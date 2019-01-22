@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328967"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143467"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> 避免在使用强制计划执行查询时重命名数据库  
 
- 执行计划使用由三个部分组成的名称 `database.schema.object` 来引用对象。   
+执行计划使用由三个部分组成的名称 `database.schema.object` 来引用对象。   
 
 如果重命名数据库，计划强制就会失败，导致在执行所有后续的查询时都需要重新编译。  
 
-##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志改善灾难恢复
+##  <a name="Recovery"></a> 在任务关键型服务器上使用跟踪标志
  
-全局跟踪标志 7745 和 7752 可用于在高可用性和灾难恢复方案中提高查询存储的性能。 有关详细信息，请参考[跟踪标志](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+全局跟踪标志 7745 和 7752 可用于提高使用查询存储的数据库的可用性。 有关详细信息，请参阅[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
   
-跟踪标志 7745 会阻止以下默认行为：在可关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，查询存储将数据写入磁盘。
+-  跟踪标志 7745 会阻止以下默认行为：在可关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前，查询存储将数据写入磁盘。 这意味着已收集但尚未保留到磁盘的查询存储数据将会丢失。 
   
-跟踪标志 7752 能够异步加载查询存储，并且允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询存储完全加载之前运行查询。 默认查询存储行为阻止在查询存储恢复之前运行查询。
+-  跟踪标志 7752 启用了查询存储的异步加载。 这会使数据库变为联机状态，并且在查询存储完全恢复之前执行查询。 默认行为是执行查询存储的同步加载。 默认行为可在恢复查询存储之前防止执行查询，但同时也可在数据集合中防止遗漏任何查询。
 
 > [!IMPORTANT]
 > 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 

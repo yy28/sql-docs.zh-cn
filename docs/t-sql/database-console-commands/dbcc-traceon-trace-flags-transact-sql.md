@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ddf60d76f41da844fe9a5187d8ce3824777716a0
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069823"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206463"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 跟踪标志用于设置特定服务器特征或更改特定行为。 例如，跟踪标志 3226 是一种常用的启动跟踪标志，可取消显示错误日志中的成功备份消息。 跟踪标志经常用于诊断性能问题或调试存储过程或复杂的计算机系统，但 Microsoft 支持部门还可能建议将它们用于解决会对特定工作负载产生负面影响的行为。  当按照指示使用时，所有记录的跟踪标志和 Microsoft 支持部门推荐的跟踪标志在生产环境中都完全受支持。  请注意，此列表中的跟踪标志在其特定用途方面可能会有一些其他注意事项，因此建议仔细查看此处和/或支持工程师提供的所有建议。 此外，与 SQL Server 中的任何配置更改一样，最好在部署标志之前在非生产环境中全面测试该标志。
@@ -116,7 +117,7 @@ ms.locfileid: "54069823"
 |**7412**|启用轻型查询执行统计信息分析基础结构。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3170113)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高内部版本。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，此跟踪标志将不起作用，因为默认情况下启用轻量分析。<br /><br />**作用域**：仅全局|
 |**7471**|为单个表上的不同统计信息启用多个 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 并发运行。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3156157)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 及更高内部版本。<br /><br />**作用域**：仅全局|
 |**7745**|强制查询存储在数据库关闭时不将数据刷新到磁盘。<br /><br />注意：使用此跟踪可能会导致先前未刷新到磁盘的查询存储数据在关闭时丢失。 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以使用 SHUTDOWN WITH NOWAIT 命令强制立即关闭，而不是使用此跟踪标志。<br /><br />**作用域**：仅全局|
-|**7752**|启用查询存储的异步加载。<br /><br />注意：如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 遇到大量与查询存储同步加载（默认行为）相关的 QDS_LOADDB 等待，则使用此跟踪标志。<br /><br />**作用域**：仅全局|
+|**7752**|启用查询存储的异步加载。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 遇到大量与查询存储同步加载（数据库恢复期间的默认行为）相关的 QDS_LOADDB 等待，则使用此跟踪标志。<br /><br />**作用域**：仅全局|
 |**7806**|在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]上启用专用管理员连接 (DAC)。 默认情况下，在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上不保留 DAC 资源。 有关详细信息，请参阅 [用于数据库管理员的诊断连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<br /><br />**作用域**：仅全局|  
 |**8011**|为资源监视器禁用环形缓冲区。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：全局和会话|
 |**8012**|为计划程序禁用环形缓冲区。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：仅全局|
@@ -126,7 +127,7 @@ ms.locfileid: "54069823"
 |**8020**|禁用工作集监视。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：仅全局|
 |**8032**|将缓存限制参数还原为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]RTM 设置，此设置通常允许更大的缓存。 当频繁重复使用的缓存条目不适合缓存时，以及当 [“针对即席工作负荷进行优化”服务器配置选项](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 未能解决与计划缓存相关的问题时，请使用此设置。<br /><br />警告：如果大缓存使较少的内存可用于其他内存消耗者（如缓冲池），则跟踪标志 8032 可能导致性能较差。<br /><br />**作用域**：仅全局|   
 |**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />注意：从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8048 不再有效。<br /><br />**作用域**：仅全局|  
-|**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3074434)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
+|**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3074434)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
 |**8079**|允许 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 询问硬件布局，并在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft-NUMA。 自动 Soft-NUMA 行为可识别超线程（HT/逻辑处理器）。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。<br /><br />**作用域**：仅全局| 
 |**8207**|允许事务复制和 CDC 的 singleton 更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/302341)。<br /><br />**作用域**：仅全局|
 |**8721**|在执行自动更新统计信息时向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/195565)。<br /><br />**作用域**：仅全局|

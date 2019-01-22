@@ -11,12 +11,12 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611035"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405717"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server
 
@@ -27,27 +27,32 @@ ms.locfileid: "47611035"
 已针对大多数应用程序服务器（如 IBM WebSphere 和 SAP NetWeaver）对 Microsoft SQL Server JDBC 驱动程序进行了测试。
   
 ## <a name="getting-started"></a>入门  
-* [步骤 1：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
+
+* [第 1 步：配置用于 Java 开发的开发环境](step-1-configure-development-environment-for-java-development.md)  
 * [步骤 2：创建用于 Java 开发的 SQL 数据库](step-2-create-a-sql-database-for-java-development.md)  
 * [步骤 3：使用 Java 连接到 SQL 的概念证明](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>文档  
+
 * [入门](getting-started-with-the-jdbc-driver.md)
 * [概述](overview-of-the-jdbc-driver.md)  
 * [编程指南](programming-guide-for-jdbc-sql-driver.md)
-* [Security](securing-jdbc-driver-applications.md)  
+* [安全性](securing-jdbc-driver-applications.md)  
 * [性能和可靠性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [故障排除](diagnosing-problems-with-the-jdbc-driver.md)
-* [示例代码](sample-jdbc-driver-applications.md) 
+* [示例代码](sample-jdbc-driver-applications.md)
 * [符合性和法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>社区
-[查找 JDBC 驱动程序的其他信息](finding-additional-jdbc-driver-information.md)  
+
+[反馈和查找 JDBC 驱动程序的其他信息](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>下载
+
 [下载 Microsoft JDBC Driver for SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -有关 Maven 项目等的其他信息。
   
 ## <a name="samples"></a>示例  
+
 * [示例 JDBC 驱动程序应用程序](sample-jdbc-driver-applications.md)  
 * [Windows 上的 Java 入门](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
 * [MacOS 上开始使用 Java](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)

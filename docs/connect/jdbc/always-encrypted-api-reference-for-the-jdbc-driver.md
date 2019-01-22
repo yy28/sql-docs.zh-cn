@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420698"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361667"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 驱动程序的 Always Encrypted API 参考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,6 +42,7 @@ ms.locfileid: "52420698"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|修改 sendTimeAsDatetime 连接属性的设置。|
 
  **SQLServerConnectionPoolProxy 类**
+ 
 |“属性”|描述|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | 返回 sendTimeAsDatetime 连接属性的设置。|
@@ -74,8 +75,8 @@ ms.locfileid: "52420698"
   
 |“属性”|描述|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|解密列加密密钥的指定加密值。 预期使用带有指定密钥路径的证书并使用指定算法加密该加密值。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey （字符串、 字符串、 Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用带有指定密钥路径的证书并使用指定算法加密列加密密钥。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey （字符串、 字符串、 Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|解密列加密密钥的指定加密值。 预期使用带有指定密钥路径的证书并使用指定算法加密该加密值。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。）|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用带有指定密钥路径的证书并使用指定算法加密列加密密钥。<br /><br /> **密钥路径的格式应为以下各项之一：**<br /><br /> 指纹：<certificate_thumbprint><br /><br /> 别名：<certificate_alias><br /><br /> （替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。）|  
 |`public void setName (String name)`|设置此密钥存储提供程序的名称。|
 |`public String getName ()`|获取此密钥存储提供程序的名称。|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420698"
   
 |“属性”|描述|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 已加密的列加密密钥 (CEK)。 使用指定的主密钥路径中的非对称密钥的 RSA 加密算法来实现此解密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey （字符串、 字符串、 Byte[]).) |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 对列加密密钥，通过向指定的算法的指定的列主密钥进行加密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey （字符串、 字符串、 Byte[]).) |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 已加密的列加密密钥 (CEK)。 使用指定的主密钥路径中的非对称密钥的 RSA 加密算法来实现此解密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。） |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 对列加密密钥，通过向指定的算法的指定的列主密钥进行加密。<br />（替代 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。） |  
 |`public void setName (String name)`|设置此密钥存储提供程序的名称。|
 |`public String getName ()`|获取此密钥存储提供程序的名称。|  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420698"
 
   
 中的新类型**microsoft.sql.Types**类
+
 |“属性”|描述|  
 |----------|-----------------|  
 |DATETIME、 SMALLDATETIME、 MONEY、 SMALLMONEY、 GUID|发送到的参数值时为目标 SQL 类型使用这些类型**加密**datetime、 smalldatetime、 money、 smallmoney、 uniqueidentifier 列使用`setObject()/updateObject()`API 方法。|  

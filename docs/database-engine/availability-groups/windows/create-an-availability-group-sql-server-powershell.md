@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209976"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226544"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 创建 AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209976"
 ###  <a name="SummaryPSStatements"></a> 任务和相应 PowerShell Cmdlet 的摘要  
  下表列出了涉及配置可用性组的基本任务，并且指出了 PowerShell cmdlet 支持的任务。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务。  
   
-|任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置**\***|  
+|任务|PowerShell Cmdlet（如果可用）或 Transact-SQL 语句|执行任务的位置&#42;|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|**New-SqlHadrEndPoint**|在缺少数据库镜像端点的每个服务器实例上执行。<br /><br /> 注意：若要更改现有数据库镜像端点，请使用 Set-SqlHadrEndpoint。|  
 |创建可用性组|首先，将 **New-SqlAvailabilityReplica** cmdlet 与 **-AsTemplate** 参数一起使用，以便为你计划包括在可用性组中的两个可用性副本中的每一个都创建内存中可用性副本对象。<br /><br /> 然后，通过使用 **New-SqlAvailabilityGroup** cmdlet 并引用你的可用性副本对象，创建可用性组。|在要承载初始主副本的服务器实例上执行。|  

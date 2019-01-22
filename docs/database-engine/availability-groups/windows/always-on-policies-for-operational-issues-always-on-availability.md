@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214166"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226554"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>对 Always On 可用性组的操作问题的基于策略的管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214166"
 ##  <a name="Always OnPBM"></a> 预定义策略和问题  
  下表概述了预定义策略。  
   
-|策略名称|问题|类别**\***|方面|  
+|策略名称|问题|类别&#42;|方面|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 群集状态|[WSFC 群集服务处于脱机状态](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
 |可用性组联机状态|[可用性组处于脱机状态](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|严重|可用性组 (availability group)|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214166"
 |可用性数据库数据同步状态|[可用性数据库的数据同步状态不正常](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性数据库|  
   
 > [!IMPORTANT]
->  **\*** 对于 AlwaysOn 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  
+>  &#42; 对于 Always On 策略，类别名称作为 ID 使用。 更改 AlwaysOn 类别的名称将会破坏其运行状况评价功能。 因此，请不要修改 AlwaysOn 类别的名称。  
   
 ##  <a name="Dashboard"></a> AlwaysOn 面板  
  AlwaysOn 面板针对可用性组运行状况为你提供一目了然的视图。 AlwaysOn 面板包括以下功能：  

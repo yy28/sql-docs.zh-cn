@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209076"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211088"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -46,7 +46,7 @@ Always On 资源 DLL 监视内部 SQL Server 组件的状态。 `sp_server_diagn
 
 租用机制强制执行 SQL Server 和 Windows Server 故障转移群集之间的同步。 发出故障转移命令时，群集服务会对当前主副本的资源 DLL 进行脱机调用。 资源 DLL 首先尝试使用存储过程使 AG 脱机。 如果此存储过程失败或超时，则会将失败报告回群集服务，然后发出终止命令。 终止再次尝试执行相同的存储过程，但使 AG 在一个新副本上联机之前，群集这次不会等待资源 DLL 报告成功或失败。 如果第二个过程调用失败，那么资源主机将不得不依赖租用机制使实例脱机。 调用资源 DLL 使 AG 脱机时，资源 DLL 会发出租用停止事件的信号，唤醒 SQL Server 租用工作线程使 AG 脱机。 即使未发出停止事件的信号，租用也将过期，并且副本将转换为解析状态。 
 
-租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU，内存不足的情况，SQL 进程在生成内存转储时无法响应，系统范围的挂起或 tempdb 压力会使租用辅助线程陷入瘫痪，阻止 SQL 实例续租并导致故障转移。 
+租用主要是主实例和群集之间的同步机制，但它也可以创建无需故障转移的故障条件。 例如，高 CPU、内存不足的情况，SQL 进程在生成内存转储时无法响应，系统范围的挂起、群集 (WSFC) 由于仲裁丢失而脱机或 tempdb 压力会使租用辅助线程陷入瘫痪，阻止 SQL 实例续租并导致故障转移。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>群集超时值的准则 
 

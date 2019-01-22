@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store 目标 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 01/10/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87991a1f0fe12cfcc10df7e7bc3c542075bd050d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0bfa4975840a93f0081cdc7fed376c748416fa06
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215696"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211028"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 目标
   “Azure Data Lake Store 目标”  组件允许 SSIS 包将数据写入 Azure Data Lake Store。 支持的文件格式为：文本、Avro 和 ORC。 
@@ -38,10 +38,8 @@ ms.locfileid: "53215696"
   
     2.  对于“文件格式”  字段，请指定要使用的文件格式。  
   
-        如果文件格式是文本，则必须指定“列分隔符字符”  值。 此外，如果文件中的第一行包含列名称，请选择“在第一个数据行中显示列名称”  。  
+       如果文件格式是文本，则必须指定“列分隔符字符”  值。 此外，如果文件中的第一行包含列名称，请选择“在第一个数据行中显示列名称”  。  
 
-        如果文件格式是 ORC，请安装相应平台的 JRE。 
+       如果文件格式是 ORC，则需要安装相应平台的 Java Runtime Environment (JRE)。
   
 3.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。  
-  
-  

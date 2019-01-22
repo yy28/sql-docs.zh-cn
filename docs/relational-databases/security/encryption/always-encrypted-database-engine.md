@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203036"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185023"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 >  有关该向导用法的视频，请参阅 [《Getting Started with Always Encrypted with SSMS》](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)（SSMS 中的始终加密入门）。
 
 1.  连接到现有数据库，该数据库中的表具有你想要使用 Management Studio 的 **对象资源管理器** 加密的列，或创建一个新的数据库，创建具有要加密的列的一个或多个表，并连接到该数据库。
-2.  右键单击数据库，指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。
+2.  右键单击数据库，将光标指向“任务”，然后单击“加密列”打开“Always Encrypted 向导”。
 3.  查看“简介”页，然后单击“下一步”。
 4.  在“列选择”页上展开表，然后选择要加密的列。 
 5.  对于选择的要加密的每个列，将“加密类型”设置为“确定性”或“随机”。

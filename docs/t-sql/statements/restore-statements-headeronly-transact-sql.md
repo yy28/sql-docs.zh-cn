@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207786"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242240"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|创建备份集的服务器内部版本号。|  
 |**MachineName**|**nvarchar(128)**|执行备份操作的计算机名称。|  
 |**标志**|**int**|设置为 1 时单个标志位的含义：<br /><br /> 1 = 日志备份包含大容量日志操作。<br /><br /> 2 = 快照备份。<br /><br /> 4 = 备份时数据库为只读。<br /><br /> 8 = 备份时数据库处于单用户模式。<br /><br /> 16 = 备份包含备份校验和。<br /><br /> 32 = 备份时数据库损坏，但要求备份操作忽略错误继续执行。<br /><br /> 64 = 结尾日志备份。<br /><br /> 128 = 包含不完整元数据的结尾日志备份。<br /><br /> 256 = 包含 NORECOVERY 的结尾日志备份。<br /><br /> **重要提示：** 建议使用单个布尔值列（下面列出了以 HasBulkLoggedData 开始且以 IsCopyOnly 结束的列）代替 Flags。|  
-|**BindingID**|**uniqueidentifier**|数据库的绑定 ID。 这与 sys.database_recovery_statusdatabase_guid 相对应。 恢复数据库时，会分配一个新值。 另请参阅 FamilyGUID（见下方）。|  
+|**BindingID**|**uniqueidentifier**|数据库的绑定 ID。 这与 sys.database_recovery_status database_guid 相对应。 恢复数据库时，会分配一个新值。 另请参阅 FamilyGUID（见下方）。|  
 |**RecoveryForkID**|**uniqueidentifier**|结尾恢复分支的 ID。 此列与 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 表中的 last_recovery_fork_guid 相对应。<br /><br /> 对于数据备份，RecoveryForkID 等于 FirstRecoveryForkID。|  
 |**排序规则**|**nvarchar(128)**|数据库使用的排序规则。|  
 |**FamilyGUID**|**uniqueidentifier**|创建时的原始数据库 ID。 恢复数据库时，此值保持不变。|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 到当前版本）。<br /><br /> 使用的加密程序的类型：证书或非对称密钥。 当备份未加密时，此值为 NULL。|  
   
 > [!NOTE]  
->  如果为备份集指定了密码，则 RESTORE HEADERONL 只显示其密码与命令中指定的 PASSWORD 选项相匹配的备份集的完整信息。 RESTORE HEADERONLY 还显示没有密码保护的备份集的完整信息。 将介质上其他受密码保护的备份集的 BackupName 列设置为 “***Password Protected\*\*\*”，剩下的所有列为 NULL。  
+>  如果为备份集指定了密码，则 RESTORE HEADERONL 只显示其密码与命令中指定的 PASSWORD 选项相匹配的备份集的完整信息。 RESTORE HEADERONLY 还显示没有密码保护的备份集的完整信息。 将介质上其他受密码保护的备份集的 BackupName 列设置为“Password Protected”，剩下的所有列为 NULL。  
   
 ## <a name="general-remarks"></a>一般备注  
  客户端可以使用 RESTORE HEADERONLY 检索特殊备份设备上的所有备份的所有备份标头信息。 对于备份设备上的每个备份，服务器都会将标头信息作为一行发送。  

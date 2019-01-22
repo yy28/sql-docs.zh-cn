@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 798a31bacecc45a22510a121847e9e20423d4b3d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069763"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143387"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54069763"
   指定在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中与 Null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 ISO 标准的行为。  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_NULLS 将为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
+> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，ANSI_NULLS 将为 ON，将该选项显式设置为 OFF 的任何应用程序都将产生错误。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,20 +83,20 @@ SET ANSI_NULLS ON
   
 为使脚本按预期运行，不管 ANSI_NULLS 数据库选项或 SET ANSI_NULLS 的设置如何，请在可能包含空值的比较中使用 IS NULL 和 IS NOT NULL。  
   
-在执行分布式查询时应将 SET ANSI_NULLS 设置为 ON。  
+在执行分布式查询时应将 ANSI_NULLS 设置为 ON。  
   
-对计算列或索引视图创建或更改索引时，SET ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
+针对计算列或索引视图创建或更改索引时，ANSI_NULLS 也必须为 ON。 如果 SET ANSI_NULLS 为 OFF，则针对表（包含计算列或索引视图的索引）的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回一个错误消息，该错误消息会列出所有违反所需值的 SET 选项。 另外，在执行 SELECT 语句时，如果 SET ANSI_NULLS 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略计算列或视图的索引值并解析选择操作，就好像表或视图没有这样的索引一样。  
   
 > [!NOTE]  
 > ANSI_NULLS 是在处理计算列或索引视图的索引时必须设置为所需值的七个 SET 选项之一。 此外，`ANSI_PADDING`、`ANSI_WARNINGS`、`ARITHABORT`、`QUOTED_IDENTIFIER` 和 `CONCAT_NULL_YIELDS_NULL` 选项还必须设置为 ON，而 `NUMERIC_ROUNDABORT` 必须设置为 OFF。  
   
  进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会自动将 ANSI_NULLS 设置为 ON。 该设置可以在 ODBC 数据源、ODBC 连接属性或 OLE DB 连接属性（它们在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之前在应用程序中设置）中进行配置。 SET ANSI_NULLS 的默认值为 OFF。  
   
- 当 SET ANSI_DEFAULTS 为 ON 时，将启用 SET ANSI_NULLS。  
+ANSI_DEFAULTS 为 ON 时，将启用 ANSI_NULLS。  
   
- SET ANSI_NULLS 的设置是在执行或运行时设置，而不是在分析时设置。  
+ANSI_NULLS 的设置是在执行或运行时定义的，而不是在分析时定义的。  
   
- 要查看此设置的当前设置，请运行以下查询：
+要查看此设置的当前设置，请运行以下查询：
   
 ```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -105,10 +105,10 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 要求具有 public 角色的成员身份。  
+ 要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非空值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI_NULLS` 设置的影响。  
+ 以下示例使用等于 (`=`) 和不等于 (`<>`) 比较运算符对表中的 `NULL` 值和非 NULL 值进行比较。 该示例还表明，`IS NULL` 不受 `SET ANSI_NULLS` 设置的影响。  
   
 ```sql  
 -- Create table t1 and insert values.  
@@ -132,9 +132,12 @@ WHERE a <> @varname;
 SELECT a   
 FROM t1   
 WHERE a IS NULL;  
-GO  
-  
--- SET ANSI_NULLS to ON and test.  
+GO 
+```
+
+现在将 ANSI_NULLS 设置为 ON 并测试。
+
+```sql
 PRINT 'Testing ANSI_NULLS ON';  
 SET ANSI_NULLS ON;  
 GO  
@@ -153,8 +156,11 @@ SELECT a
 FROM t1   
 WHERE a IS NULL;  
 GO  
-  
--- SET ANSI_NULLS to OFF and test.  
+```
+
+现在将 ANSI_NULLS 设置为 OFF 并测试。  
+
+```sql
 PRINT 'Testing SET ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  

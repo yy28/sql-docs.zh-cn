@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206346"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130567"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>高级合并复制 - 冲突的检测和解决
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   当发布服务器与订阅服务器连接并进行同步时，合并代理将检测是否存在任何冲突。 如果检测到冲突，合并代理将使用冲突解决程序（将项目添加到发布时指定的）来确定接受哪些数据并将其传播到其他站点。  
+
+ 合并复制提供了多种检测和解决冲突的方法。 此默认方法适用于大多数应用程序：  
+  
+-   如果发布服务器和订阅服务器发生冲突，则保留发布服务器更改，而放弃订阅服务器更改。   
+-   如果使用客户端订阅（请求订阅的默认类型）的两台订阅服务器发生冲突，则保留第一台与发布服务器同步的订阅服务器的更改，而放弃第二台订阅服务器的更改。 有关指定客户端和服务器订阅的信息，请参阅[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。   
+-   如果使用服务器订阅（推送订阅的默认类型）的两台订阅服务器发生冲突，则保留具有最高优先级值的订阅服务器的更改，而放弃另一台订阅服务器的更改。 如果优先级值相等，则保留第一台与发布服务器同步的订阅服务器的更改。  
   
 > [!NOTE]  
 >  由于订阅服务器与发布服务器同步，因此冲突通常发生在不同订阅服务器上进行的更新之间，而不是发生在订阅服务器和发布服务器上进行的更新之间。  
   
- 冲突的检测和解决行为取决于下列选项，本主题对这些选项进行了说明：  
-  
--   指定列级跟踪、行级跟踪还是逻辑记录级跟踪。  
-  
+ 冲突的检测和解决行为取决于下列选项，本主题对这些选项进行了说明：    
+-   指定列级跟踪、行级跟踪还是逻辑记录级跟踪。    
 -   指定默认的基于优先级的解决机制，还是指定项目冲突解决程序。 项目冲突解决程序可以是：  
   
-    -   以托管代码编写的  业务逻辑处理程序。  
-  
-    -   基于 COM 的自定义冲突解决程序 。  
-  
+    -   以托管代码编写的  业务逻辑处理程序。   
+    -   基于 COM 的自定义冲突解决程序 。    
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供的基于 COM 的冲突解决程序。  
   
      如果使用的是默认解决机制，则冲突的检测和解决行为还取决于所用的订阅类型：客户端或服务器。  
@@ -51,18 +53,32 @@ ms.locfileid: "53206346"
 ## <a name="conflict-detection"></a>冲突检测  
  数据更改是否可视为冲突取决于为项目设置的冲突跟踪类型：  
   
--   选择列级冲突跟踪时，如果对多个复制节点的同一行中的同一列进行更改，则此更改视为冲突。  
-  
--   选择行级跟踪时，如果对多个复制节点的同一行中的任意列进行更改（相应行中受影响的列不必相同），则此更改视为冲突。  
-  
+-   选择列级冲突跟踪时，如果对多个复制节点的同一行中的同一列进行更改，则此更改视为冲突。    
+-   选择行级跟踪时，如果对多个复制节点的同一行中的任意列进行更改（相应行中受影响的列不必相同），则此更改视为冲突。    
 -   选择逻辑记录级跟踪时，如果对多个复制节点的同一逻辑记录中的任意行进行更改（相应行中受影响的列不必相同），则此更改视为冲突。  
   
  有关详细信息，请参阅 [检测并解决逻辑记录中的冲突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
- 若要指定项目的冲突跟踪和解决方法级别，请参阅 [为合并项目指定冲突跟踪和解决方法级别](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)。  
+ 若要指定项目的冲突跟踪和解决方法级别，请参阅[修改合并复制属性](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 ## <a name="conflict-resolution"></a>冲突解决  
  检测到冲突后，合并代理将启动选定的冲突解决程序，并使用该冲突解决程序来确定冲突解决入选方。 入选行将应用到发布服务器和订阅服务器，而落选行中的数据将写入冲突表。 除非选择交互解决冲突，否则冲突解决程序一经执行就会立即解决冲突。  
+
+解决合并复制冲突 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  当发布服务器与订阅服务器连接并进行同步时，合并代理将检测是否存在任何冲突。 如果检测到冲突，合并代理将使用冲突解决程序来确定将接受哪些数据并将其传播到其他站点。  
+  
+> [!NOTE]  
+>  虽然订阅服务器与发布服务器同步，但冲突通常发生于不同订阅服务器上进行的更新之间，而不是于订阅服务器和发布服务器上进行的更新之间。  
+  
+ 合并复制提供了多种检测和解决冲突的方法。 此默认方法适用于大多数应用程序：  
+  
+-   如果发布服务器和订阅服务器发生冲突，则保留发布服务器更改，而放弃订阅服务器更改。  
+  
+-   如果使用客户端订阅（请求订阅的默认类型）的两台订阅服务器发生冲突，则保留第一台与发布服务器同步的订阅服务器的更改，而放弃第二台订阅服务器的更改。 有关指定客户端和服务器订阅的信息，请参阅[指定合并订阅类型和冲突解决优先级 (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。  
+  
+-   如果使用服务器订阅（推送订阅的默认类型）的两台订阅服务器发生冲突，则保留具有最高优先级值的订阅服务器的更改，而放弃另一台订阅服务器的更改。 如果优先级值相等，则保留第一台与发布服务器同步的订阅服务器的更改。  
+  
+ 有关合并复制的冲突检测和解决的详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ### <a name="resolver-types"></a>冲突解决程序类型  
  在合并复制中，冲突解决发生在项目级别。 对于由多个项目组成的发布，可以用不同的冲突解决程序解决不同项目的冲突，也可以用同一个冲突解决程序解决一个项目、多个项目或者组成发布的所有项目的冲突。  

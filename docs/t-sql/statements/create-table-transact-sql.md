@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980383"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300564"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。  
   
@@ -981,7 +981,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  本地临时表的名称前缀有一个数字符号 (#table_name)，而全局临时表的名称前缀有两个数字符号 (##table_name)。  
   
- SQL 语句使用 CREATE TABLE 语句中为 table_name 指定的值引用临时表，例如####：  
+ SQL 语句使用 CREATE TABLE 语句中为 table_name 指定的值引用临时表，例如：  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  如果在单个存储过程或批处理中创建了多个临时表，则它们必须有不同的名称。  
+ 
+ 创建或访问临时表时，如果包括 schema_name，它将被忽略。  所有临时表都在 dbo 架构中进行创建。
   
  如果本地临时表由存储过程创建或由多个用户同时执行的应用程序创建，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]必须能够区分由不同用户创建的表。 为此，[!INCLUDE[ssDE](../../includes/ssde-md.md)]在内部为每个本地临时表的表名追加一个数字后缀。 存储在 tempdb 的 sysobjects 表中的临时表，其全名由 CREATE TABLE 语句中指定的表名和系统生成的数字后缀组成。 为了可追加后缀，为本地临时表指定的 table_name 不能超过 116 个字符。  
   

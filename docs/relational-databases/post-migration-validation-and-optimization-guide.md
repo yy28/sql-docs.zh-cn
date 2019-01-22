@@ -1,6 +1,6 @@
 ---
 title: 迁移后验证和优化指南 | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213616"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206363"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移后步骤对于协调任何数据准确性和完整性至关重要，同时还能发现与工作负载相关的性能问题。
 
-# <a name="common-performance-scenarios"></a>常见性能方案 
+## <a name="common-performance-scenarios"></a>常见性能方案
+
 以下是迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台后会遇到的一些常见性能方案及其应对方法。 其中包括从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（从较低版本迁移到较高版本），以及从外部平台（如 Oracle、DB2、MySQL 和 Sybase）迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的方案。
 
 ## <a name="CEUpgrade"></a> 由于 CE 版本变更导致的查询回归
- 
+
 适用于：从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 从较低版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。
@@ -126,6 +128,7 @@ ms.locfileid: "53213616"
 > 由于 MSTVF（多语句表值函数）不在编译时创建，因此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器需依赖于试探方法（而非实际统计信息）来确定行预估数。 即使向基表中添加索引也不会有任何帮助。 对于 MSTVF，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对于MSTVF 预期返回的行数使用固定预估值 1（从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 开始，该固定预估值为 100 行）。
 
 ### <a name="steps-to-resolve"></a>解决步骤
+
 1.  如果多语句 TVF 仅为单个语句，请将其转换为内联 TVF。
 
     ```sql
@@ -142,7 +145,8 @@ ms.locfileid: "53213616"
     RETURN
     END
     ```
-    若要 
+
+    接下来显示内联格式示例。
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ ms.locfileid: "53213616"
 
 2.  如果问题更复杂，请考虑使用内存优化表或临时表中存储的中间结果。
 
-##  <a name="Additional_Reading"></a> 其他阅读主题  
+##  <a name="Additional_Reading"></a> 其他阅读主题
+
  [Query Store 最佳实践](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [用户定义函数](../relational-databases/user-defined-functions/user-defined-functions.md)  

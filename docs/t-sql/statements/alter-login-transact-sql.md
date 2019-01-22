@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215586"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211108"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. 登录时更改登录密码 
+ 如果正在尝试更改当前登录所用登录名的密码，但没有 `ALTER ANY LOGIN` 权限，则必须指定 `OLD_PASSWORD` 选项。    
   
-### <a name="c-changing-the-name-of-a-login"></a>C. 更改登录名称  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. 更改登录名称  
  以下示例将 `Mary5` 登录名称更改为 `John2`。  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. 将登录名映射到凭据  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. 将登录名映射到凭据  
  以下示例将登录名 `John2` 映射到凭据 `Custodian04`。  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. 将登录名映射到可扩展密钥管理凭据  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. 将登录名映射到可扩展密钥管理凭据  
  以下示例将登录名 `Mary5` 映射到 EKM 凭据 `EKMProvider1`。  
   
   

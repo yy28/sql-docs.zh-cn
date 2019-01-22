@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207436"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226664"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207436"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |自动故障转移 (automatic failover)|否|否|是|  
 |计划的手动故障转移|否|是|是|  
-|强制故障转移|是|是|是**\***|  
+|强制故障转移|是|是|是&#42;|  
   
- **\*** 如果对已同步的辅助副本发出强制故障转移命令，辅助副本的行为与手动故障转移时的行为相同。  
+ &#42;如果对已同步的次要副本发出强制故障转移命令，次要副本的行为与手动故障转移时的行为相同。  
   
  在故障转移过程中，数据库不可用的时间取决于故障转移的类型及其原因。  
   
