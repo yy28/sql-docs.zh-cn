@@ -24,16 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75c1bb4f7c236f45b94e534ceec2655fc24808df
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980433"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327898"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -418,7 +418,7 @@ SID = sid
 ## <a name="remarks"></a>Remarks
 
 - 密码是区分大小写的。
-- 创建映射到 Azure AD 帐户的服务器级主体 (FROM EXTERNAL PROVIDER) 时引入了新语法****
+- 创建映射到 Azure AD 帐户的服务器级主体 (FROM EXTERNAL PROVIDER) 时引入了新语法
 - 指定 FROM EXTERNAL PROVIDER 时：
     - login_name 必须表示现有 Azure AD 帐户（用户、组或应用程序），当前 Azure SQL 托管实例可在 Azure AD 中访问该帐户。
     - 不能使用 PASSWORD 选项。
