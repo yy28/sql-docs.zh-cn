@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206463"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361687"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -145,6 +145,7 @@ ms.locfileid: "54206463"
 |**9488**|<a name="9488"></a>当使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型时，将表值函数的固定估计值设置为默认值 1（对应于 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更早版本的查询优化器基数估计模型下的默认值）。<br /><br />**作用域**：全局、会话或查询|
 |**9495**|在 INSERT...SELECT 操作的插入过程中禁用并行，它适用于用户表和临时表。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/3180087)<br /><br />**作用域**：全局或会话| 
 |**9567**|对自动种子设定过程中的 Always On 可用性组启用数据流压缩。 在自动种子设定过程中，压缩可大幅缩短传输时间，并且将增加处理器上的负载。 有关详细信息，请参阅[自动初始化 Always On 可用性组](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[调整可用性组的压缩](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**作用域**：全局或会话|
+|**9571**|禁用可用性组自动设定种子到默认数据库路径。 有关详细信息，请参阅[磁盘布局](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**作用域**：全局或会话| 
 |**9591**|在 Always On 可用性组中禁用日志块压缩。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，日志块压缩是用于同步副本和异步副本的默认行为。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，压缩仅用于异步副本。 <br /><br />**作用域**：全局或会话|
 |**9592**|对同步可用性组启用日志流压缩。 默认情况下，对同步可用性组禁用此功能，因为压缩会增加延迟。 有关详细信息，请参阅 [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)（调整可用性组的压缩）。<br /><br />**作用域**：全局或会话| 
 |**9929**|将每个内存中检查点文件都缩减为 1 MB。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3147012)。<br /><br />**作用域**：仅全局|  
