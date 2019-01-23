@@ -4,17 +4,17 @@ description: 本文提供有关 SQL Server 常见问题的解答在 Linux 上运
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/25/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457660"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 方面的常见问题 (FAQ)
 
@@ -32,10 +32,6 @@ ms.locfileid: "49419352"
 
    SQL Server 经过测试且支持在 Linux 上的前面列出的分发版。 其他 Linux 发行版密切相关，可能能够在运行 SQL Server （例如，CentOS 密切相关到 Red Hat Enterprise Server）。 但如果您选择不受支持的操作系统上安装 SQL Server，请查看**的支持策略**一部分[Microsoft SQL Server 的技术支持策略](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)若要了解支持影响。 另请注意，一些社区维护的 Linux 分发没有正式的方法，才能获得支持，如果基础操作系统是问题。
 
-1. **Linux 上的许可工作原理？**
-
-   SQL Server 是获得相同的方式许可适用于 Windows 和 Linux。 事实上，SQL Server 的许可，然后选择要在所选的平台上使用该许可证。 有关详细信息，请参阅[授权的 SQL Server 如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
-
 1. **Linux 上的 SQL Server 是与 Windows 上相同？**
 
    与在 Windows，SQL Server 数据库引擎的核心都是在 Linux 上相同的。 但是，某些功能当前不支持在 Linux 上。 Linux 不支持的功能的列表，请参阅[不受支持的功能和服务](sql-server-linux-release-notes.md#Unsupported)。 此外查看[已知问题](sql-server-linux-release-notes.md#known-issues)。 在这些列表中指定，除非其他 SQL Server 功能和服务支持在 Linux 上。
@@ -47,6 +43,39 @@ ms.locfileid: "49419352"
 1. **我来自 Windows SQL Server 背景。是否有资源，以帮助了解如何在 Linux 上使用 SQL Server？**
 
    [快速入门](sql-server-linux-setup.md#platforms)提供有关如何在 Linux 上安装 SQL Server 并运行 Transact SQL 查询的分步说明。 其他教程提供了有关在 Linux 上使用 SQL Server 的其他说明。 第三方技巧的列表，请参阅[MSSQLTIPS 列表上 Linux 的提示的 SQL Server](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)。
+
+## <a name="licensing"></a>授权
+
+1. **Linux 上的许可工作原理？**
+
+   SQL Server 是获得相同的方式许可适用于 Windows 和 Linux。 事实上，SQL Server 的许可，然后选择要在所选的平台上使用该许可证。 有关详细信息，请参阅[授权的 SQL Server 如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
+
+1. **我已购买时应该选择什么版本的 SQL Server？**
+
+   运行 mssql conf 安装程序时您会看到以下选项：
+   
+   ```
+   Choose an edition of SQL Server:
+      1. Evaluation (free, no production use rights, 180-day limit)
+      2. Developer (free, no production use rights)
+      3. Express (free)
+      4. Web (PAID)
+      5. Standard (PAID)
+      6. Enterprise (PAID)
+      7. Enterprise Core (PAID)
+      8. I bought a license through a retail sales channel and have a product key to enter.
+   ```
+     
+   如果你获取你通过批量许可企业协议的一部分或您的 MSDN 订阅的许可证，你需要选择选项 4 到 7。 此步骤不要求你输入许可证，但你必须之前购买适当的许可为您的配置。 如果你已购买标准版通过零售渠道，选择选项 8。 此选项会提示你输入密钥。 
+
+1. **如何验证安装的版本和版本的 Linux 上的 SQL Server？**
+
+   连接到 SQL Server 实例与客户端工具，如**sqlcmd**， **mssql cli**，或 Visual Studio Code。 然后运行以下 TRANSACT-SQL 查询，若要验证的版本和正在运行的 SQL Server 版本： 
+
+   ```sql
+   SELECT @@VERSION
+   SELECT SERVERPROPERTY('Edition')
+   ```
 
 ## <a name="installation"></a>安装
 
@@ -69,22 +98,6 @@ ms.locfileid: "49419352"
 1. **可以在 Linux 上执行无人参与的安装的 SQL Server？**
 
    是。 有关无人参与安装的讨论，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md#unattended)。 请参阅有关示例脚本[Red Hat](sample-unattended-install-redhat.md)， [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)，并[Ubuntu](sample-unattended-install-ubuntu.md)。 此外可以查看[此示例脚本](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)创建的 SQL Server 客户顾问团队。
-
-1. **我已购买时应该选择什么版本的 SQL Server？**
-
-   运行 mssql conf 安装程序时为您提供这些选项：  
-   `Choose an edition of SQL Server:` <br>
-`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
-`     2. Developer (free, no production use rights)` <br>
-`     3. Express (free)` <br>
-`     4. Web (PAID)` <br>
-`     5. Standard (PAID)` <br>
-`     6. Enterprise (PAID)` <br>
-`     7. Enterprise Core (PAID)` <br>
-`     8. I bought a license through a retail sales channel and have a product key to enter.`
-     
-   如果你获取你通过批量许可企业协议的一部分或您的 MSDN 订阅的许可证，你需要选择 4 到 7。 如果你已购买标准版通过零售渠道，您需要选择 8。 
-
 
 ## <a name="tools"></a>工具
 
@@ -139,7 +152,7 @@ ms.locfileid: "49419352"
 
 1. **是否可以迁移我的数据从 Oracle 和其他数据库引擎到 Linux 上的 SQL Server？**
 
-   是。 SSMA 支持将从数据库引擎的几种类型的迁移： Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (以前称为 SAP Sybase ASE)。 有关如何使用 SSMA 的示例，请参阅[将 Oracle 架构迁移到 SQL Server Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)。
+   是。 SSMA 支持将从数据库引擎的几种类型的迁移：Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE (以前称为 SAP Sybase ASE)。 有关如何使用 SSMA 的示例，请参阅[将 Oracle 架构迁移到 SQL Server Linux 上使用 SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)。
 
 1. **SQL Server 文件需要哪些权限？**
 
