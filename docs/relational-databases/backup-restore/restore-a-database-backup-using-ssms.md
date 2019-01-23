@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302900"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317807"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52302900"
         -   **选择备份设备** 对话框  
         
             **备份介质类型**  
-         从“备份介质类型”下拉列表中选择一个介质类型。  注意：只有在计算机上装有磁带机时，才会显示“磁带”选项，只有至少存在一个备份设备时，才会显示“备份设备”选项。
+         从“备份介质类型”下拉列表中选择一个介质类型。  注意：只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。
 
             **“添加”**  
             根据在“备份介质类型”下拉列表中选择的介质类型，单击“添加”将打开下列对话框之一。 （如果“备份介质”列表框中的列表已满，则“添加”按钮不可用。）
@@ -94,7 +94,7 @@ ms.locfileid: "52302900"
     
              将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。    
     
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。    
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称。    
     
          > [!NOTE]
          > 此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。    
@@ -145,7 +145,7 @@ ms.locfileid: "52302900"
 7.  在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 备份集包含数据库备份，而不是现有的‘`Sales`’数据库。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:备份集中的数据库备份与现有的“`Sales`”数据库不同。 (Microsoft.SqlServer.SmoExtended)”
 
 8.  在“结尾日志备份”部分中，取消选中“还原前执行结尾日志备份”。
 
@@ -157,7 +157,7 @@ ms.locfileid: "52302900"
 9.  在“服务器连接”部分，选中“关闭目标数据库的现有连接”。
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 无法获得独占访问权限，因为数据库正在使用中。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:因为数据库正在使用，所以无法获得对数据库的独占访问权。 (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -180,7 +180,7 @@ ms.locfileid: "52302900"
 
     > [!NOTE]
     > 如果收到以下错误信息：      
-    > “System.Data.SqlClient.SqlError：数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `RESTORE` 语句的 `WITH REPLACE` 或 `WITH STOPAT` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
+    > “System.Data.SqlClient.SqlError:数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `RESTORE` 语句的 `WITH REPLACE` 或 `WITH STOPAT` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
     > 那么你可能未输入上面步骤 6 中的新数据库名称。 还原一般会防止意外使用一个数据库覆盖另一个数据库。 如果 `RESTORE` 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  将以前的磁盘备份还原到某个时间点

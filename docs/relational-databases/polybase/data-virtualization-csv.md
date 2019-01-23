@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6d16f2c11effaeddbbe5981f5cf6055186ceb8e
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609755"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405668"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>将外部表向导与 CSV 文件一起使用
 
@@ -39,7 +39,7 @@ SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程
 
 ## <a name="select-destination-database"></a>选择目标数据库
 
-在此步骤中，将选择要将数据虚拟化到的目标数据库。 下拉字段将包含上一屏幕中指定的 SQL 主实例中的所有可接受的数据库。 在这里，还可以命名新的外部表并查看它将使用的架构。
+在此步骤中，将选择要将数据虚拟化到其中的目标数据库。 下拉字段将包含上一屏幕中指定的 SQL 主实例中的所有可接受的数据库。 在这里，还可以命名新的外部表并查看它将使用的架构。
 
 ![创建数据库主密钥](media/data-virtualization/csv-select-destination.png)
 

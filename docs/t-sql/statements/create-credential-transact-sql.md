@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509385"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327778"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET = 'secret'  
  指定发送身份验证所需的机密内容。  
   
- 当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关在 Azure 容器上创建存储访问策略和共享访问签名的详细信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
+ 当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关如何在 Azure 容器上创建存储访问策略和共享访问签名的信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
   
  FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name  
  指定企业密钥管理提供程序 (EKM) 的名称。 有关密钥管理的详细信息，请参阅[可扩展密钥管理 (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 令牌创建凭据  
  适用于：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 下面的示例使用 SAS 令牌创建共享访问签名凭据。  若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及创建使用共享访问签名的凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 下面的示例使用 SAS 令牌创建共享访问签名凭据。  若要详细了解如何在 Azure 容器上创建存储访问策略和共享访问签名，以及使用共享访问签名创建凭据，请参阅[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  CREDENTIAL NAME 参数需要名称与容器路径匹配，以 https 开头并且末尾不包含正斜杠。 IDENTITY 参数需要名称 SHARED ACCESS SIGNATURE。 SECRET 参数需要共享访问签名令牌。  

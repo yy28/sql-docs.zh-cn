@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300064"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395425"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ ms.locfileid: "54300064"
     -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
   
     -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](https://support.microsoft.com/kb/947213)  
+    
+- **对于 Linux**：在 Linux 上，还需要打开与需要访问的服务关联的端口。 不同的 Linux 分发和不同的防火墙具有各自的过程。 如需了解两个示例，请参阅 [Red Hat 上的 SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) 和 [SUSE 上的 SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions)。 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用的端口 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  下面几个表可有助于您确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的端口。  

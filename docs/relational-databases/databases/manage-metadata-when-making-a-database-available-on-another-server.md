@@ -35,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559465"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405837"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,11 +108,11 @@ ms.locfileid: "51559465"
   
  有关此功能的详细信息，请参阅 [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
-> **注意：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据。 若要了解代理帐户的凭据 ID，请使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系统表。  
+> **注意**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户使用凭据。 若要了解代理帐户的凭据 ID，请使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系统表。  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- DB_CHAINING 和 TRUSTWORTHY 数据库选项默认设置为 OFF。 如果针对原始数据库将这两个选项之一设置为 ON，则可能必须对目标服务器实例上的数据库启用这两个选项。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
+ DB_CHAINING 和 TRUSTWORTHY 数据库选项默认设置为 OFF。 如果针对原始数据库将这两个选项之一设置为 ON，则可能必须对目标服务器实例上的数据库启用这两个选项。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  附加和分离操作都会禁用数据库的跨数据库所有权链接。 有关如何启用链接的详细信息，请参阅 [cross db ownership chaining 服务器配置选项](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "51559465"
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
- 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='password'. 建议通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "51559465"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Windows Management Instrumentation (WMI) 事件  
  使用服务器事件的 WMI 提供程序，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的事件。 必须在目标服务器实例所在的计算机上定义任何依赖于服务器级事件（此事件通过数据库所依赖的 WMI 提供程序显示）的应用程序。 WMI 事件提供程序使用在 **msdb**中定义的目标服务创建事件通知。  
   
-> **注意：** 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
+> **注意**：有关详细信息，请参阅 [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。  
   
  **使用 SQL Server Management Studio 创建 WMI 警报**  
   
@@ -195,7 +195,7 @@ ms.locfileid: "51559465"
   
  此外，如果原始服务器实例和目标服务器示例具有不同版本的 [断字符和词干分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)组件或[全文搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)组件，则全文索引和查询的行为可能有所不同。 此外， [同义词库](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 存储在特定于实例的文件中。 您必须将这些文件的副本传输到目标服务器实例上的相同位置，或者在新的实例上重新创建这些文件。  
   
-> **注意：** 当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
+> **注意**：当将包含全文目录文件的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务器实例上时，会将目录文件从其以前的位置与其他数据库文件一起附加，这与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的情况相同。 有关详细信息，请参阅 [全文搜索升级](../../relational-databases/search/upgrade-full-text-search.md)。  
   
  有关详细信息，请参阅：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "51559465"
   
  若要为数据库原始副本中的部分或全部对象生成脚本，可以使用生成脚本向导，并在 **“选择脚本选项”** 对话框中将 **“编写登录脚本”** 选项设置为 **True**。  
   
-> **注意：** 有关如何为镜像数据库设置登录名的信息，请参阅[数据库镜像或 AlwaysOn 可用性组设置登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意**：有关如何为镜像数据库设置登录名的信息，请参阅[设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切换后登录名和作业的管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a> Permissions  
@@ -291,7 +291,7 @@ ms.locfileid: "51559465"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>证书或非对称密钥的服务器级权限  
  不能向证书或非对称密钥直接授予服务器级权限。 相反，可以向专门针对特定证书或非对称密钥创建的映射登录名授予服务器级权限。 因此，每个需要服务器级权限的证书或非对称密钥都需要自己的“证书映射登录名  ”或“非对称密钥映射登录名 ”。 若要为证书或非对称密钥授予服务器级权限，请向其映射登录名授予相应权限。  
   
-> **注意：** 映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
+> **注意**：映射登录名仅用于对使用相应证书或非对称密钥签名的代码进行授权。 映射登录名不能用于身份验证。  
   
  映射登录名及其权限都位于 **master**中。 如果证书或非对称密钥位于 **master**之外的数据库中，则必须在 **master** 中重新创建证书或非对称密钥并将其映射到登录名。 如果将数据库移动、复制或还原到其他服务器实例，则必须在目标服务器实例的 **master** 数据库中重新创建其证书或非对称密钥，将证书或非对称密钥映射到登录名，并向此登录名授予必需的服务器级权限。  
   

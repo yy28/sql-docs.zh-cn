@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135317"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327808"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,7 @@ ALTER DATABASE
 介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。  
   
 ## <a name="syntax"></a>语法  
-  
+
 ```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
@@ -124,14 +124,15 @@ ALTER DATABASE { database_name  | CURRENT }
  
 <compatibility_level>
    { 140 | 130 | 120 | 110 | 100 | 90 }   
-```  
-  
+```
+
 ## <a name="arguments"></a>参数  
+
 *database_name*  
 要修改的数据库的名称。  
   
-> [!NOTE]  
->  此选项在包含的数据库中不可用。  
+> [!NOTE]
+> 此选项在包含的数据库中不可用。
   
 CURRENT  
 **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -159,7 +160,8 @@ COLLATE collation_name
 \<file_and_filegroup_options>::=  
 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
   
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -191,7 +193,8 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 - 还原数据库备份。  
 - 分离数据库。  
   
-## <a name="changing-the-database-collation"></a>更改数据库排序规则  
+## <a name="changing-the-database-collation"></a>更改数据库排序规则
+
 在对数据库应用不同排序规则之前，请确保已满足下列条件：  
   
 - 您是当前数据库的唯一用户。  
@@ -221,31 +224,35 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
   
 由新的排序规则产生的重复名称将导致更改操作失败，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误消息，指出重复名称所在的命名空间。  
   
-## <a name="viewing-database-information"></a>查看数据库信息  
+## <a name="viewing-database-information"></a>查看数据库信息
+
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. 更改数据库的名称  
+### <a name="a-changing-the-name-of-a-database"></a>A. 更改数据库的名称
+
 以下示例将 `AdventureWorks2012` 数据库的名称更改为 `Northwind`。  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 Modify Name = Northwind ;  
 GO  
-```  
-  
-### <a name="b-changing-the-collation-of-a-database"></a>B. 更改数据库的排序规则  
+```
+
+### <a name="b-changing-the-collation-of-a-database"></a>B. 更改数据库的排序规则
+
 以下示例创建了一个名为 `testdb`、排序规则为 `SQL_Latin1_General_CP1_CI_A`S 的数据库，然后将 `testdb` 数据库的排序规则更改为 `COLLATE French_CI_AI`。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
   
@@ -256,9 +263,10 @@ GO
 ALTER DATABASE testDB  
 COLLATE French_CI_AI ;  
 GO  
-```  
-  
-## <a name="see-also"></a>另请参阅  
+```
+
+## <a name="see-also"></a>另请参阅
+
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -367,8 +375,8 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 ```
-  
-## <a name="arguments"></a>参数  
+
+## <a name="arguments"></a>参数
 
 *database_name*  
 
@@ -392,11 +400,11 @@ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'Bus
 更改数据库的服务层。 
 
 以下示例将版本更改为 `premium`：
-  
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
-``` 
+```
 
 如果数据库的 MAXSIZE 属性设置为该版本支持的有效范围之外的值，则 EDITION 更改会失败。  
 
@@ -440,22 +448,25 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB)
 **基于 vCore 的模型**
 
 **常规用途服务层 - 第 4 代计算平台**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|
 
 **常规用途服务层 - 第 5 代计算平台**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
-
 **业务关键服务层 - 第 4 代计算平台**
+
 |性能级别|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |最大数据大小 (GB)|1024|1024|1024|1024|1024|1024|
 
 **业务关键服务层 - 第 5 代计算平台**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |最大数据大小 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -471,8 +482,8 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB)
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
 
 指定性能级别。 以下示例将高级数据库的服务目标更改为 `P6`：
- 
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
@@ -499,7 +510,7 @@ WITH ALLOW_CONNECTIONS { ALL | NO }
 
 未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`,    `GP_Gen5_8`,    `GP_Gen5_16`,   `GP_Gen5_24`,   `GP_Gen5_32`,   `GP_Gen5_48`,   `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`,    `BC_Gen5_8`,    `BC_Gen5_16`,   `BC_Gen5_24`,   `BC_Gen5_32`,   `BC_Gen5_48`,   `BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
 
 未指定 SERVICE_OBJECTIVE 时，会在与主数据库相同的服务级别上创建辅助数据库。 指定了 SERVICE_OBJECTIVE 时，会在指定级别上创建辅助数据库。 此选项支持使用成本较低的服务级别创建异地复制辅助数据库。 指定的 SERVICE_OBJECTIVE 必须处于与源相同的版本中。 例如，如果版本是高级版本，则无法指定 S0。  
   
@@ -796,9 +807,10 @@ ALTER DATABASE database_name
           | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
           | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }  
-```  
-  
-## <a name="arguments"></a>参数  
+```
+
+## <a name="arguments"></a>参数
+
 *database_name*  
 指定要修改的数据库的名称。  
 
@@ -819,7 +831,8 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 指定性能级别。 有关 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 的服务目标的详细信息，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 需要以下权限：  
   
 - 服务器级别主体登录名（由预配进程创建），或者  
@@ -827,14 +840,16 @@ SERVICE_OBJECTIVE
   
 数据库的所有者不能更改数据库，除非该所有者是 `dbmanager` 角色的成员。  
   
-## <a name="general-remarks"></a>一般备注  
+## <a name="general-remarks"></a>一般备注
+
 当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER。  
   
 SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
-## <a name="limitations-and-restrictions"></a>限制和局限  
+## <a name="limitations-and-restrictions"></a>限制和局限
+
 要运行 ALTER DATABASE，数据库必须处于联机且非暂停状态。  
   
 必须在自动提交模式（默认事务管理模式）下运行 ALTER DATABASE 语句。 此操作在连接设置中进行设置。  
@@ -843,7 +858,8 @@ ALTER DATABASE 不能是用户定义的事务的一部分。
 
 不可更改数据库排序规则。  
   
-## <a name="examples"></a>示例  
+## <a name="examples"></a>示例
+
 在运行这些示例之前，请确保所更改的数据库不是当前数据库。 当前数据库必须不同于你正在更改的数据库，因此连接到 master 数据库之后必须运行 ALTER。  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. 更改数据库的名称  
@@ -871,7 +887,8 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [CREATE DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [参考文章的 SQL 数据仓库列表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
@@ -914,7 +931,8 @@ ALTER DATABASE database_name
     ENCRYPTION { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
 *database_name*  
 要修改的数据库的名称。 要在设备上显示数据库列表，请使用 [sys.databases (Transact SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。  
   
@@ -952,32 +970,39 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUT
 
 有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 需要具有针对数据库的 ALTER 权限。  
   
 ## <a name="error-messages"></a>错误消息
+
 如果“自动统计信息”功能被禁用，而你尝试更改统计信息设置，则 PDW 会给出错误“PDW 中不支持此选项”。 系统管理员可通过启用功能开关 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 来启用“自动统计信息”功能。
 
-## <a name="general-remarks"></a>一般备注  
+## <a name="general-remarks"></a>一般备注
+
 REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大于、等于或小于数据库的当前值。  
   
-## <a name="limitations-and-restrictions"></a>限制和局限  
+## <a name="limitations-and-restrictions"></a>限制和局限
+
 增长和收缩操作是近似的。 所得到的实际大小可能因大小参数而异。  
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 不会将 ALTER DATABASE 语句作为原子操作执行。 如果在执行期间中止该语句，将保持已发生的更改。  
 
 统计信息设置只有在管理员已启用“自动统计信息”功能时才可工作。管理员可使用功能开关 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 启用或禁用“自动统计信息”功能。 
   
-## <a name="locking-behavior"></a>锁定行为  
+## <a name="locking-behavior"></a>锁定行为
+
 在 DATABASE 对象上采用共享锁。 无法更改另个用户正在读取或写入的数据库。 这包括已在数据库上发出 [USE](../language-elements/use-transact-sql.md) 语句的会话。  
   
-## <a name="performance"></a>“性能”  
+## <a name="performance"></a>“性能”
+
 收缩数据库可能需要大量时间和系统资源，具体取决于数据库中的实际数据大小和磁盘上的碎片量。 例如，收缩数据库可能需要几个小时或更长时间。  
   
-## <a name="determining-encryption-progress"></a>确定加密进度  
+## <a name="determining-encryption-progress"></a>确定加密进度
+
 可使用以下查询来确定数据库透明数据加密进度的百分比：  
   
-```sql  
+```sql
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -1023,7 +1048,8 @@ WHERE type = 'CONTROL';
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. 更改 AUTOGROW 设置  
+### <a name="a-altering-the-autogrow-setting"></a>A. 更改 AUTOGROW 设置
+
 将数据库 `CustomerSales` 的 AUTOGROW 设置为 ON。  
   
 ```sql  
@@ -1031,7 +1057,8 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 更改复制表的最大存储  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. 更改复制表的最大存储
+
 下面的示例将数据库 `CustomerSales` 的复制表存储限制设置为 1 GB。 这是每个计算节点的存储限制。  
   
 ```sql  
@@ -1039,7 +1066,8 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 更改分布式表的最大存储  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 更改分布式表的最大存储
+
  下面的示例将数据库 `CustomerSales` 的分布式表存储限制设置为 1000 GB (1 TB)。 这是设备上所有计算节点的组合存储限制，而不是每个计算节点的存储限制。  
   
 ```sql  
@@ -1047,7 +1075,8 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 更改事务日志的最大存储  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 更改事务日志的最大存储
+
  下面的示例更新数据库 `CustomerSales`使设备的最大 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小为 10 GB。  
   
 ```sql  
@@ -1067,6 +1096,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. 为数据库实现自动创建和自动更新统计信息
+
 使用以下语句可为数据库 CustomerSales 自动且异步地创建和更新统计信息。  这将根据需要创建和更新单列统计信息，从而创建高质量的查询计划。
 
 ```sql
@@ -1074,11 +1104,12 @@ ALTER DATABASE CustomerSales
     SET AUTO_CREATE_STATISTICS ON;
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS ON; 
-ALTER DATABASE CustomerSales
+ALTER DATABASE 
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [CREATE DATABASE（并行数据仓库）](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
 

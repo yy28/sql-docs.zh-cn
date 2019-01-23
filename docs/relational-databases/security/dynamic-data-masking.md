@@ -11,19 +11,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543951"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317777"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ![动态数据屏蔽](../../relational-databases/security/media/dynamic-data-masking.png)
 
-动态数据屏蔽 (DDM) 通过对非特权用户屏蔽敏感数据来限制敏感数据的公开。 它可以用于显著简化应用程序中安全性的设计和编码。  
+动态数据掩码 (DDM) 通过对非特权用户屏蔽敏感数据来限制敏感数据的公开。 它可以用于显著简化应用程序中安全性的设计和编码。  
 
 动态数据屏蔽允许用户在尽量减少对应用程序层的影响的情况下，指定需要披露的敏感数据，从而防止对敏感数据的非授权访问。 DDM 可以在数据库上进行配置，以隐藏对指定数据库字段进行查询时获得的结果集中的敏感数据，同时不会更改数据库中的数据。 可以轻松地对现有应用程序使用动态数据屏蔽，因为屏蔽规则是应用于查询结果。 许多应用程序可以屏蔽敏感数据，而无需修改现有查询。
 
@@ -94,7 +94,7 @@ WHERE is_masked = 1;
  添加动态数据屏蔽是作为架构更改对基础表执行的，因此无法对具有依赖项的列执行。 若要解决此限制，可先删除依赖项，然后添加动态数据屏蔽，再重新创建依赖项。 例如，如果依赖项是由于索引依赖于该列，则可以删除索引，然后添加掩码，再重新创建依赖索引。
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全说明：可使用推断或暴力技术绕过屏蔽
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全说明：可使用推断或强力破解技术绕过屏蔽
 
 动态数据屏蔽旨在通过在应用程序使用的一组预定义查询中限制数据泄露，来简化应用程序开发。 虽然动态数据屏蔽也可以用于在直接访问生产数据库时防止敏感数据的意外泄露，不过请务必注意，具有即席查询权限的非特权用户可以应用技术来获取对实际数据的访问权限。 如果需要授予这类即席访问权限，则应使用审核监视所有数据库活动并缓解这种情况。
  

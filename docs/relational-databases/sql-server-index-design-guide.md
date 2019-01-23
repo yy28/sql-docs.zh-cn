@@ -1,7 +1,7 @@
 ---
 title: SQL Server 索引体系结构和设计指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712698"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420182"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes (Transact-SQL)](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns (Transact-SQL)](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>内存中非聚集索引体系结构
 
-内存中非聚集索引最初由 Microsoft Research 在 2011 年提出设想并说明，并使用称为 Bw 树的数据结构实现。 Bw 树是 B 树的无锁和无闩锁变体。 有关详细信息，请参阅 [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)（Bw 树：用于新硬件平台的 B 树）。 
+内存中非聚集索引最初由 Microsoft Research 在 2011 年提出设想并说明，并使用称为 Bw 树的数据结构实现。 Bw 树是 B 树的无锁和无闩锁变体。 有关详细信息，请参阅[Bw 树：新硬件平台的 B 树](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)。 
 
 Bw 树处于一个非常高的级别，可以理解为按页 ID (PidMap) 组织的页映射，用于分配和重复使用页 ID (PidAlloc) 的设施，和在页映射中链接并相互链接的一组页。 这三个高级别子组件组成了 Bw 树的基本内部结构。
 
@@ -856,7 +856,7 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "拆分页")
 
-**步骤 1：** 分配两个新页（P1 和 P2），将旧 P1 页中的行拆分到这些新页上，包括新插入的行。 使用页映射表中的新槽存储 P2 页的物理地址。 此时，任何并发操作都还无法访问 P1 和 P2 页。 此外，设置了从 P1 指向 P2 的逻辑指针。 然后，在一个原子步骤中更新页映射表，将指针从旧 P1 更改到新 P1。 
+**步骤 1：** 分配两个新页（P1 和 P2），将旧 P1 页中的行拆分到这些新页上（包括新插入的行）。 使用页映射表中的新槽存储 P2 页的物理地址。 此时，任何并发操作都还无法访问 P1 和 P2 页。 此外，设置了从 P1 指向 P2 的逻辑指针。 然后，在一个原子步骤中更新页映射表，将指针从旧 P1 更改到新 P1。 
 
 **步骤 2：** 非叶页指向 P1，但是没有指针从非叶页直接指向 P2。 只能通过 P1 到达 P2。 要创建从非叶页指向 P2 的指针，需要分配新的非叶页（内部索引页），复制旧的非叶页中的所有行，并添加一个指向 P2 的新行。 完成此操作后，在一个原子步骤中更新页映射表，将指针从旧的非叶页更改为新的非叶页。
 

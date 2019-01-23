@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673573"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327863"
 ---
 # <a name="always-encrypted-wizard"></a>始终加密向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 使用 **始终加密向导** 帮助保护存储在 SQL Server 数据库中的敏感数据。 始终加密允许客户端对客户端应用程序内的敏感数据进行加密，并且永远不向 SQL Server 显示加密密钥。 因此，始终加密分隔了拥有数据（且可以查看它）的人员与管理数据（但没有访问权限）的人员。  有关此功能的完整说明，请参阅 [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
  
- - 有关显示如何使用向导配置始终加密并在客户端应用程序中使用它的端对端演练，请参阅 [SQL 数据库教程：使用始终加密保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
+ - 有关显示如何使用向导配置 Always Encrypted 并在客户端应用程序中使用它的端到端演练，请参阅 [SQL 数据库教程：使用 Always Encrypted 保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
  
  - 有关包括使用该向导的视频，请参阅 [使用始终加密保持敏感数据的安全](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，还可参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全团队博客 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)（SSMS 加密向导 - 用几个简单的步骤启用 Always Encrypted）。  
  
- - **权限：** 若要查询加密列并使用此向导选择密钥，则必须具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。 若要创建新密钥，还必须具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 权限。  
+ - **权限：** 若要查询加密列并使用此向导选择密钥，必须具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。 若要创建新密钥，还必须具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 权限。  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>打开始终加密向导  
  
@@ -57,7 +57,7 @@ ms.locfileid: "51673573"
  
    - **将主密钥存储在 AKV 中** 有关详细信息，请参阅 [Azure 密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  
- - 若要在 Azure 密匙保管库中生成列主密匙，用户必须具有密匙保管库的 **WrapKey**、 **UnwrapKey**、 **Verify**和 **Sign** 权限。 用户可能还需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**和 **Restore** 权限。 有关详细信息，请参阅 [什么是 Azure 密匙保管库？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 和   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
+ - 若要在 Azure 密匙保管库中生成列主密匙，用户必须具有密匙保管库的 **WrapKey**、 **UnwrapKey**、 **Verify**和 **Sign** 权限。 用户可能还需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**和 **Restore** 权限。 有关详细信息，请参阅[什么是 Azure 密匙保管库？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
  
  - 该向导仅支持两个选项。 必须使用 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 配置硬件安全模块和客户商店。  
  
@@ -69,7 +69,7 @@ ms.locfileid: "51673573"
 
  - **列主密匙** 保护用于加密列加密密匙的密匙。 列主密匙必须存储在受信任的密匙存储中。 有关列主密匙（包括它们的位置）的信息存储在系统目录视图中的数据库中。  
 
- - **列加密密钥** 用于加密存储在数据库列中的敏感数据。 可以使用单个列加密密匙加密列中的所有值。 列加密密钥的加密值存储在系统目录视图中的数据库中。 应在一个安全的/受信任的位置存储列加密密钥以用于备份。  
+ - **列加密密钥** 用于加密存储在数据库列中的敏感数据。 可以使用单个列加密密匙加密列中的所有值。 列加密密匙的加密值存储在系统目录视图中的数据库中。 应在一个安全的/受信任的位置存储列加密密钥以用于备份。  
 
  ## <a name="see-also"></a>另请参阅  
  - [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

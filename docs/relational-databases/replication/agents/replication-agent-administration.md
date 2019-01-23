@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125680"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419822"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "54125680"
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../../../ relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅“使用[复制监视器](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)查看信息和执行任务”。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   

@@ -1,7 +1,7 @@
 ---
 title: 在可用性组中配置 SQL Server 分发数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126447"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372690"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>在 Always On 可用性组中设置复制分发数据库
 
@@ -34,7 +34,9 @@ ms.locfileid: "54126447"
 SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 通过以下机制，引入对 AG 中复制分发数据库的支持：
 
 - 分发数据库 AG 需要具有侦听器。 当发布服务器添加分发服务器时，它将侦听器名称用作分发服务器名称。
-- 将侦听器名称作为分发服务器名称创建复制作业。
+- 将侦听器名称作为分发服务器名称创建复制作业。 分发服务器上创建的复制快照、日志读取器和分发代理（推送订阅）作业将在分发数据库 AG 的所有次要副本上创建。
+ >[!NOTE]
+ >拉取订阅的分发代理作业将在订阅服务器（而非分发服务器）上创建。 
 - 新的作业监视分发数据库的状态（在 AG 中为主要或次要）并基于分发数据库的状态禁用或启用复制作业。
 
 根据以下所述的步骤配置好 AG 中的分发数据库后，在分发数据库 AG 故障转移前后，复制配置和运行时作业都可以正确运行。

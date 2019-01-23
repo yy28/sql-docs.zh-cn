@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5930a5fb03fdab282e575049cf026dd23f17c6f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06c73cfa612b5348659fec9c8a2022b11ddc5936
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830805"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405577"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ GO
 > [!NOTE]  
 >  如果需要返回事件数据，我们建议使用 XQuery **value()** 方法而不是 **query()** 方法。 **query()** 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 **value()** 方法无法在输出中呈现 CRLF 实例。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击 **ddlDatabseTriggerLog** 并选择“编写数据库触发器脚本为”。 默认情况下，DDL 触发器 **ddlDatabseTriggerLog** 处于禁用状态。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击“ddlDatabaseTriggerLog”并选择“将数据库触发器脚本编写为”。 默认情况下，DDL 触发器 ddlDatabaseTriggerLog 处于禁用状态。  
   
 ## <a name="see-also"></a>另请参阅  
  [DDL 事件](../../relational-databases/triggers/ddl-events.md)   

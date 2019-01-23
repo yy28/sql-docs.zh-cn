@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558634"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405857"
 ---
 # <a name="master-database"></a>master 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,34 +50,34 @@ ms.locfileid: "51558634"
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|否|  
-|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
-|ANSI_NULLS|OFF|用户帐户控制|  
-|ANSI_PADDING|OFF|用户帐户控制|  
-|ANSI_WARNINGS|OFF|用户帐户控制|  
-|ARITHABORT|OFF|用户帐户控制|  
+|ANSI_NULL_DEFAULT|OFF|是|  
+|ANSI_NULLS|OFF|是|  
+|ANSI_PADDING|OFF|是|  
+|ANSI_WARNINGS|OFF|是|  
+|ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_CREATE_STATISTICS|ON|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
-|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
-|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
+|CONCAT_NULL_YIELDS_NULL|OFF|是|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
+|CURSOR_DEFAULT|GLOBAL|是|  
 |数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|否|  
 |ENCRYPTION|OFF|否|  
 |MIXED_PAGE_ALLOCATION|ON|否|  
-|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
-|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
-|PARAMETERIZATION|SIMPLE|用户帐户控制|  
-|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|NUMERIC_ROUNDABORT|OFF|是|  
+|PAGE_VERIFY|CHECKSUM|是|  
+|PARAMETERIZATION|SIMPLE|是|  
+|QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|用户帐户控制|  
-|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|RECOVERY|SIMPLE|是|  
+|RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|DISABLE_BROKER|否|  
-|TRUSTWORTHY|OFF|用户帐户控制|  
+|TRUSTWORTHY|OFF|是|  
   
 有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
   

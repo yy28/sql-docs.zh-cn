@@ -1,6 +1,6 @@
 ---
 title: SQL Server 隐私补充 | Microsoft Docs
-ms.date: 4/25/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -10,14 +10,15 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409719"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420022"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文总结了 SQL Server 中使用的不同数据对象的行为，并说明了如何使用这些对象来传递个人信息或机密方式信息。 本文用作整个 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=521839)的附录。 本文中的数据分类仅适用于 SQL Server 本地产品版本。 它不适用于：
@@ -43,12 +44,13 @@ ms.locfileid: "52409719"
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
-|应用场景  |访问限制  |保留期要求 |
+|应用场景 |访问限制 |保留期要求 |
 |---------|---------|---------|
-|这些凭据通过使用反馈始终保留在用户计算机上。     |-         |-         |
-|故障转储可以包含访问控制数据。     |-         |故障转储：最长 30 天。         |
-|这些凭据通过用户反馈始终保留在用户计算机上（除非客户手动插入）    |仅限 Microsoft 内部使用，不允许第三方访问。         |用户反馈：最长 1 年         |
- |
+|这些凭据通过使用反馈始终保留在用户计算机上。 |- |- |
+|故障转储可以包含访问控制数据。 |- |故障转储：最长 30 天。 |
+|这些凭据通过用户反馈始终保留在用户计算机上（除非客户手动插入） |仅限 Microsoft 内部使用，不允许第三方访问。 |用户反馈：最长 1 年|
+|&nbsp;|&nbsp;|&nbsp;|
+
 ## <a name="customer-content"></a>客户内容
 
 根据定义，客户内容是指直接或间接存储在用户表中的数据。 该数据包括可能存储在用户表中的统计信息或查询文本中的用户文本。
@@ -60,6 +62,7 @@ ms.locfileid: "52409719"
 - 包含文本值的查询文本。
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
+
 |应用场景  |访问限制  |保留期要求 |
 |---------|---------|---------|
 |此数据通过用户反馈保留在用户计算机上。 |- |- |
@@ -130,7 +133,7 @@ ms.locfileid: "52409719"
 - 事件名称和错误代码
 - 硬件设置和 OEM 制造商等标识
 
-Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称值（例如：Sharepoint 或第三方打包程序，并且在使用情况数据启用时将此信息包含在发送给 Microsoft 的系统元数据中）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
+Microsoft does 会检查由使用 SQL Server 的其他程序设置的应用程序名称值（示例：启用使用情况数据时，Sharepoint 或第三方打包程序在发送给 Microsoft 的系统元数据中包括此信息）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
 
 ### <a name="permitted-usage-scenarios"></a>允许的使用方案
 
@@ -138,7 +141,7 @@ Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称�
 |---------|---------|---------|
 |Microsoft 可能使用它来优化功能，并/或修复当前功能中的 bug。|仅限 Microsoft 内部使用，不允许第三方访问。 |最短 90 天 - 最长 3 年 |
 |可用于向客户提供建议。  例如，“根据产品的使用情况，建议使用功能 X，因为它性能更优良。” |例如，Microsoft 可通过仪表板向原始客户公开该数据。 |客户数据安全日志：最短 3 年 - 最长 6 年 |
-Microsoft 可使用该数据对未来产品进行规划。 |Microsoft 可将此信息与其他硬件和软件供应商共享，以改善其产品在 Microsoft 软件中的运行性能。 |最短 90 天 - 最长 3 年|
+|Microsoft 可使用该数据对未来产品进行规划。 |Microsoft 可将此信息与其他硬件和软件供应商共享，以改善其产品在 Microsoft 软件中的运行性能。 |最短 90 天 - 最长 3 年|
 |根据所发送的使用情况反馈，Microsoft 可使用该数据来提供基于云的服务。 例如，显示组织中所有 SQL Server 安装的功能使用情况的客户仪表板。 |Microsoft 可通过仪表板向原始客户公开该数据。 |最短 90 天 - 最长 3 年 |
 |客户可自愿向 Microsoft 发送包含客户内容的用户反馈。 |仅限 Microsoft 内部使用，不允许第三方访问。 Microsoft 可向原始客户公开数据。 |用户反馈：最长 1 年 |
 |可使用数据库名称和应用程序名称将数据和应用程序归到已知的分类中，例如运行 Microsoft 提供的软件类别和运行其他公司提供的软件类别。|仅限 Microsoft 内部使用，不允许第三方访问。|最短 90 天 - 最长 3 年 |

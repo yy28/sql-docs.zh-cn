@@ -38,20 +38,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532559"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327879"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
-创建新数据库。 
+创建新数据库。
 
 单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
 
-有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="click-a-product"></a>单击一个产品！
 
@@ -72,12 +72,11 @@ ms.locfileid: "52532559"
 
 在 SQL Server 中，此语句创建新数据库和使用的文件及其文件组。 它还可用于创建数据库快照，或附加数据库文件以从其他数据库的分离文件创建数据库。 
 
-
 ## <a name="syntax"></a>语法  
 
 创建数据库。  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -164,7 +163,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *database_name*  
  新数据库的名称。 数据库名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
@@ -455,7 +455,8 @@ CREATE DATABASE database_snapshot_name
   
  有关详细信息，请参阅“备注”部分的“数据库快照”。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  创建、修改或删除用户数据库后，应备份 [master 数据库](../../relational-databases/databases/master-database.md)。  
   
  CREATE DATABASE 语句必须以自动提交模式（默认事务管理模式）运行，不允许在显式或隐式事务中使用。  
@@ -479,14 +480,16 @@ CREATE DATABASE database_snapshot_name
 - 数据库快照创建
 - 内存优化数据文件组
    
-## <a name="database-files-and-filegroups"></a>数据库文件和文件组  
+## <a name="database-files-and-filegroups"></a>数据库文件和文件组
+
  每个数据库至少有两个文件（一个主文件和一个事务日志文件）和一个文件组。 可以为每个数据库指定最多 32,767 个文件和 32,767 个文件组。  
   
  在创建数据库时，请根据数据库中预期的最大数据量，创建尽可能大的数据文件  
   
  建议使用存储区域网络 (SAN)、基于 iSCSI 的网络或本地附加的磁盘来存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件，因为该配置使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能和可靠性得到了优化。  
   
-## <a name="database-snapshots"></a>数据库快照  
+## <a name="database-snapshots"></a>数据库快照
+
  可以使用 CREATE DATABASE 语句创建*源数据库*的只读静态视图（*数据库快照*）。 当创建快照时，源数据库已存在，所以数据库快照在事务上与源数据库一致。 源数据库可以具有多个快照。  
   
 > [!NOTE]  
@@ -498,20 +501,24 @@ CREATE DATABASE database_snapshot_name
   
  有关详细信息，请参阅[数据库快照 (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
-## <a name="database-options"></a>数据库选项  
+## <a name="database-options"></a>数据库选项
+
  创建数据库时，总会自动设置几个数据库选项。 有关这些选项的列表，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
-## <a name="the-model-database-and-creating-new-databases"></a>model 数据库和创建新数据库  
+## <a name="the-model-database-and-creating-new-databases"></a>model 数据库和创建新数据库
+
  [model 数据库](../../relational-databases/databases/model-database.md)中的所有用户定义对象都会复制到所有新创建的数据库中。 可以向 model 数据库中添加任何对象（例如表、视图、存储过程、数据类型等），以将这些对象包括到所有新建数据库中。  
   
  当指定 CREATE DATABASE database_name 语句而不带其他大小参数时，主数据文件将与 model 数据库中的主文件具有相同的大小。  
   
  除非指定了 FOR ATTACH，否则每个新数据库都从 model 数据库继承数据库选项设置。 例如，在 model 数据库和任何新建数据库中，数据库选项 auto shrink 都设置为 **true**。 如果更改了 model 数据库中的选项，则这些新选项设置也将用于您所创建的所有新数据库中。 在 model 数据库中的更改操作不会影响现有数据库。 如果在 CREATE DATABASE 语句中指定了 FOR ATTACH，则新数据库将继承原始数据库的数据库选项设置。  
   
-## <a name="viewing-database-information"></a>查看数据库信息  
+## <a name="viewing-database-information"></a>查看数据库信息
+
  可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  要求具有 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
   
  为了控制对运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机上的磁盘使用，通常只有少数登录帐户才有创建数据库的权限。  
@@ -525,7 +532,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### <a name="permissions-on-data-and-log-files"></a>对数据文件和日志文件的权限  
+### <a name="permissions-on-data-and-log-files"></a>对数据文件和日志文件的权限
+
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，会对每个数据库的数据文件和日志文件设置特定的权限。 每当对数据库执行下列操作时，便会设置下列权限：  
   
 |||  
@@ -541,7 +549,8 @@ GO
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-creating-a-database-without-specifying-files"></a>A. 创建未指定文件的数据库  
+### <a name="a-creating-a-database-without-specifying-files"></a>A. 创建未指定文件的数据库
+
  以下示例创建名为 `mytest` 的数据库，并创建相应的主文件和事务日志文件。 因为语句没有 \<filespec> 项，所以主数据库文件的大小为 model 数据库主文件的大小。 事务日志将设置为下列值中的较大者：512 KB 或主数据文件大小的 25%。 因为没有指定 MAXSIZE，文件可以增大到填满所有可用的磁盘空间为止。 此示例演示如何在创建 `mytest` 数据库之前删除名为 `mytest` 的数据库（如果它存在）。  
   
 ```sql  
@@ -559,7 +568,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库  
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 创建指定数据和事务日志文件的数据库
+
  以下示例会创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
 ```sql  
@@ -581,7 +591,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 通过指定多个数据和事务日志文件创建数据库  
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 通过指定多个数据和事务日志文件创建数据库
+
  以下示例创建数据库 `Archive`，该数据库具有三个 `100-MB` 数据文件和两个 `100-MB` 事务日志文件。 主文件是列表中的第一个文件，并使用 `PRIMARY` 关键字显式指定。 事务日志文件在 `LOG ON` 关键字后指定。 请注意用于 `FILENAME` 选项中各文件的扩展名：`.mdf` 用于主数据文件，`.ndf` 用于辅助数据文件，`.ldf` 用于事务日志文件。 此示例将数据库放置于 `D:` 驱动器上，而非 `master` 数据库中。  
   
 ```sql  
@@ -619,7 +630,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="d-creating-a-database-that-has-filegroups"></a>D. 创建具有文件组的数据库  
+### <a name="d-creating-a-database-that-has-filegroups"></a>D. 创建具有文件组的数据库
+
  以下示例创建数据库 `Sales`，该数据库具有以下文件组：  
   
 -   包含文件 `Spri1_dat` 和 `Spri2_dat` 的主文件组。 将这些文件的 FILEGROWTH 增量指定为 `15%`。  
@@ -676,7 +688,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="e-attaching-a-database"></a>E. 附加数据库  
+### <a name="e-attaching-a-database"></a>E. 附加数据库
+
  以下示例分离在示例 D 中创建的数据库 `Archive`，然后使用 `FOR ATTACH` 子句附加该数据库。 `Archive` 定义为具有多个数据和日志文件。 但是，由于文件的位置自创建后没有发生更改，所以只需在 `FOR ATTACH` 子句中指定主文件。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，要附加的数据库中包含的所有全文文件也将随数据库一起附加。  
   
 ```sql  
@@ -690,7 +703,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### <a name="f-creating-a-database-snapshot"></a>F. 创建数据库快照  
+### <a name="f-creating-a-database-snapshot"></a>F. 创建数据库快照
+
  以下示例会创建数据库快照 `sales_snapshot0600`。 由于数据库快照是只读的，所以不能指定日志文件。 为了符合语法要求，指定了源数据库中的每个文件，但没有指定文件组。  
   
  该示例的源数据库是在示例 D 中创建的 `Sales` 数据库。  
@@ -709,7 +723,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 创建数据库并指定排序规则名称和选项  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 创建数据库并指定排序规则名称和选项
+
  以下示例会创建数据库 `MyOptionsTest`。 指定了排序规则名称，并将 `TRUSTYWORTHY` 和 `DB_CHAINING` 选项设置为 `ON`。  
   
 ```sql  
@@ -729,7 +744,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移动的全文目录  
+### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移动的全文目录
+
  以下示例同时附加全文目录 `AdvWksFtCat` 以及 `AdventureWorks2012` 数据和日志文件。 在该示例中，将全文目录从其默认位置移动到新位置 `c:\myFTCatalogs`。 数据和日志文件保留在其默认位置。  
   
 ```sql  
@@ -748,7 +764,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 创建指定一个行文件组和两个 FILESTREAM 文件组的数据库  
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 创建指定一个行文件组和两个 FILESTREAM 文件组的数据库
+
  下面的示例将创建数据库 `FileStreamDB`。 该数据库在创建之时包含一个行文件组和两个 FILESTREAM 文件组。 每个文件组都包含一个文件：  
   
 -   `FileStreamDB_data` 包含行数据。 它包含一个文件，即带有默认路径的 `FileStreamDB_data.mdf`。  
@@ -806,7 +823,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 创建一个数据库，该数据库具有含多个文件的 FILESTREAM 文件组  
+### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 创建一个数据库，该数据库具有含多个文件的 FILESTREAM 文件组
+
  下面的示例将创建数据库 `BlobStore1`。 该数据库在创建之时包含一个行文件组和一个 FILESTREAM 文件组 `FS`。 该 FILESTREAM 文件组包含两个文件：`FS1` 和 `FS2`。 然后，通过将第三个文件 `FS3` 添加到 FILESTREAM 文件组来改变该数据库。  
   
 ```sql  
@@ -855,7 +873,8 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -887,6 +906,7 @@ GO
 ## <a name="syntax"></a>语法 
 
 ### <a name="create-a-database"></a>创建数据库
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -966,7 +986,7 @@ MAXSIZE
 
 逻辑服务器上单一数据库和池化数据库适用的基于 DTU 的模型。
 
-|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|
@@ -990,28 +1010,32 @@ MAXSIZE
 |1024 GB|N/A|N/A|√|√|√ (D)|
 |从 1024 GB 到最大 4096 GB，增量为 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
-\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，以下区域当前提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、美国弗吉尼亚州政府、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关基于 DTU 的模型的资源限制的其他详细信息，请参阅[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。  
+\* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关基于 DTU 的模型的资源限制的其他详细信息，请参阅[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。  
 
 基于 DTU 的模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
  
 逻辑服务器上单一数据库和池化数据库适用的基于 vCore 的模型。
 
 **常规用途服务层 - 第 4 代计算平台**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|
 
 **常规用途服务层 - 第 5 代计算平台**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **业务关键服务层 - 第 4 代计算平台**
+
 |性能级别|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |最大数据大小 (GB)|1024|1024|1024|1024|1024|1024|
 
 **业务关键服务层 - 第 5 代计算平台**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |最大数据大小 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1021,16 +1045,19 @@ MAXSIZE
 适用于托管实例中数据库的基于 vCore 的模型
 
 **常规用途服务层 - 第 4 代计算平台**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |最大数据大小 (TB)|8|8|8|
 
 **常规用途服务层 - 第 5 代计算平台**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |最大数据大小 (TB)|8|8|8|8|8|
 
 以下规则适用于 MAXSIZE 和 EDITION 参数：  
+
 - 如果指定了 EDITION 但未指定 MAXSIZE，则使用版本的默认值。 例如，如果 EDITION 设置为 Standard 并且未指定 MAXSIZE，则 MAXSIZE 将自动设置为 250 MB。  
 - 如果 MAXSIZE 和 EDITION 均未指定，则 EDITION 设置为 Standard (S0)，MAXSIZE 设置为 250 GB。  
 
@@ -1049,13 +1076,13 @@ SERVICE_OBJECTIVE
   
 ELASTIC_POOL (name = \<elastic_pool_name)
  
-适用于：仅限单一数据库和池化数据库。 不适用于超大规模服务层中的数据库。
+**适用范围：** 仅限单一数据库和池化数据库。 不适用于超大规模服务层中的数据库。
 
 要在弹性数据库池中创建新数据库，请将数据库的 SERVICE_OBJECTIVE 设置为 ELASTIC_POOL，并提供池的名称。 有关详细信息，请参阅[弹性池有助于管理和缩放多个 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)。  
   
 AS COPY OF [source_server_name.]source_database_name
 
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
 
 将数据库复制到同一台或其他 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上。  
   
@@ -1082,11 +1109,11 @@ CATALOG_COLLATION 参数仅在数据库创建期间可用。
   
 ## <a name="database-copies"></a>数据库复制  
 
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
 
 使用 `CREATE DATABASE` 语句复制数据库是一个异步操作。 因此，在整个复制过程中，不需要与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器建立连接。 `CREATE DATABASE` 语句会在 sys.databases 中的条目创建之后，但是在数据库复制操作完成之前将控制权返还给用户。 换言之，当数据库复制仍在进行时，`CREATE DATABASE` 语句会成功返回。  
   
-- 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 服务器上监视复制进程：在 [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) 中查询 `percentage_complete` 或 `replication_state_desc` 列，或在 **sys.databases** 视图中查询 `state` 列。 可以使用 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，它还会返回数据库操作（包括数据库复制）的状态。  
+- 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 服务器上监视复制进程：在 [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) 中查询 `percentage_complete` 或 `replication_state_desc` 列，或在 sys.databases 视图中查询 `state` 列。 可以使用 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，它还会返回数据库操作（包括数据库复制）的状态。  
   
 在复制过程成功完成后，目标数据库与源数据库在事务上是一致的。  
   
@@ -1103,25 +1130,28 @@ CATALOG_COLLATION 参数仅在数据库创建期间可用。
   
  有关详细信息，请参阅[使用 TRANSACT-SQL 创建 Azure SQL 数据库的副本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 要创建数据库，登录名必须为下列各项之一： 
   
 - 服务器级别主体登录名  
   
 - 本地 Azure SQL Server 的 Azure AD 管理员  
 - 登录名为 `dbmanager` 数据库角色的成员    
-**使用 `CREATE DATABASE ... AS COPY OF` 语法的其他要求：** 在本地服务器上执行语句的登录名还必须至少为源服务器上的 `db_owner`。 如果登录名基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，那么在本地服务器上执行语句的登录名必须在源 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上具有匹配的登录名，名称和密码均完全相同。  
+**使用 `CREATE DATABASE ... AS COPY OF` 语法的其他要求：** 在本地服务器上执行语句的登录名还必须至少是源服务器上的 `db_owner`。 如果登录名基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，那么在本地服务器上执行语句的登录名必须在源 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器上具有匹配的登录名，名称和密码均完全相同。  
   
 ## <a name="examples"></a>示例
   
-### <a name="simple-example"></a>简单示例  
+### <a name="simple-example"></a>简单示例
+
  创建数据库的简单示例。  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>版本的简单示例  
+### <a name="simple-example-with-edition"></a>版本的简单示例
+
  创建标准数据库的简单示例。  
   
 ```sql  
@@ -1129,7 +1159,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### <a name="example-with-additional-options"></a>其他选项的示例  
+### <a name="example-with-additional-options"></a>其他选项的示例
+
  使用多个选项的示例。  
   
 ```sql  
@@ -1138,10 +1169,11 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>创建副本  
+### <a name="creating-a-copy"></a>创建副本
+
  创建数据库副本的示例。  
   
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
 
 ```sql  
 CREATE DATABASE escuela 
@@ -1152,16 +1184,17 @@ AS COPY OF school;
 
 在名为 S3M100 的池中创建新数据库：  
 
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
   
 ```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>在其他服务器上创建数据库副本  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>在其他服务器上创建数据库副本
+
 下面的示例针对单个数据库，在 P2 性能级别下创建名为 db_copy 的 db_original 数据库的副本。  无论 db_original 是否位于弹性池中或是否处于单个数据库的性能级别，这都为 true。  
   
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
 
 ```sql  
 CREATE DATABASE db_copy 
@@ -1170,7 +1203,7 @@ CREATE DATABASE db_copy
   
 下面的示例在名为 ep1 的弹性池中创建名为 db_copy 的 db_original 数据库的副本。  无论 db_original 是否位于弹性池中或是否处于单个数据库的性能级别，这都为 true。 如果 db_original 位于具有不同名称的弹性池中，那么仍将在 ep1 中创建 db_copy。  
   
-适用于：仅限单一数据库和池化数据库。
+**适用范围：** 仅限单一数据库和池化数据库。
 
 ```sql  
 CREATE DATABASE db_copy 
@@ -1244,7 +1277,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
    > [!TIP]
    > 解决方法是使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)。 在 `CREATE DATABASE` 之后设置数据库选项并添加文件。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 要创建数据库，登录名必须为下列各项之一： 
   
 - 服务器级别主体登录名  
@@ -1253,7 +1287,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="examples"></a>示例
   
-### <a name="simple-example"></a>简单示例  
+### <a name="simple-example"></a>简单示例
+
  创建数据库的简单示例。  
   
 ```sql  
@@ -1302,7 +1337,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
 *database_name*  
 新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
@@ -1317,35 +1353,38 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *MAXSIZE*  
 默认为 245,760 GB (240 TB)。  
 
-适用于：已针对计算 Gen1 进行优化
+**适用范围：** 已针对计算代系 1 进行优化
 
 允许的最大数据库大小。 数据库大小不能超出 MAXSIZE。 
 
-适用于：已针对计算 Gen2 进行优化
+**适用范围：** 已针对计算代系 2 进行优化
 
 数据库中允许的最大行存储数据大小。 存储在行存储表中的数据、列存储索引的增量存储或非聚集索引（聚集在列存储索引上）都不可超过 MAXSIZE。  压缩到列存储格式的数据没有大小限制，不受 MAXSIZE 约束。
   
 SERVICE_OBJECTIVE  
 指定性能级别。 有关 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的服务目标的详细信息，请参阅[性能层](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
-## <a name="general-remarks"></a>一般备注  
+## <a name="general-remarks"></a>一般备注
+
 使用 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 查看数据库属性。  
   
 使用 [ALTER DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)在以后更改最大大小或服务目标值。   
 
 SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详细信息，请参阅[在 Azure SQL 数据库中通过兼容性级别 130 优化查询性能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 所需的权限：  
   
 -   服务器级别主体登录名（由预配进程创建），或者  
   
 -   `dbmanager` 数据库角色的成员。  
   
-## <a name="error-handling"></a>错误处理  
+## <a name="error-handling"></a>错误处理
 如果数据库的大小达到 MAXSIZE，你将收到错误代码 40544。 如果发生这种情况，你不能插入或更新数据或创建新的对象（如表、存储过程、视图和函数）。 不过，仍可以读取和删除数据、截断表、删除表和索引以及重新生成索引。 然后，您可以将 MAXSIZE 更新为比当前数据库大小更大的值，或者删除一些数据以释放存储空间。 在您可以插入新数据之前，可能有长达十五分钟的延迟。  
   
-## <a name="limitations-and-restrictions"></a>限制和局限  
+## <a name="limitations-and-restrictions"></a>限制和局限
+
 您必须连接到 master 数据库才能创建新的数据库。  
   
 `CREATE DATABASE` 语句必须是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的唯一语句。
@@ -1354,7 +1393,8 @@ SQL 数据仓库设置为 COMPATIBILITY_LEVEL 130，且不得更改。 有关详
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
-### <a name="a-simple-example"></a>A. 简单示例  
+### <a name="a-simple-example"></a>A. 简单示例
+
 创建数据仓库数据库的简单示例。 这将创建最小最大大小为 10240 GB、默认排序规则为 SQL_Latin1_General_CP1_CI_AS 且 最小计算功率为 DW100 的数据库。  
   
 ```  
@@ -1362,7 +1402,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. 创建具有所有选项的数据仓库数据库  
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. 创建具有所有选项的数据仓库数据库
+
 创建使用所有选项的 10 TB 数据仓库的示例。  
   
 ```  
@@ -1370,7 +1411,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
 [ALTER DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1440,7 +1482,8 @@ WITH (
   
  如果 AUTOGROW 为 OFF，那么对于在单个计算节点上增加的日志大小可能会超过 log_size 的任何操作，将向用户返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  需要 master 数据库中的 CREATE ANY DATABASE 权限，或者 sysadmin 固定服务器角色的成员身份。  
   
  以下示例向数据库用户 Fay 提供创建数据库的权限。  
@@ -1452,10 +1495,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## <a name="general-remarks"></a>一般备注  
+## <a name="general-remarks"></a>一般备注
+
  数据库创建时的数据库兼容性级别为 120，这是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的兼容级别。 这可确保数据库将能够使用 PDW 所使用的所有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能。  
   
-## <a name="limitations-and-restrictions"></a>限制和局限  
+## <a name="limitations-and-restrictions"></a>限制和局限
+
  不允许在显式事务中使用 CREATE DATABASE 语句。 有关详细信息，请参阅[语句](../../t-sql/statements/statements.md)。  
   
  有关数据库的最小和最大约束的信息，请参阅 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的“最小值和最大值”。  
@@ -1468,15 +1513,18 @@ GO
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志的大小为（log_size/Compute 节点数量）。  
   
-## <a name="locking"></a>锁定  
+## <a name="locking"></a>锁定
+
  在 DATABASE 对象上采用共享锁。  
   
-## <a name="metadata"></a>元数据  
+## <a name="metadata"></a>元数据
+
  成功执行此操作后，[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 元数据视图中将会显示该数据库的条目。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-basic-database-creation-examples"></a>A. 基本数据库创建示例  
+### <a name="a-basic-database-creation-examples"></a>A. 基本数据库创建示例
+
  以下示例创建数据库 `mytest`，对于复制表，每个 Compute 节点分配 100 GB 存储，对于分布式表，每个设备分配 500 GB 存储，对于事务日志，每个设备分配 100 GB 存储。 在此示例中，AUTOGROW 默认为关。  
   
 ```  
@@ -1498,7 +1546,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 创建部分 GB 级大小数据库  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 创建部分 GB 级大小数据库
+
  以下示例创建数据库 `mytest`，（AUTOGROW 为 关）对于复制表，每个计算节点分配 1.5 GB 存储，对于分布式表，每个设备分配 5.25 GB 存储，对于事务日志，每个设备分配 10 GB 存储。  
   
 ```  
@@ -1509,7 +1558,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [ALTER DATABASE（并行数据仓库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
   

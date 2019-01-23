@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257092"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317797"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ QTA 的起点假设将数据库从以前版本的 [!INCLUDE[ssNoVersion](../../i
 1.  根据用户设置的工作负载持续时间（以天为单位）的建议设置来配置查询存储。 考虑与典型业务周期匹配的工作负载持续时间。
 2.  请求启动所需的工作负载，以便查询存储可以收集工作负载数据的基线（若尚未提供）。
 3.  升级到用户所选的目标数据库兼容性级别。
-4.  请求收集第 2 次传递的工作负载数据，以进行比较和回归检测。
+4.  请求收集第 2 次传递的工作负载数据，用于进行比较和回归检测。
 5.  循环访问根据[查询存储回归的查询](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)视图找到的任何回归，通过收集有关适用优化器模型变体的可能排列的运行时统计信息进行试验，并测量结果。 
 6.  报告测量到的改进，并且可选择允许使用[计划指南](../../relational-databases/performance/plan-guides.md)保留那些更改。
 
@@ -138,7 +138,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
     > [!NOTE]
     > 通过“会话”按钮可回到“会话管理”页面，而活动会话保持不变。
 
-    此步骤有 3 个子步骤：
+    此步骤有以下三个子步骤：
 
     1.  **基线数据收集**：要求用户运行代表性工作负载周期，以便查询可以收集基线。 完成此工作负载后，选中“工作负载运行已完成”并单击“下一步”。
 
@@ -207,7 +207,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
     > 改为使用 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 系统表搜索计划指南，然后使用 [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md) 手动删除。  
   
 ## <a name="permissions"></a>Permissions  
-需要的成员资格为 db_owner 角色成员资格。
+需要的成员资格为 db_owner 角色。
   
 ## <a name="see-also"></a>另请参阅  
  [兼容性级别和 SQL Server 升级](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

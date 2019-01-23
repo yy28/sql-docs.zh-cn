@@ -1,7 +1,7 @@
 ---
 title: 数据库运行状况检测故障转移选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525113"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419962"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "52525113"
 
 例如，在数据库级别运行状况检测选项处于启用状态时，如果 SQL Server 不能写入其中一个数据库的事务日志文件，该数据库的状态会改为指示故障，可用性组会快速故障转移，然后应用程序可能重新连接，并在数据库再次联机后继续努力将中断次数降到最低。
 
-<a name="enabling-database-level-health-detection"></a>启用数据库级别运行状况检测
-----
+### <a name="enabling-database-level-health-detection"></a>启用数据库级别运行状况检测
+
 尽管通常建议使用“数据库运行状况”选项，但此选项“默认处于禁用状态”，目的是与以前版本的默认设置保持后向兼容。
 
 可通过几种简单的方式来启用数据库级别运行状况检测设置：
@@ -52,7 +52,7 @@ ms.locfileid: "52525113"
 
 3. 用于执行 CREATE AVAILABILITY GROUP 的 Transact-SQL 语法。 DB_FAILOVER 参数接受值 ON 或 OFF。
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ ms.locfileid: "52525113"
 
 4. 用于执行 ALTER AVAILABILITY GROUP 的 Transact-SQL 语法。 DB_FAILOVER 参数接受值 ON 或 OFF。
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,40 +89,40 @@ ms.locfileid: "52525113"
 
 系统 DMV sys.availability_groups 显示 db_failover 列，该列指示数据库级别运行状况检测选项为关 (0) 还是开 (1)。
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 dmv 输出示例：
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 当可用性组由于执行数据库级别运行状况检测发生故障转移后，SQL Server 错误日志（或 sp_readerrorlog 中的文本）将显示错误消息 41653。
 
 例如，此错误日志摘录显示由于磁盘问题导致事务日志写入失败，随后名为 AutoHa-Sample 的数据库关闭，进而触发数据库级别运行状况检测，使可用性组执行故障转移。
 
->2016-04-25 12:20:21.08 spid1s      错误: 17053，严重性: 16，状态: 1。
+>2016-04-25 12:20:21.08 spid1s      错误:17053，严重性:16，状态：1.
 >
->2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: 遇到操作系统错误 21 (设备未就绪)。
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter:遇到操作系统错误 21 (设备未就绪)。
 >2016-04-25 12:20:21.08 spid1s      日志刷新过程中出现写入错误。
 >
->2016-04-25 12:20:21.08 spid79      错误: 9001，严重性: 21，状态: 4。
+>2016-04-25 12:20:21.08 spid79      错误:9001，严重性:21，状态:4.
 >
 >2016-04-25 12:20:21.08 spid79      数据库“AutoHa-Sample”的日志不可用。 有关相应错误消息，请查看事件日志。 修复所有错误后重新启动数据库。
 >
->2016-04-25 12:20:21.15 spid79      错误: 41653，严重性: 21，状态: 1。
+>**2016-04-25 12:20:21.15 spid79      错误:41653，严重性:21，状态:1。**
 >
->2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”出错(错误类型: 2“DB_SHUTDOWN”)，导致可用性组“Contoso-ag”故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
+>**2016-04-25 12:20:21.15 spid79      数据库“AutoHa-Sample”遇到错误(错误类型:2 'DB_SHUTDOWN')，导致可用性组“Contoso-ag”发生故障。有关所遇到的错误的信息，请参阅 SQL Server 错误日志。如果此状况继续存在，请与系统管理员联系。
 >
 >2016-04-25 12:20:21.17 spid79      数据库“AutoHa-Sample”的状态信息 - 强化的 Lsn:“(34:664:1)”    提交 LSN:“(34:656:1)”    提交时间:“Apr 25 2016 12:19PM”
 >
 >2016-04-25 12:20:21.19 spid15s     AlwaysOn 可用性组与辅助数据库的连接终止，因为主要数据库“AutoHa-Sample”位于可用性副本“SQLServer-0”上，其副本 ID为: {c4ad5ea4-8a99-41fa-893e-189154c24b49}。 这只是一条信息性消息。 不需要任何用户操作。
 >
->2016-04-25 12:20:21.21 spid75      AlwaysOn: 可用性组“Contoso-ag”的本地副本正在准备转换为解析角色，以便响应来自 Windows Server 故障转移群集(WSFC)群集的请求。 这只是一条信息性消息。 不需要任何用户操作。
+>2016-04-25 12:20:21.21 spid75      AlwaysOn:可用性组“Contoso-ag”的本地副本正在准备转换为解析角色，以便响应来自 Windows Server 故障转移群集(WSFC)群集的请求。 这只是一条信息性消息。 不需要任何用户操作。
 >
 >2016-04-25 12:20:21.21 spid75      可用性组“ag”中本地可用性副本的状态已从“PRIMARY_NORMAL”更改为“RESOLVING_NORMAL”。  由于可用性组脱机，因此状态发生更改。  副本脱机的原因包括：已删除关联的可用性组，用户已将 Windows Server 故障转移群集 (WSFC) 管理控制台中的关联可用性组设置为离线，或可用性组正在故障转移到其他 SQL Server 实例。  有关详细信息，请参阅 SQL Server 错误日志、Windows Server 故障转移群集 (WSFC) 管理控制台或 WSFC 日志。
 
@@ -135,7 +135,8 @@ NAME  |  db_failover
 以下是创建捕获此事件的 XEvent 会话的示例。 如未指定路径，XEvent 输出文件应位于默认的 SQL Server 错误日志路径中。 在可用性组的主要副本上执行此操作：
 
 扩展事件会话脚本示例
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ GO
 
 字段说明：
 
-|列数据    | 描述
-|---------|---------
-|availability_group_id  |可用性组的 ID。
-|availability_group_name    |可用性组的名称。
-|availability_replica_id    |可用性副本的 ID。
-|availability_replica_name  |可用性副本的名称。
-|database_name  |报告错误的数据库的名称。
-|database_replica_id    |可用性副本数据库的 ID。
-|failover_ready_replicas    |同步的自动故障转移次要副本数。
-|fault_type     | 报告的错误 ID。 可能的值：  <br/> 0 - 无 <br/>1 - 未知<br/>2 - 关闭
-|is_critical    | 从 SQL Server 2016 开始，对于 XEvent 此值应始终返回 true。
+|列数据 | 描述|
+|---------|---------|
+|availability_group_id |可用性组的 ID。|
+|availability_group_name |可用性组的名称。|
+|availability_replica_id |可用性副本的 ID。|
+|availability_replica_name |可用性副本的名称。|
+|database_name |报告错误的数据库的名称。|
+|database_replica_id |可用性副本数据库的 ID。|
+|failover_ready_replicas |同步的自动故障转移次要副本数。|
+|fault_type  | 报告的错误 ID。 可能的值：  <br/> 0 - 无 <br/>1 - 未知<br/>2 - 关闭|
+|is_critical | 从 SQL Server 2016 开始，对于 XEvent 此值应始终返回 true。|
 
 
 在此示例输出中，fault_type 显示：由于名为 AutoHa-Sample2 的数据库出错（错误类型为 2- 关闭），SQLSERVER-1 副本上的可用性组 Contoso-ag 发生了严重事件。
 
-|字段  | ReplTest1
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|字段  | ReplTest1|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>相关参考

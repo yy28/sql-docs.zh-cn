@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520693"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327838"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52520693"
 -   **在 PowerShell 中：** 在密钥保管库中创建一个新的非对称密钥（使用与当前的 TDE 非对称密钥不同的名称）。  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52520693"
 * 向 SQL Server 服务主体授予权限以使用此新的保管库。  
 * 修改数据库引擎使用的 SQL Server 凭据以反映新的保管库名称（如果需要）。  
   
-只要密钥备份保留在同一个地理区域或国家云，就可以跨 Azure 区域还原密钥备份，这些国家/地区包括：美国、加拿大、日本、澳大利亚、印度、APAC、欧洲、巴西、中国、美国政府或德国。  
+可以跨 Azure 区域还原密钥备份，前提是它们保留在同一个地理区域或国家/地区云中：美国、加拿大、日本、澳大利亚、印度、亚太地区、欧洲、巴西、中国、美国政府或德国。  
   
   
 ##  <a name="AppendixB"></a> B. 常见问题  

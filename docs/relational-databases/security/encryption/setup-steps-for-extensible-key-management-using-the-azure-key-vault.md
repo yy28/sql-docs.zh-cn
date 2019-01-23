@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522923"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327348"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 版本  |可再发行组件安装链接
 2016 | [适用于 Visual Studio 2015 的 Visual C++ 可再发行组件](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第 I 部分：设置 Azure Active Directory 服务主体  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>第一部分：设置 Azure Active Directory 服务主体  
  为了向 Azure 密钥保管库授予 SQL Server 访问权限，你需要在 Azure Active Directory (AAD) 中具有服务主体帐户。  
   
 1.  转到 [Azure 门户](https://ms.portal.azure.com/)，并登录。  
@@ -58,7 +58,7 @@ SQL Server 版本  |可再发行组件安装链接
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分：创建密钥保管库和密钥  
+## <a name="part-ii-create-a-key-vault-and-key"></a>第二部分：创建密钥保管库和密钥  
  此处创建的密钥保管库和密钥将供 SQL Server 数据库引擎使用，以实现加密密钥保护。  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ SQL Server 版本  |可再发行组件安装链接
      安装并启动最新的 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)（5.2.0 或更高版本）。 使用以下命令登录到你的 Azure 帐户：  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      该语句返回：  
@@ -83,14 +83,14 @@ SQL Server 版本  |可再发行组件安装链接
     ```  
   
     > [!NOTE]  
-    >  如果你有多个订阅并想要指定其中一个用于保管库，请使用 `Get-AzureRmSubscription` 查看订阅，然后使用 `Select-AzureRmSubscription` 选择适当的订阅。 否则，PowerShell 将默认为你选择一个订阅。  
+    >  如果你有多个订阅并想要指定其中一个用于保管库，请使用 `Get-AzSubscription` 查看订阅，然后使用 `Select-AzSubscription` 选择适当的订阅。 否则，PowerShell 将默认为你选择一个订阅。  
   
 2.  **创建新资源组**  
   
      资源组中必须包含通过 Azure 资源管理器创建的所有 Azure 资源。 创建资源组用于包含密钥保管库。 此示例使用 `ContosoDevRG`。 选择你自己的 **唯一** 资源组和密钥保管库名称，因为所有密钥保管库名称是全局唯一的。  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      该语句返回：  
@@ -109,10 +109,10 @@ SQL Server 版本  |可再发行组件安装链接
   
 3.  **创建密钥保管库**  
   
-     `New-AzureRmKeyVault` cmdlet 需要一个资源组名称、一个密钥保管库名称和一个地理位置。 例如，对于名为 `ContosoDevKeyVault`的密钥保管库，请键入：  
+     `New-AzKeyVault` cmdlet 需要一个资源组名称、一个密钥保管库名称和一个地理位置。 例如，对于名为 `ContosoDevKeyVault`的密钥保管库，请键入：  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ SQL Server 版本  |可再发行组件安装链接
     > [!IMPORTANT]  
     >  Azure Active Directory 服务主体必须至少具有密钥保管库的 `get`、 `wrapKey` 和 `unwrapKey` 权限。  
   
-     如下所示，对 **参数使用第 I 部分的** 客户端 ID `ServicePrincipalName` 。 如果 `Set-AzureRmKeyVaultAccessPolicy` 成功运行，则以无提示方式运行，并且无任何输出。  
+     如下所示，对 **参数使用第 I 部分的** 客户端 ID `ServicePrincipalName` 。 如果 `Set-AzKeyVaultAccessPolicy` 成功运行，则以无提示方式运行，并且无任何输出。  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     调用 `Get-AzureRmKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  
+     调用 `Get-AzKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  
   
        
 5.  **在密钥保管库中生成非对称密钥**  
   
-     在 Azure 密钥保管库中生成密钥有两种方法：1) 导入现有的密钥或 2) 创建新的密钥。  
+     有以下两种方法可在 Azure 密钥保管库中生成密钥：1) 导入现有密钥或 2) 创建新密钥。  
                   
       > [!NOTE]
         >  SQL Server 仅支持 2048 位 RSA 密钥。
@@ -238,11 +238,11 @@ SQL Server 版本  |可再发行组件安装链接
     >  虽然密钥保管库支持具有多个版本的相同命名的密钥，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器使用的密钥不应受版本控制或对其进行滚动更新。 如果管理员想要滚动用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的密钥，则应在保管库中创建一个具有不同名称的新密钥并用它来加密 DEK。  
    
   
-## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第 III 部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
+## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第三部分：安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器  
  从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下载 SQL Server 连接器。 （此操作应由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员完成。）  
 
 > [!NOTE]  
->  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344)，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。
+>  已替换版本 1.0.0.440 和更早的版本，且生产环境不再支持这些版本。 要升级至版本 1.0.1.0 或更高版本，请访问 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=45344) ，并参照“升级 SQL Server 连接器”下 [SQL Server 连接器维护与故障排除](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)页面上的指南。
 
 > [!NOTE]  
 > 1.0.5.0 版在指纹算法方面进行了一项重大更改。 升级到 1.0.5.0 版后，可能会遭遇数据库还原失败。 请参阅 KB 文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
@@ -262,7 +262,7 @@ SQL Server 版本  |可再发行组件安装链接
 -   [C.SQL Server 连接器的错误代码说明](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>第 IV 部分：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>第四部分：配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  请参阅 [B. 常见问题解答](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)以查看本节中每个操作所需的最低权限级别的说明。  
   
 1.  **启动 sqlcmd.exe 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio。**  
