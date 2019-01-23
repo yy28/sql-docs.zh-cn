@@ -1,7 +1,7 @@
 ---
 title: 数据库级别的角色 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780825"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420092"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 ***Windows 操作系统中的*** 组 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 数据库级角色的权限作用域为数据库范围。  
@@ -92,8 +93,8 @@ ms.locfileid: "47780825"
 
 |角色名称|描述|  
 |--------------------|-----------------|
-**dbmanager** | 可以创建和删除数据库。 创建数据库的 dbmanager 角色的成员将成为该数据库的所有者，从而让该用户可作为 dbo 用户连接到该数据库。 Dbo 用户具有数据库中的所有数据库权限。 Dbmanager 角色的成员不一定具有访问非他们所有的数据库的权限。
-**loginmanager** | 可以创建和删除虚拟 master 数据库中的登录名。  
+|**dbmanager** | 可以创建和删除数据库。 创建数据库的 dbmanager 角色的成员将成为该数据库的所有者，从而让该用户可作为 dbo 用户连接到该数据库。 Dbo 用户具有数据库中的所有数据库权限。 Dbmanager 角色的成员不一定具有访问非他们所有的数据库的权限。|
+|**loginmanager** | 可以创建和删除虚拟 master 数据库中的登录名。|
 
 > [!NOTE]
 > 服务器级别主体和 Azure Active Directory 管理员（如果已配置）具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 中的所有权限，且无需成为任何角色的成员。 有关详细信息，请参阅 [SQL 数据库身份验证和授权：授予访问权限](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
@@ -114,7 +115,7 @@ ms.locfileid: "47780825"
 
 ## <a name="working-with-r-services"></a>使用 R Services  
 
-**适用于：** SQL Server（从 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**适用范围：** SQL Server（从 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 开始）   
 
 安装 R Services 时，其他数据库角色可用于管理包。 有关详细信息，请参阅 [SQL Server 的 R 包管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 

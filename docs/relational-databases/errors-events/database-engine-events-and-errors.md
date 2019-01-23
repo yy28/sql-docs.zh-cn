@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a424f6fa95a7b295722750f9bb68db9ef30d66a4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257242"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405877"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 
@@ -927,7 +927,7 @@ ms.locfileid: "54257242"
 |   1846    |   16  |   否  |   当创建自动恢复的卷影复制服务(VSS)快照以进行在线 DBCC 检查时，找不到数据库 '%ls' 的 SQL VSS 编写器组件。  |
 |   1847    |   16  |   否  |   当前版本的操作系统不支持自动恢复的卷影复制服务(VSS)快照。  |
 |   1848    |   16  |   否  |   卷影复制服务(VSS)无法创建数据库 '%ls' 的自动恢复快照以进行在线 DBCC 检查。   |
-|   1849    |   16  |   否  |   CREATE DATABASE 失败，因为声明了 FILESTREAM 文件组，并且在模型数据库中将 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 设置为 ON。 请在模型数据库中将 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 设置为 OFF，或者在创建数据库时不声明任何 FILESTREAM 文件组，在新数据库中将 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 设置为 OFF，然后使用 ALTER DATABSE 添加 FILESTREAM 文件组和文件。    |
+|   1849    |   16  |   否  |   CREATE DATABASE 失败，因为声明了 FILESTREAM 文件组，并且在模型数据库中将 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 设置为 ON。 请在模型数据库中将 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 设置为 OFF，或者在创建数据库时不声明任何 FILESTREAM 文件组，在新数据库中将 ALLOW_SNAPSHOT_ISOLATION 和 READ_COMMITTED_SNAPSHOT 设置为 OFF，然后使用 ALTER DATABASE 添加 FILESTREAM 文件组和文件。   |
 |   1901    |   16  |   否  |   无法对视图 '%.* ls' 创建索引或统计信息 '%.*ls'，因为键列 '%.*ls' 不精确，是计算列且未持久化。 请考虑在视图索引或统计信息键中删除对列的引用，或将列更改为精确列。 如果列是在基表中计算出来的，请考虑在该处将它标记为 PERSISTED。 |
 |   1902    |   16  |   否  |   无法对 %S_MSG '%.*ls' 创建多个聚集索引。请在创建新聚集索引前删除现有的聚集索引 '%.* ls'。   |
 |   [1904](mssqlserver-1904-database-engine-error.md)   |   16  |   否  |   表 '%.* ls' 的 %S_MSG '%.*ls' 在 %S_MSG 键列表中具有 %d 个列名。 索引或统计信息键列列表的最大限制为 %d。    |
@@ -2710,7 +2710,7 @@ ms.locfileid: "54257242"
 |   6222    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是类型 "%.* ls.%.*ls" 的字段 "%.*ls" 对于本机序列化无效。   |
 |   6223    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是类型 "%.* ls.%.*ls" 的字段 "%.*ls" 为 "%.* ls.%.*ls" 类型(它没有用 "LayoutKind.Sequential" 进行标记)。 本机序列化要求用 "LayoutKind.Sequential" 标记该类型。    |
 |   6224    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是类型 "%.* ls.%.*ls" 的字段 "%.*ls" 是用 "System.NonSerializedAttribute" 标记的。 本机序列化类型不能具有用 "System.NonSerializedAttribute" 标记的字段。   |
-|   6225    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是类型 "%.* ls.%.* 的字段 "%.*ls" 为 "%.* ls.%.*ls" 类型(它是非值类型)。 本机序列化类型只能有可直接复制到本机结构中的字段类型。 如果希望有任何其他类型的字段，请考虑使用其他的序列化格式，如用户定义序列化。    |
+|   6225    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是类型 "%.* ls.%. *的字段 "%.*ls" 为 "%.* ls.%.*ls" 类型(它是非值类型)。 本机序列化类型只能有可直接复制到本机结构中的字段类型。 如果希望有任何其他类型的字段，请考虑使用其他的序列化格式，如用户定义序列化。    |
 |   6226    |   16  |   否  |   对类型 "%.*ls.%.* 做标记以进行用户定义序列化，但是它未实现 "%.*ls.%.* ls" 接口。    |
 |   6227    |   16  |   否  |   类型 "%.*ls.%.* ls" 已标记为进行本机序列化，但是类型 "%.* ls.%.*ls" 的字段 "%.*ls" 为 "%.* ls.%.*ls" 类型(它无法直接复制到本机结构中)，或类型 "%.* ls.%.*ls" 具有递归定义。  |
 |   6228    |   16  |   否  |   对类型 "%.*ls.%.* ls" 做标记以进行本机序列化，但是它包含无法直接复制到本机结构中的字段。    |
