@@ -1,233 +1,249 @@
-- name: Always On 可用性组
-  href: always-on-availability-groups-sql-server.md
-- name: 针对 AlwaysOn 可用性组的先决条件、限制和建议
-  href: prereqs-restrictions-recommendations-always-on-availability.md
-- name: 故障转移群集和 AlwaysOn 可用性组
-  href: failover-clustering-and-always-on-availability-groups-sql-server.md
-- name: AlwaysOn 可用性组入门 (SQL Server)
-  href: getting-started-with-always-on-availability-groups-sql-server.md
-- name: AlwaysOn 可用性组概述
+- name: 概述
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
+    - name: 针对 AlwaysOn 可用性组的先决条件、限制和建议
+      href: prereqs-restrictions-recommendations-always-on-availability.md
     - name: 可用性模式
       href: availability-modes-always-on-availability-groups.md
+- name: 快速入门
+  items:
+    - name: 入门
+      href: getting-started-with-always-on-availability-groups-sql-server.md
+    - name: 创建可用性组
       items:
+        - name: 向导
+          href: use-the-availability-group-wizard-sql-server-management-studio.md
+        - name: 对话框
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Transact-SQL
+          href: create-an-availability-group-transact-sql.md
+        - name: PowerShell
+          href: create-an-availability-group-sql-server-powershell.md
+        - name: Azure 虚拟机
+          href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
+- name: 操作说明
+  items:
+    - name: 配置
+      href: creation-and-configuration-of-availability-groups-sql-server.md
+      items:
+        - name: 启用和禁用 AlwaysOn 可用性组
+          href: enable-and-disable-always-on-availability-groups-sql-server.md
+        - name: 创建 AlwaysOn 可用性组终结点 (PowerShell)
+          href: database-mirroring-always-on-availability-groups-powershell.md
+        - name: 在添加或修改可用性副本时指定端点 URL
+          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+        - name: 将辅助副本联接到可用性组
+          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: 启动 AlwaysOn 辅助数据库的数据移动
+          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+        - name: 为可用性组手动准备辅助数据库
+          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+        - name: 将辅助数据库联接到可用性组
+          href: join-a-secondary-database-to-an-availability-group-sql-server.md
+        - name: 将辅助副本添加到可用性组
+          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: 使用“将副本添加到可用性组向导”
+          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+        - name: 使用“添加 Azure 副本向导”
+          href: use-the-add-azure-replica-wizard-sql-server.md
+        - name: 将数据库添加到可用性组
+          href: availability-group-add-a-database.md
+        - name: 使用“将数据库添加到可用性组向导”
+          href: availability-group-add-database-to-group-wizard.md
+        - name: 创建或配置可用性组侦听器
+          href: create-or-configure-an-availability-group-listener-sql-server.md
+        - name: 为可用性组配置只读路由
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 从可用性组中删除辅助数据库 (SQL Server)
+          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+        - name: 从可用性组中删除主数据库
+          href: remove-a-primary-database-from-an-availability-group-sql-server.md
+        - name: 从可用性组中删除辅助副本
+          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+        - name: 删除可用性组
+          href: remove-an-availability-group-sql-server.md
+        - name: 删除可用性组侦听器
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: 解决 AlwaysOn 可用性组配置问题
+          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
+    - name: 管理
+      items:
+        - name: 执行可用性组的计划手动故障转移
+          href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+        - name: 执行可用性组的强制手动故障转移
+          href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+        - name: 使用故障转移可用性组向导
+          href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
         - name: 更改可用性副本的可用性模式
           href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-    - name: 故障转移和故障转移模式
-      href: failover-and-failover-modes-always-on-availability-groups.md
-    - name: 更改可用性副本的故障转移模式
-      href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-    - name: 针对可用性组的自动故障转移的灵活的故障转移策略
-      href: flexible-automatic-failover-policy-availability-group.md
-    - name: 配置灵活的故障转移策略以控制自动故障转移的条件
-      href: configure-flexible-automatic-failover-policy.md
-    - name: 可用性副本之间的会话期间的可能故障 (SQL Server)
-      href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-    - name: 活动辅助副本：辅助副本备份
-      href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-    - name: 配置可用性副本备份
-      href: configure-backup-on-availability-replicas-sql-server.md
-    - name: 活动辅助副本：可读辅助副本
-      href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-    - name: 关于对可用性副本的客户端连接访问
-      href: about-client-connection-access-to-availability-replicas-sql-server.md
-    - name: 配置对可用性副本的只读访问
-      href: configure-read-only-access-on-an-availability-replica-sql-server.md
-    - name: 可用性组侦听器、客户端连接和应用程序故障转移
-      href: ../../listeners-client-connectivity-application-failover.md
-    - name: Always On 客户端连接
-      href: always-on-client-connectivity-sql-server.md
-    - name: 创建或配置可用性组侦听器
-      href: create-or-configure-an-availability-group-listener-sql-server.md
-    - name: “添加 IP 地址”对话框
-      href: add-ip-address-dialog-box-sql-server-management-studio.md
-    - name: 为可用性组配置只读路由
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: 删除可用性组侦听器
-      href: remove-an-availability-group-listener-sql-server.md
+        - name: 更改可用性副本的故障转移模式
+          href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+        - name: 配置灵活的故障转移策略以控制自动故障转移的条件
+          href: configure-flexible-automatic-failover-policy.md
+        - name: 配置可用性副本备份
+          href: configure-backup-on-availability-replicas-sql-server.md
+        - name: 配置对可用性副本的只读访问
+          href: configure-read-only-access-on-an-availability-replica-sql-server.md
+        - name: 挂起可用性数据库
+          href: suspend-an-availability-database-sql-server.md
+        - name: 恢复可用性数据库
+          href: resume-an-availability-database-sql-server.md
+        - name: 更改可用性副本的会话超时期限
+          href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+        - name: 使可用性组脱机
+          href: ../../take-an-availability-group-offline-sql-server.md
+        - name: 更改服务器实例的 HADR 群集上下文
+          href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+        - name: 解决失败的添加文件操作问题（AlwaysOn 可用性组）
+          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+    - name: 监视
+      href: monitoring-of-availability-groups-sql-server.md
+      items:
+        - name: 监视可用性组 (T-SQL)
+          href: monitor-availability-groups-transact-sql.md
+        - name: 使用“对象资源管理器详细信息”监视可用性组
+          href: use-object-explorer-details-to-monitor-availability-groups.md
+        - name: 查看可用性组属性
+          href: view-availability-group-properties-sql-server.md
+        - name: 查看可用性副本属性
+          href: view-availability-replica-properties-sql-server.md
+        - name: 查看可用性组侦听器属性
+          href: view-availability-group-listener-properties-sql-server.md
+- name: 概念
+  items:
+    - name: 配置
+      items:
+        - name: 故障转移群集和 AlwaysOn 可用性组
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: 故障转移和故障转移模式
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: 针对可用性组的自动故障转移的灵活的故障转移策略
+          href: flexible-automatic-failover-policy-availability-group.md
+        - name: 管理可用性组中数据库的登录名和作业
+          href: ../../logins-and-jobs-for-availability-group-databases.md
+    - name: 管理
+      href: administration-of-an-availability-group-sql-server.md
+      items:
+        - name: 可用性副本之间的会话期间的可能故障 (SQL Server)
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+        - name: 备份次要副本
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: 可读次要副本
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: 在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
+          href: upgrading-always-on-availability-group-replica-instances.md
+    - name: 连接
+      items:
+        - name: 客户端连接
+          href: about-client-connection-access-to-availability-replicas-sql-server.md
+        - name: 客户端连接性
+          href: ../../listeners-client-connectivity-application-failover.md
+        - name: Always On 客户端连接
+          href: always-on-client-connectivity-sql-server.md
+    - name: 互操作性
+      href: always-on-availability-groups-interoperability-sql-server.md
+      items:
+        - name: 包含的数据库与 Always On 可用性组
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: 数据库镜像或 AlwaysOn 可用性组不支持跨数据库事务
+          href: transactions-always-on-availability-and-database-mirroring.md
+        - name: 含有 AlwaysOn 可用性组的数据库快照
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: 加密的数据库与 AlwaysOn 可用性组
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: FILESTREAM 和 FileTable 与 AlwaysOn 可用性组
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: 从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: 远程 Blob 存储区 (RBS) 和 AlwaysOn 可用性组
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: 为 AlwaysOn 可用性组配置复制
+          href: configure-replication-for-always-on-availability-groups-sql-server.md
+        - name: 维护 AlwaysOn 发布数据库
+          href: maintaining-an-always-on-publication-database-sql-server.md
+        - name: 复制订阅服务器和 AlwaysOn 可用性组
+          href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: 复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组
+          href: replicate-track-change-data-capture-always-on-availability.md
+        - name: 含有 AlwaysOn 可用性组的 Analysis Services
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: Reporting Services 与 AlwaysOn 可用性组
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker 与 AlwaysOn 可用性组
+          href: service-broker-with-always-on-availability-groups-sql-server.md
+- name: 参考
+  items:
     - name: AlwaysOn 可用性组的 Transact-SQL 语句概述
       href: transact-sql-statements-for-always-on-availability-groups.md
     - name: AlwaysOn 可用性组的 PowerShell Cmdlet 概述
       href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-- name: 为 Always On 可用性组配置服务器实例
-  href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
-  items:
-    - name: 启用和禁用 AlwaysOn 可用性组
-      href: enable-and-disable-always-on-availability-groups-sql-server.md
-    - name: 为 AlwaysOn 可用性组创建数据库镜像端点 (SQL Server PowerShell)
-      href: database-mirroring-always-on-availability-groups-powershell.md
-    - name: 解决 AlwaysOn 可用性组配置问题
-      href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-- name: 创建和配置可用性组
-  href: creation-and-configuration-of-availability-groups-sql-server.md
-  items:
-    - name: 使用可用性组向导
-      href: use-the-availability-group-wizard-sql-server-management-studio.md
-    - name: “指定可用性组名称”页（新建可用性组向导/添加数据库向导）
-      href: specify-availability-group-name-page.md
-    - name: “选择数据库”页（新建可用性组向导/添加数据库向导）
-      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-    - name: “指定副本”页（新建可用性组向导：添加副本向导）
-      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-    - name: “选择初始数据同步”页（AlwaysOn 可用性组向导）
-      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-    - name: “验证”页（AlwaysOn 可用性组向导）
-      href: validation-page-always-on-availability-group-wizards.md
-    - name: “摘要”页（AlwaysOn 可用性组向导）
-      href: summary-page-always-on-availability-group-wizards.md
-    - name: “进度”页（AlwaysOn 可用性组向导）
-      href: progress-page-always-on-availability-group-wizards.md
-    - name: “结果”页（AlwaysOn 可用性组向导）
-      href: results-page-always-on-availability-group-wizards.md
-    - name: 使用“新建可用性组”对话框
-      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-    - name: 创建可用性组 (Transact-SQL)
-      href: create-an-availability-group-transact-sql.md
-    - name: 创建可用性组 (SQL Server PowerShell)
-      href: create-an-availability-group-sql-server-powershell.md
-    - name: 在添加或修改可用性副本时指定端点 URL
-      href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-    - name: 将辅助副本联接到可用性组
-      href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: 启动 AlwaysOn 辅助数据库的数据移动
-      href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-    - name: 为可用性组手动准备辅助数据库
-      href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-    - name: 将辅助数据库联接到可用性组
-      href: join-a-secondary-database-to-an-availability-group-sql-server.md
-    - name: 管理可用性组中数据库的登录名和作业
-      href: ../../logins-and-jobs-for-availability-group-databases.md
-- name: 管理可用性组
-  href: administration-of-an-availability-group-sql-server.md
-  items:
-    - name: 执行可用性组的计划手动故障转移
-      href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-    - name: 执行可用性组的强制手动故障转移
-      href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-    - name: 使用故障转移可用性组向导
-      href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-    - name: 将数据库添加到可用性组
-      href: availability-group-add-a-database.md
-    - name: 使用“将数据库添加到可用性组向导”
-      href: availability-group-add-database-to-group-wizard.md
-- name: “连接到现有的次要副本”页（添加副本向导和添加数据库向导）
-  href: connect-to-existing-secondary-replicas-page.md
-  items:
-    - name: 挂起可用性数据库
-      href: suspend-an-availability-database-sql-server.md
-    - name: 恢复可用性数据库
-      href: resume-an-availability-database-sql-server.md
-    - name: 从可用性组中删除辅助数据库 (SQL Server)
-      href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-    - name: 从可用性组中删除主数据库
-      href: remove-a-primary-database-from-an-availability-group-sql-server.md
-    - name: 将辅助副本添加到可用性组
-      href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: 使用“将副本添加到可用性组向导”
-      href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-    - name: 使用“添加 Azure 副本向导”
-      href: use-the-add-azure-replica-wizard-sql-server.md
-    - name: 更改可用性副本的会话超时期限
-      href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-    - name: 从可用性组中删除辅助副本
-      href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-    - name: 删除可用性组
-      href: remove-an-availability-group-sql-server.md
-    - name: 使可用性组脱机
-      href: ../../take-an-availability-group-offline-sql-server.md
-    - name: 更改服务器实例的 HADR 群集上下文
-      href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-    - name: 解决失败的添加文件操作问题（AlwaysOn 可用性组）
-      href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-- name: 在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
-  href: upgrading-always-on-availability-group-replica-instances.md
-- name: 针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)
-  href: always-on-policies-for-operational-issues-always-on-availability.md
-  items:
-    - name: 使用 AlwaysOn 策略查看可用性组的运行状况
-      href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
-    - name: 使用 AlwaysOn 面板 (SQL Server Management Studio)
-      href: use-the-always-on-dashboard-sql-server-management-studio.md
-    - name: 选项（SQL Server AlwaysOn、“仪表板”页）
-      href: options-sql-server-always-on-dashboard-page.md
-    - name: 策略评估结果 (AlwaysOn)
-      href: policy-evaluation-result-always-on.md
-    - name: WSFC 群集服务处于脱机状态
-      href: wsfc-cluster-service-is-offline.md
-    - name: 可用性组处于脱机状态
-      href: availability-group-is-offline.md
-    - name: 可用性组未准备好进行自动故障转移
-      href: availability-group-is-not-ready-for-automatic-failover.md
-    - name: 一些可用性副本未同步数据
-      href: some-availability-replicas-are-not-synchronizing-data.md
-    - name: 一些同步副本不同步
-      href: some-synchronous-replicas-are-not-synchronized.md
-    - name: 一些可用性副本不具有正常运行的角色
-      href: some-availability-replicas-do-not-have-a-healthy-role.md
-    - name: 断开一些可用性副本的连接
-      href: some-availability-replicas-are-disconnected.md
-    - name: 可用性副本不具有运行状况良好的角色
-      href: availability-replica-does-not-have-a-healthy-role.md
-    - name: 断开可用性副本的连接
-      href: availability-replica-is-disconnected.md
-    - name: 可用性数据库的数据同步状态不正常
-      href: data-synchronization-state-of-availability-database-is-not-healthy.md
-    - name: 可用性副本未联接
-      href: availability-replica-is-not-joined.md
-    - name: 可用性数据库挂起
-      href: availability-database-is-suspended.md
-    - name: 未联接辅助数据库
-      href: secondary-database-is-not-joined.md
-    - name: 一些可用性数据库的数据同步状态不正常
-      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-- name: 监视可用性组
-  href: monitoring-of-availability-groups-sql-server.md
-  items:
-    - name: 监视可用性组 (Transact-SQL)
-      href: monitor-availability-groups-transact-sql.md
-    - name: 使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)
-      href: use-object-explorer-details-to-monitor-availability-groups.md
-    - name: 查看可用性组属性
-      href: view-availability-group-properties-sql-server.md
-    - name: 可用性组属性和新建可用性组（“常规”页）
+    - name: 可用性组策略
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+        - name: 使用 AlwaysOn 策略查看可用性组的运行状况
+          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: 使用 AlwaysOn 面板 (SQL Server Management Studio)
+          href: use-the-always-on-dashboard-sql-server-management-studio.md
+        - name: 选项（SQL Server AlwaysOn、“仪表板”页）
+          href: options-sql-server-always-on-dashboard-page.md
+        - name: 策略评估结果 (AlwaysOn)
+          href: policy-evaluation-result-always-on.md
+        - name: WSFC 群集服务处于脱机状态
+          href: wsfc-cluster-service-is-offline.md
+        - name: 可用性组处于脱机状态
+          href: availability-group-is-offline.md
+        - name: 可用性组未准备好进行自动故障转移
+          href: availability-group-is-not-ready-for-automatic-failover.md
+        - name: 一些可用性副本未同步数据
+          href: some-availability-replicas-are-not-synchronizing-data.md
+        - name: 一些同步副本不同步
+          href: some-synchronous-replicas-are-not-synchronized.md
+        - name: 一些可用性副本不具有正常运行的角色
+          href: some-availability-replicas-do-not-have-a-healthy-role.md
+        - name: 断开一些可用性副本的连接
+          href: some-availability-replicas-are-disconnected.md
+        - name: 可用性副本不具有运行状况良好的角色
+          href: availability-replica-does-not-have-a-healthy-role.md
+        - name: 断开可用性副本的连接
+          href: availability-replica-is-disconnected.md
+        - name: 可用性数据库的数据同步状态不正常
+          href: data-synchronization-state-of-availability-database-is-not-healthy.md
+        - name: 可用性副本未联接
+          href: availability-replica-is-not-joined.md
+        - name: 可用性数据库挂起
+          href: availability-database-is-suspended.md
+        - name: 未联接辅助数据库
+          href: secondary-database-is-not-joined.md
+        - name: 一些可用性数据库的数据同步状态不正常
+          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+    - name: 可用性组属性
       href: availability-group-properties-new-availability-group-general-page.md
-    - name: 可用性组属性：新建可用性组（“备份首选项”页）
-      href: availability-group-properties-new-availability-group-backup-preferences-page.md
-    - name: 查看可用性副本属性
-      href: view-availability-replica-properties-sql-server.md
-    - name: 可用性副本属性（“常规”页）
-      href: availability-replica-properties-general-page.md
-    - name: 查看可用性组侦听器属性
-      href: view-availability-group-listener-properties-sql-server.md
-- name: AlwaysOn 可用性组：互操作性
-  href: always-on-availability-groups-interoperability-sql-server.md
-  items:
-    - name: 包含的数据库与 Always On 可用性组
-      href: contained-databases-with-always-on-availability-groups-sql-server.md
-    - name: 数据库镜像或 AlwaysOn 可用性组不支持跨数据库事务
-      href: transactions-always-on-availability-and-database-mirroring.md
-    - name: 含有 AlwaysOn 可用性组的数据库快照
-      href: database-snapshots-with-always-on-availability-groups-sql-server.md
-    - name: 加密的数据库与 AlwaysOn 可用性组
-      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-    - name: FILESTREAM 和 FileTable 与 AlwaysOn 可用性组
-      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-    - name: 从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
-      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-    - name: 远程 Blob 存储区 (RBS) 和 AlwaysOn 可用性组
-      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-    - name: 为 AlwaysOn 可用性组配置复制
-      href: configure-replication-for-always-on-availability-groups-sql-server.md
-    - name: 维护 AlwaysOn 发布数据库
-      href: maintaining-an-always-on-publication-database-sql-server.md
-    - name: 复制订阅服务器和 AlwaysOn 可用性组
-      href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-    - name: 复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组
-      href: replicate-track-change-data-capture-always-on-availability.md
-    - name: 含有 AlwaysOn 可用性组的 Analysis Services
-      href: analysis-services-with-always-on-availability-groups.md
-    - name: Reporting Services 与 AlwaysOn 可用性组
-      href: reporting-services-with-always-on-availability-groups-sql-server.md
-    - name: Service Broker 与 AlwaysOn 可用性组
-      href: service-broker-with-always-on-availability-groups-sql-server.md
+      items:
+        - name: 可用性副本属性（“常规”页）
+          href: availability-replica-properties-general-page.md
+        - name: 可用性组属性：新建可用性组（“备份首选项”页）
+          href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: 可用性组向导
+      items:
+        - name: “添加 IP 地址”对话框
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: “指定可用性组名称”页
+          href: specify-availability-group-name-page.md
+        - name: “选择数据库”页
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: “指定副本”页
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: “选择初始数据同步”页
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: “验证”页
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: 摘要页
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: “进度”页
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: “结果”页
+          href: results-page-always-on-availability-group-wizards.md
+        - name: 使用“新建可用性组”对话框
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: “连接到现有的次要副本”页（添加副本向导和添加数据库向导）
+          href: connect-to-existing-secondary-replicas-page.md

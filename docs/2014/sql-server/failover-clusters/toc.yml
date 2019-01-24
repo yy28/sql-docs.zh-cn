@@ -1,13 +1,67 @@
-- name: SQL Server 2014 的高可用性解决方案
-  href: high-availability-solutions-sql-server.md
-  items:
-    - name: 自动页修复 （针对可用性组和数据库镜像）
-      href: automatic-page-repair-availability-groups-database-mirroring.md
-    - name: 角色切换后登录名和作业的管理
-      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-    - name: 孤立用户故障排除
-      href: troubleshoot-orphaned-users-sql-server.md
-- name: SQL Server 故障转移群集安装 +
-  href: install/sql-server-failover-cluster-installation.md
-- name: Windows Server 故障转移群集 (WSFC) +
+- name: 概述
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: AlwaysOn 故障转移群集实例
+      href: windows/always-on-failover-cluster-instances-sql-server.md
+- name: 操作说明
+  items:
+    - name: 部署
+      items:
+        - name: 安装前
+          href: install/before-installing-failover-clustering.md
+        - name: 安装
+          href: install/sql-server-failover-cluster-installation.md
+        - name: 创建群集
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: 安装客户端工具
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: 在 SQL Server 故障转移群集中添加或删除节点
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: 删除 SQL Server 故障转移群集实例
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: 升级故障转移群集实例
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: 升级 SQL Server 故障转移群集实例
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+    - name: 配置
+      items:
+        - name: 重命名故障转移群集实例
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: 向 SQL Server 资源添加依赖项
+          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: 配置群集仲裁 NodeWeight 设置
+          href: windows/configure-cluster-quorum-nodeweight-settings.md
+        - name: 更改故障转移群集实例的 IP 地址
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
+        - name: 配置 FailureConditionLevel 属性设置
+          href: windows/configure-failureconditionlevel-property-settings.md
+        - name: 查看和读取故障转移群集实例诊断日志
+          href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+    - name: 管理
+      items:
+        - name: 查看群集仲裁 NodeWeight 设置
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: 通过强制仲裁进行 WSFC 灾难恢复
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: 在无仲裁情况下强制启动 WSFC 群集
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: 在无仲裁情况下强制启动 WSFC 群集
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: 孤立用户故障排除
+          href: troubleshoot-orphaned-users-sql-server.md
+- name: 概念
+  items:
+    - name: 配置
+      items:
+        - name: WSFC 仲裁模式和投票配置
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: SQL Server 多子网群集
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+    - name: 管理
+      href: windows/failover-cluster-instance-administration-and-maintenance.md
+      items:
+        - name: 自动页修复 （针对可用性组和数据库镜像）
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: 角色切换后登录名和作业的管理
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md

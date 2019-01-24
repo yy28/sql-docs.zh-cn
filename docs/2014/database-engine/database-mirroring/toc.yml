@@ -1,118 +1,136 @@
-- name: 数据库镜像端点
-  href: the-database-mirroring-endpoint-sql-server.md
-  items:
-    - name: 针对数据库镜像和 AlwaysOn 可用性组的传输安全性
-      href: transport-security-database-mirroring-always-on-availability.md
-    - name: 创建使用 Windows 身份验证的数据库镜像端点 (Transact-SQL)
-      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-    - name: 允许使用 Windows 身份验证对数据库镜像端点进行网络访问
-      href: ../database-mirroring-allow-network-access-windows-authentication.md
-    - name: 使用数据库镜像端点证书 (Transact-SQL)
-      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
-      items:
-        - name: 允许数据库镜像端点使用证书进行出站连接 (Transact-SQL)
-          href: database-mirroring-use-certificates-for-outbound-connections.md
-        - name: 允许数据库镜像端点将证书用于入站连接 (Transact-SQL)
-          href: database-mirroring-use-certificates-for-inbound-connections.md
-- name: 数据库镜像
+- name: 概述
   href: database-mirroring-sql-server.md
   items:
     - name: 数据库镜像的前提条件、限制和建议
       href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-    - name: 数据库镜像运行模式
-      href: database-mirroring-operating-modes.md
-      items:
-        - name: 更改数据库镜像会话中的事务安全 (Transact-SQL)
-          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-    - name: Database Mirroring Witness
-      href: database-mirroring-witness.md
-      items:
-        - name: 仲裁：见证服务器如何影响数据库可用性
-          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-        - name: 使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
-          href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-        - name: 添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
-          href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-        - name: 从数据库镜像会话删除见证服务器 (SQL Server)
-          href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-    - name: 数据库镜像会话期间的角色切换
-      href: role-switching-during-a-database-mirroring-session-sql-server.md
-      items:
-        - name: 手动故障转移数据库镜像会话 (Transact-SQL)
-          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-        - name: 手动故障转移数据库镜像会话 (SQL Server Management Studio)
-          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-        - name: 在数据库镜像会话中强制服务 (Transact-SQL)
-          href: force-service-in-a-database-mirroring-session-transact-sql.md
-        - name: 估计在角色切换期间服务的中断
-          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-    - name: Possible Failures During Database Mirroring
-      href: possible-failures-during-database-mirroring.md
     - name: 镜像状态 (SQL Server)
       href: mirroring-states-sql-server.md
-    - name: 设置数据库镜像
-      href: setting-up-database-mirroring-sql-server.md
+    - name: 数据库镜像运行模式
+      href: database-mirroring-operating-modes.md
+    - name: Database Mirroring Witness
+      href: database-mirroring-witness.md
+- name: 操作说明
+  items:
+    - name: 配置
       items:
-        - name: 为镜像准备镜像数据库
-          href: prepare-a-mirror-database-for-mirroring-sql-server.md
-        - name: 设置加密的镜像数据库
-          href: set-up-an-encrypted-mirror-database.md
-        - name: 将镜像数据库设置为使用 Trustworthy 属性 (Transact-SQL)
-          href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-        - name: 指定服务器网络地址（数据库镜像）
-          href: specify-a-server-network-address-database-mirroring.md
-        - name: 建立使用 Windows 身份验证的数据库镜像会话 (SQL Server Management Studio)
-          href: establish-database-mirroring-session-windows-authentication.md
-        - name: 启动配置数据库镜像安全向导 (SQL Server Management Studio)
-          href: start-the-configuring-database-mirroring-security-wizard.md
-    - name: 包括见证服务器（配置数据库镜像安全向导）
-      href: include-witness-server-configure-database-mirroring-security-wizard.md
-    - name: 选择要配置的服务器（配置数据库镜像安全向导）
-      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-    - name: 主体服务器实例（配置数据库镜像安全向导）
-      href: principal-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 镜像服务器实例（配置数据库镜像安全向导）
-      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 见证服务器实例（配置数据库镜像安全向导）
-      href: witness-server-instance-configure-database-mirroring-security-wizard.md
-    - name: 服务帐户（配置数据库镜像安全向导）
-      href: service-accounts-configure-database-mirroring-security-wizard.md
-    - name: 使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
-      href: database-mirroring-establish-session-windows-authentication.md
+        - name: 部署
+          items:
+            - name: 设置数据库镜像
+              href: setting-up-database-mirroring-sql-server.md
+            - name: 为镜像准备镜像数据库
+              href: prepare-a-mirror-database-for-mirroring-sql-server.md
+            - name: 设置加密的镜像数据库
+              href: set-up-an-encrypted-mirror-database.md
+            - name: 将镜像数据库设置为使用 Trustworthy 属性
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+            - name: 指定服务器网络地址
+              href: specify-a-server-network-address-database-mirroring.md
+            - name: 使用 Windows 身份验证建立数据库镜像会话
+              href: establish-database-mirroring-session-windows-authentication.md
+            - name: 删除数据库镜像
+              href: removing-database-mirroring-sql-server.md
+        - name: Witness
+          items:
+            - name: 使用 Windows 身份验证添加见证服务器
+              href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+            - name: 添加或替换见证服务器 (SQL Server Management Studio)
+              href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+            - name: 删除见证服务器
+              href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: 管理
       items:
-        - name: 示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
-          href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-        - name: 示例：使用证书设置数据库镜像 (Transact-SQL)
-          href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
-    - name: 设置数据库镜像或 AlwaysOn 可用性组的登录帐户
-      href: set-up-login-accounts-database-mirroring-always-on-availability.md
-    - name: 数据库镜像配置故障排除
-      href: troubleshoot-database-mirroring-configuration-sql-server.md
-    - name: 将客户端连接到数据库镜像会话
-      href: connect-clients-to-a-database-mirroring-session-sql-server.md
-    - name: 暂停和恢复数据库镜像
-      href: pausing-and-resuming-database-mirroring-sql-server.md
-      items:
-        - name: 暂停或恢复数据库镜像会话 (SQL Server)
-          href: pause-or-resume-a-database-mirroring-session-sql-server.md
-    - name: 删除数据库镜像
-      href: removing-database-mirroring-sql-server.md
-      items:
-        - name: 删除数据库镜像 (SQL Server)
-          href: remove-database-mirroring-sql-server.md
-    - name: 在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
-      href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-    - name: 在升级服务器实例时最大限度地减少镜像数据库的停机时间
-      href: upgrading-mirrored-instances.md
-    - name: 监视数据库镜像
-      href: monitoring-database-mirroring-sql-server.md
-      items:
+        - name: 查看镜像数据库的状态
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+        - name: 暂停或恢复数据库镜像
+          href: pausing-and-resuming-database-mirroring-sql-server.md
+        - name: 连接客户端
+          href: connect-clients-to-a-database-mirroring-session-sql-server.md
+        - name: 更改事务安全性
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+        - name: 手动故障转移 (T-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: 手动故障转移 (SSMS)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: 强制服务执行故障转移
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: 估计角色切换期间的中断
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+        - name: 在升级服务器实例时最大限度地减少镜像数据库的停机时间
+          href: upgrading-mirrored-instances.md
         - name: 使用镜像性能度量的警告阈值和警报
           href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+    - name: Security
+      items:
+        - name: 设置数据库镜像或 AlwaysOn 可用性组的登录帐户
+          href: set-up-login-accounts-database-mirroring-always-on-availability.md
+        - name: 创建 Windows 身份验证终结点
+          href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+        - name: 允许网络访问终结点
+          href: ../database-mirroring-allow-network-access-windows-authentication.md
+        - name: 对终结点使用证书
+          href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+          items:
+            - name: 使用证书进行出站连接
+              href: database-mirroring-use-certificates-for-outbound-connections.md
+            - name: 使用证书进行入站连接
+              href: database-mirroring-use-certificates-for-inbound-connections.md
+- name: 概念
+  items:
+    - name: 互操作性和共存
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: 数据库镜像和 SQL Server 故障转移群集实例
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: 数据库镜像和日志传送
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: 数据库镜像和全文目录
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: 数据库镜像和数据库快照
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: 数据库镜像和复制
+          href: database-mirroring-and-replication-sql-server.md
+    - name: 管理
+      items:
+        - name: 监视数据库镜像
+          href: monitoring-database-mirroring-sql-server.md
+        - name: 仲裁：见证服务器如何影响数据库可用性
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: 数据库镜像会话期间的角色切换
+          href: role-switching-during-a-database-mirroring-session-sql-server.md
+        - name: Possible Failures During Database Mirroring
+          href: possible-failures-during-database-mirroring.md
+        - name: 数据库镜像配置故障排除
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+        - name: 在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
+          href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
+    - name: Security
+      items:
+        - name: 终结点
+          href: the-database-mirroring-endpoint-sql-server.md
+        - name: 针对数据库镜像和 AlwaysOn 可用性组的传输安全性
+          href: transport-security-database-mirroring-always-on-availability.md
+- name: 参考
+  items:
+    - name: 配置数据库镜像安全向导
+      href: start-the-configuring-database-mirroring-security-wizard.md
+      items:
+        - name: 添加见证服务器
+          href: include-witness-server-configure-database-mirroring-security-wizard.md
+        - name: 选择要配置的服务器
+          href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+        - name: 主体服务器实例
+          href: principal-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 镜像服务器实例
+          href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 见证服务器实例
+          href: witness-server-instance-configure-database-mirroring-security-wizard.md
+        - name: 服务帐户
+          href: service-accounts-configure-database-mirroring-security-wizard.md
+    - name: 数据库镜像监视器概述
+      href: database-mirroring-monitor-overview.md
+      items:
         - name: 启动数据库镜像监视器 (SQL Server Management Studio)
           href: start-database-mirroring-monitor-sql-server-management-studio.md
-        - name: 数据库镜像监视器概述
-          href: database-mirroring-monitor-overview.md
         - name: 注册镜像数据库
           href: register-mirrored-database.md
         - name: 数据库镜像监视器（状态页）
@@ -123,18 +141,3 @@
           href: database-mirroring-monitor-warnings-page.md
         - name: 设置警告阈值
           href: set-warning-thresholds.md
-        - name: 查看镜像数据库的状态 (SQL Server Management Studio)
-          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-- name: 数据库镜像：互操作性和共存
-  href: database-mirroring-interoperability-and-coexistence-sql-server.md
-  items:
-    - name: 数据库镜像和 SQL Server 故障转移群集实例
-      href: database-mirroring-and-sql-server-failover-cluster-instances.md
-    - name: 数据库镜像和日志传送
-      href: database-mirroring-and-log-shipping-sql-server.md
-    - name: 数据库镜像和全文目录
-      href: database-mirroring-and-full-text-catalogs-sql-server.md
-    - name: 数据库镜像和数据库快照
-      href: database-mirroring-and-database-snapshots-sql-server.md
-    - name: 数据库镜像和复制
-      href: database-mirroring-and-replication-sql-server.md
