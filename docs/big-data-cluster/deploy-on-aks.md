@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241238"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898922"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>配置用于 SQL Server 2019 大数据群集 （预览版） 部署的 Azure Kubernetes 服务
 
@@ -26,7 +26,7 @@ AKS 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程
 本文介绍部署 Kubernetes AKS 使用 Azure CLI 上的步骤。 如果还没有 Azure 订阅，请在开始之前创建一个免费帐户。
 
 > [!TIP] 
-> 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
+> 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[快速入门：部署大数据群集在 Azure Kubernetes 服务 (AKS) 的 SQL Server](quickstart-big-data-cluster-deploy.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -106,6 +106,6 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
 
 ## <a name="next-steps"></a>后续步骤
 
-在本文中的步骤配置在 AKS 中的 Kubernetes 群集。 下一步是将 SQL Server 2019 大数据部署到群集。
+在本文中的步骤配置在 AKS 中的 Kubernetes 群集。 下一步是将 SQL Server 2019 大数据部署到群集。 有关如何部署大数据群集的详细信息，请参阅以下文章：
 
-[快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)](quickstart-big-data-cluster-deploy.md)
+[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)

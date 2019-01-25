@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241698"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898982"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54241698"
 - 一个 Azure 订阅。
 - [大数据工具](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
    - **Azure CLI**
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
 
    > [!IMPORTANT]
-   > 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 21 永久性卷声明。 当选择 Azure 虚拟机大小和节点数，请确保可以跨节点附加的磁盘总数大于或等于 21。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
+   > 默认值**Standard_L4s**机大小不一定在每个 Azure 区域中可用。 如果您选择不同的计算机大小，请确保在群集中节点之间可以附加的磁盘总数大于或等于 21。 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 21 永久性卷声明。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
 
    > [!NOTE]
    > `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建部署之后,`MSSQL_SA_PASSWORD`环境变量是可发现通过运行`echo $MSSQL_SA_PASSWORD`主实例容器中。 出于安全考虑，更改你`sa`部署后的主实例上的密码。 有关详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
@@ -236,6 +236,8 @@ az group delete -n <resource group name>
 ```
 
 ## <a name="next-steps"></a>后续步骤
+
+部署脚本 Azure Kubernetes 服务配置，并且还部署了 SQL Server 2019 大数据群集。 您还可以选择自定义进行手动安装以后进行部署。 若要了解更多有关如何大数据群集部署以及如何自定义部署，请参阅[如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)。
 
 现在，已部署 SQL Server 大数据群集，可以加载示例数据并浏览的教程：
 

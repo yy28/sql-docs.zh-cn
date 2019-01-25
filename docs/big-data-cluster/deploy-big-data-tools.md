@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372632"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898953"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
-本指南介绍了客户端工具应在管理，用于创建、 安装和使用 SQL Server 2019 大数据群集 （预览版）。
+本指南介绍了客户端工具应在管理，用于创建、 安装和使用 SQL Server 2019 大数据群集 （预览版）。 以下部分提供了一系列工具和安装说明的链接。 在部署之前的大数据群集，配置标记为必需的 Windows 或 Linux 的工具。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ ms.locfileid: "54372632"
 在某些情况下仅需要其余的工具。 **Azure CLI**可用于管理与 AKS 部署关联的 Azure 服务。 **mssql cli**是一种可选的但有用的工具，可用于连接到群集中的 SQL Server 主实例和从命令行运行查询。 并**sqlcmd**并**curl**是必需的如果你打算使用 GitHub 脚本安装示例数据。
 
 ## <a name="next-steps"></a>后续步骤
+
+配置工具后，将 SQL Server 2019 大数据群集部署到云或本地中的 Kubernetes。 有关详细信息，请参阅以下部署文章：
+
+- [快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)](quickstart-big-data-cluster-deploy.md)
+- [如何部署 SQL Server 大数据群集在 Kubernetes 上](deployment-guidance.md)
 
 有关大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
