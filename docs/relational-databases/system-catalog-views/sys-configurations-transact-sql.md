@@ -20,17 +20,18 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1a2ae2d0d8f8c5eea00ed5d31ad8aadb88e5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596105"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044993"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   系统中每个服务器范围的配置选项值各占一行。  
+
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|配置值的唯一 ID。|  
@@ -48,7 +49,7 @@ ms.locfileid: "47596105"
 > [!NOTE]  
 >  有关数据库级别配置选项，请参阅[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要配置软件 NUMA，请参阅[SOFT-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

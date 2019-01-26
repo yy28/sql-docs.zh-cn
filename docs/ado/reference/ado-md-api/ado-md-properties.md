@@ -14,21 +14,22 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696926"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044769"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|指示对哪些 ADO**连接**对象当前的单元集或当前所属的编录。|  
-|[标题](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指示显示时要使用的文本标题**级别**或**成员**对象。|  
+|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指示显示时要使用的文本标题**级别**或**成员**对象。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|指示为其成员的当前**成员**对象是父对象的层次结构中。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|返回的集合**成员**为其当前**成员**层次结构中父级。|  
-|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|指示级别之间的数**级别**和层次结构级别的根。|  
 |[说明](../../../ado/reference/ado-md-api/description-property-ado-md.md)|返回当前对象的文本说明。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|指示在轴上的维度数。|  
@@ -45,7 +46,7 @@ ms.locfileid: "47696926"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|指示是层次结构中的当前成员的父级的成员。|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|指示此位置成员的父级是否与紧位于其之前的成员的父级相同。|  
 |[数据源](../../../ado/reference/ado-md-api/source-property-ado-md.md)|指示单元格集中的数据源。|  
-|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|指示在单元集中的当前状态。|  
+|[状态](../../../ado/reference/ado-md-api/state-property-ado-md.md)|指示在单元集中的当前状态。|  
 |[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指示当前成员的类型。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|指示当前对象的确切名称。|  
 |[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  

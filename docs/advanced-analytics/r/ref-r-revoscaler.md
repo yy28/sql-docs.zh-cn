@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645418"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044404"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR （SQL Server 中的 R 库）
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR**是来自 Microsoft 的高性能数据科学函数库。 函数支持数据导入、 数据转换、 汇总、 可视化和分析。
@@ -34,10 +35,10 @@ RevoScaleR 充当用于分布式的数据科学平台。 例如，您可以使�
 
 **RevoScaleR**库是根据 R 3.4.3 和可用，仅在安装以下 Microsoft 产品或下载之一：
 
-+ [SQL Server 2016 R 服务](../install/sql-r-services-windows-install.md)
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更高版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R 客户端](set-up-a-data-science-client.md)
++ [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的产品发布版本是 Windows 限、 从 SQL Server 2017 开始。 针对 Linux 支持**RevoScaleR**中的新[SQL Server 2019 预览版](../../linux/sql-server-linux-setup-machine-learning.md)。
@@ -55,7 +56,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 | 函数| Description|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  创建将计算推送到远程实例的 SQL Server 计算上下文对象。 多个**RevoScaleR**函数采用作为自变量的计算上下文。 |
-[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 获取或设置活动计算上下文。 |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 获取或设置活动计算上下文。 |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | 创建基于 SQL Server 查询或表的数据对象。 |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | 创建基于 ODBC 连接的数据源。 |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | 创建基于本地 XDF 文件的数据源。 XDF 文件通常用于内存中将数据卸载到磁盘。 在使用更多的数据不是可以从一个批处理中的数据库传输或更多的数据多于可以容纳在内存中时，XDF 文件很有用。 例如，如果您定期大量数据从数据库移动到本地工作站，而不是查询重复的每个 R 操作，数据库可 XDF 文件作为缓存的一种保存数据保存在本地，然后使用它在 R 工作区中。|
@@ -78,7 +79,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 
 | 函数 | Description |
 |----------|-------------|
-| [rxOpen 方法](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 检查数据源是否可用，请打开或关闭数据源、 从源读取数据、 将数据写入到目标，并关闭数据源。|
+| [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 检查数据源是否可用，请打开或关闭数据源、 从源读取数据、 将数据写入到目标，并关闭数据源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 将数据数据从源分片移动到文件存储或数据帧。|
 | [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | 数据源之间移动时转换数据。|
 
@@ -101,7 +102,7 @@ SQL Server 和 R 在某些情况下使用不同的数据类型。 有关 SQL 和
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |计算近似分位数的.xdf 文件和数据帧而不进行排序。 | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |数据，包括按组进行计算的基本摘要统计信息。 写入到不受支持的.xdf 文件组计算的。 | 
-|[于](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |基于公式的交叉表的数据。 | 
+|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |基于公式的交叉表的数据。 | 
 |[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |替代基于公式的交叉表用于返回多维数据集结果的有效表示形式。 输出写入到.xdf 文件不受支持。 | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |跨 tabulations 边际摘要。 | 
 |[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |将交叉表结果到 xtabs 对象。 | 

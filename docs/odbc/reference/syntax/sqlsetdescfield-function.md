@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420232"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044354"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函数
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:R/W APD:R/W IRD:R/W IPD:R/W|ARD:Ptr APD，则为 null:Ptr IRD，则为 null:Ptr IPD，则为 null:Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:Ptr APD，则为 null:Ptr IRD，则为 null:未使用的 IPD:未使用|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD:R/W IRD:未使用的 IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD:SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
-SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
+|SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD:R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:Ptr IPD，则为 null:Null ptr|  
   
  [1] 字段只有在驱动程序会自动填充 IPD 时定义。 如果不是，不进行定义。 如果应用程序尝试设置这些字段，SQLSTATE HY091 将返回 （无效的描述符字段标识符）。  

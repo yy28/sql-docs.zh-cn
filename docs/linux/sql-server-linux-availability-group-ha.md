@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031020"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044930"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -59,12 +59,13 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 读取缩放、 高可用性和数据保护，可以提供具有三个同步副本的可用性组。 下表介绍可用性行为。 
 
-| |读取缩放|高可用性 （& a) </br> 数据保护 | 数据保护
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 
-|一个次要副本中断  | 主要是 R / w。 如果主没有自动故障转移会失败。 |主要是 R / w。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 
-<sup>*</sup> 默认值
+| |读取缩放|高可用性 （& a) </br> 数据保护 | 数据保护|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 |
+|一个次要副本中断  | 主要是 R / w。 如果主没有自动故障转移会失败。 |主要是 R / w。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 |
+
+<sup>\*</sup> 默认值
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 具有两个同步副本的可用性组提供读取缩放和数据保护。 下表介绍可用性行为。 
 
-| |读取缩放 |数据保护
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。| 自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。
-|一个次要副本中断  |主要是 R/W，运行可能导致数据丢失。 |主次要副本恢复之前不可用的用户事务。
-<sup>*</sup> 默认值
+| |读取缩放 |数据保护|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。| 自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。|
+|一个次要副本中断  |主要是 R/W，运行可能导致数据丢失。 |主次要副本恢复之前不可用的用户事务。|
 
->[!NOTE]
->前面的方案是在 SQL Server 2017 CU 1 之前的行为。 
+<sup>\*</sup> 默认值
+
+> [!NOTE]
+> 前面的方案是在 SQL Server 2017 CU 1 之前的行为。 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 在可用性组图中，主副本将配置数据推送到辅助副本和仅配置副本。 辅助副本还会收到用户数据。 仅配置副本不会接收用户数据。 辅助副本处于同步可用性模式。 仅配置副本不包含可用性组-仅有关可用性组的元数据中的数据库。 仅配置副本上的配置数据是以同步方式提交。
 
->[!NOTE]
->仅配置副本的 availabilility 组是用于 SQL Server 2017 CU1 的新功能。 SQL Server 可用性组中的所有实例必须都是 SQL Server 2017 CU1 或更高版本。 
+> [!NOTE]
+> 仅配置副本的 availabilility 组是用于 SQL Server 2017 CU1 的新功能。 SQL Server 可用性组中的所有实例必须都是 SQL Server 2017 CU1 或更高版本。 
 
 默认值为`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`为 0。 下表介绍可用性行为。 
 
-| |高可用性 （& a) </br> 数据保护 | 数据保护
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|主要副本中断 | 自动故障转移。 新的主副本是 R / w。 | 自动故障转移。 新的主数据库不可用的用户事务。 
-|次要副本中断 | 主要副本是 R/W，运行可能导致数据丢失 （如果主数据库将失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 如果主故障转移到没有副本也会失败。 
-|配置仅副本中断 | 主要是 R / w。 如果主没有自动故障转移也会失败。 | 主要是 R / w。 如果主没有自动故障转移也会失败。 
-|同步辅助 + 配置仅副本中断| 主数据库不可用的用户事务。 无自动故障转移。 | 主数据库不可用的用户事务。 故障转移到如果没有副本以及主服务器失败。 
-<sup>*</sup> 默认值
+| |高可用性 （& a) </br> 数据保护 | 数据保护|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|主要副本中断 | 自动故障转移。 新的主副本是 R / w。 | 自动故障转移。 新的主数据库不可用的用户事务。 |
+|次要副本中断 | 主要副本是 R/W，运行可能导致数据丢失 （如果主数据库将失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 如果主故障转移到没有副本也会失败。 |
+|配置仅副本中断 | 主要是 R / w。 如果主没有自动故障转移也会失败。 | 主要是 R / w。 如果主没有自动故障转移也会失败。 |
+|同步辅助 + 配置仅副本中断| 主数据库不可用的用户事务。 无自动故障转移。 | 主数据库不可用的用户事务。 故障转移到如果没有副本以及主服务器失败。 |
 
->[!NOTE]
->承载仅配置副本的 SQL Server 的实例还可以托管其他数据库。 它还可加入作为多个可用性组的配置数据库。 
+<sup>\*</sup> 默认值
+
+> [!NOTE]
+> 承载仅配置副本的 SQL Server 的实例还可以托管其他数据库。 它还可加入作为多个可用性组的配置数据库。 
 
 ## <a name="requirements"></a>要求
 
-* 可用性组中包含仅配置副本的所有副本都必须都是 SQL Server 2017 CU 1 或更高版本。
-* 任何版本的 SQL Server 可以托管仅配置副本，包括 SQL Server Express。 
-* 可用性组需要至少一个辅助副本-除了主副本。
-* 仅配置副本不会计入每个 SQL Server 实例的副本的最大数目。 SQL Server 标准版，最多三个副本，SQL Server Enterprise Edition 支持最多 9。
+- 可用性组中包含仅配置副本的所有副本都必须都是 SQL Server 2017 CU 1 或更高版本。
+- 任何版本的 SQL Server 可以托管仅配置副本，包括 SQL Server Express。 
+- 可用性组需要至少一个辅助副本-除了主副本。
+- 仅配置副本不会计入每个 SQL Server 实例的副本的最大数目。 SQL Server 标准版，最多三个副本，SQL Server Enterprise Edition 支持最多 9。
 
 ## <a name="considerations"></a>注意事项
 
-* 不能超过一个配置每个可用性组的唯一副本。 
-* 仅配置副本不能为主要副本。
-* 不能修改仅配置副本的可用性模式。 若要从仅配置副本更改为同步或异步辅助副本，删除仅配置副本，并添加所需的可用性模式的辅助副本。 
-* 仅配置副本是同步的与可用性组元数据。 没有任何用户数据。 
-* 具有一个主副本和一个配置唯一的副本，但没有任何辅助副本的可用性组不是有效的。 
-* 您不能在 SQL Server Express 版本的实例上创建可用性组。 
+- 不能超过一个配置每个可用性组的唯一副本。 
+- 仅配置副本不能为主要副本。
+- 不能修改仅配置副本的可用性模式。 若要从仅配置副本更改为同步或异步辅助副本，删除仅配置副本，并添加所需的可用性模式的辅助副本。 
+- 仅配置副本是同步的与可用性组元数据。 没有任何用户数据。 
+- 具有一个主副本和一个配置唯一的副本，但没有任何辅助副本的可用性组不是有效的。 
+- 您不能在 SQL Server Express 版本的实例上创建可用性组。 
 
 <a name="pacemakerNotify"></a>
 
@@ -144,14 +147,14 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 例如，具有三个同步副本： 一个主副本和两个同步辅助副本的可用性组。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 为 1;(3 / 2-> 1)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - 所需的数量的副本响应预升级操作为 2;(3-1 = 2)。 
 
 在此方案中，两个副本必须响应的触发故障转移。 主要副本中断后的成功自动故障转移，这两个辅助副本需要最新状态和响应预升级通知。 如果它们处于联机状态且同步，它们具有相同的序列号。 可用性组升级其中之一。 如果只有一个辅助副本响应预升级操作，则资源代理不能确保的辅助数据库的响应具有最高的 sequence_number，和不触发故障转移。
 
->[!IMPORTANT]
->`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 为 0 时有数据丢失风险。 主副本在中断期间，资源代理不会自动触发故障转移。 可以等待主要副本恢复，也可以手动故障转移使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
+> [!IMPORTANT]
+> `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 为 0 时有数据丢失风险。 主副本在中断期间，资源代理不会自动触发故障转移。 可以等待主要副本恢复，也可以手动故障转移使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
 
 可以选择重写默认行为，并防止可用性组资源设置`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自动。
 
@@ -167,10 +170,10 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->运行上述命令时，主要是暂时降级为次要副本，然后再次进行升级。 资源更新将导致所有副本停止并重新启动。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`仅在副本重新启动，不在瞬间完成后设置。
+> [!NOTE]
+> 运行上述命令时，主要是暂时降级为次要副本，然后再次进行升级。 资源更新将导致所有副本停止并重新启动。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`仅在副本重新启动，不在瞬间完成后设置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Linux 上的可用性组](sql-server-linux-availability-group-overview.md)
 

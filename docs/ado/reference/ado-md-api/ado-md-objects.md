@@ -14,19 +14,20 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828705"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044911"
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示一个位置或单元，其中包含所选的一个或多个维度成员集的筛选轴。|  
 |[目录](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即多维数据集和基础维度、 层次结构、 级别和成员）。|  
-|[单元格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示单元集内包含的轴坐标相交处的数据。|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示单元集内包含的轴坐标相交处的数据。|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多维查询的结果。 它是从多维数据集或其他单元集中选择的单元的集合。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|表示从多维架构，其中包含一组相关的维度的多维数据集。|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多维数据集，其中包含一个或多个层次结构的成员的维度之一。|  
@@ -39,7 +40,7 @@ ms.locfileid: "47828705"
   
 |Object|Description|  
 |------------|-----------------|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的开放连接。|  
+|[“连接”](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的开放连接。|  
   
  这些对象之间的关系中所示[ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)。  
   

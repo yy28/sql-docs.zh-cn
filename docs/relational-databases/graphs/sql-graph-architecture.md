@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300184"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044543"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ ms.locfileid: "54300184"
 了解[!INCLUDE[tsql-md](../../includes/tsql-md.md)]引入 SQL Server 和 Azure SQL 数据库中的扩展，以便创建和查询图形对象。 查询语言扩展帮助查询和遍历图形使用 ASCII 图表语法。
  
 ### <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
+
 |任务   |相关的文章  |说明
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 现已扩展为支持创建表 AS 节点或 AS 边界。 请注意，边缘表可能会或可能没有任何用户定义的特性。  |
@@ -145,6 +146,7 @@ ms.locfileid: "54300184"
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句
+
 |任务   |相关的文章  |说明
 |---  |---  |---  |
 |Insert |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)|插入节点表与关系表中插入无异。 值`$node_id`自动生成列。 尝试插入中的值`$node_id`或`$edge_id`列将导致错误。 用户必须提供相应的值`$from_id`和`$to_id`插入边缘表时的列。 `$from_id` 并`$to_id`是`$node_id`给定的边连接节点的值。  |
@@ -154,6 +156,7 @@ ms.locfileid: "54300184"
 
 
 ### <a name="query-statements"></a>查询语句
+
 |任务   |相关的文章  |说明
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|节点和边缘表作为内部存储，因此在节点和边界表上支持大多数 SQL Server 或 Azure SQL 数据库中的表支持的操作  |

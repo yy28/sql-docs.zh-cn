@@ -14,21 +14,22 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637225"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044661"
 ---
 # <a name="adox-properties"></a>ADOX 属性
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|指示 ADO**连接**对象所属的目录。|  
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|描述列特征。|  
 |[群集](../../../ado/reference/adox-api/clustered-property-adox.md)|指示是否对索引进行聚集。|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|指定 ADO**命令**可用于创建或执行该过程的对象。|  
-|[计数](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|指示该对象的创建的日期。|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|指示该对象的上次修改的日期。|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|指示列的规定的最大大小。|  

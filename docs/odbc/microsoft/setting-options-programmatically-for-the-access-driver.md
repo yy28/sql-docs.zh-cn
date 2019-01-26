@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804455"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044463"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以编程方式为 Access 驱动程序设置选项
+
 |选项|Description|方法|  
 |------------|-----------------|------------|  
 |缓冲区大小|内部缓冲区，以千字节，Microsoft Access 用于传输数据到 \ 来自磁盘的大小。 默认缓冲区大小为 2048 KB （显示为 2048年）。 可以输入任何整除 256 的整数值。|若要动态设置此选项，在调用中使用 MAXBUFFERSIZE 关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  

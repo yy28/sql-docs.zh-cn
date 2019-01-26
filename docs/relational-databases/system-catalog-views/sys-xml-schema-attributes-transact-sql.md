@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_attributes (TRANSACT-SQL) |Microsoft Docs
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,18 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a7a7075fb1710622d0681ba4c10ba8bfe696653
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac0f23e73f67c3d95744d974366ab547d50672ea
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719015"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044840"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回每个 XML 架构组件，是一个特性，一行**symbol_space**的**A**。  
+
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**|--|继承自[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  
@@ -38,7 +39,7 @@ ms.locfileid: "47719015"
 |**must_be_qualified**|**bit**|1 = 此属性必须由命名空间显式限定。<br /><br /> 0 = 此属性可由命名空间隐式限定。 （默认值）|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|属性的默认值。 如果未提供默认值，则为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  
