@@ -9,18 +9,19 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: efb72426b1eceff0dbbf88676fb0aa9a83134cae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701835"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044983"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 要管理 SQL Server 服务，请从各种行业领先工具中进行选择。  本文重点介绍提供支持 Microsoft SQL Server 的管理解决方案的 Microsoft 合作伙伴公司。
 
 ## <a name="our-management-partners"></a>我们的管理合作伙伴
+
 | Partner | 描述 | 链接 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 合规性管理器是一种综合的审核解决方案，显示在 SQL Server 上由谁执行何种操作、何时执行、如何执行，以帮助确保符合法规和数据安全要求。<br><br>[系统要求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[网站][idera_website]<br>[Twitter][idera_twitter]<br>[视频][idera_youtube] | |

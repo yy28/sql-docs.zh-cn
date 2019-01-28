@@ -13,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4f26b5de16185f7c19601cd91a88e9bda23b895
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 094a5f631b6a1cb146e46a6c4f1170fc56ca63f2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457580"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>备份已启用延伸的数据库 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53596718"
  -   Microsoft Azure 将自动备份 Stretch Database 已从 SQL Server 迁移到 Azure 的远程数据。  
 
 > [!TIP]
-> 备份仅仅是完整的高可用性和业务连续性解决方案的一部分。 有关高可用性的详细信息，请参阅 [高可用性解决方案](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。
+> 备份仅仅是完整的高可用性和业务连续性解决方案的一部分。 有关高可用性的详细信息，请参阅 [高可用性解决方案](../../database-engine/sql-server-business-continuity-dr.md)。
    
 ## <a name="back-up-your-sql-server-data"></a>备份 SQL Server 数据  
   

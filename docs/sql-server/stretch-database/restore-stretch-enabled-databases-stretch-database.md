@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457630"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>还原已启用延伸的数据库 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596578"
   有关备份的详细信息，请参阅 [备份已启用延伸数据库](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)。
 
 > [!TIP]
-> 备份仅仅是完整的高可用性和业务连续性解决方案的一部分。 有关高可用性的详细信息，请参阅 [高可用性解决方案](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。
+> 备份仅仅是完整的高可用性和业务连续性解决方案的一部分。 有关高可用性的详细信息，请参阅 [高可用性解决方案](../../database-engine/sql-server-business-continuity-dr.md)。
 
 ## <a name="restore-your-sql-server-data"></a>还原 SQL Server 数据
 若要从硬件故障或损坏中恢复，请从备份中还原已启用延伸的 SQL Server 数据库。 你也可以继续使用当前使用的 SQL Server 还原方法。 有关详细信息，请参阅 [还原与恢复概述](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。
