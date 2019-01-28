@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: 发行说明
     href: big-data-cluster-release-notes.md
-- name: 快速入门
+- name: Install
   items:
-  - name: 部署 SQL Server 大数据群集
-    href: quickstart-big-data-cluster-deploy.md
+  - name: 安装工具
+    items:
+    - name: 安装大数据工具
+      href: deploy-big-data-tools.md
+    - name: 安装 mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: 部署脚本
+    items:
+    - name: Azure Kubernetes 服务
+      href: quickstart-big-data-cluster-deploy.md
+  - name: 部署指南
+    items:
+    - name: 部署指南
+      href: deployment-guidance.md
+    - name: Azure Kubernetes 服务
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: 教程
   items:
   - name: 1_加载示例数据
@@ -41,24 +59,6 @@ items:
     href: concept-security.md
 - name: 操作指南
   items:
-  - name: Install
-    items:
-    - name: 部署大数据群集
-      items:
-      - name: 部署指南
-        href: deployment-guidance.md
-      - name: 在 Minikube 上部署
-        href: deploy-on-minikube.md
-      - name: 在 AKS 上部署
-        href: deploy-on-aks.md
-      - name: 使用 Kubeadm 部署
-        href: deploy-with-kubeadm.md
-    - name: 安装工具
-      items:
-      - name: 安装大数据工具
-        href: deploy-big-data-tools.md
-      - name: 安装 mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: 数据虚拟化
     items:
     - name: 虚拟化关系数据
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 请求访问大数据群集
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405557"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898912"
