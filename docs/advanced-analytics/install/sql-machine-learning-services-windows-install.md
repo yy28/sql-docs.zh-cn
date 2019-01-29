@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372701"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147005"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 
@@ -29,7 +29,9 @@ ms.locfileid: "54372701"
 
 + 数据库引擎实例为必需项。 不能只安装 R 或 Python 功能，但可以将它们逐步添加到现有实例中。
 
-- SQL Server 2017 中的故障转移群集不支持安装机器学习服务。 但是，SQL Server 2019 支持此操作。 
++ 实现业务连续性[Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)的机器学习服务支持。 您必须安装机器学习服务和配置包，每个节点上。
+
++ SQL Server 2017 中的故障转移群集不支持安装机器学习服务。 但是，SQL Server 2019 支持此操作。 
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将会失败。
 

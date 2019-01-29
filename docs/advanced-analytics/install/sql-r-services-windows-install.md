@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645316"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147025"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ ms.locfileid: "53645316"
 ## <a name="pre-install-checklist"></a>预安装清单
 
 + 需要数据库引擎实例。 不能只安装 R，但可以将其逐步添加到现有实例。
+
++ 实现业务连续性[Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)R Services 支持。 您必须安装 R Services 和配置包，每个节点上。
 
 + 不要在故障转移群集上安装 R Services。 用于隔离 R 进程的安全机制与 Windows Server 故障转移群集环境不兼容。
 

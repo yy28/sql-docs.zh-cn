@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805713"
 ---
 # <a name="always-encrypted-wizard"></a>始终加密向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54327863"
  
  - **权限：** 若要查询加密列并使用此向导选择密钥，必须具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 权限。 若要创建新密钥，还必须具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 权限。  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>打开始终加密向导  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>打开始终加密向导
  
  1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的对象资源管理器组件连接到 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
    
  2.  右键单击数据库，指向“任务”，然后单击“加密列”。  
    
- ## <a name="column-selection-page"></a>列选择页  
+ ## <a name="column-selection-page"></a>列选择页
  - 找到表和列，然后选择加密类型（确定性的或随机的）和已选择列的加密密匙。 若要解密当前已加密的列，选择“纯文本” 。 若要旋转列加密密匙，请选择不同的加密密匙，向导将解密列并使用新密钥重新加密列。 （ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持加密临时表和内存中表，但不能通过此向导进行配置。）  
  
 ## <a name="master-key-configuration-page"></a>主密匙配置页  

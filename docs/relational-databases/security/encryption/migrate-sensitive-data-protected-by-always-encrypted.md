@@ -14,17 +14,18 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe1af350632325d56fdf0251b790082fb443e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769233"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880530"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>迁移通过“始终加密”保护的敏感数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- 若要在大容量复制操作期间加载加密数据，而不用在服务器上执行元数据检查，请使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 选项创建用户。 此选项旨在由早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （如 bcp.exe）的 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的旧式工具使用，或由不能使用“始终加密”的第三方提取-转换-加载 (ETL) 工作流使用。 这使用户可以安全地将加密数据从包含加密列的一组表中移动到具有加密列的另一组表中（在相同或不同的数据库中）。  
- -  
+
+若要在大容量复制操作期间加载加密数据，而不用在服务器上执行元数据检查，请使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 选项创建用户。 此选项旨在由早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （如 bcp.exe）的 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的旧式工具使用，或由不能使用“始终加密”的第三方提取-转换-加载 (ETL) 工作流使用。 这使用户可以安全地将加密数据从包含加密列的一组表中移动到具有加密列的另一组表中（在相同或不同的数据库中）。  
+
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 选项  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) 和 [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) 都具有 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 选项。 当设置为“开”时（默认为“关”），此选项将取消在大容量复制操作中，在服务器上进行的加密元数据检查，以便用户可以在表或数据库之间大容量复制加密数据，而无需解密数据。  
   

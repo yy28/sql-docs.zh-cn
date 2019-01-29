@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432830"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087736"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 机器学习服务安装在 SQL Server 2019 之间的差异  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53432830"
 
 ## <a name="symbolic-link-created-by-setup"></a>安装程序创建的符号链接
 
-为当前的默认值创建符号链接**R_SERVICES**并**PYTHON_SERIVCES**作为 SQL Server 安装程序的一部分。 如果不想要创建此链接，一种替代方法是所有应用程序包读取的权限授予指向文件夹的层次结构。
+为当前的默认值创建符号链接**R_SERVICES**并**PYTHON_SERVICES**作为 SQL Server 安装程序的一部分。 如果不想要创建此链接，一种替代方法是所有应用程序包读取的权限授予指向文件夹的层次结构。
 
 
 ## <a name="see-also"></a>另请参阅

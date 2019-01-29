@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203306"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044453"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何为 AlwaysOn 可用性组群集 DTC 服务
 
@@ -26,12 +26,14 @@ ms.locfileid: "53203306"
 本主题介绍为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 群集化 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 有关分布式事务和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的其他信息，请参阅 [AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
  ## <a name="checklist-preliminary-requirements"></a>清单：初步要求
+
 ||任务|参考|  
 |------|-----------------|----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保已正确配置所有节点、服务和可用性组。|[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保已满足可用性组 DTC 的要求。|[AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>清单：群集 DTC 资源的依赖关系
+
 ||任务|参考|  
 |------|-----------------|----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|共享存储驱动器。|[配置共享存储驱动器](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)。 请考虑使用驱动器盘符 **M**。|
@@ -43,6 +45,7 @@ ms.locfileid: "53203306"
 
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>清单：公布群集 DTC 资源配置
+
 ||任务|参考|  
 |------|-----------------|----------|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为群集 DTC 资源安全启用网络访问权限。|[Enable Network Access Securely for MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)（为 MS DTC 安全启用网络访问权限）|

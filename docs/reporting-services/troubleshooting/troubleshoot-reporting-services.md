@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686125"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087926"
 ---
 # <a name="troubleshoot-reporting-services"></a>排除 Reporting Services 故障
   此部分的主题帮助确定并解决 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的问题。  
@@ -32,7 +32,7 @@ ms.locfileid: "47686125"
 
 +  [对在本机模式报表服务器上发布或查看报表进行故障排除](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Reporting Services 的服务器和数据库连接问题疑难解答](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Reporting Serivces 的服务器和数据库连接问题疑难解答](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![小文件文件夹图标](../../reporting-services/troubleshooting/media/filefolder-small.png)   **错误和事件参考**  
  + [错误和事件参考 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

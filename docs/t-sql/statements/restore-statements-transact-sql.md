@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2022064cd1f9db8ae61d4480266278854bf0bc8c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242230"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045090"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -294,6 +294,7 @@ Note: URL is the format used to specify the location and the file name for the M
   
 ### <a name="discontinued-restore-keywords"></a>废止的 RESTORE 关键字  
 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中已停止使用以下关键字：  
+
 |停止使用的关键字|替换为…|替换关键字的示例|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  

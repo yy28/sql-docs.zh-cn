@@ -11,12 +11,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2808f6f653ee25f240dbe400b76e018e5033676
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376649"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087786"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 PowerPivot for SharePoint
   若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
@@ -33,7 +33,7 @@ ms.locfileid: "53376649"
   
 |||  
 |-|-|  
-|[准备 PowerShell 环境](#bkmk_prerequisites)<br /><br /> [症状和建议操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服务](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 和 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot 服务应用程序和代理](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [“数据库”](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [计时器作业](#bkmk_timer_jobs)<br /><br /> [运行状况规则](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 日志](#bkmk_logs)<br /><br /> [MSOLAP 访问接口](#bkmk_msolap)<br /><br /> [ADOMD.Net 客户端库](#bkmk_adomd)<br /><br /> [运行状况数据收集规则](#bkmk_health_collection)<br /><br /> [解决方案](#bkmk_solutions)<br /><br /> [手动验证步骤](#bkmk_manual)<br /><br /> [更多资源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 脚本](#bkmk_full_script)|![powershell 验证 powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "powerpivot 的 powershell 验证")|  
+|[准备 PowerShell 环境](#bkmk_prerequisites)<br /><br /> [症状和建议操作](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 服务](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService and PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot 服务应用程序和代理](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [“数据库”](#bkmk_databases)<br /><br /> [SharePoint 功能](#bkmk_features)<br /><br /> [计时器作业](#bkmk_timer_jobs)<br /><br /> [运行状况规则](#bkmk_health_rules)<br /><br /> **(E)** [Windows 和 ULS 日志](#bkmk_logs)<br /><br /> [MSOLAP 访问接口](#bkmk_msolap)<br /><br /> [ADOMD.Net 客户端库](#bkmk_adomd)<br /><br /> [运行状况数据收集规则](#bkmk_health_collection)<br /><br /> [解决方案](#bkmk_solutions)<br /><br /> [手动验证步骤](#bkmk_manual)<br /><br /> [更多资源](#bkmk_more_resources)<br /><br /> [完整的 PowerShell 脚本](#bkmk_full_script)|![powershell 验证 powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "powerpivot 的 powershell 验证")|  
   
 ##  <a name="bkmk_prerequisites"></a> 准备 PowerShell 环境  
  本章节的步骤旨在准备 PowerShell 环境。 这些不一定是必需步骤，具体视脚本环境的当前配置方式而定。  
@@ -87,7 +87,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService 和 PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService 和 PowerPivotEngineService  
  本章节中的脚本用于验证 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 系统服务。 用于 SharePoint 2013 部署的系统服务有一个，用于 SharePoint 2010 部署的服务有两个。  
   
  **PowerPivotSystemService**  
@@ -106,7 +106,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  如果您使用的是 SharePoint 2013，请**跳过该脚本** 。 PowerPivotEngineService 不是 SharePoint 2013 部署的一部分。 如果您在 SharePoint 2013 上运行 Get-PowerPivot**引擎**服务 cmdlet，则系统会显示类似以下内容的错误消息。 即使您已运行了本主题先决条件中说明的 Add-PSSnapin 命令，仍会返回该错误消息。  
@@ -467,7 +467,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

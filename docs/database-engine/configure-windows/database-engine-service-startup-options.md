@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626327"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044324"
 ---
 # <a name="database-engine-service-startup-options"></a>数据库引擎服务启动选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626327"
   
 ## <a name="list-of-startup-options"></a>启动选项列表  
 ### <a name="default-startup-options"></a>默认启动选项  
+
 |选项|描述|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|是 master 数据库文件的完全限定路径（通常为：C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf）。 如果没有提供此选项，则使用现有的注册表参数。|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626327"
 |**-l**  *master_log_path*|是 master 数据库日志文件的完全限定路径（通常为：C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf）。 如果没有指定此选项，则使用现有的注册表参数。|  
   
 ### <a name="other-startup-options"></a>其他启动选项   
+
 |选项 |描述|   
 |---------------------------|-----------------|  
 |**-c**|缩短从命令提示符启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的启动时间。 通常， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 通过调用服务控制管理器作为服务启动。 由于在通过命令提示符启动时 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 不作为服务启动，因此请使用 **-c** 跳过此步骤。|  

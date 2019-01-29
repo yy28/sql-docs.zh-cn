@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785958"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087866"
 ---
 # <a name="thread-pool-properties"></a>线程池属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ ms.locfileid: "53785958"
   
  忽略 NUMA 节点。 将只有一个 IOProcess 线程池，并将使该线程池中的所有线程与所有逻辑处理器关联。 默认情况下（其中 PerNumaNode=-1），如果计算机具有的 NUMA 节点少于 4 个，则这是合适的设置。  
   
- ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 处理器和线程池通信")  
+ ![Numa、 处理器和线程池的对应关系](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 处理器和线程池的对应关系")  
   
  **设置 PerNumaNode=1**  
   
  为每个 NUMA 节点创建 IOProcess 线程池。 具有不同的线程池可改进对本地资源（如 NUMA 节点上的本地缓存）的协调访问。  
   
- ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 处理器和线程池通信")  
+ ![Numa、 处理器和线程池的对应关系](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 处理器和线程池的对应关系")  
   
  **设置 PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53785958"
   
  在以下示例中，在具有 4 个 NUMA 节点和 32 个逻辑处理器的系统上，将 **PerNumaNode** 设置为 2 会产生 32 个 IOProcess 线程池。 前 8 个线程池中的线程将关联到 NUMA 节点 0 中的所有逻辑处理器，但理想的处理器设置为 0、1、2 直到 7。 接下来的 8 个线程池将关联到 NUMA 节点 1 中的所有逻辑处理器，而理想的处理器设置为 8、9、10 直到 15，以此类推。  
   
- ![Numa、 处理器和线程池通信](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 处理器和线程池通信")  
+ ![Numa、 处理器和线程池的对应关系](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 处理器和线程池的对应关系")  
   
  在此关联水平上，计划程序始终会尝试先使用首选 NUMA 节点内的理想逻辑处理器。 如果逻辑处理器不可用，计划程序将选择同一节点内的另一个处理器，或在其他线程不可用时选择同一处理器组中的处理器。 有关详细信息和示例，请参阅 [Analysis Services 2012 配置设置（Wordpress 博客）](http://go.microsoft.com/fwlink/?LinkId=330387)。  
   

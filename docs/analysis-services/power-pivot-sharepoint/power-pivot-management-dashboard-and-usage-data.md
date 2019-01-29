@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419698"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087746"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419698"
 ### <a name="change-the-current-service-application"></a>更改当前服务应用程序。  
  要在管理仪表板中更改当前 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序，请执行以下步骤：  
   
-1.  在 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理面板顶部，记下当前服务应用程序的名称，例如**默认 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务应用程序**。  
+1.  在顶部[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理仪表板中，记下当前服务应用程序的名称，例如**默认[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服务应用程序**。  
   
 2.  在 **“操作”** 面板中单击 **“列出服务应用程序”**。  
   

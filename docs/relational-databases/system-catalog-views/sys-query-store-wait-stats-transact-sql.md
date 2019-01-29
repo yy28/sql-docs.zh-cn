@@ -20,14 +20,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43cd85210c437520d2f72b7e9a16fbe2aab84514
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521255"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087836"
 ---
-# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
+# <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "52521255"
 |**avg_query_wait_time_ms**|**float**|平均等待每次执行 （以毫秒为单位报告） 在聚合时间间隔和等待类别中的查询计划的持续时间。|
 |**last_query_wait_time_ms**|**bigint**|上次等待持续时间内聚合间隔的查询计划，然后等待类别 （以毫秒为单位报告）。|
 |**min_query_wait_time_ms**|**bigint**|最小值`CPU wait`聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
-|**max_query_wait_time_ms**|**bigint**|最大 'CPU 等待 ' 聚合间隔内的查询计划的时间，并且等待类别 （以毫秒为单位报告）。|
+|**max_query_wait_time_ms**|**bigint**|最大`CPU wait`聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` 查询的持续时间标准偏差计划聚合时间间隔内，并等待类别 （以毫秒为单位报告）。|
 
 ## <a name="wait-categories-mapping-table"></a>等待类别映射表
@@ -58,19 +58,19 @@ ms.locfileid: "52521255"
 |**0**|**Unknown**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
-|**3**|**锁**|LCK_M_%|
-|**4**|**闩锁**|LATCH_ %|
-|**5**|**缓冲区闩锁**|PAGELATCH_ %|
+|**3**|**Lock**|LCK_M_%|
+|**4**|**闩锁**|LATCH_%|
+|**5**|**缓冲区闩锁**|PAGELATCH_%|
 |**6**|**缓冲区 IO**|PAGEIOLATCH_%|
 |**7**|**编译***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR %、 SQLCLR %|
 |**9**|**镜像**|DBMIRROR %|
-|**10**|**事务**|XACT %、 DTC %、 TRAN_MARKLATCH_ %、 MSQL_XACT_ %、 TRANSACTION_MUTEX|
-|**11**|**空闲**|SLEEP_ %，LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_队列 XE_TIMER_EVENT|
-|**12**|**抢先式**|PREEMPTIVE_ %|
+|**10**|**事务**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
+|**11**|**Idle**|SLEEP_ %，LAZYWRITER_SLEEP、 SQLTRACE_BUFFER_FLUSH、 SQLTRACE_INCREMENTAL_FLUSH_SLEEP、 SQLTRACE_WAIT_ENTRIES、 FT_IFTS_SCHEDULER_IDLE_WAIT、 XE_DISPATCHER_WAIT、 REQUEST_FOR_DEADLOCK_SEARCH、 LOGMGR_QUEUE、 ONDEMAND_TASK_QUEUE、 CHECKPOINT_队列 XE_TIMER_EVENT|
+|**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_ % **（但不是 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事务日志 IO**|数据库、 LOGBUFFER、 LOGMGR_RESERVE_APPEND、 LOGMGR_FLUSH、 LOGMGR_PMM_LOG、 CHKPT、 WRITELOGF|
-|**15**|**网络 IO**|ASYNC_NETWORK_IO，NET_WAITFOR_PACKET，PROXY_NETWORK_IO EXTERNAL_SCRIPT_NETWORK_IOF|
+|**15**|**网络 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET EXCHANGE|
 |**17**|**内存**|RESOURCE_SEMAPHORE、 CMEMTHREAD、 CMEMPARTITIONED、 EE_PMOLOCK、 MEMORY_ALLOCATION_EXT、 RESERVED_MEMORY_ALLOCATION_EXT、 MEMORY_GRANT_UPDATE|
 |**18**|**用户等待**|WAITFOR 子句，WAIT_FOR_RESULTS，BROKER_RECEIVE_WAITFOR|
@@ -84,7 +84,7 @@ ms.locfileid: "52521255"
 
 ## <a name="permissions"></a>权限
 
- 需要**VIEW DATABASE STATE**权限。  
+ 需要 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>请参阅
 

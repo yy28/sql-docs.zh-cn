@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300564"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838144"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  指示新列是标识列。 在表中添加新行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将为该列提供一个唯一的增量值。 标识列通常与 PRIMARY KEY 约束一起用作表的唯一行标识符。 可以将 IDENTITY 属性分配到 tinyint、smallint、int、decimal(p,0) 或 numeric(p,0) 列。 每个表只能创建一个标识列。 不能对标识列使用绑定默认值和 DEFAULT 约束。 必须同时指定种子和增量，或者两者都不指定。 如果二者都未指定，则取默认值 (1,1)。  
-  
- 在内存优化表中，唯一可用于种子和增量的值为 1；(1,1) 是种子和增量的默认值。  
   
  seed  
  是装入表的第一行所使用的值。  

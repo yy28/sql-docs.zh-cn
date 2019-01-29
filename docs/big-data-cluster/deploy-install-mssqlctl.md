@@ -9,12 +9,12 @@ ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361407"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087606"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安装 mssqlctl 来管理 SQL Server 2019 大数据群集
 
@@ -34,9 +34,15 @@ ms.locfileid: "54361407"
 
 1. 打开新的 Windows PowerShell 会话，以便获取在其中与 Python 配合使用的最新路径。
 
-2. 安装**mssqlctl**使用以下命令：
+1. 如果有任何以前版本的**mssqlctl**安装，请务必卸载**mssqlctl**首先在之前安装最新版本。
 
-   ```bash
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+
+1. 安装**mssqlctl**使用以下命令：
+
+   ```powershell
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
@@ -57,16 +63,22 @@ ms.locfileid: "54361407"
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
-   
+
+1. 如果有任何以前版本的**mssqlctl**安装，请务必卸载**mssqlctl**首先在之前安装最新版本。
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
 1. 安装**mssqlctl**使用以下命令：
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-   
+
    > [!NOTE]
    > `--user`开关将 mssqlctl 安装到 Python 用户安装目录。 这通常是`~/.local/bin`Linux 上。 可以将此目录添加到你的路径或导航到用户的安装目录并运行`./mssqlctl`从那里。
-   
+
 ## <a name="next-steps"></a>后续步骤
 
 有关大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

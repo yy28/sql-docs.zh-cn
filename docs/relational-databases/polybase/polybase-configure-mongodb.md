@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947582"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044493"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>配置 PolyBase 以访问 MongoDB 中的外部数据
 
@@ -142,6 +142,7 @@ JSON 嵌套/重复数据类型将按如下所示平展
 * 嵌套字段 restaurant.address.zipcode 将变为 restaurant.address_zipcode
 
 数组等级将按如下所示平展：
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时， |2|

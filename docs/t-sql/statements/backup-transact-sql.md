@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805773"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ URL 的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVers
 以下示例向 Microsoft Azure Blob 存储服务执行 `Sales` 的 COPY_ONLY 备份。  存储帐户名称为 `mystorageaccount`。  容器名称为 `myfirstcontainer`。  已经创建具有读取、写入、删除和列表权限的存储访问策略。  已使用与存储访问策略相关联的共享访问签名创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 Microsoft Azure Blob 存储服务的详细信息，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 备份到 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   

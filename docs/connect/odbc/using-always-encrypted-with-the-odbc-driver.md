@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226684"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044944"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ SQL Server 的 ODBC 驱动程序还支持使用 CEKeystoreProvider 接口的自�
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 参数 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[输入]连接句柄。 必须是有效的连接句柄，但通过一个连接句柄加载提供程序是从在同一进程中任何其他可访问。|
@@ -451,6 +452,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 参数 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[输入]连接句柄。 必须是有效的连接句柄，但通过一个连接句柄加载提供程序是从在同一进程中任何其他可访问。|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | 参数 | 描述 |
 |:---|:---|
 |`name`|[输入]在集，提供程序的名称时将数据发送到。 在 Get 时被忽略。 以 null 结尾的宽字符字符串。|
@@ -489,6 +492,7 @@ char data[];
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 参数 | 描述 |
 |:---|:---|
 |`ConnectionHandle`| [输入]连接句柄。 必须是有效的连接句柄，但通过一个连接句柄加载提供程序是从在同一进程中任何其他可访问。|
@@ -508,6 +512,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 参数 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[输入]连接句柄。 必须是有效的连接句柄，但通过一个连接句柄加载提供程序是从在同一进程中任何其他可访问。|

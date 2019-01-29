@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738113"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044483"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738113"
 ||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，应用 **“层次结构成员”** 选项卡上设置的用户和组权限的频率（以秒为单位）。 默认值为 **3600** 秒（60 分钟）。|  
 
 ##  <a name="Performance"></a> 性能设置  
+
 |配置管理器设置|系统设置|描述|  
 |-----------------------------------|--------------------|-----------------|  
 |**启用性能改进设置**|**PerformanceImprovementEnable**|我们默认启用此设置（设置为 1），使加载权限相关页面具有良好的性能。 但在此情况下，创建/修改实体、属性、用户或组性能不佳。 为避免这种情况，可以禁用此设置（设置为 0）。 随后更改此设置。 必须运行命令“EXEC [mdm].[udpPerformanceToggleSwitch];”，以确保视图和数据正确无误。|  

@@ -14,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380948"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044344"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ ms.locfileid: "53380948"
 |默认值|0|100|30|30|有效 MAX 值的计算如下：min(100,100-(20+50)) = 30。 计算的共享百分比为有效 MAX - MIN = 30。|  
 |池 1|20|100|50|30|有效 MAX 值的计算方式为：min(100,100-50) = 50。 计算的共享百分比为有效 MAX - MIN = 30。|  
 |池 2|50|70|70|20|有效 MAX 值的计算方式为：min(70,100-20) = 70。 共享百分比的计算方式为：有效 MAX - MIN = 20。|  
+
 下面的公式用于计算上表中有效 MAX 百分比和共享百分比：  
   
 -   Min(X,Y) 表示 X 和 Y 中的较小值。  

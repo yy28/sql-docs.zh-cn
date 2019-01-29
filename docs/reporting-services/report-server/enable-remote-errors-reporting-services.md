@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457450"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
   可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -108,7 +108,7 @@ ms.locfileid: "51813121"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 表（本机模式）  
   
-1.  > [!NOTE]  
-    >  您可以通过编辑报表服务器数据库中的 **ConfigurationInfo** 表将 **EnableRemoteErrors** 设置为 **True**，但是如果报表服务器正在使用中，则应使用 SQL Server Management Studio 或脚本来修改此设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
+> [!NOTE]  
+>  您可以通过编辑报表服务器数据库中的 **ConfigurationInfo** 表将 **EnableRemoteErrors** 设置为 **True**，但是如果报表服务器正在使用中，则应使用 SQL Server Management Studio 或脚本来修改此设置。 如果修改了数据库中的设置，则需要重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务，然后更改才会生效。  
   
   

@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420182"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880540"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -362,7 +362,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   覆盖查询。  
   
-     或者当索引包含查询中的所有列时，性能可以提升。 查询优化器可以找到索引内的所有列值；不会访问表或聚集索引数据，这样就减少了磁盘 I/O 操作。 使用具有[包含列](#Included_Columns)的索引来添加覆盖列，而不是创建宽索引键。  
+     当索引包含查询中的所有列时，性能可以提升。 查询优化器可以找到索引内的所有列值；不会访问表或聚集索引数据，这样就减少了磁盘 I/O 操作。 使用具有[包含列](#Included_Columns)的索引来添加覆盖列，而不是创建宽索引键。  
   
      如果表有聚集索引，则该聚集索引中定义的列将自动追加到表上每个非聚集索引的末端。 这可以生成覆盖查询，而不用在非聚集索引定义中指定聚集索引列。 例如，如果一个表在 `C`列上有聚集索引，则 `B` 和 `A` 列的非聚集索引将具有其自己的键值列 `B`、 `A`和 `C`。  
       

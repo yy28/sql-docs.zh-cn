@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419868"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087708"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
   PowerPivot 管理面板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助您管理 SQL Server PowerPivot for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
@@ -67,7 +67,7 @@ ms.locfileid: "52419868"
 ### <a name="change-the-current-service-application"></a>更改当前服务应用程序。  
  在管理面板中更改当前 PowerPivot 服务应用程序：  
   
-1.  在 PowerPivot 管理面板顶部，记下当前服务应用程序的名称，例如 **“默认 PowerPivot 服务应用程序”**。  
+1.  在 PowerPivot 管理面板顶部，记下名称的当前服务应用程序，例如**默认 PowerPivot 服务应用程序**。  
   
 2.  在 **“操作”** 面板中单击 **“列出服务应用程序”**。  
   
