@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405877"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045080"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 
@@ -578,6 +578,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>错误 1000 到 1999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   否  |   第 %d 行:指定的长度或精度 %d 无效。   |
@@ -1009,6 +1010,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>错误 2000 到 2999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   否  |   不能为组号大于一的复制创建过程。   |
@@ -1381,6 +1383,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>错误 3000 - 3999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   否  |   不能对数据库快照执行 BACKUP 或 RESTORE。   |
@@ -1821,6 +1824,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>错误 4000 到 4999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   否  |   在仍存在待处理的请求时客户端发送了 sp_reset_connection，服务器正在断开连接。  |
@@ -3155,6 +3159,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>错误7000 到 7999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   否  |   OPENXML 文档句柄参数的数据类型必须为 int。 |
@@ -3598,6 +3603,7 @@ ms.locfileid: "54405877"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>错误 8000 到 8999
+
 | 错误| Severity | 是否记录事件 | 描述|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   否  |   传入的表格格式数据流(TDS)远程过程调用(RPC)协议流不正确。 Sql Variant 参数的元信息无效。 |
