@@ -115,7 +115,7 @@ EXEC sp_xml_removedocument @docHandle;
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
   
- XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。  例如，如果 *rowpattern* 以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
+ XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。 例如，如果 rowpattern 以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。   
   
 ### <a name="description-of-the-rowset-to-be-generated"></a>对要生成的行集的说明  
  OPENXML 使用行集架构来生成结果行集。 指定行集架构时，可以使用下列选项。  
@@ -170,7 +170,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -    通过使用 ColPattern 参数  
   
-     *ColPattern*是 XPath 表达式，被指定为 WITH 子句中的 *SchemaDeclaration* 的一部分。  在 *ColPattern* 中指定的映射覆盖 flags 参数指定的映射。  
+     *ColPattern*是 XPath 表达式，被指定为 WITH 子句中的 *SchemaDeclaration* 的一部分。 在 *ColPattern* 中指定的映射覆盖 flags 参数指定的映射。   
   
      *ColPattern* 可以用于指定映射类型（如以属性为中心或以元素为中心），以覆盖或增强 *flags*指定的默认映射。  
   
@@ -183,14 +183,14 @@ EXEC sp_xml_removedocument @docHandle;
  *flags* 和 *ColPattern* 参数都是可选的。 如果未指定映射，则采用以属性为中心的映射。 以属性为中心的映射是 *flags* 参数的默认值。  
   
 #### <a name="attribute-centric-mapping"></a>以属性为中心的映射  
-  将 OPENXML 中的 **flags** 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。 如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
+ 将 OPENXML 中的 **flags** 参数设置为 1 (XML_ATTRIBUTES) 将指定“以属性为中心”的映射。  如果 *flags* 包含 XML_ATTRIBUTES，则显示的行集提供或使用其中每个 XML 元素都表示为一行的那些行。 XML 属性根据名称对应映射到 SchemaDeclaration 中定义的属性，或 WITH 子句的 Tablename 提供的属性。 名称对应表示具有特定名称的 XML 属性都以相同名称存储在行集中的列内。  
   
   如果列名不同于它映射到的属性名称，则必须指定 ColPattern。  
   
  如果 XML 属性具有命名空间限定符，则行集中的列名也必须有该限定符。  
   
 #### <a name="element-centric-mapping"></a>以元素为中心的映射  
-  将 OPENXML 中的 **flags** 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。  除了下列差异外，它与“以属性为中心”的映射相似：  
+ 将 OPENXML 中的 **flags** 参数设置为 2 (XML_ELEMENTS) 将指定“以元素为中心”的映射。   除了下列差异外，它与“以属性为中心”的映射相似：  
   
 -   除非指定列级模式，否则映射的名称对应（例如，映射到具有相同名称的 XML 元素的列）选择不复杂的子元素。 在检索过程中，如果子元素复杂（因为它包含其他子元素），则将列设置为 NULL。 然后忽略子元素的属性值。  
   
