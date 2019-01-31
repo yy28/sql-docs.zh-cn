@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514308"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428654"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,26 +53,26 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>参数    
- *database_id* |NULL |0 |默认值    
+ *database_id* | NULL | 0 | DEFAULT    
  数据库 ID。 *database_id*是**smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果指定为空， *database_id*，则还必须指定为 NULL *object_id*， *index_id*，以及*partition_number*。    
     
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
- *object_id* |NULL |0 |默认值    
+ *object_id* | NULL | 0 | DEFAULT    
  索引所基于的表或视图的对象 ID。 *object_id* 是 **int**。    
     
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回指定数据库中的所有表和视图的缓存信息。 如果指定为空， *object_id*，则还必须指定为 NULL *index_id*并*partition_number*。    
     
- *index_id* | 0 |NULL |-1 |默认值    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  索引的 ID。 *index_id*是**int**。有效输入包括索引 0 的 ID 号，如果*object_id*是一个堆，NULL，-1 或默认值。 默认值为 -1。在此上下文中，NULL、-1 和 DEFAULT 是等价值。    
     
  指定 NULL 可返回基表或视图的所有索引的缓存信息。 如果指定为空， *index_id*，则还必须指定为 NULL *partition_number*。    
     
- *partition_number* |NULL |0 |默认值    
+ *partition_number* | NULL | 0 | DEFAULT    
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆中，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
  指定 NULL 可返回索引或堆的所有分区的缓存信息。    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|数据库 ID。|    
 |**object_id**|**int**|表或视图的 ID。|    
-|**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆|    
-|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 数据堆或 B 树行集跟踪对于列存储索引的内部数据的 ID。<br /><br /> NULL-这不是内部的列存储行集。<br /><br /> 有关更多详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|索引或堆中从 1 开始的分区号。|    
+|**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
+|**partition_number**|**int**|索引或堆中从 1 开始的分区号。| 
+|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 数据堆或 B 树行集跟踪对于列存储索引的内部数据的 ID。<br /><br /> NULL-这不是内部的列存储行集。<br /><br /> 有关更多详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|叶级插入的累积计数。|    
 |**leaf_delete_count**|**bigint**|叶级删除的累积计数。 leaf_delete_count 才会递增第一次未标记为虚影的已删除的记录。 首先，幻像的已删除的记录**leaf_ghost_count**而递增。|    
 |**leaf_update_count**|**bigint**|叶级更新的累积计数。|    
@@ -156,7 +156,7 @@ sys.dm_db_index_operational_stats (
     
      这些列指示索引或堆上是否存在闩锁争用以及争用的意义。    
     
--   **row_lock_count**和**page_lock_count**    
+-   **row_lock_count** and **page_lock_count**    
     
      这些列指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试获取行锁和页锁的次数。    
     
@@ -241,9 +241,9 @@ GO
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     

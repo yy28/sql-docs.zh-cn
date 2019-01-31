@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211916"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428594"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,24 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
  [  **@publication=** ] **'***发布***’**  
  已插入跟踪令牌的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@tracer_id=** ] *tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  要删除的跟踪令牌的 ID。 *tracer_id*是**int**，默认值为 NULL。 如果**null**，则会删除属于该发布的所有跟踪令牌。  
   
- [  **@cutoff_date=** ] *cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  指定一个截止日期，以便删除在该日期之前插入发布的所有跟踪令牌。 *cutoff_date*为 datetime，默认值为 NULL。  
   
  [ **@publisher=** ] **'***发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]
->  应仅指定此参数为非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+>  应仅指定此参数为非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器或从分发服务器上执行存储的过程时。  
   
  [ **@publisher_db=** ] **'***publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果在发布服务器上执行该存储过程，将忽略此参数。  
   
+> [!NOTE]
+>  从分发服务器上执行存储的过程时，应指定此参数。  
+
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
