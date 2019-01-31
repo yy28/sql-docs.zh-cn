@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524319"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044374"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524319"
 SQL Server 2016 SP2 安装可能需要在安装后重新启动。 作为最佳做法，建议在安装 SQL Server 2016 SP2 后计划并执行重新启动。
 
 SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
+
 |功能|描述|详细信息|
 |   --- |   --- |   --- |
 |分发数据库清除过程已改进 |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 |增量统计信息的自动更新统计信息功能已改进 |    在某些情况下，如果表中的多个分区出现大量数据更改，递增统计信息的总修改计数器超过自动更新阈值，但是任何单独分区都未超过自动更新阈值，那么统计信息更新可能会推迟，直到该表中出现更多的修改。 已在跟踪标志 11024 下更正此行为。   |       |
 
 SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
+
 |功能 |描述   |详细信息   |
 |   --- |   --- |   --- |
 |对可用性组中数据库的完整 DTC 支持    |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |       |
@@ -110,12 +112,12 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 |CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |对复制的 DROP TABLE 支持|DROP TABLE DDL 支持复制，以允许删除复制文章。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |文件流 RsFx 驱动程序签名|文件流 RsFx 驱动程序使用 Windows 硬件开发人员中心仪表板门户（开发门户）签名和认证，从而允许在 Windows Server 2016/Windows 10 上毫无问题地安装 SQL Server 2016 SP1 文件流 RsFx 驱动程序。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
-|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|SQL 服务帐户的 LPIM - 编程识别|允许 DBA 以编程方式识别服务启动时内存中锁定页面 (LPIM) 特权是否生效。|[Developers Choice:Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)（开发人员选择：以编程方式识别 SQL Server 中的 LPIM 和 IFI 特权）|
 |手动更改跟踪清除|新存储过程根据需要清除更改跟踪内部表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |本地临时表的并行 INSERT...SELECT 更改|INSERT..SELECT 操作中的新并行插入。|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)（SQL Server 客户咨询团队）|
 |Showplan XML|扩展诊断包括授予警告和针对查询启用的最大内存、启用的跟踪标志，并且还显示其他诊断信息。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |存储类内存|在 Windows Server 2016 中使用存储类内存推进事务处理，带来的结果是事务提交时间加快了几个数量级。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[开发人员选择：USE HINT 查询提示](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|使用查询选项 `OPTION(USE HINT('<option>'))` 通过受支持的查询级别提示更改查询优化器行为。 与 QUERYTRACEON 不同，USE HINT 选项不需要 sysadmin 特权。|[Developers Choice:USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)（开发人员选择：USE HINT 查询提示）|
 |XEvent 添加件|新 XEvent 和 Perfmon 诊断功能改进了延迟的故障排除。|[扩展事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 此外，请注意以下修补程序：
@@ -141,9 +143,9 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 -   [产品文档 (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**问题及对用户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。 
+**问题及其对客户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。 
 
-**解决方案：** 请使用下列解决方案之一：
+**解决方法：** 使用以下任一解决方案：
 
 - 安装 [KB 3138367 - Visual C++ 2013 和 Visual C++ 可再发行包的更新](https://support.microsoft.com/kb/3138367)。 KB 是首选的解决方案。 可以在安装 SQL Server 2016 之前或之后安装此更新。 
 
@@ -161,7 +163,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
     - **在 SQL Server 2016 安装过程中：** 如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
 
-    - **Microsoft 更新：** 该更新作为 SQL Server 2016 的重要的非安全更新，可从 Microsoft 更新获取。 通过 Microsoft 更新进行安装，更新后 SQL Server 2016 需要重新启动服务器。 
+    - **Microsoft 更新：** 该更新作为 SQL Server 2016 的关键非安全更新，可从 Microsoft 更新获取。 通过 Microsoft 更新进行安装，更新后 SQL Server 2016 需要重新启动服务器。 
 
     - **下载中心：** 最后，可从 Microsoft 下载中心获取该更新。 可以在安装 SQL Server 2016 之后下载更新软件并安装在服务器上。 
 
@@ -170,13 +172,13 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>与数据库或表名称中的特定字符有关的问题
 
-**问题和对客户的影响：** 尝试对数据库或表启用 Stretch Database 将失败，并出现错误。 将对象名称从小写转换为大写时，如果名称中包含被视为其他字符的一个字符，则会出现此问题。 导致此问题的一个示例字符是字符“ƒ”（通过键入 ALT+159 创建）。
+**问题及其对客户的影响：** 尝试对数据库或表启用 Stretch Database 将失败，并出现错误。 将对象名称从小写转换为大写时，如果名称中包含被视为其他字符的一个字符，则会出现此问题。 导致此问题的一个示例字符是字符“ƒ”（通过键入 ALT+159 创建）。
 
 **解决方法：** 如果想要对数据库或表启用 Stretch Database，唯一的方法是重命名对象并删除问题字符。
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>与使用 INCLUDE 关键字的索引有关的问题
 
-**问题和对用户的影响：** 如果表的一个索引使用 INCLUDE 关键字以包含索引中的其他列，那么尝试对该表启用 Stretch Database 将失败并显示错误。
+**问题及其对客户的影响：** 如果表的一个索引使用 INCLUDE 关键字以包含索引中的其他列，那么尝试对该表启用 Stretch Database 将失败并显示错误。
 
 **解决方法：** 删除使用 INCLUDE 关键字的索引，对表启用 Stretch Database，然后重新创建索引。 如果这样做，请务必遵从组织的维护实践和策略，以确保对受影响的表的用户的影响最小或没有影响。
 
@@ -184,7 +186,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>与版本的自动数据清理有关的问题（不包括企业版和开发人员版）
 
- **问题和对用户的影响：** 对版本的自动数据清理失败（不包括企业版和开发人员版）。 因此，如果不手动清除数据，查询存储使用的空间将不断增长，直至达到配置的限制为止。 如果此问题未得到修复，那么为错误日志分配的磁盘空间也将被填满，因为每次尝试执行清理都将生成一个转储文件。 清理激活期限取决于工作负荷频率，但不会超过 15 分钟。
+ **问题及其对客户的影响：** 对版本的自动数据清理失败（不包括企业版和开发人员版）。 因此，如果不手动清除数据，查询存储使用的空间将不断增长，直至达到配置的限制为止。 如果此问题未得到修复，那么为错误日志分配的磁盘空间也将被填满，因为每次尝试执行清理都将生成一个转储文件。 清理激活期限取决于工作负荷频率，但不会超过 15 分钟。
 
  **解决方法：** 如果计划对企业版和开发人员版以外的版本使用查询存储，则需要显式关闭清理策略。 可通过 SQL Server Management Studio（数据库属性页）或 Transact-SQL 脚本来完成该操作：
 
@@ -206,7 +208,7 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 ###  <a name="bkmk_ga_docs"></a> 产品文档 (GA) 
  **问题及其对客户的影响：** 尚未提供可下载的 SQL Server 2016 文档版本。 在使用帮助库管理器尝试联机安装内容时，你将看到 SQL Server 2012 和 SQL Sever 2014 文档，但没有 SQL Server 2016 文档的选项。    
     
- **解决方法：** 使用以下解决方法之一暂时解决此问题：    
+ **解决方法：** 使用以下任一解决方法暂时解决此问题：    
     
  ![管理 SQL Server 的帮助设置](../sql-server/media/docs-sql2016-managehelpsettings.png "管理 SQL Server 的帮助设置")    
     

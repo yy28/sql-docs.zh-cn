@@ -1,7 +1,7 @@
 ---
 title: 步骤 3：测试第 6 课包 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,36 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5119aef360778030f076a3e186225933b4a811a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9342c312de10700e0af8224496ad526c6a930591
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796507"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880470"
 ---
-# <a name="lesson-6-3---testing-the-lesson-6-package"></a>第 6-3 课 - 测试第 6 课包
+# <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 课：测试第 6 课包
 在运行时，包从 VarFolderName 参数获取 Directory 属性的值。  
   
-若要验证该包在运行时是否使用新值更新了 Directory 属性，只需执行该包。 由于只向新目录中复制了三个示例数据文件，因此该数据流将只运行三次，而不遍历原始文件夹中的 14 个文件。  
+若要验证该包是否更新了 Directory 属性，只需执行该包即可。 因为已将三个示例数据文件复制到新目录中，所以数据流会运行三次。
   
-## <a name="checking-the-package-layout"></a>检查包布局  
-测试包之前，应当确保 Lesson 6 包中的控制流和数据流包含下列关系图中显示的对象。 控制流应与第 5 课中的控制流相同。 数据流应与第 5 课中的数据流相同。  
+## <a name="check-the-package-layout"></a>检查包布局  
+在测试包之前，请验证第 6 课包中的控件和数据流是否与下图中显示的对象类似：   
   
 **控制流**  
   
-![控制流](../integration-services/media/task3lesson6control.jpg "控制流")  
+![控制流](../integration-services/media/task4lesson2control.gif "控制流")  
   
 **数据流**  
   
-![数据流](../integration-services/media/task3lesson6data.jpg "数据流")  
+![数据流](../integration-services/media/task5lesson5data.gif "数据流")  
   
-### <a name="to-test-the-lesson-6-tutorial-package"></a>测试第 6 课教程包  
+## <a name="test-the-lesson-6-package"></a>测试第 6 课包  
   
-1.  在“调试”菜单上，单击“启动调试”。  
+1.  在“调试”菜单中，选择“启动调试”。  
   
-2.  该包运行完成后，请在“调试”菜单上单击“停止调试”。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
   
-## <a name="next-task-in-lesson"></a>课程中的下一个任务  
+## <a name="go-to-next-task"></a>转到下一个任务
 [步骤 4：部署第 6 课包](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369299"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087676"
 ---
 # <a name="monitor-sql-server-components"></a>监视 SQL Server 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ Windows 提供下列工具来监视在服务器上运行的应用程序：
   
      为了进行分析，将捕获的事件数据加载到捕获该数据的应用程序中。 
      
-     例如，可以将捕获的扩展事件跟踪重新加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 进行查看和分析。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标数据的高级查看功能](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
+     例如，可以将捕获的扩展事件跟踪重新加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以进行查看和分析。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标数据的高级查看功能](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。
 
      可以将 SQL 跟踪数据重新加载到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 进行查看和分析。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)。  
   

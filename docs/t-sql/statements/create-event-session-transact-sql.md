@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457670"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...n] ) 指定要与事件会话一起使用的选项。  
   
  MAX_MEMORY =size [ KB | MB ]  
- 指定要分配给会话用来缓冲事件的最大内存量。 默认值为 4 MB。 size 是整数，并且其值可以以千字节 (KB) 或兆字节 (MB) 表示。  
+ 指定要分配给会话用来缓冲事件的最大内存量。 默认值为 4 MB。 size 是整数，并且其值可以以千字节 (KB) 或兆字节 (MB) 表示。 最大内存量不能超过 2 GB（小于 2048 MB）。 但是，不建议使用 GB 范围内的内存值。
   
  EVENT_RETENTION_MODE = { ALLOW_SINGLE_EVENT_LOSS | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  指定要用于处理事件丢失的事件保留模式。  

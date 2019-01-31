@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805743"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -80,6 +80,28 @@ ms.locfileid: "50021691"
 **SystemSnapshotLimit**  
 为报表存储的快照的最大数目。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则无快照限制。  
 
+**AccessControlAllowCredentials**  
+指示当“凭据”标记设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false**秒。
+
+**AccessControlAllowHeaders** 客户端发出请求时，服务器允许的以逗号分隔的标头列表。 此属性可为空字符串，指定 * 可允许所有标头。
+
+**AccessControlAllowMethods** 当客户端发出请求时，服务器允许的以逗号分隔的 HTTP 方法列表。 默认值为（GET、PUT、POST、PATCH、DELETE），指定 * 可允许所有方法。
+
+**AccessControlAllowOrigin** 当客户端发出请求时，服务器允许的以逗号分隔的来源列表。 默认值为空白，这将阻止所有请求，指定 * 可在未设置凭据时允许所有源，如果指定凭据，则必须指定源的显式列表。
+
+**AccessControlExposeHeaders** 服务器将向客户端公开的以逗号分隔的标头列表。 默认值为空。
+
+**AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
+
+**AllowedResourceExtensionsForUpload*****（仅限 Power BI 报表服务器）*** 设置可上传到报表服务器的资源扩展。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。 
+
+
+**EditSessionCacheLimit**  
+指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
+
+**EditSessionTimeout**  
+指定报表编辑会话超时之前的秒数。默认值为 7200 秒（两小时）。  
+
 **EnableIntegratedSecurity**  
 确定报表数据源连接是否支持 Windows 集成安全性。 默认值为 **True**。 有效值如下：
 
@@ -97,25 +119,6 @@ ms.locfileid: "50021691"
 
 **EnableRemoteErrors**  
 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
-
-**AccessControlAllowCredentials**  
-指示当“凭据”标记设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false**秒。
-
-**AccessControlAllowHeaders** 客户端发出请求时，服务器允许的以逗号分隔的标头列表。 此属性可为空字符串，指定 * 可允许所有标头。
-
-**AccessControlAllowMethods** 当客户端发出请求时，服务器允许的以逗号分隔的 HTTP 方法列表。 默认值为（GET、PUT、POST、PATCH、DELETE），指定 * 可允许所有方法。
-
-**AccessControlAllowOrigin** 当客户端发出请求时，服务器允许的以逗号分隔的来源列表。 默认值为空白，这将阻止所有请求，指定 * 可在未设置凭据时允许所有源，如果指定凭据，则必须指定源的显式列表。
-
-**AccessControlExposeHeaders** 服务器将向客户端公开的以逗号分隔的标头列表。 默认值为空。
-
-**AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
-
-**EditSessionCacheLimit**  
-指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
-
-**EditSessionTimeout**  
-指定报表编辑会话超时之前的秒数。默认值为 7200 秒（两小时）。  
 
 **EnableCustomVisuals**（仅适用于 Power BI 报表服务器） 启用 Power BI 自定义视觉对象的显示。 值为 True/False。 默认值为 True。  
 
@@ -136,6 +139,8 @@ ms.locfileid: "50021691"
 **ScheduleRefreshTimeoutMinutes**（仅限 Power BI 报表服务器）：设置所需的计划刷新超时时间。默认值为 120。
 
 **ShowDownloadMenu**：启用客户端工具下载菜单。 默认值为 true。
+
+**SupportedHyperlinkSchemes*****（仅限 Power BI 报表服务器）*** 设置允许在可呈现的“超链接”操作上定义的 URI 方案的逗号分隔列表，或设置“&ast;”以启用所有超链接方案。 例如，设置“http、https”将允许指向“https://www. contoso.com”的超链接，但将删除指向“mailto:bill@contoso.com”或“javascript:window.open(‘www.contoso.com’, ‘_blank’)”的超链接。 默认为“&ast;”。
 
 **TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60。
 

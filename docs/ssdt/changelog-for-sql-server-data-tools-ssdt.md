@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213446"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087886"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>SSDT for Visual Studio 2017 (15.9.0)
+生成号：14.0.16186.0  
+发布日期：2019 年 1 月 28 日
+
+### <a name="whats-new"></a>新增功能
+**SSIS：**
+1. 为 SSIS 2017 添加 Power Query 源（预览）
+2. 添加对 SSIS 2012 的支持。
+3. 为 SSIS 2019 添加 Oracle 源和目标。
+4. 解决了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。
+5. 解决了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。
+6. 解决了在某些情况下保存包导致 Visual Studio 崩溃的问题。 
+7. 解决了在某些情况下，当保护级别为 EncryptSensitiveWithPassword 并且目标服务器版本早于 SQL 2017 时，无法执行程序包的问题。
+8. 修复了 SSDT 中未显示使用默认字体的注释的问题。
+9. ISDeploymentWizard 支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。
+
+### <a name="known-issues"></a>已知问题：
+
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 版本高于 15.8 的 SSDT for Visual Studio 2017 不支持设计包含 Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
+- 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持 OData v4。
+- 当 SSIS 和 SSAS 安装在同一个 Visual Studio 实例上时，Power Query 源可能不支持使用 ODBC 连接到 Oracle。
+- 未本地化 Power Query 源。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)

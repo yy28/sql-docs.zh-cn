@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5121af5edf195454ec6a27d5a586a921c2853b4c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519763"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087636"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,12 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
+|15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |SSDT 版本| Visual Studio 2015|
@@ -45,11 +47,13 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 |17.4|[SSDT for VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[SSDT for VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |SSDT 版本| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 
@@ -57,7 +61,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
 
   
 ## <a name="links-to-download-pages"></a>下载页面的链接 
-**SQL 关系数据库引擎**  
+**SQL 关系：数据库引擎**  
   
 提供模板，用于为 RDBMS 和 Azure SQL 数据库生成关系数据库。 对于设计关系数据库，SSDT 与版本无关。 你可以将 Visual Studio 2012 或 2013 与任意版本的 SQL Server 数据库引擎或 Azure SQL 数据库一起使用。  
   
@@ -71,7 +75,7 @@ SSDT 可向后兼容，因此用户始终都可以使用[最新的 SSDT](downloa
   
 Visual Studio 2013 客户可以下载预览版本的 SSDT，以试用产品发布版本中尚未包括的新功能。  
   
-**SQL BI：Analysis Services、Reporting Services、Integration services**  
+**SQL BI：Analysis Services、Reporting Services、集成服务**  
   
 BI 模板用于创建 SSAS 模型、SSRS 报表和 SSIS 包。 BI Designer 与特定版本的 SQL Server 关联。 若要使用较新的 BI 功能，请安装较新版本的 BI Designer。  
   

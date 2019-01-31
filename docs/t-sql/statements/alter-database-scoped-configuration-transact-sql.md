@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226594"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838114"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
-允许用户在数据库或语句范围内启用或禁用行模式内存授予反馈，同时将数据库兼容级别维持在 150 或更高。 行模式内存授予反馈是 SQL Server 2019 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能。
+允许用户在数据库范围内启用或禁用行模式内存授予反馈，同时将数据库兼容性级别维持在 150 或更高。 行模式内存授予反馈是 SQL Server 2017 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能（SQL Server 2019 和 Azure SQL 数据库支持行模式）。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+允许用户在数据库范围内启用或禁用批处理模式内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 批处理模式内存授予反馈是 SQL Server 2017 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能。
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+允许用户在数据库范围内启用或禁用批处理模式自适应联接，同时将数据库兼容性级别维持在 140 或更高。 批处理模式自适应联接是 SQL Server 2017 中推出的[自适应查询处理](../../relational-databases/performance/adaptive-query-processing.md)的一个功能。
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+
+允许用户在数据库范围内的行存储上启用或禁用批处理模式，同时将数据库兼容性级别维持在 150 或更高。 行存储上的批处理模式是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+
+允许用户在数据库范围内启用或禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 表变量延迟编译是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
 
 ## <a name="Permissions"></a> Permissions
 

@@ -1,7 +1,7 @@
 ---
-title: 步骤 4：测试第 5 课教程包 | Microsoft Docs
+title: 步骤 4：测试第 5 课包 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,20 +11,21 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f23e1e6e9321d4211c53a176242c81cad6ff8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664555"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880450"
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>第 5-4 课 - 测试第 5 课教程包
-在运行时，包从运行时更新的变量中获取 **Directory** 属性的值，而不是使用在创建包时指定的原始目录名。 该变量的值由 SSISTutorial.dtsConfig 文件填充。  
+# <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 课：测试第 5 课包
+
+在运行时，包从配置变量中而非创建包时指定的目录名称中获取 Directory 属性的值。 该变量的值来自 SSISTutorial.dtsConfig XML 文件。  
   
-若要验证该包在运行时是否使用新值更新了 Directory 属性，只需执行该包。 由于只向新目录中复制了三个示例数据文件，因此该数据流将只运行三次，而不遍历原始文件夹中的 14 个文件。  
+若要验证该包在运行时是否使用新值更新了 Directory 属性，请运行该包。 因为新目录中只有三个示例数据文件，所以数据流会运行三次。  
   
 ## <a name="checking-the-package-layout"></a>检查包布局  
-测试程序包之前，应确保第 5 课包中的控制流和数据流包含显示在下列关系图中的对象。 控制流应与第 4 课中的控制流相同。 数据流应与第 4 课中的数据流相同。  
+在测试包之前，请验证第 5 课包中的控件和数据流是否与下图中显示的对象类似：  
   
 **控制流**  
   
@@ -34,11 +35,11 @@ ms.locfileid: "47664555"
   
 ![包中的数据流](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### <a name="to-test-the-lesson-5-tutorial-package"></a>测试 Lesson 5 教程包  
+## <a name="test-the-lesson-5-package"></a>测试第 5 课包  
   
-1.  在 **“调试”** 菜单中，单击 **“启动调试”**。  
+1.  在“调试”菜单中，选择“启动调试”。  
   
-2.  该包运行完成后，请在 **“调试”** 菜单上单击 **“停止调试”**。  
+2.  当包运行完毕后，在“调试”菜单中，选择“停止调试”。  
   
 ## <a name="next-lesson"></a>下一课  
 [第 6 课：在 SSIS 中对项目部署模型使用参数](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

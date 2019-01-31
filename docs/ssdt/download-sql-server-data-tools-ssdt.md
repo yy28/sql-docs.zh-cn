@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,14 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60f477889bab268ed6e5f8ff7916972d29047059
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300682"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147939"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
@@ -35,9 +36,8 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 若要在 [Visual Studio 安装](https://docs.microsoft.com/visualstudio/install/install-visual-studio)过程中安装 SSDT，请选择“数据存储和处理”工作负荷，然后选择“SQL Server Data Tools”。 如果已安装 Visual Studio，则可以[编辑工作负荷列表](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)，使其包括 SSDT：![数据存储和处理工作负荷](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
-
-
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>安装 Analysis Services、Integration Services 和 Reporting Services 工具
+
 若要安装 AS、IS 和 RS 项目支持，请运行 [SSDT 独立安装程序](#ssdt-for-vs-2017-standalone-installer)。 
 
 该安装程序列出了可将 SSDT 工具添加到其中的可用 Visual Studio 实例。 如果未安装 Visual Studio，则选择“安装新的 SQL Server Data Tools 实例”可通过最低版本的 Visual Studio 安装 SSDT，但为获得最佳体验，建议通过[最新版本的 Visual Studio](https://www.visualstudio.com/downloads) 使用 SSDT。 
@@ -48,20 +48,19 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.8.2) ](https://go.microsoft.com/fwlink/?linkid=2038031) 
+[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - 安装 SSDT for Visual Studio 2017 (15.8.2) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（若已安装），并关闭所有 VS 实例。
-> - 修复了将包含包（包含脚本任务/平面文件目标）的 SSIS 项目部署到 Azure-SSIS，而导致该包无法在 Azure-SSIS 中执行的问题。
-> - SSDT for Visual Studio 2017 (15.8.2) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
+> - SSDT for Visual Studio 2017 (15.8.2) 不支持设计包含 Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
 
 
 **版本信息**  
   
-版本号：15.8.2  
-生成号：14.0.16182.0  
-发布日期：2018 年 11 月 5 日  
+版本号：15.9.0  
+生成号：14.0.16186.0  
+发布日期：2019 年 1 月 28 日  
 
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -69,20 +68,19 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>支持的语言 - SSDT for VS 2017
 
-此版本的 SSDT for VS 2017 可安装以下语言：  
+此版本的 SSDT for VS 2017 可安装以下语言：
 
-[中文(简体)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x804) | 
-[中文(繁体)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x404) | 
-[英语(美国)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x409) | 
-[法语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x407) | 
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x410) | 
-[日语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x411) | 
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x412) | 
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x416) | 
-[俄语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x419) | 
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40a)  
-
+- [简体中文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
+- [繁体中文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
+- [英语（美国）]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
+- [法语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
+- [德语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
+- [意大利语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x410)
+- [日语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x411)
+- [朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x412)
+- [葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x416)
+- [俄语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x419)
+- [西班牙语]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40a)
 
 ## <a name="offline-install"></a>脱机安装
 
@@ -92,7 +90,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 1. [下载 SSDT 独立安装程序](#ssdt-for-vs-2017-standalone-installer)。
 2. [下载 vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe)。
-3. 仍联机时，执行以下命令之一以下载脱机安装所需的全部文件。 使用 `--layout` 选项是关键，它将下载脱机安装的实际文件。 将 <filepath> 替换为保存文件的实际布局路径。
+3. 仍联机时，执行以下命令之一以下载脱机安装所需的全部文件。 使用 `--layout` 选项是关键，它将下载脱机安装的实际文件。 将 `<filepath>` 替换为保存文件的实际布局路径。
 
    
    A.   对于特定语言，请传递区域设置：`vs_sql.exe --layout c:\<filepath> --lang en-us`（一种语言为大约 1 GB）  
@@ -116,20 +114,20 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
   
 |项目模板|支持的 SQL 平台|  
 |-------------------|--------------------|  
-关系数据库|  SQL Server 2005* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br />  * SQL Server 2005 支持已停止提供，<br /><br /> 请转至官方支持的 SQL 版本|
-  |Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
-  |Integration Services 包| SQL Server 2014 - SQL Server 2017    |
+|关系数据库|  SQL Server 2005\* - SQL Server 2017<br> （使用适用于 Visual Studio 2017 的 SSDT 17.x 或 SSDT 来连接 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md)）<br /><br />Azure SQL Database<br /><br />Azure SQL 数据仓库（仅支持查询；尚不支持数据库项目）<br /><br /> \* SQL Server 2005 支持已停止提供，<br /><br /> 请转至官方支持的 SQL 版本|
+|Analysis Services 模型<br /><br />Reporting Services 报表 | SQL Server 2008 - SQL Server 2017|
+|Integration Services 包| SQL Server 2012 - SQL Server 2019 |
   
 ## <a name="dacfx"></a>DacFx
+
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4.1：[下载数据层应用程序框架 (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508)。
 
 ## <a name="previous-versions"></a>以前的版本
 
 若要下载并安装 SSDT for Visual Studio 2015 或较旧版本的 SSDT，请参阅[以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)。
 
+## <a name="next-steps"></a>后续步骤
 
-
-## <a name="next-steps"></a>后续步骤  
 安装 SSDT 后，阅读这些教程，了解如何使用 SSDT 创建数据库、包、数据模型和报告：  
 
 - [面向项目的脱机数据库开发](project-oriented-offline-database-development.md)  
@@ -139,8 +137,8 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+## <a name="see-also"></a>另请参阅
 
-## <a name="see-also"></a>另请参阅  
 [SSDT MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 团队博客](https://blogs.msdn.com/b/ssdt/)  
 [DACFx API 参考](https://msdn.microsoft.com/library/dn645454.aspx)  

@@ -22,12 +22,12 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3607ad38e58c5bc1315bc8d01bd0d188d704261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805703"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "47781695"
   
 -   将 @@ROWCOUNT 重置为 0 但不将该值返回到客户端。  
   
- 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例如下：SET @local_variable、RETURN、READTEXT 以及不带查询 Select 语句，如 SELECT GETDATE() 或 SELECT 'Generic Text'。  
+ 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例包括：SET @local_variable、RETURN、READTEXT 和在没有 SELECT GETDATE() 或 SELECT 'Generic Text' 等查询语句的情况下选择****。  
   
- 在查询中执行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1。  
+ 在查询中进行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1。  
   
  数据操作语言 (DML) 语句将 @@ROWCOUNT 值设置为受查询影响的行数，并将该值返回到客户端。 DML 语句不会将任何行发送到客户端。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47781695"
   
  EXECUTE 语句保留前一个 @@ROWCOUNT。  
   
- USE、SET \<选项>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等语句将 ROWCOUNT 值重置为 0。  
+ USE、SET \<选项>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等语句将 ROWCOUNT 值重置为 0。  
   
  本机编译存储过程保留以前的 @@ROWCOUNT。 本机编译存储过程中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不设置 @@ROWCOUNT。 有关详细信息，请参阅[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   

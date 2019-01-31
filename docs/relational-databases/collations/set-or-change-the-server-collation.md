@@ -1,7 +1,7 @@
 ---
 title: 设置或更改服务器排序规则 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954391"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443693"
 ---
 # <a name="set-or-change-the-server-collation"></a>设置或更改服务器排序规则
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954391"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>设置托管实例中的服务器排序规则
 
-可以在创建实例时指定 Azure SQL 托管实例（预览版）中的服务器排序规则（当前仅适用于 PowerShell）。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS。 无法将仅限 Unicode 的排序规则和新的 UTF-8 排序规则指定为服务器级排序规则。
-有关演示如何在 Azure SQL 数据库托管实例中设置服务器级排序规则的脚本模板，请参阅[使用资源管理器模板设置托管实例排序规则](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)。 如果要将数据库从 SQL Server 迁移到托管实例，请使用 `SERVERPROPERTY(N'Collation')` 函数检查源 SQL Server 中的服务器排序规则，并创建与 SQL Server 排序规则匹配的托管实例。 使用不匹配的服务器级排序规则将数据库从 SQL Server 迁移到托管实例可能会导致查询中出现多个意外错误。 不能更改现有托管实例的服务器级排序规则。
+可以在创建实例时指定 Azure SQL 托管实例中的服务器级别排序规则（预览），以后不能更改。 创建实例时，可通过 [Azure 门户](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和资源管理器模板](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)设置服务器级别排序规则。 默认服务器级排序规则为 SQL_Latin1_General_CP1_CI_AS。 无法将仅限 Unicode 的排序规则和新的 UTF-8 排序规则指定为服务器级排序规则。
+如果要将数据库从 SQL Server 迁移到托管实例，请使用 `SERVERPROPERTY(N'Collation')` 函数检查源 SQL Server 中的服务器排序规则，并创建与 SQL Server 排序规则匹配的托管实例。 使用不匹配的服务器级排序规则将数据库从 SQL Server 迁移到托管实例可能会导致查询中出现多个意外错误。 不能更改现有托管实例的服务器级排序规则。
 
 ## <a name="see-also"></a>另请参阅
 

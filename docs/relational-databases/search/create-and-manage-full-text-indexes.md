@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669016"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044523"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ ms.locfileid: "51669016"
 
 ##  <a name="view"></a> 查看全文索引的属性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 查看全文索引的属性
+
 |目录视图或动态管理视图|描述|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|对于全文索引引用的每个全文目录，返回与其对应的一行。|  
@@ -76,7 +77,7 @@ ms.locfileid: "51669016"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**<br /><br />有关详细信息，请参阅[全文索引属性（“常规”页面）](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)。|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文索引属性（“列”页面）](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文索引属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 *database_name*.*table_name* 启动表增量填充）相关联。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在退出“全文检索属性”对话框之后，所有新创建的计划都将与 SQL Server 代理作业（对 database_name.table_name 启动表增量填充）相关联。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "51669016"
   
  下表列出了与索引表和列相关的全文属性及其相关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
   
-|“属性”|描述|函数|  
+|属性|描述|函数|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|表中的 TYPE COLUMN，其中包含列的文档类型信息。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|列是否启用了全文索引。|COLUMNPROPERTY|  

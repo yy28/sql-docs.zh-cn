@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589291"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087686"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>启用数据库引擎的加密连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589291"
   
  
 ##  <a name="Provision"></a> 在服务器中提供（安装）证书  
+
+>[!NOTE]
+>请参阅[证书管理（SQL Server 配置管理器）](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)以在单个服务器上添加证书。
   
 1.  在“开始”  菜单上，单击“运行” ，并在“打开”  框中键入 **MMC** ，然后单击“确定” 。  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589291"
   
 10. 完成 **证书导入向导**，将证书添加到计算机中，然后关闭 MMC 控制台。 有关向计算机添加证书的详细信息，请参阅 Windows 文档。  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>在多个服务器之间预配（安装）证书
+
+请参阅[证书管理（SQL Server 配置管理器）](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)以在多个服务器之间添加证书。
+
 ##  <a name="Export"></a> 导出服务器证书  
   
 1.  在“证书”管理单元中的“证书” / “个人”文件夹中找到证书，右键单击“证书”，指向“所有任务”，然后单击“导出”。  
@@ -89,15 +96,15 @@ ms.locfileid: "53589291"
 > [!NOTE]
 > 要确保客户端和服务器之间的安全连接，请将客户端配置为请求加密连接。 [本文稍后部分](#client-request-encrypt-connect-23h)将介绍更多详细信息。
 
-
-
 ### <a name="wildcard-certificates"></a>通配符证书  
 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持通配符证书。 其他客户端可能不支持通配符证书。 有关详细信息，请参阅客户端文档。 无法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 选择通配符证书。 要使用通配符证书，必须编辑 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 注册表项，并为“证书”值输入证书的指纹（不留空格）。  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> 将客户端配置为请求加密连接  
   
 1.  将原始证书或导出的证书文件复制到客户端计算机。  
   
@@ -107,7 +114,7 @@ ms.locfileid: "53589291"
   
 4.  在 **“标志”** 选项卡的 **“强制协议加密”** 框中，单击 **“是”**。  
   
-##  <a name="EncryptConnection"></a> 通过 SQL Server Management Studio 加密连接  
+## <a name="EncryptConnection"></a> 通过 SQL Server Management Studio 加密连接  
   
 1.  在对象资源管理器工具栏上，单击 **“连接”**，再单击 **“数据库引擎”**。  
   
