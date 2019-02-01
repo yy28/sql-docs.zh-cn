@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0061e96168f16d8a92ed47578c32a3b16bf57306
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241808"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513767"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的"hello world"Python 脚本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,4 +98,4 @@ GO
 现在，已运行两个简单的 Python 脚本，需要深入研究构建输入和输出。
 
 > [!div class="nextstepaction"]
-> [快速入门：处理输入和输出](quickstart-python-run-using-t-sql.md)
+> [快速入门：处理输入和输出](quickstart-python-inputs-and-outputs.md)
