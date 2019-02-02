@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044704"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652586"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -28,14 +28,14 @@ ms.locfileid: "55044704"
 APS CU7.3 可以提高查询性能与在 SQL 查询优化器的公用子表达式消除。 改进提高了两种方法中的查询。 第一个好处是可以识别并消除此类表达式帮助减少 SQL 编译时间。 第二个和更重要的好处是这些冗余的子表达式的数据移动操作将消除因此执行时间的查询变得更快。 可以找到此功能的详细的说明[此处](common-sub-expression-elimination.md)。
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>对于 Informatica 10.2.0 APS Informatica 连接器已发布
-我们为您发布了有关 APS Informatica 版本 10.2.0 使用 Informatica 连接器的新版本。 可以从下载新连接器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
+我们发布了有关 APS Informatica 10.2.0 和 10.2.0 版本使用 Informatica 连接器的新版本修补程序 1。 可以从下载新连接器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
 
 #### <a name="supported-versions"></a>支持的版本
 
 | APS 版本 | Informatica PowerCenter | 驱动程序 |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 和更高版本 | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 和更高版本 | 10.2.0、 10.2.0 修补程序 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2

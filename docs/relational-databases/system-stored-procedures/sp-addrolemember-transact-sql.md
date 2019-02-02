@@ -1,7 +1,7 @@
 ---
 title: sp_addrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659645"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652536"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,24 +38,16 @@ ms.locfileid: "47659645"
   
 ## <a name="syntax"></a>语法  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>参数  
- [ @rolename=] '*角色*  
+ [ @rolename= ] '*role*'  
  当前数据库中的数据库角色的名称。 *角色*是**sysname**，无默认值。  
   
- [ @membername=] '*security_account*  
+ [ @membername= ] '*security_account*'  
  添加到该角色中的安全帐户。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 数据库角色、 Windows 登录名或 Windows 组。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -70,7 +62,7 @@ sp_addrolemember 'role', 'security_account'
   
  只能使用 sp_addrolemember 将向数据库角色添加成员。 若要将成员添加到服务器角色，请使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  为灵活的数据库角色添加成员需要满足以下条件之一：  
   
 -   Db_securityadmin 或 db_owner 固定的数据库角色的成员身份。  
@@ -103,7 +95,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 添加 Windows 登录名  
  以下示例将添加登录名`LoginMary`到`AdventureWorks2008R2`数据库用户作为`UserMary`。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
@@ -129,7 +121,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)  

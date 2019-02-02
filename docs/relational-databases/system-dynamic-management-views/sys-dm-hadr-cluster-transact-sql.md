@@ -1,7 +1,7 @@
 ---
 title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c4e66ed6471ec0959cfece477af4b939fb129c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58450f8e43c5f1f736fb4388008f7af3325e430d
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748235"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570730"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47748235"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 实例的 WSFC 群集的名称。|  
-|**quorum_type**|**tinyint**|此 WSFC 群集使用的仲裁的类型，可为下列值之一：<br /><br /> 0 = 节点的大多数。 此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，对于七个节点的群集，此仲裁配置可以承受三个节点故障。<br /><br /> 1 = 节点和磁盘的大多数。 如果磁盘见证服务器保持联机，此仲裁配置可以承受半数（舍入）节点故障。 例如，一个磁盘见证服务器保持联机的六节点群集可以承受三个节点故障。 如果磁盘见证服务器脱机或失败，此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，一个磁盘见证服务器已失败的六节点群集可以承受两个 (3-1=2) 节点故障。<br /><br /> 2 = 节点和文件共享的大多数。 此仲裁配置的工作方式与“节点和磁盘的大多数”的工作方式类似，但使用文件共享见证服务器而不是磁盘见证服务器。<br /><br /> 3 = 无大多数: 仅限磁盘。 如果仲裁磁盘联机，此仲裁配置可以承受除一个节点之外的所有节点故障。|  
-|**quorum_type_desc**|**varchar(50)**|说明**quorum_type**、 一个的：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY|  
+|**quorum_type**|**tinyint**|此 WSFC 群集使用的仲裁的类型，可为下列值之一：<br /><br /> 0 = 节点的大多数。 此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，对于七个节点的群集，此仲裁配置可以承受三个节点故障。<br /><br /> 1 = 节点和磁盘的大多数。 如果磁盘见证服务器保持联机，此仲裁配置可以承受半数（舍入）节点故障。 例如，一个磁盘见证服务器保持联机的六节点群集可以承受三个节点故障。 如果磁盘见证服务器脱机或失败，此仲裁配置可以承受半数（舍入）减 1 个节点故障。 例如，一个磁盘见证服务器已失败的六节点群集可以承受两个 (3-1=2) 节点故障。<br /><br /> 2 = 节点和文件共享的大多数。 此仲裁配置的工作方式与“节点和磁盘的大多数”的工作方式类似，但使用文件共享见证服务器而不是磁盘见证服务器。<br /><br /> 3 = 无大多数：仅限磁盘。 如果仲裁磁盘联机，此仲裁配置可以承受除一个节点之外的所有节点故障。<br /><br /> 4 = 未知的仲裁。 未知的仲裁的群集。<br /><br /> 5 = 云见证。 群集的仲裁仲裁利用 Microsoft Azure。 如果云见证服务器可用，群集可以承受半数 （舍入） 个节点故障。|  
+|**quorum_type_desc**|**varchar(50)**|说明**quorum_type**、 一个的：<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|WSFC 仲裁的状态，可为下列值之一：<br /><br /> 0 = 未知仲裁状态<br /><br /> 1 = 标准仲裁<br /><br /> 2 = 强制仲裁|  
 |**quorum_state_desc**|**varchar(50)**|说明**quorum_state**、 一个的：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  
