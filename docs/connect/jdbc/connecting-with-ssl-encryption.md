@@ -1,7 +1,7 @@
 ---
 title: 使用 SSL 加密进行连接 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812185"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737128"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密进行连接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,7 @@ String connectionUrl =
 > [!NOTE]  
 >  或者，可以使用由 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类提供的适当的资源库方法来设置连接属性的值。  
   
- 在 encrypt 属性设置为 true 且 trustServerCertificate 属性设置为 false 的情况下，如果连接字符串中的服务器名称与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 证书中的服务器名称不符，则将出现以下错误：驱动程序无法通过使用安全套接字层 (SSL) 加密与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立安全连接。 错误:“java.security.cert.CertificateException: 在安全套接字层(SSL)初始化过程中验证证书中的服务器名称失败。”  
-  
+ 如果**加密**属性设置为**true**并**trustServerCertificate**属性设置为**false**如果中的服务器名称连接字符串与 SSL 证书中的服务器名称不匹配，将发出以下错误： `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 从版本 7.2，该驱动程序支持通配符模式匹配的 SSL 证书中的服务器名称最左边的标签中。
 ## <a name="see-also"></a>另请参阅  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
  [保护 JDBC 驱动程序应用程序](../../connect/jdbc/securing-jdbc-driver-applications.md)  
