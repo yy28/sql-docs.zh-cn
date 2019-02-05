@@ -1,24 +1,35 @@
+items:
 - name: 概述
   href: about-log-shipping-sql-server.md
-- name: 配置日志传送
-  href: configure-log-shipping-sql-server.md
-- name: 向日志传送配置添加辅助数据库
-  href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-- name: 从日志传送配置中删除辅助数据库
-  href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-- name: 删除日志传送
-  href: remove-log-shipping-sql-server.md
-- name: 查看日志传送报告 (SQL Server Management Studio)
-  href: view-the-log-shipping-report-sql-server-management-studio.md
-- name: 监视日志传送 (Transact-SQL)
-  href: monitor-log-shipping-transact-sql.md
-- name: 故障转移到日志传送辅助服务器
-  href: fail-over-to-a-log-shipping-secondary-sql-server.md
-- name: 交换主日志传送服务器和辅助日志传送服务器的角色
-  href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
-- name: 日志传送和复制
-  href: log-shipping-and-replication-sql-server.md
-- name: Log Shipping Tables and Stored Procedures
-  href: log-shipping-tables-and-stored-procedures.md
-- name: 将日志传送升级至 SQL Server 2016 (Transact-SQL)
-  href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+- name: 操作说明
+  items:
+  - name: 配置日志传送
+    href: configure-log-shipping-sql-server.md
+  - name: 添加辅助数据库
+    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+  - name: 删除辅助数据库
+    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+  - name: 删除日志传送
+    href: remove-log-shipping-sql-server.md
+  - name: 查看日志传送报告
+    href: view-the-log-shipping-report-sql-server-management-studio.md
+  - name: 监视日志传送
+    href: monitor-log-shipping-transact-sql.md
+  - name: 故障转移到辅助数据库
+    href: fail-over-to-a-log-shipping-secondary-sql-server.md
+  - name: 交换服务器的角色
+    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: 概念
+  items:
+  - name: 日志传送和复制
+    href: log-shipping-and-replication-sql-server.md
+  - name: Log Shipping Tables and Stored Procedures
+    href: log-shipping-tables-and-stored-procedures.md
+  - name: 将日志传送升级到 SQL Server 2016
+    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+ms.openlocfilehash: 5530e222895a32760cb60ef406685a6e9736461c
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513927"

@@ -15,15 +15,15 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: a9cbbfa627d386409e31225470ca543668139ed5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: fdb5e407c690ef7dd9a3bdfb4c77fe6897d66585
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380118"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689780"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   本主题说明如何创建和测试分类器用户定义函数 (UDF)。 这些步骤涉及在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询编辑器中执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 语句。  
   
  下面的过程中显示的示例说明了创建非常复杂的分类器用户定义函数的可能性。  

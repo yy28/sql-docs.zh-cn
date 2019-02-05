@@ -14,15 +14,15 @@ ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3ec802a1d2dce89549c252cb6218e0bd8084be18
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a2a900bdb72e13d2521e8da0a3b971c2b9edccb
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380478"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689880"
 ---
 # <a name="resource-governor-workload-group"></a>资源调控器工作负荷组
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，工作负荷组充当具有相似分类标准的会话请求的容器。 工作负荷允许对会话进行聚合监视，并定义会话的策略。 每个工作负荷组均位于一个资源池中，它表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的策略和为资源池定义的资源运行。  
   
 ## <a name="workload-group-concepts"></a>工作负荷组概念  

@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226524"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428644"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ INCREMENT BY \<constant>
   
 3.  将计算的值返回给调用语句。  
   
- **缓存用尽时的 CACHE 选项**  
+**缓存用尽时的 CACHE 选项**  
   
  每当请求序列对象以便为 CACHE 选项生成下一个值时，如果缓存已用完，都会发生以下过程：  
   
@@ -139,7 +139,7 @@ INCREMENT BY \<constant>
   
 3.  锁定序列对象的系统表行，将在步骤 2 中计算的值（最后一个值）写入系统 表。 触发缓存已用完的 xevent，向用户通知新的持久值。  
   
- **NO CACHE 选项**  
+**NO CACHE 选项**  
   
  每当请求序列对象以便为 NO CACHE 选项生成下一个值时，都会发生以下过程：  
   
