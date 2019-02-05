@@ -449,7 +449,7 @@ dtexec /option [value] [/option [value]]...
   
     > **重要说明!!** 在配置为检查包签名时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 仅检查数字签名是否存在、是否有效以及是否来自可信来源。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 不检查包是否已更改。  
   
-    > **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 ** 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
+    > **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
   
 -   /VerifyV[ersionID] versionID：（可选）。 通过将要执行的包的版本 GUID 与包验证阶段 *version_id* 参数中指定的值进行比较，来验证该 GUID。  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>相关内容  
- www.mattmasson.com 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
+ [www.mattmasson.com](www.mattmasson.com) 上的博客文章 [退出代码、DTEXEC 和 SSIS 目录](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   
