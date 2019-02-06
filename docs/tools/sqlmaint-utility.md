@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  指定备份介质为磁带。  
   
  **-BkUpOnlyIfClean**  
- 指定仅当指定的 **-Ck** 检查未发现数据问题时才进行备份。 维护操作的运行顺序与其在命令提示中出现的顺序相同。 如果还要指定 **-BkUpOnlyIfClean** 或指定无论检查报告问题与否都进行备份，则需在 **-BkUpDB**/**-BkUpLog** 参数之前指定 **-CkDB**、**-CkDBNoIdx**、**-CkAl**、**-CkAlNoIdx****-CkTxtAl** 或 **-CkCat** 参数。  
+ 指定仅当指定的 **-Ck** 检查未发现数据问题时才进行备份。 维护操作的运行顺序与其在命令提示中出现的顺序相同。 如果还要指定 **-BkUpOnlyIfClean** 或指定无论检查报告问题与否都进行备份，则需在 **-BkUpDB**/**-BkUpLog** 参数之前指定 **-CkDB**、**-CkDBNoIdx**、**-CkAl**、**-CkAlNoIdx** **-CkTxtAl** 或 **-CkCat** 参数。  
   
  **-VrfyBackup**  
  指定备份完成时，对备份运行 RESTORE VERIFYONLY。  
