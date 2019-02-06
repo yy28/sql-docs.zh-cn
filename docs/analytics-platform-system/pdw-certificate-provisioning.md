@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405092"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742117"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 证书预配的分析平台系统
 **PDW 证书预配**页的分析平台系统**Configuration Manager**导入或删除的 PDW 区域使用的证书。 使用，对通信进行加密的证书可以帮助保护通信到控制节点通过 SQL Server 客户端，使用 SQL Server PDW 驱动程序的工具[管理员控制台](monitor-the-appliance-by-using-the-admin-console.md)，和 Integration Services 将加载。  
@@ -41,7 +41,10 @@ SQL Server PDW 支持使用证书来加密连接到控制节点;包括连接到*
 使用 Analytics Platform System**Configuration Manager**添加或删除受信任的证书。 直接使用 Microsoft Windows HTTP 服务证书配置工具 (**winHttpCertCfg.exe**) 若要管理的证书不受支持。  
   
 ## <a name="import-or-remove-the-certificate"></a>导入或删除证书  
-以下说明介绍如何导入或删除设备证书。  
+以下说明介绍如何导入或删除设备证书。
+
+> [!WARNING]
+> 若要续订过期的证书必须导入新之前删除现有证书。
   
 ### <a name="to-import-the-certificate"></a>若要将证书导入  
   
