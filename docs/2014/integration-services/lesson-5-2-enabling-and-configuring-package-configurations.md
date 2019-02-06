@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747959"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760070"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
   在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 您将使用该向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 `Directory` 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -43,7 +43,7 @@ ms.locfileid: "52747959"
   
 9. 在中**属性表达式编辑器**，在单击**属性**列表，然后选择`Directory`。  
   
-10. 在“表达式”框中，单击省略号按钮 (…)。  
+10. 在中**表达式**框中，单击省略号按钮 **（...）**.  
   
 11. 在“表达式生成器”中，展开“变量”文件夹，然后将变量 **User::varFolderName** 拖到“表达式”框中。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747959"
   
 16. 单击 **“关闭”**。  
   
-17. 向导将创建名为 SSISTutorial.dtsConfig 的配置文件，该文件包含特定变量的 v`alue` 的配置设置，此变量用于设置枚举器的 `Directory` 属性。  
+17. 向导将创建名为 SSISTutorial.dtsConfig，其中包含有关配置设置的配置文件`value`反过来将设置变量的`Directory`枚举器的属性。  
   
     > [!NOTE]  
     >  配置文件通常包含有关包属性的复杂信息，但对于本教程，唯一的配置信息应当是  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName]。属性 [值]"ValueType ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ 配置 >。  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>创建并填充新的示例数据文件夹  
@@ -105,6 +105,6 @@ ms.locfileid: "52747959"
 3.  在`New Sample Data`文件夹中，粘贴复制的文件。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 3:修改目录属性配置值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [步骤 3：修改目录属性配置值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   
