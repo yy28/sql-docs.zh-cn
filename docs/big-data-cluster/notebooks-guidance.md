@@ -5,17 +5,17 @@ description: 此文章介绍了如何对 SQL Server 2019 大数据群集在 Azur
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 95a1f141467fa4c3ee9cd7e7076eca604aa497ca
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e4f1c945bd09c4d2878ebb441027e32898f24c56
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241798"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807467"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -29,20 +29,20 @@ ms.locfileid: "54241798"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **Kubectl**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>连接到 Hadoop 网关 Knox 终结点
+## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>连接到 SQL Server 大数据群集终结点
 
-你可以连接到群集中的不同终结点。 您可以连接到 Microsoft SQL Server 连接类型或 HDFS/Spark 网关终结点。
-在 Azure 数据 Studio （预览版） 中，按 F1，并单击**新的连接** 并且可以连接到你的 HDFS/Spark 网关终结点。
+你可以连接到群集中的不同终结点。 您可以连接到 Microsoft SQL Server 连接类型或 SQL Server 大数据群集终结点。
+在 Azure 数据 Studio （预览版） 中，按 F1，并单击**新的连接** 并且可以连接到你的 SQL Server 大数据群集终结点。
 
 ![image1](media/notebooks-guidance/image1.png)
 
 ## <a name="browse-hdfs"></a>浏览 HDFS
 
-连接后，你将能够浏览 HDFS 文件夹。 在完成部署，并且你将能够启动 WebHDFS**刷新**，添加**的新目录**，**上载**文件，和**删除**.
+连接后，你将能够浏览 HDFS 文件夹。 部署完成后，SQL Server 开始 WebHDFS 才开始。 使用 WebHDFS，你可以**刷新**，添加**的新目录**，**上载**文件，并**删除**。
 
 ![image2](media/notebooks-guidance/image2.png)
 
@@ -60,16 +60,18 @@ ms.locfileid: "54241798"
 有多种方法来启动新的 notebook。
 
 1. 从**管理仪表板**。 新的连接后，您将看到仪表板。 单击**新的 Notebook**从仪表板的任务。
-
-  ![image4](media/notebooks-guidance/image4.png)
+  
+    ![image4](media/notebooks-guidance/image4.png)
 
 1. 右键单击 HDFS/Spark 连接，然后单击**新的 Notebook**的上下文菜单中。
 
-  ![image5](media/notebooks-guidance/image5.png)
+    ![image5](media/notebooks-guidance/image5.png)
 
-  例如，提供的笔记本中，名称`Test.ipynb`。 单击“保存” 。
+    名为的新文件`Notebook-0.ipynb`随即打开。
 
-![image6](media/notebooks-guidance/image6.png)
+    ![image6](media/notebooks-guidance/image6.png)
+
+当从命令托盘打开笔记本时，笔记本将作为打开`Untitled-0.ipynb`。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支持的内核和将附加到上下文
 
@@ -77,97 +79,95 @@ Notebook 安装支持使用 PySpark 和 Spark，Spark Magic 内核时，可用�
 
 ![image7](media/notebooks-guidance/image7.png)
 
-当你选择其中一个这些内核时，我们将在虚拟环境中安装该内核，您可以开始在受支持的语言中编写代码。
+当你选择其中一个这些内核时，安装在虚拟环境中配置该内核，您可以开始在受支持的语言中编写代码。
 
 |内核|Description
 |:-----|:-----
-|PySpark 内核|有关编写使用 Spark 计算群集中的 Python 代码。
-|Spark 内核|有关编写使用 Spark 计算群集中的 Scala 代码。
-|Python 内核|用于写入 Python 代码进行本地开发。
+|PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。
+|Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
+|Python Kernel|编写 Python 代码进行本地开发。
 
-`Attach to`提供附加的内核的上下文。 当您连接到 HDFS/Spark 网关 (Knox) 结束时点默认`Attach to`群集该终结点。
+`Attach to` 提供要附加的内核的上下文。 当连接到 SQL Server 大数据群集终结点，默认值`Attach to`群集该终结点。
 
-![image8](media/notebooks-guidance/image8.png)
+在您未连接到 SQL Server 大数据群集终结点，默认内核是 Python 和`Attach to`是`localhost`。
 
 ## <a name="hello-world-in-different-contexts"></a>不同的上下文中的 hello world
 
-### <a name="pyspark-kernel"></a>Pyspark 内核
+### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark 内核
 
-选择 PySpark 内核在下面的代码中的单元格类型：
+选择 PySpark 内核在下面的代码中的单元格类型。
+
+单击 **“运行”**。
+
+Spark 应用程序启动，并返回以下输出：
+
+![image8](media/notebooks-guidance/image8.png)
+
+### <a name="spark-kernel--scala-language"></a>Spark 内核 |Scala 语言
+
+选择 Spark |Scala 内核和在下面的代码中的单元格类型。
 
 ![image9](media/notebooks-guidance/image9.png)
 
-单击运行和你应启动 Spark 应用程序，请参阅，您将看到以下输出：
-
-![Image10](media/notebooks-guidance/image10.png)
-
-输出应类似于下图类似。
-
-![Image11](media/notebooks-guidance/image11.png)
-
-### <a name="spark-kernel"></a>Spark 内核
 通过单击来添加新的代码单元格 **+ Code**命令工具栏中。
 
-![Image12](media/notebooks-guidance/image12.png)
+现在，选择 Spark |Scala 内核在下拉列表中和在 – 在单元格中键入/粘贴
 
-单击下方的选项图标上时，还可以查看"单元格选项"
+![image10](media/notebooks-guidance/image10.png)
 
-![Image13](media/notebooks-guidance/image13.png)
+单击下 – 的选项图标上时，还可以查看"单元格选项"
 
-以下是有关每个单元格的选项
+![image11](media/notebooks-guidance/image11.png)
 
-![Image14](media/notebooks-guidance/image14.png)-
+### <a name="spark-kernel--r-language"></a>Spark 内核 |R 语言
 
-现在，选择 Spark 内核，内核在下拉列表中，然后在中的单元格类型/粘贴
+选择 Spark |R 内核在下拉列表中。 在单元格中，键入或粘贴代码。 单击**运行**看到以下输出。
 
-![Image15](media/notebooks-guidance/image15.png)
+![image13](media/notebooks-guidance/image13.png)
 
-单击**运行**和你应看到正在启动 Spark 应用程序和这将创建与 Spark 会话**spark** ，并将定义**HelloWorld**对象。
+### <a name="local-python-kernel"></a>本地 Python 内核
+
+选择本地 Python 内核在-中的单元格类型
+
+![image14](media/notebooks-guidance/image14.png)
+
+### <a name="markdown-text"></a>Markdown 文本
+
+通过单击来添加新的文本单元格 **+ 文本**命令工具栏中。
+
+![image15](media/notebooks-guidance/image15.png)
+
+若要更改编辑视图的文本单元格内双击 
+
+![image16](media/notebooks-guidance/image16.png)
+
+要编辑模式的单元格更改
+
+![image17](media/notebooks-guidance/image17.png)
+
+现在类型 markdown 和你将看到在同一时间的预览
+
+![image18](media/notebooks-guidance/image18.png)
+
+单击 **“运行”**。 在 Spark 应用程序启动创建 Spark 会话，作为**spark** ，并定义**HelloWorld**对象。
 
 笔记本应类似于下图。
 
-![Image16](media/notebooks-guidance/image16.png)
+文本单元格外单击将改为预览模式下，隐藏 markdown。
 
-一次定义的对象，然后在下一步的 Notebook 单元中，键入下面的代码中：
+![image19](media/notebooks-guidance/image19.png)
 
-![Image17](media/notebooks-guidance/image17.png)
-
-单击**运行**笔记本中菜单，您应看到"Hello，world ！" 在输出中。
-
-![Image18](media/notebooks-guidance/image18.png)
-
-### <a name="local-python-kernel"></a>本地 python 内核
-选择本地 Python 内核在-中的单元格类型
-
-![Image19](media/notebooks-guidance/image19.png)
-
-您应看到下列输出：
-
-![Image20](media/notebooks-guidance/image20.png)
-
-### <a name="markdown-text"></a>Markdown 文本
-通过单击来添加新的文本单元格 **+ 文本**命令工具栏中。
-
-![Image21](media/notebooks-guidance/image21.png)
-
-单击预览图标以添加 markdown
-
-![Image22](media/notebooks-guidance/image22.png)
-
-单击预览图标再次以切换以查看只需 markdown
-
-![Image23](media/notebooks-guidance/image23.png)
 
 ## <a name="manage-packages"></a>管理包
-我们针对本地 Python 开发优化的项目之一是包括安装包的客户将需要为其方案的能力。 默认情况下，我们包括常用的程序包像 pandas、 numpy 等，但如果希望不包括的包然后编写以下代码的 Notebook 单元格中： 
+我们针对本地 Python 开发优化的项目之一是包括安装包的客户将需要为其方案的能力。 默认情况下，我们包括等常用的程序包`pandas`，`numpy`等，但如果您希望不包括的包然后在笔记本单元中编写以下代码： 
 
 ```python
 import <package-name>
 ```
 
-当运行此命令时，您将收到`Module not found`错误。 如果您的包存在，然后将未收到错误。
+运行此命令时`Module not found`返回。 如果您的包存在，然后将未收到错误。
 
-如果您发现`Module not Found`错误，然后单击**管理包**以标识您 Virtualenv 启动终端中的路径。 现在可以安装本地包。 使用以下命令以安装包：
+如果它返回`Module not Found`错误，然后单击**管理包**以标识您 Virtualenv 启动终端中的路径。 现在可以安装本地包。 使用以下命令以安装包：
 
 ```bash
 ./pip install <package-name>
@@ -178,8 +178,6 @@ import <package-name>
 ```python
 import <package-name>
 ```
-
-现在，当您运行该单元格，应不再获得`Module not found`错误。
 
 若要卸载包，请使用从终端运行以下命令：
 

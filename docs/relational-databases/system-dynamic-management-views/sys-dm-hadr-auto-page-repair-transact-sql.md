@@ -1,7 +1,7 @@
 ---
-title: sys.dm_hadr_auto_page_repair (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 02/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be4bd3af61ef81c81dffc695ed3489c620b42903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688225"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771323"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.locfileid: "47688225"
 |**file_id**|**int**|页所在文件的 ID。|  
 |**page_id**|**bigint**|文件中页的 ID。|  
 |**error_type**|**int**|错误类型。 值可以是：<br /><br /> **-** 1 = 所有硬件 823 错误<br /><br /> 1 = 824 错误的校验和或页撕裂 （如错误的页 ID) 以外的错误<br /><br /> 2 = 错误的校验和<br /><br /> 3 = 页撕裂|  
-|**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 排队等候自动页修复（已收到来自伙伴的响应）。<br /><br /> 5 = 自动页修复已成功，页应当可用。<br /><br /> 6 = 无法修复页。 这表示在页修复尝试期间发生了错误，例如，可能是由于伙伴上的页也已损坏、已经断开与伙伴的连接或网络发生故障。 此状态不是最终状态；如果在此页上再次发现损坏，则将再次请求伙伴上的该页。|  
+|**page_status**|**int**|页修复尝试的状态：<br /><br /> 2 = 排队等候来自伙伴的请求。<br /><br /> 3 = 请求已发送到伙伴。<br /><br /> 4 = 已成功修复的页。<br /><br /> 5 = 最后一次尝试期间未能修复页 / 自动页修复将尝试重新修复此页。|  
 |**modification_time**|**datetime**|页状态最后发生更改的时间。|  
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  
  [自动页修复（可用性组：数据库镜像）](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [suspect_pages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [管理 suspect_pages 表 (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   
