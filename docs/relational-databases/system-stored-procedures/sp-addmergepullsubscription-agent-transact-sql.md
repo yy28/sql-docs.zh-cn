@@ -230,8 +230,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@frequency_subday_interval =** ] *frequency_subday_interval*  
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- 第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
+ [**@active_start_time_of_day=**] *active_start_time_of_day*  
+ 第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day* 是 **int**，默认值为 NULL。  
   
  [ **@active_end_time_of_day =** ] *active_end_time_of_day*  
  停止安排合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  

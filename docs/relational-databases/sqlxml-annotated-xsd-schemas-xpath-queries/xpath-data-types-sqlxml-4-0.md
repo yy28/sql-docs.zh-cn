@@ -106,7 +106,7 @@ ms.locfileid: "54256922"
 (@m + 3) = 4  
 ```  
   
- 如果@m属于**fixed14.4** XDR 数据类型到 XPath 数据类型通过从 XDR 数据类型转换：  
+ 如果@m属于 **fixed14.4** XDR 数据类型到 XPath 数据类型通过从 XDR 数据类型转换：  
   
 ```  
 CONVERT(money, m)  
