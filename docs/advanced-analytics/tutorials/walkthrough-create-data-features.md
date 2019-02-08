@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645136"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890008"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server （演练） 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "53645136"
 
 1. 使用一个名为的 SQL 函数*fnCalculateDistance*。 该函数应已存在于 NYCTaxi_Sample 数据库。 在对象资源管理器，验证存在通过导航此路径的函数：数据库 > NYCTaxi_Sample > 可编程性 > 函数 > 标量值函数 > dbo.fnCalculateDistance。
 
-  如果该函数不存在，请使用 SQL Server Management Studio NYCTaxi_Sample 数据库中生成该函数。
+    如果该函数不存在，请使用 SQL Server Management Studio NYCTaxi_Sample 数据库中生成该函数。
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
