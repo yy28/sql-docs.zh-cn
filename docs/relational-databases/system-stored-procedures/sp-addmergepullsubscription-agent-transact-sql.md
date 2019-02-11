@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>备注  
  **sp_addmergepullsubscription_agent**用于合并复制，并使用类似于的功能[sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。  
   
- 有关如何执行时正确地指定安全设置的示例**sp_addmergepullsubscription_agent**，请参阅[Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+ 有关如何执行时正确地指定安全设置的示例**sp_addmergepullsubscription_agent**，请参阅[创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,8 +352,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addmergepullsubscription_agent**。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
