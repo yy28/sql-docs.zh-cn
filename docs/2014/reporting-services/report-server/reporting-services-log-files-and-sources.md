@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa6b0aed3bafb760f73875e941815579406496b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c355a6ecdecc5ad17dbdba788e736dfaf701d099
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353740"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021539"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器和报表服务器环境使用各种日志目标来记录有关服务器操作和状态的信息。 有两个基本日志记录类别：执行日志记录和跟踪日志记录。 执行日志记录包含有关报表执行统计信息、审核、性能诊断和优化的信息。 跟踪日志记录是有关错误消息和一般诊断的信息。  

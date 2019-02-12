@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017909"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供数据驱动订阅功能，这样您便可根据动态订阅服务器数据自定义报表的分发。 数据驱动订阅专门用于下列情况：  
@@ -56,7 +56,7 @@ ms.locfileid: "48081678"
   
 -   必须运行 SQL Server 代理服务。  
   
--   包含参数的报表。 本教程假定示例报表`Sales Orders`，使用本教程来创建[创建基本表报表&#40;SSRS 教程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
+-   包含参数的报表。 本教程以使用教程 `Sales Orders` 创建基本表报表（SSRS 教程） [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)。  
   
 -   向示例报表提供数据的 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48081678"
  **学完本教程的估计时间：** 30 分钟。 如果您还没有完成基本报表教程，则还需要 30 分钟。  
   
 ## <a name="see-also"></a>请参阅  
- [数据驱动订阅](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

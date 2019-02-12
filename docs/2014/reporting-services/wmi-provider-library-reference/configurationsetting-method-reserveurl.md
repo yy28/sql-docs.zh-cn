@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d670170a594af7346f44f236e96a724813278743
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162757"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020508"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   为给定的应用程序添加一个 URL 预留。  
@@ -56,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
 ## <a name="remarks"></a>备注  
- *UrlString* 不包括虚拟路径名称。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)方法提供实现此目的。  
+ *UrlString* 不包括虚拟路径名称。 可以使用 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法实现该目的。  
   
  针对当前 Windows 服务帐户创建 URL 预留。 更改 Windows 服务帐户需要手动更新所有的 URL 预留。  
   

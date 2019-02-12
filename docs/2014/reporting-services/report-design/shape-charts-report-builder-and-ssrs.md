@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081694"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014948"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形状图（报表生成器和 SSRS）
   形状图将值数据显示为整体的百分比。 形状图通常用于显示数据集中不同值之间的比例比较结果。 类别由各个形状段来表示。 形状段的大小由值来决定。 形状图与饼图的用法类似，但前者是按从最大到最小的顺序来排列类别。  
   
- 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何向漏斗图添加数据的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 漏斗图按逐渐递减的比例来显示值。 漏斗区的大小由序列值在所有值总计中所占的百分比来确定。 例如，您可能使用漏斗图来显示网站访问者的趋势。 漏斗图可能会在顶部显示较宽的区域，表明访问者对主页的点击率；而其他区域将成比例缩小。 有关如何向漏斗图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  下图显示的是漏斗图示例。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48081694"
   
 -   形状图将每个数据组显示为单独的图表段。 您必须至少添加一个数据字段和一个类别字段。 如果向形状图中添加多个数据字段，则形状图会在同一个图表中显示这些数据字段。  
   
--   形状图最有效的是以排序顺序显示成比例的百分比。 然而，为了保持一致性，图表默认情况下不会对数据集中的值进行排序。 请考虑从高到低对值排序，从而最准确地以漏斗图或棱锥图来表示数据。 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+-   形状图最有效的是以排序顺序显示成比例的百分比。 然而，为了保持一致性，图表默认情况下不会对数据集中的值进行排序。 请考虑从高到低对值排序，从而最准确地以漏斗图或棱锥图来表示数据。 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
 -   当计算比率时，Null 值、空值、负值和零值均无效。 因此，这些值不会显示在形状图中。 若要将这些值类型显示在图表中，需将图表类型更改为除形状图外的其他类型。 有关如何向非形状图添加空点的详细信息，请参阅[向图表添加空点&#40;报表生成器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   

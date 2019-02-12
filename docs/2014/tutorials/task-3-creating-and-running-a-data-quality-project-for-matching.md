@@ -1,24 +1,21 @@
 ---
-title: 任务 3： 创建和运行数据质量项目以进行匹配 |Microsoft Docs
+title: 任务 3：创建和运行数据质量项目以进行匹配 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099527"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035848"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>任务 3：创建并运行数据质量项目以进行匹配
   在本任务中，您将创建匹配活动的数据质量项目并对已清理的供应商数据运行匹配过程以删除数据中的所有重复项。  
@@ -50,6 +47,6 @@ ms.locfileid: "48099527"
 12. 单击**下一步**若要切换到**导出**页。  
   
 ## <a name="next-step"></a>下一步  
- [任务 4：将匹配活动的结果导出到 Excel 文件](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [任务 4:将结果导出匹配到 Excel 文件的活动](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

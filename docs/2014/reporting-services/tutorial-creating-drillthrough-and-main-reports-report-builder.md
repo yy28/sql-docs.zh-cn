@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512555"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023749"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
@@ -98,7 +98,7 @@ ms.locfileid: "52512555"
   
 3.  在右窗格中，确认已选中“表或矩阵向导”。  
   
-##  <a name="DConnection"></a> 1a。 指定数据连接  
+##  <a name="DConnection"></a> 1a. 指定数据连接  
  数据连接包含连接到外部数据源（如 Analysis Services 多维数据集或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）所需的信息。 若要指定数据连接，可以从报表服务器使用共享数据源或创建仅在此报表中使用的嵌入数据源。 在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
@@ -144,7 +144,7 @@ ms.locfileid: "52512555"
   
 14. 单击“下一步” 。  
   
-##  <a name="DMDXQuery"></a> 1b。 创建 MDX 查询  
+##  <a name="DMDXQuery"></a> 1b. 创建 MDX 查询  
  在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
@@ -213,7 +213,7 @@ ms.locfileid: "52512555"
   
 7.  单击“下一步” 。  
   
-##  <a name="DLayout"></a> 1 c。 将数据组织到组中  
+##  <a name="DLayout"></a> 1c. 将数据组织到组中  
  在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -239,7 +239,7 @@ ms.locfileid: "52512555"
   
 6.  单击“下一步” 。  
   
-##  <a name="DTotals"></a> 一维。 添加小计和总计  
+##  <a name="DTotals"></a> 1d. 添加小计和总计  
  创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 #### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -399,7 +399,7 @@ ms.locfileid: "52512555"
   
 2.  在“入门”对话框中，确认已选中“新建报表”，然后单击“表或矩阵向导”。  
   
-##  <a name="MConnection"></a> 1a。 指定数据连接  
+##  <a name="MConnection"></a> 1a. 指定数据连接  
  您将嵌入数据源添加到主报表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>创建嵌入数据源  
@@ -438,7 +438,7 @@ ms.locfileid: "52512555"
   
 14. 单击“下一步” 。  
   
-##  <a name="MMDXQuery"></a> 1b。 创建 MDX 查询  
+##  <a name="MMDXQuery"></a> 1b. 创建 MDX 查询  
  接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
@@ -536,7 +536,7 @@ ms.locfileid: "52512555"
   
 6.  单击“下一步” 。  
   
-##  <a name="MLayout"></a> 1 c。 将数据组织到组中  
+##  <a name="MLayout"></a> 1c. 将数据组织到组中  
  在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -555,7 +555,7 @@ ms.locfileid: "52512555"
   
      步骤 3 和 4 指定要在矩阵中显示的数据。  
   
-##  <a name="MTotals"></a> 一维。 添加小计和总计  
+##  <a name="MTotals"></a> 1d. 添加小计和总计  
  可以在报表中显示小计和总计。 主报表中的数据作为指示器显示；在完成向导后将删除总计。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>添加小计和总计  
@@ -719,7 +719,7 @@ ms.locfileid: "52512555"
   
 7.  单击“保存” 。  
   
-##  <a name="MRunReports"></a> 8。运行主报表和钻取报表  
+##  <a name="MRunReports"></a> 8.运行主报表和钻取报表  
  运行主报表，然后单击产品类别列中的值以运行钻取报表。  
   
 #### <a name="to-run-the-reports"></a>运行报表  

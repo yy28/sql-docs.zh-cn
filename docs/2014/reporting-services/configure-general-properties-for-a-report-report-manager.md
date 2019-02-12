@@ -12,20 +12,20 @@ helpviewer_keywords:
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 24cf490734933eaa367eacf3881bacec92e877fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b1e453bf06f0035a2ceca17f9f5c0af2d2fc9a0c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023838"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>配置报表的常规属性（报表管理器）
     
 ### <a name="to-configure-general-report-properties"></a>配置常规报表属性  
   
-1.  启动[报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置常规属性的报表，并打开该报表。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112177"
   
 ## <a name="see-also"></a>请参阅  
  [移动或删除项&#40;报表管理器&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [报表的常规属性页&#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   

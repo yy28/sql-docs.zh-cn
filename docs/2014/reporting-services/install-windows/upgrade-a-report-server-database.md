@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: a792b31fc02f5d3df4c339d1a18bbc8ee7aa29f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413004"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039648"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
   报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  

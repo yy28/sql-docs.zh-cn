@@ -1,25 +1,24 @@
 ---
-title: 第 2 课： 向时序挖掘结构添加挖掘模型 |Microsoft Docs
+title: 第 2 课：向时序挖掘结构添加挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461943"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022258"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 课：向时序挖掘结构添加挖掘模型
-  在本课中，将新的挖掘模型添加到刚刚创建的挖掘结构[第 1 课： 创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
+  在本课中，将新的挖掘模型添加到刚刚创建的挖掘结构[第 1 课：创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
  为了向现有挖掘结构添加新的挖掘模型，可以使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)语句。 可以将语句中的代码分为下列几部分：  
@@ -219,7 +218,7 @@ WITH DRILLTHROUGH
  在下一课中，您将处理所有模型和挖掘结构。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 3 课：准备时序结构和模型](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [第 3 课：处理时序结构和模型](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 时序算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

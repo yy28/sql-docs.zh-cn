@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220843"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017799"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
   表、矩阵和列表是在以行和列形式组织的单元中显示报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  
@@ -56,7 +56,7 @@ ms.locfileid: "48220843"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- 若要快速开始使用表、矩阵和列表，请参阅[教程：创建基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)、[教程：创建矩阵报表（报表生成器）](../tutorial-creating-a-matrix-report-report-builder.md)和[教程：创建自由格式的报表（报表生成器）](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速开始使用表、 矩阵和列表，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)，[教程：创建矩阵报表&#40;报表生成器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)，并[教程：创建自由格式的报表&#40;报表生成器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将表、矩阵和列表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48220843"
   
  ![从工具箱添加的新矩阵，选中](../media/rs-matrixtemplatenewselected.gif "从工具箱添加的新矩阵，选中")  
   
- 您可以按行组和列组中的多个字段或表达式对数据进行分组。 在运行时，当组合报表数据和数据区域时，随着为列组添加列和为行组添加行，矩阵将在页面上水平和垂直增长。 矩阵单元显示仅限于单元所属行组和列组的交集的聚合值。 例如，如果您的矩阵具有一个行组（类别）和两个显示销售额之和的列组（区域和年份），则报表中将显示两个单元，其中对于“类别”组中的每个值都显示销售额之和。 单元的作用域是两个交集：类别和区域的交集，以及类别和年份的交集。 矩阵可以包含嵌套组和相邻组。 嵌套组具有父-子关系，相邻组具有对等关系。 您可以添加矩阵内嵌套行组和列组的任何级别和所有级别的小计。  
+ 您可以按行组和列组中的多个字段或表达式对数据进行分组。 在运行时，当组合报表数据和数据区域时，随着为列组添加列和为行组添加行，矩阵将在页面上水平和垂直增长。 矩阵单元显示仅限于单元所属行组和列组的交集的聚合值。 例如，如果您的矩阵具有一个行组（类别）和两个显示销售额之和的列组（区域和年份），则报表中将显示两个单元，其中对于“类别”组中的每个值都显示销售额之和。 单元格的作用域是两个交集：类别和区域和类别和年。 矩阵可以包含嵌套组和相邻组。 嵌套组具有父-子关系，相邻组具有对等关系。 您可以添加矩阵内嵌套行组和列组的任何级别和所有级别的小计。  
   
  为使矩阵数据的外观更具可读性和突出显示要强调的数据，可以合并单元或者水平和垂直拆分，并将格式应用于数据和组标题。  
   
@@ -124,58 +124,58 @@ ms.locfileid: "48220843"
   
  通过添加任何 Tablix 功能，可以继续开发表、矩阵或列表。 Tablix 功能包括显示行和列中的分组数据的详细信息数据或聚合。 可以创建嵌套组、独立的相邻组或递归组。 可以对分组数据进行筛选和排序，并通过在组定义中包括多个组表达式来方便地组合组。  
   
- 您还可以为组添加总计，或者为数据区域添加总计。 可以隐藏行或列以简化报表，并使用户能够切换显示隐藏数据，这与明细报表中相同。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 您还可以为组添加总计，或者为数据区域添加总计。 可以隐藏行或列以简化报表，并使用户能够切换显示隐藏数据，这与明细报表中相同。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本节中列出的过程分步向您说明如何在您的报表中使用表、矩阵和列表；如何显示行和列中的数据、添加和删除列、合并单元以及为行组和列组包括小计。  
   
--   [添加详细信息组&#40;报表生成器和 SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [添加详细信息组（报表生成器和 SSRS）](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [向组或 Tablix 数据区域添加总计&#40;报表生成器和 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [更改单元中的项&#40;报表生成器和 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [更改单元中的项（报表生成器和 SSRS）](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [更改行高或列宽&#40;报表生成器和 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [更改行高或列宽（报表生成器和 SSRS）](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [插入或删除列&#40;报表生成器和 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [插入或删除列（报表生成器和 SSRS）](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [插入或删除行&#40;报表生成器和 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [插入或删除行（报表生成器和 SSRS）](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [合并数据区域中的单元格&#40;报表生成器和 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [合并数据区域中的单元（报表生成器和 SSRS）](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [创建一个递归层次结构组（报表生成器和 SSRS）](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [添加或删除数据区域的组中&#40;报表生成器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [在数据区域中添加或删除组（报表生成器和 SSRS）](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [显示组头和组尾&#40;报表生成器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [与组一起显示组头和组尾（报表生成器和 SSRS）](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [创建递阶的报表&#40;报表生成器和 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [创建递阶报表（报表生成器和 SSRS）](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [添加、 移动或删除表、 矩阵或列表&#40;报表生成器和 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [添加、移动或删除表、矩阵或列表（报表生成器和 SSRS）](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> 本节内容  
  下列主题提供有关使用 Tablix 数据区域的其他信息。  
   
- [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)  
  说明与 Tablix 数据区域（例如 Tablix 的区域、详细信息和分组数据、列组和行组以及静态和动态行和列）相关的关键概念。  
   
- [向 Tablix 数据区域添加数据&#40;报表生成器和 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [向 Tablix 数据区域添加数据（报表生成器和 SSRS）](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  提供与向 Tablix 数据区域添加详细信息和分组数据、小计和总计以及标签有关的详细信息。  
   
- [控制 Tablix 数据区域显示报表页上的&#40;报表生成器和 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  介绍 Tablix 数据区域的属性，您可以修改这些属性以便更改在报表中查看 Tablix 数据区域时该数据区域的显示方式。  
   
- [控制行标题和列标题&#40;报表生成器和 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [控制行标题和列标题（报表生成器和 SSRS）](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  介绍在表、矩阵或列表数据区域可以水平或垂直跨多页时如何控制行和列标题。  
   
- [创建递归层次结构组&#40;报表生成器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  介绍如何显示递归数据（其中，父级和子级之间的关系由数据集中的字段表示）。  
   
- [了解组&#40;报表生成器和 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)  
  说明什么是组以及何时使用它们，并介绍可用于不同 Tablix 数据区域的组。  
   
 

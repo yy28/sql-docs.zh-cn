@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12f37232f9f108a2764123d1bce567e9048a8b6d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035008"
 ---
 # <a name="secure-shared-dataset-items"></a>保护共享数据集项
   在报表服务器上，共享数据集项可由多个报表使用。 您可以对共享数据集加以保护以便控制用户能够访问的程度。 默认情况下，只有是“管理员”内置组的成员的用户才能查看共享数据集、修改属性、启用缓存、创建缓存刷新计划以及删除项。 所有其他用户必须具有为其创建的角色分配才能访问共享数据集。  
@@ -47,7 +47,7 @@ ms.locfileid: "48098803"
 |使用报表|查看共享数据集定义。|内容管理员<br /><br /> 报表生成器|  
 |设置项的安全性|创建和修改控制共享数据集访问权限的角色分配。 此任务必须与“查看报表”或“管理报表”任务一起使用。 否则，由于用户无法选择项，此任务将不会发挥任何作用。|内容管理员|  
   
- 有关详细信息，请参阅[项级任务](tasks-and-permissions-item-level-tasks.md)并[预定义角色](role-definitions-predefined-roles.md)。  
+ 有关详细信息，请参阅 [项级任务](tasks-and-permissions-item-level-tasks.md) 和 [预定义角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [管理共享数据集](../report-data/manage-shared-datasets.md)   

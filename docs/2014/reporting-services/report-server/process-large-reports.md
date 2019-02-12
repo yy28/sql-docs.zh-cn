@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5eee6e985a62071172a287cda2c526c9f2a0a87d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039668"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026761"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 使用使用者备用名称
   本主题说明了如何通过修改 rsreportserver.config 文件和使用 Netsh.exe 工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) 以使用使用者可选名称 (SAN)。  
@@ -29,9 +29,9 @@ ms.locfileid: "48134167"
   
  要使用 SAN，SSL 证书必须在服务器上注册，签名并且获得私钥。 你无法使用自签名证书。  
   
- 中的 Url[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]可以配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务进行侦听，对许多 URL 有效，并与其他应用程序共享 SSL 端口。 SAN 的形式如下：www.s2.com。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的 URL 可配置为使用 SSL 证书。 一个证书通常只有一个使用者名称，此名称针对一个 SSL（安全套接字层）会话只允许一个 URL。 SAN 是证书中的附加字段，允许 SSL 服务进行侦听，对许多 URL 有效，并与其他应用程序共享 SSL 端口。 SAN 的形式如下：www.s2.com。  
   
- 有关 SSL 设置的详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，请参阅[本机模式报表服务器上配置 SSL 连接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SSL 设置的详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](security/configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>将 SSRS 配置为使用适用于 Web 服务 URL 的使用者备用名称  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48134167"
   
 ## <a name="see-also"></a>请参阅  
  [RSReportServer 配置文件](report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 配置管理器&#40;本机模式&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager（本机模式）](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026558"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  
@@ -53,7 +53,7 @@ ms.locfileid: "48209467"
  **文本串联运算符。** 使用“and”(&amp;) 符号可以联接或串联一个或多个文本字符串，以生成单个文本。  
   
 ##  <a name="Constants"></a> 常量  
- 常量不是计算得出的值，因此不会发生更改。 报表生成器使用以下常量： `True`， `False`，和`Empty`。 这些常量用于计算布尔字段。 例如，假设有一个名为 IsDiscontinued 的字段。 此字段的有效值只能为 True、False 或 Empty (" ")。  
+ 常量不是计算得出的值，因此不会发生更改。 报表生成器使用以下常量：`True`、`False` 和 `Empty`。 这些常量用于计算布尔字段。 例如，假设有一个名为 IsDiscontinued 的字段。 此字段的有效值只能为 True、False 或 Empty (" ")。  
   
 ##  <a name="Functions"></a> 函数  
  函数是通过使用按特定顺序指定的特定值（称为“参数” ）来执行计算的预定义公式。 参数可以是文字值或字段，也可以是二者的组合。 在公式中使用字段时，字段名称代表该字段的每个实例。 如果参数为文字值，则可能需要使用特定字符来指定该参数为文字值。  
@@ -69,12 +69,12 @@ ms.locfileid: "48209467"
 |||  
 |-|-|  
 |聚合函数|`AVG`, `COUNT`, `COUNTDISTINCT`, `MAX`, `MIN`, `STDEV`, `STDEVP`, `SUM`, `VAR`, `VARP`|  
-|条件函数|`IF`, `IN`, `SWITCH`|  
+|条件函数|`IF`、`IN`、`SWITCH`|  
 |转换函数|`INT`, `DECIMAL`, `FLOAT`, `TEXT`|  
 |日期和时间函数|`DATE`, `DATEADD`, `DATEDIFF`, `DATETIME`, `DATEONLY`, `DAY`, `DAYOFWEEK`, `DAYOFYEAR`, `HOUR`, `MINUTE`, `MONTH`, `NOW`, `QUARTER`, `SECOND`, `TIMEONLY`, `TODAY`, `WEEK`, `YEAR`|  
-|信息函数|`GETUSERCULTURE`, `GETUSERID`|  
-|逻辑函数|`AND`, `NOT`, `OR`|  
-|数学函数|`MOD`, `ROUND`, `TRUNC`|  
+|信息函数|`GETUSERCULTURE`、`GETUSERID`|  
+|逻辑函数|`AND`、`NOT`、`OR`|  
+|数学函数|`MOD`、`ROUND`、`TRUNC`|  
 |运算符|加 (+), 除 (/), 等于 (=), 乘方 (^), 大于 (>), 大于或等于 (>=), 小于 (<), 小于或等于 (<=), 乘 (*), 取反 (-), 不等于 (<>), 减 (-)|  
 |文本函数|`CONCAT`, `FIND`, `LEFT`, `LENGTH`, `LOWER`, `LTRIM`, `REPLACE`, `RIGHT`, `RTRIM`, `SUBSTRING`, `UPPER`|  
   

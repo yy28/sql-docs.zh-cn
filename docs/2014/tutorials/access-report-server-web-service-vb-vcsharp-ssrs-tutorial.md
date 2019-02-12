@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, Web service
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015618"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>使用 Visual Basic 或 Visual C# 访问报表服务器 Web 服务（SSRS 教程）
   以下教程介绍如何从与创建的应用程序访问报表服务器 Web 服务[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
@@ -52,7 +51,7 @@ ms.locfileid: "53366679"
 > [!NOTE]  
 >  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **若要完成本教程的估计的时间：** 60 分钟  
+ **学完本教程的估计时间：** 60 分钟  
   
 ## <a name="tasks"></a>“任务”  
  [第 1 课：创建 Web 服务客户端项目](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  

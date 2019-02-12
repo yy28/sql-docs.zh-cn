@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081057"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030609"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查询设计器用户界面
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器生成多维表达式 (MDX) 查询和数据挖掘表达式 (DMX) 查询[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源。 该主题介绍了 MDX 查询设计器。 有关 DMX 查询设计器的详细信息，请参阅[针对 DMX 的 Analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源生成多维表达式 (MDX) 查询和数据挖掘表达式 (DMX) 查询。 该主题介绍了 MDX 查询设计器。 有关 DMX 查询设计器的详细信息，请参阅 [针对 DMX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)。  
   
  MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动选定的多维数据集的成员，以创建可在处理报表时检索数据的 MDX 查询。  
   
@@ -62,14 +62,14 @@ ms.locfileid: "48081057"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![更改为 MDX 查询视图](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|切换到命令类型 MDX。|  
 |![更改为 DMX 查询语言视图](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|切换到命令类型 DMX。|  
 |![刷新结果数据](../../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|刷新数据源的元数据。|  
-|![添加计算的成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员")|显示 **“计算成员生成器”** 对话框。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
 |![切换显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
 |![“显示聚合”按钮](../../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|在“数据”窗格中显示聚合。|  
@@ -107,7 +107,7 @@ ms.locfileid: "48081057"
   
 -   **编辑为文本**  
   
--   **添加计算成员**(![添加计算的成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员"))  
+-   **添加计算成员** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **显示空单元格**（![切换显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   
@@ -116,9 +116,9 @@ ms.locfileid: "48081057"
 -   **显示聚合**（![“显示聚合”按钮](../../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")）  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services MDX 查询设计器中定义参数&#40;报表生成器和 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [针对 DMX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 配置文件](../report-server/rsreportdesigner-configuration-file.md)   
  [针对 MDX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)  
   

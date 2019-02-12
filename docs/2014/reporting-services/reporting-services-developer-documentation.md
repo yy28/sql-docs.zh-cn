@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97d59933a1df11123b153e11f7ae75d926829dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023438"
 ---
 # <a name="developer39s-guide-reporting-services"></a>开发人员&#39;s 指南 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
@@ -51,7 +51,7 @@ ms.locfileid: "48116002"
  介绍如何使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 提供程序以管理报表服务器部署。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [报表定义语言 (SSRS)](reports/report-definition-language-ssrs.md)   
  [技术参考 (SSRS)](technical-reference-ssrs.md)   
  [安全开发 (Reporting Services)](extensions/secure-development/secure-development-reporting-services.md)  

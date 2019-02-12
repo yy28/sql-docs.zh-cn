@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 290e88a1f96b6cec6d4120464bb098abb0f422ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03928e651b742061e726b9c92683d9d4e9aebd08
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014828"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
   将第二个或更多的 SharePoint 模式报表服务器添加到您的 SharePoint 场可改进报表服务器处理的性能和响应时间。 如果您在将更多的用户、报表和其他应用程序添加到报表服务器时发现性能下降，则添加其他报表服务器可改进性能。 在存在硬件问题或者您在对环境中的单独服务器执行一般性的维护时，也建议添加第二个报表服务器以便提高报表服务器的可用性。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始，用于在 SharePoint 模式中扩展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 环境的步骤遵循标准 SharePoint 场部署并且利用 SharePoint 负载平衡功能。  

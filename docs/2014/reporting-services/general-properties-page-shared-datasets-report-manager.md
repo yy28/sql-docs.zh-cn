@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032748"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>共享数据集的“常规”属性页（报表管理器）
   使用“共享数据集”页可以查看和管理共享数据集项的属性。  
@@ -40,7 +40,7 @@ ms.locfileid: "48202727"
  **名称**  
  键入共享数据集的名称，此名称用于标识报表服务器文件夹层次结构内的项。  
   
- **Description**  
+ **说明**  
  提供有关共享数据集的信息。 此说明显示在“内容”页上。  
   
  **在列表视图中隐藏**  
@@ -65,12 +65,12 @@ ms.locfileid: "48202727"
  将共享数据集定义替换为文件系统上 .rsd 文件中的其他定义。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [缓存刷新选项&#40;报表管理器&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [缓存页，共享数据集&#40;报表管理器&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [管理共享数据集](report-data/manage-shared-datasets.md)   
- [缓存共享数据集&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [缓存共享数据集 (SSRS)](report-server/cache-shared-datasets-ssrs.md)  
   
   

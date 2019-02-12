@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040157"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
   本教程旨在帮助您了解地图功能，您可以使用该功能针对地理背景显示报表数据。  
@@ -330,7 +330,7 @@ ms.locfileid: "53359859"
   
  在下面的步骤中，指定颜色规则，以便将特定的颜色与每个县的商店销售额范围关联起来。 颜色红-黄-绿指示相应的高-中-低销售额。 设置色阶的格式以显示货币。 在新的图例中显示年销售额范围。 对于不包含商店的县，不使用任何颜色，以指明没有关联的数据。  
   
-###  <a name="Relationship"></a> 6a。 在空间数据与分析数据之间建立关系  
+###  <a name="Relationship"></a> 6a. 在空间数据与分析数据之间建立关系  
  若要基于分析数据改变县形状中的颜色，首先必须将分析数据与空间数据关联起来。 在本教程中，您将使用要匹配的县名称。  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>在空间数据与分析数据之间建立关系  
@@ -359,7 +359,7 @@ ms.locfileid: "53359859"
   
  对于包含商店的每个县，其颜色取决于您在向导中选择的样式的调色板。  
   
-###  <a name="ColorRules"></a> 6b。 为多边形指定颜色规则  
+###  <a name="ColorRules"></a> 6b. 为多边形指定颜色规则  
  若要创建根据商店销售额改变每个县颜色的规则，必须指定范围值、要显示的范围的划分数以及要使用的颜色。  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>为具有关联数据的所有多边形指定颜色规则  
@@ -396,7 +396,7 @@ ms.locfileid: "53359859"
   
  色阶显示五种颜色：红色、橙色、黄色、黄绿色和绿色。 每个颜色表示一个销售额范围，此范围是以县为单位根据销售额自动计算得出的。  
   
-###  <a name="ColorScale"></a> 6 c。 将色阶中的数据的格式设置为“货币”  
+###  <a name="ColorScale"></a> 6c. 将色阶中的数据的格式设置为“货币”  
  默认情况下，数据具有常规格式。 您可以应用自定义格式。  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>设置色阶的格式  
@@ -415,7 +415,7 @@ ms.locfileid: "53359859"
   
  色阶对于每个范围用货币格式显示年销售额。  
   
-###  <a name="NewLegend"></a> 6 d。 创建新图例  
+###  <a name="NewLegend"></a> 6d. 创建新图例  
  默认情况下，所有规则显示在第一个图例中。 若要改进地图的显示效果，可以添加图例。  
   
  若要更改默认显示，有两个步骤：创建新的图例，然后将地图层的规则结果与新的图例相关联。  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011808"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>在 URL 访问与 SOAP 之间选择
   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义应用程序的过程可能充满挑战。 然而，这样的挑战并不在于编程模型或 API 有多么复杂，而在于如何从众多可能的集成方法中选择一种合适的方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 最初的设计就是一个开发平台，因此在构建时考虑了编程的灵活性。 在满足灵活性要求后，接下来需要决定如何将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航和管理功能集成到现有业务应用程序中。  

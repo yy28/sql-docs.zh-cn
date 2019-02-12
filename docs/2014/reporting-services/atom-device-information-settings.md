@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a424f7af44f6272f0d511a68b1e29d89b90d3372
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b20d11ac8a07632e9105c3963d19f7936832aec4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020640"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 设备信息设置
   用于 Atom 呈现扩展插件的设备信息设置支持要使用的 Atom 馈送和字符编码的名称的提交。  

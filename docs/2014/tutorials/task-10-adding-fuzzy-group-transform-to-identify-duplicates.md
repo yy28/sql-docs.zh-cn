@@ -1,26 +1,23 @@
 ---
-title: 任务 10： 添加模糊分组转换以确定重复项 |Microsoft Docs
+title: 任务 10:添加模糊分组转换以确定重复项 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d11487c2bfbcda4c18904c77d029c91440ca8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211598"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026988"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>任务 10：添加模糊分组转换以确定重复项
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>任务 10:添加模糊分组转换以确定重复项
   在本任务中，您向数据流添加模糊分组转换。 模糊分组转换可有助于标识源数据中的重复项。 请参阅[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)的更多详细信息。  
   
 1.  拖放**模糊分组**转换中**其他转换**上**SSIS 工具箱**到**数据流**选项卡上的**合并正确和已更正的记录**。  
@@ -58,6 +55,6 @@ ms.locfileid: "48211598"
 15. 单击**确定**以关闭**模糊分组转换编辑器**。  
   
 ## <a name="next-step"></a>下一步  
- [任务 11：添加有条件拆分转换以筛选重复项](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [任务 11:添加有条件拆分转换以筛选重复项](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

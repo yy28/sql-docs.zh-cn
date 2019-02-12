@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010434"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
   您可以使用报表管理器从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库或 Oracle 数据库生成模型。 报表模型是从已发布到报表服务器上的共享数据源中生成。 如果尚未拥有共享数据源，则必须先创建一个。  
@@ -41,15 +41,15 @@ ms.locfileid: "48064847"
   
 5.  确认选中了 **“启用此数据源”** 复选框。  
   
-6.  在 **“连接类型”** 列表中，选择要连接的数据源类型。 连接类型必须是以下类型之一： **Oracle**、 **Microsoft SQL Server** 或 **Microsoft SQL Server Analysis Services**。  
+6.  在 **“连接类型”** 列表中，选择要连接的数据源类型。 连接类型必须是以下值之一：**Oracle**， **Microsoft SQL Server**或**Microsoft SQL Server Analysis Services**。  
   
 7.  在 **“连接字符串”** 框中，输入指向数据库的连接字符串。  
   
 8.  选择报表生成器用户连接数据库需要使用的连接方法。  
   
-    -   Windows 身份验证：如果希望操作系统对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户进行身份验证，请选择此选项。 如果选择此选项，则允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全功能（如密码加密）对用户进行身份验证。 极力建议选择此选项。  
+    -   Windows 身份验证：选择此选项，当你想要进行身份验证的操作系统时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用户。 如果选择此选项，则允许 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全功能（如密码加密）对用户进行身份验证。 极力建议选择此选项。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证： 选择此选项，当你希望用户使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]你创建的登录帐户。 用户必须提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名和密码。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证：选择此选项，当你希望用户使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]你创建的登录帐户。 用户必须提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名和密码。  
   
         > [!CAUTION]  
         >  请尽可能使用 Windows 身份验证。  

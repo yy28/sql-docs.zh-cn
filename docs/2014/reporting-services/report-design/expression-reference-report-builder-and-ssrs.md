@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: aba89b5d98ba7caa81f98e6a80346b4e3d6bd0bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166757"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022230"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>表达式引用（报表生成器和 SSRS）
   报表表达式支持对内置函数和内置集合的多种形式的引用。 表达式必须具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法，然后才能发布或处理报表。  
   
- 若要开发复杂表达式或使用自定义代码或自定义程序集的表达式，建议您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+ 若要开发复杂表达式或使用自定义代码或自定义程序集的表达式，建议您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器。 有关详细信息，请参阅 [报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -29,25 +29,25 @@ ms.locfileid: "48166757"
  本节中的主题可帮助编写报表中的简单表达式。  
   
 ## <a name="in-this-section"></a>本节内容  
- [表达式中的数据类型&#40;报表生成器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+ [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
- [表达式中的常量&#40;报表生成器和 SSRS&#41;](constants-in-expressions-report-builder-and-ssrs.md)  
+ [表达式中的常量类型（报表生成器和 SSRS）](constants-in-expressions-report-builder-and-ssrs.md)  
   
- [表达式中的运算符&#40;报表生成器和 SSRS&#41;](operators-in-expressions-report-builder-and-ssrs.md)  
+ [表达式中的运算符类型（报表生成器和 SSRS）](operators-in-expressions-report-builder-and-ssrs.md)  
   
- [表达式中的内置集合&#40;报表生成器和 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
+ [表达式中的内置集合（报表生成器和 SSRS）](built-in-collections-in-expressions-report-builder.md)  
   
- [内置的全局和用户引用&#40;报表生成器和 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Parameters 集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Parameters 集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)  
   
- [数据集字段集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [数据集字段集合引用（报表生成器和 SSRS）](built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [DataSources 和 DataSets 集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [DataSources 和 DataSets 集合引用（报表生成器和 SSRS）](built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [报表和组变量集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [报表和组变量集合引用（报表生成器和 SSRS）](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [ReportItems 集合引用&#40;报表生成器和 SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md)  
+ [ReportItems 集合引用（报表生成器和 SSRS）](built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  

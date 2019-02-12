@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1fc6c16004ba2a3bba7d11b49a351fcb3fc1641e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4bcdd91fb11301de3f3f22fddbf8f4d6c27fbde
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362549"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020758"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中不推荐使用的功能
   本主题介绍不推荐使用的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能。 在不推荐使用这些功能的版本中仍提供这些功能，但是计划在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中删除它们。 在新的应用程序中不应使用这些不推荐使用的功能。  

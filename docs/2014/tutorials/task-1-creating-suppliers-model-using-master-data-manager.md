@@ -1,26 +1,23 @@
 ---
-title: 任务 1： 创建使用主数据管理器的供应商模型 |Microsoft Docs
+title: 任务 1:创建供应商模型使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71b3a98a2a5052d6da4fec3e12d81ee8d452c6f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148317"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035478"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>任务 1：使用主数据管理器创建供应商模型
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>任务 1:使用主数据管理器创建供应商模型
   在此任务中，创建名为的模型**供应商**在 MDS 中使用**主数据管理器**。  
   
 1.  导航到[ http://localhost/mds ](http://localhost/mds)以启动**主数据管理器**。 如果使用其他名称配置了 Web 应用程序或它位于其他网站上，请替换该 URL。  
@@ -44,6 +41,6 @@ ms.locfileid: "48148317"
 6.  单击**保存模型**工具栏上的按钮。  
   
 ## <a name="next-step"></a>下一步  
- [任务 2：使用 MDS Add-in for Excel 将供应商数据上载到 MDS](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [任务 2:供应商数据上载到 MDS Excel 的 MDS 外接程序使用](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

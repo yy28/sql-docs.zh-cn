@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011009"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>报表生成器中的数据连接、数据源和连接字符串
   为了在报表中包含数据，您需要创建数据连接和数据集。 数据连接包括有关如何访问外部数据源的信息。 数据集包含一个查询命令，用于指定通过使用数据连接要包含哪些数据。  
@@ -47,23 +47,23 @@ ms.locfileid: "48183487"
 ##  <a name="ConnectionString"></a> 连接字符串示例  
  数据连接包括一个连接字符串，它通常由外部数据源的所有者提供。 下表列出了不同外部数据源类型的连接字符串示例：  
   
-|**数据源**|**示例**|**Description**|  
+|**数据源**|**示例**|**说明**|  
 |---------------------|-----------------|---------------------|  
-|本地服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库|`data source="(local)";initial catalog=AdventureWorks2012`|数据源类型设置为`SQL Server`。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例数据库|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|数据源类型设置为`SQL Server`。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 数据库|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|数据源类型设置为`SQL Server`。|  
-|本地服务器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库|`data source=localhost;initial catalog=Adventure Works DW 2012`|数据源类型设置为`SQL Server Analysis Services`。|  
-|SharePoint 列表|`data source=http://MySharePointWeb/MySharePointSite/`|数据源类型设置为`SharePoint List`。|  
+|本地服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库|`data source="(local)";initial catalog=AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例数据库|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 数据库|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|将数据源类型设置为 `SQL Server`。|  
+|本地服务器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库|`data source=localhost;initial catalog=Adventure Works DW 2012`|将数据源类型设置为 `SQL Server Analysis Services`。|  
+|SharePoint 列表|`data source=http://MySharePointWeb/MySharePointSite/`|将数据源类型设置为 `SharePoint List`。|  
 ||||  
 |报表模型|不适用。|报表模型不需要连接字符串。 在报表生成器中，找到报表服务器并选择表示报表模型的 .smdl 文件。|  
-|Oracle 服务器|`data source=myserver`|数据源类型设置为`Oracle`。 必须在报表生成器计算机上和报表服务器上安装 Oracle 客户端工具。|  
-|SAP NetWeaver BI 数据源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|数据源类型设置为`SAP NetWeaver BI`。|  
-|Hyperion Essbase 数据源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|数据源类型设置为`Hyperion Essbase`。|  
-|Teradata 数据源|`data source=` *\<NN &GT;。\<NNN &GT;。\<NNN &GT;。\<N &GT;* `;`|数据源类型设置为`Teradata`。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。|  
+|Oracle 服务器|`data source=myserver`|将数据源类型设置为 `Oracle`。 必须在报表生成器计算机上和报表服务器上安装 Oracle 客户端工具。|  
+|SAP NetWeaver BI 数据源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|将数据源类型设置为 `SAP NetWeaver BI`。|  
+|Hyperion Essbase 数据源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|将数据源类型设置为 `Hyperion Essbase`。|  
+|Teradata 数据源|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|将数据源类型设置为 `Teradata`。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。|  
 |Teradata 数据源|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|与前一示例类似，将数据源类型设置为 `Teradata`。 请仅使用在 Database 标记中指定的默认数据库，不要自动发现数据关系。|  
-|XML 数据源、Web 服务|`data source=http://adventure-works.com/results.aspx`|数据源类型设置为`XML`。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。|  
-|XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|数据源类型设置为`XML`。 其连接字符串是一个指向 XML 文档的 URL。|  
-|XML 数据源、嵌入的 XML 文档|*Empty*|数据源类型设置为`XML`。 XML 数据嵌入在报表定义中。|  
+|XML 数据源、Web 服务|`data source=http://adventure-works.com/results.aspx`|将数据源类型设置为 `XML`。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。|  
+|XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|将数据源类型设置为 `XML`。 其连接字符串是一个指向 XML 文档的 URL。|  
+|XML 数据源、嵌入的 XML 文档|*Empty*|将数据源类型设置为 `XML`。 XML 数据嵌入在报表定义中。|  
   
  有关每种连接类型的详细信息，请参阅[从外部数据源中添加数据&#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md)并[支持的 Reporting Services 数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183487"
   
 ## <a name="see-also"></a>请参阅  
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [报表部件的&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)  
   
   

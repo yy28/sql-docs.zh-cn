@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025058"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器连接到报表服务器数据库时使用的登录帐户。 只读。  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>备注  
- 此属性的有效值将的值而异[DatabaseLogonType](configurationsetting-property-databaselogontype.md)属性。  
+ 此属性的有效值将因 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 属性的值而异。  
   
  如果忽略此属性[DatabaseLogonType](configurationsetting-property-databaselogontype.md)属性设置为`2 (Service)`。  
   

@@ -158,13 +158,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016087"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   仪表数据区域是显示数据集中的单个值的一维数据区域。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 可以使用仪表面板在单个仪表面板内创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -181,7 +181,7 @@ ms.locfileid: "48154167"
   
  ![仪表元素示意图](../media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- 有关将仪表用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 有关将仪表用作 Kpi 的详细信息，请参阅[教程：向报表添加 KPI&#40;报表生成器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将仪表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "48154167"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 径向仪表选项：“径向”、“径向，最小仪表”、“两个刻度”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
+ 径向仪表选项：径向，径向，最小仪表、 两个刻度、 东北方向 90 度、 西北方向 90 度，西南方向 90 度、 东南方向 90 度、 北方 180 度、 南方 180 度、 东方 180 度 West180 度和计量。  
   
  **线性仪表**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个刻度”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“圆点图”。  
+ 线性仪表选项：水平、 垂直、 多个条形指针、 两个刻度、 三个颜色范围，对数、 温度计、 温度计华氏温度/Celcius 和圆点图。  
   
   
 ##  <a name="AddingData"></a> 向仪表添加数据  
@@ -244,14 +244,14 @@ ms.locfileid: "48154167"
 -   右键单击仪表指针，然后选择 **“指针属性”**。 有关`Value`、 从下拉列表中选择一个字段，或通过单击来定义字段表达式**表达式**(*fx*) 按钮。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>将字段聚合为单个值  
- 向仪表添加字段[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]默认情况下计算该字段的聚合。 数字数据类型是使用 SUM 函数聚合的。 非数字数据类型是使用 COUNT 函数聚合的，该函数可对数据集或组中特定值或字段的实例数进行计数。 如果值字段的数据类型是字符串，则仪表将无法显示数值，即使这些字段中包含数字也是如此。 仪表将改用 COUNT 函数来聚合字符串字段。 若要避免此行为，请确保使用的字段是数字数据类型，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为使用 CDbl 或 CInt 常量的数值数据类型。 例如，以下表达式将名为 MyField 的字符串字段转换为数值。  
+ 默认情况下，将字段添加到仪表时， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 会计算字段的聚合。 数字数据类型是使用 SUM 函数聚合的。 非数字数据类型是使用 COUNT 函数聚合的，该函数可对数据集或组中特定值或字段的实例数进行计数。 如果值字段的数据类型是字符串，则仪表将无法显示数值，即使这些字段中包含数字也是如此。 仪表将改用 COUNT 函数来聚合字符串字段。 若要避免此行为，请确保使用的字段是数字数据类型，而不是包含格式化数字的字符串。 可以使用 Visual Basic 表达式以将字符串值转换为使用 CDbl 或 CInt 常量的数值数据类型。 例如，以下表达式将名为 MyField 的字符串字段转换为数值。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  有关聚合表达式的详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="defining-a-group-on-a-gauge"></a>在仪表上定义组  
- 将字段添加到仪表之后，可以添加一个数据组。 仪表不同于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的所有其他数据区域，它可以在一个数据区域中显示多个组。 通过在仪表上定义组表达式来添加组与在 Tablix 数据区域中添加行组相同。 但是，添加组之后，仪表仅将最后一个组的值显示为指针值。 例如，如果针对年份添加分组表达式，指针将指向数据集中表示最后一年的销售额聚合值的值。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)。  
+ 将字段添加到仪表之后，可以添加一个数据组。 仪表不同于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中的所有其他数据区域，它可以在一个数据区域中显示多个组。 通过在仪表上定义组表达式来添加组与在 Tablix 数据区域中添加行组相同。 但是，添加组之后，仪表仅将最后一个组的值显示为指针值。 例如，如果针对年份添加分组表达式，指针将指向数据集中表示最后一年的销售额聚合值的值。 有关组的详细信息，请参阅 [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)。  
   
  对于在表或列表中显示多个仪表并希望显示按组聚合的数据等情况，您可能希望在仪表中添加组。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
@@ -287,9 +287,9 @@ ms.locfileid: "48154167"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节中列出的过程分步骤显示如何在报表中使用仪表、如何使数据在仪表中高效地显示以及如何添加和配置仪表及其元素。  
   
--   [向报表添加仪表&#40;报表生成器和 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [向报表添加仪表（报表生成器和 SSRS）](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [在仪表上设置最小值或最大值&#40;报表生成器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [设置仪表的最小值或最大值（报表生成器和 SSRS）](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [在仪表上设置对齐间隔&#40;报表生成器和 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -302,9 +302,9 @@ ms.locfileid: "48154167"
 |||  
 |-|-|  
 |术语|定义|  
-|[设置仪表上的刻度的格式&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上刻度的格式有关的一般信息，并且提供与径向仪表和线性仪表上刻度的格式设置选项有关的详细信息。|  
-|[设置仪表上的指针的格式&#40;报表生成器和 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上指针的格式有关的一般信息，并且提供与可用于径向仪表和线性仪表的指针样式的格式设置选项有关的详细信息。|  
-|[设置仪表上的范围的格式&#40;报表生成器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上范围的格式以便指示仪表上一段重要的值或者以直观方式指示指针值何时进入某一值范围有关的信息。|  
+|[设置仪表上刻度的格式（报表生成器和 SSRS）](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上刻度的格式有关的一般信息，并且提供与径向仪表和线性仪表上刻度的格式设置选项有关的详细信息。|  
+|[设置仪表上指针的格式（报表生成器和 SSRS）](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上指针的格式有关的一般信息，并且提供与可用于径向仪表和线性仪表的指针样式的格式设置选项有关的详细信息。|  
+|[设置仪表上范围的格式（报表生成器和 SSRS）](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供与设置仪表上范围的格式以便指示仪表上一段重要的值或者以直观方式指示指针值何时进入某一值范围有关的信息。|  
   
   
 ## <a name="see-also"></a>请参阅  

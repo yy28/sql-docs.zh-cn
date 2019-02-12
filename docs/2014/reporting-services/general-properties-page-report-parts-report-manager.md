@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136239"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040478"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>报表部件的“常规”属性页（报表管理器）
   使用该属性页可以查看和管理报表部件的常规属性。  
@@ -53,7 +53,7 @@ ms.locfileid: "48136239"
  **名称**  
  键入一个名称来标识报表部件。  
   
- **Description**  
+ **说明**  
  提供有关报表部件的信息。 该说明显示在报表管理器的“内容”页中。 用户从报表创作工具中搜索报表部件时，可以搜索该说明文本。  
   
  **在列表视图中隐藏**  
@@ -79,9 +79,9 @@ ms.locfileid: "48136239"
   
 ## <a name="see-also"></a>请参阅  
  [管理报表部件](report-design/managing-report-parts.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [报表部件的&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表部件（报表生成器和 SSRS）](report-parts-report-builder-and-ssrs.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [报表生成器中的报表部件和数据集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

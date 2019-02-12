@@ -2,10 +2,8 @@
 title: sp_execute_remote （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837085"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035898"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,10 +44,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>参数  
- [ \@data_source_name =] *datasourcename*  
+ [ \@data_source_name = ] *datasourcename*  
  标识外部数据源执行该语句。 请参阅[创建外部数据源&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部数据源可以是类型的"RDBMS"或"SHARD_MAP_MANAGER"。  
   
- [ \@stmt =]*语句*  
+ [ \@stmt= ] *statement*  
  是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理。 \@语句必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定 Unicode 常量，则它必须带有前缀**N**。例如，Unicode 常量**N 'sp_who'** 有效，但是字符常量 **'sp_who'** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在 64 位服务器上的字符串的大小被限制为 2 GB 的最大大小**nvarchar （max)**。  
   
 > [!NOTE]  
@@ -57,10 +55,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  包含在每个参数\@stmt 必须具有一个对应的条目，在这种\@params 参数定义列表和参数值列表。  
   
- [ \@params =] N'\@*parameter_name * * data_type* [，...*n* ]  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  是一个字符串，它包含的定义中嵌入的所有参数\@stmt。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 每个参数中指定\@中定义 stmtmust \@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理在\@stmt 不包含参数，\@参数不是必需的。 该参数的默认值为 NULL。  
   
- [ \@param1 =] '*value1*  
+ [ \@param1= ] '*value1*'  
  参数字符串中定义的第一个参数的值。 该值可以是 Unicode 常量，也可以是 Unicode 变量。 必须为包含在每个参数提供参数值\@stmt。值不需要[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理在\@stmt 不具有任何参数。  
   
  *n*  
@@ -72,7 +70,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>结果集  
  返回的结果集的第一个 SQL 语句。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 权限。  
   
 ## <a name="remarks"></a>备注  
@@ -106,6 +104,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>另请参阅：
 
-[创建数据库范围凭据](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[创建外部数据源 (Transact SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

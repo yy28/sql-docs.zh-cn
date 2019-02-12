@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ff44ce1f100f6845999f038d21f14efce9a5654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2fe0ade0d5011bfcbf6a2969f8e342ab20670a24
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026281"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>添加分页符（报表生成器和 SSRS）
   您可以向数据区域内的矩形、数据区域或组添加分页符，以控制每个页面中的信息量。 添加分页符能够提高已发布报表的性能，因为在您查看报表时，系统只需处理每个页面中的项。 如果整个报表位于一个页面中，则您只能在所有项都得到处理后才能查看报表。  
@@ -64,6 +64,6 @@ ms.locfileid: "48053448"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)   
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204377"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035408"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>修改和处理市场篮模型（数据挖掘中级教程）
   在处理你创建的关联挖掘模型之前，必须更改两个参数的默认值：*支持*并*概率*。  
@@ -63,6 +62,6 @@ ms.locfileid: "48204377"
  [浏览市场篮模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

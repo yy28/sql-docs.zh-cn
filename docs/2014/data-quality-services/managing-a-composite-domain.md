@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f40a2df471dc1e0593d25f96c1b04837822725d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1dbd9b34b02b2d5fc614562cadf9305b76aa02d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042648"
 ---
 # <a name="managing-a-composite-domain"></a>管理复合域
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用复合域。 有时候，单一域不会令人满意地表示字段中的数据，并且您只能通过组合单一域来表示这些数据。 为此，您创建复合域。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段，这些相关字词未进行分析，但包括在单个复合值中。 该值中的每个字词都将由不同的单一域表示。 在您将单一域包括在复合域中，然后将复合域映射到数据字段后，可以通过在单一域中生成知识，在知识库中生成与该字段中的数据有关的知识。 复合域（与单一域相似）是单个数据字段中数据的语义表示形式。  

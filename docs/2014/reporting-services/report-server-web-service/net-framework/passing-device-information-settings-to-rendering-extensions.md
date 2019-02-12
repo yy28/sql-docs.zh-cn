@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f9f8df66bdd07a2a30a563af27b4c98cccf2c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 56f5540e1bde5ea0a4fee51f445bccd1566fbb7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081977"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026328"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 报表服务器 Web 服务中的设置将以 **DeviceInfo** XML 元素的形式传递并由报表服务器进行处理。 由于设备信息设置均具有默认值，因此在呈现进程中可将其视为可选参数。 但是，您可以使用设备信息设置对呈现进行自定义并覆盖由服务器提供的默认值。  
@@ -36,7 +36,7 @@ ms.locfileid: "48081977"
  可以用多种方式指定设备信息设置。 可以通过编程方式使用 Render 方法。 如果要通过报表的 URL 访问报表，则可以指定设备信息作为 URL 参数。 还可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件中编辑设备信息设置，以指定全局呈现参数。 有关全局指定呈现参数的详细信息，请参阅[在 RSReportServer.Config 中自定义呈现扩展插件参数](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
 ## <a name="passing-device-information-using-the-render-method"></a>使用 Render 方法传递设备信息  
- 若要将设备信息设置传递给呈现扩展插件，请使用<xref:ReportExecution2005.ReportExecutionService.Render%2A>方法。 例如，当以 HTML 格式呈现时，可将以下 XML 字符串传递到 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法以创建一个 HTML 段落。  
+ 若要将设备信息设置传递给呈现扩展插件，请使用 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法。 例如，当以 HTML 格式呈现时，可将以下 XML 字符串传递到 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法以创建一个 HTML 段落。  
   
 ```  
 <DeviceInfo>  
@@ -44,7 +44,7 @@ ms.locfileid: "48081977"
 </DeviceInfo>  
 ```  
   
- 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML 设备信息设置](../../html-device-information-settings.md)。  
+ 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML Device Information Settings](../../html-device-information-settings.md)。  
   
 ## <a name="passing-device-information-using-url-access"></a>使用 URL 访问传递设备信息  
  您也可以通过 URL 访问传递设备信息设置。 设备信息设置以 URL 参数的形式传递。 可以将以下 URL 访问字符串传递到报表服务器以生成不带 HTML 查看器工具栏的所呈现报表。  

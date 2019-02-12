@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 0b954f61e947a7422d518516987be6215d6263b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021508"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>将 HTML 导入报表（报表生成器和 SSRS）
   可以使用文本框向报表中插入从数据集字段中检索到的 HTML 格式的文本。 文本可以来自于其计算结果为正确格式的 HTML 的任何简单或复杂表达式。 格式化文本可以呈现为支持的所有输出格式，包括 PDF。  
@@ -28,7 +28,7 @@ ms.locfileid: "53208364"
 > [!NOTE]  
 >  导入包含 HTML 标记的文本时，文本框必须始终首先分析数据。 由于仅支持 HTML 标记的子集，因此在呈现报表中显示的 HTML 可能不同于您的原始 HTML。  
   
- 若要快速开始，请参阅[教程：设置文本的格式&#40;报表生成器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

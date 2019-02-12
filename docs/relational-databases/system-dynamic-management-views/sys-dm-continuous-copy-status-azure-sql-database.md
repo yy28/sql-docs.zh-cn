@@ -2,10 +2,8 @@
 title: sys.dm_continuous_copy_status （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023878"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,13 +42,13 @@ ms.locfileid: "51665936"
 |**partner_database**|**sysname**|链接 SQL Database 服务器上链接数据库的名称。|  
 |**last_replication**|**datetimeoffset**|上次应用的复制事务的时间戳。|  
 |**replication_lag_sec**|**int**|当前时间与上次成功提交到主数据库上但活动辅助数据库尚未确认的事务的时间戳之间的时间差（以秒计）。|  
-|**replication_state**|**tinyint**|为此数据库的连续复制复制的状态。 以下是可能的值和及其说明。<br /><br /> 1： 种子设定。 复制目标正在设定种子，处于事务不一致的状态。 直到设定种子完毕后，才能连接到活动辅助数据库。 <br />2： 正在保持同步。 活动辅助数据库当前正在与主数据库保持同步，处于事务一致的状态。<br />3： 重新设定种子。 因无法恢复的复制故障，正在自动为活动辅助数据库重新设定种子。<br />4： 挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
+|**replication_state**|**tinyint**|为此数据库的连续复制复制的状态。 以下是可能的值和及其说明。<br /><br /> 1：正在设定种子。 复制目标正在设定种子，处于事务不一致的状态。 直到设定种子完毕后，才能连接到活动辅助数据库。 <br />2：正在保持同步。 活动辅助数据库当前正在与主数据库保持同步，处于事务一致的状态。<br />3：正在重新设定种子。 因无法恢复的复制故障，正在自动为活动辅助数据库重新设定种子。<br />4：挂起。 这不是活动的连续复制关系。 此状态通常指示可用的互连带宽不足，无法满足主数据库上事务活动的水平。 但是，连续复制关系仍保持不变。|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state 的说明，它是以下某项：<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|这始终设置为 0|  
 |**is_target_role**|**bit**|0 = 复制关系源<br /><br /> 1 = 复制关系目标|  
 |**is_interlink_connected**|**bit**|1 = 互连已连接。<br /><br /> 0 = 互连已断开连接。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要检索数据，要求的成员身份**db_owner**数据库角色。 Dbo 用户、 的成员**dbmanager**数据库角色和 sa 登录名均可查询此视图。  
   
 ## <a name="remarks"></a>备注  

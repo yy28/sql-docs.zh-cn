@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 254cd7875988103fd6dc479d66794f4d2627179d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019410"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
   若要更改报表首次运行时数据区域中数据的排序顺序，必须为数据区域或组设置排序表达式。 默认情况下，组的排序表达式自动设置为与组表达式相同的值。  
@@ -27,7 +27,7 @@ ms.locfileid: "48119997"
   
 -   在仪表数据区域中，您通常不需要对数据进行排序，因为仪表将显示相对于范围的单个值。 如果确实需要对仪表中的数据进行排序，则必须首先定义组，然后设置组的排序表达式。  
   
- 有关详细信息，请参阅[对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
  对于 Tablix 数据区域，还可以将交互式排序按钮添加到列标题的顶部，以便让用户能够更改组或详细信息行的排序顺序。 有关详细信息，请参阅[交互式排序（报表生成器和 SSRS）](interactive-sort-report-builder-and-ssrs.md)。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119367"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010868"
 ---
 # <a name="new-linked-report-page-report-manager"></a>“新建链接报表”页（报表管理器）
   使用“新建链接报表”页可以创建链接报表。 链接报表是指具有自己的设置和属性、但链接到其他报表的报表定义的报表。 如果您有一个基础报表并且希望在它的基础上针对特定组或特定用户加以改动，则链接报表很有用；根据您指定为参数的区域代码返回不同数据的区域报表便是链接报表的一个例子。 链接报表通常是通过参数化报表创建。如果您希望每个报表具有不同的参数值，则可以为每个报表实例保存不同的参数值以创建参数化报表。 不过，您也可以通过有权访问的任何报表创建链接报表。  
@@ -48,7 +48,7 @@ ms.locfileid: "48119367"
  **名称**  
  指定链接报表的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 但是，指定名称时不得使用字符 ; ? : \@ & = +，$ / * \< > |"或 / 指定名称时。  
   
- **Description**  
+ **说明**  
  键入对报表内容的说明。 有权访问该报表的用户可以在“内容”页中查看此说明。  
   
  **位置**  

@@ -1,22 +1,21 @@
 ---
-title: 第 1 课： 创建 Web 服务客户端项目 |Microsoft Docs
+title: 第 1 课：创建 Web 服务客户端项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080797"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025288"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 课：创建 Web 服务客户端项目
   针对本演练，您将创建访问报表服务器 Web 服务的简单控制台应用程序。 本演练假定您是在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境中进行开发的。  
@@ -38,7 +37,7 @@ ms.locfileid: "48080797"
      在解决方案资源管理器中，展开该项目节点。 具有默认名称为 Program.cs 的文件 (对于 Module1.vb [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 已添加到你的项目。  
   
 ## <a name="see-also"></a>请参阅  
- [第 2 课： 添加 Web 引用](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [第 2 课：添加 Web 引用](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [访问报表服务器 Web 服务使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教程&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

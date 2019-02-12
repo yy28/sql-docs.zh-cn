@@ -12,15 +12,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f5cec577ba63659e33aa564d5ae4225f8594429
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029994"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020168"
 ---
 # <a name="create-a-data-quality-project"></a>创建数据质量项目
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]创建数据质量项目。 数据质量项目用于在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中运行清理或匹配活动。  
@@ -51,13 +51,13 @@ ms.locfileid: "51029994"
   
     4.  在 **“选择活动”** 区域中，单击您要使用此数据质量项目执行的活动：  
   
-        -   **清理**：选择此活动将清理源数据。  
+        -   **清理**:选择此活动将清理源数据。  
   
-        -   **匹配**：选择此活动将执行匹配。 只有在为数据质量项目选择的知识库包含匹配策略的情况下，此活动才可用。  
+        -   **匹配**:选择此活动将执行匹配。 只有在为数据质量项目选择的知识库包含匹配策略的情况下，此活动才可用。  
   
 4.  单击 **“创建”** 将创建数据质量项目。  
   
-##  <a name="FollowUp"></a> 跟进：在创建数据质量项目后  
+##  <a name="FollowUp"></a> 跟进：创建数据质量项目之后  
  在创建数据质量项目后，将向您提供一个向导，可用于执行所选活动：清理或匹配。 有关清理和匹配活动的详细信息，请参阅[数据清理](../../2014/data-quality-services/data-cleansing.md)和[数据匹配](../../2014/data-quality-services/data-matching.md)。  
   
   

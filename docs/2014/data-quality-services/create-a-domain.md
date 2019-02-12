@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6db2481777a79697e109400786399a5db9daf448
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024448"
 ---
 # <a name="create-a-domain"></a>创建域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域。 域中的值是字段中数据的语义表示形式。 有关域的详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "51031597"
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：创建域后  
+##  <a name="FollowUp"></a> 跟进：在创建域后  
  在创建域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

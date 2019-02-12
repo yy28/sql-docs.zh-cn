@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7fa5535d9ea44390312d9db535bbea7a7a5a7d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023008"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 属性
   MSReportServer_Instance 类为客户端提供连接到已安装的报表服务器所需的基本信息。  
@@ -33,8 +33,8 @@ ms.locfileid: "48062717"
   
 |||  
 |-|-|  
-|[EditionID 属性&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|返回报表服务器的版本类别。|  
-|[EditionName 属性&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|返回报表服务器版本类别的可读名称。|  
+|[EditionID 属性 (WMI MSReportServer_Instance)](msreportserver-instance-properties-editionid.md)|返回报表服务器的版本类别。|  
+|[EditionName 属性 (WMI MSReportServer_Instance)](msreportserver-instance-properties-editionname.md)|返回报表服务器版本类别的可读名称。|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|此对象支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基础结构，但不能通过代码直接使用。|  
 |[InstanceName](msreportserver-instance-properties-instancename.md)|返回特定计算机上报表服务器实例的名称。 只读。|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|指示是否将报表服务器配置为 SharePoint 集成模式。|  

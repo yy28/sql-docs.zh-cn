@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029308"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -33,13 +33,13 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`或`Binary`) 要对其执行聚合，例如，表达式`=Fields!FieldName.Value`。  
+ （`Variant` 或 `Binary`）要对其执行聚合的表达式，例如，`=Fields!FieldName.Value`。  
   
  *作用域*  
- (`String`) 要对其应用聚合函数项包含该报表的数据集、 组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
+ (`String`) 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
  *递归*  
- (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  
+ (**Enumerated Type**) 可选。 `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return-type"></a>返回类型  
  返回`Integer`。  
@@ -77,9 +77,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

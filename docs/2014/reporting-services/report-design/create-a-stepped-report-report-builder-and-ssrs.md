@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0afb8222c188ac509a2b198709922d52ca008d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113695"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020459"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
   递阶报表可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  
@@ -105,7 +105,7 @@ ms.locfileid: "48113695"
 3.  更改用于显示组数据的单元的填充值。  
   
 ## <a name="see-also"></a>请参阅  
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076517"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041358"
 ---
 # <a name="verifying-a-report-run"></a>验证报表运行情况
   若要查看报表处理状态的有关信息，则可以使用日志文件或参考在报表管理器中随报表显示的状态信息。  

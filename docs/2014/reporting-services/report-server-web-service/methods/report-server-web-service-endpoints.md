@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119984"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009701"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  
   
 ## <a name="the-management-endpoints"></a>管理端点  
- 有三个端点可用于管理报表服务器上的对象，即：<xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010>。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器上的对象。 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器上的对象。 <xref:ReportService2010>端点合并的功能<xref:ReportService2005>和<xref:ReportService2006>，可以管理报表服务器上配置为本机模式或 SharePoint 集成模式下的对象。  
+ 有三个端点可用于管理报表服务器上的对象，即：<xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010>。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器上的对象。 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器上的对象。 <xref:ReportService2010> 终结点合并了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，可以管理为本机或 SharePoint 集成模式配置的报表服务器上的对象。  
   
 > [!IMPORTANT]  
 >  当报表服务器配置为 SharePoint 集成模式时，<xref:ReportService2005> API 将返回 `rsOperationNotSupportedSharePointMode` 错误。 如果报表服务器配置为本机模式，<xref:ReportService2006> API 将返回 `rsOperationNotSupportedNativeMode` 错误。 同样，在非预期模式中使用 <xref:ReportService2010> 中的模式特定 API 时，API 将返回相应的错误。  
@@ -67,7 +67,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |代理端点|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 中不推荐使用此终结点[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
+|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用此端点。|  
 |<xref:ReportService2010>|为管理配置为本机模式或 SharePoint 集成模式的报表服务器提供 API。|  
 |<xref:ReportExecution2005>|提供用于运行和导航报表的 API。|  
 |<xref:ReportServiceAuthentication>|提供 API，以便在将 SharePoint Web 应用程序配置为窗体身份验证时，针对报表服务器对用户进行身份验证。|  

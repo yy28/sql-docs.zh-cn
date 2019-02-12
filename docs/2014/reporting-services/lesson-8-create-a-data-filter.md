@@ -1,5 +1,5 @@
 ---
-title: 第 8 课：创建数据筛选器 | Microsoft Docs
+title: 第 8 课：创建数据筛选器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189917"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037059"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 课：创建数据筛选器
   在父报表上添加钻取操作后，接下来将创建一个数据筛选器，用于为子报表定义的数据表。  
@@ -44,7 +44,7 @@ ms.locfileid: "48189917"
   
 5.  单击等号 (**=**) 中的运算符**运算符**下拉列表。  
   
-6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，然后再双击`productid`中**值**区域。 “为以下项设置表达式: 值”字段现在应包含类似于 =Parameters!productid.Value 的表达式。  
+6.  单击表达式按钮旁边**值**字段中，单击**参数**中**类别**区域中，然后再双击`productid`中**值**区域。 **设置表达式：值**字段现在应包含类似于表达式 **= 参数 ！ 产品 id。值**。  
   
 7.  单击**确定，** 并**确定**中再次**Tablix 属性**对话框。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189917"
   
 2.  创建新的函数接受的参数`productid`，类型为 Integer，并返回`datatable`对象，并执行以下操作。  
   
-    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课： 定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课：定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
-    2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
+    2.  创建连接到 SqlServer 数据库以执行中定义的查询**第 4 课：定义数据连接和 DataTable 用于子报表**。  
   
     3.  该查询将返回未筛选的数据。  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189917"
   
 2.  创建一个新函数，该函数接受类型为 Integer 的参数 `productid` 并返回 `datatable` 对象，然后执行以下操作。  
   
-    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课： 定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  创建数据集的实例`DataSet2`，其中的第 2 步中创建[第 4 课：定义用于子报表的数据连接和数据表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
-    2.  创建一个到 SqlServer 数据库的连接，以执行在 **第 4 课：定义用于子报表的数据连接和 DataTable**中定义的查询。  
+    2.  创建连接到 SqlServer 数据库以执行查询定义**第 4 课：定义数据连接和 DataTable 用于子报表**。  
   
     3.  该查询将包括参数 `productid` 以确保根据在父报表中选择的 `ProductID` 筛选所返回的数据。  
   

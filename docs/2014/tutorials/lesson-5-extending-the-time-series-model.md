@@ -1,22 +1,21 @@
 ---
-title: 第 5 课： 扩展时序模型 |Microsoft Docs
+title: 第 5 课：扩展时序模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028818"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 课：扩展时序模型
   在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 中，可以向时序模型中添加新数据，并自动将新数据合并到模型中。 您可以通过下列两种方式之一向时序挖掘模型添加新数据：  
@@ -156,7 +155,7 @@ PREDICTION JOIN <source query>
   
  下表显示了为 M200 Europe 提供的新值对预测的影响。 您没有为 Pacific 地区的 M200 产品提供任何新数据，只是为了进行比较而提供此序列：  
   
- **产品和区域： M200 Europe**  
+ **产品和区域：M200 Europe**  
   
 |||||  
 |-|-|-|-|  
@@ -168,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **产品和区域： M200 Pacific**  
+ **产品和区域：M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -219,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  预测结果从时间段 3 开始，该时间段在您提供的 2 个月的新数据之后。  
   
- **产品和区域： M200 Europe**  
+ **产品和区域：M200 Europe**  
   
  具有更新数据的模型（具有 EXTEND_MODEL_CASES 的 PredictTimeSeries）  
   
@@ -231,10 +230,10 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>使用 REPLACE_MODEL_CASES 进行预测  
- 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 此方案的详细的演练所示[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+ 如果您想对一组事例的某个模型定型，然后将该模型应用到不同的数据序列，则替换模型事例非常有用。 此方案的详细的演练所示[第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [时序模型查询示例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries (DMX)](/sql/dmx/predicttimeseries-dmx)  
   
   

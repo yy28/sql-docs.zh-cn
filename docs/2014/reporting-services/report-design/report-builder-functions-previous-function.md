@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118207"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010678"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 函数（报表生成器和 SSRS）
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
@@ -33,7 +33,7 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`或`Binary`) 要用于标识数据的表达式和要为其检索以前值，例如，`Fields!Fieldname.Value`或`Sum(Fields!Fieldname.Value)`。  
+ （`Variant` 或 `Binary`）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
  (`String`) 可选。 组或数据区域中或为 null 的名称 (`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要从中检索由指定的以前值的作用域*表达式*。  
@@ -46,7 +46,7 @@ Previous(expression, scope)
   
  如果*表达式*不包含聚合，`Previous`函数默认为报表项的当前作用域。  
   
- 在详细信息组中，使用`Previous`在详细信息行的前一个实例中指定的字段引用的值。  
+ 在详细信息组中，使用 `Previous` 可以在详细信息行的前一实例中指定字段引用的值。  
   
 > [!NOTE]  
 >  `Previous`函数只支持详细信息组中的字段引用。 例如，在详细信息组的文本框中， `=Previous(Fields!Quantity.Value)` 将返回上一行中 `Quantity` 字段的数据。 在第一行中，此表达式返回一个 Null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）。  
@@ -82,9 +82,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

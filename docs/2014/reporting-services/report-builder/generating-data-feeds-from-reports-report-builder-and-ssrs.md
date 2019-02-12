@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020678"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成随后可用在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端中的数据馈送。  
@@ -57,7 +57,7 @@ ms.locfileid: "53377589"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 从此报表生成的 Atom 服务文档包括两个数据馈送，一个用于每个动态对等列：区域和年份。 下图显示了每个数据馈送的内容。  
+ 该报表生成的 Atom 服务文档包括两个数据馈送，每个数据馈送对应一个动态对等列：Territory 和 Year。 下图显示了每个数据馈送的内容。  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6751dcfca820fcd7bdcdf73ff6979e572c7159fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f20eef9609bbede00c6503f681620763216d3a15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066587"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020088"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>添加、更新和删除数据 (Master Data Services)
   你可以添加数据并将数据批量更改为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的模型。  
@@ -71,7 +71,7 @@ ms.locfileid: "48066587"
   
 6.  根据业务规则对数据进行验证。  
   
-     在主数据管理器中，导航到模型的“资源管理器”  功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅[验证存储过程 (Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
+     在主数据管理器中，导航到模型的“资源管理器”  功能区域，然后应用业务规则以验证数据。 有关详细信息，请参阅[业务规则验证特定成员 (Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 同时可以使用存储过程来验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
   
      使用临时表加载数据时，不会自动根据业务规则验证数据。 有关执行何种验证以及何时执行的详细信息，请参阅[验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)。  
   

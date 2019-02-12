@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022288"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
   表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 将使用**表达式**对话框可以编写表达式的连接名称值、 查找中单独的数据集中的值显示不同的图片基于字段值，等等。  
@@ -522,7 +522,7 @@ ms.locfileid: "52399330"
   
 38. 单击 **“运行”** 以预览报表。  
   
-##  <a name="GreenBar"></a> 8。使"绿色图条"报表的报表  
+##  <a name="GreenBar"></a> 8.使"绿色图条"报表的报表  
  使用参数指定要应用于报表的交替行的颜色，使报表成为条纹形式的报表。  
   
 #### <a name="to-add-a-parameter"></a>添加参数  

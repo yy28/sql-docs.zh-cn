@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12d6db8e8f9add797d640f043de8470fa7a5ed15
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392510"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017228"
 ---
 # <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  

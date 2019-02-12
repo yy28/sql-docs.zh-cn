@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6fff4c4110f6f51c8e2363cff1fb64633caeb888
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372119"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024298"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在报表生成器中指定凭据
   凭据对试图从数据源中检索数据的用户进行身份验证。 数据源所有者确定必须使用的凭据类型。 例如，数据库管理员可能指定用户必须提供 Windows 用户名和密码。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032008"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>报表设计和报表部署的规划 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了创作和部署报表的多个方法。 使用本主题帮助计划协同工作的报表创作环境和报表服务器。 本主题概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件对报表定义的支持。 报表定义是用报表定义语言 (RDL) 或客户端报表定义语言 (RDLC) 编写的 XML 文件。 每个报表定义都符合位于该文件开头的特定架构版本的要求。  

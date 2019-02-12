@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017959"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
   可以使用报表查看器 Web 部件来查看配置为 SharePoint 集成模式的报表服务器上运行的报表。 可显示的报表包括报表定义 (.rdl) 文件和报表生成器报表。 报表在报表查看器 Web 部件的新页面中自动打开，但如果您希望始终在某现有网页中显示特定报表，也可以将报表查看器 Web 部件添加至该网页或站点。  
@@ -59,10 +59,10 @@ ms.locfileid: "48110037"
   
  下面列出了报表查看器 Web 部件的自定义属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |报告|SharePoint 站点或同一 Web 应用程序或场内站点上的报表的完全限定路径。 为了在设置其他属性时能够获得最佳结果，请在指定报表 URL 后单击“应用”。|  
-|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效的值包括`_Top`， `_Blank`，和`_Self`。 `_Top` 使用当前窗口，`_Blank` 在新浏览器窗口中加载文档，而 `_Self` 在当前框架内打开文档。 虽然 `_Parent` 是 HTML 中 Target 属性的有效值，但请不要将此值用于嵌入页面的报表查看器 Web 部件。|  
+|超链接目标|标准 HTML，用于指定显示当前文档内链接内容的目标框架。 对于包含指向外部网站的超链接的报表，可以指定是用目标文档替换当前窗口中的现有报表还是在新浏览器窗口中打开目标文档。 有效值包括 `_Top`、`_Blank` 和 `_Self`。 `_Top` 使用当前窗口，`_Blank` 在新浏览器窗口中加载文档，而 `_Self` 在当前框架内打开文档。 虽然 `_Parent` 是 HTML 中 Target 属性的有效值，但请不要将此值用于嵌入页面的报表查看器 Web 部件。|  
 |自动生成 Web 部件标题|生成的标题，包含报表查看器 Web 部件名称和报表名称，中间用短划线分隔。 如果报表没有标题，则使用报表的文件名。 将 Web 部件添加到页面时，即可看到此标题。 如果选中此复选框，则每次刷新页面时都会生成标题。|  
 |自动生成 Web 部件标题详细信息链接|生成的显示在 Web 部件之上的超链接。 单击此链接可以在新页面中以整页模式打开报表。|  
 |显示报表生成器菜单项。|显示或隐藏用于打开报表生成器的 **“操作”** 菜单选项。|  
@@ -75,10 +75,10 @@ ms.locfileid: "48110037"
 |显示查找按钮|显示或隐藏工具栏上的查找控件。 查找控件让用户可以在所呈现的报表中搜索文本。 此选项更改所有查找控件的可见性。|  
 |显示缩放控件|显示或隐藏工具栏上的缩放控件。|  
 |显示 ATOM 馈送按钮|显示或隐藏工具栏上的 ATOM 馈送按钮。<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
-|工具栏位置|确定工具栏在报表查看器中的位置。 有效的值包括`Top`和`Bottom`。|  
-|提示区域|有效的值包括`Displayed`， `Collapsed`，和`Hidden`。 `Displayed` 显示的报表，包括参数化的值和运行报表之前，需要用户输入的参数区域。 使用`Hidden`如果已指定所有报表参数，并且您不希望用户看到参数区域。|  
+|工具栏位置|确定工具栏在报表查看器中的位置。 有效值包括 `Top` 和 `Bottom`。|  
+|提示区域|有效值包括 `Displayed`、`Collapsed` 和 `Hidden`。 `Displayed` 为包括参数化值的报表显示参数区域，这需要用户在运行报表之前进行输入。 如果已指定所有报表参数并且不希望用户看到参数区域，请使用 `Hidden`。|  
 |参数区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
-|文档结构图|报表中定义的报表导航控件，用于提供对报表特定部分的一键式访问。 可在 HTML 报表中使用此控件。 文档结构图显示在报表视图区域旁的可折叠区域中。 有效的值包括`Displayed`， `Collapsed`，和`Hidden`。 如果已为报表定义文档结构图，并且未在 Web 部件属性中将其选为隐藏或折叠，则默认情况下将展开此区域。 如果文档结构图处于折叠状态，可以单击箭头将其展开。|  
+|文档结构图|报表中定义的报表导航控件，用于提供对报表特定部分的一键式访问。 可在 HTML 报表中使用此控件。 文档结构图显示在报表视图区域旁的可折叠区域中。 有效值包括 `Displayed`、`Collapsed` 和 `Hidden`。 如果已为报表定义文档结构图，并且未在 Web 部件属性中将其选为隐藏或折叠，则默认情况下将展开此区域。 如果文档结构图处于折叠状态，可以单击箭头将其展开。|  
 |文档结构图区域宽度|可以选择度量单位和值。 默认值为 200 像素。 对于此属性，唯一的要求是其值大于零。|  
 |加载参数|检索报表的参数属性。 并非所有报表都具有参数。 如果报表不具有参数，则不返回任何值。 如果为刚上载的报表设置属性，可能会收到错误信息，指明数据源连接已删除。 如果遇到这种情况，请重置连接并在指定连接后完成参数属性的设置。 有关如何设置连接的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。<br /><br /> 为了达到最佳效果，请在单击“加载参数”之前单击 **“应用”** 。<br /><br /> 加载参数属性之后，可以设置它们，方法与在报表的参数属性页上进行设置相同。 有关如何设置参数的详细信息，请参阅[在已发布报表上设置参数（SharePoint 集成模式下的 Reporting Services）](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48110037"
   
 ## <a name="see-also"></a>请参阅  
  [在 SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

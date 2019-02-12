@@ -1,22 +1,21 @@
 ---
-title: 第 3 课： 从报表服务器加载报表定义 |Microsoft Docs
+title: 第 3 课：从报表服务器加载报表定义 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813870"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025638"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 课：从报表服务器加载报表定义
   创建项目并从 RDL 架构生成类之后，您就可以从报表服务器加载报表定义了。  
@@ -98,7 +97,7 @@ ms.locfileid: "51813870"
     ```  
   
 ## <a name="next-lesson"></a>下一课  
- 在下一课中，您将学习如何编写用于更新从报表服务器加载的报表定义的代码。 请参阅[第 4 课： 以编程方式更新报表定义](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
+ 在下一课中，您将学习如何编写用于更新从报表服务器加载的报表定义的代码。 请参阅[第 4 课：以编程方式更新报表定义](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

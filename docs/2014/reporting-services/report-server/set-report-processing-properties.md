@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019118"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
@@ -44,7 +44,7 @@ ms.locfileid: "48161727"
 ### <a name="running-reports-from-snapshots"></a>通过快照运行报表  
  报表快照是包含布局信息以及在特定时间点所检索到的数据的报表。 您可以按报表快照形式运行报表，以防止报表在任意时间运行（例如，在执行计划备份期间）。 报表快照通常按计划创建并在随后进行刷新，因此您可以精确地设定进行报表和数据处理的时间。 如果报表所基于的查询需要很长的运行时间，或查询使用的数据来自您需要在特定时间无人访问的数据源，则应以快照形式运行报表。  
   
- 报表快照存储在报表服务器数据库中，随后当用户或进程（如订阅）请求报表时，即可从其中检索报表。 报表快照更新时，将用新的实例进行覆盖。 除非专门设置了相应选项以将报表快照添加到报表历史记录中，否则报表服务器不保存早期版本的报表快照。 有关详细信息，请参阅[创建、修改和删除报表历史记录中的快照](create-modify-and-delete-snapshots-in-report-history.md)。  
+ 报表快照存储在报表服务器数据库中，随后当用户或进程（如订阅）请求报表时，即可从其中检索报表。 报表快照更新时，将用新的实例进行覆盖。 除非专门设置了相应选项以将报表快照添加到报表历史记录中，否则报表服务器不保存早期版本的报表快照。 有关详细信息，请参阅 [创建、修改和删除报表历史记录中的快照](create-modify-and-delete-snapshots-in-report-history.md)。  
   
  并非所有报表都可配置为以快照形式运行。 如果报表在获取报表数据时需要提示用户输入凭据，或使用 Windows 集成安全性，则无法为其创建快照。 如果希望以快照形式运行参数化报表，则必须在创建快照时指定要使用的默认参数。 与按需运行的报表不同，在打开报表后，就不可能为报表快照指定不同的参数值。 选择不同的参数值会引起新的报表处理请求，而这是不允许的。  
   
@@ -57,8 +57,8 @@ ms.locfileid: "48161727"
  如果存在以上条件，则报表服务器将在订阅的下次计划运行时间禁用此订阅。 若要重新激活订阅，请打开订阅，再进行保存。 打开订阅后，报表服务器会将订阅参数值更新成为快照指定的参数值。 有关订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [配置报表的执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [配置报表的执行属性（报表管理器）](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
  [如何：向报表历史记录添加快照](add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

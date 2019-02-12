@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bf1d2d6a884f3751cd2d252bbba38d62aeea5bf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080817"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023718"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting 属性
   MSReportServer_ConfigurationSetting 类用于表示报表服务器实例的安装和运行时参数。 这些设置存储在 RSReportServer.config 配置文件中。  
@@ -47,7 +47,7 @@ ms.locfileid: "48080817"
 |[IsSharePointIntegrated](configurationsetting-property-issharepointintegrated.md)|指示报表服务器是否配置为 SharePoint 集成模式。|  
 |[IsWebServiceEnabled](configurationsetting-property-iswebserviceenabled.md)|指示是否已启用报表服务器 Web 服务。 只读。|  
 |[IsWindowsServiceEnabled](configurationsetting-property-iswindowsserviceenabled.md)|指示是否已启用报表服务器 Windows 服务。 只读。|  
-|[MachineAccountIdentity 属性&#40;WMI&#41;](configurationsetting-property-machineaccountidentity.md)|获取安装了报表服务器的计算机的计算机帐户标识。|  
+|[MachineAccountIdentity 属性 (WMI)](configurationsetting-property-machineaccountidentity.md)|获取安装了报表服务器的计算机的计算机帐户标识。|  
 |[PathName](configurationsetting-property-pathname.md)|指定报表服务器实例的安装路径。|  
 |[SecureConnectionLevel](configurationsetting-property-secureconnectionlevel.md)|返回 RSReportServer.config 文件中指定的安全连接级别。|  
 |[SenderEmailAddress](configurationsetting-property-senderemailaddress.md)|从报表服务器获取用于发送电子邮件的地址。 只读。|  
@@ -55,8 +55,8 @@ ms.locfileid: "48080817"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|从 RSReportServer.config 文件中获取 SMTP 服务器属性。 只读。|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|指定以无人参与方式运行报表时报表服务器将模拟的登录用户帐户。 只读。|  
 |[版本](configurationsetting-property-version.md)|返回报表服务器的版本。|  
-|[VirtualDirectoryReportManager 属性&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|返回报表管理器应用程序的虚拟目录。|  
-|[VirtualDirectoryReportServer 属性&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|返回报表服务器 Web 服务应用程序的虚拟目录。|  
+|[VirtualDirectoryReportManager 属性 (WMI MSReportServer_ConfigurationSetting)](configurationsetting-property-virtualdirectoryreportmanager.md)|返回报表管理器应用程序的虚拟目录。|  
+|[VirtualDirectoryReportServer 属性 (WMI MSReportServer_ConfigurationSetting)](configurationsetting-property-virtualdirectoryreportserver.md)|返回报表服务器 Web 服务应用程序的虚拟目录。|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|返回报表服务器 Windows 服务运行时实际使用的标识。 只读。|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|返回在上次配置报表服务器 Windows 服务时所指定的运行时要使用的标识。 只读。|  
   

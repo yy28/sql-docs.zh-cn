@@ -40,13 +40,13 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3bf939773ac419a8ace4ec9de7425b23f78dd816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029708"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>深化操作（报表生成器和 SSRS）
   B 在文本框上提供了加号和减号图标，使用户能够以交互方式隐藏和显示项。 这称为 *深化* 操作。 对于表或矩阵，可以显示或隐藏静态行和列，或者与组关联的行和列。  
@@ -72,7 +72,7 @@ ms.locfileid: "48211547"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="comparing-drilldown-and-drillthrough-reports"></a>比较明细报表和钻取报表  
- 在明细报表中，用户单击加号或减号按钮即可展开或折叠报表的某个部分，以显示详细信息数据。 在钻取报表中，用户单击摘要值的链接即可打开一个单独的相关报表，来显示详细信息数据。 详细信息数据仅在运行详细信息报表时检索。 钻取报表所需的资源通常少于明细报表。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+ 在明细报表中，用户单击加号或减号按钮即可展开或折叠报表的某个部分，以显示详细信息数据。 在钻取报表中，用户单击摘要值的链接即可打开一个单独的相关报表，来显示详细信息数据。 详细信息数据仅在运行详细信息报表时检索。 钻取报表所需的资源通常少于明细报表。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>呈现扩展插件对隐藏报表项的支持  
  只有支持用户交互功能的呈现扩展插件（如在报表生成器和报表管理器中运行报表时使用的 HTML 呈现扩展插件）才支持报表项在显示状态和隐藏状态之间的切换功能。 其他呈现扩展插件会显示隐藏项。 下面的列表说明了对具有条件可见性的报表项的支持：  
@@ -86,7 +86,7 @@ ms.locfileid: "48211547"
  有关详细信息，请参阅[呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取、 深化、 子报表和嵌套的数据区域&#40;报表生成器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
+ [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)   
  [交互式排序、文档结构图和链接（报表生成器和 SSRS）](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   

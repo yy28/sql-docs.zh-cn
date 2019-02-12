@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033118"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表 （报表生成器）
   本教程教您如何基于示例销售数据创建基本矩阵报表。 该矩阵具有嵌套行组和列组，以及相邻列组。 您将学习如何设置列的格式以及旋转文本。 下图显示与您将创建的报表类似的报表。  
@@ -325,7 +325,7 @@ ms.locfileid: "53353396"
   
  报表在表头中包含一个报表标题。  
   
-##  <a name="Save"></a> 8。保存报表  
+##  <a name="Save"></a> 8.保存报表  
  您可以将报表保存到报表服务器、SharePoint 库或本地计算机。  
   
  在本教程中，将报表保存到报表服务器。 如果您没有对报表服务器的访问权限，则可以保存到您的计算机。  
@@ -356,7 +356,7 @@ ms.locfileid: "53353396"
   
 4.  单击“保存” 。  
   
-##  <a name="RotateTextBox"></a> 9。（可选）将文本框旋转 270 度  
+##  <a name="RotateTextBox"></a> 9.（可选）将文本框旋转 270 度  
  具有矩阵的报表在运行时可以垂直方式和水平方式展开。 通过垂直旋转文本框或者旋转 270 度，您可以节约水平空间。 呈现的报表然后将更窄，并且如果导出到 Microsoft Word 之类的格式，报表将更有可能适合打印页面。  
   
  文本框还可以将文本显示为竖排（从上到下）。 有关详细信息，请参阅[文本框（报表生成器和 SSRS）](report-design/text-boxes-report-builder-and-ssrs.md)。  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373389"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012688"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225949"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043248"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
   
- CSV 呈现扩展插件使用字符串分隔符来分隔字段和行，字符串分隔符可以配置为逗号之外的其他字符。 生成的文件可以用电子表格程序（如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ）打开，也可以用作其他程序的导入格式。 导出的报表会变为.csv 文件，并返回 MIME 类型的`text/csv`。  
+ CSV 呈现扩展插件使用字符串分隔符来分隔字段和行，字符串分隔符可以配置为逗号之外的其他字符。 生成的文件可以用电子表格程序（如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ）打开，也可以用作其他程序的导入格式。 所导出的报表会变为 .csv 文件，并返回 MIME 类型的 `text/csv`。  
   
  如果您想要在 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中处理与图表、数据条、迷你图、仪表和指示器相关的数据，请将报表导出为 CSV 文件，然后在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中打开该文件。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48225949"
   
 -   自定义报表项  
   
--   线条  
+-   行  
   
 -   图像  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48225949"
 |图表|通过创建每个图表值的行和成员标签来呈现。 来自系列和类别的标签采用平展的层次结构，并包含在图表值的行中。|  
 |数据条|像图表一样呈现。 通常，数据条并不包括层次结构或标签。|  
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
-|仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
+|测量|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
 |映射|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48225949"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

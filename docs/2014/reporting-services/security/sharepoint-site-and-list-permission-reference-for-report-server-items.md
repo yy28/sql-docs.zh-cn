@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a64c28884b5c656e75e172f36b2bb008a1bbfdcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077377"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035058"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
   本主题提供了 SharePoint 中的权限参考，对于在 SharePoint 集成模式下运行的报表服务器，可使用这些权限来授予对报表服务器操作的访问权限。 如果要创建自定义权限级别，本主题可帮助您选择要使用何种权限。  
@@ -74,7 +74,7 @@ ms.locfileid: "48077377"
 |打开|打开网站、列表或文件夹以访问相应容器中的项。|X|X|X|读取计划和项属性。|  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 与 SharePoint 组和权限中的角色和任务比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

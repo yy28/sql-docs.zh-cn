@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c4ccc300b260c6a0ee7d512756876015f57994f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014578"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>在图表中添加或删除组（报表生成器和 SSRS）
   单击图表数据区域以显示 **“图表数据”** 窗格。 通过将数据集字段拖到 **“类别组”** 和 **“序列组”** 区域来创建组。 若要添加嵌套组，请向该区域添加多个字段。  
@@ -57,6 +57,6 @@ ms.locfileid: "48123457"
 2.  在“类别组”或“序列组”区域中右键单击该组，然后单击“删除”。  
   
 ## <a name="see-also"></a>请参阅  
- [图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  
   
   

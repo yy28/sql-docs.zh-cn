@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ef8697edeccd92bf34e22c96a168c19b380f6fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f10e941ef5acd180e8b279762e84535bad5689e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203307"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043218"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 有关形状图的详细信息，请参阅[形状图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48203307"
   
 -   饼图至少需要两个值才能在各部分之间进行有效比较。 如果您的饼图仅包含一种颜色，请确认已添加一个类别字段作为分组依据。 如果饼图不包含类别，则会将数据字段中的值聚合为一个值并显示出来。  
   
--   与其他所有图表类型一样，饼图根据默认调色板中包含的颜色值生成颜色。 在报表中使用多个饼图时，此方法可能导致不同的饼图对数据点所使用的颜色不同。 如果报表中具有多个饼图，最好为每个类别组手动设定颜色以在不同图表之间保持一致的颜色。 有关如何定义图表上的颜色的详细信息，请参阅[格式设置图表上序列颜色&#40;报表生成器和 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   与其他所有图表类型一样，饼图根据默认调色板中包含的颜色值生成颜色。 在报表中使用多个饼图时，此方法可能导致不同的饼图对数据点所使用的颜色不同。 如果报表中具有多个饼图，最好为每个类别组手动设定颜色以在不同图表之间保持一致的颜色。 有关如何在图表上定义颜色的详细信息，请参阅 [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>对饼图应用绘制样式  
  您可以向饼图添加特殊的绘制样式以增强其视觉效果。 绘制样式包括凹凸效果和凹陷效果。 这些效果仅可在二维饼图上使用。 下图显示了饼图上的凹凸绘制样式和凹陷绘制样式示例。  
@@ -64,7 +64,7 @@ ms.locfileid: "48203307"
  有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在饼图上显示百分比值  
- 与其他形状图类似，饼图表示整体的各部分比例。 因此，通常将饼图标签设置为百分比格式。 为与其他图表类型保持一致，默认情况下图表不显示百分比标签。 有关如何显示为图表上的百分比值的详细信息，请参阅[饼形图上显示百分比值&#40;报表生成器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 有关如何在报表中将数字设置为百分比格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 与其他形状图类似，饼图表示整体的各部分比例。 因此，通常将饼图标签设置为百分比格式。 为与其他图表类型保持一致，默认情况下图表不显示百分比标签。 有关如何在图表上将值显示为百分比的详细信息，请参阅 [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 有关如何在报表中将数字设置为百分比格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  ![将数据点标签显示为百分比的饼图](../media/rs-piechartpercentages.gif "Pie chart with data point labels as percentages")  
   
@@ -82,16 +82,16 @@ ms.locfileid: "48203307"
 ## <a name="consolidating-small-slices-on-a-pie-chart"></a>合并饼图上的小切片  
  饼图中的点数量过多时，数据会变得模糊，难以辨认。 如果数据中有许多小数据点，可采用以下两种方法来收集多个饼图切片：  
   
--   将较小的数据切片收集到饼图的一个切片中。 这在一些情况下非常有用，例如，希望饼图具有一个只收集剩余数据的“其他”数据点。 有关详细信息，请参阅[收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
+-   将较小的数据切片收集到饼图的一个切片中。 这在一些情况下非常有用，例如，希望饼图具有一个只收集剩余数据的“其他”数据点。 有关详细信息，请参阅 [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   将小切片收集到增补饼图中。 第二个饼图不会显示在设计器中。 而在报表处理期间，图表会基于数据点的值计算是否需要显示第二个饼图。 如果需要显示第二个饼图，则值将会添加到另一个饼图中。  
   
 ## <a name="see-also"></a>请参阅  
- [在饼图外显示数据点标签&#40;报表生成器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [设置图表上的图例的格式&#40;报表生成器和 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [教程：向报表添加饼图&#40;报表生成器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   

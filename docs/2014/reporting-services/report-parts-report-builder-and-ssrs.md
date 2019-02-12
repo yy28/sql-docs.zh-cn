@@ -11,14 +11,14 @@ f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97e15adf9bbc18fadfd9789472f75a1070ebd60d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366369"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022825"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 报表部件具有 .rsc 文件扩展名。  

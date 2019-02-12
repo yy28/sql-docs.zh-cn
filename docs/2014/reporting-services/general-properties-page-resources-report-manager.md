@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181647"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032418"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
   使用资源的“常规”属性页可以重命名、删除、移动或替换资源。 页面顶部显示有关添加资源或修改属性的用户的信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "48181647"
  **名称**  
  指定资源的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ / * \< > |"或 / 指定名称时。  
   
- **Description**  
+ **说明**  
  键入资源的说明。 有权访问该资源的用户可以在“内容”页中看到此说明。  
   
  **在列表视图中隐藏**  
@@ -60,7 +60,7 @@ ms.locfileid: "48181647"
  单击此选项可打开“导入资源”页，在该页上可以从文件共享中选择资源文件。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [查看资源的页&#40;报表管理器&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [项的“安全性”属性页（报表管理器）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

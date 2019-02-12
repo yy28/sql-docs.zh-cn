@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013243"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
   
  在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。  
   
- 在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。 HTML 呈现扩展插件可以将 HTML 呈现为片段或完整的 HTML 文档。 如果 HTML 为片断形式， `HEAD`， `HTML`，和`BODY`会删除 HTML 文档的标记。 只有 `BODY` 标记的内容才会呈现。 这在将此 HTML 片段嵌入其他应用程序生成的 HTML 时颇为有用。  
+ 在浏览器中查看报表时，包括报表在报表管理器中运行时，HTML 呈现扩展插件都是默认的呈现扩展插件。 HTML 呈现扩展插件可以将 HTML 呈现为片段或完整的 HTML 文档。 如果 HTML 为片断形式，则会删除 HTML 文档的 `HEAD`、`HTML` 和 `BODY` 标记。 只有 `BODY` 标记的内容才会呈现。 这在将此 HTML 片段嵌入其他应用程序生成的 HTML 时颇为有用。  
   
  在某些情况下，以 HTML 格式呈现报表时，报表参数可用于发起脚本注入攻击。 有关保护报表的详细信息，请参阅 [保护报表和资源](../security/secure-reports-and-resources.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084537"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

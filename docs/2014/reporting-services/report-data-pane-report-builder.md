@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81ab7f53f546c3b048551a0f3acd3866c29a8eb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179377"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010348"
 ---
 # <a name="report-data-pane-report-builder"></a>“报表数据”窗格（报表生成器）
   使用 **“报表数据”** 窗格可以查看报表中当前定义的参数、数据源、数据集、字段集合和图像。 该窗格会显示表示报表中数据的项的层次结构视图。 顶级节点表示内置字段、参数、图像和数据源引用。 展开每个节点可以查看各数据项。 例如，展开某个数据源节点时，会显示为该数据源定义的数据集。 展开数据集时，会显示其字段集合。 将报表项拖至报表设计图面或“分组”窗格可将数据与报表页上选定的报表项相链接。 有关详细信息，请参阅[报表设计视图（报表生成器）](report-builder/report-design-view-report-builder.md)。  
@@ -30,9 +30,9 @@ ms.locfileid: "48179377"
  表示报表中常用的字段，如报表名称或页码。 有关详细信息，请参阅[表达式中的内置集合（报表生成器和 SSRS）](report-design/built-in-collections-in-expressions-report-builder.md)。  
   
  **Parameters**  
- 表示报表参数的集合，每个参数都可为单值或多值参数。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 表示报表参数的集合，每个参数都可为单值或多值参数。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
- **映像**  
+ **图像**  
  表示报表中使用的图像集。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)。  
   
  **数据源**  

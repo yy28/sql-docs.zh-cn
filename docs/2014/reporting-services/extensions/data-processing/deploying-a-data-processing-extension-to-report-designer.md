@@ -1,5 +1,5 @@
 ---
-title: 如何向报表设计器部署数据处理扩展插件 | Microsoft Docs
+title: 如何：将数据处理扩展插件部署到报表设计器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded3d366450ab3d5ea3375bb02929b4b52337d0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088478"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011559"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何向报表设计器部署数据处理扩展插件
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何：将数据处理扩展插件部署到报表设计器
   报表设计器在您设计报表时使用数据处理扩展插件检索和处理数据。 您应将数据处理扩展插件程序集作为专用程序集部署到报表设计器。 还需要在报表设计器配置文件 RSReportDesigner.config 中生成一个条目。  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>部署数据处理扩展插件程序集  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223017"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037958"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上范围的格式（报表生成器和 SSRS）
   仪表范围是仪表刻度上的带区或区域，用于指示仪表上一段重要的值。 使用仪表范围，能以可见方式指示指针值何时进入某个值范围。 范围由开始值和结束值定义。  
@@ -32,7 +32,7 @@ ms.locfileid: "48223017"
  [设置仪表上刻度的格式（报表生成器和 SSRS）](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [设置仪表上指针的格式（报表生成器和 SSRS）](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [设置仪表的最小值或最大值（报表生成器和 SSRS）](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [教程：向报表添加 KPI&#40;报表生成器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)  
   
   

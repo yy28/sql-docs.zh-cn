@@ -12,14 +12,14 @@ helpviewer_keywords:
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dc63daf4095238f948be6bde22bf190aa4d1977a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 84f74f51879a777ea0b9874f1b124806c109e02f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022188"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>从 Microsoft Access 导入报表 (Reporting Services)
   在报表设计器中，你可以导入报表从[!INCLUDE[msCoName](../includes/msconame-md.md)]访问数据库或项目。 必须在安装报表设计器的计算机上安装 Access 2002 或更高版本。  

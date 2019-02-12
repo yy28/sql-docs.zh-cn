@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3e26f43f0a146466e32b51ab43a2935f898e1a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125047"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036379"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>添加和删除扩展部署的加密密钥（SSRS 配置管理器）
   通过将多个报表服务器配置为使用一个共享的报表服务器数据库，可以在扩展部署模型中运行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 扩展部署中的成员身份是基于报表服务器是否将加密密钥存储在报表服务器数据库中。 通过为特定的报表服务器实例添加和删除加密密钥，可以控制扩展部署成员身份。 如果要从部署中删除节点，则可以按任意顺序进行删除。 如果要向部署中添加节点，则必须联接已作为部署的一部分的报表服务器中的所有新实例。  
@@ -63,7 +63,7 @@ ms.locfileid: "48125047"
  这些步骤从扩展部署中删除报表服务器，但不会卸载报表服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 从扩展部署中删除报表服务器之后，如果不再需要服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以卸载该服务器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 有关信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[卸载现有 SQL Server 实例（安装程序）](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [配置和管理加密密钥&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [初始化报表服务器&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [初始化 Report Server（SSRS 配置管理器）](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

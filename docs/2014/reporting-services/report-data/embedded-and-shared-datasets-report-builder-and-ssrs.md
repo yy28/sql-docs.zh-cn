@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b62c631972aee6f56ec8f62db51b2e402000011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 069c8900d5d9939567dd5e59f2f5f6547b0044af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041708"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>嵌入数据集和共享数据集（报表生成器和 SSRS）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 数据集依赖于包含有关外部数据源的信息的数据连接。 数据本身并不包含在报表定义中。 数据集包含查询命令、字段集合、参数、筛选器以及数据选项（包括区分大小写和排序规则）。 有两种类型的数据集：  
@@ -45,7 +45,7 @@ ms.locfileid: "48117807"
   
 3.  下表将可为报表服务器上共享数据集的定义配置的属性与可为报表定义中共享数据集的实例配置的属性进行了比较。  
   
-    |“属性”|有关定义的配置说明|有关实例的配置说明|  
+    |属性|有关定义的配置说明|有关实例的配置说明|  
     |--------------|--------------------------------------------|------------------------------------------|  
     |查询文本|配置查询，包括将查询定义为表达式。|无法更改查询。|  
     |查询参数|不能引用报表参数<br /><br /> 包含默认值<br /><br /> 包含只读标志|配置定义中未标记为只读的参数|  
@@ -60,11 +60,11 @@ ms.locfileid: "48117807"
  若要创建或编辑嵌入数据集，请使用“报表数据”窗格。 在创建数据集后，您可以在 **“数据集属性”** 对话框中配置属性。  
   
 ## <a name="see-also"></a>请参阅  
- [嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)   
- [数据连接、 数据源和报表生成器中的连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

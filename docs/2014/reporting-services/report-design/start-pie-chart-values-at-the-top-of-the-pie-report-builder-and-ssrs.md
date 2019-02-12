@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fba0cbf880348fa05f32e26fe8a47644aab10924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0de0501bc62d8aa305f1bcd08e8fe3de5433ff9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119190"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036368"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>从饼图顶部开始绘制饼图值（报表生成器和 SSRS）
   默认情况下，在饼图中，数据集中的第一个值从与饼顶部成 90 度的位置开始绘制。 您可能希望从顶部开始绘制第一个值。  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374319"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035098"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -63,7 +63,7 @@ ms.locfileid: "53374319"
   
 |HTTP.SYS 中的 URL 预留|URL|解释|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<计算机名 > / reportserver<br /><br /> http://\<ip 地址 > / reportserver<br /><br /> http://localhost/reportserver|此 URL 预留针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 预留，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 预留。|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|此 URL 预留针对端口 80 指定了一个通配符 (+)。 这会将指定主机（在端口 80 上解析为报表服务器计算机）的任何传入请求放入报表服务器队列中。 请注意，借助此 URL 预留，可以使用任意数目的 URL 访问报表服务器。<br /><br /> 对于大多数操作系统而言，这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器的默认 URL 预留。|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|此 URL 预留指定了一个 IP 地址，与通配符 URL 预留相比，其限制性要强很多。 只能使用包含此 IP 地址的 URL 连接到报表服务器。 给定此 URL 保留项，对 http:// 上报表服务器的请求\<计算机名 > / reportserver 或 http://localhost/reportserver会失败。|  
   
 ##  <a name="DefaultURLs"></a> 默认 URL  
@@ -86,12 +86,12 @@ ms.locfileid: "53374319"
   
 |实例类型|应用程序|默认 URL|HTTP.SYS 中的实际 URL 预留|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|默认实例|报表服务器 Web 服务|http://\<服务器名 > / reportserver|http://\<服务器名 >: 80/reportserver|  
-|默认实例|报表管理器|http://\<服务器名 > / reportserver|http://\<服务器名 >: 80/reportserver|  
-|命名实例|报表服务器 Web 服务|http://\<服务器名 > / reportserver_\<实例名 >|http://\<服务器名 >: 80/reportserver_\<实例名 >|  
-|命名实例|报表管理器|http://\<服务器名 > / reports_\<实例名 >|http://\<服务器名 >: 80/reports_\<实例名 >|  
-|SQL Server Express|报表服务器 Web 服务|http://\<服务器名 > / reportserver_SQLExpress|http://\<服务器名 >: 80/reportserver_SQLExpress|  
-|SQL Server Express|报表管理器|http://\<服务器名 > / reports_SQLExpress|http://\<服务器名 >: 80/reports_SQLExpress|  
+|默认实例|报表服务器 Web 服务|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|默认实例|报表管理器|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|命名实例|报表服务器 Web 服务|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
+|命名实例|报表管理器|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
+|SQL Server Express|报表服务器 Web 服务|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
+|SQL Server Express|报表管理器|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的身份验证和服务标识  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留指定了报表服务器服务的服务帐户。 运行服务的帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。 报表服务器实例的服务标识存储在 RSReportServer.config 文件中。  

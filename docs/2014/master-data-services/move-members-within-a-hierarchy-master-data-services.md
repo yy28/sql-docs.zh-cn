@@ -13,20 +13,20 @@ helpviewer_keywords:
 - derived hierarchies, moving members
 - members [Master Data Services], moving
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12957de6492419811fe37dc6d412281af9883f04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96f3c1232f1124ef5f2cd9e77d89fa06607392c7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112088"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026688"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>在层次结构中移动成员 (Master Data Services)
   在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，在层次结构中移动成员可以更改其位置或父分配。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -58,7 +58,7 @@ ms.locfileid: "48112088"
   
 ## <a name="see-also"></a>请参阅  
  [使用临时过程移动显式层次结构成员&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [派生层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [显式层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+ [派生层次结构 (Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
+ [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

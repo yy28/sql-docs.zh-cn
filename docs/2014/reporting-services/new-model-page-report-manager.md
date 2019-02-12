@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138787"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010788"
 ---
 # <a name="new-model-page-report-manager"></a>“新建模型”页（报表管理器）
   使用此页可以从共享数据源生成默认的报表模型。 只能从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系数据源和 Oracle 关系数据源生成报表模型。  
@@ -42,9 +42,9 @@ ms.locfileid: "48138787"
  **名称**  
  指定模型的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = +，$ / * \< > |" /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
- **Description**  
+ **说明**  
  显示模型的说明。 通过报表管理器查看此项的用户在浏览文件夹层次结构时会看到此说明。  
   
  **更改位置**  

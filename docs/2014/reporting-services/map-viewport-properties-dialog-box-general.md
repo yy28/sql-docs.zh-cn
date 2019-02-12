@@ -12,14 +12,14 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018179"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>“地图视区属性”对话框 -&gt;“常规”
   选择 **“地图视区属性”** 对话框中的 **“常规”** 可以更改坐标系统、投影和边界选项。  
@@ -32,7 +32,7 @@ ms.locfileid: "48138621"
   
 -   **地理** 当地图数据用经度和纬度坐标表示时选择此选项，例如用于城市位置。  
   
- **投影**  
+ **Projection**  
  指定用于将地理坐标投影到二维图面的方法。 选择与将要可视化的数据兼容的投影。 受投影影响的四个空间属性是区域、形状、距离和方向。 对于地球的视图，投影的选择取决于中心视图、地图边界和缩放系数。  
   
  以下的每个投影具有这些空间属性的一个或多个：  

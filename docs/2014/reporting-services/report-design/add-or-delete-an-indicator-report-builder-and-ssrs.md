@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017718"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
   指示器是以直观的形式提供单个数据值的状态的最小化仪表。 有关它们的详细信息，请参阅[指示器（报表生成器和 SSRS）](indicators-report-builder-and-ssrs.md)。  
@@ -25,13 +25,13 @@ ms.locfileid: "48202967"
   
  当您首次添加指示器时，指示器配置为默认使用百分比作为度量单位。 百分比范围均匀分布在指示器集的各成员之间，并且由指示器表示的值的作用域为该指示器的父级（如表或矩阵）。  
   
- 您可以更新指示器的值和状态。 有关详细信息，请参阅以下主题：  
+ 您可以更新指示器的值和状态。 有关详细信息，请参阅下列主题：  
   
--   [更改指示器图标和指示器集&#40;报表生成器和 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [设置和配置度量单位&#40;报表生成器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [设置和配置度量单位（报表生成器和 SSRS）](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [设置同步作用域&#40;报表生成器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  因为指示器位于仪表面板内，所以，当您要使用 **“指示器属性”** 对话框或 **“属性”** 窗格配置指示器时，您需要选择指示器，而不是选择面板。 下图显示了指示器仪表面板中的一个选定指示器。  
   

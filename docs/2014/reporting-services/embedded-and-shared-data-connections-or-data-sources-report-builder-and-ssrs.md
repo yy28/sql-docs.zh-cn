@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031948"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>嵌入和共享的数据连接或数据源（报表生成器和 SSRS）
   当运行查询或处理报表时，报表使用数据连接来检索报表的数据。 您可以从内置数据连接类型的列表中进行选择，以连接到关系数据库、多维数据库、Web 服务或一些其他数据源。 当描述数据连接时，需要使用以下术语。  
@@ -45,11 +45,11 @@ ms.locfileid: "48224429"
 ## <a name="shared-data-sources"></a>共享数据源  
  如果您的数据源使用频率较高，就可以采用共享数据源。 建议尽量使用共享数据源。 使用共享数据源可便于对报表和报表访问进行管理，并有助于提高报表和报表所访问数据源的访问安全性。 如果需要共享数据源，可以请求系统管理员为您创建一个。  
   
- 在报表生成器中，您不能创建共享数据源。 您可以浏览到报表服务器中的共享数据源并进行选择。 有关详细信息，请参阅[数据连接、 数据源和报表生成器中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
+ 在报表生成器中，您不能创建共享数据源。 您可以浏览到报表服务器中的共享数据源并进行选择。 有关详细信息，请参阅 [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
  在报表设计器中，您不能浏览到报表服务器上的共享数据源。 在解决方案资源管理器中，您可以将共享数据源作为项目的一部分创建，并选择是否将它们部署到报表服务器。 您只能选择在本地使用它们，因为您的计算机或报表服务器要求的凭据存在差异。 有关详细信息，请参阅 [ Reporting Services 中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
- 下面的图标表示报表服务器文件夹层次结构中的共享的数据源项：![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")  
+ 下面的图标指示报表服务器文件夹层次结构中的共享数据源项：![共享数据源图标](media/hlp-16datasource.png "共享数据源图标")  
   
 ## <a name="embedded-data-sources"></a>嵌入数据源  
  嵌入数据源是保存在报表定义中的数据连接。 只有嵌入数据源连接信息所嵌入的报表才能使用这些信息。 若要定义并管理嵌入数据源，请使用 **“数据源属性”** 对话框。  
@@ -70,8 +70,8 @@ ms.locfileid: "48224429"
   
 ## <a name="see-also"></a>请参阅  
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [报表创作概念&#40;报表生成器和 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Reporting Services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [报表创作概念（报表生成器和 SSRS）](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

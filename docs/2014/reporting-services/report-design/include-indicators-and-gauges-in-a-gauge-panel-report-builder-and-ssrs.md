@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d4f5fd487ddea09ea3fc4c8c94fba32c4e713dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021698"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在仪表面板中包括指示器和仪表（报表生成器和 SSRS）
   仪表面板是包含一个或多个仪表和指示器的顶级容器。 指示器可以嵌入在仪表中或在仪表面板放置于仪表旁。  

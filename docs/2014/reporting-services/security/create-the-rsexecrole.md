@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171517"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023488"
 ---
 # <a name="create-the-rsexecrole"></a>创建 RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用名为的预定义的数据库角色`RSExecRole`授予报表服务器到报表服务器数据库的权限。 `RSExecRole`与报表服务器数据库自动创建角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用称为 `RSExecRole` 的预定义数据库角色向报表服务器数据库授予报表服务器权限。 `RSExecRole`与报表服务器数据库自动创建角色。 通常，始终不应修改该角色或将其他用户分配给该角色。 但是，将报表服务器数据库移到新的或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]时，必须在 Master 和 MSDB 系统数据库中重新创建该角色。  
   
  使用以下说明，您将执行下列步骤：  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48171517"
   
 ## <a name="before-you-start"></a>开始之前  
   
--   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是步骤不会直接影响您能够创建和预配`RSExecRole`，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
+-   备份加密密钥，以便可以在数据库移动之后对其进行还原。 这是不会直接影响您创建和设置 `RSExecRole` 的能力的步骤，不过您必须有密钥备份才能验证您的工作。 有关详细信息，请参阅 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
--   验证您是以具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的 `sysadmin` 权限的用户帐户身份登录的。  
+-   验证您是以具有 `sysadmin` 实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 权限的用户帐户身份登录的。  
   
 -   验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务已安装在计划使用的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例上并且正在运行。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "48171517"
  关于手动创建 `RSExecRole` 的说明是供迁移报表服务器安装的上下文中使用的。 备份和移动报表服务器数据库等重要任务均不在本主题中讲述，但是会记录在数据库引擎文档中。  
   
 ## <a name="create-rsexecrole-in-master"></a>在 Master 中创建 RSExecRole  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用扩展存储的过程，以[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务来支持计划的操作。 下列步骤说明如何向 `RSExecRole` 角色授予这些过程的执行权限。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的扩展存储过程来支持计划操作。 下列步骤说明如何向 `RSExecRole` 角色授予这些过程的执行权限。  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>使用 Management Studio 在 Master 系统数据库中创建 RSExecRole  
   
-1.  启动[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]并连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]承载报表服务器数据库的实例。  
+1.  启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 并连接到承载报表服务器数据库的 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 实例。  
   
 2.  打开 **“数据库”**。  
   
@@ -229,9 +229,9 @@ ms.locfileid: "48171517"
 15. 单击链接打开报表管理器。 您应看到报表服务器数据库中的报表服务器项。  
   
 ## <a name="see-also"></a>请参阅  
- [将报表服务器数据库移到另一台计算机&#40;SSRS 本机模式&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services 配置管理器&#40;本机模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [创建本机模式报表服务器数据库&#40;SSRS 配置管理器&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [备份和还原 Reporting Services 加密密钥](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [将报表服务器数据库移至其他计算机（SSRS 本机模式）](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+ [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [创建本机模式报表服务器数据库（SSRS 配置管理器）](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4886ebb992c00d587ac03e5424255bd6d86cd63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 90339f33d8bfa7f40db7eaf57ac49b85fde130cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531637"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041348"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能和任务
   查找任何人（数据管理人员、Data Quality Services 管理员或 SQL Server 管理员）为准备和执行数据质量项目所需的信息。  

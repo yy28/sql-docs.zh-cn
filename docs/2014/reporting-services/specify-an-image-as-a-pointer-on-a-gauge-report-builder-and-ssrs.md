@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 25524aa5c7f7223f07e019ae7b8c7d6f1e3d9f7f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027938"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>指定图像作为仪表的指针（报表生成器和 SSRS）
-  仪表包含三个可用于自定义指针外观的内置样式。 对于径向仪表，内置样式为：针、标记和图条。 对于线性仪表，内置样式为：标记、图条和温度计。 如果需要一个唯一指针，则用户可以创建一个图像并指定其作为全功能指针。  
+  仪表包含三个可用于自定义指针外观的内置样式。 对于径向仪表，内置的样式为：针、 标记和条。 对于线性仪表，内置样式为：标记、图条和温度计。 如果需要一个唯一指针，则用户可以创建一个图像并指定其作为全功能指针。  
   
  为指针指定图像时，图像必须满足以下规范：  
   

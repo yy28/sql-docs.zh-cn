@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206157"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030268"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>报表的“常规”属性页（报表管理器）
   使用报表的“常规”属性页可以重命名、删除、移动或替换报表定义。 也可以使用此页创建链接报表。 页面顶部显示了有关创建或修改报表的用户以及发生更改的时间等详细信息。  
@@ -34,11 +34,11 @@ ms.locfileid: "48206157"
   
 ## <a name="options"></a>选项  
  **名称**  
- 指定报表的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ * \< >  
+ 指定报表的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = + , $ * \< >  
   
  " 和 /。  
   
- **Description**  
+ **说明**  
  键入报表的说明。 有权访问该报表的用户可以在“内容”页中查看此说明。  
   
  **在列表视图中隐藏**  
@@ -61,7 +61,7 @@ ms.locfileid: "48206157"
   
  您打开的副本与最初发布到报表服务器的原始报表定义相同。 在报表发布后对其设置的任何属性（例如参数和数据源属性）不会反映在您打开的文件中。  
   
- 您可以修改报表定义并将其保存为共享文件夹中的新文件，再将报表定义作为新项上载到报表服务器。 在中打开时，报表定义所做的修改[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（或另一个应用程序） 会不直接保存到报表服务器。 您必须通过上载文件将修改后的报表发布到报表服务器上。  
+ 您可以修改报表定义并将其保存为共享文件夹中的新文件，再将报表定义作为新项上载到报表服务器。 当报表定义在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] （或其他应用程序）中处于打开状态时，对其进行的修改并不会直接保存到报表服务器上。 您必须通过上载文件将修改后的报表发布到报表服务器上。  
   
  **替换**  
  单击此选项可将当前报表中所使用的报表定义替换为文件系统上 .rdl 文件中的其他报表定义。 如果更新报表定义，则必须在更新完成后重置数据源设置。  
@@ -70,7 +70,7 @@ ms.locfileid: "48206157"
  单击此选项可为链接报表选择其他报表定义。 当报表为链接报表时，将会显示此选项。 如果报表为链接报表，您可以设置此属性来替换报表定义。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

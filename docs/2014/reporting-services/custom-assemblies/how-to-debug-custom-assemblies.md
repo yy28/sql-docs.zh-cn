@@ -1,5 +1,5 @@
 ---
-title: 如何：调试自定义程序集 | Microsoft Docs
+title: 如何：调试自定义程序集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011489"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>如何调试自定义程序集
+# <a name="how-to-debug-custom-assemblies"></a>如何：调试自定义程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析自定义程序集代码和查找其中错误的调试工具。 要使用的最佳工具取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]。  
   
  设计、开发和测试 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 自定义程序集的建议方式是创建包含您的测试报表和自定义程序集的解决方案。  

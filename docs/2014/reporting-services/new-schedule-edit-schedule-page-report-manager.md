@@ -1,5 +1,5 @@
 ---
-title: '新计划: 编辑计划页 （报表管理器） |Microsoft Docs'
+title: 新计划：编辑计划页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034540"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新计划: 编辑计划页 （报表管理器）
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新计划：编辑计划页 （报表管理器）
   使用“新建计划”/“编辑计划”页可为报表创建计划。 您可以与订阅一起使用计划，以刷新缓存的报表，以及按独立项的形式创建快照或在报表历史记录中创建快照。  
   
 > [!NOTE]  
@@ -79,7 +79,7 @@ ms.locfileid: "48139457"
   
 -   **“小时”** 可定义以每小时为间隔运行的计划。 使用 **“开始日期和结束日期”** 部分可以指定运行计划的日期。  
   
--   **“天”** 可以定义在所选日的特定时分运行的计划。 您可以按以下方式指定日期： 每个\<*天*>、 每个工作日和每个\<*数*> 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
+-   **“天”** 可以定义在所选日的特定时分运行的计划。 可以按以下方式来指定日期：每个\<*天*>、 每个工作日和每个\<*数*> 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
   
 -   **“周”** 可定义以每周为间隔在特定时分运行的计划。 时间间隔可以是完整的周（例如，每两周）或一周中的几天。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139457"
  计划过期时并无通知。 结束日期后，计划将不再运行。 过期的计划不会被删除。 只能手动删除这些计划。 也就是说，如果选择继续过期的计划，只需扩展结束日期即可。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、修改和删除计划](subscriptions/create-modify-and-delete-schedules.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   

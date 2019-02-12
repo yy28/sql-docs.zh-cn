@@ -1,24 +1,23 @@
 ---
-title: 第 2 课： 评估按计划定期的最佳实践策略 |Microsoft Docs
+title: 第 2 课：评估按计划定期的最佳实践策略 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2a29a56a53fe02aeb02c6096ca287b65c23d9b27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170839"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026182"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>课程 2：定期评估最佳实践策略
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>第 2 课：评估按计划定期的最佳实践策略
   您可以对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例配置最佳实践策略的定期评估。 若要配置定义运行的最佳实践策略，您必须将这些策略导入到目标实例中。  
   
  若要将计划的策略部署到多个服务器中，您可以将这些策略导入到一个实例，为每个策略配置计划，将计划的策略导出到某一文件夹，然后通过已注册的服务器将计划的策略部署到目标实例。  

@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3d9abd6c84d6d6abe0d30eac06d113a81ebcd0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038268"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>图表中的三维效果、凹凸效果和其他效果（报表生成器和 SSRS）
   三维 (3D) 效果可以使图表具有深度并增强视觉效果。 例如，若要强调分离型饼图的某个特定切片，可以旋转并更改图表的透视，以便人们可以首先注意到该切片。 将三维效果应用于图表时，将会禁用所有渐变颜色和阴影类型。  
   
  可以将三维效果应用于单个图表，还可以在同一报表中同时显示二维和三维图表。  
   
- 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅[向图表添加三维效果&#40;报表生成器和 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)。  
+ 对于所有的图表类型，你都可以通过在“图表区属性”对话框中选择“启用三维”，将三维效果应用到图表区。 有关详细信息，请参阅 [向图表添加三维效果（报表生成器和 SSRS）](chart-effects-add-3d-effects-report-builder.md)。  
   
  为图表增添视觉影响的另外一种方法是在条形图、柱形图、饼图和圆环图中添加凹凸效果、阳文和纹理样式。 有关详细信息，请参阅[向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   

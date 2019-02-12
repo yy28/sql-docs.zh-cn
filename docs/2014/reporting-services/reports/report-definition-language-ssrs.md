@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010413"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -44,7 +44,7 @@ ms.locfileid: "53367010"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 架构定义  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件进行验证。 架构定义 RDL 元素可在 .rdl 文件中什么位置出现的规则。 元素包括其数据类型和基数，即允许的出现次数。 元素可以是简单的，也可以是复杂的。 简单元素没有子元素或属性。 复杂元素具有子元素以及可选具有属性。  
   
- 例如，此架构包含 RDL 元素 `ReportParameters`，它为复杂类型 `ReportParametersType`。 根据约定，元素的复杂类型是元素名称后跟单词 `Type`。 `ReportParameters` 元素可由 `Report` 元素（复杂类型）包含，并可以包含 `ReportParameter` 元素。 `ReportParameterType` 是只能为下列值之一的简单类型：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 有关 XML 架构数据类型的详细信息，请参阅[XML 架构第 2 部分：数据类型第二版](https://go.microsoft.com/fwlink/?linkid=4871)。  
+ 例如，此架构包含 RDL 元素 `ReportParameters`，它为复杂类型 `ReportParametersType`。 根据约定，元素的复杂类型是元素名称后跟单词 `Type`。 `ReportParameters` 元素可由 `Report` 元素（复杂类型）包含，并可以包含 `ReportParameter` 元素。 `ReportParameterType` 是只能为下列值之一的简单类型：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
  可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取： http://servername/reportserver/reportdefinition.xsd。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53367010"
 |----------|-----------------|  
 |`Binary`|具有 Base-64 编码二进制值的属性。|  
 |`Boolean`|以 `true` 或 `false` 作为对象值的属性。 除非另行指定，否则未指定的可选布尔对象的值为 `False`。|  
-|`Date`|具有以 ISO8601 日期格式指定的完全指定日期时间值的属性：年-月-日 [THH:MM [: SS [。S]]]。|  
+|`Date`|具有以 ISO8601 日期格式 YYYY-MM-DD[THH:MM[:SS[.S]]] 指定的完全指定日期或日期时间值的属性。|  
 |`Enum`|具有字符串文本值的属性，该文本值必须是指定值列表中的某个值。|  
 |`Float`|具有浮点值的属性。 使用句号 (.) 作为可选的小数分隔符。|  
 |`Integer`|具有整数 (int32) 值的属性。|  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018099"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>“地图纬线属性”对话框 -&gt;“标签”
   使用**MapParallel 属性**对话框可以更改水平网格在地图视区中的标签选项。 根据视区的指定坐标系统，纬线表示以下值之一：  
@@ -31,7 +31,7 @@ ms.locfileid: "48097287"
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
 ## <a name="options"></a>选项  
- **时间间隔**  
+ **Interval**  
  键入以度为单位的整数值，指定纬线之间的间隔。 默认情况下，选择 **“自动”** 。 如果将此选项设置为 **“自动”**，则值将由地图数据集中的数据决定。  
   
  **显示标签**  
@@ -52,6 +52,6 @@ ms.locfileid: "48097287"
   
 ## <a name="see-also"></a>请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   
- [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

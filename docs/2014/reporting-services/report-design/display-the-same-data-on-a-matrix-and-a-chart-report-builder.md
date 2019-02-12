@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5ef8b1997685aa776eb93c17d144b6f640ea9d3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043308"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
   如果希望在矩阵和图表中显示相同数据，则必须将两个数据区域的属性都设置为指定相同数据集，而且还要为筛选器、组、排序和数据指定相同表达式。  
   
- 由于两个数据区域的数据将有相同的祖先（报表数据集），因此在向矩阵添加交互式排序按钮之后，当用户单击该按钮时它会同时更改矩阵和图表的排序顺序。 有关详细信息，请参阅[向表或矩阵添加交互式排序&#40;报表生成器和 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 由于两个数据区域的数据将有相同的祖先（报表数据集），因此在向矩阵添加交互式排序按钮之后，当用户单击该按钮时它会同时更改矩阵和图表的排序顺序。 有关详细信息，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   
  若要使用矩阵列组值作为图表的图例，必须指定图表上序列数据的颜色，然后使用与填充颜色相同的颜色作为用于显示组值的矩阵单元中文本框的背景色。 有关详细信息，请参阅[对多个形状图指定一致的颜色（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
- 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅[多个数据区域链接到同一数据集&#40;报表生成器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ 在运行时，如果组定义中有太多组值，则报表可能显得很混乱。 您可能需要筛选值、组合组或调整阈值，以便图表为您组合组。 有关详细信息，请参阅 [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

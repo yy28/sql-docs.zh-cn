@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109917"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031538"
 ---
 # <a name="subscriptions-page-report-manager"></a>“订阅”页（报表管理器）
   使用“订阅”页可以列出当前报表或共享数据源的所有订阅。 如果有足够的权限（指“管理所有订阅”任务），则可以查看所有用户的订阅。 否则，此页仅显示您所拥有的订阅。  
@@ -60,7 +60,7 @@ ms.locfileid: "48109917"
  **报告**  
  从共享数据源打开此页时，此列标识为其定义了订阅的报表。 **“文件夹”** 列用于标识报表位置。  
   
- **Description**  
+ **说明**  
  显示订阅的说明。  
   
  **触发器**  
@@ -80,7 +80,7 @@ ms.locfileid: "48109917"
  如果订阅已停用，将无法对其进行处理。 若要更新订阅并使其可操作，请先打开订阅，然后保存即可。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [创建、 修改和删除标准订阅&#40;Reporting Services 本机模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [创建、修改和删除计划](subscriptions/create-modify-and-delete-schedules.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  

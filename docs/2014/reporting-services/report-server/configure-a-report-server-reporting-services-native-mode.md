@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c236e26cc9c03490a88fec70ec619917f457cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010918"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>配置报表服务器（Reporting Services 本机模式）
   报表服务器可能需要进行其他配置后才能使用，具体取决于安装过程中所选的选项。 至少，报表服务器配置应包含以下内容：  
@@ -30,11 +30,11 @@ ms.locfileid: "48104498"
   
 -   用于存储应用程序数据、报表和其他项的报表服务器。  
   
- 如果选择了以下安装选项之一：本机模式默认配置或 SharePoint 集成模式默认配置，则安装程序会配置最低设置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
+ 如果你选择以下任意安装选项，则安装程序将配置最低设置：本机模式默认配置或 SharePoint 集成的模式默认配置。 如果在“仅文件”模式下安装报表服务器（即通过安装向导中的 **“安装但不配置”** 选项），则只需要配置服务帐户。 完成安装之后，必须配置 Web 服务 URL 和报表服务器数据库。  
   
  报表管理器是本机模式报表服务器的可选功能，但建议您配置报表管理器，以便授予用户访问报表服务器和管理报表服务器内容的权限。 如果在 SharePoint 集成模式下部署报表服务器，可使用 SharePoint 服务器的 Web 前端授予访问权限。  
   
- 可以根据需要配置其他功能，例如报表服务器电子邮件和无人参与的执行帐户。 有关详细信息，请参阅[管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)。  
+ 可以根据需要配置其他功能，例如报表服务器电子邮件和无人参与的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)。  
   
  若要配置报表服务器，请使用 Reporting Services 配置工具。  
   
@@ -53,15 +53,15 @@ ms.locfileid: "48104498"
 ## <a name="next-steps"></a>后续步骤  
  若要完成部署，应配置报表管理器或 SharePoint 集成。 有关详细信息，请参阅[配置报表管理器（本机模式）](configure-web-portal.md)。  
   
- 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的一个迹象是在尝试从远程客户端计算机打开报表管理器时出现空白页。 有关配置防火墙的信息，请参阅[为报表服务器访问配置防火墙](configure-a-firewall-for-report-server-access.md)。  
+ 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的一个迹象是在尝试从远程客户端计算机打开报表管理器时出现空白页。 有关配置防火墙的信息，请参阅 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
   
  如果使用的是 Windows Vista 或 Windows Server 2008，则可能需要执行其他步骤，才能在本地打开报表管理器。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- 通过创建文件夹、上载项和运行报表来验证您的安装。 按照中的说明[验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md)来验证安装。  
+ 通过创建文件夹、上载项和运行报表来验证您的安装。 按照 [验证 Reporting Services 安装](../install-windows/verify-a-reporting-services-installation.md) 中的说明来验证安装。  
   
 ## <a name="see-also"></a>请参阅  
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)   
- [将防火墙配置为允许报表服务器访问](configure-a-firewall-for-report-server-access.md)   
+ [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)   
  [配置本机模式报表服务器以进行本地管理 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [配置报表服务器以进行远程管理](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

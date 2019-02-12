@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376669"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016908"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
   在本教程中，您将基于示例销售数据创建一个基本的表报表，然后向该表的单元中添加迷你图。  
@@ -82,7 +82,7 @@ ms.locfileid: "53376669"
   
 8.  在“连接字符串”中，键入以下文本：  
   
-     **数据源 =\<服务器名 >**  
+     **Data Source=\<servername>**  
   
      表达式\<服务器名 >，例如，Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 因为报表数据不是从 SQL Server 数据库提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库用于对查询进行分析。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "53376669"
   
 4.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Title"></a> 8。（可选）添加报表标题  
+##  <a name="Title"></a> 8.（可选）添加报表标题  
  报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
  通过将不同的字体样式、大小和颜色应用于文本的短语和单个字符，可以进一步增强文本。 有关详细信息，请参阅[设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -318,7 +318,7 @@ ms.locfileid: "53376669"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9。保存报表  
+##  <a name="Save"></a> 9.保存报表  
  将报表保存到报表服务器或计算机上。 如果不将报表保存到报表服务器上，则许多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能（如报表部件和子报表）将不可用。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034818"
 ---
 # <a name="secure-folders"></a>保护文件夹
   文件夹的安全性是保护报表服务器中所有内容的基础。 由于安全性在整个文件夹结构中是可继承的，因此您可以将文件夹层次结构中或大或小的不同部分指定为允许某些类型的访问。  
@@ -37,7 +37,7 @@ ms.locfileid: "48182707"
   
 |选择此任务|授予以下操作权限|  
 |----------------------|---------------------------|  
-|查看文件夹|查看文件夹的层次结构和只读属性（指示文件夹的创建时间与修改时间）。<br /><br /> 除非将用户分配到的角色中还包括“查看报表”、“查看模型”、“查看资源”和“查看数据源”任务，否则用户无法查看文件夹中的项。|  
+|查看文件夹|查看文件夹的层次结构和只读属性（指示文件夹的创建时间与修改时间）。<br /><br /> 用户不能在文件夹中查看项，除非它们分配给角色的还包括以下任务："查看报表、"查看模型"、"查看资源"和"数据源视图"。|  
 |管理文件夹|查看文件夹属性、更改名称或说明，或将文件夹移到另一位置。 此任务允许用户创建文件夹。|  
 |管理报表|将报表从文件系统添加到文件夹，以及将报表从报表设计器发布到报表服务器。|  
 |管理数据源|向文件夹中添加新的共享数据源项，以及更改现有的共享数据源。|  

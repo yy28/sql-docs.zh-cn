@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3853fd48c75cfeb6ec786b0d7d7518112fe07f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a68100af72b7680ed1a9212f5d7c6c54ed07bec1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056317"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013020"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>在 Web 应用程序中使用 SOAP API
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 因为它是一个 Web 服务，所以您可以轻松地访问 SOAP API 以向自定义业务应用程序提供企业报表功能。 从 Web 应用程序访问报表服务器 Web 服务的方法与从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序访问 SOAP API 的方法非常类似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，它公开报表服务器 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  
@@ -87,7 +87,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## <a name="see-also"></a>请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [将 Reporting Services 集成到应用程序中](../application-integration/integrating-reporting-services-into-applications.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
  [在 Windows 应用程序中使用 SOAP API](integrating-reporting-services-using-soap-windows-application.md)  
   
   

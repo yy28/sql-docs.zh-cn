@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031442"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
   使用 **“选择颜色”** 对话框可以为数据区域或文本框中单个或多个单元的背景指定颜色选项，或为图表指定颜色选项。  
@@ -63,7 +63,7 @@ ms.locfileid: "48184657"
  **蓝色**  
  代表 RGB 颜色中蓝色部分的十进制值。 使用数字调整框可更改值或键入一个介于 0 到 255 之间的值。  
   
- **alpha**  
+ **Alpha**  
  代表颜色中 Alpha 或透明度部分的十进制值。 启用该值后，您可使用滑块开关调整至所需的透明度。  
   
  **色调**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184657"
   
 ## <a name="see-also"></a>请参阅  
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

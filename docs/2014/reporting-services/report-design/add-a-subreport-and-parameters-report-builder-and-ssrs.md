@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d7ab908fa5f9696c5db4c49f3d99338c9f01a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166187"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017188"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>添加子报表和参数（报表生成器和 SSRS）
   当您希望创建作为多个相关报表的容器的主报表时，可以向报表添加子报表。 子报表是对另一个报表的引用。 若要通过数据值使报表相关联（例如，使多个报表显示同一客户的数据），必须设计参数化报表（例如，显示特定客户详细信息的报表）作为子报表。 向主报表添加子报表时，可以指定传递给子报表的参数。  
   
  还可以向表或矩阵中的动态行或动态列添加子报表。 处理主报表时，会处理每行的子报表。 在这种情况下，请考虑您是否能通过使用数据区域或嵌套数据区域实现所需的效果。  
   
- 若要向报表中添加子报表，您必须首先创建将作为子报表的报表。 有关创建子报表的详细信息，请参阅[子报表&#40;报表生成器和 SSRS&#41;](subreports-report-builder-and-ssrs.md)。  
+ 若要向报表中添加子报表，您必须首先创建将作为子报表的报表。 有关创建子报表详细信息，请参阅 [子报表（报表生成器和 SSRS）](subreports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -73,7 +73,7 @@ ms.locfileid: "48166187"
      更改子报表参数的顺序不会影响子报表的处理。  
   
 ## <a name="see-also"></a>请参阅  
- [子报表&#40;报表生成器和 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [子报表（报表生成器和 SSRS）](subreports-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017038"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
   本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用于内部存储。 该数据库是必需的，它用于存储已发布的报表、模型、共享数据源、会话数据、资源和服务器元数据。  
@@ -33,7 +33,7 @@ ms.locfileid: "48090257"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>何时创建或配置报表服务器数据库  
  如果在“仅文件”模式下安装报表服务器，则必须创建和配置报表服务器数据库。  
   
- 如果您安装了[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在默认配置为纯模式，报表服务器数据库创建和安装报表服务器实例时会自动配置。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
+ 如果在本机模式的默认配置下安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则安装报表服务器实例时会自动创建和配置报表服务器数据库。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器查看或修改安装程序为您配置的设置。  
   
 ##  <a name="rsdbrequirements"></a> 开始之前  
  创建或配置报表服务器数据库是一个多步骤过程。 创建报表服务器数据库之前，请考虑要如何指定下列各项：  
@@ -116,10 +116,10 @@ ms.locfileid: "48090257"
   
 7.  检查“摘要”页上的信息以确保设置正确，然后单击 **“下一步”**。  
   
-8.  单击“报表服务器 URL”页或“报表管理器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，您会在浏览器窗口中看到报表服务器文件夹层次结构或报表管理器。 有关详细信息，请参阅[验证 Reporting Services 安装](verify-a-reporting-services-installation.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+8.  单击“报表服务器 URL”页或“报表管理器 URL”页上的 URL，验证连接。 必须定义这些 URL 才能进行此测试。 如果报表服务器数据库连接有效，您会在浏览器窗口中看到报表服务器文件夹层次结构或报表管理器。 有关详细信息，请参阅 [联机丛书中的](verify-a-reporting-services-installation.md) 验证 Reporting Services 安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [数据库&#40;SSRS 本机模式&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
  [管理 Reporting Services 本机模式报表服务器](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

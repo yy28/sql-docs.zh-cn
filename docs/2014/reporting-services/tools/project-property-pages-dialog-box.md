@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: kfile
+ms.openlocfilehash: 16dc2b9c39dd12e32be3a88c32a3639e8eb6b4ae
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043138"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
   使用项目属性页可以配置报表服务器项目的部署属性。 若要打开此对话框，请在“项目”菜单中，单击“\<报表项目名称>属性”。  

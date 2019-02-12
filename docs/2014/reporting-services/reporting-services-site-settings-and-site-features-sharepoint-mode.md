@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3286d9067401216c17747feaa13c46442fad66dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: b2e6997afd52c8b999d981c5c15b782ad9a56407
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031068"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 网站设置和网站功能（SharePoint 模式）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式具有几个网站级自定义功能和可以从“SharePoint 网站设置”页管理的网站功能。 这些设置适用于整个网站并影响所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  

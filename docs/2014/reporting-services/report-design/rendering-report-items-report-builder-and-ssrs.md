@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017697"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>呈现报表项（报表生成器和 SSRS）
   报表项的数量、大小和位置会影响呈现器对表体的分页方式。 下面说明了各种报表项的呈现方式。  
@@ -78,7 +78,7 @@ ms.locfileid: "48050889"
   
 -   重复的列标题和行标题。  
   
-     表头优先于表尾。 内部重复的组优先于外部组。 项`RepeatWith`属性设置的更接近于目标数据区域会优先于距离数据区域较远的项。  
+     表头优先于表尾。 内部重复的组优先于外部组。 如果项设置了 `RepeatWith` 属性且距离目标数据区域较近，则这些项优先于距离数据区域较远的项。  
   
 -   小型报表项，例如文本框或矩形，其显式 KeepTogether 属性设置为`true`。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050889"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

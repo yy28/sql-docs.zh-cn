@@ -1,26 +1,23 @@
 ---
-title: 任务 13： 添加 OLE DB 目标将数据写入 MDS 临时表 |Microsoft Docs
+title: 任务 13:添加 OLE DB 目标将数据写入 MDS 临时表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223097"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035068"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>任务 13：添加 OLE DB 目标以便将数据写入 MDS 临时表
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>任务 13:添加 OLE DB 目标以便将数据写入 MDS 临时表
   现在，已添加**ImportType**并**BatchTag**所有记录的值，现在可以将它们发送到 MDS 的过渡环境。 在本任务中，使用 OLE DB 目标将数据写入**stg.supplier_Leaf**临时表。  
   
 1.  拖动**OLE DB Destination**从**其他目标**主题中**SSIS 工具箱**到**数据流**选项卡并将其放置在**添加 MDS 所需的列**。  
@@ -52,6 +49,6 @@ ms.locfileid: "48223097"
      ![完成数据流](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "完成数据流")  
   
 ## <a name="next-step"></a>下一步  
- [任务 14：将执行 SQL 任务添加到控制流以运行 MDS 的存储过程](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [任务 14:添加执行 SQL 任务添加到控制流以运行 MDS 的存储的过程](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

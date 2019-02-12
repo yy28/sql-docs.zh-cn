@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011138"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>测试筛选后的模型（数据挖掘基础教程）
   现在，您已确定`TM_Decision_Tree`模型是最准确的您将自定义模型以更好地满足的需求[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]目标邮递活动。 具体来说，市场部希望了解男客户和女客户是否存在特征差异。 这些信息可帮助他们决定哪些杂志进行广告使用以及功能在邮件中推广哪些产品。  
@@ -88,7 +87,7 @@ ms.locfileid: "48054997"
   
  [浏览决策树模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>浏览筛选后的模型  
   
@@ -130,15 +129,15 @@ ms.locfileid: "48054997"
  有关如何将筛选器应用于嵌套表的示例，请参阅[数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)。  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
- [测试提升图的准确性&#40;数据挖掘基础教程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [测试提升图的准确性（数据挖掘基础教程）](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第 6 课： 创建和使用预测&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 课：创建和使用预测&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [挖掘模型任务和操作指南](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [从挖掘模型中删除筛选器](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

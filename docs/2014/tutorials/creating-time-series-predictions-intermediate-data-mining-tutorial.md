@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119867"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027988"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>创建时序预测（数据挖掘中级教程）
   在本课前面的任务中，您已经创建了时序模型并浏览了结果。 默认情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将始终为一个时序模型创建一组五 (5) 个预测，并将预测值作为预测图的一部分显示。 但是，也可以通过生成数据挖掘扩展插件 (DMX) 预测查询，来创建预测。  
@@ -88,41 +87,41 @@ ms.locfileid: "48119867"
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 年 7 月 25 日|99978.00|  
-|2008 年 8 月 25 日|145575.07|  
-|2008 年 9 月 25 日|116835.19|  
-|2008 年 10 月 25 日|116537.38|  
-|2008 年 11 月 25 日|107760.55|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
+|10/25/2008|116537.38|  
+|11/25/2008|107760.55|  
   
  **M200 Europe PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|2008 年 7 月 25 日|52|  
-|2008 年 8 月 25 日|67|  
-|2008 年 9 月 25 日|58|  
-|2008 年 10 月 25 日|57|  
-|2008 年 11 月 25 日|54|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
+|10/25/2008|57|  
+|11/25/2008|54|  
   
- **M200 North America-PredictAmount**  
+ **M200 North America - PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 年 7 月 25 日|348533.93|  
-|2008 年 8 月 25 日|340097.98|  
-|2008 年 9 月 25 日|257986.19|  
-|2008 年 10 月 25 日|374658.24|  
-|2008 年 11 月 25 日|379241.44|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
+|10/25/2008|374658.24|  
+|11/25/2008|379241.44|  
   
  **M200 North America-PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|2008 年 7 月 25 日|272|  
-|2008 年 8 月 25 日|152|  
-|2008 年 9 月 25 日|250|  
-|2008 年 10 月 25 日|181|  
-|2008 年 11 月 25 日|290|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
+|10/25/2008|181|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  在示例数据库中使用的日期对于此版本已更改。 如果您在使用较早版本的示例数据，则可能会看到不同的结果。  
@@ -173,12 +172,12 @@ ms.locfileid: "48119867"
   
 3.  在中**表名称**列中，键入新的临时表名，如**Test Predictions**。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
     > [!NOTE]  
     >  若要查看您创建的表，请创建与您保存数据的实例的数据库引擎的连接，然后创建查询。  
   
-## <a name="conclusion"></a>结语  
+## <a name="conclusion"></a>结束语  
  您学习了如何生成基本时序模型、解释预测和创建预测。  
   
  本教程中的其余任务是可选的，它们介绍高级时序预测。 如果您决定继续，将学习如何将新数据添加到模型并基于扩展的序列创建预测。 您还将学习如何通过使用模型中的趋势但是使用新数据序列替换模型中的数据来执行交叉预测。  

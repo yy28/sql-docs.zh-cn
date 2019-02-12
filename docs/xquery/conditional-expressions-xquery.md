@@ -20,12 +20,12 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3164d17169e0a90416c8131825c3d61b1ff5fe16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041738"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <FirstName>fname</FirstName>  
@@ -107,7 +107,7 @@ WHERE ProductModelID = 19
   
  在前面的查询中的条件**如果**表达式将检查是否有在两个以上的子元素 <`Features`>。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -142,7 +142,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <WorkCenterLocation LocationID="30" />  

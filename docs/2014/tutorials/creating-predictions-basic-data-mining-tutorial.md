@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035258"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
   已测试挖掘模型的准确性，并决定你感到满意结果后，您然后可以在使用预测查询生成器来生成预测**挖掘模型预测**对数据挖掘模型中的选项卡设计器。  
@@ -133,7 +132,7 @@ ms.locfileid: "52515448"
   
      在所选行的开头插入一个左括号，或在当前行的结尾插入一个右括号。  
   
--   **和/或**  
+-   **AND/OR**  
   
      在紧挨当前函数或列后面插入 `AND` 或 `OR` 运算符。  
   

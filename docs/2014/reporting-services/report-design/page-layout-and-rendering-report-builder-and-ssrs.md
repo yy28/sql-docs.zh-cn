@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082827"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043268"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
   当您创作报表时，务必了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现器的行为，以确保所呈现的报表显示为您需要的方式，包括页面布局和分页符。 您还可能希望确保所呈现的报表适合您或贵组织常用的纸张大小。  
@@ -49,14 +49,14 @@ ms.locfileid: "48082827"
 ##  <a name="RenderingExtensions"></a> 呈现器  
  Reporting Services 包括一组呈现器，也称为呈现扩展插件，可用来将报表导出为其他格式。 有三种类型的呈现器：  
   
--   **数据呈现器** ：数据呈现器会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 可用的数据呈现器为 CSV 和 XML。  
+-   **数据呈现器** ：数据呈现器会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 可用的数据呈现器为：CSV 和 XML。  
   
     > [!NOTE]  
     >  尽管它没有提供直接导出到其他格式的功能，但 Atom 呈现从报表中生成数据文件。  
   
--   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用的软分页符呈现器有： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 Web 存档 (MHTML) 和 HTML。  
+-   **软分页呈现器** ：软分页呈现器保留报表的布局和格式设置。 对所产生的文件进行优化，以便满足基于屏幕的查看和传递（例如在网页上）的需要。 可用的软分页符呈现器有：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 Web 存档 (MHTML) 和 HTML。  
   
--   **硬分页呈现器** ：硬分页呈现器保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。 支持的可用硬分页呈现器：TIFF 和 PDF。  
+-   **硬分页呈现器** ：硬分页呈现器保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。 支持可用硬分页呈现器：TIFF 和 PDF。  
   
  当您在报表生成器或报表设计器中预览报表时，或者在报表管理器中运行报表时，报表总是首先以 HTML 格式呈现。 在运行报表后，您可以将其导出为不同的文件格式。 有关详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48082827"
 ##  <a name="Pagination"></a> 分页  
  分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件以及您配置报表使用的分页符和哪些项目放在同一页的选项不同而异。  
   
- 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 使用数据和软分页呈现扩展插件导出的报表通常不受分页影响。 当您使用数据呈现扩展插件时，报表将呈现为 XML 或 CSV 格式的表格行集。 为了确保导出的报表数据有用，应了解所应用的规则从报表呈现了一个平展的表格行集。  
+ 若要成功设计一个对用户而言易于阅读、对您准备用于传递报表的呈现器而言最优的报表，您需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。 使用数据和软分页呈现扩展插件导出的报表通常不受分页影响。 当您使用数据呈现扩展插件时，报表将呈现为 XML 或 CSV 格式的表格行集。 为了确保导出的报表数据有用，应了解所应用的规则从报表呈现了一个平展的表格行集。  
   
  当您使用软分页呈现扩展插件（如 HTML 呈现扩展插件）时，您可能想知道报表打印后的外观以及使用硬分页呈现器（如 PDF）呈现此报表时可以达到哪种理想效果。 在创建或更新报表时，您可以在报表生成器和报表设计器中预览和导出此报表。  
   
@@ -95,33 +95,33 @@ ms.locfileid: "48082827"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节列出的过程分步向您介绍如何在报表中使用分页。  
   
--   [添加一个分页符&#40;报表生成器和 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [添加分页符（报表生成器和 SSRS）](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [在多个页中显示行标题和列标题&#40;报表生成器和 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [在多个页中显示行标题和列标题（报表生成器和 SSRS）](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [添加或删除页眉或页脚&#40;报表生成器和 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [添加或删除页面页眉或页脚（报表生成器和 SSRS）](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [在滚动报表时保持标题可见&#40;报表生成器和 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [在滚动报表时保持标题可见（报表生成器和 SSRS）](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [显示页码或其他报表属性&#40;报表生成器和 SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [显示页码或其他报表属性（报表生成器和 SSRS）](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [隐藏页眉或页脚的第一个或最后一页&#40;报表生成器和 SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> 本节内容  
  以下主题介绍有关页面布局和呈现方式的其他信息：  
   
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)  
  提供有关如何在报表中使用页眉和页脚以及如何使用它们来控制分页的信息。  
   
- [控制分页符、 标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [控制分页符、标题、列和行（报表生成器和 SSRS）](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  提供有关使用分页符的信息。  
   
   
   
 ## <a name="see-also"></a>请参阅  
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [导出报表&#40;报表生成器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

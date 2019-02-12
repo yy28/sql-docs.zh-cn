@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135147"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017708"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 列表查询设计器
   报表生成器同时提供了图形查询设计器和基于文本的查询设计器，帮助您创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  
@@ -64,7 +64,7 @@ ms.locfileid: "48135147"
  若要在此窗格中添加或删除字段，请在“SharePoint 列表”窗格中选中或清除针对表或视图字段的复选框。  
   
 ###  <a name="AppliedFilters"></a> “应用的筛选器”窗格  
- “应用的筛选器”窗格显示用于限制在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成[!INCLUDE[tsql](../includes/tsql-md.md)]WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
+ “应用的筛选器”窗格显示用于限制在运行时检索的数据行数的条件。 此窗格中指定的条件用于生成 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 子句。 如果选择了参数选项，则会自动创建报表参数。 通过基于查询参数的报表参数，用户可为查询指定值，以便控制报表中的数据。  
   
  显示以下列：  
   

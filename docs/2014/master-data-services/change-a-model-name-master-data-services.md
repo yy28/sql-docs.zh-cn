@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021709"
 ---
 # <a name="change-a-model-name-master-data-services"></a>更改模型名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，可以更改模型的名称。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 ### <a name="to-change-a-model-name"></a>若要更改模型名称  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48102957"
 6.  单击 **“保存模型”**。  
   
 ## <a name="see-also"></a>请参阅  
- [创建模型&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+ [创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [删除模型 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   

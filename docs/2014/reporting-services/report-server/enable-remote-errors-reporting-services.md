@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60a601fb20617f5a41b27a7c1972778e116f25a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4db37e85a43b6eb64a6999590f5b2be92293de56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111723"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016778"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
-  可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 `EnableRemoteErrors` 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅[报表服务器系统属性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+  可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 `EnableRemoteErrors` 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **本主题内容：**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48111723"
   
 ##  <a name="bkmk_mgtStudio"></a> 通过 SQL Server Management Studio 启用远程错误（本机模式）  
   
-1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../tools/connect-to-a-report-server-in-management-studio.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+1.  启动 Management Studio 并连接到报表服务器实例。 有关详细信息，请参阅 [联机丛书中的](../tools/connect-to-a-report-server-in-management-studio.md) 连接到 Management Studio 中的报表服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  右键单击报表服务器节点，然后选择“属性”。  
   

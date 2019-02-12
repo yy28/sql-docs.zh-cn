@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100618"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019412"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>在报表中查找文本、数字或日期（SharePoint 集成模式下的 Reporting Services）
   通过键入要查找的词或短语（搜索项的最大长度为 256 个字符），可以在报表中搜索内容。 搜索一种导航技术，它在报表中查找匹配值并将焦点放在报表中包含该值的部分。  
@@ -44,6 +44,6 @@ ms.locfileid: "48100618"
 4.  若要搜索随后出现的相同值，请单击 **“下一个”**。  
   
 ## <a name="see-also"></a>请参阅  
- [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

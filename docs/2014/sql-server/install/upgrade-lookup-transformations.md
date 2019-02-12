@@ -12,15 +12,15 @@ helpviewer_keywords:
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032368"
 ---
 # <a name="upgrade-lookup-transformations"></a>升级查找转换
   当您从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，请考虑将该包修改为利用查找转换中的新功能。 该转换支持 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中的缓存类型和数据输出选项。 详细了解其他缓存和数据输出，请参阅[查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)。  
@@ -34,6 +34,6 @@ ms.locfileid: "48182617"
  有关详细信息，请参阅[查找转换编辑器&#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a35e16107d926bc9815e2e6de2d43a35172bd2e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1bc66e2d415b9f46193e1fce0b18a58bc570d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070277"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042958"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>暂停和恢复共享计划
   您可以暂停和恢复正在使用的共享计划。 通过暂停共享计划，可以暂时冻结用于触发报表处理和订阅的计划。 您只能暂停和恢复共享计划。 不能暂停报表特定计划。  
   
- 您不能暂停和恢复正在进行的报表处理。 您只能暂停和恢复处于 SQL Server 代理服务计划队列中的计划。 正在进行的作业不在计划引擎的管理范围内。 有关详细信息，请参阅[管理正在运行的进程](manage-a-running-process.md)  
+ 您不能暂停和恢复正在进行的报表处理。 您只能暂停和恢复处于 SQL Server 代理服务计划队列中的计划。 正在进行的作业不在计划引擎的管理范围内。 有关详细信息，请参阅 [管理运行中的进程](manage-a-running-process.md)  
   
  暂停共享计划时，可以取消将要发生的任何操作。 恢复共享计划后，报表和订阅处理将使用服务器的本地时间，在计划的下一次执行时间进行。 假如未暂停计划，本机模式报表服务器或 SharePoint 服务应用程序不会虚构出一些本来将要发生的计划操作。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48070277"
 -   [暂停和恢复共享计划（SharePoint 模式）](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 暂停和恢复共享计划（本机模式）  
- 要暂停和恢复共享计划，请使用报表管理器中的“计划”页。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；它没有提供用于暂停和恢复计划的选项。 有关详细信息，请参阅[Create，Modify，and Delete Schedules](create-modify-and-delete-schedules.md)。  
+ 要暂停和恢复共享计划，请使用报表管理器中的“计划”页。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]；它没有提供用于暂停和恢复计划的选项。 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>暂停或恢复共享计划  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48070277"
   
 ## <a name="see-also"></a>请参阅  
  [“计划”](schedules.md)   
- [创建、修改和删除计划](create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
  [更改报表服务器上的时区和时钟设置](change-time-zones-and-clock-settings-on-a-report-server.md)   
  [管理运行中的进程](manage-a-running-process.md)  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020008"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
@@ -71,7 +71,7 @@ ms.locfileid: "51032354"
     > [!NOTE]  
     >  有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
   
-##  <a name="FollowUp"></a> 跟进：将项目值导入到域后  
+##  <a name="FollowUp"></a> 跟进：项目值导入到域后  
  将在清理过程中收集的数据质量知识导入到域中后，您可以对该域和值执行其他域管理任务。 有关详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  
   
 ##  <a name="Values"></a> 要导入的值  

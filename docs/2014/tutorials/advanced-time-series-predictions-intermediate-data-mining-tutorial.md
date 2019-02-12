@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032798"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高级时序预测（数据挖掘中级教程）
   通过浏览预测模型，您发现尽管大多数区域的销售额都遵循一个相似的模式，但是某些区域和某些型号（例如，太平洋地区的 M200 型号）却呈现出完全不同的趋势。 您对此并不感到惊奇，因为您知道区域之间的差异很常见，可以由多种因素引起，其中包括市场促销、错误的报告或地理政治事件。  
@@ -165,7 +164,7 @@ ms.locfileid: "52544326"
   
      **名称**：`T1000 Pacific Region`  
   
-     **说明**:**筛选器`vTimeSeries`按区域和型号**  
+     **说明**：**筛选器`vTimeSeries`按区域和型号**  
   
 5.  在“文本”窗格中键入以下查询，然后单击“确定”：  
   

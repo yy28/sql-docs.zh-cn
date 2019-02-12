@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 08dc61c366937c3f1b4f90e009bf8a2460a7e4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365899"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020359"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
   为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将决定数据以图表形式呈现时对数据进行解释的好坏程度。 例如，如果数据集包含许多与图表大小有关的数据点，则使用面积图、折线图或散点图可能会更好地呈现数据集。 有关如何根据所选图表类型准备数据的讨论，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  

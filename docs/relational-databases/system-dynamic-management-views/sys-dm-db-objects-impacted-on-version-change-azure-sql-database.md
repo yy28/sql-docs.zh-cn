@@ -2,10 +2,8 @@
 title: sys.dm_db_objects_impacted_on_version_change （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 11445fefd94925f32e40173491f27b8ea0837218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012930"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,12 +35,12 @@ ms.locfileid: "47645355"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |class|**int** NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
-|class_desc|**nvarchar(60)** 不为 NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class_desc|**nvarchar(60)** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
 |minor_id|**int** NULL|**NULL**约束<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar(60)** 不为 NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(对于内部函数)<br /><br /> **geometry** （适用于系统 UDT）<br /><br /> **geography:: parse** （适用于系统 UDT 方法）|  
+|dependency|**nvarchar(60)** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(对于内部函数)<br /><br /> **geometry** （适用于系统 UDT）<br /><br /> **geography:: parse** （适用于系统 UDT 方法）|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
@@ -69,7 +67,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
-|1|**“索引”**|重新生成标识的任何索引**sys.dm_db_objects_impacted_on_version_change**为例：  `ALTER INDEX ALL ON <table> REBUILD`<br />或多个<br />`ALTER TABLE <table> REBUILD`|  
-|2|**对象**|通过标识的所有约束**sys.dm_db_objects_impacted_on_version_change**必须重新计算基础表中的几何图形和地理数据后重新验证。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或多个<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**“索引”**|重新生成标识的任何索引**sys.dm_db_objects_impacted_on_version_change**为例：  `ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Object**|通过标识的所有约束**sys.dm_db_objects_impacted_on_version_change**必须重新计算基础表中的几何图形和地理数据后重新验证。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

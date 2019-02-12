@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7420b28bcdf12b0e173b097396972d3cc53ef973
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6022c1fee61e16445f3ec81eff0f8113ce22ab1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176587"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031338"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>创建报表历史记录（SharePoint 集成模式下的 Reporting Services）
   报表历史记录是随着时间变化而创建的报表快照的集合。 每个快照都是报表创建时所生成的报表的副本。 它包含创建快照时该报表当时的布局和数据。 呈现信息不与快照存储在一起。 打开报表历史记录中的快照时，它将在报表查看器 Web 部件中以 HTML 形式打开。 呈现该快照后，您可以将其导出为其他应用程序格式。  

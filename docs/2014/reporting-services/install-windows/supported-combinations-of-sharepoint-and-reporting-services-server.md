@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b2335e06f5821bedefad8aeb558a3528632ad1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4e1a516f10c15b8e84d80ff91de1aa9d66d8e1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034098"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>支持的 SharePoint 和 Reporting Services 服务器及外接程序的组合 (SQL Server 2014)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器可在 SharePoint 模式下安装，并且可与 SharePoint 部署集成。 在报表服务器、SharePoint 的 Reporting Services 外接程序和 SharePoint 产品的所有组合中，并非所有功能都受支持。 本主题概述支持的组合。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，集成是组合以下各项的结果：  
@@ -44,7 +44,7 @@ ms.locfileid: "48102717"
 |1|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2013|用户帐户控制|  
 |2|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|用户帐户控制|  
 |3|[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2013|用户帐户控制|  
-|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|用户帐户控制<br /><br /> 例外：不支持 Power View 集成。|  
+|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|用户帐户控制<br /><br /> 异常：不支持 power view 集成。|  
 |5|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|SharePoint 2010|用户帐户控制|  
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|用户帐户控制|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|用户帐户控制|  
@@ -63,10 +63,10 @@ ms.locfileid: "48102717"
   
 -   SQL Server 2012（或更高版本）报表服务器不支持 SQL Server 2008 R2 外接程序。 SharePoint 2010 必备组件安装程序会自动安装 SQL Server 2008 R2 外接程序。 必须在安装外接程序的更新版本前卸载它。 不支持外接程序的就地升级。  
   
--   **升级：** 装有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的 SharePoint 2010 无法就地升级到 SharePoint 2013。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 外接程序和报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或更高版本。 有关升级的详细信息，请参阅[升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)。  
+-   **升级：** 使用 SharePoint 2010[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序安装，不能升级到 SharePoint 2013 位置中。 SharePoint 2013 需要 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 外接程序和报表服务器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或更高版本。 有关升级的详细信息，请参阅 [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
+ [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SQL Server 2014 的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)  
   

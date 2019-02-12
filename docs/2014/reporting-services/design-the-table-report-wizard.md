@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a3f26a52cc101a671e5587bd07e39503dfcfd0e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a59d959443c2e9a021bf570147fd8dba5eb85aba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018189"
 ---
 # <a name="design-the-table-report-wizard"></a>设计表（报表向导）
   使用报表向导的此页可以选择要在报表中包含的字段。  
@@ -30,7 +30,7 @@ ms.locfileid: "48222960"
  **显示的字段**  
  显示已经为页面、组或详细信息分配的字段。 单击 **“删除”** 可将字段从列表中删除。  
   
- **第**  
+ **页**  
  查看在页面级别中显示的字段的列表。 若要更改这些字段的顺序，请选择一个字段，再单击上移按钮或下移按钮。  
   
  **分组**  

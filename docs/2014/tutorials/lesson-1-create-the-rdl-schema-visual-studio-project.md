@@ -1,22 +1,21 @@
 ---
-title: 第 1 课： 创建 RDL 架构 Visual Studio 项目 |Microsoft Docs
+title: 第 1 课：创建 RDL 架构 Visual Studio 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018908"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 课：创建 RDL 架构 Visual Studio 项目
   针对本教程，您将创建一个简单控制台应用程序。 本教程假定你正在开发中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
@@ -198,7 +197,7 @@ ms.locfileid: "48187327"
     ```  
   
 ## <a name="next-lesson"></a>下一课  
- 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第 2 课： 使用 xsd 工具的 RDL 架构生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
+ 在下一课中，您将使用 XML 架构定义工具 (Xsd.exe) 从 RDL 架构中生成类，并将其包含在项目中。 请参阅[第 2 课：从 RDL 架构使用 xsd 工具生成类](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用从 RDL 架构生成的类更新报表&#40;SSRS 教程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

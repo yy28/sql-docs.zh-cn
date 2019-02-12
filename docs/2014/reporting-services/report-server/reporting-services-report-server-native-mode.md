@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025828"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 报表服务器（本机模式）
   配置为本机模式的报表服务器将作为应用程序服务器运行，并专门通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]组件提供所有处理和管理功能。  
@@ -78,7 +78,7 @@ ms.locfileid: "48086907"
   
 -   通过制定报表处理计划，并指定哪些报表按需运行，哪些报表应从缓存加载，从而均衡服务器上的报表处理需求。  
   
- 通过以下两个预定义的角色提供执行管理任务的权限： **系统管理员** 和 **内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)。  
+ 通过两个预定义角色提供的权限来执行管理任务：**系统管理员**并**内容管理员**。 若要有效地管理报表服务器内容，要求您同时分配有这两个角色。 有关这些预定义角色的详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)。  
   
  用于管理报表服务器内容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或报表管理器。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 允许您设置默认值和启用功能。 报表管理器用于授予用户对报表服务器项和操作的访问权限，查看和使用报表以及其他内容类型，以及查看和使用所有共享项和报表分发功能。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48086907"
   
  若要向报表服务器中添加资源，请上载或发布文件：  
   
-|运算|文件类型|  
+|操作|文件类型|  
 |---------------|---------------|  
 |上载|除报表定义 (.rdl) 文件和报表模型 (.smdl) 文件之外的所有文件都将作为资源上载。<br /><br /> 若要上载资源，如果报表服务器在本机模式下运行，则必须使用报表管理器，如果报表服务器在 SharePoint 集成模式下运行，则必须使用 SharePoint 站点上的应用程序页。 有关详细信息，请参阅[上传文件或报表（报表管理器）](../reports/upload-a-file-or-report-report-manager.md)或[将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |发布|除 .rdl、.smdl 和 .rds 数据源文件之外，项目中的所有文件都将作为资源上载。 若要发布资源，请将现有项添加到报表设计器的一个项目中，然后将该项目发布到报表服务器。|  

@@ -11,14 +11,14 @@ f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022128"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>“报表属性”对话框 ->“页面设置”（报表生成器）
   选择**页面设置**上**报表属性**，对话框可以设置整个报表页选项。  
@@ -51,10 +51,10 @@ ms.locfileid: "48905077"
  **底部**  
  设置报表底部与报表最后一行底部之间的距离。  
   
- **左侧**  
+ **Left**  
  设置报表的左边缘与报表行的左边缘之间的距离。  
   
- **右侧**  
+ **Right**  
  设置报表的右边缘与报表行的右边缘之间的距离。  
   
 ## <a name="see-also"></a>请参阅  

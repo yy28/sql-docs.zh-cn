@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13d4141b25a194a3d2536e2ebf3246eefe659f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc06dc9c708354e863c37d6067a2355492d4cddd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112758"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024288"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 与 2008 和 2008 R2 报表服务器集成
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 在 SharePoint 管理中心中上完成新功能的管理**管理服务**并**管理器服务应用程序**页。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前为 SharePoint 集成的体系结构仍支持[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品，与以前版本的报表服务器集成 SharePoint 2010 外接程序。  

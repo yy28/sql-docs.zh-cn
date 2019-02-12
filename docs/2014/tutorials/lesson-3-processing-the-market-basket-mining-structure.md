@@ -1,25 +1,24 @@
 ---
-title: 第 3 课： 处理市场篮挖掘结构 |Microsoft Docs
+title: 第 3 课：处理市场篮挖掘结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018259"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>第 3 课：处理市场篮挖掘结构
-  在本课程中，您将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句的 vAssocSeqLineItems 和 vAssocSeqOrders 从[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]示例数据库来处理挖掘结构和挖掘模型在中创建[第 1 课： 创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)并[第 2 课： 向市场篮挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。  
+  在本课程中，您将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句的 vAssocSeqLineItems 和 vAssocSeqOrders 从[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]示例数据库来处理挖掘结构和挖掘模型在中创建[第 1 课：创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)和[第 2 课：向市场篮挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。  
   
  处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 处理挖掘模型，挖掘结构定义的数据将通过所选的数据挖掘算法。 该算法将搜索趋势和模式，然后在挖掘模型中存储此信息。 因此，挖掘模型不包含实际源数据，而是包含由算法发现的信息。 有关处理挖掘模型的详细信息，请参阅[处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
   

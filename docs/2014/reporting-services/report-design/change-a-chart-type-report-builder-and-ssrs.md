@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c0128e6e7bb5ca0020d8dbcf34858d0f5d6bf2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085699"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037178"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
   首次将图表插入报表中时，将显示 **“选择图表类型”** 对话框。 如果取消此对话框，则默认情况下会添加柱形图图表类型。  
@@ -39,7 +39,7 @@ ms.locfileid: "48085699"
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [仪表&#40;报表生成器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [向报表添加图表&#40;报表生成器和 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   
+ [向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

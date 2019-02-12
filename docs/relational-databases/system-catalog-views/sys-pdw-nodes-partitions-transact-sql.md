@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012548"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47843355"
 |data_compression_desc|`nvarchar(60)`|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
 |pdw_node_id|`int`|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>每个分发中的每个分区中的示例 a： 显示行 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>示例 A：每个分区中每个分布区中显示行 
 
 适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 若要显示每个分发中的每个分区中的行数，请使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>若要查看每个分区的表的每个分布区中的行的示例 b： 使用系统视图
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>示例 B：使用系统视图来查看每个分区的表的每个分布区中的行
 
 适用范围：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

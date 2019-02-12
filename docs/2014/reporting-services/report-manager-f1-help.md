@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019318"
 ---
 # <a name="report-manager-f1-help"></a>报表管理器的 F1 帮助
   下列主题提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器的页级帮助。 该应用程序中的每一页都有一个对应的主题。 并非所有页面都可用。 安全设置确定了您可以访问的页面。 若要从报表管理器中访问这些主题，请在主工具栏上单击 **“帮助”** 。  
@@ -104,9 +104,9 @@ ms.locfileid: "48133287"
  有关报表管理器和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的详细信息，请参阅 MSDN 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  
   
 ## <a name="see-also"></a>请参阅  
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
  [功能参考 (Reporting Services)](feature-reference-reporting-services.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
  [报表管理器](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 组件概述](tools/reporting-services-tools.md)  
   

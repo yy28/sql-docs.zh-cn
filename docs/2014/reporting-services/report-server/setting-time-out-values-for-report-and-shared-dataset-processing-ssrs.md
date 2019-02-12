@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028556"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>为报表和共享数据集处理设置超时值 (SSRS)
   可以通过指定超时值来限制使用系统资源的方式。 报表服务器支持两种类型的超时值：  
@@ -35,14 +35,14 @@ ms.locfileid: "48166257"
  大多数超时错误出现在查询处理期间。 如果遇到超时错误，请尝试增大查询超时值。 确保将报表执行超时值调整为比查询超时值更大的值。时间段必须足以完成查询和报表处理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>为报表中的嵌入数据集设置查询超时值  
- 查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 超时值与报表一起存储在`Timeout`报表定义的元素。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 查询超时值是在创作报表过程中在定义嵌入数据集时指定的。 该超时值随报表一起存储，它存储在报表定义的 `Timeout` 元素中。 默认情况下，此值设置为 30 秒。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
  对已发布报表的属性具有修改权限的用户可以通过编辑报表定义文件来重置此值。  
   
  还可以为数据驱动订阅指定查询超时值。 查询超时值是在“数据驱动订阅”页中指定的。 指定的值决定了报表服务器在从订阅服务器数据源检索数据时等待查询处理完成的时间。  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>为共享数据集设置查询超时值  
- 当您创建或管理共享数据集时在报表服务器上以秒为单位指定查询超时值。 默认情况下，该值设置为 0 秒，这相当于无超时值。 有关详细信息，请参阅[管理共享数据集](../report-data/manage-shared-datasets.md)。  
+ 当您创建或管理共享数据集时在报表服务器上以秒为单位指定查询超时值。 默认情况下，该值设置为 0 秒，这相当于无超时值。 有关详细信息，请参阅 [管理共享数据集](../report-data/manage-shared-datasets.md)。  
   
 ## <a name="setting-a-report-execution-time-out"></a>设置报表执行超时值  
  可以通过设置报表执行超时值来限制报表服务器用于处理报表的时间量。 报表执行超时值可以在报表管理器中指定。 可以为“站点设置”页中的所有报表设置默认值，然后覆盖特定报表的“执行”属性页中的值。 默认情况下，该值设置为 1800 秒。 有关详细信息，请参阅 [设置报表处理属性](set-report-processing-properties.md)。  
@@ -56,9 +56,9 @@ ms.locfileid: "48166257"
 >  可以在 RSReportServer.config 文件中设置 `RunningRequestsDbCycle` 设置，以更改计算正在运行的作业的频率。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
- [管理正在运行的进程](../subscriptions/manage-a-running-process.md)   
+ [管理运行中的进程](../subscriptions/manage-a-running-process.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  
   
   

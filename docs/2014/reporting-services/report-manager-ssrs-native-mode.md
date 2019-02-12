@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176937"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036568"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>报表管理器（SSRS 本机模式）
   报表管理器是基于 Web 的报表访问和管理工具，用于通过 HTTP 连接来管理远程位置的单个报表服务器实例。 您还可以使用报表管理器的报表查看器和导航功能。 本主题内容：  
@@ -48,7 +48,7 @@ ms.locfileid: "48176937"
   
 -   配置报表执行属性、报表历史记录和报表参数。  
   
--   创建连接到并从中检索数据的报表模型[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源或从[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]关系数据源。  
+-   创建报表模型，使用这些报表模型可以连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系数据源，并从这些数据源中检索数据。  
   
 -   设置模型项安全性，以便可以访问模型中的特定实体，或将实体映射到事先创建的预定义点击链接型报表。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "48176937"
   
  报表管理器只能供在本机模式下运行的报表服务器使用。 配置为 SharePoint 集成模式的报表服务器不支持报表管理器。  
   
- 某些报表管理器功能才可指定版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中才提供某些报表管理器功能。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。  
+ 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。  
   
  如果您在使用 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 或 Windows Server 2008，则必须配置报表管理器以便进行本地管理。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48176937"
 |![属性页图标](media/hlp-16prop.gif "属性页图标")|属性页|单击属性图标可访问其他页面来设置属性和安全性。|  
   
 ## <a name="see-also"></a>请参阅  
- [配置 URL &#40;SSRS 配置管理器&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [配置 URL（SSRS 配置管理器）](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [规划 Reporting Services 和 Power View 浏览器支持的&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [报表生成器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services 工具](tools/reporting-services-tools.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
  [查看和浏览本机模式下使用 SharePoint Web 部件的报表&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   

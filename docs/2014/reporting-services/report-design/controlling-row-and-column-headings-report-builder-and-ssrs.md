@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8732495ad9eadf6660104f9a3edb4c991dce800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019928"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>控制行标题和列标题（报表生成器和 SSRS）
   表、矩阵或列表数据区域可以水平或垂直跨多页。 您可以指定是否在每页上重复显示行标题或列标题。 在交互式呈现器（如报表管理器）或报表预览中，还可以指定是否冻结行标题或列标题，以便在滚动报表时始终显示标题。 在表或矩阵中，第一行通常包含列标题，用来为每列中的数据加上标签；第一列通常包含行标题，用来为每行中的数据加上标签。 对于嵌套组，您可能需要重复显示包含组标签的初始行标题集和列标题集。 默认情况下，列表数据区域不包含标题。  
@@ -113,7 +113,7 @@ ms.locfileid: "48183467"
   
  ![行组，具有静态成员的高级模式](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行组，具有静态成员的高级模式")  
   
- 列出的 tablix 成员包括： **Static**、(**Static**)、Category 和 (**Details**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
+ 列出的 tablix 成员包括：**静态**，(**静态**)，类别，并 (**详细信息**)。 带有括号 () 的 tablix 成员指示没有相应的组头。 若要重复或冻结列标题，请选择上面的 Static tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48183467"
   
  ![行组、高级、无组标头。](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行组、高级、无组标头。")  
   
- 在“行组”窗格中列出了以下 tablix 成员：(**Static**)、(Category)、(**Static**) 和 (**Details**)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
+ 在“行组”窗格中，列出了以下 tablix 成员：(**静态**)、 (Category)、 (**静态**)，并 (**详细信息**)。 若要重复或冻结列标题，请选择上面的 (**Static**) tablix 成员，然后在“属性”窗格中设置属性。  
   
  [返回页首](#Top)  
   

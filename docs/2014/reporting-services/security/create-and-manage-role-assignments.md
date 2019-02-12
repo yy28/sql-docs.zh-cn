@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211007"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023728"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  
@@ -42,7 +42,7 @@ ms.locfileid: "48211007"
   
  您必须是报表服务器计算机上的本地管理员组的成员，才能创建角色分配。 您可以通过将其他用户分配给  内容管理员角色来委托该责任。  
   
- 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
+ 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>创建系统级角色分配  
  若要创建或管理系统级角色分配，请使用报表管理器，打开“站点设置”页。  
@@ -51,7 +51,7 @@ ms.locfileid: "48211007"
   
  系统级角色分配包括的权限广泛，但不包括项级角色分配中的权限。 与计算机上的系统权限相比，报告服务器上的系统角色不提供包括所有可能操作的完整集合的全面权限。 相反，系统级角色分配不过是作用域为报表服务器站点的任务的集合。 通过系统角色分配所提供的权限确定用户能否查看应用程序属性（如主页的图像或标题）、查看或管理共享计划或者使用报表生成器。  
   
- 有关详细信息，请参阅[授予用户对报表服务器的访问权限&#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)并[预定义角色](role-definitions-predefined-roles.md)。  
+ 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md) 和 [预定义角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="modifying-a-role-assignment"></a>修改角色分配  
  您可以随时修改角色分配。 所做的更改将在保存角色分配后生效。 角色分配的更改不会影响用户会话。 如果在用户打开某个报表期间将角色分配修改为拒绝其访问该报表，则只要会话处于活动状态，用户仍然可以继续使用该报表。  
@@ -68,7 +68,7 @@ ms.locfileid: "48211007"
  [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)   
  [角色分配](role-assignments.md)   
  [角色定义](role-definitions.md)   
- [预定义的角色](role-definitions-predefined-roles.md)   
+ [预定义角色](role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

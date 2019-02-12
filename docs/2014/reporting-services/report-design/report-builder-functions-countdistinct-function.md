@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bd681b0616aa175c68104da48577ad5dc19f1897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191216"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021528"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  
@@ -33,13 +33,13 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`) 对其执行聚合的表达式。  
+ (`Variant`) 要对其执行聚合的表达式。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
  *递归*  
- (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  
+ (**Enumerated Type**) 可选。 `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return-type"></a>返回类型  
  返回`Integer`。  
@@ -73,9 +73,9 @@ CountDistinct(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

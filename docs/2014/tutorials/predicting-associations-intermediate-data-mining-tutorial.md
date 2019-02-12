@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544271"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022358"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>预测关联（数据挖掘中级教程）
   在处理模型后，您可以使用模型中存储的关联的相关信息来创建预测。 在本课程的最后一个任务中，您将了解如何针对所创建的关联模型生成预测查询。 本课程假定您已经熟悉了如何使用预测查询生成器，同时希望了解如何生成针对关联模型的预测查询。 有关详细信息如何使用预测查询生成器，请参阅[数据挖掘查询接口](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  

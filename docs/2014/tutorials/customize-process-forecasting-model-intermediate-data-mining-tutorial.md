@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224469"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031678"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>自定义和处理预测模型（数据挖掘中级教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法提供了多个参数，这些参数影响模型创建方式和时间数据分析方式。 更改这些属性可以极大地影响挖掘模型进行预测的方式。  
@@ -25,7 +24,7 @@ ms.locfileid: "48224469"
   
 1.  将自定义您的模型处理时间段，通过添加新的值的方式*PERIODICITY_HINT*参数。  
   
-2.  您将了解 Microsoft 时序算法的两个其他重要参数：FORECAST_METHOD 和 PREDICTION_SMOOTHING，前者用于控制预测使用的方法，后者则用于自定义长期预测和短期预测的组合。  
+2.  你将了解 Microsoft 时序算法的两个其他重要参数：FORECAST_METHOD，允许你控制用于预测的方法和 PREDICTION_SMOOTHING，前者允许您自定义长期和短期预测的 blend。  
   
 3.  您还可以告知算法要如何处理缺失值（可选）。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224469"
 ## <a name="handling-missing-data-optional"></a>处理缺少的数据（可选）  
  在许多情况下，您的销售数据可能具有用 null 填充的空白，或者某个商店在报告期限之前没有完成报表，在序列末尾留有空白单元。 在这种情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会引发以下错误，将不处理模型。  
   
- "错误 （数据挖掘）： 时间戳就未同步系列开头\<序列名称 >，挖掘模型的\<模型名称 >。 所有时序必须以相同的时间标记结束，并且不能有随意缺失的数据点。 如果将 MISSING_VALUE_SUBSTITUTION 参数设置为 Previous 或一个数值常量，那么，只要有可能，就将自动修补缺失的数据点。”  
+ "错误 （数据挖掘）：时间戳就未同步系列开头\<序列名称 >，挖掘模型的\<模型名称 >。 所有时序必须以相同的时间标记结束，并且不能有随意缺失的数据点。 如果将 MISSING_VALUE_SUBSTITUTION 参数设置为 Previous 或一个数值常量，那么，只要有可能，就将自动修补缺失的数据点。”  
   
  为了避免出现此错误，可以指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 通过使用以下方法之一自动提供新值以填充空白：  
   
@@ -107,6 +106,6 @@ ms.locfileid: "48224469"
 ## <a name="see-also"></a>请参阅  
  [Microsoft 时序算法技术参考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft 时序算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

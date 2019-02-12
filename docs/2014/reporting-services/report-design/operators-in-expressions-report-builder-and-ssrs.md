@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 79ad4c19b0f6b3dff91def701611b0a20d66a34d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015998"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  
@@ -48,7 +48,7 @@ ms.locfileid: "48049807"
 |>=|大于等于。|  
 |=|等于。|  
 |<>|不等于。|  
-|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 以下列出了一个字符可用作通配符：<br /><br /> **%**： 零个或多个字符任意字符串。<br /><br /> **_**： 任何单个字符。<br /><br /> **[]**： 任何单个字符指定范围内的 (例如，[a-f]) 或集合 （例如 [aeiou]）。<br /><br /> **[^]**： 任何单个字符不在指定范围内的 (例如，[^ a-f]) 或设置 (例如，[^ aeiou])。|  
+|Like|确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。<br /><br /> 以下列出了一个字符可用作通配符：<br /><br /> **%**:包含零个或多个字符的任意字符串。<br /><br /> **_**:任何单个字符。<br /><br /> **[ ]**:指定范围（例如 [a-f]）或集合（例如 [aeiou]）内的任何单个字符。<br /><br /> **[^]**:不在指定范围（例如 [^a - f]）或集合（例如 [^aeiou]）内的任何单个字符。|  
 |Is|比较两个对象引用。|  
   
 ### <a name="string-concatenation"></a>字符串串联  
@@ -80,7 +80,7 @@ ms.locfileid: "48049807"
 |>>|对位模式执行算术右移位运算。|  
   
 ## <a name="see-also"></a>请参阅  
- [表达式对话框](../expression-dialog-box.md)   
+ [“表达式”对话框](../expression-dialog-box.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](data-types-in-expressions-report-builder-and-ssrs.md)   

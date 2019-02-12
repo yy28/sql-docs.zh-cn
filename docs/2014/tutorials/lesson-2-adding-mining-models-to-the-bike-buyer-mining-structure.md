@@ -1,25 +1,24 @@
 ---
-title: 第 2 课： 向自行车购买者挖掘结构添加挖掘模型 |Microsoft Docs
+title: 第 2 课：向自行车购买者挖掘结构添加挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025218"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 课：向自行车购买者挖掘结构添加挖掘模型
-  在本课中，将两个挖掘模型添加到你创建的自行车购买者挖掘结构[第 1 课： 创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  
+  在本课中，将两个挖掘模型添加到你创建的自行车购买者挖掘结构[第 1 课：创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  
   
  若要了解如何潜在客户可以按其特征分类，您将创建基于的挖掘模型[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)。 在下一课中，您将研究该算法如何查找具有类似特征的客户群。 例如，您可能发现某些客户住得比较近，骑自行车上下班，并且具有类似的教育背景。 可以使用这些客户群更好地了解不同客户之间的关系，并使用此信息创建面向特定客户的营销策略。  
   

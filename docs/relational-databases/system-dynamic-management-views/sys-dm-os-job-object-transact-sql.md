@@ -2,10 +2,8 @@
 title: sys.dm_os_job_object （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6517ba1223f90aa95f475e050553e02af26f0dcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022198"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "47780415"
 |peak_process_memory_used_mb|**bigint**|创建作业对象后，已使用的内存，单位为 MB，一个作业对象，如 SQL Server 中处理的最大资源量。| 
 |peak_job_memory_used_mb|**bigint**|已创建的内存，单位为 MB，因为作业对象累积使用作业对象中的所有进程的最大资源量。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 在 SQL 数据库托管实例，都需要`VIEW SERVER STATE`权限。 在 SQL 数据库上需要`VIEW DATABASE STATE`数据库中的权限。  
  
 ## <a name="see-also"></a>请参阅  

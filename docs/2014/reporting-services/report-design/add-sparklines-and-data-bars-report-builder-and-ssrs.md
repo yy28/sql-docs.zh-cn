@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7be0c23c4cf93e3d0f6f51bd9f83e4de16374af1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e84eef3df9122987ffb5d4e9125d2ae5397f15b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032038"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>添加迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是小的备用图，它包含一些额外细节，可以传递很多信息。 有关它们的详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
@@ -51,6 +51,6 @@ ms.locfileid: "48196487"
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [表或矩阵中的图表中对齐数据&#40;报表生成器和 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

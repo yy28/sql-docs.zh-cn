@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f0c52d22f9592d149f25f6ae8a6de2813dfcba1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043288"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装或从命令行安装。 在安装向导中，您可以选择：1) 安装文件并使用默认设置配置服务器；或 2) 仅安装文件，不通过安装向导配置服务器。  本主题讨论“本机模式默认配置”，其中，安装程序安装并配置报表服务器实例。 安装程序结束后，报表服务器便进入运行状态，可供使用。 本机模式报表服务器作为一个独立的应用程序服务器运行。 本机模式是默认服务器模式。  

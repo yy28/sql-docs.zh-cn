@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5af1b9ad92c91e2c97cc8b237e04729f4209324
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020448"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的方差。  

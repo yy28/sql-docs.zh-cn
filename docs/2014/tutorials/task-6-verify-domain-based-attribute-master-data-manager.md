@@ -1,24 +1,21 @@
 ---
-title: 任务 6： 验证是否已创建基于域的属性，使用主数据管理器 |Microsoft Docs
+title: 任务 6：验证是否已创建基于域的属性，使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207107"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037728"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>任务 6：验证通过使用主数据管理器创建了基于域的属性
   在本任务中，将使用“主数据管理器”验证在 **MDS** 中创建了 **State** 实体并且 **Supplier** 实体的 **State** 属性是依赖 **State** 实体的基于域的属性。  
@@ -29,7 +26,7 @@ ms.locfileid: "48207107"
   
 3.  确保选择了 **Suppliers** 模型，然后单击“资源管理器”。 如果已打开“资源管理器”，则可以刷新该页。  
   
-4.  将鼠标悬浮在菜单栏的“实体”上，请注意现在有两个实体：**Supplier** 和 **State**。  
+4.  将鼠标悬停**实体**在菜单栏上，请注意现在有两个实体：**供应商**并**状态**。  
   
      ![实体菜单中使用的状态和供应商](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "实体使用的状态和供应商的菜单")  
   
@@ -82,6 +79,6 @@ ms.locfileid: "48207107"
      ![状态具有更新的代码和名称属性](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "状态具有更新的代码和名称属性")  
   
 ## <a name="next-step"></a>下一步  
- [任务 7：在 Excel 中查看使用主数据管理器所做的更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [任务 7:查看在 Excel 中使用主数据管理器进行更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

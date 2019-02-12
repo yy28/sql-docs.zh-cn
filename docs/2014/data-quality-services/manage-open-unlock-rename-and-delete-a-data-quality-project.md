@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53d89072b28527a21c71373b905455426d4c664c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535436"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020319"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理（打开、解锁、重命名和删除）数据质量项目
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理数据质量项目，如打开、解锁、重命名和删除数据质量项目。  

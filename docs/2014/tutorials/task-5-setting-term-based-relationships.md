@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034448"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>任务 5：设置基于字词的关系
   在本任务中，定义为值的几个基于字词的关系**Supplier Name**域。 基于字词的关系，可对域中值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如， **Inc.** 可以更正为**Incorporated**。 DQS 在知识发现、清理或匹配过程中使用这些关系。 请参阅[创建基于字词的关系](https://msdn.microsoft.com/library/hh510404.aspx)的更多详细信息。  

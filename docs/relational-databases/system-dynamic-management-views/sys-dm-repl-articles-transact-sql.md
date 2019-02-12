@@ -3,7 +3,6 @@ title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791066"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031828"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47791066"
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用于部分更新的命令或存储过程。|  
 |**cmdTypePartialUpd**|**int**|用于部分更新存储过程的调用语法，可以为以下值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|垂直筛选项目的分区中的列数。|  
-|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 删除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 无<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分 UPDATE|  
+|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = DELETE<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 无<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|基于项目中所包含列的 INSERT 命令模板。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令模板，可以包括项目中包含的主键或列，具体取决于所使用的调用语法。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令模板，可以包括主键、更新列或完整的列列表，具体取决于所使用的调用语法。|  
@@ -66,7 +65,7 @@ ms.locfileid: "47791066"
 |**fPubAllowUpdate**|**tinyint**|指示发布是否允许更新订阅。|  
 |**intPublicationOptions**|**bigint**|指定其他发布选项的位图，其中位选项值包括：<br /><br /> **0x1** -对等复制启用。<br /><br /> **0x2** -仅发布本地更改。<br /><br /> **0x4** -为非 SQL Server 订阅服务器启用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对发布数据库的 VIEW DATABASE STATE 权限，调用**dm_repl_articles**。  
   
 ## <a name="remarks"></a>备注  
