@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027098"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在数据警报管理器中管理我的数据警报
   SharePoint 用户可以查看他们所创建的数据警报列表以及与这些警报有关的信息。 用户还可以删除其警报，打开警报定义以便在数据警报设计器中进行编辑，以及运行其警报。 下图显示数据警报管理器中可用于用户的功能。  
@@ -47,7 +47,7 @@ ms.locfileid: "48188657"
   
 -   右键单击要编辑其警报定义的数据警报，然后单击“编辑”。  
   
-     该警报定义将在数据警报设计器中打开。 有关详细信息，请参阅[编辑数据警报在警报设计器中](edit-a-data-alert-in-alert-designer.md)并[数据警报设计器](../../2014/reporting-services/data-alert-designer.md)。  
+     该警报定义将在数据警报设计器中打开。 有关详细信息，请参阅 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md) 和 [数据警报设计器](../../2014/reporting-services/data-alert-designer.md)。  
   
     > [!NOTE]  
     >  只有创建了数据警报定义的用户才能对其进行编辑。  
@@ -68,7 +68,7 @@ ms.locfileid: "48188657"
      创建警报实例，并立即发送数据警报消息，而不考虑数据警报设计器中指定的计划选项。 例如，配置为每周发送的警报，并且仅当结果更改时才发送。  
   
 ## <a name="see-also"></a>请参阅  
- [管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

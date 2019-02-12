@@ -1,5 +1,5 @@
 ---
-title: 教程：向报表添加 KPI（报表生成器）| Microsoft Docs
+title: 教程：将 KPI 添加到您的报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056518"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037658"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：将 KPI 添加到您的报表 （报表生成器）
   关键绩效指标 (KPI) 是对业务具有重大意义的可测量值。 本教程教您如何在报表中包含一个 KPI。 在本教程中，按产品子类别进行的销售汇总为 KPI。 可以使用颜色、仪表和指示器来显示 KPI 的当前状态。  
   
  下图显示了将创建的报表。  
@@ -45,7 +45,7 @@ ms.locfileid: "48056518"
 7.  [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器的分步说明，选择数据源、 创建数据集，并运行该向导，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  本教程的预计学时：15 分钟。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48056518"
   
 5.  单击“下一步” 。  
   
-6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056518"
   
 12. 单击 **“完成”**。  
   
-     表将添加到设计图面中。 此表有五个列和五个行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
+     表将添加到设计图面中。 此表有五个列和五个行。 行组窗格显示了三个行组：SalesDate、 Subcategory、 和的详细信息。 详细信息数据是由数据集查询检索的所有数据。  
   
 13. 单击 **“运行”** 以预览报表。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48056518"
   
 1.  在表中，右键单击两个单元格下从`[Sum(Sales)]`单元格 （小计行中显示子类别的销售额），并单击**文本框属性**。  
   
-2.  在中**填充**，单击**fx**按钮旁边**填充颜色**选项并输入以下表达式**设置表达式： BackgroundColor**字段：  
+2.  在中**填充**，单击**fx**按钮旁边**填充颜色**选项并输入以下表达式**设置表达式：BackgroundColor**字段：  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -312,7 +312,7 @@ ms.locfileid: "48056518"
   
 4.  在“名称”中，用 Product Sales KPI 替换默认名称。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
  报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -327,7 +327,7 @@ ms.locfileid: "48056518"
   
 1.  在“名称”中，用 Product Sales KPI 替换默认名称。  
   
-2.  单击 **“保存”**。  
+2.  单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已成功完成“向报表添加 KPI”教程的学习。 有关详细信息，请参阅仪表 （报表生成器）[指标&#40;报表生成器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)。  

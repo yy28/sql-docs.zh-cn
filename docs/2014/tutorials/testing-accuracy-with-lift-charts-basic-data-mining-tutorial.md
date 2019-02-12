@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412204"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033918"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>测试提升图的准确性（数据挖掘基础教程）
   上**挖掘准确性图表**选项卡上的数据挖掘设计器中，可以计算以及每个模型进行预测，并直接对其他模型的结果的每个模型的结果进行比较。 这种比较方法称为*提升图*。 通常，用提升图或分类准确性对挖掘模型的预测准确性进行度量。 在本教程中，我们将只使用提升图。  

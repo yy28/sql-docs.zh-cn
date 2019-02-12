@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f8c3926da14f0b00c0b62b8dd8597867186d0bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51bb27870d2455e9d7c79cd15a4a26ed790cde56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027558"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>为 GetProperties 方法设置项命名空间
   可以根据两个不同的项标识符在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 <xref:ReportService2010.ItemNamespaceHeader> SOAP 标头：项的完整路径或项的 ID。  

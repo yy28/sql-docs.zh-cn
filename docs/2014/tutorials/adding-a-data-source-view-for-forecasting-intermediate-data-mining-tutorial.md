@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162577"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034798"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>为 Forecasting 添加数据源视图（数据挖掘中级教程）
   在本任务中，添加将用于预测方案的数据源视图。 预测模型要求数据包含一个可用于标识时序中的步长的列。 如果计划分析多个数据序列，则所有序列的结束日期或时间步长必须相同。  

@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7277e8a0b50fb8e67a6601218190241c11efbd74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ea4000b6d02965d7e050704889e9cf449db9f684
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036469"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）
   迷你图和数据条是小的简单图表，它们包含一些额外细节，可以传递很多信息。 选中此选项时，迷你图和数据条中的值将在表或矩阵的不同单元中对齐，即使缺少它们所基于的数据的值。  
   
  ![rs_SparklineAlignData](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
- 在此图像中，柱形图显示每个雇员每天的销售额。 请注意，对于雇员没有销售额数据的那些天，该图留空并水平对齐后面的天。 它还通过使不同大小的图表彼此相对，垂直对齐图表。 有关详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+ 在此图像中，柱形图显示每个雇员每天的销售额。 请注意，对于雇员没有销售额数据的那些天，该图留空并水平对齐后面的天。 它还通过使不同大小的图表彼此相对，垂直对齐图表。 有关详细信息，请参阅 [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,6 +38,6 @@ ms.locfileid: "48102407"
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [添加迷你图和数据条&#40;报表生成器和 SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [添加迷你图和数据条（报表生成器和 SSRS）](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

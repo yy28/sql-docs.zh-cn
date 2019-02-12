@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9da8e25466da90ad4d76ae787695eec66b2f4f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b84ac73991124ea9f90c5fe60c11e2b93154dc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034678"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 查询设计器用户界面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源生成数据挖掘表达式 (DMX) 查询和多维表达式 (MDX) 查询。 该主题介绍了 DMX 查询设计器。 有关 MDX 查询设计器的详细信息，请参阅[Analysis Services MDX 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源生成数据挖掘表达式 (DMX) 查询和多维表达式 (MDX) 查询。 该主题介绍了 DMX 查询设计器。 有关 MDX 查询设计器的详细信息，请参阅 [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)。  
   
- DMX 图形查询设计器有三种模式：设计、查询和结果。 若要切换模式，用右键单击“查询设计”窗格，并选择模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动选定的多维数据集的成员，以创建可在处理报表时为数据集检索数据的 DMX 查询。  
+ DMX 图形查询设计器有三种模式：设计、 查询和结果。 若要切换模式，用右键单击“查询设计”窗格，并选择模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动选定的多维数据集的成员，以创建可在处理报表时为数据集检索数据的 DMX 查询。  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>图形 DMX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 DMX 查询的按钮。 下表介绍了这些按钮及其功能。  
@@ -85,12 +85,12 @@ ms.locfileid: "48136653"
  若要切换回设计模式或查询模式，请右键单击“结果”窗格并选择“设计”或“查询”。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services MDX 查询设计器中定义参数&#40;报表生成器和 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [针对 DMX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)   
  [从数据挖掘模型检索数据 (DMX) (SSRS)](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [RSReportDesigner 配置文件](../report-server/rsreportdesigner-configuration-file.md)   
- [针对 MDX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [针对 DMX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [针对 MDX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [针对 DMX 的 Analysis Services 连接类型 (SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7a04426a5be60f596e941dd9e3da38183a545418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365164"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036428"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>使用浏览器查找和查看报表（报表生成器和 SSRS）
   通过与报表服务器直接连接，您可以使用支持的任何 Web 浏览器查看报表。 每个报表在报表服务器上都有一个 URL 地址。 无需使用 Web 应用程序，输入报表的 Web 地址即可在浏览器窗口中打开相应报表。 相应的报表会以 HTML 格式打开，并且包含报表工具栏，这样在此报表中您就可以在各页间导航或按数据值进行搜索。 您可以在 URL 中设置参数以隐藏报表工具栏或选择报表的输出格式。  

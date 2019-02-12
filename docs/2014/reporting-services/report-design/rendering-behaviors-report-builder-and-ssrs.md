@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079157"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017138"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
   根据选择的呈现器，呈现报表时，将针对表体及其内容应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  
@@ -129,8 +129,8 @@ ms.locfileid: "48079157"
 -   对表或矩阵单元中的项定义的逻辑分页符将不保留。 此逻辑分页符将不应用于列表中的项。  
   
 ## <a name="see-also"></a>请参阅  
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [以 HTML 格式呈现（报表生成器和 SSRS）](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [页面布局和呈现&#40;报表生成器和 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [页面布局和呈现方式（报表生成器和 SSRS）](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

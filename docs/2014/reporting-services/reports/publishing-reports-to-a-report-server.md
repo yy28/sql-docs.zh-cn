@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182567"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021573"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
   设计和测试报表或一组报表，可以使用中的内置部署功能后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将报表发布到报表服务器。 您可以发布单个报表或报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  
@@ -41,7 +41,7 @@ ms.locfileid: "48182567"
 ## <a name="project-configurations"></a>项目配置  
  报表将在发布之前生成，以确保只将有效的报表定义发布到报表服务器。 项目配置包括用于生成报表的属性（如临时存储所生成的报表的文件夹）以及如何处理生成问题。 配置还具有用于指定报表服务器的位置和版本以及报表服务器上的文件夹的属性。  
   
- 默认情况下，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三种配置： DebugLocal、 Debug 和 Release。 默认配置为 DebugLocal。 通常，使用 DebugLocal 配置可以在本地预览窗口中查看报表，使用 Debug 配置可以将报表发布到测试服务器，使用 Release 配置可以将报表发布到生产服务器。 标准工具栏上的解决方案配置下拉列表中显示了活动的配置。 若要使用其他配置，请从列表中进行选择。  
+ 默认情况下，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三种配置：DebugLocal、 Debug 和 Release。 默认配置为 DebugLocal。 通常，使用 DebugLocal 配置可以在本地预览窗口中查看报表，使用 Debug 配置可以将报表发布到测试服务器，使用 Release 配置可以将报表发布到生产服务器。 标准工具栏上的解决方案配置下拉列表中显示了活动的配置。 若要使用其他配置，请从列表中进行选择。  
   
  报告环境中可能安装了多个报表服务器和不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以创建多个配置，然后根据部署方案选择不同的配置。 有关详细信息，请参阅[部署和版本支持 SQL Server Data Tools 中&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)并[设置部署属性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48182567"
   
 ## <a name="see-also"></a>请参阅  
  [“项目属性页”对话框](../tools/project-property-pages-dialog-box.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [升级报表](../install-windows/upgrade-reports.md)  
   
   

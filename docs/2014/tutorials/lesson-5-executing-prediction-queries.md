@@ -1,25 +1,24 @@
 ---
-title: 第 5 课： 执行预测查询 |Microsoft Docs
+title: 第 5 课：执行预测查询 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038408"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 课：执行预测查询
-  在本课程中，您将使用[SELECT FROM\<模型 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 语句以创建两个不同类型的预测基于决策树模型中创建[第 2 课： 向关联挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 这些预测类型定义如下。  
+  在本课程中，您将使用[SELECT FROM\<模型 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 语句以创建两个不同类型的预测基于决策树模型中创建[第 2 课：向关联挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 这些预测类型定义如下。  
   
  单独查询  
  使用单独查询可以在进行预测时提供即席值。 例如，您可以通过将输入（如客户的上下班路程、区号或子女数）传递给查询来确定一个客户是否会购买自行车。 单独查询可基于这些输入，返回指示客户购买自行车的可能性大小的值。  

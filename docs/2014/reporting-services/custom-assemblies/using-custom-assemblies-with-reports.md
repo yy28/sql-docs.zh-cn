@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf4880c3f979bbafaa1591fb21d29501c581deb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031348"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>将自定义程序集用于报表
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，您可以为报表项值、样式和格式设置编写自定义代码。 例如，您可以使用自定义代码基于区域性设置货币的格式，使用特殊格式设置标记某些值，或者为您的公司应用其他实行中的业务规则。 在报表中包括此代码的方法之一就是使用可以从报表定义文件内引用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建自定义代码程序集。 报表运行时，服务器将调用自定义程序集中的函数。 自定义程序集可用于检索您计划在报表中使用的指定函数。  
@@ -45,7 +45,7 @@ ms.locfileid: "48219437"
  [初始化自定义程序集对象](initializing-custom-assembly-objects.md)  
  介绍如何初始化从报表调用的自定义程序集对象的值。  
   
- [如何调试自定义程序集](how-to-debug-custom-assemblies.md)  
+ [如何：调试自定义程序集](how-to-debug-custom-assemblies.md)  
  介绍如何调试您的自定义程序集代码。  
   
 ## <a name="see-also"></a>请参阅  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150197"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018109"
 ---
 # <a name="item-level-tasks"></a>项级任务
-  项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
+  项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](tasks-and-permissions.md)。  
   
 > [!NOTE]  
 >  如果要通过编程的方式使用这些任务，则必须使用支持项级任务的方法。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
@@ -31,7 +31,7 @@ ms.locfileid: "48150197"
   
  共享数据集使用与报表相同的权限集。 报表部件使用与资源相同的权限集。  
   
-|任务|应用到的项|Permissions|  
+|任务|应用到的项|权限|  
 |----------|---------------------|-----------------|  
 |使用报表|报表|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
 |使用报表|共享数据集|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
@@ -56,7 +56,7 @@ ms.locfileid: "48150197"
 |查看模型|报表模型|读取属性<br /><br /> 读取内容<br /><br /> 读取数据源|  
 |查看报表|报表|读取内容<br /><br /> 读取属性|  
 |查看报表|共享数据集|读取内容<br /><br /> 读取属性|  
-|查看资源|Resources|读取内容<br /><br /> 读取属性|  
+|查看资源|资源|读取内容<br /><br /> 读取属性|  
 |查看资源|报表部件|读取内容<br /><br /> 读取属性|  
   
 ## <a name="see-also"></a>请参阅  

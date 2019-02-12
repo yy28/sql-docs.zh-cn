@@ -13,14 +13,14 @@ helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: af04c7697d685fe36c34b09060302756f6f51214
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 34248f660d31d6993ce21a0bcced0e0857b685cb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029128"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 查询设计器用户界面（报表生成器）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 SAP NetWeaver® Business Intelligence 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。  
@@ -54,7 +54,7 @@ ms.locfileid: "48127409"
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
 |![刷新数据集字段](media/rsqdicon-refreshfields.gif "Refresh dataset fields")|刷新数据源的元数据。|  
-|![添加计算的成员](../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员")|显示 **“计算成员生成器”** 对话框。|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。|  
 |![切换显示空单元格](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
 |![删除](../analysis-services/media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
@@ -91,13 +91,13 @@ ms.locfileid: "48127409"
   
 -   **编辑为文本**  
   
--   **添加计算成员**(![添加计算的成员](../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员"))  
+-   **添加计算成员** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **显示空单元格**（![切换显示空单元格](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   
 -   **自动执行**（![自动执行查询](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）  
   
--   **删除**(![删除](../analysis-services/media/rsqdicon-delete.gif "删除"))  
+-   **删除** (![删除](../analysis-services/media/rsqdicon-delete.gif "删除"))  
   
 ## <a name="see-also"></a>请参阅  
  [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)  

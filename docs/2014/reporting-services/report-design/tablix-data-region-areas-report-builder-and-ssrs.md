@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210937"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021378"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
   Tablix 数据区域具有四个包含 Tablix 单元的区域：角部区、行组区、列组区和正文区。 每个区域中的单元都具有不同功能。 向 Tablix 正文区添加单元可以显示详细信息数据和分组数据。 创建组时，报表生成器和报表设计器向行组区或列组区添加单元，以便显示组实例值。 存在行组和列组时，报表生成器和报表设计器将创建 Tablix 角单元。  
@@ -26,7 +26,7 @@ ms.locfileid: "48210937"
   
  在设计图面上，用点线表示选定 Tablix 数据区域中的上述四个区域。 下图显示了 Tablix 区域的相应区域，该 Tablix 区域具有基于 Category 和 Subcategory 的嵌套行组、基于 Geography 和 Country/Region 的嵌套列组，以及基于 Year 的相邻列组。  
   
- ![Tablix 数据区域](../media/rs-tablixareas.gif "Tablix 数据区域")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  下表对各区域进行了说明：  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48210937"
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

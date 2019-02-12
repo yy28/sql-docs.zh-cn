@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 21cf0a14492c31c33d7923ea34c7cb00fa69bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162357"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011888"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>添加或删除页眉或页脚（报表生成器和 SSRS）
   您可以向页眉或页脚添加静态文本、图像、线条、矩形和边框。 如果您希望在页眉或页脚中添加变量或计算数据，还可以在文本框中包含表达式和数据绑定图像。  
@@ -48,7 +48,7 @@ ms.locfileid: "48162357"
   
     -   **矩形**  
   
-    -   **图像**  
+    -   **Image**  
   
 3.  右键单击页眉，然后单击“页眉属性”添加边框、背景图像或颜色，或调整页眉宽度。 再单击 **“确定”**。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162357"
 >  一旦删除，报表中将不再包含页眉或页脚。 如果随后再次添加页眉或页脚，您之前添加到页眉或页脚中的任何项都将不再显示。  
   
 ## <a name="see-also"></a>请参阅  
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

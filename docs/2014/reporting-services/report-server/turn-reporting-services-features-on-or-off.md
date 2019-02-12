@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2379a62a39453dcde75b39386ab6701a9fba101a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107217"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031088"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果您只需要交互式的按需报表，则可以只运行报表服务器 Web 服务。  
@@ -42,7 +42,7 @@ ms.locfileid: "48107217"
   
 1.  在文本编辑器中打开 `RsReportServer.config` 文件。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-2.  若要打开报表服务器 Web 服务，设置`IsWebServiceEnabled`到`true`:  
+2.  若要打开报表服务器 Web 服务，请将 `IsWebServiceEnabled` 设置为 `true`：  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -124,13 +124,13 @@ ms.locfileid: "48107217"
   
 1.  在文本编辑器中打开 RsReportServer.config 文件。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-2.  若要打开报表管理器，设置`IsReportManagerEnabled`到`true`:  
+2.  若要打开报表管理器，请将 `IsReportManagerEnabled` 设置为 `true`：  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  若要关闭报表管理器，设置`IsReportManagerEnabled`到`false`:  
+3.  若要关闭报表管理器，请将 `IsReportManagerEnabled` 设置为 `false`：  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  

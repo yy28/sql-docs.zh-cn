@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1ba908e9db3764ccfc0bd35f8dbb901245519e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017258"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点上授予对报表服务器项的权限
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 提供了内置安全功能。使用这些功能，你可以授予对从 SharePoint 站点和库访问的报表服务器项的访问权限。 如果已为用户分配权限，则在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 和报表服务器之间配置集成设置后，这些用户就会立即拥有访问报表服务器项和操作的权限。 您可以使用现有权限上载报表定义和其他文档、查看报表、创建订阅以及管理项。  
@@ -30,7 +30,7 @@ ms.locfileid: "48087009"
   
 1.  在 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]的产品文档中，阅读有关标准 SharePoint 组的默认安全设置的内容，以了解如何管理权限和用户访问。  
   
-2.  查看专门影响报表服务器项和操作访问的权限列表。 有关详细信息，请参阅[将为报表服务器项的 Windows SharePoint Services 中的内置安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。  
+2.  查看专门影响报表服务器项和操作访问的权限列表。 有关详细信息，请参阅 [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。  
   
 3.  将用户帐户和组帐户分配到预定义的 SharePoint 组。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48087009"
   
  SharePoint 组拥有的权限级别可提供对许多报表服务器操作的快速访问。 如果您发现内置安全设置未提供所需访问级别，可创建自定义组或权限级别。  
   
- 报表服务器操作支持的默认安全功能的详细信息，请参阅[将为报表服务器项的 Windows SharePoint Services 中的内置安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。  
+ 有关默认安全功能支持的报表服务器操作的详细信息，请参阅 [将 Windows SharePoint Services 中的内置安全性用于报表服务器项](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。  
   
  若要使用内置安全功能，您必须将 Windows 用户帐户或组帐户分配到 SharePoint 组。 除服务器管理员和门户网站所有者外（他们在安装软件时自动获得对 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 的访问权限），所有其他用户都必须获得授权才能访问服务器。  
   
@@ -88,11 +88,11 @@ ms.locfileid: "48087009"
  [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  简要介绍了 SharePoint 组与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中的预定义角色定义之间的比较。  
   
- [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  提供有关创建有权启动报表生成器和设置模型项安全性的新 SharePoint 组的说明。 此主题还包含有关为任意报表服务器项或操作设置自定义权限的通用原则。  
   
 ## <a name="see-also"></a>请参阅  
- [SharePoint 站点上为报表服务器项设置权限&#40;Reporting Services SharePoint 集成模式下&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services 安全性和保护](reporting-services-security-and-protection.md)  
   
   

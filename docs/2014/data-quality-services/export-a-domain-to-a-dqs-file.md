@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02c3cd85e38a9bc2394c9c4cf40c34b9660b78ee
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031101"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023638"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域导出到 .dqs 文件。 您可以将域或整个知识库导出到数据文件。 有关导出知识库的信息，请参阅[将知识库导出到 .dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "51031101"
   
 6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定” 。  
   
-##  <a name="FollowUp"></a> 跟进：将域导出到 .dqs 文件后  
+##  <a name="FollowUp"></a> 跟进：之后将域导出到.dqs 文件  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  
   
   

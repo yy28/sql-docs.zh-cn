@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0704648805ce9538e16ec504a8c3508b71f1c6ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e1f048a91f8e20255050772f1503e6dfa387954b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017348"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>将报表导出为其他文件类型（报表生成器和 SSRS）
-  在报表生成器或报表设计器中预览报表时，可以将报表呈现为其他文件格式，如 CSV、图像、PDF、[!INCLUDE[ofprword](../includes/ofprword-md.md)] 或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]；也可以在查看报表服务器上的报表时呈现报表。 如果希望立即将报表另存为其他文件类型而不将报表发布到报表服务器，或者希望查看报表设计在以特定格式传递给报表读者时的显示效果，则以特定格式呈现报表将非常有用。 在设置订阅或通过电子邮件传递报表时，或者希望保存报表服务器上可用的报表时，呈现报表服务器上的报表将非常有用。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
+  在报表生成器或报表设计器中预览报表时，可以将报表呈现为其他文件格式，如 CSV、图像、PDF、 [!INCLUDE[ofprword](../includes/ofprword-md.md)]或 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]；也可以在查看报表服务器上的报表时呈现报表。 如果希望立即将报表另存为其他文件类型而不将报表发布到报表服务器，或者希望查看报表设计在以特定格式传递给报表读者时的显示效果，则以特定格式呈现报表将非常有用。 在设置订阅或通过电子邮件传递报表时，或者希望保存报表服务器上可用的报表时，呈现报表服务器上的报表将非常有用。 有关详细信息，请参阅[订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

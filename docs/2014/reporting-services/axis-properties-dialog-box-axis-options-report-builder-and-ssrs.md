@@ -12,17 +12,17 @@ f1_keywords:
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030643"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）
-  选择**轴选项**上**水平**或**垂直轴属性**对话框可以定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
+  选择**轴选项**上**水平**或**垂直轴属性**对话框可以定义图表指定轴的外观。 在以前版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，默认情况下，图表会在 X 轴上显示所有标签。 但在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 中，图表会跳过一些标签，以使生成的图表更加整洁，并避免标签冲突。 有关详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
  **启用刻度分隔线**  
@@ -51,7 +51,7 @@ ms.locfileid: "48144177"
  **最大值**  
  键入一个表示 X 轴最大值的表达式或值。 如果省略此参数，最大值将由数据集返回的数据决定。  
   
- **时间间隔**  
+ **Interval**  
  键入表示轴标签之间间隔的表达式或值。 例如，键入 1 将在轴上显示每个类别标签。 键入 2 将每隔一个类别标签显示一次。 如果省略，则将基于数据集中的值自动计算标签。  
   
  **间隔类型**  
@@ -68,6 +68,6 @@ ms.locfileid: "48144177"
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [辅助轴上绘制数据&#40;报表生成器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [迷你图和数据条（报表生成器和 SSRS）](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [添加或删除边距在图表中&#40;报表生成器和 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [在图表中添加或删除边距（报表生成器和 SSRS）](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

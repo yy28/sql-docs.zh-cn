@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157927"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026528"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -76,7 +76,7 @@ ms.locfileid: "48157927"
  报表定义可以包括存储为外部文件的图像文件。 可通过设置图像文件的完全限定 URL 来引用报表定义中的该文件。 该文件可以存储在 SharePoint 站点上，也可以存储在远程计算机上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 表示 SharePoint 网站上的图像，则在报表生成器中预览报表时将显示图像无效图标。 当将报表上载到 SharePoint 站点中，并将报表呈现在连接模式下时，图像无效的图标将显示如果仅有`View Items`权限。  
+>  如果外部 URL 表示 SharePoint 网站上的图像，则在报表生成器中预览报表时将显示图像无效图标。 将报表上载到 SharePoint 站点并以连接模式呈现报表时，如果只有`View Items`权限，则将显示该图像无效图标。  
   
  无论采用何种报表服务器模式，在报表中对外部图像文件的引用必须为完全限定的 URL。 此外，引用外部图像文件通常会需要配置无人参与的报表处理帐户。  
   

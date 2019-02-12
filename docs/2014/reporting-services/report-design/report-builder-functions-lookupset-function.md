@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166397"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029538"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称的一组匹配值。  
@@ -33,24 +33,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如 `=Fields!ID.Value` 。  
+ (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ID.Value`。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如 `=Fields!CustomerID.Value` 。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!CustomerID.Value`。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如 `=Fields!PhoneNumber.Value` 。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如，`=Fields!PhoneNumber.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“ContactInformation”。  
   
 ## <a name="return"></a>返回  
- 返回`VariantArray`，或`Nothing`如果没有匹配项。  
+ 返回 `VariantArray`，如果没有匹配项，则返回 `Nothing`。  
   
 ## <a name="remarks"></a>备注  
- 使用`LookupSet`从名称/值对的指定数据集中检索一组值的 1 对多关系。 例如，对于在表中的客户标识符，可以使用`LookupSet`该客户的未绑定到数据区域的数据集检索所有相关的电话号码。  
+ 使用 `LookupSet` 从名称/值对（每对具有 1 对多的关系）的指定数据集中检索一组值。 例如，对于表中的客户标识符，可以使用 `LookupSet` 从未绑定到该数据区域的数据集检索该客户的所有相关电话号码。  
   
- `LookupSet` 执行以下操作：  
+ `LookupSet` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果。  
   
@@ -72,7 +72,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   `LookupSet` 不能用作表达式的以下报表项：  
+-   `LookupSet` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>示例  
- 因为`LookupSet`返回集合的对象，不能直接在文本框中显示结果表达式。 可以将集合中每个对象的值连接为一个字符串。  
+ 由于 `LookupSet` 返回对象的集合，因此不能直接在文本框中显示结果表达式。 可以将集合中每个对象的值连接为一个字符串。  
   
- 使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函数`Join`从一组对象创建带分隔符的字符串。 使用逗号作为分隔符来合并一行中的对象。 在某些呈现器中，你可能使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 换行 (`vbCrLF`) 作为分隔符以在新行列出每个值。  
+ 使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数 `Join` 可以创建来自一组对象的带分隔符的字符串。 使用逗号作为分隔符来合并一行中的对象。 在某些呈现器中，你可能使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 换行 (`vbCrLF`) 作为分隔符以在新行列出每个值。  
   
  下面的表达式，它用作的文本框中，Value 属性时使用`Join`创建列表。  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

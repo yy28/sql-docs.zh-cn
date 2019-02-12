@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036868"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
   本主题介绍 **(DQS) 中** “域管理” [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 页的域列表中的控件。 使用此窗格可以选择要对其执行管理操作的域。 将对 **“域管理”** 页中的所有选项卡式页使用此同一窗格。  

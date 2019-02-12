@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224440"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024708"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以通过指定 IP 地址、端口和虚拟目录的 URL 访问报表服务器应用程序和已发布的报表。 如果 Windows 防火墙已开启，配置为报表服务器使用的端口很可能已关闭。 表明端口可能已关闭的迹象包括请求报表后出现空白网页，或尝试从远程客户端计算机打开报表管理器时出现空白页。  
@@ -30,8 +30,8 @@ ms.locfileid: "48224440"
   
  如果要访问外部计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库，或者如果报表服务器数据库在外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，则必须在外部计算机上打开端口 1433 和 1434。 有关详细信息，请参阅 [联机丛书中的](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 为数据库引擎访问配置 Windows 防火墙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关默认 Windows 防火墙设置的详细信息，以及有关影响 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的 TCP 端口的说明，请参阅 [联机丛书中的](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) 配置 Windows 防火墙以允许 SQL Server 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="prerequisites"></a>必要條件  
- 这些操作说明假定您已经配置了服务帐户，创建了报表服务器数据库，并为报表服务器 Web 服务和报表管理器配置了 URL。 有关详细信息，请参阅[管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 这些操作说明假定您已经配置了服务帐户，创建了报表服务器数据库，并为报表服务器 Web 服务和报表管理器配置了 URL。 有关详细信息，请参阅 [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)。  
   
  您还应验证是否可以通过将本地 Web 浏览器连接到本地报表服务器实例来访问报表服务器。 此步骤可确保您拥有有效的安装。 开始打开端口之前，应验证是否已对安装进行了正确的配置。 若要在 Windows Server 中完成该步骤，还必须将报表服务器站点添加到“受信任的站点”中。 有关详细信息，请参阅 [为本地管理配置本机模式报表服务器 (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
@@ -102,10 +102,10 @@ ms.locfileid: "48224440"
  您还可以通过在其他计算机上启动报表管理器来验证是否正确打开了端口。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL（SSRS 配置管理器）](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（SSRS 配置管理器）](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（SSRS 配置管理器）](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](manage-a-reporting-services-native-mode-report-server.md)  
   
   

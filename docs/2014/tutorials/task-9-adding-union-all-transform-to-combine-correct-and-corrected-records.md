@@ -1,26 +1,23 @@
 ---
-title: 任务 9： 添加 Union All 转换以合并正确和已更正的记录 |Microsoft Docs
+title: 任务 9:添加 Union All 转换以合并正确和已更正的记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022858"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>任务 9：添加 Union All 转换以合并正确和已更正的记录
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>任务 9:添加 Union All 转换以合并正确和已更正的记录
   在本任务中，您将向数据流添加 Union All 转换。 Union All 转换将多个输入组合到一个输出中。 在您的方案中，它将正确记录和已更正的记录合并到一个流中。  
   
 1.  拖放**Union All**从转换**常见**一部分**SSIS 工具箱**到**数据流**选项卡上，并将其放在**选择正确和已更正的记录**。  
@@ -46,6 +43,6 @@ ms.locfileid: "48180907"
 7.  这**连接器**应名为**已更正**。 由于有只有两个条件**更正**并**已更正**，并已使用一个条件，则**选择输入输出**对话框不显示这一次。 如果连接器重叠，则通过将连接器向左或向右拖将一个连接器向左移，将另一个连接器向右移。  
   
 ## <a name="next-step"></a>下一步  
- [任务 10：添加模糊分组转换以确定重复项](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [任务 10:添加模糊分组转换以确定重复项](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

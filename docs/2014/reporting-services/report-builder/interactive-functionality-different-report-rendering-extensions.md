@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174007"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022598"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了可用于在运行时处理报表的交互式报表功能。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一些交互式报告功能，利用这些功能，可以在运行时处理报表。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,7 +75,7 @@ ms.locfileid: "48174007"
 |-------------------|-------------------------|  
 |预览/报表查看器，HTML|用户单击这些链接便可在新的浏览器窗口中打开外部网页。|  
 |PDF|超链接通过 PDF 呈现扩展插件呈现。 用户单击某个超链接时，将在浏览器中打开该链接指向的页。|  
-|Excel|超链接以 Excel 呈现。|  
+|“导出”|超链接以 Excel 呈现。|  
 |Word|超链接以 Word 呈现。|  
 |其他|超链接无法以 MHTML、XML、CSV 或图像格式实现。<br /><br /> 对于 MHTML 和图像格式，外部图像呈现为静态图片。|  
   

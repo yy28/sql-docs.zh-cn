@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036608"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
-  报表设计器中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，报表数据窗格显示在报表中，包括数据源、 数据集、 字段、 参数和映像可以使用的数据对象的分层视图。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的报表设计器中，“报表数据”窗格显示了可在报表中使用的数据对象的层次结构视图（包括数据源、数据集、字段、参数和图像）。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  
   
 ### <a name="to-display-the-report-data-pane"></a>显示“报表数据”窗格  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210365"
      若要在两种显示状态之间切换，请双击“报表数据”窗格的标题栏。  
   
 ## <a name="see-also"></a>请参阅  
- [报表数据窗格](../report-data/report-data-pane.md)   
+ [“报表数据”窗格](../report-data/report-data-pane.md)   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

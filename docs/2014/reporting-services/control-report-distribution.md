@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018039"
 ---
 # <a name="control-report-distribution"></a>控制报表分发
   您可以配置报表服务器，以降低电子邮件和文件共享分发引起的安全风险。  
@@ -49,7 +49,7 @@ ms.locfileid: "48108137"
   
 ## <a name="see-also"></a>请参阅  
  [为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [创建和管理本机模式报表服务器的订阅](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

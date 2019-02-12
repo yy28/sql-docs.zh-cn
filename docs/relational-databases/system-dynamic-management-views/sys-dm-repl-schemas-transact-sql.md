@@ -3,7 +3,6 @@ title: sys.dm_repl_schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 430f7d53baa507a86f4b9060a41ce513adeef904
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031178"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "47763375"
 |**se_computed**|**smallint**|指定列是否为计算列。|  
 |**se_nullBitInLeafRows**|**int**|指定列值是否为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对发布数据库的 VIEW DATABASE STATE 权限，调用**dm_repl_schemas**。  
   
 ## <a name="remarks"></a>备注  

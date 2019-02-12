@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394238"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018119"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>任务 1（先决条件）：删除 MDS 中的供应商数据
   在本任务中，您将删除在 MDS 中存储的供应商数据。 使用手动将数据上载**MDS Excel 外接程序**上一课中。 您在本课中创建的 SSIS 包将自动为您将数据上载到 MDS。 因此，在测试该 SSIS 包之前，您需要从 MDS 删除供应商数据，删除派生的层次结构，删除供应商和状态实体，并且创建不含数据的供应商实体。  

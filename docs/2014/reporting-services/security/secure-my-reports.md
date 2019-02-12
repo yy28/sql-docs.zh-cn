@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166307"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035168"
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
   “我的报表”功能为使用报表提供了一个由用户管理的工作区。 为了发挥“我的报表”文件夹应有的作用，该文件夹与其他普通文件夹相比，需要限制条件较少的权限。 只有在其他文件夹中查看和运行报表的权限的用户可能需要一组扩展的权限来管理其“我的报表”文件夹及其所拥有的内容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供专用于此用途的角色分配和角色定义。  
@@ -49,7 +49,7 @@ ms.locfileid: "48166307"
 ## <a name="denying-access-to-my-reports"></a>拒绝访问“我的报表”  
  可以通过以下方式阻止用户访问“我的报表”：  
   
--   在“站点设置”页上禁用“我的报表”。 有关详细信息，请参阅[启用和禁用我的报表](../report-server/enable-and-disable-my-reports.md)。  
+-   在“站点设置”页上禁用“我的报表”。 有关详细信息，请参阅 [启用和禁用“我的报表”](../report-server/enable-and-disable-my-reports.md)。  
   
 -   删除“我的报表”角色中的所有任务。   
   

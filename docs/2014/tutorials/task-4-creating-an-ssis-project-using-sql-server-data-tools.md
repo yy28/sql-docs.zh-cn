@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024838"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4:使用 SQL Server Data Tools 创建 SSIS 项目
   通过使用在此任务中，创建一个 SSIS 项目**SQL Server Data Tools**来自动执行清理和匹配供应商数据。  

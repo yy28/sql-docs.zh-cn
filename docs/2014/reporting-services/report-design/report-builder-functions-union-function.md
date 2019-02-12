@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102837"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027189"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的联合。  
@@ -33,13 +33,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`SqlGeometry`或`SqlGeography`) 对其执行聚合的表达式。  
+ （`SqlGeometry` 或 `SqlGeography`）要对其执行聚合的表达式。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
   
  *递归*  
- (**Enumerated Type**) 可选。 `Simple` （默认值） 或`RdlRecursive`。 指定是否以递归方式执行聚合。  
+ (**Enumerated Type**) 可选。 `Simple`（默认值）或 `RdlRecursive`。 指定是否以递归方式执行聚合。  
   
 ## <a name="return"></a>返回  
  返回空间对象`SqlGeometry`或`SqlGeography`、 基于表达式类型。 有关详细信息`SqlGeometry`并`SqlGeography`空间数据类型，请参阅[空间数据类型概述](../../relational-databases/spatial/spatial-data-types-overview.md)。  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  有关递归聚合的详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 ## <a name="example"></a>示例  
- 下表显示的示例`SqlGeometry`表达式和`Union`结果表达式，以空间数据的 WKT （熟知文本） 格式显示。  
+ 下表说明 `SqlGeometry` 表达式和 `Union` 结果表达式的示例，它们以空间数据的 WKT（熟知文本）格式显示。  
   
 |具有空间数据的字段|示例|UNION 结果|  
 |-----------------------------|-------------|------------------|  
@@ -79,9 +79,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

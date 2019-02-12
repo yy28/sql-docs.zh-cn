@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5076b0d7eb5e81a71aafc840521d7924c83433a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189527"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032469"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三个安全对象组件相对应：报表服务器和 Windows 服务、报表管理器 Web 应用程序以及报表设计器预览窗口。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件对应于中的三个安全对象组件[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:报表服务器和 Windows 服务、 报表管理器 Web 应用程序和报表设计器预览窗口。  
   
 > [!NOTE]  
 >  报表设计器有两种预览模式：预览选项卡以及在以 DebugLocal 模式启动报表项目时启动的弹出式预览窗口。 “预览”选项卡不是安全对象组件，不应用安全策略设置。 预览窗口旨在模拟报表服务器的功能，因此具有策略配置文件，您或管理员必须修改该文件才能在报表设计器中使用自定义程序集和自定义扩展插件。  

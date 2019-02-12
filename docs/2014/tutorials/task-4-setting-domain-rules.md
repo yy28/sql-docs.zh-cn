@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349570"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035308"
 ---
 # <a name="task-4-setting-domain-rules"></a>任务 4:设置域规则
   在此任务中，创建的规则**联系人电子邮件**域，以确认电子邮件地址是否以结尾**@adventure-works.com**。 请参阅[创建域规则](https://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  

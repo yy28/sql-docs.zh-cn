@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205168"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017879"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共享数据集的“缓存”页（报表管理器）
   使用“缓存”属性页可以设置共享数据集的缓存选项。  
@@ -57,7 +57,7 @@ ms.locfileid: "48205168"
  保存更改。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [缓存共享数据集 (SSRS)](report-server/cache-shared-datasets-ssrs.md)   
  [计划](subscriptions/schedules.md)  

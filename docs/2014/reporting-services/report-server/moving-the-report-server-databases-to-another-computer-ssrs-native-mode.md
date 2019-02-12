@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b353e2034a7a21d963bed48e7ee7e670f677f70c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078577"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016619"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>将报表服务器数据库移至其他计算机（SSRS 本机模式）
   可以将安装中使用的报表服务器数据库移至其他计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 必须一同移动或复制数据库 reportserver 和数据库 reportservertempdb。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装需要这两个数据库；reportservertempdb 数据库必须按名称与将要移动的 reportserver 主数据库相关。  
@@ -215,16 +215,16 @@ GO
 7.  单击 **“下一步”** ，然后单击 **“完成”**。  
   
 > [!NOTE]  
->  一个[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装需要[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例包括`RSExecRole`角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../tools/access-the-reporting-services-wmi-provider.md)。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装要求 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例包含 `RSExecRole` 角色。 通过 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具设置报表服务器数据库连接时，将创建角色、注册登录信息并分配角色。 如果使用备用方法（具体来说，如果使用 rsconfig.exe 命令提示实用工具）来配置连接，报表服务器不会处于工作状态。 您可能需要编写 WMI 代码以使报表服务器可用。 有关详细信息，请参阅 [访问 Reporting Services WMI 提供程序](../tools/access-the-reporting-services-wmi-provider.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建 RSExecRole](../security/create-the-rsexecrole.md)   
  [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 配置管理器&#40;本机模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig 实用工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)   
- [配置和管理加密密钥&#40;SSRS 配置管理器&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [报表服务器数据库&#40;SSRS 本机模式&#41;](report-server-database-ssrs-native-mode.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [报表服务器数据库（SSRS 本机模式）](report-server-database-ssrs-native-mode.md)  
   
   

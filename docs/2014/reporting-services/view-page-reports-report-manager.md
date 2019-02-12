@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102797"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031628"
 ---
 # <a name="view-page-reports-report-manager"></a>报表的“视图”页（报表管理器）
   使用报表的“视图”页可以查看报表。 在报表管理器中最初打开报表时，报表采用 HTML 格式。 HTML 报表包括一个显示在报表顶部的报表工具栏，通过它可以导航报表页、在报表中搜索或将报表导出到不同格式。 下图显示了报表工具栏。  
@@ -39,7 +39,7 @@ ms.locfileid: "48102797"
 >  并非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供报表执行快照和某些导出格式。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

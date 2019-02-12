@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ae99e33bb51b38afd92ad815662947f645bf8dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c7369ac2da7dd8b7f93ec02ef240d78e76967d92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392090"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032998"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安装或卸载用于 SharePoint 的 Reporting Services 外接程序（SharePoint 2010 和 SharePoint 2013）
   在 SharePoint 服务器上运行用于 SharePoint 产品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装包 (rsSharePoint.msi)，以在 SharePoint 部署中启用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 这些功能包括 Power View、一个报表查看器 Web 部件、一个 URL 代理端点、一些内容类型和一些应用程序页，使用它们可以创建、查看及管理 SharePoint 站点上的报表、报表模型、数据源和其他报表服务器内容。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是在 SharePoint 模式下运行的报表服务器的必需组件。 可以从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导或通过从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包下载 rsSharePoint.msi 来安装此外接程序。 有关外接程序和下载页的版本列表，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037458"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
   传递扩展插件以 XML 配置文件的形式提供其配置信息。 该 XML 文件符合为传递扩展插件定义的 XML 架构。 传递扩展插件提供用于设置和修改配置文件的基础结构。  
@@ -37,9 +37,9 @@ ms.locfileid: "48184247"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|`Name`|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 `Name` 属性的最大长度是 255 个字符。 名称必须是唯一的而内的所有条目`Extension`配置文件元素。 如果存在重复的名称，则报表服务器返回错误。|  
+|`Name`|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |`Type`|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
-|`Visible`|值为 `false` 指示在用户界面中将不显示传递扩展插件。 如果未包括该属性，则默认值是`true`。|  
+|`Visible`|值为 `false` 指示在用户界面中将不显示传递扩展插件。 如果未包含此属性，则默认值为 `true`。|  
   
  有关 RSReportServer.config 文件的详细信息，请参阅 [Reporting Services 配置文件](../../report-server/reporting-services-configuration-files.md)。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184247"
   
 2.  在复制程序集文件后，打开 RSReportServer.config 文件。 RSReportServer.config 文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50 中。\<实例名 > services\reportserver 目录。 还需要在配置文件中为传递扩展插件程序集文件生成一个条目。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或诸如记事本之类的简单文本编辑器打开该配置文件。  
   
-3.  找到`Delivery`RSReportServer.config 文件中的元素。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
+3.  在 RSReportServer.config 文件中找到 `Delivery` 元素。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184247"
   
 2.  在复制程序集文件后，打开 RSReportServer.config 文件。 RSReportServer.config 文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50 中。\<实例名 > services\reportserver 目录。 还需要在配置文件中为传递扩展插件程序集文件生成一个条目。 您可以使用 Visual Studio.NET 或诸如记事本之类的简单文本编辑器打开配置文件。  
   
-3.  找到`DeliveryUI`RSReportServer.config 文件中的元素。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
+3.  在 RSReportServer.config 文件中找到 `DeliveryUI` 元素。 应当在以下位置为新创建的传递扩展插件生成一个条目：  
   
     ```  
     <Extensions>  

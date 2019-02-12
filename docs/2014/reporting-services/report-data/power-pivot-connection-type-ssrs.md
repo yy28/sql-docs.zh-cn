@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9b06b7e74a444e1d2dd29e7f86da852f0a5c0de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350482"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030448"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  

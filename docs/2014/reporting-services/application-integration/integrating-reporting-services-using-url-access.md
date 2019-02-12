@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2fe9b635b53a83699cfc40eddadd7d73bd7948c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132337"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035994"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
   借助于 URL 访问，您可以通过报表服务器 URL 访问报表。 使用 URL 请求，您可以访问特定的报表服务器以及报表服务器数据库中的报表、资源和其他项。 还可以为用户自定义报表查看和导航体验。 URL 的查询字符串包含设备信息设置，以及针对报表和所选呈现输出的报表参数。 报表服务器处理 URL 请求的方法取决于您通过 URL 访问的项的参数、参数前缀和类型。  

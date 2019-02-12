@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018888"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>向管理员提出警报的数据警报管理器
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 为 SharePoint 警报管理员提供了数据警报管理器以便管理数据警报。 警报管理员可以查看与保存到站点的所有警报有关的信息和删除警报。 下图显示数据警报管理器中可用于 SharePoint 警报管理员的功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "48136267"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|最后一个警报已成功运行且已发送。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|已成功运行最后一个警报，但由于数据未发生更改，因此未发送任何警报。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<错误消息> 该日志文件包含有关错误的详细信息。 请参考具有以下标识符的日志条目：\<GUID>。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<错误消息> 该日志文件包含有关错误的详细信息。 请参考具有标识符的日志条目：\<GUID &GT;。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|创建了警报。|  
   
  有关详细信息，请参阅 [在数据警报管理器中管理 SharePoint 站点上的所有数据警报](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  

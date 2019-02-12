@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 940e85a5698efd06f82b57208e4d774699926ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3bdbed10df5dd2d8b52fdaa49d04758d150098b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013918"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>导出到图像文件（报表生成器和 SSRS）
   图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。 本主题提供了特定于图像呈现器的信息并说明了呈现规则的例外情况。  
   
- 图像呈现扩展插件可以生成 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支持的以下任意格式的文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。 对于 TIFF 格式，主输出流的文件名为 *ReportName*.tif。 对于其他按照每个文件一页的方式进行呈现的所有格式，文件名为 *ReportName_Page.ext* ，其中， *ext* 是所选格式的文件扩展名。 若要以另一种受图像支持的格式生成文件，请在 **OutputFormatDeviceInfo** 设置中指定上面列出的任意字符串。  
+ 图像呈现扩展插件可以采用 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支持的任何格式生成文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。 对于 TIFF 格式，主输出流的文件名为 *ReportName*.tif。 对于其他按照每个文件一页的方式进行呈现的所有格式，文件名为 *ReportName_Page.ext* ，其中， *ext* 是所选格式的文件扩展名。 若要以另一种受图像支持的格式生成文件，请在 **OutputFormatDeviceInfo** 设置中指定上面列出的任意字符串。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,8 +33,8 @@ ms.locfileid: "48098027"
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
-|JPEG|jpeg|image/jpeg|  
-|PNG|png|image/png|  
+|JPEG|JPEG|image/jpeg|  
+|PNG|PNG|image/png|  
 |TIFF|tif|image/tiff|  
 |EMF|EMF|image/emf|  
 |EMFPlus|EMF|image/emf|  
@@ -69,7 +69,7 @@ ms.locfileid: "48098027"
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同报表呈现扩展插件的交互功能&#40;报表生成器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

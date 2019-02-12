@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355557"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017248"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新建共享计划 (Management Studio)
   使用此页可以创建一个共享计划来运行已发布的报表和订阅。 共享计划可以用于替代报表特定计划或订阅特定计划。 集中的计划信息与能够暂停和恢复计划操作的功能是共享计划区别于项特定计划的两个关键功能。  
@@ -36,7 +36,7 @@ ms.locfileid: "53355557"
  **名称**  
  键入共享计划的名称。 当用户为报表和订阅选择共享计划时，此名称会出现在下拉列表中。 请确保提供能够很方便地适合列表并能够轻松地区分不同共享计划的描述性名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = +，$ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

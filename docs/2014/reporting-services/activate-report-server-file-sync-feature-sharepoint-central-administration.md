@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: 32d1988d-07e7-41c2-b636-e65ecfae4677
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8dcdfaf16f4e279ed39c46dab7d486f517854b52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 69d059807b7d48fe71cffb120c73fa9aa004a8bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017999"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>在 SharePoint 管理中心中激活报表服务器文件同步功能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器文件同步功能利用 SharePoint 事件处理程序将报表服务器目录与文档库中的项进行同步。 当用户经常直接将已发布的报表项上载到 SharePoint 文档库时，此功能很有用。 如果文件同步功能未激活，则内容仍将（但不会频繁地）保持同步。  
   
- 在安装后可以在 SharePoint 站点管理中激活文件同步功能[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]用于 SharePoint 产品外接程序。  
+ 在安装了用于 SharePoint 产品的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 外接程序之后，可以在 SharePoint 站点管理中激活该文件同步功能。  
   
  可对于每个站点（但不在网站集级别）手动激活和停用此功能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  必须安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序。 如果未安装该外接程序，则文件同步功能在站点功能列表上将不可见。  
   
- 若要验证安装，请查看已安装应用程序的列表[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows**控制面板**。 如果[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装外接程序，请按照本主题中的说明激活报表服务器文件同步功能。  
+ 若要验证是否已安装，请在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows **“控制面板”** 中查看已安装应用程序的列表。 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序已安装，请按照本主题中的说明激活报表服务器文件同步功能。  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>在站点上激活或停用 Reporting Services 文件同步功能  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48088407"
   
 ## <a name="see-also"></a>请参阅  
  [报表部件故障排除&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [激活报表服务器和 SharePoint 中的 Power View 集成功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
+ [在 SharePoint 中激活报表服务器和 Power View 集成功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
  [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   

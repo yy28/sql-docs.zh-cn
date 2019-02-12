@@ -11,16 +11,16 @@ helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: douglaslMS
+author: MightyPen
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3eed78c380baf5799f62a1516617f989af9caa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d2e5b48d3e3be630029ab508d59470fad0f8547
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015128"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 批注 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "47841865"
 |**sql:is-constant**|创建不映射到任何表的 XML 元素。 该元素出现在查询输出中。|[创建常量元素使用 sql： 是常量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |**sql:key-fields**|允许规定唯一标识表中的行的列。|[标识键列使用 sql:key-字段&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |**sql:limit-field**<br /><br /> **sql:limit-value**|允许限制基于限制值返回的值。|[筛选值使用 sql:-字段和 sql： 的值&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)|相同|  
-|**sql:mapped**|允许从结果中排除架构项。|[从生成 XML 文档中使用 sql 中排除架构元素： 映射&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)|**映射字段**|  
+|**sql:mapped**|允许从结果中排除架构项。|[从生成 XML 文档中使用 sql 中排除架构元素： 映射&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)|**map-field**|  
 |**sql:max-depth**|允许您指定在架构中指定的递归关系的深度。|[使用 sql:max-depth 指定递归关系中的深度](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|不支持|  
 |**sql:overflow-field**|标识包含溢出数据的数据库列。|[检索未用完数据使用 sql:overflow-字段&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)|相同|  
 |**sql:prefix**|创建有效的 XML ID、IDREF 和 IDREFS。 将某一字符串置于 ID、IDREF 和 IDREFS 的值之前。|[有效的 ID、 IDREF 和 IDREFS 类型属性使用 sql: prefix 创建&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|相同|  
-|**sql:relationship**|指定 XML 元素之间的关系。 **父**，**子**，**父键**，以及**子键**使用属性来建立此关系。|[关系使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|属性名称不同：<br /><br /> **键关系**<br /><br /> **foreign-relation**<br /><br /> **密钥**<br /><br /> **foreign-key**|  
+|**sql:relationship**|指定 XML 元素之间的关系。 **父**，**子**，**父键**，以及**子键**使用属性来建立此关系。|[关系使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|属性名称不同：<br /><br /> **key-relation**<br /><br /> **foreign-relation**<br /><br /> **key**<br /><br /> **foreign-key**|  
 |**sql:use-cdata**|允许指定要用于 XML 文档中的某些元素的 CDATA 部分。|[创建 CDATA 部分使用 sql: use-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|相同|  
   
 > [!NOTE]  

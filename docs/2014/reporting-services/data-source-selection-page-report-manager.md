@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032318"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
   使用“选择数据源”页，可以选择用于报表或报表模型的现有共享数据源项， 还可以选择其他数据源。 若要查看数据源类型或连接字符串，必须导航到共享数据源并打开属性页。  

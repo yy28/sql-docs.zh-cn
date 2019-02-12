@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019629"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“常规”** 可添加图片、更改图像的默认名称，还可以添加工具提示文本。  
@@ -28,7 +28,7 @@ ms.locfileid: "48108427"
  **名称**  
  为相应项键入一个名称。 该名称在报表中必须是唯一的。 默认情况下会分配一个常规名称，例如 Image1 或 Image2。  
   
- **工具提示**  
+ **Tooltip**  
  键入文本或计算结果为工具提示的表达式。 单击“表达式”(*fx*) 按钮可编辑表达式。 当用户将鼠标指针停在 HTML 报表中该项的上方时，便会显示此 **“工具提示”** 。  
   
  **选择图像源**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108427"
   
 ## <a name="see-also"></a>请参阅  
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [映像&#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [用于对话框、 窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
+ [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

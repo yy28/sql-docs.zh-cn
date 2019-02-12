@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce940bd22b9fbc5d2628cdeae3a0eea376f2bc99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010878"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  
@@ -46,7 +46,7 @@ ms.locfileid: "48165269"
   
 ## <a name="see-also"></a>请参阅  
  [角色定义](role-definitions.md)   
- [预定义的角色](role-definitions-predefined-roles.md)   
+ [预定义角色](role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

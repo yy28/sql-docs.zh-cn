@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: adc4c6ea2cc33fe9c0c911b75c74a4232963fe2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 356cfa9debf9075776f7c1b6de00211ccc59bd9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100377"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017078"
 ---
 # <a name="planning"></a>规划
   通过这些主题可以更好地了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安装和配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 环境以满足您的需要。  
@@ -33,7 +33,7 @@ ms.locfileid: "48100377"
  ![小文件文件夹图标](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Reporting Services 安装程序**  
  [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)  
   
- [部署核对清单： Reporting Services 安装到现有 SharePoint 场](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [部署核对清单：Reporting Services 安装到现有 SharePoint 场](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
  [SharePoint 中 SQL Server BI 功能的部署拓扑](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   

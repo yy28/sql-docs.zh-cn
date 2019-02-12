@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a142d7532c94f1ec9a3ed797d7e7a1db0e5d863d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9c0c1a5f57ea4394fd445cc29ed29f0b1fc38a54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029984"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
-  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，Url 用于访问报表服务器 Web 服务和报表管理器。 在可以使用任一应用程序之前，必须分别为 Web 服务和报表管理器至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和报表管理器。 在可以使用任一应用程序之前，必须分别为 Web 服务和报表管理器至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
   
 -   如果安装了默认配置，则使用默认值自动创建 URL。  
   
--   如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具创建或修改 URL，则可以接受 URL 的默认值或指定自定义值。 定义 URL 时页面上会出现该 URL 的测试链接，以便可以立即确认指定的设置是否为有效连接。 有关如何配置和测试的 URL 的分步说明，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](configure-a-url-ssrs-configuration-manager.md)。  
+-   如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具创建或修改 URL，则可以接受 URL 的默认值或指定自定义值。 定义 URL 时页面上会出现该 URL 的测试链接，以便可以立即确认指定的设置是否为有效连接。 有关如何配置和测试的 URL 的分布说明，请参阅 [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)。  
   
 ## <a name="defining-a-report-server-url"></a>定义报表服务器 URL  
  URL 精确标识了网络上报表服务器应用程序实例的位置。 创建报表服务器 URL 时，必须指定以下部分。  
@@ -43,7 +43,7 @@ ms.locfileid: "48214697"
 ## <a name="default-urls"></a>默认 URL  
  通过 URL 访问报表服务器或报表管理器时，该 URL 应包括主机名称而不是 IP 地址。 在 TCP/IP 网络上，IP 地址将解析为主机名称（或计算机的网络名称）。 如果使用了默认值配置 URL，则应可以使用将计算机名称或 localhost 指定为主机名的 URL 来访问报表服务器 Web 服务：  
   
--   http://\<计算机名 > / reportserver  
+-   http://\<computername>/reportserver  
   
 -   http://localhost/reportserver  
   
@@ -59,29 +59,29 @@ ms.locfileid: "48214697"
 >  基本 URL 预留可启用将在 URL 中使用的任何有效主机名。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具可使用允许将主机名变体解析为特殊报表服务器实例的语法在 HTTP.SYS 中创建一个 URL 预留。 有关 URL 预留的详细信息，请参阅 [关于 URL 预留和注册（SSRS 配置管理器）](about-url-reservations-and-registration-ssrs-configuration-manager.md)。  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>对报表服务器 URL 的服务器端权限  
- 每个 URL 端点的权限都以独占方式授予报表服务器服务帐户。 只有此帐户有权接受定向到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的请求。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置服务标识时，创建并维护该帐户的随机访问控制列表 (DACL)。 如果更改服务帐户，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将更新你创建的所有 URL 预留以拾取新的帐户信息。 有关详细信息，请参阅[URL 保留语法&#40;SSRS 配置管理器&#41;](url-reservation-syntax-ssrs-configuration-manager.md)。  
+ 每个 URL 端点的权限都以独占方式授予报表服务器服务帐户。 只有此帐户有权接受定向到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的请求。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置服务标识时，创建并维护该帐户的随机访问控制列表 (DACL)。 如果更改服务帐户，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将更新你创建的所有 URL 预留以拾取新的帐户信息。 有关详细信息，请参阅 [URL 预留语法（SSRS 配置管理器）](url-reservation-syntax-ssrs-configuration-manager.md)。  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>对发送到报表服务器 URL 的客户端请求进行身份验证  
- 默认情况下，URL 端点支持的身份验证类型为 Windows 身份验证。 这是默认的安全扩展插件。 如果要实现自定义或窗体身份验证提供程序，则必须修改报表服务器上的身份验证设置。 还可以选择更改 Windows 身份验证设置，使其与网络中使用的身份验证子系统匹配。 有关详细信息，请参阅[报表服务器的身份验证](../security/authentication-with-the-report-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+ 默认情况下，URL 端点支持的身份验证类型为 Windows 身份验证。 这是默认的安全扩展插件。 如果要实现自定义或窗体身份验证提供程序，则必须修改报表服务器上的身份验证设置。 还可以选择更改 Windows 身份验证设置，使其与网络中使用的身份验证子系统匹配。 有关详细信息，请参阅 [联机丛书中的](../security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
- [配置 URL &#40;SSRS 配置管理器&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)  
  本主题提供了在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中设置和修改 URL 预留的说明。  
   
- [关于 URL 保留和注册&#40;SSRS 配置管理器&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [关于 URL 预留和注册（SSRS 配置管理器）](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  URL 用于访问应用程序和报表。 本主题说明了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的应用程序 URL、默认 URL 以及 URL 预留和注册的工作方式。  
   
  [URL 预留语法（SSRS 配置管理器）](url-reservation-syntax-ssrs-configuration-manager.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的默认 URL 预留对于大多数情况都是有效的。 但是，如果要限制访问权限或扩展部署以启用 Internet 或 Extranet 访问，则可能要自定义设置以适合您的要求。 本主题说明了 URL 预留的语法并为如何创建针对特定部署的自定义预留提供了建议。  
   
- [配置文件中的 Url &#40;SSRS 配置管理器&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [配置文件中的 URL（SSRS 配置管理器）](urls-in-configuration-files-ssrs-configuration-manager.md)  
  RSReportServer.config 文件包含了 URL 预留的多个条目以及由报表管理器和报表服务器电子邮件传递使用的 URL。 本主题概述了 URL 配置设置以便您可以了解它们之间如何进行比较。  
   
- [URL 保留项的多实例报表服务器部署&#40;SSRS 配置管理器&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [多实例报表服务器部署的 URL 预留（SSRS 配置管理器）](url-reservations-for-multi-instance-report-server-deployments.md)  
  当在一台计算机中安装多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例时，如果已注册某个 URL，便会增加 URL 重复的可能性。 若要避免这些错误，请遵循本主题中针对创建特定于实例的 URL 预留的建议。  
   
 ## <a name="see-also"></a>请参阅  
- [配置 URL &#40;SSRS 配置管理器&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)   
  [Web 服务 URL &#40;SSRS 本机模式&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

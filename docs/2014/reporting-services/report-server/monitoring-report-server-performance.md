@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0bebad59894c150a77dd7b8fc3036fe50029e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023648"
 ---
 # <a name="monitoring-report-server-performance"></a>监视报表服务器性能
   使用性能监视工具可监视报表服务器的性能以评估服务器活动，查看趋势，诊断系统瓶颈以及收集可以帮您确定当前系统配置是否充分的数据。 若要优化服务器性能，可指定回收报表服务器应用程序域的频率。 有关详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "48112848"
   
  任务管理器提供了有关计算机上运行的程序和进程的信息。 您可以使用任务管理器来监视报表服务器性能的关键指标。 还可以评估运行中进程的活动，以及查看有关 CPU 和内存使用情况的图表及数据。 有关使用任务管理器的信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   
- 您可以使用性能控制台和事件查看器来创建有关报表处理与资源消耗情况的日志和警报。 有关 Windows 事件生成的信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请参阅[Windows 应用程序日志](windows-application-log.md)。 有关性能控制台的信息，请参阅本主题稍后部分中的“Windows 性能计数器”。  
+ 您可以使用性能控制台和事件查看器来创建有关报表处理与资源消耗情况的日志和警报。 有关由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]生成的 Windows 事件的信息，请参阅 [Windows 应用程序日志](windows-application-log.md)。 有关性能控制台的信息，请参阅本主题稍后部分中的“Windows 性能计数器”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具还提供有关用于缓存和会话管理的报表服务器数据库和临时数据库的信息。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48112848"
   
 -   用于监视计划操作和报表传递的 `MSRS 2011 Windows Service` 和 `MSRS 2011 Windows Service SharePoint Mode`。 这些性能对象包括一系列用于跟踪报表处理的计数器，这些处理通过计划操作启动。 计划操作包括订阅和传递、报表执行快照以及报表历史记录。  
   
--   `ReportServer:Service` 和`ReportServerSharePoint:Service`用于监视与 HTTP 相关的事件和内存管理。 这些计数器特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
+-   用于监视与 HTTP 相关的事件和内存管理的 `ReportServer:Service` 和 `ReportServerSharePoint:Service`。 这些计数器特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，用于跟踪报表服务器中与 HTTP 相关的事件，例如请求、连接和登录尝试。 此性能对象还包括与内存管理相关的计数器。  
   
  如果单台计算机上有多个报表服务器实例，则可以同时监视多个实例或分别监视各个实例。 选择要在添加计数器时包括的实例。 有关使用性能控制台 (perfmon.msc) 和添加计数器的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 产品文档。  
   

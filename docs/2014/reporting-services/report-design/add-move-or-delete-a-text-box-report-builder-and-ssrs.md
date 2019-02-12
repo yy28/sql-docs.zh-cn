@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010171"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>添加、移动或删除文本框（报表生成器和 SSRS）
   文本框是报表中最常用的报表项。 您可以向表体添加文本框以显示诸如标题、参数选择、内置字段以及日期之类的信息。  
@@ -74,8 +74,8 @@ ms.locfileid: "48122999"
     >  如果在文本框中单击并处于编辑模式，请按 ESC 以选择文本框。  
   
 ## <a name="see-also"></a>请参阅  
- [文本框中&#40;报表生成器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [文本框（报表生成器和 SSRS）](text-boxes-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [键盘快捷方式&#40;报表生成器&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [键盘快捷键（报表生成器）](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

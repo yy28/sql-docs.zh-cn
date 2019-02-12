@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5397095cc8577b174925bea234cbe54c2c49456b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e111acfbaee8c73d2c105e977f2e8892a012bbea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017158"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）
   图表将使用序列中的最小值和最大值计算轴刻度。 图表中的序列包含多个数据区域时，数据点将会变得模糊，在图表中只能轻松地看到少量数据点。 例如，假设报表显示 30 天内的每日销售总额。  

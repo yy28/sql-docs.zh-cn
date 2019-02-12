@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189607"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024468"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
   使用“安全属性”页可以查看或修改安全设置，以确定对文件夹、报表、模型、资源和共享数据源的访问。 此页可用于您有权保护的项。  
@@ -51,7 +51,7 @@ ms.locfileid: "48189607"
  选中要删除的组名或用户名旁边的复选框，再单击 **“删除”**。 如果角色分配是剩余的唯一角色分配，或者如果它是定义报表服务器的安全基线的内置角色分配（如“Built-in\Administrators”），则不能删除该角色分配。 删除角色分配不会删除组或用户帐户或角色定义。  
   
  **新建角色分配**  
- 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新的角色分配： 编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
+ 单击此选项可打开“新建角色分配”页，该页用于为当前项创建其他角色分配。 有关详细信息，请参阅[新建角色分配：编辑角色分配页&#40;报表管理器&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
   
  **恢复到父级安全设置**  
  单击此选项可将安全设置重置到其直接父文件夹的安全设置。 如果贯穿报表服务器文件夹层次结构的继承是完整的，则使用顶层文件夹（即主文件夹）的安全设置。  
@@ -64,7 +64,7 @@ ms.locfileid: "48189607"
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- [预定义的角色](security/role-definitions-predefined-roles.md)   
+ [预定义角色](security/role-definitions-predefined-roles.md)   
  [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)   
  [角色分配](security/role-assignments.md)   
  [角色定义](security/role-definitions.md)  

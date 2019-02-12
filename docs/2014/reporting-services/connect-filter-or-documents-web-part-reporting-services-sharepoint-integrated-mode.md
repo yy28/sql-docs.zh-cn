@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166887"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031218"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>连接筛选器或文档 Web 部件（SharePoint 集成模式下的 Reporting Services）
   如果在使用 SharePoint 产品，可以创建一个包含筛选器 Web 部件或文档 Web 部件和报表查看器 Web 部件的面板或 Web 部件页。 支持的版本为 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]。 还支持 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 或 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007。 通过连接筛选器 Web 部件，在筛选器 Web 部件中选择筛选器值的用户可以将值发送至同一页中的参数化报表。 通过连接文档 Web 部件，在文档库中单击报表的用户可以在相邻的报表查看器 Web 部件中查看报表。  
@@ -77,7 +77,7 @@ ms.locfileid: "48166887"
 11. 签入更改并保存此页。  
   
 ## <a name="see-also"></a>请参阅  
- [将报表查看器 Web 部件添加到 Web 页&#40;Reporting Services SharePoint 集成模式下&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [在 SharePoint 站点上的报表查看器 Web 部件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f3299b67ffb55723a59326ec884d9ad30617e24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036598"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -44,7 +44,7 @@ ms.locfileid: "48212657"
 -   查阅有关图像 (EMF) 呈现的联机丛书主题，以了解如何呈现页面以供打印预览和输出。  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 概述  
- 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表。 使用的 EMF 设备信息包括：StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
+ 该控件显示一个自定义打印对话框，它支持其他打印对话框常见的功能，包括打印预览、指定特定页和范围的页面选择、页边距和打印方向等功能。 该控件打包为 CAB 文件。 “打印”对话框中的文本已本地化为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中支持的所有语言。 RSPrintClient ActiveX 控件使用图像呈现扩展插件 (EMF) 打印报表。 使用以下的 EMF 设备信息：StartPage、 EndPage、 MarginBottom、 MarginLeft、 MarginTop、 MarginRight、 PageHeight 和 PageWidth。 不支持图像呈现的其他设备信息设置。  
   
 ### <a name="language-support"></a>语言支持  
  该打印控件可以提供不同语言的用户界面文本，接受符合不同度量系统标准的输入值。 所用的语言和度量系统由 Culture 和 UICulture 属性确定。 这两个属性都接受 LCID 值。 如果为所支持语言的变体语言指定 LCID，则会应用最接近的匹配语言。 如果不支持指定的 LCID，并且没有最接近的匹配 LCID，则会应用英语（美国）。  
@@ -67,7 +67,7 @@ ms.locfileid: "48212657"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
-|“属性”|类型|RW|，则“默认”|Description|  
+|属性|类型|RW|默认|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|双精度|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |MarginRight|双精度|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
@@ -75,8 +75,8 @@ ms.locfileid: "48212657"
 |MarginBottom|双精度|RW|报表设置|获取或设置下边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |PageWidth|双精度|RW|报表设置|获取或设置页宽。 如果开发人员或报表定义中未进行设置，则默认值为 215.9 毫米。|  
 |PageHeight|双精度|RW|报表设置|获取或设置页高。 如果开发人员或报表定义中未进行设置，则默认值为 279.4 毫米。|  
-|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入`3`，如果语言是法语或英寸在语言为英语 （美国） 将以毫米为单位测得值。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
-|UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 “打印”对话框中的文本已本地化为以下语言：简体中文、繁体中文、英语、法语、德语、意大利语、日语、朝鲜语和西班牙语。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|Culture|Int32|RW|浏览器区域设置|指定区域设置标识符 (LCID)。 此值将确定用户输入的度量单位。 例如，如果用户键入`3`，如果语言是法语或英寸在语言为英语 （美国） 将以毫米为单位测得值。 有效值包括：1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|RW|客户端区域性|指定对话框字符串的本地化语言。 在打印对话框中的文本本地化为以下语言：简体中文、 繁体中文传统，英语、 法语、 德语、 意大利语、 日语、 朝鲜语和西班牙语。 有效值包括：1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|指定控件是否向报表服务器发出 GET 命令，以启动无会话打印连接。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>何时设置 Authenticate 属性  

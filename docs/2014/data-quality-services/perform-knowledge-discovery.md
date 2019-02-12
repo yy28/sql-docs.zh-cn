@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505580"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019668"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  
@@ -186,7 +186,7 @@ ms.locfileid: "52505580"
   
 11. 单击 **“完成”** 可完成知识发现活动。 如果您未查看每个域，将会显示一个弹出窗口。 单击 **“是”** 将继续查看，否则单击 **“否”** 。 如果您单击“否”，将显示另一个弹出窗口，支持您执行以下操作：  
   
-    1.  **发布**:为当前用户或他人使用，将发布该知识库。 将不锁定该知识库，该知识库（在知识库表中）的状态将设置为空，且域管理和知识发现活动都将可用。 您将返回到主页。 若要完成该过程，请在弹出窗口中单击 **“是”** 。  
+    1.  **发布**：为当前用户或他人使用，将发布该知识库。 将不锁定该知识库，该知识库（在知识库表中）的状态将设置为空，且域管理和知识发现活动都将可用。 您将返回到主页。 若要完成该过程，请在弹出窗口中单击 **“是”** 。  
   
     2.  **不**:将保存您的工作，该知识库将保持锁定状态，以及知识库的状态将设置为在工作中。 域管理和知识发现活动都将可用。 您将返回到主页。  
   

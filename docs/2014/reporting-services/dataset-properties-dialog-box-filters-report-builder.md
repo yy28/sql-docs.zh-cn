@@ -11,14 +11,14 @@ f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58abc975b461c6d12778c95620eadedd4e6caf8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172147"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030218"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>“数据集属性”对话框 ->“筛选器”（报表生成器）
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  
@@ -62,6 +62,6 @@ ms.locfileid: "48172147"
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
  [向数据集添加筛选器&#40;报表生成器和 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

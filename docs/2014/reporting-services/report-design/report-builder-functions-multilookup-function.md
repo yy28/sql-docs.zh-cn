@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147449"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021581"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称集的一组第一个匹配值。  
@@ -33,24 +33,24 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`VariantArray`) 当前作用域中计算结果并指定要查找的名称或键集的表达式。 例如，对于多值参数， `=Parameters!IDs.value`。  
+ (`VariantArray`) 在当前作用域中计算结果并指定要查找的名称或键的集合的表达式。 例如，对于多值参数， `=Parameters!IDs.value`。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如 `=Fields!ID.Value` 。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ID.Value`。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如 `=Fields!Name.Value` 。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如，`=Fields!Name.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Colors”。  
   
 ## <a name="return"></a>返回  
- 返回`VariantArray`，或`Nothing`如果没有匹配项。  
+ 返回 `VariantArray`，如果没有匹配项，则返回 `Nothing`。  
   
 ## <a name="remarks"></a>备注  
- 使用`Multilookup`从名称-值对其中每对具有 1 对 1 关系的数据集中检索一组值。 `MultiLookup` 等效于调用`Lookup`的名称或键集。 例如，对于基于主键标识符的多值参数，可以使用`Multilookup`中的表达式中的表来检索未绑定到参数或该表的数据集中的相关的值的文本框中。  
+ 使用 `Multilookup` 从名称-值对（每对具有 1 对 1 的关系）的数据集中检索一组值。 `MultiLookup` 等同于对一组名称或键调用 `Lookup`。 例如，对于基于主键标识符的多值参数，可以在表中使用文本框表达式中的 `Multilookup` 来检索未绑定到该参数或该表的数据集中的相关值。  
   
- `Multilookup` 执行以下操作：  
+ `Multilookup` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果并生成变体对象的数组。  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  存在下列限制：  
   
--   `Multilookup` 在应用所有筛选表达式后，将计算  
+-   在应用所有筛选表达式后计算 `Multilookup` 的结果  
   
 -   只支持一个级别的查找。 源、目标或结果表达式不能包含对查找函数的引用。  
   
@@ -70,7 +70,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   `Multilookup` 不能用作表达式的以下报表项：  
+-   `Multilookup` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   
@@ -98,7 +98,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|组件|  
   
- 若要查找与标识符列表对应的名称，请使用 `Multilookup`。 您必须首先将该列表拆分为字符串数组，调用`Multilookup`以检索类别名称，然后将结果连接成字符串。  
+ 若要查找与标识符列表对应的名称，请使用 `Multilookup`。 必须首先将该列表拆分为字符串数组，调用 `Multilookup` 以检索类别名称，然后将结果连接成字符串。  
   
  将以下表达式放入绑定到 Category 数据集的数据区域中的文本框时，显示“自行车, 组件, 自行车, 附件”：  
   
@@ -111,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>示例  
  假定数据集 ProductColors 包含颜色标识符字段 ColorID 和颜色值字段 Color，如下表中所示：  
   
-|ColorID|Color|  
+|ColorID|颜色|  
 |-------------|-----------|  
 |1|Red|  
 |2|蓝色|  
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

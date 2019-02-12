@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179217"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023998"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio 中报表服务器的 F1 帮助
   本节包含有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可用于管理报表服务器的对话框的主题。  
@@ -29,7 +29,7 @@ ms.locfileid: "48179217"
   
 -   [删除目录项](delete-catalog-items-management-studio.md)  
   
--   [作业属性页](job-properties-management-studio.md)  
+-   [“作业属性”页](job-properties-management-studio.md)  
   
 -   [新建共享计划](new-shared-schedule-management-studio.md)  
   

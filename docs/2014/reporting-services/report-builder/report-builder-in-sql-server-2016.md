@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030478"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的报表生成器
-  报表生成器是一种报表创作环境的业务用户更愿意[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office 环境。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  
+  Report Builder 是一种报表创作环境，适用于喜欢在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 环境下工作的业务用户。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  
   
  本图中的报表包含一个矩阵，带有行组和列组、迷你图、指示器，以及角单元中的摘要饼图，还附带一个地图，有两组地理数据，以颜色和圆圈大小表示。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48209537"
   
 -   **使用表、矩阵或图表向导创建报表**。 选择数据源连接，拖放字段以创建数据集查询，选择布局和样式并自定义报表。  
   
--   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 您还可以添加[!INCLUDE[msCoName](../../../includes/msconame-md.md)]必应地图图块背景。  
+-   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 还可以添加 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地图图块背景。  
   
 
   
@@ -79,22 +79,22 @@ ms.locfileid: "48209537"
  [SQL Server 2014 的报表生成器中的新增功能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  介绍此版本的报表生成器的新增功能，包括地图。  
   
- [教程： 创建快速图表报表脱机](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教程：创建快速图表报表脱机](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介绍报表生成器以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
   
- [规划报表&#40;报表生成器&#41;](../report-design/planning-a-report-report-builder.md)  
+ [规划报表（报表生成器）](../report-design/planning-a-report-report-builder.md)  
  提供在开始生成报表之前应当考虑哪些情况的信息。  
   
- [报表创作概念&#40;报表生成器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [报表创作概念（报表生成器和 SSRS）](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  定义在整个报表生成器文档中使用的主要概念。  
   
- [报表设计视图&#40;报表生成器&#41;](report-design-view-report-builder.md)  
+ [报表设计视图（报表生成器）](report-design-view-report-builder.md)  
  介绍报表设计视图的不同窗格和区域。  
   
- [共享数据集设计视图&#40;报表生成器&#41;](shared-dataset-design-view-report-builder.md)  
+ [共享数据集设计视图（报表生成器）](shared-dataset-design-view-report-builder.md)  
  介绍共享数据集设计视图的不同窗格和区域。  
   
- [键盘快捷方式&#40;报表生成器&#41;](keyboard-shortcuts-report-builder.md)  
+ [键盘快捷键（报表生成器）](keyboard-shortcuts-report-builder.md)  
  概述可用于在报表生成器中导航和设计报表的快捷键。  
   
  [启动报表生成器&#40;报表生成器&#41;](start-report-builder.md)  

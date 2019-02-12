@@ -11,14 +11,14 @@ f1_keywords:
 - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4acfe27815dc8eeb2f15a685937d5870fd74368b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040988"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>“报表属性”对话框 ->“引用”（报表生成器）
   选择 **“报表属性”** 对话框中的 **“引用”** 可以添加或删除对报表定义中的表达式所使用的自定义程序集或其他外部程序集以及自定义类实例的引用。 在报表生成器本地模式中，不支持自定义程序集。 为使用自定义程序集，请使用报表设计器中创作报表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  

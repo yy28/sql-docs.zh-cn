@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking （SQL 数据仓库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022965"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630235"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]受影响的活动日志**sp_pdw_log_user_data_masking**确信[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志。 **sp_pdw_log_user_data_masking**不会影响数据库事务日志，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志。  
   
- **背景信息：** 默认配置中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，并且在某些情况下可以包括如包含在操作中的用户数据**插入**， **更新**，并**选择**语句。 如果存在在设备上问题，这允许由引起的问题而无需重现此问题的条件的分析。 为了防止用户数据写入到[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，客户可以选择使用此存储的过程启用用户数据掩码。 语句仍将写入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，但所有可能包含用户数据的语句中的文字将屏蔽; 替换为某些预定义的常量值。  
+ **背景信息：** 在默认配置[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，并且在某些情况下可以包括如包含在操作中的用户数据**插入**，**更新**，和**选择**语句。 如果存在在设备上问题，这允许由引起的问题而无需重现此问题的条件的分析。 为了防止用户数据写入到[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，客户可以选择使用此存储的过程启用用户数据掩码。 语句仍将写入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志，但所有可能包含用户数据的语句中的文字将屏蔽; 替换为某些预定义的常量值。  
   
  在设备上启用透明数据加密时，屏蔽中的用户数据的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志将自动打开。  
   
@@ -65,7 +64,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   你可以显式启用用户数据中屏蔽[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]通过使用活动日志**sp_pdw_log_user_data_masking**过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定数据库角色或**CONTROL SERVER**权限。  
   
 ## <a name="example"></a>示例  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023528"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>浏览 Naive Bayes 模型（数据挖掘基础教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法提供了多种方法来显示自行车的购买和输入的属性之间的交互。  
@@ -90,7 +89,7 @@ ms.locfileid: "48058167"
 -   [浏览聚类分析模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第 5 课： 测试模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [第 5 课：测试模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
  [浏览聚类分析模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  

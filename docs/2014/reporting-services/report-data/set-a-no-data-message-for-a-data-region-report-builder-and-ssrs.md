@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: daca0d1d73663ef43d5645fe8be6c239de704e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a73e75c61fe3911919ed5112a1a6afff406adcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016728"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>为数据区域设置“无数据”消息（报表生成器和 SSRS）
   如果希望指定在呈现的报表中所显示的文本来代替没有数据的数据区域，请为表、矩阵或列表数据区域设置 NoRowsMessage 属性，为图表数据区域设置 NoDataMessage 属性，以及为地图的色阶设置 NoDataText 属性。 运行时，报表处理器会针对报表中每个数据集运行查询，并且该数据集查询可能不生成结果集。 对于绑定到空数据集的数据区域，可以指定显示文本，而不是显示空数据区域。 如果在运行时子报表的数据集中没有数据，则还可以设置子报表的 NoRowsMessage 属性。  
@@ -59,10 +59,10 @@ ms.locfileid: "48219964"
      此外，也可以在下拉列表中单击“表达式”以打开“表达式”对话框并创建表达式。  
   
 ## <a name="see-also"></a>请参阅  
- [子报表&#40;报表生成器和 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [子报表（报表生成器和 SSRS）](../report-design/subreports-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../report-design/charts-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](../report-design/maps-report-builder-and-ssrs.md)   
- [子报表&#40;报表生成器和 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [子报表（报表生成器和 SSRS）](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

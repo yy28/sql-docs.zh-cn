@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2018
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c98898560d4b2f523974065831f0d316a390f7b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682525"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028808"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 对于 columnstore 索引中的每列包括一行。  
@@ -36,7 +36,7 @@ ms.locfileid: "47682525"
 | **row_count**               | **int**    | 行组中的行数。                             |
 | **has_nulls**               | **int**    | 1 如果列段具有 Null 值。                     |
 | **base_id**                 | **bigint** | 如果使用的编码类型 1 的基值 ID。  如果未正在使用的编码类型 1，则 base_id 设置为 1。 |
-| **量值**               | **float**  | 如果使用的编码类型 1 的量值。  如果未正在使用的编码类型 1，则将量值设置为 1。 |
+| **magnitude**               | **float**  | 如果使用的编码类型 1 的量值。  如果未正在使用的编码类型 1，则将量值设置为 1。 |
 | **primary__dictionary_id**  | **int**    | 主字典的 ID。 一个非零值将指向此列将在当前段 （即行组） 的本地字典。 值为-1 指示存在此段没有本地字典。 |
 | **secondary_dictionary_id** | **int**    | 辅助字典的 ID。 一个非零值将指向此列将在当前段 （即行组） 的本地字典。 值为-1 指示存在此段没有本地字典。 |
 | **min_data_id**             | **bigint** | 列段中的最小数据 ID。                       |
@@ -78,14 +78,14 @@ ORDER BY    table_nm
 ,           sm.name
 ```
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
 
 ## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [创建列存储索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

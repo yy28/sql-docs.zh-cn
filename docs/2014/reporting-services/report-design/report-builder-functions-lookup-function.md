@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026038"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
@@ -33,24 +33,24 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如 `=Fields!ProdID.Value` 。  
+ (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如，`=Fields!ProdID.Value`。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如 `=Fields!ProductID.Value` 。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如，`=Fields!ProductID.Value`。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如 `=Fields!ProductName.Value` 。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如，`=Fields!ProductName.Value`。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Products”。  
   
 ## <a name="return"></a>返回  
- 返回`Variant`，或`Nothing`如果没有匹配项。  
+ 返回 `Variant`，如果没有匹配项，则返回 `Nothing`。  
   
 ## <a name="remarks"></a>备注  
- 使用`Lookup`从名称/值对的指定数据集中检索值的 1 对 1 关系。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
+ 使用 `Lookup` 从指定的数据集中为名称-值对（每对具有 1 对 1 关系）检索值。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
   
- `Lookup` 执行以下操作：  
+ `Lookup` 执行下列操作：  
   
 -   计算当前作用域中源表达式的结果。  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   源、目标和结果表达式不能包含对报表或组变量的引用。  
   
--   `Lookup` 不能用作表达式的以下报表项：  
+-   `Lookup` 不能作为以下报表项的表达式：  
   
     -   数据源的动态连接字符串。  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

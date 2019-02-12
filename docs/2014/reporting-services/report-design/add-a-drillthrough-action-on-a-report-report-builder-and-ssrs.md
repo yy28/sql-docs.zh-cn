@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027568"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在报表中添加钻取操作（报表生成器和 SSRS）
   单击主报表中的链接时打开的报表称为“钻取报表” 。 此钻取链接启用了一个钻取操作。  
@@ -61,8 +61,8 @@ ms.locfileid: "48221747"
 7.  若要测试该链接，请运行报表，然后单击对其设置此链接的报表项。  
   
 ## <a name="see-also"></a>请参阅  
- [操作属性对话框&#40;报表生成器和 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [“操作属性”对话框（报表生成器和 SSRS）](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在序列上显示工具提示（报表生成器和 SSRS）](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

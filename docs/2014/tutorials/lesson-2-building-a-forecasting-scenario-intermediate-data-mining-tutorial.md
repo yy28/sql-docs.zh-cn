@@ -1,11 +1,10 @@
 ---
-title: 第 2 课： 生成预测方案 （数据挖掘中级教程） |Microsoft Docs
+title: 第 2 课：生成预测方案 （数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020778"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 课：生成预测方案（数据挖掘中级教程）
-  作为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的销售分析人员，您需要对下一年产品的销售量做出预测。 特别是已要求您比较不同区域和产品线的预测值。 此外，您还需要确定不同产品的销售量在一年中的不同时间是否有变化。  
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 课：生成预测方案 （数据挖掘中级教程）
+  作为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]的销售分析人员，您需要对下一年产品的销售量做出预测。 特别是已要求您比较不同区域和产品线的预测值。 此外，您还需要确定不同产品的销售量在一年中的不同时间是否有变化。  
   
- 为了找到所需的信息，在本课程中您将按三个区域汇总公司每月的销售数据：欧洲、北美洲和太平洋地区。  
+ 若要查找所需的信息，请将在本课程中汇总的每月级别的公司的销售数据并也将汇总由三个区域的销售数字：欧洲、 北美洲和太平洋地区。  
   
  完成本课程中的任务之后，您便能回答下列问题：  
   
@@ -41,10 +40,10 @@ ms.locfileid: "48122597"
   
 -   第二部分将指导您基于所有区域创建常规时序模型。 可以使用此常规模型用于*交叉预测*。  
   
- 若要完成本课程中，如下所示中的任务将使用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据源中创建[第 1 课： 创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ 若要完成本课程中，如下所示中的任务将使用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据源中创建的[第 1 课：创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)。  
   
 > [!WARNING]  
->  中的日期[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]对于此版本已更新示例数据库。 如果您使用 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的早期版本，则可以在执行这些步骤后生成模型，但可能会看到不同的结果。  
+>  对于此版本， [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 示例数据库中的日期已更新。 如果您使用 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]的早期版本，则可以在执行这些步骤后生成模型，但可能会看到不同的结果。  
   
  **创建简单预测模型**  
   
@@ -76,15 +75,15 @@ ms.locfileid: "48122597"
  [了解模型的要求某一时序的&#40;数据挖掘中级教程&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>所有课程  
- [第 1 课： 创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [第 1 课：创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- 第 2 课：预测方案（数据挖掘中级教程）  
+ 第 2 课：预测方案 （数据挖掘中级教程）  
   
- [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [第 4 课： 生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [第 4 课：生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [第 5 课： 生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [第 5 课：生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   

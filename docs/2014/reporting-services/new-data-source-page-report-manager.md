@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029098"
 ---
 # <a name="new-data-source-page-report-manager"></a>“新建数据源”页（报表管理器）
   使用“新建数据源”页，可以创建共享数据源项。 共享数据源定义与外部数据源的连接。 使用共享数据源，可以从使用该数据源的报表、模型和数据驱动订阅分别创建和维护数据源连接设置。  

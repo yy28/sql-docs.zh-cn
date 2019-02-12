@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2895e6c2d181834554123c76e3a59d71abbe54a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026318"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，您必须安装完 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后运行 DQSInstaller.exe 文件。 本主题介绍如何从 **“开始”** 屏幕、 **“开始”** 菜单、Windows 资源管理器或命令提示符运行 DQSInstaller.exe，您可以选择上述任何方法来运行 DQSInstaller.exe 文件。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7d138662d8b72a99d84d9a224b97bed6be58c675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029888"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>为传递扩展插件实现 ISubscriptionBaseUIUserControl 接口
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件可以包含订阅用户界面 (UI) 的实现，以便在报表管理器中收集扩展插件特定的信息。 当用户创建新的订阅或修改现有订阅时，将调用此 UI。 当创建新订阅时，此 UI 显示适当的默认值并使得用户能够与传递提供程序交互。 当修改订阅时，将使用当前订阅中的信息预填充此 UI。  

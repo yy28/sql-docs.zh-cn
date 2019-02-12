@@ -1,11 +1,10 @@
 ---
-title: 第 5 课： 生成神经网络模型和逻辑回归模型 （数据挖掘中级教程） |Microsoft Docs
+title: 第 5 课：生成神经网络模型和逻辑回归模型 （数据挖掘中级教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -16,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1bbfd2344b46e015e26d2dba393aea689329949c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108817"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035808"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第 5 课：生成神经网络模型和逻辑回归模型 （数据挖掘中级教程）
   
   
- 业务部门[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]所从事的项目以提高客户对呼叫中心满意度。 他们雇用了一位供应商来管理呼叫中心并报告有关呼叫中心工作效率的指标，同时请您分析该供应商提供的一些初步数据。 他们想知道是否会有任何值得关注的发现。 特别是，他们想知道这些数据是否间接显示了人员配备的任何问题或改进客户满意度的方式。  
+ [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 业务部门正在开展旨在提高客户对呼叫中心满意度的计划。 他们雇用了一位供应商来管理呼叫中心并报告有关呼叫中心工作效率的指标，同时请您分析该供应商提供的一些初步数据。 他们想知道是否会有任何值得关注的发现。 特别是，他们想知道这些数据是否间接显示了人员配备的任何问题或改进客户满意度的方式。  
   
  该数据集很小，只包括 30 天内呼叫中心的运转情况。 数据跟踪每个班次的操作员新手和有经验操作员的人数、来电数、订单数以及必须解决的问题数、客户等待某人回电话的平均时间。 数据还包含基于“挂断率” 的服务质量指标，它反映客户不满意的程度。  
   
@@ -58,15 +57,15 @@ ms.locfileid: "48108817"
  [添加数据源为呼叫中心数据的视图&#40;数据挖掘中级教程&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>所有课程  
- [第 1 课： 创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [第 1 课：创建中级数据挖掘解决方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [第 4 课： 生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [第 4 课：生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- 第 5 课：神经网络和逻辑回归方案（数据挖掘中级教程）  
+ 第 5 课：神经网络模型和逻辑回归方案 （数据挖掘中级教程）  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   

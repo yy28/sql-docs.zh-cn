@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036118"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
   使用“选择链接”页可为当前所选链接报表选择要基于的不同报表。 链接报表基于已发布到报表服务器的其他报表。 链接报表使用基础报表的布局和数据，但是其属性页与基础报表不同，以便您可以自定义参数属性、安全设置、名称、说明和位置。  

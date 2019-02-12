@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 58ab7a391134a36d305e3a1dc3a64543fbe4f673
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81e490077db54e0e373b24885ff919ae2b3dd7ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066477"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038656"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>散点图（报表生成器和 SSRS）
-  散点图将序列显示为一组点。 值由点在图表中的位置表示。 类别由图表中的不同标记表示。 散点图通常用于比较跨类别的聚合数据。 有关如何将数据添加到散点图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+  散点图将序列显示为一组点。 值由点在图表中的位置表示。 类别由图表中的不同标记表示。 散点图通常用于比较跨类别的聚合数据。 有关如何将数据添加到散点图的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  
   
  下图显示的是散点图示例。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48066477"
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [折线图&#40;报表生成器和 SSRS&#41;](line-charts-report-builder-and-ssrs.md)  
+ [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)  
   
   

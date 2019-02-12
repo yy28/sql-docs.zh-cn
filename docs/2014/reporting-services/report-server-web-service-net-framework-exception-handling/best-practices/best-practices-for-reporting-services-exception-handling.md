@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dad2ba27f67423ae84d9b63c52f479a5ffca278
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 10bf93cbaa510b9cff0cf373ada287e1aa2aea6c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144527"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034808"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 异常处理的最佳实践
   当开发 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 应用程序时，可以使用多种方法来消除或减少异常的发生。 当确实发生异常时，请向用户提供明确和简洁的错误消息，并添加适当的异常处理以防止应用程序意外结束。  

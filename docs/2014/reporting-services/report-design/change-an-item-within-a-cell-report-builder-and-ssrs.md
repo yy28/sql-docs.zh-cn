@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2f666a5732a49050418917084554d630faabe679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46724389392221aa1f759ee68675e9436dee752f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018938"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>更改单元中的项（报表生成器和 SSRS）
   只有非容器项（例如文本框、线条或图像）才可以用新的报表项替换。 例如，可以将一个表拖到文本框中来用该表替换文本框。  
@@ -36,7 +36,7 @@ ms.locfileid: "48156958"
 >  在将某一图像报表项拖到单元中时，“图像属性”对话框将打开，从中可以设置图像添加到单元前的属性，例如图像的源。  
   
 ## <a name="see-also"></a>请参阅  
- [图像、 文本框、 矩形和线条&#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [图像、文本框、矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

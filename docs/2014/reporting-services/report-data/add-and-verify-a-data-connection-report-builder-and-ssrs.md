@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030558"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>添加和验证数据连接或数据源（报表生成器和 SSRS）
   在报表生成器中，您可以从报表服务器添加共享数据源或为您的报表创建嵌入数据源。 在报表设计器中，您可以创建共享数据源或嵌入数据源，并且将其部署到报表服务器上。  
@@ -59,7 +59,7 @@ ms.locfileid: "48082009"
   
     2.  采用以下备选方案之一指定连接字符串：  
   
-    -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关示例连接字符串的列表，请参阅[数据连接、 数据源和报表生成器中的连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
+    -   直接在 **“连接字符串”** 文本框中键入连接字符串。 有关示例连接字符串的列表，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
     -   单击表达式 (**fx** ) 按钮创建计算结果为连接字符串的表达式。 在 **“表达式”** 对话框的“表达式”窗格中，键入该表达式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082009"
   
 2.  单击 **“测试连接”**。  
   
-3.  如果连接成功，则显示以下消息：“已成功地创建连接”。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  如果连接成功，将显示以下消息："已成功创建连接"。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  如果连接失败，则显示以下消息：“无法连接到数据源”。  
+4.  如果连接不成功，将显示以下消息："无法连接到数据源。"  
   
 5.  单击 **“详细信息”**，然后使用该信息来解决问题。  
   

@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4064188dee8f8902712962c93715e6ebce839b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023588"
 ---
 # <a name="cache-a-report-report-manager"></a>如何缓存一个报表（报表管理器）
   提高性能的一种方法是配置报表的缓存属性。 缓存报表后，会在一段时间内保存已呈现报表的副本。 请求该报表的第一个用户必须等到所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户可以立即查看它，因为处理已经完成。  
   
- 可缓存的报表类型存在限制。 例如，如果报表输出随着用户标识的变化而变化，或者使用请求该报表的用户的安全令牌检索数据，则无法缓存此报表。 有关详细信息，请参阅 [缓存报表 (SSRS)](caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
+ 可缓存的报表类型存在限制。 例如，如果报表输出随着用户标识的变化而变化，或者使用请求该报表的用户的安全令牌检索数据，则无法缓存此报表。 有关详细信息，请参阅 [缓存报表 (SSRS)](caching-reports-ssrs.md)。  
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>计划缓存报表的过期时间  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要设置缓存属性的报表，悬停在该项上，然后单击下拉箭头。  
   
@@ -51,6 +51,6 @@ ms.locfileid: "48173177"
   
 ## <a name="see-also"></a>请参阅  
  [设置报表处理属性](set-report-processing-properties.md)   
- [缓存报表&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [缓存报表 (SSRS)](caching-reports-ssrs.md)  
   
   

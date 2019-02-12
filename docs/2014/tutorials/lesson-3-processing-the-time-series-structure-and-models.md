@@ -1,24 +1,23 @@
 ---
-title: 第 3 课： 处理时序结构和模型 |Microsoft Docs
+title: 第 3 课：处理时序结构和模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026268"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 课：准备时序结构和模型
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>第 3 课：处理时序结构和模型
   在本课程中，您将使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)语句处理挖掘结构和挖掘模型创建的时序。  
   
  处理挖掘结构时，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将读取源数据并生成支持挖掘模型的结构。 您必须始终在首次创建挖掘模型和结构时对它进行处理。 如果使用 INSERT INTO 指定挖掘结构，该语句将处理挖掘结构及其关联的所有挖掘模型。  
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     源查询引用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]中级教程示例项目中定义的数据源。 它使用此数据源来访问视图 vTimeSeries。 此视图包含将用于定型挖掘模型的源数据。 如果您不熟悉此项目或此视图，请参阅[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+     源查询引用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]中级教程示例项目中定义的数据源。 它使用此数据源来访问视图 vTimeSeries。 此视图包含将用于定型挖掘模型的源数据。 如果您不熟悉此项目或此视图，请参阅[第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
      现在，完整的语句应该如下所示：  
   
@@ -147,7 +146,7 @@ OPENQUERY (<source data definition>)
  在该查询完成运行之后，可以使用处理过的挖掘模型创建预测。 在下一课中，您将基于创建的挖掘模型创建多个预测。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 4 课：使用 DMX 创建时序预测](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [第 4 课：创建时序预测使用 DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>请参阅  
  [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

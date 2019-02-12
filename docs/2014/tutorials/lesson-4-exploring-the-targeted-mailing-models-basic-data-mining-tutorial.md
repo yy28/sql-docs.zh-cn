@@ -1,24 +1,23 @@
 ---
-title: 第 4 课： 浏览 Targeted 的 Mailing 模型 （数据挖掘基础教程） |Microsoft Docs
+title: 第 4 课：浏览 Targeted 的 Mailing 模型 （数据挖掘基础教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147302"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039898"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 课：浏览 Targeted Mailing 模型（数据挖掘基础教程）
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 课：浏览 Targeted 的 Mailing 模型 （数据挖掘基础教程）
   在处理项目中的模型后，可以浏览它们以查找所关注的趋势。 因为仅仅查看数字难以发现复杂的模式，SQL Server 数据挖掘提供一些可视工具，可帮助您调查数据和理解算法在数据内发现的规则和关系。 您还可以使用各种准确性测试来在部署之前验证您的数据集或发现哪个模型的性能最佳。  
   
  当你使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]以浏览模型，您创建的每个模型中列出**挖掘模型查看器**数据挖掘设计器中的选项卡。 您可以使用查看器来浏览模型。 这些查看器也在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中提供。  
@@ -52,7 +51,7 @@ ms.locfileid: "48147302"
  [第 3 课：添加和处理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第 5 课： 测试模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [第 5 课：测试模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031728"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "52544611"
 |*FallbackPage*|设置在搜索或文档结构图选择失败的情况下显示的页码。|默认值为当前页的页码。|  
 |*GetImage*|为 HTML 查看器用户界面获取一个特定的图标。||  
 |*图标*|获取特定呈现扩展插件的图标。||  
-|*样式表*|指定要应用于 HTML 查看器的样式表。||  
+|*Stylesheet*|指定要应用于 HTML 查看器的样式表。||  
 |Device Information Setting|形式的指定设备信息设置`rc:tag=value`，其中*标记*的设备信息设置特定于当前使用的呈现扩展插件的名称 (请参见说明*设置格式*参数)。 例如，可以使用 IMAGE 呈现扩展插件的 OutputFormat 设备信息设置向在 URL 访问字符串中使用以下参数的 JPEG 图像呈现报表：`...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 有关所有扩展插件特定的设备信息设置的详细信息，请参阅[呈现扩展插件的设备信息设置 (Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
   
 ## <a name="report-server-commands-rs"></a>报表服务器命令 (rs:)  

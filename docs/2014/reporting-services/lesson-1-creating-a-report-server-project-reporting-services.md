@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：创建报表服务器项目 (Reporting Services) | Microsoft Docs
+title: 第 1 课：创建报表服务器项目 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3a57bbc055c226fdfa9d4454ba22f2160dee06c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032358"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中创建报表，必须先创建报表服务器项目以用于保存报表定义 (.rdl) 文件和报表所需的其他所有资源文件。 然后，您将创建实际的报表定义文件、定义报表的数据源、定义数据集并定义报表布局。 运行报表时，将检索实际数据并将其与布局相结合，然后呈现在屏幕上，以便执行导出、打印或保存操作。  
   
- 在本课中，您将学习如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建报表服务器项目。 报表服务器项目用于创建在报表服务器中运行的报表。  
+ 在本课中，您将学习如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建报表服务器项目。 报表服务器项目用于创建在报表服务器中运行的报表。  
   
 ### <a name="to-create-a-report-server-project"></a>创建报表服务器项目  
   
@@ -52,12 +52,12 @@ ms.locfileid: "48220967"
   
      此时报表设计器将打开，并在“设计”视图中显示新的 .rdl 文件。  
   
- 报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 组件。 它包含两个视图：“设计”  和“预览” 。 单击各个选项卡可更改视图。  
+ 报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]组件。 它具有两个视图：**设计**并**预览**。 单击各个选项卡可更改视图。  
   
  在“报表数据”  窗格中定义数据。 在“设计”  视图中定义报表布局。 可以在“预览”视图中运行报表并查看其外观。  
   
 ## <a name="next-task"></a>下一个任务  
- 您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息 (Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)。  
+ 您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息&#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建基本表报表（SSRS 教程）](create-a-basic-table-report-ssrs-tutorial.md)  

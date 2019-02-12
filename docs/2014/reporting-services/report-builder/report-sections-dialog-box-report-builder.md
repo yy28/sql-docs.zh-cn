@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d3aab1e36d51df8eabf14bbd5fb4ecf6824591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050548"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015028"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>“报表区域”对话框（报表生成器）
   打开报表时，报表生成器会验证报表是否只包含一个报表定义语言 (RDL) \<Section> 元素。 不支持打开具有多个 \<Section> 元素的报表。  
@@ -30,6 +30,6 @@ ms.locfileid: "48050548"
  单击 **“确定”** 继续。  
   
 ## <a name="see-also"></a>请参阅  
- [用于对话框、 窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

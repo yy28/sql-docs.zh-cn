@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022890"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>配置和管理报表服务器（Reporting Services SharePoint 模式）
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是一种基于服务器的报告平台，提供大量现成的工具和服务，帮助您创建、 部署和管理你的组织，以及编程功能，您可以扩展和自定义你的报表的报表功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是基于服务器的报表平台，提供了各种现成可用的工具和服务，帮助你创建、部署和管理组织的报表，并提供了使你能扩展和自定义报表功能的编程功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。  
   
 ## <a name="in-this-section"></a>本节内容  
  以下各节中的内容可以帮助您理解与将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 环境与 SharePoint 产品或技术相集成有关的概念、部署方案、过程等等：  

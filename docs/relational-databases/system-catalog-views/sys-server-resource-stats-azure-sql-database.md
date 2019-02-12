@@ -2,10 +2,8 @@
 title: sys.server_resource_stats （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -21,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392630"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009649"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,10 +40,10 @@ ms.locfileid: "52392630"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|指示 15 秒的报告间隔的起始的 UTC 时间|  
 |end_time|**datetime**|指示 15 秒的报告间隔结束的 UTC 时间|
-|resource_type|nvarchar （128)|为其提供指标的资源类型|
-|resource_name|nvarchar （128)|资源的名称。|
-|sku|nvarchar （128)|托管实例的实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键型</li></ul>|
-|hardware_generation|nvarchar （128)|硬件生成标识符： 例如，第 4 代或第 5 代|
+|resource_type|Nvarchar(128)|为其提供指标的资源类型|
+|resource_name|nvarchar(128)|资源的名称。|
+|sku|nvarchar(128)|托管实例的实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键型</li></ul>|
+|hardware_generation|nvarchar(128)|硬件生成标识符： 例如，第 4 代或第 5 代|
 |virtual_core_count|ssNoversion|表示每个实例 （8、 16 或 24 日在公共预览版） 的虚拟内核数|
 |avg_cpu_percent|decimal(5,2)|使用过度的实例的托管实例服务层限制的百分比形式表示的平均计算使用率。 它是计算为该实例中的所有数据库的所有资源池的 CPU 时间的总和并除以该层在给定时间间隔内的可用 CPU 时间。|
 |reserved_storage_mb|BIGINT|保留每个实例存储 （该客户购买的托管实例的空间量存储）|

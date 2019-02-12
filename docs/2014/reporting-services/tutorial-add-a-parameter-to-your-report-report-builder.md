@@ -1,5 +1,5 @@
 ---
-title: 教程：向报表添加参数（报表生成器）| Microsoft Docs
+title: 教程：将参数添加到您的报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018878"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
   通过向报表添加参数，用户可以筛选来自数据源的报表数据或报表中的报表数据。 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。  
@@ -55,7 +55,7 @@ ms.locfileid: "48190297"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  本教程的预计学时：25 分钟。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48190297"
   
      此查询不包含查询参数。 稍后，您将在本教程中添加查询参数。  
   
-11. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 11 行数据，这些数据显示针对四个商店的每个子类别销售的物品数量，并且结果集包含以下列：StoreID、Subcategory、Quantity。  
+11. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 11 行数据中显示针对四个商店每个子类别销售的物品数量，包括以下列：StoreID、 Subcategory、 Quantity。  
   
 12. 单击“下一步” 。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48190297"
   
 7.  在报表查看器工具栏上，在 Store ID 的旁边键入 **200**，然后单击“查看报表”。  
   
-##  <a name="AddDataset"></a> 4a。 添加数据集以提供可用值和显示名称  
+##  <a name="AddDataset"></a> 4a. 添加数据集以提供可用值和显示名称  
  若要确保用户只能为参数键入有效值，可以创建一个从中选择值的值下拉列表。 值可以来自于您指定的数据集或列表。 可用值必须由具有不包含对参数的引用的查询的数据集提供。  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>为参数创建有效值数据集  
@@ -238,7 +238,7 @@ ms.locfileid: "48190297"
   
      “报表数据”窗格在 **Stores** 数据集节点下显示字段 StoreID 和 StoreName。  
   
-##  <a name="AvailableValues"></a> 4b 部分： 指定可用值以创建值的下拉列表  
+##  <a name="AvailableValues"></a> 4b. 指定可用值以创建值的下拉列表  
  在创建数据集以提供可用值之后，必须更改报表属性，以指定将哪个数据集和哪个字段用于填充报表查看器工具栏上的有效值下拉列表。  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>为参数提供数据集中的可用值  
@@ -269,7 +269,7 @@ ms.locfileid: "48190297"
   
  报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="DefaultValues"></a> 4 核。 指定默认值，以便自动运行报表  
+##  <a name="DefaultValues"></a> 4c. 指定默认值，以便自动运行报表  
  可以为每个参数指定默认值，以便自动运行报表。  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>从数据集中指定默认值  
@@ -306,7 +306,7 @@ ms.locfileid: "48190297"
   
  有关*@StoreID*，报表查看器显示值"Contoso Catalog Store"。 这是商店标识符的显示名称**200**。 报表显示了标识符为 **200**的商店销售的附件、摄像机和数码 SLR 相机数量。  
   
-##  <a name="NameValue"></a> 4d。 从具有名称/值对的数据集查找值  
+##  <a name="NameValue"></a> 4d. 从具有名称/值对的数据集查找值  
  数据集可以同时包含标识符和对应的名称字段。 若只有一个标识符，则可以在创建的包含名称/值对的数据集中查找对应的名称。  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>从数据集查找值  
@@ -327,7 +327,7 @@ ms.locfileid: "48190297"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Store 列标题包含复杂表达式的显示文本：  **< \<Expr >>**。  
+     Store 列标题包含复杂表达式的显示文本：**<\<Expr >>**。  
   
 8.  预览报表。  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190297"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 在刚创建的表达式的前面的文本框中单击，然后键入以下内容：Parameter Values Selected:。  
+15. 在刚创建的表达式的前面的文本框中单击，然后键入以下内容：“所选的参数值:”。  
   
 16. 预览报表。  
   
@@ -436,7 +436,7 @@ ms.locfileid: "48190297"
   
 19. 从下拉列表中，单击“全选”清除列表，再单击“Contoso Catalog Store”和“Contoso Asia Online Store”，然后单击“查看报表”。  
   
-##  <a name="Boolean"></a> 8。为条件可见性添加布尔参数  
+##  <a name="Boolean"></a> 8.为条件可见性添加布尔参数  
   
 #### <a name="to-add-a-boolean-parameter"></a>添加布尔参数  
   
@@ -482,7 +482,7 @@ ms.locfileid: "48190297"
   
  页脚中的文本框将显示所选的所有商店名称。  
   
-##  <a name="Title"></a> 9。添加报表标题  
+##  <a name="Title"></a> 9.添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -490,7 +490,7 @@ ms.locfileid: "48190297"
   
 2.  键入 Parameterized Product Sales，然后在文本框外部单击。  
   
-##  <a name="Save"></a> 10。保存报表  
+##  <a name="Save"></a> 10.保存报表  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>将报表保存到报表服务器  
   
@@ -504,7 +504,7 @@ ms.locfileid: "48190297"
   
 4.  在“名称”中，用 Parameterized Sales Report 替换默认名称。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
  报表即已保存至报表服务器。 您连接的报表服务器将显示在窗口底部的状态栏中。  
   

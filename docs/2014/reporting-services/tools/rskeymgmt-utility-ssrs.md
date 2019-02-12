@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541854"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038258"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
@@ -86,7 +86,7 @@ ms.locfileid: "52541854"
   
  对于 **rskeymgmt -a**，存储在该文件中的对称密钥值将应用于报表服务器实例。  
   
- `-p`  *密码*  
+ `-p`  *password*  
  （`-f` 必需）指定用于备份或应用对称密钥的密码。 该值不能为空。  
   
  `-i`  
@@ -98,10 +98,10 @@ ms.locfileid: "52541854"
  `-n`  
  指定远程计算机上报表服务器实例的名称。 如果已在默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中安装了报表服务器，则此参数是可选的（`-n` 的默认值为 MSSQLSERVER）。 如果已按命名实例的形式安装报表服务器，则 `-n` 为必需项。  
   
- `-u`  *用户帐户*  
+ `-u`  *useraccount*  
  指定要加入扩展部署的远程计算机上的管理员帐户。 如果未指定帐户，则使用当前用户的凭据。  
   
- `-v`  *密码*  
+ `-v`  *password*  
  （`-u` 必需）指定要加入扩展部署的远程计算机上管理员帐户的密码。  
   
  **-t**  *trace*  

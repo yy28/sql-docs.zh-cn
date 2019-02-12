@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109433"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033478"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>创建嵌入数据源或共享数据源 (SSRS)
   报表数据源指定名称和连接信息。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持两种类型的数据源，分别是嵌入数据源和共享数据源。 嵌入数据源在报表定义中定义并只由该报表使用。 共享数据源被定义为一个单独项并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。  
@@ -87,10 +87,10 @@ ms.locfileid: "48109433"
   
 ## <a name="see-also"></a>请参阅  
  [在 Reporting Services 数据源中存储凭据](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [转换从数据源嵌入到共享&#40;报表生成器和 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [将报表或模型绑定到共享的数据源&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [将报表或模型绑定到共享数据源 (SSRS)](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [配置报表的数据源属性（报表管理器）](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Reporting Services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

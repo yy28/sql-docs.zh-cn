@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037998"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  
@@ -125,10 +125,10 @@ ms.locfileid: "48098437"
   
  根据与打印页的尺寸相关的逻辑页数，可以生成更准确的页计数。 在 Excel 中，页脚会自动使用逻辑页码。 若要将逻辑页计数放在页眉中，必须将设备信息设置配置为使用简单页眉。 注意，使用简单页眉时，将删除在页眉区域中处理复杂报表布局的功能。  
   
- 有关详细信息，请参阅[导出到 Microsoft Excel（报表生成器和 SSRS）](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [矩形和线条&#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

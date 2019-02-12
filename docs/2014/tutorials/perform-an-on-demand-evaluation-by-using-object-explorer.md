@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ddb0eeb783f2bdb617ba5c2ac2b18896c23abdcc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536556"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028278"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>通过使用对象资源管理器执行按需评估
   在此任务中，您将使用对象资源管理器为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的单个实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]执行最佳实践策略的按需评估。  
@@ -49,7 +48,7 @@ ms.locfileid: "52536556"
   
     3.  在中**选择策略**对话框中，浏览到包含最佳实践策略的以下文件夹：  
   
-         **C:\Program 文件 (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+         **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
         > [!NOTE]  
         >  文件路径可能各不相同，具体取决于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序文件的安装位置、运行的操作系统是 32 位还是 64 位以及语言标识符。  

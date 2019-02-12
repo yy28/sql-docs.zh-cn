@@ -1,26 +1,20 @@
 ---
-title: 任务 15： 生成和运行 SSIS 项目 |Microsoft Docs
+title: 任务 15:生成和运行 SSIS 项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-author: douglaslms
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1b84614910a594c4496e1eba8b7c11cb2d5617d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050397"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022800"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>任务 15：生成和运行 SSIS 项目
+# <a name="task-15-building-and-running-the-ssis-project"></a>任务 15:生成和运行 SSIS 项目
   在本任务中，您将生成并运行 SSIS 项目。 如果必须在计算机上安装 Excel 2010 的 64 位版本，则应设置的值**Run64BitRuntime**到**False**有关 Excel 源正常工作。  
   
 1.  在中**解决方案资源管理器**窗口中，单击**项目**菜单中，然后单击**CleanseAndCurateSuppliers 属性**。  
@@ -46,6 +40,6 @@ ms.locfileid: "48050397"
 8.  单击**调试**菜单栏，然后单击**停止调试**以停止调试会话。 如果包失败，应启用数据查看器并查看数据在组件之间的流动方式。  
   
 ## <a name="next-step"></a>下一步  
- [任务 16：使用主数据管理器进行验证](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+ [任务 16:验证使用主数据管理器](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

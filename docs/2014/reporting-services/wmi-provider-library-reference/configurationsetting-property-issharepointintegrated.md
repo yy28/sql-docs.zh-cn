@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dd8afe71a455d64ce10fe6677567c3d78577c8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96c8db6fa6d21c0354047061d708250861f0b0c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016678"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>IsSharePointIntegrated 属性 (WMI)
   指定报表服务器是否处于 SharePoint 集成模式。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，此属性将始终返回 `False`，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例为 SharePoint 共享服务，且不受 WMI 提供程序的控制。  

@@ -1,24 +1,21 @@
 ---
-title: 任务 5： 添加数据流任务 |Microsoft Docs
+title: 任务 5：添加数据流任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ade652a874d8519fb0ff85c7622e2955248286d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137367"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017778"
 ---
 # <a name="task-5-adding-data-flow-task"></a>任务 5：添加数据流任务
   在本任务中，您将向 SSIS 包的控制流添加一个数据流任务。  
@@ -34,6 +31,6 @@ ms.locfileid: "48137367"
 4.  双击**Data Flow Task**若要切换到**数据流**选项卡。  
   
 ## <a name="next-step"></a>下一步  
- [任务 6：将 Excel 源添加到数据流](task-6-adding-excel-source-to-the-data-flow.md)  
+ [任务 6:将 Excel 源添加到数据流](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1526eeef7e28ea9994aa833d8272b177852ba5fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1d2552c441a17f3d79c3db0d06a0b128618503d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067277"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027085"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>设置报表或文本框的区域设置 (Reporting Services)
   报表或文本框的 **“语言”** 属性包含区域设置，该区域设置确定因语言和区域而异的默认报表数据显示格式，例如日期、货币或数值。 文本框的 **“语言”** 属性会覆盖报表的 **“语言”** 属性。 如果不为 **“语言”** 指定值，则 Reporting Services 将使用报表服务器所用操作系统的区域设置来发布报表，或使用报表创作计算机的区域设置来预览报表。  
   
  对于 HTML 报表，您可以覆盖默认 **“语言”** 值，而使用浏览器客户端的 HTTP 标头所指定的语言，方法是对报表或文本框的 **“语言”** 属性使用包含内置字段 User!Language 的表达式。  
   
- 您还可以在 URL 中指定报表的 **“语言”** 属性。 有关详细信息，请参阅[设置报表参数在 URL 中的语言](../set-the-language-for-report-parameters-in-a-url.md)。  
+ 您还可以在 URL 中指定报表的 **“语言”** 属性。 有关详细信息，请参阅 [设置 URL 中的报表语言参数](../set-the-language-for-report-parameters-in-a-url.md)。  
   
 ### <a name="to-set-the-locale-for-a-report"></a>设置报表的区域设置  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48067277"
     -   对于 **UnicodeBiDi** 属性，选择要在文本框中使用的双向嵌入级别。  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

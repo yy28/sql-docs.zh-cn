@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQLXML Managed Classes, SqlXmlAdapter object
 - Managed Classes [SQLXML], SqlXmlAdapter object
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7a34cae11dcb866b9ed78a456c560957823982f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db67e12449118ad3bfd03faeb540056ad6570ffe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796535"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035938"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>SQLXML 托管类 - SqlXmlAdapter 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47796535"
   
  SqlXmlAdapter 对象支持以下方法：  
   
- void Fill (DataSet ds)  
+ void Fill(DataSet ds)  
  用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 检索的 XML 数据填充 .NET Framework 中的数据集。  
   
  void Update (DataSet ds)  

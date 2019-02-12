@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215527"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026888"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或删除角色分配（报表管理器）
   角色分配将组或用户帐户映射到包含可执行任务的预定义的角色定义。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的操作类型。 若要创建、修改或删除角色分配，请使用报表管理器。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  
@@ -37,7 +37,7 @@ ms.locfileid: "48215527"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>修改或删除系统角色分配  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  单击 **“网站设置”**。  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48215527"
 6.  若要删除角色分配，请单击该用户或组名旁边的复选框，再单击 **“删除”**。  
   
 ## <a name="see-also"></a>请参阅  
- (创建-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [角色分配](role-assignments.md)   
  [“站点设置”页（报表管理器）](../site-settings-page-report-manager.md)   
- [“新建系统角色分配: 编辑系统角色分配”页（报表管理器）](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [新建系统角色分配：编辑系统角色分配页&#40;报表管理器&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

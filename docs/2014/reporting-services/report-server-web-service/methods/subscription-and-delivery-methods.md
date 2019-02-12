@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5598122d95d3c90bcd91a32b8423117e05dc2a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3b16e33ff38107706a506803300d0499bfd3fc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027958"
 ---
 # <a name="subscription-and-delivery-methods"></a>订阅和传递方法
   可以使用这些方法来创建和管理目录项的订阅和传递。  

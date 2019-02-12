@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7317cafbcff5c02322eae2671939f22344ef25bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a670fe4019d1bc8eebfeb385a63b0c0e58ae61d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031439"
 ---
 # <a name="web-service-authentication"></a>Web 服务身份验证
   可以使用 Windows 身份验证或基本身份验证对针对报表服务器 Web 服务进行的调用进行身份验证。 对报表服务器发出 SOAP 请求的任何客户端都必须实现其中一种支持的身份验证协议的客户端部分。 如果你使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，则可以使用托管代码 HTTP 类来实现身份验证。 通过使用这些 API，可以轻松地随 SOAP 请求一起发送身份验证信息。  
@@ -56,7 +56,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- 必须在调用报表服务器 Web 服务的任何方法之前设置凭据。 如果您没有设置凭据，将收到错误代码“HTTP 401 错误: 拒绝访问”。 必须在使用服务之前对其进行身份验证，但在设置凭据之后，只要你继续使用同一个服务变量（如 rs），就不需要再次设置这些凭据。  
+ 必须在调用报表服务器 Web 服务的任何方法之前设置凭据。 如果不设置凭据，将收到 HTTP 401 错误的错误代码：拒绝访问。 必须在使用服务之前对其进行身份验证，但在设置凭据之后，只要你继续使用同一个服务变量（如 rs），就不需要再次设置这些凭据。  
   
 ## <a name="custom-authentication"></a>自定义身份验证  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含一个编程 API，它向开发人员提供了设计和开发自定义身份验证扩展插件（称为安全扩展插件）的机会。 有关详细信息，请参阅 [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md)。  

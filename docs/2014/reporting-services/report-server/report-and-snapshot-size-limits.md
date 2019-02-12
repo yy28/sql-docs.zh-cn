@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374119"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035638"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  

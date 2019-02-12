@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bfb730a7c19e4aa2481ed50ec69b5356c955584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148809"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037819"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -63,9 +63,9 @@ ms.locfileid: "48148809"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
-     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber。  
+     **设置表达式：值**文本框包含表达式 = Globals ！PageNumber。  
   
-2.  将光标放在 = 号和类型之后`"Page " &`。  
+2.  将光标放在 = 号后，然后键入 `"Page " &`。  
   
      该表达式现在变为 ="Page "&Globals!PageNumber  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48148809"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [中的文本框中的文本格式&#40;报表生成器和 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

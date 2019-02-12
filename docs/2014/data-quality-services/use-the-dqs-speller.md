@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016078"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 拼写检查器会检查域中字符串值的语法、拼写和句子结构。 拼写检查器是独立的客户端功能，不与服务器端引擎集成并且对当前流或状态没有影响。 拼写检查器会标识它认为可能是错误的那些字符串值，然后在对域值进行其他手动更改的相同位置用红色的下划线标记这些字符串值。 这些位置包括：  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e985fd7b1d18bfe33da7185bc769bb31186bdfe2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68e6ea1c31cea554944824e38926318682b163ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038158"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折线图（报表生成器和 SSRS）
-  折线图将序列显示为一组由单个线条连接的点。 折线图用于表示在一段连续时间内发生的大量数据。 有关如何向折线图添加数据的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  折线图将序列显示为一组由单个线条连接的点。 折线图用于表示在一段连续时间内发生的大量数据。 有关如何向折线图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  下图显示了一个包含三个序列的折线图。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48199947"
   
 -   **渐变线图**。 一种使用渐变线而不是规则线条的折线图。 渐变线图通过使用一种线条来连接各点，这种线条使渐变线图看起来像阶梯或楼梯的梯级一样。  
   
--   **迷你图**。 迷你图是折线图的变体，它仅在 Tablix 或矩阵的单元中显示线条序列。 有关详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+-   **迷你图**。 迷你图是折线图的变体，它仅在 Tablix 或矩阵的单元中显示线条序列。 有关详细信息，请参阅 [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="data-considerations-for-line-charts"></a>折线图的数据注意事项  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48199947"
 -   绘制成线条的序列并不会在图表区占太大空间。  因此，折线图经常与其他图表类型（如柱形图）结合使用。 但是，折线图不能与条形图、极坐标图、饼图或形状图等图表类型结合使用。  
   
 ## <a name="see-also"></a>请参阅  
- [条形图&#40;报表生成器和 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)   
  [柱形图（报表生成器和 SSRS）](column-charts-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   

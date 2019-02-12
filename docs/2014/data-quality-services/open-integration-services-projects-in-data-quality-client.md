@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5703d15cccb49575d617568fd90f2719603a0a7a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020138"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
   通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，您可以在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
@@ -48,9 +48,9 @@ ms.locfileid: "52391590"
   
 3.  在 **“打开项目”** 屏幕上，可以通过以下方式之一标识 Integration Services 项目：  
   
-    1.  **项目名称**:使用以下命名术语列出 integration Services 项目："Package.DQS Cleansing_*\<日期 > * *\<时间 >*_ {GUID}。" 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。   
+    1.  **项目名称**：Integration Services 项目使用以下命名术语列出："Package.DQS Cleansing_*\<日期 > * *\<时间 >*_ {GUID}。" 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。   
   
-    2.  **项目类型**:Integration Services 项目具有**SSIS**作为项目类型中**打开项目**屏幕。  
+    2.  **项目类型**：在“打开项目”屏幕中，Integration Services 项目具有 SSIS 作为项目类型。  
   
      选择一个项目，然后单击 **“下一步”**。  
   

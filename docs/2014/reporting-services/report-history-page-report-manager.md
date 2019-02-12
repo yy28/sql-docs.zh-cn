@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033858"
 ---
 # <a name="report-history-page-report-manager"></a>“报表历史记录”页（报表管理器）
   使用“报表历史记录”页可以查看一段时间中生成并存储的报表快照。 根据报表服务器上设置的选项，报表历史记录可能只包含较新的快照。  
@@ -56,7 +56,7 @@ ms.locfileid: "48053137"
   
 ## <a name="see-also"></a>请参阅  
  [查看或删除报表历史记录&#40;报表管理器&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [将快照添加到报表历史记录&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [向报表历史记录添加快照（报表管理器）](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [快照选项属性页&#40;报表管理器&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

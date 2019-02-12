@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f026e83f5f968480b9484c0a1251929a299055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029698"
 ---
 # <a name="caching-reports-ssrs"></a>缓存报表 (SSRS)
   报表服务器可以缓存已处理报表的副本，并在用户打开此报表时返回该副本。 对用户而言，可指示报表为缓存副本的唯一证据是报表的运行日期和时间。 如果日期或时间不是当前的日期或时间，并且报表不是快照，则说明该报表是从缓存中检索的。  
@@ -63,7 +63,7 @@ ms.locfileid: "48069408"
   
  对于使用不同参数值生成不同报表实例的参数化报表，若要缓存该报表的多个实例，则更改报表将非常有用。 注意，只能对报表指定基于查询的参数。  
   
- 当您指定计划或当您创建数据驱动订阅时，应安排向缓存传递报表的频率。 为了将新副本传递到缓存，旧副本必须已过期。 因此，必须对报表的执行属性进行配置以包括缓存过期设置。 过期设置必须与定义的订阅计划一致。 例如，如果创建一个每天晚上运行的订阅，则每天晚上在该订阅运行之前，缓存也应过期。 如果执行属性不包括过期时间，则将忽略后续的传递。 有关缓存刷新计划的详细信息，请参阅[计划](../subscriptions/schedules.md)。 有关设置属性的详细信息，请参阅[设置报表处理属性](set-report-processing-properties.md)。 有关使用数据驱动订阅的详细信息，请参阅[数据驱动订阅](../subscriptions/data-driven-subscriptions.md)。  
+ 当您指定计划或当您创建数据驱动订阅时，应安排向缓存传递报表的频率。 为了将新副本传递到缓存，旧副本必须已过期。 因此，必须对报表的执行属性进行配置以包括缓存过期设置。 过期设置必须与定义的订阅计划一致。 例如，如果创建一个每天晚上运行的订阅，则每天晚上在该订阅运行之前，缓存也应过期。 如果执行属性不包括过期时间，则将忽略后续的传递。 有关缓存刷新计划的详细信息，请参阅 [计划](../subscriptions/schedules.md)。 有关设置属性的详细信息，请参阅 [设置报表处理属性](set-report-processing-properties.md)。 有关使用数据驱动订阅的详细信息，请参阅 [数据驱动订阅](../subscriptions/data-driven-subscriptions.md)。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>导致缓存过期的条件  
  响应下列事件时会导致缓存报表失效：修改报表定义，修改报表参数，更改数据源凭据或者更改报表执行选项。 如果删除缓存中存储的报表，则也将删除该报表的缓存版本。  
@@ -71,7 +71,7 @@ ms.locfileid: "48069408"
  如果出于任何原因（例如，如果用户指定的参数值与生成缓存报表所用的参数值不同）无法从缓存实例呈现报表，则报表服务器将重新运行该报表。  
   
 ## <a name="see-also"></a>请参阅  
- [设置处理选项&#40;Reporting Services SharePoint 集成模式下&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
  [Reporting Services 概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
  [预加载缓存（报表管理器）](preload-the-cache-report-manager.md)   

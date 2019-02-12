@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81a50aa53c41ee0db4b6e9d97f2b96ca58e2649c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 502d3636998b6bdcebd8f3ac9044bd5df14bd66e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228029"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029858"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>“数据集属性”对话框 -&gt;“选项”
   选择**选项**上**集**对话框可以更改数据选项，如排序规则选项和小计，查询。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
