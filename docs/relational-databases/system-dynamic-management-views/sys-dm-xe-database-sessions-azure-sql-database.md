@@ -2,22 +2,20 @@
 title: sys.dm_xe_database_sessions （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: ba1a198e9550f72f3e6781659f1cba39bd3d5d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013508"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "54143267"
 |From|若要|关系|  
 |--------|------|----------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多对一|  
-|sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
 ## <a name="see-also"></a>请参阅  
 [Azure SQL 数据库中扩展的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

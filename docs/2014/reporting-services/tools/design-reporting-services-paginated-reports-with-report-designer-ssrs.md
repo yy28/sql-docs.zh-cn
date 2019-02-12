@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145887"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037808"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用报表设计器设计报表 (SSRS)
   使用报表设计器可以创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  
@@ -118,7 +118,7 @@ ms.locfileid: "48145887"
   
     -   按 F5。  
   
-     如果您使用项目配置，生成报表但不部署该报表中指定，`StartItem`当前配置的属性将在单独的预览窗口中打开。  
+     如果使用生成报表但不部署该报表的项目配置，则将在单独的预览窗口中打开在当前配置的 `StartItem` 属性中指定的报表。  
   
     > [!NOTE]  
     >  若要使用调试模式，必须设置开始项。 在解决方案资源管理器中右键单击报表项目中，单击**属性**，然后在`StartItem`，选择要显示的报表的名称。  
@@ -183,7 +183,7 @@ ms.locfileid: "48145887"
 |3|很小的生成问题，以轻微的方式更改报表布局，您可能注意不到所发生的更改。|  
 |4|仅用于发布警告。|  
   
- 当你尝试预览或部署报表包含报表项中的新增功能[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，如地图和数据条，可以从报表删除这些报表项。 默认情况下，此配置的 ErrorLevel 属性设置为 2，这样，当删除地图时，将导致报表生成过程失败。 然而，如果将 ErrorLevel 属性的值更改为 0 或 1，则将删除地图，发出警告，但生成过程继续进行。  
+ 当您尝试预览或部署的报表包含 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中新增的报表项（如地图和数据栏）时，可能会从报表中删除这些报表项。 默认情况下，此配置的 ErrorLevel 属性设置为 2，这样，当删除地图时，将导致报表生成过程失败。 然而，如果将 ErrorLevel 属性的值更改为 0 或 1，则将删除地图，发出警告，但生成过程继续进行。  
   
   
 ## <a name="see-also"></a>请参阅  

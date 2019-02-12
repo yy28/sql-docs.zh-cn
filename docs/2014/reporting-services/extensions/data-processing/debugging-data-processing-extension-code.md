@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ae167ee18dd7fe3c511f758493f891e5303c24fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b7418b2118e42217150605521d121123b8582a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034058"
 ---
 # <a name="debugging-data-processing-extension-code"></a>调试数据处理扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析数据处理扩展插件代码和查找其中错误的调试工具。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  

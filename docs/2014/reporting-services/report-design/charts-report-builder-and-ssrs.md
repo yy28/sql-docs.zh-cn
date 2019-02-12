@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528693"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025718"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>图表（报表生成器和 SSRS）
   如果要以可视格式汇总数据，请使用图表数据区域。 使用图表，您可以一眼就能看到大量的聚合信息。 创建图表前需仔细准备和了解数据，这一点很重要，因为这样做有助于您快速高效地设计图表。 有关详细信息，请参阅[向报表添加图表（报表生成器和 SSRS）](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要开始立即使用图表，请参阅栏、 列、 迷你图和饼图中的教程[教程&#40;报表生成器&#41;](../report-builder-tutorials.md)或条形图和饼图教程中的[ &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  

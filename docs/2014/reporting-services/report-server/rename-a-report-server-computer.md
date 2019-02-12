@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029140"
 ---
 # <a name="rename-a-report-server-computer"></a>重命名报表服务器计算机
   重命名计算机将导致相应地更改 Web 服务器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称（如果是在同一台计算机上）。 在某些情况下，在计算机名称发生更改之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能无法访问。 请使用本主题中提供的步骤在计算机名称更改之后重新配置报表服务器。  
@@ -39,16 +39,16 @@ ms.locfileid: "48114287"
 ## <a name="renaming-a-report-server-computer"></a>重命名报表服务器计算机  
  如果要重命名运行报表服务器的计算机，请执行下列操作：  
   
-1.  打开**RSReportServer.config**在文本编辑器中修改和`UrlRoot`设置以反映新的服务器名称。 传递扩展插件使用 `UrlRoot` 设置来编写在访问存储于报表服务器中的项时所使用的 URL。 更改报表服务器 URL 地址，你需要更新`UrlRoot`设置，以便订阅可以继续按预期方式传递报表。  
+1.  打开**RSReportServer.config**在文本编辑器中修改和`UrlRoot`设置以反映新的服务器名称。 传递扩展插件使用 `UrlRoot` 设置来编写在访问存储于报表服务器中的项时所使用的 URL。 更改报表服务器 URL 地址时需要更新 `UrlRoot` 设置，以便订阅可以继续按预期方式传递报表。  
   
-2.  在同一文件中，如果设置，修改`ReportServerUrl`设置以反映新的服务器名称。 注意，并非每次安装时都会使用此设置。 如果此设置为空，则无需执行任何操作。  
+2.  在同一个文件中，修改 `ReportServerUrl` 设置（如果对其进行了配置），使其反映新服务器名称。 注意，并非每次安装时都会使用此设置。 如果此设置为空，则无需执行任何操作。  
   
     > [!NOTE]  
     >  如果在企业网络中使用的是 Windows Internet 名称服务 (WINS)，则在一段时间内仍可以通过以前的名称使用报表服务器和报表管理器。 WINS 向它所服务的每一台计算机映射一个 IP 地址。 WINS 为重命名的计算机刷新 IP 地址之后，将无法再使用旧的计算机名称访问报表服务器或报表管理器。  
   
 ## <a name="see-also"></a>请参阅  
  [RSReportServer 配置文件](rsreportserver-config-configuration-file.md)   
- [Reporting Services 配置管理器&#40;本机模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 报表服务器（本机模式）](reporting-services-report-server-native-mode.md)   
  [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)   
  [rsconfig 实用工具 (SSRS)](../tools/rsconfig-utility-ssrs.md)  

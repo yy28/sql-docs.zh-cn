@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192627"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028298"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>设置线条、颜色和图像的格式（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以设置线条、颜色、数据区域、图像和其他报表项的格式。  
@@ -44,7 +44,7 @@ ms.locfileid: "48192627"
   
  除了标准边框外，还可以对图表应用其他边框。 有关详细信息，请参阅[向图表添加边框（报表生成器和 SSRS）](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)。  
   
- 也可将边框添加到报表自身中。 有关详细信息，请参阅[向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
+ 也可将边框添加到报表自身中。 有关详细信息，请参阅 [向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)的详细信息。  
   
 ## <a name="applying-background-colors"></a>应用背景色  
  可以将纯色添加到整个报表或报表内文本框的背景中，也可以添加到数据区域内的单元或单元组。 默认情况下，背景色为白色；不过，您可以从报表项中 **“属性”** 对话框的 **“填充”** 选项卡中选择颜色。 例如，如果要更改文本框的背景色，请右键单击该文本框，然后选择 **“文本框属性”**。 单击 **“填充”** ，然后选择需要的颜色。 在此对话框中，可以为所选项选择背景色，也可以添加背景中显示的图像。  
@@ -57,8 +57,8 @@ ms.locfileid: "48192627"
  还可以将图像（如徽标）添加到报表的背景中，或添加到矩形、文本框、表、矩阵或某些图表部件中，或添加到表体和页部分。 有关详细信息，请参阅[图像（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [设置文本和占位符的格式（报表生成器和 SSRS）](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [设置文本框中文本的格式（报表生成器和 SSRS）](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [“填充”对话框（报表生成器和 SSRS）](../fill-dialog-box-report-builder-and-ssrs.md)  
   

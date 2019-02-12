@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e02a79570258fb15125094709a9fe5f3cf67bb7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d792081d7554aefe4684b5a2e491aac875de49d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153773"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038438"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>“数据集属性”对话框 ->“参数”
   选择 **“数据集属性”** 对话框中的 **“参数”** 可以添加、更改和删除查询参数，包括链接到报表参数的查询参数。  
   
  无论何时在查询选项卡上更改查询，都会对查询命令进行分析。 对标识的每个查询参数，将创建其名称完全相同且区分大小写的报表参数。 默认情况下，查询参数将自动添加到查询参数列表中并链接到相应的报表参数。  
   
- 如果某个报表参数的默认值与另一个链接到查询参数的报表参数存在依赖关系，则报表参数的顺序（即其在“报表参数属性”对话框中显示的顺序）十分重要。 列表中后面的报表参数可以引用列表中前面的参数。 有关报表参数的详细信息，请参阅[报表参数&#40;报表生成器和报表设计器&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 如果某个报表参数的默认值与另一个链接到查询参数的报表参数存在依赖关系，则报表参数的顺序（即其在“报表参数属性”对话框中显示的顺序）十分重要。 列表中后面的报表参数可以引用列表中前面的参数。 有关报表参数的详细信息，请参阅 [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 ## <a name="options"></a>选项  
  **“添加”**  
@@ -50,6 +50,6 @@ ms.locfileid: "48153773"
 ## <a name="see-also"></a>请参阅  
  [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
- [更改报表参数的顺序&#40;报表生成器和 SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+ [更改报表参数的顺序（报表生成器和 SSRS）](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 29268d5ddb85b462550da9cb0960ee2c11bfb3f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae4079f0f7be0bb854a8c77737251fdfd09ca0b6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035488"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>表达式中的常量（报表生成器和 SSRS）
   常量由文字文本或预定义文本构成。 报表处理器具有对预定义常量的访问权限，所以当表达式中包含常量时，这些常量所代表的值会在计算之前进行替换。  
@@ -36,13 +36,13 @@ ms.locfileid: "48130907"
 ## <a name="rdl-constants"></a>RDL 常量  
  您可以在表达式中使用以报表定义语言 (RDL) 定义的常量。 在 **“表达式”** 对话框中，当创建只接受某些有效值（也称为枚举类型）的报表属性的表达式时，显示常量。 下表显示两个示例。  
   
-|“属性”|Description|值|  
+|属性|Description|值|  
 |--------------|-----------------|------------|  
 |TextAlign|文本框中对齐文本的有效值。|General、Left、Center、Right|  
 |BorderStyle|添加到报表的行的有效值。|Default、None、Dotted、Dashed、Solid、Double、DashDot、DashDotdot|  
   
 ## <a name="visual-basic-constants"></a>Visual Basic 常量  
- 您可以在表达式中使用在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库定义的常量。 例如，可以使用常量`DateInterval.Day`。 对于日期 2008 年 1 月 10 日，以下表达式会返回数字 10：  
+ 您可以在表达式中使用在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库定义的常量。 例如，可以使用常量 `DateInterval.Day`。 对于日期 2008 年 1 月 10 日，以下表达式会返回数字 10：  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48130907"
 |MistyRose|创建基于背景色的报表属性的表达式时，可以按名称指定颜色。 **“表达式”** 对话框中列出了有效名称。|  
   
 ## <a name="see-also"></a>请参阅  
- [表达式对话框](../expression-dialog-box.md)   
+ [“表达式”对话框](../expression-dialog-box.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](data-types-in-expressions-report-builder-and-ssrs.md)   

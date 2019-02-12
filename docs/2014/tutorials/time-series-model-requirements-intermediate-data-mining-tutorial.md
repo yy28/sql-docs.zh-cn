@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d40d378a7b8d9d491b53e4a12d5d64bca36848e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173387"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035148"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>了解时序模型的要求（数据挖掘中级教程）
   准备要在预测模型中使用的数据时，必须确保数据包含可用于标识时序中的步长的列。 该列将被指定为 `Key Time` 列。 由于这是一个键列，所以列中必须包含唯一数值。  

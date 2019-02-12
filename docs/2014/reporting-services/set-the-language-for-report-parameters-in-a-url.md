@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d855e911a20749b405179ebd31dfb10ac6ddc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c6150d3060861d2e485ea8e3cd5ad2a0eecc6e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031398"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>设置 URL 中的报表语言参数
   *rs:ParameterLanguage* URL 访问参数可以缓解与使用浏览器语言解释区分区域性的报表参数（如日期、时间、货币和数字）相关的问题。 借助于 *rs:ParameterLanguage*，现在可以独立于浏览器解释 URL。 例如，如果报表服务器设置为区域设置“德语”，但用户正在使用设置为“英语-美国”的浏览器通过 URL 访问某个报表，则将以错误的方式解释传递到报表服务器的参数值。  
@@ -43,7 +43,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  除了 URL 访问参数 **rc:Parameters** 的值 **true** 和 *false*之外，您现在可以传递值 **Collapsed**。 对于某个 URL 使用 *rc:Parameters*=**Collapsed** 时，HTML 查看器的参数提示区域将折叠到视线之外，但用户仍可以进行切换。 值为 **false** 时，将从 HTML 查看器工具栏删除参数提示区域并使其无法供最终用户使用。  
   
 ## <a name="see-also"></a>请参阅  
- [URL 访问&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

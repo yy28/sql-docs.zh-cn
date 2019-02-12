@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ca96d67a219ff106d2eb3388c129f9b8af306f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30d87a1df39ad5e92cb8b29a71506825f17a2789
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034518"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用“我的报表”（报表生成器和 SSRS）
   在配置为本机模式的报表服务器上，“我的报表”文件夹是一个个人工作区，您可以用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 相反，“我的报表”文件夹则是用户管理的工作区。 您可以添加或删除报表和文件夹，保存带有个性化设置的链接报表。  

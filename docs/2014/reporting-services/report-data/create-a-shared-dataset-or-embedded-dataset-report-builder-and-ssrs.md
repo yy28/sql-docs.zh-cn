@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011158"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
   您可以创建供单个报表使用的嵌入数据集，也可以创建供多个报表使用的保存到报表服务器的共享数据集。 若要创建数据集，必须具有嵌入数据源或共享数据源。  
@@ -117,7 +117,7 @@ ms.locfileid: "48133257"
  [查询设计器（报表生成器）](../query-designers-report-builder.md)   
  [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
- [数据连接、 数据源和报表生成器中的连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [嵌入数据集和共享数据集（报表生成器和 SSRS）](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

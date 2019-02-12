@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376869"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015658"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7:将 DQS 清理转换添加到数据流
   在本任务中，您将向数据流添加 DQS 清理转换以使用 DQS 清理输入的供应商数据。 请参阅 **[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 有关转换的详细信息。  
