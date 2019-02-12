@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016586"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>将 Office 数据连接 (.odc) 用于报表（SharePoint 集成模式下的 Reporting Services）
   对于局限性方案而言，可以使用现有 Office 数据连接 (.odc) 文件来为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表提供连接信息。 在创建共享数据源时，可用 .odc 文件替代 .rsds 文件。 报表服务器使用 .odc 文件的方式与使用 .rsds 文件的方式相同；它读取文件以获得数据源类型、连接字符串以及凭据信息。  
@@ -35,7 +35,7 @@ ms.locfileid: "48162857"
   
 -   .odc 文件必须指定一个连接字符串。  
   
--   凭据可以设置为`None`， `Stored`，或`Integrated`。 如果将凭据方法设置为`Stored`，报表服务器将提示用户输入凭据而不是使用已存储的凭据。 报表服务器不能按照 .odc 文件中的定义使用已存储凭据。  
+-   凭据可设置为 `None`、`Stored` 或 `Integrated`。 如果将凭据方法设置为 `Stored`，则报表服务器将提示用户提供凭据，而不要使用已存储凭据。 报表服务器不能按照 .odc 文件中的定义使用已存储凭据。  
   
 -   数据源所具有的架构必须与创建报表时使用的架构相同。 如果数据结构不同，报表将无法运行。  
   
@@ -102,6 +102,6 @@ ms.locfileid: "48162857"
      如果尝试将上述步骤用于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库和示例报表，请注意：只有 Company Sales 报表可不经修改地立即与 .odc 文件一起使用。 其他示例报表包含有不能与 OLE DB 提供程序配合使用的查询参数和功能。 但是，如果先在报表设计器中对这些报表进行修改，那么就可以让报表与 OLE DB 访问接口配合使用。  
   
 ## <a name="see-also"></a>请参阅  
- [创建、 修改和删除共享的数据源&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [创建、修改和删除共享数据源 (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

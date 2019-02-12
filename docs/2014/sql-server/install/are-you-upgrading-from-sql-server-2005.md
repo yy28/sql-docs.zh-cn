@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
-author: douglaslms
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e3f76346bf77e782eb47999a7acc36369fbec104
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038838"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  

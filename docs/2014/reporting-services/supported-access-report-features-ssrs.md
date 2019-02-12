@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180607"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012021"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支持的 Access 报表功能 (SSRS)
   将报表导入报表设计器时，导入过程会将 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 报表转换为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持多项 Access 功能；但是，由于 Access 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之间存在差异，因此某些功能会略有修改或不受支持。 本主题介绍如何将 Access 报表功能转换为 RDL。  
@@ -57,7 +57,7 @@ ms.locfileid: "48180607"
   
 |||||  
 |-|-|-|-|  
-|图像|标签|行|Rectangle|  
+|图像|Label|行|Rectangle|  
 |SubForm|SubReport<br /><br /> **请注意**虽然 SubReport 控件主报表中的转换，但子报表本身将单独转换。|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支持以下控件：  
@@ -85,7 +85,7 @@ ms.locfileid: "48180607"
 |IsHyperlink|IsVisible|KeepTogether（组）|Left|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|页|Picture|PictureTiling（报表）|ReadingOrder|  
+|Pages|Picture|PictureTiling（报表）|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|宽度|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48180607"
 |||||  
 |-|-|-|-|  
 |CanGrow（区域）|CanShrink（区域）|DecimalPlaces|FastLaserPrinting|  
-|“筛选器”|FilterOn|“格式”|FormatConditions|  
+|“筛选器”|FilterOn|格式|FormatConditions|  
 |GrpKeepTogether|KeepTogether（区域）|NumeralShapes|Orientation|  
 |PaintPalette|PaletteSource|PictureAlignment|PicturePages|  
 |PictureSizeMode|PictureTiling（图像）|ScrollBars|SpecialEffect|  
@@ -124,7 +124,7 @@ ms.locfileid: "48180607"
 |Asc|CBool|CByte|CCur|  
 |Cdate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|“格式”|  
+|CStr|CVar|CVDate|格式|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
 |Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
@@ -264,7 +264,7 @@ ms.locfileid: "48180607"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>文本函数  
@@ -272,7 +272,7 @@ ms.locfileid: "48180607"
   
 |||||  
 |-|-|-|-|  
-|“格式”|Format$|InStr|InStrRev|  
+|格式|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|替换|Right|Right$|  

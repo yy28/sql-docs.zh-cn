@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cdd9d9bc6ba4e6a71c0fa3a25424230e88b0b3c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f393fb4a17e129cfbf9af42c0173fe2c7bb7f176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015729"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>在数据警报管理器中管理 SharePoint 站点上的所有数据警报
   SharePoint 警报管理员可以查看由任何站点用户创建的数据警报的列表以及有关警报的信息。 警报管理员也可以删除警报。 下图显示数据警报管理器中可用于警报管理员的功能。  
@@ -50,7 +50,7 @@ ms.locfileid: "48109617"
     >  删除警报定义后，将不会发送进一步的警报消息。 但是，如果您查询警报数据库，可能会发现该警报定义仍存在。 警报服务将按照计划执行清除，因此该警报定义将在下次清除中被永久删除。 默认清除间隔为 20 分钟。 此设置以及其他清除间隔都是可配置的。 有关详细信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

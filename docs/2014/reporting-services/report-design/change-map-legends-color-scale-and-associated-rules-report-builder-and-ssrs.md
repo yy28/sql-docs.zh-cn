@@ -33,13 +33,13 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99f2edaac2962fe2a11f70b0fea18f892ed740a5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041108"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  
@@ -320,7 +320,7 @@ ms.locfileid: "49169257"
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
  [添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [报表故障排除：地图报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

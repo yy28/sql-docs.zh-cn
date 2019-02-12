@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c788f0ec625e072aefbc7637f209ee7197e80d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 49ea3e0e87d9594ff16b3512533597ea9a9ea37c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037899"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在饼图外显示数据点标签（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，饼图标签经过了优化，可以仅在几个数据切片中显示标签。 如果饼图包含的切片过多，标签可能会重叠。 一种解决方案是在饼图外显示标签，这样可能会为较长的数据标签留出更多的空间。 如果发现标签仍然重叠，可以启用三维来为这些标签留出更多的空间。 这将减小饼图的直径，在饼图周围留出更多的空间。  
@@ -55,7 +55,7 @@ ms.locfileid: "48149747"
 4.  如果希望图表为标签留出更多空间但仍显示二维效果，则将“旋转”和“倾角”属性设置为“0”。  
   
 ## <a name="see-also"></a>请参阅  
- [饼图&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [饼图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [收集饼图上的小切片（报表生成器和 SSRS）](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在饼图上显示百分比值（报表生成器和 SSRS）](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   

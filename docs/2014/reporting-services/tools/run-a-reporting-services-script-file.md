@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbec3514c7910896e35690be8262b006325f3ef7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: f7db9d1ec95e384cc2756b43518e7e85242005b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013568"
 ---
 # <a name="run-a-reporting-services-script-file"></a>运行 Reporting Services 脚本文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本环境 (RS.exe) 从命令提示符处运行脚本文件。 RS.exe 有许多可供使用的命令提示符参数。 有关命令提示符选项的详细信息，请参阅 [RS.exe 实用工具 (SSRS)](rs-exe-utility-ssrs.md)。 有关更多脚本示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  

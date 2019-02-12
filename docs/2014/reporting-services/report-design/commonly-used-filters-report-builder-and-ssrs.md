@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 48e9673e31371f76f84a9e5d8d5841282b364425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221689"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039608"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用筛选器（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  
@@ -55,8 +55,8 @@ ms.locfileid: "48221689"
 ## <a name="see-also"></a>请参阅  
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)   
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
- [表达式中的数据类型&#40;报表生成器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+ [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
   

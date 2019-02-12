@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138719"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031848"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>“数据源属性”对话框 -&gt;“常规”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“常规”** 可从报表服务器中选择共享数据源，或者创建或修改报表中嵌入的数据源的连接信息。  
@@ -67,8 +67,8 @@ ms.locfileid: "48138719"
 ## <a name="see-also"></a>请参阅  
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [数据连接、 数据源和报表生成器中的连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [报表生成器中的数据连接、数据源和连接字符串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [数据源凭据-属性对话框&#40;报表生成器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [用于对话框、 窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

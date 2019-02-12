@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016008"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
   Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  
@@ -46,18 +46,18 @@ ms.locfileid: "48166808"
 ## <a name="using-a-color-fill-on-each-series"></a>对每个序列使用颜色填充  
  通过为图表中的每个序列各指定一种颜色，还可以在图表上定义您自己的颜色。 为此，请打开 **“序列属性”** 对话框，并设置 **“填充”** 的 **“颜色”** 属性。 该方法将覆盖定义的所有调色板。 通常，最好使用自定义调色板定义您自己的颜色，因为在报表处理之前，您可能不知道数据集中的序列数。  
   
- 该方法最适合希望根据表达式按条件设置序列颜色的情况。  有关详细信息，请参阅[图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
+ 该方法最适合希望根据表达式按条件设置序列颜色的情况。  有关详细信息，请参阅 [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  
   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)）  
   
- [通过添加条带线突出显示图表数据&#40;报表生成器和 SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [通过添加条带线突出显示图表数据（报表生成器和 SSRS）](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   
- [向图表添加凹凸效果、浮雕和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [向图表添加凹凸效果、阳文和纹理样式（报表生成器和 SSRS）](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [设置图表上图例的格式（报表生成器和 SSRS）](chart-legend-formatting-report-builder.md)  
   

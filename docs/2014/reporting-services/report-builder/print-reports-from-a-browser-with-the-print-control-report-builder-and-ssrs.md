@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030388"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用打印控件从浏览器中打印报表（报表生成器和 SSRS）
   虽然浏览器是用于查看报表的最常见的客户端应用程序，但是浏览器的打印功能并不是打印报表的理想选择。 浏览器的打印功能是针对打印网页而设计的。 通常，从浏览器打印的页面包括网页上的所有可见元素，以及标识网页或网站的页眉和页脚信息。 从浏览器打印将会打印当前窗口的内容。 对于多页报表，浏览器最多打印第一页，而且如果报表页超出了打印页的尺寸，打印的内容可能还会减少。  
   
- 若要提高在浏览器中所查看报表的打印质量，以及打印多页报表，可使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的客户端打印功能。 客户端打印功能提供了一个标准 **“打印”** 对话框，可用来选择打印机，指定页面范围和边距，以及在打印前预览报表。 客户端打印功能旨在替代浏览器 **“文件”** 菜单上的 **“打印”** 命令。 使用客户端打印功能时，报表的打印效果与其设计样式相同，只是不包含在网页打印输出中看到的额外元素。  
+ 若要提高在浏览器中所查看报表的打印质量，以及打印多页报表，您可以使用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的客户端打印功能。 客户端打印功能提供了一个标准 **“打印”** 对话框，可用来选择打印机，指定页面范围和边距，以及在打印前预览报表。 客户端打印功能旨在替代浏览器 **“文件”** 菜单上的 **“打印”** 命令。 使用客户端打印功能时，报表的打印效果与其设计样式相同，只是不包含在网页打印输出中看到的额外元素。  
   
- 要使用客户端打印，需安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控件。 有关详细信息，请参阅[启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 要使用客户端打印，需安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控件。 有关详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,6 +42,6 @@ ms.locfileid: "48110727"
   
 ## <a name="see-also"></a>请参阅  
  [打印报表（报表生成器和 SSRS）](print-reports-report-builder-and-ssrs.md)   
- [打印报表&#40;报表生成器和 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [打印报表（报表生成器和 SSRS）](print-a-report-report-builder-and-ssrs.md)  
   
   

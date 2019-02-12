@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043178"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
   “分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格由“行组”窗格和“列组”窗格组成。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48204659"
   
 -   **默认。** 使用默认模式可以添加、编辑或删除组。 通过从“报表数据”窗格中拖动字段并将它们插入组层次结构中，可以添加父组、子组和详细信息组。 若要添加相邻组，必须使用 **“添加组”** 快捷方式。 有关详细信息，请参阅 [在数据区域中添加或删除组（报表生成器和 SSRS）](../report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
--   **高级**。 使用 **“高级模式”** 可以查看行组和列组的所有成员，以及为静态成员设置属性。 创建组或添加总计时，将自动设置用于控制 Tablix 数据区域如何在每个报表页上呈现行和列的属性。 若要手动调整这些属性，必须在 Tablix 成员上设置它们。 有关详细信息，请参阅[控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+-   **高级**。 使用 **“高级模式”** 可以查看行组和列组的所有成员，以及为静态成员设置属性。 创建组或添加总计时，将自动设置用于控制 Tablix 数据区域如何在每个报表页上呈现行和列的属性。 若要手动调整这些属性，必须在 Tablix 成员上设置它们。 有关详细信息，请参阅 [控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）](../report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 ## <a name="default-mode"></a>默认模式  
  在默认模式中，“行组”窗格和“列组”窗格将显示所有父组、子组和相邻组的层次结构视图。 子组缩进显示在其父组下面。 相邻组以与其同级组相同的缩进程度显示。 下图显示一个 Tablix 数据区域，其中包含嵌套行组和嵌套及相邻的列组。  
@@ -64,11 +64,11 @@ ms.locfileid: "48204659"
   
 -   **KeepTogether**。  
   
--   `KeepWithGroup`。 布尔值。 仅适用于静态行成员。 如果可能，则将此行与上一个或下一个同级动态成员一起显示（如果它未隐藏）。  
+-   `KeepWithGroup` 的用户。 布尔值。 仅适用于静态行成员。 如果可能，则将此行与上一个或下一个同级动态成员一起显示（如果它未隐藏）。  
   
 -   **RepeatOnNewPage**。 布尔值。 仅适用于静态行成员，并且 KeepWithGroup 不为“无”时。 如果可能，则在至少有一个由 KeepWithGroup 指定的动态成员实例的每一页上重复该静态行。  
   
--   `Hidden`。 布尔值。 指示行或列最初是否应当隐藏。  
+-   `Hidden` 的用户。 布尔值。 指示行或列最初是否应当隐藏。  
   
 -   **ToggleItem。** 字符串。 向其添加切换图像的文本框的名称。 该文本框必须在相同的组作用域或包含作用域中。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "48204659"
 ## <a name="see-also"></a>请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
- [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

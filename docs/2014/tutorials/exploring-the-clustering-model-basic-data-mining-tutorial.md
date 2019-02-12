@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016808"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>浏览聚类分析模型（数据挖掘基础教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)]聚类分析算法事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
@@ -119,7 +118,7 @@ ms.locfileid: "50146737"
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
  [浏览决策树模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Microsoft 分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
  [群集对比选项卡&#40;挖掘模型查看器&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
  [群集配置文件选项卡&#40;挖掘模型查看器&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011249"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
   报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -115,7 +115,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|存储报表或报表项的位置的路径。|  
 |UserName|用户标识符。|  
 |ExecutionID|与请求关联的内部标识符。 同一用户会话的请求共享相同的执行 ID。|  
-|RequestType|可能的值：<br />**交互式**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
+|RequestType|可能的值：<br />**Interactive**<br />**订阅**<br /><br /> <br /><br /> 分析按 RequestType=Subscription 筛选的日志数据和按 TimeStart 排序的数据可揭示大量使用订阅的时间段，这样您可能要将某些报表订阅修改为其他时间。|  
 |格式|呈现格式。|  
 |Parameters|用于执行报表的参数值。|  
 |ItemAction|可能的值：<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **执行**<br /><br /> **RenderEdit**|  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|用于检索数据的毫秒数。|  
 |TimeProcessing|用于处理报表的毫秒数。|  
 |TimeRendering|用于呈现报表的毫秒数。|  
-|源|报表执行的源。 可能的值：<br /><br /> **实时**<br /><br /> **缓存**:指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**:指示基于动态生成的报表模型的钻取报表，或在客户端上预览的报表生成器报表（使用报表服务器进行处理和呈现）。<br /><br /> **会话**:指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**:指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
+|源|报表执行的源。 可能的值：<br /><br /> **Live**<br /><br /> **缓存**:指示缓存的执行，例如，数据集查询不实时执行。<br /><br /> **快照**<br /><br /> **历史记录**<br /><br /> **即席**:指示基于动态生成的报表模型的钻取报表，或在客户端上预览的报表生成器报表（使用报表服务器进行处理和呈现）。<br /><br /> **会话**:指示已建立的会话内的跟进请求。  例如，初始请求为查看第一页，跟进请求为使用当前会话状态导出到 Excel。<br /><br /> **Rdce**:指示报表定义自定义扩展插件。 在执行报表时，RDCE 自定义扩展插件可以在将某一报表定义传递到处理引擎前动态自定义该报表定义。|  
 |“登录属性”|状态（rsSuccess 或错误代码；如果发生多个错误，则只记录第一个）。|  
 |ByteCount|所呈现的报表的大小（字节）。|  
 |RowCount|查询返回的结果行数。|  

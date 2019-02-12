@@ -3,6 +3,7 @@ title: 日期和时间改进 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -10,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba3c6bfb78656226745dc8267077749ca46ff3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56df8dd8a0f8341180ad094e58868636b8d5a37d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661686"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029168"
 ---
 # <a name="date-and-time-improvements"></a>日期和时间改进
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "51661686"
 ### <a name="use-time-as-a-distinct-data-type"></a>将时间用作非重复数据类型  
  OLE DB 已具有一种只包含时间的数据类型 DBTYPE_DBTIME，它的精度为 1 秒。 在 ODBC 中，等效类型为 SQL_TYPE_TIME（对于 ODBC 2.0 应用程序为 SQL_TIME）。  
   
- 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时间数据类型具有秒的小数形式，其准确度可达 100 纳秒。 这要求中的新类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端： DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 已编写的所用时间不带秒的小数部分的现有应用程序可以使用 time(0) 列。 现有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 类型及其对应的结构应正常工作，除非应用程序依赖于元数据中返回的类型。  
+ 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时间数据类型具有秒的小数形式，其准确度可达 100 纳秒。 这要求中的新类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端：DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 已编写的所用时间不带秒的小数部分的现有应用程序可以使用 time(0) 列。 现有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 类型及其对应的结构应正常工作，除非应用程序依赖于元数据中返回的类型。  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>将具有扩展的秒的小数部分精度的时间用作非重复数据类型  
  某些应用程序（如过程控制和生产应用程序）要求能够处理精度高达 100 纳秒的时间数据。 可满足这一用途的新类型为 DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。  

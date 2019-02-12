@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043258"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
   报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 **reportserver** 和 **reportservertempdb**。  
@@ -32,7 +32,7 @@ ms.locfileid: "48073877"
   
  数据库可以在本地或远程 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例上运行。 如果您有足够的系统资源或要保留软件许可，则选择本地实例非常有用，但在远程计算机上运行数据库可以提高性能。  
   
- 可以从以前的安装或包含其他报表服务器实例的不同实例中导入或重用现有的报表服务器数据库。 报表服务器数据库的架构必须与报表服务器实例兼容。 如果数据库为较早的格式，则系统将提示您将其升级到当前格式。 新版本不能降级为旧版本。 如果您有一个较新的报表服务器数据库，则无法将其与更早版本的报表服务器实例一起使用。 有关如何将报表服务器数据库升级到较新格式的详细信息，请参阅[升级报表服务器数据库](../install-windows/upgrade-a-report-server-database.md)。  
+ 可以从以前的安装或包含其他报表服务器实例的不同实例中导入或重用现有的报表服务器数据库。 报表服务器数据库的架构必须与报表服务器实例兼容。 如果数据库为较早的格式，则系统将提示您将其升级到当前格式。 新版本不能降级为旧版本。 如果您有一个较新的报表服务器数据库，则无法将其与更早版本的报表服务器实例一起使用。 有关如何将报表服务器数据库升级到较新格式的详细信息，请参阅 [升级报表服务器数据库](../install-windows/upgrade-a-report-server-database.md)。  
   
 > [!IMPORTANT]  
 >  数据库的表结构已经针对服务器操作进行了优化，因此不应对其进行修改或调整。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会将表结构从一个版本更改为下一个版本。 如果修改或扩展数据库，可能会限制或阻止执行将来执行升级或应用 Service Pack 的能力。 还可能会引入破坏报表服务器操作的更改。 例如，如果在 ReportServer 数据库上启用 READ_COMMITTED_SNAPSHOT，将中断交互式排序功能。  
@@ -66,11 +66,11 @@ ms.locfileid: "48073877"
  如果在备份临时数据库后执行了恢复操作，则应删除其内容。 通常，在任何时候删除临时数据库的内容都是安全的。 但是，删除内容后必须重新启动报表服务器 Windows 服务。  
   
 ## <a name="see-also"></a>请参阅  
- [承载 SQL Server 故障转移群集中的报表服务器数据库](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [在 SQL Server 故障转移群集中承载报表服务器数据库](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 报表服务器](../reporting-services-report-server.md)   
  [管理报表服务器数据库（SSRS 本机模式）](report-server-database-ssrs-native-mode.md)   
- [创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（SSRS 配置管理器）](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 的备份和还原操作](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

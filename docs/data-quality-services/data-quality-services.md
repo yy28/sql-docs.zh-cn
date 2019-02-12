@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3392f524dff3c237912a7564e083a3cb7ecdd0ed
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 7d65dee84a2636508af997a4aac2c851e7bd9e72
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017198"
 ---
 # <a name="data-quality-services"></a>“数据库引擎服务”
 
@@ -24,7 +24,7 @@ ms.locfileid: "52617177"
 
 [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是知识驱动型数据质量产品。 DQS 使您可以生成知识库，然后使用它执行各种关键数据质量任务，包括数据的更正、充实、标准化和消除重复。 DQS 通过使用引用数据访问接口提供的基于云的 Reference Data Services，使您可以执行数据清理。 DQS 还可以提供集成到数据质量任务的事件探查功能，使您可以分析数据的完整性。  
   
- DQS 由[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]和[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]组成，它们都作为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的一部分安装。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]是一个 SQL Server 实例功能，它包含具有数据质量功能和存储的三个 SQL Server 目录。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]是一个 SQL Server 共享功能，企业用户、信息工作者和 IT 专业人员可以使用它执行计算机辅助的数据质量分析和以交互方式管理其数据质量。 您还可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 数据质量功能（它们都基于 DQS）来执行数据质量过程。  
+ DQS 由 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]组成，它们都作为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的一部分安装。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]是一个 SQL Server 实例功能，它包含具有数据质量功能和存储的三个 SQL Server 目录。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]是一个 SQL Server 共享功能，企业用户、信息工作者和 IT 专业人员可以使用它执行计算机辅助的数据质量分析和以交互方式管理其数据质量。 您还可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 数据质量功能（它们都基于 DQS）来执行数据质量过程。  
   
  有关安装 DQS 的信息，请参阅 [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)。 如果想要从当前 DQS 版本升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请参阅[升级 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   

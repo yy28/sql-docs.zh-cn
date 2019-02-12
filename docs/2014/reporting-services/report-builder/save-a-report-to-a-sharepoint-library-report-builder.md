@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9a053a0a27be8d53c0f5ba403822f2f946d02604
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: kfile
+ms.openlocfilehash: 8f9c2cabbd19552b0509204208f23fe3579b7412
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041458"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>将报表保存到 SharePoint 库（报表生成器）
   若要将报表保存到配置为 SharePoint 集成模式的报表服务器，必须找到 SharePoint 服务器并建立与报表服务器的连接。 在报表定义中，对与报表相关的项的所有引用都必须使用特定于 SharePoint 报表服务器的值。 相关项包括子报表、钻取报表和基于 Web 的图像等资源。 有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
