@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012538"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
   自定义报表项使用 `Microsoft.ReportDesigner` 命名空间中的类。 用于实现自定义报表项的类可分为两个主要类别：旨在支持自定义报表项基础结构的唯一类和用于封装相关报表定义语言 (RDL) 元素功能的托管包装类。 有关如何使用这些类的代码示例，请参阅 [SQL Server Reporting Services Product Samples（SQL Server Reporting Services 产品示例）](https://go.microsoft.com/fwlink/?LinkId=177889)。  

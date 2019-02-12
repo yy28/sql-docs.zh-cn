@@ -15,28 +15,28 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010580"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
   本主题介绍如何通过使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 为 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的不同活动和模块配置严重级别。 严重级别定义 DQS 中发生的事件的强度。 DQS 事件具有以下严重级别，这些级别按严重程度递减列出：  
   
--   **致命**:可能会导致严重/意外结果的重大的运行时错误。  
+-   **严重**：可能会导致严重/意外结果的重大的运行时错误。  
   
--   **错误**:其他运行时错误。  
+-   **错误**：其他运行时错误。  
   
--   **则发出警告**:可能会导致错误的事件有关的警告。  
+-   **警告**：可能会导致错误的事件的有关警告。  
   
--   **信息**:有关一般的事件不是错误或警告的信息。 例如，一个 DQS 过程已开始。  
+-   **信息**：与一般事件有关的并非错误或警告的信息。 例如，一个 DQS 过程已开始。  
   
--   **调试**:有关事件的详细详细信息。  
+-   **调试**：有关事件的详细信息。  
   
  通过为不同的 DQS 活动和模块配置严重级别，可筛选要记入日志的信息，以及筛选要为各 DQS 活动或模块写入 DQS 日志文件的信息。 例如，如果您将某一 DQS 活动的严重级别设为 **“警告”**，则只有与该 DQS 活动关联的警告和更高级别严重程度的消息（错误和严重）将被记入日志。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "53202376"
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“配置”**。  
   
-3.  接下来，单击 **“日志设置”** 选项卡。列出了可以为其选择的严重级别的下列 DQS 活动：**域管理**，**知识发现**，**清理项目 （不包括**“匹配策略和匹配项目”和“RDS”。  
+3.  接下来，单击 **“日志设置”** 选项卡。列出下列 DQS 活动，你可以为其选择严重程度：“域管理”、“知识发现”、“清理项目 (Ex.RDS)”“匹配策略和匹配项目”和“RDS”。  
   
-4.  对于某一 DQS 活动，选择您要记入日志的严重级别。 您可以选择以下级别之一：**致命**，**错误**， **，则发出警告**，**信息**，并且**调试**。 例如，对于知识发现活动，如果您只希望将严重消息写入 DQS 日志文件，则在下拉列表中对 **“知识发现”** 活动选择 **“严重”** 。  
+4.  对于某一 DQS 活动，选择您要记入日志的严重级别。 可以选择下列其中一个类型：严重、错误、警告、信息和调试。 例如，对于知识发现活动，如果您只希望将严重消息写入 DQS 日志文件，则在下拉列表中对 **“知识发现”** 活动选择 **“严重”** 。  
   
     > [!NOTE]  
     >  默认情况下，将为每个活动选择 **“错误”** 。 这意味着，默认情况下对于每个活动，错误和严重消息将写入 DQS 日志文件。  
@@ -80,7 +80,7 @@ ms.locfileid: "53202376"
   
 2.  在出现的网格中，在 **“模块”** 列的下拉列表中选择某一模块名称。  
   
-3.  接下来，从 **“严重性”** 列的下拉列表中选择该模块的严重级别。 您可以选择以下级别之一：**致命**，**错误**， **，则发出警告**，**信息**，并且**调试**。  
+3.  接下来，从 **“严重性”** 列的下拉列表中选择该模块的严重级别。 可以选择下列其中一个类型：严重、错误、警告、信息和调试。  
   
      例如，在域管理活动内，您可以通过选择 **Microsoft.Ssdqs.DomainRules.Define** 模块，然后选择不同的日志严重级别，为域规则定义功能设置与域管理活动不同的粒度级别。 类似地，您可以通过选择 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 模块，然后选择不同的日志严重级别，为跨域规则定义功能设置不同的粒度级别。  
   

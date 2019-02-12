@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014978"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>向报表历史记录添加快照（报表管理器）
   报表历史记录是随着时间变化而创建的报表快照的集合。 报表快照是包含在特定时间点检索到的布局信息以及查询结果的报表。 与按需运行报表（在选择该报表时可获得最新的查询结果）不同，报表快照按计划进行处理，再保存到报表服务器中。 当您选择报表快照进行查看时，报表服务器将在报表服务器数据库中检索存储的报表，然后显示快照创建时报表的数据和布局。  
@@ -38,7 +38,7 @@ ms.locfileid: "48075967"
 3.  单击 **“新建快照”**。 将在 **“运行时间”** 列中创建一个新快照。  
   
     > [!NOTE]  
-    >  为此，管理员必须将报表历史记录配置为 **“允许手动创建历史记录”**。 有关详细信息，请参阅[限制报表历史记录&#40;报表管理器&#41;](../reports/limit-report-history-report-manager.md)。  
+    >  为此，管理员必须将报表历史记录配置为 **“允许手动创建历史记录”**。 有关详细信息，请参阅 [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)。  
   
 4.  单击 **“应用”**。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "48075967"
 5.  单击 **“应用”**。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表的执行属性&#40;报表管理器&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [打开和关闭报表&#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [配置报表的执行属性（报表管理器）](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [打开和关闭报表（报表管理器）](../reports/open-and-close-a-report-report-manager.md)   
  [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)   
  [“计划”](../subscriptions/schedules.md)   
  [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)  

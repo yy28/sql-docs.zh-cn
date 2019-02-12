@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015009"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>“地图经线属性”对话框 ->“标签”
   使用**MapMeridian 属性**对话框可以更改垂直网格在地图视区中的标签选项。 根据视区的指定坐标系统，经线表示以下值之一：  
@@ -31,7 +31,7 @@ ms.locfileid: "48115749"
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
 ## <a name="options"></a>选项  
- **时间间隔**  
+ **Interval**  
  键入以度为单位的整数值，指定经线之间的间隔。 默认情况下，选择 **“自动”** 。 **“自动”** 表示值由空间数据自动决定。  
   
  **显示标签**  

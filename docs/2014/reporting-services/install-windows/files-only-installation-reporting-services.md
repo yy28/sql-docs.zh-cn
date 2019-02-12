@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c94dac1e8cd3ac645d7b229ba4f6ebd1987128b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 451141a1fdc5560faec3e82fedd10b772e79872f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029616"
 ---
 # <a name="files-only-installation-reporting-services"></a>“仅文件”安装 (Reporting Services)
   “仅文件安装”指的是一种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装模式，在该安装模式中，安装程序为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程序文件创建文件夹结构、将文件复制到磁盘、在本地计算机上注册报表服务器服务、配置服务帐户、向服务帐户授予文件权限以及注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供程序。  
   
- “仅文件”安装包括以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：报表服务器 Web 服务（它承载报表服务器 Web 服务、后台处理应用程序和报表管理器）、报表生成器、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令行实用工具（rsconfig.exe、rskeymgmt.exe 和 rs.exe）。 此模式不适用于诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]之类的共享功能。如果要安装此类功能，就必须将其指定为独立的项。  
+ 仅文件安装包括以下[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]功能：报表服务器服务 （它承载报表服务器 Web 服务、 后台处理应用程序和报表管理器），报表生成器[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]命令行实用工具 (rsconfig.exe、 rskeymgmt.exe 和rs.exe)。 此模式不适用于诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]之类的共享功能。如果要安装此类功能，就必须将其指定为独立的项。  
   
  与其他安装模式不同，“仅文件”模式下安装的报表服务器在安装程序完成后不能正常工作。 要使用 [Reporting Services 配置管理器（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)来使报表服务器联机，需要进行其他配置。  
   
@@ -60,9 +60,9 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
   
 ## <a name="see-also"></a>请参阅  
  [验证 Reporting Services 安装](verify-a-reporting-services-installation.md)   
- [配置报表服务器服务帐户&#40;SSRS 配置管理器&#41;](configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器 Url &#40;SSRS 配置管理器&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器服务帐户（SSRS 配置管理器）](configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [配置报表服务器 URL（SSRS 配置管理器）](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services SharePoint 模式下安装&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-reporting-services-sharepoint-mode.md)   
  [安装 Reporting Services 本机模式报表服务器](install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 工具](../tools/reporting-services-tools.md)  
