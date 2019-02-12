@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 15838ca2bb994aba32cd4aa83d7e8e23c78743f9
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143467"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760100"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -345,8 +345,9 @@ WHERE is_forced_plan = 1;
 > 如果仅对 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中正在运行的工作负载见解使用查询存储，请尽快安装 [KB 4340759](https://support.microsoft.com/help/4340759) 中的性能可伸缩性修补程序。 
 
 ## <a name="see-also"></a>另请参阅  
- [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)  
+[查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
+[通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
+[相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      
+[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)     
   
