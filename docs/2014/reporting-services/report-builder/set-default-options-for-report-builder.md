@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218227"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032968"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
   单击**报表生成器**按钮，然后单击**选项**为显示最近使用的文件和连接设置选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
@@ -47,6 +47,6 @@ ms.locfileid: "48218227"
  清除最近访问的站点、服务器、共享数据集、共享数据源连接和文档的当前列表。  
   
 ## <a name="see-also"></a>请参阅  
- [用于对话框、 窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [用于对话框、窗格和向导的报表生成器帮助](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

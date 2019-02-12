@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034078"
 ---
 # <a name="publishing-data-sources-and-reports"></a>发布数据源和报表
   在发布报表之前，您应预览报表以查看其运行时的外观。 您可以继续改进设计，直到对结果满意为止。  
@@ -36,7 +36,7 @@ ms.locfileid: "48182177"
  [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)  
  说明如何将报表发布到报表服务器。  
   
- [在 SharePoint 模式下报表服务器上的已发布的报表项的 URL 示例&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  说明如何将报表发布到 SharePoint 站点。  
   
 ## <a name="see-also"></a>请参阅  

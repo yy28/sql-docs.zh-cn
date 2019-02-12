@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211937"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035298"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>浏览市场篮模型（数据挖掘中级教程）
   现在，您构建`Association`模型中，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]中的关联查看器**挖掘模型查看器**数据挖掘设计器选项卡。 本教程指导您使用查看器来浏览各项之间的关系。 查看器可以帮助您快速查看哪些产品通常会一起出现，并且大致了解出现的模式。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]关联查看器包含三个选项卡：**规则**，**项集**，并且**依赖关系网络**。 由于每个选项卡显示的数据视图略有差异，因此在浏览某个模型时，您通常会在不同窗格之间多次来回切换，以便深入了解数据。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]关联查看器包含三个选项卡：**规则**，**项集**，和**依赖关系网络**。 由于每个选项卡显示的数据视图略有差异，因此在浏览某个模型时，您通常会在不同窗格之间多次来回切换，以便深入了解数据。  
   
 -   [依赖关系网络选项卡](#bkmk_DepNet)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48211937"
 ##  <a name="bkmk_Itemsets"></a> 项集选项卡  
  接下来，您将更加详细地了解 Touring Tire 和 Touring Tire Tube 产品的模型所生成的规则和项集。 **项集**选项卡显示三个重要的信息片段的项集相关的[!INCLUDE[msCoName](../includes/msconame-md.md)]关联算法发现：  
   
--   **支持：** 出现项集的事务数。  
+-   **支持：** 在其中出现项集的事务数。  
   
 -   **大小：** 集中的项的项的数目。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48211937"
 ##  <a name="bkmk_Rules"></a> 规则选项卡  
  **规则**选项卡显示与算法发现的规则相关的以下信息。  
   
--   **概率：** *可能性*的规则，定义为给定左侧项的右侧项的概率。  
+-   **概率：***可能性*的规则，定义为给定左侧项的右侧项的概率。  
   
 -   **重要性：** 规则的有用性的度量值。 值越大则意味着规则越有用。  
   
@@ -197,8 +196,8 @@ ms.locfileid: "48211937"
  [筛选挖掘模型中的嵌套的表&#40;数据挖掘中级教程&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [第 4 课： 生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [第 3 课：生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [第 4 课：生成顺序聚类分析方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Microsoft 关联算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 关联算法技术参考](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

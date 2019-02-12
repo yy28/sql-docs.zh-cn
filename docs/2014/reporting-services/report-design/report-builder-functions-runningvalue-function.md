@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 321c0f95d92536d816b365362cd119a292ac1004
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5176ddc4f06531dcbfea383362bdd195a215fe84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034848"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  

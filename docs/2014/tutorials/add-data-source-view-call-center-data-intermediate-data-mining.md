@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171939"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035038"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>为呼叫中心数据添加数据源视图（数据挖掘中级教程）
   在本任务中，添加一个将用于访问呼叫中心数据的数据源视图。 将使用相同的数据来生成用于探索的初始神经网络模型以及用于提供建议的逻辑回归模型。  
@@ -58,7 +57,7 @@ ms.locfileid: "48171939"
     |||  
     |-|-|  
     |**列名**|DayOfWeek|  
-    |**Description**|从 DimDate 表获取一周中的某天|  
+    |**说明**|从 DimDate 表获取一周中的某天|  
     |**表达式**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      若要验证表达式创建数据需要请右键单击该表**FactCallCenter**，然后选择**浏览数据**。  
@@ -70,7 +69,7 @@ ms.locfileid: "48171939"
 |FactCallCenterID|数据导入到数据仓库中时创建的一个任意键。<br /><br /> 此列标识唯一的记录并应作为数据挖掘模型的事例键。|  
 |DateKey|呼叫中心运营的日期，以整数表示。 整数日期键在数据仓库中经常用到，但是如果要按日期值分组，您可能要获取日期/时间格式的日期。<br /><br /> 请注意由于供应商为每个运营日中的每个班次都提供了一个单独的报表，因此日期不是唯一的。|  
 |WageType|指示当天是工作日、 周末或假期。<br /><br /> 很可能是由于客户服务的质量在工作日与周末因此您将使用此列作为输入。|  
-|班次|指示为其记录呼叫的轮班时间。 此呼叫中心将工作日划分为四个轮班时间：AM、PM1、PM2 和 Midnight。<br /><br /> 班次可能影响客户服务质量，因此您将使用此列作为输入。|  
+|班次|指示为其记录呼叫的轮班时间。 此呼叫中心将工作日划分为四个轮班时间：AM、 PM1、 PM2 和 Midnight。<br /><br /> 班次可能影响客户服务质量，因此您将使用此列作为输入。|  
 |LevelOneOperators|指示值班的一级接线员的数量。<br /><br /> 呼叫中心的员工最低级别为 l 级，因此这些员工经验不足。|  
 |LevelTwoOperators|指示值班的二级接线员的数量。<br /><br /> 员工必须记录一定数量的服务小时数才会被视为第二级操作员。|  
 |TotalOperators|此轮班时间内存在的接线员的总数。|  
