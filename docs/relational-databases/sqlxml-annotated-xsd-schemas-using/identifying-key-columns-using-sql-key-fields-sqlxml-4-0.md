@@ -47,9 +47,9 @@ ms.locfileid: "56040438"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 生成正确的嵌套时\<sql: relationship > 未提供足够信息  
  此示例显示了在何处 **sql:key-字段** 必须指定。  
   
- 请考虑以下架构。 该架构指定的层次结构之间**\<顺序 >** 并 **\<客户 >** 元素在其中 **\<顺序 >** 元素是父元素和 **\<客户 >** 元素是子元素。  
+ 请考虑以下架构。 该架构指定的层次结构之间 **\<顺序 >** 并 **\<客户 >** 元素在其中 **\<顺序 >** 元素是父元素和 **\<客户 >** 元素是子元素。  
   
- **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息**\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有**sql:key-字段**批注，将生成的层次结构是不准确。  
+ **\<Sql: relationship >** 标记用于指定父-子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 中提供的信息 **\<sql: relationship >** 不足以唯一标识父表 (Sales.SalesOrderHeader) 中的行。 因此，如果没有**sql:key-字段**批注，将生成的层次结构是不准确。  
   
  与**sql:key-字段** 中所指定 **\<顺序 >** 、 批注可唯一标识父 （Sales.SalesOrderHeader 表） 中的行和及其子元素出现在下面其父项。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56040438"
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 KeyFields2.xml。  
   
-2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询返回所有**\<HumanResources.Employee >** 元素：  
+2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询返回所有 **\<HumanResources.Employee >** 元素：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
