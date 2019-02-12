@@ -2,7 +2,7 @@
 title: 针对可用性组的先决条件、限制和建议
 description: 有关部署 Always On 可用性组的先决条件、限制和建议的说明。
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202986"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570800"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202986"
     -   对于次要副本，SQL Server 实例最多使用 100 个线程进行并行重做。 每个数据库最多使用 CPU 内核总数的一半，但是每个数据库不能超过 16 个线程。 如果单个实例的所需线程总数超过 100 个，则 SQL Server 会对每个其余数据库使用单个重做线程。 串行重做线程将在处于不活动状态约 15 秒后释放。 
     
     > [!NOTE]
-    > 基于数据库的升序数据库 ID 选择这些数据库使用单线程。 在这种情况下，对于托管可用性组数据库数量比可用工作线程数量多的 SQL Server 实例，应考虑其数据库创建顺序。 例如，在具有 32 个或更多个 CPU 内核的系统上，从加入可用性组的第 7 个数据库开始的所有数据库都将处于串行重做模式，不考虑每个数据库的实际重做工作负载。 应先将需要并行重做的数据库添加到可用性组。    
+    > 基于数据库的升序数据库 ID 选择这些数据库使用单线程。 在这种情况下，对于托管可用性组数据库数量比可用工作线程数量多的 SQL Server 实例，应考虑其数据库创建顺序。 例如，在具有 32 个或更多个 CPU 核心的系统上，一个或多个可用性组中的前六个数据库（按数据库 ID 排序）将使用并行重做模式，所有后续数据库将使用单个重做模式。
   
 -   此外，可用性组使用未共享的线程，如下所示：  
   

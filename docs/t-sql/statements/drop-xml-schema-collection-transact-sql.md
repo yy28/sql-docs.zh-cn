@@ -23,19 +23,19 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 112d46b26d8b4e03e8842aa17b8f1ad54976e19a
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804485"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652526"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除整个 XML 架构集合及其所有组件。  
+删除整个 XML 架构集合及其所有组件。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,16 +45,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>参数  
- relational_schema  
- 标识关系架构的名称。 如果未指定，则假定为默认的关系架构。  
+relational_schema  
+标识关系架构的名称。 如果未指定，则假定为默认的关系架构。  
   
- sql_identifier  
- 要删除的 XML 架构集合的名称。  
+sql_identifier  
+要删除的 XML 架构集合的名称。  
   
 ## <a name="remarks"></a>Remarks  
- 删除 XML 架构集合属于事务性操作。 这表示如果删除事务内的 XML 架构集合然后回滚此事务，则 XML 架构集合不会被删除。  
+删除 XML 架构集合属于事务性操作。 如果删除事务内的 XML 架构集合，然后回滚此事务，则 XML 架构集合不会被删除。  
   
- 当 XML 架构集合正在使用时，不能将其删除。 这表示删除的集合不能存在下列任何情况：  
+当 XML 架构集合在使用时，不能将其删除。 因此，要删除的集合不能存在下列任何情况：  
   
 -   与任何 **xml** 类型参数或列关联。  
   
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Permissions  
- 删除 XML SCHEMA COLLECTION 需要对集合具有 DROP 权限。  
+删除 XML SCHEMA COLLECTION 需要对集合具有 DROP 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示如何删除 XML 架构集合。  
+以下示例显示如何删除 XML 架构集合。  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

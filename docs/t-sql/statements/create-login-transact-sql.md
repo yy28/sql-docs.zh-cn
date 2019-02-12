@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327898"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421404"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "54327898"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\*SQL 数据库<br />单一数据库/弹性池\*_**|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
   
 ## <a name="syntax"></a>语法 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>参数  
 login_name  
-指定创建的登录名。 Azure SQL 数据库逻辑服务器仅支持 SQL 登录。 
+指定创建的登录名。 Azure SQL 数据库单一数据库/弹性池仅支持 SQL 登录名。 
 
 PASSWORD ='password*'  
 指定正在创建的 SQL 登录的密码。 请使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。 
@@ -320,7 +320,7 @@ CREATE LOGIN 语句必须是批中的唯一语句。
 
 ## <a name="logins"></a>登录名
 - 必须具有对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份。 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 权限的成员身份的 Azure Active Directory (Azure AD) 帐户可以执行此命令
-- 必须是用于 Azure SQL 逻辑服务器的同一目录中的 Azure AD 成员
+- 必须是用于 Azure SQL 数据库服务器的同一目录中的 Azure AD 成员
   
 ## <a name="after-creating-a-login"></a>创建登录后  
 创建登录后，该登录可以连接到 SQL 数据库，但是只具有授予 public 角色的权限。 考虑执行以下部分活动。 
@@ -378,7 +378,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据库<br />托管实例 \*_|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL 数据库<br />托管实例\*_**|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -387,7 +387,7 @@ GO
 ## <a name="syntax"></a>语法 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -440,14 +440,14 @@ SID = sid
 默认情况下，在 master 中授予新建 Azure AD 登录名的标准权限为：
 - CONNECT SQL 和 VIEW ANY DATABASE。
 
-### <a name="sql-database-managed-instance-logins"></a>SQL 数据库托管实例登录
+### <a name="sql-database-managed-instance-logins"></a>SQL 数据库托管实例登录名
 
 - 必须具有对服务器的 ALTER ANY LOGIN 权限或固定服务器角色（`securityadmin` 和 `sysadmin` 中的一个）的成员身份。 只有具有针对服务器的 ALTER ANY LOGIN 权限或其中一个角色的成员身份的 Azure Active Directory (Azure AD) 帐户可以执行创建命令。
 - 如果登录名是 SQL 主体，那么只有属于 `sysadmin` 角色的登录才能使用创建命令为 Azure AD 帐户创建登录名。
 - 必须是用于 Azure SQL 托管实例的同一目录中的 Azure AD 成员。
 
 ## <a name="after-creating-a-login"></a>创建登录后  
-创建登录名后，该登录名可以连接到 SQL 托管实例，但是只具有授予 public 角色的权限。 考虑执行以下部分活动。 
+创建登录名后，该登录名可以连接到 SQL 数据库托管实例，但只具有授予 public 角色的权限。 考虑执行以下部分活动。 
   
 - 若要通过 Azure AD 登录名创建 Azure AD 用户，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
 - 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) 和 [GRANT](grant-transact-sql.md) 语句。
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|\*SQL 数据<br />仓库\*|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|\*SQL 数据<br />仓库\*|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库 \*_
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库 \*_
 
 &nbsp;
 

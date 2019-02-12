@@ -28,19 +28,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c00302049a1831a7126484e953fc2ce384724bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffe255903a397fd3bc1f36dd57cf38f17eac00ba
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841485"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652546"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  在查询执行过程中发生溢出或被零除错误时终止查询。  
+在查询执行过程中发生溢出或被零除错误时结束查询。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,33 +57,33 @@ SET ARITHABORT ON
 ```
   
 ## <a name="remarks"></a>Remarks  
- 在登录会话中，应始终将 ARITHABORT 设置为 ON。 将 ARITHABORT 设置为 OFF 可能对查询优化产生负面影响，进而导致性能问题。  
+在登录会话中始终将 ARITHABORT 设置为 ON。 将 ARITHABORT 设置为 OFF 可能对查询优化产生负面影响，进而导致性能问题。  
   
 > [!WARNING]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的默认 ARITHABORT 设置为 ON。 客户端应用程序将 ARITHABORT 设置为 OFF 可以接收不同的查询计划，使得对性能较差的查询进行故障排除变得困难。 即，同一个查询可以在 Management Studio 中快速执行，但在应用程序中却比较慢。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 排除查询故障时始终与客户端 ARITHABORT 设置匹配。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的默认 ARITHABORT 设置为 ON。 客户端应用程序将 ARITHABORT 设置为 OFF 可以接收不同的查询计划，这使得对性能较差的查询进行故障排除变得困难。 也就是说，同一个查询可以在 Management Studio 中快速执行，但在应用程序中却比较慢。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 排除查询故障时，请始终与客户端 ARITHABORT 设置匹配。  
   
- 如果 SET ARITHABORT 为 ON，并且 SET ANSI WARNINGS 也为 ON，则这些错误情况将导致查询终止。  
+如果 SET ARITHABORT 和 SET ANSI WARNINGS 均为 ON，则这些错误情况将导致查询结束。  
   
- 如果 SET ARITHABORT 为 ON，但 SET ANSI WARNINGS 为 OFF，则这些错误情况将导致批处理终止。 如果在事务内发生错误，则回滚事务。 如果 SET ARITHABORT 为 OFF 并且发生了这些错误之一，则显示一条警告消息，并将 NULL 赋予算术运算的结果。  
+如果 SET ARITHABORT 为 ON，但 SET ANSI WARNINGS 为 OFF，则这些错误情况将导致批处理结束。 如果在事务内发生错误，则回滚事务。 如果 SET ARITHABORT 为 OFF，并且发生了这些错误之一，则显示一条警告消息，并且算术运算的结果为 NULL。  
   
- 如果 SET ARITHABORT 和 SET ANSI WARNINGS 为 OFF 并且发生了这些错误之一，则显示一条警告消息，并将 NULL 赋给算术运算的结果。  
+如果 SET ARITHABORT 和 SET ANSI WARNINGS 均为 OFF，并且发生了这些错误之一，则显示一条警告消息，并且算术运算的结果为 NULL。  
   
 > [!NOTE]  
->  如果 SET ARITHABORT 和 SET ARITHIGNORE 都没有设置，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在执行查询后返回 NULL 和一条警告消息。  
+>  如果 SET ARITHABORT 和 SET ARITHIGNORE 均为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在运行查询后返回 NULL，并显示一条警告消息。  
   
- 当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。 如果数据库兼容级别设置为 80 或更低，则必须将 ARITHABORT 选项显式设置为 ON。  
+当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。 如果数据库兼容级别设置为 80 或更低，则必须将 ARITHABORT 选项显式设置为 ON。  
   
- 如果 SET ARITHABORT 为 OFF，并且在对表达式求值的过程中 INSERT、DELETE 或 UPDATE 语句遇到算术错误（溢出、被零除或域错误），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将插入或更新一个 NULL 值。 如果目标列不可为空，则插入或更新操作将失败，用户将收到错误消息。  
+在对表达式求值的过程中，如果 SET ARITHABORT 为 OFF，INSERT、UPDATE 或 DELETE 语句遇到算术、溢出、被零除或域错误，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将插入或更新一个 NULL 值。 如果目标列不可为空，则插入或更新操作将失败，用户将看到错误消息。  
   
- 如果 SET ARITHABORT 或 SET ARITHIGNORE 为 OFF，而 SET ANSI_WARNINGS 为 ON，则遇到被零除或溢出错误时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会返回错误消息。  
+如果 SET ARITHABORT 或 SET ARITHIGNORE 为 OFF，而 SET ANSI_WARNINGS 为 ON，则遇到被零除或溢出错误时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会返回错误消息。  
   
- 如果 SET ARITHABORT 设置为 OFF，并且对 IF 语句的 Boolean 条件求值过程中发生中止错误，则执行 FALSE 分支。
+如果 SET ARITHABORT 为 OFF，并且对 IF 语句的 Boolean 条件求值过程中发生中止错误，则执行 FALSE 分支。
   
- 在对计算列或索引视图创建或更改索引时，SET ARITHABORT 必须为 ON。 如果 SET ARITHABORT 为 OFF，则对包含计算列或索引视图索引的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句时将失败。
+在对计算列或索引视图创建或更改索引时，SET ARITHABORT 必须为 ON。 如果 SET ARITHABORT 为 OFF，则对包含计算列或索引视图索引的表执行 CREATE、UPDATE、INSERT 和 DELETE 语句时将失败。
   
- SET ARITHABORT 的设置是在执行或运行时设置的，而不是在分析时设置的。  
+SET ARITHABORT 的设置是在执行或运行时发生的，而不是在分析时发生的。  
   
- 要查看此设置的当前设置，请运行以下查询：
+要查看 SET ARITHABORT 的当前设置，请运行以下查询：
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -93,10 +93,10 @@ SELECT @ARITHABORT AS ARITHABORT;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 要求 **公共** 角色具有成员身份。  
+要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 下例说明了在两种 `SET ARITHABORT` 设置下的被零除错误和溢出错误。  
+下例说明了在 `SET ARITHABORT` 设置下的被零除错误和溢出错误。  
   
 ```  
 -- SET ARITHABORT  

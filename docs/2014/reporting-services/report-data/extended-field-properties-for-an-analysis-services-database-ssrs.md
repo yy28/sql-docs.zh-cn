@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038448"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
   
- 扩展属性包括预定义属性和自定义属性。 预定义的属性是通用的多个数据源映射到特定字段属性名称，并且可以访问通过内置属性`Fields`集合按名称。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
+ 扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 `Fields` 集合按名称进行访问。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
  在图形模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查询设计器定义查询时，一组预定义的单元属性和维度属性会自动添加到 MDX 查询。 您只能使用在您的报表的 MDX 查询中专门列出的扩展属性。 根据您的报表，可能需要修改默认 MDX 命令文本才能包含多维数据集中定义的其他维度或自定义属性。 有关 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中的可用扩展字段的详细信息，请参阅[创建和使用属性值 (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md)。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>在报表中使用字段属性  
- 扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 不过，您必须将该字段拖到报表上，然后将更改`Value`到你想要使用的属性字段的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
+ 扩展字段属性包括预定义属性和数据访问接口特定属性。 即使字段属性位于为数据集生成的查询中，它们也不会与字段列表一起显示在 **“报表数据”** 窗格中，因此，不能将字段属性拖至报表设计图面中。 相反，您必须将字段拖至报表，然后将字段的 `Value` 属性更改为要使用的属性。 例如，如果已设置多维数据集的单元格数据的格式，则可以通过表达式 `=Fields!FieldName.FormattedValue`，来使用 FormattedValue 字段属性。  
   
  若要引用未预定义的扩展属性，请在表达式中使用以下语法：  
   
@@ -129,7 +129,7 @@ CELL PROPERTIES
   
  即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 MDX 查询结果窗格中，你可以双击单元格并查看单元格的属性值（如果在多维数据集中进行了设置）。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|“属性”|Value|  
+|属性|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- 如果使用此查询创建报表数据集，并将该数据集绑定到一个表，则可以看到字段的默认 VALUE 属性，例如 `=Fields!Month_of_Year!Value`。 如果将此表达式设置为该表的排序表达式，则结果将为对表进行排序按字母顺序按月因为值字段使用`String`数据类型。 若要按月份在一年中的顺序（即一月排在第一位，十二月排在最后）对该表进行排序，请使用以下表达式：  
+ 如果使用此查询创建报表数据集，并将该数据集绑定到一个表，则可以看到字段的默认 VALUE 属性，例如 `=Fields!Month_of_Year!Value`。 如果将此表达式设置为该表的排序表达式，则会按月份的字母顺序对表进行排序，因为“值”字段使用 `String` 数据类型。 若要按月份在一年中的顺序（即一月排在第一位，十二月排在最后）对该表进行排序，请使用以下表达式：  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>请参阅  
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
- [表达式中的内置集合&#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

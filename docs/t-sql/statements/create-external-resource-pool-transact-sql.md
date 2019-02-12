@@ -21,24 +21,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-ms.openlocfilehash: c74b693bb813970aa795837b568af66a04847c61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49baad50d950578b9d2bbb96b4168c730056b307
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805551"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570670"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的部分物理资源（内存和 CPU）。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。
+创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。
 
 + 对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 
-+ 对于 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe` 以及 `python.exe`、`BxlServer.exe`，还有它们生成的其他进程。
++ 对于 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部池控制 `rterm.exe`、`python.exe`、`BxlServer.exe`，以及它们生成的其他进程。
 
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -65,10 +65,10 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ## <a name="arguments"></a>参数
 
 pool_name  
-外部资源池的用户定义名称。 pool_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
+外部资源池的用户定义名称。 pool_name 是字母数字，最多可包含 128 个字符。 此参数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
 
 MAX_CPU_PERCENT =value  
-指定在存在 CPU 争用时外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。
+指定出现 CPU 争用时，外部资源池中的所有请求可以接收的最大平均 CPU 带宽。 value 为整数且默认设置为 100。 value 的允许范围是 1 到 100。
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 将外部资源池附加到特定 CPU。 默认值为 AUTO。
 
@@ -86,7 +86,7 @@ MAX_PROCESSES =value
 
 执行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]实现资源池。
 
- 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
+有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 
 有关管理用于机器学习的外部资源池的详细信息，请参阅 [SQL Server 中机器学习的资源调控](../../advanced-analytics/r/resource-governance-for-r-services.md)。 
 
@@ -96,7 +96,7 @@ MAX_PROCESSES =value
 
 ## <a name="examples"></a>示例
 
-以下语句定义外部池，将 CPU 使用率限制为 75%，并将最大内存限制为计算机可用内存的 30%。
+下面的语句定义了一个将 CPU 使用率限制为 75% 的外部池。 该语句还将最大内存定义为计算机上可用内存的 30%。
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
@@ -112,13 +112,13 @@ GO
   
 ## <a name="see-also"></a>另请参阅
 
- [external scripts enabled 服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
- [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
- [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [sys.resource_governor_external_resource_pools (Transact SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
+[启用了外部脚本的服务器配置选项](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+[ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
+[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
+[CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
+[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+[资源调控器资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
+[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)
+[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)

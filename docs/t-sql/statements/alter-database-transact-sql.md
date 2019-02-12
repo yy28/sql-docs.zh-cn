@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327808"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421464"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "54327808"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -288,15 +288,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
 
 ## <a name="overview"></a>概述
 
-在 Azure SQL 数据库中，使用此语句修改逻辑服务器上的数据库。 使用此语句更改数据库的名称、更改数据库的版本和服务目标、将数据库加入到弹性池或将其从弹性池中删除、设置数据库选项、添加或删除数据库作为异地复制关系中的辅助，以及设置数据库兼容级别。
+在 Azure SQL 数据库中，使用此语句修改单一数据库/弹性池上的数据库。 使用此语句更改数据库的名称、更改数据库的版本和服务目标、将数据库加入到弹性池或将其从弹性池中删除、设置数据库选项、添加或删除数据库作为异地复制关系中的辅助，以及设置数据库兼容级别。
 
 由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。  
 
@@ -653,7 +653,7 @@ ALTER DATABASE db1 FAILOVER
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据库<br />托管实例\*_&nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -776,7 +776,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -898,7 +898,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库\*_&nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库\*_&nbsp;|  
 
 &nbsp;
 

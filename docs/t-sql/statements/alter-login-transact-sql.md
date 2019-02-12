@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/06/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a373c46a00f6e83461f41974bafa269e50468bca
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3475aa24fe585c5f3133e5116573915c0462612f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327818"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421354"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "54327818"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL 数据库<br />逻辑服务器](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -285,11 +285,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\*SQL 数据库<br />单一数据库/弹性池\*_**|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
 
 ## <a name="sql-server"></a>SQL Server
  
@@ -446,7 +446,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-login-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据库<br />托管实例 \*_|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL 数据库<br />托管实例\*_**|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -455,7 +455,7 @@ GO
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database Managed Instance
+-- Syntax for SQL Server and Azure SQL Database managed instance
   
 ALTER LOGIN login_name   
     {   
@@ -494,7 +494,7 @@ ALTER LOGIN login_name
 > SQL 数据库托管实例的 Azure AD 登录名当前为公共预览版。
   
 ```  
--- Syntax for Azure SQL Database Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Database managed instance using Azure AD logins
   
 ALTER LOGIN login_name   
   {   
@@ -711,7 +711,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|\*SQL 数据<br />仓库\*|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|\*SQL 数据<br />仓库\*|[并行<br />数据仓库](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -872,7 +872,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库 \*_
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-login-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库 \*_
 
 &nbsp;
 

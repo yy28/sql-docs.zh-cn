@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 选项 (Transact-SQL) | Microsoft Docs
 description: 了解如何在 SQL Server 和 Azure SQL 数据库中设置自动优化、加密和查询存储等数据库选项
 ms.custom: ''
-ms.date: 1/10/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 077af312704185c66c2aa2cd5d8c777af2b90776
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211128"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421454"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 选项 (Transact-SQL) 
 
@@ -54,7 +54,7 @@ ms.locfileid: "54211128"
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
@@ -1282,11 +1282,11 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
 
 兼容性级别是 `SET` 选项，但在 [ALTER DATABASE 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)中进行了说明。  
   
@@ -1629,7 +1629,7 @@ READ_WRITE
 控制用户对数据库的访问。  
   
 RESTRICTED_USER  
-RESTRICTED_USER 只允许 db_owner 固定数据库角色成员以及 dbcreator 和 sysadmin 固定服务器角色成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。  RESTRICTED_USER 不能使用 SQL 数据库托管实例修改。
+RESTRICTED_USER 只允许 db_owner 固定数据库角色成员以及 dbcreator 和 sysadmin 固定服务器角色成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。  不能使用 SQL 数据库托管实例修改 RESTRICTED_USER。
   
 MULTI_USER  
 所有拥有连接到数据库的相应权限的用户，都允许进行连接。  
@@ -2069,7 +2069,7 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |_\*SQL 数据库<br />托管实例\*_&nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL 数据库<br />托管实例\*_** &nbsp;|
 
 
 
@@ -2357,7 +2357,7 @@ READ_WRITE
 控制用户对数据库的访问。  
   
 RESTRICTED_USER  
-RESTRICTED_USER 只允许 db_owner 固定数据库角色成员以及 dbcreator 和 sysadmin 固定服务器角色成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。  RESTRICTED_USER 不能使用 SQL 数据库托管实例修改。
+RESTRICTED_USER 只允许 db_owner 固定数据库角色成员以及 dbcreator 和 sysadmin 固定服务器角色成员连接到数据库，不过对连接数没有限制。 在 ALTER DATABASE 语句的终止子句所指定的时间范围内，所有数据库连接都将被断开。 在数据库转换到 RESTRICTED_USER 状态后，不合格用户所做的连接尝试将被拒绝。  不能使用 SQL 数据库托管实例修改 RESTRICTED_USER。
   
 MULTI_USER  
 所有拥有连接到数据库的相应权限的用户，都允许进行连接。  

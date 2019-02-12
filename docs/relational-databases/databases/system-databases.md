@@ -1,7 +1,7 @@
 ---
 title: 系统数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64b32a4b46ac1d86d358881b99d9988b902a4a47
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4da57264ca48a53f29485bf279a4c50b3d2f0e81
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558760"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421064"
 ---
 # <a name="system-databases"></a>系统数据库
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含以下系统数据库。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "51558760"
 |[tempdb 数据库](../../relational-databases/databases/tempdb-database.md)|一个工作空间，用于保存临时对象或中间结果集。|  
 
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库逻辑服务器，仅 master 数据库和 tempdb 数据库适用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>修改系统数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持用户直接更新系统对象（如系统表、系统存储过程和目录视图）中的信息。 实际上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一整套管理工具，用户可以使用这些工具充分管理他们的系统以及数据库中的所有用户和对象。 其中包括：  

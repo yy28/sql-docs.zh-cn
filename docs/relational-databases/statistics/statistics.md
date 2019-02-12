@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380728"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229038"
 ---
 # <a name="statistics"></a>统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53380728"
 -   点线表示用于估计范围中的非重复值总数 (distinct_range_rows) 和范围中的总指数 (range_rows)。 查询优化器使用 range_rows 和 distinct_range_rows 计算 average_range_rows，且不存储抽样值。   
   
 #### <a name="density"></a>密度向量  
-密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
+密度 是有关给定列或列组合中重复项数目的信息，其计算公式为 1/（非重复值数目）。 查询优化器使用密度提高根据相同表或索引视图返回多个列的查询的基数估计。 密度与值的选择性成反比，密度越小，值的选择性越大。 例如，在一个代表汽车的表中，很多汽车出自同一制造商，但每辆车都有唯一的车牌号 (VIN)。 因为 VIN 的密度比制造商低，所以 VIN 索引比制造商索引更具选择性。 
 
 > [!NOTE]
 > 频率是有关统计信息对象第一个键列中每个非重复值出现次数的信息，其计算公式为行计数 * 密度。 最大频率 1 出现在具有唯一值的列中。

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980003"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421194"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ account_name：Azure 存储帐户的完全限定的域名 (FQDN)。
 
 
 **SHARD_MAP_MANAGER**   
- 对于 SHARD_MAP_MANAGER，指定承载 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的逻辑服务器名称。
+ 对于 SHARD_MAP_MANAGER，指定托管 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的 SQL 数据库服务器名称。
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 有关分步教程，请参阅[跨扩展云数据库进行报告（预览）](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)。
   
 **RDBMS**   
-对于 RDBMS，指定 Azure SQL 数据库中的远程数据库的逻辑服务器名称。  
+对于 RDBMS，指定 Azure SQL 数据库中远程数据库的 SQL 数据库服务器名称。  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>示例：Azure SQL Database
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 创建分片映射管理器外部数据源
-若要创建外部数据源以引用 SHARD_MAP_MANAGER，请指定承载 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的逻辑服务器名称。
+若要创建外部数据源以引用 SHARD_MAP_MANAGER，请指定托管 Azure SQL 数据库中的分片映射管理器或 Azure 虚拟机上的 SQL Server 数据库的 SQL 数据库服务器名称。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. 创建 RDBMS 外部数据源
-若要创建外部数据源以引用 RDBMS，请指定 Azure SQL 数据库中的远程数据库的逻辑服务器名称。
+若要创建外部数据源以引用 RDBMS，请指定 Azure SQL 数据库中的远程数据库的 SQL 数据库服务器名称。
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

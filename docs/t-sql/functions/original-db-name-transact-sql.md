@@ -18,17 +18,17 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee1644e34964a41a8e6ee97897bcce6a1783e536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8782f07e774d48c371a558fa6626ef09e372ab30
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743985"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513777"
 ---
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回由用户在数据库连接字符串中指定的数据库名称。 这是使用 sqlcmd-d 选项 (USE database) 或 ODBC 数据源表达式（initial catalog = 数据库名称）指定的数据库。  
+  返回由用户在数据库连接字符串中指定的数据库名称。 使用 sqlcmd-d 选项 (USE database) 指定此数据库。 也可以使用开放式数据库连接 (ODBC) 数据源表达式 (initial catalog =databasename) 来指定此数据库。  
   
  该数据库与默认用户数据库不同。  
   
@@ -42,7 +42,7 @@ ORIGINAL_DB_NAME ()
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 如果未指定初始数据库，则该函数将返回一个空字符串。  
+ 如果未指定初始数据库，该函数将返回一个空字符串。  
   
 ## <a name="see-also"></a>另请参阅  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   

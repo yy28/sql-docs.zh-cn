@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795575"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513907"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47795575"
   
 ## <a name="syntax"></a>语法  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ CHECKSUM ( * | expression [ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM 对其参数列表计算一个称为校验和的哈希值。 使用哈希值生成哈希索引。 如果 `CHECKSUM` 函数具有列参数，则结果是一个哈希索引，并且对计算的 CHECKSUM 值生成索引。 它可用于对列进行等价搜索。
+`CHECKSUM` 对其参数列表计算一个称为校验和的哈希值。 使用哈希值生成哈希索引。 如果 `CHECKSUM` 函数具有列参数，则结果是一个哈希索引，并且对计算的 `CHECKSUM` 值生成索引。 它可用于对列进行等价搜索。
   
-`CHECKSUM` 函数满足哈希函数的属性：`CHECKSUM` 在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同数据类型且对应的元素相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 因为 `CHECKSUM` 函数，指定类型的 Null 值被定义为相等进行比较。 如果表达式列表中的至少一个值发生更改，则列的校验和很可能也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `CHECKSUM`。 否则，请考虑改用 [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)。 指定 MD5 哈希算法时，HashBytes 为两个不同输入返回相同结果的可能性比 CHECKSUM 小得多。
+`CHECKSUM` 函数满足哈希函数的属性：`CHECKSUM` 在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同数据类型且对应的元素相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 因为 `CHECKSUM` 函数，指定类型的 Null 值被定义为相等进行比较。 如果表达式列表中的至少一个值发生更改，则列的校验和很可能也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `CHECKSUM` 小得多。
   
-表达式顺序会影响计算 `CHECKSUM` 值。 用于 CHECKSUM(\*) 的列顺序是表或视图定义中指定的列顺序。 其中包括计算列。
+表达式顺序会影响计算 `CHECKSUM` 值。 用于 `CHECKSUM(*)` 的列顺序是在表或视图定义中指定的列顺序。 其中包括计算列。
   
-CHECKSUM 值取决于排序规则。 使用不同排序规则存储的相同值将返回一个不同的 CHECKSUM 值。
+`CHECKSUM` 值取决于排序规则。 使用不同排序规则存储的相同值将返回一个不同的 `CHECKSUM` 值。
   
 ## <a name="examples"></a>示例  
 这些示例显示了如何使用 `CHECKSUM` 来生成哈希索引。
@@ -75,6 +75,7 @@ CHECKSUM 值取决于排序规则。 使用不同排序规则存储的相同值�
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ GO
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

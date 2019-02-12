@@ -2,7 +2,7 @@
 title: tempdb 数据库 | Microsoft Docs
 description: 本主题提供有关在 SQL Server 和 Azure SQL 数据库中配置和使用 tempdb 数据库的详细信息
 ms.custom: P360
-ms.date: 07/17/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,14 +18,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df57b6d99e07b107770db1a98a7a97e76c392254
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535314"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421266"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   tempdb 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或 SQL 数据库的所有用户使用。 tempdb 用于保留：  
   
@@ -39,7 +40,7 @@ ms.locfileid: "52535314"
   > 每个内部对象至少使用九页；一个 IAM 页，一个八页的区。 有关页和区的详细信息，请参阅[页和区](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)。
 
   > [!IMPORTANT]
-  > Azure SQL 数据库逻辑服务器支持存储在 tempdb 中，且范围限定为数据库级别的全局临时表和全局临时存储过程。 全局临时表和全局临时存储过程供同一 Azure SQL 数据库中的所有用户会话共享。 其他 Azure SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。 对于 Azure SQL 数据库逻辑服务器，仅 master 数据库和 tempdb 数据库适用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关在 Azure SQL 数据库逻辑服务器上下文中对 tempdb 的讨论，请参阅 [Azure SQL 数据库逻辑服务器中的 tempdb 数据库](#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 
+  > Azure SQL 数据库单一数据库和弹性池支持存储在 tempdb 中并且作用域为数据库级别的全局临时表和全局临时存储过程。 全局临时表和全局临时存储过程供同一 Azure SQL 数据库中的所有用户会话共享。 其他 Azure SQL 数据库中的用户会话无法访问全局临时表。 有关详细信息，请参阅[数据库作用域内全局临时表（Azure SQL 数据库）](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)与 SQL Server 支持相同的临时对象。 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库单一数据库和弹性池上下文中 tempdb 的讨论，请参阅 [Azure SQL 数据库单一数据库和弹性池中的 tempdb 数据库](#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。
 
 - 版本存储区是数据页的集合，它包含支持使用行版本控制的功能所需的数据行。 共有两个版本存储区：公用版本存储区和联机索引生成版本存储区。 版本存储区包含：
   - 由使用已提交读（使用行版本控制隔离或快照隔离事务）的数据库中数据修改事务生成的行版本。  
@@ -48,6 +49,7 @@ ms.locfileid: "52535314"
 **tempdb** 中的操作是最小日志记录操作，以便回滚事务。 每次启动**时都会重新创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，从而在系统启动时总是具有一个干净的数据库副本。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此 **tempdb** 中不会有什么内容从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话保存到另一个会话。 不允许对 **tempdb**进行备份和还原操作。  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的物理属性
+
  下表列出了 SQL Server 中 tempdb 数据和日志文件的初始配置值（基于模型数据库的默认设置）。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|初始大小|文件增长|  
@@ -61,42 +63,44 @@ ms.locfileid: "52535314"
 > [!NOTE]
 > 数据文件数的默认值遵循 [KB 2154845](https://support.microsoft.com/kb/2154845/)中的一般准则。  
   
-### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>在 SQL Server 中移动 tempdb 数据和日志文件  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>在 SQL Server 中移动 tempdb 数据和日志文件 
+ 
  若要移动 **tempdb** 数据和日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   
-### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的数据库选项  
+### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server 中 tempdb 的数据库选项 
+ 
  下表列出了 **tempdb** 数据库中每个数据库选项的默认值，以及是否可以修改该选项。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|用户帐户控制|  
-|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
-|ANSI_NULLS|OFF|用户帐户控制|  
-|ANSI_PADDING|OFF|用户帐户控制|  
-|ANSI_WARNINGS|OFF|用户帐户控制|  
-|ARITHABORT|OFF|用户帐户控制|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|是|  
+|ANSI_NULL_DEFAULT|OFF|是|  
+|ANSI_NULLS|OFF|是|  
+|ANSI_PADDING|OFF|是|  
+|ANSI_WARNINGS|OFF|是|  
+|ARITHABORT|OFF|是|  
 |AUTO_CLOSE|OFF|否|  
-|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_CREATE_STATISTICS|ON|是|  
 |AUTO_SHRINK|OFF|否|  
-|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
-|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
-|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
+|CONCAT_NULL_YIELDS_NULL|OFF|是|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
+|CURSOR_DEFAULT|GLOBAL|是|  
 |数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|ON|否|  
 |ENCRYPTION|OFF|否|  
 |MIXED_PAGE_ALLOCATION|OFF|否|  
-|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
-|PAGE_VERIFY|对于新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 CHECKSUM。<br /><br /> 对于升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 NONE。|用户帐户控制|  
-|PARAMETERIZATION|SIMPLE|用户帐户控制|  
-|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|NUMERIC_ROUNDABORT|OFF|是|  
+|PAGE_VERIFY|对于新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 CHECKSUM。<br /><br /> 对于升级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，为 NONE。|是|  
+|PARAMETERIZATION|SIMPLE|是|  
+|QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
 |RECOVERY|SIMPLE|否|  
-|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
-|Service Broker 选项|ENABLE_BROKER|用户帐户控制|  
+|RECURSIVE_TRIGGERS|OFF|是|  
+|Service Broker 选项|ENABLE_BROKER|是|  
 |TRUSTWORTHY|OFF|否|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  

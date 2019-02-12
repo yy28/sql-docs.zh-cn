@@ -1,7 +1,7 @@
 ---
 title: master 数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,21 +14,23 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405857"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421164"
 ---
 # <a name="master-database"></a>master 数据库
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](../../relational-databases/databases/resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
 
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库逻辑服务器，仅 master 数据库和 tempdb 数据库适用。 有关逻辑服务器和逻辑 master 数据库的相关概念，请参阅[什么是 Azure SQL 逻辑服务器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 对于 Azure SQL 数据库单一数据库和弹性池，仅 master 数据库和 tempdb 数据库适用。 有关详细信息，请参阅[什么是 Azure SQL 数据库服务器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 有关 Azure SQL 数据库上下文中关于 tempdb 的讨论，请参阅 [Azure SQL 数据库中的 tempdb 数据库](tempdb-database.md#tempdb-database-in-sql-database)。 对于 Azure SQL 数据库托管实例，所有系统数据库都适用。 若要详细了解 Azure SQL 数据库托管实例，请参阅[什么是托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
-## <a name="physical-properties-of-master"></a>master 数据库的物理属性  
+## <a name="physical-properties-of-master"></a>master 数据库的物理属性
+
 下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
   
 |文件|逻辑名称|物理名称|文件增长|  
@@ -39,13 +41,14 @@ ms.locfileid: "54405857"
 有关如何移动 **master** 数据和日志文件的信息，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
 
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库逻辑服务器，用户无法控制 master数据库的大小。
+> 对于 Azure SQL 数据库服务器，用户无法控制 master 数据库的大小。
   
-### <a name="database-options"></a>数据库选项  
+### <a name="database-options"></a>数据库选项
+
 下表列出了 SQL Server 和 Azure SQL 数据库托管实例的 master 数据库中每个数据库选项的默认值，以及该选项是否可以修改。 若要查看这些选项的当前设置，请使用 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图。  
   
 > [!IMPORTANT]
-> 对于 Azure SQL 数据库逻辑服务器，用户无法控制这些数据库选项。
+> 对于 Azure SQL 数据库单一数据库和弹性池，用户无法控制这些数据库选项。
 
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  

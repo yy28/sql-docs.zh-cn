@@ -23,19 +23,19 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599435"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652516"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  启用 DML、DDL 或登录触发器。  
+启用 DML、DDL 或登录触发器。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,41 +45,41 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *schema_name*  
- 触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name。  
+*schema_name*  
+触发器所属架构的名称。 不能为 DDL 或登录触发器指定 schema_name。  
   
- trigger_name  
- 要启用的触发器的名称。  
+trigger_name  
+要启用的触发器的名称。  
   
- ALL  
- 指示启用在 ON 子句作用域中定义的所有触发器。  
+ALL  
+指示启用在 ON 子句作用域中定义的所有触发器。  
   
- *object_name*  
- 对其创建了要执行的 DML 触发器 *trigger_name* 的表或视图的名称。  
+*object_name*  
+对其创建了要执行的 DML 触发器 *trigger_name* 的表或视图的名称。  
   
- DATABASE  
- 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在数据库作用域内执行。  
+DATABASE  
+对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在数据库作用域内执行。  
   
- ALL SERVER  
- **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ALL SERVER  
+**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在服务器作用域内执行。 ALL SERVER 也适用于登录触发器。  
+对于 DDL 触发器，指示所创建或修改的 *trigger_name* 将在服务器作用域内执行。 ALL SERVER 也适用于登录触发器。  
   
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
 ## <a name="remarks"></a>Remarks  
- 启用触发器并不是要重新创建它。 禁用的触发器仍以对象形式存在于当前数据库中，但并不激发。 启用触发器将导致在执行触发器最初编程时所针对的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时激发。 可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用触发器。 还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
+启用触发器并不是要重新创建它。 禁用的触发器仍以对象形式存在于当前数据库中，但并不触发。 启用触发器将导致在运行触发器最初编程时所针对的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时触发。 可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用触发器。 此外，还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
 ## <a name="permissions"></a>Permissions  
- 若要启用 DML 触发器，用户必须至少对于创建触发器所在的表或视图拥有 ALTER 权限。  
+若要启用 DML 触发器，用户需要至少对于创建触发器所在的表或视图拥有 ALTER 权限。  
   
- 若要启用具有服务器作用域 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户必须对服务器具有 CONTROL SERVER 权限。 若要启用具有数据库范围 (ON DATABASE) 的 DDL 触发器，用户至少应在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  
+若要启用具有服务器作用域 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户需要对服务器具有 CONTROL SERVER 权限。 若要启用具有数据库范围 (ON DATABASE) 的 DDL 触发器，用户至少需要在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 在表中启用 DML 触发器  
- 以下示例禁用在 AdventureWorks 数据库的表 `Address` 中创建的触发器 `uAddress`，然后再启用它。  
+以下示例禁用在 AdventureWorks 数据库的表 `Address` 中创建的触发器 `uAddress`，然后再启用它。  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. 启用 DDL 触发器  
- 以下示例会创建具有数据库作用域的 DDL 触发器 `safety`，并且先禁用然后再启用该触发器。  
+以下示例会创建具有数据库作用域的 DDL 触发器 `safety`，并且先禁用然后再启用该触发器。  
   
 ```  
 CREATE TRIGGER safety   
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 启用以同一作用域定义的所有触发器  
- 以下示例启用在服务器作用域级别创建的所有 DDL 触发器。  
+以下示例启用在服务器作用域级别创建的所有 DDL 触发器。  
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

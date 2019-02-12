@@ -1,7 +1,7 @@
 ---
 title: 连接到 SQL Server 或 Azure SQL 数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e07d1bb2c38fdf5284a09d49a7b81419872720b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8770ad0e7a5d04a2a1de96c15cb709b8321a5d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847416"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421284"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>连接到 SQL Server 或 Azure SQL 数据库
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 要使用服务器和数据库，需首先连接到服务器。 可以同时连接到多个服务器。
 
-[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 支持多种类型的连接。 本文详细介绍如何接到 SQL Server 和 Azure SQL 数据库（连接到 Azure SQL 逻辑服务器）。 有关其他连接选项的相关信息，请参阅此页面底部的[链接](#see-also)。
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 支持多种类型的连接。 本文详细介绍如何连接到 SQL Server 和 Azure SQL 数据库（连接到 Azure SQL 单一数据库或弹性池）。 有关其他连接选项的相关信息，请参阅此页面底部的[链接](#see-also)。
   
 ## <a name="connecting-to-a-server"></a>连接到服务器  
 

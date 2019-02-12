@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc33bb52ec613d8e31cd8f61525dc7012ad01d48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129787"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513857"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ snapshot [ -?]
  登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值为 **1**。  
+ 指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。 默认值是处理器数量的两倍。  
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  是否将无关删除操作发送到订阅服务器。 无关删除操作是针对不属于订阅服务器分区的行发送到订阅服务器的 DELETE 命令。 无关删除操作不会影响数据的完整性或收敛，但它们会导致不必要的网络通信。 **MaxNetworkOptimization** 的默认值是 **0**。 将 **MaxNetworkOptimization** 设置为 **1** 可将不相关的删除操作发生的机会减至最小，从而减少网络通信，并最大程度地优化网络。 如果存在多个级别的联接筛选器和复杂子集筛选器，则将此参数设置为 **1** 还会增加元数据的存储并导致发布服务器性能下降。 您应仔细评估您的复制拓扑，仅当无关删除操作导致的网络通信高到无法接受时才应将 **MaxNetworkOptimization** 设置为 **1** 。  

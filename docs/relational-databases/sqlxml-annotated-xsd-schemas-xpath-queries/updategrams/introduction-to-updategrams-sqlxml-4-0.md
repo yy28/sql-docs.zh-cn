@@ -20,16 +20,16 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91cb486c1b24cf213b765e42d721c4aeb0866ec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843385"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026878"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47843385"
  使用默认映射（在 updategram 中未指定映射架构）时，如果是以元素为中心的映射，则 updategram 元素映射到表并且子元素映射到列。如果是以属性为中心的映射，则属性映射到列。  
   
 ### <a name="element-centric-mapping"></a>以元素为中心的映射  
- 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。 **\<Person.Contact >** 元素包含 **\<FirstName >** 并 **\<LastName >** 子元素。 这些子元素是属性的 **\<Person.Contact >** 元素。  
+ 在以元素为中心的 updategram 中，元素包含指示元素属性的子元素。 请参阅以下 updategram 示例。  **\<Person.Contact >** 元素包含 **\<FirstName >** 并 **\<LastName >** 子元素。 这些子元素是属性的 **\<Person.Contact >** 元素。  
   
  由于此 updategram 未指定映射架构，updategram 使用隐式映射，其中 **\<Person.Contact >** 元素映射到 Person.Contact 表，其子元素映射到 FirstName 和姓氏列。  
   

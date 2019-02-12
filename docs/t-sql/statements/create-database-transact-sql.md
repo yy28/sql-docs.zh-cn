@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure SQL 数据仓库和并行数据仓库的数据库语法
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327879"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570840"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ ms.locfileid: "54327879"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| _\*SQL 数据库<br />逻辑服务器\*_  | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\*SQL 数据库<br />单一数据库/弹性池\*_**  | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
 
 ## <a name="overview"></a>概述
 
-在 Azure SQL 数据库逻辑服务器中，此语句可与 Azure SQL 服务器一起使用，以在弹性池中创建单一数据库或数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本、服务目标以及新数据库的弹性池（如果适用）。 它还可用于在弹性池中创建数据库。 此外，它还可用于在其他逻辑服务器上创建数据库的副本。
+在 Azure SQL 数据库单一数据库/弹性池中，此语句可与 Azure SQL 服务器一起使用，以在弹性池中创建单一数据库或数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本、服务目标以及新数据库的弹性池（如果适用）。 它还可用于在弹性池中创建数据库。 此外，它还可用于在其他 SQL 数据库服务器上创建数据库的副本。
 
 ## <a name="syntax"></a>语法 
 
@@ -973,7 +973,7 @@ EDITION
  
 指定数据库的服务层。 
 
-逻辑服务器上的单一数据库和池化数据库。 可用的值包括：“basic”、“standard”、“premium”、“GeneralPurpose”、“BusinessCritical”和“Hyperscale”。 
+单一数据库/弹性池上的单一数据库和入池数据库。 可用的值包括：“basic”、“standard”、“premium”、“GeneralPurpose”、“BusinessCritical”和“Hyperscale”。 
   
 在指定了 EDITION 但未指定 MAXSIZE 时，MAXSIZE 将设置为版本支持的限制性最高的大小。  
   
@@ -984,7 +984,7 @@ MAXSIZE
 > [!NOTE]
 > MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
 
-逻辑服务器上单一数据库和池化数据库适用的基于 DTU 的模型。
+SQL 数据库服务器上适用于单一数据库和入池数据库的基于 DTU 的模型
 
 |**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ MAXSIZE
 
 基于 DTU 的模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
  
-逻辑服务器上单一数据库和池化数据库适用的基于 vCore 的模型。
+SQL 数据库服务器上适用于单一数据库和入池数据库的基于 vCore 的模型
 
 **常规用途服务层 - 第 4 代计算平台**
 
@@ -1063,12 +1063,12 @@ MAXSIZE
 
 SERVICE_OBJECTIVE
 
-- 针对逻辑服务器上的单一数据库和池化数据库。
+- 针对单一数据库和入池数据库
 
   - 指定性能级别。 服务目标的可用值包括：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`。 
- - 针对超大规模服务层中的逻辑服务器上的单一数据库指定性能级别。 服务目标的可用值包括：`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。 
+ - 针对超大规模服务层中的单一数据库 指定性能级别。 服务目标的可用值包括：`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。 
  
-- 托管实例上的数据库
+- 针对托管实例上的数据库
 
   指定性能级别。 服务目标的可用值包括：`GP_GEN4_8`、`GP_GEN4_16`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`。 
 
@@ -1232,7 +1232,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current)| _\*SQL 数据库<br />托管实例 \*_   | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| **_\*SQL 数据库<br />托管实例\*_**   | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1305,7 +1305,7 @@ CREATE DATABASE TestDB1;
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\*    | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)| \*SQL 数据<br />仓库\*    | [并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="overview"></a>概述
 
-在 Azure SQL 数据仓库中，此语句可与 Azure SQL 逻辑服务器一起使用，以创建 SQL 数据仓库数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本和服务目标。
+在 Azure SQL 数据仓库中，此语句可与 Azure SQL 数据库服务器一起使用，以创建 SQL 数据仓库数据库。 使用此语句，可以指定数据库名称、排序规则、最大大小、版本和服务目标。
 
 ## <a name="syntax"></a>语法  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|  _\*并行<br />数据仓库 \*_ |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />单一数据库/弹性池](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|  _\*并行<br />数据仓库 \*_ |
 
 &nbsp;
 

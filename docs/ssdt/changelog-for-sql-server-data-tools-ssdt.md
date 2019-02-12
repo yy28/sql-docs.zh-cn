@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087886"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428674"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "55087886"
 
 ### <a name="whats-new"></a>新增功能
 **SSIS：**
-1. 为 SSIS 2017 添加 Power Query 源（预览）
-2. 添加对 SSIS 2012 的支持。
-3. 为 SSIS 2019 添加 Oracle 源和目标。
-4. 解决了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。
-5. 解决了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。
-6. 解决了在某些情况下保存包导致 Visual Studio 崩溃的问题。 
-7. 解决了在某些情况下，当保护级别为 EncryptSensitiveWithPassword 并且目标服务器版本早于 SQL 2017 时，无法执行程序包的问题。
+1. 在 ADF 2017 中为 SSIS 添加了 Power Query 源（预览版）。
+2. 重新添加了对 SQL Server 2012 的支持。
+3. 为 SQL Server 2019 添加了 Oracle 源和目标。
+4. 修复了从早期 SSIS 版本迁移时无法加载脚本任务/组件的问题。
+5. 修复了数据查看器在 Windows 7 SP1 和 Windows 8.1 上无法运行的问题。
+6. 修复了在某些情况下保存包导致 Visual Studio 崩溃的问题。 
+7. 修复了在某些情况下，当保护级别为 EncryptSensitiveWithPassword 并且目标服务器版本早于 SQL Server 2017 时，无法执行程序包的问题。
 8. 修复了 SSDT 中未显示使用默认字体的注释的问题。
 9. ISDeploymentWizard 支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。
 

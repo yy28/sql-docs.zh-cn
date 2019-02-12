@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ca90e681e82e56485fa0feb33326aba49fac97
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133738"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428624"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +247,7 @@ MAXDOP = max_degree_of_parallelism
 ### <a name="examples-use-the-adventureworks-database"></a>使用 AdventureWorks 数据库示例。  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. 将 CREATE STATISTICS 与 SAMPLE number PERCENT 一起使用  
- 下面的示例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ContactMail1` 表的 `BusinessEntityID` 和 `EmailPromotion` 列的 5% 作为随机抽样来创建 `Contact` 统计信息。  
+ 下例使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person` 表的 `BusinessEntityID` 和 `EmailPromotion` 列的 5% 作为随机抽样来创建 `ContactMail1` 统计信息。  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -256,7 +256,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>B. 将 CREATE STATISTICS 与 FULLSCAN 和 NORECOMPUTE 一起使用  
- 以下示例对 `ContactMail2` 表的 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `Contact` 统计信息，并禁用自动重新计算统计信息。  
+ 以下示例对 `NamePurchase` 表的 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `Person` 统计信息，并禁用自动重新计算统计信息。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -289,7 +289,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. 将 CREATE STATISTICS 与 FULLSCAN 和 PERSIST_SAMPLE_PERCENT 一起使用  
- 以下示例为 `Contact` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `ContactMail2` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
+ 以下示例为 `Person` 表 `BusinessEntityID` 和 `EmailPromotion` 列中的所有行创建 `NamePurchase` 统计信息，并为所有未明确指定采样百分比的后续更新设置 100% 的采样百分比。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

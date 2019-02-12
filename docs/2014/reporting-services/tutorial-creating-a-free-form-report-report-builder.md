@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068987"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013748"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
   本教程教你如何创建一个与书信格式类似的 SSRS 自由格式报表。 你可以排列报表项来创建一个具有文本框、图像和其他数据区域的窗体。  
@@ -46,7 +46,7 @@ ms.locfileid: "48068987"
   
 -   [添加汇总数据可视化](#Visualization)  
   
- 完成本教程的预计学时：20 分钟。  
+ 本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -71,11 +71,11 @@ ms.locfileid: "48068987"
   
 1.  在“报表数据”窗格中，单击 **“新建”**，然后单击 **“数据源”**。  
   
-2.  在中`Name`框中，键入： **ListDataSource**  
+2.  在`Name`框中，键入：**ListDataSource**  
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
-4.  请确认连接类型为 Microsoft SQL Server，然后在“连接字符串”框中键入：Data Source = \<servername>  
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：数据源 = \<servername>  
   
      \<服务器名称 >，例如，Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 因为报表数据不是从 SQL Server 数据库提取的，所以不需要包括数据库的名称。 指定服务器上的默认数据库用于对查询进行分析。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48068987"
   
 1.  在“报表数据”窗格中，单击 **“新建”**，然后单击 **“数据集”**。  
   
-2.  在中`Name`框中，键入： **ListDataset。**  
+2.  在`Name`框中，键入：**ListDataset。**  
   
 3.  单击“使用在我的报表中嵌入的数据集” ，然后验证数据源是否为 **ListDataSource**。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068987"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     将一列添加到该列表中。 该列包含该单元格 `[Territory].`  
+     将一列添加到该列表中。 该列包含单元 `[Territory].`。  
   
 4.  右键单击列表中的 Territory 列，然后单击 **“删除列”**。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068987"
   
 2.  在功能区的 **“插入”** 选项卡上，单击 **“文本框”**，然后将一个文本框拖到该列表的左上角，但放在你以前添加的矩形内。 使该文本框大约 3 英寸高，5 英寸宽。  
   
-3.  将光标置于文本框的上部，然后键入： **Newsletter for** 。  
+3.  将光标置于文本框的上部，然后键入：Newsletter for。  
   
      ![添加新闻稿标题文本](../../2014/tutorials/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068987"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 将光标置于您在步骤 3 中键入的文本之下，然后键入： **Hello** 。  
+9. 将光标置于你在步骤 3 中键入的文本之下，然后键入：**Hello** 。  
   
     > [!NOTE]  
     >  请确保在“Hello”一词之后包含一个多余的空格。 该空格用于将文本以及您将在下一步骤中添加的字段分隔开来。  
@@ -279,7 +279,7 @@ ms.locfileid: "48068987"
   
      ![添加新闻稿文本](../../2014/tutorials/media/tutorial-newslettertext.png "添加新闻稿文本")  
   
-20. 将光标置于您在步骤 15 中粘贴的文本的下方，然后键入： **Congratulations on your total sales of** 。  
+20. 将光标置于你在步骤 15 中粘贴的文本之下，然后键入：**恭喜你销售总额的**。  
   
     > [!NOTE]  
     >  请确保在“of”一词之后包含一个多余的空格。 该空格用于将文本以及您将在下一步骤中添加的字段分隔开来。  
@@ -398,7 +398,7 @@ ms.locfileid: "48068987"
   
 4.  在中`Name`，替换默认名称**SalesInformationByTerritory**。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
  报表即已保存至报表服务器。 您连接的报表服务器的名称将显示在窗口底部的状态栏中。  
   
@@ -410,9 +410,9 @@ ms.locfileid: "48068987"
   
 3.  在中`Name`，替换默认名称**SalesInformationByTerritory**。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
-##  <a name="Line"></a> 8。（可选）添加线条以便分隔报表区域  
+##  <a name="Line"></a> 8.（可选）添加线条以便分隔报表区域  
  添加线条可以分隔报表的可编辑区域和详细信息区域。  
   
 #### <a name="to-add-a-line"></a>添加线条  
@@ -431,7 +431,7 @@ ms.locfileid: "48068987"
   
      ![向报表添加线条](../../2014/tutorials/media/tutorial-reportwithline.png "将行添加到报表")  
   
-##  <a name="Visualization"></a> 9。（可选）添加汇总数据可视化  
+##  <a name="Visualization"></a> 9.（可选）添加汇总数据可视化  
  矩形有助于控制报表的呈现方式。 将饼图和柱形图放置于矩形内，可以确保报表以您所需的方式呈现。  
   
 #### <a name="to-add-a-rectangle"></a>添加矩形  
@@ -466,7 +466,7 @@ ms.locfileid: "48068987"
   
 10. 右键单击图表标题，然后单击 **“标题属性”**。  
   
-11. 在 **“图表标题属性”** 对话框的“标题”文本中，键入： **Product Quantities Sold**。  
+11. 在中**图表标题属性**对话框中的，标题文本中，键入：Product Quantities Sold。  
   
 12. 单击 **“字体”** 选项卡，然后在 **“大小”** 列表中，单击 **10pt**。  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068987"
   
 10. 右键单击图表标题，然后单击 **“标题属性”**。  
   
-11. 在 **“图表标题属性”** 对话框的“标题”文本中，键入： **Product Sales**。  
+11. 在中**图表标题属性**对话框中的，标题文本中，键入：Product Sales。  
   
 12. 单击 **“字体”** 选项卡，然后在 **“大小”** 列表中，单击 **10pt**，然后单击 **“确定”**。  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068987"
   
 1.  单击你在本课程前面部分添加的矩形。  
   
-     在属性窗格中`Name`属性显示矩形的名称。  
+     在“属性”窗格中，`Name` 属性显示矩形的名称。  
   
      ![矩形的名称](../../2014/tutorials/media/tutorial-rectanglename.png "矩形的名称")  
   

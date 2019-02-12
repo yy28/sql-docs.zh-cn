@@ -17,12 +17,12 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482177b87fb4d62cbebb64361e0b26ed9a681c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4672b899b51f109b18f157851e479d3e9ba4755f
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816555"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513787"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>数据类型同义词 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,23 +35,27 @@ ms.locfileid: "47816555"
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|character( n )|**char(n)**|  
-|character varying( n )|**varchar(n)**|  
+|**character(n****)**|**char(n)**|  
+|**character varying(n****)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|float[(n)] for n = 1-7****|**real**|  
-|float[(n)] for n = 8-15****|**float**|  
+|**float**[**(** n **)**] for n = 1-7|**real**|  
+|**float**[**(** n **)**] for n = 8-15|**float**|  
 |**integer**|**int**|  
-|national character( n )|**nchar(n)**|  
-|national char( n )|**nchar(n)**|  
-|national character varying( n )|**nvarchar(n)**|  
-|national char varying( n )|**nvarchar(n)**|  
+|**national character(** n **)**|**nchar(n)**|  
+|**national char(** n **)**|**nchar(n)**|  
+|**national character varying(** n **)**|**nvarchar(n)**|  
+|**national char varying(** n **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-在诸如 CREATE TABLE、CREATE PROCEDURE 或 DECLARE @variable 这类数据定义语言 (DDL) 语句中，数据类型同义词可用来代替相应的基本数据类型名。 但是，创建对象后看不到同义词。 创建对象后，为对象分配与同义词相关联的基本数据类型。 没有记录能表明在创建对象的语句中指定了同义词。
+在数据定义语言 (DDL) 语句中，数据类型同义词可用来代替相应的基本数据类型名。 这些语句包括 CREATE TABLE、CREATE PROCEDURE 和 DECLARE *@variable*。 但是，创建对象后看不到同义词。 创建对象后，为对象分配与同义词相关联的基本数据类型。 没有记录显示在创建对象的语句中指定了同义词。
   
-将给所有由原始对象派生出的对象（如结果集列或表达式）分配基本数据类型。 所有对原始对象和任何派生对象执行的后续元数据函数都将报告基本数据类型，而不是同义词。 这种行为会发生在元数据操作（如 sp_help）和其他报告表或结果集列的数据类型的系统存储过程、信息架构视图或各种数据访问 API 元数据操作上。
+将为从原始对象派生的对象（如结果集列或表达式）分配基本数据类型。 使用原始对象或任何派生对象的任何元数据函数都将报告基本数据类型，而不是同义词，其中包括：
+
+* 元数据操作，如 sp_help 和其他系统存储过程、
+* 信息架构视图和
+* 数据访问 API 元数据操作，用于报告表或结果集列的数据类型。
   
 例如，您可以通过指定 `national character varying` 创建表：
   
@@ -59,7 +63,7 @@ ms.locfileid: "47816555"
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-实际为 `VarCharCol` 分配了 nvarchar(10) 数据类型，所有后续元数据函数将该列报告为 nvarchar(10) 列。 元数据函数永远不会将它们报告为 national character varying(10) 列。
+为 `VarCharCol` 分配了 nvarchar(10) 数据类型，所有后续元数据函数将该列报告为 nvarchar(10) 列。 元数据函数永远不会将它们报告为 national character varying(10) 列。
   
 ## <a name="see-also"></a>另请参阅
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617757"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513869"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,13 +58,13 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-按照表中任一行计算的 BINARY_CHECKSUM(*) 返回相同的值，只要随后未修改行。 BINARY_CHECKSUM 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素具有相同类型且相等，则在任何两个表达式列表上应用的 BINARY_CHECKSUM 将返回同一值。 对于该定义，我们认为指定类型的 NULL 值作为相等的值进行比较。 如果表达式列表中至少一个值发生更改，则表达式校验和也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，我们建议仅当应用程序可以容忍偶然丢失的更改时，使用 BINARY_CHECKSUM。 否则，请考虑改用 HashBytes。 借助指定的 MD5 哈希算法，HashBytes 为两个不同输入返回相同结果的可能性比 BINARY_CHECKSUM 小得多。
+按照表中任一行计算的 `BINARY_CHECKSUM(*)` 返回相同的值，前提是后续没有对行进行修改。 `BINARY_CHECKSUM` 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素类型相同且相等，则在任何两个表达式列表上应用的 BINARY CHECKSUM 将返回相同值。 对于该定义，我们认为指定类型的 NULL 值作为相等的值进行比较。 如果表达式列表中至少一个值发生更改，则表达式校验和也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `BINARY_CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `BINARY_CHECKSUM` 小得多。
   
-BINARY_CHECKSUM 可针对表达式列表运行，并为指定列表返回相同的值。 如果任意两个表达式列表的对应元素具有相同的类型和字节表示形式，则对这两个列表应用的 BINARY_CHECKSUM 将返回相同的值。 对于此定义，指定类型的 Null 值被认为具有相同的字节表示形式。
+`BINARY_CHECKSUM` 可针对表达式列表运行，并为指定列表返回相同的值。 如果任意两个表达式列表的对应元素具有相同的类型和字节表示形式，则对这两个列表应用的 `BINARY_CHECKSUM` 将返回相同的值。 对于此定义，指定类型的 Null 值被认为具有相同的字节表示形式。
   
-BINARY_CHECKSUM 和 CHECKSUM 具有相似的功能：它们可用于计算表达式列表上的校验值，且表达式的顺序将影响结果值。 用于 BINARY_CHECKSUM(*) 的列顺序是在表或视图定义中指定的列顺序。 其中包括计算列。
+`BINARY_CHECKSUM` 函数和 `CHECKSUM` 函数类似。 它们可用于计算表达式列表上的校验值，且表达式的顺序将影响结果值。 用于 `BINARY_CHECKSUM(*)` 的列顺序是在表或视图定义中指定的列顺序。 其中包括计算列。
   
-BINARY_CHECKSUM 和 CHECKSUM 为字符串数据类型返回不同的值，这类字符串的区域设置可能导致具有不同表示形式的字符串进行等值比较。 字符串数据类型为  
+`BINARY_CHECKSUM` 和 `CHECKSUM` 为字符串数据类型将返回不同的值，其中的区域设置可能导致具有不同表示形式的字符串进行等值比较。 字符串数据类型为  
 
 * **char**  
 * **nchar**  
@@ -75,9 +75,9 @@ BINARY_CHECKSUM 和 CHECKSUM 为字符串数据类型返回不同的值，这类
 
 * sql_variant（如果 sql_variant 的基类型为字符串数据类型）。  
   
-例如，字符串“McCavity”和“Mccavity”的 BINARY_CHECKSUM 值不同。 反之，对于不区分大小写的服务器，上述字符串的 CHECKSUM 返回相同的校验值。 应避免比较 CHECKSUM 值和 BINARY_CHECKSUM 值。
+例如，字符串“McCavity”和“Mccavity”的 `BINARY_CHECKSUM` 值不同。 反之，对于不区分大小写的服务器，上述字符串的 `CHECKSUM` 将返回相同的校验和值。 应避免比较 `CHECKSUM` 值与 `BINARY_CHECKSUM` 值。
  
-BINARY_CHECKSUM 支持任何长度的 varbinary(max) 类型的字符和最多 255 个 nvarchar(max) 类型字符。
+`BINARY_CHECKSUM` 支持任何字符长度的 varbinary(max) 类型和最多 255 个字符长度的 nvarchar(max) 类型。
   
 ## <a name="examples"></a>示例  
 此示例使用 `BINARY_CHECKSUM` 检测表行中的更改。
@@ -99,7 +99,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅
 [聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  
-[CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)
+[HASHBYTES (Transact-SQL)](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

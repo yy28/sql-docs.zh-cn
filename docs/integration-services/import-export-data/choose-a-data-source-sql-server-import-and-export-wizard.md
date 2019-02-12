@@ -1,7 +1,7 @@
 ---
 title: 选择数据源（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806008"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290417"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
-  在欢迎页之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择数据源” 。 在此页上，需提供有关数据源以及如何连接到它的信息。
+  在欢迎页之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“选择数据源”。 在此页上，需提供有关数据源以及如何连接到它的信息。
   
 有关可以使用的数据源的信息，请参阅 [我可以使用哪些数据源和目标？](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 SQL Server Integration Services (SSIS)。 因此，适用于 SSIS 的限制也同样适用于该向导。  例如，已按[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)中所述默认添加了 ErrorCode 和 ErrorColumn 列。
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>“选择数据源”页面的屏幕截图 
-以下屏幕截图显示向导的“选择数据源”  页的第一部分。 此页的其余部分含有数量不定的选项，具体取决于此处选择的数据源。
+下图显示了该向导“选择数据源”页的第一部分。 此页的其余部分含有数量不定的选项，具体取决于此处选择的数据源。
 
 ![选择源](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ ms.locfileid: "47806008"
 
 有关如何连接到此处未列出的数据源的信息，请参阅[连接字符串参考](https://www.connectionstrings.com/)。 该第三方站点包含示例连接字符串、关于数据提供程序的详细信息以及它们需要的连接信息。
 
-## <a name="whats-next"></a>下一步是什么？  
+## <a name="whats-next"></a>下一步是什么？
  在提供有关数据源以及如何连接到它的信息后，下一个页面是“选择目标” 。 在此页上，需提供有关数据目标以及如何连接到它的信息。 有关详细信息，请参阅 [选择目标](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。
- 
+
 ## <a name="see-also"></a>另请参阅
 [导入和导出向导的简单示例入门](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

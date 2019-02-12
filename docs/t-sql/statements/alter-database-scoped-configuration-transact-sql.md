@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838114"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421314"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,7 +216,7 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 允许为[全局临时表](create-table-transact-sql.md)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。
 
-- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 逻辑服务器中，可以在逻辑服务器的单个用户数据库中设置此选项。
+- 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库和弹性池，可以在 SQL 数据库服务器的单个用户数据库中设置此选项。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例中，要在 `TempDB` 中设置此选项且单个用户数据库的设置不起作用。
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }

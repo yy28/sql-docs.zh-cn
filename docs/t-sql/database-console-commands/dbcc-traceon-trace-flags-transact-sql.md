@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361687"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652596"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -126,7 +126,7 @@ ms.locfileid: "54361687"
 |**8019**|为异常环形缓冲区禁用堆栈集合。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：仅全局|
 |**8020**|禁用工作集监视。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：仅全局|
 |**8032**|将缓存限制参数还原为 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]RTM 设置，此设置通常允许更大的缓存。 当频繁重复使用的缓存条目不适合缓存时，以及当 [“针对即席工作负荷进行优化”服务器配置选项](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 未能解决与计划缓存相关的问题时，请使用此设置。<br /><br />警告：如果大缓存使较少的内存可用于其他内存消耗者（如缓冲池），则跟踪标志 8032 可能导致性能较差。<br /><br />**作用域**：仅全局|   
-|**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />注意：从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8048 不再有效。<br /><br />**作用域**：仅全局|  
+|**8048**|将 NUMA 分区内存对象转换为 CPU 分区内存对象。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2809338)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为是动态的，由引擎控制。<br /><br />**作用域**：仅全局|  
 |**8075**|在 64 位 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 上收到内存页分配错误时，减少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3074434)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8075 不再有效。<br /><br />**作用域**：仅全局|
 |**8079**|允许 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 询问硬件布局，并在报告每个 NUMA 节点 8 个或更多 CPU 的系统上自动配置 Soft-NUMA。 自动 Soft-NUMA 行为可识别超线程（HT/逻辑处理器）。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 8079 不再有效。<br /><br />**作用域**：仅全局| 
 |**8207**|允许事务复制和 CDC 的 singleton 更新。 对订阅服务器的更新可以作为 DELETE 和 INSERT 对复制。 这可能不符合业务规则的要求，如激发 UPDATE 触发器。 使用跟踪标志 8207 时，对只影响一行的唯一列的更新（单一实例更新）将作为 UPDATE 而非作为 DELETE 或 INSERT 对进行复制。 如果该更新影响具有唯一约束的列或影响多个行，则仍将该更新作为 DELETE 或 INSERT 对进行复制。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/302341)。<br /><br />**作用域**：仅全局|

@@ -1,7 +1,7 @@
 ---
 title: 在 SQL Server 中计划内存中 OLTP 功能的应用 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519565"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421184"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>在 SQL Server 中计划内存中 OLTP 功能的应用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52519565"
 
 对于 Azure SQL 数据库云服务中托管的数据库，所选的服务层会影响允许数据库使用的活动内存量。 应计划使用警报监视数据库的内存使用。 有关详细信息，请参阅：
 
-- 查看[定价层](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)的内存中 OLTP 存储限制
+- 查看[定价层](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)的内存中 OLTP 存储限制
 - [监视内存中 OLTP 存储](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>内存优化表变量

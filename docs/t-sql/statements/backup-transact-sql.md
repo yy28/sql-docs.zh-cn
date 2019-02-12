@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805773"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421494"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -940,7 +940,7 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />托管实例\*_&nbsp;|[并行<br />数据仓库](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[并行<br />数据仓库](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 

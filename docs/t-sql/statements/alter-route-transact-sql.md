@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169021"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421084"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ WITH
  替换为  
  引入对要更改的路由进行定义的子句。  
   
- SERVICE_NAME ='service\_name_'_  
+ SERVICE_NAME **='**_service\_name_**'**  
  指定此路由指向的远程服务的名称。 service_name 必须与远程服务使用的名称完全匹配。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 service_name 匹配。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 服务名称为 'SQL/ServiceBroker/BrokerConfiguration' 的路由是指向 Broker Configuration Notice 服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
  如果省略 SERVICE_NAME 子句，则路由的服务名称保持不变。  
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS ='next\_hop\_address'  
 
- 对于 SQL 数据库托管实例，`ADDRESS` 必须是本地的。
+ 对于 Azure SQL 数据库托管实例，`ADDRESS` 必须是本地的。
 
  指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址：  
   

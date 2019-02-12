@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841155"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420955"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact SQL 配置函数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47841155"
 > [!NOTE]  
 > 我们已注意到一个问题，即 @@VERSION 报告的产品版本对于 Azure SQL 数据库来说不正确。 Azure SQL 数据库运行的 SQL Server 数据库引擎的版本始终领先于 SQL Server 的本地版本，且包含最新安全修补程序。 这意味着，此修补程序级别始终等同于或领先于 SQL Server 的本地版本，且 SQL Server 中提供的最新功能在 Azure SQL 数据库中可用。
 >
-> 若要以编程方式确定引擎版本，请使用 SELECT SERVERPROPERTY('EngineEdition')。 此查询将在 Azure SQL 数据库中针对独立数据库返回“5”，针对托管实例返回“8”。 
+> 若要以编程方式确定引擎版本，请使用 SELECT SERVERPROPERTY('EngineEdition')。 此查询将在 Azure SQL 数据库中针对单一数据库/弹性池返回“5”，针对托管实例返回“8”。 
 >
 > 解决此问题后，我们将更新文档。
 

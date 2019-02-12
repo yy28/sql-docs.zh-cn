@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980475"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484856"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="determining-the-number-of-table-partitions"></a>确定表分区的数目
 每个用户定义的表格划分为多个较小的表格，这些表格存储在名为分发的不同位置。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 个分发。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，分发的数目取决于 Compute 节点的数目。
  
-每个分发包含所有的表分区。 例如，如果有 60 个分发和 4 个表分区，则会有 320 个分区。 如果该表是一个群集列存储索引，每个分区将有一个列存储索引，这意味着你将拥有 320 个列存储索引。
+每个分发包含所有的表分区。 例如，如果有 60 个分发和 4 个表分区，再加上一个空分区，则会有 300 个分区 (5 x 60= 300)。 如果该表是一个群集列存储索引，每个分区将有一个列存储索引，这意味着你将拥有 300 个列存储索引。
 
 我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关更多指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010808"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 查询设计器
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了图形和基于文本的查询设计器，以帮助您生成查询的报表中每个数据源类型。  
@@ -31,11 +31,11 @@ ms.locfileid: "48219488"
   
 -   **查询设计器类型。** 例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源同时支持图形查询设计器和基于文本的查询设计器。  
   
--   **查询语言变化。** 例如，像 [!INCLUDE[tsql](../includes/tsql-md.md)] 这样的查询语言在语法上可能有所不同，具体情况取决于数据源类型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 语言与 Oracle SQL 语言在查询命令的语法上有不同之处。  
+-   **查询语言变化。** 例如，像 [!INCLUDE[tsql](../includes/tsql-md.md)] 这样的查询语言在语法上可能有所不同，具体情况取决于数据源类型。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 语言与 Oracle SQL 语言在查询命令的语法上有不同之处。  
   
--   **对数据库对象名的架构部分的支持。** 当数据源使用架构作为数据库对象标识符的一部分时，对于不使用默认架构的任何名称而言，必须将架构名作为查询的一部分提供。 例如 `SELECT FirstName, LastName FROM [Person].[Person]` 。  
+-   **对数据库对象名的架构部分的支持。** 当数据源使用架构作为数据库对象标识符的一部分时，对于不使用默认架构的任何名称而言，必须将架构名作为查询的一部分提供。 例如，`SELECT FirstName, LastName FROM [Person].[Person]`。  
   
--   **对查询参数的支持。** 数据访问接口在为参数提供支持方面存在差异。 某些数据访问接口支持命名参数；例如， `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`。 某些数据访问接口支持未命名参数；例如， `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`。 参数标识符可能因数据提供程序;例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用"at"(@) 符号，而 Oracle 则使用冒号 （:）。 某些数据访问接口不支持参数。  
+-   **对查询参数的支持。** 数据访问接口在为参数提供支持方面存在差异。 某些数据访问接口支持命名参数；例如， `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`。 某些数据访问接口支持未命名参数；例如， `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`。 参数标识符可能因数据提供程序不同而不同；例如， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用“at”(@) 符号，而 Oracle 则使用冒号 (:)。 某些数据访问接口不支持参数。  
   
 -   **能否导入查询。** 例如，对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源，可从报表定义文件 (.rdl) 或 .sql 文件中导入现有查询。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48219488"
 -   [基于文本的查询设计器用户界面](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 支持的数据源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services 支持的数据源 (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [从外部数据源中添加数据 (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)   
  [数据处理扩展插件和.NET Framework 数据提供程序&#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
- [扩展&#40;SSRS&#41;](extensions-ssrs.md)  
+ [扩展插件 (SSRS)](extensions-ssrs.md)  
   
   

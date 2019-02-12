@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363009"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017178"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   本主题将概述的升级和迁移选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有两种用于升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的常规方法：  
@@ -113,7 +113,7 @@ ms.locfileid: "53363009"
   
 -   备份对 IIS 中现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虚拟目录的任何自定义。  
   
--   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败并且类似于以下错误消息将写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层 (SSL) 证书。**.  
+-   删除无效的 SSL 证书。  这包括在升级 Reporting Services 前未计划更新的到期证书。  无效证书将导致升级失败并且类似于以下错误消息将写入 Reporting Services 日志文件：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:未在网站上配置安全套接字层 (SSL) 证书**。  
   
  在升级生产环境之前，务必在与生产环境具有相同配置的生产前环境中运行测试升级。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "53363009"
   
 -   SharePoint 模式：请参阅的"密钥管理"部分[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
--    本机模式：请参阅[备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   本机模式：请参阅[备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
  ![使用顶部的链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[本主题中：](#bkmk_top)  
   

@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1af38969f461cc607eb2b002fbc88aea77a2880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018029"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
   本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 站点中不同类型的目录项。  
   
  不必添加此参数字符串。 如果您省略此字符串，报表服务器将会计算项类型，并且自动选择适当的参数值。 但是，在 URL 中使用 rs:Command=Value 字符串可改进报表服务器的性能。  
   
- 请注意下面示例中的 `_vti_bin` 代理语法。 有关使用代理语法的详细信息，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
+ 请注意下面示例中的 `_vti_bin` 代理语法。 有关使用代理语法的详细信息，请参阅 [URL Access Parameter Reference](url-access-parameter-reference.md)。  
   
 ## <a name="access-a-report"></a>访问报表  
  要在浏览器中查看报表，请使用 rs:Command=Render 参数。 例如：  
@@ -66,7 +66,7 @@ ms.locfileid: "48098597"
 </DataSourceDefinition>  
 ```  
   
- 将根据报表服务器的 **SecureConnectionLevel** 设置返回连接字符串。 有关详细信息**SecureConnectionLevel**设置，请参见[Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
+ 将根据报表服务器的 **SecureConnectionLevel** 设置返回连接字符串。 有关 **SecureConnectionLevel** 设置的详细信息，请参阅 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
   
 ## <a name="access-the-contents-of-a-folder"></a>访问文件夹的内容  
  要访问某一文件夹的内容，请使用 rs:Command=GetChildren 参数。 将返回一个一般的文件夹导航页，其中包含指向在所请求文件中包含的子文件夹、报表、数据源和资源的链接。 例如：  
@@ -78,7 +78,7 @@ ms.locfileid: "48098597"
  您所看到的用户界面类似于由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) 使用的目录浏览模式。 报表服务器的版本号（包括内部版本号）也将显示在文件夹列表之下。  
   
 ## <a name="see-also"></a>请参阅  
- [URL 访问&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517711"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484846"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  为外部文件格式指定名称。
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] 指定外部数据的格式。
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 指定外部数据的格式。
   
    -   PARQUET 指定 Parquet 格式。
   
@@ -171,7 +171,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
   
 -   DateTimeOffset：'yyyy-MM-dd HH:mm:ss'  
   
--   Time：'HH:mm:ss'  
+-   时间：'HH:mm:ss'  
   
 下表中显示了**示例日期格式**：
   
