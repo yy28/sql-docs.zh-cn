@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d5c0e2a09926c87669f537710cc44df76b30c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200740"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032398"
 ---
 # <a name="publish-reports"></a>发布报表
-  从[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，您可以将所有报表和共享的数据源到报表服务器将报表服务器项目中通过部署该项目，也可以发布单个报表。 在可以发布报表之前，必须指定目标报表服务器的 URL。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](tools/set-deployment-properties-reporting-services.md)。  
+  从[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，你可以通过部署报表服务器项目将项目中的所有报表和共享数据源发布到报表服务器，也可以发布单个报表。 在可以发布报表之前，必须指定目标报表服务器的 URL。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](tools/set-deployment-properties-reporting-services.md)。  
   
- 可以使用[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]新版[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]若要打开，修改、 预览、 保存和发布同时[!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)]和[!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)]报表。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
+ 可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 打开、修改、预览、保存和发布 [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] 和 [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] 报表。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>发布项目中的所有报表  
   

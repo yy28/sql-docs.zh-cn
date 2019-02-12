@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010959"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
   报表历史记录是报表快照的集合。 通过添加和删除快照或修改影响报表历史记录存储的属性，可以对报表历史记录进行维护。 您可以手动或按计划创建报表历史记录。  
@@ -61,10 +61,10 @@ ms.locfileid: "48144697"
  删除报表时将同时删除报表历史记录。 例如，如果删除月销售情况报表，代之以新报表，则与该报表关联的所有报表历史记录也将随之删除。 但是，如果移动报表，所有报表历史记录也将随之移动。  
   
 ## <a name="see-also"></a>请参阅  
- [创建报表历史记录&#40;Reporting Services SharePoint 集成模式下&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server-content-management-ssrs-native-mode.md)   
- [将快照添加到报表历史记录&#40;报表管理器&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [创建报表历史记录（SharePoint 集成模式下的 Reporting Services）](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server-content-management-ssrs-native-mode.md)   
+ [向报表历史记录添加快照（报表管理器）](add-a-snapshot-to-report-history-report-manager.md)   
  [限制报表历史记录（报表管理器）](../reports/limit-report-history-report-manager.md)  
   
   

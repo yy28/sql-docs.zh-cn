@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042848"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>指定外部项的路径（报表生成器和 SSRS）
   在报表项属性中指定钻取报表、子报表和图像文件等引用项的路径，这些引用项在报表定义文件外部并存储在报表服务器上。  
@@ -40,12 +40,12 @@ ms.locfileid: "48221707"
   
 -   **项的完整路径。**  
   
-    -   **在报表服务器上：** 路径将从 **/** 主文件夹开始。 例如，/Reports/AllSubreports/Subreport1。  
+    -   **在报表服务器：** 从开始路径**/**，主文件夹。 例如，/Reports/AllSubreports/Subreport1。  
   
-    -   **在 SharePoint 站点上：** 必须在表达式中指定报表名称，并包含报表项的完整 URL 以及文件扩展名 .rdl。 例如 `="http://server/site/library/folder/Report1.rdl"` 。  
+    -   **在 SharePoint 站点：** 在表达式中，项和文件扩展名.rdl 的完整 url，必须指定报表名称。 例如，`="http://server/site/library/folder/Report1.rdl"`。  
   
 ## <a name="see-also"></a>请参阅  
- [添加外部图像&#40;报表生成器和 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [添加外部图像（报表生成器和 SSRS）](add-an-external-image-report-builder-and-ssrs.md)   
  [添加子报表和参数（报表生成器和 SSRS）](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [在报表中添加钻取操作（报表生成器和 SSRS）](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   

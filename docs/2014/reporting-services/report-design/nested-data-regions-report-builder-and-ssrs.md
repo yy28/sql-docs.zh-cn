@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3b3ff687b0ac3f9319351b45a49f8f272444ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110017"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026048"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>嵌套数据区域（报表生成器和 SSRS）
   可以在一个数据区域（如矩阵）内嵌套另一个数据区域（如图表），通常用于简明显示数据摘要或提供可视显示和表或矩阵显示。  
@@ -27,7 +27,7 @@ ms.locfileid: "48110017"
   
  在此图中，角单元中的饼图和行中的迷你图为嵌套数据区域。  
   
- 根据定义，嵌套数据区域基于相同报表数据集。 嵌套数据区域不能基于不同数据集。 若要显示不同数据集的数据，请考虑使用钻取报表或子报表。 有关详细信息，请参阅[钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+ 根据定义，嵌套数据区域基于相同报表数据集。 嵌套数据区域不能基于不同数据集。 若要显示不同数据集的数据，请考虑使用钻取报表或子报表。 有关详细信息，请参阅 [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -87,10 +87,10 @@ ms.locfileid: "48110017"
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
- [仪表&#40;报表生成器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](formatting-report-items-report-builder-and-ssrs.md)   
- [教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [设置仪表上的刻度的格式&#40;报表生成器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [教程：向报表添加 KPI&#40;报表生成器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [设置仪表上刻度的格式（报表生成器和 SSRS）](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

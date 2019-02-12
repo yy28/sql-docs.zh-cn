@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ce59e126ce24e30e091b4a5456d8b78c84355e88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641759"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026723"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>查看测试用例报表 (OracleToSQL)
 测试用例报表显示的测试验证结果和一般测试的信息。 如果测试失败，还会显示有关已验证的对象中的任何不匹配数据的信息。  

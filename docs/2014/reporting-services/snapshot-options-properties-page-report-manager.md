@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078097"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042348"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  
@@ -62,9 +62,9 @@ ms.locfileid: "48078097"
  单击此选项可保存所做的更改。  
   
 ## <a name="see-also"></a>请参阅  
- [将快照添加到报表历史记录&#40;报表管理器&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [创建、 修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [向报表历史记录添加快照（报表管理器）](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [创建、修改和删除报表历史记录中的快照](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

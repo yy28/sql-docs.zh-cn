@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1ecface6931e73f2153e32ee9ae71ed22ca56057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136897"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027118"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -35,7 +35,7 @@ ms.locfileid: "48136897"
   
      否则，单击 **“在发布前查看和修改报表部件”**。  
   
-3.  编辑报表部件名称和说明：双击名称以便编辑它，然后在“说明”字段中单击以便添加说明。  
+3.  编辑报表部件名称和说明：双击名称以便对其进行编辑，然后在单击**说明**字段添加说明。  
   
     > [!NOTE]  
     >  最好提供报表部件名称和说明，以便在搜索时帮助用户识别它。 对于整个路径而言，报表部件名称的最大长度是 260 个字符，包括服务器上文件夹的名称，后随报表部件的实际名称。  
@@ -58,10 +58,10 @@ ms.locfileid: "48136897"
 >  如果您将其作为新的报表部件发布，则该报表部件将具有新的唯一 ID。 如果原始报表部件发生更改，它将不再接收更新。  
   
 ## <a name="see-also"></a>请参阅  
- [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [报表部件和报表生成器中的数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)   
+ [报表生成器中的报表部件和数据集](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [报表部件故障排除&#40;报表生成器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [检查更新或关闭更新&#40;报表生成器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [浏览查找报表部件和设置默认文件夹&#40;报表生成器和 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

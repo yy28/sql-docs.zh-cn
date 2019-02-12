@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 146edd7519674ba83ac996a9b4aa1f7ec9a43ec2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365979"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011259"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>将多个数据区域链接到同一数据集（报表生成器和 SSRS）
   可以将多个数据区域添加到一个报表以提供同一报表数据集中的数据的不同视图。 例如，您可能希望以表的形式显示数据，同时，还希望在图表中以可视化方式显示它。 为此，您必须对相应的筛选表达式、排序表达式和组表达式使用相同的表达式和作用域。  

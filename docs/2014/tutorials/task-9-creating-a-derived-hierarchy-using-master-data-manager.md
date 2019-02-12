@@ -1,26 +1,23 @@
 ---
-title: 任务 9： 创建派生层次结构使用主数据管理器 |Microsoft Docs
+title: 任务 9:创建派生层次结构使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039328"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>任务 9：使用主数据管理器创建派生层次结构
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>任务 9:使用主数据管理器创建派生层次结构
   在本任务中，您将使用主数据管理器创建一个派生层次结构。 此派生层次结构派生自之间的基于域的属性关系**供应商**并**状态**实体。  
   
 1.  切换到的主页**主数据管理器**通过单击**SQL Server 2012 Master Data Services**页的顶部。  
@@ -41,11 +38,11 @@ ms.locfileid: "48076877"
   
      ![保存派生层次结构按钮](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "保存派生层次结构按钮")  
   
-7.  拖动**供应商**从**可用级别： SuppliersInState**到**当前级别： SuppliersInState**。  
+7.  拖动**供应商**从**可用级别：SuppliersInState**到**当前级别：SuppliersInState**。  
   
      ![可用实体和层次结构，以当前级别](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "可用实体和层次结构，以当前级别")  
   
-8.  拖动**状态**从**可用级别： SuppliersInState**到**当前级别： SuppliersInState**。 屏幕应具有**当前级别**，如下图中所示。  
+8.  拖动**状态**从**可用级别：SuppliersInState**到**当前级别：SuppliersInState**。 屏幕应具有**当前级别**，如下图中所示。  
   
      ![当前级别和派生层次结构的预览版](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "当前级别和派生层次结构预览")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076877"
      ![派生层次结构资源管理器中的](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "派生层次结构在资源管理器")  
   
 ## <a name="next-step"></a>下一步  
- [第 5 课：使用 SSIS 自动执行清理和匹配](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [第 5 课：自动执行清理和匹配使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

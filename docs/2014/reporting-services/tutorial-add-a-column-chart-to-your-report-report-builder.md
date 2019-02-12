@@ -1,5 +1,5 @@
 ---
-title: 教程：向报表添加柱形图（报表生成器）| Microsoft Docs
+title: 教程：将柱形图添加到您的报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104127"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026762"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：将柱形图添加到您的报表 （报表生成器）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图可能在以下方面十分有用：  
   
 -   显示一段时间内数据的更改。  
@@ -53,7 +53,7 @@ ms.locfileid: "48104127"
 9. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  本教程的预计学时：15 分钟。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104127"
   
 1.  切换到报表设计视图。  
   
-2.  选择词语**图表标题**顶部的图表，然后键入以下文本： **Store Sales Order Totals**。  
+2.  选择词语**图表标题**在顶部的图表，然后键入以下文本：**存储销售订单合计**。  
   
 3.  单击 **“运行”** 以预览报表。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48104127"
   
 9. 右键单击垂直轴标题沿图表的一侧，然后单击**轴标题属性**。  
   
-10. 替换中的文本**标题文本**字段的以下文本： **Sales Total (in Thousands)**。 还可以指定与如何设置标题格式相关的多种选项。  
+10. 替换中的文本**标题文本**字段具有以下文本：**（以千为单位） 的销售总额**。 还可以指定与如何设置标题格式相关的多种选项。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -267,7 +267,7 @@ ms.locfileid: "48104127"
   
  图表将显示一条线条，它按日期显示销售总计的移动平均线，每隔四天计算一次平均值。  
   
-##  <a name="Title"></a> 8。添加报表标题  
+##  <a name="Title"></a> 8.添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -291,7 +291,7 @@ ms.locfileid: "48104127"
   
 7.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a> 9。保存报表  
+##  <a name="Save"></a> 9.保存报表  
   
 #### <a name="to-save-the-report"></a>保存报表  
   
@@ -301,7 +301,7 @@ ms.locfileid: "48104127"
   
 3.  在“名称”中，键入 Sales Order Column Chart。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已成功完成“向报表添加柱形图”教程。 若要了解有关图表的详细信息，请参阅[图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)和[迷你图和数据条（报表生成器和 SSRS）](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

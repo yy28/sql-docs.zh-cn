@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0ffa426a907bc6011acabaf60375f5da8fba1dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87f1a5fa6b7dd6d3d100665d0808f894b8224d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040858"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器的电子邮件配置中的 `SendUsing` 元素是否设置为 `true`。  
@@ -40,7 +40,7 @@ public Boolean SendUsingSMTPServer;
 ```  
   
 ## <a name="property-values"></a>属性值  
- 一个只读的`Boolean`对象。  
+ 只读的 `Boolean` 对象。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  

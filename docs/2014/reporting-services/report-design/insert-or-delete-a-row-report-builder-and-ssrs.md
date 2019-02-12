@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8ee7c9665186648217f522ce1642cc791274ad0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 40ab945f5eadbf1e1e876e37e921626719755a8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053567"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026059"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
   可以在 Tablix 数据区域中添加或删除行。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  
@@ -60,7 +60,7 @@ ms.locfileid: "48053567"
   
 ## <a name="see-also"></a>请参阅  
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
- [了解组&#40;报表生成器和 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [了解组（报表生成器和 SSRS）](understanding-groups-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

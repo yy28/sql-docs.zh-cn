@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a6ef09783b69f6920d5421a52fbe8dbd13ed0e4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409994"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011469"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>从 .dqs 文件导入域
   本主题说明如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域从 .dqs 文件导入到现有知识库。 通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序导出域或知识库可创建 .dqs 数据文件。 .dqs 数据文件已加密，因此无法查看。  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040048"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
-  在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  
+  在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，您需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>配置文件呈现扩展插件元素  
- 将呈现扩展插件编译为 .DLL 后，您可以在 rsreportserver.config 文件中添加一个条目。 默认情况下，该文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 父元素为 \<Render>。 在 Render 元素之下是用于每个呈现扩展插件的 Extension 元素。 `Extension`元素包含两个属性，名称和类型。  
+ 将呈现扩展插件编译为 .DLL 后，您可以在 rsreportserver.config 文件中添加一个条目。 默认情况下，该文件位于 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer。 父元素为 \<Render>。 在 Render 元素之下是用于每个呈现扩展插件的 Extension 元素。 `Extension` 元素包含两个属性，即 Name 和 Type。  
   
  下表描述的特性`Extension`呈现扩展插件的元素：  
   
@@ -34,8 +34,8 @@ ms.locfileid: "48190877"
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extensions** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
-|**Visible**|值为 `false` 指示在用户界面中将不显示该呈现扩展插件。 如果未包括该属性，则默认值是`true`。|  
-|**LogAllExecutionRequests**|值 `false` 表示在一个会话中只对第一次报表执行记录一个条目。 如果未包括该属性，则默认值是`true`。<br /><br /> 例如，此设置决定着是只对报表中呈现的第一页记录一个条目（设为 `false` 时），还是对报表中呈现的每一页都记录一个条目（设为 `true` 时）。|  
+|**Visible**|值为 `false` 指示在用户界面中将不显示该呈现扩展插件。 如果未包含此属性，则默认值为 `true`。|  
+|**LogAllExecutionRequests**|值 `false` 表示在一个会话中只对第一次报表执行记录一个条目。 如果未包含此属性，则默认值为 `true`。<br /><br /> 例如，此设置决定着是只对报表中呈现的第一页记录一个条目（设为 `false` 时），还是对报表中呈现的每一页都记录一个条目（设为 `true` 时）。|  
   
  有关详细信息，请参阅 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190877"
   
 1.  将程序集从临时位置复制到您要在其上使用此呈现扩展插件的报表服务器的 bin 目录中。 报表服务器 Bin 目录的默认位置为 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer\Bin。  
   
-2.  在复制程序集文件后，打开 rsreportserver.config 文件。 rsreportserver.config 文件也位于报表服务器 bin 目录中。 还需要在配置文件中为扩展插件程序集文件生成一个条目。 可使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或简单的文本编辑器打开该文件。  
+2.  在复制程序集文件后，打开 rsreportserver.config 文件。 rsreportserver.config 文件也位于报表服务器 bin 目录中。 还需要在配置文件中为扩展插件程序集文件生成一个条目。 您可以使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或简单文本编辑器打开该文件。  
   
      有关详细信息，请参阅 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)。  
   

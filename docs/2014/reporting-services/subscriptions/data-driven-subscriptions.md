@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71ab6239172ea39a8adcee9ca017a5408079a8d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ca57a64268beb85e08a56c79184338a872bceed0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357149"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011838"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
   数据驱动订阅提供了一种使用动态订阅数据的方式，这些数据是在运行时从外部数据源中检索的。 数据驱动订阅还可以使用定义订阅时指定的静态文本和默认值。 可以使用数据驱动订阅来执行以下操作：  

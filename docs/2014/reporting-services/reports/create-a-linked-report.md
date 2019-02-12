@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210201"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010888"
 ---
 # <a name="create-a-linked-report"></a>创建链接报表
   链接报表是提供对现有报表的访问点的报表服务器项。 从概念上说，它与用于运行程序或打开文件的程序快捷方式类似。  
@@ -35,16 +35,16 @@ ms.locfileid: "48210201"
   
 2.  键入新链接报表的名称。 根据需要，可以键入说明。  
   
-3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果不选择其他文件夹，在当前文件夹 （它所基于的报表存储位置） 中创建链接的报表。  
+3.  若要为报表选择不同的文件夹，请单击 **“更改位置”**。 单击要使用的文件夹，或者在 **“位置”** 框中键入文件夹名称。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果没有选择不同的文件夹，则将在当前文件夹（链接报表所基于的报表的存储位置）中创建链接报表。  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 打开链接的报表。  
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 将打开链接报表。  
   
      链接报表的图标与报表服务器管理的其他项不同。 下面的图标表示链接报表：  
   
      ![链接报表图标](../media/hlp-16linked.gif "链接报表图标")  
   
 ## <a name="see-also"></a>请参阅  
- [打开和关闭报表&#40;报表管理器&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [打开和关闭报表（报表管理器）](../reports/open-and-close-a-report-report-manager.md)   
  [“新建链接报表”页（报表管理器）](../new-linked-report-page-report-manager.md)   
  [“选择项位置”页（报表管理器）](../choose-item-location-page-report-manager.md)   
  [报表的“常规”属性页（报表管理器）](../general-properties-page-reports-report-manager.md)   

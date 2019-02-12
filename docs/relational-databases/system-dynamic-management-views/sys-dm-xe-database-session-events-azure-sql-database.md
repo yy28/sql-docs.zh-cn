@@ -2,22 +2,21 @@
 title: sys.dm_xe_database_session_events （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 869ed1a58cde0c8350bfd05a97538a5e73931548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ba6b7613dbda16831502ad8030f1b0a0a065370
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028258"
 ---
 # <a name="sysdmxedatabasesessionevents-azure-sql-database"></a>sys.dm_xe_database_session_events（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47758725"
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
+|**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和任何更高版本。|  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -35,14 +34,14 @@ ms.locfileid: "47758725"
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
 |event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多对一|  
-|sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
   

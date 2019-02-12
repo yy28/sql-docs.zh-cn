@@ -1,11 +1,10 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
+ms.technology: data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f1e2180e6d22cee81c94d880eca1debaa20c8c5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f96dd7be6de1415abb8a71425b083c58e7012d9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837185"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023988"
 ---
-# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact SQL)
+# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   显示与所有无法合并到由管理员定义的诊断会话的内部诊断事件相关的信息。 查询此视图，以了解该驱动器的所有其他 Dmv 填充的背后的诊断和事件处理子系统的统计信息。 有一组的每个节点上每个进程的队列。  

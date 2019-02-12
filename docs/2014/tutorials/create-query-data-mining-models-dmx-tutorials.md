@@ -1,26 +1,25 @@
 ---
-title: 创建和查询使用 DMX 数据挖掘模型： 教程 (Analysis Services-数据挖掘) |Microsoft Docs
+title: 创建和查询使用 DMX 数据挖掘模型：教程 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176987"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012518"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 创建和查询数据挖掘模型：教程（Analysis Services - 数据挖掘）
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>创建和查询使用 DMX 数据挖掘模型：教程 (Analysis Services-数据挖掘)
   使用创建数据挖掘解决方案后[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以创建针对数据挖掘模型以预测趋势、 检索数据中的模式以及度量挖掘模型的准确性的查询。  
   
  以下列表中的分步教程可帮助您了解如何生成并运行通过使用数据挖掘查询[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，以便可以充分利用你的数据。  
@@ -40,9 +39,9 @@ ms.locfileid: "48176987"
      本教程创建一个预测模型以演示 CREATE MODEL (DMX) 语句的用法。 然后，添加相关的模型，并通过更改 Microsoft 时序算法的参数来自定义每个模型的行为。 最后，创建预测并使用新数据更新预测。 在创建预测时更新时序是在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中增加的功能。  
   
 ## <a name="reference"></a>参考  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>相关章节  
   

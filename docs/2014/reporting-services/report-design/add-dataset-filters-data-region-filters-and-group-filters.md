@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154217"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026169"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  
@@ -70,9 +70,9 @@ ms.locfileid: "48154217"
 |**报表定义架构数据类型**|**CLR 类型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
-|`DateTime`|`DateTime`, `DateTimeOffset`|  
-|`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
-|`Float`|`Single`, `Double`, `Decimal`|  
+|`DateTime`|`DateTime`， `DateTimeOffset`|  
+|`Integer`|`Int16`、`Int32`、`UInt16`、`Byte`、`SByte`|  
+|`Float`|`Single`、`Double`、`Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
   
  必须指定数据类型时，你可以在表达式的 Value 部分指定你自己的转换。  
@@ -84,7 +84,7 @@ ms.locfileid: "48154217"
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|将表达式与一个值进行比较。|  
 |**TopN、BottomN**|将表达式与一个 `Integer` 值进行比较。|  
-|**TopPercent、BottomPercent**|比较表达式与一个`Integer`或`Float`值。|  
+|**TopPercent、BottomPercent**|将表达式与一个 `Integer` 或 `Float` 值进行比较。|  
 |**Between**|测试表达式是否在两个值之间（含这两个值）。|  
 |**In**|测试表达式是否包含在一组值中。|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154217"
  此值还可以包括参数引用，以允许用户以交互方式选择作为筛选依据的值。  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)  
   
   

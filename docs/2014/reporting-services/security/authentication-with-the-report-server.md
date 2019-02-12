@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357117"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043298"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
@@ -83,7 +83,7 @@ ms.locfileid: "53357117"
 ## <a name="see-also"></a>请参阅  
  [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
- (创建-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [为报表数据源指定凭据和连接信息](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [实现安全扩展插件](../extensions/security-extension/implementing-a-security-extension.md)   
  [配置本机模式报表服务器上的 SSL 连接](configure-ssl-connections-on-a-native-mode-report-server.md)   

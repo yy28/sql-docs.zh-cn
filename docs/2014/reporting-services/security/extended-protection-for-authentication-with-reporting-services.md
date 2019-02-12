@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017920"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。  
@@ -166,7 +166,7 @@ ms.locfileid: "53355659"
  [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [针对验证的扩展保护概述](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrated Windows Authentication with Extended Protection（将 Windows 身份验证与扩展保护相集成）](https://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft 安全公告：身份验证扩展的保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Microsoft 安全公告：身份验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [报表服务器服务跟踪日志](../report-server/report-server-service-trace-log.md)   
  [RSReportServer 配置文件](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

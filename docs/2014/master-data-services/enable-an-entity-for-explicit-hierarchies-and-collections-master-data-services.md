@@ -11,25 +11,25 @@ helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b4f97063a1f926fc29f94aab0bb3e38e393590a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039098"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>为显式层次结构和集合启用实体 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，为显式层次结构和集合启用一个实体，以便您可以为该实体创建显式层次结构和集合。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "48095807"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [创建显式层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+-   [创建显式层次结构 (Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [创建集合&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [创建集合 (Master Data Services)](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [实体&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
- [显式层次结构&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
+ [显式层次结构 (Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [集合 (Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

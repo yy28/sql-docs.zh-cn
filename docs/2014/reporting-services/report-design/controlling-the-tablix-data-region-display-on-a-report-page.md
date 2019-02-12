@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043048"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>控制 Tablix 数据区域在报表页上的显示（报表生成器和 SSRS）
   本主题介绍 Tablix 数据区域的属性，您可以修改这些属性以便更改在报表中查看 Tablix 数据区域时该数据区域的显示方式。  
@@ -56,7 +56,7 @@ ms.locfileid: "48117847"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>控制 Tablix 行和列组的呈现方式  
  控制 Tablix 数据区域组的呈现方式取决于组结构。 Tablix 数据区域可包含四个区域，如下图所示：  
   
- ![Tablix 数据区域](../media/rs-tablixareas.gif "Tablix 数据区域")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  行组区和列组区包含组标题。 当某一 tablix 数据区域具有组标题时，您可以通过在 **“Tablix 属性”** 对话框的 **“常规”** 页上设置属性，控制行和列的重复方式。  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117847"
 ## <a name="see-also"></a>请参阅  
  [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制分页符、 标题、 列和行&#40;报表生成器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [控制分页符、标题、列和行（报表生成器和 SSRS）](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   

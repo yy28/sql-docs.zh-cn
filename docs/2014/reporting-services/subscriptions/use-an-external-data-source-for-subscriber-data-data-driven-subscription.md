@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043058"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部数据源提供订阅方数据（数据驱动订阅）
   在数据驱动订阅中，动态订阅数据是由从外部数据源检索数据的查询或命令提供的。 可以从满足数据驱动订阅处理要求的任何支持数据源中检索订阅数据。 查询或命令语法必须对随报表服务器安装的数据处理扩展插件有效。  
@@ -81,7 +81,7 @@ ms.locfileid: "48174707"
   
 ## <a name="see-also"></a>请参阅  
  [创建、 修改和删除数据驱动订阅](data-driven-subscriptions.md)   
- [数据驱动订阅](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)  
   
   

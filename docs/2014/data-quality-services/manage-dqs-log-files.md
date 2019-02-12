@@ -11,15 +11,15 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: be71c04c007c4801cd0e0166bcd7751937713af6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3d6bc56129d32c181dc37b2c1cdd4015830c0adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033404"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013408"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 日志文件
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 日志文件可帮助您诊断和解决与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]有关的问题。 为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]和 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]生成单独的日志文件。  
@@ -27,7 +27,7 @@ ms.locfileid: "51033404"
  您可以使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 为 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 功能和模块配置日志严重性设置。 或者，您还可以通过在 DQS_MAIN 数据库中手动更改 DQS 日志配置设置以及在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上更改 XML 文件，为 DQS 日志文件配置其他一些（高级）设置。  
   
 ##  <a name="DQSServer"></a> 数据质量服务器日志文件  
- [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志文件 DQServerLog.DQS_MAIN.log 包含在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上运行的活动的日志。 如果您安装了 SQL Server 的默认实例，则 DQServerLog.DQS_MAIN.log 文件将位于 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log 下。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]日志文件包含以下信息部分，每个部分之间用竖线 (|) 分隔：  
+ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志文件 DQServerLog.DQS_MAIN.log 包含在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上运行的活动的日志。 如果您安装了 SQL Server 的默认实例，则 DQServerLog.DQS_MAIN.log 文件将位于 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log 下。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 日志文件包含以下信息部分，每个部分之间用竖线 (|) 分隔：  
   
 -   日期和时间  
   

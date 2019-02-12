@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 993e6abe1df84f712f107f994b5a824e04d89467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33b628894376a909de5ee39b9de5a6e979a679f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153567"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036068"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>将 Reporting Services 集成到应用程序中
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是一个开放和可扩展的报表平台，设计用于向开发人员提供一整套用于开发解决方案的 API。  
@@ -50,7 +50,7 @@ ms.locfileid: "48153567"
  说明如何使用 URL 访问将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航集成到您的现有业务应用程序中。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [URL 访问与 SOAP 之间选择](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [技术参考 (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [报表服务器 Web 服务](../report-server-web-service/report-server-web-service.md)  

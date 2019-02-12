@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3fcba9c2af2344ca39d2ef781a1384580a7afeaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011299"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>向地图添加自定义位置（报表生成器和 SSRS）
   向报表添加地图之后，可以添加您自己的点位置。  
@@ -28,7 +28,7 @@ ms.locfileid: "48108667"
 > [!NOTE]  
 >  覆盖该嵌入点的层显示属性时，您所做的更改无法还原。  
   
- 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

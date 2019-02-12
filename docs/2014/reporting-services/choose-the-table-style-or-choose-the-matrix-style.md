@@ -11,17 +11,17 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablestyle.f1
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62088c91b0fc574490a3c7f2c8d1f442c5d53add
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 589962fbb1819fd4d8f69130dd6031a92ba172ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211370"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014518"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>选择表样式或选择矩阵样式
-  使用报表向导的这些页可为报表选择文本和线条样式。 样式列表基于可配置的模板。 报表设计器提供了下列初始模板：石板、森林、正式、Normal、海洋和通用。  
+  使用报表向导的这些页可为报表选择文本和线条样式。 样式列表基于可配置的模板。 报表设计器提供了下列初始模板：静态图像、 林、 公司、 粗体、 海洋和泛型。  
   
  您还可以添加其他样式模板。  
   

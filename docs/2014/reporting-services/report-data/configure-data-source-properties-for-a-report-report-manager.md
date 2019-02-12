@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e629b706cec435ac027f7a90f50bf12e1cb81879
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: accae7ea31570550a77e4b73c80e2617ad27fef5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041508"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>配置报表的数据源属性（报表管理器）
   在运行报表时，报表服务器检索属性信息以确定如何连接到数据源。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  
@@ -27,7 +27,7 @@ ms.locfileid: "48136407"
   
 ### <a name="to-configure-an-embedded-data-source"></a>配置嵌入数据源  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页。 导航到要配置报表特定数据源的报表，然后打开该报表。  
   
@@ -57,14 +57,14 @@ ms.locfileid: "48136407"
   
     -   如果数据源不使用凭据（例如，如果数据源是通过文件系统访问的 XML 文件），请单击“不需要凭据”。 仅当此凭据类型对于相应数据源有效时，才能指定它。 如果为要求身份验证的数据源选择此选项，则连接将失败。 如果选择此选项，请确保配置无人参与的执行帐户，以便在用户凭据不可用时，报表服务器可连接到其他计算机以检索数据或文件。  
   
- 有关配置凭据的详细信息，请参阅[指定凭据和报表数据源的连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。 有关无人参与的执行帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 有关配置凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](specify-credential-and-connection-information-for-report-data-sources.md)。 有关无人参与的执行帐户的详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [内容页&#40;报表管理器&#41;](../contents-page-report-manager.md)   
+ [“内容”页（报表管理器）](../contents-page-report-manager.md)   
  [“新建数据源”页（报表管理器）](../new-data-source-page-report-manager.md)   
- [创建、 修改和删除共享的数据源&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [创建、修改和删除共享数据源 (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理报表数据源](manage-report-data-sources.md)   
- [创建、 删除或修改共享的数据源&#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [“数据源”属性页（报表管理器）](../data-sources-properties-page-report-manager.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 856faf8f35e30343ef322e726e3d0dffc30ebb4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040138"
 ---
 # <a name="expression-dialog-box-report-builder"></a>“表达式”对话框（报表生成器）
   使用**表达式**对话框可以编写[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]表达式的报表项属性。 您可以使用表达式来设置多个属性，包括颜色、字体和边框。 在运行时，报表处理器对表达式进行计算，然后用结果替代属性的值。  
@@ -30,7 +30,7 @@ ms.locfileid: "53590611"
 ## <a name="expression-constructs"></a>表达式构造  
  表达式以等号 (=) 开头，可以包含常量、文字、运算符以及对内置字段、内置集合、内置函数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 运行库函数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 公共语言运行时类和自定义函数的引用。 以下列表介绍了可添加到表达式中的类别和值。  
   
- **设置表达式：**_\<属性名称 >_  
+ **设置表达式：**_\<PropertyName>_  
  要为其定义表达式的属性的名称。 此外，还可以在“属性”窗格中按名称设置此属性。  
   
  **常量**  
@@ -44,7 +44,7 @@ ms.locfileid: "53590611"
  **Parameters**  
  提供报表参数的列表。  
   
- **字段 (** _\<所选数据集 >_ **)**  
+ **Fields(** _\<selected Dataset>_ **)**  
  显示在数据集类别中选择的数据集的字段列表。 双击某字段可将该字段复制到“表达式”框。  
   
  **数据集**  

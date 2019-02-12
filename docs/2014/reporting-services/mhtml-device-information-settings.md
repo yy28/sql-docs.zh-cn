@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dd75a21625eb3ab31c9b1655e0f85943470cee54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 014a08a2ce19192835117d1fca44bcd0e67f4eef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011938"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 设备信息设置
   下表列出的是以 Web 存档 (MHTML) 格式呈现报表时的设备信息设置。  

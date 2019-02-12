@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194109"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040878"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>聚合函数引用（报表生成器和 SSRS）
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  
@@ -45,7 +45,7 @@ ms.locfileid: "48194109"
   
 -   [测试作用域](#TestingforScope)  
   
- 若要确定函数的有效作用域，请参阅各个函数参考主题。 有关详细信息和示例，请参阅[总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 若要确定函数的有效作用域，请参阅各个函数参考主题。 有关详细信息和示例，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,10 +53,10 @@ ms.locfileid: "48194109"
 ##  <a name="CalculatingAggregates"></a> 内置聚合函数  
  下列内置函数为默认作用域或命名作用域中的一组非 Null 数值数据计算汇总值。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的平均值。|  
-|[计数](report-builder-functions-count-function.md)|返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。|  
+|[Count](report-builder-functions-count-function.md)|返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。|  
 |[Max](report-builder-functions-max-function.md)|返回在给定作用域上下文中由表达式指定的所有非 Null 数值的最大值。 可以使用此函数指定图表轴最大值以控制刻度。|  
 |[Min](report-builder-functions-min-function.md)|返回在给定作用域上下文中由表达式指定的所有非 Null 数值的最小值。 可以使用此函数指定图表轴最小值以控制刻度。|  
@@ -120,40 +120,40 @@ ms.locfileid: "48194109"
 ##  <a name="CalculatingRunningValues"></a> 计算运行值  
  以下内置函数计算一组数据的运行值。 `RowNumber` 类似于 `RunningValue`，它将返回计数的运行值，该计数针对包含作用域中的每一行进行递增。 这些函数的作用域参数必须指定包含作用域，用于控制计数开始的时间。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|返回指定作用域内行数的运行计数。 `RowNumber`函数 1 开始重新计数，而不是 0。|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|返回指定作用域内行数的运行计数。 `RowNumber` 函数从 1 开始重新计数，而不是从 0 开始。|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。|  
   
 ##  <a name="RetrievingRowCounts"></a> 检索行计数  
  下列内置函数计算给定作用域内的行数。 使用此函数可以对所有行进行计数，包括含有 Null 值的行。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
 |[CountRows](report-builder-functions-countrows-function.md)|返回指定作用域内的行数，包括含有 Null 值的行。|  
   
 ##  <a name="LookupFunctions"></a> 从另一个数据集中查找值  
  下面的查找函数从指定数据集中检索值。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
 |[Lookup 函数](report-builder-functions-lookup-function.md)|从数据集中返回指定表达式的值。|  
 |[LookupSet 函数](report-builder-functions-lookupset-function.md)|从数据集中返回指定表达式的一组值。|  
 |[Multilookup 函数](report-builder-functions-multilookup-function.md)|从包含名称/值对的数据集中返回一组名称的第一个匹配值的集合。|  
   
 ##  <a name="RetrievingPostsortValues"></a> 检索依赖排序的值  
- 下列内置函数返回给定作用域内第一个、最后一个或以前的值。 这些函数依赖数据值的排序顺序。 例如，可以使用这些函数查找页上的第一个和最后一个值来创建字典样式页眉。 使用`Previous`例如为特定作用域内的上一行的值的一个行中的值进行比较，以百分比年查出表中的年份值。  
+ 下列内置函数返回给定作用域内第一个、最后一个或以前的值。 这些函数依赖数据值的排序顺序。 例如，可以使用这些函数查找页上的第一个和最后一个值来创建字典样式页眉。 使用 `Previous` 可以将指定作用域内某一行中的值与该行以前的值进行比较，例如，使用它可以查出表中的年度同比百分比值。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
 |[第一个](report-builder-functions-first-function.md)|返回指定表达式的给定作用域中的第一个值。|  
 |[上一次](report-builder-functions-last-function.md)|返回指定表达式的给定作用域中的最后一个值。|  
-|[“上一步”](report-builder-functions-previous-function.md)|返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。|  
+|[Previous](report-builder-functions-previous-function.md)|返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。|  
   
 ##  <a name="RetrievingServerAggregates"></a> 检索服务器聚合  
  下列内置函数从数据访问接口中检索自定义聚合。 例如，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源类型可以检索在用于组头的数据源服务器上计算的聚合。  
   
-|**函数**|**Description**|  
+|**函数**|**说明**|  
 |------------------|---------------------|  
 |[Aggregate](report-builder-functions-aggregate-function.md)|按照数据访问接口的定义返回指定表达式的自定义聚合。|  
   
@@ -165,15 +165,15 @@ ms.locfileid: "48194109"
 |[InScope](report-builder-functions-inscope-function.md)|指示项的当前实例是否在指定的作用域内。|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 检索递归级别  
- 下列内置函数检索处理递归层次结构时的当前级别。 使用与此函数的结果`Padding`在文本框中，可以控制递归组可视层次结构的缩进级别的属性。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
+ 下列内置函数检索处理递归层次结构时的当前级别。 此函数的结果与文本框中的 `Padding` 属性配合使用可以控制递归组可视层次结构的缩进级别。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 |函数|Description|  
 |--------------|-----------------|  
-|[Level](report-builder-functions-level-function.md)|返回在递归层次结构中的当前深度级别。|  
+|[级别](report-builder-functions-level-function.md)|返回在递归层次结构中的当前深度级别。|  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036898"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
-  该教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建与发布报表的工具。 本教程旨在于帮助新用户了解如何查找和打开各个工具。 如果你已熟悉这些工具，你可以转到其他教程，可帮助了解有关使用的重要技能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 有关其他教程的详细信息，请参阅[Reporting Services 教程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  该教程介绍了用于配置报表服务器、管理报表服务器内容和操作以及创建与发布报表的工具。 本教程旨在于帮助新用户了解如何查找和打开各个工具。 如果您已经熟悉了这些工具，您可以转到其他教程学习有关使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的重要技能。 有关其他教程的详细信息，请参阅[Reporting Services 教程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
   
  本主题内容：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48105498"
   
 -   配置无人参与的报表处理和电子邮件报表传递。  
   
- **安装：** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式时会安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器。 有关详细信息，请参阅[安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **安装：** 安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 本机模式时，会安装 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager。 有关详细信息，请参阅 [安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>启动 Reporting Services 配置管理器  
   
@@ -85,12 +85,12 @@ ms.locfileid: "48105498"
   
      ![Reporting Services 配置工具](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 配置工具")  
   
- **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ **后续步骤：**[配置和管理报表服务器（SSRS 本机模式）](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)和 [Reporting Services 配置管理器（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="bkmk_report_manager"></a> 报表管理器 （本机模式）  
  使用[报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)可设置权限、 管理订阅和计划，以及处理报表。 也可以使用报表管理器来查看报表。  
   
- **安装：** 安装时安装报表管理器[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式：[安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **安装：** 在安装时安装报表管理器[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]本机模式：[安装 Reporting Services 本机模式报表服务器](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  必须拥有足够的权限才能打开报表管理器（最初，只有本地 Administrators 组的成员拥有访问报表管理器功能的权限）。 报表管理器根据当前用户的角色分配提供不同的页和选项。 没有权限的用户将得到一个空页。 拥有查看报表权限的用户将获得链接，用户点击这些链接可以打开报表。 若要了解有关权限的详细信息，请参阅[角色和权限 (Reporting Services)](../security/roles-and-permissions-reporting-services.md)。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48105498"
   
 4.  如果本地报表服务器上运行报表管理器，请参阅[为本地管理配置本机模式报表服务器&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- **下一步：** [配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)。  
+ **后续步骤：**[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)。  
   
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
  报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)。  
@@ -169,7 +169,7 @@ ms.locfileid: "48105498"
   
 1.  在 Web 浏览器的地址栏中，键入以下 URL：  
   
-     **http://\<服务器名 > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  按 Enter。  
   

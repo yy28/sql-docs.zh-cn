@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362899"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013598"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表是包括报表数据和报表布局元素的基于 XML 的报表定义。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 报表是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的基于服务器的报表平台的一部分。  

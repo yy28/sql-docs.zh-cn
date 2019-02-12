@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180867"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037298"
 ---
 # <a name="windows-application-log"></a>Windows 应用程序日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将事件消息写入 Windows 应用程序日志。 您可以使用写入应用程序日志的消息信息，找出在本地系统上运行的报表服务器应用程序生成的事件。  
   
 ## <a name="viewing-report-server-events"></a>查看报表服务器事件  
- 使用事件查看器可以查看日志文件并筛选其中包含的消息。 有关事件消息的详细信息，请参阅[错误和事件参考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)。 有关 Windows 应用程序日志或事件查看器的详细信息，请参阅 Windows 产品文档。  
+ 使用事件查看器可以查看日志文件并筛选其中包含的消息。 有关事件消息的详细信息，请参阅 [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)。 有关 Windows 应用程序日志或事件查看器的详细信息，请参阅 Windows 产品文档。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供以下三个事件源：  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48180867"
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 日志文件和来源](../report-server/reporting-services-log-files-and-sources.md)   
- [错误和事件参考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [错误和事件参考 (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082238"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039258"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -111,7 +111,7 @@ ms.locfileid: "48082238"
     2.  如果列出了该帐户，则将其选中，然后单击 **“删除”**。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>对已存储凭据使用模拟功能  
- 您还可以使用凭据来模拟其他用户的身份。 对于 SQL Server 数据库，使用模拟选项可以设置[SETUSER](/sql/t-sql/statements/setuser-transact-sql)函数。  
+ 您还可以使用凭据来模拟其他用户的身份。 对于 SQL Server 数据库，使用模拟选项可以设置 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 函数。  
   
 > [!IMPORTANT]  
 >  对于支持订阅的报表，或按计划生成报表历史记录或刷新报表执行快照的报表，请勿使用模拟功能。  
@@ -134,18 +134,18 @@ ms.locfileid: "48082238"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |集成安全性|模拟当前用户|对于所有数据源类型，均使用当前的用户帐户进行连接。|  
 |Windows 凭据|模拟指定的用户|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模拟用户帐户进行连接。|  
-|数据库凭据|模拟无人参与的执行帐户或服务帐户。<br /><br /> （Reporting Services 会在使用服务标识发送连接请求时删除管理员权限）。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 将用户名和密码追加到连接字符串中。<br /><br /> 有关[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 如果使用的是 TCP/IP 协议，则连接会成功；否则，连接将失败。<br /><br /> 对于 XML：<br /><br /> 如果使用数据库凭据，则报表服务器上的连接将失败。|  
-|None|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 有关[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
+|数据库凭据|模拟无人参与的执行帐户或服务帐户。<br /><br /> （Reporting Services 会在使用服务标识发送连接请求时删除管理员权限）。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 将用户名和密码追加到连接字符串中。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 如果使用的是 TCP/IP 协议，则连接会成功；否则，连接将失败。<br /><br /> 对于 XML：<br /><br /> 如果使用数据库凭据，则报表服务器上的连接将失败。|  
+|None|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
   
 ## <a name="setting-credentials-programmatically"></a>通过编程方式设置凭据  
- 您可以通过编写代码来设置凭据，以控制对报表和报表服务器的访问。 有关详细信息，请参阅[数据源和连接方法](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  
+ 您可以通过编写代码来设置凭据，以控制对报表和报表服务器的访问。 有关详细信息，请参阅 [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 支持的数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [管理报表数据源](../../integration-services/connection-manager/data-sources.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../report-manager-ssrs-native-mode.md)   
- [创建、 删除或修改共享的数据源&#40;报表管理器&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [配置报表的数据源属性&#40;报表管理器&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)   
+ [创建、删除或修改共享数据源（报表管理器）](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [配置报表的数据源属性（报表管理器）](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

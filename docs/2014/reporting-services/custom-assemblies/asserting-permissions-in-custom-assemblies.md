@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 57e2197b8e24a4de1639a573d79f6ee25036294c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f2ac7bfb08aa5812b8db90d3c1a6049665ce1b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025991"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>在自定义程序集中断言权限
   默认情况下，自定义程序集代码以受限的 Execution 权限集运行。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  

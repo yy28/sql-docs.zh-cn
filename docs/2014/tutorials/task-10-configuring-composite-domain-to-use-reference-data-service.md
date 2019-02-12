@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011589"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10:配置复合域以使用引用数据服务
   在此任务中，配置**地址验证**复合域以使用**Melissa 数据-地址检查**服务。 在运行时，在清理活动期间，DQS 将“地址验证”域中各域的值传递给此服务以进行清理。 请参阅[映射到引用数据的域/复合域](https://msdn.microsoft.com/library/hh213030.aspx)的更多详细信息。  

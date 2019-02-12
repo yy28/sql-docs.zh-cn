@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139603"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043388"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>报表和组变量集合引用（报表生成器和 SSRS）
   在报表的表达式中需要多次使用某个复杂计算时，您可能需要创建一个变量。 您可以创建一个报表变量或组变量。 变量名称在报表中必须是唯一的。  
@@ -53,7 +53,7 @@ ms.locfileid: "48139603"
     > [!NOTE]  
     >  您不能控制报表处理器何时初始化一个变量或何时对更新变量的表达式进行计算。 变量初始化的执行顺序未定义。  
   
- 有关会话的详细信息，请参阅[在报表生成器中预览报表](../report-builder/previewing-reports-in-report-builder.md)。  
+ 有关会话的详细信息，请参阅 [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="group-variables"></a>组变量  
  使用组变量可在组的作用域中计算一次复杂表达式。 组变量仅在组及其子组的作用域中有效。  
@@ -74,7 +74,7 @@ ms.locfileid: "48139603"
   
 ## <a name="see-also"></a>请参阅  
  [对数据进行筛选、分组和排序（报表生成器和 SSRS）](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [表达式中的内置集合&#40;报表生成器和 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [表达式中的内置集合（报表生成器和 SSRS）](built-in-collections-in-expressions-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)  
   
   

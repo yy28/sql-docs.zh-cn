@@ -12,14 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181404"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011178"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）
   从 SharePoint 库运行报表时，可以在报表或链接至报表的外部文件中定义连接信息。 如果连接信息嵌入在报表中，则该信息称为自定义数据源。 如果连接信息在外部文件中进行定义，则该信息称为共享数据源。 外部文件可以是报表服务器数据源 (.rsds) 文件，也可以是 Office 数据连接 (.odc) 文件。  
@@ -51,7 +51,7 @@ ms.locfileid: "48181404"
   
     -   若要使用户在每次运行报表时都输入其凭据，请选择 **“凭据提示”** 。 若要为此报表计划订阅或数据处理，请不要选择此选项。  
   
-    -   若要使用一组凭据访问数据，请选择 **“已存储凭据”** 。 凭据在存储之前是加密的。 您可以选择用于确定如何对已存储凭据进行身份验证的选项。 如果已存储的凭据属于 Windows 用户帐户，请选择“用作 Windows 凭据”。 如果要设置数据库服务器的执行上下文，请选择 **“设置此帐户的执行上下文”** 。 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库，此选项将设置 SETUSER 函数。 有关详细信息，请参阅 [SETUSER (Transact-SQL)](/sql/t-sql/statements/setuser-transact-sql)。  
+    -   若要使用一组凭据访问数据，请选择 **“已存储凭据”** 。 凭据在存储之前是加密的。 您可以选择用于确定如何对已存储凭据进行身份验证的选项。 如果已存储的凭据属于 Windows 用户帐户，请选择“用作 Windows 凭据”。 如果要设置数据库服务器的执行上下文，请选择 **“设置此帐户的执行上下文”** 。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库，此选项将设置 SETUSER 函数。 有关详细信息，请参阅 [SETUSER (Transact-SQL)](/sql/t-sql/statements/setuser-transact-sql)。  
   
     -   如果要在连接字符串中指定凭据，或者如果要使用在报表服务器上配置的最低特权帐户运行报表，请选择“不需要提供凭据”。 如果未在报表服务器上配置此帐户，系统将提示用户输入凭据，并且不会运行您为报表定义的任何计划操作。  
   

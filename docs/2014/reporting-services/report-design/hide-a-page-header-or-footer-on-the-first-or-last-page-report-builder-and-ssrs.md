@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101057"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040778"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 添加页眉或页脚后，可以在报表的第一页和最后一页选择性地将其隐藏。  
@@ -49,8 +49,8 @@ ms.locfileid: "48101057"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [页眉和页脚（报表生成器和 SSRS）](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [添加或删除页眉或页脚&#40;报表生成器和 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [添加或删除页面页眉或页脚（报表生成器和 SSRS）](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

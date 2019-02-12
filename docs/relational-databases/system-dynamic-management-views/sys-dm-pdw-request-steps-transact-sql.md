@@ -2,8 +2,8 @@
 title: sys.dm_pdw_request_steps (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039048"
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact SQL)
+# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有关编写给定的请求或查询中的所有步骤的信息[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 它列出了每个查询步骤对应一行。  
@@ -29,8 +29,8 @@ ms.locfileid: "52393591"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 和 step_index 构成此视图的键。<br /><br /> 与请求关联的唯一数字 id。|请参阅中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|request_id 和 step_index 构成此视图的键。<br /><br /> 此步骤的一系列步骤组成该请求中的位置。|0 到 (n-1)，为包含 n 个步骤的请求。|  
-|operation_type|**nvarchar(35)**|表示此步骤的操作的类型。|**DMS 查询计划操作：** ReturnOperation、 执行、 MoveOperation、 为 BroadcastMoveOperation、 ShuffleMoveOperation、 针对以下、 CopyOperation、 DistributeReplicatedTableMoveOperation<br /><br /> **SQL 查询计划操作：** OnOperation，针对以下<br /><br /> **其他查询计划操作：** MetaDataCreateOperation'，'RandomIDOperation<br /><br /> **对于读取的外部操作：** HadoopShuffleOperation'，'HadoopRoundRobinOperation'，'HadoopBroadcastOperation<br /><br /> **有关 MapReduce 的外部操作：** HadoopJobOperation'，'HdfsDeleteOperation<br /><br /> **对于写入的外部操作：** ExternalExportDistributedOperation'，'ExternalExportReplicatedOperation'，'ExternalExportControlOperation<br /><br /> 详细信息，请参阅"了解查询计划"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
-|distribution_type|**nvarchar(32)**|此步骤中将进行的分布的类型。|AllNodes、 AllDistributions、 AllComputeNodes、 ComputeNode、 分发、 SubsetNodes、 SubsetDistributions、 未指定|  
+|operation_type|**nvarchar(35)**|表示此步骤的操作的类型。|**DMS 查询计划操作：**'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL 查询计划操作：** OnOperation，针对以下<br /><br /> **其他查询计划操作：**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **对于读取的外部操作：**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **有关 MapReduce 的外部操作：**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **对于写入的外部操作：**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 详细信息，请参阅"了解查询计划"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
+|distribution_type|**nvarchar(32)**|此步骤中将进行的分布的类型。|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|其中步骤正在运行。|计算、 控制，DMS|  
 |status|**nvarchar(32)**|此步骤的状态。|挂起、 正在运行、 完成、 失败、 UndoFailed、 PendingCancel，已取消、 撤消、 已中止|  
 |error_id|**nvarchar(36)**|如果有与此步骤中，关联的错误的唯一 id。|请参阅的 error_id [sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则为 NULL。|  

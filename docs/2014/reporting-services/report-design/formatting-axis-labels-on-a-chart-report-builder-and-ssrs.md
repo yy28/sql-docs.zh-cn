@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185387"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023578"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
@@ -52,7 +52,7 @@ ms.locfileid: "48185387"
   
  当您将一个字段从数据集拖放到图表表面上时，该图表会确定此字段是属于类别轴还是值轴。  
   
- 值轴通常是图表的垂直轴（或 y 轴）。 它用于显示要绘制的数值数据值。 拖放到数据字段区域中的字段将绘制在值轴上。 类别轴通常是图表的水平轴（或 x 轴）。 对于条形图中的这些轴，情况正好相反。 在条形图中，类别轴是垂直轴，而值轴是水平轴。 有关详细信息，请参阅[条形图&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 值轴通常是图表的垂直轴（或 y 轴）。 它用于显示要绘制的数值数据值。 拖放到数据字段区域中的字段将绘制在值轴上。 类别轴通常是图表的水平轴（或 x 轴）。 对于条形图中的这些轴，情况正好相反。 在条形图中，类别轴是垂直轴，而值轴是水平轴。 有关详细信息，请参阅 [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>图表如何计算轴标签间隔  
  在设置轴标签的格式之前，应先了解图表如何计算轴标签间隔。 这样，您就可以通过设置必需的属性来实现所需的轴标记行为。  
@@ -92,13 +92,13 @@ ms.locfileid: "48185387"
  “Name”字段沿类别轴绘制。 图表在 4 到 6 个标签之间进行计算，并计算自动调整设置来确定应如何调整类别轴上的标签，而不会导致标签冲突。 因此，某些类别标签可能被取消。 您可以单独覆盖每个轴的自动调整选项。  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>在类别轴上显示所有标签  
- 在值轴上，轴间隔提供图表上数据点的一致度量。 但是，在类别轴上，此功能会导致显示不带轴标签的类别。 通常，您希望所有类别都带有标签。 可以通过将间隔数设置为 1 来显示所有类别。  有关详细信息，请参阅[指定轴间隔&#40;报表生成器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。  
+ 在值轴上，轴间隔提供图表上数据点的一致度量。 但是，在类别轴上，此功能会导致显示不带轴标签的类别。 通常，您希望所有类别都带有标签。 可以通过将间隔数设置为 1 来显示所有类别。  有关详细信息，请参阅 [指定轴间隔（报表生成器和 SSRS）](specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  使用手动设置轴上间隔来代替自动标记功能后，图表必须对其他元素进行相应的调整。 因此，图表上标签的位置和大小或者其他元素的大小可能是不可预知的。  
   
 ## <a name="variable-axis-intervals"></a>可变轴间隔  
- 图表计算大约 5 个轴标签间隔而不考虑图表的大小。 在更宽或更高的图表上，如果在一个轴上仅显示 5 个标签，则各个标签之间会出现较大的间隔。 这会使根据该轴来确定每个数据点的值变得更加困难。 若要避免在更宽或更高的图表上出现此情况，您可以设置可变轴间隔。 图表会根据相应轴的具体情况基于该图表的宽度或高度来计算能够在轴上显示的最佳标签数。 有关详细信息，请参阅[指定轴间隔&#40;报表生成器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。  
+ 图表计算大约 5 个轴标签间隔而不考虑图表的大小。 在更宽或更高的图表上，如果在一个轴上仅显示 5 个标签，则各个标签之间会出现较大的间隔。 这会使根据该轴来确定每个数据点的值变得更加困难。 若要避免在更宽或更高的图表上出现此情况，您可以设置可变轴间隔。 图表会根据相应轴的具体情况基于该图表的宽度或高度来计算能够在轴上显示的最佳标签数。 有关详细信息，请参阅 [指定轴间隔（报表生成器和 SSRS）](specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 ## <a name="sorting-axis-values"></a>对轴值进行排序  
  类别按它们在结果集中的出现顺序沿 x 轴显示。 通过向查询添加 SORT 命令或通过使用表达式对数据集进行排序，可以更改组顺序。 图表数据区域与其他数据区域的排序方式相同。 有关如何对数据进行排序的详细信息，请参阅[对数据区域中的数据进行排序（报表生成器和 SSRS）](sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
@@ -113,18 +113,18 @@ ms.locfileid: "48185387"
 -   在 **“序列属性”** 对话框的 **“类别字段”** 选项中选择一个字段或键入一个表达式。 图表将为您指定的类别字段中的所有值添加轴间隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>在类别轴中添加或删除侧边距  
- 在条形图、柱形图和散点图中，图表会自动在 x 轴结尾处添加侧边距。 您无法更改该边距的大小。 在所有其他图表类型中，图表都不会添加侧边距。 有关详细信息，请参阅[添加或删除边距从图表&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
+ 在条形图、柱形图和散点图中，图表会自动在 x 轴结尾处添加侧边距。 您无法更改该边距的大小。 在所有其他图表类型中，图表都不会添加侧边距。 有关详细信息，请参阅 [在图表中添加或删除边距（报表生成器和 SSRS）](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [设置轴标签的格式为日期或货币&#40;报表生成器和 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [在图表中放置标签&#40;报表生成器和 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [图表中的位置标签（报表生成器和 SSRS）](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [指定轴间隔&#40;报表生成器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [指定轴间隔（报表生成器和 SSRS）](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [添加或删除边距在图表中&#40;报表生成器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [在图表中添加或删除边距（报表生成器和 SSRS）](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [指定对数刻度&#40;报表生成器和 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [指定对数刻度（报表生成器和 SSRS）](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
  [设置图表格式（报表生成器和 SSRS）](formatting-a-chart-report-builder-and-ssrs.md)   

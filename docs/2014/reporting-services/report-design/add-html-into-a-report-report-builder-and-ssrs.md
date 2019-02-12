@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ebee6948403822d7e4a9f8d406d1000b27ee2468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043018"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>向报表添加 HTML（报表生成器和 SSRS）
   可以使用占位符从数据集中的字段导入 HTML 以在报表中使用。 默认情况下，占位符表示纯文本，因此需要将占位符的标记类型改为 HTML。 有关详细信息，请参阅[将 HTML 导入报表（报表生成器和 SSRS）](importing-html-into-a-report-report-builder-and-ssrs.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "48182027"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
- [设置数字和日期格式&#40;报表生成器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [设置数字和日期格式（报表生成器和 SSRS）](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [设置线条、颜色和图像的格式（报表生成器和 SSRS）](images-report-builder-and-ssrs.md)   
  [“占位符属性”对话框 ->“常规”（报表生成器和 SSRS）](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

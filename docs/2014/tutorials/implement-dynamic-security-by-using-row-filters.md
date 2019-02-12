@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404192"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041048"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
   在本补充课程中，您将另外创建一个实现动态安全性的角色。 动态安全性提供了基于当前登录用户的用户名或登录 ID 的行级别安全性。 若要了解详细信息，请参阅[角色（SSAS 表格）](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
@@ -86,10 +85,10 @@ ms.locfileid: "52404192"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<第一个用户名 >|\<最后一个用户名 >|\<域 \ 用户名 >|  
-    |1|3|\<第一个用户名 >|\<最后一个用户名 >|\<域 \ 用户名 >|  
-    |2|4|\<第一个用户名 >|\<最后一个用户名 >|\<域 \ 用户名 >|  
-    |3|5|\<第一个用户名 >|\<最后一个用户名 >|\<域 \ 用户名 >|  
+    |1|2|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
+    |1|3|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
+    |2|4|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
+    |3|5|\<第一个用户名 >|\<最后一个用户名 >|\<domain\username>|  
   
 3.  在新工作表中，将 first name、last name 和 domain\username 替换为您组织中的三个用户的姓名和登录 ID。 将同一个用户置于前两行，Employee Id 为 1。 这表示此用户属于多个销售区域。 保持 Employee Id 和 Sales Territory Id 字段不变。  
   

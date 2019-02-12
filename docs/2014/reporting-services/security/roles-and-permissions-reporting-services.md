@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ab60b588b276fd95e253d3ccf3fdeaf8ac71d409
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116841"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010969"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色和权限 (Reporting Services)
   Reporting Services 提供身份验证子系统和基于角色的授权模型。 身份验证和授权模型取决于相应的报表服务器是在本机模式下运行还是在 SharePoint 模式下运行。 如果报表服务器是 SharePoint 部署的一部分，则 SharePoint 权限将确定哪些用户对此报表服务器具有访问权限。  

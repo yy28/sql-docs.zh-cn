@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040728"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
   好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，您可以将地图添加到报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  
@@ -63,7 +63,7 @@ ms.locfileid: "48095707"
   
 -   地图库中报表内的地图。  
   
--   提供空间数据作为 ESRI 形状文件的第三方站点或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]空间数据。  
+-   提供空间数据作为 ESRI 形状文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 空间数据的第三方站点。  
   
 -   Bing 地图图块，为地图视图提供背景。 若要在地图中显示图块，必须将报表服务器配置为支持 Bing 地图 Web 服务。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48095707"
 |-----------------|-----------------|----------------|-----------------------------|  
 |![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本图|Polygon|只显示区域的地图，例如，销售区域。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。 调色板是一组预定义的颜色。 当分配完调色板中的所有颜色后，将分配颜色的阴影。|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|颜色分析图|Polygon|一个按变化的颜色显示分析数据的地图，例如，按区域列出的销售数据。|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|多边形|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|气泡图|Polygon|一个在各区域中心以不同气泡大小显示分析数据的地图，例如，按区域列出的销售数据。<br /><br /> 选项：根据第二个分析字段改变区域颜色以及指定颜色规则。|  
 |![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本线条图|行|只显示线条的地图，例如，交货路线。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色。|  
 |![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析线条图|行|线条颜色和宽度发生变化的地图，例如，交货的包装数和按路线的实时度量。<br /><br /> 选项：通过一个分析字段改变线条宽度，通过第二个分析字段改变线条颜色，以及指定颜色规则。|  
 |![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本标记地图|点|在每个位置显示一个标记的地图，例如，市县。<br /><br /> 选项：通过调色板改变颜色或使用一种颜色，以及更改标记样式。|  
@@ -123,7 +123,7 @@ ms.locfileid: "48095707"
   
  在使用“地图”向导添加地图之后，您可以使用“层”向导创建其他层或更改用于层的选项。 有关向导的详细信息，请参阅[地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
- 可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
+ 可以单独为每个层自定义显示或数据选项。 有关运行向导后自定义地图的详细信息，请参阅 [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)中的“在何处可以获取 ESRI 形状文件？”。  
   
  
   
@@ -163,8 +163,8 @@ ms.locfileid: "48095707"
   
 ## <a name="see-also"></a>请参阅  
  [自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)   
+ [教程：地图报表&#40;报表生成器&#41;](../tutorial-map-report-report-builder.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
- [报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

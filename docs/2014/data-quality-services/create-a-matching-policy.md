@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025348"
 ---
 # <a name="create-a-matching-policy"></a>创建匹配策略
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中生成匹配策略。 您可以通过对示例数据运行“匹配策略”活动在 DQS 中准备匹配过程。 在此活动中，在策略中创建和测试一个或多个匹配规则，然后发布知识库以使匹配的规则可供公开使用。 知识库中只能有一个匹配策略，但该策略可以包含多个匹配规则。  

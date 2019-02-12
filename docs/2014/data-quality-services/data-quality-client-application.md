@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9cedf942ea765bacd773e5183da6f6e6ada78a06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032105"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043088"
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序允许您使用独立工具执行数据质量操作。 此应用程序使您能够创建知识库、创建和运行数据质量项目以及执行管理任务。  

@@ -1,5 +1,5 @@
 ---
-title: 新建角色分配： 编辑角色分配页 （报表管理器） |Microsoft Docs
+title: 新建角色分配：编辑角色分配页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc92d5e8bba2200bb1a88739cd83c12b2f0bdd12
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181787"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025548"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>“新建角色分配: 编辑角色分配”页（报表管理器）
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新建角色分配：编辑角色分配页 （报表管理器）
   使用“新建角色分配”或“编辑角色分配”页可以授予对报表服务器项和操作的权限。 需要访问报表服务器的每个用户都必须拥有用来定义访问级别的角色分配。 可以针对根节点或者针对特定的报表、模型、文件夹、资源或共享数据源创建角色分配。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安全性可以通过您应用到项的角色分配来强制执行。 角色分配将某个组或用户匹配到某个角色定义，每个角色定义标识该组或用户可以执行的与某一特定项相关的任务。  
   
- 项级的角色分配的影响面可以更广。 虽然它们可以与单个报表或文件夹关联，但还可以在文件夹层次结构中的更高级别定义它们，并且树视图中更低位置的文件夹和项可以继承它们。 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。  
+ 项级的角色分配的影响面可以更广。 虽然它们可以与单个报表或文件夹关联，但还可以在文件夹层次结构中的更高级别定义它们，并且树视图中更低位置的文件夹和项可以继承它们。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  
@@ -47,9 +47,9 @@ ms.locfileid: "48181787"
 >  此框仅可用于“新建角色分配”页上。  
   
  **角色**  
- 显示报表服务器中定义的可用于定义项安全性的所有角色。 创建或更改报表或文件夹的角色分配时，选择一个或多个角色，直到组合任务集能够说明应允许用户执行的操作。 若要查看的每个角色支持的任务集，请使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 不能在报表管理器中查看、创建、修改或删除角色。 有关说明，请参阅[创建、 删除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
+ 显示报表服务器中定义的可用于定义项安全性的所有角色。 创建或更改报表或文件夹的角色分配时，选择一个或多个角色，直到组合任务集能够说明应允许用户执行的操作。 若要查看每个角色支持的任务集，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 不能在报表管理器中查看、创建、修改或删除角色。 有关说明，请参阅[创建、 删除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
   
- **Description**  
+ **说明**  
  显示有关角色的其他信息。 对于预定义角色例如**浏览器**或**Content Manager**，此说明汇总了每个角色支持的任务。  
   
  **删除角色分配**  
@@ -61,9 +61,9 @@ ms.locfileid: "48181787"
 ## <a name="see-also"></a>请参阅  
  [创建、删除或修改角色 (Management Studio)](security/role-definitions-create-delete-or-modify.md)   
  [授予对本机模式报表服务器的权限](security/granting-permissions-on-a-native-mode-report-server.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [角色分配](security/role-assignments.md)   
- [授予用户对报表服务器访问&#40;报表管理器&#41;](security/grant-user-access-to-a-report-server.md)  
+ [授予用户对报表服务器的访问权限（报表管理器）](security/grant-user-access-to-a-report-server.md)  
   
   

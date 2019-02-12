@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030611"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式 （报表生成器）
   在本教程中，您可以练习以不同方式设置文本格式。 在设置了具有数据源和数据集的空白报表后，您可以选择要完成的步骤。  
@@ -71,11 +71,11 @@ ms.locfileid: "53350108"
   
 1.  在“报表数据”窗格中，单击 **“新建”**，然后单击 **“数据源”**。  
   
-2.  在中**名称**框中，键入：**TextDataSource**  
+2.  在“名称”框中键入：**TextDataSource**  
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
-4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：**数据源 =\<服务器名 >**  
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：数据源 = \<servername>  
   
     > [!NOTE]  
     >  表达式\<服务器名 >，例如，Report001，指定在其安装的 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库的连接。 如果你已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "53350108"
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在中**名称**框中，键入：**TextDataset。**  
+3.  在“名称”框中键入：**TextDataset。**  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”**。  
   

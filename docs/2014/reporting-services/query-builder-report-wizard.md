@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013158"
 ---
 # <a name="query-builder-report-wizard"></a>查询生成器（报表向导）
   使用查询生成器可以指定用于检索要在报表中使用的结果集的查询。 您可以在两种查询生成器中进行选择：  
@@ -41,7 +41,7 @@ ms.locfileid: "48056297"
  **导入**  
  打开“导入查询”对话框，显示任何可用报表的 .rdl 和 .sql 文件。 可以按原样使用导入的查询，也可以在查询生成器中进行修改。  
   
- **运算符（运行）**  
+ **运算符(Run)**  
  运行查询，并且在查询有效的情况下返回结果集。 请注意，如果查询是表达式，您将不能执行查询。 若要验证基于表达式的查询，您必须预览报表。  
   
  **命令类型**  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051337"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042759"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>创建数据源视图（数据挖掘基础教程）
   数据源视图是在某个数据源的基础上生成的，并且定义可在您的挖掘结构中使用的数据的子集。 您还可以使用数据源视图来添加列、创建计算列和聚合以及添加命名视图。 通过数据源视图，可以选择与项目相关的数据，建立表之间的关系，以及修改数据的结构，而不必修改原始的数据源。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -48,9 +47,9 @@ ms.locfileid: "48051337"
  [创建数据源&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一课  
- [第 2 课： 生成 Targeted 的 Mailing 结构&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [第 2 课：生成 Targeted 的 Mailing 结构&#40;数据挖掘基础教程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [定义数据源视图&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [定义数据源视图 (Analysis Services)](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

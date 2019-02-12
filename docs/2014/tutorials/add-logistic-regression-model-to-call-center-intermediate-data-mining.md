@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015508"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>向呼叫中心结构中添加逻辑回归模型（数据挖掘中级教程）
   除了分析可能影响呼叫中心运营的因素之外，您还需要就员工如何提升其服务质量提供一些具体的建议。 在此任务中，您将使用生成探索模型时所使用的挖掘结构，并添加一个用来创建预测的挖掘模型。  
@@ -70,6 +69,6 @@ ms.locfileid: "48208198"
  [创建呼叫中心模型的预测&#40;数据挖掘中级教程&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363369"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028008"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -110,7 +110,7 @@ ms.locfileid: "53363369"
   
  有关查询语法的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[用于 XML 报表数据的 XML 查询语法 (SSRS)](report-data-ssrs.md)。  
   
- 有关示例，请参阅[Reporting Services:使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>检索 XML Web 服务数据的要求  
  XML 数据处理扩展插件不能检测架构。 因此，您必须通过某种方式来发现哪些 SOAP 方法将检索所需数据。 您还必须了解 Web 服务用于其数据的寻址方案或命名空间。  

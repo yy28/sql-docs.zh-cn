@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 676bbf12efa9b8640ef244f6dd57325b047d79ba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018918"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   您必须为每个应用程序至少配置一个 URL 才能使用报表管理器或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。 如果您将报表服务器配置为使用 SharePoint 集成模式，并使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具更新了报表服务器 Web 服务 URL，则您还必须更新 SharePoint 管理中心中的 URL。  

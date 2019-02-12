@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015976"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
   
 > [!NOTE]  
->  尽管您不能修改报表工具栏，但是可以配置报表 URL 的参数以在报表中隐藏工具栏。 有关隐藏报表工具栏的详细信息，请参阅[URL Access Parameter Reference](url-access-parameter-reference.md)。  
+>  尽管您不能修改报表工具栏，但是可以配置报表 URL 的参数以在报表中隐藏工具栏。 有关隐藏报表工具栏的详细信息，请参阅 [URL 访问参数引用](url-access-parameter-reference.md)。  
   
 ## <a name="report-toolbar"></a>报表工具栏  
  报表工具栏为 HTML 呈现扩展插件中所呈现的报表提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。  
@@ -34,13 +34,13 @@ ms.locfileid: "48182667"
   
  报表工具栏与下图中所显示的报表工具栏类似。 根据报表功能或可用的呈现选项的不同，您看到的报表工具栏可能会与该图有所不同。  
   
- ![报表工具栏](media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  下表对报表工具栏的常用功能进行了说明： 每个功能都由您访问该功能时所使用的控件标识。  
   
 |图标或控件||若要|  
 |------------------------------|-|--------|  
-|![页导航控件](media/htmlviewer-pagenav.gif "页导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
+|![页面导航控件](media/htmlviewer-pagenav.gif "页面导航控件")|**页面导航控件**|打开报表的第一页或最后一页，逐页浏览报表，以及打开报表中的特定页面。 若要查看特定页面，请键入相应的页码，再按 Enter。|  
 |![页面显示控件](media/htmlviewer-pagesize.gif "页面显示控件")|**页面显示控件**|放大或缩小报表页的大小。 除了按比例更改外，还可以选择“页宽”，以使报表页的水平宽度适应浏览器窗口大小，或选择“整页”，以使报表的垂直高度适应浏览器窗口大小。 **Internet Explorer 5.5 和更高版本支持** “缩放” [!INCLUDE[msCoName](../includes/msconame-md.md)] 选项。|  
 |![搜索字段](media/htmlviewer-search.gif "搜索字段")|**搜索字段**|通过键入要查找的单词或短语（最长不超过 256 个字符）在报表中搜索内容。 搜索不区分大小写，将从当前选择的页或区域开始。 搜索操作中只包括可见内容。 若要搜索随后出现的相同值，请单击 **“下一个”**。|  
 |![导出格式](media/htmlviewer-export.GIF "导出格式")|**导出格式**|打开一个新的浏览器窗口，并以所选的格式呈现报表。 可用的格式由报表服务器上安装的呈现扩展插件决定。 建议打印时采用 TIFF 格式。 单击 **“导出”** 可以按所选格式查看报表。|  

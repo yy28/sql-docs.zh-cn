@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], consolidated members
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042898"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合并的权限（主数据服务）
   合并权限应用到实体的所有合并成员的属性值。  

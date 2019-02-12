@@ -2,8 +2,8 @@
 title: sys.dm_pdw_resource_waits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027498"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact SQL)
+# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   显示等待中的所有资源类型的信息[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
@@ -37,7 +37,7 @@ ms.locfileid: "52514653"
 |acquire_time|**datetime**|获取的锁或资源的时间。||  
 |state|**nvarchar(50)**|等待状态的状态。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|等待项的优先级。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|保留此请求的并发槽数 (最大值 32) 数。|1-对于 SmallRC<br /><br /> 3-对于 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22-对于 XLargeRC|  
+|concurrency_slots_used|**int**|保留此请求的并发槽数 (最大值 32) 数。|1-对于 SmallRC<br /><br /> 3-对于 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22 - for XLargeRC|  
 |resource_class|**nvarchar(20)**|用于此请求的资源类。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>请参阅  

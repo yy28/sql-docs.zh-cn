@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5e9ac249f6fd3c6626084f254ad60889066c334
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8f4fbe5a3990348edc2e8b3716ca869c4166e145
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043278"
 ---
 # <a name="data-quality-projects-dqs"></a>数据质量项目 (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据质量项目就是使用知识库，通过执行“数据清理”  和  “数据匹配”活动改进源数据的质量，然后将结果数据导出到 SQL Server 数据库或 .csv 文件。 您可以将数据质量项目创建为一个清理项目或匹配项目，以执行相应的任务。 可以通过使用同一个知识库运行清理项目和匹配项目，因为用于数据清理和匹配的知识可以内置于同一个知识库中。  
@@ -38,7 +38,7 @@ ms.locfileid: "51029804"
  有关数据质量项目中的清理活动的详细信息，请参阅 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)。  
   
 ##  <a name="Matching"></a> 数据质量项目：匹配活动  
- 匹配数据质量项目支持您基于知识库中的匹配策略执行匹配活动，通过标识精确匹配项和近似匹配项，进而删除重复数据，以防止数据重复。 建议先清除数据，然后再运行匹配。 为此：  
+ 匹配数据质量项目支持您基于知识库中的匹配策略执行匹配活动，通过标识精确匹配项和近似匹配项，进而删除重复数据，以防止数据重复。 建议先清除数据，然后再运行匹配。 为此，请执行以下操作：  
   
 1.  创建数据质量项目，选择 **“清理”** 活动，对源数据完成数据清理活动，然后将其导出到 SQL Server 数据库中的表。  
   

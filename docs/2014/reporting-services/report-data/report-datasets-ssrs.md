@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040508"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>向报表添加数据（报表生成器和 SSRS）
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "48201497"
   
  您还可以通过添加包括其所依赖的数据集的报表部件，向报表添加数据集。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何创建可显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库数据的报表，请参阅[教程：创建基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成包含自身数据的报表，请参阅[教程：脱机创建快速图表报表（报表生成器）](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何创建显示来自数据的报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成的报表，包括其自己的数据，请参阅[教程：创建快速图表报表脱机&#40;报表生成器&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -74,9 +74,9 @@ ms.locfileid: "48201497"
   
 -   [报表参数（报表生成器和报表设计器）](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [报表部件的&#40;报表生成器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)  
   
--   [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201497"
   
  [在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [在关系查询设计器中生成查询&#40;报表生成器和 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [在关系查询设计器中生成查询（报表生成器和 SSRS）](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [为多维数据的参数值显示隐藏的数据集&#40;报表生成器和 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [为多维数据的参数值显示隐藏的数据集（报表生成器和 SSRS）](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [向数据集添加筛选器（报表生成器和 SSRS）](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [数据区域设置无数据消息&#40;报表生成器和 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [为数据区域设置“无数据”消息（报表生成器和 SSRS）](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [将查询参数与报表参数相关联&#40;报表生成器和 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [将查询参数与报表参数相关联（报表生成器和 SSRS）](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Analysis Services MDX 查询设计器中定义参数&#40;报表生成器和 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201497"
   
 ## <a name="see-also"></a>请参阅  
  [报表设计视图（报表生成器）](../report-builder/report-design-view-report-builder.md)   
- [报表创作概念&#40;报表生成器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [报表创作概念（报表生成器和 SSRS）](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375319"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041698"
 ---
 # <a name="start-report-builder-report-builder"></a>启动报表生成器（报表生成器）
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包含独立和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的报表生成器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可用于本机模式或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -47,7 +47,7 @@ ms.locfileid: "53375319"
   
 1.  在 Web 浏览器的地址栏中，键入以下 URL：  
   
-     http://\<服务器名 > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
+     http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
   
 2.  按 Enter。  
   

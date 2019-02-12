@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100318"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020721"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>指定序列的图表区（报表生成器和 SSRS）
   图表为包括外部边框、图表标题和图例的顶级容器。 默认情况下，图表包含一个默认图表区。 图表区在图表表面上不可见，但您可将图表区当作只包含轴标签、轴标题和一个或多个序列的绘图区的容器。 下图说明了单个图表中的图表区的概念。  
@@ -44,11 +44,11 @@ ms.locfileid: "48100318"
 4.  （可选）将图表区垂直对齐。 若要执行此操作，请右键单击图表并选择“图表区域属性”。 在 **“对齐”** 中，选择要将选中的图表区与其对齐的另一图表区。  
   
 ## <a name="see-also"></a>请参阅  
- [图表上的多个序列&#40;报表生成器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [图表中的多个序列（报表生成器和 SSRS）](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [极坐标图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [形状图（报表生成器和 SSRS）](shape-charts-report-builder-and-ssrs.md)   
- [饼图&#40;报表生成器和 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)  
   
   

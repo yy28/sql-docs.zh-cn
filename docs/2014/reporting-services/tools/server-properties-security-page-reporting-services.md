@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041168"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
   使用此页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
@@ -34,9 +34,9 @@ ms.locfileid: "48161434"
  **启用特别报告**  
  指定用户是否可以从报表生成器报表执行即席查询，当用户单击相关数据时，会自动在报表生成器报表中生成新报表。  
   
- 设置此选项将确定报表服务器的 `EnableLoadReportDefinition` 属性是设置为 `True` 还是 `False`。 如果清除此选项，该属性将设置为`False`和报表服务器将不会生成在数据浏览过程中创建的点击链接型报表。 将阻止对 `LoadReportDefinition` 方法的所有调用。  
+ 设置此选项将确定报表服务器的 `EnableLoadReportDefinition` 属性是设置为 `True` 还是 `False`。 如果清除此选项，则该属性将设置为 `False`，报表服务器将不会生成在数据浏览过程中创建的点击链接型报表。 将阻止对 `LoadReportDefinition` 方法的所有调用。  
   
- 关闭此选项则会缓解恶意用户来通过使用报表服务器重载来启动拒绝服务攻击的威胁`LoadReportDefinition`请求。  
+ 如果关闭此选项，则会缓解恶意用户通过用 `LoadReportDefinition` 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表服务器属性 (Management Studio)](set-report-server-properties-management-studio.md)   

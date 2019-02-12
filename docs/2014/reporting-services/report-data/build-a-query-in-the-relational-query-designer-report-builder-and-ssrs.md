@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b9e394929aa78e301e0431d25781626c3ba79dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edd99567611754f8208ac3271951b9e566e5613
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112759"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040378"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在关系查询设计器中生成查询（报表生成器和 SSRS）
   查询设计器可帮助您指定为报表数据集要从外部数据源中检索的数据。 当您在向导中生成查询或创建数据集查询时，可以使用查询设计器。  

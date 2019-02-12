@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: kfile
+ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030848"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>将报表服务器内容类型添加到库中（SharePoint 集成模式下的 Reporting Services）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供预定义的 SharePoint 内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。  
@@ -66,7 +66,7 @@ ms.locfileid: "52617137"
   
 5.  刷新浏览器，然后为 **“报表服务器集成功能”** 单击 **“激活”**。  
   
-    ![停用](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 为单个文档库启用内容类型管理 (SharePoint 2013)  
   

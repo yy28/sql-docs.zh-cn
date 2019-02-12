@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041368"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了对象资源管理器，可用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 对于 Reporting Services，可以使用对象资源管理器执行以下操作：  
@@ -101,15 +101,15 @@ ms.locfileid: "48099037"
   
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “连接到服务器” **对话框中将** 指定为服务器类型时，可以指定报表服务器名称或 Web 服务端点。  
   
-|连接到|“任务”|Permissions|  
+|连接到|“任务”|权限|  
 |----------------|-----------|-----------------|  
 |本机模式的报表服务器，作为默认实例或命名实例进行连接：<br /><br /> \<server name>\<_instance><br /><br /> 与报表服务器的连接是通过报表服务器 WMI 提供程序建立的。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  
-|本机模式的报表服务器，作为默认实例或命名实例进行连接，通过报表服务器 Web 服务端点：<br /><br /> http://\<服务器名 > / reportserver<br /><br /> 指定指向报表服务器的 URL 提供了另一种连接到报表服务器的方法。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  
-|SharePoint 集成模式的报表服务器，通过 SharePoint 站点进行连接：<br /><br /> http://\<web 服务器 > /\<SharePointSite >|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理为所连接的站点定义的共享计划。<br /><br /> 查看为所连接的站点定义的权限级别。|对所连接的 SharePoint 站点拥有“完全控制”级权限。|  
+|本机模式的报表服务器，作为默认实例或命名实例进行连接，通过报表服务器 Web 服务端点：<br /><br /> http://\<servername>/reportserver<br /><br /> 指定指向报表服务器的 URL 提供了另一种连接到报表服务器的方法。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  
+|SharePoint 集成模式的报表服务器，通过 SharePoint 站点进行连接：<br /><br /> http://\<webserver>/\<SharePointSite>|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理为所连接的站点定义的共享计划。<br /><br /> 查看为所连接的站点定义的权限级别。|对所连接的 SharePoint 站点拥有“完全控制”级权限。|  
 |SharePoint 集成模式的报表服务器，通过报表服务器实例的名称进行连接：<br /><br /> \<server name>\<_instance>|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。|对与报表服务器集成的 SharePoint 站点拥有“完全控制”级权限。<br /><br /> 请注意，当您连接到报表服务器而非 SharePoint 站点时，可以执行的任务数将会明显减少。 这是因为报表服务器只能返回在报表服务器数据库，而不是 SharePoint 配置数据库和内容数据库中存储或管理的应用程序数据。|  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server Management Studio 中的 Reporting Services (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
