@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420648"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079463"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 上配置对 Analysis Services 的 HTTP 访问
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420648"
 > [!NOTE]  
 >  请记住，为了允许与远程 Analysis Services 服务器的客户端连接，需取消阻止 Windows 防火墙中的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 步骤 1:将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
+##  <a name="bkmk_copy"></a> 步骤 1：将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
  所创建的每个 HTTP 端点均必须有其自身的一组 MSMDPUMP 文件。 在此步骤中，从 Analysis Services 程序文件夹中将 MSMDPUMP 可执行文件、配置文件和资源文件复制到新的虚拟目录文件夹，你将在运行 IIS 的计算机的文件系统上创建此虚拟目录文件夹。  
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
@@ -111,8 +111,10 @@ ms.locfileid: "52420648"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  IIS 管理器可能无法连接到 Analysis Services 中的当前版本，如果数据库是从上一个备份。 这导致 MSMDPUMP 中的更改，并应通过将 msmdpump.dll 文件从上一有效版本复制来解决。
   
-##  <a name="bkmk_appPool"></a> 步骤 2:在 IIS 中创建应用程序池和虚拟目录  
+##  <a name="bkmk_appPool"></a> 步骤 2：在 IIS 中创建应用程序池和虚拟目录  
  接下来，创建应用程序池和抽取端点。  
   
 #### <a name="create-an-application-pool"></a>创建应用程序池  
@@ -148,7 +150,7 @@ ms.locfileid: "52420648"
 > [!NOTE]  
 >  这些说明的先前版本包括用于创建虚拟目录的步骤。 这些步骤已不需要。  
   
-##  <a name="bkmk_auth"></a> 步骤 3:配置 IIS 身份验证和添加扩展插件  
+##  <a name="bkmk_auth"></a> 步骤 3：配置 IIS 身份验证和添加扩展插件  
  在这一步中，进一步配置刚刚创建的 SSAS 虚拟目录。 您将指定一个身份验证方法，然后添加脚本映射。 Analysis Services 在 HTTP 上支持的身份验证方法包括：  
   
 -   Windows 身份验证（Kerberos 或 NTLM）  
