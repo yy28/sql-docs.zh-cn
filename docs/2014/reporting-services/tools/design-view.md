@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137387"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010411"
 ---
 # <a name="design-view"></a>“设计”视图
   使用“设计”视图可以排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  
@@ -52,7 +52,7 @@ ms.locfileid: "48137387"
  使用“属性”窗格可以查看设计图面上当前所选的报表项或“分组”窗格中的当前所选组。 另外，也可以右键单击所选报表项或组，然后单击“属性”打开报表项或组的相应“属性”对话框。  
   
 ## <a name="see-also"></a>请参阅  
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [页眉和页脚（报表生成器和 SSRS）](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [报表设计提示（报表生成器和 SSRS）](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

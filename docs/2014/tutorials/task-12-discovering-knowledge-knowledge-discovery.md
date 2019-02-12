@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367179"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039628"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>任务 12:发现知识（知识发现）
   在本任务中，您将执行**知识发现**上的活动**Supplier ID**并**Supplier Name**域。 在此方案中，知识发现过程主要导入这两个域的值。  

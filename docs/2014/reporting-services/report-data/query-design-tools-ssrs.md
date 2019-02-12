@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 396542d6c29a463eae83442e3b3398b68cd01b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180349"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041258"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>SQL Server Data Tools 的报表设计中的查询设计工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了各种查询设计工具，您可以使用这些工具在报表设计器中创建数据集查询。 要处理的数据源类型确定了特定查询设计器的可用性。 此外，某些查询设计器还提供了其他模式，以便选择是在可视模式下工作，还是直接在查询语言中工作。 本主题将介绍每种工具及其支持的数据源类型。 本主题将介绍下列工具：  
@@ -80,10 +80,10 @@ ms.locfileid: "48180349"
   
  ![Analysis Services DMX 查询设计器，设计视图](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
   
- 若要使用 DMX 查询设计器，必须定义包含有效数据挖掘模型的可用数据源。 为数据源定义数据集时，可以在 DMX 查询设计器中打开查询。 如有必要，请使用工具栏上的 MDX 和 DMX 按钮在 MDX 和 DMX 模式之间进行切换。 选择模型后，可创建向报表提供数据的数据挖掘预测查询。 有关详细信息，请参阅 [Analysis Services DMX 查询设计器用户界面](analysis-services-dmx-query-designer-user-interface.md)。  
+ 若要使用 DMX 查询设计器，必须定义包含有效数据挖掘模型的可用数据源。 为数据源定义数据集时，可以在 DMX 查询设计器中打开查询。 如有必要，请使用工具栏上的 MDX 和 DMX 按钮在 MDX 和 DMX 模式之间进行切换。 选择模型后，可创建向报表提供数据的数据挖掘预测查询。 有关详细信息，请参阅 [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md)。  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI 查询设计器  
- [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查询设计器用于从 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 数据库中检索数据。 若要使用此查询设计器，必须具有[!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)]具有至少一个 InfoCube、 MultiProvider 或启用 Web 的查询定义的数据源。 下图显示了 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查询设计器。  
+ [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查询设计器用于从 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 数据库中检索数据。 若要使用此查询设计器，必须定义至少包含一个 InfoCube、MultiProvider 或启用了 Web 的查询的 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 数据源。 下图显示了 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查询设计器。  
   
  ![在设计模式下使用 MDX 的查询设计器](../media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48180349"
  [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)   
  [数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)   
- [Reporting Services 支持的数据源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [创建嵌入或共享数据源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+ [Reporting Services 支持的数据源 (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [创建嵌入数据源或共享数据源 (SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
   

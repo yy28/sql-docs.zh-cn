@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b23f670aa6ddabbf3789da4b06fb8b9b1a4d1e13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a8957c3dbc7fdf627edde70814227833d81f4c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211179"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036029"
 ---
 # <a name="using-url-access-in-a-web-application"></a>在 Web 应用程序中使用 URL 访问
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  

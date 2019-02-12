@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018998"
 ---
 # <a name="csv-device-information-settings"></a>CSV 设备信息设置
   通过用于 CSV 呈现扩展插件的设备信息设置，可以更改分隔符和限定符并指定换行符处理。 还可以提交文件的扩展名，以及指示编码和是否在输出中包括标题行。 由于分隔符可能是特殊字符，因此，如果将设置编写为 XML，则应在 CDATA 部分对它们进行编码。  
@@ -35,8 +35,8 @@ ms.locfileid: "48116907"
 |**NoHeader**|指示是否从输出中排除标题行。 默认值是 `false`。|  
 |`Qualifier`|围绕着包含字段分隔符或记录分隔符的结果放置的限定符字符串。 如果结果包含限定符，将重复此限定符。 `Qualifier` 设置必须与 `FieldDelimiter` 和 `RecordDelimiter` 设置不同。 默认值为引号 (")。|  
 |`RecordDelimiter`|要放在每个记录末尾的记录分隔符。 默认值为 \<cr>\<lf>。|  
-|**SuppressLineBreaks**|指示是否在输出中包含从数据删除的换行符。 默认值是 `false`。 如果值为`true`，则`FieldDelimiter`， `RecordDelimiter`，和`Qualifier`设置不能为空格字符。|  
-|`UseFormattedValues`|指示是否将格式化的字符串放入 CSV 输出中。 默认值是`true`时`ExcelMode`是`true`; 否则它是`false`。|  
+|**SuppressLineBreaks**|指示是否在输出中包含从数据删除的换行符。 默认值是 `false`。 如果值为 `true`，则 `FieldDelimiter`、`RecordDelimiter` 和 `Qualifier` 设置不能为空格字符。|  
+|`UseFormattedValues`|指示是否将格式化的字符串放入 CSV 输出中。 默认值为 `true`（当 `ExcelMode` 为 `true` 时），否则为 `false`。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

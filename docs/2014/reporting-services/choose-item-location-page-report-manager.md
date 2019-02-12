@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4140fe03cb091a119942c563afe7f41ae69c5103
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038528"
 ---
 # <a name="choose-item-location-page-report-manager"></a>“选择项位置”页（报表管理器）
   使用“选择项位置”页可以为新链接报表或新模型选择文件夹。 如果要为特定的用户组创建链接报表或模型，则最好将该项放在包含这组用户所使用的其他报表和模型的文件夹中。 必须选择一个已经存在并且有权对其添加内容的文件夹。  

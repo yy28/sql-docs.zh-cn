@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030696"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019918"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
   若要将您的源数据用于 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作并导出已处理的数据，您可以执行以下任一操作：  
@@ -24,7 +24,7 @@ ms.locfileid: "51030696"
   
 -   使用您自己的数据库作为 DQS 操作的源数据，以及导出已处理的数据的目标。 为此，请确保你的数据库与数据质量服务器数据库在同一个 SQL Server 实例中。 否则，该数据库将无法在数据质量客户端中用于 DQS 操作。 此外，为导出匹配结果，必须向你的 Windows 用户帐户授予对 DQS_STAGING_DATA 数据库的访问权限，因为匹配结果分为两个阶段进行导出：首先，匹配结果导出到 DQS_STAGING_DATA 数据库的临时表中，然后移到你的目标数据库的表中。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   您必须已通过运行 DQSInstaller.exe 文件完成了 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装。 有关详细信息，请参阅 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "51030696"
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右侧窗格中，选中 **DQS_STAGING_DATA** 数据库的 **“映射”** 列下的复选框，然后在 **“数据库角色成员身份: DQS_STAGING_DATA”** 窗格中选择以下角色：  
+5.  在右窗格中，选择下的复选框**地图**的列**DQS_STAGING_DATA**数据库，并选择中的以下角色**数据库角色成员身份：DQS_STAGING_DATA**窗格：  
   
-    -   **db_datareader**：从表/视图中读取数据。  
+    -   **db_datareader**:从表/视图中读取数据。  
   
-    -   **db_datawriter**：在表中添加、删除或更改数据。  
+    -   **db_datawriter**:添加、 删除或更改表中的数据。  
   
-    -   **db_ddladmin**：创建、修改或删除表/视图。  
+    -   **db_ddladmin**:创建、 修改或删除表/视图。  
   
 6.  在 **“登录属性”** 对话框中，单击 **“确定”** 以应用所做的更改。  
   

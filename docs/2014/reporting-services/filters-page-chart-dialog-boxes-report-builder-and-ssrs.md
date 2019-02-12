@@ -16,14 +16,14 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 55d0da172a8e543d370965ec686340c3e2c23ad8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018139"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>“筛选器”页 -&gt;“图表”对话框（报表生成器和 SSRS）
   在以下对话框中单击 **“筛选器”** ：  
@@ -67,6 +67,6 @@ ms.locfileid: "48116327"
  [添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
- [筛选、 分组和对数据进行排序&#40;报表生成器和 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [对数据进行筛选、分组和排序（报表生成器和 SSRS）](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019429"
 ---
 # <a name="contents-page-report-manager"></a>“内容”页（报表管理器）
   使用“内容”页可以查看当前文件夹的内容，选择要查看的项，或导航到其他文件夹。 选择一个文件夹后即可打开此页。 此页也是报表管理器的主页。  
@@ -56,8 +56,8 @@ ms.locfileid: "48056247"
  单击此选项可在文件夹层次结构中重新定位项。 单击 **“移动”** 之前，请选中要移动的每个项旁边的复选框。 这将打开“移动项”页，可以在此页上浏览文件夹以选择新的位置。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表服务器内容管理（SSRS 本机模式）](report-server/report-server-content-management-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

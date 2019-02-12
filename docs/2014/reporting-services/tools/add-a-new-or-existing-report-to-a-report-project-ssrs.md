@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021408"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>向报表项目中添加新报表或现有报表 (SSRS)
-  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以通过使用报表向导或通过将新的空白报表添加到你的项目添加新报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您可以通过使用报表向导或通过将新的空白报表添加到项目中来添加新报表。 也可以添加现有报表。 添加报表后，您可以看到项目 **“报表”** 文件夹下会列出该报表名称。  
   
 > [!NOTE]  
 >  若要使用现有数据源预览报表，您必须有权从报表创作客户端访问此数据源。 有关详细信息，请参阅[创建嵌入或共享数据源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "48173597"
   
     -   **选择报表类型。** 第三步是选择所需的报表类型。 您可以选择表格报表或矩阵报表。 表格报表的列数是固定的。 而矩阵报表（即交叉表报表）的列数根据查询结果而变化。 地图报表在地图背景下显示分析。  
   
-    -   **选择样式。** 接下来是使用样式模板将样式应用于报表。 选择一个模板以将样式（如字体、颜色和边框样式）应用于报表。 报表设计器提供了六个样式模板：石板、森林、公司、粗体、海洋和一般。 您还可以添加其他样式模板。  
+    -   **选择样式。** 接下来是使用样式模板将样式应用于报表。 选择一个模板以将样式（如字体、颜色和边框样式）应用于报表。 报表设计器提供了六个样式模板：静态图像、 林、 公司、 粗体、 海洋和泛型。 您还可以添加其他样式模板。  
   
         > [!NOTE]  
         >  您可以修改现有模板或添加新的通过编辑 \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles 中的 StyleTemplates.xml 文件\\< lang\>文件夹，其中\<lang > 是所使用的语言 (例如，如果您使用英文版的[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，文件夹名称为"EN")。 该文件夹位于安装报表设计器的计算机上。 StyleTemplates.xml 文件有两个副本。 若要修改通过报表向导所应用的样式，请编辑针对您所用语言创建的上述文件夹中的文件。  

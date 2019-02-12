@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 517ee5ae6690e2c2cc835c3f44862545e5ea94e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026062"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 函数（报表生成器和 SSRS）
   返回指定表达式的给定作用域中的第一个值。  
@@ -33,7 +33,7 @@ First(expression, scope)
   
 #### <a name="parameters"></a>Parameters  
  *expression*  
- (`Variant`或`Binary`) 要对其执行聚合，例如，表达式`=Fields!FieldName.Value`。  
+ （`Variant` 或 `Binary`）要对其执行聚合的表达式，例如，`=Fields!FieldName.Value`。  
   
  *作用域*  
  (`String`) 可选。 包含要对其应用聚合函数的报表项的数据集、组或数据区域的名称。 如果未指定 *scope* ，则使用当前作用域。  
@@ -44,9 +44,9 @@ First(expression, scope)
 ## <a name="remarks"></a>备注  
  `First` 函数返回在指定作用域中应用所有排序和筛选后的一组数据的第一个值。  
   
- `First`函数不能用于当前 （默认值） 作用域的组筛选器表达式。  
+ `First` 函数只能用在当前作用域（默认）相关的组筛选表达式中。  
   
- 此外可以使用`First`中的页标头返回的第一个值`ReportItems`以便生成在页面显示的第一个和最后一个项的字典样式标题页的集合。  
+ 您还可以在页眉中使用 `First` 函数，返回 `ReportItems` 集合中属于某页面的第一个值，以便在页面中生成显示首项和尾项的字典样式标题。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   
@@ -72,9 +72,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [在报表中使用表达式&#40;报表生成器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
- [总计、 聚合和内置集合的表达式作用域&#40;报表生成器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

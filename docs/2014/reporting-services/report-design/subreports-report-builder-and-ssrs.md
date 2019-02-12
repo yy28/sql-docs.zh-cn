@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 785557e57defba45f23c7a4abb041d4e8ba04884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023508"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子报表（报表生成器和 SSRS）
   子报表是在主报表的表体中显示其他报表的报表项。 从概念上说，报表中的子报表类似于网页中的框架。 子报表用于在报表中嵌入另一个报表。 任何报表都可以用作子报表。 显示为子报表的报表存储在报表服务器上，通常与父报表在同一文件夹中。 您可以设计父报表，以便向子报表传递参数。 可以在数据区域中重复子报表，使用参数在子报表的每个实例中筛选数据。  
@@ -36,7 +36,7 @@ ms.locfileid: "48165327"
   
  使用数据区域可以在一个数据区域内嵌套来自同一数据源的数据组。 使用子报表可以在一个数据区域内嵌套来自不同数据源的数据组、在多个父报表中重复使用某个子报表，或者在另一个报表中显示独立的报表。 例如，通过在另一个报表的表体内放置多个子报表，可以创建“摘要簿”。  
   
- 数据区域的功能和灵活性与子报表相差无几，但性能更佳。 由于报表服务器将子报表的每个实例作为独立的报表来处理，因此性能可能会受到影响。 有关详细信息，请参阅[嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)。  
+ 数据区域的功能和灵活性与子报表相差无几，但性能更佳。 由于报表服务器将子报表的每个实例作为独立的报表来处理，因此性能可能会受到影响。 有关详细信息，请参阅 [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)。  
   
 ## <a name="using-parameters-in-subreports"></a>在子报表中使用参数  
  若要将参数从父报表传递给子报表，请在用作子报表的报表中定义报表参数。 在父报表中放入子报表时，您可以选择报表参数以及要从父报表传递给子报表中的报表参数的值。  
@@ -56,6 +56,6 @@ ms.locfileid: "48165327"
  在报表生成器中，若要预览主报表中的子报表，这两个报表必须位于相同报表服务器中，否则必须指定子报表的完整路径。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取、 深化、 子报表和嵌套的数据区域&#40;报表生成器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

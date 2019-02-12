@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 09b5228ff383db7700d5b8f027314e6e45feb40c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036318"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>向图表添加空点（报表生成器和 SSRS）
   Null 值在图表中显示为空格或显示为序列中数据点间的空白。 空点是可在由 Null 值创建的空格中插入的数据点。  

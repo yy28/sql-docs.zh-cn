@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197577"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030068"
 ---
 # <a name="dependent-items-page-report-manager"></a>“依赖项”页（报表管理器）
   使用“依赖项”页可以查看引用共享数据源的报表和模型的列表。 每个项类型的图标指明该项是报表还是模型。 在列表视图或详细信息视图中可以查看此页。 使用详细信息视图可以显示每个项的详细信息。 详细信息视图中还有其他页选项。 为了帮助您管理共享数据源，此页提供了一些指向使用该数据源的报表和模型的链接、有关报表或模型的上次运行或修改时间的指标，以及“删除”和“移动”按钮，以便您可以方便地删除不再使用的报表和模型，或者将其移至另一个位置以待您确定是否仍然需要它们。  
@@ -38,7 +38,7 @@ ms.locfileid: "48197577"
  **名称**  
  显示报表或模型的名称。 单击报表的名称即可打开该报表。 单击模型的名称可以打开其属性页。  
   
- **Description**  
+ **说明**  
  显示报表或模型的说明。  
   
  **删除**  
@@ -64,8 +64,8 @@ ms.locfileid: "48197577"
   
 ## <a name="see-also"></a>请参阅  
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

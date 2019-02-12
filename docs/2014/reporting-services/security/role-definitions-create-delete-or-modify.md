@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032858"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>创建、删除或修改角色 (Management Studio)
   Reporting Services 提供了定义对报表服务器的访问级别的预定义角色。 需要访问报表服务器的每个用户或组都通过说明可以执行的任务的角色来进行访问。 这些角色是对作为整体的报表服务器进行定义的。 不能对报表服务器的特定部分改变角色定义，也不能指定根据不同情况以不同的方式使用角色。  
   
  若要创建、修改或删除角色，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 只能删除未使用的角色。  
   
- 若要将所创建的角色分配给用户或组，请使用报表管理器。 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
+ 若要将所创建的角色分配给用户或组，请使用报表管理器。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
   
 > [!NOTE]  
 >  如果报表服务器配置为 SharePoint 集成模式，并且已连接到与该报表服务器集成的 SharePoint 站点，则可以查看和修改控制对报表服务器内容和操作的访问权限的权限级别。  
@@ -78,7 +78,7 @@ ms.locfileid: "48166327"
   
 ## <a name="see-also"></a>请参阅  
  [在 Management Studio 中连接到报表服务器](../tools/connect-to-a-report-server-in-management-studio.md)   
- (创建-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [SQL Server Management Studio 中的 Reporting Services (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

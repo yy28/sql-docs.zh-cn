@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfilee
+ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041298"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
   了解群集通过在查看器中浏览模型以获得进一步的序列后，您可以在使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  

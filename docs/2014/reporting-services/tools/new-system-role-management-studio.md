@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c9bce266836e1181c1d619d89985d9d461729e83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44d0318882b619f4f6206f59ba47656f35c38636
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043358"
 ---
 # <a name="new-system-role-management-studio"></a>新建系统角色 (Management Studio)
   使用此页可以创建系统级角色定义。 系统角色定义指定了作为整体应用于报表服务器的一组系统级任务。  
@@ -30,11 +30,11 @@ ms.locfileid: "48182997"
  **名称**  
  键入角色定义的名称。 角色定义名称在报表服务器命名空间中必须是唯一的。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时请不要使用以下字符：  
   
- ; ? : \@ & = +，$ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   
- **Description**  
+ **说明**  
  提供介绍如何使用角色和枚举角色所支持任务的说明。  
   
  **任务**  

@@ -2,7 +2,7 @@
 title: sys.database_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: ''
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a237a562b747922fba4c294330bc9db067822242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032298"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47689955"
 |**state_desc**|**nvarchar(60)**|文件状态的说明：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。|  
 |size|**int**|文件的当前大小（以 8 KB 页为单位）。<br /><br /> 0 = 不适用<br /><br /> 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> FILESTREAM 文件组容器大小反映当前使用的容器的大小。|  
 |**max_size**|**int**|最大文件大小（以 8 KB 为单位的页数）：<br /><br /> 0 = 不允许增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 对于 FILESTREAM 文件组容器，max_size 反映容器的最大大小。<br /><br /> 请注意不受限制的日志文件大小与升级的数据库将报告为-1 的日志文件的最大大小。|  
-|**增长**|**int**|0 = 文件大小固定，不会增长。<br /><br /> >0 = 文件将自动增长。<br /><br /> is_percent_growth = 0，则增量以 8 KB 页为单位，并舍入到最近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，增量将用整数百分比表示。|  
+|**growth**|**int**|0 = 文件大小固定，不会增长。<br /><br /> >0 = 文件将自动增长。<br /><br /> is_percent_growth = 0，则增量以 8 KB 页为单位，并舍入到最近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，增量将用整数百分比表示。|  
 |**is_media_read_only**|**bit**|1 = 文件位于只读介质上。<br /><br /> 0 = 文件位于读写介质上。|  
 |**is_read_only**|**bit**|1 = 文件标记为只读。<br /><br /> 0 = 文件标记为读/写。|  
 |**is_sparse**|**bit**|1 = 文件是稀疏文件。<br /><br /> 0 = 文件不是稀疏文件。<br /><br /> 有关详细信息，请参阅[查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)。|  
@@ -68,7 +68,7 @@ ms.locfileid: "47689955"
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，在删除或截断大型对象后由 sys.database_files 立即返回的值可能不反映实际可用的磁盘空间。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
 
 ## <a name="examples"></a>示例  

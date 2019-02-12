@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037718"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>创建神经网络结构和模型（数据挖掘中级教程）
   若要创建数据挖掘模型，必须先使用数据挖掘向导基于新数据源视图创建一个新的挖掘结构。 在本任务中，您将使用该向导创建一个挖掘结构，同时创建一个基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法的关联挖掘模型。  
@@ -122,7 +121,7 @@ ms.locfileid: "52395799"
   
  ![服务级别值的分发](../../2014/tutorials/media/skt-service-grade-valuesc.gif "服务级别值的分布")  
   
- 因此，处理模型时，输出的分组方式可能会与预期的不同。 例如，如果使用聚类分析来确定最佳值组，该算法将 ServiceGrade 中的值为这样一个：0.0748051948-0.09716216215。 尽管此分组在数学上很准确，但此类范围可能对业务用户并没有太大意义。  
+ 因此，处理模型时，输出的分组方式可能会与预期的不同。 例如，如果使用聚类分析来确定最佳值组，该算法将 ServiceGrade 中的值为这样一个：0.0748051948 - 0.09716216215. 尽管此分组在数学上很准确，但此类范围可能对业务用户并没有太大意义。  
   
  在此步骤中，要使结果更直观，您将组数字值以不同的方式，创建数值数据列的副本。  
   
@@ -147,19 +146,19 @@ ms.locfileid: "52395799"
 |Value|Support|  
 |-----------|-------------|  
 |\< 0.0748051948|34|  
-|0.0748051948-0.09716216215|27|  
-|0.09716216215-0.13297297295|39|  
-|0.13297297295-0.167499999975|10|  
-|> = 0.167499999975|10|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
+|0.13297297295 - 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  按等面积装箱  
   
 |Value|Support|  
 |-----------|-------------|  
 |\< 0.07|26|  
-|0.07-0.00|22|  
-|0.09-0.11|36|  
-|> = 0.12|36|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  可以在处理完所有数据后，从模型的边际统计信息节点获取这些统计信息。 有关边际统计信息节点的详细信息，请参阅[神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: aeb4df3ea92cd6df608325a8b2ddb7ffaa285787
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52576786"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041308"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   对于现有的 DQS 安装，您可以从命令提示符运行 DQSInstaller.exe 文件，以便一次性将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，并在稍后使用 .dqsb 文件一次性将所有知识库导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 有关从命令提示符运行 DQSInstaller.exe 的详细信息，请参阅 [从命令提示符运行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 中的 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  

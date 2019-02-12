@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014038"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用从 RDL 架构生成的类更新报表（SSRS 教程）
   本教程说明了如何通过使用 XML 架构定义工具 (Xsd.exe) 生成的类，可用于序列化和反序列化报表定义文件 （.rdl 和.rdlc） [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>类。  
@@ -59,7 +58,7 @@ ms.locfileid: "53349378"
 > [!NOTE]  
 >  安装过程中不会自动安装示例，但是您可以随时安装这些示例。 有关示例的信息，请参阅[SQL Server 产品示例](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **若要完成本教程的估计的时间：** 30 分钟  
+ **学完本教程的估计时间：** 30 分钟  
   
 ## <a name="tasks"></a>“任务”  
  [第 1 课：创建 RDL 架构 Visual Studio 项目](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  

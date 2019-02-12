@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 16a1f51e5dec779dc185f1f1e4012a3d26069a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081077"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041557"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当您创建报表时，经常预览报表以验证报表显示您所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  
@@ -82,6 +82,6 @@ ms.locfileid: "48081077"
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](../report-design/charts-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [保存报表&#40;报表生成器&#41;](saving-reports-report-builder.md)  
+ [保存报表（报表生成器）](saving-reports-report-builder.md)  
   
   

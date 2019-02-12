@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011848"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
   地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -271,7 +271,7 @@ ms.locfileid: "53362909"
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ## <a name="see-also"></a>请参阅  
- [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)  
   

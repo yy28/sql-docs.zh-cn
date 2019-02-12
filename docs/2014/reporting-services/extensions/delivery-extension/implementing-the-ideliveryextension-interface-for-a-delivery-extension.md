@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f768da85b70168b090bfde19058926e098cd418
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cd878e1b2a3f7e368985fa9b5b40cbdff7833a0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017838"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>为传递扩展插件实现 IDeliveryExtension 接口
   传递扩展插件类用于根据报表通知的内容将通知传递给用户。 传递扩展插件类还提供了基础结构，用于验证传递到传递扩展插件的用户设置。 此外，传递扩展插件类应包含特定的属性，客户端可以使用这些属性获得有关扩展插件的名称、扩展插件支持的设置以及可用于传递扩展插件的呈现格式的信息。  

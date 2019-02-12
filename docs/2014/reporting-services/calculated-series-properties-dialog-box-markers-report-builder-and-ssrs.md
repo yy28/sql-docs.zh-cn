@@ -12,17 +12,17 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0ffa3f0b1709754dc7fd4269ca403a86856b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8e4d6eef27b79e86f8994dd6e79d3de83c809f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029828"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“标记”（报表生成器和 SSRS）
-  在 **“计算序列属性”** 对话框中选择 **“标记”** 可定义标记在序列的每个数据点上的显示方式。 标记仅对某些图表类型可用。 支持标记的图表类型如下：面积图、条形图、柱形图、折线图、极坐标图和散点图。 有关图表功能的详细信息，请参阅[图表类型（报表生成器和 SSRS）](report-design/chart-types-report-builder-and-ssrs.md)。  
+  在 **“计算序列属性”** 对话框中选择 **“标记”** 可定义标记在序列的每个数据点上的显示方式。 标记仅对某些图表类型可用。 以下图表类型支持标记：区域中，栏、 列、 行、 极坐标图和散点图。 有关图表功能的详细信息，请参阅[图表类型（报表生成器和 SSRS）](report-design/chart-types-report-builder-and-ssrs.md)。  
   
 ## <a name="options"></a>选项  
  **标记类型**  
@@ -46,7 +46,7 @@ ms.locfileid: "48053409"
  [设置图表上轴标签的格式（报表生成器和 SSRS）](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [使用调色板定义图表上的颜色（报表生成器和 SSRS）](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [辅助轴上绘制数据&#40;报表生成器和 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [设置图表上数据点的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [向图表添加移动平均线&#40;报表生成器和 SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [设置图表上数据点的格式（报表生成器和 SSRS）](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [向图表添加移动平均线（报表生成器和 SSRS）](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

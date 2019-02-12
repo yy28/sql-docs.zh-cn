@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025038"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 设备信息设置
   下表列出以 PDF 格式呈现报表时的设备信息设置。  
@@ -31,7 +31,7 @@ ms.locfileid: "48148297"
 |**DpiX**|输出设备在 X 方向的分辨率。|  
 |**DpiY**|输出设备在 Y 方向的分辨率。|  
 |**EndPage**|要呈现的报表的最后一页。 默认值为 `StartPage` 的值。|  
-|`HumanReadablePDF`|指示是否应压缩 PDF，这使得源更易于读取。 默认值是 `false.`|  
+|`HumanReadablePDF`|指示是否应压缩 PDF，这使得源更易于读取。 默认值为 `false.`|  
 |**MarginBottom**|要为报表设置的下边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  
 |**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  
 |**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含一个整数或小数值，后跟“in”（例如，1in）。 此值将覆盖报表的原始设置。|  

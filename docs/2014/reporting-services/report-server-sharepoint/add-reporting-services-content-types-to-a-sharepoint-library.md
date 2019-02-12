@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105884"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030688"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>将报表查看器 Web 部件添加到网页（SharePoint 集成模式下的 Reporting Services）
   可以使用报表查看器 Web 部件查看在报表服务器（配置为在 SharePoint 集成模式下运行）上运行的报表。 可以使用 Web 部件显示您在报表生成器或报表设计器中创建并上载到库中的报表定义 (.rdl) 文件。  
@@ -59,7 +59,7 @@ ms.locfileid: "48105884"
 ## <a name="see-also"></a>请参阅  
  [在 SharePoint 站点上的报表查看器 Web 部件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自定义报表查看器 Web 部件](../customize-the-report-viewer-web-part.md)   
- [授予对 SharePoint 站点上的报表服务器项的权限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [在 SharePoint 站点上授予对报表服务器项的权限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

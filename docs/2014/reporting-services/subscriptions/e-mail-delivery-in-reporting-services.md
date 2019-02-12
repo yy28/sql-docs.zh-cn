@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065557"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029548"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的电子邮件传递
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中包含电子邮件传递扩展插件，该插件提供了通过电子邮件将报表发送到单个用户或组的方式。 电子邮件传递扩展插件是通过 Reporting Services 配置管理器并编辑 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件进行配置的。  
@@ -78,11 +78,11 @@ ms.locfileid: "48065557"
   
  有关如何配置 SharePoint 模式报表服务器的信息，请参阅以下内容：  
   
--   [为 Reporting Services 服务应用程序配置电子邮件&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [为 Reporting Services 服务应用程序配置电子邮件（SharePoint 2010 和 SharePoint 2013）](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>请参阅  
  [任务和权限](../security/tasks-and-permissions.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [数据驱动订阅](data-driven-subscriptions.md)   
  [角色分配](../security/role-assignments.md)  
   

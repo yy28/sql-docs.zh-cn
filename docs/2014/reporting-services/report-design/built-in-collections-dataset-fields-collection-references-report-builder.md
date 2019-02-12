@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093303"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037153"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>数据集字段集合引用（报表生成器和 SSRS）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>使用扩展字段属性  
  扩展字段属性是由数据处理扩展插件为字段定义的其他属性，这些属性由数据集的数据源类型确定。 扩展字段属性可以是预定义的，也可以特定于某个数据源类型。 有关详细信息，请参阅 [Analysis Services 数据库的扩展字段属性 (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
- 如果您指定该字段不支持的属性，该表达式计算结果为`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 如果数据访问接口不支持扩展的字段属性，或如果不执行查询时找到该字段，该属性的值是`null`(`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 的属性的类型`String`和`Object`，和类型的属性为零 (0) `Integer`。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
+ 如果指定了该字段不支持的属性，则表达式的计算结果为 `null`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Nothing`）。 如果数据访问接口不支持扩展字段属性，或在执行查询时找不到该字段，则对于 `null` 和 `Nothing` 类型的属性，属性值为 `String`（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为 `Object`）；对于 `Integer` 类型的属性，属性值为零 (0)。 数据处理扩展插件可以通过优化包括此语法的查询来充分利用预定义属性。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   

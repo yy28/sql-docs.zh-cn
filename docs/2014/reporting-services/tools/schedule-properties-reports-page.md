@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b1b33bd63dc4351761622bf7e6b51b7f7a616fe9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363229"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032708"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
   使用此页可以查看使用此共享计划的所有报表的列表。 计划可用于刷新报表快照、生成报表历史记录、触发订阅或使报表的缓存副本过期。 若要了解如何使用计划，请查看报表的属性和订阅信息。  

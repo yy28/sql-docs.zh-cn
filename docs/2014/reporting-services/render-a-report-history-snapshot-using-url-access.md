@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8b857d0aab5cc64255e3d041d58fdc7ab398358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cc661c1241ce6d265fc949d7324ed4c54a5793f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029498"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>使用 URL 访问呈现报表历史记录快照
   您可以通过提供 *rs:Snapshot* 参数并将其值设置为有效的快照 ID，基于报表历史记录快照呈现报表。 参数值采用 YYYY-MM-DDTHH:MM:SS 格式，该格式基于国际标准化组织 (ISO) 8601 标准。  
   
- 如果省略此参数，则报表将根据报表服务器的报表执行和缓存管理选项设置呈现。 有关报表执行的详细信息，请参阅[设置报表处理属性](report-server/set-report-processing-properties.md)。  
+ 如果省略此参数，则报表将根据报表服务器的报表执行和缓存管理选项设置呈现。 有关报表执行的详细信息，请参阅 [设置报表处理属性](report-server/set-report-processing-properties.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例说明检索历史记录快照的 URL：  
@@ -37,7 +37,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [URL 访问&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

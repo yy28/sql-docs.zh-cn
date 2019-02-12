@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014568"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
   ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。  
@@ -29,7 +29,7 @@ ms.locfileid: "48082537"
  此文件位于 \Reporting Services\Report Server\Bin 文件夹。  
   
 ## <a name="editing-guidelines"></a>编辑指南  
- 您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅[报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
+ 您可以对此文件进行修改，重命名日志文件或提高/降低跟踪级别。 请不要修改任何其他设置。 有关说明，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>配置示例  
  下面的示例显示了 ReportingServicesService.exe.config 文件中的设置和默认值。  

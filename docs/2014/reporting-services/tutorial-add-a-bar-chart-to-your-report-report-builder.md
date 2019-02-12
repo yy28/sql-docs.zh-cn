@@ -1,5 +1,5 @@
 ---
-title: 教程：向报表添加条形图（报表生成器）| Microsoft Docs
+title: 教程：将条形图添加到您的报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106797"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041418"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：将条形图添加到您的报表 （报表生成器）
   条形图以水平方式显示类别数据。 这有助于：  
   
 -   提高长类别名称的可读性。  
@@ -55,7 +55,7 @@ ms.locfileid: "48106797"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、创建数据集和选择数据源的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，创建数据集，并选择数据源，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  本教程的预计学时：15 分钟。  
   
@@ -122,11 +122,11 @@ ms.locfileid: "48106797"
   
 2.  单击“条形图”，然后单击“下一步”。  
   
-     上**排列图表字段**页上，有四个字段中的**可用字段**窗格： FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
+     上**排列图表字段**页上，有四个字段中的**可用字段**窗格：FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
   
 3.  将 LastName 拖动到“类别”窗格。  
   
-4.  将 SalesYear2009 拖动到“值”窗格。 SalesYear2009 表示每个销售人员在 2009 年的销售总额。 “值”窗格显示 `[Sum(SalesYear2009)]`，因为该图表显示的是每个产品的销售总额。  
+4.  将 SalesYear2009 拖动到“值”窗格。 SalesYear2009 表示每个销售人员在 2009 年的销售总额。 “值”窗格显示 `[Sum(SalesYear2009)]` ，因为该图表显示的是每个产品的销售总额。  
   
 5.  将 SalesYear2008 拖动到 SalesYear2009 下的“值”窗格。 SalesYear2008 表示每个销售人员在 2008 年的销售总额。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106797"
   
 1.  切换到报表设计视图。  
   
-2.  选择词语**图表标题**顶部的图表，然后键入以下文本： **Sales for 2008 and 2009**。  
+2.  选择词语**图表标题**在顶部的图表，然后键入以下文本：**Sales for 2008 and 2009**。  
   
 3.  单击该文本的外部。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "48106797"
   
  报表将在水平轴上以千为单位将销售额显示为货币，且没有小数位数。  
   
-##  <a name="Filter"></a> 8。添加筛选器以显示前五个值  
+##  <a name="Filter"></a> 8.添加筛选器以显示前五个值  
  可以向图表添加筛选器，以指定数据集中哪些数据要包含于图表中或排除在图表外。  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>添加筛选器并显示前五个值  
@@ -310,7 +310,7 @@ ms.locfileid: "48106797"
   
  图表将显示 2009 年销售数据中前五位销售人员的姓名。  
   
-##  <a name="Title"></a> 9。添加报表标题  
+##  <a name="Title"></a> 9.添加报表标题  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
   
@@ -332,7 +332,7 @@ ms.locfileid: "48106797"
   
 6.  单击 **“运行”** 以预览报表。  
   
-##  <a name="Save"></a> 10。保存报表  
+##  <a name="Save"></a> 10.保存报表  
   
 #### <a name="to-save-the-report"></a>保存报表  
   
@@ -342,7 +342,7 @@ ms.locfileid: "48106797"
   
 3.  在“名称”中，键入 Sales Bar Chart。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
  报表将保存在报表服务器上。  
   

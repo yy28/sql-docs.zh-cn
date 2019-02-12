@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043228"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
   若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表&#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或者[列出&#40;报表生成器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
@@ -121,6 +121,6 @@ ms.locfileid: "48072427"
  可以拆分先前合并的单元。 可以跨列水平拆分或沿行垂直拆分单元。 若要将一个单元拆分为单元块，请首先水平拆分单元，然后再根据需要垂直拆分单元。  
   
 ## <a name="see-also"></a>请参阅  
- [Tablix 数据区域&#40;报表生成器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024138"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
   指示器是以直观的形式提供单个数据值的状态的最小化仪表。 表示指示器及其状态的图标十分简单，并且即使在以小尺寸使用时也保持有效的外观。  
@@ -44,7 +44,7 @@ ms.locfileid: "48142457"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可按原样使用的内置指示器集和指示器图标，但您也可以自定义单独的指示器图标和指示器集以满足您的需要。  
   
- 有关将指示器用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 有关将指示器用作 Kpi 的详细信息，请参阅[教程：向报表添加 KPI&#40;报表生成器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将指示器作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -90,7 +90,7 @@ ms.locfileid: "48142457"
   
 -   从指示器集中删除图标，以便通过只使用几个图标使数据显示更简单。  
   
- 有关详细信息，请参阅[更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 在表和矩阵中使用指示器  
@@ -100,23 +100,23 @@ ms.locfileid: "48142457"
   
  ![rs_IndicatorReportBlueArrows](../media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
- 有关添加、更改和删除指示器的详细信息，请参阅[添加或删除指示器（报表生成器和 SSRS）](add-or-delete-an-indicator-report-builder-and-ssrs.md)。  
+ 有关添加、更改和删除指示器的详细信息，请参阅 [添加或删除指示器（报表生成器和 SSRS）](add-or-delete-an-indicator-report-builder-and-ssrs.md)。  
   
- 在您首次向报表添加一个指示器时，该指示器配置为使用默认值。 然后，您可以更改这些默认值，以便指示器以您所需的方式描绘数据。 您可以更改指示器图标的外观、指示器选择要使用的图标的方式，并可以更改指示器集使用的图标。 有关详细信息，请参阅[更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
+ 在您首次向报表添加一个指示器时，该指示器配置为使用默认值。 然后，您可以更改这些默认值，以便指示器以您所需的方式描绘数据。 您可以更改指示器图标的外观、指示器选择要使用的图标的方式，并可以更改指示器集使用的图标。 有关详细信息，请参阅 [更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
- 默认情况下，指示器配置为使用百分比作为度量单位，并且自动检测数据中的最小值和最大值。 指示器集中的每个图标都具有百分比范围。 百分比范围的数目依赖于图标集中图标的数目，但这些范围具有相同的大小和顺序。 例如，如果图标集具有五个图标，则有五个百分比范围，每个范围占总大小的 20%。 第一个范围以 0 开始、以 20 结束，第二个范围以 20 开始、以 40 结束，依此类推。 报表上的指示器使用的图标来自其百分比范围在指示器数据值处于的范围内的指示器集。 对于图标集中的每个图标，您可以更改百分比范围。 可以通过提供值或表达式来显式设置最小值和最大值。 您可以将度量单位更改为数值。 在此情况下，不要为数据指定最小值或最大值。 而是为指示器使用的每个图标仅提供开始值和结束值。 有关详细信息，请参阅[集和配置度量单位&#40;报表生成器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
+ 默认情况下，指示器配置为使用百分比作为度量单位，并且自动检测数据中的最小值和最大值。 指示器集中的每个图标都具有百分比范围。 百分比范围的数目依赖于图标集中图标的数目，但这些范围具有相同的大小和顺序。 例如，如果图标集具有五个图标，则有五个百分比范围，每个范围占总大小的 20%。 第一个范围以 0 开始、以 20 结束，第二个范围以 20 开始、以 40 结束，依此类推。 报表上的指示器使用的图标来自其百分比范围在指示器数据值处于的范围内的指示器集。 对于图标集中的每个图标，您可以更改百分比范围。 可以通过提供值或表达式来显式设置最小值和最大值。 您可以将度量单位更改为数值。 在此情况下，不要为数据指定最小值或最大值。 而是为指示器使用的每个图标仅提供开始值和结束值。 有关详细信息，请参阅 [设置和配置度量单位（报表生成器和 SSRS）](set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
   
- 指示器通过同步指定作用域内的指示器数据值，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以通过根据报表的布局选择不同的作用域，更改指示器的同步。 指示器可以忽略同步。 有关详细信息，请参阅[设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)。  
+ 指示器通过同步指定作用域内的指示器数据值，提供数据值。 默认情况下，作用域是指示器的父容器，例如包含指示器的表或矩阵。 您可以通过根据报表的布局选择不同的作用域，更改指示器的同步。 指示器可以忽略同步。 有关详细信息，请参阅 [设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)。  
   
  有关了解和设置报表作用域的常规信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 指示器仅使用单个值。 如果您需要显示多个数据值，则应使用迷你图或数据条来代替指示器。 它们可以表示多个数据值，即使在小尺寸下也简单、易于理解，并且适合在表和矩阵中使用。 有关详细信息，请参阅[迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+ 指示器仅使用单个值。 如果您需要显示多个数据值，则应使用迷你图或数据条来代替指示器。 它们可以表示多个数据值，即使在小尺寸下也简单、易于理解，并且适合在表和矩阵中使用。 有关详细信息，请参阅 [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="SizingIndicatators"></a> 调整指示器的大小以便提供最佳的视觉效果  
  除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。 假定某一报表使用指示器来显示客户对不同类型自行车的满意度。 指示器使用的图标可以根据客户满意度配置为不同的大小。 满意度越高，在报表中出现的图标就越大。 下图显示了自行车的销售报表以及反映销售额的图标大小。  
   
- 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅[指定大小的指示器使用表达式&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
+ 您可以使用表达式基于指示器使用的字段值动态设置星形的大小。 有关详细信息，请参阅 [使用表达式指定指示器的大小（报表生成器和 SSRS）](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
   
  若要了解有关编写和使用表达式的详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
@@ -128,9 +128,9 @@ ms.locfileid: "48142457"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- 有关详细信息，请参阅[在仪表面板中包括指示器和仪表（报表生成器和 SSRS）](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [在仪表面板中包括指示器和仪表（报表生成器和 SSRS）](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)。  
   
- 有关使用仪表的详细信息，请参阅[仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。  
+ 有关使用仪表的详细信息，请参阅 [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)。  
   
   
 ##  <a name="SequenceIndicatorStates"></a> 指示器状态的序列  
@@ -188,22 +188,22 @@ ms.locfileid: "48142457"
 ##  <a name="HowTo"></a> 操作指南主题  
  本节列出的过程说明如何添加、更改和删除指示器，如何配置和自定义指示器，以及如何在仪表中使用指示器。  
   
--   [添加或删除指示器&#40;报表生成器和 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [添加或删除指示器（报表生成器和 SSRS）](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [更改指示器图标和指示器集&#40;报表生成器和 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [更改指示器图标和指示器集（报表生成器和 SSRS）](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [设置和配置度量单位&#40;报表生成器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [设置和配置度量单位（报表生成器和 SSRS）](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [设置同步作用域&#40;报表生成器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [设置同步作用域（报表生成器和 SSRS）](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [指定使用表达式的指示器的大小&#40;报表生成器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [使用表达式指定指示器的大小（报表生成器和 SSRS）](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [在仪表面板中包括指示器和仪表&#40;报表生成器和 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [在仪表面板中包括指示器和仪表（报表生成器和 SSRS）](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>请参阅  
- [仪表&#40;报表生成器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   
  [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)  
   
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2541fab45a948465a4237f13f86eb4ae520594c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 00dbe62d042618fdf61ef07f2ace5ba2acb2e11e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013039"
 ---
 # <a name="system-level-tasks"></a>系统级任务
-  系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
+  系统级任务是与应用于整个报表服务器站点的操作相关的权限的集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于特定项的项级任务。 有关详细信息，请参阅 [项级任务](tasks-and-permissions-item-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅 [Tasks and Permissions](tasks-and-permissions.md)。  
   
 > [!NOTE]  
 >  如果以编程方式使用这些任务，则必须使用支持系统级任务的方法。 有关详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  
@@ -29,7 +29,7 @@ ms.locfileid: "48082427"
 ## <a name="permissions-in-system-level-tasks"></a>系统级任务中的权限  
  下表给出了各个系统任务的权限集合。 所列出的权限仅供参考，目的是为每个任务的可用功能提供更准确的说明。  
   
-|任务|Permissions|  
+|任务|权限|  
 |----------|-----------------|  
 |执行报表定义|执行报表定义（权限和任务名称相同）|  
 |生成事件|生成事件|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372900"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033678"
 ---
 # <a name="basic-data-mining-tutorial"></a>数据挖掘基础教程
   欢迎来到[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据挖掘基础教程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一个集成的环境，用于创建数据挖掘模型和进行预测。 在本教程中，您将完成目标邮递活动中使用机器学习来分析和预测客户购买行为的一种方案。 本教程说明了如何使用三种最重要的数据挖掘算法：聚类、决策树和 Naive Bayes。 您还将了解如何分析您发现使用挖掘模型查看器的内容以及如何创建预测和准确性图表中包含的数据挖掘工具[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 虚构公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 用于所有的示例。  

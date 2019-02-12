@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011499"
 ---
 # <a name="cache-refresh-options-report-manager"></a>缓存刷新选项（报表管理器）
   使用“缓存刷新选项”页可以创建使用报表或共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 对于共享数据集，不能覆盖标记为只读的参数值。 在刷新选项页中，可以创建和使用多个刷新计划。  
@@ -57,7 +57,7 @@ ms.locfileid: "48081547"
  选择此选项可以编辑当前刷新计划。  
   
 ## <a name="cache-refresh-plan-options"></a>缓存刷新计划选项  
- **Description**  
+ **说明**  
  指定缓存刷新计划的说明。  
   
  **项特定的计划**  
@@ -66,12 +66,12 @@ ms.locfileid: "48081547"
  **配置**  
  单击此选项可打开用于指定频率信息的“计划”页。  
   
- 有关详细信息，请参阅[新计划： 编辑计划页&#40;报表管理器&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。  
+ 有关详细信息，请参阅[新计划：编辑计划页&#40;报表管理器&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。  
   
  **共享的计划**  
  选择此选项可以选择现有计划。  
   
- 有关详细信息，请参阅[Create，Modify，and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
+ 有关详细信息，请参阅 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
   
  **@\<** *参数* **>**  
  指定参数值的一个组合。 只有在当前数据集或报表有参数时，才会显示此部分。  
@@ -103,7 +103,7 @@ ms.locfileid: "48081547"
   
  如果共享数据集定义中为参数指定了 **“从查询中省略”** 选项，则不必提供默认值。 此标志表示不在查询中使用数据集参数。 例如，该参数出现在共享数据集定义中，因为它是仅在数据集筛选器中使用的报表参数。  
   
- 若要查看或更改数据集参数选项，必须编辑共享数据集定义。 有关详细信息，请参阅[管理共享数据集](report-data/manage-shared-datasets.md)。  
+ 若要查看或更改数据集参数选项，必须编辑共享数据集定义。 有关详细信息，请参阅 [管理共享数据集](report-data/manage-shared-datasets.md)。  
   
 ### <a name="report-parameters"></a>报表参数  
  对于报表，在成功创建一个缓存刷新计划前，每个参数值必须是有效的。 必须键入或选择每个报表参数的默认值。 您设置的值将覆盖在报表服务器上定义的报表参数默认值。  
@@ -130,7 +130,7 @@ ms.locfileid: "48081547"
   
 ## <a name="see-also"></a>请参阅  
  [项级任务](security/tasks-and-permissions-item-level-tasks.md)   
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [缓存报表 (SSRS)](report-server/caching-reports-ssrs.md)   
  [管理共享数据集](report-data/manage-shared-datasets.md)  

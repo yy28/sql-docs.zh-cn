@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596788"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032948"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于�
 
 如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
 
-在 Azure SQL 数据库中，[机器学习服务（使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)目前处于公共预览状态。
+在 Azure SQL 数据库中，[机器学习服务（使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前处于公共预览状态。
 
 机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。
 
@@ -126,8 +126,8 @@ SQL Server 2017 机器学习服务是 SQL Server 2016 R 服务的下一代，增
 
 | 产品名称 | 引擎版本 | 发布日期 |
 |--------------|---------|--------------|
-| SQL Server 2017 机器学习服务 （数据库内） | R Server 9.2.1 <br/> Python 服务器 9.2 | 2017 年 10 月 |
-| SQL Server 2017 机器学习服务器 （独立版） | R Server 9.2.1 <br/> Python 服务器 9.2 | 2017 年 10 月 |
+| SQL Server 2017 机器学习服务 （数据库内） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2017 机器学习服务器 （独立版） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
 | SQL Server 2016 R Services （数据库内） | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server （独立版）  |  R Server 9.1 | 2017 年 7 月 |
 

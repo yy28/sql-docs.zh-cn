@@ -1,5 +1,5 @@
 ---
-title: 如何：向报表服务器部署数据处理扩展插件 | Microsoft Docs
+title: 如何：将数据处理扩展插件部署到报表服务器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017969"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何向报表服务器部署数据处理扩展插件
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：将数据处理扩展插件部署到报表服务器
   报表服务器使用数据处理扩展插件来检索和处理所呈现报表中的数据。 您应将数据处理扩展插件程序集作为私有程序集部署到报表服务器。 还需要在报表服务器配置文件 RSReportServer.config 中生成一个条目。  
   
 ## <a name="procedures"></a>过程  
@@ -36,7 +36,7 @@ ms.locfileid: "48160733"
   
 2.  在复制程序集文件后，打开 RSReportServer.config 文件。 RSReportServer.config 文件位于 ReportServer 目录中。 还需要在配置文件中为数据处理扩展插件程序集文件生成一个条目。 可以使用 Visual Studio 或诸如记事本之类的简单文本编辑器打开此配置文件。  
   
-3.  找到`Data`RSReportServer.config 文件中的元素。 应当在以下位置为新创建的数据处理扩展插件生成一个条目：  
+3.  在 RSReportServer.config 文件中找到 `Data` 元素。 应当在以下位置为新创建的数据处理扩展插件生成一个条目：  
   
     ```  
     <Extensions>  

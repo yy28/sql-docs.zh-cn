@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 638f3d5551bc04e92278405df4cddea8b73c6dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93297d4b1da9363b0755ffe0e1c103a54797d299
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018089"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>在 Windows 应用程序中使用 SOAP API
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 SOAP API 是一个 Web 服务，同样可以轻松地访问此服务以向自定义业务应用程序提供企业报表功能。 只需通过编写对此 Web 服务进行调用的代码，即可在 Windows 应用程序中访问此服务。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，该类公开此 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  

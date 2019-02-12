@@ -1,5 +1,5 @@
 ---
-title: 教程：创建基本表报表（报表生成器）| Microsoft Docs
+title: 教程：创建基本表报表 （报表生成器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189107"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020428"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表 （报表生成器）
   本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,7 +50,7 @@ ms.locfileid: "48189107"
   
 7.  [导出报表](#Export)  
   
- 完成本教程的预计学时：20 分钟。  
+ 本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "48189107"
   
 3.  在右窗格中，确认已选中“表或矩阵向导”。  
   
-##  <a name="DataConnection"></a> 1a。 在表向导中指定数据连接  
+##  <a name="DataConnection"></a> 1a. 在表向导中指定数据连接  
  数据连接包含要连接到外部数据源（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）的信息。 通常会从数据源所有者处获取连接信息以及要使用的凭据类型。 若要指定数据连接，可以从报表服务器使用共享数据源或创建仅在此报表中使用的嵌入数据源。  
   
  在本教程中，您将使用嵌入数据源。 若要了解有关使用共享数据源的详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -108,7 +108,7 @@ ms.locfileid: "48189107"
   
 10. 单击“下一步” 。  
   
-##  <a name="Query"></a> 1b。 在表向导中创建查询  
+##  <a name="Query"></a> 1b. 在表向导中创建查询  
  在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "48189107"
   
 4.  单击“下一步” 。  
   
-##  <a name="Groups"></a> 1 c。 在表向导中将数据组织到组中  
+##  <a name="Groups"></a> 1c. 在表向导中将数据组织到组中  
  在选择要进行分组的字段时，可以设计一个表格，其中的行和列显示了详细数据和聚合数据。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -191,7 +191,7 @@ ms.locfileid: "48189107"
   
 6.  单击“下一步” 。  
   
-##  <a name="Subtotals"></a> 一维。 在表向导中添加小计行和合计行  
+##  <a name="Subtotals"></a> 1d. 在表向导中添加小计行和合计行  
  创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
   
 #### <a name="to-add-subtotals-and-totals"></a>添加小计和总计  
@@ -229,7 +229,7 @@ ms.locfileid: "48189107"
   
 3.  单击 **“完成”**。  
   
- 表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
+ 表将添加到设计图面中。 该表有 5 列、5 行。 行组窗格显示了三个行组：SalesDate、 Subcategory、 和的详细信息。 详细信息数据是由数据集查询检索的所有数据。  
   
 ##  <a name="FormatCurrency"></a> 2.将数据格式设置为货币  
  默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  
@@ -354,7 +354,7 @@ ms.locfileid: "48189107"
   
 3.  在“名称”中，用“Product Sales”替换默认名称。  
   
-4.  单击 **“保存”**。  
+4.  单击“保存” 。  
   
 ##  <a name="Export"></a> 7.导出报表  
  可以将报表导出为不同的格式，如 Microsoft Excel 和以逗号分隔的值 (CSV)。 有关详细信息，请参阅[导出报表&#40;报表生成器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。  
@@ -386,7 +386,7 @@ ms.locfileid: "48189107"
   
 5.  确认文件类型为**Excel 工作簿**。  
   
-6.  单击 **“保存”**。  
+6.  单击“保存” 。  
   
 #### <a name="to-view-the-report-in-excel"></a>在 Excel 中查看报表  
   

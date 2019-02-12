@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392930"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025618"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>第 5 课：测试模型 （数据挖掘基础教程）
   现在，已使用目标邮递方案定型集处理了模型，将针对测试集来测试模型。 验证是数据挖掘过程中的重要步骤。 在将挖掘模型部署到生产环境之前，了解目标邮递挖掘模型针对实际数据的性能很重要。  

@@ -2,10 +2,8 @@
 title: dbo.server_quotas （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: ''
+ms.service: sql-database
 ms.reviewer: ''
-ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dbo.server_quotas
@@ -21,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034438"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.locfileid: "51671327"
 |quota_name|**nvarchar**|服务器的配额类型。 类型**Premium_database**等效于具有资源保留数据库。|  
 |quota_value|**int**|服务器中允许的配额类型数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图可供所有用户角色有权连接到虚拟**主**数据库。  
   
 ## <a name="see-also"></a>请参阅  

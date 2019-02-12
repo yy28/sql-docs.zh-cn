@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015532"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 课：定义数据驱动订阅
   在本课程中，您将使用数据驱动订阅页来连接订阅数据源，生成一个检索订阅数据的查询，然后将结果集映射到报表和传递选项。  
   
 > [!NOTE]  
 >  开始操作之前，请确认 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务正在运行。 如果该代理服务未运行，则无法保存订阅。  
   
- 本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅 [第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ 本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅[第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  本主题内容：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48058727"
   
 1.  对于 **“文件名”**，请选择 **“从数据库获取该值”**。 选择字段 **Order**。  
   
-2.  对于 **“路径”**，请选择 **“指定静态值”**。 在设置值，键入您拥有写入权限的公共文件共享的名称 (例如， `\\mycomputer\public\myreports`)。  
+2.  对于 **“路径”**，请选择 **“指定静态值”**。 在“设置值”中，键入您拥有写入权限的公共文件共享的名称（例如，`\\mycomputer\public\myreports`）。  
   
 3.  对于 **“呈现格式”**，请选择 **“从数据库获取该值”**。 选择 **“格式”**。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058727"
   
 ## <a name="see-also"></a>请参阅  
  [创建数据驱动订阅（SSRS 教程）](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [数据驱动订阅](subscriptions/data-driven-subscriptions.md)   
+ [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [创建、 修改和删除数据驱动订阅](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [使用外部数据源提供订阅方数据&#40;数据驱动订阅&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [使用外部数据源提供订阅方数据（数据驱动订阅）](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

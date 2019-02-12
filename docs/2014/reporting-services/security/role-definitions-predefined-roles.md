@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167214"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035128"
 ---
 # <a name="predefined-roles"></a>预定义角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
@@ -31,7 +31,7 @@ ms.locfileid: "48167214"
   
 2.  明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”** 角色。  
   
-3.  准备好向用户帐户和组帐户分配特定角色后，请使用报表管理器。 有关详细信息，请参阅[授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)。  
+3.  准备好向用户帐户和组帐户分配特定角色后，请使用报表管理器。 有关详细信息，请参阅 [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)角色。  
   
 ##  <a name="bkmk_rolelist"></a> 预定义角色定义  
  预定义角色都由其所支持的任务定义。 您可以修改这些角色，也可以用自定义角色替换它们。  
@@ -70,7 +70,7 @@ ms.locfileid: "48167214"
 |管理报表历史记录|创建、查看和删除报表历史记录，查看报表历史记录的属性，以及查看和修改确定快照历史记录限值以及缓存工作方式的设置。|  
 |管理报表|添加和删除报表，修改报表参数，查看和修改报表属性，查看和修改为报表提供内容的数据源，查看和修改报表定义，以及设置报表级安全策略。|  
 |管理资源|创建、修改和删除资源，以及查看和修改资源属性。|  
-|设置项的安全策略|定义报表、链接报表、文件夹、资源和数据源的安全策略。 有关详细信息，请参阅[安全对象项](securable-items.md)。|  
+|设置项的安全策略|定义报表、链接报表、文件夹、资源和数据源的安全策略。 有关详细信息，请参阅 [安全对象](securable-items.md)。|  
 |查看数据源|查看文件夹层次结构中的共享数据源项。|  
 |查看报表|运行报表和查看报表属性。|  
 |查看模型|在文件夹层次结构中查看模型，将模型用作报表的数据源，以及对模型运行查询以检索数据。|  
@@ -189,7 +189,7 @@ ms.locfileid: "48167214"
 |任务|Description|  
 |----------|-----------------|  
 |执行报表定义|开始执行报表定义，而不将定义发布到报表服务器。|  
-|管理作业|查看和取消正在运行的作业。 有关详细信息，请参阅[管理运行中的进程](../subscriptions/manage-a-running-process.md)。|  
+|管理作业|查看和取消正在运行的作业。 有关详细信息，请参阅 [管理运行中的进程](../subscriptions/manage-a-running-process.md)。|  
 |管理报表服务器属性|查看和修改应用于报表服务器及其所管理的项的属性。<br /><br /> 该任务支持重命名报表管理器、启用“我的报表”以及设置报表历史默认值。|  
 |管理角色|创建、查看、修改和删除角色定义。<br /><br /> “系统管理员”角色的成员可以使用“站点设置”页来管理角色。 |  
 |管理共享计划|创建、查看、修改和删除用于运行或刷新报表的共享计划。|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167214"
  [创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)   
  [授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)   
  [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)   
- [授予对本机模式报表服务器的权限](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [任务和权限](tasks-and-permissions.md)  
   
   

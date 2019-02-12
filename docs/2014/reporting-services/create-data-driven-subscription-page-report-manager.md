@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116835"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027038"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>“创建数据驱动订阅”页（报表管理器）
   使用“创建数据驱动订阅”页可以生成或修改订阅，每次运行订阅时，都会在订阅服务器数据库中查询订阅信息。 数据驱动订阅使用查询结果来确定订阅的收件人、传递设置和报表参数值。 在运行时，报表服务器将运行一个查询，以获取订阅设置所需的值。 可以使用“创建数据驱动订阅”页来定义查询并将查询值赋予订阅设置。 为数据驱动订阅指定的值和选项分别位于若干个页面上，类似于向导。 总共有七个页面。  
@@ -45,7 +45,7 @@ ms.locfileid: "48116835"
     >  报表数据源必须使用存储的凭据，此按钮才可用。  
   
 ## <a name="start-a-subscription-page-1"></a>开始创建订阅（第 1 页）  
- **Description**  
+ **说明**  
  提供订阅的说明。 该说明将显示在 **“我的订阅”** 中的订阅列表内以及报表的 **“订阅”** 选项卡中。  
   
  **指定通知收件人的方式**  
@@ -53,7 +53,7 @@ ms.locfileid: "48116835"
   
 -   选择 **“报表服务器文件共享”** 可以将报表传递到文件共享位置。 报表将作为静态文件传递，并断开与报表服务器的连接。 有关详细信息，请参阅 [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md)。  
   
--   选择 **“报表服务器电子邮件”** 可以将报表传递到电子邮件收件箱。 有关详细信息，请参阅 [Reporting Services 中的电子邮件传递](subscriptions/e-mail-delivery-in-reporting-services.md)。  
+-   选择 **“报表服务器电子邮件”** 可以将报表传递到电子邮件收件箱。 有关详细信息，请参阅 [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 -   选择 **“Null 传递提供程序”** 可以将报表传递到报表服务器数据库。 使用此选项可创建报表快照。 如果希望按照特定计划将用户特定的报表快照或参数化报表快照预先上载到报表服务器，则可以使用此选项。 有关详细信息，请参阅 [缓存报表 (SSRS)](report-server/caching-reports-ssrs.md)版本中预加载缓存的唯一方法。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48116835"
  将计划定义为每小时运行一次。  
   
  **每日**  
- 可以将计划定义为在所选日期的具体时间运行。 您可以按以下方式指定日期： 每个*\<天 >*、 每个工作日和每个*\<数 >* 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
+ 可以将计划定义为在所选日期的具体时间运行。 可以按以下方式来指定日期：每个*\<天 >*、 每个工作日和每个*\<数 >* 天。 选择一个选项会禁用其他选项，即使其他天已显示为选中状态也是如此。  
   
  **每周**  
  将计划定义为在每周的具体时间运行。 时间间隔可以是完整的周（例如，每两周）或一周中的几天。  
@@ -170,11 +170,11 @@ ms.locfileid: "48116835"
  如果提供了必需的订阅信息， **“完成”** 按钮将为启用状态。 单击 **“完成”** 即可完成创建订阅。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [数据驱动订阅](subscriptions/data-driven-subscriptions.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [创建数据驱动订阅（SSRS 教程）](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [订阅和传递&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

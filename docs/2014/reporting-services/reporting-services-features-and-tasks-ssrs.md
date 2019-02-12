@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 571c6251b2af502d0032b95ac9bb4dc4227fcb15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 601f4ca75b9126d1f3d5e4b534159245e3785a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041778"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能和任务 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基础内容按报表和报表功能、报表服务器功能和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 产品功能进行组织。  
@@ -45,12 +45,12 @@ ms.locfileid: "48165137"
   
  [URL 访问 (SSRS)](url-access-ssrs.md)  
   
- [扩展&#40;SSRS&#41;](extensions-ssrs.md)  
+ [扩展插件 (SSRS)](extensions-ssrs.md)  
   
  [Reporting Services 工具](tools/reporting-services-tools.md)  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [新增功能&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

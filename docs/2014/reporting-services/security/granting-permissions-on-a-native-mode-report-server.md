@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 892349a6a4ce2bbdd51670a92231c626129ae53b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014558"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
@@ -40,7 +40,7 @@ ms.locfileid: "48161467"
   
  若要授予对报表服务器项和操作的访问权限，请遵循下列原则：  
   
-1.  检查预定义角色，以确定是否可以按原样使用它们。 如果需要调整任务或额外定义角色，应该在开始向用户分配特定角色之前执行这些操作。 有关每个角色的详细信息，请参阅[预定义角色](role-definitions-predefined-roles.md)。  
+1.  检查预定义角色，以确定是否可以按原样使用它们。 如果需要调整任务或额外定义角色，应该在开始向用户分配特定角色之前执行这些操作。 有关每个角色的详细信息，请参阅 [预定义角色](role-definitions-predefined-roles.md)。  
   
 2.  明确需要访问报表服务器的用户和组以及访问级别。 应该为大多数用户分配 **“浏览者”** 角色或 **“报表生成者”** 角色。 应该为少量用户分配 **“发布者”** 角色。 应该只为极少数用户分配 **“内容管理员”** 角色。  
   
@@ -68,14 +68,14 @@ ms.locfileid: "48161467"
   
 |工具|“任务”|  
 |----------|-----------|  
-|Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、 删除或修改角色&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
-|报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器访问&#40;报表管理器&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)|  
+|Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)|  
+|报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [预定义的角色](role-definitions-predefined-roles.md)   
- [授予对 SharePoint 站点上的报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [预定义角色](role-definitions-predefined-roles.md)   
+ [在 SharePoint 站点上授予对报表服务器项的权限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [针对报表服务器的身份验证](authentication-with-the-report-server.md)   
- (创建-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services 安全性和保护](reporting-services-security-and-protection.md)   
  [报表服务器内容管理（SSRS 本机模式）](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

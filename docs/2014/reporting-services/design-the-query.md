@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8eae5e75ec1573faf906b359c7a3314fb513887c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4ce60e8326149ac0d8e7f54a84dd344f5088ee3d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159337"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032615"
 ---
 # <a name="design-the-query"></a>设计查询
   使用报表向导的此页来创建查询，可以手动键入查询，使用查询生成器来交互生成查询，或从另一个表中导入查询。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522850"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014139"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
   在此任务中，您将要计划的最佳实践策略导入到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上的基于策略的管理中。  
@@ -36,7 +35,7 @@ ms.locfileid: "52522850"
   
 5.  在中**查找**列表中，浏览到包含最佳实践策略的以下文件夹：  
   
-     **C:\Program 文件 (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+     **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  文件路径可能各不相同，具体取决于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程序文件的安装位置、运行的操作系统是 32 位还是 64 位以及语言标识符。  

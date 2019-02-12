@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023498"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 SSRS 报表参数、可设置的属性以及更多有关参数的常规用法。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。  
@@ -227,7 +227,7 @@ ms.locfileid: "53366259"
 ##  <a name="bkmk_Related_Topics"></a> 相关内容  
  [配置 SSRS 报表参数（测验）](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [爆发宇宙的 InvalidReportParameterException 报告服务中](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

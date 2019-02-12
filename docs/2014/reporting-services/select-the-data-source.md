@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011818"
 ---
 # <a name="select-the-data-source"></a>选择数据源
   使用报表向导的此页可为报表定义数据源。  
@@ -41,13 +41,13 @@ ms.locfileid: "48166957"
   
  单击 **“编辑”** ，在 **“连接属性”** 对话框中指定数据源服务器。 您可以指定本地或远程数据源。  
   
- 单击 **“凭据”** 可提供数据库凭据。 指定的凭据至少要满足您连接到数据源以进行报表设计的要求。 在报表服务器上部署报表时，数据库凭据必须适应报表的所有用户的要求。 例如，如果你希望所有报表用户都使用凭据连接数据源，请选择“使用 Windows 身份验证（集成安全性）”。 您指定的凭据必须对数据源有效，因此如果您选择 Windows 身份验证，则请确保数据源可接受来自要运行报表的所有用户帐户的连接。 数据库凭据和报表可以分开管理。 有关详细信息，请参阅[管理报表数据源](report-data/manage-report-data-sources.md)。  
+ 单击 **“凭据”** 可提供数据库凭据。 指定的凭据至少要满足您连接到数据源以进行报表设计的要求。 在报表服务器上部署报表时，数据库凭据必须适应报表的所有用户的要求。 例如，如果你希望所有报表用户都使用凭据连接数据源，请选择“使用 Windows 身份验证（集成安全性）”。 您指定的凭据必须对数据源有效，因此如果您选择 Windows 身份验证，则请确保数据源可接受来自要运行报表的所有用户帐户的连接。 数据库凭据和报表可以分开管理。 有关详细信息，请参阅 [管理报表数据源](report-data/manage-report-data-sources.md)。  
   
  **将此作为共享的数据源**  
  选择此选项可将数据源以共享数据源形式存储在项目中，而不是存储在报表中。 这样，即可将其用作项目中其他报表的数据源。  
   
 ## <a name="see-also"></a>请参阅  
- [嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 报表服务器](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 配置文件](report-server/rsreportdesigner-configuration-file.md)   
