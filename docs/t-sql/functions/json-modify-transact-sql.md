@@ -4,19 +4,19 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026518"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ JSON_MODIFY ( expression , path , newValue )
   
 |现有的值|路径存在|宽松模式|严格模式|  
 |--------------------|-----------------|--------------|-----------------|  
-|不为 NULL|用户帐户控制|更新现有值。|更新现有值。|  
+|不为 NULL|是|更新现有值。|更新现有值。|  
 |不为 NULL|否|尝试在指定路径上创建新的键:值对。<br /><br /> 这可能会失败。 例如，如果指定路径 `$.user.setting.theme`，则在 `$.user` 或 `$.user.settings` 对象不存在，或者设置是数组或标量值时，JSON_MODIFY 不会插入键 `theme`。|错误 - INVALID_PROPERTY|  
-|NULL|用户帐户控制|删除现有属性。|将现有值设置为 NULL。|  
+|NULL|是|删除现有属性。|将现有值设置为 NULL。|  
 |NULL|否|无操作。 返回第一个参数作为结果。|错误 - INVALID_PROPERTY|  
   
  在宽松模式下，JSON_MODIFY 会尝试创建新的键:值对，但在某些情况下可能会失败。  

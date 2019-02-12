@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019328"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -28,7 +28,7 @@ ms.locfileid: "48071287"
   
  启用基本身份验证之前，请验证您的安全基础结构是否支持。 在基本身份验证模式下，报表服务器 Web 服务会将凭据传递给本地安全机构。 如果凭据指定本地用户帐户，则该用户将由报表服务器计算机上的本地安全机构进行身份验证，并获取对本地资源有效的安全令牌。 域用户帐户的凭据将转发给域控制器并由它进行身份验证。 生成的票证对网络资源有效。  
   
- 若要在将凭据传输到网络中的域控制器时降低凭据被截获的风险，则需要通道加密，如安全套接字层 (SSL)。 基本身份验证本身以明文形式传输用户名，以 Base-64 编码格式传输密码。 添加信道加密会使数据包不可读。 有关详细信息，请参阅[配置本机模式报表服务器上的 SSL 连接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 若要在将凭据传输到网络中的域控制器时降低凭据被截获的风险，则需要通道加密，如安全套接字层 (SSL)。 基本身份验证本身以明文形式传输用户名，以 Base-64 编码格式传输密码。 添加信道加密会使数据包不可读。 有关详细信息，请参阅 [配置本机模式报表服务器上的 SSL 连接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
  启用基本身份验证后，请注意在将连接属性设置为向报表提供数据的外部数据源时，用户不能选择 **“Windows 集成安全性”** 选项。 该选项将在数据源属性页中显示为灰色。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48071287"
           </AuthenticationTypes>  
     ```  
   
-4.  将它粘贴到的现有条目 <`Authentication`>。  
+4.  将其粘贴在 <`Authentication`> 的现有条目上。  
   
-     如果使用的多个身份验证类型，将添加仅`RSWindowsBasic`元素但不能删除的项`RSWindowsNegotiate`， `RSWindowsNTLM`，或`RSWindowsKerberos`。  
+     如果使用的是多个身份验证类型，则只能添加 `RSWindowsBasic` 元素，而不能删除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的条目。  
   
-     若要支持 Safari 浏览器，则不能将报表服务器配置为使用多个身份验证类型。 必须仅指定`RSWindowsBasic`并删除其他条目。  
+     若要支持 Safari 浏览器，则不能将报表服务器配置为使用多个身份验证类型。 必须仅指定 `RSWindowsBasic`，并删除其他条目。  
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071287"
   
 |元素|Required|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|用户帐户控制<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。 （默认值）<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|  
+|LogonMethod|用户帐户控制<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 不支持值 0（针对交互登录）和 1（针对批处理登录)。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
 |默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071287"
     </configuration>  
     ```  
   
-     必须将身份验证模式设置为`Windows`如果包含一个 Web.config 文件。  
+     如果包含一个 Web.config 文件，则必须将身份验证模式设置为 `Windows`。  
   
-     `Identity impersonate` 可以是`True`或`False`。  
+     `Identity impersonate` 可以是 `True` 或 `False`。  
   
-    -   将其设置为`False`如果不希望 ASP.NET 读取安全令牌。 该请求将在报表服务器服务的安全上下文中运行。  
+    -   如果不希望 ASP.NET 读取安全令牌，则将它设置为 `False`。 该请求将在报表服务器服务的安全上下文中运行。  
   
-    -   将其设置为`True`如果希望 ASP.NET 从宿主层读取安全令牌。 如果设置为 `True`，还必须指定 `userName` 和 `password` 来指定一个匿名帐户。 您指定的凭据将确定发出请求时所处的安全上下文。  
+    -   如果希望 ASP.NET 从宿主层读取安全令牌，则将它设置为 `True`。 如果设置为 `True`，还必须指定 `userName` 和 `password` 来指定一个匿名帐户。 您指定的凭据将确定发出请求时所处的安全上下文。  
   
 5.  将 Web.config 文件保存到 ReportBuilder\bin 文件夹。  
   
-6.  打开 RSReportServer.config 文件中的，在服务部分中找到`IsReportManagerEnabled`并添加其下的以下设置：  
+6.  打开 RSReportServer.config 文件，在“Services”部分中查找 `IsReportManagerEnabled`，然后在其下添加以下设置：  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  

@@ -3,7 +3,6 @@ title: exist() 方法（xml 数据类型）| Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83b029554b8a85f11c477063a818bd90a4019740
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026634"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 方法（xml 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ select @x.exist('true()');
 ## <a name="examples"></a>示例  
  以下示例演示如何指定 exist() 方法。  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>示例：对 xml 类型变量指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例如：对 xml 类型变量指定 exist() 方法  
  以下示例中，@x 是一个 xml 类型变量（非类型化的 xml），@f 是一个整数类型变量，用于存储 exist() 方法返回的值。 如果 XML 实例中存储的日期值为 `2002-01-01`，exist() 方法返回 True (1)。  
   
 ```  
@@ -92,7 +91,7 @@ SELECT @f;
   
 -   text() 方法返回一个文本节点，其中包含非类型化的值 `2002-01-01`。 （XQuery 类型为 xdt:untypedAtomic。）必须将此类型化的值从 x 显式强制转换为 xsd:date，因为本示例中不支持隐式转换。  
   
-### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>示例：对类型化 xml 变量指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>例如：对类型化的 xml 变量指定 exist() 方法  
  以下示例说明了如何对 xml 类型变量使用 exist() 方法。 它是类型化的 XML 变量，因为它指定了架构命名空间集合名称 `ManuInstructionsSchemaCollection`。  
   
  在该示例中，首先将生产说明文档分配给此变量，然后使用 exist() 方法查看文档中是否包含 LocationID 属性值为 50 的 <`Location`> 元素。  
@@ -112,7 +111,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>示例：对 xml 类型列指定 exist() 方法  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>例如：对 xml 类型列指定 exist() 方法  
  下面的查询检索的是目录说明中不包括规范（<`Specifications`> 元素）的产品型号 ID：  
   
 ```  

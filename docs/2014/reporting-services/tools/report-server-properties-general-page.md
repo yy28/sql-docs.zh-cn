@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019338"
 ---
 # <a name="server-properties-general-page"></a>服务器属性（“常规”页）
   使用此页可以查看或修改报表管理器中所使用的标题，启用或禁用“我的报表”，为“我的报表”安全性选择角色定义以及启用或禁用客户端打印控件。  
@@ -50,7 +50,7 @@ ms.locfileid: "48222199"
  指定要用于“我的报表”安全性的角色定义。 角色定义标识在每个“我的报表”文件夹中都支持的任务集。  
   
  **允许下载 ActiveX 客户端打印控件**  
- 集`EnableClientPrinting`报表服务器系统属性。 如果启用客户端打印，则具有本地管理员权限的用户可以选择下载已签名的 ActiveX 控件来打印 HTML 报表。 有关详细信息，请参阅[启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 设置 `EnableClientPrinting` 报表服务器系统属性。 如果启用客户端打印，则具有本地管理员权限的用户可以选择下载已签名的 ActiveX 控件来打印 HTML 报表。 有关详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [设置报表服务器属性 (Management Studio)](set-report-server-properties-management-studio.md)   

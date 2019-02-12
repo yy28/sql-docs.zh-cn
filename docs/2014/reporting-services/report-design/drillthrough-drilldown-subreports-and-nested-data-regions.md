@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022805"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）
   可以通过多种方法组织数据，以显示一般信息与详细信息之间的关系。  您可以将所有数据都放在报表中，但将这些数据设置为在用户单击以显示详细信息之前处于隐藏状态，这就是“深化”  操作。 可以在“嵌套”  在其他数据区域（例如表或矩阵）内的一个数据区域（例如表或图表）内显示数据。 还可以在完全包含在主报表内的“子报表”  中显示数据。 或者，可以将详细信息数据放在“钻取”  报表中，钻取报表是在用户单击链接时显示的单独报表。  
@@ -83,19 +83,19 @@ ms.locfileid: "48179537"
 
   
 ##  <a name="InThisSection"></a> 本节内容  
- [钻取报表&#40;报表生成器和 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [钻取报表（报表生成器和 SSRS）](drillthrough-reports-report-builder-and-ssrs.md)  
  介绍在用户单击主报表中的链接时打开的报表。  
   
- [子报表&#40;报表生成器和 SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [子报表（报表生成器和 SSRS）](subreports-report-builder-and-ssrs.md)  
  介绍在主报表的表体中显示的报表。  
   
- [嵌套数据区域&#40;报表生成器和 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [嵌套数据区域（报表生成器和 SSRS）](nested-data-regions-report-builder-and-ssrs.md)  
  介绍在一个数据区域中嵌套另一个数据区域，如在矩阵中嵌套图表。  
   
- [向下钻取操作&#40;报表生成器和 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [深化操作（报表生成器和 SSRS）](drilldown-action-report-builder-and-ssrs.md)  
  介绍使用深化操作来隐藏和显示报表项。  
   
- [指定外部项的路径&#40;报表生成器和 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  介绍如何引用报表定义文件外部的项。  
   
 ## <a name="see-also"></a>请参阅  
