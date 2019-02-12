@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 120390e99a8eb94a24bb2cd56253debd9450ac52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098757"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036678"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>为报表参数添加、更改或删除可用值（报表生成器和 SSRS）
   创建报表参数后，可以指定向用户显示的可用值列表。 可用值列表将限制用户只能选择参数的有效值。  
@@ -32,7 +32,7 @@ ms.locfileid: "48098757"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 在您发布某一报表后，您可以通过对报表服务器设置参数属性值，在报表创作工具中覆盖在报表中定义的可用值。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)。  
+ 在您发布某一报表后，您可以通过对报表服务器设置参数属性值，在报表创作工具中覆盖在报表中定义的可用值。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>添加或更改报表参数的可用值  
   
@@ -77,12 +77,12 @@ ms.locfileid: "48098757"
      预览该报表时，将不再显示参数的可用值下拉列表。  
   
 ## <a name="see-also"></a>请参阅  
- [更改报表参数的顺序&#40;报表生成器和 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [添加、 更改或删除报表参数&#40;报表生成器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [向报表添加级联参数&#40;报表生成器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [更改报表参数的顺序（报表生成器和 SSRS）](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [向报表添加级联参数（报表生成器和 SSRS）](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [为报表参数添加、更改或删除默认值（报表生成器和 SSRS）](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [参数集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)   
- [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   
   

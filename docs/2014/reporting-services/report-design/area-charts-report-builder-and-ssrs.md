@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4d19fa1a5aca4ac67be6328646df47267218af42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190997"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034158"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面积图（报表生成器和 SSRS）
-  面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何将数据添加到面积图的详细信息，请参阅[图表&#40;报表生成器和 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  面积图将序列显示为一组由线连接的点，并填充线下方的所有区域。 有关如何向分区图添加数据的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  下图显示了一个堆积面积图的例子。 这里的数据非常适合用堆积面积图显示，因为这种图表可以显示所有序列的总计以及每个序列在总计中所占的比例。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48190997"
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)   
  [更改图表类型（报表生成器和 SSRS）](change-a-chart-type-report-builder-and-ssrs.md)   
- [空和 Null 数据点在图表中的&#40;报表生成器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [图表中的空白和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

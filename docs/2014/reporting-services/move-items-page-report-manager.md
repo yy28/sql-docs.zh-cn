@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009681"
 ---
 # <a name="move-items-page-report-manager"></a>“移动项”页（报表管理器）
   使用“移动项”页可以将报表、文件夹或其他项移至报表服务器上的新位置。 您可以键入新位置的路径，也可以使用树视图找到报表服务器命名空间中的新位置。 只能移动您有权移动并且存储在当前报表服务器中的项。  
@@ -66,7 +66,7 @@ ms.locfileid: "48082747"
 4.  在项工具栏中，单击 **“移动”**。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [常规属性页上，文件夹&#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [报表的“常规”属性页（报表管理器）](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [常规属性页上，资源&#40;报表管理器&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

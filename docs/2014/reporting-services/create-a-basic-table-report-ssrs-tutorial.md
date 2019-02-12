@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ab5e18825ec9a328db926829355b706cff2a58d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022962"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>创建基本表报表（SSRS 教程）
   本教程旨在帮助您创建基本表报表基于[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库使用报表设计器。 您还可以使用报表生成器或报表向导创建报表。 在本教程中，您将执行以下操作：创建报表项目、设置连接信息、定义查询、添加表数据区域、对某些字段进行分组和汇总以及预览报表。  
@@ -45,17 +45,17 @@ ms.locfileid: "53366709"
  还必须具有从 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库检索数据的只读权限。  
   
 ## <a name="tasks"></a>“任务”  
- [第 1 课：创建报表服务器项目&#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
+ [第 1 课：创建报表服务器项目 (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [第 2 课：指定连接信息&#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [第 2 课：指定连接信息 (Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [第 3 课：为表报表定义数据集&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [第 3 课：为表报表定义数据集 (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [第 4 课：向报表添加表&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [第 4 课：向报表添加表 (Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
- [第 5 课：设置报表格式&#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
+ [第 5 课：设置报表格式 (Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)  
   
- [第 6 课：添加分组和总计&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [第 6 课：添加分组和总计 (Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  阅读教程时，我们建议您将添加**下一步**并**上一步**到文档查看器工具栏按钮。 有关详细信息，请参阅  

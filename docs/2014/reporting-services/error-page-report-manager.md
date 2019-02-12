@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511672"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029228"
 ---
 # <a name="error-page-report-manager"></a>“错误”页（报表管理器）
   使用“错误”页可以查看关于错误情况的详细信息。 在此页上会显示基于服务器的或基于会话的错误。 与特定页面控件有关的验证错误将排成一行显示在该控件旁边。  

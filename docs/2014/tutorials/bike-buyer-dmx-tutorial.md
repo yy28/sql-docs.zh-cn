@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366719"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025248"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>自行车购买者 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，确定客户是否将购买自行车。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44973c4366f6d88cf0a5a815e4a6dcdaf88e75ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5141ca13693d140e56700b46e030e1eb2b14e0e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026998"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services 中的授权
   授权是指确定是否应为某个身份授予其请求的、针对报表服务器数据库的给定资源的访问权限的过程。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的授权体系结构，根据用户的应用程序角色分配为用户授予针对给定资源的访问权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的安全扩展插件包含对一个授权组件的实现，该组件用于在报表服务器上对用户进行身份验证后授予用户访问权限。 在某一用户尝试通过 SOAP API 和通过 URL 访问对系统或报表服务器项执行操作时，调用授权。 这可通过安全扩展插件接口**IAuthorizationExtension**。 如前所述，所有扩展插件均继承自 IExtension，这是部署的所有扩展插件的基接口。 **IExtension**并**IAuthorizationExtension**属于**Microsoft.ReportingServices.Interfaces**命名空间。  

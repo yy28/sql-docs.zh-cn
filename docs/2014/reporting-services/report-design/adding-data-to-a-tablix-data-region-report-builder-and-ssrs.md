@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b8a4d21b2db6673fda184bdd7ed391dd2af8b48d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105867"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011118"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>向 Tablix 数据区域添加数据（报表生成器和 SSRS）
   若要在表或矩阵中显示报表数据集中的数据，请在每个数据单元中，指定要显示的数据集字段的名称。 可以显示详细信息数据或分组数据。 如果将组添加到表或矩阵中，则会自动添加组值和组数据的行和列。 然后，可以为数据添加小计和总计。  

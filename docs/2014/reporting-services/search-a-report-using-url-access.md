@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9ffac7320bc284547a8b5d0598c5523e5c0b09b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0296acddd21319949ff2f76757c5297eb1bceb4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023782"
 ---
 # <a name="search-a-report-using-url-access"></a>使用 URL 访问搜索报表
   可以使用 URL 访问在报表中搜索一组特定的文本。 若要在报表中搜索，请将 URL 中的 *rc:FindString* 参数的值设置为等于所要搜索的文本。 另外，可以使用 *rc:StartFind* 和 *rc:EndFind* 参数将搜索范围缩小到相应报表中的特定页。  
@@ -33,7 +33,7 @@ http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:S
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [URL 访问&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 访问 (SSRS)](url-access-ssrs.md)   
  [URL 访问参数引用](url-access-parameter-reference.md)  
   
   

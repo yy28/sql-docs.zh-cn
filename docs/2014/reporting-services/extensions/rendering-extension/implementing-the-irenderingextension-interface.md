@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040038"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>实现 IRenderingExtension 接口
   呈现扩展插件从与实际数据相结合的报表定义中获取结果，并将得到的数据呈现为某种可用的格式。 组合的数据和格式的转换是通过一个实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的公共语言运行时 (CLR) 类完成的。 该类将对象模型转换为可由查看器、打印机或其他输出目标使用的输出格式。  
@@ -51,7 +51,7 @@ ms.locfileid: "48227267"
 -   createAndRegisterStream 是一个委托函数，可以调用它来获取要呈现到的流。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 参数  
- deviceInfo 参数包含呈现参数，而不包含报表参数。 这些呈现参数将传递给呈现扩展插件。 报表服务器会将 deviceInfo 值转换为一个 <xref:System.Collections.Specialized.NameValueCollection> 对象。 deviceInfo 参数中的项被视为区分大小写的值。 如果作为 URL 访问的结果提出呈现请求，则格式为 `rc:key=value` 的 URL 参数将转换为 deviceInfo 字段对象中的键/值对。 浏览器检测代码还在 clientCapabilities 字典中提供以下各项：EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type 以及 AcceptLanguage。 将忽略 deviceInfo 中呈现扩展插件不理解的任何名称/值对。 以下代码示例显示用于检索图标的示例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
+ deviceInfo 参数包含呈现参数，而不包含报表参数。 这些呈现参数将传递给呈现扩展插件。 报表服务器会将 deviceInfo 值转换为一个 <xref:System.Collections.Specialized.NameValueCollection> 对象。 deviceInfo 参数中的项被视为区分大小写的值。 如果作为 URL 访问的结果提出呈现请求，则格式为 `rc:key=value` 的 URL 参数将转换为 deviceInfo 字段对象中的键/值对。 浏览器检测代码还提供了以下各项中的*clientCapabilities*字典：EcmaScriptVersion、 JavaScript、 MajorVersion、 MinorVersion、 Win32、 类型和 AcceptLanguage。 将忽略 deviceInfo 中呈现扩展插件不理解的任何名称/值对。 以下代码示例显示用于检索图标的示例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

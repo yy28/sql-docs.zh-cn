@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a6546a9b38c8f12e493ea9fa47741fa56c9fab79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9e230a20e369cf8354d3740f966d01a0930916f7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171069"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035048"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>“共享数据源属性”对话框 -&gt;“凭据”
   在 **“共享数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改凭据以便连接到报表中的共享数据源。 您所提供的凭据用于访问数据源和缓存数据副本以便进行报表预览。 有关如何缓存预览数据的详细信息，请参阅 [预览报表](reports/previewing-reports.md)。 有关凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

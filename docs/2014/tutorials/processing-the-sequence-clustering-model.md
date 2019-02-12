@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022168"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>处理顺序分析和聚类分析模型
   在创建新的挖掘结构后，必须部署对数据挖掘解决方案所做的更改，然后再处理结构。 处理完新结构和挖掘模型之后，就可以浏览挖掘模型了。  
@@ -42,7 +41,7 @@ ms.locfileid: "48066167"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘设计器](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft 序列聚类分析算法](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [处理要求和注意事项&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [处理要求和注意事项（数据挖掘）](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

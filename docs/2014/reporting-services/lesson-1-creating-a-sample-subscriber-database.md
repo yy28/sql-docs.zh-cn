@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：创建示例订阅服务器数据库 | Microsoft Docs
+title: 第 1 课：创建示例订阅服务器数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039238"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
   定义数据驱动的订阅前，必须具有可提供订阅数据的数据源。 在此步骤中，您将创建一个小型数据库，以存储本教程中使用的订阅数据。 稍后在处理订阅时，报表服务器将检索此数据并使用它来自定义报表输出、传递选项和报表表示格式。  

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112677"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016108"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“大小”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“大小”** 可以设置字段或设计区域中显示的图像的大小，或者更改单元或文本框边缘与该单元或文本框内包含的图片或值之间的多余空间。  
@@ -34,13 +34,13 @@ ms.locfileid: "48112677"
  **原始大小成比例**  
  选择此选项可按比例调整图像大小，使之适应单元或文本框的高度和宽度。  
   
- **剪辑**  
+ **Clip**  
  选择此选项可从图片的左上角开始，在单元或文本框的高度和宽度内显示图像。 图像的边框可以缩小或放大以适合图像。 如果图像大于单元或文本框的大小，则只显示部分图像。  
   
- **左侧**  
+ **Left**  
  指定单元或文本框左边缘与单元中显示值之间的填充量或间距。  
   
- **右侧**  
+ **Right**  
  指定单元或文本框右边缘与单元中显示值之间的填充量或间距。  
   
  **Top**  
@@ -52,7 +52,7 @@ ms.locfileid: "48112677"
 ## <a name="see-also"></a>请参阅  
  [图像属性对话框，常规&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [映像&#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [用于对话框、 窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
+ [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

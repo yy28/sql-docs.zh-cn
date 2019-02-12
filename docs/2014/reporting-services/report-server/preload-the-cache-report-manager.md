@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035078"
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
   您可以通过为共享数据集创建缓存刷新计划，为共享数据集预加载缓存。  
@@ -40,7 +40,7 @@ ms.locfileid: "48209497"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>通过创建缓存刷新计划预加载缓存  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要缓存的项。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48209497"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>通过使用数据驱动订阅将用户特定报表预加载到缓存中  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到 **“内容”** 页，然后导航到要为其创建订阅的报表。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "48209497"
 18. 单击 **“应用”**。  
   
 ## <a name="see-also"></a>请参阅  
- [数据驱动订阅](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [创建数据驱动订阅（SSRS 教程）](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [性能、快照、缓存 (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
  [设置报表处理属性](set-report-processing-properties.md)   
- [缓存报表&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [缓存报表 (SSRS)](caching-reports-ssrs.md)  
   
   

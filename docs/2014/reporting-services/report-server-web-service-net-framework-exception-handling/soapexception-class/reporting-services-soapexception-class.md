@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: de33b2cdbc082e609e392d36aa53b8c5bbd2ce4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac8b0b7a36cc3ecff37ba0d74167b99458eb5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027193"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 类
   您应该解决已知可能会发生的特定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 错误。 例如，在您要求用户创建某一文件夹的应用程序中，该用户可能尝试创建已存在的文件夹。 作为开发人员，您无法控制用户在您的应用程序的文件夹名称和路径字段中输入的内容，但可以控制当某人无意中尝试创建已存在的项时的用户体验。  

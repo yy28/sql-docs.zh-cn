@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6b50d6757c4ea635da35e881219dd63871dc0967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372829"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039308"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 连接类型 (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是一种可扩展的数据仓库工具，可以通过大规模并行处理提供高性能和可扩展性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 数据库进行分布式处理和数据存储。  

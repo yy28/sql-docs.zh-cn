@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5a7cd9ee7026dbc662d381a76ad66be2dbbb61d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014808"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用表达式指定指示器的大小（报表生成器和 SSRS）
   除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。  
@@ -30,7 +30,7 @@ ms.locfileid: "48206247"
   
  “属性”窗格提供对指示器的 IndicatorStates 集合的属性的访问。 可以通过使用表达式设置 IndicatorStates 集合成员的 ScaleFactor 属性，将图标配置为不同的大小。 有关详细信息，请参阅[表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
- 在此过程中所用的表达式还用于生成具有不同大小的指示器中, 所示的报表[指标&#40;报表生成器和 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  
+ 在此过程中使用的表达式还用于生成具有不同大小的指示器的报表，如 [指示器（报表生成器和 SSRS）](indicators-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

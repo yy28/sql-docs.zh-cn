@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110590"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037028"
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  

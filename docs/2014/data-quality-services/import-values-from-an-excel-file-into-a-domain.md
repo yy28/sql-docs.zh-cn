@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.importfailing.f1
 - sql12.dqs.kb.importselect.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f195461d11b84860ab7fdf5539eca17946894ad3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019598"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
   本主题介绍如何将值从 Excel 文件导入到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的域中。 使用 Excel 文件将域值导入到 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中可以简化知识生成过程、节省时间并提高效率。 借助这一方法，在 Excel 文件或文本文件中具有有效数据值列表的人士能够将这些值导入到域中。 从 Excel 文件，您可以将域值导入到某个域中，或者将多个域导入到知识库中。 （有关将域导入到知识库的详细信息，请参阅[在知识发现中从 Excel 文件中导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)。）不支持导出到 Excel 文件。  

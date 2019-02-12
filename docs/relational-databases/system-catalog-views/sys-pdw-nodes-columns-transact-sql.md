@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b811bb94039974faa8c145ef93df92949fbd702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 949d8a90892e1954ee0a96f0025cb623569fbe55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714905"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024418"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47714905"
 |is_column_set|**bit**|1 = 列为列集。|始终为 0。|  
 |pdw_node_id|**int**|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|NOT NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>请参阅  

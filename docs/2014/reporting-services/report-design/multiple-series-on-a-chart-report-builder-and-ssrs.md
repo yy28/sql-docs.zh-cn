@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 91222c11318ffd88a152b24b284bdf8b11ed6d7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160715"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011279"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>图表中的多个序列（报表生成器和 SSRS）
   当图表中存在多个序列时，必须确定比较这些序列的最佳方式。 可以使用堆积图显示每个序列的相对比例。 如果仅比较两个共享公用类别 (x) 轴的序列，请使用辅助轴。 当显示两个相关数据序列（例如，价格和数量或收入和税收）时，该方法非常有用。 如果图表不可读，请考虑使用多个图表区以增强各序列之间的目视间隔。  
@@ -57,6 +57,6 @@ ms.locfileid: "48160715"
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [在图表中显示包含多个数据区域的序列（报表生成器和 SSRS）](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [图表类型&#40;报表生成器和 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)  
   
   

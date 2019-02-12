@@ -1,24 +1,23 @@
 ---
-title: 第 6 课： 运行 RDL 架构应用程序 (VB-C#) |Microsoft Docs
+title: 第 6 课：运行 RDL 架构应用程序 (VB-C#) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 09d5ad740cb692549d56b9226bc3c7ad5bb234a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175777"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022219"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>第 6 课： 运行 RDL 架构应用程序 (VB-C#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>第 6 课：运行 RDL 架构应用程序 (VB-C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 提供了两种从集成开发环境 (IDE) 生成和运行控制台应用程序的方法：  
   
 -   开始执行（调试）  

@@ -1,5 +1,5 @@
 ---
-title: 第 4 课：向报表添加表 (Reporting Services) | Microsoft Docs
+title: 第 4 课：将表添加到报表 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033228"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：将表添加到报表 (Reporting Services)
   定义数据集后，您可以开始定义报表。 将要纳入报表的数据区域、文本框、图像和其他项拖放到设计图面上来创建报表布局。  
   
  包含基础数据集中重复数据行的项称为“数据区域”。 基本报表将只有一个数据区域，但是对于要将图表添加到表格报表等情况，则可以添加多个数据区域。 添加数据区域之后，可以向该数据区域添加字段。  
@@ -47,7 +47,7 @@ ms.locfileid: "48220807"
     > [!NOTE]  
     >  列标题是 Line Total。 报表设计器通过将 LineTotal 拆分为两个单词，自动创建该列的友好名称。  
   
-     以下关系图显示已由下列字段填充的表数据区域：Date、Order、Product、Qty 和 Line Total。  
+     下图显示了使用这些字段已填充的表数据区域：日期、 订单、 产品、 Qty 和行总计。  
   
      ![设计，具有标题行和详细信息行的表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design，Table with 标头行和详细信息行")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220807"
 >  在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
+ 您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [表（报表生成器和 SSRS）](report-design/tables-report-builder-and-ssrs.md)   

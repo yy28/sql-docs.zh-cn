@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220719"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010570"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>“点击链接型报表”页（报表管理器）
   当您单击报表中所包含的交互式数据时，点击链接型报表显示相关的数据表。 这些报表由报表服务器基于用来创建报表的模型中所包含的信息来生成。 如果您不想使用由报表服务器生成的点击链接型报表，则可以创建自定义报表，将其发布到报表服务器并映射到在模型中定义的交互式数据点。 必须在报表生成器中从同一模型创建自定义报表，然后再发布到报表服务器。 若要将自定义报表映射到模型中的项，请使用报表管理器中的“点击链接型报表”页。  
@@ -32,7 +32,7 @@ ms.locfileid: "48220719"
  尽管您可以选择任何可访问的报表，但请仅选择专门为您正在配置的模型创建的报表。  
   
 > [!NOTE]  
->  点击链接型报表中的每个版本不可[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
+>  在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的每个版本中均不提供点击链接型报表。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不能确定您的单位所运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本，请与数据库管理员联系。  
   
 ## <a name="navigation"></a>导航  
  使用以下过程导航到用户界面 (UI) 中的这一位置。  

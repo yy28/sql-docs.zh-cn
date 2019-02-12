@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010188"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
   如果您希望用户能在报表中单击链接即可打开浏览器浏览您指定的 URL，则可向报表项添加一个超链接。 超链接既可以是静态 URL，也可以是计算结果为 URL 的表达式。 如果数据库中的某个字段包含 URL，则表达式可以包含该字段，从而为报表提供超链接的动态列表。 您可以向文本框、图像、图表和仪表添加超链接。 必须确保该用户对您提供的 URL 具有访问权限。  
@@ -28,7 +28,7 @@ ms.locfileid: "53366169"
   
  还可以向具有 **“操作”** 属性的任何项的 URL 添加超链接，例如图表中的文本框、图像或计算序列。 用户单击该报表项时，将执行您所定义的操作。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](../action-properties-dialog-box-report-builder-and-ssrs.md)和[指定外部项的路径（报表生成器和 SSRS）](specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
- 若要快速开始，请参阅[教程：设置文本的格式&#40;报表生成器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速开始，请参阅[教程：设置文本格式（报表生成器）](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[保护报表和资源](../security/secure-reports-and-resources.md)。  

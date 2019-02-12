@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158907"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027248"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  
@@ -101,15 +101,15 @@ ms.locfileid: "48158907"
 ##  <a name="Distribution"></a> 了解分布选项  
  若要创建值的分布，可以将数据分成若干范围。 指定分布类型、子范围数以及范围的最小值和最大值。  
   
- 在以下列表中，假定你有三个地图元素和六个具有以下值的相关分析值：1、10、200、2000、4777、8999，范围为 1 到 9999。  
+ 在以下列表中，假定您有三个地图元素和六个具有以下值的范围为 1 到 9999 的相关分析值：1、10、200、2000、4777、8999。  
   
--   **相等间隔。** 创建将数据划分为相等范围间隔的范围。 例如，三个范围将为 0-2999, 3000-5999, 6000-8999。 子范围 1：1, 10, 200, 500。 子范围 2：4777。 子范围 3：8999。 此方法不考虑数据的分布方式。 很大的值或很小的值会使分布结果扭曲。  
+-   **相等间隔。** 创建将数据划分为相等范围间隔的范围。 例如，三个范围将为 0-2999, 3000-5999, 6000-8999。 子范围 1：1、10、200、500。 子范围 2：4777。 子范围 3：8999。 此方法不考虑数据的分布方式。 很大的值或很小的值会使分布结果扭曲。  
   
--   **相等分布。** 创建用于划分数据以使每个范围具有相同项数的范围。 对于示例数据，三个范围将为 0-10, 11-500, 501-8999。 子范围 1：1、10。 子范围 2：200、500。 子范围 3：4777, 8999。 此方法如果创建跨很大或很小范围的划分，会使分布结果扭曲。  
+-   **相等分布。** 创建用于划分数据以使每个范围具有相同项数的范围。 对于示例数据，三个范围将为 0-10, 11-500, 501-8999。 子范围 1：1, 10. 子范围 2：200, 500. 子范围 3：4777, 8999. 此方法如果创建跨很大或很小范围的划分，会使分布结果扭曲。  
   
 -   **最佳。** 创建自动调整分布以创建平衡子范围的范围。 子范围数由算法决定。  
   
--   **自定义：** 指定您自己的范围数以控制值的分布。 对于示例数据，你可以指定 3 个范围：1-2、3-8、9。  
+-   **自定义：** 指定您自己的范围数以控制值的分布。 对于示例数据，可以指定范围 3 的范围：1-2、3-8、9。  
   
  分布值由规则使用，以改变地图元素显示值。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48158907"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|显示范围开始和范围结束的实际数值。|10 - 790|  
   
 ## <a name="see-also"></a>请参阅  
- [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)   
  [地图向导和地图层向导（报表生成器和 SSRS）](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

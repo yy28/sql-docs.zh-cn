@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043107"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和线条（报表生成器和 SSRS）
   使用矩形和线条可在报表中创建各种视觉效果。 您可以在“主页”选项卡的“边框”部分设置这些报表项的显示属性，还可以使用“属性”窗格设置其他属性。 可以为矩形添加类似背景色或图像、工具提示或书签这样的功能。  
@@ -42,18 +42,18 @@ ms.locfileid: "48181167"
 
   
 ##  <a name="ReportBorder"></a> 添加报表边框  
- 通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为报表添加边框。 有关详细信息，请参阅[向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
+ 通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为报表添加边框。 有关详细信息，请参阅 [向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)的详细信息。  
   
 
   
 ##  <a name="HowTo"></a> 操作指南主题  
- [向报表添加边框&#40;报表生成器和 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [向报表添加边框（报表生成器和 SSRS）](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [添加矩形或容器&#40;报表生成器和 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [添加矩形或容器（报表生成器和 SSRS）](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [添加和修改线条&#40;报表生成器和 SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [添加和修改线条（报表生成器和 SSRS）](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>请参阅  
- [添加矩形或容器&#40;报表生成器和 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [添加矩形或容器（报表生成器和 SSRS）](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

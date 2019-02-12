@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031588"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
   使用文件夹的“常规”属性页可以查看和设置所创建文件夹的属性。 有关创建或修改文件夹的用户以及修改文件夹的时间的信息显示在“常规属性”页面顶部。  
@@ -38,7 +38,7 @@ ms.locfileid: "48156448"
  **名称**  
  指定文件夹的名称。 名称必须至少包含一个字母数字字符。 还可以包含空格和某些符号。 在指定名称时，不得使用字符 ; ? : \@ & = +，$ * \< > |"或 / 指定名称时。  
   
- **Description**  
+ **说明**  
  键入对文件夹内容的说明。 有权访问该文件夹的用户可以在“内容”页中查看此说明。  
   
  **在列表视图中隐藏**  
@@ -54,7 +54,7 @@ ms.locfileid: "48156448"
  单击此选项可在报表服务器命名空间内重新定位报表或文件夹。 单击此按钮将打开“移动项”页，使用此页可以浏览文件夹以选择新的文件夹位置。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

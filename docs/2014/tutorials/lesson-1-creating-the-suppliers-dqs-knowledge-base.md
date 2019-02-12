@@ -1,24 +1,21 @@
 ---
-title: 第 1 课： 创建 DQS Suppliers 知识库 |Microsoft Docs
+title: 第 1 课：创建 DQS Suppliers 知识库 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010949"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>第 1 课：创建 DQS Suppliers 知识库
   在本课程中，创建名为 DQS 知识库**供应商**与供应商数据相关的知识 （元数据）。 您使用该知识库执行针对输入供应商数据的清理和匹配活动。 该清理活动标识不正确/无效数据、更正不正确数据、处理更正/建议、对数据执行标准化以及用更多的信息使数据更丰富。 该匹配活动对数据进行比较并且标识数据中的类似记录（但稍有不同），以便帮助您删除数据中的重复项。  
@@ -46,6 +43,6 @@ ms.locfileid: "48176487"
 -   发布该知识库以便可以在清理和匹配活动中使用该知识库。  
   
 ## <a name="next-step"></a>下一步  
- [任务 1：创建知识库和域](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [任务 1:创建知识库和域](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

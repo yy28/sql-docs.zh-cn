@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035198"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>选项（“查询结果”和“依赖关系服务”页）
   使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**对话框中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
@@ -53,6 +52,4 @@ ms.locfileid: "48118617"
  如果使用 SQL Server 身份验证，请提供密码。  
   
  **测试**  
- 单击此选项可对连接进行测试。  
-  
-  
+ 单击此选项可对连接进行测试。

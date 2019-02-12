@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: be3f95c1a0c395c412479d3a8836e9126fb0373f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374649"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038018"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  

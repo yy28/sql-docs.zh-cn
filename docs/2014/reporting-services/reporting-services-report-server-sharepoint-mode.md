@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 82442d68f5fdac010b7198a2f9bc919e5410e40f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7af146e8b3323cd8634d9b995d103b6e92d591d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352225"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016248"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
   为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 **配置的** 报表服务器可在 SharePoint 产品的部署中运行。 SharePoint 模式下的报表服务器可针对报表和其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 内容类型使用 SharePoint 的协作和管理功能。 SharePoint 模式要求在 SharePoint Web 前端上安装用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的适当版本。  

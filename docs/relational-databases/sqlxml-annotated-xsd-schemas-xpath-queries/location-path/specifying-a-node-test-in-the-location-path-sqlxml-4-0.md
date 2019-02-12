@@ -13,16 +13,16 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2883b1645dfe1114fc40f63c576797b477ae0ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792015"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027399"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47792015"
 > [!NOTE]  
 >  不支持通配符节点测试 *（例如 `child::*`）。  
   
-## <a name="node-test-example-1"></a>节点测试： 示例 1  
+## <a name="node-test-example-1"></a>节点测试：示例 1  
  位置路径`child::Customer`中选择**\<客户 >** 上下文节点的子元素。  
   
  在本示例中，`child` 是轴，`Customer` 是节点测试。 主要节点类型**子**轴是**\<元素 >**。 因此，如果节点测试为 TRUE **\<客户 >** 节点是**\<元素 >** 节点。 如果上下文节点没有**\<客户 >** 子级，则返回空节点集。  

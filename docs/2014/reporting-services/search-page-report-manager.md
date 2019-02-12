@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206127"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037350"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
   使用“搜索结果”页可以查看为报表、链接报表、报表模型、共享数据源、文件夹或资源指定的搜索操作的结果。 搜索结果按字母顺序列出。 您可以按照类型、名称或说明进行排序。  
@@ -65,7 +65,7 @@ ms.locfileid: "48206127"
  悬停在某个项之上，单击下拉箭头以打开下拉菜单，从中可以访问和配置所选项的属性。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

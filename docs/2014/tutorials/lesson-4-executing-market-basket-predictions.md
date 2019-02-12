@@ -1,25 +1,24 @@
 ---
-title: 第 4 课： 执行市场篮预测 |Microsoft Docs
+title: 第 4 课：执行市场篮预测 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041428"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 课：执行市场篮预测
-  在本课程中，您将使用 DMX`SELECT`语句以创建基于关联的预测模型中创建[第 2 课： 向市场篮挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 使用 DMX `SELECT` 语句并添加一个 `PREDICTION JOIN` 子句可创建一个预测查询。 预测联接语法的详细信息，请参阅[SELECT FROM&#60;模型&#62;预测联接&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  
+  在本课程中，您将使用 DMX`SELECT`语句以创建基于关联的预测模型中创建[第 2 课：向市场篮挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 使用 DMX `SELECT` 语句并添加一个 `PREDICTION JOIN` 子句可创建一个预测查询。 预测联接语法的详细信息，请参阅[SELECT FROM&#60;模型&#62;预测联接&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  
   
  **SELECT FROM\<模型 > PREDICTION JOIN**形式的`SELECT`语句包含三个部分：  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  在工具栏上，单击**Execute**按钮。  
   
-     查询将返回包含以下三种产品的表：HL Mountain Tire、Fender Set – Mountain 和 ML Mountain Tire。 该表按概率顺序列出这些返回的产品。 最有可能包含在查询指定的三种产品所在购物车中的返回的产品将出现在表的顶部。 其次最有可能包含在购物车中的产品是下面的两种产品。 该表还包含说明预测准确性的统计信息。  
+     查询返回包含三种产品的表：HL Mountain Tire、 Fender Set-Mountain 和 ML Mountain Tire。 该表按概率顺序列出这些返回的产品。 最有可能包含在查询指定的三种产品所在购物车中的返回的产品将出现在表的顶部。 其次最有可能包含在购物车中的产品是下面的两种产品。 该表还包含说明预测准确性的统计信息。  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>使用 MINIMUM_PROBABILITY 为 0.01 的模型创建预测  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  在工具栏上，单击**Execute**按钮。  
   
-     查询将返回包含以下三种产品的表：HL Mountain Tire、Water Bottle 和 Fender Set - Mountain。 该表按概率顺序列出这些产品。 出现在该表顶部的产品是最有可能包含在查询指定的三种产品所在购物车中的产品。 其余产品是其次最有可能包含在该购物车中的产品。 该表还包含描述的预测准确性的统计信息。  
+     查询返回包含三种产品的表：HL Mountain Tire、 Water Bottle 和 Fender Set-Mountain。 该表按概率顺序列出这些产品。 出现在该表顶部的产品是最有可能包含在查询指定的三种产品所在购物车中的产品。 其余产品是其次最有可能包含在该购物车中的产品。 该表还包含描述的预测准确性的统计信息。  
   
      您可以看到从查询的此结果的值*MINIMUM_PROBABILITY*参数会影响由查询返回的结果。  
   

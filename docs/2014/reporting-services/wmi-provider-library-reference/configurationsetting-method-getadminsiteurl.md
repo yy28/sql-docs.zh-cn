@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68f3811c448fca9921308b520dc6c6ef9a006d5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f1fc08eb50c62cc9295d80cac894a9d9f3338698
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098567"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021650"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>GetAdminSiteUrl 方法 (WMI)
   获取集成报表服务器的 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 场管理中心网站的绝对 URL。  

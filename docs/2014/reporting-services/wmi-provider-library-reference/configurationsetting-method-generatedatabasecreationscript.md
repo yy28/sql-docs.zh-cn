@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2dbd112c340662ed90632a06904c0b3bd1939a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213478"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022108"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成可用于创建报表服务器数据库的 SQL 脚本。  
@@ -53,7 +53,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  指示是以本机模式还是以 SharePoint 模式创建数据库。  
   
 > [!IMPORTANT]  
->  从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]为 SharePoint 共享服务，且不受 WMI 提供程序。 应始终将此参数设置为`False`。  
+>  从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`不支持，因为在 SharePoint 模式下，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]为 SharePoint 共享服务，且不受 WMI 提供程序。 您应始终将此参数设置为 `False`。  
   
  *脚本*  
  [out] 包含所生成的 SQL 脚本的字符串。  

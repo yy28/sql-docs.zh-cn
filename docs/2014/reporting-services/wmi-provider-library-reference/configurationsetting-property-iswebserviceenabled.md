@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a03753602b0a44cac213cf001406bd537ede695b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079910"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022028"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWebServiceEnabled 属性 (WMI MSReportServer_ConfigurationSetting)
   指示是否已启用报表服务器 Web 服务。 只读。  
@@ -40,7 +40,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>属性值  
- 一个只读的`Boolean`值。 值为`true`指示是否已启用报表服务器 Web 服务。  
+ 只读的 `Boolean` 值。 如果值为 `true`，指示报表服务器 Web 服务已启用。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135134"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016258"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 在 SharePoint 管理中心内管理服务应用程序。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
   
  本主题涵盖以下信息：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48135134"
   
 2.  在服务应用程序名称附近单击或单击 **“类型”** 列，这将选择整行，然后在 SharePoint 功能区上单击 **“属性”** 。  
   
- 有关服务应用程序属性的详细信息，请参阅 [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
+ 服务应用程序属性的详细信息，请参阅[步骤 3:创建 Reporting Services 服务应用程序](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)中的“服务应用程序”一节。  
   
 ##  <a name="bkmk_openpages"></a> 打开服务应用程序管理页面  
  要打开 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用管理页面，请完成以下步骤：  
@@ -91,10 +91,10 @@ ms.locfileid: "48135134"
   
 |设置|注释|  
 |-------------|--------------|  
-|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 . 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅[报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)|  
+|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 . 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |保留执行日志的天数|默认值为 60 天。|  
   
- 所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅 [为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> 安全设置  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48135134"
   
 |第|Description|  
 |----------|-----------------|  
-|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 您应考虑将存储正在运行的另一台计算机上的密钥文件[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 默认文件名称与服务应用程序名称相同。|  
+|备份加密密钥|1) 在“密码:”和“确认密码:”框中键入密码，然后单击“导出”。 如果您键入的密码不符合域策略的复杂性要求，将会看到一条警告。<br /><br /> 2) 系统会提示你指定保存密钥文件的位置。 你应该考虑将密钥文件存储在与运行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的计算机不同的计算机上。 默认文件名称与服务应用程序名称相同。|  
 |还原加密密钥|1) 在“文件位置”框中键入或浏览密钥文件<br /><br /> 2) 在“密码”框中，键入用于备份加密文件的密码。<br /><br /> 3) 单击“确定”|  
 |更改加密密钥|此操作将创建一个新密钥，并且重新加密您已加密的内容。 如果有很多内容，此操作可能需要几个小时。<br /><br /> 完成更改加密密钥操作后，建议您备份新密钥。|  
 |删除加密的内容|删除的内容无法恢复。<br /><br /> **\*\* 重要提示 \*\*** 删除和重新创建对称密钥的操作不能逆转或撤消。 删除或重新创建该密钥可能对您当前的安装产生重要影响。 如果删除对称密钥，则使用此密钥加密的所有现有数据也将被删除。 删除的数据包括指向外部报表数据源的连接字符串、存储的连接字符串和某些订阅信息。|  
@@ -154,7 +154,7 @@ ms.locfileid: "48135134"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- 有关详细信息，请参阅[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+ 有关详细信息，请参阅 [用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="options"></a>选项  
  **指定执行帐户**  
@@ -192,7 +192,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  在“服务应用程序关联”页中，将视图更改为 **“服务应用程序”**。  
   
-3.  找到并单击将新的名称[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
+3.  找到并单击新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的名称。 也可以单击应用程序代理组名称 **默认值** 以将代理添加到默认组，而不是完成以下步骤。  
   
 4.  在 **“编辑以下连接组”** 选择框中，选择 **自定义**。  
   

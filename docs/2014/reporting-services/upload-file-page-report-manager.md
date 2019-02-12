@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023538"
 ---
 # <a name="upload-file-page-report-manager"></a>“上载文件”页（报表管理器）
   使用“上载文件”页可以将文件从文件系统发布到报表服务器数据库。 上载的文件将显示为报表服务器文件夹层次结构中的项。  
   
 -   上载的 .rdl 文件将以报表形式发布到报表服务器。  
   
--   如果上载的 .smdl 文件包含数据源视图信息，则这些文件将作为报表模型发布。 如果这些文件缺少数据源视图引用，则上载时将出现错误。 如果上载.smdl 文件从数据源视图信息可能会丢失[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]报表模型项目。 在报表模型项目中，数据源视图信息存储在 .smdl 文件之外的单独文件中。  
+-   如果上载的 .smdl 文件包含数据源视图信息，则这些文件将作为报表模型发布。 如果这些文件缺少数据源视图引用，则上载时将出现错误。 如果从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 报表模型项目上载 .smdl 文件，则数据源视图信息可能会丢失。 在报表模型项目中，数据源视图信息存储在 .smdl 文件之外的单独文件中。  
   
      包含数据源视图信息（因此能够成功上载）的模型文件是以前已发布到报表服务器、之后又从该服务器保存到文件系统上某文件的那些文件。 如果打开某模型的“常规属性”页，再单击 **“编辑”** 来打开该模型，则可以将该模型保存到文件，再将该文件作为新模型上载到报表服务器。 随后上载的 .smdl 文件将包含发布模型所需的所有信息。  
   
@@ -57,8 +57,8 @@ ms.locfileid: "48128257"
  如果希望将现有项替换为更新的版本，请选中此复选框。 若要覆盖现有版本，新项和现有项的名称必须完全相同。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [报表管理器（SSRS 本机模式）](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [“内容”页（报表管理器）](../../2014/reporting-services/contents-page-report-manager.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)   
  [将文件上载到文件夹](report-server/upload-files-to-a-folder.md)  
   

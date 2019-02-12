@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc2898fd9bca67b0b6838e685ad0cb7e2739e3c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219467"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029808"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>自定义报表项实现要求
   本主题将讨论开发和部署自定义报表项的先决条件。  

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018249"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>“地图颜色规则”对话框 -&gt;“常规”
   选择 **“颜色规则属性”** 对话框中的 **“常规”** 可以定义此层上地图元素的颜色选项。 地图元素包括多边形、线条和点。 当您创建了基于空间数据的地图元素和来自数据集字段（或来自空间数据源字段）的分析数据之间的关系后，就可以应用颜色规则。  
@@ -44,7 +44,7 @@ ms.locfileid: "48179287"
   
  从下拉列表中选择要使用的分析数据字段。 根据空间数据的来源不同，该列表显示来自空间数据源的字段或具有空间数据和分析数据之间的某一对应关系的报表数据集的字段。 若要创建这样的关系，请在所选地图层的“分析数据”页上设置数据选项。  
   
- **调色板**  
+ **Palette**  
  键入或选择调色板的名称。  
   
  **开始颜色**  
@@ -61,6 +61,6 @@ ms.locfileid: "48179287"
   
 ## <a name="see-also"></a>请参阅  
  [地图（报表生成器和 SSRS）](report-design/maps-report-builder-and-ssrs.md)   
- [更改地图图例、 色阶和关联的规则&#40;报表生成器和 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [更改地图图例、色阶和关联的规则（报表生成器和 SSRS）](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

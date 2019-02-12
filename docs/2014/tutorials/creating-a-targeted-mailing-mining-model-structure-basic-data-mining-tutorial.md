@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030798"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>创建目标邮件挖掘模型结构（数据挖掘基础教程）
   要创建目标邮件方案，第一步是使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的数据挖掘向导创建新的挖掘结构和决策树挖掘模型。  
@@ -103,7 +102,7 @@ ms.locfileid: "48087707"
   
     -   **FirstName**  
   
-    -   **姓氏**  
+    -   **LastName**  
   
      确保这些行仅选择了左侧列中的复选标记。 这些列将添加到结构中，但不会包含在模型中。 但是，模型生成后，它们将可用于钻取和测试。 有关钻取详细信息，请参阅[钻取查询&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   

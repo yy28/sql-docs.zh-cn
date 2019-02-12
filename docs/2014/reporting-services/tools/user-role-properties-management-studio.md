@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149697"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015483"
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
   使用此页，可以查看项级角色定义中所包含的任务， 还可以更改任务列表或修改角色说明。  
@@ -34,7 +34,7 @@ ms.locfileid: "48149697"
  **名称**  
  指定角色定义的名称。  
   
- **Description**  
+ **说明**  
  显示角色定义的说明。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，该说明仅在此页上可见。 在报表管理器中，该说明可帮助用户确定是否在角色分配中使用该角色。  
   
  **任务**  

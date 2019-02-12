@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040198"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>指定数据类型和内容类型（数据挖掘基础教程）
   您已选择了用于生成结构和为模型定型的列，现在可以对向导设置的默认数据类型和内容类型进行任何必要的更改。  
@@ -31,27 +30,27 @@ ms.locfileid: "48176599"
   
     |“列”|内容类型|数据类型|  
     |------------|------------------|---------------|  
-    |**地址行 1**|**离散**|**Text**|  
-    |**地址行 2**|**离散**|**Text**|  
+    |**地址行 1**|**离散**|**文本**|  
+    |**地址行 2**|**离散**|**文本**|  
     |**年龄**|**连续**|**Long**|  
     |**自行车购买者**|**离散**|**Long**|  
-    |**上下班路程**|**离散**|**Text**|  
+    |**上下班路程**|**离散**|**文本**|  
     |**CustomerKey**|**Key**|**Long**|  
     |**DateLastPurchase**|**连续**|**Date**|  
-    |**Email Address**|**离散**|**Text**|  
-    |**英语教育**|**离散**|**Text**|  
-    |**英语职业**|**离散**|**Text**|  
-    |**FirstName**|**离散**|**Text**|  
-    |**性别**|**离散**|**Text**|  
-    |**地域关键字**|**离散**|**Text**|  
-    |**House Owner Flag**|**离散**|**Text**|  
-    |**Last Name**|**离散**|**Text**|  
-    |**婚姻状况**|**离散**|**Text**|  
+    |**Email Address**|**离散**|**文本**|  
+    |**英语教育**|**离散**|**文本**|  
+    |**英语职业**|**离散**|**文本**|  
+    |**FirstName**|**离散**|**文本**|  
+    |**性别**|**离散**|**文本**|  
+    |**地域关键字**|**离散**|**文本**|  
+    |**House Owner Flag**|**离散**|**文本**|  
+    |**Last Name**|**离散**|**文本**|  
+    |**婚姻状况**|**离散**|**文本**|  
     |**Number Cars Owned**|**离散**|**Long**|  
     |**Number Children At Home**|**离散**|**Long**|  
-    |**地区**|**离散**|**Text**|  
+    |**地区**|**离散**|**文本**|  
     |**Total Children**|**离散**|**Long**|  
-    |**Yearly Income**|**连续**|**双精度**|  
+    |**Yearly Income**|**连续**|**Double**|  
   
 3.  单击“下一步” 。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48176599"
  [创建目标的邮件挖掘模型结构&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [内容类型&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [数据类型&#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [内容类型 &#40;数据挖掘&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [数据类型（数据挖掘）](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

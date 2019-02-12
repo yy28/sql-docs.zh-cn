@@ -28,16 +28,16 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502560"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041498"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类 - SqlXmlCommand 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>方法  
  TheSqlXmlCommand 对象支持多个方法，包括以下方法用来执行命令：  
   
- void executenonquery （)  
+ void ExecuteNonQuery()  
  执行该命令，但不返回任何内容。 如果您想要执行非查询命令（即，不返回任何内容的命令），则此方法将很有用。 例如，执行更新记录但不返回任何内容的 updategram 或 DiffGram。  
   
  Stream executestream （)  
@@ -70,10 +70,10 @@ public SqlXmlCommand(string cnString)
   
  TheSqlXmlCommand 对象还支持这些其他方法：  
   
- SqlXmlParameter createparameter （)  
+ SqlXmlParameter CreateParameter()  
  创建一个 SqlXmlParameter 对象。 可以设置的值*名称*并*值*此对象的参数。 如果您希望将参数传递到某一命令，则此方法很有用。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
- void clearparameters （)  
+ void ClearParameters()  
  清除为给定命令对象创建的参数。 如果您想要对同一命令对象执行多个查询，则此方法很有用。  
   
 ## <a name="properties"></a>Properties  

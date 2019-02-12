@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d88725e0392d07784be7b558dc6cd18f03e458d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158357"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038558"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version 属性 (WMI MSReportServer_Instance)
   以格式 Major.Minor.Build.Revision 返回报表服务器的版本。 只读。  
@@ -34,13 +34,13 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>属性值  
- 一个`string`，其中包含报表服务器的版本。  
+ 包含报表服务器的版本的 `string`。  
   
 ## <a name="example-code"></a>示例代码  
  [MSReportServer_ConfigurationSetting 类](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>要求  
- **Namespace**：[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [MSReportServer_Instance 成员](msreportserver-instance-members.md)  

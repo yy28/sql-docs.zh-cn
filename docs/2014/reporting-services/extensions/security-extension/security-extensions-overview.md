@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 468398a30108b79c1a9f48ce42e035f20b9199f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88ba5b5b8336bfde71356c7a5ffe81e7d2689a50
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019568"
 ---
 # <a name="security-extensions-overview"></a>安全扩展插件概述
   利用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全扩展插件，可以对用户或组进行身份验证和授权；这样，不同的用户便可登录至同一台报表服务器，并基于他们的标识执行不同的任务或操作。 默认情况下，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于 Windows 的身份验证扩展插件，该插件使用 Windows 帐户协议来验证声明在系统上拥有帐户的用户的标识。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用基于角色的安全系统为用户授权。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 基于角色的安全模型与其他技术的基于角色的安全模型类似。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354197"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014438"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   共享数据集设计窗口有助于您创建可与他人共享的数据集查询。 通过该窗口，您可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  

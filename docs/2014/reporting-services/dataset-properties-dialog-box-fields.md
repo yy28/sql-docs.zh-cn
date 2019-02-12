@@ -12,14 +12,14 @@ f1_keywords:
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b2300dc39ec07b25fe79586846929de3954b5631
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5ef58bedad50c21b17c6ea5ace674480b58a5c2c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128390"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032899"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>“数据集属性”对话框 -&gt;“字段”
   在 **“数据集属性”** 对话框中选择 **“字段”** 可更改报表数据集的字段集合。 尽管字段列表是自动填充的，但是可以使用 **“字段”** 来添加、编辑和删除查询及计算字段。  

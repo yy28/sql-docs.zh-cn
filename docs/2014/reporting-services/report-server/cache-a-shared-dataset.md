@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 02ccefb30a91b8e57cd393a9a75b42f840b06918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9c4b124ca7d8595962535cded369670430a4adff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026458"
 ---
 # <a name="cache-a-shared-dataset"></a>如何缓存一个共享数据集
   提高性能的一种方法是配置共享数据集的缓存属性。 缓存共享数据集后，会在指定的一段时间内保存查询结果。 第一个向使用该共享数据集的报表发出请求的用户必须等到查询结果和所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户将会体验到性能改进，因为查询和处理已经完成。 还可以指定运行查询的缓存刷新计划，并在指定的缓存过期时间之前一直缓存查询结果。  
@@ -27,7 +27,7 @@ ms.locfileid: "48127957"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>计划缓存报表的过期时间  
   
-1.  启动[报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
+1.  启动 [报表管理器（SSRS 本机模式）](../report-manager-ssrs-native-mode.md)。  
   
 2.  在报表管理器中，导航到要为其设置缓存属性的共享数据集，将鼠标悬停在该项上，然后单击下拉箭头。  
   

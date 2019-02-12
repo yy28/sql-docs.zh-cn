@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029528"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  

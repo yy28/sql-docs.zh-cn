@@ -1,26 +1,23 @@
 ---
-title: 任务 8： 为在 Excel 中的 State 实体添加新值 |Microsoft Docs
+title: 任务 8:为在 Excel 中的 State 实体添加新值 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04fe6fa0a9036ca3835fd4bc0afcb0e35854fd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222149"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032028"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8：在 Excel 中为 State 实体添加新值
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8:在 Excel 中为 State 实体添加新值
   在本任务中，您将在 Excel 中为 State 实体添加值，并且将更改发布到 MDS 服务器。  
   
 1.  添加**工作表**Excel 通过单击底部的新选项卡中。  
@@ -29,11 +26,11 @@ ms.locfileid: "48222149"
   
 2.  在中**Excel**，单击**主数据**菜单上，选项卡，然后单击**显示资源管理器**功能区上。  
   
-3.  在中**主数据资源管理器**，选择**供应商**有关**模型**。 你应看到两个实体：**供应商**并**状态**实体列表中。  
+3.  在中**主数据资源管理器**，选择**供应商**有关**模型**。 您应该在实体列表中看到两个实体：**供应商**并**状态**实体列表中。  
   
 4.  双击**状态**列表中。 所有成员**状态**从 MDS 实体应显示在工作表中。  
   
-5.  现在，使用以下值的结尾处添加一个行：**北卡罗来纳**有关**名称**并**NC**有关**代码**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
+5.  现在，在末尾添加具有以下值的一行：**北卡罗来纳州**有关**名称**并**NC**有关**代码**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
   
      ![Excel-将北卡罗来纳州添加到状态](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-将北卡罗来纳州添加到状态")  
   
@@ -51,11 +48,11 @@ ms.locfileid: "48222149"
   
 10. 请注意，**颜色编码**行的**北卡罗来纳州**作为**状态**现已与其他记录相同。  
   
-11. **可选：** 确认新成员 (NC) 已添加到**状态**使用的实体**资源管理器**中**主数据管理器**。  
+11. **可选：** 验证新成员 (NC) 已添加到**状态**通过使用实体**资源管理器**中**主数据管理器**。  
   
 12. 在 Excel 中，右键单击**状态**工作表的底部，然后单击**删除**以删除该工作表。 删除该工作表不会从 MDS 服务器中删除任何数据。  
   
 ## <a name="next-step"></a>下一步  
- [任务 9：使用主数据管理器创建派生层次结构](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [任务 9:创建派生层次结构使用主数据管理器](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159517"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039678"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）
   若要参数化 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  
@@ -32,7 +32,7 @@ ms.locfileid: "48159517"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>在设计模式下的 MDX 中定义查询参数  
   
-1.  在报表数据窗格中，右键单击从创建的数据集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，，然后单击**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“ **查询**”。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  将维度拖至筛选区域，然后将其放入 **“维度”** 列的第一个单元格中。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159517"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>在查询模式下的 MDX 中定义查询参数  
   
-1.  在报表数据窗格中，右键单击从创建的数据集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据源类型，，然后单击**查询**。 此时将在设计模式下打开 MDX 查询设计器。  
+1.  在“报表数据”窗格中，右键单击从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源类型创建的数据集，然后单击“ **查询**”。 此时将在设计模式下打开 MDX 查询设计器。  
   
 2.  在工具栏上单击 **“设计”** 以切换到查询模式。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48159517"
      若要查看为报表参数提供可用值的数据集，请右键单击“报表数据”窗格中的任意空白区域，然后单击“ **显示隐藏的数据集**”。 此时“报表数据”窗格将显示报表中的所有数据集。  
   
 ## <a name="see-also"></a>请参阅  
- [针对 MDX 的 analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [针对 MDX 的 Analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)  
   
   

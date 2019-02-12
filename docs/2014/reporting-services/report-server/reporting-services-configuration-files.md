@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a752a226a550e867fed5b0ca59143a72df6c7dcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 651f8f2fa263918a59a4756a53f1e86f4679c60e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183287"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025689"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 配置文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将组件信息存储在注册表和配置文件中，其中配置文件会在安装过程中复制到文件系统。 配置文件包含仅供内部使用的值和用户定义的值的组合。 可以通过安装程序、配置工具、命令行实用工具以及手动编辑配置文件的方式来指定用户定义的值。  
@@ -46,7 +46,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
   
 |存储位置：|Description|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|存储报表服务器服务的功能区的配置设置：报表管理器、报表服务器 Web 服务和后台处理。 有关每个设置的详细信息，请参阅[RSReportServer 配置文件](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|存储功能区的报表服务器服务的配置的设置：报表管理器、 报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|存储报表管理器的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportManager|  
 |报表服务器 Web 服务的 Web.config|仅包括 ASP.NET 所需的那些设置。|\<Installation directory> \Reporting Services \ReportServer|  
@@ -67,10 +67,10 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |存储位置：|Description|位置|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|存储报表服务器服务的功能区的配置设置：报表管理器、报表服务器 Web 服务和后台处理。 有关每个设置的详细信息，请参阅[RSReportServer 配置文件](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
+|RSReportServer.config|存储功能区的报表服务器服务的配置的设置：报表管理器、 报表服务器 Web 服务和后台处理。 有关每项设置的详细信息，请参阅 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|存储服务器扩展插件的代码访问安全策略。 有关此文件的详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|\<Installation directory> \Reporting Services \ReportServer|  
 |报表服务器 Web 服务的 Web.config|仅包括 ASP.NET 所需的那些设置。|\<Installation directory> \Reporting Services \ReportServer|  
-|注册表设置|存储用于卸载 Reporting Services 的配置状态和其他设置。 另外还存储每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的信息。<br /><br /> 不要直接修改这些设置，因为此操作会使安装无效。|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 示例实例 ID：MSSQL12.MSSQLSERVER<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
+|注册表设置|存储用于卸载 Reporting Services 的配置状态和其他设置。 另外还存储每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的信息。<br /><br /> 不要直接修改这些设置，因为此操作会使安装无效。|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 示例实例 ID:MSSQL12.MSSQLSERVER<br /><br /> **- 和 -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
 |RSReportDesigner.config|存储报表设计器的配置设置。 有关详细信息，请参阅 [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md)。|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies。|  
   
 ## <a name="see-also"></a>请参阅  

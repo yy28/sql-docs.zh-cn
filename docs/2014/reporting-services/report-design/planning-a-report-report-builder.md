@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017278"
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  
@@ -38,7 +38,7 @@ ms.locfileid: "48202027"
   
 -   **希望读者看到哪些数据？是否应针对不同用户筛选数据或格式？**  
   
-     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)。  
+     您可能希望将报表范围缩小到特定用户或位置，或者缩小到特定时间段。 若要筛选报表数据，请使用参数来检索并只显示所需的数据。 有关详细信息，请参阅 [报表参数（报表生成器和报表设计器）](report-parameters-report-builder-and-report-designer.md)的详细信息。  
   
 -   **是否需要创建自己的计算？**  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48202027"
   
 -   **打算如何传递报表？**  
   
-     您可以将报表保存到本地计算机，并继续在本地使用它或运行它，供自己参考。 但是，若要与其他人共享报表，需要将报表保存到配置为本机模式的报表服务器或 SharePoint 集成模式下的报表服务器。 将报表保存到服务器可允许其他人在需要时运行报表。 另外，报表服务器管理员可以设置对报表的订阅，或者设置通过电子邮件向他人传递报表。 您可以根据需要以特定导出格式传递报表。 有关详细信息，请参阅[查找、 查看和管理报表&#40;报表生成器和 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+     您可以将报表保存到本地计算机，并继续在本地使用它或运行它，供自己参考。 但是，若要与其他人共享报表，需要将报表保存到配置为本机模式的报表服务器或 SharePoint 集成模式下的报表服务器。 将报表保存到服务器可允许其他人在需要时运行报表。 另外，报表服务器管理员可以设置对报表的订阅，或者设置通过电子邮件向他人传递报表。 您可以根据需要以特定导出格式传递报表。 有关详细信息，请参阅 [查找、查看和管理报表（报表生成器和 SSRS）](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 中的报表生成器](../report-builder/report-builder-in-sql-server-2016.md)   
- [报表创作概念&#40;报表生成器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [报表创作概念（报表生成器和 SSRS）](report-authoring-concepts-report-builder-and-ssrs.md)   
  [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)  
   
   

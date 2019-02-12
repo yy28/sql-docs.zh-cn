@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036908"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 课：使用 Suppliers 知识库清理供应商数据
   通过使用在本课程中，清理 Excel 文件中的供应商数据**供应商**第一课中创建的知识库。 DQS 中的数据清理包括**计算机辅助过程**前者分析数据与知识库中知识的相符和一个**交互进程**，可用于查看和修改从在计算机辅助过程的结果。 数据清理功能可以识别数据源中不正确的数据，然后对这些数据进行更正或提出更正建议。 它还通过使用域值、同义词的前导值、域规则、基于字词的关系和参考数据来使客户数据标准化和更加丰富。 您可以通过交互方式批准或拒绝计算机辅助过程建议的更改。 请参阅[数据清理](https://msdn.microsoft.com/library/gg524800.aspx)的更多详细信息。  

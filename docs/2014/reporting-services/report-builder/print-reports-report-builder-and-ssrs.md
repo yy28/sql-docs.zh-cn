@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096686"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031198"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -34,25 +34,25 @@ ms.locfileid: "48096686"
 3.  对于大多数的导出报表，报表打印输出包括报表上的所有可见内容，与用户在计算机监视器上看到的内容没有分别。 而报表设计图面中的空白区域将会保留。 若要以水平方式添加或删除额外的空白页，请更改报表页面宽度。  
   
 > [!NOTE]  
->  如果使用浏览器的“打印”命令，则 HTML 报表打印输出可能仅包含第一页中的内容。 如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端打印功能打印 HTML 报表，效果将更加出色。 有关详细信息，请参阅[从使用打印控件的浏览器中打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。  
+>  如果使用浏览器的“打印”命令，则 HTML 报表打印输出可能仅包含第一页中的内容。 如果使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 客户端打印功能打印 HTML 报表，效果将更加出色。 有关详细信息，请参阅 [使用打印控件从浏览器中打印报表（报表生成器和 SSRS）](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用打印控件的浏览器打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [使用打印控件从浏览器中打印报表（报表生成器和 SSRS）](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  介绍如何使用客户端打印功能通过 Web 浏览器或报表管理器打印报表。  
   
- [从其他应用程序打印报表&#40;报表生成器和 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [从其他应用程序打印报表（报表生成器和 SSRS）](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  介绍如何打印已导出到其他应用程序的报表。  
   
- [打印报表&#40;报表生成器和 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- 提供有关如何打印报表、如何控制页边距以及如何为硬分页呈现器（PDF、图像或打印）将呈现的报表指定纸张大小的分步说明。  
+ [打印报表（报表生成器和 SSRS）](print-a-report-report-builder-and-ssrs.md)  
+ 有关如何打印报表，请提供分步说明如何控制页边距在页上，以及如何指定将通过硬分页呈现器呈现的报表的纸张大小：PDF、 图像或打印。  
   
 ## <a name="see-also"></a>请参阅  
  [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [页眉和页脚&#40;报表生成器和 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [映像&#40;报表生成器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [页眉和页脚（报表生成器和 SSRS）](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [图像（报表生成器和 SSRS）](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

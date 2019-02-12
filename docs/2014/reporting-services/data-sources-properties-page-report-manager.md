@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031979"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>“数据源”属性页（报表管理器）
   使用“数据源”属性页可以定义当前报表连接到外部数据源的方式。 您可以覆盖原先与报表一起发布的数据源连接信息。 如果一个报表有多个数据源，则每个数据源在属性页中都有其自己的特定区域。 数据源按照在报表中定义的顺序列出。  
@@ -67,17 +67,17 @@ ms.locfileid: "48192137"
  **运行该报表的用户提供的凭据**  
  每一名用户都必须键入用户名和密码以访问数据源。 可以定义请求用户凭据的提示文本。 默认的文本字符串为“输入用户名和密码以访问数据源”。  
   
- 如果用户提供的凭据为 Windows 身份验证凭据，请选择“在与数据源建立连接时用作 Windows 凭据”  。 如果使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
+ 如果用户提供的凭据为 Windows 身份验证凭据，请选择“在与数据源建立连接时用作 Windows 凭据”  。 如果使用数据库身份验证（例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证），请不要选中此复选框。  
   
  **在报表服务器中安全地存储凭据**  
  在报表服务器数据库中存储加密的用户名和密码。 选择此选项可在无人参与的模式下运行报表（例如，通过计划或事件而不是用户操作来启动报表）。 如果使用默认安全性，则用户名必须为 Windows 域帐户。 按以下格式指定帐户：\<域 >\\< 用户名\>。 指定的帐户对于用来承载报表所用数据源的计算机必须具有本地登录权限。  
   
- 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果使用数据库身份验证不选择此复选框 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证)。  
+ 如果凭据为 Windows 身份验证凭据，请选中 **“在与数据源建立连接时用作 Windows 凭据”** 。 如果使用数据库身份验证（例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证），请不要选中此复选框。  
   
- 选中 **“与数据源建立连接之后模拟经过身份验证的用户”** 可允许委托凭据，但是只有当数据源支持模拟时才能这样做。 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库，此选项将设置 SETUSER 函数。  
+ 选中 **“与数据源建立连接之后模拟经过身份验证的用户”** 可允许委托凭据，但是只有当数据源支持模拟时才能这样做。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库，此选项将设置 SETUSER 函数。  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]仅支持 Windows 帐户凭据。 因此选择选项"用作 Windows 凭据连接到数据源时"和"经过身份验证之后模拟的用户具有与数据源建立连接"的同时[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]仅支持 Windows 帐户凭据。 因此，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源选中“在与数据源建立连接时用作 Windows 凭据”和“与数据源建立连接之后模拟经过身份验证的用户”。  
   
  **Windows 集成的安全性**  
  使用当前用户的 Windows 凭据来访问数据源。 如果用于访问数据源的凭据与用于登录到网络域的凭据相同，请选择此选项。 如果您的域启用了 Kerberos 身份验证或者数据源与报表服务器位于同一台计算机上，则此选项最为有效。 如果未启用 Kerberos，则 Windows 凭据可能会传递到其他计算机上。 如果需要其他计算机连接，您将得到错误提示而不是所需的数据。  

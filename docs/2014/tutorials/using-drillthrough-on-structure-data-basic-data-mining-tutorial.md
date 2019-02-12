@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012758"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>对结构数据使用钻取（数据挖掘基础教程）
-  作为其广告活动，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]发送邮寄给潜在的客户在 34 至 40 时代人口统计。 市场部已决定，他们还想要将电子邮件发送到客户购买自行车从[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]五年以上。 在本课中，您将标识拥有旧自行车的客户并检索其联系信息。 模型中不包括此信息，但结构中包括此信息。 若要检索联系信息，您需要首先确保已对结构启用了钻取，然后使用钻取来显示目标客户的姓名和地址。  
+  作为其广告活动，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]发送邮寄给潜在的客户在 34 至 40 时代人口统计。 市场部已决定还要向五年多以前从 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 购买自行车的客户发送电子邮件。 在本课中，您将标识拥有旧自行车的客户并检索其联系信息。 模型中不包括此信息，但结构中包括此信息。 若要检索联系信息，您需要首先确保已对结构启用了钻取，然后使用钻取来显示目标客户的姓名和地址。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>对挖掘模型启用钻取  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053034"
  恭喜您！您已经完成了数据挖掘基础教程。 既然您已经熟练掌握了数据挖掘工具，我们建议您同时完成数据挖掘中级教程，中级教程将演示如何创建用于预测、市场篮分析以及顺序分析和聚类分析的模型。  
   
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
- [创建预测&#40;数据挖掘基础教程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [创建预测（数据挖掘基础教程）](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
  [使用预测查询生成器创建预测查询](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

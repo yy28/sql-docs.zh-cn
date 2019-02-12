@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 14eb29f4e5390a92118ddb97bab908d8c6c1a1d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169194"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038128"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>创建递归层次结构组（报表生成器和 SSRS）
   若要显示递归数据，其中由数据集中的字段表示父级和子级之间的关系，可以设置数据区域组表达式根据子字段并设置基于父字段的父属性。  
@@ -34,12 +34,12 @@ ms.locfileid: "48169194"
  有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)和[创建递归层次结构组（报表生成器和 SSRS）](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)。  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>支持递归的聚合函数  
- 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 以下函数接受`Recursive`作为参数：[总和](report-builder-functions-sum-function.md)， [Avg](report-builder-functions-avg-function.md)，[计数](report-builder-functions-count-function.md)， [CountDistinct](report-builder-functions-countdistinct-function.md)， [CountRows](report-builder-functions-countrows-function.md)，[最大](report-builder-functions-max-function.md)， [Min](report-builder-functions-min-function.md)， [StDev](report-builder-functions-stdev-function.md)， [StDevP](report-builder-functions-stdevp-function.md)，[总和](report-builder-functions-sum-function.md)，[Var](report-builder-functions-var-function.md)，并[VarP](report-builder-functions-varp-function.md)。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
+ 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 以下函数接受`Recursive`作为参数：[总和](report-builder-functions-sum-function.md)， [Avg](report-builder-functions-avg-function.md)，[计数](report-builder-functions-count-function.md)， [CountDistinct](report-builder-functions-countdistinct-function.md)， [CountRows](report-builder-functions-countrows-function.md)， [Max](report-builder-functions-max-function.md)， [Min](report-builder-functions-min-function.md)， [StDev](report-builder-functions-stdev-function.md)， [StDevP](report-builder-functions-stdevp-function.md)， [Sum](report-builder-functions-sum-function.md)， [Var](report-builder-functions-var-function.md)，和[VarP](report-builder-functions-varp-function.md). 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)   
- [聚合函数参考&#40;报表生成器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)   
  [表（报表生成器和 SSRS）](tables-report-builder-and-ssrs.md)   
  [矩阵（报表生成器和 SSRS）](create-a-matrix-report-builder-and-ssrs.md)   
  [列表（报表生成器和 SSRS）](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

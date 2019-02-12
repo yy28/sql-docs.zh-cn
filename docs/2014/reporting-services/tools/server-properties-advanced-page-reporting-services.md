@@ -1,7 +1,7 @@
 ---
 title: 服务器属性（“高级”页）- Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119866"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041578"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
   使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。  

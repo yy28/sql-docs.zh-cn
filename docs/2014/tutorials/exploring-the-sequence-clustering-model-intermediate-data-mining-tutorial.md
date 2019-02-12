@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: kfile
+ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590181"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024990"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>浏览顺序分析和聚类分析模型（数据挖掘中级教程）
   现在，您构建**Sequence Clustering with Region**模型，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析查看器**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]序列分类查看器包含五个选项卡：**分类关系图**，**分类剖面图**，**分类特征**， **ClusterDiscrimination**，和**的状态转换**. 有关如何使用此查看器的详细信息，请参阅[使用 Microsoft 序列分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  

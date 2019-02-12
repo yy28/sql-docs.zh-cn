@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b59f544894677c75f923c2dd6185c229495e42ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e0fe323460431750a6c79e181bda9e0173a31025
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372779"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040838"
 ---
 # <a name="schedules"></a>“计划”
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享计划和报表特定计划，可帮助您控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  

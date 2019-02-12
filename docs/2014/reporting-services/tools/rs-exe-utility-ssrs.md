@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505644"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023118"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  
@@ -71,10 +71,10 @@ ms.locfileid: "52505644"
  `-s` *serverURL*  
  （必需）指定执行文件的 Web 服务器的名称和报表服务器的虚拟目录名。 以下是报表服务器 URL 的一个示例： `http://examplewebserver/reportserver`。 服务器名称开头处的前缀 http:// 或 https:// 是可选的。 如果省略前缀，报表服务器脚本主机将先尝试使用 https，并在 https 无效时使用 http。  
   
- `-u` [*域*\\]*用户名*  
+ `-u` [*domain*\\]*username*  
  （可选）指定用于连接到报表服务器的用户帐户。 如果省略 `-u` 和 `-p`，则使用当前的 Windows 用户帐户。  
   
- `-p` *密码*  
+ `-p` *password*  
  （指定了 `-u` 时为必需）指定与 `-u` 参数一起使用的密码。 此值区分大小写。  
   
  `-e`  

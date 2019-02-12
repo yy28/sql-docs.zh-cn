@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031638"
 ---
 # <a name="images-report-builder-and-ssrs"></a>图像（报表生成器和 SSRS）
   图像是一种报表项，包含对嵌入在报表中、存储在数据库中、存储在报表服务器上或存储在 Web 上其他位置的图像的引用。 图像可以是数据行重复使用的图片。 您还可以将图像用作某些报表项的背景。  
@@ -45,7 +45,7 @@ ms.locfileid: "48227137"
 ##  <a name="EmbedImages"></a> 嵌入图像  
  您可以将图像嵌入报表，使所有的图像数据都存储在报表定义中。 嵌入图像时，将对该图像进行 MIME 编码，然后以文本形式将其存储到报表定义中。 使用嵌入图像可确保图像始终对报表可用，但它也会增大报表定义的大小。  
   
- 有关嵌入图像的详细信息，请参阅[在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)。  
+ 有关嵌入图像的详细信息，请参阅 [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)。  
   
 
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227137"
   
  当报表在报表生成器或报表设计器中运行时，预览将使用用户的凭据来显示图像。 当报表在报表服务器上运行时，如果服务器凭据没有足够权限来访问图像，则报表中的图像可能无法显示。 在此种情况下，请与系统管理员联系。  
   
- 有关向报表添加外部图像的详细信息，请参阅[添加外部图像&#40;报表生成器和 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)。  
+ 有关向报表添加外部图像的详细信息，请参阅 [添加外部图像（报表生成器和 SSRS）](add-an-external-image-report-builder-and-ssrs.md)。  
   
  
   
@@ -66,28 +66,28 @@ ms.locfileid: "48227137"
 > [!NOTE]  
 >  某些呈现扩展插件（例如 HTML 呈现扩展插件）可以在表体、页眉和页脚中呈现表体的背景图像。 可以为页眉和页脚单独定义背景图像，但如果没有定义图像，则报表将使用表体的背景图像。 其他呈现扩展插件（例如图像呈现扩展插件）不能在页眉和页脚中呈现表体的背景图像。  
   
- 有关添加背景图像的详细信息，请参阅[添加背景图像&#40;报表生成器和 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)。  
+ 有关添加背景图像的详细信息，请参阅 [添加背景图像（报表生成器和 SSRS）](add-a-background-image-report-builder-and-ssrs.md)。  
   
  
   
 ##  <a name="DataboundImages"></a> 数据绑定图像  
- 您可以向报表中添加存储于数据库中的图像。 您使用的图像报表项与静态图像所用的相同，但还需要使用一组指示该图像存储在数据库中的属性。 若要查看有关使用数据绑定图像的说明，请参阅[添加数据绑定图像&#40;报表生成器和 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)。  
+ 您可以向报表中添加存储于数据库中的图像。 您使用的图像报表项与静态图像所用的相同，但还需要使用一组指示该图像存储在数据库中的属性。 若要查看有关使用数据绑定图像的说明，请参阅 [添加数据绑定图像（报表生成器和 SSRS）](add-a-data-bound-image-report-builder-and-ssrs.md)。  
   
 
   
 ##  <a name="HowTo"></a> 操作指南主题  
- [添加外部图像&#40;报表生成器和 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [添加外部图像（报表生成器和 SSRS）](add-an-external-image-report-builder-and-ssrs.md)  
   
- [在报表中嵌入图像&#40;报表生成器和 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [在报表中嵌入图像（报表生成器和 SSRS）](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [添加背景图像&#40;报表生成器和 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [添加背景图像（报表生成器和 SSRS）](add-a-background-image-report-builder-and-ssrs.md)  
   
- [添加数据绑定图像&#40;报表生成器和 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [添加数据绑定图像（报表生成器和 SSRS）](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>请参阅  
- [导出到图像文件&#40;报表生成器和 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [导出到图像文件（报表生成器和 SSRS）](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

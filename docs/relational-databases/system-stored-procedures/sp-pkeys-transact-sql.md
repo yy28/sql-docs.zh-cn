@@ -3,7 +3,6 @@ title: sp_pkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da9b788e69decf1c209eec846fbeccc811e70374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 759d666f725eb6ebad49b3dffe2cd93bf9469eb0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589761"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022928"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,15 +43,15 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name=] '*名称*  
+ [ @table_name= ] '*name*'  
  是要为其返回信息的表。 *名称*是**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [ @table_owner=] '*所有者*  
+ [ @table_owner= ] '*owner*'  
  为指定的表指定所有者。 *所有者*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在，则返回该表的列。  
   
- [ @table_qualifier=] '*限定符*  
+ [ @table_qualifier= ] '*qualifier*'  
  表限定符。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -12,14 +12,14 @@ f1_keywords:
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032348"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>“数据源属性”对话框 ->“凭据”
   在 **“数据源属性”** 对话框中选择 **“凭据”** ，可以显示和修改凭据以便连接到报表中的数据源。 您所提供的凭据用于访问数据源和缓存数据副本以便进行报表预览。 有关如何缓存预览数据的详细信息，请参阅 [预览报表](reports/previewing-reports.md)。 有关凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

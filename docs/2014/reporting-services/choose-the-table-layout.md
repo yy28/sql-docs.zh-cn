@@ -11,23 +11,23 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7bdf0dfcaefa63b611a86a6bb5a10d58045c6602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 167abcad8787ff3bdd0591696dbd6b365037d174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020788"
 ---
 # <a name="choose-the-table-layout"></a>选择表布局
   使用报表向导的此页可以选择报表中表的布局。  
   
 ## <a name="options"></a>选项  
- **单步执行**  
+ **Stepped**  
  创建报表，其中每一列对应一个字段，组字段显示在详细信息字段列左侧的组头中。 此类型的表没有组尾。  
   
- **块**  
+ **Block**  
  创建报表，其中每一列对应一个字段，组字段显示在每个组的第一个详细信息行中。 只有在选中 **“包括小计”** 时，此类型的表才会包含组尾。  
   
  **包括小计**  

@@ -11,14 +11,14 @@ f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f6ab67682afc00057085fe3d0f793c51a28258d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025808"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>“列可见性”对话框（报表生成器）
   在报表首次运行时使用 **“列可见性”** 对话框来显示或隐藏选中的列，其他时候可通过此对话框使用另一报表项来切换该列的可见性。  
@@ -36,7 +36,7 @@ ms.locfileid: "48057752"
  **显示或隐藏基于表达式**  
  选择此选项可以使初始可见性根据表达式相应变化。  
   
- 键入一个表达式的计算结果为`Boolean`的值`True`可以隐藏项和`False`表示显示该项。 单击“表达式”(*fx*) 按钮可编辑表达式。  
+ 键入计算结果为 `Boolean` 值的表达式，值为 `True` 时表示隐藏该项，值为 `False` 时表示显示该项。 单击“表达式”(*fx*) 按钮可编辑表达式。  
   
  **可以通过此报表项切换显示**  
  选择此选项可以显示一个切换图像，用户可以使用该图像在 HTML 报表查看器中显示或隐藏此列。  
@@ -46,7 +46,7 @@ ms.locfileid: "48057752"
 ## <a name="see-also"></a>请参阅  
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
  [为项添加展开或折叠操作（报表生成器和 SSRS）](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [映像&#40;报表生成器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [图像（报表生成器和 SSRS）](report-design/images-report-builder-and-ssrs.md)   
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [“图像属性”对话框 ->“常规”（报表生成器和 SSRS）](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

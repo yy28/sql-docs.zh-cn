@@ -3,6 +3,7 @@ title: 以编程方式更改密码 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010625"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675036"
   
 |SQL Server 错误代码|错误消息|  
 |---------------------------|-------------------|  
-|15113|用户 '%.*ls' 登录失败。原因: 密码验证失败。 帐户已锁定。|  
-|18463|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 此时无法使用密码。|  
-|18464|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码太短，不符合策略要求。|  
-|18465|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 密码太长，不符合策略要求。|  
-|18466|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码不够复杂，不符合策略要求。|  
-|18467|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 该密码不符合密码筛选器 DLL 的要求。|  
-|18468|用户 "%.*ls" 登录失败。 原因: 密码更改失败。 在密码验证过程中出错。|  
-|18487|用户 "%.*ls" 登录失败。 原因: 该帐户的密码已过期。|  
-|18488|用户 "%.*ls" 登录失败。 原因: 该帐户的密码必须更改。|  
+|15113|用户登录失败 %.* ls' 的原因：密码有效性验证失败。 帐户已锁定。|  
+|18463|用户 "%.*ls" 登录失败。 原因:密码更改失败。 此时无法使用密码。|  
+|18464|用户 "%.*ls" 登录失败。 原因:密码更改失败。 该密码太短，不符合策略要求。|  
+|18465|用户 "%.*ls" 登录失败。 原因:密码更改失败。 密码太长，不符合策略要求。|  
+|18466|用户 "%.*ls" 登录失败。 原因:密码更改失败。 该密码不够复杂，不符合策略要求。|  
+|18467|用户 "%.*ls" 登录失败。 原因:密码更改失败。 该密码不符合密码筛选器 DLL 的要求。|  
+|18468|用户 "%.*ls" 登录失败。 原因:密码更改失败。 在密码验证过程中出错。|  
+|18487|用户 "%.*ls" 登录失败。 原因:帐户的密码已过期。|  
+|18488|用户 "%.*ls" 登录失败。 原因:必须更改帐户的密码。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持密码过期，但用户界面和以编程方式。  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012459"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>删除和重新创建加密密钥（SSRS 配置管理器）
   删除和重新创建加密密钥不属于加密密钥例行维护活动。 您可以为了响应对报表服务器的特定威胁来执行这些任务，或者当无法访问报表服务器数据库时作为最后一种解决手段来执行这些任务。  
@@ -41,7 +41,7 @@ ms.locfileid: "48111010"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新创建加密密钥（Reporting Services 配置工具）  
   
-1.  禁用报表服务器 Web 服务和 HTTP 访问通过修改`IsWebServiceEnabled`rsreportserver.config 文件中的属性。 此步骤可暂时停止将身份验证请求发送到报表服务器而不会完全关闭服务器。 您必须具有最低限度的服务，以便可以重新创建密钥。  
+1.  通过修改 rsreportserver.config 文件中的 `IsWebServiceEnabled` 属性禁用报表服务器 Web 服务和 HTTP 访问。 此步骤可暂时停止将身份验证请求发送到报表服务器而不会完全关闭服务器。 您必须具有最低限度的服务，以便可以重新创建密钥。  
   
      如果要为报表服务器扩展部署重新创建加密密钥，请对该部署中的所有实例禁用此属性。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111010"
   
     2.  打开 rsreportserver.config 文件。  
   
-    3.  有关`IsWebServiceEnabled`属性，指定`False`，然后保存所做的更改。  
+    3.  对于 `IsWebServiceEnabled` 属性，指定为 `False`，然后保存所做的更改。  
   
 2.  启动 Reporting Services 配置工具，再连接到要配置的报表服务器实例。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111010"
   
 4.  重新启动报表服务器 Windows 服务。 如果要为扩展部署重新创建加密密钥，请在所有实例上重新启动该服务。  
   
-5.  重新启用 Web 服务和 HTTP 访问通过修改`IsWebServiceEnabled`rsreportserver.config 文件中的属性。 如果使用的是扩展部署，请对所有实例执行此操作。  
+5.  通过修改 rsreportserver.config 文件中的 `IsWebServiceEnabled` 属性，重新启用 Web 服务和 HTTP 访问。 如果使用的是扩展部署，请对所有实例执行此操作。  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>如何重新创建加密密钥 (rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111010"
   
 1.  对于每个共享数据源，必须重新键入连接字符串。  
   
-2.  对于每个使用存储的凭据的报表和共享数据源，必须重新键入用户名和密码，然后再保存。 有关详细信息，请参阅[指定凭据和报表数据源的连接信息](../../integration-services/connection-manager/data-sources.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
+2.  对于每个使用存储的凭据的报表和共享数据源，必须重新键入用户名和密码，然后再保存。 有关详细信息，请参阅 [“联机丛书”中的](../../integration-services/connection-manager/data-sources.md) 指定报表数据源的凭据和连接信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 3.  对于每个数据驱动订阅，打开每个订阅，再重新键入订阅数据库的凭据。  
   
 4.  对于使用加密数据的订阅（其中包括文件共享传递扩展插件和使用加密的任何第三方传递扩展插件），打开每个订阅，再重新键入凭据。 使用报表服务器电子邮件传递的订阅不使用加密数据，因而不受密钥更改的影响。  
   
 ## <a name="see-also"></a>请参阅  
- [配置和管理加密密钥&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [存储加密的报表服务器数据&#40;SSRS 配置管理器&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [配置和管理加密密钥（SSRS 配置管理器）](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

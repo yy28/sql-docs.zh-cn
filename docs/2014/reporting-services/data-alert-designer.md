@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518006"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018069"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
   使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  

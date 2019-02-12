@@ -3,9 +3,8 @@ title: sys.pdw_database_mappings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 33ee909d2127717d7fa061897f12879c3a79bd08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a07d8074c4d7de7ebe9fea214f4d00ea25d3a3e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833385"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012929"
 ---
-# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact SQL)
+# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   地图**database_id**的数据库的物理名称到计算节点上使用，并提供了**主体 id**的系统上的数据库所有者。 加入**sys.pdw_database_mappings**到**sys.databases**并**sys.pdw_nodes_pdw_physical_databases**。  
@@ -46,9 +45,9 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
   
 ## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_nodes_pdw_physical_databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+ [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys.pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

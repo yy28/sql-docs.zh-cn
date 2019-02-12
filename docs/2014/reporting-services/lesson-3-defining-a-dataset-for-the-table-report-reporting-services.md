@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528216"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009669"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：定义数据集为表报表 (Reporting Services)
   定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
@@ -74,6 +74,6 @@ ms.locfileid: "52528216"
 ## <a name="see-also"></a>请参阅  
  [查询设计工具在报表设计器的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server 连接类型 (SSRS)](report-data/sql-server-connection-type-ssrs.md)   
- [教程：编写 TRANSACT-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教程：编写 Transact-SQL 语句](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

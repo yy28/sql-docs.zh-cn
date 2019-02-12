@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5688cd5beccc582ef5c3413b19938104f659680a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130657"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034708"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>向报表添加边框（报表生成器和 SSRS）
   通过向表头、表尾和表体本身添加边框（而不是添加线条或矩形），可以为报表添加边框。  
@@ -38,6 +38,6 @@ ms.locfileid: "48130657"
 3.  右键单击页脚中任何项的外部，然后单击“页脚属性”。 在 **“边框”** 选项卡上，添加所需样式的左边框、下边框和右边框。  
   
 ## <a name="see-also"></a>请参阅  
- [矩形和线条&#40;报表生成器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

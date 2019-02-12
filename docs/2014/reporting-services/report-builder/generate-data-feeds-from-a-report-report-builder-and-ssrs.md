@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 876fba07af1e7f82c38d4142914c1aded10117e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017028"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
-  您可以从报表，生成与 Atom 兼容的数据馈送，然后使用在应用程序中，数据馈送，如[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]客户端，可以使用数据源。  
+  您可以从报表生成与 Atom 兼容的数据馈送，然后在可利用数据馈送的应用程序（例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）中使用数据馈送。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送。 该文档为报表中的每个数据区域至少列出一个数据馈送。 根据数据区域的类型以及数据区域显示的数据， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以自数据区域生成多个数据馈送。  
   
  Atom 服务文档为每个数据馈送包含一个唯一标识符，在 URL 中使用该标识符可以查看数据馈送的内容。  
   
- 有关详细信息，请参阅[基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)中处理数据。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

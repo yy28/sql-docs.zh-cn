@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358819"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025858"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  
@@ -194,7 +194,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的组件  
   
--   演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件  
+-   演练：Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features（创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件）  
   
 ## <a name="see-also"></a>请参阅  
  [自定义报表项体系结构](custom-report-item-architecture.md)   

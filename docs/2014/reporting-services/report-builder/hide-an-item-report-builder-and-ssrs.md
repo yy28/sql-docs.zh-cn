@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196397"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025488"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
   如果希望基于报表参数或指定的某个其他表达式来有条件地隐藏项，则可以设置报表项的可见性。  
   
- 还可以设计报表（如明细报表），使用户通过单击报表中的文本框即可切换报表项的可见性。 有关详细信息，请参阅[为项添加展开或折叠操作（报表生成器和 SSRS）](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 还可以设计报表（如明细报表），使用户通过单击报表中的文本框即可切换报表项的可见性。 有关详细信息，请参阅 [为项添加展开或折叠操作（报表生成器和 SSRS）](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
  下面的过程介绍了如何基于常量或表达式，显示或隐藏呈现报表中的报表项。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48196397"
 3.  在 **“列可见性”** 对话框中，执行第一个过程中的步骤 3 和 4。  
   
 ## <a name="see-also"></a>请参阅  
- [向下钻取操作&#40;报表生成器和 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [深化操作（报表生成器和 SSRS）](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [为项添加展开或折叠操作（报表生成器和 SSRS）](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

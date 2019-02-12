@@ -12,26 +12,26 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9c52690de427ad741a340b5696b246694326ece1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171157"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037708"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>“占位符属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   使用 **“占位符属性”** 对话框可以更改文本框中占位符的值、工具提示以及标记选项。  
   
 ## <a name="options"></a>选项  
- **Label**  
+ **标签**  
  键入占位符的标签。 该标签仅显示在设计图面中。  
   
  **ReplTest1**  
  键入文本框的值。 该值应为字段表达式、其他表达式或标签。 单击“表达式” (*fx*) 按钮可编辑表达式。  
   
- **工具提示**  
+ **Tooltip**  
  键入文本或计算结果为工具提示的表达式。 单击“表达式” (*fx*) 按钮可编辑表达式。 当用户将鼠标指针停在呈现报表中该项的上方时，便会显示此工具提示。  
   
  **标记类型**  
@@ -45,9 +45,9 @@ ms.locfileid: "48171157"
  [设置文本框中文本的格式（报表生成器和 SSRS）](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [向报表添加 HTML（报表生成器和 SSRS）](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](report-design/expression-examples-report-builder-and-ssrs.md)   
- [文本框中&#40;报表生成器和 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [文本框（报表生成器和 SSRS）](report-design/text-boxes-report-builder-and-ssrs.md)   
  [设置报表项的格式（报表生成器和 SSRS）](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [设置文本和占位符的格式&#40;报表生成器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [将 HTML 报表导入&#40;报表生成器和 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [设置文本和占位符的格式（报表生成器和 SSRS）](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [将 HTML 导入报表（报表生成器和 SSRS）](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041041e33647ebe5f49b61295f667ee78b7c1950
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36577210d6279b859cd88423b436567951aef1b3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220507"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035357"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  
@@ -38,7 +38,7 @@ ms.locfileid: "48220507"
  本节介绍每种模式的图形查询设计器中的工具栏按钮和查询设计器窗格。  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>设计模式下的图形查询设计器  
- 编辑使用的数据集的 MDX 查询时[!INCLUDE[extEssbase](../../../includes/extessbase-md.md)]数据源，在设计模式下打开图形查询设计器。  
+ 为使用 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 数据源的数据集编辑 MDX 查询时，图形查询设计器将在设计模式下打开。  
   
  下图列出了设计模式的窗格。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48220507"
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![刷新数据集字段](../media/rsqdicon-refreshfields.gif "Refresh dataset fields")|刷新数据源的元数据。|  
-|![添加计算的成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|显示 **“计算成员生成器”** 对话框。 使用此按钮可以创建或编辑计算成员表达式，其中包括设置 **“求解次序”** 属性。|  
 |![切换显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|自动运行查询并在每次更改（如在“数据”窗格中删除一列）之后显示结果。 结果将显示在“数据”窗格中。|  
 |![删除](../../analysis-services/media/rsqdicon-delete.gif "删除")|从查询中删除选定项。 使用此按钮可以删除“筛选器”窗格中的选定行。|  
@@ -95,7 +95,7 @@ ms.locfileid: "48220507"
   
 -   **编辑为文本**  
   
--   **添加计算成员**(![添加计算的成员](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "添加计算的成员"))  
+-   **添加计算成员** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **显示空单元格**（![切换显示空单元格](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")）  
   

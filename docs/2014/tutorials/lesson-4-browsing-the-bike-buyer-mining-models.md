@@ -1,25 +1,24 @@
 ---
-title: 第 4 课： 浏览自行车购买者挖掘模型 |Microsoft Docs
+title: 第 4 课：浏览自行车购买者挖掘模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147342"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011526"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 课：浏览自行车购买者挖掘模型
-  在本课程中，您将使用[SELECT (DMX)](/sql/dmx/select-dmx)语句浏览决策树和聚类分析挖掘中的内容模型中创建的[第 2 课： 添加挖掘模型预测的挖掘结构](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  在本课程中，您将使用[SELECT (DMX)](/sql/dmx/select-dmx)语句浏览决策树和聚类分析挖掘中的内容模型中创建的[第 2 课：向预测性挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
   
  挖掘模型中包含的列不是由挖掘结构定义的列，而是用于说明通过算法获得的趋势和模式的特定列集。 描述了这些挖掘模型列[DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)架构行集。 例如，内容架构行集中的 MODEL_NAME 列包含挖掘模型的名称。 对于聚类分析挖掘模型，NODE_CAPTION 列包含每个分类的名称，NODE_DESCRIPTION 列包含每个分类的特征说明。 您可以通过使用 SELECT FROM 浏览这些列\<模型 >。在 DMX 中的内容语句。 也可以使用该语句浏览用于创建挖掘模型的数据。 为了使用该语句，必须对挖掘结构启用钻取功能。 有关语句的详细信息，请参阅[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)。  
   

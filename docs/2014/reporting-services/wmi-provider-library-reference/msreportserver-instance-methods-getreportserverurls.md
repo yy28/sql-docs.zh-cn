@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013998"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls 方法 (WMI MSReportServer_Instance)
   返回可用于访问报表服务器和报表管理器的 URL 列表。  
@@ -37,7 +37,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>Parameters  
  *ApplicationName[]*  
- 一个包含安装的应用程序的数组。 值为`ReportServerWebService`或`ReportManager`。  
+ 一个包含安装的应用程序的数组。 值为 `ReportServerWebService` 或 `ReportManager`。  
   
  *URLs[]*  
  一个包含已成功注册的 URL 的数组。  
@@ -54,7 +54,7 @@ public void GetReportServerUrls(out string[] applicationName,
  可通过 InvokeMethod 函数调用由 WMI 管理对象公开的方法。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI 文档中的“Executing Methods on Management Objects”（对管理对象执行方法）。  
   
 ## <a name="requirements"></a>要求  
- **Namespace**：[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **命名空间:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>请参阅  
  [MSReportServer_ConfigurationSetting 成员](msreportserver-configurationsetting-members.md)  

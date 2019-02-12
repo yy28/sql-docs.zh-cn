@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7deac283e848ec932b266ac77cf4f5575da5d38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bec5c1b3d2df5c6a721179de5848fd90c08fdd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057837"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018019"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>使用 SOAP 集成 Reporting Services
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API 提供了多个 Web 服务端点，用于开发自定义报表解决方案。 这些端点目前分为两个类别：管理和执行。 管理功能通过 <xref:ReportService2005>、<xref:ReportService2006> 和 <xref:ReportService2010> 端点公开。 <xref:ReportService2005> 端点用于管理配置为本机模式的报表服务器，而 <xref:ReportService2006> 端点用于管理配置为 SharePoint 集成模式的报表服务器。 <xref:ReportService2010> 合并了 <xref:ReportService2005> 和 <xref:ReportService2006> 的功能，可以管理配置为本机模式或 SharePoint 集成模式的报表服务器。  

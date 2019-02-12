@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a3cf7c5fd54d1742c862dacb4e207ea5a618b896
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb3d7e60db2e5827c61ff2c80dbaf674262621f7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363739"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030238"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>迁移 Reporting Services 安装（SharePoint 模式）
   此主题概述将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署从一个 SharePoint 环境迁移到另一环境所需的步骤。 具体步骤可能会根据您正在从其迁移的版本而有所不同。 有关 SharePoint 模式的升级和迁移方案的详细信息，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。 如果只想要将报表项从一台服务器复制到另一个，请参阅[用于在报表服务器之间迁移内容的示例 Reporting Services rs.exe 脚本](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "53363739"
  新 SharePoint 环境运行后，可以在包括内容数据库的数据库级别选择仅内容迁移或完全迁移。  
   
 ###  <a name="bkmk_content_only_migration"></a> 仅限迁移的内容  
- **Reporting Services 仅内容迁移：** 如果你想要复制[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]内容的新场，则需要使用工具例如**rs.exe**将内容复制到新的 SharePoint 安装。 有关仅内容迁移的详细信息，请参阅以下内容：  
+ **仅迁移 Reporting Services 内容：** 若要将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 内容复制到新场，则需要使用相关工具（如 rs.exe）将内容复制到新的 SharePoint 安装。 有关仅内容迁移的详细信息，请参阅以下内容：  
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 脚本：** 这些脚本可以在本机模式与 SharePoint 模式报表服务器之间迁移内容和资源。 有关详细信息，请参阅[将脚本保存到报表服务器之间迁移内容的示例 Reporting Services rs.exe](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)和[将内容从一个报表服务器迁移到另一个的ReportingServicesRS.exe脚本](http://azuresql.codeplex.com/releases/view/115207).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "53363739"
 |-|-------------|------------|-----------|  
 |**1**|将 SharePoint 内容数据库还原到新的场。|SharePoint“数据库附加升级”方法。|基本步骤：<br /><br /> 1) 在新的服务器上还原数据库。<br /><br /> 2) 通过指示 URL 将内容数据库附加到 Web 应用程序。<br /><br /> 3) Get-SPWebapplication 将列出所有 Web 应用程序和 URL。<br /><br /> 请参阅[确定升级方法 (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) 和[附加数据库并升级到 SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx) 中的“数据库附加升级”部分。|  
 |**2**|还原作为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目录数据库 (ReportServer) 的 SQL 数据库。|SQL Database 库备份和还原。<br /><br /> **或**<br /><br /> SQL Server 数据库分离和附加。|首次使用数据库时， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将根据需要更新数据库架构，以便数据库可用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 环境。|  
-|**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|SharePoint 管理中心。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 使用 SharePoint 管理中心的详细信息，请参阅"步骤 3:中的创建 Reporting Services 服务应用程序"部分[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
+|**3**|创建新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序。|SharePoint 管理中心。|在您创建新的服务应用程序时，将其配置为使用您复制到的报表服务器数据库。<br /><br /> 有关使用 SharePoint 管理中心的详细信息，请参阅中的创建 Reporting Services 服务应用程序"部分[安装 Reporting Services SharePoint 模式适用于 SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。<br /><br /> 有关使用 PowerShell 的示例，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)中的“使用 PowerShell 创建 Reporting Services 服务应用程序”一节。|  
 |**4**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件。|简单文件复制。|文件默认位置的示例：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|  
 |**5**|还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密密钥。|使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序“SystemSettings”页还原密钥备份文件。<br /><br /> **or**<br /><br /> PowerShell。|请参阅[管理 Reporting Services SharePoint 服务应用程序](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)主题中的“密钥管理”部分。|  
   

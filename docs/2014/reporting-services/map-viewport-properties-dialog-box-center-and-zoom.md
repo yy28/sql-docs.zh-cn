@@ -12,14 +12,14 @@ f1_keywords:
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026170"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>“地图视区属性”对话框 -&gt;“中心和缩放”
   选择 **“地图视区属性”** 对话框中的 **“中心和缩放”** 可以设置地图的中心视图和缩放系数。 指定地图数据源和要在报表中包含的地图的边界后，可以指定视图中心和缩放系数以进一步控制地图的显示。 根据用于指定中心和缩放值的不同方法，选项也会不同。 单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  

@@ -1,26 +1,23 @@
 ---
-title: 任务 16： 验证使用主数据管理器 |Microsoft Docs
+title: 任务 16:验证使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0f8c608384e3840f0c154233e90a79d4319bbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203187"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023598"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>任务 16：使用主数据管理器进行验证
+# <a name="task-16-verifying-with-master-data-manager"></a>任务 16:使用主数据管理器进行验证
   在本任务中，您查看 SSIS 包所提交的批处理作业的状态并验证数据已使用主数据管理器上载到了 MDS 服务器。  
   
 1.  启动**主数据管理器**([http://localhost/MDS](http://localhost/MDS))。 如果已打开，请单击**Microsoft SQL Server Master Data Services**顶部以切换到**主页**。  
@@ -35,9 +32,9 @@ ms.locfileid: "48203187"
   
 5.  请确保**供应商**为选择模型**模型**并**VERSION_1**为选择**版本**，然后单击**资源管理器**。  
   
-6.  您可以看到数据 SSIS 包已导入 MDS。 数据应已清理，没有重复**代码**值 (注意： **SupplierID**在 Excel 中的列对应于**代码**MDS 中 Supplier 实体的属性)。  
+6.  您可以看到数据 SSIS 包已导入 MDS。 数据应已清理，没有重复**代码**值 (注意：**SupplierID**在 Excel 中的列对应于**代码**MDS 中 Supplier 实体的属性)。  
   
 ## <a name="next-step"></a>下一步  
- [任务 17：查看由 SSIS 包创建的 DQS 清理项目](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
+ [任务 17:查看由 SSIS 包 DQS 清理项目创建](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

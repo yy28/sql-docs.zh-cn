@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026898"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>“我的订阅”页（报表管理器）
   使用“我的订阅”页可以在同一位置查看您的所有订阅。 使用此页可以访问、修改或删除您拥有的任何订阅。 您只拥有您所创建的订阅。 您不能访问其他用户的订阅，也不能访问您可使用但不能拥有的订阅（例如，如果您的名称已添加到由另一个用户定义的某个现有订阅中）。 您不能从本页创建订阅。 有关创建订阅的详细信息，请参阅[新的订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "48165957"
  **报告**  
  显示在订阅中指定的报表。 单击报表名称可以查看该报表。  
   
- **Description**  
+ **说明**  
  显示订阅的说明。 单击说明可以查看或编辑报表的订阅信息。  
   
  **文件夹**  
@@ -68,7 +68,7 @@ ms.locfileid: "48165957"
  如果订阅已停用，将无法对其进行处理。 若要更新订阅并使其可操作，请先打开订阅，然后保存即可。  
   
 ## <a name="see-also"></a>请参阅  
- [订阅和传递&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [订阅和传递 (Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [报表管理器的 F1 帮助](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

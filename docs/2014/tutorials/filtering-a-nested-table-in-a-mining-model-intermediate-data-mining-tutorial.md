@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027509"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>筛选挖掘模型中的嵌套表（数据挖掘中级教程）
   创建并浏览模型后，您决定将精力集中在客户数据的某个子集上。 例如，您可能希望仅分析包含特定项的购物篮，或者可能希望仅分析在某个时间段内没有购买任何物品的客户的人口统计信息。  
@@ -111,7 +110,7 @@ ms.locfileid: "48159964"
  [预测关联&#40;数据挖掘中级教程&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [模型筛选器语法和示例&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [模型筛选器语法和示例（Analysis Services – 数据挖掘）](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   
