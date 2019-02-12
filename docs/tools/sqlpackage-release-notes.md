@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012998"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 发行说明
 
 [下载最新版本](sqlpackage-download.md)
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
+
+发布日期：2009 年 2 月 1 日  
+生成：15.0.4316.1 
+
+版本包括以下功能和修补程序：
+
+- 添加了的对 UTF8 排序规则。
+- 性能修复的旧版基数估计器用于反向工程的查询。
+- 启用对索引视图的非聚集列存储索引。
+- 修复了重大架构比较性能问题时生成的脚本。
+- 修复架构偏差检测逻辑，以便忽略特定 xevent 会话。
+- 修复导入图形表排序。
+- 修复导出外部表，其中对象的权限。
+- 移动到.NET Core 2.2 
+- 将内存支持存储用于.NET Core 上的架构比较。
+
+此版本包括跨平台的预览版本的 sqlpackage 面向.NET Core 2.2，并可以在 macOS 和 Linux 上运行。 此预览版本具有以下已知的问题：
+
+- 不支持生成和部署参与者。
+- 较旧的.dacpac 和.bacpac 文件，使用 json 数据序列化不受支持。
+- 由于使用区分大小写的文件系统的问题可能无法解析引用的.dacpacs (例如 master.dacpac)。
+  - 一种解决方法就是利用的名称引用文件 (例如 MASTER。BACPAC)。
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
-发布日期： 2018 年 10 月 24 日  
-生成： 15.0.4200.1 
+发布日期：2018 年 10 月 24日日  
+生成：15.0.4200.1 
 
 版本包括以下功能和修补程序：
 
@@ -41,8 +64,8 @@ ms.locfileid: "52413737"
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-发布日期：2018 年 6 月 22 日  
-内部版本号：14.0.4079.2  
+发布日期：2018 年 6 月 26 日  
+生成：14.0.4079.2  
 
 此版本包括以下修复内容：
 
@@ -53,8 +76,8 @@ ms.locfileid: "52413737"
 
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
-发布日期： 2018 年 1 月 25 日  
-内部版本号：14.0.3917.1
+发布日期：2018 年 1 月 25日日  
+生成：14.0.3917.1
 
 此版本包括以下修复内容：
 
@@ -66,8 +89,8 @@ ms.locfileid: "52413737"
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-发布日期：2017 年 12 月 12 日  
-内部版本号：14.0.3881.1
+发布日期：2019 年 12 月 12 日  
+生成：14.0.3881.1
 
 此版本包括以下修复内容：
 
@@ -76,22 +99,3 @@ ms.locfileid: "52413737"
 - 添加了 /DiagnosticsFile:"C:\Temp\sqlpackage.log"命令行参数来指定文件路径来保存诊断信息。
 - 添加了的 /Diagnostics 命令行参数将诊断信息记录到控制台。
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>在 macOS 和 Linux.NET Core （预览版） 上的 sqlpackage
-
-发布日期：2018 年 11 月 15 日  
-生成
-
-此版本包含面向.NET Core 2.1 的 sqlpackage 的跨平台预览版本，并且可以在 macOS 和 Linux 上运行。 
-
-此版本包括以下修复内容：
-
-- 移动到.NET Core 2.1 
-- 支持的 CLR UDT 类型，包括 SQL CLR UDT 类型： SqlGeography、 SqlGeometry 和 SqlHierarchyId。
-
-此版本是早期预览版具有以下已知问题：
-
-- /P:CommandTimeout 参数被硬编码为 120。
-- 不支持生成和部署参与者。
-- 较旧的.dacpac 和.bacpac 文件，使用 json 数据序列化不受支持。
-- 由于使用区分大小写的文件系统的问题可能无法解析引用的.dacpacs (例如 master.dacpac)。
-  - 一种解决方法就是利用的名称引用文件 (例如 MASTER。BACPAC)。

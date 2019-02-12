@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 2018-06-27
+ms.date: 06/27/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 29d01a54dc8293c46c2ac71b0fd91905ff9174ec
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045067"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033599"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -196,7 +196,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
@@ -413,7 +413,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。 |
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
  |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。 |
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。 |
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。 |
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。 |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异|
@@ -574,7 +574,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
