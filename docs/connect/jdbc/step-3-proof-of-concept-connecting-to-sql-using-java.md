@@ -1,7 +1,7 @@
 ---
 title: 步骤 3：使用 Java 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3afb5c45bcf1b007806ec1fdf83f4fd4958fe324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 305be93a342b66a18cae6de4f60ba9efa98e1738
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849785"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736898"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步骤 3：使用 Java 连接到 SQL 的概念证明
   
@@ -42,7 +42,6 @@ public class SQLDatabaseConnection {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
 
         try (Connection connection = DriverManager.getConnection(connectionUrl);) {
@@ -78,7 +77,6 @@ public class SQLDatabaseConnection {
                 + "password=yourpassword;"
                 + "encrypt=true;"
                 + "trustServerCertificate=false;"
-                + "hostNameInCertificate=*.database.windows.net;"
                 + "loginTimeout=30;";
 
         ResultSet resultSet = null;
@@ -102,7 +100,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
+## <a name="step-3-insert-a-row"></a>步骤 3：插入行  
 在此示例中，执行 INSERT 语句、 传递参数，并检索自动生成 Primary Key 值。   
   
 ```java  
@@ -124,7 +122,6 @@ public class SQLDatabaseConnection {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
 
         String insertSql = "INSERT INTO SalesLT.Product (Name, ProductNumber, Color, StandardCost, ListPrice, SellStartDate) VALUES "
