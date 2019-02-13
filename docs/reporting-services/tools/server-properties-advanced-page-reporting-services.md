@@ -93,7 +93,7 @@ ms.locfileid: "54805743"
 
 **AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
 
-**AllowedResourceExtensionsForUpload*****（仅限 Power BI 报表服务器）*** 设置可上传到报表服务器的资源扩展。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。 
+**AllowedResourceExtensionsForUpload** ***（仅限 Power BI 报表服务器）*** 设置可上传到报表服务器的资源扩展。 不需要包含的内置文件类型的扩展名，如 &ast;.rdl 和 &ast;.pbix。 默认扩展名为“&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx”。 
 
 
 **EditSessionCacheLimit**  
@@ -140,16 +140,16 @@ ms.locfileid: "54805743"
 
 **ShowDownloadMenu**：启用客户端工具下载菜单。 默认值为 true。
 
-**SupportedHyperlinkSchemes*****（仅限 Power BI 报表服务器）*** 设置允许在可呈现的“超链接”操作上定义的 URI 方案的逗号分隔列表，或设置“&ast;”以启用所有超链接方案。 例如，设置“http、https”将允许指向“https://www. contoso.com”的超链接，但将删除指向“mailto:bill@contoso.com”或“javascript:window.open(‘www.contoso.com’, ‘_blank’)”的超链接。 默认为“&ast;”。
+**SupportedHyperlinkSchemes** ***（仅限 Power BI 报表服务器）*** 设置允许在可呈现的“超链接”操作上定义的 URI 方案的逗号分隔列表，或设置“&ast;”以启用所有超链接方案。 例如，设置“http、https”将允许指向“https://www. contoso.com”的超链接，但将删除指向“mailto:bill@contoso.com”或“javascript:window.open(‘www.contoso.com’, ‘_blank’)”的超链接。 默认为“&ast;”。
 
 **TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60。
 
 **TrustedFileFormat**：设置在浏览器中的 Reporting Services 门户网站下打开的所有外部文件格式。 对于未列出的外部文件格式，浏览器会提示下载选项。 默认值为 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web 和 png。
 
-**EnablePowerBIReportExportData*****（仅适用于 Power BI 报表服务器）***  
+**EnablePowerBIReportExportData** ***（仅适用于 Power BI 报表服务器）***  
 启用从 Power BI 视觉对象导出 Power BI 报表服务器数据。 值为 True 和 False。  默认值为 True。  
 
-**ScheduleRefreshTimeoutMinutes*****（仅适用于 Power BI 报表服务器）***  
+**ScheduleRefreshTimeoutMinutes** ***（仅适用于 Power BI 报表服务器）***  
 针对嵌入了 AS 模型的 Power BI 报表的计划刷新的数据刷新超时时间（以分钟为单位）。 默认值为 120 分钟。
 
 **EnableTestConnectionDetailedErrors**  
