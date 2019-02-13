@@ -79,7 +79,7 @@ ms.locfileid: "56038418"
 </xsd:schema>  
 ```  
   
- 该架构指定**\<客户 >** 具有元素**CustomerID**并**CompanyName**属性。 **Sql: relation**批注映射**\<客户 >** 到 Customers 表的元素。  
+ 该架构指定**\<客户 >** 具有元素 **CustomerID** 并 **CompanyName**属性。 **Sql: relation** 批注映射 **\<客户 >** 到 Customers 表的元素。  
   
  考虑 XML 文档的以下片段：  
   
@@ -91,13 +91,13 @@ ms.locfileid: "56038418"
   
  将前文中所述的架构提供给 XML 大容量加载并使用 XML 数据作为输入，XML 大容量加载按以下方式处理源数据中的节点（元素和属性）：  
   
--   第一个开始标记**\<客户 >** 元素使该元素进入作用域。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
+-   第一个开始标记 **\<客户 >** 元素使该元素进入作用域。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
   
 -   在架构中的所有属性， **\<客户 >** 元素映射到 Customers 表的列。 这些属性进入作用域时，XML 大容量加载将它们的值复制到父作用域已生成的客户记录。  
   
 -   当 XML 大容量加载到达的结束标记**\<客户 >** 元素，该元素离开作用域。 这将导致 XML 大容量加载认为该记录已完成并将其发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- XML 大容量加载执行此过程为每个后续**\<客户 >** 元素。  
+ XML 大容量加载执行此过程为每个后续 **\<客户 >** 元素。  
   
 > [!IMPORTANT]  
 >  在此模型中，由于是在到达结束标记（或节点离开作用域）时插入记录，因此必须定义节点作用域内与该记录相关的所有数据。  
@@ -149,7 +149,7 @@ ms.locfileid: "56038418"
   
  下面给出了示例 XML 数据和创建工作示例的步骤。  
   
--   当**\<客户 >** XML 数据文件中的元素节点进入作用域，则 XML 大容量加载将生成 Cust 表的记录。 然后，XML 大容量加载将必要的列值 （CustomerID、 CompanyName 和 City） 复制从 **\<CustomerID >**， **\<公司名称 >**，和**\<城市 >** 与这些元素的子元素进入作用域。  
+-   当 **\<客户 >** XML 数据文件中的元素节点进入作用域，则 XML 大容量加载将生成 Cust 表的记录。 然后，XML 大容量加载将必要的列值 （CustomerID、 CompanyName 和 City） 复制从**\<CustomerID >**， **\<公司名称 >**， 和 **\<城市 >** 与这些元素的子元素进入作用域。  
   
 -   当**\<顺序 >** 元素节点进入作用域，则 XML 大容量加载将生成 CustOrder 表的记录。 XML 大容量加载将复制的值**OrderID**属性为此记录。 从获取客户 id 列所需的值 **\<CustomerID >** 的子元素**\<客户 >** 元素。 XML 大容量加载使用中指定的信息 **\<sql: relationship >** 若要获取此记录的 CustomerID 外密钥值，除非**CustomerID**属性是中指定**\<顺序 >** 元素。 一般规则是如果子元素显式指定外键属性的值，XML 大容量加载使用该值并不会获取值从父元素使用指定的 **\<sql: relationship >**. 与此**\<顺序 >** 元素节点离开作用域中，XML 大容量加载将记录发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]然后再处理所有后续**\<顺序 >** 元素节点相同的方式。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "56038418"
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 **Dt: type ="nmtokens"** 批注将被忽略，就像忽略 IDREFS 类型。  
   
- 例如，考虑下面的 XSD 架构描述**\<客户 >** 并**\<顺序 >** 元素。 **\<客户 >** 元素包含**OrderList** IDREFS 类型的属性。  **\<Sql: relationship >** 标记指定的客户和订单列表之间的一个对多关系。  
+ 例如，考虑下面的 XSD 架构描述**\<客户 >** 并**\<顺序 >** 元素。 **\<客户 >** 元素包含**OrderList** IDREFS 类型的属性。 **\<Sql: relationship >** 标记指定的客户和订单列表之间的一个对多关系。  
   
  以下是架构：  
   
