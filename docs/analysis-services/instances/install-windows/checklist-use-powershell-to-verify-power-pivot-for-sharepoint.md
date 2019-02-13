@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![sharepoint 常规应用程序组中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序组中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置” ，然后单击 **中的“管理面板”****[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![sharepoint 常规应用程序组中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 常规应用程序组中的 powerpivot")|借助 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理面板，您可以在管理中心有选择地验证大多数组件。 要在“管理中心”打开该面板，请单击“常规应用程序设置”  ，然后单击 **中的“管理面板”** **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**。 有关该面板的详细信息，请参阅 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 症状和建议操作  
  下表列出了症状或问题，以及本主题的建议章节（旨在帮助您解决问题）。  
