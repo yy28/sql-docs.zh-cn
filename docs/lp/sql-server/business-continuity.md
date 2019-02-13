@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server 业务连续性
 description: 深入了解不同的 SQL Server 功能，借助这些功能，实现高可用性、灾难恢复和保持业务正常运行，且无需考虑具体环境。
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3aa486304568d2d572b1d1946a89c8ab5ec9753a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698155"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079363"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698155"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">下载 SQL Server</span>
+                                    <span class="likeAnH3">试用 SQL Server 2019（预览版）</span>
                                 </div>
                             </div>
                         </div>

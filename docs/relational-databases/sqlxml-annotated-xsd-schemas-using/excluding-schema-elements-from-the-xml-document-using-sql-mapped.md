@@ -47,7 +47,7 @@ ms.locfileid: "56019098"
   
  在将此 XSD 架构映射到 AdventureWorks 数据库中的 Person.Contact 表**sql： 映射**上指定**HomeAddress**属性，因为 Employees 表不存储主页雇员的地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。  **\<Person.Contact >** 元素映射到 Person.Contact 表中，而所有属性都映射到 Person.Contact 表中的相同名称的列。  
+ 为架构的其余部分进行默认映射。 **\<Person.Contact >** 元素映射到 Person.Contact 表中，而所有属性都映射到 Person.Contact 表中的相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
