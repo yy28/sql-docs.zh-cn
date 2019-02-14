@@ -38,7 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@password=**] **'**_密码_  
+ [ **@password=**] **'**_密码_  
  是的新密码。 *密码* 是 **sysname** ，无默认值。 如果分发服务器是本地的密码**distributor_admin**更改系统登录名。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -130,7 +130,7 @@ tablediff
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定目标表。  
   
  **-b** _large_object_bytes_  
- 大型对象数据类型列中要比较的字节数，这些数据类型包括：**text****ntext**、**image****varchar(max)****nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
+ 大型对象数据类型列中要比较的字节数，这些数据类型包括：**text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 默认为列的大小。 任何大于 *large_object_bytes* 的数据不会进行比较。  
   
  **-bf**  _number_of_statements_  
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 选项时要写入到当前 **脚本文件中的** 语句数。 当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句数超过 *number_of_statements*时，将创建一个新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本文件。  
