@@ -3,7 +3,7 @@ title: 发行说明和更改日志
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361677"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231124"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新发行说明和更改日志
 
 **[下载并安装最新版本 ！](download.md)**
 
+## <a name="february-2019-february-release"></a>2019 年 2 月 （年 2 月发行版）
+
+发布日期：2019 年 2 月 13日日  
+版本：1.4.5
+
+- 添加**SQL Server 的管理包**扩展包，用于轻松地安装 SQL Server 管理员相关扩展。 这包括：
+    - [SQL Server 代理](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server 事件探查器](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server 导入](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Profiler 扩展中添加了筛选的扩展的事件支持
+- 已添加将另存为 XML 功能，可以将 T-SQL 的结果保存为 XML
+- 添加了数据层应用程序向导的改进
+    - 添加了生成脚本按钮
+    - 添加了的视图，以便在部署过程可能造成数据丢失的警告
+- 更新到[SQL Server 2019 预览版扩展](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 生成流式处理长时间，默认情况下启用运行查询
+- 解决[bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)。
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>年 1 月修补程序 2019 （年 1 月修补程序版本）
 

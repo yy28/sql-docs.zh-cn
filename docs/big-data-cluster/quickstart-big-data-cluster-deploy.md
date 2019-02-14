@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898982"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231064"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -171,56 +171,7 @@ kubectl get svc service-proxy-lb -n <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-大数据群集现在部署在 AKS 的 SQL 服务器。 你现在可以使用 Azure Data Studio 连接到 SQL Server 主实例和使用 Azure Data Studio 的 HDFS/Spark 终结点。
-
-### <a id="master"></a> 主实例
-
-SQL Server 主实例是包含关系的 SQL Server 数据库的传统 SQL Server 实例。 以下步骤介绍如何连接到使用 Azure Data Studio 的主实例。
-
-1. 从命令行中，查找使用以下命令在主实例的 IP:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. 在 Azure Data Studio，按**F1** > **新连接**。
-
-1. 在中**连接类型**，选择**Microsoft SQL Server**。
-
-1. 键入 SQL Server 主实例中的 IP 地址**服务器名称**(例如：**\<IP 地址\>、 31433**)。
-
-1. 输入 SQL 登录名**用户名**(`SA`) 和**密码**（在部署脚本中输入的密码）。
-
-1. 将目标更改**数据库名称**到一个关系数据库。
-
-   ![连接到主实例](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. 按**Connect**，并**Server 仪表板**应显示。
-
-### <a id="hdfs"></a> HDFS/Spark 网关
-
-**HDFS/Spark 网关**使你能够连接才能与 HDFS 存储池和运行 Spark 作业。 以下步骤介绍如何使用 Azure Data Studio 进行连接。
-
-1. 从命令行中，查找使用以下命令在 HDFS/Spark 网关的 IP 地址：
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. 在 Azure Data Studio，按**F1** > **新连接**。
-
-1. 在中**连接类型**，选择**SQL Server 大数据群集**。
-   
-   > [!TIP]
-   > 如果没有看到**SQL Server 大数据群集**连接类型，请确保已安装[SQL Server 2019 扩展](../azure-data-studio/sql-server-2019-extension.md)和已完成的扩展后重启 Azure Data Studio正在安装。
-
-1. 键入中的大数据群集的 IP 地址**服务器名称**（不指定端口）。
-
-1. 输入`root`有关**用户**并指定**密码**到大数据群集部署脚本中输入。
-
-   ![连接到 HDFS/Spark 网关](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. 按**Connect**，并**Server 仪表板**应显示。
+大数据群集现在部署在 AKS 的 SQL 服务器。 你现在可以使用 Azure Data Studio 连接到群集。 有关详细信息，请参阅[连接到 SQL Server 大数据群集使用 Azure Data Studio](connect-to-big-data-cluster.md)。
 
 ## <a name="clean-up"></a>清理
 

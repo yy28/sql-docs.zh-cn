@@ -5,20 +5,28 @@ description: 了解如何连接到 SQL Server 主实例和 SQL Server 2019 大�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241818"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231034"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
 
-本文介绍如何从 Azure Data Studio 连接到 SQL Server 2019 大数据群集 （预览版）。
+本文介绍如何从 Azure Data Studio 连接到 SQL Server 2019 大数据群集 （预览版）。 有两个用于与大数据群集交互的主终结点：
+
+| 端点 | Description |
+|---|---|
+| SQL Server 主实例 | 包含关系的 SQL Server 数据库在群集中的 SQL Server 主实例。 |
+| HDFS/Spark 网关 | 访问 HDFS 存储在群集和运行 Spark 作业的功能中。 |
+
+> [!TIP]
+> Azure Data Studio 2019 年 2 月版本中，会自动连接到 SQL Server 主实例提供 UI 访问 HDFS/Spark 网关。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -26,15 +34,11 @@ ms.locfileid: "54241818"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **Kubectl**
+   - **kubectl**
 
-## <a name="connect-to-the-cluster"></a>连接到群集
+## <a id="master"></a> 连接到群集
 
-当连接到的大数据群集时，可以选择要连接到 SQL Server 主实例或 HDFS/Spark 网关。 以下部分说明如何连接到每个。
-
-## <a id="master"></a> 主实例
-
-SQL Server 主实例是包含关系的 SQL Server 数据库的传统 SQL Server 实例。 以下步骤介绍如何连接到使用 Azure Data Studio 的主实例。
+若要连接到具有 Azure Data Studio 的大数据群集，请在群集中与 SQL Server 主实例的新连接。 以下步骤介绍如何连接到使用 Azure Data Studio 的主实例。
 
 1. 从命令行中，查找使用以下命令在主实例的 IP:
 
@@ -59,9 +63,20 @@ SQL Server 主实例是包含关系的 SQL Server 数据库的传统 SQL Server 
 
 1. 按**Connect**，并**Server 仪表板**应显示。
 
-## <a id="hdfs"></a> HDFS/Spark 网关
+Azure Data Studio 2019 年 2 月版本中，连接到 SQL Server 主实例还可以与 HDFS/Spark 网关进行交互。 这意味着不需要使用单独的连接是 HDFS 和下一节介绍的 Spark。
 
-**HDFS/Spark 网关**使你能够连接才能与 HDFS 存储池和运行 Spark 作业。 以下步骤介绍如何使用 Azure Data Studio 进行连接。
+- 在对象资源管理器现在包含一个新**Data Services**节点，右键单击支持大数据群集任务，例如创建新的笔记本或提交 spark 作业。 
+- **Data Services**节点还包含**HDFS**文件夹中的 HDFS 探索并在 Notebook 中执行操作，例如 Create External Table 或分析。
+- **Server 仪表板**连接还包含用于选项卡**SQL Server 大数据群集**并**SQL Server 2019 （预览版）** 时安装该扩展。
+
+   ![Azure 数据 Studio 数据服务节点](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> 如果您看到**未知的错误**在 UI 中，你可能必须[直接连接到 HDFS/Spark 网关](#hdfs)。 此错误的一个原因是不同的密码的 SQL Server 主实例和 HDFS/Spark 网关。 Azure Data Studio 假设两个使用相同的密码。
+  
+## <a id="hdfs"></a> 连接到 HDFS/Spark 网关
+
+在大多数情况下，连接到 SQL Server 主实例可让你可以访问的 HDFS 和 Spark 以及通过**Data Services**节点。 但是，仍可以创建专用的连接到**HDFS/Spark 网关**必要。 以下步骤介绍如何使用 Azure Data Studio 进行连接。
 
 1. 从命令行中，查找使用以下命令之一 HDFS/Spark 网关的 IP 地址。
    
