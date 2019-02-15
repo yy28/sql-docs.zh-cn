@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f22ba0a5d611d48422611bd9ab767f42711f2f1d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3c2d45905f74c0a3e28f1d143e258dbe2cef4df
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018949"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292365"
 ---
 # <a name="delete-rows-dialog-box"></a>“删除行”对话框
   使用 **“删除行”** 对话框可以删除表、矩阵或列表数据区域中的行。 对于与组关联的行，您还可以删除组定义。  

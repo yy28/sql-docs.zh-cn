@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f54988b6cf780f9282a368237f7a79c35a17948
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032348"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284535"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>“数据源属性”对话框 ->“凭据”
   在 **“数据源属性”** 对话框中选择 **“凭据”** ，可以显示和修改凭据以便连接到报表中的数据源。 您所提供的凭据用于访问数据源和缓存数据副本以便进行报表预览。 有关如何缓存预览数据的详细信息，请参阅 [预览报表](reports/previewing-reports.md)。 有关凭据的详细信息，请参阅 [指定报表数据源的凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

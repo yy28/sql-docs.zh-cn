@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 43f27ea78bec3f7b81f49d44a6bd56274367f2b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f237710588f9cd2a8b53d98871ae2ed85b54b132
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021677"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290095"
 ---
 # <a name="expression-dialog-box"></a>“表达式”对话框
   使用**表达式**对话框可以编写[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]表达式的报表项属性。 您可以使用表达式来设置多个属性，包括颜色、字体和边框。 在运行时，报表处理器对表达式进行计算，然后用结果替代属性的值。  

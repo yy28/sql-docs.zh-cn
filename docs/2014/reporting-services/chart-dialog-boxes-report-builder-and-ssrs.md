@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776d52c5e34bb44942fc4dedfee83164f3121166
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a063c20ce3fdb98cc86232bbe1492e7e0c603408
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022097"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296016"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>图表对话框（报表生成器和 SSRS）
   本节包含一些图表对话框的帮助。 另外，您可以通过按 F1 或单击对话框中显示的“帮助”按钮来打开帮助。  

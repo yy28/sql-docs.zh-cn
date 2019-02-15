@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6d536ea97d7240c7f79fdb2447b32ada8e190817
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009629"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288057"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>将三维效果添加到图表（报表生成器和 SSRS）
   三维 (3D) 效果可以使图表具有深度并增强视觉效果。 例如，若要强调分离型饼图的某个特定切片，可以旋转并更改图表的透视，以便人们可以首先注意到该切片。 将三维效果应用于图表时，将会禁用所有渐变颜色和阴影类型。  

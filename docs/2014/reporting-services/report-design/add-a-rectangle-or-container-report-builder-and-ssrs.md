@@ -11,15 +11,15 @@ f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 21bf1d94f179f9c48fb3b00f06d98cec105c9f27
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b14c42d88354660c04955ddc20e7586fdc377f1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017208"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291475"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>添加矩形或容器（报表生成器和 SSRS）
   如果希望使用图形元素分隔报表的各部分、强调某些报表区或为一个或多个报表项提供背景，则可以向报表中添加矩形。 矩形还可以用作容器，以控制数据区域在报表中的呈现方式。 可以通过编辑矩形属性（如背景和边框颜色）自定义矩形的外观。 有关使用矩形作为容器的详细信息，请参阅[矩形和线条（报表生成器和 SSRS）](rectangles-and-lines-report-builder-and-ssrs.md)和[在矩阵和图表中显示相同数据（报表生成器）](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。  

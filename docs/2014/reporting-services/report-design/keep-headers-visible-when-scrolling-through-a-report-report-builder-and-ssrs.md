@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82a31e583123cf04893cffc928b0d8db80906489
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9b271451645e2f7fbe25a5660a893f87b55732c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019058"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297485"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在滚动报表时保持标题可见（报表生成器和 SSRS）
   呈现报表之后，为防止行和列标签滚动出视野之外，可以冻结行或列标题。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e893b005e074f50828b04525c1c1f963a801489e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037958"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287335"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上范围的格式（报表生成器和 SSRS）
   仪表范围是仪表刻度上的带区或区域，用于指示仪表上一段重要的值。 使用仪表范围，能以可见方式指示指针值何时进入某个值范围。 范围由开始值和结束值定义。  

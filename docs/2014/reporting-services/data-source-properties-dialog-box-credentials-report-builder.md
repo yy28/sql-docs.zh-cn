@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c57ce5992349aa9fe195620b8ac1c1d2b2ba4744
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13ff0172847968439143edfd322ec895f8b0929c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034198"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298455"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>“数据源属性”对话框 -&gt;“凭据”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改用于连接到报表中的嵌入数据源的凭据。 您所提供的凭据用于访问数据源以便预览报表。 有关凭据的详细信息，请参阅 [在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 162be037a4ae458fdc609b76d8cad1ee21c27e0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24aa024f063c086b78d5b336af8c7841788672fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037198"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286135"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
   报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022288"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295115"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
   表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 将使用**表达式**对话框可以编写表达式的连接名称值、 查找中单独的数据集中的值显示不同的图片基于字段值，等等。  

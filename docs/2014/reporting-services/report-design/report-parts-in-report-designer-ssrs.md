@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043338"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286325"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>报表设计器中的报表部件 (SSRS)
   在报表设计器中，在您创建了表、图表和项目中的其他报表项后，可以将它们作为“报表部件”  发布到报表服务器或与报表服务器相集成的 SharePoint 站点中，以便您和他人可以在其他报表中重复使用它们。  

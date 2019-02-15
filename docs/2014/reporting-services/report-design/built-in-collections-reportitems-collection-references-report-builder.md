@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 92872f29600bc380025e76933ef8a1aab2879e51
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042828"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285875"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 集合引用（报表生成器和 SSRS）
   `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 `ReportItems` 集合包括位于表头、表尾或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用 `ReportItems` 内置集合在每个页面中生成显示首项和尾项的字典样式表头。  

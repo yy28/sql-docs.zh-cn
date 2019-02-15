@@ -11,15 +11,15 @@ f1_keywords:
 - "10530"
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1b50af41b3430e921002422dfc14a5752af4b4e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b5befc97e163bd05baf118a2d6bf49d8c3c8285
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029638"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294705"
 ---
 # <a name="report-properties-dialog-box-references"></a>“报表属性”对话框 ->“引用”
   选择 **“报表属性”** 对话框中的 **“引用”** 可以添加或删除对报表定义中的表达式所使用的自定义程序集或其他外部程序集以及自定义类实例的引用。  

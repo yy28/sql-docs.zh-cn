@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033118"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288407"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表 （报表生成器）
   本教程教您如何基于示例销售数据创建基本矩阵报表。 该矩阵具有嵌套行组和列组，以及相邻列组。 您将学习如何设置列的格式以及旋转文本。 下图显示与您将创建的报表类似的报表。  

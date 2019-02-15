@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 76577b8623639d2fa9bffb5b83d65604a5afdcbe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022778"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287895"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>“图例属性”对话框 ->“常规”（报表生成器和 SSRS）
   使用 **“图例”** 对话框可以定义图表中图例的外观和布局。 有关详细信息，请参阅[设置图表上的图例的格式&#40;报表生成器和 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)。  

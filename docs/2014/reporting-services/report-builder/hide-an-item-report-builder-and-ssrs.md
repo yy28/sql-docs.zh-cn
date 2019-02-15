@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b0cd9fc3c7a2621aef6d2b77bf0cd80d6ca73916
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025488"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291335"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隐藏项（报表生成器和 SSRS）
   如果希望基于报表参数或指定的某个其他表达式来有条件地隐藏项，则可以设置报表项的可见性。  

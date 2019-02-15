@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018878"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298655"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
   通过向报表添加参数，用户可以筛选来自数据源的报表数据或报表中的报表数据。 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。  

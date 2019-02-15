@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 835580a8c08712035776eb37432d10730363d417
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017708"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288915"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 列表查询设计器
   报表生成器同时提供了图形查询设计器和基于文本的查询设计器，帮助您创建查询，以指定要从 SharePoint 站点中为报表数据集检索的数据。 使用图形查询设计器可以浏览 SharePoint 列表元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询、修改查询或键入查询命令。 您还可以从文件或报表中导入现有的查询。  

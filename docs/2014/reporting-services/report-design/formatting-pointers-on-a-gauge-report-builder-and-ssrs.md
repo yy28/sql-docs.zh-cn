@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5e83c008e44d0aa6011e74cdf85ce88a9c19444e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032579"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297105"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
   仪表指针指示仪表的当前值。 默认情况下，添加字段之后，字段中包含的值将聚合为仪表指针显示的一个值。 可以为仪表添加多个指针以便指向基于相同刻度的多个值，也可以添加多个刻度，并为添加的每个刻度各添加一个指针。 向仪表添加字段之后，必须对相应刻度设置最大值和最小值，以便为指针值提供上下文。 您还可以选择设置某一范围的最小值和最大值，该范围在刻度上显示一个关键区域。  

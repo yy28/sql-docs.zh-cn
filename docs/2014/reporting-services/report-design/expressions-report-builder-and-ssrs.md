@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 327932f82ddee445c7e15f53f02edd39ba0b28bf
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016458"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288617"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 许多报表项属性都可以设置为表达式。 表达式可帮助您控制报表的内容、设计和交互。 表达式以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]编写，保存在报表定义中，并且在运行报表时由报表处理器计算。  

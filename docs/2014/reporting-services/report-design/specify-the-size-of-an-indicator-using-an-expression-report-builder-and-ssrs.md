@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9a8f3262f4e897ac8a531eb13ec933ab01f6d94d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014808"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290645"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用表达式指定指示器的大小（报表生成器和 SSRS）
   除了颜色、方向和形状外，您还可以使用大小来提供最佳的指示器视觉效果。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46e431f85960f0fb5ce93ff80a53a3001c1b666d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ca9d9b4985b9c920d5e9ab2db5ae3bac5725d16
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023568"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287255"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>极坐标图（报表生成器和 SSRS）
   极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  

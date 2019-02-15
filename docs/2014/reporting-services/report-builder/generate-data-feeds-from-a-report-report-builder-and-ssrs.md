@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 270b2783f53d1fe0704dd504bbaa4004466dd115
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017028"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295055"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
   您可以从报表生成与 Atom 兼容的数据馈送，然后在可利用数据馈送的应用程序（例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）中使用数据馈送。  

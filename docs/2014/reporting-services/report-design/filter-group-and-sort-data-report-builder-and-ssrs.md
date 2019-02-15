@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0d6f6fb32544cdd38d819dac35d0cf2ee35a372f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011858"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294685"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  

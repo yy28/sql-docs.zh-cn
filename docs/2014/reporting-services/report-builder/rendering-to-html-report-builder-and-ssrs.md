@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013243"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296845"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031198"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290455"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  

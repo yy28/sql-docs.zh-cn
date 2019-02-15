@@ -13,15 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5136dd8086295135f72ee91dc50921adf1331c73
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029298"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296205"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
   在您考虑一个文本框时，可能要考虑在类似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 的图面上包含文本的独立框。 在报表生成器中，某些文本类似上述文本框，它们可显示标题、说明和标签的文字文本，或者基于表达式显示动态文本。 但表或矩阵（tablix 数据区域）中的每个单元也都包含文本框，可以使用您的报表中独立文本框的格式设置方式来设置这些文本框的格式。  

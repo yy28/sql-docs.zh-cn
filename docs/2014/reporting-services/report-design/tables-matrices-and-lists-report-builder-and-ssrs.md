@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017799"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287125"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>表、矩阵和列表（报表生成器和 SSRS）
   表、矩阵和列表是在以行和列形式组织的单元中显示报表数据的数据区域。 单元通常包含文本数据（如文本、日期和数字），但它们还可以包含仪表、图表或报表项（例如图像）。 表、矩阵和列表常常统称为 Tablix 数据区域。  

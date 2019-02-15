@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037808"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292054"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用报表设计器设计报表 (SSRS)
   使用报表设计器可以创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  

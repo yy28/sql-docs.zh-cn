@@ -25,15 +25,15 @@ f1_keywords:
 - "10188"
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3dd81f9ff49b7b99baf6796b3030da1611d02b7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5d4668bd2d0ba4b8b9e4ae965037fb929b8c3fe8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027878"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289725"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>设置图表上图例的格式（报表生成器和 SSRS）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  

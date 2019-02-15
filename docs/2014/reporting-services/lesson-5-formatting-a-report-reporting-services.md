@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026280"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292565"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：格式设置报表 (Reporting Services)
   既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  

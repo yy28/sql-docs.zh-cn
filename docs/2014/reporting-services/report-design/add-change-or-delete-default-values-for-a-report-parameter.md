@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ef88ca9dc7870ad277640b40a02838c78b8dddce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 433217542180350b4e2bd3b25c14a055e8efc391
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032268"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297375"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>为报表参数添加、更改或删除默认值（报表生成器和 SSRS）
   创建报表参数后，您可以提供一个默认值列表。 如果所有参数都有有效默认值，报表会在您第一次查看或预览它时自动运行。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fdfcdae32c4709a19833612e16a4956f76c78c5f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011178"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295125"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）
   从 SharePoint 库运行报表时，可以在报表或链接至报表的外部文件中定义连接信息。 如果连接信息嵌入在报表中，则该信息称为自定义数据源。 如果连接信息在外部文件中进行定义，则该信息称为共享数据源。 外部文件可以是报表服务器数据源 (.rsds) 文件，也可以是 Office 数据连接 (.odc) 文件。  

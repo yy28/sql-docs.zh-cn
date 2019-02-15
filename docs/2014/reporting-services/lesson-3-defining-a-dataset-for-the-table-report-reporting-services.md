@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009669"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294335"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：定义数据集为表报表 (Reporting Services)
   定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  

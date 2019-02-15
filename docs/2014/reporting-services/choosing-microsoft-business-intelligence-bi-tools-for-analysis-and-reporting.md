@@ -1,5 +1,5 @@
 ---
-title: 分析和报告与 Microsoft 商业智能 (BI) 工具
+title: 使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553139"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289185"
 ---
-# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>分析和报告与 Microsoft 商业智能 (BI) 工具
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
   下表将数据分析和报告的工作负荷映射到最适合这些工作负荷的 Microsoft BI 工具。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "53553139"
 |执行自助式预测分析||||||[Excel 数据挖掘外接程序](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |可视化和浏览数据||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |使用自然语言查询提问|||||[问答](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|使用移动设备访问报告||||[HTML 5 (支持查看 < 10 MB 的文件)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (支持查看 < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [在 iOS 设备上的 power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [在 Android 设备上的 power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[适用于 Windows 10 的 power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|使用移动设备访问报告||||[HTML 5（支持查看 10 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5（支持查看 250 MB 以内的文件）](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 设备上的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[适用于 Windows 10 的 Power BI 移动应用](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |协作和共享|||[SharePoint 网站](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 团队网站](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 网站](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**公司 BI**|IT 专业人员||||||  
 |创建多维/表格公司模型||||||[Analysis Services](../analysis-services/analysis-services.md)|  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f88222768c3194543ec2abd5821b53c67f3b04fe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011289"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292974"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>对多个形状图指定一致的颜色（报表生成器和 SSRS）
   在非形状图上从基于序列在图表中的索引的调色板选择新颜色。 例如，图表中的第一个序列将映射到调色板中的第一个颜色。 但是，对于形状图，该行为则不相同。 在形状图中，调色板中的每个颜色都映射到数据集中的数据点。 例如，数据点 1 映射到调色板中的第一个颜色，数据点 2 映射调色板中的第二个颜色，依此类推。  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016149"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286616"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
   表达式通常在报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](add-an-expression-report-builder-and-ssrs.md)。  

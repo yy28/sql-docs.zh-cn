@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5020b0d9dc509aff629347582ef1782d1262ceb8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28ccbab8475a2227dbd4dedfb0eb17bcd69dce03
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041218"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288205"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>创建一个递归层次结构组（报表生成器和 SSRS）
   递归层次结构组可组织来自包含多个层次结构级别的单个报表数据集的数据。例如，表示组织层次结构中的经理－雇员关系的报告结构。  

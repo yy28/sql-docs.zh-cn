@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 19131187813523020923083daf0868bf970a7f83
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022598"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295515"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一些交互式报告功能，利用这些功能，可以在运行时处理报表。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  

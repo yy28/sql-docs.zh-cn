@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df5f3be98f88e3966ccda0226e0f2f1353b1d64d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019398"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286175"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或删除列（报表生成器和 SSRS）
   可以在 Tablix 数据区域中添加或删除列。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  

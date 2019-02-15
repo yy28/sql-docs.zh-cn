@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042908"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289545"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向报表中添加地图或地图层之后，您可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  

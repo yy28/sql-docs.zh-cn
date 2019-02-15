@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030611"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297280"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式 （报表生成器）
   在本教程中，您可以练习以不同方式设置文本格式。 在设置了具有数据源和数据集的空白报表后，您可以选择要完成的步骤。  

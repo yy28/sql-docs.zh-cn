@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e974ab95f2e4ad5543a33f37af168a5f3b870eb4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 486b1516cf5d51740e4a37c46a640e79476a413d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032470"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293806"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
   可以将参数添加到报表，以允许用户为参数选择多个值。  

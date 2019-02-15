@@ -12,15 +12,15 @@ helpviewer_keywords:
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e507d9fa5b57fe63c1540f4490a7b04d878199f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031948"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288935"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>嵌入和共享的数据连接或数据源（报表生成器和 SSRS）
   当运行查询或处理报表时，报表使用数据连接来检索报表的数据。 您可以从内置数据连接类型的列表中进行选择，以连接到关系数据库、多维数据库、Web 服务或一些其他数据源。 当描述数据连接时，需要使用以下术语。  

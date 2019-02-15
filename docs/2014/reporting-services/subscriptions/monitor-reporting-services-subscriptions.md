@@ -14,15 +14,15 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015078"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295448"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  

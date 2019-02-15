@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locales [Reporting Services]
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1d2552c441a17f3d79c3db0d06a0b128618503d9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 03f99854aff2333bdb01387d07c90f81c98abe76
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027085"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285235"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>设置报表或文本框的区域设置 (Reporting Services)
   报表或文本框的 **“语言”** 属性包含区域设置，该区域设置确定因语言和区域而异的默认报表数据显示格式，例如日期、货币或数值。 文本框的 **“语言”** 属性会覆盖报表的 **“语言”** 属性。 如果不为 **“语言”** 指定值，则 Reporting Services 将使用报表服务器所用操作系统的区域设置来发布报表，或使用报表创作计算机的区域设置来预览报表。  

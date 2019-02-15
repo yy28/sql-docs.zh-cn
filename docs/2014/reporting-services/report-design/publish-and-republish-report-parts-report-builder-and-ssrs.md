@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7390aa556898f4842850b66684c74a347caba94b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027118"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293115"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  

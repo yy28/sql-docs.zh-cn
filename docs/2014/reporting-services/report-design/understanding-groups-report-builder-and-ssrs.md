@@ -11,15 +11,15 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 97f61325c563c1c8ff22ff3e4177c74726f775cc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037393"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286535"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解组（报表生成器和 SSRS）
   在报表生成器中，组是绑定到数据区域的报表数据集中的命名数据集。 基本上，一个组可组织一个报表数据集视图。 数据区域中的所有组都指定相同报表数据集的不同视图。  

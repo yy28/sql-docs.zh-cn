@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017688"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297165"
 ---
 # <a name="troubleshoot-report-builder"></a>报表生成器故障排除
   报表生成器是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的一个报表创作工具，可以用于从多种不同类型的数据源生成报表，并可将报表发布到报表服务器或 SharePoint 站点。 在 Web 浏览器或作为的一部分，可以在报表生成器中，查看您创建报告[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 应用程序或 SharePoint 站点。  

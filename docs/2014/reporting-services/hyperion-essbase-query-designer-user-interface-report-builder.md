@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fc7951df4e0cb3f6bf3b03d820cdd2f78797b714
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78edb97c624cab763aeb1153d6f905bba7362b2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030168"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293850"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查询设计器用户界面（报表生成器）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个图形查询设计器，用于为 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动在数据源中定义的多维数据集的成员，以生成可在处理报表时检索数据的 MDX 查询。  

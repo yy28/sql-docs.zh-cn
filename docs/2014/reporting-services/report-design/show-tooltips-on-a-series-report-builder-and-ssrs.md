@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dedf1cedbfc0d829ae9e1c3b10a2f4699e35cb6b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029648"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291425"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在序列上显示工具提示（报表生成器和 SSRS）
   可以向图表的序列上的每个数据点添加工具提示，以显示与数据点有关的信息，例如，用户将光标悬停在所呈现报表中的数据点上时，会显示组名、数据点的值，或数据点相对于序列总计的百分比。  

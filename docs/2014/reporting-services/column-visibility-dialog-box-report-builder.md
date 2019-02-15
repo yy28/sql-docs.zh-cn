@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025808"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294435"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>“列可见性”对话框（报表生成器）
   在报表首次运行时使用 **“列可见性”** 对话框来显示或隐藏选中的列，其他时候可通过此对话框使用另一报表项来切换该列的可见性。  

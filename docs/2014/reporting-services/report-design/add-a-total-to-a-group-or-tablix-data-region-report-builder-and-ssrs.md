@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e7aa240f87e6553625846cc0c076b2194f1cec3d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34a8c56386e7dc9a7ddc91d957bbabb11f4689fe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032426"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292760"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>向组或 Tablix 数据区域添加总计（报表生成器和 SSRS）
   可以在 Tablix 数据区域中为组或整个数据区域添加总计。 默认情况下，总计是在应用筛选器之后组或数据区域中的非 Null 数值数据之和。 若要为组添加总计，请在“分组”窗格中单击组快捷菜单上的 **“添加总计”** 。 若要为 Tablix 正文区中的各个单元添加总计，请单击单元快捷菜单上的 **“添加总计”** 。 “添加总计”命令与上下文相关，并且仅支持数字字段。 根据选择的 Tablix 单元，您可以通过选择 Tablix 正文区中的单元为一个单元添加总计，也可以通过选择 Tablix 行组区或 Tablix 列组区中的单元为整个组添加总计。 有关 Tablix 区域的详细信息，请参阅 [Tablix 数据区域（报表生成器和 SSRS）](../tablix-data-region-report-builder-and-ssrs.md)。  

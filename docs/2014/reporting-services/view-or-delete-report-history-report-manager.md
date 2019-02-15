@@ -23,15 +23,15 @@ helpviewer_keywords:
 - displaying report snapshots
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b1a3e69ab9b96cde350551e3f7dec7f47bfb46a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031384"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290905"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>查看或删除报表历史记录（报表管理器）
   报表历史记录与关联的报表一起保存。 有权查看报表的所有用户都可以查看相应的历史记录。  

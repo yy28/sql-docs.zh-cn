@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5f5d8f6f88f862486a50b0e7365bb221acb0138e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6de5a58a378c67a64fa50a92d08ab140f0f34960
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015010"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289235"
 ---
 # <a name="security-report-builder"></a>安全性（报表生成器）
   报表生成器是一类设计用来与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器配合使用的报表创作客户端应用程序。 可以将报表服务器配置为在本机模式中作为独立服务器运行，也可以将报表服务器配置为在 SharePoint 集成模式中运行以支持 SharePoint 站点上的报表。  

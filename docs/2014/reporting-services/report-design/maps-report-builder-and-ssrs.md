@@ -15,15 +15,15 @@ f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ef5cc5ba452ddd29bd961cfd693a89b2b7f3e56c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013958"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291245"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，您可以向报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  

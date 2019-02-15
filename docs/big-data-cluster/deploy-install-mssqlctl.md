@@ -5,16 +5,16 @@ description: 了解如何安装 mssqlctl 工具用于安装和管理 SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/15/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 54fef15869eb86c3694adfb793ed028e22aadf4d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087606"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287115"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安装 mssqlctl 来管理 SQL Server 2019 大数据群集
 
@@ -23,7 +23,7 @@ ms.locfileid: "55087606"
 **mssqlctl**是启用群集管理员若要启动和管理大数据群集通过 REST Api 以 Python 编写的命令行实用程序。 所需的最小的 Python 版本是 3.5 版。 您还必须拥有`pip`用于下载并安装**mssqlctl**工具。 下面的说明为 Windows 和 Ubuntu 提供示例。 在其他平台上安装 Python，请参阅[Python 文档](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
 > [!IMPORTANT]
-> 如果安装了以前版本的**mssqlctl**，则必须删除该群集*之前*升级**mssqlctl**和安装新版本。 有关详细信息，请参阅[升级到新的发行版](deployment-guidance.md#upgrade)。
+> 如果要安装较新版本的大数据群集，必须备份您的数据并删除旧的群集*之前*升级**mssqlctl**和安装新版本。 有关详细信息，请参阅[升级到新的发行版](deployment-guidance.md#upgrade)。
 
 ## <a id="windows"></a> Windows mssqlctl 安装
 

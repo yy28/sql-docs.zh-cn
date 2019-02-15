@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026508"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286220"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
   文档结构图提供了一组指向所呈现报表中的报表项的导航链接。 当您查看包含文档结构图的报表时，将在报表旁显示一个单独的侧窗格。 用户通过单击文档结构图中的链接，可跳至显示报表项的报表页。 报表的各区域和组将按一定层次结构的链接形式排列。 单击文档结构图中的项会刷新报表，并显示与文档结构图中所单击项对应的报表区域。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043268"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294425"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>页面布局和呈现方式（报表生成器和 SSRS）
   当您创作报表时，务必了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 呈现器的行为，以确保所呈现的报表显示为您需要的方式，包括页面布局和分页符。 您还可能希望确保所呈现的报表适合您或贵组织常用的纸张大小。  

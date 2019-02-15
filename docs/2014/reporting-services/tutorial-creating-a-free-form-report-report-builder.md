@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013748"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286797"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
   本教程教你如何创建一个与书信格式类似的 SSRS 自由格式报表。 你可以排列报表项来创建一个具有文本框、图像和其他数据区域的窗体。  

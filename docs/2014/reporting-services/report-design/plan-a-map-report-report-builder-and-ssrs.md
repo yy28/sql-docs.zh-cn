@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288185"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
   好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，您可以将地图添加到报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  

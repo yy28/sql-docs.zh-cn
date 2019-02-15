@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c446593803d54a3829c024f590eaf95250d7cfe6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 183309b2ce9f002c83628168079be597535dbbb8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043308"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298275"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩阵和图表上显示相同数据（报表生成器）
   如果希望在矩阵和图表中显示相同数据，则必须将两个数据区域的属性都设置为指定相同数据集，而且还要为筛选器、组、排序和数据指定相同表达式。  

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 882f7ba5aed75aec20d656c5ca49da66625ec6e6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031442"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293105"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
   使用 **“选择颜色”** 对话框可以为数据区域或文本框中单个或多个单元的背景指定颜色选项，或为图表指定颜色选项。  

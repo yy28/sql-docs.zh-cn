@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 47e8f2e046e919e4b8f292046b99665ea7a012b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043107"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292985"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和线条（报表生成器和 SSRS）
   使用矩形和线条可在报表中创建各种视觉效果。 您可以在“主页”选项卡的“边框”部分设置这些报表项的显示属性，还可以使用“属性”窗格设置其他属性。 可以为矩形添加类似背景色或图像、工具提示或书签这样的功能。  

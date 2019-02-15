@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 778c65a7c8a7e1cf98a4ad8a7cf65ab28c3cf19a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043248"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297055"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  

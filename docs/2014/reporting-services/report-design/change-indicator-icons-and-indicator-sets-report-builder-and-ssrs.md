@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: eadd265cc4d3e9cda3678e6269c4ec998b7ace20
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41a3eefad844c153a4f4d264d4efcf8d91677394
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025948"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294715"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>更改指示器图标和指示器集（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供预先配置的指示器集，它们可能不总是能够高效地描绘您的数据以及适合于传递的报表。 本主题提供的过程介绍如何更改指示器图标的外观，以及如何更改指示器集以便包括不同的指示器图标或者更多或更少的指示器图标。  

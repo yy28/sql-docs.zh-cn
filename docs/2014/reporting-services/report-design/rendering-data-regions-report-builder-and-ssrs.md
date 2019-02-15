@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adf3365f43e9898e6282a571901913e0400acd9e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020369"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293705"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>呈现数据区域（报表生成器和 SSRS）
   除了适用于所有报表项的常规呈现行为外，数据区域还要遵循其他一些分页和呈现行为。 特定于数据区域的呈现规则包括数据区域如何增长，如何呈现特殊的单元（如角单元或标题单元）以及如何呈现从右向左读的数据区域。 本主题将介绍如何呈现数据区域的各个部分。  

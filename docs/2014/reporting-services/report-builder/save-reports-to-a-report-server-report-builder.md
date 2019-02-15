@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 458f86927fb14ef0e764aee550d4b1e02a1c4547
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039148"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290155"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
   在报表生成器中，可以将报表定义保存到报表服务器（也称为发布报表）。 将报表保存到报表服务器时，其他用户可以查看报表。 每次运行已发布的报表时，将检索最新的数据。 若要保存所呈现报表的静态副本，请将该报表导出为另一文件格式并保存它，或使用报表历史记录功能来保存所呈现报表的各个版本。  

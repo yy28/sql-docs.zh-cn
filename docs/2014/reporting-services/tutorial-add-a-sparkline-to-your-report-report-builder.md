@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016908"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294725"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
   在本教程中，您将基于示例销售数据创建一个基本的表报表，然后向该表的单元中添加迷你图。  

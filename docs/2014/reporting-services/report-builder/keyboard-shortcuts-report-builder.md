@@ -11,15 +11,15 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bfda9c489cfde4f134f1b223dc7fe8f1db7f5367
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031938"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297188"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   使用报表生成器时，您可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  

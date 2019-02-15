@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46984681329be6e236cac6271d3768705a26dd7b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fd2b4d8d8b883fd5cb4dd22aca9d64537d1bcd79
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027548"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291835"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
   轴间隔用于定义坐标轴上的标签和附带的刻度线的数目。 在值轴上，轴间隔提供图表上数据点的一致度量。 但是，在类别轴上，此功能会导致显示不带轴标签的类别。 可以在轴 Interval 属性中指定所需间隔数。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 根据结果集中的数据在运行时计算间隔数。 有关轴间隔的计算方式的详细信息，请参阅[设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  

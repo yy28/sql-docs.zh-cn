@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2fcaaf1e12e685ef029d758216eb10f9b21526bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284995"
 ---
 # <a name="report-f1-help"></a>报表的 F1 帮助
   在本部分中的主题提供有关可以在报表设置的选项的信息**报表属性**对话框。 若要打开**报告属性**对话框中，右键单击报表设计器中的背景，然后单击**报表属性**。  

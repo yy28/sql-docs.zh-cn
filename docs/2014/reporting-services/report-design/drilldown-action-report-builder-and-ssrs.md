@@ -38,15 +38,15 @@ f1_keywords:
 - "10062"
 - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5f04eaab455f27c0450d9d6c3d9f4b9f1c39ec0f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029708"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297305"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>深化操作（报表生成器和 SSRS）
   B 在文本框上提供了加号和减号图标，使用户能够以交互方式隐藏和显示项。 这称为 *深化* 操作。 对于表或矩阵，可以显示或隐藏静态行和列，或者与组关联的行和列。  

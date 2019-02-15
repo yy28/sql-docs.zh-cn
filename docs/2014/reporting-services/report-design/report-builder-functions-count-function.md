@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2e90a3d1e7b5e00c61be2ed4d1d50db501474e35
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029308"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292425"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  

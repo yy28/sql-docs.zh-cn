@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameters [Reporting Services], multivalued
 - valid values [Reporting Services]
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f53d94a83cf5217294ac7ffd2682446e551ed33b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039608"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291075"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用筛选器（报表生成器和 SSRS）
   若要创建筛选器，必须指定一个或多个筛选器公式。 筛选器公式包括表达式、数据类型、运算符和值。 本主题提供了常用筛选器的示例。  

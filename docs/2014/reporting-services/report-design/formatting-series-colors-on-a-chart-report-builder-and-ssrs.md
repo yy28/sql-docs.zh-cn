@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.borders.f1
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f3622ea10c5dbd0b38e7562ec8039fb1f28571b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298165"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>设置图表上序列颜色的格式（报表生成器和 SSRS）
   Reporting Services 为图表提供了多种内置调色板，或者您也可以定义自定义调色板。 默认情况下，图表使用内置**BrightPastel**颜色调色板填充每个序列。 这些颜色也会显示在图例中。 向图表添加多个序列时，图表按颜色在调色板中的定义顺序为序列各分配一种颜色。  

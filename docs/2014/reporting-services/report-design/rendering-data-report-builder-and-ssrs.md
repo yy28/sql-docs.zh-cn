@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 681fffa274b9ec8bf9f4e5d76e909325d1611d6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 101a20a85484076b7a1a71344818b9265ef2453d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020558"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296905"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>呈现数据（报表生成器和 SSRS）
   使用 HTML、MHTML、Word、Excel、PDF 或 Image 之类的布局呈现器时，数据和其组织保持不变。 当使用逗号分隔值 (CSV) 或 XML 之类的数据呈现器格式导出时，不会呈现任何可视布局元素。 呈现报表时，CSV 和 XML 会将某些规则应用到表体及其内容。 这些规则用于确定数据在这些格式中的呈现方式。  

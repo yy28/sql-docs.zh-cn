@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 212a96b4656e3ed3fd91744f43c8e27c45e112f8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020459"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286525"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>创建递阶报表（报表生成器和 SSRS）
   递阶报表可在父组下方的同一列中缩进显示详细信息行或子组，如下例所示：  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5952850708057016c5f9b8144254682a7f47fd9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 68bf430f1b1bcf7a687ecaa77c883fdb5d6cce82
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029388"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289785"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>将报表保存到您的计算机（报表生成器）
   在报表生成器中，可以将报表定义保存到您的计算机。 不过，将报表保存到您的计算机后，其他用户将不能查看这些报表，并且引用共享数据源或存储报表项（如图像和子报表）的报表可能不能在外部运行。 建议将报表保存到报表服务器或 SharePoint 站点。  

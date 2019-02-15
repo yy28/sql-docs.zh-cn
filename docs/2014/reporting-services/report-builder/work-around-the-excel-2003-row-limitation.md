@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37c20a59efa741b5ca768cd6b63773ad7aa15afe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032441"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287970"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>避开 Excel 行限制
   本主题介绍在将报表导出到 Excel 时，如何避开 Excel 2003 的行限制。 本解决方法适用于只包含表的报表。  

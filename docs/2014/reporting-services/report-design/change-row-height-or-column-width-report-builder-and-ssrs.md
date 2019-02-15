@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4444821e00b4b6d271aa1c6d15b756121eecfd2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a6fd1eceffcf429d2a57602ef8b2944270fa497
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042338"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298405"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>更改行高或列宽（报表生成器和 SSRS）
   设置行高时，您所指定的是呈现的报表中行的最大高度。 但默认情况下，行中的文本框设置为可在运行时沿垂直方向增长，以容纳其中的数据，这会使行超过您指定的高度。 若要设置固定行高，您必须更改文本框的属性，使其不会自动增高。  

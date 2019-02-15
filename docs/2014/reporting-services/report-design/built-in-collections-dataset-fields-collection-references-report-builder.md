@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d4717b1f8a905576d2f59657fd8ae8ad00396e3b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037153"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297425"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>数据集字段集合引用（报表生成器和 SSRS）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  

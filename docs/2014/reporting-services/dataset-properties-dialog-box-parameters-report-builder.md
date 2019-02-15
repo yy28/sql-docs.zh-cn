@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 207aa0b0657670d93dbdfc92b80a0c3d3285de7d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030198"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298005"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
   选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  

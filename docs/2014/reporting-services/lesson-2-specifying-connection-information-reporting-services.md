@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020518"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290175"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
   向“教程”项目添加报表之后，需要定义数据源，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  

@@ -11,15 +11,15 @@ f1_keywords:
 - "10121"
 - sql12.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb01b4a01222fd9c445f99ac2c80253c652737ae
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034718"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294956"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>向表或矩阵添加交互式排序（报表生成器和 SSRS）
   添加交互式排序按钮可以让用户能够更改表和矩阵中行和列的排序顺序。 只有支持用户交互的呈现格式（例如 HTML）才支持此功能。  

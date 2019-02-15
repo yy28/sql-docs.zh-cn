@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4e868988ae1bea8953e143cba540c35654311c03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020708"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293916"
 ---
 # <a name="plan-for-map-report-support"></a>计划地图报表支持
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持使用空间数据源的地图报表。 空间数据可来自 SQL Server 数据库或 ESRI 形状文件，或者来自随 Reporting Services 或报表生成器一起安装的地图库。 地图还可以显示 Bing 地图图块的背景。 报表作者可以创建空间数据或 Bing 地图图块指定为动态和在运行时检索到或为静态的嵌入报表定义中的报表。  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043398"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296875"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
   数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)。  

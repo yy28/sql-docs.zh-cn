@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c64c4c000f3634e720ddfd9b20a1256a826677e8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013598"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298495"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表是包括报表数据和报表布局元素的基于 XML 的报表定义。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 报表是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的基于服务器的报表平台的一部分。  

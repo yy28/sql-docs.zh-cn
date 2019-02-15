@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025868"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293735"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>创建、删除或修改共享数据源（报表管理器）
   共享数据源指定数据源的连接属性。 如果数据源供大量的报表、模型或数据驱动订阅使用，则可考虑创建共享数据源，以消除必须在多个位置维护相同连接信息的开销。  

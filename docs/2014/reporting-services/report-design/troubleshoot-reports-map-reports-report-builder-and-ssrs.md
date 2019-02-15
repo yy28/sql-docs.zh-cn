@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0660eb1e4e9ae682e1a7c64005a767280c441445
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036804"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296235"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当您向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时，报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  

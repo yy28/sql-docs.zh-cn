@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b89f965fd85a45419741a3d18552d9e1323196cf
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015998"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293755"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  

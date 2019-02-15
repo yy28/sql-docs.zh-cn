@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 88e8dd648610d6cd83af6276fc0bb71449532737
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015689"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295886"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  

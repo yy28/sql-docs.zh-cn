@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5c6076a672c0f86b290f77e35d750550d0a7c2a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026761"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294415"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>配置 Reporting Services 使用使用者备用名称
   本主题说明了如何通过修改 rsreportserver.config 文件和使用 Netsh.exe 工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) 以使用使用者可选名称 (SAN)。  

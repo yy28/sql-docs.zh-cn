@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037149"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287966"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Parameters 集合引用（报表生成器和 SSRS）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  

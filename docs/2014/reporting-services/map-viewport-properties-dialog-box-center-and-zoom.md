@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29cc14559b1c81646a2285106e04b7380e6a77e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026170"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296265"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>“地图视区属性”对话框 -&gt;“中心和缩放”
   选择 **“地图视区属性”** 对话框中的 **“中心和缩放”** 可以设置地图的中心视图和缩放系数。 指定地图数据源和要在报表中包含的地图的边界后，可以指定视图中心和缩放系数以进一步控制地图的显示。 根据用于指定中心和缩放值的不同方法，选项也会不同。 单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  

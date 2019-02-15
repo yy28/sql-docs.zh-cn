@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bf2f253405e3e64764f3b7edf61112a3bb05d601
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 073f032967c0546659b79a57c79d995e0e6f09b9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025078"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293245"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分页（报表生成器和 SSRS）
   分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。  

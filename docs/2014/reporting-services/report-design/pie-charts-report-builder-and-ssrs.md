@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f10e941ef5acd180e8b279762e84535bad5689e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6f7f10aad960e46b72b981f8546da89cb6712dc9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043218"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291885"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>饼图（报表生成器和 SSRS）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成了一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。 有关形状图的详细信息，请参阅[形状图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
