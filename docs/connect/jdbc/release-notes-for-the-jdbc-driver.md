@@ -1,7 +1,7 @@
 ---
 title: JDBC 驱动程序的发行说明 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/29/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,54 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e7225da803185074e50f3c33d734ec50ccdc29b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514559"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737058"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC Driver 发行说明
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Microsoft JDBC Driver 7.2 for SQL Server 中的更新
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 是完全符合 JDBC API 规范 4.2。 Java 版本兼容性根据命名 7.2 包中的 jar。 例如，mssql jdbc 7.2.0.jre11.jar 文件从 7.2 包应使用与 Java 11 配合使用。
+
+### <a name="support-for-jdk-11"></a>对 JDK 11 的支持
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 目前使用 Java 开发工具包 (JDK) 版本 11.0 除了 JDK 1.8 兼容。
+
+### <a name="support-for-active-directory-managed-service-identity-msi-authentication"></a>支持 Active Directory 托管服务标识 (MSI) 身份验证
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 现在支持 Active Directory 托管服务标识 (MSI) 身份验证模式。 这种模式的身份验证是适用于 Azure 资源启用了"Identity"功能的支持。 若要获取驱动程序支持这两种类型的托管系统标识 (MSI) **accessToken**建立安全连接。
+
+更多详细信息和示例应用程序使用此身份验证模式可在此处找到：[使用 Azure Active Directory 身份验证连接](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+
+### <a name="osgi-support"></a>OSGi 支持
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 引入到驱动程序通过以下实现添加了 OSGi 支持`org.osgi.service.jdbc.DataSourceFactory`和`org.osgi.framework.BundleActivator`:
+
+- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
+- `com.microsoft.sqlserver.jdbc.osgi.Activator`
+
+### <a name="sqlservererror-apis"></a>SQLServerError Api
+
+引入了适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2`SQLServerException.getSQLServerError()`和`SQLServerError`getter Api 以检索有关从服务器所生成错误的其他详细信息。 有关详细信息，请参阅[消除错误](../../connect/jdbc/handling-errors.md)。
+
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本 1.6.3
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 已更新 Maven 依赖于"Microsoft Azure Active Directory 身份验证库 (ADAL4J) 适用于 Java"到版本 1.6.3，它还引入了"Java 客户端运行时为 AutoRest"作为 Maven 依赖项 (版本：1.6.5）。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>更新后的"Microsoft Azure 密钥保管库 SDK 的 Java"版本：1.2.0
+
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.2 已更新 Maven 依赖于"Microsoft Azure 密钥保管库 SDK 的 Java"到版本 1.2.0，它还引入了"Microsoft Azure SDK 为密钥保管库 WebKey"作为 Maven 依赖项 (版本：1.2.0）。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+
+### <a name="known-issues"></a>已知问题
+
+使用 SQL Server 的 Microsoft JDBC 驱动程序 7.2，某些参数化查询存在一个已知的问题。 将很快发布 7.2 版 (v7.2.1) 的更新，若要解决此问题。
+
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Microsoft JDBC Driver 7.0 for SQL Server 更新
 
@@ -75,9 +113,9 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-adal4j-version-160"></a>更新的 ADAL4J 版本： 1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本 1.6.0
 
-适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.0 已更新为版本 1.6.0 Maven 依赖于 azure 的与 active directory-库-用于-java (ADAL4J)。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+适用于 SQL Server 的 Microsoft JDBC 驱动程序 7.0 已更新为版本 1.6.0 Maven 依赖于"Microsoft Azure Active Directory 身份验证库 (ADAL4J) 适用于 Java"。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Microsoft JDBC Driver 6.4 for SQL Server 中的更新
 
@@ -93,7 +131,7 @@ Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2
 
 ### <a name="added-connection-property-sslprotocol"></a>添加了连接属性： sslProtocol
 
-新的连接属性允许用户指定 TLS 协议关键字。 可能的值为:"TLS"、"TLSv1"、"TLSv1.1"和"TLSv1.2"。 有关详细信息，请参阅[SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)。
+新的连接属性允许用户指定 TLS 协议关键字。 可能的值有："TLS"、"TLSv1"、"TLSv1.1"和"TLSv1.2"。 有关详细信息，请参阅[SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)。
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>不推荐使用连接属性： fipsProvider
 
@@ -131,9 +169,9 @@ JDBC 驱动程序已实现了已准备的语句元数据缓存以改进性能。
 
 JDBC Driver 现在支持，在所有受支持的操作系统（Windows、Linux 和 Mac）上结合使用 Azure Active Directory (Azure AD) 集成身份验证和 Kerberos。 或者，在 Windows 操作系统中，用户可以使用身份验证 sqljdbc_auth.dll。
 
-### <a name="updated-adal4j-version-140"></a>更新的 ADAL4J 版本： 1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>更新了“用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”版本 1.4.0
 
-JDBC 驱动程序已更新为版本 1.4.0 Maven 依赖于 azure 的与 active directory-库-用于-java (ADAL4J)。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
+JDBC 驱动程序已更新为版本 1.4.0 Maven 依赖于"Microsoft Azure Active Directory 身份验证库 (ADAL4J) 适用于 Java"。 有关依赖关系的详细信息，请参阅[适用于 SQL Server 功能的 Microsoft JDBC 驱动程序的依赖关系](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Microsoft JDBC Driver 6.2 for SQL Server 中的更新
 
@@ -177,7 +215,7 @@ JDBC 驱动程序现在支持以下可配置超时。 可以根据应用程序�
 
 Microsoft JDBC Driver 6.0 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 根据其符合性的 JDBC API 版本命名的 jar，6.0 程序包中。 例如，6.0 程序包中的 sqljdbc42.jar 文件与 JDBC API 4.2 兼容。 同样，sqljdbc41.jar 文件与 JDBC 4.1 API 兼容。
 
-若要确保具有正确 sqljdbc42.jar 或 sqljdbc41.jar 文件，运行以下代码行。 如果输出是"驱动程序版本： 6.0.7507.100"，你具有 JDBC Driver 6.0 包。
+若要确保具有正确 sqljdbc42.jar 或 sqljdbc41.jar 文件，运行以下代码行。 如果输出是"驱动程序版本：6.0.7507.100"，你具有 JDBC Driver 6.0 包。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -214,7 +252,7 @@ JDBC Driver 6.0 可用于在要连接到 Azure SQL 数据库的 JDBC 连接字�
 
 Microsoft JDBC Driver 4.2 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2。 根据其符合性的 JDBC API 版本命名 4.2 程序包中的 jar。 例如，从 4.2 程序包 sqljdbc42.jar 文件与 JDBC API 4.2 兼容。 同样，sqljdbc41.jar 文件与 JDBC 4.1 API 兼容。
 
-若要确保具有正确 sqljdbc42.jar 或 sqljdbc41.jar 文件，请运行以下代码行。 如果输出是"驱动程序版本： 4.2.6420.100"，你具有 JDBC Driver 4.2 包。
+若要确保具有正确 sqljdbc42.jar 或 sqljdbc41.jar 文件，请运行以下代码行。 如果输出是"驱动程序版本：4.2.6420.100"，你具有 JDBC Driver 4.2 包。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

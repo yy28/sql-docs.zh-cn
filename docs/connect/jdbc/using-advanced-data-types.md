@@ -1,7 +1,7 @@
 ---
 title: 使用高级的数据类型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510505"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736818"
 ---
 # <a name="using-advanced-data-types"></a>使用高级数据类型
 
@@ -32,10 +32,13 @@ ms.locfileid: "52510505"
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> 图像|LONGVARBINARY|byte[] \(默认）、Blob、InputStream、String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String（默认）、Clob、InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String（默认）、Clob、NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String（默认）、InputStream、Clob、byte[]、Blob、SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String（默认）、byte[]、InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry<br /><br /> 地理|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持以二进制数据的格式发送和检索 CLR UDT，但不支持操作 CLR 元数据。  
   
 以下部分提供了关于如何使用 JDBC 驱动程序和高级数据类型的示例。  
@@ -55,7 +58,7 @@ JDBC 驱动程序实现了 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 接�
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>从数据库中检索大值类型
 
-当从数据库检索非二进制大值数据类型（如 varchar(max) 数据类型）时，一种方法是将该数据作为字符流进行读取。 以下实例使用了 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法从数据库中检索数据，并将其返回为结果集。 然后，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法从结果集读取大值数据。  
+从数据库中检索非二进制大值数据类型（例如 varchar(max) 数据类型）时，一种方法是将此数据读取为字符流。 以下实例使用了 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法从数据库中检索数据，并将其返回为结果集。 然后，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法从结果集读取大值数据。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -66,7 +69,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > 这种方法还可用于**文本**， **ntext**，并**nvarchar （max)** 数据类型。  
 
-当从数据库检索二进制大值数据类型（如 varbinary(max) 数据类型）时，可以采取多种方法。 最有效的方法是将数据作为二进制流进行读取，如下所示：  
+从数据库中检索二进制大值数据类型（例如 varbinary(max)）时，可采用多种方法进行操作 。 最有效的方法是将数据作为二进制流进行读取，如下所示：  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -162,12 +165,20 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 ## <a name="user-defined-data-type"></a>用户定义的数据类型  
 
-通过允许在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库中存储对象和自定义数据结构，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中引入了用户定义的类型 (UDT)，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 可使用 Microsoft .NET 公共语言运行时 (CLR)（生成可验证的代码）所支持的任意一种语言定义 UDT。 这些语言包括 Microsoft Visual C# 和 Visual Basic .NET。 数据被公开为基于 .NET Framework 的类或结构的字段和属性，行为由类或结构的方法定义。  
+通过允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储对象和自定义数据结构，在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了用户定义的类型 (UDT)，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 可使用 Microsoft .NET 公共语言运行时 (CLR)（生成可验证的代码）所支持的任意一种语言定义 UDT。 这些语言包括 Microsoft Visual C# 和 Visual Basic .NET。 数据被公开为基于 .NET Framework 的类或结构的字段和属性，行为由类或结构的方法定义。  
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可用作表的列定义、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的变量或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或存储过程的参数。  
   
 有关用户定义的数据类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用和修改用户定义类型的实例”。  
   
+## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+
+Sql_variant 数据类型有关的信息，请参阅[使用 Sql_variant 数据类型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+
+## <a name="spatial-data-types"></a>空间数据类型
+
+有关空间数据类型的信息，请参阅[使用空间数据类型](../../connect/jdbc/use-spatial-datatypes.md)。  
+
 ## <a name="see-also"></a>另请参阅
 
 [了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

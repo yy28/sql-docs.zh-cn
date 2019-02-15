@@ -1,7 +1,7 @@
 ---
 title: 使用 Kerberos 集成身份验证连接到 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396151"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736988"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接 SQL Server
 
@@ -48,7 +48,7 @@ ms.locfileid: "52396151"
 
 - 如果指定**authenticationScheme = JavaKerberos**但未同时指定**integratedSecurity = true**，则驱动程序将忽略**authenticationScheme**连接属性，并将希望在连接字符串中找到用户名和密码凭据。
 
-使用数据源创建连接时，可使用 setAuthenticationScheme 以编程方式设置身份验证架构，并可选择使用 setServerSpn 设置 Kerberos 连接的 SPN。
+使用数据源来创建连接时，可使用 setAuthenticationScheme 以编程方式设置身份验证方案，也可选择性地使用 setServerSpn 为 Kerberos 连接设置 SPN。
 
 新增了一个记录程序以支持 Kerberos 身份验证：com.microsoft.sqlserver.jdbc.internals.KerbAuthentication。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。
 
@@ -57,7 +57,7 @@ ms.locfileid: "52396151"
 1. 设置**AllowTgtSessionKey**为 1 的 Windows 注册表中。 有关详细信息，请参阅 [Windows Server 2003 中的 Kerberos 协议注册表项和 KDC 配置项](https://support.microsoft.com/kb/837361)。
 2. 请确保 Kerberos 配置（UNIX 环境中的 krb5.conf）指向您的环境中正确的领域和 KDC。
 3. 通过使用 kinit 或登录到域来初始化 TGT 缓存。
-4. 当在 Windows Vista 或 Windows 7 操作系统上运行使用 authenticationScheme=JavaKerberos 的应用程序时，应使用标准用户帐户。 但如果以管理员帐户运行应用程序，则必须使用管理员特权运行该应用程序。
+4. 当在 Windows Vista 或 Windows 7 操作系统上运行使用 authenticationScheme=JavaKerberos 的应用程序时，应使用标准用户帐户。 但是，如果在管理员帐户下运行应用程序，则该程序必须以管理员特权运行。
 
 > [!NOTE]  
 > serverSpn 连接属性仅受 Microsoft JDBC Driver 4.2 及更高版本支持。
@@ -66,7 +66,7 @@ ms.locfileid: "52396151"
 
 服务主体名称 (SPN) 是客户端用来唯一标识服务实例的名称。
 
-可以使用 serverSpn 连接属性指定 SPN 或只需让驱动程序生成它（默认）。 此属性采用“MSSQLSvc/fqdn:port\@REALM”的格式，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是 SQL Server 的 Kerberos 领域的大写字母表示。 如果你的 Kerberos 配置的默认领域与服务器的领域相同，并且默认情况下不包含该领域，则此属性的领域部分是可选的。 如果想要支持跨领域身份验证方案，其中 Kerberos 配置中的默认领域与服务器的领域不同，则必须使用 serverSpn 属性设置 SPN。
+可以使用 serverSpn 连接属性指定 SPN 或只需让驱动程序生成它（默认）。 此属性采用“MSSQLSvc/fqdn:port\@REALM”的形式，其中 fqdn 是完全限定的域名，port 是端口号，REALM 是 SQL Server 的 Kerberos 领域（采用大写形式）。 如果 Kerberos 配置的默认领域与该 Server 的领域相同且不默认包含在内，则此属性的领域部分可选。 如果想要支持跨领域身份验证方案，其中 Kerberos 配置中的默认领域与服务器的领域不同，则必须使用 serverSpn 属性设置 SPN。
 
 例如，你的 SPN 可能如下所示:"MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ。CORP.CONTOSO.COM"
 
@@ -110,19 +110,19 @@ SQLJDBCDriver {
 
 因此，每个登录模块配置文件条目均包含一个名称，该名称后跟一个或多个特定于 LoginModule 的条目，其中每个特定于 LoginModule 的条目以分号结尾，并且整个特定于 LoginModule 的条目组都包含在大括号中。 每个配置文件条目均以分号结尾。
 
-除了允许驱动程序使用登录配置模块文件中指定的设置获取 Kerberos 凭据之外，驱动程序还可使用现有凭据。 这在您的应用程序需要使用多个用户的凭据创建连接时非常有用。
+除了允许驱动程序使用登录配置模块文件中指定的设置获取 Kerberos 凭据之外，驱动程序还可使用现有凭据。 如果应用程序需要使用多个用户凭据来创建连接，则这非常有用。
 
-在尝试使用指定登录模块登录之前，如果现有凭据可用，则驱动程序将尝试使用它们。 因此，使用 Subject.doAs 方法在特定上下文下执行代码时，将使用传递给 Subject.doAs 调用的凭据创建连接。
+在尝试使用指定登录模块登录之前，如果现有凭据可用，则驱动程序将尝试使用它们。 因此，在使用 `Subject.doAs` 方法在特定上下文中执行代码时，可通过传递到 `Subject.doAs` 调用的凭据创建连接。
 
 有关详细信息，请参阅 [JAAS 登录配置文件](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html)和[类 Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html)。
 
-从 Microsoft JDBC Driver 6.2 开始，或者可以使用连接属性 jaasConfigurationName 传递登录模块配置文件的名称，这样，具有其自己的登录名配置的每个连接。
+从 Microsoft JDBC Driver 6.2 开始，登录模块配置文件的名称可以根据需要传递使用连接属性`jaasConfigurationName`，这样，具有其自己的登录名配置的每个连接。
 
 ## <a name="creating-a-kerberos-configuration-file"></a>创建 Kerberos 配置文件
 
 有关 Kerberos 配置文件的详细信息，请参阅 [Kerberos 需求](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html)。
 
-下面是一个示例域配置文件，其中 YYYY 和 ZZZZ 是您网站的域名称。
+这是一个示例域配置文件，其中 YYYY 和 ZZZZ 是域名。
 
 ```ini
 [libdefaults]  
@@ -153,7 +153,7 @@ forwardable = yes
 
 您可以使用 -Djava.security.krb5.conf 启用域配置文件。 可以启用登录模块配置文件 **-Djava.security.auth.login.config**。
 
-例如，启动应用程序时，您可使用以下命令行：
+例如，可以使用以下命令启动应用程序：
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
@@ -192,6 +192,33 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 ```
 
 Username 属性不需要领域，如果用户属于 default_realm krb5.conf 文件中设置。 当`userName`并`password`设置连同`integratedSecurity=true;`和`authenticationScheme=JavaKerberos;`属性，该连接会建立与用户名的值作为 Kerberos 主体沿与提供的密码。
+
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>在同一个域上使用 Kerberos 身份验证从 Unix 计算机
+
+本指南假定一个有效的 Kerberos 设置已存在。 具有使用 Kerberos 身份验证以验证前面提到的则返回 true 的 Windows 计算机上运行下面的代码。 该代码将打印"身份验证方案：KERBEROS"如果成功，则在控制台。 需要外部提供的任何其他运行时标志、 依赖项或驱动程序设置。 可以验证成功的连接的 linux 操作系统上运行相同的代码块。
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("<database>");
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+1. 域将客户端计算机加入到与服务器位于同一域中。
+2. （可选）设置默认的 Kerberos 票证位置。 这非常方便地通过设置`KRB5CCNAME`环境变量。
+3. 获取 Kerberos 票证，通过生成一个新或者将它们放置的现有默认 Kerberos 票证位置中。 若要生成一个票证，只需使用终端并初始化该票证通过`kinit USER@DOMAIN.AD`其中"用户"和"域。AD"分别是主体服务器和域。 例如 `kinit SQL_SERVER_USER03@MICROSOFT.COM`。 在默认票证位置，或者在将生成票证`KRB5CCNAME`路径如果设置。
+4. 终端会提示输入密码，输入的密码。
+5. 验证是否通过在票证中的凭据`klist`并确认你想要用于身份验证的凭据。
+6. 运行上面的示例代码，并确认 Kerberos 身份验证成功。
 
 ## <a name="see-also"></a>另请参阅
 

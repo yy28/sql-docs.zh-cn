@@ -1,7 +1,7 @@
 ---
 title: 使用空间数据类型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460542"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737008"
 ---
 # <a name="using-spatial-datatypes"></a>正在使用空间数据类型
 
@@ -90,41 +90,41 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 |方法|描述|
 |:------|:----------|
-|void setGeometry (int n，Geometry x)| 将指定的参数设置为给定的 microsoft.sql.Geometry 类对象。
-|void setGeography (int n，Geography x)| 将指定的参数设置为给定的 microsoft.sql.Geography 类对象。
+|void setGeometry(int n, Geometry x)| 将指定的参数设置为给定的 microsoft.sql.Geometry 类对象。
+|void setGeography(int n, Geography x)| 将指定的参数设置为给定的 microsoft.sql.Geography 类对象。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
 |方法|描述|
 |:------|:----------|
-|Geometry getGeometry (int colunIndex)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geometry 对象。
+|Geometry getGeometry(int colunIndex)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geometry 对象。
 |Geometry getGeometry (字符串 columnName)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geometry 对象。
-|Geography getGeography (int colunIndex)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geography 对象。
+|Geography getGeography(int colunIndex)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geography 对象。
 |Geography getGeography (字符串 columnName)| 此结果集对象的当前行中将返回指定列的值作为 Java 编程语言中的 com.microsoft.sqlserver.jdbc.Geography 对象。
 
 ### <a name="geometry"></a>Geometry
 
 |方法|描述|
 |:------|:----------|
-|Geometry STGeomFromText (字符串 wkt，int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geometry 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
-|Geometry STGeomFromWKB (byte [] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geometry 实例的构造函数。
+|Geometry STGeomFromText(String wkt, int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geometry 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
+|Geometry STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geometry 实例的构造函数。
 |几何图形反序列化 (byte [] wkb)| 从空间数据的内部 SQL Server 格式的 Geometry 实例的构造函数。
 |Geometry 分析 (字符串 wkt)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geometry 实例的构造函数。 空间引用标识符是默认设置为 0。
 |几何点 （双精度型 x，y double，int SRID）| 根据其 X 和 Y 值以及空间引用标识符表示的点实例的几何图形实例的构造函数。
 |字符串 stastext （)| 返回 Geometry 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
-|byte [] stasbinary （)| 返回 Geometry 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
-|字节 [] serialize()| 返回表示 Geometry 类型的内部 SQL Server 格式的字节。
+|byte[] STAsBinary()| 返回 Geometry 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
+|byte[] serialize()| 返回表示 Geometry 类型的内部 SQL Server 格式的字节。
 |布尔 hasM()| 返回对象是否包含 M （度量） 值。
 |布尔 hasZ()| 返回对象是否包含 Z （标高） 值。
-|双精度 getX()| 返回 X 坐标值。
-|双精度 getY()| 返回 Y 坐标值。
-|双精度 getM()| 返回的对象的 M （度量） 值。
-|双精度 getZ()| 返回的对象的 Z （标高） 值。
+|Double getX()| 返回 X 坐标值。
+|Double getY()| 返回 Y 坐标值。
+|Double getM()| 返回的对象的 M （度量） 值。
+|Double getZ()| 返回的对象的 Z （标高） 值。
 |int getSrid()| 返回的空间引用标识符 (SRID) 值。
-|布尔使用 isnull （)| 返回的 Geometry 对象是否为 null。
+|boolean isNull()| 返回的 Geometry 对象是否为 null。
 |int STNumPoints()| 返回的 Geometry 对象中的点数。
-|Stgeometrytype （） 的字符串| 返回由几何图形实例表示的开放地理空间联盟 (OGC) 类型名称。
-|字符串 asTextZM()| 返回几何图形对象的熟知文本 (WKT) 表示形式。
+|String STGeometryType()| 返回由几何图形实例表示的开放地理空间联盟 (OGC) 类型名称。
+|String asTextZM()| 返回几何图形对象的熟知文本 (WKT) 表示形式。
 |字符串 tostring （)| 返回几何图形对象的字符串表示形式。
 
 ### <a name="geography"></a>Geography
@@ -132,24 +132,24 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |方法|描述|
 |:------|:----------|
 |Geography STGeomFromText (字符串 wkt，int SRID)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数，增加了该实例传递的任何 Z（标高）和 M（度量）值。
-|Geography STGeomFromWKB (byte [] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geography 实例的构造函数。
+|Geography STGeomFromWKB(byte[] wkb)| 开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式的 Geography 实例的构造函数。
 |Geography 反序列化 (byte [] wkb)| 从空间数据的内部 SQL Server 格式的 Geography 实例的构造函数。
 |Geography 分析 (字符串 wkt)| 开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式的 Geography 实例的构造函数。 空间引用标识符是默认设置为 0。
-|地理点 （双 lat，lon double，int SRID）| Geography 实例的构造函数，表示来自其纬度和经度值的 Point 实例以及空间引用标识符。
+|地理点 （双 lon，lat double，int SRID）| 地理实例的构造函数，它表示来自其经纬度的点实例和空间引用标识符。
 |字符串 stastext （)| 返回 Geography 实例的开放地理空间信息联盟 (OGC) 熟知文本 (WKT) 表示形式。 此文本将不包含该实例传递的任何 Z（标高）或 M（度量）值。
-|byte [] STAsBinary())| 返回 Geography 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
-|字节 [] serialize()| 返回表示 Geography 类型的内部 SQL Server 格式的字节。
+|byte[] STAsBinary())| 返回 Geography 实例的开放地理空间信息联盟 (OGC) 熟知二进制 (WKB) 表示形式。 此值不包含该实例传递的任何 Z 或 M 值。
+|byte[] serialize()| 返回表示 Geography 类型的内部 SQL Server 格式的字节。
 |布尔 hasM()| 返回对象是否包含 M （度量） 值。
 |布尔 hasZ()| 返回对象是否包含 Z （标高） 值。
-|双精度 getLatitude()| 返回的纬度值。
-|双精度 getLongitude()| 返回经度值。
-|双精度 getM()| 返回的对象的 M （度量） 值。
-|双精度 getZ()| 返回的对象的 Z （标高） 值。
+|Double getLatitude()| 返回的纬度值。
+|Double getLongitude()| 返回经度值。
+|Double getM()| 返回的对象的 M （度量） 值。
+|Double getZ()| 返回的对象的 Z （标高） 值。
 |int getSrid()| 返回的空间引用标识符 (SRID) 值。
-|布尔使用 isnull （)| 返回的 Geography 对象是否为 null。
+|boolean isNull()| 返回的 Geography 对象是否为 null。
 |int STNumPoints()| 返回的 Geography 对象中的点数。
-|字符串 STGeographyType()| 返回由地域实例表示的开放地理空间联盟 (OGC) 类型名称。
-|字符串 asTextZM()| 返回的 Geography 对象的熟知文本 (WKT) 表示形式。
+|String STGeographyType()| 返回由地域实例表示的开放地理空间联盟 (OGC) 类型名称。
+|String asTextZM()| 返回的 Geography 对象的熟知文本 (WKT) 表示形式。
 |字符串 tostring （)| 返回的 Geography 对象的字符串表示形式。
 
 ## <a name="limitations-of-spatial-datatypes"></a>空间数据类型的限制

@@ -1,7 +1,7 @@
 ---
 title: 使用大容量复制 API 用于为 MSSQL JDBC 驱动程序的批量插入操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696556"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737098"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>将大容量复制 API 用于批插入操作
 
@@ -26,7 +26,7 @@ SQL Server 支持对批处理插入操作的 Azure 数据仓库中使用大容�
 
 此功能仅适用于 PreparedStatement 和 CallableStatement 的`executeBatch()`  &  `executeLargeBatch()` Api。
 
-## <a name="pre-requisites"></a>系统必备组件
+## <a name="pre-requisites"></a>先决条件
 
 有两个先决条件，为批插入启用大容量复制 API。
 
@@ -65,7 +65,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 * 插入包含 INSERT SELECT 表达式的查询 (例如， `INSERT INTO TABLE SELECT * FROM TABLE2`)，不受支持。
 * 插入包含多个值表达式的查询 (例如， `INSERT INTO TABLE VALUES (1, 2) (3, 4)`)，不受支持。
 * 不支持的 OPTION 子句后跟、 联接多个表或另一个查询后, 跟 insert 查询。
-* 由于大容量复制 API 的限制`DATETIME`， `SMALLDATETIME`，`GEOMETRY`，和`GEOGRAPHY`数据类型，不支持此功能。
+* 由于大容量复制 API 的限制`MONEY`， `SMALLMONEY`， `DATE`， `DATETIME`， `DATETIMEOFFSET`， `SMALLDATETIME`， `TIME`， `GEOMETRY`，和`GEOGRAPHY`此当前不支持数据类型功能。
 
 如果查询失败由于非"SQL server"相关的错误，该驱动程序将记录错误消息和回退到批插入的原始逻辑。
 

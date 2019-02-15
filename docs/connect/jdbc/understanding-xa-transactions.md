@@ -1,7 +1,7 @@
 ---
 title: 了解 XA 事务 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393831"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736938"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -45,9 +45,9 @@ ms.locfileid: "52393831"
 
 - 将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，你可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
   
-     借助于在 [MSDTC 和紧密结合的事务](https://support.microsoft.com/kb/938653)中提供的修补程序，可以支持紧密结合的 XA 分支，其中，多个具有相同全局事务 ID (GTRID) 的 XA 分支映射到单一 MS DTC 事务 ID。 这种支持使得多个紧密结合的 XA 分支可以在资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）中看到彼此发生的变化。  
+     [MSDTC 和紧密耦合事务](https://support.microsoft.com/kb/938653)中提供的修补程序可实现对紧密耦合的 XA 分支的支持，其中具有全局事务 ID (GTRID) 的多个 XA 分支会映射到单个 MS DTC 事务 ID。 通过该项支持，多个紧密耦合的 XA 分支可在资源管理器中查看彼此的更改，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志允许应用程序使用紧密结合的 XA 事务，这些事务具有不同的 XA 分支事务 ID (BQUAL)，但具有相同的全局事务 ID (GTRID) 和格式 ID (FormatID)。 若要使用该功能，必须设置[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的标志参数：  
+- 借助 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志，应用程序可使用紧密耦合的 XA 事务，其中这些事务具有不同的 XA 分支事务 ID (BQUAL)，但其全局事务 ID (GTRID) 和格式 ID (FormatID) 相同。 若要使用该功能，必须设置[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的标志参数：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ ms.locfileid: "52393831"
 > JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。  
 
 > [!NOTE]  
-> 从 SQL Server 2019 公共预览版 CTP 2.0 开始，JDBC XA 分布式的事务组件包含在 SQL Server 引擎可启用或禁用使用系统存储过程。 若要启用所需的组件来执行 XA 分布式事务使用 JDBC 驱动程序，请执行以下存储的过程。
+> 从 SQL Server 2019 公共预览版 CTP 2.0 JDBC XA 分布式的事务组件包含在 SQL Server 引擎中，并可以启用或禁用使用系统存储过程。
+> 若要启用所需的组件来执行 XA 分布式事务使用 JDBC 驱动程序，请执行以下存储的过程。
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 若要禁用以前安装的组件，请执行以下存储的过程。 
+> 若要禁用以前安装的组件，请执行以下存储的过程。
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ ms.locfileid: "52393831"
   
 4. 单击“本地 DTC 属性”对话框上的“安全”选项卡。  
   
-5. 选中“启用 XA 事务”复选框，然后单击“确定”。 这将使 MS DTC 服务重新启动。  
+5. 选中“启用 XA 事务”复选框，然后单击“确定”。 这将导致 MS DTC 服务重启。
   
 6. 再次单击“确定”以关闭“属性”对话框，然后关闭“组件服务”。  
   
@@ -104,11 +105,11 @@ ms.locfileid: "52393831"
   
 在每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，一次只能配置一个版本的 sqljdbc_xa.dll 程序集。 应用程序可能需要使用不同版本的 JDBC 驱动程序，才能使用 XA 连接来连接到同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在这种情况下，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装最新的 JDBC 驱动程序附带的 sqljdbc_xa.dll。  
   
-可以通过三种方法来验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本：  
+有三种方法可验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本：
   
 1. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 LOG 目录。 选择并打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的“ERRORLOG”文件。 在“ERRORLOG”文件中搜索“使用‘SQLJDBC_XA.dll’版本 ...”这一短语。  
   
-2. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa.dll 程序集。  
+2. 打开将参与分布式事务处理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的 Binn 目录。 选择 sqljdbc_xa.dll 程序集。
 
     - 在 Windows Vista 或更高版本上：右键单击 sqljdbc_xa.dll，然后选择“属性”。 然后单击“详细信息”选项卡。“文件版本”字段显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上当前安装的 sqljdbc_xa.dll 的版本。  
   
@@ -128,11 +129,11 @@ ms.locfileid: "52393831"
 这些设置特定用于 SQL Server 实例，应在以下注册表项下创建：  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> 对于在 64 位计算机中运行的 32 位 SQL Server，应在以下项的下面创建注册表设置：`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> 对于在 64 位计算机中运行的 32 位 SQL Server，应在以下项的下面创建注册表设置：`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 将为每个开始的事务设置超时值，并且在超时过期后由 SQL Server 回滚该事务。 超时具体取决于这些注册表设置以及用户通过 XAResource.setTransactionTimeout() 指定的设置。 有关如何解释这些超时值的一些示例如下所示：  
   
@@ -146,18 +147,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 - `XADefaultTimeout = 30`、`XAMaxTimeout = 60`
   
-     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时。 如果客户端指定任何超时，只要超时值小于 60 秒（最大值），将使用客户端的超时。  
+     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时。 如果客户端指定了任何超时，则只要此时间小于 60 秒（最大值），就将使用它。  
   
 - `XADefaultTimeout = 0`、`XAMaxTimeout = 30`
   
-     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时（最大值）。 如果客户端指定任何超时，只要超时值小于 30 秒（最大值），将使用客户端的超时。  
+     意味着如果客户端不指定任何超时，所有事务将有 30 秒的超时（最大值）。 如果客户端指定了任何超时，则只要此时间小于 30 秒（最大值），就将使用它。  
   
 ### <a name="upgrading-sqljdbcxadll"></a>升级 sqljdbc_xa.dll
 
 您在安装新版本的 JDBC 驱动程序时，也应该使用新版本中的 sqljdbc_xa.dll 来升级服务器上的 sqljdbc_xa.dll。  
   
 > [!IMPORTANT]  
-> 您应该在维护窗口期间或进程中没有 MS DTC 事务时升级 sqljdbc_xa.dll。  
+> 你应在维护时段内或在未处理任何 MS DTC 事务时升级 sqljdbc_xa.dll。
   
 1. 卸载使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免费）**。  
   

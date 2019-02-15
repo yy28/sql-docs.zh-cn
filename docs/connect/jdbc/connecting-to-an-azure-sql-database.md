@@ -1,7 +1,7 @@
 ---
 title: 连接到 Azure SQL 数据库 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602207"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736978"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>连接到 Azure SQL 数据库
 
@@ -47,9 +47,9 @@ ms.locfileid: "51602207"
   
 |注册表设置|推荐值|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ 参数 \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ 参数 \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ 参数 \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 重启计算机，注册表设置才能生效。  
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>将服务器名称追加到连接字符串中的 UserId  
 
 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 之前的版本中，连接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 时，要求将服务器名称追加到连接字符串中的 UserId。 例如， user@servername。 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，不再要求将 @@servername 追加到连接字符串中的 UserId。  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密要求设置 hostNameInCertificate
 
-当连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应指定**hostNameInCertificate**如果您指定**加密 = true**。 (如果在连接字符串中的服务器名称是*短名称*。*domainName*，将**hostNameInCertificate**属性设置为\*。*domainName*。)  
-  
-例如：  
+之前的版本 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，连接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，则应指定**hostNameInCertificate**如果你指定**加密 = true** （如果在连接中的服务器名称字符串是*短名称*。*domainName*，将**hostNameInCertificate**属性设置为\*。*domainName*。)。 此属性是可选自版本 7.2 的驱动程序。
+
+例如：
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a>另请参阅
