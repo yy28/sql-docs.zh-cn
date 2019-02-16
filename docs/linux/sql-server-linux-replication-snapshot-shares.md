@@ -4,18 +4,18 @@ description: 本文介绍如何在 Linux 上配置快照文件夹共享 SQL Serv
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 9/24/2018
+ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3f05aa128aa8296d3860cf3ff81a642a0dc5d5a
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254304"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319128"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>使用共享配置复制快照文件夹
 
@@ -140,7 +140,7 @@ sudo service smb status
 
 ## <a name="next-steps"></a>后续步骤
 
-[Linux 上的概念： SQL Server 复制](sql-server-linux-replication.md)
+[概念：Linux 上的 SQL Server 复制](sql-server-linux-replication.md)
 
 [复制存储过程](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
