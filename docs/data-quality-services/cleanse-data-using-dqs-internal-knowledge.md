@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617647"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011536"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS（内部）知识清理数据
 
@@ -60,11 +60,11 @@ ms.locfileid: "52617647"
 ##  <a name="Mapping"></a> 映射阶段  
  在映射阶段中，您可以指定到要清理的源数据的连接，并将源数据中的列映射到选定知识库中的相应域。  
   
-1.  在清理数据质量向导的 **“映射”** 页上，选择要清理的源数据： **SQL Server** 或 **“Excel 文件”**：  
+1.  在清理数据质量向导的“映射”页上，选择要清理的源数据：SQL Server 或“Excel 文件”：  
   
-    1.  **SQL Server**：如果您已将源数据复制到 **DQS_STAGING_DATA** 数据库，则选择此数据库作为源数据库，然后选择包含您的源数据的适当表/视图。 否则，请选择您的源数据库和相应的表/视图。 您的源数据库必须与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] “数据库” **下拉列表中提供的** 位于同一 SQL Server 实例中。  
+    1.  SQL Server：如果已将源数据复制到 DQS_STAGING_DATA 数据库，则选择此数据库作为源数据库，然后选择包含源数据的适当表/视图。 否则，请选择您的源数据库和相应的表/视图。 您的源数据库必须与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] “数据库” **下拉列表中提供的** 位于同一 SQL Server 实例中。  
   
-    2.  **Excel 文件**：单击 **“浏览”**，然后选择包含要清理的数据的 Excel 文件。 要选择 Excel 文件，必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则， **“浏览”** 按钮将不可用，您将在此文本框之下获得通知，说明未安装 Microsoft Excel。 此外，如果 Excel 文件的第一行包含标头数据，则让 **“将第一行用作标头”** 复选框保留为选中状态。  
+    2.  **Excel 文件**：单击“浏览”，然后选择包含要清理的数据的 Excel 文件。 要选择 Excel 文件，必须在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 计算机上安装 Microsoft Excel。 否则， **“浏览”** 按钮将不可用，您将在此文本框之下获得通知，说明未安装 Microsoft Excel。 此外，如果 Excel 文件的第一行包含标头数据，则让 **“将第一行用作标头”** 复选框保留为选中状态。  
   
 2.  在 **“映射”** 下，将源数据中的数据列映射到知识库中的适当域，操作步骤为：从 **“源列”** 列中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择一个域。 重复此步骤，将源数据中的所有列映射到知识库中的相应域。 如果需要，您可以单击 **“添加列映射”** 图标以将行添加到映射表。  
   
@@ -142,16 +142,16 @@ ms.locfileid: "52617647"
 ##  <a name="Export"></a> 导出阶段  
  在导出阶段中，您指定用于导出清理数据的参数：导出的内容和位置。  
   
-1.  在清理数据质量向导的 **“导出”** 页上，选择用于导出已清理数据的目标类型： **SQL Server**、 **“CSV 文件”** 或 **“Excel 文件”**。  
+1.  在清理数据质量向导的“导出”页上，选择用于导出已清理数据的目标类型：“SQL Server”、“CSV 文件”或“Excel 文件”。  
   
     > [!IMPORTANT]  
     >  如果您使用的是 64 位版本的 Excel，则无法将已清理的数据导出到 Excel 文件；只能导出到 SQL Server 数据库或 .csv 文件。  
   
-    1.  **SQL Server**：如果您希望在 **DQS_STAGING_DATA** 中导出数据，则选择它作为目标数据库，然后指定将创建来存储导出数据的表名。 否则，如果您希望将数据导出到其他数据库，则选择另一个数据库，然后指定将创建来存储导出数据的表名。 您的目标数据库必须与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] “数据库” **下拉列表中提供的** 位于同一 SQL Server 实例中。  
+    1.  SQL Server：如果希望在 DQS_STAGING_DATA 中导出数据，则选择它作为目标数据库，然后指定将创建来存储导出数据的表名。 否则，如果您希望将数据导出到其他数据库，则选择另一个数据库，然后指定将创建来存储导出数据的表名。 您的目标数据库必须与 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] “数据库” **下拉列表中提供的** 位于同一 SQL Server 实例中。  
   
-    2.  **CSV 文件**：单击 **“浏览”**，然后指定您要将清理数据导出到其中的 .csv 文件的名称和位置。 您还可以键入 .csv 文件的文件名以及要导出清理数据的完整路径。 例如“c:\ExportedData.csv”。 该文件保存在安装了 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的计算机上。  
+    2.  **CSV 文件**：单击“浏览”，然后指定要将清理数据导出到其中的 .csv 文件的名称和位置。 您还可以键入 .csv 文件的文件名以及要导出清理数据的完整路径。 例如“c:\ExportedData.csv”。 该文件保存在安装了 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的计算机上。  
   
-    3.  **Excel 文件**：单击 **“浏览”**，然后指定您要将清理数据导出到其中的 Excel 文件的名称和位置。 您还可以键入 Excel 文件的文件名以及要导出清理数据的完整路径。 例如“c:\ExportedData.xlsx”。 该文件保存在安装了 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的计算机上。  
+    3.  **Excel 文件**：单击“浏览”，然后指定要将清理数据导出到其中的 Excel 文件的名称和位置。 您还可以键入 Excel 文件的文件名以及要导出清理数据的完整路径。 例如“c:\ExportedData.xlsx”。 该文件保存在安装了 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的计算机上。  
   
 2.  选中 **“标准化输出”** 复选框，以便基于为域选择的输出格式对输出进行标准化。 例如，将字符串值更改为大写，或使单词的首字母变为大写。 有关指定域的输出格式的信息，请参阅 **设置域属性** 中的 [“将输出格式设置为”](../data-quality-services/set-domain-properties.md)列表。  
   
@@ -161,17 +161,17 @@ ms.locfileid: "52617647"
   
     -   **数据和清理信息**：单击此单选按钮以导出每个域的以下数据：  
   
-        -   \<Domain>_Source：域中的原始值。  
+        -   **\<Domain>_Source**：域中的原始值。  
   
-        -   \<Domain>_Output：域中已清理的值。  
+        -   **\<Domain>_Output**：域中已清理的值。  
   
-        -   \<Domain>_Reason：为更正此值指定的原因。  
+        -   **\<Domain>_Reason**：为更正此值指定的原因。  
   
-        -   \<Domain>_Confidence：所有更正的字词的置信度。 置信度显示为与相应的百分比值相等的十进制值。 例如，95% 的置信度将显示为 .9500000。  
+        -   **\<Domain>_Confidence**：所有更正的字词的置信度。 置信度显示为与相应的百分比值相等的十进制值。 例如，95% 的置信度将显示为 .9500000。  
   
-        -   \<Domain>_Status：数据清理后域值的状态。 例如， **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”** 或 **“正确”**。  
+        -   **\<Domain>_Status**：数据清理后域值的状态。 例如， **“建议”**、 **“新建”**、 **“无效”**、 **“已更正”** 或 **“正确”**。  
   
-        -   记录状态：除了对每个映射域具有状态字段 (\<DomainName>_Status) 之外，“记录状态”字段还显示记录的状态。 如果记录中的任何域状态为“新建”或“正确”，则“记录状态”设置为“正确”。 如果记录中的任何域状态为“建议”、“无效”或“已更正”，则“记录状态”设置为各自的值。 例如，如果记录中的任何域状态为“建议”，则“记录状态”设置为“建议”。  
+        -   **记录状态**：除了对每个映射域具有状态字段 (\<DomainName>_Status) 之外，“记录状态”字段还显示记录的状态。 如果记录中的任何域状态为“新建”或“正确”，则“记录状态”设置为“正确”。 如果记录中的任何域状态为“建议”、“无效”或“已更正”，则“记录状态”设置为各自的值。 例如，如果记录中的任何域状态为“建议”，则“记录状态”设置为“建议”。  
   
             > [!NOTE]  
             >  如果您使用引用数据服务来进行清理操作，则还可以导出有关域值的其他数据。 有关详细信息，请参阅[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
@@ -191,15 +191,15 @@ ms.locfileid: "52617647"
   
  **“事件探查器”** 选项卡按字段和域提供以下有关源数据的统计信息：  
   
--   **记录**：对于数据清理活动分析了数据示例中的多少条记录  
+-   **记录数**：对于数据清理活动分析了数据示例中的多少条记录  
   
--   **正确的记录**：多少条记录被认为是正确的  
+-   **正确的记录数**：多少条记录被认为是正确的  
   
--   **更正的记录**：更正了多少条记录  
+-   **更正的记录数**：更正了多少条记录  
   
--   **建议的记录**：建议了多少条记录  
+-   **建议的记录数**：建议了多少条记录  
   
--   **无效记录**：多少条记录无效  
+-   **无效记录数**：多少条记录无效  
   
  字段统计信息包括：  
   
@@ -207,9 +207,9 @@ ms.locfileid: "52617647"
   
 -   **域**：映射到字段的域的名称  
   
--   **更正的值**：已更正的域值的数目  
+-   **更正的值个数**：已更正的域值的数目  
   
--   **建议值**：建议的域值数目  
+-   **建议的值个数**：建议的域值数目  
   
 -   **完整性**：针对每个清理活动映射的每个源字段的完整性  
   

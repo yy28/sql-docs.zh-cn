@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 396797a115821543a1330cedfbe10ebf63769aeb
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 26f1b65876d9d6c6e25cc4df27a588fe17cf9d0c
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299364"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889948"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "54299364"
 > [!div class="nextstepaction"]
 > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
-指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 该表达式源自简单查询，并且在单条 SELECT、INSERT、UPDATE 或 DELETE 语句的执行范围内定义。 该子句也可用在 CREATE VIEW 语句中，作为该语句的 SELECT 定义语句的一部分。 公用表表达式可以包括对自身的引用。 这种表达式称为递归公用表表达式。  
+指定临时命名的结果集，这些结果集称为公用表表达式 (CTE)。 这派生自简单的查询，并在单个 SELECT、INSERT、UPDATE、DELETE 或 MERGE 语句的执行范围内定义。 该子句也可用在 CREATE VIEW 语句中，作为该语句的 SELECT 定义语句的一部分。 公用表表达式可以包括对自身的引用。 这种表达式称为递归公用表表达式。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

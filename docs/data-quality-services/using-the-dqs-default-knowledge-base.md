@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd057885bbaa3aa6439079a744ac0b2d341dd638
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5767515d290ed6933af55f1405b06f735f704b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040888"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 默认知识库
 
@@ -30,11 +30,11 @@ ms.locfileid: "52616727"
   
 -   **国家/地区（两字母前导）**：对于每个地点，包含常规的长名称（国家/地区指定的官方名称）和短名称（列表、地图等使用的通用名称）、两字母缩写形式、三字母缩写形式和三位代码。  将前导值设置为国家/地区两字母缩写形式。  
   
--   **美国 - 县**：包含美国县的列表。  
+-   **美国 - 郡县**：包含美国郡县的列表。  
   
 -   **美国 - 姓氏**：包含 2000 年人口普查中出现 100 或更多次的姓氏列表。  
   
--   **美国 - 地方**：包含2000 年人口普查中抽取的 50 个州、哥伦比亚特区和波多黎各的地方名称列表。  
+-   **美国 - 地方**：包含 2010 年人口普查中抽取的 50 个州、哥伦比亚特区和波多黎各的地方名称列表。  
   
 -   **美国 - 州**：包含美国每个州的常规长（官方）名称和两字母缩写形式。 将前导值设置为常规州名称。  
   

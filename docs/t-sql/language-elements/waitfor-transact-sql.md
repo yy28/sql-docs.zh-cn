@@ -27,17 +27,17 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5884c549160834cec6412e4524667a460344d66f
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595723"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807477"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在达到指定时间或时间间隔之前，或者指定语句至少修改或返回一行之前，阻止执行批处理、存储过程或事务。  
+  阻止执行批处理、存储过程或事务，直到已过指定时间或时间间隔，或者指定语句发生修改或至少返回一行为止。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ WAITFOR
  可以继续执行批处理、存储过程或事务之前必须经过的指定时段，最长可为 24 小时。  
   
  '*time_to_pass*'  
- 等待的时段。 可以使用 datetime 数据可接受的格式之一指定 time_to_pass，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。 这将被格式化为 hh:mm[[:ss].mss]。
+ 等待的时段。 time_to_pass 可以以“datetime”数据格式指定，也可以指定为局部变量。 不能指定日期；因此，不允许指定“datetime”值的日期部分。 time_to_pass 将被格式化为 hh:mm[[:ss].mss]。
   
  TIME  
  指定的运行批处理、存储过程或事务的时间。  
   
  '*time_to_execute*'  
- WAITFOR 语句完成的时间。 可以使用 datetime 数据可接受的格式之一指定 time_to_execute，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定 datetime 值的日期部分。 这将被格式化为 hh:mm[[:ss].mss]，并且可以选择包括 1900-01-01 的日期。
+ WAITFOR 语句完成的时间。 可以使用“datetime”数据格式指定 time_to_execute，也可以将其指定为局部变量。 不能指定日期；因此，不允许指定“datetime”值的日期部分。 time_to_execute 将被格式化为 hh:mm[[:ss].mss]，并且可以选择包括 1900-01-01 的日期。
   
  *receive_statement*  
  有效的 RECEIVE 语句。  
@@ -88,7 +88,7 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  执行 WAITFOR 语句时，事务正在运行，并且其他请求不能在同一事务下运行。  
   
- 实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别。 时间计数器在计划完与 WAITFOR 语句关联的线程后启动。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
+ 实际的时间延迟可能与 time_to_pass、time_to_execute 或 timeout 中指定的时间不同，它依赖于服务器的活动级别。 计划 WAITFOR 语句线程时，计时器开始计时。 如果服务器忙碌，则可能不会立即计划线程；因此，时间延迟可能比指定的时间要长。  
   
  WAITFOR 不更改查询的语义。 如果查询不能返回任何行，WAITFOR 将一直等待，或等到满足 TIMEOUT 条件（如果已指定）。  
   
@@ -98,7 +98,7 @@ WAITFOR
   
  如果查询超出了 query wait 选项的值，则 WAITFOR 语句参数不运行即可完成。 有关详细信息，请参阅[配置 query wait 服务器配置选项](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看活动进程和正在等待的进程，请使用 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
   
- 每个 WAITFOR 语句都有与其关联的线程。 如果对同一服务器指定了多个 WAITFOR 语句，可将等待这些语句运行的多个线程关联起来。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将监视与 WAITFOR 语句关联的线程数，并在服务器开始遇到线程资源不足的问题时，随机选择其中部分线程退出。  
+ 每个 WAITFOR 语句都有与其关联的线程。 如果对同一服务器指定了多个 WAITFOR 语句，可将等待这些语句运行的多个线程关联起来。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将监视 WAITFOR 语句线程数，并在服务器开始遇到线程资源不足的问题时，随机选择其中部分线程退出。  
   
  如果某个事务锁定了 WAITFOR 语句试图访问的行集以防止对行集进行更改，则可以在该事务中运行包含 WAITFOR 语句的查询来创建死锁。 如果存在上述死锁，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会标识这些情况并返回空结果集。  
   
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. 在 WAITFOR DELAY 中使用局部变量  
- 以下示例显示如何对 `WAITFOR DELAY` 选项使用局部变量。 将创建一个存储过程，该过程将等待可变的时间段，然后将经过的小时、分钟和秒数信息返回给用户。  
+ 以下示例显示如何对 `WAITFOR DELAY` 选项使用局部变量。 该存储过程将等待可变的时间段，然后将经过的小时、分钟和秒数信息返回给用户。  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -173,5 +173,4 @@ GO
  [控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

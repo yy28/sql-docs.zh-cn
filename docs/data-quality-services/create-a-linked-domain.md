@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617887"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022080"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617887"
 ### <a name="controlling-data-flow-to-composite-domains"></a>控制到复合域的数据流  
  链接域使您能够控制字段与复合域之间的数据流。 您可以区分一个字段中的数据何时流向复合域，而另一个非常相似的域中的数据何时不流向复合域。 这是通过指定以下内容来实现的：在两个链接域中，一个域是复合域的一部分，而另一个域则不是。 从域角度来看，链接域是完全相同的。 它们包含同样的知识。 然而，从复合域的角度来看，链接域是不同的。 一个参与复合域；另一个则不参与。  
   
- 例如，一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father’s First Name。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
+ 示例是一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father's First Name。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

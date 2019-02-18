@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66a1ad8c326dc6fe221777136edcb01a9b9aa1af
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617487"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028078"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知识库
 
@@ -44,25 +44,25 @@ ms.locfileid: "52617487"
   
 4.  在上下文菜单中，您可以执行以下操作：  
   
-    1.  **打开**：单击以便在 **“选择活动”** 窗格中选择的活动中打开该知识库。  
+    1.  **打开**：单击以在“选择活动”窗格内所选的活动中打开该知识库。  
   
-    2.  **取消锁定**：如果您是在域管理、知识发现和匹配策略活动的某一步骤中正在使用该知识库的用户，并且关闭了该知识库，则可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    2.  **解锁**：如果你是在域管理、知识发现和匹配策略活动的某一步骤中正在使用该知识库的用户，并且关闭了该知识库，则可以取消锁定该知识库。 如果您卸载了该知识库，则其他人士将能够打开并使用该知识库。 如果知识库未处于某一活动状态中，则此命令将不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    3.  **放弃工作**：在知识库处于正被使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
+    3.  **放弃工作**：在知识库处于使用状态时单击，如表的“状态”字段中的条目所示。 如果知识库未处于某一活动状态中，则此命令将不可用；并且在知识库被锁定时不可用。 有关详细信息，请参阅 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)。  
   
-    4.  **重命名**：单击可使表的“知识库”字段对于您右键单击的知识库而言可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
+    4.  **重命名**：单击它，可使表的“知识库”字段对于你右键单击的知识库而言可编辑。 更改名称，然后单击该知识库和字段中的其他知识库，以便接受名称更改。  
   
-    5.  **删除**：单击可从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上的 DQS_MAIN 数据库中删除该知识库。  
+    5.  **删除**：单击它，可从 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 上的 DQS_MAIN 数据库中删除该知识库。  
   
-    6.  **属性**：单击可显示数据库的属性，这些属性是只读的。  
+    6.  **属性**：单击它，可显示数据库的属性，这些属性是只读的。  
   
         1.  **源知识库**：此数据库所基于的知识库。 此为可选项。  
   
-        2.  **状态**：指示知识库是否为 **“工作中”** 状态，以及知识库是否处于特定的知识管理活动中，这由其在上次关闭时的状态确定。 该状态可以是 **“工作中”**，在此情况下，知识库在某一知识管理会话中打开，但未处于特定的活动中；也可以是 **“工作中”** 加上知识管理活动，在此情况下，知识库在某一知识管理会话中打开，并且处于特定的活动中。  
+        2.  **状态**：指示知识库是否处于“工作中”状态以及其是否位于特定的知识管理活动中（由其在上次关闭时的状态决定）。 该状态可以是 **“工作中”**，在此情况下，知识库在某一知识管理会话中打开，但未处于特定的活动中；也可以是 **“工作中”** 加上知识管理活动，在此情况下，知识库在某一知识管理会话中打开，并且处于特定的活动中。  
   
-        3.  **已锁定**：如果知识库已锁定，则为 **True** ；否则为 **False** 。  
+        3.  **已锁定**：如果知识库已锁定，则为 True；否则为 False  
   
-        4.  **包含未发布的内容**：如果知识库包含尚未通过发布保存的内容，则为 True；否则为 False。  
+        4.  **包含未发布的内容**：如果知识库包含尚未通过发布保存的内容，则为 True；否则为 False  
   
         5.  **锁定方**：关闭了知识库并且锁定它的用户的名称。  
   

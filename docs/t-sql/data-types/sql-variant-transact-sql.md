@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013498"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 下列规则适用于 sql_variant 比较：
 -   当不同基本数据类型的 sql_variant 值进行比较，而且基本数据类型属于不同的数据类型系列时，则在层次结构图中数据类型系列较高的值被认为在两个值中较大。  
 -   当不同基本数据类型的sql_variant 值进行比较，而且基本数据类型属于相同的数据类型系列时，则在层次结构图中基本数据类型较低的值先隐式转换为其他数据类型，然后再进行比较。  
--   在比较 char、varchar、nchar 或 nvarchar 数据类型的 sql_variant 值时，将首先基于以下条件来比较这些值的排序规则：LCID、LCID 版本、比较标志和排序 ID。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
+-   在比较“char”、“varchar”、“nchar”或“nvarchar”数据类型的“sql_variant”值时，将首先基于以下条件来比较这些值的排序规则：LCID、LCID 版本、比较标识和排序 ID。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
   
 ## <a name="converting-sqlvariant-data"></a>转换 sql_variant 数据  
 当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象。

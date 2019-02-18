@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616427"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024588"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
 
@@ -44,7 +44,7 @@ ms.locfileid: "52616427"
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右侧窗格中，选中 **DQS_STAGING_DATA** 数据库的 **“映射”** 列下的复选框，然后在 **“数据库角色成员身份: DQS_STAGING_DATA”** 窗格中选择以下角色：  
+5.  在右侧窗格中，选中“DQS_STAGING_DATA”数据库的“映射”列下的复选框，然后在“数据库角色成员身份:DQS_STAGING_DATA”窗格中选择以下角色：  
   
     -   **db_datareader**：从表/视图中读取数据。  
   

@@ -2,7 +2,7 @@
 title: 为可用性组配置分布式事务
 description: '介绍如何为 Always On 可用性组内的数据库配置分布式事务。 '
 ms.custom: seodec18
-ms.date: 05/22/2018
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215666"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832109"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>为 Always On 可用性组配置分布式事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->不能在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 上更改分布式事务的可用性组。 若要更改设置，请删除可用性组并使用 `DTC_SUPPORT = PER_DB` 设置重新创建。 
+>从 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 开始，可更改分布式事务的可用性组。 对于 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本，则需要进行删除，然后使用 `DTC_SUPPORT = PER_DB` 设置重新创建可用性组。 
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分布式事务 - 技术概念
 

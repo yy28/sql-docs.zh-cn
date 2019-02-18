@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405797"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742097"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的租用、群集和运行状况检测超时的机制和指南 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | 超时设置 | 用途 | Between | 使用 | IsAlive 和 LooksAlive | 原因 | 结果 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | 租用超时 </br> **默认值：20000** | 防止裂脑 | 主站点到群集 </br> (HADR) | [Windows 事件对象](/windows/desktop/Sync/event-objects)| 在两者中使用 | OS 挂起、虚拟内存不足、生成转储、限定 CPU、WSFC 故障（失去仲裁） | AG 资源脱机-联机、故障转移 |  
+ | 会话超时 </br> **默认值：10000** | 就主副本和辅助副本之间的通信问题进行通知 | 辅助副本到主副本 </br> (HADR) | [TCP 套接字（通过 DBM 终结点发出的消息）](/windows/desktop/WinSock/windows-sockets-start-page-2) | 二者都不使用 | 网络通信， </br> 辅助副本的问题 - 故障、OS 挂起、资源争用 | 辅助副本 - 已断开连接 | 
+ |HealthCheck 超时  </br> **默认值：30000** | 指示尝试确定主副本的运行状况时超时 | 群集到辅助副本 </br> （FCI 和 HADR） | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 在两者中使用 | 满足故障条件、OS 挂起、虚拟内存不足、工作集微调、生成转储、WSFC（丢失仲裁）、计划程序问题（死锁计划程序）| AG 资源脱机-联机或故障转移、FCI 重启/故障转移 |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另请参阅    
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616688"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029993"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼写检查器
 
@@ -68,7 +68,7 @@ ms.locfileid: "52616688"
   
 6.  如果您要将值添加到字典中，则单击 **“添加到字典”**。 红色下划线将从值中消失。  
   
-##  <a name="FollowUp"></a> 跟进：在使用拼写检查器后  
+##  <a name="FollowUp"></a> 跟进：使用拼写检查器后  
  在您运行了拼写检查器后，完成域处于其中的活动以便使用拼写检查器建议的更正。 如果在域发现、域管理或匹配策略活动中，则发布知识库以使拼写检查器分析的结果可用于知识库中。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="How"></a> 拼写检查器的原理  

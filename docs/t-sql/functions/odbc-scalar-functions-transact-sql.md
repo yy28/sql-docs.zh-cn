@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535594"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760080"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "52535594"
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>函数  
- 以下各表列出了未在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重复的 ODBC 标量函数。  
+ 以下各表列出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中非重复的 ODBC 标量函数。  
   
 ### <a name="string-functions"></a>字符串函数  
   
 |函数|描述|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以位为单位）。<br /><br /> 它不只适用于字符串数据类型， 因此不会将 string_exp 隐式转换为字符串，而是会返回提供给它的任何数据类型的（内部）大小。|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以位为单位）。<br /><br /> 返回给定数据类型的内部大小，而不将 string_exp 转换为字符串。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|返回一个表示将 string_exp2 连接到 string_exp1 的结果的字符串。 生成的字符串依赖于 DBMS。 例如，如果 string_exp1 所表示的列包含一个 NULL 值，则 DB2 将返回 NULL，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回非 NULL 的字符串。|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以字节为单位）。 结果为不小于位数除以 8 所得数的最小整数。<br /><br /> 它不只适用于字符串数据类型， 因此不会将 string_exp 隐式转换为字符串，而是会返回提供给它的任何数据类型的（内部）大小。|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|返回字符串表达式的长度（以字节为单位）。 结果为不小于位数除以 8 所得数的最小整数。<br /><br /> 返回给定数据类型的内部大小，而不将 string_exp 转换为字符串。|  
   
 ### <a name="numeric-function"></a>数值函数  
   
@@ -93,15 +93,15 @@ ms.locfileid: "52535594"
 |CURDATE( ) (ODBC 3.0)|返回当前日期。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|返回当前本地时间。 time-precision 参数确定返回值的秒精度。|  
 |CURTIME() (ODBC 3.0)|返回当前本地时间。|  
-|DAYNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的日部分的特定于数据源的日名称（例如，对于使用英语的数据源， 返回 Sunday 到 Saturday 或 Sun. 到 Sat.； 对于使用德语的数据源，返回 Sonntag 到 Samstag）。|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|根据 date_exp 中的月份字段返回该月的该日，返回值为 1 到 31 范围内的整数。|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|根据 date_exp 中的周字段返回该周的该日，返回值为 1 到 7 范围内的整数值，其中 1 表示星期天。|  
-|HOUR( time_exp ) (ODBC 1.0)|根据 time_exp 中的小时字段返回该小时，返回值为 0 到 23 范围内的整数值。|  
-|MINUTE( time_exp ) (ODBC 1.0)|根据 time_exp 中的分钟字段返回该分钟，返回值为 0 到 59 范围内的整数值。|  
-|SECOND( time_exp ) (ODBC 1.0)|根据 time_exp 中的秒数字段返回该秒数，返回值为 0 到 59 范围内的整数值。|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的月份部分的特定于数据源的该月份的名称（例如，对于使用英语的数据源，返回 January 到 December 或 Jan. 到 Dec.；对于使用德语的数据源，返回 Januar 到 Dezember）。|  
+|DAYNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的“星期几”部分的数据源特定的星期名称。 例如，对于使用英语的数据源， 返回 Sunday 至 Saturday 或 Sun. 至 Sat.。 对于使用德语的数据源，返回 Sonntag 至 Samstag。|
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|根据 date_exp 中的月份字段以整数形式返回当月的具体日期。 返回 1 至 31 范围内的值。|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|根据 date_exp 中的“周”字段以整数形式返回在该周的天数。 返回 1 至 7 范围内的值，其中 1 表示星期天。|  
+|HOUR( time_exp ) (ODBC 1.0)|根据 time_exp 中的“小时”字段返回具体小时，返回值为 0 到 23 范围内的整数值。|  
+|MINUTE( time_exp ) (ODBC 1.0)|根据 time_exp 中的分钟字段返回具体分钟，返回值为 0 到 59 范围内的整数值。|  
+|SECOND( time_exp ) (ODBC 1.0)|根据 time_exp 中的秒数字段返回具体秒数，返回值为 0 到 59 范围内的整数值。|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|返回一个字符串，其中包含 date_exp 的“月份”部分的数据源特定的月份名称。 例如，对于使用英语的数据源，返回 January 至 December 或 Jan. 至 Dec.。 对于使用德语的数据源，返回 Januar 至 Dezember。|  
 |QUARTER( date_exp ) (ODBC 1.0)|返回 date_exp 中的该季度，返回值为 1 到 4 范围内的整数值，其中 1 表示 1 月 1 日到 3 月 31 日。|  
-|WEEK( date_exp ) (ODBC 1.0)|根据 date_exp 中的星期字段返回该年的该周，返回值为 1 到 53 范围内的整数值。|  
+|WEEK( date_exp ) (ODBC 1.0)|根据 date_exp 中的“星期”字段返回当年的具体星期数，返回值为 1 到 53 范围内的整数值。|  
   
 ## <a name="examples"></a>示例  
   
@@ -252,7 +252,3 @@ SELECT {fn WEEK( @date_exp )};
 ## <a name="see-also"></a>另请参阅  
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
   
-  
-
-
-

@@ -18,12 +18,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a34866fb7c83098f3cb060ab009e4b187fc3c0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 507318d5cb779d64e78df6cc7f23e4eaa94f26b3
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681105"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079433"
 ---
 # <a name="ranking-functions-transact-sql"></a>排名函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,5 +79,4 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="see-also"></a>另请参阅  
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
   

@@ -3,7 +3,6 @@ title: xml 数据类型方法的使用指南 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643885"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022869"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 数据类型方法的使用准则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ## <a name="singleton-checks"></a>单一性检查  
  如果编译器无法确定在运行时能否确保单一性，则具有单一性要求的位置步骤、函数参数和运算符将返回错误。 此问题经常出现在非类型化数据上。 例如，查找属性时就需要使用单一的父元素。 通过一个用来选择单个父节点的序号即可满足此要求。 而在计算 node()-value() 组合以提取属性值时可能不需要指定序号规范。 如下例所示。  
   
-### <a name="example-known-singleton"></a>示例：已知单一性  
+### <a name="example-known-singleton"></a>例如：已知单一实例  
  在此示例中，nodes() 方法为每个 <`book`> 元素生成一个单独的行。 对 <`book`> 节点计算的 value() 方法提取 \@genre 的值，并且是单一实例属性。  
   
 ```  
@@ -80,7 +79,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
   
  对于类型检查，务必注意 //first-name[1] 和 (//first-name)[1] 之间的差异。 前者返回一组 \<first-name> 节点，其中每个节点都是其同级节点中最左侧的 \<first-name> 节点。 后者返回 XML 实例中按文档顺序排列的第一个单一的 \<first-name> 节点。  
   
-### <a name="example-using-value"></a>示例：使用 value()  
+### <a name="example-using-value"></a>例如：使用 value()  
  下面对非类型化 XML 列的查询导致发生静态的编译错误。这是因为 value() 希望将一个单一节点作为第一个参数，而编译器无法确定在运行时是否将仅有一个 \<last-name> 节点：  
   
 ```  

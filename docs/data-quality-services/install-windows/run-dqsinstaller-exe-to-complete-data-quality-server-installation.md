@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617457"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013418"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
 
@@ -36,11 +36,11 @@ ms.locfileid: "52617457"
   
 1.  在您选择安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的计算机上，通过以下任意可行方法运行 DQSInstaller.exe 文件：  
   
-    -   **“开始”屏幕**：在 **“开始”** 屏幕上，单击 **“数据质量服务器安装程序”**  
+    -   **开始屏幕**：在“开始”屏幕上，单击“数据质量服务器安装程序”。  
   
-    -   “开始菜单”：在任务栏上，单击“开始” ，指向“所有程序” ，然后单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]。 在 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]下，单击 **Data Quality Services**，然后单击“数据质量服务器安装程序”   
+    -   **开始菜单**：在任务栏上，单击“开始”，指向“所有程序”，然后单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]。 在 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]下，单击 **Data Quality Services**，然后单击“数据质量服务器安装程序”   
   
-    -   **Windows 资源管理器**：查找 DQSInstaller.exe 文件。 如果你已安装了 SQL Server 的默认实例，则 DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn 下。 双击 DQSInstaller.exe 文件。  
+    -   **Windows 资源管理器**：找到 DQSInstaller.exe 文件。 如果你已安装了 SQL Server 的默认实例，则 DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn 下。 双击 DQSInstaller.exe 文件。  
   
 2.  显示安装状态的提示符窗口将出现。 您将注意到以下三种情况：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52617457"
   
     -   **不使用命令行参数**：键入 `dqsinstaller.exe`，然后按 Enter。  
   
-    -   **使用命令行参数**：键入上表中提到的必需命令，然后按 Enter。  
+    -   **使用命令行参数**：键入上表中提到的所需命令，然后按 Enter。  
   
 4.  基于指定的命令执行所需的操作。 如果你刚刚选择的是在不使用任何命令行参数的情况下安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，则其余步骤如上一节的步骤 2-6 中所述， [从开始屏幕、开始菜单或 Windows 资源管理器运行 DQSInstaller.exe](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)。  
   

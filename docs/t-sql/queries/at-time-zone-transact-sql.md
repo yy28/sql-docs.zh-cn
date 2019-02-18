@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072231"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807447"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  将 inputdate 转换为目标时区中相应的 datetimeoffset 值。 如果所提供的 *inputdate* 没有偏移信息，则函数应用时区偏移时会假设目标时区中已提供 inputdate 值。 如果 inputdate 是作为 datetimeoffset 值提供的，则 AT TIME ZONE 子句会使用时区转换规则将其转换到目标时区中。  
+  将 inputdate 转换为目标时区中相应的 datetimeoffset 值。 如果所提供的 inputdate 没有偏移信息，则函数应用时区偏移时会假设 inputdate 值位于目标时区中。 如果 inputdate 是作为 datetimeoffset 值提供的，则 AT TIME ZONE 子句会使用时区转换规则将其转换到目标时区中。  
   
  AT TIME ZONE 实现依赖于 Windows 机制来跨时区转换 datetime 值。  
   
@@ -43,10 +43,10 @@ inputdate AT TIME ZONE timezone
  一个表达式，可解析为 smalldatetime、datetime、datetime2 或 datetimeoffset 值。  
   
  timezone  
- 目标时区的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依赖存储在 Windows 注册表中的时区。 所有安装在计算机上的时区都存储在以下注册表配置单元中：KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones。 已安装的时区列表也会通过 [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 视图公开。  
+ 目标时区的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依赖存储在 Windows 注册表中的时区。 计算机上安装的时区存储于以下注册表配置单元中：**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 已安装的时区列表也会通过 [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 视图公开。  
   
 ## <a name="return-types"></a>返回类型  
- 返回 datetimeoffset 的数据类型  
+ 返回 datetimeoffset 的数据类型。  
   
 ## <a name="return-value"></a>返回值  
  目标时区中的 datetimeoffset 值。  
@@ -54,7 +54,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  AT TIME ZONE 应用特定规则来转换 smalldatetime、datetime 和 datetime2 数据类型中的输入值，这些值位于受 DST 更改影响的区间：  
   
--   如果将时钟向前拨，本地时间会存在一个时差，且持续时间取决于时钟调整的持续时间（通常为 1 个小时，但也可能为 30 或 45 分钟，具体取决于时区）。 在这种情况下，落入该时差范围的时间点会使用 DST 更改后的偏移量进行转换。  
+-   如果将时钟向前拨，将当地时间出现与时钟调整持续时间相等的时差。 此持续时间通常为 1 小时，但它也可以是 30 或 45 分钟，具体取决于所在的时区。 落入该时差范围的时间点会按 DST 更改后的偏移量进行转换。  
   
     ```  
     /*  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>另请参阅  
  [日期和时间类型](../../t-sql/data-types/date-and-time-types.md)   
  [日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

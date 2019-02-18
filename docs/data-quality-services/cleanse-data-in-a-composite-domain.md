@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617428"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013208"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
 
@@ -58,7 +58,7 @@ ms.locfileid: "52617428"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已由规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已根据规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

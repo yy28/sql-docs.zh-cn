@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411514"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771343"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52411514"
 ## <a name="prerequisites"></a>必备条件  
 开始之前，请仔细阅读以下重要信息：  
   
-- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支持的版本和版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：验证是否可以从你的 Windows 操作系统版本和 SQL Server 版本升级到 SQL Server 2016。 例如，不能直接从 SQL Server 2005 实例升级到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 - [选择数据库引擎升级方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：要按正确顺序升级，请检查支持的版本和版本升级以及环境中安装的其他组件，并据此选择适当的升级方法和步骤。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52411514"
   
 - [安装 SQL Server 的硬件和软件要求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：查看安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的软件要求。 如果需要其他软件，则应在升级过程开始之前在每个节点上安装该软件，从而最大程度减少故障时间。  
 
-- [检查更改数据捕获或复制是否用于任何 AG 数据库](#special-steps-for-change-data-capture-or-replication)：如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[操作](#special-steps-for-change-data-capture-or-replication)。
+- [检查是否对任何 AG 数据库使用了更改数据捕获或复制](#special-steps-for-change-data-capture-or-replication):如果 AG 中的任何数据库已启用更改数据捕获 (CDC)，请完成这些[指令](#special-steps-for-change-data-capture-or-replication)。
 
 >[!NOTE]  
 >在就地升级副本的滚动升级外不支持在同一 AG 中混合使用不同版本的 SQL Server 实例。 更高版本的 SQL Server 实例不能作为新副本添加到现有 AG。 例如，SQL Server 2017 副本不能添加到现有 SQL Server 2016 AG。 要通过 AG 迁移至新版本的 SQL Server 实例，唯一可行方式是使用 SQL Server 2016 Enterprise Edition 或更高版本中的分布式 AG。
@@ -67,6 +67,11 @@ ms.locfileid: "52411514"
 -   在升级或更新任何其他的次要副本实例之前，不要升级主要副本实例。 已升级的主要副本不再将日志传送到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例尚未升级到同一版本的任何次要副本。 在挂起到辅助副本的数据移动时，对于该副本无法进行自动故障转移，且您的可用性数据库很可能发生数据丢失。  
   
 -   在故障转移 AG 前，请验证故障转移目标的同步状态为 SYNCHRONIZED。  
+
+  > [!WARNING]
+  > 将 SQL Server 的新实例或新版本安装到安装了旧版 SQL Server 的服务器可能会无意中“导致旧版 SQL Server 托管的任何可用性组中断。” 这是因为在安装 SQL Server 实例或版本期间，SQL Server 高可用性模块 (RHS.EXE) 会升级。 这会导致服务器上主要角色中的现有可用性组暂时中断。 因此，强烈建议在将较新版本的 SQL Server 安装到已托管具有可用性组的旧版 SQL Server 系统时执行以下操作之一：
+  > - 在维护时段内安装新版本的 SQL Server。 
+  > - 将可用性组故障转移到次要副本，这样在安装新 SQL Server 实例期间它便不再是主要副本。 
   
 ## <a name="rolling-upgrade-process"></a>滚动升级过程  
  实际上，确切的过程取决于一些因素，如 AG 的部署拓扑和每个副本的提交模式。 但在最简单的方案中，滚动升级是涉及以下步骤的多阶段过程：  
@@ -191,7 +196,7 @@ ms.locfileid: "52411514"
 
 >[!IMPORTANT]
 >- 验证各步骤间的同步。 在进行下一步前，确认同步提交副本在可用性组中同步，且全局主要副本与分布式 AG 中的转发器同步。 
->- 建议：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
+>- **建议**：每当验证同步时，在 SQL Server Management Studio 中刷新数据库节点和分布式 AG 节点。 所有项同步后，保存每个副本状态的屏幕截图。 这有助于跟踪当前步骤，在进行下一步前确保一切运行正常，并帮助你在故障发生时进行故障排除。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分布式可用性组的滚动升级的示例图

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036458"
 ---
 # <a name="create-a-data-quality-project"></a>创建数据质量项目
 
@@ -61,7 +61,7 @@ ms.locfileid: "52616808"
   
 4.  单击 **“创建”** 将创建数据质量项目。  
   
-##  <a name="FollowUp"></a> 跟进：在创建数据质量项目后  
+##  <a name="FollowUp"></a> 跟进：创建数据质量项目后  
  在创建数据质量项目后，将向您提供一个向导，可用于执行所选活动：清理或匹配。 有关清理和匹配活动的详细信息，请参阅[数据清理](../data-quality-services/data-cleansing.md)和[数据匹配](../data-quality-services/data-matching.md)。  
   
   

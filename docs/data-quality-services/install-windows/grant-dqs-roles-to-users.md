@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617147"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028438"
 ---
 # <a name="grant-dqs-roles-to-users"></a>将 DQS 角色授予用户
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617147"
   
 5.  在验证该用户后，在左侧窗格中单击 **“用户映射”** 。  
   
-6.  在右侧窗格中，选中 **DQS_MAIN** 数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份: DQS_MAIN”窗格中选中 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
+6.  在右侧窗格中，选中“DQS_MAIN”数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份：DQS_MAIN”窗格中选中“dqs_administrator”、“dqs_kb_editor”或“dqs_kb_operator”复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../../data-quality-services/dqs-security.md)。  
   
 7.  在“登录名 - 新建”对话框中，单击“确定”以便应用更改。  
   

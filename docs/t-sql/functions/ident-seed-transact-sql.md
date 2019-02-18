@@ -20,19 +20,19 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336a961a07b7d1f1ce9be2e1abc751f1cbc787eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711975"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079303"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回原始种子值（返回形式为 numeric(@@MAXPRECISION,0)），该值是在表或视图中创建标识列时指定的。 使用 DBCC CHECKIDENT 更改标识列的当前值不会更改此函数返回的值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,9 +49,9 @@ IDENT_SEED ( 'table_or_view' )
  **numeric**  
   
 ## <a name="exceptions"></a>异常  
- 出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
+ 出现错误时或调用方没有查看对象的权限时将返回 NULL。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 IDENT_SEED）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看用户拥有或被授予权限的安全对象的元数据。 这种安全性意味着，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 IDENT_SEED）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. 从多个表返回种子值  
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中包含带有种子值的标识列的表。  
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中带有种子值的标识列的表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,5 +99,4 @@ dbo                AWBuildVersion                         1
  [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [sys.identity_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
-  
   

@@ -1,7 +1,7 @@
 ---
 title: Parse（数据库引擎）| Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40647221fe39df637407056d8b41c0e7e75428f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55ac77cc4332ce7fe71f1dc2f1fc57d29a05a1e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417138"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041688"
 ---
 # <a name="parse-database-engine"></a>Parse（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>参数  
 input  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]：要转换的字符数据类型值。
+[!INCLUDE[tsql](../../includes/tsql-md.md)]设置用户帐户 ：要转换的字符数据类型值。
   
-CLR：要计算的字符串值。
+CLR:要计算的字符串值。
   
 ## <a name="return-types"></a>返回类型  
 SQL Server 返回类型：hierarchyid

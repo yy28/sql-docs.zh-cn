@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819475"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079373"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函数使用非对称密钥加密数据。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,7 +78,7 @@ cleartext
 varbinary（最大大小为 8,000 个字节）。  
   
 ## <a name="remarks"></a>Remarks  
-与对称密钥加密和解密相比，使用非对称密钥的加密和解密操作消耗大量资源，因此成本非常高。 我们建议开发人员避免对大型数据集执行非对称密钥加密和解密操作 - 例如，存储在数据库表中的用户数据数据集。 相反，我们建议开发人员首先使用强对称密钥对数据进行加密，然后使用非对称密钥对该对称密钥进行加密。  
+与对称密钥加密和解密相比，使用非对称密钥的加密和解密操作消耗大量资源，因此成本很高。 我们建议开发人员避免对大型数据集执行非对称密钥加密和解密操作 - 例如，存储在数据库表中的用户数据数据集。 相反，我们建议开发人员首先使用强对称密钥对数据进行加密，然后使用非对称密钥对该对称密钥进行加密。  
   
 如果输入超出一定字节数，`ENCRYPTBYASYMKEY` 将返回 NULL（具体取决于算法）。 具体限制：
 
@@ -86,7 +86,7 @@ varbinary（最大大小为 8,000 个字节）。
 + 一个 1024 位的密钥最多可加密 117 个字节
 + 一个 2048 位的密钥最多可加密 245 个字节
 
-注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和非对称密钥都可用作 RSA 密钥的包装器。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和非对称密钥都用作 RSA 密钥的包装器。  
   
 ## <a name="examples"></a>示例  
 此示例将用非对称密钥 `JanainaAsymKey02` 加密 `@cleartext` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
@@ -102,5 +102,4 @@ GO
  [DECRYPTBYASYMKEY (Transact-SQL)](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

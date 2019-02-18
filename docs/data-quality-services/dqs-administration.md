@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033138"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -55,9 +55,9 @@ ms.locfileid: "52617857"
   
 -   **引用数据**：配置引用数据服务提供程序：Microsoft Azure 市场或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Microsoft Azure 市场。  
   
--   **常规设置**：指定数据清理和数据匹配的阈值，以及在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中是否启用事件探查的通知。 DQS 在执行数据质量项目中的计算机辅助的清理和匹配活动期间使用这些阈值。  
+-   **常规设置**：指定数据清理和数据匹配的阈值，并指定是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中启用探查通知。 DQS 在执行数据质量项目中的计算机辅助的清理和匹配活动期间使用这些阈值。  
   
--   **日志设置**：DQS 中的日志文件记录在 DQS 中执行的活动，在维护和故障排除期间对于跟踪操作问题很有用。 您可以基于事件的严重级别筛选要为各种 DQS 功能（域管理、知识发现、清理、匹配和 Reference Data Services）记录的消息和 DQS 模块。  
+-   **日志设置**：DQS 中的日志文件会记录在 DQS 中执行的活动，它们可在维护和疑难解答期间用于跟踪操作问题。 您可以基于事件的严重级别筛选要为各种 DQS 功能（域管理、知识发现、清理、匹配和 Reference Data Services）记录的消息和 DQS 模块。  
   
 > [!NOTE]  
 >  **“配置”** 屏幕仅适用于对 DQS_MAIN 数据库具有 dqs_administrator 角色的那些用户。  
@@ -65,7 +65,7 @@ ms.locfileid: "52617857"
 ##  <a name="AdminOutsideClient"></a> 数据质量客户端之外的管理活动  
  下面这些活动在数据质量客户端的外部执行：  
   
--   **备份和还原 DQS 数据库**：备份和还原 DQS 数据库与备份和还原任何 SQL Server 数据库一样，但是针对 DQS 有一些注意事项。  
+-   **备份和还原 DQS 数据库**：备份和还原 DQS 数据库与备份和还原任意 SQL Server 数据库一样，但是针对 DQS 有一些注意事项。  
   
 -   **分离和附加 DQS 数据库**：分离和附加 DQS 数据库与分离和附加任何 SQL Server 数据库一样，但是针对 DQS 有一些注意事项。  
   

@@ -3,7 +3,7 @@ title: SQL Server 2012 Service Pack 发行说明 | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503275"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017058"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -147,14 +147,14 @@ ms.locfileid: "52503275"
 3.  单击 **“PowerPivot 库”**。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>若要将 PowerPivot for Excel 与 Excel 2013 一起使用，您必须使用与 Excel 一起安装的外接程序  
-**问题：** 对于 Office 2010，PowerPivot for Excel 是可从 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下载的独立外接程序。 也可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意，有两个可供下载的 PowerPivot 外接程序版本：一个是 SQL Server 2008 R2 随附的版本，另一个是 SQL Server 2012 随附的版本。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
+**问题：** 在 Office 2010 中，PowerPivot for Excel 是一种可从 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下载的独立加载项。 也可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意有两个版本的 PowerPivot 外接程序可下载：一个随 SQL Server 2008 R2 提供，而另一个随 SQL Server 2012 提供。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
   
-**解决方法：** 若要使用 PowerPivot for Excel 2013，则必须启用 COM 外接程序。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。从“**管理**”下拉框中，选择“**COM 外接程序**”，然后单击“**执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
+**解决方法：** 若要使用 PowerPivot for Excel 2013，你必须启用 COM 外接程序。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。从“**管理**”下拉框中，选择“**COM 外接程序**”，然后单击“**执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>在安装 Reporting Services 前安装和配置 SharePoint Server 2013  
-**问题：** 在安装 SQL Server Reporting Services (SSRS) **前** 完成以下操作。  
+**问题：** 在安装 SQL Server Reporting Services (SSRS) 之前，请满足以下要求。  
   
 1.  运行 SharePoint 2013 产品准备工具。  
   
@@ -162,12 +162,12 @@ ms.locfileid: "52503275"
   
 3.  运行 SharePoint 2013 产品配置向导或完成等效的配置步骤来配置 SharePoint 场。  
   
-**解决方法：**  如果在配置 SharePoint 场前安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，所需的解决方法取决于安装了哪些其他组件。  
+**解决方法：** 如果在配置 SharePoint 场之前安装了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，则所需的解决方法由所安装的其他组件而定。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 中的 Power View 需要 Microsoft.AnalysisServices.SPClient.dll  
 **问题：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 未安装必需的组件 **Microsoft.AnalysisServices.SPClient.dll**。 如果在 SharePoint 模式下安装 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但是未下载和安装 PowerPivot for SharePoint 2013 安装程序包 **spPowerPivot.msi** ，Power View 将不起作用且出现以下症状：  
   
-**症状：** 当您尝试创建 Power View 报表时，会看到一条类似于以下内容的错误消息：  
+**症状**：当你尝试创建 Power View 报表时，会看到一条类似于以下内容的错误消息：  
   
 -   “无法与数据源建立连接...”  
   
@@ -175,19 +175,19 @@ ms.locfileid: "52503275"
   
 -   “连接字符串属性‘用户标识’不支持值‘SharePoint 主体’。”  
   
-**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
+**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (spPowerPivot.msi)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
   
-#### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>在执行预定的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
-**问题**：在 PowerPivot for SharePoint 外接程序中，对包含 Power View 的工作簿使用“ **计划的数据刷新** ”将删除所有 Power View 工作表。  
+#### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>在执行计划的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
+**问题**：在 PowerPivot for SharePoint 加载项中，如果对带有 Power View 的工作簿使用“计划的数据刷新”，则将删除所有 Power View 工作表。  
   
-**解决方法**：要将 **Scheduled Data Refresh** 用于 Power View 工作簿，请创建仅作为数据模型的 PowerPivot 工作簿。 使用您的 Excel 工作表和 Power View 工作表创建单独的工作簿，将它链接到包含数据模型的 PowerPivot 工作簿。 应只对包含数据模型的 PowerPivot 工作簿安排执行数据刷新。  
+**解决方法**：要将“计划的数据刷新”用于 Power View 工作簿，请创建仅用作数据模型的 PowerPivot 工作簿。 使用您的 Excel 工作表和 Power View 工作表创建单独的工作簿，将它链接到包含数据模型的 PowerPivot 工作簿。 应只对包含数据模型的 PowerPivot 工作簿安排执行数据刷新。  
   
 ### <a name="data-quality-services"></a>“数据库引擎服务”  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>错误的 SQL Server 2012 版本中提供 DQS  
 **问题：** 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，Data Quality Services (DQS) 功能在 Enterprise、Business Intelligence 和 Developer 版本以外的 SQL Server 版本中提供。 在安装 SQL Server 2012 SP1 后，DQS 将在除 Enterprise、Business Intelligence 和 Developer 版本之外的所有版本中不可用。  
   
-**解决方法**：如果您在不支持的版本中使用 DQS，则升级到支持的版本，或者从您的应用程序中删除对此功能的依赖关系。  
+**解决方法**：如果你在不支持的版本中使用 DQS，请升级到支持的版本，或者从你的应用程序中删除对此功能的依赖项。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -197,7 +197,7 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包括 SQL Server 2012 Manage
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service 和 Designer for Oracle by Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>升级 CDC 服务和设计器  
-**问题：** 如果在您安装 SQL Server 2012 SP1 时 Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle by Attunity 安装在您的计算机上，则通过安装 SP1 将不会升级这些组件。  
+**问题：** 如果在你安装 SQL Server 2012 SP1 时 Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle by Attunity 安装在您的计算机上，则通过安装 SP1 将不会升级这些组件。  
   
 **解决方法：** 将 CDC 组件升级到最新版本：  
   

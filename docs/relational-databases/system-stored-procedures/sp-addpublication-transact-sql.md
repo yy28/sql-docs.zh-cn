@@ -267,11 +267,11 @@ sp_addpublication [ @publication = ] 'publication'
  [  **\@replicate_ddl =** ] *replicate_ddl*  
  指示发布是否支持架构复制。 *replicate_ddl*是**int**，默认值为**1**有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器和**0**为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 **1**指示复制在发布服务器上执行数据定义语言 (DDL) 语句是的并**0**指示不复制 DDL 语句。 *Oracle 发布服务器不支持架构复制。* 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
-  *\@Replicate_ddl* DDL 语句添加列时，会遵循参数。  *\@Replicate_ddl* DDL 语句更改或删除列，出于以下原因时，将忽略参数。  
+ *\@Replicate_ddl* DDL 语句添加列时，会遵循参数。 *\@Replicate_ddl* DDL 语句更改或删除列，出于以下原因时，将忽略参数。  
   
--   删除列后，必须更新 sysarticlecolumns 以防止新的 DML 语句包括已删除的列，这会导致分发代理失败。  *\@Replicate_ddl*参数被忽略，因为复制功能必须始终复制架构更改。  
+-   删除列后，必须更新 sysarticlecolumns 以防止新的 DML 语句包括已删除的列，这会导致分发代理失败。 *\@Replicate_ddl*参数被忽略，因为复制功能必须始终复制架构更改。  
   
--   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。  *\@Replicate_ddl*参数被忽略，因为复制功能必须始终复制架构更改。  
+-   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。 *\@Replicate_ddl*参数被忽略，因为复制功能必须始终复制架构更改。  
   
 -   DDL 语句添加新列时, sysarticlecolumns 不包括新列。 DML 语句将不尝试复制新列的数据。 采用该参数，因为复制或不复制 DDL 均可接受。  
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617078"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010718"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617078"
   
  如果您应该选择使用某一引用数据服务，则引用数据服务架构可能具有一个必须映射到适当域的必填列。 引用数据架构中的必填列使用“(M)”与列名称区分开来。 例如，“AddressLine”是“Melissa Data - Address Data”中的必填架构列，而“CompanyName”是“Digital Trowel Inc. - Us companies and professional data for SQL users”中的必填架构列。  
   
- 在此主题中，我们将创建四个域：Address Line、City、State 和 Zip。在复合域 Address Verification 之下，将该复合域附加到 Melissa Data - Address Check 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列。  
+ 在本主题中，我们将创建 4 个域：Address Line、City、State 和 Zip。在复合域 Address Verification 之下，将该复合域附加到 Melissa Data - Address Check 引用数据服务，然后将复合域内的各个域映射到引用数据服务架构中的相应列。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52617078"
   
 3.  在 **“新建知识库”** 屏幕上，为新的知识库键入名称，单击 **“域管理”** 活动，然后单击 **“创建”**。  
   
-4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建下列四个域： **Address Line**、 **City**、 **State**和 **Zip**。  
+4.  在 **“域管理”** 屏幕中，单击 **“创建域”** 图标以创建一个域。 创建以下 4 个域：Address Line、City、State 和 Zip。  
   
 5.  单击 **“创建复合域”** 图标以便创建一个复合域。 在 **“创建复合域”** 对话框中，在 **“复合域名称”** 框中键入 **Address Verification** ，并且在该复合域中包括在步骤 3 中创建的所有域。 单击“确定” 。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "52617078"
   
 9. 您将返回到 **“引用数据”** 选项卡。在“提供程序设置”区域中，根据需要更改下面框中的值：  
   
-    -   **自动更正阈值**：将自动完成从其置信度高于此域值的引用数据服务进行的更正。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。  
+    -   **自动更正阈值**：将自动通过其置信度高于此域值的引用数据服务进行更正。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。  
   
-    -   **建议的候选项**：要从引用数据服务显示的建议候选项的数目。  
+    -   **建议的候选项**：要通过引用数据服务显示的建议候选项数量。  
   
     -   **最低置信度**：将忽略来自其置信度低于该值的引用数据服务的建议。 以相应百分比值的小数表示形式输入一个值。 例如，对于 60% 输入 0.6。  
   

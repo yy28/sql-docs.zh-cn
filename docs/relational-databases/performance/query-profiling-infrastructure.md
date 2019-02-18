@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732024"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889978"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包括具有最小开销的轻型分析的修订版本。 对于“适用范围”中提到的上述版本，使用[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)也可以全局启用轻型分析。 引入了新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 以返回正在进行的请求的查询执行计划。
 
-从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始，如果未全局启用轻型分析，则可以使用新的 [USE HINT查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)参数 QUERY_PLAN_PROFILE 以查询级别启用轻型分析，且适用于任何会话。 当包含此新提示的查询完成时，还会输出新的 query_plan_profile 扩展事件，该事件提供类似于 query_post_execution_showplan 扩展事件的实际执行计划 XML。 使用此扩展事件的示例会话可以按下面的示例进行配置：
+从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始，如果未全局启用轻型分析，则可以使用新的 [USE HINT查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)参数 QUERY_PLAN_PROFILE 以查询级别启用轻型分析，且适用于任何会话。 当包含此新提示的查询完成时，还会输出新的 query_plan_profile 扩展事件，该事件提供类似于 query_post_execution_showplan 扩展事件的实际执行计划 XML。 
+
+> [!NOTE]
+> 即使未使用查询提示，query_plan_profile 扩展事件也会利用轻量分析。 
+
+使用 query_plan_profile 扩展事件的示例会话可以像下面的示例一样进行配置：
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

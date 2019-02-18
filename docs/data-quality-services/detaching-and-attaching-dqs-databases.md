@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e10cc69f3fe32656418a8714c852d86e631fe281
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024388"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
 

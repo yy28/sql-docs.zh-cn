@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
-ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
+ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012313"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079323"
 ---
 # <a name="operator-precedence-transact-sql"></a>运算符优先级 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  当一个复杂的表达式有多个运算符时，运算符优先级决定执行运算的先后次序。 执行顺序可能对结果值有明显的影响。  
+  如果一个复杂表达式有多个运算符，则运算符优先级将确定操作序列。 执行顺序可能对结果值有明显的影响。  
   
- 运算符的优先级别如下表中所示。 更高级别的运算符先于较低级别的运算符求值（下表中，1 为最高级别，而 8 为最低级别）。
+ 运算符的优先级别如下表中所示。 在较低级别的运算符之前先对较高级别的运算符进行求值。 在下表中，1 代表最高级别，8 代表最低级别。
   
 |级别|运算符|  
 |-----------|---------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "54012313"
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  
 |8|=（赋值）|  
   
- 当一个表达式中的两个运算符有相同的运算符优先级别时，将按照它们在表达式中的位置对其从左到右进行求值。 例如，在下面的 `SET` 语句所使用的表达式中，在加运算符之前先对减运算符进行求值。  
+ 如果一个表达式中的两个运算符有相同的优先级别，则按照它们在表达式中的位置对其从左到右进行求值。 例如，在下面的 `SET` 语句所使用的表达式中，在加运算符之前先对减运算符进行求值。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -52,9 +52,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- 在表达式中使用括号替代所定义的运算符的优先级。 首先对括号中的内容进行求值，从而产生一个值，然后括号外的运算符才可以使用这个值。  
+ 在表达式中使用括号替代所定义的运算符的优先级。 对括号内的所有内容进行求值会得到一个单一的值。 该值可被括号外的任何运算符使用。  
   
- 例如，在下面的 `SET` 语句所使用的表达式中，乘运算符具有比加运算符更高的优先级别。 因此，先对它进行求值；此表达式的结果为 `13`。  
+ 例如，在下面的 `SET` 语句所使用的表达式中，乘运算符具有比加运算符更高的优先级别。 首先计算乘法运算；表达式结果为 `13`。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -63,7 +63,7 @@ SET @MyNumber = 2 * 4 + 5;
 SELECT @MyNumber;  
 ```  
   
- 在下面的 `SET` 语句所使用的表达式中，括号使加运算先执行。 此表达式的结果为 `18`。  
+ 在以下 `SET` 语句使用的表达式中，括号使加法先进行计算。 此表达式的结果为 `18`。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -72,7 +72,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- 如果表达式有嵌套的括号，那么首先对嵌套最深的表达式求值。 以下示例中包含嵌套的括号，其中表达式 `5 - 3` 在嵌套最深的那对括号中。 该表达式产生一个值 `2`。 然后，加运算符 (`+`) 将此结果与 `4` 相加。 这将生成一个值 `6`。 最后将 `6` 与 `2` 相乘，生成表达式的结果 `12`。  
+ 如果表达式有嵌套的括号，那么首先对嵌套最深的表达式求值。 以下示例中包含嵌套的括号，其中表达式 `5 - 3` 在嵌套最深的那对括号中。 该表达式产生一个值 `2`。 然后，加法运算符 (`+`) 将此结果与 `4` 相加，得到值 `6`。 最后将 `6` 与 `2` 相乘，生成表达式的结果 `12`。  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -86,5 +86,4 @@ SELECT @MyNumber;
  [逻辑运算符 (Transact-SQL)](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [运算符 (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)  
-  
   

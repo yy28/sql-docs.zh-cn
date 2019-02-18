@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026208"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
 
@@ -87,7 +87,7 @@ ms.locfileid: "52616857"
   
     -   **按顺序**：根据复合域中域的顺序分析字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
   
-    -   **分隔符**：基于在选择“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
+    -   **分隔符**：根据在勾选“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
   
 5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”**。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   

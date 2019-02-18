@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc81cc930f901f162ff58dfe6a5615d557878cf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778115"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889988"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的文件共享传递
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 需要编写器权限的帐户可以是订阅中配置的凭据，也可以是为报表服务器配置的“文件共享帐户”  。 有关文件共享帐户的详细信息，请参阅 [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含文件共享传递扩展插件，以便你可以将报表传递到文件夹。 默认情况下会提供文件共享传递扩展插件，并且不需要进行其他配置。 为了成功传递文件，必须设置对共享文件夹的写访问权限。 需要编写器权限的帐户可以是订阅中配置的凭据，也可以是为报表服务器配置的“文件共享帐户”。 有关文件共享帐户的详细信息，请参阅 [订阅设置和文件共享帐户（配置管理器）](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)。 此外，需要访问报表的用户还必须对共享文件夹具有读取权限。  
   
  若要将报表分发到文件共享位置，需要定义标准订阅或数据驱动订阅。 若要了解如何在数据驱动订阅中使用文件共享传递，请参阅[创建数据驱动订阅（SSRS 教程）](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)。 此外，运行远程文件共享订阅的帐户需要本地登录 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 计算机的权限。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "47778115"
   
  **文件名：** 默认文件名基于源报表名称，但你可以在订阅中提供自定义名称。 扩展名是可选的，但如果指定它的话，报表服务器将创建对应于呈现格式的扩展名。  
   
- **覆盖：** 你可以指定覆盖选项，从而在每次报表传递时重复使用相同的文件名，或者创建新的文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
+ **覆盖：** 您可以指定覆盖选项对每个报表传递重复使用相同的文件名或者创建新文件。 若要覆盖文件，必须使用相同的文件名和扩展名。  
   
  为每个传递创建唯一的文件的另一种方法是在文件名中包含时间戳。 若要执行此操作，请将“@timestamp”变量添加到文件名中（例如，CompanySales@timestamp）。 采用这种方法，文件名的定义是唯一的，因此永远不会被覆盖。  
   
- 下图举例说明了为订阅配置的文件共享传递设置。  
+ 下图是为文件共享传递配置的订阅设置示例。  
   
  ![文件共享订阅](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
   

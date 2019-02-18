@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616887"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017218"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>将值从 Excel 文件导入到域
 
@@ -74,7 +74,7 @@ ms.locfileid: "52616887"
   
 14. 单击 **“完成”** 将值添加到知识库。  
   
-##  <a name="FollowUp"></a> 跟进：在将值从 Excel 文件导入到域后  
+##  <a name="FollowUp"></a> 跟进：将值从 Excel 文件导入到域后  
  在将值导入到某个域中之后，您可以对该域执行其他域管理任务，可以执行知识发现以便向该域添加知识，或者可以向该域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Synonyms"></a> 导入同义词  

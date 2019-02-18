@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dbb09e9aa932797a975f26de15e2b466101c4026
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: fdab2d77dddf565e2d94b27b2b7b46c70aafa4f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616307"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010558"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>配置清理和匹配活动的阈值
 

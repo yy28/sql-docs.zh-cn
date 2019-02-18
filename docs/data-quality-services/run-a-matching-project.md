@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015428"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
 
@@ -45,7 +45,7 @@ ms.locfileid: "52617947"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行匹配项目。  
   
-##  <a name="StartingaMatchingProject"></a> 第一步：启动匹配项目  
+##  <a name="StartingaMatchingProject"></a>第 1 步：开始匹配项目  
  您在 DQS 客户端应用程序中创建的数据质量项目中执行匹配活动。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
@@ -111,7 +111,7 @@ ms.locfileid: "52617947"
   
  存活是可选的。 您可以不运行存活便导出结果，在此情况下，DQS 将使用在匹配分析中指定的透视记录。 如果群集中两个或更多的记录符合存活规则，则存活过程将选择冲突记录中最低的记录 ID 作为存活记录。 您可以使用不同的存活规则将存活记录导出到不同的文件或表。  
   
-1.  在 **“导出”** 页上，在 **“目标类型”** 中选择您要将匹配数据导出到的目标： **“SQL Server”**、 **“CSV 文件”** 或 **“Excel 文件”**。  
+1.  在“导出”页面上的“目标类型”中选择要将匹配数据导出到的目标：“SQL Server”、“CSV 文件”或“Excel 文件”。  
   
     > [!IMPORTANT]  
     >  如果您使用的是 64 位版本的 Excel，则无法将匹配数据导出到 Excel 文件；只能导出到 SQL Server 数据库或 .csv 文件。  
@@ -168,7 +168,7 @@ ms.locfileid: "52617947"
     > [!NOTE]  
     >  如果您已完成了某个匹配项目，然后再次使用该项目，则它将使用在发布时具有的知识库。 它将不会使用自您完成了该项目后对知识库进行的任何更改。 若要使用这些更改，或使用新的知识库，将必须创建一个新的匹配项目。 另一方面，如果您已创建、但未完成某一匹配项目，则当您在该项目中运行匹配时，将使用已发布到匹配策略的任何更改。  
   
-##  <a name="FollowUp"></a> 跟进：在运行匹配项目之后  
+##  <a name="FollowUp"></a> 跟进：运行匹配项目后  
  在运行某一匹配项目后，您可以在知识库中更改匹配策略，并且基于更新的匹配策略创建和运行另一个匹配项目。 有关详细信息，请参阅 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Profiler"></a> “事件探查器”和“结果”选项卡  
@@ -181,13 +181,13 @@ ms.locfileid: "52617947"
   
 -   **记录**：数据库中的记录总数  
   
--   **值总计**：各字段中的值的总数  
+-   **总计值**：字段中值的总数  
   
 -   **新值**：自上次运行后的新值总数及其占总体的百分比  
   
 -   **唯一值**：字段中唯一值的总数及其占总体的百分比  
   
--   **新的唯一值**：字段中新唯一值的总数及其占总体的百分比  
+-   **新的唯一值**：字段中新的唯一值的总数及其占总体的百分比  
   
  字段统计信息包括：  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52617947"
   
 -   **唯一**：字段中唯一记录的数目及其占总数的百分比  
   
--   **完整性**：规则运行完毕所占的百分比。  
+-   **完整性**：规则运行完成的百分比。  
   
 ### <a name="matching-policy-notifications"></a>匹配策略通知  
  对于匹配策略活动，以下条件会导致发送通知：  

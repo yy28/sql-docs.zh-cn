@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca00ce6884ca1e36d25a7c593b0f65ac6b5c2809
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617397"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014219"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
 
@@ -29,7 +29,7 @@ ms.locfileid: "52617397"
   
  将分别为复合域中的单一域之一定义跨域规则的 If 子句和 Then 子句。 必须为不同的单一域定义每个子句。 跨域规则必须与多个单一域相关；不能为复合域定义简单域规则（仅针对单一域）。 您应该通过为单一域定义域规则来这样做。 If 子句和 Then 子句可分别包含一个或多个条件。  
   
- 具有可定义条件的跨域规则将规则逻辑应用于条件中的值的同义词以及这些值本身。 If 和 Then 子句的可定义条件是值等于、值不等于、值处于和值不处于。 例如，假定对于某一复合域，你具有以下跨域规则：“For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'”。 如果“Los Angeles”和“LA”是同义词，则此规则对于“Los Angeles CA”和“LA CA”将返回正确结果，对于“Los Angeles WA”和“LA WA”将返回错误结果。  
+ 具有可定义条件的跨域规则将规则逻辑应用于条件中的值的同义词以及这些值本身。 If 和 Then 子句的可定义条件是值等于、值不等于、值处于和值不处于。 例如，假设对复合域具有以下跨域规则：“对于‘城市’，如果值等于‘Los Angeles’，那么对于‘州’，值等于‘CA’。 如果“Los Angeles”和“LA”是同义词，则此规则对于“Los Angeles CA”和“LA CA”将返回正确结果，对于“Los Angeles WA”和“LA WA”将返回错误结果。  
   
  除了让您知道跨域规则的有效性之外，跨域规则 *“值等于”* 中的可定义 **Then**子句还在数据清理活动过程中更正数据。 有关详细信息，请参阅 [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 中的 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   

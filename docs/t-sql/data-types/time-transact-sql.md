@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762585"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079453"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "47762585"
   
 ## <a name="time-description"></a>time 说明  
   
-|“属性”|ReplTest1|  
+|属性|ReplTest1|  
 |--------------|-----------|  
 |语法|time [ (fractional second scale) ]|  
 |用法|DECLARE \@MyTime time(7)<br /><br /> CREATE TABLE Table1 ( Column1 time(7))|  
 |fractional seconds scale|为秒的小数部分指定数字的位数。<br /><br /> 这可以是从 0 到 7 的整数。 对于 Informatica，这可以是从 0 到 3 的整数。<br /><br /> 默认小数位数为 7 (100ns)。|  
-|默认的字符串文字格式<br /><br /> （用于下级客户端）|对于 Informatica，为 hh:mm:ss[.nnnnnnn]）<br /><br /> 有关详细信息，请参阅后面的“下级客户端的向后兼容性”部分。|  
+|默认的字符串文字格式<br /><br /> （用于下级客户端）|对于 Informatica，为 hh:mm:ss[.nnnnnnn]）<br /><br /> 有关详细信息，请参阅[下级客户端的后向兼容性](#BackwardCompatibilityforDownlevelClients)部分。|  
 |范围|00:00:00.0000000 到 23:59:59.9999999（对于 Informatica，为 00:00:00.000 到 23:59:59.999）|  
 |各元素的范围|hh 是表示小时的两位数字，范围为 0 到 23。<br /><br /> mm 是表示分钟的两位数字，范围为 0 到 59。<br /><br /> ss 是表示秒的两位数字，范围为 0 到 59。<br /><br /> n\* 是 0 到 7 位数字，范围为 0 到 9999999，它表示秒的小数部分。 对于 Informatica，n\* 是零到三位数字，范围为 0 到 999。|  
 |字符长度|最小 8 位 (hh:mm:ss)，最大 16 位 (hh:mm:ss.nnnnnnn)。 对于 Informatica，最大值为 12 位 (hh:mm:ss.nnn)。|  
@@ -53,7 +53,7 @@ ms.locfileid: "47762585"
 |存储大小|固定 5 个字节，是使用默认的 100ns 秒的小数部分精度时的默认存储大小。 在 Informatica 中，默认为 4 个字节，固定不变，同时秒的小数部分精度默认为 1 毫秒。|  
 |精确度|100 纳秒（Informatica 中为 1 毫秒）|  
 |默认值|00:00:00<br /><br /> 此值用作从 date 隐式转换到datetime2 或 datetimeoffset 时追加的时间部分。|  
-|用户定义的秒的小数部分精度|用户帐户控制|  
+|用户定义的秒的小数部分精度|是|  
 |时区偏移量感知和保留|否|  
 |夏时制感知|否|  
   
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- 如果转换到  
-                    date，则转换失败，并引发错误消息 206：“操作数类型冲突: date 与 time 不兼容”。  
+ 如果转换到“date”，转换失败，并引发错误消息 206：“操作数类型冲突: date 与 time 不兼容”。  
   
  转换到 datetime 时，会复制小时、分钟和秒数，且日期部分设为“1900-01-01”。 当 time(n) 值的秒的小数部分精度大于三位时，datetime 结果将被截断。 下面的代码显示将 `time(4)` 值转换为 `datetime` 值的结果。  
   
