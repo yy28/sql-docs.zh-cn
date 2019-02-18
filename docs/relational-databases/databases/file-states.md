@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54445a926dbb6f7d1e03720f31ee0bd9a1601cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1831c0f3420ad89b5a3dd850e0692ddf7b56b555
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560334"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807487"
 ---
 # <a name="file-states"></a>文件状态
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51560334"
 |State|定义|  
 |-----------|----------------|  
 |ONLINE|文件可用于所有操作。 如果数据库本身处于在线状态，则主文件组中的文件始终处于在线状态。 如果主文件组中的文件处于离线状态，则数据库将处于离线状态，并且辅助文件的状态未定义。|  
-|OFFLINE|文件不可访问，并且可能不显示在磁盘中。 文件通过显式用户操作变为离线，并在执行其他用户操作之前保持离线状态。<br /><br /> **\*\* 警告 \*\*** 当文件已损坏时，该文件仅应设置为离线，但可以进行还原。 设置为离线的文件只能通过从备份还原才能设置为在线。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。|  
+|OFFLINE|文件不可访问，并且可能不显示在磁盘中。 文件通过显式用户操作变为离线，并在执行其他用户操作之前保持离线状态。<br /><br /> **\*\*警告\*\*** 如果文件损坏但可还原，则文件状态可设置为离线。 设置为离线的文件只能通过从备份还原才能设置为在线。 有关还原单个文件的详细信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)。 <br /><br /> 如果数据库处于完全或批量记录恢复状态且文件已删除时，数据库文件也设置为离线。 sys.master_files 中的条目继续存在，直到超过 drop_lsn 值截断事务日志。 有关详细信息，请参阅[事务日志截断](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)。 |  
 |RESTORING|正在还原文件。 文件处于还原状态（因为还原命令会影响整个文件，而不仅是页还原），并且在还原完成及文件恢复之前，一直保持此状态。|  
 |RECOVERY PENDING|文件恢复被推迟。 由于在段落还原过程中未还原和恢复文件，因此文件将自动进入此状态。 需要用户执行其他操作来解决该错误，并允许完成恢复过程。 有关详细信息，请参阅[段落还原 (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。|  
 |SUSPECT|联机还原过程中，恢复文件失败。 如果文件位于主文件组，则数据库还将标记为可疑。 否则，仅文件处于可疑状态，而数据库仍处于在线状态。<br /><br /> 在通过以下方法之一将文件变为可用之前，该文件将保持可疑状态：<br /><br /> 还原和恢复<br /><br /> 包含 REPAIR_ALLOW_DATA_LOSS 的 BCC CHECKDB|  
@@ -65,5 +65,3 @@ ms.locfileid: "51560334"
  [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
-  

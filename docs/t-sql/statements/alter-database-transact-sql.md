@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421464"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832139"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -309,68 +309,73 @@ ALTER DATABASE
 [ALTER DATABASE 兼容级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbls)  
 介绍了 ALTER DATABASE 与数据库兼容级别相关的 SET 选项的语法和相关信息。  
 
-## <a name="syntax"></a>语法 
+## <a name="syntax"></a>语法
 
-```  
+```
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {  
     MODIFY NAME = new_database_name  
-  | MODIFY ( <edition_options> [, ... n] ) 
-  | SET { <option_spec> [ ,... n ] WITH <termination>} 
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
+  | MODIFY ( <edition_options> [, ... n] )
+  | SET { <option_spec> [ ,... n ] WITH <termination>}
+  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ADD SECONDARY ON SERVER <partner_server_name>  
     [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-[;] 
+[;]
 
-<edition_options> ::= 
+<edition_options> ::=
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
-  | SERVICE_OBJECTIVE = 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'}
+  | SERVICE_OBJECTIVE =
        {  <service-objective>
-       | { ELASTIC_POOL (name = <elastic_pool_name>) } 
+       | { ELASTIC_POOL (name = <elastic_pool_name>) }
        } 
 }  
 
 <add-secondary-option> ::=  
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
-     | SERVICE_OBJECTIVE = 
-       {  <service-objective> 
-       | { ELASTIC_POOL ( name = <elastic_pool_name>) } 
-       } 
+     | SERVICE_OBJECTIVE =
+       {  <service-objective>
+       | { ELASTIC_POOL ( name = <elastic_pool_name>) }
+       }
    }  
 
-<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::=  { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
-      | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
-      | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
+       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
+       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
+       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
+       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
+       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
+       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
+       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
+       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
+       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | { ELASTIC_POOL(name = <elastic_pool_name>) } 
       }
 
-<option_spec> ::= 
+<option_spec> ::=
 {  
-    <auto_option> 
-  | <change_tracking_option> 
-  | <cursor_option> 
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
   | <db_encryption_option>  
-  | <db_update_option> 
-  | <db_user_access_option> 
+  | <db_update_option>
+  | <db_user_access_option>
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
   | <snapshot_option>  
   | <sql_option> 
-  | <target_recovery_time_option> 
+  | <target_recovery_time_option>
   | <termination>  
   | <temporal_history_retention>  
 }  
@@ -378,7 +383,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>参数
 
-*database_name*  
+*database_name*
 
 要修改的数据库的名称。  
   
@@ -388,21 +393,21 @@ CURRENT
   
 MODIFY NAME = new_database_name  
 
-使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：   
+使用指定的名称 new_database_name 重命名数据库。 以下示例将 `db1` 数据库的名称更改为 `db2`：
 
-```sql  
+```sql
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
-```    
+```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
 
 更改数据库的服务层。 
 
 以下示例将版本更改为 `premium`：
 
 ```sql
-ALTER DATABASE current 
+ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
@@ -413,7 +418,7 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB)
 指定数据库的最大大小。 该最大大小必须符合针对数据库的 EDITION 属性的有效值集。 更改数据库的最大大小可能导致更改数据库 EDITION。 
 
 > [!NOTE]
-> MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
+> MAXSIZE 参数不适用于超大规模服务层中的单一数据库。 超大规模服务层数据库根据需要而增长，最大 100 TB。 SQL 数据库服务会自动添加存储空间，而无需设置最大大小。
 
 **基于 DTU 的模型**
 
@@ -444,32 +449,56 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024...4096] GB)
 \* P11 和 P15 允许 MAXSIZE 达到 4 TB，默认大小为 1024 GB。  P11 和 P15 可以使用最大 4 TB 的内含存储，且无需额外费用。 在高级层中，目前在以下区域提供大于 1 TB 的 MAXSIZE：美国东部 2、美国西部、US Gov 弗吉尼亚州、西欧、德国中部、东南亚、日本东部、澳大利亚东部、加拿大中部和加拿大东部。 有关基于 DTU 的模型的资源限制的其他详细信息，请参阅[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。  
 
 基于 DTU 的模型的 MAXSIZE 值（如果指定）必须为上表中所示的指定服务层的有效值。
- 
+
 **基于 vCore 的模型**
 
-**常规用途服务层 - 第 4 代计算平台**
+**常规用途服务层 - 第 4 代计算平台（第 1 部分）**
 
-|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
-|:--- | --: |--: |--: |--: |--: |--:|
-|最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|
+|MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|最大数据大小 (GB)|1024|1024|1024|1536|1536|1536|
 
-**常规用途服务层 - 第 5 代计算平台**
+**常规用途服务层 - 第 4 代计算平台（第 2 部分）**
 
-|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|最大数据大小 (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
+|MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
+|:----- | ------: |-------: |-------: |-------: |-------: |--------:|
+|最大数据大小 (GB)|1536|3072|3072|3072|4096|4096|
 
-**业务关键服务层 - 第 4 代计算平台**
+**常规用途服务层 - 第 5 代计算平台（第 1 部分）**
 
-|性能级别|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
-|:--- | --: |--: |--: |--: |--: |--: |
+|MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|最大数据大小 (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**常规用途服务层 - 第 5 代计算平台（第 2 部分）**
+
+|MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
+|:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
+|最大数据大小 (GB)|3072|3072|3072|4096|4096|4096|4096|
+
+**业务关键服务层 - 第 4 代计算平台（第 1 部分）**
+
+|性能级别|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |最大数据大小 (GB)|1024|1024|1024|1024|1024|1024|
 
-**业务关键服务层 - 第 5 代计算平台**
+**业务关键服务层 - 第 4 代计算平台（第 2 部分）**
 
-|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
-|:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
-|最大数据大小 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
+|性能级别|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
+|最大数据大小 (GB)|1024|1024|1024|1024|1024|1024|
+
+**业务关键服务层 - 第 5 代计算平台（第 1 部分）**
+
+|MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
+|:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
+|最大数据大小 (GB)|1024|1024|1024|1536|1536|1536|1536|
+
+**业务关键服务层 - 第 5 代计算平台（第 2 部分）**
+
+|MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
+|:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
+|最大数据大小 (GB)|3072|3072|3072|4096|4096|4096|4096|
 
 如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 针对基于 vCore 的模型，有关其资源限制的其他详细信息，请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
   
@@ -488,9 +517,15 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-指定性能级别。 服务目标的可用值包括：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_4`、`GP_GEN4_8`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_4`、`BC_GEN4_8`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_8`、`GP_Gen5_16`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_48`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_8`、`BC_Gen5_16`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_48`、`BC_Gen5_80`、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。  
+- 针对单一数据库和入池数据库
 
-有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)和[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。 
+  - 指定性能级别。 服务目标的可用值为：`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`。
+
+  - **针对超大规模服务层中的单一数据库**
+
+  指定性能级别。 服务目标的可用值包括：`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80`。
+
+有关服务目标说明以及大小、版本和服务目标组合的详细信息，请参阅 [Azure SQL 数据库服务层和性能级别](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[基于 DTU 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)和[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。 删除了对 PRS 服务目标的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
   
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
 
@@ -510,7 +545,7 @@ WITH ALLOW_CONNECTIONS { ALL | NO }
 
 未指定 ALLOW_CONNECTIONS 时，它在默认情况下会设置为 ALL。 如果它设置为 ALL，则是允许拥有适当权限的所有登录名进行连接的只读数据库。  
   
-WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }  
 
 未指定 SERVICE_OBJECTIVE 时，会在与主数据库相同的服务级别上创建辅助数据库。 指定了 SERVICE_OBJECTIVE 时，会在指定级别上创建辅助数据库。 此选项支持使用成本较低的服务级别创建异地复制辅助数据库。 指定的 SERVICE_OBJECTIVE 必须处于与源相同的版本中。 例如，如果版本是高级版本，则无法指定 S0。  
   
@@ -519,29 +554,29 @@ ELASTIC_POOL (name = \<elastic_pool_name)
 未指定 ELASTIC_POOL 时，不会在弹性池中创建辅助数据库。 指定了 ELASTIC_POOL 时，会在指定池中创建辅助数据库。  
   
 > [!IMPORTANT]  
->  执行 ADD SECONDARY 命令的用户必须是主服务器上的 DBManager，在本地数据库中拥有 db_owner 成员身份，以及是辅助服务器上的 DBManager。  
+> 执行 ADD SECONDARY 命令的用户必须是主服务器上的 DBManager，在本地数据库中拥有 db_owner 成员身份，以及是辅助服务器上的 DBManager。  
   
 REMOVE SECONDARY ON SERVER  \<partner_server_name>  
 
 删除指定服务器上的指定异地复制辅助数据库。 命令会对承载主数据库的服务器上的 master 数据库执行。  
   
 > [!IMPORTANT]  
->  执行 REMOVE SECONDARY 命令的用户必须是主服务器上的 DBManager。  
+> 执行 REMOVE SECONDARY 命令的用户必须是主服务器上的 DBManager。  
   
 FAILOVER  
 
 将异地复制合作关系中对其执行命令的辅助数据库提升为主数据库，并将当前主数据库降级为新的辅助数据库。 作为此过程的一部分，异地复制模式会暂时从异步模式切换为同步模式。 在故障转移过程中：  
   
-1.  主数据库停止接收新事务。  
+1. 主数据库停止接收新事务。  
   
-2.  所有未完成的事务都刷新到辅助数据库。  
+2. 所有未完成的事务都刷新到辅助数据库。  
   
-3.  辅助数据库成为主数据库，并开始与旧的主数据库（即新的辅助数据库）进行异步异地复制。  
+3. 辅助数据库成为主数据库，并开始与旧的主数据库（即新的辅助数据库）进行异步异地复制。  
   
 此顺序可确保不会丢失任何数据。 切换角色期间两个数据库都不可用的时间段大约为 0-25 秒。 总操作所需时间不应超过大约一分钟。 如果在发出此命令时主数据库不可用，则此命令会失败并产生指示主数据库不可用的错误消息。 如果故障转移过程未完成，并且显示为停滞，则可以使用强制故障转移命令并接受数据丢失 — 随后，如果需要恢复丢失的数据，请调用 devops (CSS) 以恢复丢失的数据。  
   
 > [!IMPORTANT]  
->  执行 FAILOVER 命令的用户必须是主服务器和辅助服务器上的 DBManager。  
+> 执行 FAILOVER 命令的用户必须是主服务器和辅助服务器上的 DBManager。  
   
 FORCE_FAILOVER_ALLOW_DATA_LOSS  
 
@@ -558,9 +593,9 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS
 4. 如果存在其他辅助数据库，则它们会自动重新配置以成为新的主数据库的辅助数据库。 此过程是异步过程，在此过程完成之前可能会出现延迟。 在重新配置之前，辅助数据库会继续是旧的主数据库的辅助数据库。  
   
 > [!IMPORTANT]  
->  执行 FORCE_FAILOVER_ALLOW_DATA_LOSS 命令的用户必须是主服务器和辅助服务器上的 DBManager。  
+> 执行 FORCE_FAILOVER_ALLOW_DATA_LOSS 命令的用户必须是主服务器和辅助服务器上的 DBManager。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
 
 若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。  
 若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -569,20 +604,20 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
   
 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
-在下列情况下，也会刷新过程缓存：针对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
+在下列情况下，也会刷新过程缓存：针对具有默认选项的数据库运行多个查询。 然后，删除数据库。
   
-## <a name="viewing-database-information"></a>查看数据库信息  
+## <a name="viewing-database-information"></a>查看数据库信息
 
 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
 
 只有服务器级主体登录名（由设置过程创建）或 `dbmanager` 数据库角色的成员可以更改数据库。  
   
 > [!IMPORTANT]  
->  数据库的所有者不能更改数据库，除非他们是 `dbmanager` 角色的成员。  
+> 数据库的所有者不能更改数据库，除非他们是 `dbmanager` 角色的成员。
   
-## <a name="examples"></a>示例  
+## <a name="examples"></a>示例
   
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. 检查版本选项并更改它们：
 
@@ -597,39 +632,47 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. 将数据库移动到不同的弹性池  
 
 将现有数据库移动到名为 pool1 的池中：  
-  
-```sql  
-ALTER DATABASE db1   
+
+```sql
+ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
-```  
-  
+```
+
 ### <a name="c-add-a-geo-replication-secondary"></a>C. 添加异地复制辅助数据库  
 
 在服务器 `secondaryserver` 上创建本地服务器上的 db1 的可读服务数据库 db1。  
   
-```sql  
-ALTER DATABASE db1   
-ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = ALL )  
-```  
-  
+```sql
+ALTER DATABASE db1
+ADD SECONDARY ON SERVER secondaryserver
+WITH ( ALLOW_CONNECTIONS = ALL )
+```
+
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. 删除异地复制辅助数据库  
- 
+
 删除服务器 `secondaryserver` 上的辅助数据库 db1。  
-  
-```sql  
-ALTER DATABASE db1   
-REMOVE SECONDARY ON SERVER testsecondaryserver   
-```  
-  
+
+```sql
+ALTER DATABASE db1
+REMOVE SECONDARY ON SERVER testsecondaryserver
+```
+
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 故障转移到异地复制辅助数据库  
 
 在服务器 `secondaryserver` 上执行时，将服务器 `secondaryserver` 上的辅助数据库 db1 提升为新的主数据库。  
   
-```sql  
+```sql
 ALTER DATABASE db1 FAILOVER  
-```  
-  
+```
+
+### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 将单一数据库更新为服务层 S0（标准版、性能级别 0）
+
+将单一数据库更新为标准版（服务层），性能级别为 S0，最大大小为 250 GB。
+
+```sql
+ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
 ## <a name="see-also"></a>另请参阅
   
 [CREATE DATABASE - Azure SQL 数据库](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   

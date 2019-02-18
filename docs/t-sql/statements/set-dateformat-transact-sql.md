@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519698"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759970"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  设置用于解释 **date**、**smalldatetime**、**datetime**、**datetime2** 和 **datetimeoffset** 字符串的月、日和年日期部分的顺序。  
+  设置用于解释日期字符串的月、日和年日期部分的顺序。 这些字符串属于类型“date”、“smalldatetime”、“datetime”、“datetime2”或“datetimeoffset”。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -55,9 +55,9 @@ SET DATEFORMAT { format | @format_var }
  日期部分的顺序。 有效参数为 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 可以是 Unicode，也可以是转换为 Unicode 的双字节字符集 (DBCS)。 美国英语默认值为 **mdy**。 有关所有支持语言的默认 DATEFORMAT，请参阅 [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  
- **date**、**datetime2** 和 **datetimeoffset** 数据类型不支持 DATEFORMAT **ydm**。  
+ “date”、“datetime2”和“datetimeoffset”数据类型不支持 DATEFORMAT“ydm”。  
   
- DATEFORMAT 设置对字符串解释的影响对于 **datetime** 和 **smalldatetime** 值与对于 **date**、**datetime2** 和 **datetimeoffset** 值可能不同，具体取决于字符串格式。 在字符串转换为日期值以便存储在数据库中时，此设置会影响字符串的解释。 它不会影响存储在数据库中的日期数据类型值的显示，也不会影响存储格式。  
+ DATEFORMAT 设置可能会对日期数据类型的字符串进行不同的解释，具体取决于字符串格式。 例如，“datetime”和“smalldatetime”的解释可能与“date”、“datetime2”或“datetimeoffset”不一致。 在字符串转换为数据库的日期值时，DATEFORMAT 会影响字符串的解释。 它不会影响日期数据类型值的显示，也不会影响数据库中的存储格式。  
   
  某些字符串格式（例如 ISO 8601）的解释与 DATEFORMAT 设置无关。  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ccf8b81bb7393f8268584bc78115cf6051f0901f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617337"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038628"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
 
@@ -48,7 +48,7 @@ ms.locfileid: "52617337"
   
 -   **监视：** 跟踪和确定数据质量活动的状态。 通过监视，您可以验证数据质量解决方案是否达到设计目的。 有关详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
--   **知识库：** Data Quality Services 是知识驱动型解决方案，它根据您使用 DQS 生成的知识分析数据。 这使您可以创建数据质量过程，这些过程不断增强有关您的数据的知识，从而不断提高数据质量。  
+-   **知识库：** Data Quality Services 是一种知识驱动型解决方案，它根据使用 DQS 生成的知识分析数据。 这使您可以创建数据质量过程，这些过程不断增强有关您的数据的知识，从而不断提高数据质量。  
   
  下图显示了 DQS 过程：  
   

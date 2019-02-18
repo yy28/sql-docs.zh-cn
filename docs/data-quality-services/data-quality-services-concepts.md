@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033434"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -52,7 +52,7 @@ ms.locfileid: "52617108"
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
--   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，用来对数据源中的值提出更正/建议。  
+-   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，从而对数据源中的值提出更正/建议。  
   
 -   **交互式清理**：数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
   

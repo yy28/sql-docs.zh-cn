@@ -1,7 +1,7 @@
 ---
 title: 精度、小数位数和长度 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020418"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "52507265"
   
 数字数据类型的长度是存储此数所占用的字节数。 字符串或 Unicode 数据类型的长度是字符个数。 binary、varbinary 和 image 数据类型的长度是字节数。 例如，int 数据类型可以有 10 位数，用 4 个字节存储，不接受小数点。 int 数据类型的精度是 10，长度是 4，小数位数是 0。
   
-当两个 char、varchar、binary 或 varbinary 表达式连接时，所生成表达式的长度是两个源表达式长度之和，或是 8,000 个字符，以二者中较少者计。
+当 char、varchar、binary 和 varbinary 表达式中的两种相串联时，所生成表达式的长度是两个源表达式长度之和（不超过 8,000 个字符）。
   
-当两个 nchar 或 nvarchar 表达式连接时，所生成表达式的长度是两个源表达式长度之和，或是 4,000 个字符，以二者中较少者计。
+当两个 nchar 或 nvarchar 表达式相串联时，所生成表达式的长度是两个源表达式长度之和（不超过 4,000 个字符）。
   
 使用 UNION、EXCEPT 或 INTERSECT 对数据类型相同但长度不同的两个表达式进行比较时，得到的长度为两个表达式中较大的长度。
   
 除了 decimal 类型之外，数字数据类型的精度和小数位数都是固定的。 如果算术运算符有两个相同类型的表达式，结果就为该数据类型，并且具有对此类型定义的精度和小数位数。 如果运算符有两个不同数字数据类型的表达式，则由数据类型优先级决定结果的数据类型。 结果具有为该数据类型定义的精度和小数位数。
   
-下表定义了当运算结果是 decimal 类型时，如何计算结果的精度和小数位数。 当下列任一条件成立时，结果为 decimal：
+下表定义了当运算结果是 decimal 类型时，如何计算结果的精度和小数位数。 出现以下任一情况时，结果为 decimal 类型：
 -   两个表达式都是 decimal 类型。  
 -   一个表达式是 decimal 类型，而另一个是比 decimal 优先级低的数据类型。  
   
-操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，是对此表达式数据类型定义的精度和小数位数。
+操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，与对此表达式数据类型定义的一致。
   
 |运算|结果精度|结果小数位数 *|  
 |---|---|---|
@@ -61,7 +61,7 @@ ms.locfileid: "52507265"
 |e1 { UNION &#124; EXCEPT &#124; INTERSECT } e2|max(s1, s2) + max(p1-s1, p2-s2)|max(s1, s2)|  
 |e1 % e2|min(p1-s1, p2 -s2) + max( s1,s2 )|max(s1, s2)|  
   
-\* 结果精度和小数位数的绝对最大值为 38。 当结果精度大于 38 时，它会减少到 38，并且相应的小数位数会减少，以尽量避免结果的整数部分被截断。 在某些情况下（如乘法或除法），为了保持小数精度，比例因子将不会减少，虽然这可能引发溢出错误。
+\* 结果精度和小数位数的绝对最大值为 38。 当结果精度大于 38 时，它会减少到 38，并且相应的小数位数会减少，以尽量避免截断结果的整数部分。 在某些情况下（如乘法或除法），为了保持小数精度，比例因子将不会减少，虽然这可能引发溢出错误。
 
 在加法和减法运算中，我们需要 `max(p1 - s1, p2 - s2)` 个位置来存储十进制数的整数部分。 如果空间不足，无法存储它们，即 `max(p1 - s1, p2 - s2) < min(38, precision) - scale`，则会减少小数位数以为整数部分提供足够空间。 生成的小数位数是 `MIN(precision, 38) - max(p1 - s1, p2 - s2)`，因此可能舍入小数部分，使其适合生成的小数位数。
 
@@ -88,5 +88,4 @@ select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10
 ## <a name="see-also"></a>另请参阅
 [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
-  
   
