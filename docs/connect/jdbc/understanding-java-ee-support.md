@@ -1,7 +1,7 @@
 ---
 title: 了解 Java EE 支持 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736920"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154612"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支持
 
@@ -36,7 +36,7 @@ ms.locfileid: "55736920"
 
 对于 JDBC 驱动程序 7.0 驱动程序包含在**mssql jdbc 7.0.0.jre8.jar**，或**mssql jdbc 7.0.0.jre10.jar**。
 
-对于 JDBC 驱动程序 7.2，驱动程序包含在**mssql jdbc 7.2.0.jre8.jar**，或**mssql jdbc 7.2.0.jre11.jar**。
+对于 JDBC 驱动程序 7.2，驱动程序包含在**mssql jdbc 7.2.1.jre8.jar**，或**mssql jdbc 7.2.1.jre11.jar**。
   
 只要使用 JDBC DriverManager 类加载驱动程序，就会使用此类名称。 另外，只要在任何驱动程序配置中必须指定驱动程序的类名称，则也将用到它。 例如，配置 Java EE 应用程序服务器内的数据源可能要求输入驱动程序类名称。  
   

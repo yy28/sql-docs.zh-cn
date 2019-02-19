@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029046"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289486"
 ---
 # <a name="saving-reports-report-builder"></a>保存报表（报表生成器）
   在报表生成器中，可以将分页报表保存到你有写入权限的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表服务器、SharePoint 库和文件共享，也可以将其保存到你的计算机。 

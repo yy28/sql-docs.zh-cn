@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驱动程序 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e0f803b68f2ab9f62c3df27c6930da8e3a8a4a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 0ec234f4a9d35b20b01f7752842dd6d59d1dc2ac
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154822"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
@@ -28,7 +28,7 @@ ms.locfileid: "55737088"
 
 Microsoft JDBC Driver 提供了不同 Jar 下使用与您的首选 Java Runtime Environment (JRE) 设置的对应关系中：
 
-提供了 SQL Server 的 Microsoft JDBC 驱动程序 7.2 **mssql jdbc 7.2.0.jre8.jar**，并**mssql jdbc 7.2.0.jre11.jar**类库文件。
+提供了 SQL Server 的 Microsoft JDBC 驱动程序 7.2 **mssql jdbc 7.2.1.jre8.jar**，并**mssql jdbc 7.2.1.jre11.jar**类库文件。
 
 SQL Server 的 Microsoft JDBC 驱动程序 7.0 提供了**mssql jdbc 7.0.0.jre8.jar**，并**mssql jdbc 7.0.0.jre10.jar**类库文件。
 
@@ -54,29 +54,29 @@ Microsoft JDBC 驱动程序 jar 文件不是 Java SDK 的一部分，并且必�
 
 如果使用 JDBC 驱动程序 7.0 classpath 设置为包含**mssql jdbc 7.0.0.jre8.jar**或**mssql jdbc 7.0.0.jre10.jar**。
 
-如果使用 JDBC 驱动程序 7.2 classpath 设置为包含**mssql jdbc 7.2.0.jre8.jar**或**mssql jdbc 7.2.0.jre11.jar**。
+如果使用 JDBC 驱动程序 7.2 classpath 设置为包含**mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**。
 
 如果 classpath 缺少正确的 Jar 文件的条目，则应用程序将引发常见`Class not found`异常。  
 
 ### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC 驱动程序 7.2
 
-**Mssql jdbc 7.2.0.jre8.jar**或**mssql jdbc 7.2.0.jre11.jar**文件安装在以下位置：
+**Mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**文件安装在以下位置：
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre11.jar
 ```
 
 以下代码片段是用于 Windows 应用程序的 CLASSPATH 语句示例：
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.0.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.1.jre11.jar`
 
 以下代码片段是用于 Unix/Linux 应用程序的 CLASSPATH 语句示例：
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.0.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.1.jre11.jar`
 
-请确保 CLASSPATH 语句包含一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如任一**mssql jdbc 7.2.0.jre8.jar**或**mssql jdbc 7.2.0.jre11.jar**。
+请确保 CLASSPATH 语句包含一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如任一**mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**。
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC 驱动程序 7.0
 
