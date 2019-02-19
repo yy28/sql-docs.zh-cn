@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -14,12 +13,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165207"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407567"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>客户端协议 - TCP 和 IP 属性（“协议”选项卡）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，可以使用 **“TCP/IP 属性”** 对话框的 **“协议”** 选项卡查看或指定下列选项。 若要连接到另一个端口，可以在 **“默认端口”** 框中键入端口号。 有关连接字符串的详细信息，请参阅 [使用 TCP IP 创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
@@ -44,6 +43,6 @@ ms.locfileid: "48165207"
 ## <a name="see-also"></a>请参阅  
  [选择网络协议](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [新建别名（“别名”选项卡）](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;别名&#62;属性&#40;别名选项卡&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [<别名>属性（“别名”选项卡）](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

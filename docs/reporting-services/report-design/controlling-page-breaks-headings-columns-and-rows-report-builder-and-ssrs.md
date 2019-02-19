@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 79e2fa75e9e7ec45b86e597aabb7d5e002a23023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2cab3e56eeda23d10e7b8a5b909792ff136591d0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816975"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294317"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分页符、标题、列和行（报表生成器和 SSRS）
   分页符可将报表划分为单独的页，以便于查看和打印。 预览报表或将其导出为其他文件格式时，分页符可确定报表内容适合报表页的方式，以获得最佳查看效果。  

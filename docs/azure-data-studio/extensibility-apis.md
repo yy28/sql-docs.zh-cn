@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029750"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407607"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 扩展性 Api
 
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 获取所有活动的对象资源管理器连接节点。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 查找所有匹配的给定元数据的对象资源管理器节点。 `schema`， `database`，并`parentObjectNames`参数都应为`undefined`时它们不适用。 `parentObjectNames` 是从最高到最低级别，在对象资源管理器，所需的对象处于非数据库父对象的列表。 例如，当使用连接 ID 搜索的列"column1"表"schema1.table1"和数据库"database1"属于`connectionId`，调用`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另请参阅[默认情况下 SQL Operations Studio 支持的类型的列表](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)此 API 调用。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 查找所有匹配的给定元数据的对象资源管理器节点。 `schema`， `database`，并`parentObjectNames`参数都应为`undefined`时它们不适用。 `parentObjectNames` 是从最高到最低级别，在对象资源管理器，所需的对象处于非数据库父对象的列表。 例如，当使用连接 ID 搜索的列"column1"表"schema1.table1"和数据库"database1"属于`connectionId`，调用`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另请参阅[的 Azure Data Studio 默认情况下支持的类型列表](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)此 API 调用。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` 该节点下存在的连接的 id

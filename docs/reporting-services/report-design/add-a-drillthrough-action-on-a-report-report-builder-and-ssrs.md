@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d2360f86004a624940abb2f79fca04f8d8ea2177
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac6cc37df04b2261288e039b67d4401b8d1bcf7b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031099"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294875"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在报表中添加钻取操作（报表生成器和 SSRS）
   单击主报表中的链接时打开的报表称为“钻取报表” 。 此钻取链接启用了一个钻取操作。  

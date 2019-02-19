@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030601"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407577"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教程：创建 Azure Data Studio 扩展
 
@@ -37,16 +37,15 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 
 - [Node.js](https://nodejs.org)已安装，不可用于你`$PATH`。 Node.js 包含[npm](https://www.npmjs.com/)，Node.js 程序包管理器，用于安装的扩展生成器。
 - [Visual Studio Code](https://code.visualstudio.com)调试扩展。
-- Azure Data Studio[调试扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)。
-- 确保`sqlops`是在你的路径。 对于 Windows，请确保你选择`Add to Path`setup.exe 中的选项。 适用于 Mac 或 Linux，运行*安装路径中的 sqlops 命令*选项。
-- SQL Operations Studio 调试扩展 （可选）。 这使您无需打包并将其安装到 Azure Data Studio 测试您的扩展插件。
+- Azure Data Studio[调试扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)（可选）。 这使您无需打包并将其安装到 Azure Data Studio 测试您的扩展插件。
+- 确保`azuredatastudio`是在你的路径。 对于 Windows，请确保你选择`Add to Path`setup.exe 中的选项。 适用于 Mac 或 Linux，运行*安装路径中的 azuredatastudio 命令*选项。
 
 
 ## <a name="install-the-extension-generator"></a>安装扩展生成器
 
 若要简化创建扩展的过程，我们已构建[扩展生成器](https://code.visualstudio.com/docs/extensions/yocode)使用 Yeoman。 若要安装它，请从命令提示符处运行以下：
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>创建您的扩展插件
 
@@ -54,13 +53,13 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 
 1. 启动扩展生成器使用以下命令：
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. 选择**新键映射**从扩展插件类型的列表：
 
    ![扩展生成器](./media/tutorial-create-extension/extension-generator.png)
 
-3. 按相关步骤来填写扩展名称 (对于本教程中，使用**ssmskeymap**)，并且添加说明。
+3. 按相关步骤来填写扩展名称 (对于本教程中，使用**ssmskeymap2**)，并且添加说明。
 
 完成前面的步骤创建一个新文件夹。 打开 Visual Studio Code 和您的文件夹中已准备好创建自己的键绑定扩展 ！
 
@@ -86,7 +85,7 @@ Azure Data Studio 基于相同的框架作为 Visual Studio Code 中，因此使
 ![keybindings.json 扩展](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**步骤 2:将快捷方式添加到扩展**
+**步骤 2：将快捷方式添加到扩展**
 
 若要将快捷方式添加到扩展中，打开*package.json*文件 （扩展名），并替换`contributes`节替换为以下：
 

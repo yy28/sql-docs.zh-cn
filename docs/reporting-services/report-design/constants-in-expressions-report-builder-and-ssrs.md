@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0f17725fde71f3b1bb12e39f16308ca2ca024f57
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab87c7c96b501c38630356590316074f84481345
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030646"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297065"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>表达式中的常量（报表生成器和 SSRS）
   常量由文字文本或预定义文本构成。 报表处理器具有对预定义常量的访问权限，所以当表达式中包含常量时，这些常量所代表的值会在计算之前进行替换。  
@@ -33,7 +33,7 @@ ms.locfileid: "50030646"
 ## <a name="rdl-constants"></a>RDL 常量  
  您可以在表达式中使用以报表定义语言 (RDL) 定义的常量。 在 **“表达式”** 对话框中，当创建只接受某些有效值（也称为枚举类型）的报表属性的表达式时，显示常量。 下表显示两个示例。  
   
-|“属性”|描述|值|  
+|属性|描述|值|  
 |--------------|-----------------|------------|  
 |TextAlign|文本框中对齐文本的有效值。|General、Left、Center、Right|  
 |BorderStyle|添加到报表的行的有效值。|Default、None、Dotted、Dashed、Solid、Double、DashDot、DashDotdot|  
