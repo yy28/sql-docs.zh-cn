@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13186bed8bae4f695f908cceb7c4884acd87ca74
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524500"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292792"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>添加数据绑定图像（报表生成器和 SSRS）
   报表可以包括对存储在数据库中的图像的引用。 此类图像称为“数据绑定图像”。 例如，在产品列表中产品名称旁边显示的图片就是数据绑定图像。  

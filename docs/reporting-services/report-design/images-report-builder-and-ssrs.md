@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a1437f92ffe497d7b1511bf369e7073d5551ba7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72beb990337daa9d55a57410b90f522194506353
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790495"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296112"
 ---
 # <a name="images-report-builder-and-ssrs"></a>图像（报表生成器和 SSRS）
   图像是一种报表项，包含对嵌入在报表中、存储在数据库中、存储在报表服务器上或存储在 Web 上其他位置的图像的引用。 图像可以是数据行重复使用的图片。 您还可以将图像用作某些报表项的背景。  

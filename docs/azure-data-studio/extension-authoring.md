@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030511"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407517"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>通过创建 Azure Data Studio 扩展来扩展功能
 
@@ -35,11 +35,11 @@ ms.locfileid: "53030511"
 
 若要开发扩展需要 Node.js 已安装并在你 $PATH 中可用。 Node.js 包含 npm，Node.js 包管理器，它将用于安装的扩展生成器。
 
-若要启动新的扩展名，可以使用 Azure 数据 Studio 扩展生成器。 Yeoman[扩展生成器](https://www.npmjs.com/package/generator-sqlops)可以非常轻松创建简单的扩展项目。 若要启动生成器，请在命令提示符下键入以下内容：
+若要启动新的扩展名，可以使用 Azure 数据 Studio 扩展生成器。 Yeoman[扩展生成器](https://www.npmjs.com/package/generator-azuredatastudio)可以非常轻松创建简单的扩展项目。 若要启动生成器，请在命令提示符下键入以下内容：
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **扩展引用**

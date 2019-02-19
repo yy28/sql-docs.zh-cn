@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc06ca21a1fa953db107b1c166bc9d05cebd67f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e1b099d3bd92d5dad8d96f4911585c28f54caa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832295"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294345"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>“转换 CRI”对话框（报表生成器）
+
   该报表包含其中有不受支持的功能的自定义报表项 (CRI)。 CRI 是对报表定义语言 (RDL) 的扩展，它支持用于显示报表中的数据的自定义对象。 CRI 包含由第三方软件供应商提供的设计时和运行时组件。  
   
 > [!NOTE]  

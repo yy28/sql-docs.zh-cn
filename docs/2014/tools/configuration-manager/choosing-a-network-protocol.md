@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068553"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407547"
 ---
 # <a name="choosing-a-network-protocol"></a>选择网络协议
   若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在同一时间服务上有多个协议的请求。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  
@@ -62,6 +61,6 @@ ms.locfileid: "48068553"
 ## <a name="enabling-the-protocol"></a>启用协议  
  该协议必须在客户端和服务器上都启用才能正常工作。 服务器可以同时监听所有已启用的协议的请求。 客户端计算机可以选取一个协议，或按照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中列出的顺序尝试这些协议。  
   
- 有关如何配置协议和连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的简短教程，请参阅 [教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+ 有关如何配置协议和连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的简短教程，请参阅[教程：数据库引擎入门](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
   

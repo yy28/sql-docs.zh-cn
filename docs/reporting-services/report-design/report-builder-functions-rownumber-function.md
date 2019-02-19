@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 87860304b7d4ff235961046d0951032797a1da0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: adae59f691c1bd29e6da28c7e2ad9f267a9f2d11
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687175"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292847"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>报表生成器函数 - RowNumber 函数
   返回指定作用域内行数的运行计数。  

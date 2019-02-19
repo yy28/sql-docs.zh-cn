@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143487"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294975"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
 在本教程中，将创建充当新闻稿的分页报表。 每一页都会显示静态文本、汇总视觉对象和详细的示例销售数据。

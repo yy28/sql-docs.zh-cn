@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f57f685532ee11f960fe71243944b819ef0dbd5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400021"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295155"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -166,7 +166,7 @@ ms.locfileid: "52400021"
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>当前 (.xlsx) Excel 呈现器和 Excel 2003 呈现器之间的差异  
  通过使用当前 (.xlsx) Excel 呈现器或 Excel 2003 呈现器呈现的报表通常是完全相同的，只在极少数的情况下，你会注意到这两种格式之间的差异。 下表对 Excel 呈现器和 Excel 2003 呈现器进行了比较。  
   
-|“属性”|Excel 2003|当前 Excel|  
+|属性|Excel 2003|当前 Excel|  
 |--------------|----------------|-------------------|  
 |每个工作表的最大列数|256|16,384|  
 |每个工作表的最大行数|65,536|1,048,576|  

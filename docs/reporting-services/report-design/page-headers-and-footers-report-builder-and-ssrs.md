@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759787"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298635"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  
@@ -55,9 +55,9 @@ ms.locfileid: "47759787"
   
 |提供支持的表达式|ReportItems 聚合|数据集聚合（作用域必须是数据集名称）|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|表体中的文本框|用户帐户控制|否|  
-|&PageNumber|用户帐户控制|否|  
-|&TotalPages|用户帐户控制|否|  
+|表体中的文本框|是|否|  
+|&PageNumber|是|否|  
+|&TotalPages|是|否|  
 |聚合函数|是。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |页面上各个项的字段集合|间接支持。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |数据绑定图像|间接支持。 例如： `=ReportItems!TXT_Photo.Value`|是。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

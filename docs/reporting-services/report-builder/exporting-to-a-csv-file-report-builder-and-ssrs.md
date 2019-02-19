@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702595"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297597"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>导出到 CSV 文件（报表生成器和 SSRS）
   逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现分页报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。  
@@ -53,7 +53,7 @@ ms.locfileid: "47702595"
   
 -   自定义报表项  
   
--   线条  
+-   行  
   
 -   图像  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47702595"
 |图表|通过创建每个图表值的行和成员标签来呈现。 来自系列和类别的标签采用平展的层次结构，并包含在图表值的行中。|  
 |数据条|像图表一样呈现。 通常，数据条并不包括层次结构或标签。|  
 |迷你图|像图表一样呈现。 通常，迷你图并不包括层次结构或标签。|  
-|仪表|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
+|测量|作为单个记录呈现，具有线性刻度的最小值和最大值、范围的起始和终止值，以及指针的值。|  
 |指示器|作为单个记录呈现，具有活动状态名称、可用状态以及数据值。|  
 |映射|对于地图层的每个地图成员，呈现包含标签和值的行。<br /><br /> 如果地图具有多个层，则行中的值将会变化，具体取决于地图层是使用相同还是不同的地图数据区域。 如果多个地图层使用相同数据区域，该行将包含所有层的数据。|  
   

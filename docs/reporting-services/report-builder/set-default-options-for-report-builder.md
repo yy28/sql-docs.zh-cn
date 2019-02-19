@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860080"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295975"
 ---
 # <a name="set-default-options-for-report-builder"></a>设置报表生成器的默认选项
   在报表生成器中，可以设置大量有用的默认设置，以使报表创作更加容易和快速。  例如，如果你可以设置或更改默认报表服务器，除非另行指定，否则报表生成器会将你的报表自动保存到同一报表服务器。  

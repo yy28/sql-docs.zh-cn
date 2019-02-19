@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617125"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294355"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>打印报表（SharePoint 模式下的 Reporting Services）
   对于在 SharePoint 模式下运行的报表服务器，可使用三种方法从 SharePoint Web 应用程序打印报表：  

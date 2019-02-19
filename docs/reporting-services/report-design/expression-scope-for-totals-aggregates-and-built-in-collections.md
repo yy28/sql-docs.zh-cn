@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394010"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297475"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>总计、聚合和内置集合的表达式作用域
   在编写表达式时，您会发现在很多情况下都会使用“作用域”  一词。 作用域可以指定要用于计算表达式的数据、呈现的页面上的文本框集、可基于切换显示或隐藏的报表项集。 “作用域”  一词出现在与表达式计算、聚合函数语法和条件可见性相关的主题中以及有关这些范畴的错误消息中。 使用以下说明有助于区分“作用域”  适用的含义：  
