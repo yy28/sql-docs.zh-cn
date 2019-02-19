@@ -23,14 +23,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 94cff6197fc4648b465881624976cbce0a03e55d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73655089cb46213ccd50c8cf78adb29df06eed6b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502695"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290194"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
