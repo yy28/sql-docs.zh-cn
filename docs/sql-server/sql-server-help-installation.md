@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202446"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771333"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-可使用 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 中的帮助查看器，从联机源或磁盘处下载和安装 SQL Server 帮助包，并在脱机状态下查看它们。 本文介绍安装帮助查看器的相关工具、如何安装脱机帮助内容，以及如何在 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和SQL Server 2017 中查看帮助。
+可使用 Microsoft Help Viewer，从联机源或磁盘处下载和安装 SQL Server 帮助包，并在脱机状态下查看它们。 帮助查看器使用 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 进行安装。本文介绍安装帮助查看器的相关工具、如何安装脱机帮助内容，以及如何在 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 中查看帮助。
 
-在具有 internet 访问权限的系统上下载了内容之后，可以将内容迁移到没有 internet 访问权的系统。 
+下载帮助查看器内容需要 Internet 访问权限。 然后可以将内容迁移到没有 Internet 访问权限的计算机。
 
 > [!NOTE]
 > SQL Server 2016 和 SQL Server 2017 的帮助现已合并。尽管某些主题仅适用于另有说明的单独版本， 但大多数主题是通用的。
 
 ## <a name="install-the-help-viewer"></a>安装帮助查看器
 
-帮助查看器有两个版本：v2.x 支持 SQL Server 2016/SQL Server 2017 帮助，v1.x 支持 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 帮助。 帮助查看器不支持代理设置，也不支持 ISO 格式。 
+有两个版本的帮助查看器。  每个版本支持不同版本的 SQL Server 内容。  脱机丛书的格式随时间推移而改变，且较旧的帮助查看器版本不支持较新的丛书版本：
+- v2.x 支持 SQL Server 2016 和 SQL Server 2017 帮助。 
+- v1.x 支持 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 帮助。 帮助查看器不支持代理设置，也不支持 ISO 格式。
 
-安装帮助查看器的工具如下： 
 
-|**安装帮助查看器的工具**|**安装的帮助查看器版本**|
+|**工具**|**安装帮助查看器版本**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |Visual Studio 早期版本 | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\*要使用 Visual Studio 2017 安装帮助查看器，请在“Visual Studio 安装程序”的“各个组件”选项卡上，选择“代码工具”下的“帮助查看器”，然后单击“安装”。 
+\*要使用 Visual Studio 2017 安装帮助查看器，请在“Visual Studio 安装程序”的“各个组件”选项卡上，选择“代码工具”下的“帮助查看器”，然后单击“安装”。
 
 >[!NOTE]
 > - SQL Server 2016 会安装帮助查看器 1.1，该查看器不支持 SQL Server 2016 帮助。 
-> - 安装 SQL Server 2017 不会安装任何帮助查看器。
+> - 安装 SQL Server 2017 不会安装帮助查看器。 帮助查看器不再随附于 SQL Server 安装中。
 > - 如果从磁盘安装内容，则帮助查看器 v2.x c 也可支持 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 帮助。
 
 ## <a name="use-help-viewer-v2x"></a>使用帮助查看器 v2.x
 
-SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL Server 2016/2017 帮助。 
+SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，后者支持 SQL Server 2016 和 SQL Server 2017 帮助。 
 
 **使用帮助查看器 v2.x 下载并安装脱机帮助内容**
 
@@ -84,21 +87,25 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 > [!NOTE]
 > 并非 SQL Server 目录中的所有顶部节点标题都与相应的可下载帮助丛书的名称完全匹配。 TOC 标题映射的丛书名称如下：
 
-| 内容窗格 | SQL Server 丛书 |
-|-----|-----|
-|Analysis Services 语言参考 | Analysis Services (MDX) 语言参考|
-|数据分析表达式 (DAX) 参考 | 数据分析表达式 (DAX) 参考|
-|数据挖掘扩展插件 (DMX) 参考 | 数据挖掘扩展插件 (DMX) 参考|
-|SQL Server 开发人员指南 | SQL Server Developer 参考|
-|下载 SQL Server Management Studio | SQL Server Management Studio|
-|SQL Server 机器学习入门 | Microsoft 机器学习服务|
-|Power Query M 参考 | Power Query M 参考|
-|SQL Server 驱动程序 | SQL Server 连接驱动程序|
-|Linux 上的 SQL Server | Linux 上的 SQL Server|
-|SQL Server 技术文档 | SQL Server 技术文档（SSIS、SSRS、数据库引擎、安装程序）|
-|用于 Azure SQL 数据库的工具和实用程序 | SQL Server 工具|
-|Transact-SQL 引用（数据库引擎） | Transact-SQL 参考|
-|Xquery 语言参考 (SQL Server) | Xquery 语言参考 (SQL Server)|
+(*) 表示内容来自 SQL Server 2017 第一个正式发布版内容以及较旧的 2016 内容。 自 2019 年 1 月起，这些丛书将作为包含内容编辑的单独、完整 SQL Server 2016 和 SQL Server 2017 丛书删除。  
+
+| | 内容窗格 | SQL Server 丛书 |
+|-----|-----|-----|
+|*|Analysis Services 语言参考 | Analysis Services (MDX) 语言参考|
+|*|数据分析表达式 (DAX) 参考 | 数据分析表达式 (DAX) 参考|
+|*|数据挖掘扩展插件 (DMX) 参考 | 数据挖掘扩展插件 (DMX) 参考|
+|*|SQL Server 机器学习入门 | Microsoft 机器学习服务|
+|*|Power Query M 参考 | Power Query M 参考|
+||SQL Server 2016 文档 | SQL Server 2016 文档|
+||SQL Server 2017 文档| SQL Server 2017 文档|
+|*|SQL Server 开发人员指南 | SQL Server Developer 参考|
+|*|下载 SQL Server Management Studio | SQL Server Management Studio|
+|*|Microsoft SQL Server 客户端编程的主页 | SQL Server 连接驱动程序|
+|*|Linux 上的 SQL Server | Linux 上的 SQL Server|
+|*|SQL Server 技术文档 | SQL Server 技术文档（SSIS、SSRS、数据库引擎、安装程序）|
+|*|用于 Azure SQL 数据库的工具和实用程序 | SQL Server 工具|
+|*|Transact-SQL 引用（数据库引擎） | Transact-SQL 参考|
+|*|Xquery 语言参考 (SQL Server) | Xquery 语言参考 (SQL Server)|
 
 > [!NOTE]
 > 如果帮助查看器在添加内容时冻结（挂起），请将 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 文件中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行更改为将来的某个日期。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](/visualstudio/welcome-to-visual-studio)。
@@ -195,7 +202,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 3. 单击“我想要使用联机帮助”，单击“确定”，然后单击“退出”。  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. 在“帮助”菜单中单击“查看帮助”，打开帮助查看器来查看内容。 
 
 ## <a name="view-f1-help"></a>查看 F1 帮助
@@ -204,28 +211,27 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 
 **查看 F1 帮助**
 
-1. 请指向“帮助”菜单上的“设置帮助首选项”，并选择“在浏览器中启动”或“在帮助查看器中启动”。 
+1. 请指向“帮助”菜单上的“设置帮助首选项”，并选择“在浏览器中启动”或“在帮助查看器中启动”。
 2. 当这些选项可用时， 请在对话框内按 F1，或单击“帮助”或“?”图标，以便在所选环境中查看上下文相关的联机主题。
 
 > [!NOTE]
->  F1 帮助仅在联机状态可用。 F1 帮助不提供脱机资源。 
+> F1 帮助仅在联机状态可用。 F1 帮助不提供脱机资源。
 
 ## <a name="systems-without-internet-access"></a>没有 internet 访问权限的系统
-按照[前文所述步骤](#use-help-viewer-v2x)，在具有 internet 访问权限的系统上使用 SQL Server 帮助查看器下载脱机内容，可以将该内容迁移到没有 Internet 访问权限的系统。 可通过以下步骤执行操作。 
+在具有 Internet 访问权限的系统上下载了脱机丛书之后，可以使用以下步骤将内容迁移到没有 Internet 访问权的系统。
 
   >[!NOTE]
-  >必须在脱机系统上安装支持帮助查看器的软件（如 SQL Server Management Studio）。 
+  >必须在脱机系统上安装支持帮助查看器的软件（如 SQL Server Management Studio）。
 
 1. 打开帮助查看器 (Ctrl + Alt + F1)。
-1. 选择感兴趣的文档。 例如，通过 SQL 进行筛选并选择 SQL Server 技术文档。 
+1. 选择感兴趣的文档。 例如，通过 SQL 进行筛选并选择 SQL Server 技术文档。
 1. 标识可以在“本地存储路径”下找到的磁盘上文件的物理路径。
-1. 使用文件系统资源管理器导航到此位置。 
+1. 使用文件系统资源管理器导航到此位置。
     1.  默认位置是： `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-1. 选择三个文件夹（“ContentStore”、“传入”、“IndexStore”），并将它们复制到脱机系统上的同一位置。 可能需要使用临时媒体设备（如 USB 或 CD）。 
+1. 选择三个文件夹（“ContentStore”、“传入”、“IndexStore”），并将它们复制到脱机系统上的同一位置。 可能需要使用临时媒体设备（如 USB 或 CD）。
 1. 移动这些文件后，在脱机系统上启动帮助查看器，然后便可以使用 SQL Server 技术文档。
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>后续步骤
 [Microsoft Help Viewer - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
