@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2d1f3139023f326bc230e6269478b6dbfe522361
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c2172b9dda1f6f15b90e0f9a65f0abc179256918
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241968"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425762"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>使用 curl 在 SQL Server 2019 大数据群集上将数据加载到 HDFS
 
@@ -35,7 +35,7 @@ kubectl get service service-security-lb -n <cluster name> -o json | jq -r .statu
 
 现在，您可以构造用于访问 WebHDFS，如下所示的 URL:
 
-`https://<service-security-lb service external IP address>:30433/gateway/default/webhdfs/v1/`
+`https://<service-security-lb service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 例如：
 
