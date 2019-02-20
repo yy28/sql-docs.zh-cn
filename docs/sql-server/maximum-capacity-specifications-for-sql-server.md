@@ -1,6 +1,6 @@
 ---
 title: SQL Server 的最大容量规范 | Microsoft Docs
-ms.date: 11/6/2017
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319398"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "49383607"
 |嵌套子查询个数||32||  
 |嵌套触发器层数||32||  
 |每个表的非聚集索引数||999||  
-|存在以下任意子句的情况下 GROUP BY 子句中的非重复表达式数目：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP||32||  
+|当存在以下任意子句时，GROUP BY 子句中的非重复表达式数：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP||32||  
 |GROUP BY 子句中的运算符生成的分组集数目||4,096||  
 |每个存储过程的参数个数||2,100||  
 |每个用户定义函数的参数个数||2,100||  
@@ -124,7 +124,7 @@ ms.locfileid: "49383607"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序 (DAC) 中测试的各种对象的最大大小和最大数量。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（64 位）|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |每个 DAC 的数据库数||1|  
 |每个 DAC 的对象数*||受数据库中对象数或可用内存限制。|  

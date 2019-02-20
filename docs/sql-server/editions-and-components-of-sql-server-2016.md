@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420222"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265394"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "54420222"
 |Resource Governor|是|否|否|否|否|  
 |已分区表并行度|是|否|否|否|否|
 |多个 Filestream 容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|否|
+|NUMA 感知、大型页内存和缓冲区数组分配|是|否<sup>4</sup>|否|否|否|
 |缓冲池扩展|是|是|否|否|否|
 |IO 资源调控|是|否|否|否|否|  
 |延迟持续性|是|是|是|是|是|
@@ -188,6 +188,8 @@ ms.locfileid: "54420222"
 <sup>2</sup> 适用于 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
 
 <sup>3</sup> LocalDB 安装选项中不包括此功能。
+
+<sup>4</sup>SQL Server Standard Edition 和基于 CAL 的许可能够限制 SQL Server Standard 可使用的处理器数，但 SQL Server Standard 为 NUMA 感知。 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |功能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
