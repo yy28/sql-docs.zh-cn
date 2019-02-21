@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/20/20198
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300084"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464773"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -37,15 +37,15 @@ ms.locfileid: "54300084"
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
     - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下载并提取：
-    - [DMA 报表 Power BI 模板](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
-    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)。
+    - [DMA 报表 Power BI 模板](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip)。
+    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
 保存到 PowerShell 模块目录的 PowerShell 模块，可调用而无需使用之前显式加载的模块。
 
 若要加载模块，请执行以下步骤：
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
-2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
+2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -97,13 +97,13 @@ ms.locfileid: "54300084"
 
 介绍了下表与 dmaDataCollector 函数相关联的参数。
 
-|参数  |Description
+|参数  |Description |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。<br/>有关详细信息，请参阅[创建的 SQL Server 清单](#create-inventory)。 |
 |**serverName** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
 |**databaseName** | 托管库存表的数据库。 |
 |**AssessmentName** | DMA 评估的名称。 |
-|**TargetPlatform** | 你想要执行评估目标类型。  可能的值为**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，并**SQLServerWindows2017**。 |
+|**TargetPlatform** | 你想要执行评估目标类型。  可能的值为**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**， **SQLServerWindows2017**，和**ManagedSqlServer**。 |
 |**AuthenticationMethod** | 连接到你想要评估的 SQL Server 目标的身份验证方法。 可能的值为**SQLAuth**并**WindowsAuth**。 |
 |**OutputLocation** | 评估在其中存储 JSON 输出文件目录。 具体取决于所评估的数据库数目和数据库内的对象数，评估可能需要极长的时间。 所有评估都完成后，将写入文件。 |
 
@@ -119,9 +119,9 @@ ms.locfileid: "54300084"
 
 介绍了下表与 dmaProcessor 函数相关联的参数。
 
-|参数  |Description
+|参数  |Description |
 |---------|---------|
-|**processTo**  | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
+|**processTo** | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
 |**serverName** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建用于处理 JSON 文件的临时数据库。  如果已指定的数据库存在，此参数设置为其中一个，然后不创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建将由 Power BI 报表数据仓库。 |
@@ -161,22 +161,43 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
    已刷新报表中的数据后**DMAWarehouse**数据库，您将看到类似于以下的报告。
 
-   ![DMAWarehouse 报表视图](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![DMAWarehouse 报表视图](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > 如果没有看到你所期待的数据，请尝试更改活动书签。  有关详细信息，请参阅功能部分。
+   > 如果没有看到你所期待的数据，请尝试更改活动书签。  有关详细信息，请参阅以下部分中的详细信息。
 
 ## <a name="working-with-dma-reports"></a>使用 DMA 报表
-若要处理的 DMA 报表，请使用切片器要作为筛选依据：
+若要处理的 DMA 报表，使用书签和切片器要作为筛选依据：
+- 评估类型 （Azure SQL DB、 Azure SQL MI、 SQL 内部） 
 - 实例名
 - 数据库名称
 - 团队名称
 
-书签还可用于报表之间切换上下文：
-- 云评估
+若要访问的书签和筛选器边栏选项卡，选择主报表页上的筛选器书签：
+
+![DMA 报表书签和筛选器](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+这使以下边栏选项卡：
+
+![DMA 报告视图边栏选项卡](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+可以使用书签报表之间切换上下文：
+- Azure SQL DB 云评估
+- Azure SQL MI 云评估
 - 在本地评估
 
-  ![DMA 报表书签](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+  ![DMA 报告视图的书签](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+若要隐藏筛选器边栏选项卡，ctrl 键并单击后退按钮：
+
+![DMA 报告视图后退按钮](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+要显示在以下任何一项上当前是否应用了筛选器的报表页的左下角还有一个提示：
+* FactAssessment-InstanceName
+* FactAssessment – DatabaseName
+* dimDBOwner-DBOwner
+
+![应用筛选器提示](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > 如果您仅执行 Azure SQL 数据库评估，然后填充只有云报表。 相反，如果您仅执行内部评估，只有在本地报表进行填充。 但是，如果执行 Azure 和本地评估，然后加载到仓库的这两种评估您可以切换云报表和通过按住 CTRL 单击本地报表关联的图标。

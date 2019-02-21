@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159762"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464723"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | Y
 |`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | Y
-|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017。 默认值是 SqlServerWindows2017   | N
 |`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
 |`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
