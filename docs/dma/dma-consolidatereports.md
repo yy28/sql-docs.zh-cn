@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464773"
+ms.locfileid: "56590342"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -186,7 +186,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 - Azure SQL MI 云评估
 - 在本地评估
 
-  ![DMA 报告视图的书签](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![DMA 报告视图的书签](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 若要隐藏筛选器边栏选项卡，ctrl 键并单击后退按钮：
 
