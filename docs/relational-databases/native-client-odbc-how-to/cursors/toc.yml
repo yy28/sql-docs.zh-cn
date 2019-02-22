@@ -1,8 +1,0 @@
-- name: 使用游标操作指南主题 (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: 提取和更新行集 (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: 使用游标 (ODBC)
-  href: use-cursors-odbc.md
-- name: 使用行集绑定 (ODBC)
-  href: use-rowset-binding-odbc.md

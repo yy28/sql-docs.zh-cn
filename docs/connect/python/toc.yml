@@ -1,6 +1,0 @@
-- name: 适用于 SQL Server 的 Python 驱动程序
-  href: python-driver-for-sql-server.md
-- name: pymssql +
-  href: ../../connect/python/pymssql/python-sql-driver-pymssql.md
-- name: pyodbc +
-  href: ../../connect/python/pyodbc/python-sql-driver-pyodbc.md

@@ -1,8 +1,0 @@
-- name: 运行存储过程
-  href: running-stored-procedures.md
-- name: 批处理存储过程调用
-  href: batching-stored-procedure-calls.md
-- name: 调用存储过程
-  href: calling-a-stored-procedure.md
-- name: 处理存储过程结果
-  href: processing-stored-procedure-results.md

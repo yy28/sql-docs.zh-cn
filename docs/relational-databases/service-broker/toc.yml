@@ -1,8 +1,0 @@
-- name: 概述
-  href: event-notifications.md
-- name: 实现
-  href: implement-event-notifications.md
-- name: 配置对话安全性
-  href: configure-dialog-security-for-event-notifications.md
-- name: 获取信息
-  href: get-information-about-event-notifications.md

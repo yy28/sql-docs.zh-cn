@@ -1,8 +1,0 @@
-- name: 管理 Text 和 Image 列
-  href: managing-text-and-image-columns.md
-- name: 绑定与未绑定的 Text 和 Image 列
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: 执行时数据和 Text、ntext 或 Image 列
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: 有日志记录的修改与无日志记录的修改
-  href: logged-vs-unlogged-modifications.md
