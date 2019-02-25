@@ -13,18 +13,15 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 107bbfa29c7118252bbad06d2f81829e3d9dedf0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 779597c0907760aa7f08c384d476ac3d3bcd63a9
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299204"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800951"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于管理任何 SQL 基础结构的集成环境。 使用 SSMS，可以访问、配置、管理和开发 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL 数据库和 SQL 数据仓库的所有组件。 SSMS 在一个综合实用工具中汇集了大量图形工具和丰富的脚本编辑器，为各种技能水平的开发者和数据库管理员提供对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的访问权限。

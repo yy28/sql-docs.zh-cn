@@ -9,19 +9,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef507ebef690dc75e21539311e45b8932a721c3a
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 8681ca62baf15a8663b3408a67b0094c569cf618
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319218"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802104"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
-
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 SQL Server 2019 的新增功能。 有关详细信息和已知问题，请参阅 [SQL Server 2019 发行说明](sql-server-ver15-release-notes.md)。
 

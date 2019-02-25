@@ -23,18 +23,15 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 18808e95920384ec9b17e0514a286a675531322b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395425"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803302"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

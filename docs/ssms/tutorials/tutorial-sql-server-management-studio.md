@@ -23,18 +23,15 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299394"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800971"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 SQL Server Management Studio (SSMS) 将介绍用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的图形界面。 此外，它还允许部署、监视和升级应用程序使用的数据层组件，如数据库。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 还提供用于编辑和调试脚本的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 语言编辑器。  
   

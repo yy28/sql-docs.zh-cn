@@ -11,17 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300304"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802493"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教程：使用 SQL Server Management Studio 连接和查询 SQL Server 实例
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 本教程将指导如何使用 SQL Server Management Studio (SSMS) 连接到 SQL Server 实例以及运行一些基本的 Transact-SQL (T-SQL) 命令。 本文演示如何执行以下操作：
 

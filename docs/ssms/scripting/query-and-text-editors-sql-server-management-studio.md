@@ -26,18 +26,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c351bdc40bcfa22ee65ec1587764e5bb7e78
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a30a6d0212e04edebf7701ce759e726bd4186948
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300234"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802433"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  
   
