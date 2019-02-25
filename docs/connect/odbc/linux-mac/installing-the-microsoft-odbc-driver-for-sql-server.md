@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984058"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331607"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -169,7 +169,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise 服务器 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -185,7 +185,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise 服务器 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -295,7 +295,7 @@ brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise 服务器 6
+### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -309,7 +309,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise 服务器 7
+### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -370,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
-每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
+每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 它也是很常见手动下载所有依赖包并将它们一起放安装在计算机上，然后手动安装反过来，每个包使用[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 包。
 
@@ -508,9 +508,9 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 
 |组件|描述|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
+|libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> 注意：你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
 
@@ -521,7 +521,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在`/usr/local/lib/`。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`Driver 17 并在`[driver .dylib directory]../share/msodbcsql/resources/en_US/`为 Driver 13。 | 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> 注意：你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`Driver 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`Driver 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
 |RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
 
