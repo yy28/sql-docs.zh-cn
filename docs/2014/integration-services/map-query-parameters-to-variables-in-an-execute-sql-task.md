@@ -18,17 +18,14 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 4adc96042090ee1cd184eebdb9f9ca5526312dd2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300074"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803082"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将查询参数映射到变量
-
-  > [!div class="nextstepaction"]
-  > [请分享你有关 SQL Docs 表的内容的反馈 ！](https://aka.ms/sqldocsurvey)
 
   本主题介绍如何在执行 SQL 任务中使用参数化 SQL 语句以及在 SQL 语句的变量和参数之间创建映射。  
   

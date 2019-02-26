@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 02/23/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590342"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801371"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -45,7 +45,7 @@ ms.locfileid: "56590342"
 
 若要加载模块，请执行以下步骤：
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
-2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
+2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip)，然后将它们保存到你创建的文件夹。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

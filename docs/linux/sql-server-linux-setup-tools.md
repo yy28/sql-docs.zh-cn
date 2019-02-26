@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270170"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801751"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -23,8 +23,8 @@ ms.locfileid: "51270170"
 
 通过下列步骤安装命令行工具、Microsoft ODBC 驱动程序及其依赖项。 **Mssql 工具**包包含：
 
-- **sqlcmd**： 命令行查询实用程序。
-- **bcp**： 大容量导入导出实用程序。
+- **sqlcmd**:命令行查询实用程序。
+- **bcp**:大容量导入导出实用程序。
 
 为以下平台安装工具：
 
@@ -77,7 +77,7 @@ ms.locfileid: "51270170"
    >   sudo yum update mssql-tools
    >   ```
 
-1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
+1. **可选**:添加`/opt/mssql-tools/bin/`为你**路径**bash shell 中的环境变量。
 
    若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 
@@ -122,7 +122,7 @@ ms.locfileid: "51270170"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
+1. **可选**:添加`/opt/mssql-tools/bin/`为你**路径**bash shell 中的环境变量。
 
    若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 
@@ -161,7 +161,7 @@ ms.locfileid: "51270170"
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **可选**： 添加`/opt/mssql-tools/bin/`到你**路径**bash shell 中的环境变量。
+1. **可选**:添加`/opt/mssql-tools/bin/`为你**路径**bash shell 中的环境变量。
 
    若要使**sqlcmd/bcp**可从登录会话的 bash shell 访问修改你**路径**中 **~/.bash_profile**文件使用以下命令：
 
@@ -190,9 +190,9 @@ ms.locfileid: "51270170"
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -214,7 +214,7 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
 
 这些包依赖于**msodbcsql**，且必须先安装。 **Msodbcsql**程序包还具有一个依赖项上**unixODBC 开发**(RPM) 或**unixodbc 开发人员**(Debian)。 位置**msodbcsql**下表中列出的包：
 
-| msodbcsql 包 | 版本 | 下载 |
+| msodbcsql package | 版本 | 下载 |
 |-----|-----|-----|
 | Red Hat RPM msodbcsql 包 | 13.1.6.0-1 | [msodbcsql RPM 包](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql 包 | 13.1.6.0-1 | [msodbcsql RPM 包](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -225,7 +225,7 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
 
 1. **将下载的包移到 Linux 计算机**。 如果使用另一台计算机下载包，将包移到 Linux 计算机的一种方法是使用**scp**命令。
 
-1. **安装和包**： 安装**mssql 工具**并**msodbc**包。 如果遇到任何依赖关系错误，请忽略，直到出现下一步操作。
+1. **安装和包**:安装**mssql 工具**并**msodbc**包。 如果遇到任何依赖关系错误，请忽略，直到出现下一步操作。
 
     | 平台 | 包安装命令 |
     |-----|-----|
@@ -233,7 +233,7 @@ Docker 映像中包含 SQL Server 命令行工具。 如果使用交互式命令
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **解决缺少的依赖项**： 必须在此时缺少依赖项。 如果没有，可以跳过此步骤。 在某些情况下，必须手动查找并安装这些依赖项。
+1. **解决缺少的依赖项**:你可能在此时缺少依赖项。 如果没有，可以跳过此步骤。 在某些情况下，必须手动查找并安装这些依赖项。
 
     对于 RPM 包，可通过下列命令检查必需的依赖项：
 

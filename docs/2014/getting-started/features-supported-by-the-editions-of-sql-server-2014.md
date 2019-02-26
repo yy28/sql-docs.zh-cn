@@ -17,23 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300584"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802651"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
 
-  > [!div class="nextstepaction"]
-  > [请分享你有关 SQL Docs 表的内容的反馈 ！](https://aka.ms/sqldocsurvey)
 
   本主题提供有关不同版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]所支持的功能的详细信息。 
 
  > **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是评估版具有 180 天试用期。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [试用软件网站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
 > 
-> **注意：** 有关 SQL Server Evaluation 版和 SQL Server Developer 版支持的功能，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
+> **注意**：有关 SQL Server Evaluation 版和 SQL Server Developer 版支持的功能，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
   
  若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
   
@@ -372,7 +370,7 @@ ms.locfileid: "54300584"
 |用量报告|用户帐户控制|用户帐户控制||||||  
 |运行状况监视规则|用户帐户控制|用户帐户控制||||||  
 |PowerPivot 库|用户帐户控制|用户帐户控制||||||  
-|PowerPivot 数据刷新|用户帐户控制|是||||||  
+|PowerPivot 数据刷新|用户帐户控制|用户帐户控制||||||  
 |PowerPivot 数据馈送|用户帐户控制|用户帐户控制||||||  
   
 ###  <a name="DataMining"></a> 数据挖掘  

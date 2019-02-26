@@ -10,18 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5eb1b2d0aa49b882afd9aa8b239a6bb64375563
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299657"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801781"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你有关 SQL Docs 表的内容的反馈 ！](https://aka.ms/sqldocsurvey)
 
 AdventureWorks 下载链接和安装说明。 
 
