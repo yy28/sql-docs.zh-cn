@@ -14,19 +14,16 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300464"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802751"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 这是在无法连接到 SQL Server 数据库引擎时使用的故障排除技术的详尽列表。 这些步骤不按你可能已尝试过的最有可能出现的问题顺序排序， 而按从最基本问题到更复杂问题的顺序排序。 这些步骤假定你使用 TCP/IP 协议从另一台计算机连接到 SQL Server（这是最常见的情形）。 这些步骤针对 SQL Server 和客户端应用程序均运行 Windows 10 的 SQL Server 2016 而编写，不过，这些步骤通常也适用于其他版本的 SQL Server 和其他操作系统，只需进行细微的修改即可。
 

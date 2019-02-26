@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300096"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802373"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > )。
@@ -66,7 +63,7 @@ ms.locfileid: "54300096"
 
 版本号：15.0 <br>
 生成号：15.0.1000.34<br>
-发布日期2018 年 10 月 18日日
+发布日期： 2018 年 10 月 18 日
 
 SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL 数据仓库和始终加密功能的多重身份验证 (MFA) 支持。
 新的 BCP 支持 Azure AD 身份验证，包括多重身份验证 (MFA) 支持用于 SQL 数据库和 SQL 数据仓库。
@@ -80,7 +77,7 @@ SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL
 > [!NOTE]
 > 您需要版本 13.1 或更高版本以支持 Always Encrypted (`-g`) 和 Azure Active Directory 身份验证 (`-G`)。 （你的计算机上可能已安装多个版本的 sqlcmd.exe。 请确保使用正确的版本。 若要确定版本，请执行 `sqlcmd -?`。）
 
-预安装默认情况下，你可以尝试从 Azure Cloud Shell sqlcmd 实用工具：[![启动 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "启动 Cloud Shell")](https://shell.azure.com)
+预安装默认情况下，可以尝试从 Azure Cloud Shell sqlcmd 实用工具： [![启动 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "启动 Cloud Shell")](https://shell.azure.com)
 
   若要在 SSMS 中运行 sqlcmd 语句，请从顶部导航栏上的“查询菜单”下拉列表中选择“SQLCMD 模式”。  
   
@@ -215,7 +212,7 @@ sqlcmd
 
    若要启用交互式身份验证，请提供-G 选项与用户名 (-U)，但不提供密码。
 
-   下面的示例将使用 Azure AD 交互模式下，该值指示用户名的用户是指的 AAD 帐户的数据导出。 这是在上一节中使用的同一示例：*Azure Active Directory 用户名和密码：*  
+   下面的示例将使用 Azure AD 交互模式下，该值指示用户名的用户是指的 AAD 帐户的数据导出。 这是在上一节中使用的同一示例： *Azure Active Directory 用户名和密码*。  
 
    交互模式要求提供密码才能手动输入，或者将启用，多重身份验证的帐户完成配置的 MFA 身份验证方法。
 
@@ -248,10 +245,10 @@ sqlcmd
 **-j** 将原始错误消息输出到银幕上。
   
  **-K** _application_intent_  
- 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅 [活动次要副本：可读次要副本（Always On 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K** ，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本（AlwaysOn 可用性组）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果 -M 未指定，-M 处于关闭状态。 有关[侦听程序、客户端连接、应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 Always On 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 和[活动次要副本：可读次要副本（Always On 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)的详细信息。 
+ 在连接到 SQL Server 可用性组或 SQL Server 故障转移群集实例的可用性组侦听程序时，应始终指定 -M。 **-M** 将为（当前）活动服务器提供更快的检测和连接。 如果 -M 未指定，-M 处于关闭状态。 有关详细信息，请参阅[侦听程序、客户端连接、应用程序故障转移](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[创建和配置可用性组 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 和[活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)。 
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -840,7 +837,7 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
 
 `GO`
 
-当您按 ENTER 时，会输出以下信息性消息：Changed database context to 'AdventureWorks2008R2'.  
+按下 Enter 时，会输出以下信息性消息：“已将数据库上下文改为 'AdventureWorks2012'。”  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 查询的输出格式  
  **sqlcmd** 首先输出列标题，其中包含在选择列表中指定的列名。 列名使用 SQLCMDCOLSEP 字符分隔。 默认情况下，将使用空格。 如果列名短于列宽，则使用空格填充输出，直到下一列。  

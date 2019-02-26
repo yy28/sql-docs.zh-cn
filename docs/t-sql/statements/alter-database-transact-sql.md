@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: a9a1d940d7229910c899104a19e3a710eb7eae92
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832139"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590492"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -48,16 +48,14 @@ ms.locfileid: "55832139"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
-
-## <a name="overview"></a>概述
+## <a name="overview-sql-server"></a>概述：SQL Server
 
 在 SQL Server 中，此语句修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
 
@@ -285,16 +283,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\*SQL 数据库<br />单一数据库/弹性池\*_** &nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL 数据库单一数据库/弹性池
-
-## <a name="overview"></a>概述
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>概述：Azure SQL 数据库单一数据库/弹性池
 
 在 Azure SQL 数据库中，使用此语句修改单一数据库/弹性池上的数据库。 使用此语句更改数据库的名称、更改数据库的版本和服务目标、将数据库加入到弹性池或将其从弹性池中删除、设置数据库选项、添加或删除数据库作为异地复制关系中的辅助，以及设置数据库兼容级别。
 
@@ -693,16 +689,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL 数据库<br />托管实例\*_** &nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
-
-## <a name="overview"></a>概述
+## <a name="overview-azure-sql-database-managed-instance"></a>概述：Azure SQL 数据库托管实例
 
 在 Azure SQL 数据库托管实例中，使用此语句来设置数据库选项。
 
@@ -722,8 +716,10 @@ ALTER DATABASE
 ```  
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
-{  
-    <file_and_filegroup_options>  
+{
+    MODIFY NAME = new_database_name   
+  | COLLATE collation_name    
+  | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
@@ -816,16 +812,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
-
-## <a name="overview"></a>概述
+## <a name="overview-azure-sql-data-warehouse"></a>概述：Azure SQL 数据仓库
 
 为数据库修改名称、最大大小或服务对象。
 
@@ -938,16 +932,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库\*_&nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL 数据库<br />单一数据库/弹性池](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库\*_&nbsp;|  
+||||||
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>并行数据仓库
-
-## <a name="overview"></a>概述
+## <a name="overview-parallel-data-warehouse"></a>概述：并行数据仓库
 
 修改并行数据仓库中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。 本文还介绍与并行数据仓库中设置数据库选项相关的语法。
 

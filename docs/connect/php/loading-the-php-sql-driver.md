@@ -1,7 +1,7 @@
 ---
 title: 加载 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606197"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744607"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>加载 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ ms.locfileid: "51606197"
 您可以下载预生成的驱动程序从你的平台[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 项目页。 每个安装包包含在线程和单线程版本 SQLSRV 和 PDO_SQLSRV 驱动程序文件。 在 Windows 中，它们也是在 32 位和 64 位版本中可用。 请参阅[Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)有关每个包中包含的驱动程序文件的列表。 PHP 版本、 体系结构和 threadedness PHP 环境，必须与匹配的驱动程序文件。
 
 在 Linux 和 macOS 上，安装驱动程序可以或者使用 PECL 中, 找到[安装教程](../../connect/php/installation-tutorial-linux-mac.md)。
+
+您还可以构建的驱动程序源中生成 PHP 时或通过使用`phpize`。 如果你选择生成源中的驱动程序，您可以选择而不生成它们为共享的扩展通过添加到 PHP 以静态方式构建它们`--enable-sqlsrv=static --with-pdo_sqlsrv=static`（在 Linux 和 macOS） 或`--enable-sqlsrv=static --with-pdo-sqlsrv=static`（在 Windows 中) 到`./configure`命令时构建 PHP。 有关 PHP 的详细信息生成系统和`phpize`，请参阅[PHP 文档](http://php.net/manual/install.php)。
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>将驱动程序文件移动到扩展目录中  
 驱动程序文件必须位于 PHP 运行时可以找到的目录。 它是最简单的方法将驱动程序文件放入默认 PHP 扩展目录-若要查找默认目录，请运行`php -i | sls extension_dir`在 Windows 或`php -i | grep extension_dir`Linux/macOS 上。 如果不使用默认扩展目录，在 PHP 配置文件 (php.ini) 中指定一个目录使用**extension_dir**选项。 例如，在 Windows，如果已将驱动程序文件放入你`c:\php\ext`目录中，将以下行添加到 php.ini:

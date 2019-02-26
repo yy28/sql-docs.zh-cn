@@ -11,18 +11,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77acf33ae4cdc4626f5467f136d8fb96b5ba96ed
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cafc8346cbdd03c99f68ec879601689a7bf90781
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299544"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802214"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 将 Excel 文件中的数据导入 SQL Server 或 Azure SQL 数据库的方法有多种。 某些方法允许你在单个步骤中从 Excel 文件直接导入数据，其他方法要求在导入数据前，必须将 Excel 数据先导出为文本。 本文总结了常用的方法，并提供有关更为详细的信息的链接。
 

@@ -21,18 +21,15 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299214"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803122"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 本主题的各节涵盖了所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数。
 -   [日期和时间数据类型](#DateandTimeDataTypes)  

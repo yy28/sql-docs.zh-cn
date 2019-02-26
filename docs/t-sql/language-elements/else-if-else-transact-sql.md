@@ -21,18 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298444"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801721"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的执行条件。 如果 Boolean_expression 的计算结果为 TRUE，则执行跟随在 Boolean_expressionis 后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句 (sql_statement)。 当 Boolean_expression 的计算结果为 FALSE 或 NULL 时，可选 ELSE 的关键字是要执行的备选 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   

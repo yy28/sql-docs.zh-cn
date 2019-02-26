@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658745"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676105"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驱动程序中的直接语句执行和预定语句执行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ ms.locfileid: "47658745"
   
 如果查询需要在前面的查询中设置了上下文，则执行您的查询使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 设置为 True。 例如，如果您在查询中使用临时表，pdo:: SQLSRV_ATTR_DIRECT_QUERY 必须设置为 True。  
   
-下面的示例显示了需要从上一个语句的上下文时，您需要将 pdo:: SQLSRV_ATTR_DIRECT_QUERY 设置为 True。  此示例使用临时表，直接执行查询时才可用于在程序中的后续语句。  
+下面的示例显示了需要从上一个语句的上下文时，您需要将 pdo:: SQLSRV_ATTR_DIRECT_QUERY 设置为 True。 此示例使用临时表，直接执行查询时才可用于在程序中的后续语句。  
   
+> [!NOTE]
+> 如果查询是调用存储的过程，并且使用在此存储过程中，使用临时表[pdo:: exec](../../connect/php/pdo-exec.md)相反。
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

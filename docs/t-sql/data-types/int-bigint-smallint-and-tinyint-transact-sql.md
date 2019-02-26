@@ -29,18 +29,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805cb2e6f3b7d9138e2bdd14518632c82251242c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319348"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802571"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 使用整数数据的精确数字数据类型。 若要节省数据库空间，请使用能够可靠包含所有可能值的最小数据类型。 例如，对于一个人的年龄，tinyint 就足够了，因为没人活到 255 岁以上。 但对于建筑物的年龄，tinyint 就不再适应，因为建筑物的年龄可能超过 255 年。
   

@@ -26,18 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299424"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803322"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   在应用关联的开窗函数前确定行集的分区和排序。 也就是说，OVER 子句定义查询结果集内的窗口或用户指定的行集。 然后，开窗函数将计算窗口中每一行的值。 您可以将 OVER 子句与函数一起使用，以便计算各种聚合值，例如移动平均值、累积聚合、运行总计或每组结果的前 N 个结果。  
   
