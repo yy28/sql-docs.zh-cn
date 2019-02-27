@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401632"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852932"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课程中，你将在 SSDT 中使用表导入向导来连接到 AdventureWorksDW SQL 示例数据库，选择数据、 预览和筛选的数据，然后将数据导入到模型工作区。  
   
-通过使用表导入向导，你可以从各种关系源导入数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外可以使用存储的过程选择数据。 若要了解有关导入数据以及你可以从导入的数据源的不同类型的详细信息，请参阅[数据源](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
+通过使用表导入向导，你可以从各种关系源导入数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外可以使用存储的过程选择数据。 若要了解有关导入数据以及你可以从导入的数据源的不同类型的详细信息，请参阅[数据源](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
   
 学完本课的预计时间：**20 分钟**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52401632"
   
     这将启动表导入向导，它将引导您设置与数据源的连接。 如果看不到表格模型资源管理器，双击**Model.bim**中**解决方案资源管理器**在设计器中打开模型。 
     
-    ![作为-表格-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     注意：如果要在 1400年兼容级别创建您的模型，您将看到新的获取数据体验，而不是表导入向导。 对话框将会显示以下，步骤稍有不同，但您将仍将能够跟着介绍一起操作。 
   
@@ -48,7 +48,7 @@ ms.locfileid: "52401632"
   
 5.  在中**数据库名称**字段中，选择**AdventureWorksDW**，然后单击**下一步**。  
   
-    ![作为表格-lesson2-tiw-名称](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  在“模拟信息”页中，需要指定在导入和处理数据时 Analysis Services 将用于连接数据源的凭据。 确认已选中“特定的 Windows 用户名和密码”，在“用户名”和“密码”中输入 Windows 登录凭据，然后单击“下一步”。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52401632"
   
 2.  清除位于以下各列顶部的复选框：**SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**。 
 
-    ![作为-表格-lesson2-tiw-清除](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     因为这些列的值与互联网销售分析无关，所以不需要导入这些列。 消除不必要的列将使您的模型，更小且更高效。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52401632"
   
     请注意，单词**应用的筛选器**此时将显示在**筛选器详细信息**中的列**DimCustomer**行; 如果单击该链接将会看到的文本说明您刚刚应用的筛选器。  
     
-    ![作为表格-lesson2-应用-筛选器](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
   
 4.  通过针对每个表中的以下各列清除复选框，筛选其余的表：  
@@ -147,7 +147,7 @@ ms.locfileid: "52401632"
   
     导入数据时，该向导会显示已提取的行的数量。 导入完所有数据之后，将显示一条指示成功的消息。  
     
-    ![作为表格-lesson2-成功](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > 若要查看在导入的表之间自动创建的关系，请在“数据准备”行上单击“详细信息”。 
