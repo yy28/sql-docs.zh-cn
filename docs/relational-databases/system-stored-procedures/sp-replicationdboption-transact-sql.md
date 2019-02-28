@@ -55,7 +55,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**订阅**|数据库为订阅数据库。|  
 |**与备份同步**|启用数据库以进行协调备份。 有关详细信息，请参阅[为事务复制启用协调备份&#40;复制 TRANSACT-SQL 编程&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
- [ **@value=**] **'***值*****  
+ [ **@value=**] **'***值***'**  
  指示是启用还是禁用给定的复制数据库选项。 *值*是**sysname**，并且可以**true**或**false**。 当此值是**false**并*optname*是**合并发布**，还将删除对合并发布数据库的订阅。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
