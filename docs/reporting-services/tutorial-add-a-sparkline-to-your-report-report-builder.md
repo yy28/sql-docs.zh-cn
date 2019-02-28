@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711139"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298605"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
@@ -154,7 +154,7 @@ ms.locfileid: "52711139"
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组： **Product**。 “列组”窗格显示一个列组： **SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+    在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：“Product”。 “列组”窗格显示一个列组：“SalesDate”。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

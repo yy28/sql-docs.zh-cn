@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403002"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292325"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52403002"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 报表设计器窗口和窗格  
- 报表设计器支持两种视图：“设计”视图，可以定义报表数据和报表布局；“预览”视图，可以显示报表的呈现视图。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
+ 报表设计器支持两种视图：“设计”视图（可以定义报表数据和报表布局）；“预览”视图（可以显示报表的呈现视图）。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> “报表数据”窗格  
  “报表数据”窗格显示内置字段、数据源、数据集、字段集合、报表参数和图像。  
@@ -175,7 +175,7 @@ ms.locfileid: "52403002"
   
 -   **报表属性** 选择可打开 **“报表属性”** 对话框。 在此对话框中，您可以分配常规报表属性（如作者姓名和网格间距）以及指定报表布局的属性（如列数和页面大小）。 还可以包括自定义代码、对程序集和类的引用，以及数据输出元素、数据转换和数据架构的名称。  
   
--   **视图** 在报表设计器的选项卡“设计”和“预览”之间切换。  
+-   **视图**：在以下两个“报表设计器”选项卡之间切换：“设计”和“预览”。  
   
 -   **页眉** 添加或删除报表的页眉。 删除页眉时，页眉中的所有项都将被删除。  
   

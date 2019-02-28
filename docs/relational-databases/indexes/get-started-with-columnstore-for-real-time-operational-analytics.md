@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531536"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294445"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>开始使用列存储适进行实时运行分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "52531536"
   
 -   [列存储索引和行组的合并策略](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>性能提示 #1：使用筛选索引提高查询性能  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>性能提示 1：使用筛选索引来提升查询性能  
  运行实时运营分析可能会影响 OLTP 工作负载的性能。  这种影响应该很小。 以下示例演示如何使用筛选索引来最大程度地降低事务工作负载上非聚集列存储索引的影响，同时仍能提供实时分析。  
   
  为了尽量减少维护操作工作负载上非聚集列存储索引的开销，你可以使用筛选条件，以便只对 *暖* 数据或缓慢变化的数据创建非聚集列存储索引。 例如，在订单管理应用程序中，可以针对已发货的订单创建非聚集列存储索引。 订单在发货后，就很少会发生变化，因此被视为暖数据。 使用筛选索引时，非聚集列存储索引中的数据只需少量的更新，因此可降低对事务工作负载的影响。  
@@ -120,7 +120,7 @@ ms.locfileid: "52531536"
 > [!NOTE]  
 >  只有基于磁盘的表才支持筛选的非聚集列存储索引。 内存优化表不支持此类索引  
   
-### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>示例 A：从 btree 索引访问热数据，从列存储索引访问暖数据  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>示例 A：从 B 树索引访问热数据，从列存储索引访问温数据  
  此示例使用筛选条件 (accountkey > 0) 来确定要将哪些行放在列存储索引中。 目的是设计筛选条件和后续查询，以便从 btree 索引访问经常变化的“热”数据，从列存储索引访问更稳定的“暖”数据。  
   
  ![用于暖数据和热数据的组合索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "用于暖数据和热数据的组合索引")  
@@ -170,10 +170,10 @@ Group By customername
   
  有关 [筛选的聚集列存储索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)的详细信息，请参阅博客  
   
-## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>性能提示 #2：将分析负载转移到 AlwaysOn 可读次要副本  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>性能提示 2：将分析负载转移到 Always On 可读次要副本  
  尽管你可以使用筛选列存储索引来尽量减少列存储索引维护，但分析查询可能仍需要大量计算资源（CPU、IO、内存），这会影响操作工作负载的性能。 对于大多数任务关键型工作负载，我们建议使用 AlwaysOn 配置。 在这种配置，你可以通过将运行中的分析负载转移到可读辅助副本来消除影响。  
   
-## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>性能提示 #3：通过在增量行组中保存热数据来减少索引碎片  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>性能提示 3：通过在增量行组中保存热数据来减少索引碎片  
  如果工作负载更新/删除了已压缩的行，则包含列存储索引的表可能会出现大量碎片（例如已删除的行）。 有碎片的列存储索引会导致内存/存储利用效率下降。 除了资源的低效利用以外，还会对分析查询性能造成负面影响，因为需要额外的 IO，并且需要从结果集中筛选出已删除的行。  
   
  在使用 REORGANIZE 命令运行索引碎片整理或者在整个表或受影响的分区上重新生成列存储索引之前，已删除的行实际上并未删除。 REORGANIZE 和索引 REBUILD 是高开销的操作，会占用本应提供给工作负载的资源。 此外，如果过早压缩行，可能会由于更新而需要重新压缩多次，从而导致压缩开销的浪费。  
@@ -203,9 +203,9 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **插入/查询工作负载：** 如果工作负载主要是插入数据和查询数据，则建议将 COMPRESSION_DELAY 的默认值设置为 0。 在单个增量行组中插入 100 万行后，新插入的行将被压缩。  
     此类工作负载的某些示例包括：(a) 传统的 DW 工作负载 (b) 需要分析 Web 应用程序中的点击模式时执行的点击流分析。  
   
--   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys 来查看列存储索引碎片。 dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
+-   **OLTP 工作负载：** 如果工作负载频繁执行 DML（即大量混合更新、删除和插入操作），可以通过检查 DMV sys. dm_db_column_store_row_group_physical_stats 来查看列存储索引碎片。 如果你看到在最近压缩的行组中，10% 以上的行标记为已删除，则可以使用 COMPRESSION_DELAY 选项来增加时间延迟，达到该延迟后，行可供压缩。 例如，对于工作负载，如果新插入的数据保持“热”状态（即多次更新）60 分钟，则应该将 COMPRESSION_DELAY 指定为 60。  
   
- 我们预计大多数客户不需要采取任何措施。 COMPRESSION_DELAY 选项的默认值应可满足需要。  
+ 大多数客户应该不需要采取任何措施。 COMPRESSION_DELAY 选项的默认值应可满足需要。  
 对于高级用户，我们建议运行以下查询并收集过去 7 天已删除的行的百分比。  
   
 ```  

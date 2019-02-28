@@ -1,12 +1,15 @@
 ---
 title: Power Query 源 | Microsoft Docs
 description: 了解如何配置 SQL Server Integration Services 数据流中的 Power Query 源
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570700"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319308"
 ---
 # <a name="power-query-source-preview"></a>Power Query 源（预览版）
 
@@ -68,9 +71,6 @@ ms.locfileid: "55570700"
 
 部分源（Oracle、DB2、MySQL、PostgreSQL、Teradata、Sybase）需要额外安装 ADO.NET 驱动程序，此驱动程序可以从 [Power Query 必备组件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a)一文中获取。 可以使用自定义安装界面将其安装在 Azure-SSIS IR 上，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
-> [!NOTE]
-> 对于“Oracle”数据源，目前无法在 Azure-SSIS IR 上安装 Oracle ADO.NET 驱动程序，因此，请暂时改为安装 Oracle ODBC 驱动程序并使用“ODBC”数据源连接到 Oracle，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的 ORACLE STANDARD ODBC 示例。
-
 对于“数据源路径”，可以输入数据源特定的属性，从而构成没有身份验证信息的连接字符串。 例如，SQL 数据源路径的格式为 `<Server>;<Database>`。 可以选择“编辑”按钮，将值分配给构成路径的数据源特定属性。
 
 ![PQ 源连接管理器编辑器路径](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ ms.locfileid: "55570700"
 最后，对于“身份验证类型”，可以从下拉菜单中选择“匿名/Windows 身份验证/用户名密码/密钥”，输入相应的访问凭据，然后选择“测试连接”按钮，确保 Power Query 源已正确配置。
 
 ![PQ 源连接管理器编辑器身份验证](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>当前限制
+
+-   暂无法使用“Oracle”数据源，因为无法在 Azure-SSIS IR 上安装 Oracle ADO.NET 驱动程序，所以请暂时改为安装 Oracle ODBC 驱动程序，并使用“ODBC”数据源连接到 Oracle，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的“ORACLE STANDARD ODBC”示例。
+
+-   暂无法在经过自定义设置的 Azure-SSIS IR 上使用“Web”数据源，所以请暂时在未经过自定义设置的 Azure-SSIS IR 上使用它。
 
 ## <a name="next-steps"></a>后续步骤
 了解如何在 Azure-SSIS IR 中作为 ADF 管道中的最优活动运行 SSIS 包。 请参阅[执行 SSIS 包活动运行时](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)一文。

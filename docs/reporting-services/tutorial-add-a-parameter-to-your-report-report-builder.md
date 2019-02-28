@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712358"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286945"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
 在本教程中，将参数添加到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表，使报表读者可以筛选报表数据的一个或多个值。 
@@ -23,7 +23,7 @@ ms.locfileid: "52712358"
 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。 
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：25 分钟。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52712358"
   
 11. 在查询设计器工具栏中，单击“运行(!)”来查看数据。   
   
-    结果集由 11 行数据组成，这些数据显示四个商店的每个子类别销售的物品数量，包含以下列：StoreID、Subcategory、Quantity。商店名称不是结果集的一部分。 接下来，您将在本教程中从单独的数据集查找与商店标识符对应的商店名称。  
+    结果集在以下列中包含 11 行数据，以显示四个店铺的每个子类别的商品销售数量：“StoreID”、“Subcategory”和“Quantity”。店铺名称不属于结果集。 接下来，您将在本教程中从单独的数据集查找与商店标识符对应的商店名称。  
   
     此查询不包含查询参数。 稍后，您将在本教程中添加查询参数。   
   
@@ -308,7 +308,7 @@ ms.locfileid: "52712358"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Store 列标题包含复杂表达式的显示文本： **Expr**。  
+    店铺列标题包含复杂表达式的显示文本：Expr。  
   
 8.  预览报表。  
   

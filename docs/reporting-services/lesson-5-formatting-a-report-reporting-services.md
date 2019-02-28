@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b04fa0c468c9e18264809f69ea42797ba83b452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c5a41b39b5c22c05ac4b13a9e57606110b60a2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842625"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291105"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：设置报表格式 (Reporting Services)
 既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
   
 ## <a name="bkmk_format_date"></a>设置日期格式  
@@ -80,7 +80,7 @@ LineTotal 字段显示常规数字。 请设置其格式，以使其显示货币
 5.  在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>Next Steps  
-您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [设置数字和日期格式（报表生成器和 SSRS）](../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  

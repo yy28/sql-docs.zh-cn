@@ -1,19 +1,19 @@
 ---
-title: 教程：创建钻取报表和主报表（报表生成器）| Microsoft Docs
+title: 教程：生成钻取报表和主报表（报表生成器）| Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526184"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286925"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
 本教程教授如何创建两种 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 
@@ -120,7 +120,7 @@ ms.locfileid: "52526184"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-    查询现在包含一个筛选器以只包括这些渠道：“在线”和“分销商”。  
+    查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -411,7 +411,7 @@ ms.locfileid: "52526184"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-    查询现在包含一个筛选器以只包括这些渠道：“在线”和“分销商”。  
+    查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -511,7 +511,7 @@ ms.locfileid: "52526184"
   
 1.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
-    向导的“预览”窗格将显示包含四行的矩阵。  运行报表时，将通过以下方式显示每个行：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），第四行包含总计。  
+    向导的“预览”窗格将显示包含四行的矩阵。  当您运行报表时，每行将按以下方式显示：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），而第四行包含总计。  
   
 2.  单击“下一步” 。  
   
@@ -627,7 +627,7 @@ ms.locfileid: "52526184"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  键入 **2009 Product Category Sales: Online and Reseller Category:**。  
+2.  键入“2009 年产品类别销售额:‘联机’和‘经销商’类别:”。  
   
 3.  选择键入的文本。  
   

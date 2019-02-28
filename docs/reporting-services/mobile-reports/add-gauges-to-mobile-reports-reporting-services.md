@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504556"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288545"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>向移动报表添加仪表 | Reporting Services
 仪表是移动报表中最基本且使用最广泛的视觉对象。 它们显示数据集中的单个值 - 值本身，或相比于目标的值。
@@ -42,7 +42,7 @@ ms.locfileid: "52504556"
 
 4. [可选] 若要更改聚合，请选择“选项”，然后选择其他聚合。
    
-   >**注意**：当你更改主值的聚合时，可能还想更改比较值的聚合，但在某些情况下，你可能想要混用聚合方法。  
+   >**注意**：如果更改主值的聚合，可能还需要更改比较值的聚合，尽管在某些情况下，可能需要混用聚合方法。  
 
 ## <a name="filter-a-gauge"></a>筛选仪表
   
@@ -58,7 +58,7 @@ ms.locfileid: "52504556"
   
 除了将仪表元素连接到数据字段的数据属性，还可以自定义多种功能属性和视觉对象属性。 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>设置值方向：值越大越好或值越小越好
+### <a name="set-value-direction-high-or-low-is-better"></a>设置值方向：“越高越好”或“越低越好”
 * 选择仪表，然后在“布局”选项卡的“视觉对象属性”窗格中，将“值方向”设置为“值越大越好”或“值越小越好”。 
 
 “值越大越好”将正值显示为绿色（表示会有好结果的理想更改），将较小的值显示为红色（表示会有坏结果的不理想更改）。 

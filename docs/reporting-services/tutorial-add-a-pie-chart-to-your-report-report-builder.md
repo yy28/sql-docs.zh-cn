@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710728"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293636"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
 在本教程中，将在 Reporting Services 分页报表中创建饼图。 添加百分比，并将小切片合并为一个切片。
@@ -27,9 +27,9 @@ ms.locfileid: "52710728"
 如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在这种情况下，请考虑将多个小切片组合成一个更大的切片。 将数据聚合到少量数据点之后，饼图更具可读性。  
  
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程。 有关如何浏览到报表服务器、添加数据源和添加数据集的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程。 有关如何转到报表服务器、添加数据源和添加数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-本教程的预计学时：10 分钟  
+本教程的预计学时：10 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  

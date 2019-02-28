@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753385"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287825"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   返回此会话的数据库的默认为 Null 性。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>参数  
  'database'  
- 为其返回为空性信息的数据库的名称。 database 是 char 或 nchar。 如果是 char，则数据库隐式转换为 nchar。  
+ 为其返回为空性信息的数据库的名称。 *database 可以是 char，也可以是 nchar。 如果是 char，则数据库隐式转换为 nchar。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 如果指定数据库的为空性允许为 null 值，并且没有显式定义列或数据类型的为空性，则 GETANSINULL 返回 1。 这是 ANSI NULL 的默认值。  
+如果数据库的为 Null 性允许 NULL 值，GETANSINULL 返回 1。 此返回值还要求不显式定义列或数据类型为 Null 性。 ANSI NULL 默认值为 1。 
   
  若要启用 ANSI NULL 默认行为，则必须设置下列条件之一:  
   

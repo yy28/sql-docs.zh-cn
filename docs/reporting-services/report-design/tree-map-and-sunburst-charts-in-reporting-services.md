@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814100"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295545"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树状图和旭日图
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -40,11 +40,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 3.  从示例数据中添加以下字段︰  
   
-    * 值：LineTotal
+    * **值**：LineTotal
     * 类别组（按下面的顺序）：
         1. CategoryName
         2. SubcategoryName
-    * 序列组：TerritoryName  
+    * **序列组**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -85,12 +85,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 3.  从示例数据中添加以下字段︰  
 
-    * 值：LineTotal
+    * **值**：LineTotal
     * 类别组（按下面的顺序）：
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * 序列组：TerritoryName  
+    * **序列组**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -114,7 +114,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
 1.  **获取数据**。  
   
-     本部分中的查询基于 Adventureworks 数据库，可从 GitHub：[AdventureWorks 2016 完整数据库备份](https://github.com/Microsoft/sql-server-samples/releases)中下载。  
+     此部分中的查询以 AdventureWorks 数据库为依据，可以从 GitHub：[AdventureWorks 2016 完整数据库备份](https://github.com/Microsoft/sql-server-samples/releases)中下载此数据库。  
   
   
 2.  **创建数据源**。  
@@ -177,7 +177,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
 * [共享数据集设计视图（报表生成器）](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [显示序列的相关工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [教程：Power BI 中的树状图](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [树形图：面向 Office 的 Microsoft Research 数据可视化应用](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [树状图：面向 Office 的 Microsoft Research 数据可视化应用程序](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

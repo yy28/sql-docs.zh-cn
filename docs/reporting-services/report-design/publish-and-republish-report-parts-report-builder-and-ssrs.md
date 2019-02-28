@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92cd029889d31229a34e549916f691230cb3dc50
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5733718f34ce62ada3662b161dad9c283a8b220b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099829"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291315"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>发布和重新发布报表部件（报表生成器和 SSRS）
   报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 您可以使用默认设置将报表部件发布到默认位置中，或者，您可以编辑名称和说明之类的报表部件元数据，并且将其保存在报表服务器上的其他位置。 如果您具有正确的权限，还可以将报表部件保存到与报表服务器集成的 SharePoint 站点上。  
@@ -32,7 +32,7 @@ ms.locfileid: "50099829"
   
      否则，单击 **“在发布前查看和修改报表部件”**。  
   
-3.  编辑报表部件名称和说明：双击名称以便编辑它，然后在“说明”字段中单击以便添加说明。  
+3.  编辑报表部件的名称和说明：双击名称即可编辑它，单击“说明”字段即可添加说明。  
   
     > [!NOTE]  
     >  最好提供报表部件名称和说明，以便在搜索时帮助用户识别它。 对于整个路径而言，报表部件名称的最大长度是 260 个字符，包括服务器上文件夹的名称，后随报表部件的实际名称。  

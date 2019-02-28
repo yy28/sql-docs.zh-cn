@@ -1,5 +1,5 @@
 ---
-title: 教程：脱机创建快速图表报表（报表生成器）| Microsoft Docs
+title: 教程：脱机生成快速图表报表（报表生成器）| Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711356"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286065"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机生成快速图表报表（报表生成器）
 
-  在本教程中，你可以使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
+  在本教程中，可使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
   
 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图类似的饼图：  
   

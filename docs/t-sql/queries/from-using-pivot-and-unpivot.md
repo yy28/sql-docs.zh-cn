@@ -25,25 +25,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0455bd8f5655a25aa55978dcfaa2dc3c3c14fabd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299474"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802072"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
-
-  可以使用 `PIVOT` 和 `UNPIVOT` 关系运算符将表值表达式更改为另一个表。 `PIVOT` 通过将表达式某一列中的唯一值转换为输出中的多个列来旋转表值表达式，并在必要时对最终输出中所需的任何其余列值执行聚合。 `UNPIVOT` 与 PIVOT 执行相反的操作，将表值表达式的列转换为列值。  
+可以使用 `PIVOT` 和 `UNPIVOT` 关系运算符将表值表达式更改为另一个表。 `PIVOT` 轮换表值表达式，具体方法是将表达式某一列中的唯一值转换为输出中的多个列，并在必要时对最终输出中所需的其余任何列值运行聚合。 与 PIVOT 执行的操作相反，`UNPIVOT` 将表值表达式的列轮换为列值。  
   
- `PIVOT` 提供的语法比一系列复杂的 `SELECT...CASE` 语句中所指定的语法更简单和更具可读性。 有关 `PIVOT` 语法的完整说明，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
+`PIVOT` 提供的语法比一系列复杂的 `SELECT...CASE` 语句中所指定的语法更简单和更具可读性。 有关 `PIVOT` 语法的完整说明，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  
   
 ## <a name="syntax"></a>语法  
- 以下语法总结了如何使用 `PIVOT` 运算符。  
+以下语法总结了如何使用 `PIVOT` 运算符。  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -70,7 +67,7 @@ FOR
 
   
 ## <a name="basic-pivot-example"></a>简单 PIVOT 示例  
- 下面的代码示例生成一个两列四行的表。  
+下面的代码示例生成一个两列四行的表。  
   
 ```sql
 USE AdventureWorks2014 ;  
@@ -81,20 +78,20 @@ GROUP BY DaysToManufacture;
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- DaysToManufacture AverageCost
- ----------------- -----------
- 0                 5.0885
- 1                 223.88
- 2                 359.1082
- 4                 949.4105
- ```
+```
+DaysToManufacture AverageCost
+----------------- -----------
+0                 5.0885
+1                 223.88
+2                 359.1082
+4                 949.4105
+```
   
- 没有定义 `DaysToManufacture` 为 3 的产品。  
+没有定义 `DaysToManufacture` 为 3 的产品。  
   
- 以下代码显示相同的结果，该结果经过透视以使 `DaysToManufacture` 值成为列标题。 提供一个列表示三 `[3]` 天，即使结果为 `NULL`。  
+以下代码显示相同的结果，该结果经过透视以使 `DaysToManufacture` 值成为列标题。 提供一个列表示三 `[3]` 天，即使结果为 `NULL`。  
   
 ```sql
 -- Pivot table with one row and five columns  
@@ -111,7 +108,7 @@ FOR DaysToManufacture IN ([0], [1], [2], [3], [4])
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Cost_Sorted_By_Production_Days 0           1           2           3           4         
@@ -120,7 +117,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>复杂 PIVOT 示例  
- 可能会用到 `PIVOT` 的常见情况是：需要生成交叉表格报表以汇总数据。 例如，假设需要在 `PurchaseOrderHeader` 示例数据库中查询 `AdventureWorks2014` 表以确定由某些特定雇员所下的采购订单数。 以下查询提供了此报表（按供应商排序）。  
+若要生成交叉表报表来汇总数据，通常可能会发现 `PIVOT` 很有用。 例如，假设需要在 `PurchaseOrderHeader` 示例数据库中查询 `AdventureWorks2014` 表以确定由某些特定雇员所下的采购订单数。 以下查询提供了此报表（按供应商排序）。  
   
 ```sql
 USE AdventureWorks2014;  
@@ -138,7 +135,7 @@ FOR EmployeeID IN
 ORDER BY pvt.VendorID;  
 ```  
   
- 以下为部分结果集。  
+以下为部分结果集。  
   
 ```
 VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
@@ -150,19 +147,19 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
 1500        3           4           4           5           4
 ```
   
- 将在 `EmployeeID` 列上透视此嵌套 select 语句返回的结果。  
+将在 `EmployeeID` 列上透视此嵌套 select 语句返回的结果。  
   
 ```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
   
- 这意味着 `EmployeeID` 列返回的唯一值自行变成了最终结果集中的字段。 因此，在透视子句中指定的每个 `EmployeeID` 号都有相应的一列：在本例中为雇员 `164`、`198`、`223`、`231` 和 `233`。 `PurchaseOrderID` 列作为值列，将根据此列对最终输出中返回的列（称为分组列）进行分组。 在本例中，通过 `COUNT` 函数聚合分组列。 请注意，将显示一条警告消息，指出为每个雇员计算 `PurchaseOrderID` 时未考虑显示在 `COUNT` 列中的任何空值。  
+`EmployeeID` 列返回的唯一值变成了最终结果集中的字段。 因此，在 pivot 子句中指定的每个 `EmployeeID` 号都有对应的列：在此示例中，为员工 `164`、`198`、`223`、`231` 和 `233`。 `PurchaseOrderID` 列作为值列，将根据此列对最终输出中返回的列（称为分组列）进行分组。 在本例中，通过 `COUNT` 函数聚合分组列。 请注意，系统会显示警告消息，以指明在为每个员工计算 `COUNT` 时，未考虑 `PurchaseOrderID` 列中的任何 NULL 值。  
   
 > [!IMPORTANT]  
 >  如果聚合函数与 `PIVOT` 一起使用，则计算聚合时将不考虑出现在值列中的任何空值。  
   
- `UNPIVOT` 将与 `PIVOT` 执行几乎完全相反的操作，将列转换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 这意味着必须标识另外两个列。 包含要旋转的列值（`Emp1`、`Emp2`...）的列将被称为 `Employee`，将保存当前位于待旋转列下的值的列被称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column。 以下为该查询。  
+与 `PIVOT` 执行的操作几乎相反，`UNPIVOT` 将列轮换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 因此，必须标识另外两个列。 包含要轮换的列值（`Emp1`、`Emp2`...）的列称为 `Employee`，保留要轮换列下的现有值的列称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column。 以下为该查询。  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -187,7 +184,7 @@ UNPIVOT
 GO  
 ```  
   
- 以下为部分结果集。  
+以下为部分结果集。  
   
 ```
 VendorID    Employee    Orders
@@ -205,12 +202,11 @@ VendorID    Employee    Orders
 ...
 ```
   
- 请注意，`UNPIVOT` 并不完全是 `PIVOT` 的逆操作。 `PIVOT` 会执行一次聚合，从而将多个可能的行合并为输出中的单个行。 而 `UNPIVOT` 不会重现原始表值表达式的结果，因为行已经被合并了。 另外，`UNPIVOT` 的输入中的 null 值不会显示在输出中，而在执行 `PIVOT` 操作之前，输入中可能有原始的 null 值。  
+请注意，`UNPIVOT` 并不完全是 `PIVOT` 的逆操作。 `PIVOT` 执行聚合，并将多个可能的行合并为输出中的一行。 `UNPIVOT` 不重现原始表值表达式的结果，因为行已被合并。 另外，`UNPIVOT` 输入中的 NULL 值也在输出中消失了。 如果值消失，表明在执行 `PIVOT` 操作前，输入中可能就已存在原始 NULL 值。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图。 右键单击该视图名称，再选择“编写视图脚本为”。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中的 `Sales.vSalesPersonSalesByFiscalYears` 视图将使用 `PIVOT` 返回每个销售人员在每个会计年度的总销售额。 若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中编写视图脚本，请在“对象资源管理器”中的“视图”文件夹下找到 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库对应的视图。 右键单击该视图名称，再选择“编写视图脚本为”。  
   
 ## <a name="see-also"></a>另请参阅  
- [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
-  
+[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+[CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

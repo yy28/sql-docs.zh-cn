@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646955"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291255"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>向 Reporting Services 移动报表添加自定义地图
 自定义地图需要两个文件：  
@@ -26,7 +26,7 @@ ms.locfileid: "47646955"
   
 ## <a name="load-a-custom-map"></a>加载自定义地图  
   
-1. 在“布局”  选项卡中选择一个地图类型：“渐变式热图” 、“范围结束热图” 或“气泡图” ，将其拖到设计图面，并将其大小调整为你所需的大小。  
+1. 在“布局”选项卡上，选择地图类型：“渐变热度地图”、“距离停止热度地图”或“气泡图”。将它拖到设计图面，并设置所需的大小。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

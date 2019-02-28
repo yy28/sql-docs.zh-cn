@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511624"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230944"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  对于任何对 (scalar_expression,x)（其中 x 是单列集中的值），当指定的比较是 TRUE 时，SOME 或 ANY 返回 TRUE；否则返回 FALSE。  
   
 ## <a name="remarks"></a>Remarks  
- SOME 要求 scalar_expression 与子查询返回的至少一个值比较时满足比较条件。 有关要求 scalar_expression 与子查询返回的每个值比较时都符合比较条件的语句，请参阅 [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_express，scalar_expression = SOME（子查询）的计算结果为 TRUE。 如果子查询返回的值为 2 和 3，则 scalar_expression = ALL（子查询）的计算结果将为 FALSE，因为子查询的某些值（等于 3 的值）不满足表达式的条件。  
+ SOME 要求 scalar_expression 与子查询返回的至少一个值比较时满足比较条件。 有关要求 scalar_expression 与子查询返回的每个值比较时都符合比较条件的语句，请参阅 [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_express，scalar_expression = SOME（子查询）的计算结果为 TRUE。 如果子查询返回值 2 和 3，scalar_expression = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
   
 ## <a name="examples"></a>示例  
   
@@ -90,7 +90,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
- 以下查询返回 `FALSE`，因为 `3` 并不小于表中的所有值。  
+ 下面的查询返回 `FALSE`，因为 `3` 并不小于表中的所有值。  
   
 ```  
 IF 3 < ALL (SELECT ID FROM T1)  
@@ -116,7 +116,7 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order cannot be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
@@ -138,7 +138,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `At least one item for this order cannot be manufactured in specified number of days.`  
+ `At least one item for this order can't be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>另请参阅  
  [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)   
@@ -148,5 +148,4 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

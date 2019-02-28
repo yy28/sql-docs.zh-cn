@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a4f2e6792e4523dea81b7e7ba8ac8f6ce45b5cbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770303"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296795"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -32,7 +32,7 @@ ms.locfileid: "47770303"
   
 -   用户 ID  
   
--   语言  
+-   “报表”  
   
  对于页码，您可能希望在数字前添加单词“Page”。 也可能希望显示总页数。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47770303"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
-     “为以下项设置表达式: 值”文本框包含表达式 =Globals!PageNumber。  
+     “为以下项设置表达式: Value”文本框包含表达式 =Globals!PageNumber。  
   
 2.  将光标放在 = 号后，然后键入 "Page " &。  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541797"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296468"
 ---
 # <a name="glossary-report-builder"></a>词汇表（报表生成器）
   
@@ -210,7 +210,7 @@ ms.locfileid: "52541797"
 |主文件 (master file)|随早期的 SQL Server 版本一起安装的文件，用来存储 master、model 和 tempdb 系统数据库和事务日志以及 pubs 示例数据库和事务日志。|  
 |匹配字段 (match fields)|用于在分析数据和空间数据之间建立关系的一组字段。|  
 |矩阵数据区域 (matrix data region)|报表布局上的数据区域，用于提供与交叉表和数据透视表类似的功能。 在运行时，由于报表数据和数据区域是组合在一起的，所以矩阵在页面上沿水平和垂直方向增长。 矩阵单元中的值显示仅限于单元所属行组和列组的交集的聚合值。|  
-|MDX|请参阅另一术语：多维表达式 (Multidimensional Expressions) (MDX)|  
+|MDX|请参阅另一术语：多维表达式 (MDX)|  
 |Mercator 投影 (Mercator projection)|在地图报表项中，指的是 Gerardus Mercator 在 1569 年发现的柱面地图投影。|  
 |元数据|有关数据属性的信息，例如列中的数据类型（numeric、text 等）或列的长度；有关文件的信息，例如其标题、说明、创建日期以及最后修改日期；或者有关数据结构的信息或指定对象设计（例如多维数据集或维度）的信息。|  
 |方法|通过使用 COM 对象执行操作的函数，与在 SQL-DMO、OLE DB 和 ActiveX 数据对象 (ADO) 中一样。|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541797"
 |protocol|使计算机之间可以交换信息的一组标准的格式和过程。|  
 |提供程序|1.OLE DB 访问接口。 2. 提供数据库访问的进程内动态链接库 (DLL)。|  
 |查询参数 (query parameters)|在数据集查询中指定的参数，如 Transact-SQL 查询。|  
-|RDL|请参阅另一术语：报表定义语言 (Report Definition Language)|  
+|RDL|请参阅另一术语：报表定义语言|  
 |记录 (record)|视为一个单元的一组相关字段（列）信息。 在关系数据库中，人们更习惯于将记录称为行。|  
 |矩形 (rectangle)|一个报表项，可用作多个报表项的容器，也可用作报表上的一个图形元素。|  
 |递归层次结构 (recursive hierarchy)|1.将来自包含多个层次结构级别的单个报表数据集的数据组织到分层结构中的层次结构。例如，表示组织层次结构中的经理－雇员关系的报告结构。 2. 在 Master Data Services 中，指的是包括递归关系的派生层次结构。 在实体具有基于域的属性，而该属性基于实体本身时，存在递归关系。|  
@@ -329,7 +329,7 @@ ms.locfileid: "52541797"
 |SKU|一种用来标识一个产品的不同版本的方法；同时也是 stock keeping unit（单品）的首字母缩略词，这是一个标准商业术语。|  
 |切片 (slice)|多维数据集中的一个数据子集，通过用维度成员限制一个或多个维度来指定。|  
 |智能标记 (smart tag)|在 Visual Studio 2005 中，智能标记直接在设计图面上显示关键配置以提高设计时的总体工作效率。|  
-|SMDL|请参阅另一术语：语义模型定义语言 (SMDL) (Semantic Model Definition Language)|  
+|SMDL|请参阅另一术语：语义模型定义语言 (SMDL)|  
 |snapshot|请参阅另一术语：报表快照 (report snapshot)|  
 |排序顺序 (sort order)|在排序规则中用于定义字符在比较运算中的求值方式及其排序顺序的一组规则。|  
 |空间数据 (spatial data)|指定对象在平面或曲面上的位置的数据。 空间数据可以是点、线条或多边形。|  

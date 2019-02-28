@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770915"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290985"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回增量值（返回形式为 numeric (@@MAXPRECISION,0)），该值是在带有标识列的表或视图中创建标识列时指定的。  
+  返回在生成表或视图的标识列时指定的递增值（形式为 numeric(@@MAXPRECISION,0)）。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,15 +43,15 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>参数  
  'table_or_view'  
- 指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量，也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar。  
+ 指定表或视图以检查有效的标识增量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 table_or_view 可以是带有引号的字符串常量。 也可以是变量、函数或列名。 table_or_view 的数据类型为 char、nchar、varchar 或 nvarchar。  
   
 ## <a name="return-types"></a>返回类型  
  **numeric**  
   
 ## <a name="exceptions"></a>异常  
- 出现错误时或调用方没有查看对象的权限时，将返回 NULL。  
+ 在出错或调用方无权查看对象时返回 NULL。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看其拥有的安全对象的元数据，或者已对其授予权限的安全对象的元数据。 也就是说，如果用户对该对象没有任何权限，则某些会产生元数据的内置函数（如 IDENT_INCR）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，用户只能查看自己拥有或有权查看的安全对象的元数据。 如果没有用户对象权限，发出元数据的内置函数（如 IDENT_INCR）可能会返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. 从多个表返回增量值  
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中包含带有增量值的标识列的表。  
+ 下面的示例返回所含标识列有增量值的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的表。  
   
 ```  
 USE AdventureWorks2012;  

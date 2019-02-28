@@ -29,19 +29,19 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5148c640dc862d641453a72592e861d0a26f98d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c99c5348b5ba0f3638fd3eaaaf261caa984a6fd
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766705"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154812"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  创建具有初始值集的列加密密钥，用指定的列主密钥进行加密。 这是一项元数据操作。 CEK 最多可具有两个值，以便列主密钥可进行轮换。 需要先创建 CEK，然后才能使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能对数据库中的列进行加密。 还可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建 CEK。 创建 CEK 前，必须使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义 CMK。  
+创建有初始值集且使用指定的列主密钥 (CMK) 进行加密的列加密密钥 (CEK)。 此加密是元数据操作。 CEK 最多有两个值，且支持 CMK 轮换。 必须先创建 CEK，然后才能使用 [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)功能来加密数据库中的任意列。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建 CEK。 创建 CEK 前，必须使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 语句定义 CMK。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,39 +62,38 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>参数  
- key_name  
- 列加密密钥在数据库中所使用的名称。  
+key\_name  
+列加密密钥在数据库中所使用的名称。  
   
- column_master_key_name  
- 指定用于对列加密密钥 (CEK) 进行加密的自定义列主密钥 (CMK) 的名称。  
+column\_master\_key\_name 指定用于加密 CEK 的自定义 CMK 的名称。  
   
- algorithm_name  
- 用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。  
+algorithm\_name  
+用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP。  
   
- varbinary_literal  
- 加密的 CEK 值 BLOB。  
+varbinary\_literal  
+加密的 CEK 值 BLOB。  
   
 > [!WARNING]  
 >  切勿在此语句中传递纯文本 CEK 值。 这样做不利于发挥此功能的优点。  
   
 ## <a name="remarks"></a>Remarks  
- CREATE COLUMN ENCRYPTION KEY 语句必须包含至少一个 VALUES 子句，最多可以包含两个。 如果只提供了一个值，可以稍后使用 ALTER COLUMN ENCRYPTION KEY 语句添加第二个值。 还可以使用 ALTER COLUMN ENCRYPTION KEY 语句删除 VALUES 子句。  
+CREATE COLUMN ENCRYPTION KEY 语句必须包含至少一个 VALUES 子句，最多可以包含两个。 如果只提供了一个值，可以稍后使用 ALTER COLUMN ENCRYPTION KEY 语句添加第二个值。 还可以使用 ALTER COLUMN ENCRYPTION KEY 语句删除 VALUES 子句。  
   
- 通常情况下，创建列加密密钥时，密钥只具有一个加密值。 列主密钥需要进行轮换（需要将当前的列主密钥替换为新的列主密钥）时，可以为列加密密钥添加一个新值，并使用新的列主密钥进行加密。 这样可以确保客户端应用程序能访问使用列加密密钥加密的数据，同时客户端应用程序将能使用新的列主密钥。 通过 Always Encrypted 功能，无权访问新主密钥的客户端应用程序中的驱动程序将能够通过列加密密钥值（使用旧的列主密钥进行加密）来访问敏感数据。  
+通常情况下，创建的 CEK 只有一个加密值。 有时，需要轮换 CMK。 将当前 CMK 替换为新 CMK。 需要轮换密钥时，添加使用新 CMK 加密的新列加密密钥值。 此轮换可以确保客户端应用程序能够访问使用 CEK 加密的数据，同时客户端应用程序还能使用新 CMK。 借助 Always Encrypted 功能，即使客户端应用程序中的驱动程序无权访问新主密钥，也可以通过使用旧 CMK 进行加密的 CEK 值来访问敏感数据。  
   
- Always Encrypted 支持的加密算法要求纯文本值具有 256 位。  
+Always Encrypted 支持的加密算法要求纯文本值具有 256 位。  
   
- 应使用密钥存储提供程序生成加密值，该提供程序封装了存储有列主密钥的密钥存储。 有关详细信息，请参阅 [Always Encrypted（客户端开发）](../../relational-databases/security/encryption/always-encrypted-client-development.md)。  
+应使用密钥存储提供程序生成加密值，此提供程序封装了保留 CMK 的密钥存储。 有关详细信息，请参阅 [Always Encrypted（客户端开发）](../../relational-databases/security/encryption/always-encrypted-client-development.md)。  
   
- 可使用 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看有关列加密密钥的相关信息。  
+可使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 查看列加密密钥的相关信息。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
+需要 ALTER ANY COLUMN ENCRYPTION KEY 权限。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-column-encryption-key"></a>A. 创建列加密密钥  
- 下面的示例创建名为 `MyCEK` 的列加密密钥。  
+下面的示例创建名为 `MyCEK` 的列加密密钥。  
   
 ```  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
@@ -107,8 +106,8 @@ WITH VALUES
 GO  
 ```  
   
-### <a name="creating-a-column-encryption-key-with-2-values"></a>创建具有 2 个值的列加密密钥  
- 下面的示例创建名为 `TwoValueCEK` 且具有两个值的列加密密钥。  
+### <a name="creating-a-column-encryption-key-with-two-values"></a>创建有两个值的列加密密钥  
+下面的示例创建名为 `TwoValueCEK` 且具有两个值的列加密密钥。  
   
 ```  
   
@@ -128,12 +127,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+[DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+[CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[Always Encrypted（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789925"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285505"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>内置集合 - 数据集字段集合引用（报表生成器）
   报表中的每个数据集都包含一个字段集合。 字段集合由数据集查询指定的字段集以及你创建的任何其他计算字段组成。 创建数据集后，字段集合将显示在 **“报表数据”** 窗格中。  
@@ -38,7 +38,7 @@ ms.locfileid: "47789925"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>在运行时检测动态字段的缺失字段  
- 默认情况下，字段集合中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化。  
+ 默认情况下，“字段集合”中的项有两个属性：Value 和 IsMissing。 IsMissing 属性指示设计时为数据集定义的字段是否包含在运行时检索到的字段中。 例如，查询可能调用一个结果集随输入参数变化的存储过程，或者查询可能为 `SELECT * FROM` \<table>，其中表定义会发生变化。  
   
 > [!NOTE]  
 >  IsMissing 可针对任何类型的数据源检测在设计时和运行时数据集架构中的更改。 IsMissing 不能用于检测多维数据集中的空成员，并且与 **EMPTY** 和 **NON EMPTY**查询语言概念无关。  

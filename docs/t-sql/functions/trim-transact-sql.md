@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54cc66f79a8be279543fa57d987d2a8ecbac1190
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299614"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331567"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ TRIM ( [ characters FROM ] string )
 ## <a name="arguments"></a>参数   
 
 字符   
-任何非 LOB 字符类型（`nvarchar`、`varchar`、`nchar` 或 `char`）的文本、变量或函数调用，其中包含应删除的字符。 不允许 `nvarchar(max)` 和 `varchar(max)` 类型。
+任何非 LOB 字符类型（`nvarchar`、`varchar`、`nchar` 或 `char`）的文本、变量或函数调用，其中包含应删除的字符。 禁止使用 `nvarchar(max)` 和 `varchar(max)` 类型。
 
 string   
 任何字符类型（`nvarchar`、`varchar`、`nchar` 或 `char`）的表达式，其中应删除字符。
@@ -52,7 +52,7 @@ string
 返回一个字符串参数类型的字符表达式，其中已从两侧删除空格字符 `char(32)` 或其他指定字符。 如果输入字符串是 `NULL`，则返回 `NULL`。
 
 ## <a name="remarks"></a>Remarks   
-默认情况下，`TRIM` 函数会删除 `char(32)` 两侧的空格字符。 这等效于 `LTRIM(RTRIM(@string))`。 具有指定字符的 `TRIM ` 函数的行为与 `REPLACE` 函数（其中开头或末尾处的字符替换为空字符串）的行为相同。
+默认情况下，`TRIM` 函数会删除 `char(32)` 两侧的空格字符。 此行为等同于 `LTRIM(RTRIM(@string))`。 具有指定字符的 `TRIM ` 函数的行为与 `REPLACE` 函数（其中开头或末尾处的字符替换为空字符串）的行为相同。
 
 
 ## <a name="examples"></a>示例
@@ -84,4 +84,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+

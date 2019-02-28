@@ -1,7 +1,7 @@
 ---
 title: 描述的聚集索引和非聚集索引 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299264"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265214"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299264"
  有关其他类型的特殊用途索引，请参阅 [Indexes](../../relational-databases/indexes/indexes.md) 。  
   
 ## <a name="indexes-and-constraints"></a>索引和约束  
- 对表列定义了 PRIMARY KEY 约束和 UNIQUE 约束时，会自动创建索引。 例如，如果创建了表并将一个特定列标识为主键，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动对该列创建 PRIMARY KEY 约束和索引。 有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) 和 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
+
+对表列定义了 PRIMARY KEY 约束和 UNIQUE 约束时，会自动创建索引。 例如，在你生成有 UNIQUE 约束的表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 自动创建非聚集索引。 如果你配置 PRIMARY KEY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 会自动创建聚集索引（除非聚集索引已存在）。 如果你尝试对现有表强制执行 PRIMARY KEY 约束，且此表上已有聚集索引，SQL Server 使用非聚集索引强制执行主键。
+
+有关详细信息，请参阅 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) 和 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)。  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>查询优化器如何使用索引  
  设计良好的索引可以减少磁盘 I/O 操作，并且消耗的系统资源也较少，从而可以提高查询性能。 对于包含 SELECT、UPDATE、DELETE 或 MERGE 语句的各种查询，索引会很有用。 例如，在 `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` 数据库中执行的查询 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 执行此查询时，查询优化器评估可用于检索数据的每个方法，然后选择最有效的方法。 可能采用的方法包括扫描表和扫描一个或多个索引（如果有）。  

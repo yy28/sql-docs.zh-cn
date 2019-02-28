@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712638"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290715"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
@@ -25,7 +25,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
@@ -51,7 +51,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 5.  单击“下一步” 。  
   
-6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -136,7 +136,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
 11. 单击 **“完成”**。  
   
-      表将添加到设计图面中。 此表有五个列和五个行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。 “列组”窗格为空。  
+      表将添加到设计图面中。 此表有五个列和五个行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。 “列组”窗格为空。  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -184,7 +184,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  在“填充”选项卡上，单击“填充颜色”选项旁边的“fx”按钮，然后在“为以下项设置表达式: BackgroundColor”字段中输入以下表达式：  
+2.  在“填充”选项卡上，单击“填充颜色”选项旁边的“fx”按钮，并在“为以下项设置表达式: BackgroundColor”字段中输入以下表达式：  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

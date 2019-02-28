@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207305"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319258"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文将介绍以下自适应查询处理功能，这些功能可用于提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的查询性能：
 - 批处理模式内存授予反馈
+- 行模式内存授予反馈（公共预览版，数据库兼容性级别为 150）
 - 批处理模式自适应联接
 - 交错执行
 
@@ -36,8 +37,6 @@ ms.locfileid: "53207305"
 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询进程和执行模块的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)。
 
 有时，出于各种原因，查询优化器所选计划不是最优计划。 例如，预计流经查询计划的行数可能不正确。 估计成本有助于确定选择用于执行的计划。 如果基数估计不正确，不管最初的假设有多差劲，仍会使用原计划。
-
-![自适应查询处理功能](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>如何启用自适应查询处理
 可以通过对数据库启用兼容性级别 140 使工作负荷自动符合自适应查询处理条件。  可使用 Transact-SQL 进行此设置。 例如：  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="see-also"></a>另请参阅
+[SQL 数据库中的智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)   
 [SQL Server 数据库引擎和 Azure SQL 数据库的性能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

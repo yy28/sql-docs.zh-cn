@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 552a6883f1d17b54e5163368bdce6d426907e0ba
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396830"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298475"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
@@ -67,7 +67,7 @@ ms.locfileid: "52396830"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>从命令行安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
 
- 还可以执行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的命令行安装，并提供参数以自定义安装。 除了标准的 MSI 内部参数以外，还可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的根安装文件夹。 REPORTSERVERURL 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用于在服务器上保存报表的默认报表服务器。  
+ 还可以执行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的命令行安装，并提供参数以自定义安装。 除了标准 MSI 内部参数以外，还可以使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 提供的自定义参数：RBINSTALLDIR 和 REPORTSERVERURL。 RBINSTALLDIR 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的根安装文件夹。 REPORTSERVERURL 指定 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 用于在服务器上保存报表的默认报表服务器。  
   
  如果要进行根本没有用户界面交互的完全静默安装，请指定 **/quiet** 选项。 根据设计，quiet 选项标志会隐藏安装错误。 因此，建议在使用 quiet 选项时包括 **/l** 选项，该选项指定进行日志记录。   
   
@@ -85,7 +85,7 @@ ms.locfileid: "52396830"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的两个特定选项为：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
+     专门用来安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的两个选项是：RBINSTALLDIR 和 REPORTSERVERURL。 不需要在命令行中包含这些参数。 以下为基准命令：  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

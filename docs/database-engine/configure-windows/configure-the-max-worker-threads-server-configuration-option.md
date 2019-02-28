@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420398"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230974"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52420398"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **配置 max worker threads 选项，使用：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52420398"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **跟进：**[在配置最大工作线程数选项之后](#FollowUp)  
+-   **跟进：**[在配置“最大工作线程”选项之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -73,7 +73,8 @@ ms.locfileid: "52420398"
     |CPU 数|32 位计算机|64 位计算机|  
     |------------|------------|------------| 
     |\<= 4 个处理器|256|512|
-    |\>4 个处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）| 
+    |\> 4 个处理器和 \< 64 个处理器|256 +（（逻辑 CPU 位数 - 4）* 8）|512 +（（逻辑 CPU 位数 - 4）* 16）|
+    |\> 64 个处理器|256 + ((逻辑 CPU 位数 - 4) * 32)|512 + ((逻辑 CPU 位数 - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不再能够安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。   我们建议对于 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，最大工作线程数为 1024。  

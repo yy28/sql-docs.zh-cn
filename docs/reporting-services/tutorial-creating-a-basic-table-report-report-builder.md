@@ -1,27 +1,27 @@
 ---
-title: 教程：创建基本表报表（报表生成器）| Microsoft Docs
+title: 教程：生成基本表报表（报表生成器）| Microsoft Docs
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712348"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298376"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表（报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：生成基本表报表（报表生成器）
 本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-完成本教程的预计学时：20 分钟。  
+本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -184,7 +184,7 @@ ms.locfileid: "52712348"
   
 4.  单击“下一步”预览表，然后单击“完成”。  
   
-表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：SalesDate、Subcategory 和 Details。 详细信息数据是由数据集查询检索的所有数据。  
+表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。  
   
 ## <a name="FormatCurrency"></a>2.将数据格式设置为货币  
 默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。   

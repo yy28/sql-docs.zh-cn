@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712708"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298645"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
 在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
@@ -27,7 +27,7 @@ ms.locfileid: "52712708"
 在本教程中，将生成一个地图报表，该报表显示了纽约州各县内的商店位置。  
    
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：30 分钟。  
   
@@ -169,9 +169,9 @@ ms.locfileid: "52712708"
 9. 在查询设计器工具栏中，单击“运行”(**!**)。  
   
     结果集包含七列，这些列表示纽约州的一组销售消费品的商店。 以下是列表，并对意思可能不明显的列进行说明： 
-    *   **StoreKey**：商店标识符。  
+    *   **StoreKey**：店铺标识符。  
     *   **StoreName**。
-    *   **SellingArea**：可用于展示产品的区域，面积从 455 平方英尺到 1,125 平方英尺。
+    *   **SellingArea**：产品展示区域，面积介于 455 平方英尺和 1,125 平方英尺之间。
     *   **City**。
     *   **County**。
     *   **Sales**：总销售额。 

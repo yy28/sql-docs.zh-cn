@@ -1,28 +1,28 @@
 ---
-title: 教程：创建矩阵报表（报表生成器）| Microsoft Docs
+title: 教程：生成矩阵报表（报表生成器）| Microsoft Docs
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712368"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291675"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表（报表生成器）
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：生成矩阵报表（报表生成器）
 本教程教你如何使用嵌套行组和列组中的示例销售数据的矩阵组件创建 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
 你还可以创建相邻列组、设置列的格式和旋转文本。 下图显示与您将创建的报表类似的报表。  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-完成本教程的预计学时：20 分钟。  
+本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅 [教程先决条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
@@ -49,7 +49,7 @@ ms.locfileid: "52712368"
   
 5.  单击“下一步” 。  
   
-6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入数据源的信息，请参阅[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 若要了解如何创建嵌入数据源，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52712368"
   
 13. 单击 **“完成”**。  
   
-    矩阵将添加到设计图面中。 “行组”窗格显示两个行组：Territory 和 SalesDate。 “列组”窗格显示两个列组：Subcategory 和 Product。 详细信息数据是由数据集查询检索的所有数据。  
+    矩阵将添加到设计图面中。 “行组”窗格显示两个行组：“Territory”和“SalesDate”。 “列组”窗格显示两个列组：“Subcategory”和“Product”。 详细信息数据是由数据集查询检索的所有数据。  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -335,7 +335,7 @@ ms.locfileid: "52712368"
   
 2.  选择包含 的单元格。 `[Territory].` 
 
-    >**请注意**：选择单元格，而不是文本。 WritingMode 属性仅可用于该单元格。
+    >**注意**：选择单元格，而不是文本。 WritingMode 属性仅可用于该单元格。
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

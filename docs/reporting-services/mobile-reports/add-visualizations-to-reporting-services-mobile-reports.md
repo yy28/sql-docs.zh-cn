@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703335"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298415"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>向 Reporting Services 移动报表添加可视化效果
 图表是数据可视化效果必不可少的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表中使用的图表，这些图表可涵盖一系列方案。 
@@ -143,7 +143,7 @@ ms.locfileid: "47703335"
 
      * 在“大小表示”下，为图块大小选择一个数值字段。
      * 在“颜色表示”下面为图块颜色选择一个数值字段。 
-     * [可选] **自定义中间值**：可视化类型为 HeatMapWithCustomCenterValue 时，只能使用 **自定义中间值** 。
+     * [可选] **自定义中心值**：如果可视化类型为 HeatMapWithCustomCenterValue，只能使用自定义中心值。
      
          中间值用于决定框的颜色。 与中间值相比，指标越好，颜色越绿。 指标越差，颜色越红。
      

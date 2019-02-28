@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410704"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292215"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
 该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
@@ -89,7 +89,7 @@ ms.locfileid: "52410704"
     ```  
 
   
-10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集通过以下列显示 23 行的数据：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集在以下列中显示 23 行数据：“FirstName”、“LastName”、“StateProvince”、“CountryRegionID”、“Gender”、“YTDPurchase”和“LastPurchase”。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ ms.locfileid: "52410704"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>查找 CountryRegion 数据集中的值  
   
-1.  单击“Country Region ID”列标题并删除文本：ID，因此它会读作“Country Region”。  
+1.  单击“国家/地区 ID”列标题，并删除文本“ID”，以显示“国家/地区”。  
   
 2.  右键单击“Country Region”列的数据单元，然后单击“表达式”。  
   

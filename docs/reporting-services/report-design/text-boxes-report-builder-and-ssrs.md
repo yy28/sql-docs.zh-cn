@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ccfc1e3c3c455a191d6a4a76c6e44a8df0289aee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815475"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294647"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文本框（报表生成器和 SSRS）
   在你考虑一个文本框时，可能要考虑在类似 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 的图面上包含文本的独立框。 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，某些文本框类似上述文本框，它们可显示标题、说明和标签的静态文本，或者基于表达式显示动态文本。 但表或矩阵（Tablix 数据区域）中的每个单元也都包含文本框，可以使用你的报表中独立文本框的格式设置方式来设置这些文本框的格式。  
@@ -51,7 +51,7 @@ ms.locfileid: "47815475"
   
  方向是对文本框设置的并且适用于文本框中的所有文本。 不能为文本框的各个部分指定不同的方向。  
   
- 若要开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中关于旋转文本的部分和[设置文本框方向（报表生成器和 SSRS）](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
+ 若要开始使用，请参阅[教程：设置文本格式（报表生成器）](../../reporting-services/tutorial-format-text-report-builder.md)中有关旋转文本的部分，并参阅[设置文本框方向（报表生成器和 SSRS）](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  [添加、移动或删除文本框（报表生成器和 SSRS）](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

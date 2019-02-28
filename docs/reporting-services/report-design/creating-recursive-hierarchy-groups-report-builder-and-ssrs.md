@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: eb8e66beacd184e1c2473917a5996530b091653e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 589fe7470de4909d9513d80726c59412f5ea2447
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807755"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292355"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>创建递归层次结构组（报表生成器和 SSRS）
 若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中显示递归数据（其中父级和子级之间的关系由数据集中的字段表示），则可以根据子字段设置数据区域组表达式，根据父字段设置 Parent 属性。  
@@ -31,7 +31,7 @@ ms.locfileid: "47807755"
  有关详细信息，请参阅[在数据区域中添加或删除组（报表生成器和 SSRS）](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)和[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)。  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>支持递归的聚合函数  
- 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 下列函数接受 **Recursive** 参数： [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)、 [Count](../../reporting-services/report-design/report-builder-functions-count-function.md)、 [CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、 [CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、 [Max](../../reporting-services/report-design/report-builder-functions-max-function.md)、 [Min](../../reporting-services/report-design/report-builder-functions-min-function.md)、 [StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、 [StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、 [Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、 [Var](../../reporting-services/report-design/report-builder-functions-var-function.md)和 [VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 可以使用接受 *Recursive* 参数的 Reporting Services 聚合函数来计算递归层次结构的汇总数据。 以下函数接受 Recursive 作为参数：[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)、[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)、[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)、[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)、[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)、[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)、[StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)、[StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)、[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)、[Var](../../reporting-services/report-design/report-builder-functions-var-function.md) 和 [VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [表、矩阵和列表（报表生成器和 SSRS）](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

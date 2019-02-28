@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299984"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331547"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299984"
   > [!div class="nextstepaction"]
   > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
-  确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。 如果任何一个参数不属于字符串数据类型，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会将其转换为字符串数据类型（如果可能）。  
+  确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。 如果任一参数都不属于字符串数据类型，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会尽量将它转换为使用字符串数据类型。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -75,10 +75,10 @@ match_expression [ NOT ] LIKE pattern
 |%|包含零个或多个字符的任意字符串。|WHERE title LIKE '%computer%' 将查找在书名中任意位置包含单词 "computer" 的所有书名。|  
 |_（下划线）|任何单个字符。|WHERE au_fname LIKE '_ean' 将查找以 ean 结尾的所有 4 个字母的名字（Dean、Sean 等）。|  
 |[ ]|指定范围 ([a-f]) 或集合 ([abcdef]) 中的任何单个字符。|WHERE au_lname LIKE '[C-P]arsen' 将查找以 arsen 结尾并且以介于 C 与 P 之间的任何单个字符开始的作者姓氏，例如 Carsen、Larsen、Karsen 等。 在范围搜索中，范围包含的字符可能因排序规则的排序规则而异。|  
-|[^]|不属于指定范围 ([a-f]) 或集合 ([abcdef]) 的任何单个字符。|WHERE au_lname LIKE 'de[^l]%' 将查找以 de 开始并且其后的字母不为 l 的所有作者的姓氏。|  
+|[^]|不属于指定范围 ([a-f]) 或集合 ([abcdef]) 的任何单个字符。|WHERE au_lname LIKE 'de[^l]%' 查找以 de 开头且后跟字母不是 l 的所有作者姓氏。|  
   
  escape_character  
- 放在通配符之前用于指示通配符应当解释为常规字符而不是通配符的字符。 escape_character 是字符表达式，无默认值，并且计算结果必须仅为一个字符。  
+ 位于通配符前的字符，用于指明应将通配符解释为常规字符，而不是通配符。 escape_character 是字符表达式，无默认值，并且计算结果必须仅为一个字符。  
   
 ## <a name="result-types"></a>结果类型  
  **Boolean**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  如果 match_expression 与指定的 pattern 相匹配，则 LIKE 返回 TRUE。  
   
 ## <a name="remarks"></a>Remarks  
- 如果使用 LIKE 执行字符串比较，则模式字符串中的所有字符都有意义。 这包括前导或尾随空格。 如果查询中的比较要返回包含 "abc "（abc 后有一个空格）的所有行，则不会返回包含 "abc"（abc 后没有空格）的列所在行。 但是可以忽略模式所要匹配的表达式中的尾随空格。 如果查询中的比较要返回包含 "abc"（abc 后没有空格）的所有行，则返回以 "abc" 开始并且具有零个或多个尾随空格的所有行。  
+ 如果你使用 LIKE 执行字符串比较，模式字符串中的所有字符都有意义。 有意义的字符包括任何前导或尾随空格。 如果查询中的比较要返回包含字符串 LIKE 'abc '（abc 后跟一个空格）的所有行，则不会返回列值为 abc（abc 后没有空格）的行。 但是可以忽略模式所要匹配的表达式中的尾随空格。 如果查询中的比较要返回包含 "abc"（abc 后没有空格）的所有行，则返回以 "abc" 开始并且具有零个或多个尾随空格的所有行。  
   
- 由于数据存储方式的原因，使用包含 char 和 varchar 数据的模式的字符串比较可能无法通过 LIKE 比较。 您应当了解每种数据类型的存储方式以及导致 LIKE 比较失败的原因。 以下示例将本地 char 变量传递给存储过程，然后使用模式匹配来查找其姓氏以一组指定的字符开始的所有雇员。  
+ 鉴于各数据类型的数据存储方式不同，如果使用包含 char 和 varchar 数据的模式进行字符串比较，可能无法传递 LIKE 比较。 下面的示例先将本地 char 变量传递给存储过程，再使用模式匹配来查找姓氏以一组指定字符开头的所有员工。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -177,9 +177,9 @@ WHERE Name LIKE 'dm%';
 GO  
 ```  
   
- 若要查看所有非动态管理视图的对象，请使用 `NOT LIKE 'dm%'`。 如果共有 32 个对象且 LIKE 找到 13 个与模式匹配的名称，则 NOT LIKE 将找到 19 个与 LIKE 模式不匹配的对象。  
+ 若要查看所有非动态管理视图的对象，请使用 `NOT LIKE 'dm%'`。 如果共有 32 个对象，且 LIKE 找到 13 个名称与模式匹配，那么 NOT LIKE 就会找到 19 个对象与 LIKE 模式不匹配。  
   
- 使用 `LIKE '[^d][^m]%'` 之类的模式不一定每次找到的名称都相同。 可能仅找到 14 名称（而不是 19 个），除了动态管理视图名称外，所有以 `d` 开始或第二个字母为 `m` 的名称也都将从结果中消除。 这是因为用反向通配符匹配字符串是分步骤进行计算的，一次一个通配符。 如果在计算过程中任一环节匹配失败，那么就会将其消除。  
+ 使用 `LIKE '[^d][^m]%'` 之类的模式不一定每次找到的名称都相同。 可能仅找到 14 名称（而不是 19 个），除了动态管理视图名称外，所有以 `d` 开始或第二个字母为 `m` 的名称也都将从结果中消除。 之所以出现此行为是因为，用否定通配符匹配字符串是分步骤进行评估，一次评估一个通配符。 如果在评估过程中任一环节匹配失败，它就会被消除。  
   
 ## <a name="using-wildcard-characters-as-literals"></a>将通配符作为文字使用  
  可以将通配符模式匹配字符作为文字字符使用。 若要将通配符作为文字字符使用，请将通配符放在方括号中。 下表显示了几个使用 LIKE 关键字和 [ ] 通配符的示例。  
@@ -196,11 +196,11 @@ GO
 |LIKE 'abc[def]'|abcd、abce 和 abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>使用 ESCAPE 子句的模式匹配  
- 可搜索包含一个或多个特殊通配符的字符串。 例如，customers 数据库中的 discounts 表可能存储含百分号 (%) 的折扣值。 若要搜索作为字符而不是通配符的百分号，必须提供 ESCAPE 关键字和转义符。 例如，一个样本数据库包含名为 comment 的列，该列含文本 30%。 若要搜索在 comment 列中的任何位置包含字符串 30% 的任何行，请指定 `WHERE comment LIKE '%30!%%' ESCAPE '!'` 之类的 WHERE 子句。 如果未指定 ESCAPE 和转义符，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将返回包含字符串 30 的所有行。  
+ 可搜索包含一个或多个特殊通配符的字符串。 例如，customers 数据库中的 discounts 表可能存储含百分号 (%) 的折扣值。 若要搜索作为字符而不是通配符的百分号，必须提供 ESCAPE 关键字和转义符。 例如，一个样本数据库包含名为 comment 的列，该列含文本 30%。 若要搜索在 comment 列中的任何位置包含字符串 30% 的任何行，请指定 `WHERE comment LIKE '%30!%%' ESCAPE '!'` 之类的 WHERE 子句。 如果未指定 ESCAPE 和转义字符，[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回包含字符串 30 的所有行。  
   
- 如果 LIKE 模式中的转义符后面没有字符，则该模式无效并且 LIKE 返回 FALSE。 如果转义符后面的字符不是通配符，则将放弃转义符并将该转义符后面的字符作为该模式中的常规字符处理。 这包括百分号 (%)、下划线 (_) 和左括号 ([) 通配符（如果它们包含在双括号 ([ ]) 中）。 另外，在双括号字符 ([]) 内，可以使用转义符并将插入符号 (^)、连字符 () 和右括号 (]) 转义。  
+ 如果 LIKE 模式中的转义字符后面没有字符，此模式无效，且 LIKE 返回 FALSE。 如果转义字符后面的字符不是通配符，转义字符会遭放弃，且后面的字符会被视为模式中的常规字符。 这些字符包括百分号 (%)、下划线 (_) 和左方括号 ([) 通配符（如果它们包含在双方括号 ([ ]) 中的话）。 可以在双方括号字符 ([ ]) 内使用转义字符，包括转义脱字号 (^)、连字符 (-) 或右方括号 (])。  
   
- 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，不能包括在 LIKE 中。  
+ 0x0000 (char(0)) 是 Windows 排序规则中未定义的字符，无法添加到 LIKE 中。  
   
 ## <a name="examples"></a>示例  
   
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用带 % 通配符的 NOT LIKE  
- 以下示例在 `DimEmployee` 表中查找不以 `612` 开头的所有电话号码。  实例时都提供 SQL Server 登录名。  
+ 下面的示例在 `DimEmployee` 表中查找不以 `612` 开头的所有电话号码。  实例时都提供 SQL Server 登录名。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用带 _ 通配符的 LIKE  
- 以下示例在 `DimEmployee` 表中查找区号以 `6` 开头、以 `2` 结尾的所有电话号码。 请注意，% 通配符字符也包括在搜索模式的末尾，因为在列值中，区号是电话号码的第一部分，其他字符位于其后。  
+ 以下示例在 `DimEmployee` 表中查找区号以 `6` 开头、以 `2` 结尾的所有电话号码。 搜索模式的末尾包含 % 通配符，用于匹配电话列值中的所有后续字符。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  
- 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23bee332835d0beb812d7737c254d6eccabee6d1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711598"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288597"
 ---
 # <a name="report-builder-tutorials"></a>报表生成器教程
 
@@ -29,13 +29,13 @@ ms.locfileid: "52711598"
 [获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)  
 大多数这些教程都使用嵌入数据源。 如果您有权访问共享数据源，则可以改为使用共享数据源。 本主题将介绍用于使用共享数据源的步骤。  
   
-[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
 按照本教程中的步骤来学习如何创建第一个报表。 本教程将向您演示如何使用报表生成器来创建数据源连接、定义简单查询、生成包含数据的布局、设置报表的格式以及添加分组和总计。  
   
-[教程：创建矩阵报表（报表生成器）](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
+[教程：生成矩阵报表（报表生成器）](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
 按照本教程中的步骤学习如何添加和配置矩阵。 使用表或矩阵向导创建报表数据源、数据集和布局，然后在报表生成器的“设计”视图内增强矩阵的效果。  
   
-[教程：创建自由格式的报表（报表生成器）](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
+[教程：生成自由格式报表（报表生成器）](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 按照本教程中的步骤学习如何从头创建自由格式的报表。 此报表在外观上与新闻稿类似。  
   
 [教程：设置文本格式（报表生成器）](../reporting-services/tutorial-format-text-report-builder.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "52711598"
 [教程：向报表添加参数（报表生成器）](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
 按照本教程中的步骤来学习如何通过使用参数自定义报表外观和内容。  
   
-[教程：创建钻取报表和主报表（报表生成器）](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+[教程：生成钻取报表和主报表（报表生成器）](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 按照本教程中的步骤学习如何为基于 Analysis Services 多维数据集的钻取方案创建报表。 您将创建主报表并允许它用于钻取，并创建作为钻取操作的目标的报表。  
   
 [教程：表达式简介](../reporting-services/tutorial-introducing-expressions.md)  
@@ -72,6 +72,6 @@ ms.locfileid: "52711598"
 
 [报表设计视图](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [SQL Server 中的报表生成器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[教程：脱机创建快速图表报表](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+[教程：脱机生成快速图表报表](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

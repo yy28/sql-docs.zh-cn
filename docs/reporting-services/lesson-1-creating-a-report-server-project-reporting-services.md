@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383652"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292345"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "49383652"
 
 5. 单击“报表服务器项目”![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)。 
 
-   >**注意**：如果看不到“商业智能”或“报表服务器项目”选项，需要使用商业智能模板更新 SSDT。 请参阅 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+   >**注意**：如果看不到“商业智能”或“报表服务器项目”选项，需要使用商业智能模板来更新 SSDT。 请参阅 [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  在“名称” 中，键入 **Tutorial**。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "49383652"
   
 1.  在“解决方案资源管理器”窗格中，右键单击“报表” > ，然后单击“添加” > “新建项”。 
 
-    >**提示**：如果看不到“解决方案资源管理器”  窗格，请单击“视图”  菜单上的“解决方案资源管理器” 。 
+    >**提示**：如果看不到“解决方案资源管理器”窗格，请单击“视图”菜单上的“解决方案资源管理器”。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -67,12 +67,12 @@ ms.locfileid: "49383652"
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]组件。 它包含两个视图：“设计”  和“预览” 。 单击各个选项卡可更改视图。  
+     报表设计器是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中运行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]组件。 它包含两个视图：“设计”和“预览”。 单击各个选项卡可更改视图。  
   
     在“报表数据”  窗格中定义数据。 在“设计”  视图中定义报表布局。 可以在“预览”  视图中运行报表并查看其外观。  
   
 ## <a name="next-lesson"></a>下一课  
-您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息 (Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。  
+您已经成功创建了名为“Tutorial”的报表项目，并向该报表项目添加了报表定义 (.rdl) 文件。 接下来，您将指定要用于报表的数据源。 请参阅[第 2 课：指定连接信息 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

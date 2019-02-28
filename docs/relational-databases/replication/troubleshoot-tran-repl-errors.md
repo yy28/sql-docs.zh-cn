@@ -1,5 +1,5 @@
 ---
-title: 疑难解答：查找 SQL Server 事务复制错误 | Microsoft Docs
+title: 排除故障：查找 SQL Server 事务复制错误 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675896"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154882"
 ---
-# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑难解答：查找 SQL Server 事务复制错误 
+# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>排除故障：查找 SQL Server 事务复制错误 
 如果对事务复制的工作机制没有基本的了解，那么排查复制错误可能会遭遇挫败。 创建发布的第一步是使用快照代理创建快照并将其保存到快照文件夹。 接下来，分发代理将该快照应用于订阅服务器。 
 
 此过程可创建发布并将其设为同步状态。 同步分三个阶段进行：
@@ -45,7 +45,7 @@ ms.locfileid: "51675896"
 1. 使用复制监视器来确定复制出错的位置（哪个代理？）：
    - 如果在“发布服务器到分发服务器”部分发生错误，则是日志读取器代理出现问题。 
    - 如果在“分发服务器到订阅服务器”部分发生错误，则是分发代理出现问题。  
-2. 在作业活动监视器中查看该代理的作业历史记录，确定错误的详细信息。 如果作业历史记录显示的信息不够详尽，可在该特定代理上[启用详细日志记录](#enable-verbose-logging)。
+2. 在作业活动监视器中查看该代理的作业历史记录，确定错误的详细信息。 如果作业历史记录显示的信息不够详尽，可在该特定代理上[启用详细日志记录](#enable-verbose-logging-on-any-agent)。
 3. 尝试确定错误的解决方案。
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "51675896"
 
     ![快捷菜单上的“启动复制监视器”命令](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    复制监视器打开：![复制监视器](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    此时，复制监视器打开：![复制监视器](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. 红色 X 表示发布不同步。 展开左侧的“我的发布服务器”，然后展开相关的发布服务器。  
   

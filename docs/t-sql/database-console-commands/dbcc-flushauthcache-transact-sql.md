@@ -19,19 +19,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3f6d11a425da5daee9cb9caf0b64a2eefed117b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16267d2af81e3338bb04f5f548e2f9d14d1d4186
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025278"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231004"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中当前用户数据库清空包含有关登录名和防火墙规则信息的数据库身份验证缓存。 此语句不适用于逻辑 master 数据库，因为 master 数据库包含有关登录名和防火墙规则信息的物理存储。 执行该语句的用户和当前连接的其他用户保持连接状态。 （[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 当前不支持 DBCC FLUSHAUTHCACHE。）
+为 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中当前用户数据库清空包含有关登录名和防火墙规则信息的数据库身份验证缓存。 此语句不适用于逻辑 master 数据库，因为 master 数据库包含登录名和防火墙规则信息的物理存储。 执行该语句的用户和当前连接的其他用户保持连接状态。 （[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 暂不支持 DBCC FLUSHAUTHCACHE。）
  
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -43,8 +43,8 @@ DBCC FLUSHAUTHCACHE [ ; ]
 无。
   
 ## <a name="remarks"></a>Remarks  
-身份验证缓存创建登录名和服务器防火墙规则（存储在 master 中）的副本并将它们放在用户数据库的内存中。  由于已包含数据库用户的信息已存储在用户数据库中，因此已包含数据库用户不是身份验证缓存的一部分。
-与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 持续保持活动连接需要至少每隔 10 小时进行重新授权（由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md) 命令，显式终止与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的连接。
+身份验证缓存创建 master 中存储的登录名和服务器防火墙规则的副本，并将它们放在用户数据库的内存中。  由于包含的数据库用户的相关信息已存储在用户数据库中，因此包含的数据库用户不是身份验证缓存的一部分。
+与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 持续保持活动连接需要至少每隔 10 小时进行重新授权（由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行）。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用最初提交的密码尝试重新授权，且无需用户输入。 为了提升性能，在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中重置密码时，连接不会重新进行身份验证，即使连接因连接池而重置，也不例外。 此行为与本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行为不同。 如果自最初授权连接时已更改密码，必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md) 命令，显式终止与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的连接。
   
 ## <a name="permissions"></a>Permissions  
 需要 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理员帐户。
@@ -58,5 +58,4 @@ DBCC FLUSHAUTHCACHE;
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e469cd06123f0efc939760fd00d5377e9ac737a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4124b909cf35ea071aef5f57672ff8a3701a44ca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738685"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286365"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>交互式排序（报表生成器和 SSRS）
   对于表中的行或矩阵中的行和列，可以添加交互式排序按钮，以便用户能够在升序和降序顺序之间切换。 交互式排序最常见的用途是向每一个列标题添加一个排序按钮。 这样，用户就可以选择要按哪个列排序。  
@@ -25,15 +25,15 @@ ms.locfileid: "47738685"
   
  添加交互式排序时，必须指定以下项：  
   
--   **排序对象：** 是对行还是对列进行排序？  
+-   **排序对象：** 行或列？  
   
--   **排序依据：** 是依据表列中显示的某一字段？ 还是依据未显示的某一字段？  
+-   **排序依据：** 依据表列中显示的某一字段？ 还是依据未显示的某一字段？  
   
--   **排序上下文：** 例如，可以在与行组关联的行、与列组关联的列、详细信息行、父组内的子组中进行排序，或者同时在父组和子组中进行排序。  
+-   **排序上下文：** 例如，可以在下列上下文中进行排序：与行组关联的行、与列组关联的列、详细信息行、父组内的子组，或同时在父组和子组中。  
   
--   **要将排序按钮添加到的文本框：** 是添加到列标题中还是添加到组行标题中？  
+-   **将排序按钮添加到哪个文本框：** 在列标题中，还是在组行标题中？  
   
--   **是否对多个数据区域同步排序：** 可以设计一个报表，使得在用户切换排序顺序时具有同一祖先的其他数据区域也进行排序。  
+-   **是否同步多个数据区域的排序：** 可以设计下面这样的报表：如果用户切换排序顺序，上级相同的其他数据区域也进行排序。  
   
  有关分步说明，请参阅 [将交互式排序添加到表或矩阵（报表生成器和 SSRS）](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
   

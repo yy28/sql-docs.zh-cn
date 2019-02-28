@@ -23,14 +23,14 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ddcfeaa62662fecef5e1b201bb81c2ce547c011
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029826"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293059"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -75,7 +75,7 @@ ms.locfileid: "50029826"
   
 1.  单击地图直到显示“地图”窗格。  
   
-2.  在工具栏上单击“添加层”按钮，从下拉列表中单击要添加的层类型：“点”、“线条”或“多边形”。  
+2.  依次单击工具栏中的“添加层”按钮，以及下拉列表中的要添加的层类型：“点”、“线”或“多边形”。  
   
     > [!NOTE]  
     >  尽管可以手动添加并配置地图层，我们仍建议您使用地图层向导来添加新层。 若要在“地图”窗格工具栏中启动向导，请单击层向导按钮 (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  

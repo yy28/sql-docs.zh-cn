@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d33b9fc81957a84c222c486199e9f806ff6eb3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d88a76bcba0350b39fed6b4e41d3b5ae80b2738f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799295"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290135"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>内置集合 - 参数集合引用（报表生成器）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
   
- 在运行时比较参数值和数据集字段值时，所比较的两个项的数据类型必须相同。 报表参数可以是下列类型之一：Boolean、DateTime、Integer、Float 或 Text，它们表示基础数据类型 String。 如有必要，您可能必须转换参数值的数据类型以与数据集值相匹配。 有关详细信息，请参阅 [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
+ 在运行时比较参数值和数据集字段值时，所比较的两个项的数据类型必须相同。 报表参数可以是下列类型之一：Boolean、DateTime、Integer、Float 或 Text（即基础数据类型 String）。 如有必要，您可能必须转换参数值的数据类型以与数据集值相匹配。 有关详细信息，请参阅 [表达式中的数据类型（报表生成器和 SSRS）](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)。  
   
  为了在表达式中包含参数引用，必须了解如何指定正确的参数引用语法，该语法会因参数是单值参数还是多值参数而有所不同。  
   

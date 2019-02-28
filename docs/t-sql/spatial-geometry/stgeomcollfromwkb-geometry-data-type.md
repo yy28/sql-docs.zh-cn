@@ -18,12 +18,12 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5222f3076126f26a03d8634bff05f32ccd4b723
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 5693d4673cc589507e7dde73dbdf68198a03cf0e
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979783"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230934"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="remarks"></a>Remarks  
  `STGeomCollFromWKB()` 返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入。  
   
- 如果输入格式不正确，则此方法将引发 FormatException 异常。  
+ 如果输入格式不正确，此方法会抛出 FormatException 异常。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STGeomCollFromWKB()` 创建 geometry 实例。  
@@ -66,5 +66,3 @@ SELECT @g.STAsText();
 ## <a name="see-also"></a>另请参阅  
  [OGC 静态几何图形方法](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
-  
-

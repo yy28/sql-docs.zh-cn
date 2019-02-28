@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710698"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295196"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
 借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  
@@ -42,7 +42,7 @@ ms.locfileid: "52710698"
   
 6. 选择“本地 Excel”  或“报表服务器” 。  
   
-   >**提示**：如果从 Excel 中添加数据，请确保：  
+   >**提示**：若要从 Excel 添加数据，请确保：  
     >* [准备 Excel 数据](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 以在移动报表中进行处理。  
     >* 先关闭该文件。  
 7. 选择需要的工作表，并选择“导入” 。   

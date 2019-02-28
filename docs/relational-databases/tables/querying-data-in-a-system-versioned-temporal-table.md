@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418808"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319108"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>在系统版本控制临时表中查询数据
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 前两个子子句返回与指定时间段重叠的行版本（即，在给定时间段之前启动并在其之后结束的行版本），CONTAINED IN 则仅返回指定时间段边界内存在的行版本。  
   
 > [!IMPORTANT]  
->  如果仅搜索非当前行版本，建议使用 **CONTAINED IN** ，因为它仅对历史记录表有效，所以将提供最佳的查询性能。 如果需要在没有任何限制的情况下查询当前数据和历史数据，则使用 **ALL** 。  
+>  如果仅搜索非最新行版本，建议直接查询历史记录表，因为这样查询性能最佳。 如果需要在没有任何限制的情况下查询当前数据和历史数据，则使用 **ALL** 。  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

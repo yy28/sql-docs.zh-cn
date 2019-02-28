@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712438"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296158"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
 本教程将使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 中的向导，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中创建条形图。 然后添加筛选器，并优化图表。 
@@ -30,7 +30,7 @@ ms.locfileid: "52712438"
   
  
 > [!NOTE]  
-> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器、创建数据集和选择数据源的分步说明，请参阅这一系列教程中的第一个教程：[教程：创建基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、创建数据集和选择数据源的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 本教程的预计学时：15 分钟。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52712438"
   
 2.  单击“条形图”，然后单击“下一步”。  
   
-    “排列图表字段”页上的“可用字段”窗格中有 4 个字段：FirstName、LastName、SalesYear2015 以及 SalesYear2014。  
+    “排列图表字段”页上的“可用字段”窗格中有 4 个字段：“FirstName”、“LastName”、“SalesYear2015”和“SalesYear2014”。  
   
 3.  将 LastName 拖动到“类别”窗格。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52712438"
   
 1.  切换到报表设计视图。  
   
-2.  选择图表顶部的词语“图表标题”，然后键入 Sales for 2014 and 2015。  
+2.  选择图表顶部的“图表标题”字词，再键入：“2014 年和 2015 年销售额”。  
   
 3.  选择标题后，在“属性”窗格中，将“颜色”设置为“黑色”并将“字体”设置为“12磅”。 
   
@@ -226,7 +226,7 @@ ms.locfileid: "52712438"
   
 7.  在“轴标题”框中，键入 Sales in thousands，然后按 Enter。  
 
-    >**注意：** 键入时，轴标题框在垂直轴上。 但是，按 Enter 后，它将转到水平轴。
+    >**注意：** 键入时，“轴标题”框显示在垂直轴上。 但是，按 Enter 后，它将转到水平轴。
   
 9. 单击 **“运行”** 以预览报表。  
   

@@ -18,17 +18,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b124878e337473789665aeba9b8509be9732f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80574014aa381744177369fbac9dd4f6b39fb44f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783655"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154772"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算术运算符 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  算术运算符对两个表达式执行数学运算，这两个表达式可以是数值数据类型类别的一个或多个数据类型。 有关数据类型类别的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+算术运算符对使用一个或多个数据类型的两个表达式运行数学运算。 它们从数值数据类型类别运行。 有关数据类型类别的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 |运算符|含义|  
 |--------------|-------------|  
@@ -38,13 +38,13 @@ ms.locfileid: "47783655"
 |[/ (Divide)](../../t-sql/language-elements/divide-transact-sql.md)|除|  
 |[%（取模）](../../t-sql/language-elements/modulo-transact-sql.md)|返回一个除法运算的整数余数。 例如，12 % 5 = 2，这是因为 12 除以 5，余数为 2。|  
   
- 加 (+) 和减 (-) 运算符也可用于对 datetime 和 smalldatetime 值执行算术运算。  
+加 (+) 和减 (-) 运算符也可用于对 datetime 和 smalldatetime 值运行算术运算。  
   
- 有关算术运算结果的精度和小数位数的详细信息，请参阅[精度、小数位数和长度 (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+若要详细了解算术运算结果的精度和确定位数，请参阅[精度、确定位数和长度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+[数学函数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

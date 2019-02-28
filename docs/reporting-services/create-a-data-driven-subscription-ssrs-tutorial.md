@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791749"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291415"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>创建数据驱动订阅（SSRS 教程）
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教程通过一个简单示例，介绍了如何创建数据驱动订阅，生成筛选报表输出并将其保存到文件共享，解释了数据驱动订阅的概念。 
@@ -29,24 +29,25 @@ ms.locfileid: "52791749"
 + 自动生成各种格式的报表，例如 .xlsx 和 .pdf。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
- 本教程分为三课：  
- 课程 | 注释
- ------- | --------------
- [第 1 课：创建示例订阅服务器数据库](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 在本课程中，将创建包含订阅服务器信息的本地表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 用于筛选的“订单编号”信息和输出文件格式。
-[第 2 课：配置报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |在本课程中，将配置报表数据源属性以便能够以无人参与的方式按计划运行报表。 无人参与的处理要求存储凭据。 您还将修改报表数据集以便包括订阅服务器数据提供的参数。 此参数用于根据订单编号筛选报表数据。
- [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 在本课程中，将创建一个数据驱动订阅。 这一课引导您完成数据驱动订阅向导中的每一页。
+本教程分为三课：  
 
- 下图说明了教程的基本工作流。
+| 课程 | 注释 |
+| ------ | -------- |
+| [第 1 课：创建示例订阅服务器数据库](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 在本课程中，将创建包含订阅服务器信息的本地表 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 用于筛选的“订单编号”信息和输出文件格式。 |
+| [第 2 课：配置报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | 在本课程中，将配置报表数据源属性以便能够以无人参与的方式按计划运行报表。 无人参与的处理要求存储凭据。 您还将修改报表数据集以便包括订阅服务器数据提供的参数。 此参数用于根据订单编号筛选报表数据。 |
+| [第 3 课：定义数据驱动订阅](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 在本课程中，将创建一个数据驱动订阅。 这一课引导您完成数据驱动订阅向导中的每一页。 |
 
-步骤  |描述 
----------|---------
-(1)     |  订阅配置说明了源报表、计划和映射到订阅服务器数据库的字段。        
-(2)     | OrderInfo 表包含 4 个用于筛选的订单编号，每个文件 1 个。 该表还包含所生成的报告的文件格式。
-(3)     | 筛选 Adventureworks 数据库中的信息，并将其返回在报表中。 
-(4)     | 按 Orderinfo 表中指定的文件格式创建报表。
+下图展示了教程的基本工作流：
 
- 
- 
+| 步骤    | 描述 |
+| --------|------------ |
+| (1)     | 订阅配置说明了源报表、计划和映射到订阅服务器数据库的字段。 |
+| (2)     | OrderInfo 表包含 4 个用于筛选的订单编号，每个文件 1 个。 该表还包含所生成的报告的文件格式。 |
+| (3)     | 筛选 Adventureworks 数据库中的信息，并将其返回在报表中。 |
+| (4)     | 按 Orderinfo 表中指定的文件格式创建报表。 |
+
+
+
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## <a name="requirements"></a>要求  

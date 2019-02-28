@@ -22,22 +22,22 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27af02d973c048ca5be4dd5c28010b3bcde65314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815185"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154702"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  创建名为默认值的对象。 当绑定到列或别名数据类型时，如果插入时没有显式提供值，则默认值将指定一个值，以便将其插入该对象所绑定的列中（或者，如果是别名数据类型，则插入所有列中）。  
+创建名为默认值的对象。 如果绑定到列或别名数据类型，且在插入期间没有显式提供值，那么 default 会指定插入对象绑定到的列（或所有列，如果是别名数据类型的话）中的值。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]而应使用通过 ALTER TABLE 或 CREATE TABLE 的 DEFAULT 关键字创建的默认定义。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,35 +48,35 @@ AS constant_expression [ ; ]
 ```  
   
 ## <a name="arguments"></a>参数  
- *schema_name*  
- 默认值所属架构的名称。  
+*schema_name*  
+ default 所属架构的名称。  
   
- default_name  
- 默认值的名称。 默认值名称必须遵守[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认值所有者名称。  
+default_name  
+ default 的名称。 默认值名称必须遵守[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定默认值所有者名称。  
   
- constant_expression  
- 只包含常量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（它不能包括任何列或其他数据库对象的名称）。 除了那些包含别名数据类型的表达式，可以使用任何常量、内置函数或数学表达式。 不能使用用户定义函数。 字符和日期常量要放在单引号 (') 内；货币、整数和浮点常量不需要引号。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
+constant_expression  
+只包含常量值的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（不得包含任何列或其他数据库对象的名称）。 可以使用任何常量、内置函数或数学表达式，除非它们包含别名数据类型。 不得使用用户定义的函数。 将字符和日期常量放在单引号 (') 中；不需要将货币、整数和浮点常量放在引号内。 二进制数据必须以 0x 开头，货币数据必须以美元符号 ($) 开头。 默认值必须与列数据类型兼容。  
   
 ## <a name="remarks"></a>Remarks  
- 只能在当前数据库中创建默认值名称。 按照架构，在数据库内默认值名称必须是唯一的。 创建默认值时，请使用 sp_bindefault 将其绑定到列或别名数据类型。  
+ 只能在当前数据库中创建 default 名称。 按照架构，在数据库内默认值名称必须是唯一的。 创建 default 时，使用 sp_bindefault 将它绑定到列或别名数据类型。  
   
- 如果默认值与其绑定的列不兼容，则在试图插入默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会生成错误消息。 例如，N/A 不能用作“numeric”列的默认值。  
+ 如果 default 与其绑定到的列不兼容，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 便会在尝试插入 default 值时生成错误消息。 例如，N/A 无法用作数值列的 default。  
   
- 如果默认值对于它所绑定的列而言太长，则该值就会被截断。  
+ 如果 default 值对于它绑定到的列而言太长，值便会遭截断。  
   
- 不能将 CREATE DEFAULT 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句组合到单个批处理中。  
+ 无法在单个批处理中结合使用 CREATE DEFAULT 语句与其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
- 在以相同的名称创建新的默认值之前，必须删除原有默认值，在删除前，必须通过执行 sp_unbindefault 来取消对该默认值的绑定。  
+ 必须先删除 default，然后才能创建同名的新 default。 此外，必须先通过执行 sp_unbindefault 来解除绑定 default，然后才能删除它。  
   
  如果列同时有默认值以及与之关联的规则，则默认值不能违反该规则。 永远不会插入与规则冲突的默认值，每次试图插入这样的默认值时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会生成错误消息。  
   
  当绑定到列以后，在以下情况下将插入默认值：  
   
--   非显式地插入值。  
+-   值不是显式插入。  
   
 -   在 INSERT 中使用 DEFAULT VALUES 或 DEFAULT 关键字来插入默认值。  
   
- 如果在创建列时指定 NOT NULL 并且没有为其创建默认值，则当用户未能为该列输入项时，就会生成错误消息。 下表说明默认值的存在与将列定义为 NULL 或 NOT NULL 之间的关系。 表中的项显示了结果。  
+ 如果在创建列时指定 NOT NULL，且没有为它创建 default，便会在用户无法在此列中输入内容时生成错误消息。 下表说明默认值的存在与将列定义为 NULL 或 NOT NULL 之间的关系。 表中的项显示了结果。  
   
 |列定义|没有输入项，没有默认值|没有输入项，有默认值|输入 NULL，没有默认值|输入 NULL，有默认值|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
@@ -86,7 +86,7 @@ AS constant_expression [ ; ]
  若要重命名默认值，请使用 sp_rename。 若要获得默认值的报告，请使用 sp_help。  
   
 ## <a name="permissions"></a>Permissions  
- 若要执行 CREATE DEFAULT，用户必须至少在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建默认值的架构拥有 ALTER 权限。  
+ 若要使用 CREATE DEFAULT，用户至少必须在当前数据库中拥有 CREATE DEFAULT 权限，并对在其中创建 default 的架构拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -100,9 +100,12 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ```  
   
 ### <a name="b-binding-a-default"></a>B. 绑定默认值  
- 以下示例绑定在示例 A 中创建的默认值。只有当没有为 `Phone` 表的 `Contact` 列指定项时，默认值才会生效。 注意，省略任何项都与在 INSERT 语句中显式声明 NULL 不同。  
+ 以下示例绑定在示例 A 中创建的默认值。只有当没有为 `Phone` 表的 `Contact` 列指定项时，默认值才会生效。 
+ 
+ > [!Note] 
+ >  省略任意项与在 INSERT 语句中显式声明 NULL 不同。  
   
- 由于不存在名为 `phonedflt` 的默认值，因此以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将失败。 本例只用于演示。  
+ 由于不存在名为 `phonedflt` 的 default，因此无法执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 本例只用于演示。  
   
 ```sql  
 USE AdventureWorks2012;  

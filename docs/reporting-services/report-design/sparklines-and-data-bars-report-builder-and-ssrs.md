@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 058263f88131261b705b306b766d97bb8f368f5d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021261"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294855"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。   
@@ -25,7 +25,7 @@ ms.locfileid: "50021261"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092) 以及 [报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165) 。  
+ 若要快速开始使用迷你图，请参阅[教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)，观看视频[操作说明：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092)，并参阅[报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165)。  
   
 > [!NOTE]  
 >  您可以将迷你图和数据条连同它们的父表、矩阵或列表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -33,15 +33,15 @@ ms.locfileid: "50021261"
 ##  <a name="KindsofSparklines"></a> 迷你图的类型  
  您几乎可以像常规图表一样创建任意类型的迷你图。 一般情况下，不能生成三维迷你图。 您可以生成以下完整图表的迷你图版本：  
   
--   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。  
+-   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆积柱形图和百分比堆积柱形图。  
   
 -   [折线图（报表生成器和 SSRS）](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)：除三维折线图之外的所有图。  
   
--   [分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：除三维分区图之外的所有图  
+-   [分区图（报表生成器和 SSRS）](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：除三维面积图之外的所有图  
   
 -   [饼图（报表生成器和 SSRS）](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)：圆环图（平面和三维均可），但不包括漏斗图和棱锥图之类的其他形状。  
   
--   [范围图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)：股价图、K 线图、误差线和盒须图。  
+-   [全距图（报表生成器和 SSRS）](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)：股价图、K 线图、误差线和盒须图。  
   
 ##  <a name="DataBars"></a> 数据条  
  数据条通常表示单个数据点，尽管它们也可以像常规条形图一样表示多个数据点。 它们通常包含无类别的若干序列，或者具有序列分组。  
@@ -52,9 +52,9 @@ ms.locfileid: "50021261"
   
  您可以生成以下完整图表的数据条版本：  
   
--   [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)：基本条形图、堆叠条形图和百分比堆叠条形图。  
+-   [条形图（报表生成器和 SSRS）](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)：基本条形图、堆积条形图和百分比堆积条形图。  
   
--   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆叠柱形图和百分比堆叠柱形图。 柱形图可以是迷你图或数据条。  
+-   [柱形图（报表生成器和 SSRS）](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本柱形图、堆积柱形图和百分比堆积柱形图。 柱形图可以是迷你图或数据条。  
   
 ##  <a name="AlignDatainTableMatrix"></a> 在表或矩阵中对齐迷你图数据  
  在您将一个迷你图插入到表或矩阵中时，将每个迷你图中的数据点与该列中其他迷你图的数据点对齐通常十分重要。 否则，很难比较不同行中的数据。 例如，为您的公司中的不同销售人员按月比较销售数据时，您需要对齐月份。 如果某个员工在四月外出，则该员工在该月可能会没有销售数据。 您想要看到该月的差距，并且看到后续月份的数据与其他员工的数据对齐。 为此，您可以对齐水平轴。 有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)中关于迷你图的部分，另请参阅[在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  

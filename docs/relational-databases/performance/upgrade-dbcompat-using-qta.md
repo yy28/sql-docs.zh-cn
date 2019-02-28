@@ -1,7 +1,7 @@
 ---
 title: 使用查询优化助手升级数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317797"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295665"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54317797"
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 引入了[自动优化](../../relational-databases/automatic-tuning/automatic-tuning.md)，进一步提升了对升级的控制，并且能够自动执行上述建议工作流中的最后一步。
 
-自 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 起，新的查询优化助手 (QTA) 功能将在升级到更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期间指导用户完成建议工作流以保持性能稳定，如[查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的“在升级到新版 SQL Server 期间保持性能稳定”部分中所述。 
+自 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 起，新的查询优化助手 (QTA) 功能将在升级到更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期间指导用户完成建议工作流以保持性能稳定，如[查询存储使用方案](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的“在升级到新版 SQL Server 期间保持性能稳定”部分中所述。 不过，QTA 不会回滚到以前已知的优质计划，如建议的工作流的最后一步所示。 相反，QTA 会跟踪在[查询存储“回归查询”](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)视图中找到的任何回归，并遍历适用的优化器模型变体的可能排列，以便生成新的更优质计划。
 
 > [!IMPORTANT]
 > QTA 不会生成用户工作负载。 如果在应用程序未使用的环境中运行 QTA，请确保可以通过其他方式在目标 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上执行代表性测试工作负载。 
@@ -54,7 +54,7 @@ QTA 的起点假设将数据库从以前版本的 [!INCLUDE[ssNoVersion](../../i
 
 有关附加数据库的详细信息，请参阅[数据库分离和附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb)。
 
-请参阅下文，了解 QTA 实质上如何使用上文所述的查询存储，只更改升级兼容性级别建议工作流的最后几个步骤。 QTA 专为选定的回归查询提供了优化选择，用于使用优化的执行计划创建新的改进状态；而不是提供选项，供用户选择是使用当前无效的执行计划还是最后一个已知的良好执行计划。
+请参阅下文，了解 QTA 实质上如何使用上文所述的查询存储，只更改升级兼容性级别建议工作流的最后几个步骤。 QTA 专为选定的回归查询提供了优化选择，用于使用优化的执行计划新建改进状态；而不是提供选项，供用户选择是使用当前低效的执行计划，还是使用最后一个已知的优质执行计划。
 
 ![使用 QTA 的数据库升级建议工作流](../../relational-databases/performance/media/qta-usage.png "Recommended database upgrade workflow using QTA")
 
@@ -197,7 +197,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
 
     ![QTA 步骤 5](../../relational-databases/performance/media/qta-step5.png "QTA Step 5")
 
-    如果之后需要对建议优化进行回滚，则选择相关查询并单击“回滚”。 删除此查询计划指南并更新列表，以删除已回滚的查询。 请注意，在下图中，已删除查询 8。
+    如果之后需要对建议优化进行回滚，请选择相关查询，并单击“回滚”。 删除此查询计划指南并更新列表，以删除已回滚的查询。 请注意，在下图中，已删除查询 8。
 
     ![QTA 步骤 5 - 回滚](../../relational-databases/performance/media/qta-step5-rollback.png "QTA Step 5 - Rollback") 
 

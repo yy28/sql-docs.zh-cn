@@ -13,14 +13,14 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c68165a01fa4843a2467471b0db3a13386beb0a4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5026ba1558d0796f715ea8f61e6e90ed628c2e9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814290"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290185"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地图（报表生成器和 SSRS）
   若要针对地理背景实现业务数据的可视化，可以向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加地图。 您选择的地图类型取决于您要在报表中传达的信息。 您可以添加只显示位置的地图、气泡地图（气泡大小随着某地区的家庭数量而变化）、标记地图（标记样式随每个商店盈利情况最好的产品而变化）或线条地图（显示商店之间的路线）。  
@@ -29,7 +29,7 @@ ms.locfileid: "51814290"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 若要开始立即使用地图，请参阅[教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)或[报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要立即开始使用地图，请参阅[教程：地图报表（报表生成器）](../../reporting-services/tutorial-map-report-report-builder.md)或[报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  可以将地图作为报表部件与报表分开保存。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -224,7 +224,7 @@ ms.locfileid: "51814290"
   
  如果您查看地图报表时看不到所需的结果，其根源可能是各种问题。 为了帮助您隔离和了解每个问题，一次处理一个层肯定会有所帮助。 使用“地图”窗格可以选择层并轻松地切换其可见性。  
   
- 有关地图报表问题的详细信息，请参阅 [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 若要详细了解地图报表问题，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> 操作指南主题  
  本部分列出的过程分步向您介绍如何在报表中使用地图和地图层。  

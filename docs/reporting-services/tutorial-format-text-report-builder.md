@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711656"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289628"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
 
@@ -25,7 +25,7 @@ ms.locfileid: "52711656"
   
 在一个步骤中，您可以故意犯某个错误，以便可以了解错误的成因。 然后，您可以纠正该错误以便实现预期效果。  
     
-完成本教程的预计学时：20 分钟。  
+本教程的预计学时：20 分钟。  
   
 ## <a name="requirements"></a>要求  
 有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "52711656"
 
     如果未出现“报表数据”窗格，请在“视图”选项卡上选中“报表数据”。
   
-2.  在“名称”框中，键入：TextDataSource  
+2.  在“名称”框中键入：“TextDataSource”  
   
 3.  单击 **“使用我的报表中嵌入的连接”**。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52711656"
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在“名称”框中，键入：TextDataset。  
+3.  在“名称”框中键入：“TextDataset”。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”**。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "52711656"
 
 ## <a name="next-steps"></a>Next Steps
 
-有许多方式可以在报表生成器中设置文本的格式。 [教程：创建自由格式的报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)中提供了更多示例。  
+有许多方式可以在报表生成器中设置文本的格式。 [教程：生成自由格式报表](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)包含更多示例。  
 
 [报表生成器教程](../reporting-services/report-builder-tutorials.md) 
 [设置报表项的格式](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

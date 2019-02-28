@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772627"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287235"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
 定义数据集后，您可以开始定义报表。 将要纳入报表的数据区域、文本框、图像和其他项拖放到设计图面上来创建报表布局。  
@@ -43,7 +43,7 @@ ms.locfileid: "47772627"
 7.  请以相同方式添加 LineTotal 字段，并创建第五列。 列标题是 Line Total。 报表设计器通过将 LineTotal 拆分为两个单词，自动创建该列的友好名称。  
   
   
-以下关系图显示已由下列字段填充的表数据区域：Date、Order、Product、Qty 和 Line Total。  
+下图展示了已填充有下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>预览报表  
@@ -64,7 +64,7 @@ ms.locfileid: "47772627"
 > 在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>Next Steps  
-您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式 (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
+您已成功地向报表添加了表数据区域、向数据区域添加了字段，并成功地预览了报表。 接下来，将设置列标题以及日期和货币值的格式。 请参阅[第 5 课：设置报表格式 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [表（报表生成器和 SSRS）](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813770"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294935"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -76,7 +76,7 @@ ms.locfileid: "51813770"
   
     -   选择地图可视化：点  
   
-4.  选择与数据源的连接选择地图可视化：点。 选择或创建一个与包含要在地图上显示的分析数据的外部数据源的数据源连接。  
+4.  选择数据源连接 选择地图可视化：点： 选择或创建一个与包含要在地图上显示的分析数据的外部数据源的数据源连接。  
   
 5.  设计查询。 生成指定分析数据的查询。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51813770"
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅 [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和 [规划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[排除报表故障：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和[计划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "51813770"
  报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [报表故障排除：映射报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [规划地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

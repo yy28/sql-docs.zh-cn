@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813670"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290075"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
   
   
@@ -70,7 +70,7 @@ ms.locfileid: "51813670"
   
 6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”** 和 **“确定”**。  
   
-    ![设计视图：带有订单总计的基本表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")  
+    ![设计视图：含订单总计的基本表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "设计视图：含订单总计的基本表")  
   
 ## <a name="bkmk_adddailytotal"></a>向报表添加每日总计  
   
@@ -98,13 +98,13 @@ ms.locfileid: "51813670"
   
 4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅蓝色”** 和 **“确定”**。  
   
-    ![设计视图：基本表中的总计](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")  
+    ![设计视图：基本表中的总计](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "设计视图：基本表中的总计")  
   
 5.  单击 **“预览”** 的行上面。  
   
     最后一页的外观应该如下图所示。 在工具栏中，单击“最后一页” ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)按钮。   
   
-    ![预览：带有总计的基本表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")  
+    ![预览：含总计的基本表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "预览：含总计的基本表")  
   
 ## <a name="bkmk_publishreport"></a>将报表发布到报表服务器（可选）  
   
@@ -125,15 +125,15 @@ ms.locfileid: "51813670"
   
     如果您在输出窗口中看到如下消息，则指示成功部署。  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------  
+    > ------ Build started:项目：教程，配置：调试 ------  
     > Skipping 'Sales Orders.rdl'. 项是最新版本。  
     > 生成完成 -- 0 个错误，0 个警告  
-    > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
+    > ------ 部署已开始：项目：教程，配置：调试 ------  
     > 部署到 https://[server name]/reportserver  
     > 部署 report '/tutorial/Sales Orders'。  
     > 部署完成 - 0 个错误，0 个警告  
-    > ==========生成：1 个成功或最新，0 个失败，0 个跳过==========  
-    > ==========部署：1 个成功，0 个失败，0 个跳过==========  
+    > ========== 生成：1 个成功或最新，0 个失败，0 个跳过 ==========  
+    > ========== 部署：1 succeeded, 0 failed, 0 skipped ==========  
   
     如果您看到如下错误消息，则确认您对报表服务器的权限并且已使用管理员权限启动了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   

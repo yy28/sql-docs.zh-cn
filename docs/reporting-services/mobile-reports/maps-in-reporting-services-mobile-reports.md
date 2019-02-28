@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810986"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294775"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -32,7 +32,7 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 ## <a name="select-the-map-type-and-region"></a>选择地图类型和区域  
   
-1. 在“布局”选项卡中选择一个地图类型，将其拖到设计图面，并将其大小调整为你所需的大小。  
+1. 在“布局”  选项卡中选择一个地图类型，将其拖到设计图面，并将其大小调整为你所需的大小。  
   
 2. 在“布局”视图>“视觉属性”面板>“地图”中，选择你所需的特定地图区域。  
   
@@ -58,14 +58,14 @@ SQL Server 移动报表提供了三种不同类型的地图，分别适用于不
   
 2. 选择“添加数据”，然后选择“本地 Excel”或“SSRS 服务器”。  
   
-   > **提示**：请确保 [数据的格式为可用于移动报表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**：请确保[数据格式适用于移动报表](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 选择需要的工作表，并选择“导入” 。  
    你可以在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看到你的数据。  
   
 4. 在“数据”视图 >“数据属性”面板 >“键”下面，在左侧的框中选择包含地图数据的表，然后在右侧的框中选择与你的地图中的区域相匹配的键字段。  
   
-5. 在“值”的下方，相同的表已在左侧框中。 选择要在地图上显示其值的数值字段。   
+5. 在“值”的下方，相同的表已在左侧框中。  选择要在地图上显示其值的数值字段。   
   
 6. 如果是区域停止点热度地图，则在“目标”  框的下方，相同的表位于左侧框中。 在右侧框中，选择要将其值作为目标值的数值字段。   
   

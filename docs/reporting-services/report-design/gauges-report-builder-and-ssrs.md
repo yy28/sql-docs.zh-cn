@@ -154,14 +154,14 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57a871f330b3b3beae9ab371305b2d7887f955d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031276"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287375"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，仪表数据区域显示数据集的单个值。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 在单个仪表面板中，可以创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -178,7 +178,7 @@ ms.locfileid: "50031276"
   
  ![仪表元素示意图](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- 有关将仪表用作 KPI 的详细信息，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 若要详细了解如何将仪表用作 KPI，请参阅[教程：向报表添加 KPI（报表生成器）](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将仪表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  
@@ -198,13 +198,13 @@ ms.locfileid: "50031276"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 径向仪表选项：“径向”、“径向，最小仪表”、“两个刻度”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
+ 径向仪表选项：“径向”、“最小径向仪表”、“两个确定位数”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
   
  **线性仪表**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个刻度”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“圆点图”。  
+ 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个确定位数”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“子弹图”。  
   
 ##  <a name="AddingData"></a> 向仪表添加数据  
  在您将仪表添加到设计图面后，可以将数据集字段拖到仪表数据窗格上。 默认情况下，仪表将字段值聚合为在仪表上显示的一个值。 该值通过使用 Value 属性附加到指针。 根据字段的数据类型，仪表使用 SUM 或 COUNT 聚合。 在您使用适合于相加的数字数据时，仪表使用 SUM 函数。 否则，它使用 COUNT 聚合。 指针的值可以使用其他聚合或不使用聚合。  

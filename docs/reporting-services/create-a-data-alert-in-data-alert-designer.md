@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504113"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331507"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
 
@@ -69,7 +69,7 @@ ms.locfileid: "52504113"
   
      根据所选列的数据类型，将列出不同的比较运算符。 如果该列具有日期数据类型，则在规则的阈值旁将显示一个日历图标。 您可以通过单击日历中的日期或者键入日期，输入数据。  
   
-     数据警报设计器提供了两种比较模式： **“值输入模式”** 和 **“字段选择模式”**。 默认模式为 **“值输入模式”**。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
+     数据警报设计器提供两种比较模式：“值输入模式”和“字段选择模式”。 默认模式为 **“值输入模式”**。 仅当处于 **“值输入模式”** 且正在使用 **“是”** 比较时，才可添加 OR 子句。  
   
 9. 若要添加 OR 子句，请单击向下箭头，然后单击“值输入模式”。  
   
