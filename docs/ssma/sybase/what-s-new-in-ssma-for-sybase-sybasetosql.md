@@ -1,7 +1,7 @@
 ---
 title: 什么是适用于 SAP ASE (SybaseToSQL) 的 SSMA 中的新增功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,15 +10,33 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 460506c8c29a3ee92f362db57719a711626d83a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2345fd2f5a30c8eba610a49524c058ebf1cfae5f
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398310"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955948"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什么是适用于 SAP ASE (SybaseToSQL) 的 SSMA 中的新增功能
-本文列出了每个版本中的 SAP ASE (以前称为 SSMA for Sybase) 更改的 SSMA。 
+本文列出了每个版本中的 SAP ASE (以前称为 SSMA for Sybase) 更改 SQL Server Migration Assistant (SSMA)。 
+
+## <a name="ssma-v80"></a>SSMA v8.0
+SSMA for Access v8.0 版本已得到增强，提供目标的修补，设计用于提高质量和转换的度量值。 此外，此版本提供了以下新功能：
+
+* 为支持**Azure SQL 数据库托管实例**作为目标。 现在可以创建目标 Azure SQL 数据库托管实例的新项目：
+
+    ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+
+*   转换后**修复顾问**。 了解有关它的详细信息[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)。
+
+*   初步的数据库架构所选内容。
+
+    连接到源时，用户现在可以选择感兴趣的数据库/架构。 选择你打算迁移的架构将保存在初始连接期间的时间并改进整体 SSMA 性能。
+
+    ![SSMA 筛选对象](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 有关 SAP ASE 的 SSMA v7.10 发布已得到增强目标修补，可提供额外的安全和隐私保护功能以满足全局要求中的更改。
@@ -36,7 +54,7 @@ SAP ASE 的 SSMA v7.9 发行版包含以下更改：
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
-## <a name="ssma-v78"></a>SSMA 7.8 版
+## <a name="ssma-v78"></a>SSMA v7.8
 SAP ASE 的 SSMA 7.8 版发行版包含以下更改：
 - 在项目设置中的突出显示的更改类型映射。
 - 提供用户要禁用遥测数据的能力。
@@ -60,7 +78,7 @@ SAP ASE 的 SSMA v7.6 发行版包含以下更改：
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 的安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA 版本 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 SAP ASE 的 SSMA 版本 7.5 版包含以下更改：
 -   增强了多项改进，以确保为残障人士使用的可访问性。
 -   更新以创建或替换语法提供支持。
@@ -89,7 +107,7 @@ SSMA for Sybase 的 v7.3 版本包含以下更改：
       - 在此博客文章提供了有关如何构造自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
       - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
-## <a name="ssma-v72"></a>SSMA 7.2 版
+## <a name="ssma-v72"></a>SSMA v7.2
 SSMA for Sybase 的 7.2 版版本包含以下更改：
 - 改进的质量和转换度量值与目标修补，根据客户反馈。
 - 遥测数据增强功能提供更好的数据点来解决客户问题并提高 SSMA 的转换率。

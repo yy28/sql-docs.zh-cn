@@ -2,7 +2,7 @@
 title: 什么是 SSMA for Oracle (OracleToSQL) 中的新增功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,44 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bc54f3046ec3163e3d480dd6feae906368fa4c12
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405994"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955958"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>什么是 SSMA for Oracle (OracleToSQL) 中的新增功能
-本文列出了每个版本中的 Oracle 更改 SSMA。  
+本文列出了每个版本中的 Oracle 更改 SQL Server Migration Assistant (SSMA)。
+
+## <a name="ssma-v80"></a>SSMA v8.0
+适用于 Oracle 的 SSMA v8.0 版本已得到增强，提供目标的修补，设计用于提高质量和转换的度量值。 此版本还提供了以下新功能：
+
+* 为支持**Azure SQL 数据库托管实例**作为目标。 现在可以创建目标 Azure SQL 数据库托管实例的新项目：
+
+  ![SQL DB MI 项目](../media/ssma-newproject-sqldbmi.png)
+
+    > [!NOTE]
+    > SSMA for Oracle 的扩展包，也已更新为允许远程安装在 Azure SQL 数据库托管实例上：
+    >
+    > ![SSMA for Oracle 扩展包](../media/ssma-oracle-ext-pack.png)
+
+    面向 Azure SQL 数据库托管实例时，不支持某些功能，包括测试人员和服务器端数据迁移。 有关详细信息[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)。
+
+*   转换后**修复顾问**。 了解有关它的详细信息[此处](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)。
+
+* 初步的数据库架构所选内容。
+
+    连接到源时，用户现在可以选择感兴趣的数据库/架构。 选择你打算迁移的架构将保存在初始连接期间的时间并改进整体 SSMA 性能。
+
+    ![SSMA 筛选对象](../media/ssma-filter-objects.png)
+
+* 能够使用官方，管理连接到 Oracle 的.NET 驱动程序。 OCI 驱动程序不再是使用 SQL Server Migration Assistant for Oracle 的先决条件。
+
+* 默认情况下映射到 VARCHAR ROWID 和 UROWID 功能。 从 'uniqueidentifier' 以适应显式 ROWID 列的数据迁移更改。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 适用于 Oracle 的 SSMA v7.10 版本包含以下更改：
@@ -39,7 +68,7 @@ ms.locfileid: "52405994"
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
-## <a name="ssma-v78"></a>SSMA 7.8 版
+## <a name="ssma-v78"></a>SSMA v7.8
 适用于 Oracle 的 SSMA 7.8 版版本包含以下更改：
 -   添加了对支持：
     - IN 子句的行表达式。
@@ -67,7 +96,7 @@ ms.locfileid: "52405994"
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 的安装先决条件，并已停止使用该工具的 32 位版本。
 
-## <a name="ssma-v75"></a>SSMA 版本 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 适用于 Oracle 的 SSMA 版本 7.5 版本包含以下更改：
 - 增强了多项改进，以确保为残障人士使用的可访问性。
 - 更新以改进质量和转换规格，与目标修补，如改进数据在迁移期间，根据客户反馈的日期和 float 数据类型处理。
@@ -110,7 +139,7 @@ ms.locfileid: "52405994"
       - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 
-## <a name="ssma-v72"></a>SSMA 7.2 版
+## <a name="ssma-v72"></a>SSMA v7.2
 适用于 Oracle 的 SSMA 7.2 版版本包含以下更改：
 - 改进的质量和转换度量值与目标修补，根据客户反馈。
 - 遥测数据增强功能提供更好的数据点来解决客户问题并提高 SSMA 的转换率。
