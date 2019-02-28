@@ -15,24 +15,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 21d9db627e55b9f4544fd52686dff9b76d55a76f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265214"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802294"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地查找与键值关联的行。  
   
  表或视图可以包含以下类型的索引：  
   
--   群集  
+-   聚集  
   
     -   聚集索引根据数据行的键值在表或视图中排序和存储这些数据行。 索引定义中包含聚集索引列。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。  
   

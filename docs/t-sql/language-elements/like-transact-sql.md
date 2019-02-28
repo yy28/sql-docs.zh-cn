@@ -32,18 +32,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: 1f35aa25453bc0b5cc1efca66af04964c0be1229
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331547"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802891"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
   确定特定字符串是否与指定模式相匹配。 模式可以包含常规字符和通配符。 模式匹配过程中，常规字符必须与字符串中指定的字符完全匹配。 但是，通配符可以与字符串的任意部分相匹配。 与使用 = 和 != 字符串比较运算符相比，使用通配符可使 LIKE 运算符更加灵活。 如果任一参数都不属于字符串数据类型，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]会尽量将它转换为使用字符串数据类型。  
   
