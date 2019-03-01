@@ -2,17 +2,17 @@
 title: R 语言和 Python 集成-SQL Server 机器学习服务的已知的问题
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645513"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018063"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>机器学习服务中的已知的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 
 如果升级不是可行的作为一种解决方法，使用 SQL 登录名运行可能需要嵌入式的 ODBC 调用的远程 R 作业。
 
-**适用范围：** SQL Server 2016 R Services 速成版
+**适用范围：** SQL Server 2016 R Services Express Edition
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11.使用 SQL Server 的库从其他工具中调用时的性能限制
 
@@ -204,7 +204,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 
 如果遇到资源限制，请检查当前的默认值。 如果 20%不够，请参阅的文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何更改此值。
 
-**适用范围：** SQL Server 2016 R Services，企业版
+**适用范围：** SQL Server 2016 R Services, Enterprise Edition
 
 ## <a name="r-script-execution-issues"></a>R 脚本执行问题
 
@@ -216,7 +216,7 @@ SQL Server 2016 计算上下文中运行 R 代码时，它们可能会看到以�
 
 如果 SQL Server 实例已安装到非默认位置，如外部`Program Files`文件夹中，当您尝试运行安装包的脚本时引发 ACCESS_DENIED 警告。 例如：
 
-> *在`normalizePath(path.expand(path), winslash, mustWork)`： 路径 [2] ="~ExternalLibraries/R/8/1":访问被拒绝*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1":访问被拒绝*
 
 原因是 R 函数尝试读取该路径，且如果失败的内置用户组**SQLRUserGroup**，不具有读取访问权限。 引发的警告不会阻止执行当前的 R 脚本，但警告可能会重复发生，每当用户在运行任何其他 R 脚本。
 
@@ -252,7 +252,7 @@ Ia 在即将推出的服务的版本中解决此问题。 解决此问题，请�
 
 此问题已在 SQL Server 2016 Service Pack 1 中解决。 我们建议您升级到最新的服务版本。
 
-**适用范围：** SQL Server 2016 R Services RTM 版本
+**适用范围：** SQL Server 2016 R Services RTM version
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.在 SQL Server 计算环境中读取数据时，无法更改列类型
 
@@ -269,7 +269,7 @@ data <- RxSqlServerData(
 
 解决方法是，您可以重新编写 SQL 查询使用 CAST 或 CONVERT，并使用正确的数据类型在 R 中表示该数据。 一般情况下，性能是更好地处理数据使用 SQL，而不是通过将 R 代码中的数据更改。
 
-**适用范围：** SQL Server 2016 R 服务
+**适用范围：** SQL Server 2016 R Services
 
 ### <a name="6-limits-on-size-of-serialized-models"></a>6.序列化模型大小限制
 

@@ -5,17 +5,17 @@ description: 本文提供用于监视和故障排除 SQL Server 2019 大数据�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241998"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017903"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>用于监视和故障排除 SQL Server 大数据群集 Kubectl 命令
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>在 SQL Server 大数据群集中显示的所有 pod 的状态
 
-使用`-n`参数来指定特定的命名空间。 请注意，在群集启动时创建的新命名空间中创建大数据群集 pod 的 SQL Server 基于中指定的群集名称`mssqlctl create cluster <cluster_name>`命令。
+使用`-n`参数来指定特定的命名空间。 请注意，在群集启动时创建的新命名空间中创建大数据群集 pod 的 SQL Server 基于中指定的群集名称`mssqlctl cluster create --name <cluster_name>`命令。
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>获取服务状态
 
-运行以下命令以获取大数据群集服务的详细信息。 这些详细信息包括它们的类型和 Ip 与相应的服务和端口相关联。 请注意，在基于中指定的群集名称群集启动时创建的新命名空间中创建 SQL Server 大数据群集服务`mssqlctl create cluster <cluster_name>`命令。
+运行以下命令以获取大数据群集服务的详细信息。 这些详细信息包括它们的类型和 Ip 与相应的服务和端口相关联。 请注意，在基于中指定的群集名称群集启动时创建的新命名空间中创建 SQL Server 大数据群集服务`mssqlctl cluster create --name <cluster_name>`命令。
 
 ```bash
 kubectl get svc -n <namespace_name>

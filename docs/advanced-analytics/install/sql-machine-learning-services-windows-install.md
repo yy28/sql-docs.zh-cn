@@ -3,17 +3,17 @@ title: 安装 SQL Server 机器学习服务 （数据库内） 上 Windows 的 S
 description: 在 SQL Server 或 SQL Server 的 Windows 上的 SQL Server 2017 机器学习服务的安装步骤上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.openlocfilehash: 00cc9989730825136ac1ce98f1250063c37144fb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147005"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017973"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 
@@ -251,6 +251,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [SQL Server 机器学习服务的防火墙配置](../../advanced-analytics/security/firewall-configuration.md)
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [创建登录名为 SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -258,7 +259,6 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 在数据库中，则可能需要以下配置更新：
 
 * [授予用户对 SQL Server 机器学习服务的权限](../../advanced-analytics/security/user-permission.md)
-* [将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > 是否需要其他配置取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。

@@ -5,16 +5,16 @@ description: 了解如何连接到 SQL Server 主实例和 SQL Server 2019 大�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231034"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017703"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
 
@@ -79,17 +79,9 @@ Azure Data Studio 2019 年 2 月版本中，连接到 SQL Server 主实例还可
 在大多数情况下，连接到 SQL Server 主实例可让你可以访问的 HDFS 和 Spark 以及通过**Data Services**节点。 但是，仍可以创建专用的连接到**HDFS/Spark 网关**必要。 以下步骤介绍如何使用 Azure Data Studio 进行连接。
 
 1. 从命令行中，查找使用以下命令之一 HDFS/Spark 网关的 IP 地址。
-   
-   **AKS 部署：**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **非 AKS 部署**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. 在 Azure Data Studio，按**F1** > **新连接**。

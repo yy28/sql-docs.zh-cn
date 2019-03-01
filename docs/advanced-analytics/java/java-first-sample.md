@@ -3,18 +3,18 @@ title: Java 示例，并适用于 SQL Server 2019-SQL Server 机器学习服务�
 description: 若要了解有关使用 SQL Server 数据的 Java 语言扩展的步骤的 SQL Server 2019 上运行 Java 示例代码。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069051"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018033"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 示例演练
 
@@ -26,7 +26,7 @@ ms.locfileid: "54069051"
 
 + SQL Server Management Studio 或另一个用于运行 T-SQL 的工具。
 
-+ Java SE 开发工具包 (JDK) 上 Windows，1.10 或 Linux 上的 JDK 1.8。
++ Java SE 开发工具包 (JDK) 8 在 Windows 或 Linux。
 
 使用命令行编译**javac**对于本教程来说已足够。 
 
@@ -148,7 +148,7 @@ public class Ngram {
 }
 ```
 
-## <a name="3---class-inputrowjava"></a>3-类 InputRow.java
+## <a name="3---class-inputrowjava"></a>3 - Class InputRow.java
 
 创建一个名为第二个类**InputRow.java**、 组成下面的代码，并保存到与相同的位置**Ngram.java**。
 
@@ -232,7 +232,7 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7-调用*getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 若要从 SQL Server 调用的代码，指定的 Java 方法**getNgrams()** sp_execute_external_script 的"脚本"参数中。 此方法属于名为"pkg"和一个名为的类文件的包**Ngram.java**。
 
@@ -240,7 +240,7 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
 
 + 在 Linux 上，在 SQL Server Management Studio 或其他工具用于运行 TRANSACT-SQL 中运行下面的代码。 
 
-+ 在 Windows 中，更改**@myClassPath**到 N'C:\myJavaCode\' （假设它 \pkg 的父文件夹） 中 SQL Server Management Studio 或其他工具执行查询前。
++ 在 Windows 中，更改@myClassPathN'C:\myJavaCode 到\'（假设它 \pkg 的父文件夹） 中 SQL Server Management Studio 或其他工具执行查询前。
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

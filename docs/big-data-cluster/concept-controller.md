@@ -5,17 +5,17 @@ description: 本指南介绍了 SQL Server 2019 大数据群集 （预览版） 
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241278"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017863"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集上的控制器？
 
@@ -29,15 +29,15 @@ ms.locfileid: "54241278"
 - 公开监视工具来观察群集的状态
 - 公开来检测和修复意外的问题的故障排除工具
 - 管理群集安全性： 确保安全的群集终结点、 管理用户和角色，配置为群集内通信的凭据
-- 管理升级的工作流，以便安全地实现 （CTP 2.2 中不可用）
-- 管理 （CTP 2.2 中不可用） 群集中的有状态服务的高可用性和灾难恢复
+- 管理升级的工作流，以便安全地实现 （CTP 2.3 中不可用）
+- 管理 （CTP 2.3 中不可用） 群集中的有状态服务的高可用性和灾难恢复
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服务
 
 控制器是部署并托管在客户要构建大数据群集相同的 Kubernetes 命名空间中。 在群集启动，使用 mssqlctl 命令行实用工具，Kubernetes 管理员安装此服务：
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 建设工作流将基于 Kubernetes 的布局包括中所述的所有组件的完全正常运行的 SQL Server 大数据群集[概述](big-data-cluster-overview.md)一文。 启动工作流首先创建控制器服务，这部署后，控制器服务会协调安装和配置 master、 计算、 数据和存储池的服务部分的其余部分。

@@ -2,17 +2,17 @@
 title: 机器学习-SQL Server 机器学习服务的数据集合疑难解答
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644986"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017933"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据集合疑难解答
 
@@ -90,7 +90,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-在 R 控制台在启动时显示的版本信息。 例如，以下版本表示 SQL Server 2017 CTP 2.0 的默认配置：
+在 R 控制台在启动时显示的版本信息。 例如，以下版本表示 SQL Server 2017 的默认配置：
 
     *Microsoft R Open 3.3.3*
 
@@ -280,9 +280,9 @@ SQL Server 生成单独的外部脚本语言运行时的日志。 这些错误�
 3. 若要启用脚本执行，请创建角色，或将用户添加到以下角色中，根据需要：
 
    - 以外的所有*db_owner*:需要执行任何外部脚本。
-   - *db_datawriter*:若要从 R 或 Python 写入结果。
-   - *db_ddladmin*:若要创建新对象。
-   - *db_datareader*:若要读取 R 或 Python 代码使用的数据。
+   - *db_datawriter*：若要从 R 或 Python 写入结果。
+   - *db_ddladmin*：若要创建新对象。
+   - *db_datareader*：若要读取 R 或 Python 代码使用的数据。
 4. 请注意当你安装 SQL Server 2016 时是否更改任何默认的启动帐户。
 5. 如果用户需要安装新的 R 包或使用其他用户已安装的 R 包，您可能需要在实例上启用包管理并分配其他权限。 有关详细信息，请参阅[启用或禁用 R 包管理](r/r-package-how-to-enable-or-disable.md)。
 

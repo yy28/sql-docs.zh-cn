@@ -5,17 +5,17 @@ description: 本教程演示如何将数据引入到在 Azure Data Studio 中使
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241678"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017733"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：将数据引入到 Spark 作业的 SQL Server 数据池
 
@@ -34,7 +34,7 @@ ms.locfileid: "54241678"
 ## <a id="prereqs"></a> 先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
 - [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
@@ -64,7 +64,7 @@ ms.locfileid: "54241678"
       );
    ```
   
-1. CTP 2.2 中的数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. CTP 2.3 中的数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 

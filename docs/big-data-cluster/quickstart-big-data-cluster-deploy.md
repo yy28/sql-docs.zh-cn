@@ -5,17 +5,17 @@ description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231064"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017873"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -108,7 +108,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ### <a name="use-the-cluster-administration-portal"></a>使用群集管理门户
 
-控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
+控制器 pod 运行后，你可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`endpoint-service-proxy`(例如： **https://\<ip 地址\>: 30777/门户**)。 用于登录到门户的凭据匹配的值**控制器用户**并**密码**你在部署脚本中指定。
 
-可以获取的 IP 地址**服务代理 lb**服务通过在 bash 或 cmd 窗口中运行以下命令：
+可以获取的 IP 地址**终结点服务代理**服务通过在 bash 或 cmd 窗口中运行以下命令：
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.2 中您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。 此外，CTP 2.2 中不显示 SQL Server 主实例的状态。
+> CTP 2.3 中您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。 此外，在 CTP 2.3 中不显示 SQL Server 主实例的状态。
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 

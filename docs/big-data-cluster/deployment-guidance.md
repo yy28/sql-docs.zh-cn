@@ -5,17 +5,17 @@ description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087856"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018003"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -84,10 +84,10 @@ kubectl config view
 
 | 环境变量 | Required | 默认值 | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | 用户帐户控制 | 不可用 | 接受 SQL Server 许可协议 (例如，Y)。  |
+| **ACCEPT_EULA** | 用户帐户控制 | 不可用 | 接受 SQL Server 许可协议 （例如，是）。  |
 | **CLUSTER_NAME** | 用户帐户控制 | 不可用 | 要部署大数据群集到 SQLServer 的 Kubernetes 命名空间的名称。 |
 | **CLUSTER_PLATFORM** | 用户帐户控制 | 不可用 | 部署 Kubernetes 群集的平台。 可以是`aks`， `minikube`， `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 计算池副本来构建数。在 ctp 版本 2.2 仅值允许为 1。 |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 计算池副本来构建数。在 ctp 版本 2.3 仅值允许为 1。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | 否 | 2 | 池中的副本，以生成数据的数目。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 否 | 2 | 存储池的副本，以生成数。 |
 | **DOCKER_REGISTRY** | 用户帐户控制 | TBD | 用于部署群集的映像的存储位置的专用注册表。 |
@@ -189,7 +189,7 @@ export STORAGE_CLASS_NAME=standard
 创建群集 API 用于初始化 Kubernetes 命名空间并将其部署到该命名空间的所有应用程序 pod。 若要部署 Kubernetes 群集上的 SQL Server 大数据群集，请运行以下命令：
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 在群集启动期间客户端命令窗口将输出的部署状态。 在部署过程中，您应看到一系列消息，它正在等待控制器 pod:
@@ -202,7 +202,7 @@ mssqlctl create cluster <your-cluster-name>
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ mssqlctl create cluster <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> 获取 SQL Server 主实例和 SQL Server 大数据群集 IP 地址
+## <a id="masterip"></a> 获取大数据群集终结点
 
-部署脚本已成功完成后，可以获取如下所述的步骤的 SQL Server 主实例的 IP 地址。 将使用此 IP 地址和端口号 31433 连接到 SQL Server 主实例 (例如：  **\<ip 地址\>、 31433**)。 同样，对于 SQL Server 大数据群集 IP。 群集管理门户中的服务终结点选项卡中概述了群集的所有终结点。 可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`service-proxy-lb`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
+部署脚本已成功完成后，可以获取如下所述的步骤的 SQL Server 主实例的 IP 地址。 将使用此 IP 地址和端口号 31433 连接到 SQL Server 主实例 (例如：  **\<ip-address-of-endpoint-master-pool\>、 31433**)。 同样，可以连接到 SQL Server 与大数据群集 （HDFS/Spark 网关） IP 相关联**终结点安全**服务。
 
-### <a name="aks"></a>AKS
-
-如果使用 AKS，Azure 提供了 Azure 负载均衡器服务。 运行以下命令：
+下面的 kubectl 命令检索大数据群集的公共终结的点：
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-寻找**外部 IP**分配给服务的值。 然后，连接到 SQL Server 主实例端口 31433 在使用的 IP 地址 (例如：  **\<ip 地址\>、 31433**) 和 SQL Server 大数据群集终结点使用的外部 IP`service-security-lb`服务。 
+寻找**外部 IP**分配给每个服务的值。
+
+中也概述了群集的所有终结点**服务终结点**群集管理门户中的选项卡。 您可以访问在门户中使用的外部 IP 地址和端口号`endpoint-service-proxy`(例如： **https://\<ip-address-of-endpoint-service-proxy\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。 此外可以使用群集管理门户来监视部署。
+
+有关如何连接的详细信息，请参阅[连接到 SQL Server 大数据群集使用 Azure Data Studio](connect-to-big-data-cluster.md)。
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ kubectl get svc -n <your-cluster-name>
 1. 删除与旧群集`mssqlctl delete cluster`命令。
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > 使用的版本**mssqlctl**匹配你的群集。 不删除较旧群集使用的较新版本**mssqlctl**。
 
 1. 卸载的任何旧版本**mssqlctl**。
 
@@ -270,13 +275,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ kubectl get svc -n <your-cluster-name>
    | 服务 | Description |
    |---|---|
    | **endpoint-master-pool** | 可以访问主实例。<br/>(**外部 IP，31433**并**SA**用户) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 支持工具和管理群集的客户端。 |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 提供对访问[群集管理门户](cluster-admin-portal.md)。<br/>(https://**外部 IP**: 30777/门户)|
-   | **service-security-lb**<br/>**service-security-nodeport** | 提供对 HDFS/Spark 网关的访问。<br/>(**EXTERNAL-IP**并**根**用户) |
+   | **endpoint-controller** | 支持工具和管理群集的客户端。 |
+   | **endpoint-service-proxy** | 提供对访问[群集管理门户](cluster-admin-portal.md)。<br/>(https://**外部 IP**: 30777/门户)|
+   | **endpoint-security** | 提供对 HDFS/Spark 网关的访问。<br/>(**EXTERNAL-IP**并**根**用户) |
 
-   > [!NOTE]
-   > 根据你的 Kubernetes 环境而异的服务名称。 服务名称在部署时在 Azure Kubernetes 服务 (AKS)，以结尾 **-l b**。对于 minikube 和 kubeadm 部署，服务名称结尾 **-nodeport**。
-
-1. 使用[群集管理门户](cluster-admin-portal.md)上监视部署**部署**选项卡。你必须等待**服务代理 lb**要访问此门户中，因此不会在部署开始之前启动服务。
+1. 使用[群集管理门户](cluster-admin-portal.md)上监视部署**部署**选项卡。你必须等待**终结点服务代理**要访问此门户中，因此不会在部署开始之前启动服务。
 
 > [!TIP]
 > 有关群集进行疑难解答的详细信息，请参阅[Kubectl 命令进行监视和故障排除 SQL Server 大数据群集](cluster-troubleshooting-commands.md)。

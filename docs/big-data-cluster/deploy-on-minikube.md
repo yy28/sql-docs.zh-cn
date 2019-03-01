@@ -5,17 +5,17 @@ description: 了解如何配置用于 SQL Server 2019 大数据群集 （预览�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241158"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017743"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>配置用于 SQL Server 2019 大数据群集部署 minikube
 
@@ -23,10 +23,9 @@ ms.locfileid: "54241158"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 若要运行 Minikube 群集的 SQL Server 2019 （预览版） 的大数据群集，建议你的计算机具有至少 32 GB RAM。
+- 32 GB 的内存 (建议 64 GB)。
 
-   > [!TIP] 
-   > 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#env)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
+- 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#env)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
 
 - 必须在计算机的 BIOS 中启用 VT x 或 amd-v 虚拟化。
 

@@ -5,17 +5,17 @@ description: 了解如何在 SQL Server 2019 大数据群集中的数据暂留�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 47fb255ea18fdf48765a1a40b1e05e06cdf7ee1e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241738"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017953"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -26,11 +26,11 @@ ms.locfileid: "54241738"
 SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 可以创建不同的存储类的不同种类的存储，并在大数据群集部署时指定它们。 你可以配置要用于哪些用途 （池） 的存储类。 SQL Server 大数据群集创建[永久性卷声明](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)替换为需要永久卷每个 pod 的指定的存储类名称。 它然后装载在 pod 中相应的永久性卷。
 
 > [!NOTE]
-> CTP 2.2，仅为`ReadWriteOnce`支持整个群集的访问模式。
+> CTP 2.3，仅为`ReadWriteOnce`支持整个群集的访问模式。
 
 ## <a name="deployment-settings"></a>部署设置
 
-若要在部署期间使用持久性存储区，配置**USE_PERSISTENT_VOLUME**并**STORAGE_CLASS_NAME**环境变量，然后再运行`mssqlctl create cluster`命令。 **USE_PERSISTENT_VOLUME**设置为`true`默认情况下。 可以重写默认值并将其设置为`false`和 SQL Server 大数据群集在这种情况下，使用 emptyDir 装载。 
+若要在部署期间使用持久性存储区，配置**USE_PERSISTENT_VOLUME**并**STORAGE_CLASS_NAME**环境变量，然后再运行`mssqlctl cluster create`命令。 **USE_PERSISTENT_VOLUME**设置为`true`默认情况下。 可以重写默认值并将其设置为`false`和 SQL Server 大数据群集在这种情况下，使用 emptyDir 装载。 
 
 > [!WARNING]
 > 没有永久性存储的情况下运行可在测试环境中，但它可能会导致无法正常工作的群集。 在 pod 重新启动时，群集元数据和/或用户数据将永久丢失。
@@ -68,7 +68,7 @@ Kubeadm 没有附带内置的存储类。 您可以选择创建自己的永久�
 在本地群集显然不带任何内置的存储类，因此你必须设置[永久性卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[配置程序](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)事先，然后使用相应在 SQL Server 大数据群集部署过程中的存储类。
 
 ## <a name="customize-storage-size-for-each-pool"></a>自定义每个池的存储大小
-默认情况下，预配为每个群集中预配 pod 永久性卷的大小为 6 GB。 这通过设置环境变量是可配置`STORAGE_SIZE`为不同的值。 例如，运行以下命令来运行之前将值设置为 10 GB 为`mssqlctl create cluster command`。
+默认情况下，预配为每个群集中预配 pod 永久性卷的大小为 6 GB。 这通过设置环境变量是可配置`STORAGE_SIZE`为不同的值。 例如，运行以下命令来运行之前将值设置为 10 GB 为`mssqlctl cluster create --name command`。
 
 ```bash
 export STORAGE_SIZE=10Gi
@@ -88,7 +88,7 @@ export STORAGE_POOL_STORAGE_SIZE=100Gi
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。 `false` 使用临时主机存储为 pod 存储。 |
 | **STORAGE_CLASS_NAME** | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 |
-| **STORAGE_SIZE** | 6 gi | 如果`USE_PERSISTENT_VOLUME`是`true`，这表示每个 pod 的永久性卷大小。 |
+| **STORAGE_SIZE** | 6Gi | 如果`USE_PERSISTENT_VOLUME`是`true`，这表示每个 pod 的永久性卷大小。 |
 | **DATA_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` 若要使用 Kubernetes 永久性卷声明为 pod 中的数据池。 `false` 要用于数据池 pod 的临时主机存储。 |
 | **DATA_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | 指示要用于关联数据池 pod 使用永久性卷的 Kubernetes 存储类的名称。|
 | **DATA_POOL_STORAGE_SIZE** | STORAGE_SIZE |指示数据池中每个 pod 的永久性卷大小。 |

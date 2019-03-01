@@ -4,18 +4,18 @@ description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401892"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018073"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401892"
 | [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
 | [Microsoft 分布式事务处理协调器](#msdtc) | 配置和故障排除 Linux 上的 MSDTC。 |
 | [MLServices Eula](#mlservices-eula) | R 和 Python Eula 接受 mlservices 包。 适用于仅 SQL Server 2019。|
+| [outboundnetworkaccess](#mlservices-outbound-access) |启用出站网络访问权限[mlservices](sql-server-linux-setup-machine-learning.md) R、 Python 和 Java 扩展。|
 | [TCP 端口](#tcpport) | 更改 SQL Server 侦听的连接的端口。 |
 | [TLS](#tls) | 配置传输级安全。 |
 | [跟踪标志](#traceflags) | 设置服务要使用的跟踪标志。 |
@@ -396,7 +397,7 @@ ms.locfileid: "52401892"
 
     | 类型 | Description |
     |-----|-----|
-    | **最小** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
+    | **mini** | mini 是最小的转储文件类型。 它使用 Linux 系统信息确定进程中的线程和模块。 转储仅包含主机环境线程堆栈和模块。 不包含间接内存引用或全局变量。 |
     | **miniplus** | MiniPlus 与 mini 相似，但它包括更多内存。 它理解 SQLPAL 和主机环境中，将下面的内存区域添加到转储的内部：</br></br> -各种全局变量</br> 的超过 64tb 所有内存</br> -所有命名区域中找到 **/proc/$ pid/maps**</br> 的来自线程和堆栈间接内存</br> 线程信息</br> -相关 Teb 和 Peb 的</br> 模块信息</br> VMM 和 VAD 树 |
     | **filtered** | filtered 采用基于减法的设计，包括进程中的所有内存，除非专门排除某些内存。 此设计理解 SQLPAL 的内部机制和宿主环境，从转储中排除某些区域。
     | **full** | 完全位于中包括所有区域的完整过程转储 **/proc/$ pid/maps**。 这不受**coredump.captureminiandfull**设置。 |
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> 启用出站网络访问
+
+R、 Python 和 Java 中的扩展的出站网络访问[SQL Server 机器学习服务](sql-server-linux-setup-machine-learning.md)功能默认处于禁用状态。 若要启用出站请求，请将"outboundnetworkaccess"布尔属性使用 mssql-conf
+
+设置属性之后, 重新启动 SQL Server Launchpad 服务读取 INI 文件的更新的值。 重新启动消息提醒您在每当修改扩展性相关的设置。
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+您还可以添加"outboundnetworkaccess"直接[mssql.conf 文件](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> 更改 TCP 端口
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 请注意，未在此文件中显示的所有设置均使用其默认值。 下一节提供了一个示例**mssql.conf**文件。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 格式
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 以下 **/var/opt/mssql/mssql.conf**文件提供每个设置的示例。 可以使用此格式才能手动更改**mssql.conf**文件根据需要。 如果手动更改该文件，必须重新启动 SQL Server 之前应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[持久保存数据](sql-server-linux-configure-docker.md)。 首先添加整个**mssql.conf**文件到你的主机目录，然后运行该容器。 没有出现在这种[客户反馈](sql-server-linux-customer-feedback.md)。
 
