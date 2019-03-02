@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018003"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227199"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -94,20 +94,22 @@ kubectl config view
 | **DOCKER_REPOSITORY** | 用户帐户控制 | TBD | 专用存储库中的上述注册表存储映像。  它是必需的封闭的公共预览版的持续时间。 |
 | **DOCKER_USERNAME** | 用户帐户控制 | 不可用 | 用于访问容器映像，以防在专用存储库中存储的用户名。 它是必需的封闭的公共预览版的持续时间。 |
 | **DOCKER_PASSWORD** | 用户帐户控制 | 不可用 | 用于访问上述的专用存储库的密码。 它是必需的封闭的公共预览版的持续时间。|
-| **DOCKER_EMAIL** | 用户帐户控制 | 不可用 | 与上面的专用存储库关联的电子邮件。 它是必需的封闭的个人预览版的持续时间。 |
 | **DOCKER_IMAGE_TAG** | 否 | 最新 | 用于标记图像的标签。 |
 | **DOCKER_IMAGE_POLICY** | 否 | 始终 | 始终强制的映像拉取。  |
-| **DOCKER_PRIVATE_REGISTRY** | 用户帐户控制 | 1 | 为封闭的公共预览版的时间范围内，此值必须设置为 1。 |
+| **DOCKER_PRIVATE_REGISTRY** | 用户帐户控制 | 不可用 | 封闭的公共预览版的时间范围内，你必须设置此值设置为"1"。 |
 | **CONTROLLER_USERNAME** | 用户帐户控制 | 不可用 | 对于群集管理员用户名。 |
 | **CONTROLLER_PASSWORD** | 用户帐户控制 | 不可用 | 群集管理员的密码。 |
 | **KNOX_PASSWORD** | 用户帐户控制 | 不可用 | Knox 用户的密码。 |
 | **MSSQL_SA_PASSWORD** | 用户帐户控制 | 不可用 | 对于 master 的 SQL 实例 SA 用户的密码。 |
 | **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。  `false` 使用临时主机存储为 pod 存储。 请参阅[数据暂留](concept-data-persistence.md)一文，了解更多详细信息。 如果部署在 minikube 的大数据群集的 SQL Server 和 USE_PERSISTENT_VOLUME = true，必须设置的值为`STORAGE_CLASS_NAME=standard`。 |
 | **STORAGE_CLASS_NAME** | 否 | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 请参阅[数据暂留](concept-data-persistence.md)一文，了解更多详细信息。 如果部署在 minikube 的大数据群集的 SQL Server 时，默认的存储类名称不同，您必须通过设置重写此`STORAGE_CLASS_NAME=standard`。 |
+| **CONTROLLER_PORT** | 否 | 30080 | 控制器服务在公共网络进行侦听 TCP/IP 端口。 |
 | **MASTER_SQL_PORT** | 否 | 31433 | 主 SQL 实例在公用网络进行侦听 TCP/IP 端口。 |
 | **KNOX_PORT** | 否 | 30443 | Apache Knox 在公用网络进行侦听 TCP/IP 端口。 |
+| **PROXY_PORT** | 否 | 30777 | 代理服务在公共网络侦听 TCP/IP 端口。 这是用于计算在门户的端口的 URL。 |
 | **GRAFANA_PORT** | 否 | 30888 | 监视应用程序 Grafana 在公用网络进行侦听 TCP/IP 端口。 |
 | **KIBANA_PORT** | 否 | 30999 | Kibana 日志搜索应用程序在公用网络进行侦听 TCP/IP 端口。 |
+
 
 > [!IMPORTANT]
 >1. 受限个人预览版期间，专用 Docker 注册表的凭据将向您提供在会审您[EAP 注册](https://aka.ms/eapsignup)。
@@ -125,7 +127,7 @@ kubectl config view
 使用 CMD 窗口 (而不是 PowerShell)，配置以下环境变量。 不要使用引号将值。
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -137,7 +139,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -146,7 +147,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 初始化以下环境变量。 在 bash 中，可以使用引号将每个值。
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -158,7 +159,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -271,17 +271,17 @@ kubectl get svc -n <your-cluster-name>
    > 不应安装的新版本**mssqlctl**而无需先卸载任何较旧版本。
 
 1. 安装最新版本**mssqlctl**。 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

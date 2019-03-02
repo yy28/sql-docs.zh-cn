@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017573"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227129"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 大数据群集中的计算池有哪些？
 
@@ -24,9 +24,6 @@ ms.locfileid: "57017573"
 ## <a name="compute-pool-architecture"></a>计算池体系结构
 
 计算池进行的其中一个或多个计算在 Kubernetes 中运行的 pod。 由协调的自动的创建和管理这些 pod [SQL Server 主实例](concept-master-instance.md)。 每个 pod 包含一组基本的服务和 SQL Server 数据库引擎的实例。
-
-> [!NOTE]
-> CTP 2.3 仅支持每个群集的单个计算池。
 
 ## <a name="scale-out-groups"></a>横向扩展组
 

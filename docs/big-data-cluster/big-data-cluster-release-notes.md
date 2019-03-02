@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017943"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227209"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 大数据群集的发行说明
 
@@ -41,6 +41,7 @@ ms.locfileid: "57017943"
 - [VS Code 扩展应用程序部署到 SQL Server 大数据群集](app-deployment-extension.md)。
 - 新的参数排序**mssqlctl**工具。
 - [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md)。
+- 外部 HDFS 兼容存储装载到大数据群集[HDFS 分层](hdfs-tiering.md)。
 - 新的统一的连接体验[SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。
 - 删除与群集**mssqlctl 群集删除**现在删除仅在命名空间中的对象的大数据群集的一部分，但保留命名空间。 以前，此命令删除整个命名空间。
 - 终结点名称已更改并在此版本中合并：
@@ -74,14 +75,6 @@ ms.locfileid: "57017943"
 
 - 如果大数据群集部署失败，则不会删除关联的命名空间。 这可能导致在群集上的孤立命名空间。 一种解决方法是在部署具有相同名称的群集之前手动删除该命名空间。
 
-#### <a name="cluster-administration-portal"></a>群集管理门户
-
-群集管理门户不显示 SQL Server 主实例的终结点。 若要查找的主实例的 IP 地址和端口，请使用以下**kubectl**命令：
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>外部表
 
 - 它是可以创建一个表，其中包含不支持的列类型的数据池外部表。 如果查询外部表，您会收到类似于以下内容一条消息：
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - 如果查询存储池外部表，可能会遇到错误，如果基础文件要在同一时间复制到 HDFS。
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 如果要创建向 Oracle 使用字符数据类型的外部表，Azure Data Studio 的虚拟化向导将这些列作为 VARCHAR 解释外部表定义中。 外部表 DDL 中，这将导致失败。 请修改使用 NVARCHAR2 类型，或手动创建 EXTERNAL TABLE 语句，而不是使用向导指定 NVARCHAR 的 Oracle 架构。
 
 #### <a name="spark-and-notebooks"></a>Spark 和笔记本
 

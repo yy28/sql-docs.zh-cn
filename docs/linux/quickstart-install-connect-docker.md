@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dc65bc84d7730ee37371dc92806af4cd6a1650aa
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231014"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227159"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -157,13 +157,13 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -180,7 +180,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -188,7 +188,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -206,7 +206,7 @@ SELECT @@SERVERNAME,
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听容器中的 TCP 1433 并公开的端口 1433，在主机上。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | SQL Server 2019 CTP 2.2 Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu** | SQL Server 2019 CTP 2.3 Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 

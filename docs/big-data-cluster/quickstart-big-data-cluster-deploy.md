@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017873"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227110"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
 
    > [!IMPORTANT]
-   > 默认值**Standard_L4s**机大小不一定在每个 Azure 区域中可用。 如果您选择不同的计算机大小，请确保在群集中节点之间可以附加的磁盘总数大于或等于 21。 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 21 永久性卷声明。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
+   > 默认值**Standard_L4s**机大小不一定在每个 Azure 区域中可用。 如果您选择不同的计算机大小，请确保在群集中节点之间可以附加的磁盘总数大于或等于 24。 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 24 永久性卷声明。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
 
    > [!NOTE]
    > `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建部署之后,`MSSQL_SA_PASSWORD`环境变量是可发现通过运行`echo $MSSQL_SA_PASSWORD`主实例容器中。 出于安全考虑，更改你`sa`部署后的主实例上的密码。 有关详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.3 中您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。 此外，在 CTP 2.3 中不显示 SQL Server 主实例的状态。
+> CTP 2.3 中您会看到一条安全警告时访问网页，因为大数据群集当前正在使用自动生成的 SSL 证书。
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 

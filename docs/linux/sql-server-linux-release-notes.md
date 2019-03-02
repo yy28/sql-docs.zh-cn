@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069833"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227309"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -52,9 +52,9 @@ ms.locfileid: "54069833"
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU9 的所有更新](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
@@ -382,8 +382,6 @@ sudo systemctl start mssql-server
 以下各节介绍了正式版 (GA) 版本的已知的问题[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]Linux 上。
 
 #### <a name="general"></a>常规
-
-- 升级到 GA 版本[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]只能从 CTP 2.1 或更高版本支持。 
 
 - 主机名的长度其中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]已安装，需要为 15 个字符或更少。 
 

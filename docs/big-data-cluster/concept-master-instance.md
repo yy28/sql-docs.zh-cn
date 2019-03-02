@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017793"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227299"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集中的主实例？
 
@@ -29,7 +29,7 @@ SQL Server 主实例为群集提供从外部访问 TDS 端点。 应用程序或
 
 ## <a name="scale-out-query-management"></a>横向扩展查询管理
 
-SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。 (Hive 的表 CTP 2.3 中不支持)
+SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。
 
 ## <a name="metadata-and-user-databases"></a>元数据和用户数据库
 

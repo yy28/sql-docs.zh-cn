@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 38dc7256e4a0e7ba2a459a9691e682cebbaa05ee
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269910"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227169"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的将 SQL Server 数据库还原
 
@@ -41,7 +41,7 @@ ms.locfileid: "51269910"
 > * 运行 TRANSACT-SQL 语句来查看和修改数据库。
 > * 备份已修改的数据库。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 * 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 * 至少 2 GB 的磁盘空间
@@ -117,11 +117,11 @@ ms.locfileid: "51269910"
 1. 从 Docker 中心请求 SQL Server 2019 预览 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    > [!TIP]
@@ -133,14 +133,14 @@ ms.locfileid: "51269910"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
 
    此命令创建 SQL Server 2019 预览版容器与开发人员版 （默认值）。 SQL Server 端口**1433年**作为端口在主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用于保存 SQL Server 创建的数据。
@@ -494,13 +494,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
     ```
 
 1. Wide World Importers 数据库现在位于新的容器。 运行一个查询，验证以前所做的更改。
