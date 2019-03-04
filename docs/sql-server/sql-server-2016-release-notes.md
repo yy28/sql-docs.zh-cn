@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3e06d2f4bacffb1334724c3d7f936e051009ad04
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044374"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852942"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 发行说明
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "55044374"
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包括 2016 SP1 之后、CU8 之前（含 CU8）发布的所有累积更新。 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包括 2016 SP1 之后、CU8 之前（含 CU8）发布的所有累积更新。
 
 - [![Microsoft 下载中心](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [下载 SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
 - 有关更新的完整列表，请参阅 [SQL Server 2016 Service Pack 2 版本信息](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
@@ -41,7 +41,7 @@ SQL Server 2016 SP2 安装可能需要在安装后重新启动。 作为最佳�
 SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 
 |功能|描述|详细信息|
-|   --- |   --- |   --- |
+|---|---|---|
 |分发数据库清除过程已改进 |   分发数据库表过大导致出现阻塞和死锁情况。 改进的清理过程旨在消除其中某些阻塞或死锁情况的发生。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |更改跟踪清除    |   改进了更改跟踪端表的更改跟踪清除性能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |利用 CPU 超时来取消 Resource Governor 请求   |   如果已达到请求的 CPU 阈值，则通过实际取消请求改进查询请求的处理工作。 已在跟踪标志 2422 下启用此行为。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
@@ -55,8 +55,8 @@ SQL Server 2016 SP2 中包括与性能和缩放相关的改进。
 
 SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
-|功能 |描述   |详细信息   |
-|   --- |   --- |   --- |
+|功能|描述|详细信息|
+|---|---|---|
 |对可用性组中数据库的完整 DTC 支持    |   SQL Server 2016 目前不支持可用性组中数据库的跨数据库事务。 我们在 SQL Server 2016 SP2 中引入了对可用性组数据库的分布式事务的完整支持。   |       |
 |更新到 sys.databases is_encrypted 列，准确反映 TempDB 的加密状态 |   对于 TempDB，sys.databases 中 is_encryptedcolumn 列的值为 1，即使是在关闭所有用户数据库的加密并重新启动 SQL Server 后也一样。 由于 TempDB 在这种情况下不再处于加密状态，因此该列中的值本该为 0。 从 SQL Server 2016 SP2 开始，sys.databases.is_encrypted 现可准确反映 TempDB 的加密状态。  |       |
 |用于生成已验证克隆和备份的新 DBCC CLONEDATABASE 选项   |   借助 SQL Server 2016 SP2，DBCC CLONEDATABASE 提供两个新选项：生成已验证克隆，或生成备份克隆。 使用 WITH VERIFY_CLONEDB 选项创建克隆数据库时，将创建并验证一致的数据库克隆，Microsoft 会为此提供支持，以便生产使用。 引进了新的属性来验证克隆是否已通过验证 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 选项创建克隆时，会在数据文件所在的同一文件夹中生成备份，以便客户将克隆移至不同的服务器或将其发送至 Microsoft 客户支持部门 (CSS) 进行故障排除。  |       |
@@ -106,7 +106,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 
 下表总结了 SQL Server 2016 SP1 中提供的重要改进。
 
-|功能|描述|有关详细信息，请参阅：|
+|功能|描述|详细信息|
 |---|---|---|
 |在 TF 715 下与自动 TABLOCK 成堆的大容量插入| 跟踪标志 715 为没有非聚集索引的堆中的大容量加载操作启用表锁。|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)（将 SAP 工作负荷迁移到 SQL Server 速度加快了 2.5 倍）|
 |CREATE 或 ALTER|部署存储过程、触发器、用户定义的函数和视图等对象。|[SQL Server 数据库引擎博客](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -123,7 +123,7 @@ SQL Server 2016 SP2 中包含与可支持性和诊断相关的改进。
 此外，请注意以下修补程序：
 - 根据来自 DBA 和 SQL 社区的反馈，启动 SQL 2016 SP1，Hekaton 日志记录消息会减少至最少。
 - 评审新的[跟踪标志](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。
-- WideWorldImporters 示例数据库的完整版本现在可用于 Standard Edition 和 Express Edition，启动 SQL Server 2016 SP1，在 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 中可用。 示例中无需任何更改。 在 RTM 中创建的 Enterprise Edition 数据库备份可用于 SP1 中的 Standard 和 Express 版。 
+- WideWorldImporters 示例数据库的完整版本现在可用于 Standard Edition 和 Express Edition，启动 SQL Server 2016 SP1，在 [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) 中可用。 示例中无需任何更改。 在 RTM 中创建的 Enterprise Edition 数据库备份可用于 SP1 中的 Standard 和 Express 版。
 
 SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做法，建议在安装 SQL Server 2016 SP1 后计划并执行重新启动。
 
@@ -132,22 +132,22 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 - [下载 Microsoft SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 (SP1) 已发布](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [SQL Server 2016 Service Pack 1 的发布信息](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 
+- ![info_tip](../sql-server/media/info-tip.png) 有关所有受支持版本的链接和信息（包括 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 的服务包），请参阅 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx)
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
--   [数据库引擎 (GA)](#bkmk_ga_instalpatch) 
+-   [数据库引擎 (GA)](#bkmk_ga_instalpatch)
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [查询存储 (GA)](#bkmk_ga_query_store)
 -   [产品文档 (GA)](#bkmk_ga_docs)
- 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**问题及其对客户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。 
+
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+**问题及其对客户的影响：** Microsoft 已发现影响 Microsoft VC++ 2013 运行时二进制文件的一个问题，这些二进制文件是作为 SQL Server 2016 系统必备进行安装的。 现在有可用的更新来修复该问题。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 2016 可能会遇到稳定性问题。 在安装 SQL Server 2016 之前，请检查计算机是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的修补程序。 此修补程序也包含在 [SQL Server 2016 RTM 的累积更新包 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) 中。
 
 **解决方法：** 使用以下任一解决方案：
 
-- 安装 [KB 3138367 - Visual C++ 2013 和 Visual C++ 可再发行包的更新](https://support.microsoft.com/kb/3138367)。 KB 是首选的解决方案。 可以在安装 SQL Server 2016 之前或之后安装此更新。 
+- 安装 [KB 3138367 - Visual C++ 2013 和 Visual C++ 可再发行包的更新](https://support.microsoft.com/kb/3138367)。 KB 是首选的解决方案。 可以在安装 SQL Server 2016 之前或之后安装此更新。
 
     如果已安装 SQL Server 2016，请按顺序执行以下步骤：
 
@@ -155,17 +155,17 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
     1.  停止数据库引擎的所有实例的 SQL Server 服务。
     1.  安装 **KB 3138367**。
     1.  重新启动计算机。
- 
 
- - 安装  [KB 3164398 - 适用于 SQL Server 2016 MSVCRT 系统必备的关键更新](https://support.microsoft.com/kb/3164398)。  
- 
-    如果使用 **KB 3164398**，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。 
+
+ - 安装  [KB 3164398 - 适用于 SQL Server 2016 MSVCRT 系统必备的关键更新](https://support.microsoft.com/kb/3164398)。
+
+    如果使用 **KB 3164398**，可以在 SQL Server 安装过程中、通过 Microsoft 更新或从 Microsoft 下载中心进行安装。
 
     - **在 SQL Server 2016 安装过程中：** 如果运行 SQL Server 安装程序的计算机具有 Internet 访问权限，那么作为整个 SQL Server 安装的一部分，SQL Server 安装程序将检查更新。 如果接受更新，安装程序将下载二进制文件并在安装过程中对文件进行更新。
 
-    - **Microsoft 更新：** 该更新作为 SQL Server 2016 的关键非安全更新，可从 Microsoft 更新获取。 通过 Microsoft 更新进行安装，更新后 SQL Server 2016 需要重新启动服务器。 
+    - **Microsoft 更新：** 该更新作为 SQL Server 2016 的关键非安全更新，可从 Microsoft 更新获取。 通过 Microsoft 更新进行安装，更新后 SQL Server 2016 需要重新启动服务器。
 
-    - **下载中心：** 最后，可从 Microsoft 下载中心获取该更新。 可以在安装 SQL Server 2016 之后下载更新软件并安装在服务器上。 
+    - **下载中心：** 最后，可从 Microsoft 下载中心获取该更新。 可以在安装 SQL Server 2016 之后下载更新软件并安装在服务器上。
 
 
 ### <a name="bkmk_ga_stretch"></a>Stretch Database
@@ -186,7 +186,8 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>与版本的自动数据清理有关的问题（不包括企业版和开发人员版）
 
- **问题及其对客户的影响：** 对版本的自动数据清理失败（不包括企业版和开发人员版）。 因此，如果不手动清除数据，查询存储使用的空间将不断增长，直至达到配置的限制为止。 如果此问题未得到修复，那么为错误日志分配的磁盘空间也将被填满，因为每次尝试执行清理都将生成一个转储文件。 清理激活期限取决于工作负荷频率，但不会超过 15 分钟。
+ **问题及其对客户的影响：** 对版本的自动数据清理失败（不包括企业版和开发人员版）。
+因此，如果不手动清除数据，查询存储使用的空间将不断增长，直至达到配置的限制为止。 如果此问题未得到修复，那么为错误日志分配的磁盘空间也将被填满，因为每次尝试执行清理都将生成一个转储文件。 清理激活期限取决于工作负荷频率，但不会超过 15 分钟。
 
  **解决方法：** 如果计划对企业版和开发人员版以外的版本使用查询存储，则需要显式关闭清理策略。 可通过 SQL Server Management Studio（数据库属性页）或 Transact-SQL 脚本来完成该操作：
 
@@ -205,25 +206,25 @@ SQL Server 2016 SP1 安装可能需要重新启动后安装。 作为最佳做�
 - `sp_query_store_remove_query`
 
 
-###  <a name="bkmk_ga_docs"></a> 产品文档 (GA) 
- **问题及其对客户的影响：** 尚未提供可下载的 SQL Server 2016 文档版本。 在使用帮助库管理器尝试联机安装内容时，你将看到 SQL Server 2012 和 SQL Sever 2014 文档，但没有 SQL Server 2016 文档的选项。    
-    
- **解决方法：** 使用以下任一解决方法暂时解决此问题：    
-    
- ![管理 SQL Server 的帮助设置](../sql-server/media/docs-sql2016-managehelpsettings.png "管理 SQL Server 的帮助设置")    
-    
--   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。     
-    
--   使用选项“联机安装内容”并下载 SQL Server 2014 Content。     
+###  <a name="bkmk_ga_docs"></a> 产品文档 (GA)
+ **问题及其对客户的影响：** 尚未提供可下载的 SQL Server 2016 文档版本。 在使用帮助库管理器尝试联机安装内容时，你将看到 SQL Server 2012 和 SQL Sever 2014 文档，但没有 SQL Server 2016 文档的选项。
 
- **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。 
+ **解决方法：** 使用以下任一解决方法暂时解决此问题：
 
-**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。    
-    
+ ![管理 SQL Server 的帮助设置](../sql-server/media/docs-sql2016-managehelpsettings.png "管理 SQL Server 的帮助设置")
+
+-   使用选项“选择联机或本地帮助”，然后配置“我想要使用联机帮助”对应的帮助选项。 
+
+-   使用选项“联机安装内容”并下载 SQL Server 2014 Content。 
+
+ **F1 帮助：** 按照设计，在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按 F1 时，将在浏览器中显示 F1 帮助文章的联机版本。 此问题在于基于浏览器的帮助，即使已配置并安装了本地帮助也不例外。
+
+**更新内容：** 在 SQL Server Management Studio 和 Visual Studio 中，在添加文档的过程中帮助查看器应用程序可能冻结（挂起）。 若要解决此问题，请完成下列步骤。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/library/mt654096.aspx)。
+
 * 在记事本中打开 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings |HlpViewer_VisualStudio14_en US.settings 文件，并将下面代码中的日期更改为在将来的某个日期。
 
 ```
-     Cache LastRefreshed="12/31/2017 00:00:00"    
+     Cache LastRefreshed="12/31/2017 00:00:00"
 ```
 
 ## <a name="additional-information"></a>其他信息
