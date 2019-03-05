@@ -1,7 +1,8 @@
 items:
 - name: 欢迎
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 概述
+  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: 新增功能
     items:
@@ -15,6 +16,8 @@ items:
       href: ../sql-server/what-s-new-in-sql-server-2016.md
     - name: SQL Server 2016 中的数据库引擎
       href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: 数据库引擎
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 版本和功能
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: SQL Server 2016 版本和功能
@@ -32,7 +35,7 @@ items:
   - name: SQL Server 2019
     href: ../sql-server/sql-server-ver15-release-notes.md
   - name: SQL Server 2017
-    href: ../sql-server/sql-server-2017-release-notes.md
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: SQL Server 2016
     href: ../sql-server/sql-server-2016-release-notes.md
   - name: SQL Server 2014
@@ -44,14 +47,16 @@ items:
   - name: SQL Server 2008 R2 SP2
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: 业务连续性
+  href: redirectfrom-business-continuity-10.md
   items:
   - name: 概述
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: 备份和还原
+    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: 概述
       href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-    - name: 使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
+    - name: 使用 Azure Blob 存储备份和还原
       href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
       - name: 连接到 Microsoft Azure 订阅
@@ -59,9 +64,9 @@ items:
       - name: SQL Server 备份到 URL
         href: ../relational-databases/backup-restore/sql-server-backup-to-url.md
         items:
-        - name: 使用 PowerShell 将多个数据库备份到 Microsoft Azure Blob 存储服务
+        - name: 使用 PowerShell 备份到 Azure Blob 存储服务
           href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: SQL Server 备份到 URL 最佳实践和故障排除
+        - name: 备份到 URL 最佳做法和故障排除
           href: ../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
         - name: 删除具有活动租约的备份 Blob 文件
           href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -92,14 +97,14 @@ items:
       items:
       - name: 计划和执行还原顺序（完整恢复模式）
         href: ../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md
-      - name: 重新启动中断的还原操作 (Transact-SQL)
+      - name: 重启中断的还原操作 (T-SQL)
         href: ../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md
     - name: 备份压缩
       href: ../relational-databases/backup-restore/backup-compression-sql-server.md
       items:
       - name: 配置备份压缩
         href: ../relational-databases/backup-restore/configure-backup-compression-sql-server.md
-      - name: 使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
+      - name: 使用资源调控器限制备份压缩的 CPU 使用量 (T-SQL)
         href: ../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
     - name: 备份加密
       href: ../relational-databases/backup-restore/backup-encryption.md
@@ -181,7 +186,7 @@ items:
     - name: 镜像备份介质集 (SQL Server)
       href: ../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md
       items:
-      - name: 备份镜像媒体集 (Transact-SQL)
+      - name: 备份到镜像媒体集 (T-SQL)
         href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
     - name: 备份历史记录和标头信息 (SQL Server)
       href: ../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md
@@ -198,7 +203,7 @@ items:
     - name: 完整数据库还原（简单恢复模式）
       href: ../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md
       items:
-      - name: 在简单恢复模式下还原数据库备份 (Transact-SQL)
+      - name: 在简单恢复模式下还原数据库备份 (T-SQL)
         href: ../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
       - name: 使用 SSMS 还原数据库备份
         href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -220,7 +225,7 @@ items:
     - name: 完整数据库还原（完整恢复模式）
       href: ../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md
       items:
-      - name: 在完整恢复模式下将数据库还原到故障点 (Transact-SQL)
+      - name: 在完整恢复模式下将数据库还原到故障点 (T-SQL)
         href: ../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md
     - name: 文件还原（简单恢复模式）
       href: ../relational-databases/backup-restore/file-restores-simple-recovery-model.md
@@ -281,12 +286,12 @@ items:
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
       - name: 例如：仅对某些文件组进行段落还原（简单恢复模式）
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
-    - name: 恢复数据库但不还原数据 (Transact-SQL)
+    - name: 恢复数据库但不还原数据 (T-SQL)
       href: ../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md
     - name: 系统数据库的备份和还原
       href: ../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
       items:
-      - name: 还原 master 数据库 (Transact-SQL)
+      - name: 还原 master 数据库 (T-SQL)
         href: ../relational-databases/backup-restore/restore-the-master-database-transact-sql.md
     - name: 备份和还原：互操作性和共存
       href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
@@ -301,6 +306,8 @@ items:
         href: ../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: 先决条件、限制和建议
         href: ../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
+      - name: 互操作性
+        href: ../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
     - name: 快速入门
       items:
       - name: 入门
@@ -312,7 +319,7 @@ items:
           href: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
         - name: 对话框
           href: ../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
         - name: PowerShell
           href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
@@ -343,6 +350,8 @@ items:
           href: ../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md
         - name: 配置只读路由
           href: ../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 创建侦听器
+          href: ../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md
         - name: 删除侦听器
           href: ../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md
         - name: 联接辅助数据库
@@ -371,7 +380,7 @@ items:
       - name: 监视
         href: ../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
         items:
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md
         - name: SQL Server Management Studio
           href: ../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md
@@ -445,6 +454,8 @@ items:
           href: ../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: 仅读取缩放
           href: ../database-engine/availability-groups/windows/read-scale-availability-groups.md
+        - name: 读取/写入连接重定向
+          href: ../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
       - name: 管理
         items:
         - name: 备份次要副本
@@ -507,7 +518,7 @@ items:
       items:
       - name: PowerShell Cmdlet
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-      - name: Transact-SQL
+      - name: T-SQL
         href: ../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md
       - name: 对话框和向导
         items:
@@ -716,9 +727,9 @@ items:
           - name: 建立数据库镜像会话
             href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
             items:
-            - name: 例如：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
+            - name: 例如：使用 Windows 身份验证设置数据库镜像 (T-SQL)
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-            - name: 例如：使用证书 (Transact-SQL) 设置数据库镜像
+            - name: 例如：使用证书设置数据库镜像 (T-SQL)
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
           - name: 升级镜像实例
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -867,6 +878,7 @@ items:
       - name: 将日志传送升级到 SQL Server 2016
         href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: 数据库设计
+  href: ../toc/redirectfrom-database-design.md
   items:
   - name: 层次结构数据
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -882,7 +894,7 @@ items:
       href: ../relational-databases/collations/set-or-change-the-column-collation.md
     - name: 查看排序规则信息
       href: ../relational-databases/collations/view-collation-information.md
-    - name: 编写国际化 Transact-SQL 语句
+    - name: 编写国际化 T-SQL 语句
       href: ../relational-databases/collations/write-international-transact-sql-statements.md
     - name: 设置会话语言
       href: ../relational-databases/collations/set-a-session-language.md
@@ -949,9 +961,9 @@ items:
     - name: 数据库分离和附加
       href: ../relational-databases/databases/database-detach-and-attach-sql-server.md
       items:
-      - name: 通过分离和附加来移动数据库 (Transact-SQL)
+      - name: 通过分离和附加来移动数据库 (T-SQL)
         href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
-      - name: 使用分离和附加来升级数据库 (Transact-SQL)
+      - name: 通过分离和附加来升级数据库 (T-SQL)
         href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
       - name: 分离数据库
         href: ../relational-databases/databases/detach-a-database.md
@@ -1027,15 +1039,15 @@ items:
     - name: 数据库快照
       href: ../relational-databases/databases/database-snapshots-sql-server.md
       items:
-      - name: 查看数据库快照的稀疏文件大小 (Transact-SQL)
+      - name: 查看数据库快照的稀疏文件大小 (T-SQL)
         href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-      - name: 创建数据库快照 (Transact-SQL)
+      - name: 创建数据库快照 (T-SQL)
         href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
       - name: 查看数据库快照 (SQL Server)
         href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
       - name: 将数据库恢复到数据库快照
         href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-      - name: 删除数据库快照 (Transact-SQL)
+      - name: 删除数据库快照 (T-SQL)
         href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
     - name: 数据库实例文件初始化
       href: ../relational-databases/databases/database-instant-file-initialization.md
@@ -1059,7 +1071,7 @@ items:
         href: ../relational-databases/blob/create-a-filestream-enabled-database.md
       - name: 创建表以存储 FILESTREAM 数据
         href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-      - name: 使用 Transact-SQL 访问 FILESTREAM 数据
+      - name: 使用 T-SQL 访问 FILESTREAM 数据
         href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
       - name: 为 FILESTREAM 数据创建客户端应用程序
         href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
@@ -1089,7 +1101,7 @@ items:
         href: ../relational-databases/blob/load-files-into-filetables.md
       - name: 在 FileTable 中使用目录和路径
         href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-      - name: 使用 Transact-SQL 访问 FileTable
+      - name: 使用 T-SQL 访问 FileTable
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: 使用文件输入输出 API 访问 FileTable
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
@@ -1272,7 +1284,7 @@ items:
       href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
     - name: 查看相关性
       href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: Transact-SQL 中的 OLE 自动化对象
+    - name: T-SQL 中的 OLE 自动化对象
       href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
       - name: OLE 自动化返回代码和错误信息
@@ -1742,9 +1754,10 @@ items:
       - name: 将 value() 和 nodes() 方法用于 OPENXML
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 开发
+  href: redirectfrom-development-10.md
   items:
-  - name: 编程以与 SQL Server 进行交互 +
-    href: ../connect/homepage-sql-connection-programming.md
+  - name: 编程以与 SQL Server 进行交互 ++
+    href: ../connect/index.md
   - name: 数据层应用程序
     items:
     - name: 概述
@@ -2090,6 +2103,8 @@ items:
         href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
       - name: SQL Server Express LocalDB 标头信息和版本信息
         href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+      - name: LocalDB API 示例
+        href: ../relational-databases/sql-server-express-localdb-reference.md
       - name: LocalDB 函数
         items:
         - name: LocalDBCreateInstance
@@ -3124,6 +3139,12 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
       - name: 使用 XML 架构
         href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+  - name: Visual Studio 本机帮助程序
+    items:
+    - name: SqlToolsVSNativeHelpers
+      href: ../relational-databases/sqltoolsvsnativehelpers.md
+    - name: FrameWindowVisible
+      href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: SQLXML
     items:
     - name: 运行 SQLXML 示例的要求
@@ -3797,8 +3818,10 @@ items:
   - name: 事务锁定和行版本控制指南
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: 安装
+  href: redirectfrom-installation-10.md
   items:
   - name: 发行说明
+    href: redirectfrom-release-notes-10.md
     items:
     - name: 向后兼容性
       href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -3814,6 +3837,8 @@ items:
       href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: 规划
     items:
+    - name: 参考
+      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: SQL Server 安装中的新增功能
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: 安装 SQL Server 的硬件和软件要求
@@ -3832,6 +3857,8 @@ items:
     items:
     - name: 概述
       href: ../database-engine/install-windows/install-sql-server.md
+    - name: 参考
+      href: ../database-engine/install-windows/installation-for-sql-server.md
     - name: 安装向导帮助
       href: ../sql-server/install/instance-configuration.md
     - name: 安装 SQL Server 数据库引擎
@@ -3878,13 +3905,15 @@ items:
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: 升级 SQL Server
     items:
+    - name: 参考
+      href: ../database-engine/install-windows/upgrade-sql-server.md
     - name: 支持的版本和版本升级 SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: 支持的版本和版本升级 SQL Server 2016
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades.md
     - name: 运行数据迁移助手以准备升级
       href: ../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: 是否从 SQL 2005、2008 或 2008 R2 升级？
+    - name: 从 SQL 2005、2008 或 2008 R2 升级
       href: ../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: 升级 Analysis Services
       href: ../database-engine/install-windows/upgrade-analysis-services.md
@@ -3993,7 +4022,7 @@ items:
         href: ../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md
       - name: ft notify bandwidth 服务器配置选项
         href: ../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md
-      - name: PolyBase 连接配置 (Transact-SQL)
+      - name: PolyBase 连接配置 (T-SQL)
         href: ../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
       - name: in-doubt xact resolution 服务器配置选项
         href: ../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md
@@ -4209,6 +4238,8 @@ items:
       href: ../database-engine/configure-windows/buffer-pool-extension.md
   - name: 卸载 SQL Server
     items:
+    - name: 概述
+      href: ../sql-server/install/uninstall-sql-server.md
     - name: 卸载现有 SQL Server 实例（安装程序）
       href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
     - name: 删除数据质量服务器对象
@@ -4221,8 +4252,8 @@ items:
       href: ../sql-server/install/uninstall-reporting-services.md
 - name: 加载和迁移数据
   items:
-  - name: SQL Server Integration Services +
-    href: ../integration-services/sql-server-integration-services.md
+  - name: SQL Server Integration Services (SSIS) ++
+    href: ../integration-services/index.md
   - name: 复制
     items:
     - name: 概述
@@ -4244,6 +4275,8 @@ items:
         items:
         - name: Dist 和 Pub 信息脚本
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
+        - name: 脚本复制
+          href: ../relational-databases/replication/scripting-replication.md
         - name: 比较复制的表
           href: ../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md
         - name: 配置预定义的警报 (SSMS)
@@ -4284,9 +4317,13 @@ items:
       - name: 监视器
         href: ../relational-databases/replication/monitor/monitoring-replication.md
         items:
+        - name: 监视复制代理
+          href: ../relational-databases/replication/monitor/monitor-replication-agents.md
         - name: 复制监视器
           href: ../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
           items:
+          - name: 启动复制监视器
+            href: ../relational-databases/replication/monitor/start-the-replication-monitor.md
           - name: 管理权限
             href: ../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
           - name: 添加或删除发布服务器
@@ -4351,6 +4388,12 @@ items:
             href: ../relational-databases/replication/publish/create-a-publication.md
           - name: 查看和修改属性
             href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
+          - name: 配置快照属性
+            href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
+          - name: 维护发布
+            href: ../relational-databases/replication/publish/maintain-publications.md
+          - name: 通过 FTP 传递快照
+            href: ../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
           - name: 删除发布
             href: ../relational-databases/replication/publish/delete-a-publication.md
           - name: 设置订阅过期时间
@@ -4367,8 +4410,6 @@ items:
             href: ../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md
           - name: 优化参数化行筛选器
             href: ../relational-databases/replication/publish/optimize-parameterized-row-filters.md
-          - name: 添加或删除项目
-            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: 更改发布和项目属性
             href: ../relational-databases/replication/publish/change-publication-and-article-properties.md
         - name: 更多项目
@@ -4377,8 +4418,12 @@ items:
             href: ../relational-databases/replication/publish/define-an-article.md
           - name: 指定项目类型
             href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
+          - name: 添加或删除项目
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: 查看和修改属性
             href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
+          - name: 在现有发布中添加或删除项目
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
           - name: 删除项目
             href: ../relational-databases/replication/publish/delete-an-article.md
         - name: 管理订阅
@@ -4392,6 +4437,12 @@ items:
             href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
           - name: 查看和修改推送订阅属性
             href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+          - name: 重新初始化订阅
+            href: ../relational-databases/replication/reinitialize-a-subscription.md
+          - name: 同步请求订阅
+            href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+          - name: 同步推送订阅
+            href: ../relational-databases/replication/synchronize-a-push-subscription.md
           - name: 删除请求订阅
             href: ../relational-databases/replication/delete-a-pull-subscription.md
           - name: 删除推送订阅
@@ -4409,6 +4460,8 @@ items:
           - name: 初始化订阅
             href: ../relational-databases/replication/initialize-a-subscription.md
             items:
+            - name: 手动初始化
+              href: ../relational-databases/replication/initialize-a-subscription-manually.md
             - name: 创建和应用初始快照
               href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
             - name: 修改快照选项
@@ -4464,12 +4517,18 @@ items:
         items:
         - name: 配置用于数据更改项的传播方法
           href: ../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: 查看复制的命令
+          href: ../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md
         - name: 实现订阅更新
           href: ../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md
         - name: 创建可更新的订阅
           href: ../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md
         - name: 发布 SP 的执行
           href: ../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: 启用从备份初始化
+          href: ../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md
+        - name: 从备份初始化
+          href: ../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md
         - name: 查看数据冲突
           href: ../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
         - name: 查找事务复制错误
@@ -4496,6 +4555,8 @@ items:
           href: ../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md
         - name: 在项目之间自动生成联接筛选器
           href: ../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
+        - name: 定义逻辑记录关系
+          href: ../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
         - name: 配置 Web 同步
           href: ../relational-databases/replication/configure-web-synchronization.md
         - name: 配置 IIS 以实现 Web 同步
@@ -4518,6 +4579,8 @@ items:
           href: ../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md
         - name: 筛选已发布数据
           href: ../relational-databases/replication/merge/filter-published-data-for-merge-replication.md
+        - name: 查看冲突信息
+          href: ../relational-databases/replication/view-conflict-information-for-merge-publications.md
         - name: 冲突解决
           items:
           - name: 选择解决程序
@@ -4602,8 +4665,10 @@ items:
         - name: Web 同步的拓扑
           href: ../relational-databases/replication/topologies-for-web-synchronization.md
       - name: 复制代理
-        href: ../relational-databases/replication/agents/replication-agents-overview.md
+        href: ../relational-databases/replication/agents/replication-agent-administration.md
         items:
+        - name: 概述
+          href: ../relational-databases/replication/agents/replication-agents-overview.md
         - name: 分发代理
           href: ../relational-databases/replication/agents/replication-distribution-agent.md
         - name: 日志读取器代理
@@ -4614,6 +4679,8 @@ items:
           href: ../relational-databases/replication/agents/replication-queue-reader-agent.md
         - name: 快照代理
           href: ../relational-databases/replication/agents/replication-snapshot-agent.md
+        - name: 代理配置文件
+          href: ../relational-databases/replication/agents/replication-agent-profiles.md
       - name: 开发人员概念
         href: ../relational-databases/replication/concepts/replication-developer-documentation.md
         items:
@@ -4648,6 +4715,8 @@ items:
           - name: Oracle
             href: ../relational-databases/replication/non-sql/oracle-publishing-overview.md
             items:
+            - name: 注意事项和限制
+              href: ../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: 术语词汇表
               href: ../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
             - name: 管理注意事项
@@ -4682,6 +4751,8 @@ items:
         href: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: 参考
       items:
+      - name: 复制语言
+        href: ../relational-databases/replication/replication-language-reference.md
       - name: 复制对象的属性
         items:
         - name: 分发服务器属性
@@ -4701,11 +4772,21 @@ items:
           href: ../relational-databases/replication/article-properties-article.md
         - name: 订阅属性
           href: ../relational-databases/replication/subscription-properties-subscriber.md
+        - name: 筛选设置
+          href: ../relational-databases/replication/filter-settings.md
+        - name: 日志读取器代理
+          href: ../relational-databases/replication/log-reader-agent.md
+        - name: 快照代理
+          href: ../relational-databases/replication/snapshot-agent.md
+        - name: 队列读取器代理
+          href: ../relational-databases/replication/queue-reader-agent.md
       - name: 工具参考
         items:
         - name: 复制监视器
           href: ../relational-databases/replication/replication-monitor.md
           items:
+          - name: 主页
+            href: ../relational-databases/replication/replication-monitor-main-page.md
           - name: 添加发布服务器
             href: ../relational-databases/replication/add-publisher.md
           - name: 分发服务器设置
@@ -4716,25 +4797,30 @@ items:
             href: ../relational-databases/replication/publisher-settings.md
           - name: 发布服务器信息
             href: ../relational-databases/replication/publisher-information-publications.md
+          - name: 发布服务器代理
+            href: ../relational-databases/replication/publisher-information-agents.md
+          - name: 列排序
+            href: ../relational-databases/replication/sort-columns.md
+        - name: 发布信息
+          items:
+          - name: 事务复制
             items:
-            - name: 事务复制
-              items:
-              - name: 订阅监视列表
-                href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-              - name: 订阅
-                href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-              - name: 警告
-                href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
-              - name: 代理
-                href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
-              - name: 跟踪令牌
-                href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
-              - name: 未分发的命令
-                href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
-              - name: 发布服务器到分发服务器的历史记录
-                href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
-              - name: 分发服务器到订阅服务器的历史记录
-                href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: 订阅监视列表
+              href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
+            - name: 订阅
+              href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
+            - name: 警告
+              href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
+            - name: 代理
+              href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
+            - name: 跟踪令牌
+              href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
+            - name: 未分发的命令
+              href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
+            - name: 发布服务器到分发服务器的历史记录
+              href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
+            - name: 分发服务器到订阅服务器的历史记录
+              href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
             - name: 合并复制
               items:
               - name: 订阅监视列表
@@ -5122,7 +5208,8 @@ items:
   - name: 大容量复制实用工具 (bcp)
     href: ../tools/bcp-utility.md
   - name: Azure 迁移服务 +
-    href: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+    displayName: DMS, Data Migration Service
+    href: /azure/dms/dms-overview
   - name: Stretch Database
     items:
     - name: 概述
@@ -6378,11 +6465,11 @@ items:
           href: ../relational-databases/data-collection/view-or-change-collection-set-schedules-sql-server-management-studio.md
         - name: 查看收集组报表 (SQL Server Management Studio)
           href: ../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md
-        - name: 配置数据收集参数 (Transact-SQL)
+        - name: 配置数据收集参数 (T-SQL)
           href: ../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md
-        - name: 创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)
+        - name: 创建使用一般 T-SQL 查询收集器类型的自定义收集组 (T-SQL)
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
-        - name: 将收集项添加到收集组中 (Transact-SQL)
+        - name: 将收集项添加到收集组中 (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
       - name: 系统数据收集组报表
         href: ../relational-databases/data-collection/system-data-collection-set-reports.md
@@ -6437,7 +6524,7 @@ items:
       items:
       - name: 概述
         href: ../relational-databases/sql-trace/sql-trace.md
-      - name: 使用 Transact-SQL 存储过程创建和运行跟踪
+      - name: 使用 T-SQL 存储过程创建和运行跟踪
         href: ../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
       - name: 使用存储过程创建手动跟踪
         href: ../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
@@ -6445,17 +6532,17 @@ items:
         href: ../relational-databases/sql-trace/save-trace-results-to-a-file.md
       - name: 改进对跟踪数据的访问
         href: ../relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: 创建跟踪 (Transact-SQL)
+      - name: 创建跟踪 (T-SQL)
         href: ../relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: 设置跟踪筛选器 (Transact-SQL)
+      - name: 设置跟踪筛选器 (T-SQL)
         href: ../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: 修改现有跟踪 (Transact-SQL)
+      - name: 修改现有跟踪 (T-SQL)
         href: ../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: 查看保存的跟踪 (Transact-SQL)
+      - name: 查看保存的跟踪 (T-SQL)
         href: ../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: 查看筛选器信息 (Transact-SQL)
+      - name: 查看筛选器信息 (T-SQL)
         href: ../relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: 删除跟踪 (Transact-SQL)
+      - name: 删除跟踪 (T-SQL)
         href: ../relational-databases/sql-trace/delete-a-trace-transact-sql.md
       - name: 优化 SQL 跟踪
         href: ../relational-databases/sql-trace/optimize-sql-trace.md
@@ -6682,7 +6769,7 @@ items:
       items:
       - name: 概述
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-      - name: 可提高 Transact-SQL 性能的内存中 OLTP 技术清单
+      - name: 可提高 T-SQL 性能的内存中 OLTP 技术清单
         href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
       - name: 概述和使用方案
         href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
@@ -6798,18 +6885,18 @@ items:
           href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: 对内存中 OLTP 数据库的高可用性支持
           href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-        - name: 对内存中 OLTP 的 Transact-SQL 支持
+        - name: 对内存中 OLTP 的 T-SQL 支持
           href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
           - name: 内存中 OLTP 支持的数据类型
             href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-          - name: 使用解释型 Transact-SQL 访问内存优化表
+          - name: 使用解释型 T-SQL 访问内存优化表
             href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
           - name: 本机编译的 T-SQL 模块支持的功能
             href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
           - name: 对于本机编译的 T-SQL 模块支持的 DDL
             href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-          - name: 内存中 OLTP 不支持的 Transact-SQL 构造
+          - name: 内存中 OLTP 不支持的 T-SQL 构造
             href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
       - name: 迁移到内存中 OLTP
         href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
@@ -6975,14 +7062,15 @@ items:
       href: ../relational-databases/synonyms/create-synonyms.md
 - name: 报告和分析
   items:
-  - name: 高级分析和机器学习 +
+  - name: 高级分析和机器学习 ++
     href: ../advanced-analytics/index.md
-  - name: 分析平台系统 +
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md
-  - name: SQL Server Analysis Services (SSAS) +
-    href: ../analysis-services/analysis-services.md
-  - name: SQL Server Reporting Services (SSRS) +
-    href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+  - name: 分析平台系统 ++
+    displayName: APS, PDW, Parallel Data Warehouse
+    href: ../analytics-platform-system/index.md
+  - name: SQL Server Analysis Services (SSAS) ++
+    href: ../analysis-services/index.md
+  - name: SQL Server Reporting Services (SSRS) ++
+    href: ../reporting-services/index.md
   - name: 大数据群集
     items:
     - name: 概述
@@ -7048,25 +7136,33 @@ items:
       - name: 数据虚拟化
         items:
         - name: 虚拟化关系数据
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization.md
         - name: 虚拟化 CSV 数据
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: HDFS 分层
+          href: ../big-data-cluster/hdfs-tiering.md
       - name: 数据引入
         items:
         - name: 使用 curl 加载数据
           href: ../big-data-cluster/data-ingestion-curl.md
         - name: 还原数据库
           href: ../big-data-cluster/data-ingestion-restore-database.md
+      - name: 部署应用
+        items:
+        - name: 使用 mssqlctl
+          href: ../big-data-cluster/big-data-cluster-create-apps.md
+        - name: 使用 VS Code
+          href: ../big-data-cluster/app-deployment-extension.md
       - name: 大数据/机器学习
         items:
         - name: 使用 PROSE 代码加速器进行数据整理
           href: ../big-data-cluster/use-prose-for-big-data-automation.md
-        - name: 部署应用
-          href: ../big-data-cluster/big-data-cluster-create-apps.md
         - name: 使用 Spark 训练和创建机器学习模型
           href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
         - name: 使用 Spark/Mleap 导出机器学习模型
           href: ../big-data-cluster/export-model-with-spark-mleap.md
+        - name: 在 RStudio 中使用 Sparklyr
+          href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: 管理 SQL Server 大数据群集
         items:
         - name: 连接到大数据群集
@@ -7083,14 +7179,12 @@ items:
           href: ../big-data-cluster/notebooks-how-to-manage.md
       - name: Spark 作业
         items:
-        - name: 提交 Spark 作业
+        - name: 在 Azure Data Studio 中提交 Spark 作业
           href: ../big-data-cluster/spark-submit-job.md
+        - name: 在 IntelliJ 中提交 Spark 作业
+          href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
         - name: 使用扩展的 Spark History Server
           href: ../big-data-cluster/spark-history-server.md
-    - name: Resources
-      items:
-      - name: 请求访问大数据群集
-        href: https://aka.ms/eapsignup
   - name: Master Data Services
     items:
     - name: 简介
@@ -7658,7 +7752,7 @@ items:
           href: ../relational-databases/polybase/polybase-faq.md
     - name: 参考
       items:
-      - name: Transact-SQL 参考
+      - name: T-SQL 参考
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
     - name: Resources
       items:
@@ -7667,7 +7761,7 @@ items:
       - name: Stack Overflow +
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: MSDN 论坛 +
-        href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
+        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
       - name: 提交反馈 +
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit +
@@ -7757,11 +7851,11 @@ items:
         - name: 经加密的 SQL Server 连接器
           href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
         - name: 自带密钥 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
         - name: 轮替 TDE BYOK 密钥 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
         - name: 删除 TDE 保护程序 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
         - name: 使用 Azure Key Vault 的 EKM
           href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
       - name: 审核
@@ -7837,10 +7931,10 @@ items:
         - name: 透明数据加密 (TDE)
           href: ../relational-databases/security/encryption/transparent-data-encryption.md
         - name: 使用 Azure SQL 数据库的 TDE +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql
+          href: /azure/sql-database/transparent-data-encryption-azure-sql
           items:
           - name: 自带密钥 +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
         - name: 加密密钥
           href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
           items:
@@ -8257,7 +8351,7 @@ items:
       href: ../ssms/scripting/sqlcmd-use-the-utility.md
     - name: 连接到数据库引擎
       href: ../ssms/scripting/sqlcmd-connect-to-the-database-engine.md
-    - name: 运行 Transact-SQL 脚本文件
+    - name: 运行 T-SQL 脚本文件
       href: ../ssms/scripting/sqlcmd-run-transact-sql-script-files.md
     - name: 与脚本变量结合使用
       href: ../ssms/scripting/sqlcmd-use-with-scripting-variables.md
@@ -8308,7 +8402,7 @@ items:
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: “数据工具操作”窗口
         href: ../ssdt/data-tools-operations-window.md
-      - name: Transact-SQL 编辑器选项
+      - name: T-SQL 编辑器选项
         href: ../ssdt/transact-sql-editor-options.md
       - name: 如何：创建新的数据库项目
         href: ../ssdt/how-to-create-a-new-database-project.md
@@ -8363,9 +8457,9 @@ items:
         href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
       - name: 如何：查看数据差异
         href: ../ssdt/how-to-view-data-differences.md
-      - name: 使用 Transact-SQL 编辑器编辑和执行脚本
+      - name: 使用 T-SQL 编辑器编辑和执行脚本
         href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-      - name: 如何：显示 Transact-SQL 脚本的大纲并向 Transact-SQL 脚本添加代码片段
+      - name: 如何：显示 T-SQL 脚本的大纲并向 Transact-SQL 脚本添加代码片段
         href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
       - name: 如何：在脚本之间导航
         href: ../ssdt/how-to-navigate-between-scripts.md
@@ -8398,7 +8492,7 @@ items:
           href: ../ssdt/sql-server-unit-test-files.md
         - name: 在 SQL Server 单元测试中使用测试条件
           href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
-        - name: 在 SQL Server 单元测试中使用 Transact-SQL 断言
+        - name: 在 SQL Server 单元测试中使用 T-SQL 断言
           href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
         - name: 如何：为 SQL Server 数据库单元测试创建测试项目
           href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
@@ -8601,7 +8695,7 @@ items:
           href: ../ssms/agent/create-a-sql-server-agent-master-job.md
         - name: 创建 SQL Server 代理的代理帐户
           href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-        - name: Create a Transact-SQL Job Step
+        - name: 创建 T-SQL 作业步骤
           href: ../ssms/agent/create-a-transact-sql-job-step.md
         - name: 创建用户定义事件
           href: ../ssms/agent/create-a-user-defined-event.md
@@ -8627,7 +8721,7 @@ items:
           href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
         - name: 定义对警报的响应 (SSMS)
           href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-        - name: Define Transact-SQL Job Step Options
+        - name: 定义 T-SQL 作业步骤选项
           href: ../ssms/agent/define-transact-sql-job-step-options.md
         - name: 删除作业类别
           href: ../ssms/agent/delete-a-job-category.md
@@ -8887,29 +8981,29 @@ items:
           href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
         - name: IntelliSense 故障排除 (SSMS)
           href: ../ssms/scripting/troubleshooting-intellisense.md
-        - name: IntelliSense 支持的 Transact-SQL 语法
+        - name: IntelliSense 支持的 T-SQL 语法
           href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-      - name: Transact-SQL 代码段
+      - name: T-SQL 代码片段
         href: ../ssms/scripting/transact-sql-code-snippets.md
         items:
-        - name: 插入 Transact-SQL 代码段
+        - name: 插入 T-SQL 代码片段
           href: ../ssms/scripting/insert-transact-sql-snippets.md
-        - name: 插入外侧 Transact-SQL 代码段
+        - name: 插入外侧 T-SQL 代码片段
           href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-        - name: 完成 Transact-SQL 代码段
+        - name: 完成 T-SQL 代码片段
           href: ../ssms/scripting/complete-transact-sql-snippets.md
-        - name: 添加 Transact-SQL 代码段
+        - name: 添加 T-SQL 代码片段
           href: ../ssms/scripting/add-transact-sql-snippets.md
-      - name: Transact-SQL 调试器
+      - name: T-SQL 调试程序
         href: ../ssms/scripting/transact-sql-debugger.md
         items:
-        - name: 运行 TSQL 调试器之前配置防火墙规则
+        - name: 运行 T-SQL 调试器之前配置防火墙规则
           href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-        - name: 运行 Transact-SQL 调试器
+        - name: 运行 T-SQL 调试程序
           href: ../ssms/scripting/run-the-transact-sql-debugger.md
-        - name: Transact-SQL 代码
+        - name: 逐句通过 T-SQL 代码
           href: ../ssms/scripting/step-through-transact-sql-code.md
-        - name: Transact-SQL 断点
+        - name: T-SQL 断点
           href: ../ssms/scripting/transact-sql-breakpoints.md
           items:
           - name: 切换断点
@@ -8926,26 +9020,26 @@ items:
             href: ../ssms/scripting/specify-a-breakpoint-action.md
           - name: 编辑断点位置
             href: ../ssms/scripting/edit-a-breakpoint-location.md
-        - name: Transact-SQL 调试器 - 信息
+        - name: T-SQL 调试器 - 信息
           href: ../ssms/scripting/transact-sql-debugger-information.md
           items:
-          - name: Transact-SQL 调试器 -“错误列表”窗口
+          - name: T-SQL 调试器 -“错误列表”窗口
             href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-          - name: Transact-SQL 调试器 -“断点”窗口
+          - name: T-SQL 调试器 -“断点”窗口
             href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-          - name: Transact-SQL 调试器 -“调用堆栈”窗口
+          - name: T-SQL 调试器 -“调用堆栈”窗口
             href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-          - name: Transact-SQL 调试器 -“局部变量”窗口
+          - name: T-SQL 调试器 -“局部变量”窗口
             href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-          - name: Transact-SQL 调试器 -“线程”窗口
+          - name: T-SQL 调试器 -“线程”窗口
             href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-          - name: Transact-SQL 调试器 -“命令”窗口
+          - name: T-SQL 调试器 -“命令”窗口
             href: ../ssms/scripting/transact-sql-debugger-command-window.md
-          - name: Transact-SQL 调试器 -“输出”窗口
+          - name: T-SQL 调试器 -“输出”窗口
             href: ../ssms/scripting/transact-sql-debugger-output-window.md
-          - name: Transact-SQL 调试器 -“监视”窗口
+          - name: T-SQL 调试器 -“监视”窗口
             href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-          - name: Transact-SQL 调试器 -“快速监视”对话框
+          - name: T-SQL 调试器 -“快速监视”对话框
             href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
         - name: 状态栏（数据库引擎查询编辑器）
           href: ../ssms/scripting/status-bar-database-engine-query-editor.md
@@ -9634,7 +9728,7 @@ items:
     - name: 创建跟踪
       href: ../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md
       items:
-      - name: 创建 Transact-SQL 脚本来运行跟踪
+      - name: 创建 T-SQL 脚本来运行跟踪
         href: ../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
     - name: 启动跟踪
       href: ../tools/sql-server-profiler/start-a-trace.md
@@ -9718,7 +9812,7 @@ items:
         href: ../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md
       - name: 重播到游标
         href: ../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
-      - name: 重播 Transact-SQL 脚本
+      - name: 重播 T-SQL 脚本
         href: ../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
       - name: SQL Server Profiler 对话框
         href: ../tools/sql-server-profiler/sql-server-profiler-f1-help.md
@@ -9989,7 +10083,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN 论坛 +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: 提交反馈 +
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit +
@@ -9997,11 +10091,11 @@ items:
 - name: Azure 上的 SQL
   items:
   - name: Azure SQL 数据库 +
-    href: https://docs.microsoft.com/en-us/azure/sql-database/
+    href: /azure/sql-database/
   - name: Azure SQL 数据仓库 +
-    href: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
   - name: Azure VM 上的 SQL Server +
-    href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
   - name: 博客
@@ -10017,17 +10111,19 @@ items:
   - name: 了解
     items:
     - name: Microsoft Virtual Academy +
-      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+      href: https://mva.microsoft.com/product-training/sql-server
     - name: 第 9 频道上的 SQL +
       href: https://channel9.msdn.com/Search
   - name: 反馈和帮助
     items:
     - name: 获取帮助
       href: ../sql-server/sql-server-get-help.md
-    - name: 提供有关 SQL 文档内容的反馈
+    - name: 有关 SQL 文档内容的反馈 +
       href: https://aka.ms/sqldocsfeedback
-    - name: 提供有关 SQL Server (UserVoice) 的反馈
+    - name: 有关 SQL Server (UserVoice) 的反馈 +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: SQL 文档调查 +
+      href: https://aka.ms/sqldocsurvey
     - name: 参与编辑 SQL 文档！
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10035,7 +10131,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN 论坛 +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit +
       href: https://www.reddit.com/r/SQLServer
   - name: 伙伴
@@ -10051,7 +10147,51 @@ items:
   - name: 帮助查看器的本地内容
     href: ../sql-server/sql-server-help-installation.md
 - name: 参考
+  href: ../toc/redirectfrom-reference-10.md
   items:
+  - name: SQL 文档包括文件
+    href: ../sql-server/applies-to-includes.md
+  - name: 已存档内容 (SQL 2005-2012) +
+    displayName: 2005, 2008, 2008 r2, 2012
+    href: https://docs.microsoft.com/previous-versions/sql/
+  - name: 数据库示例
+    href: ../toc/redirectfrom-database-samples.md
+    items:
+    - name: 示例概述
+      href: ../samples/sql-samples-where-are.md
+    - name: 所有 Github 示例 +
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
+    - name: AdventureWorks
+      items:
+      - name: 安装和配置
+        href: ../samples/adventureworks-install-configure.md
+    - name: Wide World Importers
+      href: ../toc/redirectfrom-wide-world-importers.md
+      items:
+      - name: 概述
+        href: ../samples/wide-world-importers-what-is.md
+      - name: OLTP
+        href: ../toc/redirectfrom-oltp-10.md
+        items:
+        - name: 数据库目录
+          href: ../samples/wide-world-importers-oltp-database-catalog.md
+        - name: 安装和配置
+          href: ../samples/wide-world-importers-oltp-install-configure.md
+        - name: SQL Server 功能
+          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
+      - name: 数据仓库
+        href: ../toc/redirectfrom-data-warehouse-10.md
+        items:
+        - name: 数据库目录
+          href: ../samples/wide-world-importers-dw-database-catalog.md
+        - name: 安装和配置
+          href: ../samples/wide-world-importers-dw-install-configure.md
+        - name: SQL Server 功能
+          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
+      - name: 生成数据
+        href: ../samples/wide-world-importers-generate-data.md
+      - name: ETL 工作流
+        href: ../samples/wide-world-importers-perform-etl.md
   - name: 错误和事件
     items:
     - name: 概述
@@ -11015,35 +11155,6 @@ items:
       - name: SP:StmtStarting 事件类
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Transactions 事件类别
-      href: ../relational-databases/event-classes/transactions-event-category.md
-      items:
-      - name: DTCTransaction 事件类
-        href: ../relational-databases/event-classes/dtctransaction-event-class.md
-      - name: SQLTransaction 事件类
-        href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: 'TM: Begin Tran Completed 事件类'
-        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: 'TM: Begin Tran Starting 事件类'
-        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: 'TM: Commit Tran Completed 事件类'
-        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: 'TM: Commit Tran Starting 事件类'
-        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: 'TM: Promote Tran Completed 事件类'
-        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: 'TM: Promote Tran Starting 事件类'
-        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: 'TM: Rollback Tran Completed 事件类'
-        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: 'TM: Rollback Tran Starting 事件类'
-        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: 'TM: Save Tran Completed 事件类'
-        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: 'TM: Save Tran Starting 事件类'
-        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
-      - name: TransactionLog 事件类
-        href: ../relational-databases/event-classes/transactionlog-event-class.md
-    - name: TSQL 事件类别
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL 事件类
@@ -11194,7 +11305,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md
       - name: sys.assembly_references
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
-      - name: sys.trusted_assemblies (Transact-SQL)
+      - name: sys.trusted_assemblies (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
     - name: 数据收集器
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
@@ -11254,7 +11365,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: ../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options (Transact-SQL)
+      - name: sys.database_automatic_tuning_options (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.master_files
         href: ../relational-databases/system-catalog-views/sys-master-files-transact-sql.md
@@ -14535,35 +14646,37 @@ items:
     items:
     - name: 概述
       href: ../relational-databases/system-views/replication-views-transact-sql.md
-    - name: IHextendedArticleView (Transact-SQL)
+    - name: IHextendedArticleView (T-SQL)
       href: ../relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView (Transact-SQL)
+    - name: IHextendedSubscriptionView (T-SQL)
       href: ../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns (Transact-SQL)
+    - name: IHsyscolumns (T-SQL)
       href: ../relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings (Transact-SQL)
+    - name: MSdatatype_mappings (T-SQL)
       href: ../relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status (Transact-SQL)
+    - name: MSdistribution_status (T-SQL)
       href: ../relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns（系统视图）(Transact-SQL)
+    - name: sysarticlecolumns（系统视图）(T-SQL)
       href: ../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles（系统视图）(Transact-SQL)
+    - name: sysarticles（系统视图）(T-SQL)
       href: ../relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings (Transact-SQL)
+    - name: sysdatatypemappings (T-SQL)
       href: ../relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview (Transact-SQL)
+    - name: sysextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview (Transact-SQL)
+    - name: sysmergeextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview (Transact-SQL)
+    - name: sysmergepartitioninfoview (T-SQL)
       href: ../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications（系统视图）(Transact-SQL)
+    - name: syspublications（系统视图）(T-SQL)
       href: ../relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions（系统视图）(Transact-SQL)
+    - name: syssubscriptions（系统视图）(T-SQL)
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas (Transact-SQL)
+    - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL (T-SQL)
+    displayName: tsql
+    href: ../toc/redirectfrom-transact-sql-t-sql.md
     items:
     - name: 概述
       href: ../t-sql/language-reference.md
@@ -15059,85 +15172,87 @@ items:
         href: ../t-sql/xml/binding-relational-data-inside-xml-data.md
       - name: xml 数据类型方法的使用准则
         href: ../t-sql/xml/guidelines-for-using-xml-data-type-methods.md
-    - name: 概述
+    - name: DBCC 概述
+      displayName: database console commands
       href: ../t-sql/database-console-commands/database-console-commands.md
-    - name: 关于 DBCC
-      href: ../t-sql/database-console-commands/dbcc-transact-sql.md
-    - name: DBCC CHECKALLOC
-      href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
-    - name: DBCC CHECKCATALOG
-      href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
-    - name: DBCC CHECKCONSTRAINTS
-      href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
-    - name: DBCC CHECKDB
-      href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
-    - name: DBCC CHECKFILEGROUP
-      href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
-    - name: DBCC CHECKIDENT
-      href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
-    - name: DBCC CHECKTABLE
-      href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
-    - name: DBCC CLEANTABLE
-      href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
-    - name: DBCC CLONEDATABASE
-      href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
-    - name: DBCC DBREINDEX
-      href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
-    - name: DBCC dllname (FREE)
-      href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
-    - name: DBCC DROPCLEANBUFFERS
-      href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
-    - name: DBCC FLUSHAUTHCACHE
-      href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
-    - name: DBCC FREEPROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
-    - name: DBCC FREESESSIONCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
-    - name: DBCC FREESYSTEMCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
-    - name: DBCC HELP
-      href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
-    - name: DBCC INDEXDEFRAG
-      href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
-    - name: DBCC INPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
-    - name: DBCC OPENTRAN
-      href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
-    - name: DBCC OUTPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
-    - name: DBCC PDW_SHOWEXECUTIONPLAN
-      href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
-    - name: DBCC PDW_SHOWPARTITIONSTATS
-      href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
-    - name: DBCC PDW_SHOWSPACEUSED
-      href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
-    - name: DBCC PROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
-    - name: DBCC SHOW_STATISTICS
-      href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
-    - name: DBCC SHOWCONTIG
-      href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
-    - name: DBCC SHRINKDATABASE
-      href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
-    - name: DBCC SHRINKFILE
-      href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
-    - name: DBCC SHRINKLOG
-      href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
-    - name: DBCC SQLPERF
-      href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
-    - name: DBCC TRACEOFF
-      href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
-    - name: DBCC TRACEON - 跟踪标志
-      href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
-    - name: DBCC TRACEON
-      href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
-    - name: DBCC TRACESTATUS
-      href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
-    - name: DBCC UPDATEUSAGE
-      href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
-    - name: DBCC USEROPTIONS
-      href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-    - name: 概述
+      items:
+      - name: 关于 DBCC
+        href: ../t-sql/database-console-commands/dbcc-transact-sql.md
+      - name: DBCC CHECKALLOC
+        href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
+      - name: DBCC CHECKCATALOG
+        href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
+      - name: DBCC CHECKCONSTRAINTS
+        href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
+      - name: DBCC CHECKDB
+        href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
+      - name: DBCC CHECKFILEGROUP
+        href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
+      - name: DBCC CHECKIDENT
+        href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
+      - name: DBCC CHECKTABLE
+        href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
+      - name: DBCC CLEANTABLE
+        href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
+      - name: DBCC CLONEDATABASE
+        href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
+      - name: DBCC DBREINDEX
+        href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
+      - name: DBCC dllname (FREE)
+        href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
+      - name: DBCC DROPCLEANBUFFERS
+        href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC FLUSHAUTHCACHE
+        href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
+      - name: DBCC FREEPROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
+      - name: DBCC FREESESSIONCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
+      - name: DBCC FREESYSTEMCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
+      - name: DBCC HELP
+        href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
+      - name: DBCC INDEXDEFRAG
+        href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
+      - name: DBCC INPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
+      - name: DBCC OPENTRAN
+        href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
+      - name: DBCC OUTPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
+      - name: DBCC PDW_SHOWEXECUTIONPLAN
+        href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWPARTITIONSTATS
+        href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
+      - name: DBCC PDW_SHOWSPACEUSED
+        href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
+      - name: DBCC PROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
+      - name: DBCC SHOW_STATISTICS
+        href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
+      - name: DBCC SHOWCONTIG
+        href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHRINKDATABASE
+        href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
+      - name: DBCC SHRINKFILE
+        href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
+      - name: DBCC SHRINKLOG
+        href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
+      - name: DBCC SQLPERF
+        href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
+      - name: DBCC TRACEOFF
+        href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
+      - name: DBCC TRACEON - 跟踪标志
+        href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
+      - name: DBCC TRACEON
+        href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
+      - name: DBCC TRACESTATUS
+        href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
+      - name: DBCC UPDATEUSAGE
+        href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
+      - name: DBCC USEROPTIONS
+        href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
+    - name: T-SQL 函数概述
       href: ../t-sql/functions/functions.md
     - name: Aggregate
       href: ../t-sql/functions/aggregate-functions-transact-sql.md
@@ -16805,7 +16920,7 @@ items:
       href: ../t-sql/statements/truncate-table-transact-sql.md
     - name: UPDATE STATISTICS
       href: ../t-sql/statements/update-statistics-transact-sql.md
-    - name: 教程：编写 Transact-SQL 语句
+    - name: 教程：编写 T-SQL 语句
       href: ../t-sql/tutorial-writing-transact-sql-statements.md
       items:
       - name: 第 1 课：创建和查询数据库对象
@@ -16814,40 +16929,6 @@ items:
         href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
       - name: 第 3 课：删除数据库对象
         href: ../t-sql/lesson-3-deleting-database-objects.md
-  - name: 数据库示例
-    items:
-    - name: 示例概述
-      href: ../samples/sql-samples-where-are.md
-    - name: 所有 Github 示例 +
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
-    - name: AdventureWorks
-      items:
-      - name: 安装和配置
-        href: ../samples/adventureworks-install-configure.md
-    - name: Wide World Importers
-      items:
-      - name: 概述
-        href: ../samples/wide-world-importers-what-is.md
-      - name: OLTP
-        items:
-        - name: 数据库目录
-          href: ../samples/wide-world-importers-oltp-database-catalog.md
-        - name: 安装和配置
-          href: ../samples/wide-world-importers-oltp-install-configure.md
-        - name: SQL Server 功能
-          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: 数据仓库
-        items:
-        - name: 数据库目录
-          href: ../samples/wide-world-importers-dw-database-catalog.md
-        - name: 安装和配置
-          href: ../samples/wide-world-importers-dw-install-configure.md
-        - name: SQL Server 功能
-          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
-      - name: 生成数据
-        href: ../samples/wide-world-importers-generate-data.md
-      - name: ETL 工作流
-        href: ../samples/wide-world-importers-perform-etl.md
   - name: xQuery
     items:
     - name: 概述
@@ -17004,9 +17085,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 处理 XQuery 中的命名空间
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 2eebc67fe856d02dc1d525b2f56ed68a697fca40
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: bb0c24429ffaf6609be6e34dbcfcb87f9a849d87
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676296"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227389"
