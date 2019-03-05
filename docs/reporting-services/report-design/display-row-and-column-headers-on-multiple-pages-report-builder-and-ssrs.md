@@ -1,21 +1,22 @@
 ---
 title: 在多个页中显示行标题和列标题（报表生成器和 SSRS）| Microsoft Docs
-ms.date: 03/01/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ad0da97b8b9837213a0abff73204a2287b02e011
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.date: 03/01/2017
+ms.openlocfilehash: 8bd2ab9ebfceeb8689dcaa5ce2afe912ecb4b1c6
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305315"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多个页中显示行标题和列标题（报表生成器和 SSRS）
+
   可以控制跨多个页的 Tablix 数据区域（表、矩阵或列表）的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页式报表的每页上是否重复行标题和列标题。
   
  控制行和列的方式取决于 Tablix 数据区域是否具有组头。 在包含组头的 Tablix 数据区域中单击时，点线将显示 Tablix 区域，如下图所示：  
@@ -28,37 +29,37 @@ ms.locfileid: "56291985"
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>在多个页上显示行标题  
   
-1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
   
-2.  在 **“行标题”** 中，选择 **“在每一页上重复标题行”**。  
+2. 在 **“行标题”** 中，选择 **“在每一页上重复标题行”**。  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>在多个页上显示列标题  
   
-1.  右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
+1. 右键单击 Tablix 数据区域的行控点、列控点或角部控点，然后单击 **“Tablix 属性”**。  
   
-2.  在 **“列标题”** 中，选择 **“在每一页上重复标题列”**。  
+2. 在 **“列标题”** 中，选择 **“在每一页上重复标题列”**。  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>在多个页面上显示静态行或列  
   
-1.  在设计图面上，单击 Tablix 数据区域中的行控点或列控点以将其选定。 “分组”窗格随即显示行组和列组。  
+1. 在设计图面上，单击 Tablix 数据区域中的行控点或列控点以将其选定。 “分组”窗格随即显示行组和列组。  
   
-2.  在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。 “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
+2. 在“分组”窗格的右侧，单击下箭头，然后单击 **“高级模式”**。 “行组”窗格显示行组层次结构的层次结构静态和动态成员，而“列组”窗格显示列组层次结构的相同内容。  
   
-3.  单击与在滚动时要使其保持可见的静态成员（行或列）相对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
+3. 单击与在滚动时要使其保持可见的静态成员（行或列）相对应的静态成员。 “属性”窗格显示 **“Tablix 成员”** 属性。  
   
      如果未显示“属性”窗格，请单击报表生成器窗口顶部的“视图”选项卡，然后单击“属性”。  
   
-4.  在“属性”窗格中，将 **RepeatOnNewPage** 设置为 True。  
+4. 在“属性”窗格中，将 **RepeatOnNewPage** 设置为 True。  
   
-5.  将 **“KeepWithGroup”** 设为 After。  
+5. 将 **“KeepWithGroup”** 设为 After。  
   
-6.  为要重复此出现的任意多个相邻成员重复此步骤。  
+6. 为要重复此出现的任意多个相邻成员重复此步骤。  
   
-7.  预览报表。  
+7. 预览报表。  
   
  当您查看 Tablix 数据区域分布的报表的每一页时，静态 Tablix 成员将在每页中重复出现。  
   

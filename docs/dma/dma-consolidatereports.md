@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305355"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -71,6 +71,9 @@ ms.locfileid: "56956028"
 - SQL Server 表
 
 ### <a name="if-using-a-csv-file"></a>如果使用的 CSV 文件
+> [!IMPORTANT]
+> 确保在清单文件保存为逗号分隔 (CSV) 文件。
+
 如果使用 csv 文件导入数据，请确保有只有两个列的数据-**实例名称**并**数据库名称**，和列不包含标头行。
  
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
 1. 在 Power BI Desktop 中打开 DMA 报表 Power BI 模板。
 2. 输入服务器详细信息指向你**DMAWarehouse**数据库，并选择**负载**。
-
-    > [!IMPORTANT]
-    > 不要按 Enter 以接受的值。
-
+   
       ![加载 DMA 报表 Power BI 模板](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    已刷新报表中的数据后**DMAWarehouse**数据库，您将看到类似于以下的报告。

@@ -13,16 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725765"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956048"
 ---
 # <a name="list-of-bugs-fixed"></a>修复的缺陷列表
 
 此页包含在每个版本中，从开始修复的 bug 的列表[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.3 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 固定的 TCP 发送通知事件句柄内存泄漏
+- 枚举 _SQL_FILESTREAM_DESIRED_ACCESS msodbcsql.h 标头文件中的固定重定义问题
+- 固定缺少 ACCESS_TOKEN 和身份验证相关的适用于 Linux msodbcsql.h 标头文件中定义
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

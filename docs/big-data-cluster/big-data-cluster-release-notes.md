@@ -5,17 +5,17 @@ description: 本文介绍了最新的更新以及 SQL Server 2019 大数据群�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227209"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334744"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 大数据群集的发行说明
 
@@ -39,7 +39,7 @@ ms.locfileid: "57227209"
 - [将在 SQL Server 大数据群集，在 IntelliJ 中的 Spark 作业提交](spark-submit-job-intellij-tool-plugin.md)。
 - [适用于应用程序部署和管理群集的常见 CLI](big-data-cluster-create-apps.md)。
 - [VS Code 扩展应用程序部署到 SQL Server 大数据群集](app-deployment-extension.md)。
-- 新的参数排序**mssqlctl**工具。
+- [将更改为**mssqlctl**工具命令的用法](#mssqlctlctp23)。
 - [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md)。
 - 外部 HDFS 兼容存储装载到大数据群集[HDFS 分层](hdfs-tiering.md)。
 - 新的统一的连接体验[SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。
@@ -74,6 +74,18 @@ ms.locfileid: "57227209"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 如果大数据群集部署失败，则不会删除关联的命名空间。 这可能导致在群集上的孤立命名空间。 一种解决方法是在部署具有相同名称的群集之前手动删除该命名空间。
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- **Mssqlctl**工具更改从动词-名词命令名词谓词顺序的排序。 例如，`mssqlctl create cluster`现在`mssqlctl cluster create`。
+
+- `--name`参数现在是在创建与群集时所需`mssqlctl cluster create`。
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- 有关升级到最新版本的大数据群集的重要信息和**mssqlctl**，请参阅[升级到新版本](deployment-guidance.md#upgrade)。
 
 #### <a name="external-tables"></a>外部表
 
