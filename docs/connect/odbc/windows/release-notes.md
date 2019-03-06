@@ -1,5 +1,5 @@
 ---
-title: 发行说明 （SQL Server ODBC 驱动程序） |Microsoft Docs
+title: 发行说明 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
@@ -11,17 +11,28 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cb599d59a374fc09dbc0009f0288296cc1df9d9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1321ac161923499d57ab69374b8ed603d272e0
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702066"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955768"
 ---
 # <a name="release-notes"></a>发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Windows 上的 Microsoft ODBC Driver for SQL Server 发行说明。  
+
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 新变化
+
+**添加功能**:
+
+- Azure Active Directory 托管服务标识 (系统和用户分配) 身份验证模式，有关详细信息，请参阅[使用 Azure Active Directory 与 ODBC 驱动程序](../using-azure-active-directory.md)
+- 能够流式传输的详细信息，请参阅 Always Encrypted 列对输入的参数[ODBC 驱动程序使用始终加密时的限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 分布式事务，有关详细信息，请参阅[使用 XA 事务](../use-xa-with-dtc.md)
+
+[Bug 修复](../bug-fixes.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的新增功能
 
