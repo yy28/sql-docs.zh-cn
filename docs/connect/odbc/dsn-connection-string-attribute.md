@@ -1,7 +1,7 @@
 ---
 title: DSN 和连接字符串关键字的 ODBC 驱动程序的 SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306234"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662871"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
 
@@ -23,7 +23,7 @@ ms.locfileid: "53306234"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支持/的 DSN 连接字符串关键字和连接属性
 
-下表列出了可用关键字以及为每个平台 （l： 属性Linux ; M:Mac;W:Windows： 单击关键字或更多详细信息的属性。
+下表列出了可用的关键字以及为每个平台 (l: Linux; 属性M: Mac;W: Windows)。 单击关键字或更多详细信息的属性。
 
 | DSN / 连接字符串关键字 | 连接属性 | 平台 |
 |-|-|-|
@@ -105,7 +105,7 @@ ms.locfileid: "53306234"
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -156,6 +156,7 @@ ms.locfileid: "53306234"
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 集成身份验证。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密码身份验证。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 交互式身份验证。|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 托管服务标识身份验证。 为用户分配的标识，UID 设置为用户标识的对象 ID。 |
 | |SQL_AU_RESET|取消设置。 重写任何 DSN 或连接字符串设置。|
 
 > [!NOTE]
@@ -214,4 +215,21 @@ ms.locfileid: "53306234"
 |-|-|
 | char * | 密钥存储提供程序库路径 |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+若要启用 XA 事务与 XA 兼容事务处理器 (TP)，应用程序需要调用**SQLSetConnectAttr** SQL_COPT_SS_ENLIST_IN_XA 和一个指向`XACALLPARAM`对象。 Windows、 （17.3 及更高版本） 的 Linux 和 mac 上支持此选项
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ 若要将 XA 事务与 ODBC 连接相关联，提供 TRUE 或 FALSE 的 SQL_COPT_SS_ENLIST_IN_XA 而不是指针调用时**SQLSetConnectAttr**。 这在 Windows 上才有效，不能用于指定客户端应用程序通过 XA 操作。 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|ReplTest1|描述|平台|  
+|-----------|-----------------|-----------------|  
+|XACALLPARAM 对象 *|指向 `XACALLPARAM` 对象的指针。|Windows、 Linux 和 Mac|
+|TRUE|将 XA 事务与 ODBC 连接相关联。 将在 XA 事务的保护下执行所有相关的数据库活动。|Windows|  
+|FALSE|取消关联与 ODBC 连接的事务。|Windows|
+
+ 请参阅[使用 XA 事务](../../connect/odbc/use-xa-with-dtc.md)有关 XA 事务的详细信息。

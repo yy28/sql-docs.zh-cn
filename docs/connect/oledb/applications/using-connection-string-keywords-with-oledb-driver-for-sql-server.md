@@ -2,7 +2,7 @@
 title: 将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用 | Microsoft Docs
 description: 将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c96a65c3935e91204d562933ba4f5f0de932f3e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed200e47d1ce7e579dde3059da1d17b85c6677f6
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838292"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744527"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>将连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序结合使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,15 +79,16 @@ ms.locfileid: "47838292"
 |关键字|初始化属性|描述|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|“Address”的同义词。|  
-|**Address**|SSPROP_INIT_NETWORKADDRESS|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 “Address”通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 值**地址**传递给的值的优先级高于**Server**在连接字符串时使用的 SQL Server OLE DB 驱动程序中。 另外请注意，`Address=;` 将连接到在 Server 关键字中指定的服务器，而 `Address= ;, Address=.;`、 `Address=localhost;` 和 `Address=(local);` 都会产生本地服务器的连接。<br /><br /> Address 关键字的完整语法如下所示：<br /><br /> [_协议_**:**]_地址_[**，**_端口&#124;\pipe\pipename_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有_协议_也不**网络**指定关键字、 OLE DB 驱动程序适用于 SQL Server 将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|   
+|**Address**|SSPROP_INIT_NETWORKADDRESS|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 “Address”通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 值**地址**传递给的值的优先级高于**Server**在连接字符串时使用的 SQL Server OLE DB 驱动程序中。 另外请注意，`Address=;` 将连接到在 Server 关键字中指定的服务器，而 `Address= ;, Address=.;`、 `Address=localhost;` 和 `Address=(local);` 都会产生本地服务器的连接。<br /><br /> Address 关键字的完整语法如下所示：<br /><br /> [_protocol_**:**]_Address_[**,**_port &#124;\pipe\pipename_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既没有_协议_也不**网络**指定关键字、 OLE DB 驱动程序适用于 SQL Server 将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|   
 |**APP**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br /> 默认值是**ReadWrite**。 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序对高可用性和灾难恢复的 SQL Server 支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|可附加数据库的主文件的名称（包括完整路径名）。 若要使用 AttachDBFileName，还必须使用访问接口字符串 Database 关键字来指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会重新附加它（而是使用已附加的数据库作为连接的默认数据库）。|  
+|**身份验证**<a href="#table1_1"><sup id="table1_authmode">**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值为<br/><ul><li>`(not set)`： 由其他关键字身份验证模式。</li><li>`ActiveDirectoryPassword:` Active Directory 身份验证使用登录 ID 和密码。</li><li>`ActiveDirectoryIntegrated:` 对使用当前登录的用户的 Windows 帐户凭据的 Active Directory 集成身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`Integrated Security`(或`Trusted_Connection`) 身份验证关键字或其对应的属性的值设置`Authentication`关键字 （或其相应的属性） 到`ActiveDirectoryIntegrated`若要启用新的加密和证书验证行为。<br/><br/><li>`SqlPassword:` 使用登录 ID 和密码进行身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`SQL Server`身份验证设置的值`Authentication`关键字 （或其相应的属性） 到`SqlPassword`若要启用新的加密和证书验证行为。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“yes”和“no”。|  
 |**“数据库”**|DBPROP_INIT_CATALOG|数据库名称。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|指定要使用的数据类型的处理模式。 对于访问接口数据类型，可识别的值为“0”，对于 SQL Server 2000 数据类型则为“80”。|  
-|**Encrypt**|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
+|**加密**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“yes”和“no”。 默认值为“no”。|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|用于数据库镜像的故障转移服务器的名称。|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|故障转移伙伴的 SPN。 默认值为空字符串。 空字符串导致 OLE DB 驱动程序的 SQL Server 以使用默认设置，提供程序生成的 SPN。|  
 |**语言**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语言。|  
@@ -99,16 +100,18 @@ ms.locfileid: "47838292"
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|网络数据包大小。 默认值为 4096。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受字符串“yes”和“no”作为值。 如果是“no”，则不允许数据源对象保留敏感的身份验证信息。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录密码。|  
-|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> 如果不指定，则与本地计算机上的默认实例建立连接。<br /><br /> **地址**关键字将覆盖**Server**关键字。<br /><br /> 通过指定以下条件之一，可连接到本地服务器的默认实例：<br /><br /> **Server =;**<br /><br /> **Server =。;**<br /><br /> **与;**<br /><br /> **与;**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\**  *instancename* **;**<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[OLE DB 驱动程序对 LocalDB 的 SQL Server 支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，将追加**\\** _InstanceName_。<br /><br /> 如果不指定服务器，则与本地计算机上的默认实例建立连接。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> Server 关键字的完整语法如下：<br /><br /> **Server =**[_协议_**:**]*Server*[**，**_端口_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字、 OLE DB 驱动程序适用于 SQL Server 将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 将忽略传递给的值开头的空格**Server**在连接字符串时使用的 SQL Server OLE DB 驱动程序中。|   
+|**Server**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 该值必须是服务器的网络名称、IP 地址或者 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器别名。<br /><br /> 如果不指定，则与本地计算机上的默认实例建立连接。<br /><br /> **地址**关键字将覆盖**Server**关键字。<br /><br /> 通过指定以下条件之一，可连接到本地服务器的默认实例：<br /><br /> **Server=;**<br /><br /> **Server =。;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> 有关 LocalDB 的支持的详细信息，请参阅[OLE DB 驱动程序对 LocalDB 的 SQL Server 支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)。<br /><br /> 若要指定的命名的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，将追加**\\** _InstanceName_。<br /><br /> 如果不指定服务器，则与本地计算机上的默认实例建立连接。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> Server 关键字的完整语法如下：<br /><br /> **Server=**[_protocol_**:**]*Server*[**,**_port_]<br /><br /> _protocol_ 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。<br /><br /> 以下示例将指定一个命名管道：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此行指定 named pipes 协议、本地计算机上的一个命名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称 (`MSSQL$MYINST01`)，以及命名管道的默认名称 (`sql/query`)。<br /><br /> 如果既没有*协议*也不**网络**指定关键字、 OLE DB 驱动程序适用于 SQL Server 将使用中指定的协议顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置管理器。<br /><br /> “port”是指定服务器上所要连接到的端口。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。<br /><br /> 将忽略传递给的值开头的空格**Server**在连接字符串时使用的 SQL Server OLE DB 驱动程序中。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|服务器的 SPN。 默认值为空字符串。 空字符串导致 OLE DB 驱动程序的 SQL Server 以使用默认设置，提供程序生成的 SPN。|  
-|**Timeout**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
+|**超时**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|何时"yes"，指示 SQL Server 的 OLE DB 驱动程序使用 Windows 身份验证模式进行登录验证。 否则指示适用于 SQL Server 的 OLE DB 驱动程序使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名和密码进行登录验证，并且必须指定 UID 和 PWD 关键字。|  
-|**TrustServerCertificate**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“yes”和“no”作为值。 默认值为“no”，它意味着将验证服务器证书。|  
+|**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“yes”和“no”作为值。 默认值为“no”，它意味着将验证服务器证书。|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。|  
 |**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|控制元数据的检索方式连接到时[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和更高版本。 可能的值为“yes”和“no”。 默认值为“no”。<br /><br />默认情况下，使用 SQL Server 的 OLE DB 驱动程序[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)并[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)存储过程来检索元数据。 这些存储的过程有一些限制 （例如它们将失败时在临时表上）。 设置**UseFMTONLY**为"yes"指示驱动程序以使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)进行元数据检索相反。|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|此关键字已弃用，并且 SQL Server 的 OLE DB 驱动程序将忽略其设置。|  
 |**WSID**|SSPROP_INIT_WSID|工作站标识符。|  
   
+<b id="table1_1">[1]:</b>为了提高安全性，加密和证书验证行为修改时使用的身份验证/访问令牌初始化属性或其相应的连接字符串关键字。 有关详细信息，请参阅[加密和证书验证](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
+
  使用 IDataInitialize::GetDataSource 的 OLE DB 应用程序所使用的连接字符串有以下语法：  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
@@ -135,8 +138,10 @@ ms.locfileid: "47838292"
   
 |关键字|初始化属性|描述|  
 |-------------|-----------------------------|-----------------|  
+|**访问令牌**<a href="#table2_1"><sup id="table2_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|使用向 Azure Active Directory 进行身份验证的访问令牌。 <br/><br/>**注意：** 它是错误指定了此关键字，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`连接字符串关键字或其相应的属性/关键字。|
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br /> 默认值是**ReadWrite**。 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序对高可用性和灾难恢复的 SQL Server 支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**身份验证**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值为<br/><ul><li>`(not set)`： 由其他关键字身份验证模式。</li><li>`ActiveDirectoryPassword:` Active Directory 身份验证使用登录 ID 和密码。</li><li>`ActiveDirectoryIntegrated:` 对使用当前登录的用户的 Windows 帐户凭据的 Active Directory 集成身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`Integrated Security`(或`Trusted_Connection`) 身份验证关键字或其对应的属性的值设置`Authentication`关键字 （或其相应的属性） 到`ActiveDirectoryIntegrated`若要启用新的加密和证书验证行为。<br/><br/><li>`SqlPassword:` 使用登录 ID 和密码进行身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`SQL Server`身份验证设置的值`Authentication`关键字 （或其相应的属性） 到`SqlPassword`若要启用新的加密和证书验证行为。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
@@ -157,12 +162,14 @@ ms.locfileid: "47838292"
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受字符串“true”和“false”作为值。 如果是“false”，则不允许数据源对象保留敏感的身份验证信息|  
 |**提供程序**||对于 OLE DB 驱动程序适用于 SQL Server，这应该是"MSOLEDBSQL"。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|服务器的 SPN。 默认值为空字符串。 空字符串导致 OLE DB 驱动程序的 SQL Server 以使用默认设置，提供程序生成的 SPN。|  
-|**信任服务器证书**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“true”和“false”作为值。 默认值为“false”，它意味着将验证服务器证书。|  
-|**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“true”和“false”。 默认值为“false”。|  
+|**信任服务器证书**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“true”和“false”作为值。 默认值为“false”，它意味着将验证服务器证书。|  
+|**对数据使用加密**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“true”和“false”。 默认值为“false”。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制元数据的检索方式连接到时[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和更高版本。 可能的值为“true”和“false”。 默认值为“false”。<br /><br />默认情况下，使用 SQL Server 的 OLE DB 驱动程序[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)并[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)存储过程来检索元数据。 这些存储的过程有一些限制 （例如它们将失败时在临时表上）。 设置**使用 FMTONLY**来"true"指示驱动程序以使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)进行元数据检索相反。|  
 |**用户 ID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。|  
 |**Workstation ID**|SSPROP_INIT_WSID|工作站标识符。|  
   
+<b id="table2_1">[1]:</b>为了提高安全性，加密和证书验证行为修改时使用的身份验证/访问令牌初始化属性或其相应的连接字符串关键字。 有关详细信息，请参阅[加密和证书验证](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
+
  **注意**：在连接字符串中，“旧密码”属性会设置 SSPROP_AUTH_OLD_PASSWORD，它是当前密码（可能已过期），通过访问接口字符串属性无法获取该密码。  
   
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ActiveX 数据对象 (ADO) 连接字符串关键字  
@@ -188,8 +195,10 @@ ms.locfileid: "47838292"
   
 |关键字|初始化属性|描述|  
 |-------------|-----------------------------|-----------------|  
+|**访问令牌**<a href="#table3_1"><sup id="table3_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|使用向 Azure Active Directory 进行身份验证的访问令牌。<br/><br/>**注意：** 它是错误指定了此关键字，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`连接字符串关键字或其相应的属性/关键字。|
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br /> 默认值是**ReadWrite**。 有关 OLE DB 驱动程序有关的 SQL Server 支持的详细信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[OLE DB 驱动程序对高可用性和灾难恢复的 SQL Server 支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**应用程序名称**|SSPROP_INIT_APPNAME|用于标识应用程序的字符串。|  
+|**身份验证**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_AUTH_MODE|指定使用的 SQL 或 Active Directory 身份验证。 有效值为<br/><ul><li>`(not set)`： 由其他关键字身份验证模式。</li><li>`ActiveDirectoryPassword:` Active Directory 身份验证使用登录 ID 和密码。</li><li>`ActiveDirectoryIntegrated:` 对使用当前登录的用户的 Windows 帐户凭据的 Active Directory 集成身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`Integrated Security`(或`Trusted_Connection`) 身份验证关键字或其对应的属性的值设置`Authentication`关键字 （或其相应的属性） 到`ActiveDirectoryIntegrated`若要启用新的加密和证书验证行为。<br/><br/><li>`SqlPassword:` 使用登录 ID 和密码进行身份验证。</li><br/>**注意：** 它具有**建议**使用该应用程序`SQL Server`身份验证设置的值`Authentication`关键字 （或其相应的属性） 到`SqlPassword`若要启用新的加密和证书验证行为。</ul>|
 |**自动翻译**|SSPROP_INIT_AUTOTRANSLATE|“AutoTranslate”的同义词。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|配置 OEM/ANSI 字符转换。 可识别的值为“true”和“false”。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|等待数据源初始化完成的时间（秒）。|  
@@ -210,12 +219,14 @@ ms.locfileid: "47838292"
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|接受字符串“true”和“false”作为值。 如果是“false”，则不允许数据源对象保留敏感的身份验证信息。|  
 |**提供程序**||对于 OLE DB 驱动程序适用于 SQL Server，这应该是"MSOLEDBSQL"。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|服务器的 SPN。 默认值为空字符串。 空字符串导致 OLE DB 驱动程序的 SQL Server 以使用默认设置，提供程序生成的 SPN。|  
-|**信任服务器证书**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“true”和“false”作为值。 默认值为“false”，它意味着将验证服务器证书。|  
-|**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“true”和“false”。 默认值为“false”。|  
+|**信任服务器证书**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|接受字符串“true”和“false”作为值。 默认值为“false”，它意味着将验证服务器证书。|  
+|**对数据使用加密**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|指定在通过网络发送数据之前是否应当将其加密。 可能的值为“true”和“false”。 默认值为“false”。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|控制元数据的检索方式连接到时[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和更高版本。 可能的值为“true”和“false”。 默认值为“false”。<br /><br />默认情况下，使用 SQL Server 的 OLE DB 驱动程序[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)并[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)存储过程来检索元数据。 这些存储的过程有一些限制 （例如它们将失败时在临时表上）。 设置**使用 FMTONLY**来"true"指示驱动程序以使用[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)进行元数据检索相反。|  
 |**用户 ID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名。|  
 |**Workstation ID**|SSPROP_INIT_WSID|工作站标识符。|  
   
+<b id="table3_1">[1]:</b>为了提高安全性，加密和证书验证行为修改时使用的身份验证/访问令牌初始化属性或其相应的连接字符串关键字。 有关详细信息，请参阅[加密和证书验证](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
+
  **注意**：在连接字符串中，“旧密码”属性会设置 SSPROP_AUTH_OLD_PASSWORD，它是当前密码（可能已过期），通过访问接口字符串属性无法获取该密码。  
   
 ## <a name="see-also"></a>另请参阅  

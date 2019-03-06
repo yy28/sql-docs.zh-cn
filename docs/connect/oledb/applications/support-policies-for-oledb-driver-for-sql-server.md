@@ -1,7 +1,7 @@
 ---
 title: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序的支持策略
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 782745fa9957cd611aa875bec2f9b740b489f210
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 790f19d136470458620e0c00de00885e079256bf
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202006"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744597"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的支持策略
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "53202006"
 
 |受支持的操作系统|  
 |--------------------------------------|---------------------------------|   
-|Microsoft Windows 8.1<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012<br /><br />Microsoft Windows Server 2012 R2<br /><br />Microsoft Windows Server 2016|  
+|Microsoft Windows 8.1 + [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [2014 年 4 月更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016|  
 
 ## <a name="ado-support-policies"></a>ADO 支持策略  
- ADO 应用程序如果不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的任何功能，则可以使用 Windows 附带的 SQLOLEDB OLE DB 访问接口。  
+ 如果 ADO 应用程序不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的任何功能，可以使用 Windows 附带的 SQLOLEDB OLE DB 提供程序。  
 
  ADO 应用程序可以使用 SQL Server 的 OLE DB 驱动程序，但如果用户这样做它们必须指定`DataTypeCompatibility=80`在连接字符串中。 如果连接字符串中包含 `DataTypeCompatibility=80`，则只能使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的功能。  
 
 ## <a name="ole-db-support-policies"></a>OLE DB 支持策略  
-应用程序可使用随 Windows 操作系统附带的 OLE DB 提供程序 (SQLOLEDB)。 但是，这是在维护模式下，不再更新。 您应改用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL)。
+应用程序可使用随 Windows 操作系统附带的 OLE DB 提供程序 (SQLOLEDB)。 但是，这是在维护模式下，不再更新。 改为使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL)。
 
 ## <a name="see-also"></a>另请参阅  
  [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

@@ -2,7 +2,7 @@
 title: SQL Server 功能的 OLE DB 驱动程序 |Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序功能
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840905"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744457"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>适用于 SQL Server 的 OLE DB 驱动程序功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840905"
   
  [执行异步操作](../../oledb/features/performing-asynchronous-operations.md)  
  讨论适用于 SQL Server 的 OLE DB 驱动程序如何支持异步操作，即能够在不阻止调用线程的情况下立即返回。  
-  
+
+[使用 Azure Active Directory](using-azure-active-directory.md)  
+讨论的新身份验证方法中 OLE DB 驱动程序 18.2.1 引入具有更安全的默认设置，并允许连接到 Azure SQL 数据库使用联合的标识的实例。
+
  [使用多个活动的结果集 (MARS)](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  讨论 OLE DB 驱动程序适用于 SQL Server 如何支持多个活动结果集 (MARS)。 MARS 支持使用单一数据库连接执行和接收多个结果集。  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840905"
   
  [适用于 SQL Server 的 OLE DB 驱动程序的 UTF-16 支持](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 在下列情况下，适用于 SQL Server 的 OLE DB 驱动程序不向缓冲区添加高代理项码位：如果在绑定列结果或输出参数时提供了长度固定的缓冲区，如果在缓冲区中终止符前面写入的 wchar 字符是代理项对的高代理项码位，以及如果下一个 wchar 字符是一个低代理项码位。  
+ 
+ [适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ 讨论对 utf-8 服务器编码和配置采取预防措施用户应使用 utf-8 编码数据时的支持。
   
  [适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中添加的高可用性和灾难恢复功能。  

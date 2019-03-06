@@ -1,7 +1,7 @@
 ---
 title: 常量 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,17 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409524"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744447"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常量 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题将讨论 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 定义的常量。  
+本主题将讨论 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]定义的常量。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV 驱动程序常量  
 [PDO 网站](https://php.net/manual/book.pdo.php) 上列出的常量在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]中有效。  
@@ -55,7 +55,7 @@ PDO::SQLSRV_ATTR_ENCODING 属性可传递给 [PDOStatement::setAttribute](../../
 |PDO::SQLSRV_ENCODING_BINARY|数据是来自服务器的原始字节流，无需执行编码或转换。<br /><br />对 PDO::setAttribute 无效。|  
 |PDO::SQLSRV_ENCODING_SYSTEM|数据是 8 位字符，该格式如在系统上设置的 Windows 区域设置的代码页中所指定。 任何多字节字符或未映射到此代码页中的字符都会替换为单字节问号 (?) 字符。|  
 |PDO::SQLSRV_ENCODING_UTF8|数据采用 UTF-8 编码。 这是默认编码。|  
-|PDO::SQLSRV_ENCODING_DEFAULT|使用 PDO::SQLSRV_ENCODING_SYSTEM（如果在连接过程中已指定）。<br /><br />使用连接的编码（如果在准备语句中已指定）。|  
+|PDO::SQLSRV_ENCODING_DEFAULT|使用 PDO::SQLSRV_ENCODING_SYSTEM（如果在连接过程中已指定）。<br /><br />使用连接的编码（如果已在准备语句中指定）。|  
   
 ### <a name="query-timeout"></a>查询超时值  
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间（以秒为单位）。 零 (0) 是默认值，表示无超时。  
@@ -68,6 +68,11 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性是任一非负整数，表示超时时间�
 ### <a name="handling-numeric-fetches"></a>处理数值提取操作
 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可以用于处理数值 SQL 类型 （位、 整数、 smallint、 tinyint、 float 和 real） 列中数值的提取操作。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 设置为 true，整数列的结果时表示为整数，而 SQL 浮动和实数表示为浮点数。 可以设置此属性与[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
 
+您可以修改默认十进制格式设置行为具有 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 和 PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性。 这些属性的行为等同于 SQLSRV 端上的相应选项 (**FormatDecimals**并**DecimalPlaces**)，不同的是输出参数不支持的格式设置。 这些属性可能会在连接或语句级别设置与[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但任何语句属性重写相应的连接属性。 有关更多详细信息，请参阅[格式设置十进制字符串和 Money 值 （PDO_SQLSRV 驱动程序）](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)。
+
+### <a name="handling-date-and-time-fetches"></a>处理日期和时间提取
+
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 指定是否形式检索日期和时间类型[PHP DateTime](http://php.net/manual/en/class.datetime.php)对象。 如果保留 false，则默认行为是将它们作为字符串返回。 此属性可能设置在连接或语句级别与[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)，但语句属性重写相应的连接属性。 有关详细信息，请参阅[如何： 检索日期和时间类型作为 PHP DateTime 对象使用 PDO_SQLSRV 驱动程序](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驱动程序常量  
 以下部分将列出由 SQLSRV 驱动程序使用的常量。  
@@ -139,7 +144,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可以用于处理数值 SQL 类型 
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM ($编码<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
 |SQLSRV_PHPTYPE_STRING ($编码<sup>1</sup>)|String|  
   
 1. SQLSRV_PHPTYPE_STREAM 和 SQLSRV_PHPTYPE_STRING 接受用于指定流编码的参数。 下表包含作为可接受参数的 SQLSRV 常量以及对相应编码的说明。  
@@ -169,7 +174,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可以用于处理数值 SQL 类型 
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|十进制<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
@@ -177,7 +182,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性可以用于处理数值 SQL 类型 
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|数值<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  

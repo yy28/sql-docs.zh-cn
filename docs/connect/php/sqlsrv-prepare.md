@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_prepare |Microsoft Docs
+title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602917"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676145"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,9 +70,13 @@ $options [可选]：关联阵列，用于设置查询属性。 下表列出了�
   
 |Key|支持的值|描述|  
 |-------|--------------------|---------------|  
-|QueryTimeout|正整数值。|设置查询超时（以秒为单位）。 默认情况下，驱动程序无限期等待结果。|  
-|SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|将驱动程序配置为在执行时发送所有流数据 (true)，或配置为在区块中发送流数据 (false)。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
+|ClientBufferMaxKBSize|正整数|配置保留客户端游标的结果集的缓冲区大小。<br /><br />默认值为 10240 KB。 有关详细信息，请阅读[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
+|DecimalPlaces|介于 0 和 4 （含） 之间的整数|指定小数位数设置格式时提取金额值。<br /><br />将忽略任何负整数或值大于 4。<br /><br />此选项才可用 FormatDecimals 时才 **，则返回 true**。|
+|FormatDecimals|**true** 或 **false**<br /><br />默认值是 **false**秒。|指定是否要添加前导为在适当的时候十进制字符串置零，并使`DecimalPlaces`money 类型设置格式的选项。<br /><br />有关详细信息，请参阅[格式设置十进制字符串和 Money 值 （SQLSRV 驱动程序）](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
+|QueryTimeout|正整数|设置查询超时（以秒为单位）。 默认情况下，驱动程序无限期等待结果。|  
+|ReturnDatesAsStrings|**true** 或 **false**<br /><br />默认值是 **false**秒。|将配置语句以字符串形式检索日期和时间类型 (**，则返回 true**)。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
 |可滚动|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
+|SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|将驱动程序配置为在执行时发送所有流数据 (true)，或配置为在区块中发送流数据 (false)。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
   
 ## <a name="return-value"></a>返回值  
 语句资源。 如果无法创建语句资源，将返回 **false** 。  

@@ -2,7 +2,7 @@
 title: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
 description: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687861"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744567"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ OLE DB 已[取消弃用](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/1
 > [!NOTE]
 > 若要在现有应用程序中使用 SQL Server，新 Microsoft OLE DB 驱动程序，您应计划将连接字符串从 SQLOLEDB 或 SQLNCLI，转换为 MSOLEDBSQL。
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>在本节中  
 [何时使用适用于 SQL Server 的 OLE DB 驱动程序](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  讨论适用于 SQL Server 的 OLE DB 驱动程序与 Microsoft 数据访问技术的适应度如何，探讨它与 Windows DAC 和 ADO.NET 相比较如何，同时提供建议，帮助用户决定要采用哪种数据访问技术。  
   

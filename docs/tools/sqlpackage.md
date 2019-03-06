@@ -196,7 +196,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|
@@ -413,7 +413,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。 |
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
  |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。 |
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。 |
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。 |
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。 |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异|
@@ -574,7 +574,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新不用于复制设置。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新对象在分区方案中的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新分区方案和分区函数方面的差异。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新权限方面的差异。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定在发布到数据库时，是应忽略还是应更新带引号的标识符设置方面的差异。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定当您发布到数据库时，应忽略还是更新登录的角色成员身份之间的差异。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定在发布到数据库时，应忽略还是应更新 SQL Server 保留路由表中的路由的时间量方面的差异。|

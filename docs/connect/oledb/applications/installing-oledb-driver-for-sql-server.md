@@ -2,7 +2,7 @@
 title: 安装适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft 文档
 description: 安装和卸载 SQL Server 的 OLE DB 驱动程序
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602217"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744377"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安装适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ SQL Server 文件 （msoledbsql.dll，msoledbsqlr.rll），OLE DB 驱动程序�
 > [!NOTE]  
 > OLE DB 驱动程序适用于 SQL Server 的所有相应的注册表设置都作为安装过程的一部分。  
 
-SQL Server 标头和库文件 （msoledbsql.h 和 msoledbsql.lib），OLE DB 驱动程序安装在`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`。 此外，msoledbsql.msi 安装中的相同文件 x64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`。  
+SQL Server 标头和库文件 （msoledbsql.h 和 msoledbsql.lib），OLE DB 驱动程序安装在`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`。 此外，msoledbsql.msi 安装中的相同文件 x64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`。  
 
 通过 msoledbsql.msi，可以将 OLE DB 驱动程序分发适用于 SQL Server。 你可能需要在部署应用程序时安装用于 SQL Server 的 OLE DB 驱动程序。 安装多个包（对于用户而言就像是一次安装）的一种方法就是使用链接器和引导程序技术。 有关详细信息，请参阅[为 Visual Studio 2005 创作自定义引导程序包](https://go.microsoft.com/fwlink/?LinkId=115667)和[添加自定义系统必备](https://go.microsoft.com/fwlink/?LinkId=115668)。  
   

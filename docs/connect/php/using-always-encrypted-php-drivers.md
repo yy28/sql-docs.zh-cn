@@ -269,7 +269,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 Windows 上的 SQL Server ODBC 驱动程序包含名为 Windows 证书存储的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不是在 macOS 或 Linux 上可用。）与此提供程序，客户端计算机上本地存储 CMK 和应用程序无额外配置才可使用的驱动程序。 但是，应用程序必须具有对证书和私钥的访问的存储中。 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-### <a name="using-azure-key-vault"></a>使用 Azure Key Vault 的 EKM
+### <a name="using-azure-key-vault"></a>使用 Azure Key Vault
 
 Azure Key Vault 提供了一种方法来存储加密密钥、 密码和其他机密，使用 Azure，可以用于始终加密的存储密钥。 SQL Server （17 和更高版本） 的 ODBC 驱动程序包括 Azure 密钥保管库的内置主密钥存储提供程序。 以下连接选项处理 Azure Key Vault 配置： `KeyStoreAuthentication`， `KeyStorePrincipalId`，和`KeyStoreSecret`。 
  -   `KeyStoreAuthentication` 可以采用两个可能的字符串值之一：`KeyVaultPassword`和`KeyVaultClientSecret`。 这些值控制与其他两个关键字一起使用哪种身份验证凭据。
@@ -278,7 +278,7 @@ Azure Key Vault 提供了一种方法来存储加密密钥、 密码和其他机
      -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStorePrincipalId`必须是应用程序客户端 id。
  -   `KeyStoreSecret` 采用一个字符串，表示凭据机密。 
      -   如果`KeyStoreAuthentication`设置为`KeyVaultPassword`，然后`KeyStoreSecret`必须是用户的密码。 
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStoreSecret`必须与应用程序客户端 id。关联的应用程序机密
+     -   如果 `KeyStoreAuthentication` 设置为 `KeyVaultClientSecret`，则 `KeyStoreSecret` 必须是与应用程序客户端 ID 相关联的应用程序机密。
 
 所有三个选项中必须存在要使用 Azure 密钥保管库的连接字符串。 此外，`ColumnEncryption`必须设置为`Enabled`。 如果`ColumnEncryption`设置为`Disabled`但 Azure 密钥保管库选项都存在，该脚本将继续而不进行错误但会执行任何加密。
 

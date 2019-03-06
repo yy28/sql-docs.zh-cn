@@ -2,7 +2,7 @@
 title: 适用于 SQL Server 的 OLE DB 驱动程序的系统要求 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序的要求
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821025"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744427"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的系统要求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821025"
 >  确保以管理员权限进行登录，然后再安装此软件。  
 
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 有关支持的 SQL Server 的 OLE DB 驱动程序的操作系统的列表，请参阅[的 OLE DB Driver for SQL Server 支持策略](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)。  
+ 有关支持的 SQL Server 的 OLE DB 驱动程序的操作系统的列表，请参阅[适用于 SQL Server 的 OLE DB 驱动程序支持策略](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)。  
+
+ ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 身份验证要求  
+ 当通过 OLE DB 驱动程序使用 Azure Active Directory 身份验证方法，确保[SQL Server 的 Active Directory 身份验证库](https://go.microsoft.com/fwlink/?LinkID=513072)已安装。 ADAL 不需要其他身份验证方法或 OLE DB 操作。
+有关详细信息，请参阅[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="sql-server-requirements"></a>SQL Server 要求  
  若要使用用于 SQL Server 的 OLE DB 驱动程序中访问数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，必须具有的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持与 MDAC 的所有版本、Windows 数据访问组件以及适用于 SQL Server 的 OLE DB 驱动程序的所有版本的连接。 如果客户端的较旧版本连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则该客户端未知的服务器数据类型将映射到与客户端版本相兼容的类型。 有关详细信息，请参阅本主题后面的“客户端版本的数据类型兼容性”。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持与 MDAC 的所有版本、Windows 数据访问组件以及适用于 SQL Server 的 OLE DB 驱动程序的所有版本的连接。 如果客户端的较旧版本连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则该客户端未知的服务器数据类型将映射到与客户端版本相兼容的类型。 有关详细信息，请参阅[客户端版本的数据类型兼容性](#data-type-compatibility-for-client-versions)。  
 
 ## <a name="cross-language-requirements"></a>跨语言要求  
  英文版的适用于 SQL Server 的 OLE DB 驱动程序可以在所有受支持的本地化操作系统上使用。 在同一语言的本地化 OLE DB 驱动程序的 SQL Server 版本的本地化操作系统上支持的 OLE DB 驱动程序适用于 SQL Server 本地化的版本。 只要安装了匹配的语言设置，则受支持的操作系统的英文版还支持适用于 SQL Server 的 OLE DB 驱动程序的本地化版本。  
@@ -68,12 +72,12 @@ ms.locfileid: "47821025"
 
 |数据类型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|适用于 SQL Server 的 OLE DB 驱动程序|Windows 数据访问组件、MDAC 及<br /><br /> OLE DB 驱动程序的 SQL Server OLE DB 应用程序与 DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|图像|  
 |varchar(max)|varchar|varchar|varchar|文本|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|varbinary|udt|udt|图像|  
+|CLR UDT (> 8 Kb)|varbinary|udt|udt|图像|  
 |日期|varchar|日期|日期|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  

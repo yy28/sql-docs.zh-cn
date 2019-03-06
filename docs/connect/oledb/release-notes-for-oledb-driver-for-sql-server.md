@@ -1,17 +1,17 @@
 ---
-title: 发行说明（适用于 SQL Server 的 OLE DB 驱动程序） | Microsoft Docs
-ms.date: 07/03/2018
+title: 发行说明（适用于 SQL Server 的 OLE DB 驱动程序）| Microsoft Docs
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36dc1b7325265da6231b75e9f4db46854b0b219f
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789115"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744357"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -19,6 +19,13 @@ ms.locfileid: "47789115"
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 本页介绍 Microsoft OLE DB 驱动程序的每个版本中添加适用于 SQL Server。
+
+## <a name="whats-new-in-version-1821"></a>版本 18.2.1 中的新增功能
+
+**添加的功能：**
+
+* 支持 utf-8 服务器编码。 有关详细信息，请参阅： [utf-8 的 OLE DB 驱动程序支持 SQL Server 的](features/utf-8-support-in-oledb-driver-for-sql-server.md)。
+* Azure Active Directory 身份验证支持。 有关详细信息，请参阅[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="whats-new-in-version-1810"></a>版本 18.1.0 中的新增功能
 

@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044944"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662851"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 插入到数据库列（包括加密列）中的值将作为绑定参数传递（请参阅 [SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)）。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询会失败，因为该驱动程序不会尝试加密或其他处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
 
-- 插入到 SSN 列的参数的 SQL 类型设置为 SQL_CHAR，映射到**char** SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果参数的类型设置为 SQL_WCHAR，映射到**nchar**，查询将失败，因为始终加密不支持从加密的 nchar 值为加密的 char 值的服务器端转换。 请参阅[ODBC 程序员参考-附录 d:数据类型](https://msdn.microsoft.com/library/ms713607.aspx)有关的数据类型映射信息。
+- 插入到 SSN 列的参数的 SQL 类型设置为 SQL_CHAR，映射到**char** SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果参数的类型设置为 SQL_WCHAR，映射到**nchar**，查询将失败，因为始终加密不支持从加密的 nchar 值为加密的 char 值的服务器端转换。 请参阅[ODBC 程序员参考-附录 d： 数据类型](https://msdn.microsoft.com/library/ms713607.aspx)有关的数据类型映射信息。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制为了检索查询参数的元数据而往返的次数
 
-如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，将返回每个参数，以允许要进行加密的驱动程序的与加密相关信息。 以上行为可确保实现针对客户端应用程序的高级别透明性：应用程序（和应用程序开发人员）不需要知道哪些查询在访问加密列，只需将面向加密列的值传递到参数中的驱动程序即可。
+如果为连接启用了 Always Encrypted，默认情况下，驱动程序将为每个参数化查询调用 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，并将查询语句（不带任何参数值）传递到 SQL Server。 此存储的过程分析查询语句，以找出，如果任何参数需要加密，并且如果是这样，将返回每个参数，以允许要进行加密的驱动程序的与加密相关信息。 以上行为可确保高级别的客户端应用程序的透明度： 应用程序 （和应用程序开发人员） 不需要知道哪些查询在访问加密的列，只要面向加密的列的值传递给参数中的驱动程序。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每个语句始终加密行为
 
@@ -369,6 +369,8 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 
 - 使用此方法，客户端 ID/密码的凭据是应用程序客户端 ID 和应用程序密码。
 
+- 托管服务标识-使用此方法的凭据是系统分配的标识或用户分配的标识。 为用户分配的标识，UID 设置为用户标识的对象 ID。
+
 若要允许使用 Cmk 存储在 AKV 中的列加密的驱动程序，请使用以下的仅限连接字符串关键字：
 
 |凭据类型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Azure 密钥保管库便于存储和管理用于始终加密的列主密钥（�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**用户名/密码**
+**用户名/密码**：
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 - 要将已加密文本插入 varbinary （max） 的形式 （例如上面检索到），请将`BCPMODIFYENCRYPTED`选项设为 TRUE，并且执行 BCP IN 操作。 为了使生成的数据以便进行解密，请确保目标列的 CEK 是与最初从其获取已加密文本相同。
 
-使用时**bcp**实用程序：控制`ColumnEncryption`设置，请使用-D 选项并指定包含所需的值的 DSN。 若要插入已加密文本，请确保`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`启用的用户的设置。
+使用时**bcp**实用程序： 控制`ColumnEncryption`设置，请使用-D 选项并指定包含所需的值的 DSN。 若要插入已加密文本，请确保`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`启用的用户的设置。
 
 操作对加密列时下, 表提供的操作的摘要：
 
@@ -577,7 +579,8 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 |`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。 <br><br>默认值为 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>当`KeyStoreAuthetication`  =  `KeyVaultClientSecret`将此值设置为有效 Azure Active Directory 应用程序客户端 ID |
-|`KeyStoreSecret` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`将此值设置为相应的用户名的密码。 <br>当`KeyStoreAuthentication`  =  `KeyVaultClientSecret`将此值设置为与有效 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密|
+|`KeyStoreSecret` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`将此值设置为相应的用户名的密码。 <br>当`KeyStoreAuthentication`  =  `KeyVaultClientSecret`将此值设置为与有效 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密 |
+
 
 ### <a name="connection-attributes"></a>连接属性
 

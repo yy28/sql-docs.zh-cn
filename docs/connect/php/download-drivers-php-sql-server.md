@@ -1,7 +1,7 @@
 ---
 title: 下载 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f946aa354ddde07db6abd5797982c1621bf24dbb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605244"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744367"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>下载 Microsoft Drivers for PHP for SQL Server
 
@@ -25,6 +25,7 @@ ms.locfileid: "51605244"
 
 以下版本的 Windows 上的 PHP 驱动程序是可供下载：
 
+- [Microsoft Drivers 5.6 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
@@ -34,6 +35,7 @@ ms.locfileid: "51605244"
 
 用于 PHP 的驱动程序轻松下载和安装 Linux 和 macOS 上使用 PECL。 请参阅[Linux 和 macOS 安装教程](installation-tutorial-linux-mac.md)有关详细信息。 如果需要手动安装的驱动程序在 Linux 和 macOS 上的 PHP，是可供下载的以下版本：
 
+- [Microsoft Drivers 5.6 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
