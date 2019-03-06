@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662851"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956058"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 SQLGetData 部件中。 SQLGetData 对只有一个调用可以进行，具有足够长以包含整个列的数据的缓冲区。
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>在使用 SQLPutData 部件中发送数据
-不能使用 SQLPutData 部件中发送数据插入或比较。 SQLPutData 只有一个调用可以进行，使用包含整个数据的缓冲区。 对于将长数据插入到加密列中，使用大容量复制 API，包含一个输入的数据文件中下一节中所述。
+在 SQL Server 的 ODBC 驱动程序 17.3 之前, 不能使用 SQLPutData 部件中发送数据插入或比较。 SQLPutData 只有一个调用可以进行，使用包含整个数据的缓冲区。 对于将长数据插入到加密列中，使用大容量复制 API，包含一个输入的数据文件中下一节中所述。
 
 ### <a name="encrypted-money-and-smallmoney"></a>加密的 money 和 smallmoney
 加密**资金**或**smallmoney**列不能为目标的参数，因为没有不特定 ODBC 数据类型映射到这些类型，从而导致操作数类型冲突错误。

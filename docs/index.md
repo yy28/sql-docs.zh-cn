@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>管理、监视和优化</h3>
-                                                          <p><b>维护计划、SQL 事件探查器、自动 Tunic、内存中 OLTP、分区、统计信息、索引、基数估计 </b>  </p>
+                                                          <p><b>维护计划、SQL Profiler、自动调整、内存中 OLTP、分区、统计信息、索引、基数估计</b>  </p>
                                                       </div>
                                                   </div>
                                               </div>
