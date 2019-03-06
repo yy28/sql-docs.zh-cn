@@ -10,15 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d67b8bba1449cce473baa5313762c4933a72e250
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600297"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955858"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的新增功能
+
+**支持的新分布**: SuSE 月 15 日，Ubuntu 18.10 macOS 10.14
+
+**添加功能**:
+
+- Azure Active Directory 托管服务标识 (系统和用户分配) 身份验证模式，有关详细信息，请参阅[使用 Azure Active Directory 与 ODBC 驱动程序](../using-azure-active-directory.md)
+- 能够流式传输的详细信息，请参阅 Always Encrypted 列对输入的参数[ODBC 驱动程序使用始终加密时的限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 分布式事务，有关详细信息，请参阅[使用 XA 事务](../use-xa-with-dtc.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的新增功能
 
