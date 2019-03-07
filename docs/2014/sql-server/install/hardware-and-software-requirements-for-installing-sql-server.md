@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 253f517c41c7d703c9d8fad3355cc93d682ed010
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a9ed1c397dbdd30535dd58f17ff3d12f3b84941d
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527150"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
 
@@ -101,7 +101,7 @@ ms.locfileid: "53366239"
 |---------------|-----------------|  
 |.NET Framework|在选择 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、复制或 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]时，.NET 3.5 SP1 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所必需的，但不再由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序安装。 <br />-如果运行安装程序并没有.NET 3.5 SP1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序要求您下载并安装.NET 3.5 SP1，然后才能继续[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 (安装.NET 3.5 SP1 [Microsoft.NET Framework 3.5 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=22)。)错误消息中包含指向下载中心的链接，您也可以从 Windows Update 下载 .NET 3.5 SP1。 若要避免在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间中断，可在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，先下载并安装 .NET 3.5 SP1。<br />-如果在计算机上运行安装程序[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]，在安装之前，必须启用.NET Framework 3.5 SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />-如果没有 internet 访问，必须下载并运行安装程序以安装任何上面提到的组件之前安装.NET Framework 3.5 SP1。 有关详细信息的建议和指导如何获取和上启用.NET Framework 3.5[!INCLUDE[win8](../../includes/win8-md.md)]并[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，请参阅[Microsoft.NET Framework 3.5 部署注意事项](https://msdn.microsoft.com/library/windows/hardware/hh975396)(https://msdn.microsoft.com/library/windows/hardware/hh975396)。<br /><br /> .NET 4.0 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]所必需的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在功能安装步骤中安装 .NET 4.0。<br />-如果要安装[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，请确保 Internet 连接是在计算机上可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将下载并安装 .NET Framework 4，因为 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 介质不包含该软件。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上的服务器核心模式下不安装.NET 4.0 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 您必须首先安装 .NET 4.0，然后才能在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。|  
 |Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不安装或启用 Windows PowerShell 2.0；但对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]组件和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 而言，Windows PowerShell 2.0 是一个安装必备组件。 如果安装程序报告缺少 Windows PowerShell 2.0，您可以按照 [Windows 管理框架](https://go.microsoft.com/fwlink/?LinkId=186214) 页中的说明安装或启用它。|  
-|网络软件|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的操作系统具有内置网络软件。 独立安装的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br /><br /> 注意：通过协议不支持故障转移群集上。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)。|  
+|网络软件|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持的操作系统具有内置网络软件。 独立安装的命名实例和默认实例支持以下网络协议：共享内存、命名管道、TCP/IP 和 VIA。<br /><br /> 注意：故障转移群集不支持 VIA 协议。 与 SQL Server 实例在同一故障转移群集节点上运行的客户端或应用程序可以使用 Shared Memory 协议，通过其本地管道地址连接到 SQL Server。 不过，这种连接无法感知群集，因此会在实例故障转移后无法连接。 因此，不建议使用这种连接，只能用于极个别的方案。 不推荐使用 VIA 协议。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 有关网络协议和网络库的详细信息，请参阅 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)。|  
 |虚拟化|在以下版本中以 Hyper-V 角色运行的虚拟机环境中支持 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise 和 Datacenter 版本<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard、 Enterprise 和 Datacenter 版本。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 和 Standard 版本。<br /><br /> 除了父分区所需的资源以外，还必须为每个虚拟机（子分区）的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例提供足够的处理器资源、内存和磁盘资源。 本主题后面列出要求。\*<br /><br /> 在 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 上的 Hyper-V 角色中，最多可以为运行 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 位/64 位、 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位版本的虚拟机分配 4（四）个虚拟处理器。<br /><br /> 在的 HYPER-V 角色[!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />最多可以为运行 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 位/64 位的虚拟计算机分配 8（八）个虚拟处理器。<br />最多可以为运行 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位版本的虚拟机分配 64（六十四）个虚拟处理器。<br /><br /> 有关详细信息的不同版本的计算容量限制[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以及如何在具有超线程处理器的物理和虚拟化环境中不同，请参阅[Compute Capacity Limits by Edition 的 SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). 有关 Hyper-V 角色的详细信息，请参阅 [Windows Server 2008 网站](https://go.microsoft.com/fwlink/?LinkId=182820)。<br /><br /> **\*\* 重要\* \*** 中支持来宾故障转移群集[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 有关用于来宾故障转移群集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和操作系统的支持版本的详细信息以及对虚拟化的支持的详细信息，请参阅 [针对在硬件虚拟环境中运行的 Microsoft SQL Server 产品的支持策略](https://go.microsoft.com/fwlink/?LinkId=151676)。|  
 |硬盘|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 要求最少 6 GB 的可用硬盘空间。<br /><br /> 磁盘空间要求将随所安装的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件不同而发生变化。 有关详细信息，请参阅本主题后面的 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace) 。 有关支持的数据文件存储类型的信息，请参阅 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |驱动器|从磁盘进行安装时需要相应的 DVD 驱动器。|  
@@ -115,7 +115,7 @@ ms.locfileid: "53366239"
   
 |组件|要求|  
 |---------------|-----------------|  
-|内存<sup>[1]</sup>|**最低要求：**<br /><br /> Express Editions：512 MB<br /><br /> 所有其他版本：1 GB<br /><br /> **建议：**<br /><br /> Express Editions：1 GB<br /><br /> 所有其他版本：至少 4 GB 并且应该随着数据库大小的增加而增加，以便确保最佳性能。|  
+|Memory<sup>[1]</sup>|**最低要求：**<br /><br /> Express Editions：512 MB<br /><br /> 所有其他版本：1 GB<br /><br /> **建议：**<br /><br /> Express Editions：1 GB<br /><br /> 所有其他版本：至少 4 GB 并且应该随着数据库大小的增加而增加，以便确保最佳性能。|  
 |处理器速度|**最低要求：**<br /><br /> x86 处理器：1.0 GHz<br /><br /> x64 处理器：1.4 GHz<br /><br /> **建议：** 2.0 GHz 或更快|  
 |处理器类型|x64 处理器：AMD Opteron、AMD Athlon 64、支持 Intel EM64T 的 Intel Xeon 和支持 EM64T 的 Intel Pentium IV<br /><br /> x86 处理器：Pentium III 兼容处理器或速度更快的处理器|  
   
@@ -130,28 +130,25 @@ ms.locfileid: "53366239"
 -   对于在支持的 64 位操作系统上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位版本，WOW64 中支持管理工具。 有关支持的操作系统的详细信息，请在下面各节中选择 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本。  
   
  **服务器核心支持：**  
-  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 的 Server Core 安装上现在支持 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 在以下 Windows Server 版本的 Server Core 模式上支持安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ：  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Enterprise 64 位  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位  
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  现在支持 Windows Server 2008 R2、 Windows Server 2012、 Windows Server 2012 R2、 Windows Server 2016 和 Windows Server 2019 的服务器核心安装上。 
+
+安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Server Core 上模式受以下版本的 Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
   
  有关安装的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Server Core 上看到[Server Core 上安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
-> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受支持的版本[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]64 位 x64 Standard edition 也支持[!INCLUDE[sbs_2](../../includes/sbs-2-md.md)]64-bit x64。  
+   >[!NOTE]
+   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位 x64 Standard 版本中支持的 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 版本在 [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64 位 x64 版本中也受支持。  
   
  **操作系统支持：**  
   
@@ -229,7 +226,7 @@ ms.locfileid: "53366239"
   
 -   SMB 文件共享  
   
-    > **注意：** 无论是独立安装还是群集安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件均不支持 SMB 存储。 请改用直接连接存储或存储区域网络。  
+    > **注意**：无论是独立安装还是群集安装， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件均不支持 SMB 存储。 请改用直接连接存储或存储区域网络。  
   
     > **重要说明!!** SMB 存储可由 Windows 文件服务器或第三方 SMB 存储设备承载。 如果使用 Windows 文件服务器，该 Windows 文件服务器版本应为 2008 或更高。 有关将 SMB 文件共享作为存储选项安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的详细信息，请参阅 [SMB 文件共享用作存储选项时安装 SQL Server](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)。  
   

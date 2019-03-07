@@ -2,7 +2,7 @@
 title: 什么是 SSMA for Oracle (OracleToSQL) 中的新增功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,18 +10,27 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 1d28ddc0ca3338c9f3a5f8e9e912efa90f6cbcfa
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955958"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527100"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>什么是 SSMA for Oracle (OracleToSQL) 中的新增功能
 本文列出了每个版本中的 Oracle 更改 SQL Server Migration Assistant (SSMA)。
 
+## <a name="ssma-v81"></a>SSMA v8.1
+适用于 Oracle 的 SSMA v8.1 版本增强了能够提高质量和转换的度量值的目标修补。
+
+> [!NOTE]
+> 自动更新的已知的问题可能会导致失败的更新从 SSMA v8.0 v8.1。 如果遇到此错误，请下载最新版本，然后手动安装它。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
+
 ## <a name="ssma-v80"></a>SSMA v8.0
-适用于 Oracle 的 SSMA v8.0 版本已得到增强，提供目标的修补，设计用于提高质量和转换的度量值。 此版本还提供了以下新功能：
+适用于 Oracle 的 SSMA v8.0 版本增强了设计用于提高质量和转换的度量值的目标修补。 此版本还提供了以下新功能：
 
 * 为支持**Azure SQL 数据库托管实例**作为目标。 现在可以创建目标 Azure SQL 数据库托管实例的新项目：
 
@@ -46,16 +55,10 @@ ms.locfileid: "56955958"
 
 * 默认情况下映射到 VARCHAR ROWID 和 UROWID 功能。 从 'uniqueidentifier' 以适应显式 ROWID 列的数据迁移更改。
 
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
-
 ## <a name="ssma-v710"></a>SSMA v7.10
 适用于 Oracle 的 SSMA v7.10 版本包含以下更改：
 - 可提供额外的安全和隐私保护功能以满足全局要求中的更改的目标的修补。
 - 转换改进，与分层查询相关。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 适用于 Oracle 的 SSMA v7.9 版本包含以下更改：
@@ -65,20 +68,14 @@ ms.locfileid: "56955958"
 - 有关迁移支持使用 SQL Server Integration Services (SSIS) 数据。 转换后的架构，则可以通过右键单击上下文菜单选项创建的 SSIS 包。
 - SSMA 中的 Azure SQL 数据库连接对话框也已更改，以指定完全限定的服务器名称。 在以前版本的 SSMA，Azure SQL 数据库前缀必须明确指出在项目设置。
 
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
-
 ## <a name="ssma-v78"></a>SSMA v7.8
 适用于 Oracle 的 SSMA 7.8 版版本包含以下更改：
--   添加了对支持：
+-   支持：
     - IN 子句的行表达式。
     - 隐式类型转换。
     - Azure SQL 数据库的 UID 转换。
-- 在项目设置中的突出显示的更改类型映射。
-- 提供用户要禁用遥测数据的能力。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
+- 更改项目设置中突出显示的类型映射。
+- 用户若要禁用遥测数据的能力。
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 适用于 Oracle 的 SSMA v7.7 版本包含以下更改：
@@ -87,22 +84,13 @@ ms.locfileid: "56955958"
 - SQL Server 2017 支持现已正式与 Oracle 的扩展包，也支持在 Linux 上 （新的远程安装选项）。 请注意，扩展包功能是在 Linux 上，安装时如不支持测试人员和服务器端数据迁移功能。
 - 适用于 Oracle 的 SSMA 允许您将迁移作为常规表的具体化视图 (通过在设置可配置**项目设置** -> **同步** ->  **具体化视图发现后备表**)。
 
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
-
 ## <a name="ssma-v76"></a>SSMA v7.6
-适用于 Oracle 的 SSMA v7.6 版本已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 支持 Windows 和 Linux 上的 SQL Server 2017 处于公共预览状态，不应该用于生产迁移。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 的安装先决条件，并已停止使用该工具的 32 位版本。
+适用于 Oracle 的 SSMA v7.6 版本得到了增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 支持 Windows 和 Linux 上的 SQL Server 2017 处于公共预览状态，不应该用于生产迁移。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 适用于 Oracle 的 SSMA 版本 7.5 版本包含以下更改：
 - 增强了多项改进，以确保为残障人士使用的可访问性。
 - 更新以改进质量和转换规格，与目标修补，如改进数据在迁移期间，根据客户反馈的日期和 float 数据类型处理。
-
-> [!IMPORTANT]
-> .Net 4.5.2 是安装 SSMA 版本 7.5 的先决条件。 此外，从 v7.4 开始，SSMA 的 32 位版本正在停止。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 适用于 Oracle 的 SSMA v7.4 版本包含以下更改：
@@ -132,7 +120,8 @@ ms.locfileid: "56955958"
 - 通过以下各项公开的 SSMA 可扩展性框架：
   - 导出到 SQL Server Data Tools (SSDT) 项目的功能。
     -   现在，您可以到 SSDT 项目从 SSMA 导出架构脚本。 架构脚本可用于进行附加的架构更改和部署你的数据库。
-![将另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
+
+        ![将另存为 SSDT 项目命令](../media/export-schema-scripts_red.png)
   - 可供执行的自定义转换 SSMA 的库。
     - 现在可以构造自定义语法转换和转换之前未处理的 SSMA 能处理的代码。
       - 在此博客文章提供了有关如何构造自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
@@ -222,9 +211,7 @@ ms.locfileid: "56955958"
 -   有关 IE 10 中的不可见的报表页的已修复的 bug。  
   
 ## <a name="january-2012"></a>2012 年 1 月  
-适用于 Oracle 的 SSMA 的 2012 年 1 月版本包含以下更改：  
-  
--   添加了的对行类型与 RecordType 输入参数的默认设置为 NULL。  
+适用于 Oracle 的 SSMA 的 2012 年 1 月版本添加了对行类型支持，RecordType 输入的参数的默认设置为 NULL。  
   
 ## <a name="july-2011"></a>2011 年 7 月  
 适用于 Oracle 的 SSMA 的 2011 年 7 月版本包含以下更改：  
