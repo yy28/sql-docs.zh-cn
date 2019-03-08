@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202806"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828127"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53202806"
   
 > [!NOTE]  
 > 要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 的活动用户实例，请使用指定管道名称的命名管道协议进行连接，例如 `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`。 有关详细信息，请参阅 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文档。  
-  
+> [!NOTE]  
+> 连接通常保留在“最近使用”(MRU) 历史记录中。 若要从 MRU 中删除条目，只需单击“服务器名称”组合框，选择要删除的服务器的名称，然后按 DEL 键。  
+   
 **身份验证**  
 当前版本的 SSMS 中，连接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的实例时提供五种身份验证模式。 如果你的“身份验证”对话框中与以下列表中的不匹配，请从 [下载 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 下载最新版本的 SSMS。  
 

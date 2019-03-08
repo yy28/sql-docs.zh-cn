@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072852"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803152"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -68,7 +68,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 
 例如，SQL Server 2016 的默认位置为 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`。
 
-更新 core-site.xml，添加以下三个属性 ****。 根据以下环境设置值：
+更新 **core-site.xml**，添加以下三个属性。 根据以下环境设置值：
 
 ```xml
 <property>
@@ -212,7 +212,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 
 ### <a name="mit-kdc"></a>MIT KDC  
 
-在 KDC 主机或任何经过配置的 KDC 客户端上运行 kadmin.local  >（管理员登录）> listprincs  可查看已注册 KDC 的所有 SPN，包括管理员 **** ****。 如果在 Hadoop 群集上正确配置了 Kerberos，则群集中的每个可用服务均应有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）默认情况下，其对应的 keytab 文件（密码替换项）位于 /etc/security/keytabs 下 ****。 已使用 KDC 私钥对它们进行加密。  
+在 KDC 主机或任何经过配置的 KDC 客户端上运行 kadmin.local  >（管理员登录）> listprincs  可查看已注册 KDC 的所有 SPN，包括管理员 **** ****。 如果在 Hadoop 群集上正确配置了 Kerberos，则群集中的每个可用服务均应有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）默认情况下，其对应的 keytab 文件（密码替换项）位于  **/etc/security/keytabs** 下。 已使用 KDC 私钥对它们进行加密。  
 
 也可考虑使用 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 在本地 KDC 上验证管理员凭据。 用法示例为： `kinit identity@MYREALM.COM`。 密码提示框指示存在标识。  默认情况下，可在 /var/log/krb5kdc.log 中获取 KDC 日志，其中包括所有票证请求（包括生成请求的客户端 IP） ****。 应有来自 SQL Server 计算机 IP（此工具的运行位置）的两个请求：第一个是针对身份验证服务器的 TGT 的 AS\_REQ ，第二个是针对票证授予服务器的 ST 的 TGS\_REQ **** ****。
 

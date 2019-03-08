@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991870"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590482"
 ---
 # <a name="about-change-data-capture-sql-server"></a>关于变更数据捕获 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991870"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解变更数据捕获和捕获实例  
  在跟踪对数据库中任何单个表进行的更改之前，必须为数据库显式启用变更数据捕获。 这是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)存储过程完成的。 为数据库启用变更数据捕获后，可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)存储过程将源表标识为跟踪的表。 为表启用变更数据捕获后，将创建一个关联的捕获实例以支持传播源表中的更改数据。 捕获实例由一个更改表和最多两个查询函数组成。 说明捕获实例配置详细信息的元数据保留在变更数据捕获元数据表 **cdc.change_tables**、 **cdc.index_columns**和 **cdc.captured_columns**中。 可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程来检索此信息。  
   
- 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*_*表名*>。 它的关联更改表的命名方式为：在捕获实例名称后面追加 **_CT** 。 用于查询所有更改的函数的命名方式为：在捕获实例名称后面追加 **fn_cdc_get_all_changes_**。 如果将捕获实例配置为支持 **net changes**，则还会创建 **net_changes** 查询函数，并通过在捕获实例名称后面追加 **fn_cdc_get_net_changes\_** 来进行命名。  
+ 与捕获实例关联的所有对象都是在启用变更数据捕获的数据库的变更数据捕获架构中创建的。 捕获实例名称的要求是：必须是有效的对象名，并且在数据库捕获实例中是唯一的。 默认情况下，该名称是源表的 \<*架构名称*\_*表名*>。 它的关联更改表的命名方式为：在捕获实例名称后面追加 **_CT** 。 用于查询所有更改的函数的命名方式为：在捕获实例名称后面追加 **fn_cdc_get_all_changes_**。 如果将捕获实例配置为支持 **net changes**，则还会创建 **net_changes** 查询函数，并通过在捕获实例名称后面追加 **fn_cdc_get_net_changes\_** 来进行命名。  
   
 ## <a name="change-table"></a>更改表  
  变更数据捕获更改表的前五列是元数据列。 这些列提供与记录的更改有关的附加信息。 其余列镜像源表中按名称标识的捕获列（通常还会按类型进行标识）。 这些列保存从源表中收集的捕获列数据。  

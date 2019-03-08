@@ -23,18 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297c6aa82ff318d7e00ee022a5f9b25ad309358
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012118"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801571"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 用于定义一个与采用 24 小时制并带有秒小数部分的一日内时间相组合的日期。
   
@@ -56,7 +53,7 @@ ms.locfileid: "56012118"
 |存储大小|8 字节|  
 |精确度|舍入到 .000、.003 或 .007 秒三个增量。|  
 |默认值|1900-01-01 00:00:00|  
-|日历|公历（不包括完整的年份范围。）|  
+|日历|公历（包括完整的年份范围。）|  
 |用户定义的秒的小数部分精度|否|  
 |时区偏移量感知和保留|否|  
 |夏时制感知|否|  
@@ -66,7 +63,7 @@ ms.locfileid: "56012118"
   
 |数字|描述|  
 |---|---|
-|日期格式：<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 时间格式：<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|您可以指定日期数据，其中月份也通过数值指定。 例如 5/20/97 表示 1997 年 5 月 20 日。 当使用数值日期格式时，请在使用正斜杠符号 (/)、连字符 (-) 或句点 (.) 作为分隔符的字符串中指定年、月、日。 此字符串必须采用以下格式：<br /><br /> *数字 分隔符 数字 分隔符 数字 [时间] [时间]*<br /><br /> <br /><br /> 当语言设置为 us_english 时，默认的日期顺序是 mdy。 可以使用 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 语句更改日期顺序。<br /><br /> SET DATEFORMAT 的设置决定了如何解释日期值。 如果顺序和设置不匹配，这些值将由于超出范围而不会被解释成日期，或者被错误地解释。 例如，12/10/08 可以解释成六个不同的日期，具体解释为哪一日期取决于 DATEFORMAT 的设置。 四位数字的年份被解释为年。|  
+|日期格式：<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 时间格式：<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|您可以指定日期数据，其中月份也通过数值指定。 例如 5/20/97 表示 1997 年 5 月 20 日。 当使用数值日期格式时，请在使用正斜杠符号 (/)、连字符 (-) 或句点 (.) 作为分隔符的字符串中指定年、月、日。 此字符串必须采用以下格式：<br /><br /> *数字 分隔符 数字 分隔符 数字 [时间] [时间]*<br /><br /> <br /><br /> 当语言设置为 us_english 时，默认的日期顺序是 mdy。 可以使用 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 语句更改日期顺序。<br /><br /> SET DATEFORMAT 的设置决定了如何解释日期值。 如果顺序不符合设置，这些值不会被解释为日期。 无序的日期可能会被错误解释成超出范围或使用错误的值。 例如，12/10/08 可以解释成六个不同的日期，具体解释为哪一日期取决于 DATEFORMAT 的设置。 四位数字的年份被解释为年。|  
   
 |字母|描述|  
 |---|---|
@@ -74,7 +71,7 @@ ms.locfileid: "56012118"
   
 |ISO 8601|描述|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|示例：<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> 若要使用 ISO 8601 格式，必须按此格式指定每一个元素。 这也包括显示在此格式中的 T、冒号 (:) 和句点 (.)。<br /><br /> 方括号表示秒小数部分是可选的。 时间部分按 24 小时制指定。<br /><br /> T 表示后面是 datetime 值的时间部分。<br /><br /> 使用 ISO 8601 格式的优点是它是一种国际标准，不会产生模糊的指定。 同时，此格式不受 SET DATEFORMAT 或 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 设置的影响。|  
+|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|示例：<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> 若要使用 ISO 8601 格式，必须指定每个元素的格式，包括格式中显示的 T、冒号 (:)、句点 (.)。<br /><br /> 方括号表示秒小数部分是可选的。 时间部分按 24 小时制指定。<br /><br /> T 表示后面是 datetime 值的时间部分。<br /><br /> 使用 ISO 8601 格式的优点是它是一种国际标准，不会产生模糊的指定。 同时，此格式不受 SET DATEFORMAT 或 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 设置的影响。|  
   
 |未分隔的|描述|  
 |---|---|

@@ -5,18 +5,18 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661325"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662681"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教程：SQL Server Management Studio 组件和配置
 本教程介绍 SQL Server Management Studio (SSMS) 中的多种窗口组件和一些适用于工作区的基本配置选项。 本文将指导如何： 
@@ -42,14 +42,14 @@ ms.locfileid: "47661325"
 
     ![“视图”菜单](media/ssms-configuration/viewmenu.png)
 
-- **对象资源管理器** (F8)：对象资源管理器是服务器中所有数据库对象的树状视图。 此视图包括 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的数据库。 对象资源管理器包括连接到它的所有服务器的信息。 
+- **对象资源管理器** (F8)：对象资源管理器是服务器中所有数据库对象的树视图。 此视图包括 SQL Server 数据库引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的数据库。 对象资源管理器包括连接到它的所有服务器的信息。 
     
     ![“对象资源管理器”](media/ssms-configuration/objectexplorer.png)
 - **查询窗口** (Ctrl+N)：选择“新建查询”后，在此窗口中输入 Transact-SQL (T-SQL) 查询。 查询结果也显示在此处。
     
     ![“新建查询”窗口](media/ssms-configuration/newquery.png)
 
-- **属性** (F4)：当查询窗口打开时，可看到“属性”视图。 该视图显示查询的基本属性。 例如，它显示查询开始的时间，返回的行数及连接详细信息。  
+- **属性** (F4)：查询窗口处于打开状态时，可以看到“属性”视图。 该视图显示查询的基本属性。 例如，它显示查询开始的时间，返回的行数及连接详细信息。  
 
     ![属性](media/ssms-configuration/properties.png)
 

@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991820"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590402"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53991820"
   
 2.  在新的主体数据库（以前的镜像数据库）上创建捕获作业和清除作业。 若要创建作业，请使用 [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) 存储过程。  
   
- 若要查看清除作业或捕获作业的当前配置，请在新的主体服务器实例上使用 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 存储过程。 对于给定数据库，捕获作业名为 cdc.*database_name*_capture，清除作业名为 cdc.*database_name*_cleanup，其中 *database_name* 为数据库的名称。  
+ 若要查看清除作业或捕获作业的当前配置，请在新的主体服务器实例上使用 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 存储过程。 对于给定数据库，捕获作业名为 cdc.*database\_name*\_capture，清除作业名为 cdc.*database\_name*\_cleanup，其中 *database_name* 为数据库的名称。  
   
  若要更改作业的配置，请使用 [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) 存储过程。  
   

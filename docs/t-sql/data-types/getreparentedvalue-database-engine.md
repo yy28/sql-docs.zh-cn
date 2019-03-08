@@ -18,17 +18,17 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f96840516b160a7fef7fd97454250131695fc7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033048"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662781"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回其相对于根的路径是到 newRoot 路径的节点，后跟从 oldRoot 到 this 的路径。
+返回其相对于根的路径是到 _newRoot_ 的路径的节点，后跟相对于 _oldRoot_ 的路径。
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ oldRoot
 hierarchyid，它是表示将要修改的层次结构级别的节点。
   
 newRoot  
-hierarchyid，它表示将替换当前节点的 oldRoot 部分以移动该节点的节点。
+表示节点的 **hierarchyid**。 替换当前节点的 _oldRoot_ 部分以移动该节点。
   
 ## <a name="return-types"></a>返回类型  
 SQL Server 返回类型：hierarchyid
@@ -55,12 +55,12 @@ SQL Server 返回类型：hierarchyid
 CLR 返回类型：SqlHierarchyId
   
 ## <a name="remarks"></a>Remarks  
-可用于通过将节点从 oldRoot 移动到 newRoot 来修改树。 GetReparentedValue 可用于将层次结构中的某个节点移动到层次结构中的新位置。 hierarchyid 数据类型表示层次结构，但并不强制实现层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 hierarchyid 数据类型的唯一索引有助于避免重复条目。 有关移动整个子树的示例，请参阅[分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)。
+用于通过将节点从 _oldRoot_ 移动到 _newRoot_ 来修改树。 GetReparentedValue 用于将层次结构节点移动到层次结构中的新位置。 **hierarchyid** 数据类型表示层次结构，但并不强制实现层次结构。 用户必须确保 hierarchyid 针对新的位置适当地结构化。 hierarchyid 数据类型的唯一索引有助于避免重复条目。 有关移动整个子树的示例，请参阅[分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)。
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比较两个节点位置  
-以下示例显示了节点的当前 hierarchyid。 它还显示了如果节点没有移动为 @NewParent 节点的后代，节点的 hierarchyid 将会是什么。 它使用 `ToString()` 方法来显示层次结构关系。
+以下示例显示了节点的当前 hierarchyid。 它还显示了如果移动节点使其成为 **@NewParent** 节点的后代，节点的 **hierarchyid** 将会是什么。 它使用 `ToString()` 方法来显示层次结构关系。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

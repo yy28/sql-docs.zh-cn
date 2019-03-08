@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847455"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425812"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \]（通配符 - 要匹配的字符）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  匹配指定范围内或者属于方括号 `[ ]` 所指定的集合中的任意单个字符。 可以在涉及模式匹配的字符串比较（例如，`LIKE` 和 `PATINDEX`）中使用这些通配符。  
+匹配指定范围内或者属于方括号 `[ ]` 所指定的集合中的任意单个字符。 可以在涉及模式匹配的字符串比较（例如，`LIKE` 和 `PATINDEX`）中使用这些通配符。  
   
 ## <a name="examples"></a>示例  
 ### <a name="a-simple-example"></a>A：简单示例   
-以下示例返回以 `m` 开头的名称。 `[n-z]` 指定第二个字母必须是 `n` 到 `z` 范围内的某个字母。 百分号通配符 `%` 允许任何或不包含以 3 个字符开头的字符。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库不在结果集中，且被排除在结果集外。
+以下示例返回以 `m` 字母开头的名称。 `[n-z]` 指定第二个字母必须是 `n` 到 `z` 范围内的某个字母。 百分号通配符 `%` 允许任何或不包含以 3 个字符开头的字符。 `model` 数据库和 `msdb` 数据库均符合此条件。 `master` 数据库不符合条件，并被排除在结果集外。
  
 ```sql
 SELECT name FROM sys.databases
@@ -67,7 +67,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- 下面是结果集：  
+ 结果集如下：  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  

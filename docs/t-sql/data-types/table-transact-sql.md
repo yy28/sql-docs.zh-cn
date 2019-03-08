@@ -16,20 +16,20 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f61e3417e44fad0ce25796e5e888bcfc2781206
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 816f1983723b119d7092013fad6296668621fe75
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204276"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662811"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-一种特殊的数据类型，可用于存储结果集以进行后续处理。 table 主要用于临时存储一组作为表值函数的结果集返回的行。 可将函数和变量声明为 table 类型。 table 变量可用于函数、存储过程和批处理中。 若要声明 table 类型的变量，请使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
+一种特殊的数据类型，可用于存储结果集以进行后续处理。 table 主要用于临时存储一组作为表值函数结果集返回的行。 可将函数和变量声明为 table 类型。 table 变量可用于函数、存储过程和批处理中。 若要声明 table 类型的变量，请使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
 
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -83,7 +83,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 对于具有不更改的查询计划的小规模查询以及在主要考虑重新编译时，table 变量提供以下好处：
--   table 变量的行为类似于局部变量。 有明确定义的作用域。 这就是在其中声明该变量的函数、存储过程或批处理。  
+-   table 变量的行为类似于局部变量。 有明确定义的作用域。 此变量就是在其中声明该变量的函数、存储过程或批处理。  
      在其作用域内，table 变量可像常规表那样使用。 该变量可应用于 SELECT、INSERT、UPDATE 和 DELETE 语句中用到表或表的表达式的任何地方。 但是，table 不能用于以下语句中：  
   
 ```sql
@@ -92,15 +92,15 @@ SELECT select_list INTO table_variable;
   
 在定义 table 变量的函数、存储过程或批处理结束时，会自动清除此变量。
   
--   在存储过程中使用 table 变量与使用临时表相比，减少了存储过程的重新编译量，并且没有影响性能的基于成本的选择。  
--   涉及 table 变量的事务只在 table 变量更新期间存在。 因此，table 变量需要较少的锁定和记录资源。  
+-   在存储过程中使用 table 变量与使用临时表相比，减少了存储过程重新编译量，并且没有影响性能的基于成本的选择。  
+-   涉及 table 变量的事务只在 table 变量更新期间存在。 因此，table 变量需要较少的锁定和日志记录资源。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限
-Table 变量没有分发统计信息，不会触发重新编译。 因此，在许多情况下，优化器会在假定 table 变量没有行的前提下生成查询计划。 出于这一原因，如果您预计会存在大量行（超过 100 行），那么在使用 table 变量时应小心谨慎。 这种情况下，使用临时表可能是更好的解决方案。 或者，如果查询联接 table 变量和其他表，则可使用 RECOMPILE 提示，这使优化器会对 table 变量使用正确的基数。
+Table 变量没有分发统计信息。 它们不会触发重新编译。 在许多情况下，优化器会生成查询计划，假设 table 变量没有行。 出于这一原因，如果您预计会存在大量行（超过 100 行），那么在使用 table 变量时应小心谨慎。 这种情况下，使用临时表可能是更好的解决方案。 如果查询联接 table 变量和其他表，则可使用 RECOMPILE 提示，这使优化器会对 table 变量使用正确的基数。
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化器基于成本的原因模型中，不支持 table 变量。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 这通常包含具有联接、并行度决策和索引选择选项的查询。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化器基于成本的原因模型中，不支持 table 变量。 因此，在需要基于成本的选择来实现高效的查询计划时，不应使用这些变量。 在需要基于成本的选择时，临时表是首选。 此计划通常包含具有联接、并行度决策和索引选择选项的查询。
   
-修改 table 变量的查询不会生成并行查询执行计划。 修改特大型 table 变量或复杂查询中的 table 变量时，可能会影响性能。 在这种情况下，请考虑改用临时表。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询。
+修改 table 变量的查询不会生成并行查询执行计划。 修改大型 table 变量或复杂查询中的 table 变量时，可能会影响性能。 在需要修改 table 变量的情况下，请改用临时表。 有关详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。 还可以并行执行读取 table 变量而不对变量进行修改的查询。
   
 不能显式创建 table 变量的索引，也不保留 table 变量的任何统计信息。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，引入了新语法，允许你使用表定义创建特定索引类型内联。  使用这种新语法，你可以在 table 变量上创建索引，作为表定义的一部分。 在某些情况下，可以通过使用临时表来改进性能，这些表提供完整的索引支持和统计信息。 有关临时表的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
 
@@ -108,7 +108,7 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
   
 不支持在 table 变量之间进行赋值操作。
   
-由于 table 变量作用域有限，并且不是持久数据库的一部分，因而不受事务回滚的影响。
+由于 table 变量作用域有限，并且不是持久数据库的一部分，因而事务回滚不会影响它们。
   
 表变量在创建后就无法更改。
 
@@ -118,30 +118,30 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
 > [!NOTE]
 > 表变量延迟编译是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中的公共预览版功能。
 
-使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为等同于临时表行为，这一变化会导致使用实际基数，而不是原始的一行猜测。 
+使用“表变量延迟编译”，引用表变量的语句会延迟编译，直到首次实际执行语句后。 此延迟编译行为与临时表的行为相同。 此更改导致使用实际基数，而不是原始单行猜测。 
 
-若要启用“表变量延迟编译”的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
+若要启用“表变量延迟编译”的公共预览版，请为查询运行时连接到的数据库启用数据库兼容性级别 150。
 
 表变量延迟编译不会更改表变量的任何其他特性。 例如，此功能不会向表变量添加列统计信息。
 
-表变量延迟编译不会增加重新编译频率。  相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存的计划将由连续查询重新使用，直到该计划被逐出或被重新编译。 
+表变量延迟编译不会增加重新编译频率。 相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存计划由连续查询重复使用。 会对计划重复使用，直至此计划已逐出或进行重新编译。 
 
-如果用于初始计划编译的表变量行计数表示与固定的行计数猜测截然不同的一个典型值，则下游操作将受益。  如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
+用于初始计划编译的表变量行计数表示典型值可能不同于固定的猜测行计数。 如果不同，下游操作会有优势。 如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
 
 ### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>在不更改兼容性级别的情况下禁用表变量延迟编译
-可在数据库或语句范围内禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 若要对源自数据库的所有查询执行表变量延迟编译，请在对应数据库的上下文中执行以下命令：
+可在数据库或语句范围内禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 若要对源自数据库的所有查询禁用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
 ```
 
-若要对源自数据库的所有查询重新启用表变量延迟编译，请在对应数据库的上下文中执行以下命令：
+若要对源自数据库的所有查询重新启用表变量延迟编译，请在对应数据库的上下文中执行以下示例：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
 ```
 
-此外，还可以通过将 DISABLE_DEFERRED_COMPILATION_TV 指定为 USE HINT 查询提示，为特定查询禁用表变量延迟编译。  例如：
+此外，还可以通过将 DISABLE_DEFERRED_COMPILATION_TV 分配为 USE HINT 查询提示，为特定查询禁用表变量延迟编译。  例如：
 
 ```sql
 DECLARE @LINEITEMS TABLE 
@@ -170,7 +170,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ## <a name="examples"></a>示例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. 声明一个表类型的变量  
-下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 请注意，`INSERTED.ModifiedDate` 列中的结果与 `Employee` 表的 `ModifiedDate` 列中的值不同。 这是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
+下例将创建一个 `table` 变量，用于储存 UPDATE 语句的 OUTPUT 子句中指定的值。 在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。 `INSERTED.ModifiedDate` 列中的结果与 `Employee` 表的 `ModifiedDate` 列中的值不同。 此区别是因为对 `AFTER UPDATE` 表定义了 `ModifiedDate` 触发器，该触发器可以将 `Employee` 的值更新为当前日期。 不过，从 `OUTPUT` 返回的列可反映触发器激发之前的数据。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
   
 ```sql
 USE AdventureWorks2012;  

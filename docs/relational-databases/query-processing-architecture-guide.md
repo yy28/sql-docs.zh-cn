@@ -1,7 +1,7 @@
 ---
 title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591881"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802403"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ ms.locfileid: "53591881"
 处理单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 SQL 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
 
 ### <a name="logical-operator-precedence"></a>逻辑运算符的优先顺序
-
 当一个语句中使用了多个逻辑运算符时，计算顺序依次为：`NOT`、`AND`最后是 `OR`。 算术运算符和位运算符优先于逻辑运算符处理。 有关详细信息，请参阅[运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)。
 
 在下面的示例中，颜色条件适用于产品型号 21，而不适用于产品型号 20，因为 `AND` 的优先级高于 `OR`。
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>优化 SELECT 语句
-
 `SELECT` 语句是非程序性的，它不规定数据库服务器应用于检索请求数据的确切步骤。 这意味着数据库服务器必须分析语句，以决定提取所请求数据的最有效方法。 这被称为“优化 `SELECT` 语句”。 处理此过程的组件称为“查询优化器”。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或直接称为“计划”。 本主题的后续各节将详细介绍查询计划的内容。
 
 在优化单个 `SELECT` 语句期间查询优化器的输入和输出如下图中所示：
@@ -126,7 +124,6 @@ GO
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器很重要，因为它可以使数据库服务器针对数据库内的更改情况进行动态调整，而无需程序员或数据库管理员输入。 这样程序员可以集中精力描述最终的查询结果。 他们可以相信每次运行语句时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器总能针对数据库的状态生成一个有效的执行计划。
 
 ### <a name="processing-a-select-statement"></a>处理 SELECT 语句
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 处理单个 SELECT 语句的基本步骤包括如下内容： 
 
 1. 分析器扫描 `SELECT` 语句并将其分解成逻辑单元（如关键字、表达式、运算符和标识符）。
@@ -135,18 +132,97 @@ GO
 4. 关系引擎开始执行计划。 在处理需要基表中数据的步骤时，关系引擎请求存储引擎向上传递从关系引擎请求的行集中的数据。
 5. 关系引擎将存储引擎返回的数据处理成为结果集定义的格式，然后将结果集返回客户端。
 
-### <a name="processing-other-statements"></a>处理其他语句
+### <a name="ConstantFolding"></a> 常量折叠和表达式计算 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会先计算一些常量表达式来提高查询性能。 这称为常量折叠。 常量是 [!INCLUDE[tsql](../includes/tsql-md.md)] 文本，例如 3、“ABC”、“2005-12-31”、1.0e3 或 0x12345678。
 
-上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT 语句，该语句提供要更新或插入的数据值。
+#### <a name="foldable-expressions"></a>可折叠表达式
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将常量折叠与下列类型的表达式配合使用：
+- 仅包含常量的算术表达式，如 1+1、5/3*2。
+- 仅包含常量的逻辑表达式，如 1=1 和 1>2 AND 3>4。
+- 被 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 认为可折叠的内置函数包括 `CAST` 和 `CONVERT`。 通常，如果内部函数只与输入有关而与其他上下文信息（例如 SET 选项、语言设置、数据库选项和加密密钥）无关，则该内部函数是可折叠的。 不确定性函数是不可折叠的。 确定性内置函数是可折叠的，但也有例外情况。
+
+> [!NOTE] 
+> 使用大型对象类型时将出现例外。 如果折叠进程的输出类型是大型对象类型（text、image、nvarchar(max)、varchar(max) 或 varbinary(max)），则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠该表达式。
+
+#### <a name="nonfoldable-expressions"></a>不可折叠表达式
+所有其他表达式类型都是不可折叠的。 特别是下列类型的表达式是不可折叠的：
+- 非常量表达式，例如，结果取决于列值的表达式。
+- 结果取决于局部变量或参数的表达式，例如 @x。
+- 不确定性函数。
+- 用户定义函数（[!INCLUDE[tsql](../includes/tsql-md.md)] 和 CLR）。
+- 结果取决于语言设置的表达式。
+- 结果取决于 SET 选项的表达式。
+- 结果取决于服务器配置选项的表达式。
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>可折叠和不可折叠常量表达式示例
+请考虑以下查询：
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+如果此查询的 `PARAMETERIZATION` 数据库选项不设置为 `FORCED`，则查询被编译之前，将计算表达式 `117.00 + 1000.00` 并用计算结果 `1117.00` 替换该表达式。 常量折叠的优点如下：
+- 运行时不必重复计算表达式。
+- 查询优化器可使用计算表达式后所得的值来估计 `TotalDue > 117.00 + 1000.00` 查询部分的结果集的大小。
+
+另一方面，如果 `dbo.f` 是用户定义的标量函数，则不折叠表达式 `dbo.f(100)`，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不折叠包含用户定义函数的表达式，即使这些函数是确定性函数也是如此。 有关参数化的详细信息，请参阅本文稍后的[强制参数化](#ForcedParam)部分。
+
+#### <a name="ExpressionEval"></a>表达式计算 
+此外，有些不可进行常量折叠但其参数在编译时已知的表达式（无论其参数是参数变量还是常量）将由优化期间优化器中包括的结果集大小（基数）估计器来计算。
+
+具体而言，在编译时将计算下列内置函数和特殊运算符（如果它们的所有输入都已知）：`UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST` 和 `CONVERT`。 如果所有输入都是已知的，则在编译时计算下列运算符：
+- 算术运算符：+、-、\*、/、一元运算符 -
+- 逻辑运算符：`AND`、`OR`、`NOT`
+- 比较运算符：<、>、<=、>=、<>、`LIKE`、`IS NULL`、`IS NOT NULL`
+
+在基数估计过程中，查询优化器不计算其他任何函数或运算符。
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>编译时表达式计算示例
+以下面的存储过程为例：
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+在优化存储过程中的 `SELECT` 语句期间，查询优化器尝试计算 `OrderDate > @d+1` 条件结果集的所需基数。 表达式 `@d+1` 不可进行常量折叠，因为 `@d` 是一个参数变量。 但是，在优化时，该参数值是已知的。 这使查询优化器能够准确估计结果集的大小，有助于其选择较好的查询计划。
+
+现在考虑一个与上面的示例类似的示例，不同之处是在此查询中局部变量 `@d2` 替换了 `@d+1`，并且表达式在 SET 语句中计算而不是在查询中计算。
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中优化 *MyProc2* 中的 `SELECT`语句时，`@d2` 的值是未知的。 因此，查询优化器为 `OrderDate > @d2` 的选择性使用默认估计值（在此示例中为 30%）。
+
+### <a name="processing-other-statements"></a>处理其他语句
+上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT` 语句，该语句提供要更新或插入的数据值。
 
 即使像 `CREATE PROCEDURE` 或 `ALTER TABLE` 这样的数据定义语言 (DDL) 语句也被最终解析为系统目录表上的一系列关系操作，而有时则根据数据表解析（如 `ALTER TABLE ADD COLUMN`）。
 
 ### <a name="worktables"></a>工作表
-
 关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 tempdb 中生成，并在不再需要时自动删除。
 
 ### <a name="view-resolution"></a>视图解析
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器对索引视图和非索引视图将区别对待： 
 
 * 索引视图的行以表的格式存储在数据库中。 如果查询优化器决定使用查询计划的索引视图，则索引视图将按照基表的处理方式进行处理。
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 显示计划功能显示关系引擎为这两个 `SELECT` 语句生成相同的执行计划。
 
 ### <a name="using-hints-with-views"></a>使用视图提示
-
 放置在查询中的视图的提示可能会在视图扩展为访问其基表时与其他提示冲突。 发生这种情况时，查询将返回错误。 例如，请考虑下列视图，它们的定义中包含有表提示：
 
 ```sql
@@ -455,7 +530,7 @@ WHERE ProductSubcategoryID = 4;
 
 使用参数将常量与 SQL 语句分隔开有助于关系引擎识别重复计划。 可以按下列方式使用参数： 
 
-* 在 Transact-SQL 中，使用 `sp_executesql`： 
+* 在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中，使用 `sp_executesql`： 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ WHERE ProductSubcategoryID = 4;
      @MyIntParm
    ```
 
-   建议对动态生成 SQL 语句的 Transact-SQL 脚本、存储过程或触发器使用此方法。 
+   建议对 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本、存储过程或动态生成 SQL 语句的触发器使用此方法。 
 
 * ADO、OLE DB 和 ODBC 使用参数标记。 参数标记是问号 (?)，在 SQL 语句中替代常量并绑定到程序变量。 例如，可以在 ODBC 应用程序中执行下列操作： 
 

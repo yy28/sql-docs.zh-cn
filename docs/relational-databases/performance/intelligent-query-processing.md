@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 00bea67666845ea43226b4bfe48b6dd5ab3f3741
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291655"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590452"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -101,6 +101,8 @@ ms.locfileid: "56291655"
 
 > [!NOTE]
 > 行存储上的批处理模式是一项公共预览版功能。  
+
+行存储上的批处理模式可实现分析工作负载的批处理模式执行，而无需列存储索引。  此功能支持用于磁盘上堆和 B 树索引的批处理模式执行和位图筛选器。 行存储上的批处理模式可实现对所有现有支持批处理模式的运算符的支持。
 
 ### <a name="background"></a>背景
 

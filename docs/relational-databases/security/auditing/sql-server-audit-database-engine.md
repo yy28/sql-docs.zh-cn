@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8e5c839f8c5005e3f02129e36023db53f70f4a20
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590299"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590472"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "53590299"
 ### <a name="database-mirroring-and-sql-server-audit"></a>数据库镜像和 SQL Server 审核  
  已定义了数据库审核规范并使用数据库镜像的数据库将包括此数据库审核规范。 若要对已镜像的 SQL 实例进行正确的处理，必须配置下列项：  
   
--   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID**=**_\<GUID from source Server Audit_> 进行配置。  
+-   镜像服务器必须拥有具有相同 GUID 的审核才能使数据库审核规范能够写入审核记录。 这可以通过使用命令 CREATE AUDIT WITH GUID **=**_\<GUID from source Server Audit_> 进行配置。  
   
 -   对于二进制文件目标，镜像服务器服务帐户对要写入审核记录的位置必须具有相应的权限。  
   

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532552"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590432"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "52532552"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 爬网日志文件名的可变部分如下。
--   <**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 <catid>是一个带有前导零的五位数。  
+-   \<**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 \<catid>是一个带有前导零的五位数。  
 -   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  
@@ -142,7 +142,7 @@ ms.locfileid: "52532552"
 2.  500 MB 是系统中其他进程所需内存的估计值。 如果系统正在执行其他工作，请相应地增加此值。  
 3.  。*ism_size* 假定为 8 MB。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>示例：估计 fdhost.exe 的内存需求量  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例如：估计 fdhost.exe 的内存需求量  
   
  此示例针对具有 8GM RAM 和 4 个双核处理器的 64 位计算机。 首先计算出 fdhost.exe 所需内存的估计值 -F。 爬网范围数是 `8`。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52532552"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>示例：设置最大服务器内存  
+ #### <a name="example-setting-max-server-memory"></a>例如：设置最大服务器内存  
   
  此示例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将 **最大服务器内存** 设置为上一个示例中计算得到的 *M* 的值， `7052`：  
   

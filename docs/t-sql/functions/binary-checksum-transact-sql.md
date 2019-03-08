@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513869"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676085"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 返回按照表的某一行或表达式列表计算的二进制校验和值。
   
-![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -58,11 +58,11 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-按照表中任一行计算的 `BINARY_CHECKSUM(*)` 返回相同的值，前提是后续没有对行进行修改。 `BINARY_CHECKSUM` 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素类型相同且相等，则在任何两个表达式列表上应用的 BINARY CHECKSUM 将返回相同值。 对于该定义，我们认为指定类型的 NULL 值作为相等的值进行比较。 如果表达式列表中至少一个值发生更改，则表达式校验和也会更改。 但是，这一点无法保证。 因此，若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `BINARY_CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `BINARY_CHECKSUM` 小得多。
+按照表中任一行计算的 `BINARY_CHECKSUM(*)` 返回相同的值，前提是后续没有对行进行修改。 `BINARY_CHECKSUM` 满足哈希函数的下列属性：在使用等于 (=) 运算符比较时，如果两个列表的相应元素类型相同且相等，则在任何两个表达式列表上应用的 BINARY CHECKSUM 将返回相同值。 对于该定义，我们认为指定类型的 NULL 值作为相等的值进行比较。 如果表达式列表中至少一个值发生更改，则表达式校验和也会更改。 但是，不保证此更改，因此若要检测值是否更改，建议仅当应用程序可以容忍偶然错过更改时，使用 `BINARY_CHECKSUM`。 否则，请考虑改用 `HASHBYTES`。 使用指定的 MD5 哈希算法时，`HASHBYTES` 为两个不同输入返回相同结果的可能性要比 `BINARY_CHECKSUM` 小得多。
   
 `BINARY_CHECKSUM` 可针对表达式列表运行，并为指定列表返回相同的值。 如果任意两个表达式列表的对应元素具有相同的类型和字节表示形式，则对这两个列表应用的 `BINARY_CHECKSUM` 将返回相同的值。 对于此定义，指定类型的 Null 值被认为具有相同的字节表示形式。
   
-`BINARY_CHECKSUM` 函数和 `CHECKSUM` 函数类似。 它们可用于计算表达式列表上的校验值，且表达式的顺序将影响结果值。 用于 `BINARY_CHECKSUM(*)` 的列顺序是在表或视图定义中指定的列顺序。 其中包括计算列。
+`BINARY_CHECKSUM` 函数和 `CHECKSUM` 函数类似。 它们可用于计算表达式列表上的校验值，且表达式的顺序将影响结果值。 用于 `BINARY_CHECKSUM(*)` 的列顺序是在表或视图定义中指定的列顺序。 此排序包括计算列。
   
 `BINARY_CHECKSUM` 和 `CHECKSUM` 为字符串数据类型将返回不同的值，其中的区域设置可能导致具有不同表示形式的字符串进行等值比较。 字符串数据类型为  
 

@@ -21,16 +21,16 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bffe558ea76b3adf7cc6e70c423587a5f7ee27d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05dbc7ae15ba70b4bb0133f8b02d9e57a4330046
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852025"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801301"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-借助于键盘快捷键，可以通过按 Alt+*<single letter>* 来选择菜单命令或按钮。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
+借助于键盘快捷键，可以通过按 ALT+\<single letter> 来选择菜单命令或按钮。 例如，若要打开“编辑”菜单，请按 Alt+E。 使用“自定义”对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
 用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具”/“选项”对话框的“键盘”页中创建。  
   

@@ -19,19 +19,19 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a9598ccdb6ed8e38c5b7a44341dcf3e54732418a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509583"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802831"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   比较标量值和单列集中的值。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,14 +56,14 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>结果值  
- 如果对于所有比较对（scalar_expression、x）指定的比较均为 TRUE（其中 x 是单列集中的值），则返回 TRUE；否则返回 FALSE。  
+ 如果指定的比较对于所有比较对 (_scalar_expression_**,**_x)_ 均为 TRUE（其中 *x* 是单列集中的值），则返回 TRUE。 否则返回 FALSE。  
   
 ## <a name="remarks"></a>Remarks  
- ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE。 如果子查询返回的值为 2 和 3，则 scalar_expression = ALL（子查询）的计算结果将为 FALSE，因为子查询的某些值（等于 3 的值）不满足表达式的条件。  
+ ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE。 如果子查询返回值 2 和 3，*scalar_expression* = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
   
  有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
- 本主题讨论了 ALL 用于子查询的情况。 ALL 也可以与 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 一起使用。  
+ 本文讨论了 ALL 用于子查询的情况。 ALL 也可以与 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 一起使用。  
   
 ## <a name="examples"></a>示例  
  以下示例创建一个存储过程，该过程确定是否能够在指定的天数中制造出 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中具有指定 `SalesOrderID` 的所有组件。 该示例使用子查询为具有特定 `DaysToManufacture` 的所有组件创建 `SalesOrderID` 值的列表，然后确认所有 `DaysToManufacture` 都在指定的天数内。  
@@ -84,7 +84,7 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cannot be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
   
 ```  
   
@@ -104,7 +104,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Some items for this order cannot be manufactured in specified number of days or less.`  
+ `Some items for this order can't be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>另请参阅  
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
@@ -115,5 +115,4 @@ EXECUTE DaysToBuild 49080, 1 ;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

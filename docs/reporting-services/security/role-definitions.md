@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849465"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444222"
 ---
 # <a name="role-definitions"></a>角色定义
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，“角色**定义”是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色定义*是一组任务的命名集合，这些任务定义了可在报表服务器上执行的操作。 角色定义提供了报表服务器用于增强安全性的规则。 当用户尝试执行任务（如发布报表）时，报表服务器将检查用户的角色分配以确定该任务是否包含在其角色定义中。 如果试图执行的任务包括在角色定义中，则提交请求。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>使用角色授予对报表服务器的访问权限  
  角色只有在角色分配中使用时才有效。 有关角色如何提供安全性的详细信息，请参阅 [角色分配](../../reporting-services/security/role-assignments.md)。  

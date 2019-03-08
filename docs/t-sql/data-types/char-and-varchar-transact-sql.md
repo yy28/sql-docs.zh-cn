@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299384"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801401"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [请分享你对 SQL Docs 目录的反馈！](https://aka.ms/sqldocsurvey)
 
 字符数据类型 char（长度固定）或 varchar（长度可变）。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，使用启用了 UTF-8 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字符编码。 若指定了非 UTF-8 排序规则，则这些数据类型仅会存储该排序规则的相应代码页支持的字符子集。
   
@@ -46,7 +43,7 @@ char [ ( n ) ] 固定长度字符串数据。 n 用于定义字符串长度（�
 varchar [ ( n | max ) ] 可变长度字符串数据。 n 用于定义字符串长度（以字节为单位），并且它可以为 1 到 8,000 之间的值。 max 指示最大存储大小是 2^31-1 个字节 (2 GB)。 对于单字节编码字符集（如拉丁文），存储大小为 n + 2 个字节，并且可存储的字符数也为 n。 对于多字节编码字符集，存储大小仍为 n + 2 个字节，但可存储的字符数可能小于 n。 varchar 的 ISO 同义词是 charvarying 或 charactervarying。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>Remarks  
-如果没有在数据定义或变量声明语句中指定 n，则默认长度为 1。 如果在使用 CAST 和 CONVERT 函数时未指定 n，则默认长度为 30。
+如果没有在数据定义或变量声明语句中指定 *n*，则默认长度为 1。 如果在使用 CAST 和 CONVERT 函数时未指定 *n*，则默认长度为 30。
   
 为使用 char 或 varchar 的对象分配的是默认的数据库排序规则，但可使用 COLLATE 子句分配特定的排序规则。 该排序规则控制用于存储字符数据的代码页。
 
@@ -67,19 +64,19 @@ varchar [ ( n | max ) ] 可变长度字符串数据。 n 用于定义字符串�
   
 > [!WARNING]
 > 每个非 null varchar(max) 或 nvarchar(max) 列都需要 24 个字节的附加固定分配，这将在执行排序操作期间根据 8,060 字节行限制进行计数。 这样一来，可能会为非 null varchar(max) 或 nvarchar(max)（可在表格中进行创建）列数创建隐式限制。  
-在以下情况下不提供特殊错误：创建表格（最大行大小超过允许的最大 8,060 字节时出现的一般警告除外）时，或插入数据时。 这一较大的行大小可能会导致在执行某些正常操作（例如聚集索引键更新或完整列集排序）期间出现错误（例如错误 512），使得用户在执行操作前无法预料到此类错误。
+在以下情况下不提供特殊错误：创建表格（最大行大小超过允许的最大 8,060 字节时出现的一般警告除外）时，或插入数据时。 这一较大的行大小可能会导致在执行某些正常操作（例如聚集索引键更新或完整列集排序）期间出现错误（例如错误 512），用户在执行操作前无法预料到此类错误。
   
 ##  <a name="_character"></a>转换字符数据  
-如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 出于从字符表达式转换的目的将 uniqueidentifier 类型视为字符类型，因此在转换到字符类型时要遵循截断规则。 请参阅后面的“示例”一节。
+如果将字符表达式转换为不同大小的字符数据类型，则对于新数据类型而言过长的值将被截断。 出于从字符表达式转换的目的将 **uniqueidentifier** 类型视为字符类型，因此，在转换到字符类型时要遵循截断规则。 请参阅后面的“示例”一节。
   
 如果将某个字符表达式转换为不同数据类型或大小的字符表达式（例如从 char(5) 转换为 varchar(5) 或从 char(20) 转换为 char(15)），则输入值的排序规则会被分配给经过转换的值。 如果将非字符表达式转换为字符数据类型，则当前数据库的默认排序规则会被分配给经过转换的值。 在任意一种情况下，都可以使用 [COLLATE](../../t-sql/statements/collations.md) 子句分配特定的排序规则。
   
 > [!NOTE]  
 > char 和 varchar 数据类型支持代码页转换，但是 text 数据类型不支持。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本一样，将不报告代码页转换期间的数据丢失。  
   
-要转换为近似 numeric 数据类型的字符表达式包含可选的指数符号 [一个大写或小写的字母 E 后跟可选的加号 (+) 或减号 (-)，然后再跟一个数字]。
+要转换为近似 **numeric** 数据类型的字符表达式可以包括可选的指数表示法。 此表示法为一个小写的 e 或一个大写的 E 后跟可选的加号 (+) 或减号 (-)，再后跟一个数字。
   
-要转换为精确 numeric 数据类型的字符表达式必须包含数字、小数点和可选的加号 (+) 或减号 (-)。 将忽略前导空格。 逗号分隔符（例如 123,456.00 中的千位分隔符）在字符串中禁用。
+要转换为精确 numeric 数据类型的字符表达式必须包含数字、小数点和可选的加号 (+) 或减号 (-)。 将忽略前导空格。 不允许在字符串中使用逗号分隔符，例如 123,456.00 中的千位分隔符。
   
 要转换为 money 或 smallmoney 数据类型的字符表达式还可以包含可选的小数点和美元符号 ($)。 可以使用逗号分隔符（如在 $123,456.00 中）。
   
@@ -109,7 +106,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. 转换数据以便于显示  
-以下示例将两列转换为字符类型并应用一种样式，该样式将特定格式应用于所显示的数据。 money 类型转换为字符数据并应用样式 1，这会对小数点左侧的每三个数字和对小数点右侧的每两个数字加一个逗号来显示值。 datetime 类型转换为字符数据并应用样式 3，这会以格式 dd/mm/yy 来显示数据。 在 WHERE 子句中，money 类型强制转换为字符类型，以执行字符串比较操作。
+以下示例将两列转换为字符类型并应用一种样式，该样式将特定格式应用于所显示的数据。 money 类型转换为字符数据并应用样式 1，这会对小数点左侧的每三个数字和对小数点右侧的每两个数字加一个逗号来显示值。 **datetime** 类型转换为字符数据并应用样式 3，这会以 dd/mm/yy 格式来显示数据。 在 WHERE 子句中，money 类型强制转换为字符类型，以执行字符串比较操作。
   
 ```sql
 USE AdventureWorks2012;  

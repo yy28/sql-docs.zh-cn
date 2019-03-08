@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598281"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828447"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598281"
 -   Windows API 操作本质上是非事务性的，并不与用户事务关联。 但是，完全支持对存储在 FileTable 中的 FILESTREAM 数据的事务性访问，就像对待常规表中的任何 FILESTREAM 列一样。  
   
 -   还可以通过常规 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问来查询和更新 FileTable。 它们还与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具和诸如备份的功能集成。  
+
+-   无法通过 dbmail 发送电子邮件请求以及附加位于文件流目录中的文件（因此无法附加 filetable）。 文件系统筛选器驱动程序 RsFx0420 会检查进出文件流文件夹的传入 I/O 请求。 如果请求不是同时出自 SQLServer 可执行文件和文件流代码中，则会显式禁止它们。
   
 ##  <a name="additional"></a> 使用 FileTable 的其他注意事项  
   

@@ -1,8 +1,8 @@
 ---
 title: 查询提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 1f156c897d4205e87ce3ee8be3a339fbc2b5bf10
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265374"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662911"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ ROBUST PLAN
    此提示名称与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 是并行的。
 *  'DISABLE_PARAMETER_SNIFFING'      
    指示查询优化器在使用一个或多个参数编译查询时，使用平均数据分布。 此指令让查询计划独立于编译查询时首次使用的参数值。 此提示名称与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[数据库范围内配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 PARAMETER_SNIFFING=OFF 是并行的。
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  禁用行模式内存授予反馈。 有关详细信息，请参阅[模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)。
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  禁用标量 UDF 内联。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
+* 'DISALLOW_BATCH_MODE'    
+  禁用批处理模式执行。 有关详细信息，请参阅[执行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 此提示名称与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 是并行的。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

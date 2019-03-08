@@ -1,7 +1,7 @@
 ---
 title: 基数估计 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328847"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828017"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本文将阐释如何评估和选择 SQL 系统的最佳基数估计 (CE) 配置。 大多数系统受益于最新的 CE，因为它最准确。 CE 将预测查询可能返回的行数。 查询优化器使用基数预测来生成最佳查询计划。 通过更准确的估计，查询优化器通常可以更好地生成更优查询计划。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 这意味着它将选择执行具有最低估计处理开销的查询计划。 查询优化器基于以下两个主要因素来确定执行查询计划的开销：
+
+- 查询计划每个级别上处理的总行数，称为该计划的基数。
+- 由查询中所使用的运算符规定的算法的开销模式。
+
+第一个因素（基数）用作第二个因素（开销模式）的输入参数。 因此，增大基数将减少估计开销，从而加快执行计划。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的基数估计 (CE)主 要派生自创建索引或统计信息时所创建的直方图（以手动或自动方式）。 有时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还使用查询的约束信息和逻辑重写来确定基数。
+
+在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法精确计算基数。 这将使开销计算不准确，可能导致生成不理想的查询计划。 避免在查询中使用这些构造可以提高查询性能。 有时，使用查询表达式或其他措施也可以提高查询性能，如下所述：
+
+- 带谓词的查询，这些查询在同一表的不同列之间使用比较运算符。
+- 带谓词的查询，这些查询使用运算符且下列任何一种情况为 True：
+  - 运算符两侧所涉及的列中没有统计信息。
+  - 统计信息中值的分布不均匀，但查询将查找高选择性的值集。 特别是，当运算符是除相等 (=) 运算符以外的任何其他运算符时，这种情况可能为 True。
+  - 谓词使用不等于 (!=) 比较运算符或 `NOT` 逻辑运算符。
+- 使用任意 SQL Server 内置函数或标量值用户定义函数（其参数不是常量值）的查询。
+- 包含通过算术或字符串串联运算符联接的列的查询。
+- 比较在编译或优化查询时其值未知的变量的查询。
+
+本文将阐释如何评估和选择系统的最佳 CE 配置。 大多数系统受益于最新的 CE，因为它最准确。 CE 将预测查询可能返回的行数。 查询优化器使用基数预测来生成最佳查询计划。 通过更准确的估计，查询优化器通常可以更好地生成更优查询计划。  
   
 你的应用程序系统可能具有重要的查询，其计划由于新的 CE 而更改为较慢计划。 此类查询可能为以下任一种：  
   

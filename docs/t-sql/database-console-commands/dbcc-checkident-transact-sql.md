@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154855"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800991"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56154855"
   检查 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定表的当前标识值，如有必要，则更改标识值。 还可以使用 DBCC CHECKIDENT 为标识列手动设置新的当前标识值。  
    
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ DBCC CHECKIDENT
   
 ## <a name="arguments"></a>参数  
  *table_name*  
- 是要对其当前标识值进行检查的表名。 指定的表必须包含标识列。 表名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+ 是要对其当前标识值进行检查的表名。 指定的表必须包含标识列。 表名必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。 两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
   
  NORESEED  
  指定不应更改当前标识值。  
@@ -79,29 +79,29 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|不重置当前标识值。 DBCC CHECKIDENT 将返回标识列的当前标识值和当前最大值。 如果这两个值不相同，则应重置标识值，以避免值序列中的潜在错误或空白。|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> 或多个<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果表的当前标识值小于标识列中存储的最大标识值，则使用标识列中的最大值对其进行重置。 请参阅后面的“例外”一节。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|将当前标识值设置为 *new_reseed_value*。 如果自从创建表以来未在表中插入任何行，或者已使用 TRUNCATE TABLE 语句删除所有行，则在运行 DBCC CHECKIDENT 之后插入的第一行将使用 *new_reseed_value* 作为标识。<br /><br /> 如果表中有行，插入的下一行包含 new_reseed_value 和[当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。 在版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更早版本中，插入的下一行使用 *new_reseed_value* + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果该表不为空，那么将标识值设置为小于标识列中的最大值的数字时，将会出现下列情况之一：<br /><br /> -如果标识列中存在 PRIMARY KEY 或 UNIQUE 约束，则随后在表中执行插入操作时将生成错误消息 2627，原因是生成的标识值将与现有值冲突。<br /><br /> -如果不存在 PRIMARY KEY 或 UNIQUE 约束，则随后的插入操作将产生重复的标识值。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|将当前标识值设置为 *new_reseed_value*。 如果自从创建表以来未在表中插入任何行，或者已使用 TRUNCATE TABLE 语句删除所有行，则在运行 DBCC CHECKIDENT 之后插入的第一行将使用 new_reseed_value 作为标识。<br /><br /> 如果表中有行，插入的下一行包含 new_reseed_value 和[当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。 在版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更早版本中，插入的下一行使用 *new_reseed_value* + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果该表不为空，那么将标识值设置为小于标识列中的最大值的数字时，将会出现下列情况之一：<br /><br /> -如果标识列中存在 PRIMARY KEY 或 UNIQUE 约束，则随后在表中执行插入操作时将生成错误消息 2627。 出现此错误的原因是生成的标识值将与现有值冲突。<br /><br /> -如果不存在 PRIMARY KEY 或 UNIQUE 约束，则随后的插入操作将产生重复的标识值。|  
   
 ## <a name="exceptions"></a>异常  
  下表列出了 DBCC CHECKIDENT 不自动重置当前标识值时的条件，并提供了重置该值的方法。  
   
 |条件|重置方法|  
 |---------------|-------------------|  
-|当前标识值大于表中的最大值。|执行 DBCC CHECKIDENT (*table_name*, NORESEED) 可以确定列中的当前最大值，然后指定该值作为 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) 命令中的 *new_reseed_value*。<br /><br /> -或-<br /><br /> 执行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，其中 *new_reseed_value* 设置为非常低的值，然后运行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正值。|  
-|删除表中的所有行。|执行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，其中 *new_reseed_value* 设置为所需的起始值。|  
+|当前标识值大于表中的最大值。|执行 DBCC CHECKIDENT (table_name, NORESEED) 以确定列中的当前最大值。 接下来，在 DBCC CHECKIDENT (table_name, RESEED,new_reseed_value) 命令中指定该值作为 new_reseed_value。<br /><br /> -或-<br /><br /> 执行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，其中 *new_reseed_value* 设置为非常低的值，然后运行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正值。|  
+|删除表中的所有行。|执行 DBCC CHECKIDENT (table_name, RESEED,new_reseed_value)，其中 new_reseed_value 设置为新起始值。|  
   
 ## <a name="changing-the-seed-value"></a>更改种子值  
- 种子值是针对装入表的第一行插入到标识列的值。 所有后续行都包含当前标识值和增量值，其中当前标识值是为当前表或视图生成的最新标识值。  
+ 种子值是针对加载到表中的第一行插入到标识列的值。 所有后续行都包含当前标识值和增量值，其中当前标识值是为当前表或视图生成的最新标识值。  
   
- 不能使用 DBCC CHECKIDENT 执行下列任务：  
+ 不能将 DBCC CHECKIDENT 用于下列任务：  
   
 -   更改创建表或视图时为标识列指定的原始种子值。  
   
 -   重设表或视图中的现有行的种子值。  
   
- 若要更改原始种子值并重设所有现有行的种子值，必须删除并重新创建标识列，然后为标识列指定新的种子值。 当表包含数据时，还会将标识号添加到具有指定种子值和增量值的现有行中。 无法保证行的更新顺序。  
+ 若要更改原始种子值并重设所有现有行的种子值，请删除并重新创建标识列，然后为标识列指定新的种子值。 当表包含数据时，还会将标识号添加到具有指定种子值和增量值的现有行中。 无法保证行的更新顺序。  
   
 ## <a name="result-sets"></a>结果集  
- 无论是否为包含标识列的表指定了任何选项，DBCC CHECKIDENT 都会为所有操作（仅在指定新的种子值时例外）返回以下消息：  
+ 无论是否为包含标识列的表指定了任何选项，DBCC CHECKIDENT 都会为所有操作（除了一个操作）返回以下消息。 该操作指定新的种子值。  
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
@@ -114,8 +114,8 @@ DBCC CHECKIDENT
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-resetting-the-current-identity-value-if-it-is-needed"></a>A. 根据需要重置当前标识值  
- 以下示例根据需要重置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  数据库中指定表的当前标识值。  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. 在需要时重置当前标识值  
+ 以下示例在需要时重置 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中指定表的当前标识值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,5 +167,4 @@ GO
 [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)  
-  
   

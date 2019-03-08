@@ -18,17 +18,17 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f517a0a991d36fb0371a7f2eee5e3fb4a0dacc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d093331425443a0879d5f59f5a2d03fdebcb2abd
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715946"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425752"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf（geometry 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-一个方法，用于测试 **geometry** 实例是否与指定的类型相同。 如果 **geometry** 实例的类型与指定的类型相同，或者指定的类型是该实例类型的上级，则返回 1；否则，返回 0。
+一个方法，用于测试 **geometry** 实例是否与指定的类型相同。 如果 **geometry** 实例的类型与指定类型相同，则返回 1。 如果指定的类型是该实例类型的上级，此方法也返回 1。 否则，此方法返回 0。
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +38,16 @@ ms.locfileid: "47715946"
 ```  
   
 ## <a name="arguments"></a>参数  
- *geometry_type*  
- 一个 **nvarchar(4000)** 字符串，用于指定 **geometry** 类型层次结构中公开的 15 个类型之一。  
+*geometry_type*  
+**nvarchar(4000)** 字符串，用于指定 **geometry** 类型层次结构中公开的 15 个类型之一。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit  
   
- CLR 返回类型：SqlBoolean  
+ CLR 返回类型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 该方法的输入必须是以下各项之一：Geometry、Point、Curve、LineString、CircularString、CompoundCurve、Surface、Polygon、CurvePolygon、GeometryCollection、MultiSurface、MultiPolygon、MultiCurve、MultiLineString 和 MultiPoint。 如果将任何其他字符串用于输入，此方法会引发 **ArgumentException**。  
+ 方法的输入必须为以下类型之一：**Geometry**、**Point**、**Curve**、**LineString**、**CircularString**、**CompoundCurve**、**Surface**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiSurface**、**MultiPolygon**、**MultiCurve**、**MultiLineString** 和 **MultiPoint**。 如果将任何其他字符串用于输入，此方法会引发 **ArgumentException**。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个 `MultiPoint` 实例，并使用 `InstanceOf()` 查看该实例是否为 `GeometryCollection`。  

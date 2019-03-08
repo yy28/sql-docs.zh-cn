@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017068"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662771"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ binary [ ( n ) ] 长度为 n 字节的固定长度二进制数据，其中 n 是
 varbinary [ ( n | max) ] 可变长度二进制数据。 n 的取值范围为 1 至 8,000。 max 指示最大存储大小是 2^31-1 个字节。 存储大小为所输入数据的实际长度 + 2 个字节。 所输入数据的长度可以是 0 字节。 varbinary 的 ANSI SQL 同义词为 binary varying。
   
 ## <a name="remarks"></a>Remarks  
-如果没有在数据定义或变量声明语句中指定 n，则默认长度为 1。 如果没有使用 CAST 函数指定 n，则默认长度为 30。
+如果没有在数据定义或变量声明语句中指定 _n_，则默认长度为 1。 如果没有使用 CAST 函数指定 _n_，则默认长度为 30。
 
 | 数据类型 | 何时使用... |
 | --- | --- |
@@ -50,11 +50,23 @@ varbinary [ ( n | max) ] 可变长度二进制数据。 n 的取值范围为 1 �
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>转换 binary 和 varbinary 数据
-将数据从字符串数据类型（char、varchar、nchar、nvarchar、binary、varbinary、text、ntext 或图像）转换为不等长的 binary 或 varbinary 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在数据的右侧填充或截断数据。 从其他数据类型转换为 binary 或 varbinary 时，将在数据的左侧填充或截断数据。 填充将通过使用十六进制的零来完成。
+将数据从字符串数据类型转换为不同长度的 **binary** 或 **varbinary** 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在数据的右侧填充或截断数据。 这些字符串数据类型为：
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **图像**
+
+从其他数据类型转换为 binary 或 varbinary 时，将在数据的左侧填充或截断数据。 填充将通过使用十六进制的零来完成。
   
-如果 binary 数据是最容易来回移动的数据，则将数据转换为 binary 和 varbinary 数据类型很有用。 将任一类型的任一值转换为足够大的二进制值，然后转换回原类型时，如果两次转换都是在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上进行的，则始终生成相同的值。 值的二进制表示形式在不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间可能会有所不同。
+如果 binary 数据是最容易来回移动的数据，则将数据转换为 binary 和 varbinary 数据类型很有用。 某些时候，可能会将值类型转换为足够大的二进制值，然后再将其转换回来。 如果两种转换在同一版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上发生，则此转换总是会生成相同的值。 值的二进制表示形式在不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之间可能会有所不同。
   
-可以将 int、smallint 和 tinyint 转换为 binary 或 varbinary，但是如果将 binary 转换回整数值，则在发生了截断的情况下此值将不同于原始整数值。 例如，以下 SELECT 语句显示整数值 `123456` 通常被存储为二进制值 `0x0001e240`：
+可以将 **int**、**smallint** 和 **tinyint** 转换为 **binary** 或 **varbinary**。 如果将 **binary** 值转换回整数值，则在发生了截断的情况下此值将不同于原始整数值。 例如，以下 SELECT 语句显示整数值 `123456` 被存储为二进制值 `0x0001e240`：
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  
