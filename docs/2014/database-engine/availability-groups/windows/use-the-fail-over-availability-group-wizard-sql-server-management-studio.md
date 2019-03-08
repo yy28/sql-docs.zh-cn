@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519303"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579647"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用故障转移可用性组向导 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。 可用性组在可用性副本级别进行故障转移。 如果故障转移到一个处于 SYNCHRONIZED 状态的辅助副本，则向导将执行计划的手动故障转移（不会造成数据丢失）。 如果故障转移到一个处于 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 状态的次要副本，则向导将执行强制的手动故障转移（这也称为“强制故障转移”，可能造成数据丢失）。 这两种形式的手动故障转移均会将您所连接的辅助副本转换为主角色。 计划的手动故障转移当前会将先前的主副本转换为辅助角色。 在强制故障转移之后，一旦先前的主副本联机，它就会转换为辅助角色。  
@@ -39,7 +39,7 @@ ms.locfileid: "52519303"
   
      [“连接到副本”页](#ConnectToReplica) （将在本主题的后面介绍）  
   
-     “确认可能丢失数据”页[](#ConfirmPotentialDataLoss) （将在本主题的后面介绍）  
+     [确认可能丢失数据页](#ConfirmPotentialDataLoss) （将在本主题的后面介绍）  
   
      [摘要页&#40;AlwaysOn 可用性组向导&#41;](summary-page-always-on-availability-group-wizards.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52519303"
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  在你首次执行计划的手动故障转移之前，请参阅 [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell 来对 AlwaysOn 可用性组执行计划的手动故障转移或强制的手动故障转移（强制故障转移）。  
   
- 在第一个强制故障转移前，请参阅"开始之前"和"跟进：强制故障转移后的重要任务"内的部分[执行某一可用性组的强制手动故障转移&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
+ 在首次强制故障转移之前，请参阅“开始之前”和“跟进：强制故障转移之后的重要任务”部分，位于[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中。  
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52519303"
   
      有关详细信息，请参阅[“结果”页（AlwaysOn 可用性组向导）](results-page-always-on-availability-group-wizards.md)。  
   
-11. 强制故障转移后，请参阅"跟进：中的强制故障转移"之后部分[执行某一可用性组的强制手动故障转移&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
+11. 强制故障转移后，请参阅“跟进：强制故障转移之后”部分，位于[执行可用性组的强制手动故障转移 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 中。  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>有关此向导独有的页面的帮助  
  本节介绍 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]独有的页面。  
@@ -201,7 +201,7 @@ ms.locfileid: "52519303"
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 可用性模式 （AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)   
+ [可用性模式 （AlwaysOn 可用性组）](availability-modes-always-on-availability-groups.md)   
  [故障转移和故障转移模式&#40;AlwaysOn 可用性组&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [执行可用性组的计划手动故障转移 (SQL Server)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
