@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511324"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578409"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
   本主题介绍对象命名约定，以及无法在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的任何对象名称、代码或脚本中使用的保留字和字符。  
@@ -71,10 +71,10 @@ ms.locfileid: "52511324"
 |Object|无效字符|  
 |------------|------------------------|  
 |`Server`|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 请参阅[命名约定 (Windows)](/windows/desktop/DNS/naming-conventions)有关详细信息。|  
-|`DataSource`|: / \ * &#124; ? "（) [] {} <>|  
-|`Level` 或 `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` 或 `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
-|所有其他对象|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` 或 `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` 或 `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|所有其他对象|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **异常：如果允许使用保留字符**  
   

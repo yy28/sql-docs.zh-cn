@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363919"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579587"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的辅助副本的备份。  
   
 > [!NOTE]  
->  辅助副本备份的介绍，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  有关次要副本备份的介绍，请参阅[活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53363919"
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅[跟进工作：配置辅助副本备份之后](#FollowUp)本主题中更高版本。  
+    >  没有强制的自动备份首选项设置。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
   
 6.  使用 **“副本备份优先级”** 网格更改可用性副本的备份优先级。 此网格将显示每个承载可用性组的副本的服务器实例的当前备份优先级。 网格列如下所示：  
   
@@ -146,7 +146,7 @@ ms.locfileid: "53363919"
      指定您希望在选择要执行备份的副本时备份作业将忽略可用性副本的角色。 请注意，备份作业可能评估其他因素，例如每个可用性副本的备份优先级及其操作状态和已连接状态。  
   
     > [!IMPORTANT]  
-    >  没有强制的 `AutomatedBackupPreference`。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅[跟进工作：配置辅助副本备份之后](#FollowUp)本主题中更高版本。  
+    >  没有强制的 `AutomatedBackupPreference`。 对此首选项的解释取决于您为给定可用性组中的数据库撰写备份作业脚本的逻辑（如果有）。 自动备份首选项设置对即席备份没有影响。 有关详细信息，请参阅本主题后面部分的[跟进：配置次要副本备份之后](#FollowUp)。  
   
      例如，以下命令会将可用性组 `MyAg` 的 `AutomatedBackupPreference` 属性设置为 `SecondaryOnly`。 此可用性组中的数据库自动备份将永远不会在主副本上发生，但将重定向到具有最高备份优先级设置的辅助副本。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53363919"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 跟进：配置辅助副本备份之后  
+##  <a name="FollowUp"></a>跟进：配置次要副本备份之后  
  若要为某一给定可用性组考虑使用自动备份首选项，则对于承载备份优先级大于零 (>0) 的可用性副本的每个服务器实例，您需要为该可用性组中的数据库的备份作业编写脚本。 若要确定当前副本是否为首选备份副本，请在备份脚本中使用 [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函数。 如果当前服务器实例承载的可用性副本是用于备份的首选副本，则此函数将返回 1。 否则，该函数返回 0。 通过对查询此函数的每个可用性副本运行简单的脚本，可以确定哪个副本应运行给定的备份作业。 例如，备份作业脚本的典型代码段如下所示：  
   
 ```  
@@ -201,6 +201,6 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 活动辅助副本：在辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动次要副本：在辅助副本 （AlwaysOn 可用性组） 上的备份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

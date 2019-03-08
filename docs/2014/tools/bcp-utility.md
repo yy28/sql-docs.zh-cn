@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133837"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579754"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
   **Bcp**大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
@@ -101,7 +101,7 @@ ms.locfileid: "54133837"
   
 -   **格式**创建格式化文件基于指定的选项 (**-n**， `-c`， `-w`，或 **-N**) 以及表或视图的分隔符。 大容量复制数据时， **bcp** 命令可以引用一个格式化文件，从而避免以交互方式重复输入格式信息。 **format** 选项要求指定 **-f** 选项；创建 XML 格式化文件时还需要指定 **-x** 选项。 有关详细信息，请参阅 [创建格式化文件 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)。 必须将 **nul** 指定为值 (**format nul**)。  
   
- *所有者*  
+ *owner*  
  表或视图的所有者的名称。 如果执行该操作的用户拥有指定的表或视图，则*owner* 是可选的。 如果未指定 *owner*，并且执行该操作的用户不是指定的表或视图的所有者，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将返回错误消息，而且该操作将取消。  
   
  **"** _query_ **"**  

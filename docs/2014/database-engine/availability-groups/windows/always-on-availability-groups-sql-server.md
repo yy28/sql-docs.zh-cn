@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356252"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578747"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组”  针对一组离散的用户数据库（称为“可用性数据库” ，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
@@ -141,7 +141,7 @@ ms.locfileid: "53356252"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  有关限制和使用与其他功能的限制信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[Always On 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  有关通过 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用其他功能的限制和局限性的详细信息，请参阅 [AlwaysOn 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
@@ -157,9 +157,9 @@ ms.locfileid: "53356252"
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"Alwayson 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
-     [Microsoft SQL Server Code-Named"Denali"Alwayson 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮书：**  
   

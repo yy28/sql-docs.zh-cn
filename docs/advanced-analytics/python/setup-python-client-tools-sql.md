@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046527"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579556"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,4 +305,4 @@ display.Image(data=image)
 现在，有工具和有效的连接到 SQL Server，通过运行通过 Python 快速入门使用扩展你的技能[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 > [!div class="nextstepaction"]
-> [快速入门：验证存在 SQL Server 中的 Python ](../tutorials/quickstart-python-verify.md)
+> [快速入门：验证存在 SQL Server 中的 Python](../tutorials/quickstart-python-verify.md)

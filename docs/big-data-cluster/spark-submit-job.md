@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241579"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578237"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>提交 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业
 
@@ -25,7 +25,7 @@ ms.locfileid: "54241579"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **Kubectl**
+   - **kubectl**
 
 - [连接到你的大数据群集的 HDFS/Spark 网关的 Azure Data Studio](connect-to-big-data-cluster.md)。
 
@@ -34,7 +34,7 @@ ms.locfileid: "54241579"
 
 + 单击**新的 Spark 作业**在仪表板中打开 Spark 作业提交对话框。
 
-    ![通过单击仪表板提交菜单 ](./media/submit-spark-job/new-spark-job.png)
+    ![通过单击仪表板提交菜单](./media/submit-spark-job/new-spark-job.png)
  
 + 右键单击对象资源管理器中的群集，然后选择**提交 Spark 作业**从上下文菜单。 将打开 Spark 作业提交对话框。  
  

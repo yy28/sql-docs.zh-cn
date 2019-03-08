@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044394"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579177"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 
@@ -132,7 +132,7 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 |备份和还原任务|Description|  
 |---------------------------|---------------|  
-|为备份服务器准备服务器。|[获取和配置备份服务器 ](acquire-and-configure-backup-server.md)|  
+|为备份服务器准备服务器。|[获取和配置备份服务器](acquire-and-configure-backup-server.md)|  
 |备份数据库。|[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |将数据库还原。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

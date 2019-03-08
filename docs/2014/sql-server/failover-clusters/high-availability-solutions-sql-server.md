@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543595"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579037"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解决方案 (SQL Server)
   本主题介绍了几个提高服务器或数据库可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解决方案。 高可用性解决方案可减少硬件或软件故障造成的影响，保持应用程序的可用性，从而将用户可以察觉到的停机时间减至最少。  
@@ -36,7 +36,7 @@ ms.locfileid: "52543595"
  AlwaysOn 故障转移群集实例  
  作为的一部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AlwaysOn 产品/服务，AlwaysOn 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能来提供本地高可用性，通过在服务器实例级别的冗余*故障转移群集实例*(FCI)。 FCI 是在 Windows Server 故障转移群集 (WSFC) 节点上和（可能）多个子网中安装的单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在网络中，FCI 显示为在单台计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，不过它提供了从一个 WSFC 节点到另一个 WSFC 节点的故障转移（如果当前节点不可用）。  
   
- 有关详细信息，请参阅[AlwaysOn 故障转移群集实例 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)。  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中引入的企业级高可用性和灾难恢复解决方案，可使一个或多个用户数据库的可用性达到最高。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例驻留在 Windows Server 故障转移群集 (WSFC) 节点上。 有关详细信息，请参阅[AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "52543595"
   
 ## <a name="see-also"></a>请参阅  
  [Windows Server 故障转移群集 (WSFC) 与 SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [数据库镜像：互操作性和共存&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [数据库镜像：互操作性和共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [SQL Server 2014 中弃用的数据库引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617618"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579577"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +202,7 @@ ETL 过程使用此架构中的存储的过程。 他们获得所需的时间范
 |Configuration_ApplyAuditing|Adds 审核。 服务器审核适用于标准版本的数据库。对于 enterprise edition 添加附加的数据库审核。|
 |Configuration_ApplyColumnstoreIndexing|将应用到索引的列存储`Sales.OrderLines`和`Sales.InvoiceLines`并相应地重新编制索引。|
 |Configuration_ApplyFullTextIndexing|将应用到全文索引`Application.People`， `Sales.Customers`， `Purchasing.Suppliers`，和`Warehouse.StockItems`。 将替换`Website.SearchForPeople`， `Website.SearchForSuppliers`， `Website.SearchForCustomers`， `Website.SearchForStockItems`，`Website.SearchForStockItemsByTags`与使用全文索引编制的更换过程。|
-|Configuration_ApplyPartitioning|将应用到的表分区`Sales.CustomerTransactions and `Purchasing.SupplierTransactions' 和重新排列索引以满足。|
+|Configuration_ApplyPartitioning|将应用到的表分区`Sales.CustomerTransactions`和`Purchasing.SupplierTransactions`，和重新排列的索引以满足。|
 |Configuration_ApplyRowLevelSecurity|应用于筛选器的客户的行级别安全性，方法是 sales territory 相关角色。|
 |Configuration_ConfigureForEnterpriseEdition|将应用列存储索引、 全文、 内存中，polybase 和分区。|
 |Configuration_EnableInMemory|（如果不在 Azure 中运行） 中添加内存优化文件组，将替换`Warehouse.ColdRoomTemperatures`，`Warehouse.VehicleTemperatures`与内存中的等效项，并会将数据迁移，将重新创建`Website.OrderIDList`， `Website.OrderList`， `Website.OrderLineList`，`Website.SensorDataList`表使用的类型内存优化的等效项、 删除和重新创建过程`Website.InvoiceCustomerOrders`， `Website.InsertCustomerOrders`，和`Website.RecordColdRoomTemperatures`，它使用这些表类型。|

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506923"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579377"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506923"
 |提供了指向有关各个挖掘模型查看器的信息的链接|[数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何创建提升图、利润图、分类矩阵或测试挖掘结构|[测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解有关处理选项和权限的信息|[处理数据挖掘对象](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有关 Analysis Services 的详细信息|[多维模型数据库 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有关 Analysis Services 的详细信息|[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

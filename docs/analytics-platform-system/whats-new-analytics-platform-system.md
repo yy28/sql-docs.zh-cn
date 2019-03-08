@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652586"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579408"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -120,7 +120,7 @@ APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新�
 ### <a name="t-sql"></a>T-SQL
 选择@var现在支持。 有关详细信息，请参阅[选择本地变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-现在支持哈希和 ORDER GROUP 查询提示。 有关详细信息，请参阅[Hints(Transact-SQL)-查询 ](/sql/t-sql/queries/hints-transact-sql-query)
+现在支持哈希和 ORDER GROUP 查询提示。 有关详细信息，请参阅[Hints(Transact-SQL)-查询](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>功能开关
 APS AU7 引入了中的功能切换[Configuration Manager](launch-the-configuration-manager.md)。 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds 现在都可以由管理员更改的可配置选项。

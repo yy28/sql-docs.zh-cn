@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361490"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579217"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性组中数据库的登录名和作业 (SQL Server)
   您应当定期维护 AlwaysOn 可用性组的每个主数据库及其相应的辅助数据库上的同一组用户登录名和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业。 在为可用性组承载可用性副本的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上，必须重新生成这些登录名和作业。  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410767"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579427"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52410767"
   
 让我们看看模型属性。 单击**Model.bim**。 在中**属性**窗口中，您将看到[模型属性](../analysis-services/tabular-models/model-properties-ssas-tabular.md)，最重要的是**DirectQuery 模式下**属性。 此属性指定是在内存中模式（关闭）还是在 DirectQuery 模式（打开）下部署模型。 对于本教程，您将在内存中模式下创作和部署模型。
 
-![作为表格-lesson1-属性](../analysis-services/media/as-tabular-lesson1-properties.png)
+![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 创建新模型时，可以在指定的数据建模设置根据相应某些模型属性自动设置**工具** > **选项**对话框。 “数据备份”、“工作区保持期”和“工作区服务器”属性指定备份、在内存中保留以及构建工作区数据库（模型创作数据库）的方式和位置。 如有必要，您可以稍后更改这些设置，但目前保留这些属性不变。  
 

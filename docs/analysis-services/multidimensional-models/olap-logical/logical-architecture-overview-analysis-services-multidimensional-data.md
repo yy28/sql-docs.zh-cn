@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397751"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579437"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -121,6 +121,6 @@ ms.locfileid: "52397751"
  此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：**[维度关系](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [多维模型数据库 ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多维模型数据库](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

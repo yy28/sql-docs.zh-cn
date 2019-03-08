@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129277"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579367"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  
@@ -116,7 +116,7 @@ ms.locfileid: "54129277"
   
      当需要将大量更改发送到订阅服务器时，用新快照重新初始化这些更改可能比使用复制分别移动每个更改要快。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
-     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     对于事务复制，复制监视器在 **“未分发的命令”** 选项卡上显示下列信息：分发数据库中尚未分发到订阅服务器的事务数，以及预计分发这些事务所需的时间。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="snapshot-considerations"></a>快照注意事项  
   

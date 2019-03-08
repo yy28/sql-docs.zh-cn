@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044543"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579347"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "55044543"
 
 |任务   |相关的文章  |说明
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 现已扩展为支持创建表 AS 节点或 AS 边界。 请注意，边缘表可能会或可能没有任何用户定义的特性。  |
+|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 现已扩展为支持创建表 AS 节点或 AS 边界。 请注意，边缘表可能会或可能没有任何用户定义的特性。  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|可以更改节点和边缘表的关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部图表列，喜欢`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表中的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
 |创建边缘约束    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072335"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579525"
 ---
 # <a name="tabular-model-solution-deployment"></a>表格模型解决方案部署 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "53072335"
 |[同步 Analysis Services 数据库](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|说明如何使用同步数据库向导同步任意两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格或多维数据库之间的元数据和数据。|  
   
 ## <a name="see-also"></a>请参阅  
- [连接到表格模型数据库 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [连接到表格模型数据库](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

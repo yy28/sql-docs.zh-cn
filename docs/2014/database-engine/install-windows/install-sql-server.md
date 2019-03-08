@@ -13,15 +13,15 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356696"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578349"
 ---
 # <a name="install-sql-server-2014"></a>安装 SQL Server 2014
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ 下载 SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[下载 SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **感谢您参与到[Scott Hanselman](http://www.hanselman.com/)收集所有安装程序包链接在一个位置 ！**
   
  本主题概要介绍用于安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的不同安装选项。 有关详细信息的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以安装的组件和安装过程中，请参阅[适用于 SQL Server 2014 安装](installation-for-sql-server.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 创建多维模型使用 SQL Server Data Tools (SSDT) |Microsoft 文档
+title: 创建多维模型使用 SQL Server Data Tools (SSDT) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 576b2e2654bdae98bd3f9464f162715c002c60e3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41bc227d238534a7fc1c0bee0070e3b6c973b2d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025444"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579227"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>使用 SQL Server Data Tools 创建多维模型 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了两个不同的环境以生成、部署和管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案： [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 这两个环境都可实现项目系统。 有关 Visual Studio 项目的详细信息，请参阅 MSDN Library 中的 [作为容器的项目](http://go.microsoft.com/fwlink/?LinkId=63960) 。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是一种基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010 的开发环境，用于创建和修改商业智能解决方案。 使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，可以创建包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象（多维数据集、维度等）定义的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，这些定义存储在包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 元素的 XML 文件内。 这些项目包含在还可含有来自其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件（包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]）的项目的解决方案中。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，可以开发 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，作为独立于任意特定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的解决方案的一部分。 您可以向测试服务器的实例部署对象，以便在开发期间进行测试，然后再使用同一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，向一个或多个临时服务器或生产服务器实例部署对象。 包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的解决方案中的项目和项可以与源代码管理（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe）集成。 有关使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目的详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。 您还可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 直接连接到现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建和修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，而无需使用项目，也无需在 XML 文件中存储对象定义。 有关详细信息，请参阅[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)，和[Connect in Online Mode to an Analysis Services Database](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是一种基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010 的开发环境，用于创建和修改商业智能解决方案。 使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，可以创建包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象（多维数据集、维度等）定义的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，这些定义存储在包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 元素的 XML 文件内。 这些项目包含在还可含有来自其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件（包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]）的项目的解决方案中。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，可以开发 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，作为独立于任意特定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的解决方案的一部分。 您可以向测试服务器的实例部署对象，以便在开发期间进行测试，然后再使用同一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，向一个或多个临时服务器或生产服务器实例部署对象。 包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的解决方案中的项目和项可以与源代码管理（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe）集成。 有关使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目的详细信息，请参阅 [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)。 您还可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 直接连接到现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建和修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，而无需使用项目，也无需在 XML 文件中存储对象定义。 有关详细信息，请参阅[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)，并[Connect in Online Mode to Analysis Services 数据库](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一个管理环境，主要用于管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的实例。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，可以管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象（执行备份、处理等），还可以使用 XMLA 脚本直接在现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上创建新对象。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了 Analysis Server 脚本项目，在该项目中可开发和保存以多维表达式 (MDX)、数据挖掘扩展插件 (DMX) 和 XML for Analysis (XMLA) 编写的脚本。 通常，Analysis Server 脚本项目可用于在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上执行管理任务或重新创建对象（例如数据库和多维数据集）。 这些项目可作为解决方案的一部分进行保存，并可与源代码管理控件相集成。 有关使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建 Analysis Server 脚本项目的详细信息，请参阅 [SQL Server Management Studio 中的 Analysis Services 脚本项目](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "34025444"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 增强了商业智能应用程序的开发，因为你可以在源代码管理的多用户环境中处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，而不需要与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例建立活动连接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供对用于查询和测试的现有对象的直接访问，并可用于更快速地实现以前已编写脚本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 但是，将项目部署到生产环境后，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]数据库及其对象时必须谨慎。 避免覆盖以下更改：直接对现有数据库中的对象所做的更改，以及对最初生成部署解决方案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目所做的更改。 有关详细信息，请参阅 [在开发阶段使用 Analysis Services 项目和数据库](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)和 [在生产环境中使用 Analysis Services 项目和数据库](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
 -   [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
 -   [配置 Analysis Services 项目属性 (SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
--   [生成 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
+-   [生成 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
   
 -   [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34025444"
   
 -   [在生产环境中使用 Analysis Services 项目和数据库](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-production.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [在 SQL Server Management Studio 的 analysis Services 脚本项目](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
- [多维模型数据库 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [SQL Server Management Studio 中的 Analysis Services 脚本项目](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
+ [多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

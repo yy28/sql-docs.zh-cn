@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518275"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579397"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>配置分析平台系统的 InfiniBand 网络适配器
 介绍如何在要连接到控制节点上并行数据仓库 (PDW) 的非设备客户端服务器上配置无线带宽技术网络适配器。 使用这些指令的基本连接并以实现高可用性，以便加载、 备份以及其他进程会自动连接到活动的 InfiniBand 网络。  
@@ -182,5 +182,5 @@ ms.locfileid: "52518275"
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>请参阅  
-[获取和配置加载服务器 ](acquire-and-configure-loading-server.md)  
+[获取和配置加载服务器](acquire-and-configure-loading-server.md)  
   

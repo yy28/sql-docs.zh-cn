@@ -1,5 +1,5 @@
 ---
-title: 教程：表达式简介 |Microsoft Docs
+title: 教程：表达式简介 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295115"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579597"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
   表达式帮助您创建功能强大、灵活的报表。 本教程指导您创建和实现使用常用函数和运算符的表达式。 将使用**表达式**对话框可以编写表达式的连接名称值、 查找中单独的数据集中的值显示不同的图片基于字段值，等等。  
@@ -66,7 +66,7 @@ ms.locfileid: "56295115"
 >  在本教程中，由于查询包含了数据值，因此它不需要外部数据源。 这样，查询就会非常长。 在业务环境中，查询不会包含数据。 本教程中的查询仅供学习使用。  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 #### <a name="to-create-a-new-table-report"></a>创建新的表报表  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56295115"
   
      该查询指定列名称，这些名称包括出生日期、名字、姓氏、省/市/自治区、国家/地区标识符、性别和年初至今的采购信息。  
   
-10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 20 行的数据，包括以下列：FirstName、 LastName、 StateProvince、 CountryRegionID、 Gender、 YTDPurchase 和 LastPurchase。  
+10. 在查询设计器工具栏中，单击“运行”(**!**)。 结果集显示 20 行的数据，包括以下列：“FirstName”、“LastName”、“StateProvince”、“CountryRegionID”、“Gender”、“YTDPurchase”和“LastPurchase”。  
   
 11. 单击“下一步” 。  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295115"
   
 1.  从 **“报表生成器”** 按钮，单击 **“另存为”**。  
   
-2.  单击**桌面`, `My Documents**，或**我的计算机**，然后浏览到要保存报表的文件夹。  
+2.  单击 **“桌面”**、 **“我的文档”** 或 **“我的电脑”**，然后浏览到要将报表保存到的文件夹。  
   
 3.  在“名称”中，用“Sales Comparison Summary”替换默认名称。  
   

@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126067"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578317"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
   复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。 使用复制，可以在局域网和广域网、拨号连接、无线连接和 Internet 上将数据分发到不同位置以及分发给远程或移动用户。  
@@ -29,13 +29,13 @@ ms.locfileid: "54126067"
   
 
 ## <a name="whats-new"></a>新增功能 
-- SQL Server 2017 不到 SQL Server 复制引入重要的新功能。 
-- SQL Server 2016 不具有到 SQL Server 复制引入重要的新功能。 
+- SQL Server 2017 未向 SQL Server 复制引入重要的新功能。 
+- SQL Server 2016 未向 SQL Server 复制引入重要的新功能。 
 
-有关向后兼容性信息，请参阅[复制向后兼容性](replication-backward-compatibility.md) 
+有关后向兼容性详细信息，请参阅[复制后向兼容性](replication-backward-compatibility.md) 
 
 
- ## <a name="replication-security"></a>复制安全
+ ## <a name="replication-security"></a>复制安全性
   
 -   [查看和修改复制安全设置](security/view-and-modify-replication-security-settings.md)  
 -   [管理发布访问列表中的登录名](security/manage-logins-in-the-publication-access-list.md)  
@@ -126,13 +126,13 @@ ms.locfileid: "54126067"
 -   [管理对等拓扑](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [停止复制拓扑](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [配置 Oracle 发布服务器的事务集作业](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [升级复制脚本 ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [升级复制脚本](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>监视器
   
 -   [允许非管理员使用复制监视器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以编程方式监视复制](monitor/programmatically-monitor-replication.md)    
--   [查看复制的命令和分发数据库中的其他信息 ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [查看合并发布的冲突信息 ](view-conflict-information-for-merge-publications.md) 
+-   [查看复制的命令和分发数据库中的其他信息](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [查看合并发布的冲突信息](view-conflict-information-for-merge-publications.md) 
 -   [为事务复制测量滞后时间和验证连接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

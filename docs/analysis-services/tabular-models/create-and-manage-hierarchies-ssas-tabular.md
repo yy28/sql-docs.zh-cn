@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5e785fe0e4a5f0030beceff7b9393932a29eaa52
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072594"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579546"
 ---
 # <a name="create-and-manage-hierarchies"></a>创建和管理层次结构 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "53072594"
 -   或者，单击父层次结构级别，然后按 Delete 键。 这也会删除其所有子级别。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型设计器 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [表格模型设计器](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [层次结构](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [度量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

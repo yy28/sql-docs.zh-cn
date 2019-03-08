@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537362"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572770"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>部署脚本文件-指定处理选项
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537362"
   
 -   **处理方法** 此设置将控制在部署后是否处理部署的对象以及将执行的处理的类型。 有以下三个处理选项：  
   
-    -   默认处理（默认值）  
+    -   默认处理 （默认值） 检测数据库对象的处理状态并执行必要的处理，将未处理或部分处理的对象传递到完全处理的状态。
   
-    -   完全处理  
+    -   完全处理处理对象并将其包含的所有对象。 对已被处理的对象执行“处理全部”时，Analysis Services 将删除该对象中的所有数据，然后再处理该对象。 
   
-    -   None  
-  
+    -   无表示在执行任何处理。
+
+
 -   **写回表选项** 如果在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中启用了写回，则此设置可定义处理写回的方式。 有以下三个写回表选项：  
   
     -   默认情况下，如果存在写回表，则使用该表。 如果写回表不存在，则将创建一个新的写回表。  

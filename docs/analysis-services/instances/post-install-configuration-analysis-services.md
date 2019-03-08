@@ -1,5 +1,5 @@
 ---
-title: 安装后配置 (Analysis Services) |Microsoft 文档
+title: 安装后配置 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00c6986fdb3cba910df98165d64afdb154ded68d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aadcdb901c39af148b22640413b921aae288f016
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016604"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579477"
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)）。  
   
- 您具有可供部署的数据库后，需要完成一些额外工作。 换句话说，您需要在数据库上配置角色成员身份以授予用户对数据的访问权限、设计数据库备份和恢复策略，以及确定是否需要预定处理工作负荷以定期刷新数据。 可以在这些链接中找到有关数据库部署和管理的详细信息：[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
+ 您具有可供部署的数据库后，需要完成一些额外工作。 换句话说，您需要在数据库上配置角色成员身份以授予用户对数据的访问权限、设计数据库备份和恢复策略，以及确定是否需要预定处理工作负荷以定期刷新数据。 有关数据库部署和管理的详细信息，请访问以下链接：[多维模型数据库](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)并[表格模型数据库](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   
 ## <a name="instance-configuration"></a>实例配置  
  Analysis Services 是可复制的服务，这意味着您可以在单个服务器上安装该服务的多个实例。 使用 SQL Server 安装程序将每个其他实例作为命名实例单独安装，并单独进行配置以实现预定用途。 例如，开发服务器可能运行网络流量记录器或将默认值用于数据存储，您可能在支持生产工作负荷的服务器上对这些值进行更改。 需要调整系统配置的另一示例是在由其他服务共享的硬件上安装 Analysis Services 实例。 在同一硬件上承载多个包含大量数据的应用程序时，您可能需要配置用于降低内存阈值的服务器属性，以优化所有应用程序之间的可用资源。  
@@ -29,7 +29,7 @@ ms.locfileid: "34016604"
   
 |链接|任务说明|  
 |----------|----------------------|  
-|[将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|在 Windows 防火墙中创建入站规则，以便可以通过 Analysis Services 实例使用的 TCP 端口路由请求。 此任务是必需的。 在定义入站防火墙规则之前，任何人都无法从远程计算机访问 Analysis Services。|  
+|[配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|在 Windows 防火墙中创建入站规则，以便可以通过 Analysis Services 实例使用的 TCP 端口路由请求。 此任务是必需的。 在定义入站防火墙规则之前，任何人都无法从远程计算机访问 Analysis Services。|  
 |[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)|在安装期间，您必须将至少一个用户帐户添加到 Analysis Services 实例的“管理员”角色。 很多例行服务器操作（如处理外部关系数据库的数据）需要管理权限。 使用本主题中的信息添加或修改“管理员”角色的成员身份。|
 |[为运行 SQL Server 的计算机配置防病毒软件](https://support.microsoft.com/kb/309422) |可能需要安装扫描软件（如防病毒应用程序和反间谍应用程序）以排除 SQL Server 文件夹和文件类型。 如果扫描软件在 Analysis Services 需要使用程序或数据文件时将其锁定，那么会发生服务中断或数据损坏的情况。 |
 |[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)|安装过程中，将设置 Analysis Services 服务帐户，并为之授予允许对可执行程序和数据库文件进行受控访问的适当权限。 安装之后，应考虑在执行其他任务时是否允许使用该服务帐户。 处理和查询工作负荷均可在该服务帐户下执行。 仅当该服务帐户具有适当权限时，这些操作才会成功。|  
@@ -40,7 +40,7 @@ ms.locfileid: "34016604"
 ## <a name="next-steps"></a>后续步骤  
  了解如何使用客户端库从 Microsoft 应用程序或自定义应用程序连接到 Analysis Services。 根据您的解决方案要求，您还可能需要为 Kerberos 身份验证配置服务。 必须跨域边界的连接将需要进行 HTTP 访问。 有关后续步骤的说明，请参阅 [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md)   
  [在多维和数据挖掘模式下安装 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [安装 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   

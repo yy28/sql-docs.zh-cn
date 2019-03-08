@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bd9e43232b77bc77611b0c4cd5285b69c9a6261
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046769"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579687"
 ---
-# <a name="quickstart-verify-r-exists-in-sql-server"></a>快速入门：验证 SQL Server 中存在 R 
+# <a name="quickstart-verify-r-exists-in-sql-server"></a>快速入门：验证 SQL Server 中是否存在 R 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 包括对数据科学驻留的 SQL Server 数据分析的 R 语言支持。 在 R 脚本可以包含的开放源代码 R 函数、 第三方 R 库或内置的 Microsoft R 库等[RevoScaleR](../r/revoscaler-overview.md)用于在规模较大的预测分析。
@@ -32,7 +32,7 @@ SQL Server 包括对数据科学驻留的 SQL Server 数据分析的 R 语言支
 本演练需要访问 SQL Server 的实例与已安装以下项之一：
 
 + [SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md)，与安装的 R 语言
-+ [SQL Server 2016 R 服务](../install/sql-r-services-windows-install.md)
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 SQL Server 实例可以是 Azure 虚拟机或本地。 只需注意，外部脚本编写功能默认处于禁用状态，因此可能需要[启用外部脚本](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并确认**SQL Server Launchpad 服务**在开始之前运行。
 
@@ -103,4 +103,4 @@ Microsoft 提供大量预装了机器学习服务中的 SQL Server 实例的 R �
 现在，已确认你的实例已准备好使用 R，则需要进一步了解基本的 R 交互。
 
 > [!div class="nextstepaction"]
-> [快速入门：SQL Server 中的"hello world"R 脚本 ](quickstart-r-run-using-tsql.md)
+> [快速入门：SQL Server 中的"hello world"R 脚本](quickstart-r-run-using-tsql.md)

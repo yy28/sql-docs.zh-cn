@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134087"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579317"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
@@ -218,7 +218,7 @@ ms.locfileid: "54134087"
   
 ### <a name="considerations"></a>注意事项  
   
--   不支持将分发数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 为了让分发服务器提供高可用性，请使用 SQL Server 故障转移群集。 有关详细信息，请参阅[AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   不支持将分发数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。 复制配置与配置了分发服务器的 SQL Server 实例相关联，因此无法镜像或复制分发数据库。 为了让分发服务器提供高可用性，请使用 SQL Server 故障转移群集。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   尽管支持订阅服务器故障转移到辅助数据库，但这是一个相对复杂的手动过程。 该过程与故障转移镜像的订阅服务器数据库所用的方法基本相同。 订阅服务器必须运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本才能加入可用性组。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134087"
  [复制订阅服务器和 AlwaysOn 可用性组&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [关于变更数据捕获 (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [关于更改跟踪 (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)   

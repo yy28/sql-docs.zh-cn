@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852882"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579067"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services 服务器管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +47,12 @@ Azure Analysis Services，请参阅[管理 Azure Analysis Services](https://docs
  通常，大多数必须执行的管理任务都不会根据模式发生改变。 作为 Analysis Services 系统管理员，您可以使用相同的过程和脚本来管理网络上的任何 Analysis Services 实例，而不必考虑该实例是如何安装的。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 属于例外情况。 针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署进行服务器管理始终是在 SharePoint 场的上下文中进行的。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 与其他服务器模式的不同之处在于，它始终为单实例模式，且始终通过 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具进行管理。 尽管可以在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但这并不是理想做法。 SharePoint 场包括可同步服务器状态和监视服务器可用性的基础架构。 使用其他工具可能干扰这些操作。 有关详细信息[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务器管理，请参阅[Powerpivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
+>  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 属于例外情况。 针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署进行服务器管理始终是在 SharePoint 场的上下文中进行的。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 与其他服务器模式的不同之处在于，它始终为单实例模式，且始终通过 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具进行管理。 尽管可以在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但这并不是理想做法。 SharePoint 场包括可同步服务器状态和监视服务器可用性的基础架构。 使用其他工具可能干扰这些操作。 有关详细信息[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务器管理，请参阅[Powerpivot for SharePoint](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
   
   
 ## <a name="see-also"></a>另请参阅  
- [比较表格和多维解决方案 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [比较表格和多维解决方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

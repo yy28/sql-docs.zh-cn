@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124817"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578837"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>什么&#39;SQL Server 2014 中的 s
   本主题总结了中的新增功能的详细的链接[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，并总结了服务包 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -44,12 +44,12 @@ ms.locfileid: "54124817"
 ## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) 未引入重大的新功能。
 -  [SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。
--  [![下载 Service Pack 1 Microsoft??SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [下载 Service Pack 1 的 Microsoft??SQL Server??2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694)。
+-  [![下载 Service Pack 1 Microsoft??SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [下载 Service Pack 1 的 Microsoft??SQL Server??2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
 ## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
 - [SQL Server 2014 Service Pack 2 版本信息](https://support.microsoft.com/en-us/kb/3171021)。
--  [![下载 Service Pack 2 的 Microsoft??SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [下载 Service Pack 2 的 Microsoft??SQL Server??2014](https://go.microsoft.com/fwlink/?LinkID=821558)。
+-  [![下载 Service Pack 2 的 Microsoft??SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [下载 Service Pack 2 的 Microsoft??SQL Server??2014](https://go.microsoft.com/fwlink/?LinkID=821558).
 -  [![下载 SQL Server 2014 SP2 功能包](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164)[下载 SQL Server 2014 SP2 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2)包括以下改进：
@@ -63,7 +63,7 @@ ms.locfileid: "54124817"
 -    **空间本机实现：** 中引入的空间查询性能得到显著提高[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 到本机实现。 有关详细信息，请参阅[知识库文章 KB3107399](https://support.microsoft.com/en-us/kb/3107399)。
 
 ### <a name="supportability-and-diagnostics-improvements"></a>可支持性和诊断改进
--   **克隆数据库：** 克隆数据库是一个新的 DBCC 命令，增强了对现有生产数据库克隆架构和不含数据的元数据进行故障排除。 使用命令创建克隆`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  注意：克隆的数据库不应用于生产环境。 使用以下命令确定是否已从克隆数据库生成一个数据库： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 返回值**1**指示数据库创建时的 clonedatabase **0**指示它不是克隆。
+-   **克隆数据库：** 克隆数据库是一个新的 DBCC 命令，增强了对现有生产数据库克隆架构和不含数据的元数据进行故障排除。 使用命令创建克隆`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  **注意：** 克隆的数据库不应用于生产环境。 使用以下命令确定是否已从克隆数据库生成一个数据库： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 返回值**1**指示数据库创建时的 clonedatabase **0**指示它不是克隆。
 -   **Tempdb 可支持性：** 新的错误日志消息，指明 tempdb 文件的数目和大小/tempdb 数据文件在服务器启动时存在的自动增长。
 -   **数据库即时文件初始化日志记录：** 新的错误日志消息，指明服务器 statup，数据库即时文件初始化 （启用/禁用） 的状态上。
 -   **在调用堆栈中的模块名称：** Xevent 调用堆栈现包含模块名称 + 而不是绝对地址的偏移量。

@@ -14,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823871"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579297"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>升级 SQL Server 故障转移群集
   在所有故障转移群集节点上，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 都支持[!INCLUDE[ssDE](../../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 分别从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]  故障转移群集升级。  
@@ -40,7 +40,7 @@ ms.locfileid: "52823871"
   
     -   不能将故障转移群集节点降级为独立的实例。  
   
--   有关详细信息，请参阅[AlwaysOn 故障转移群集实例 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
+-   有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集  
  不能直接升级非-多子网[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多子网故障转移群集。 有关详细信息，请参阅[升级 SQL Server 故障转移群集实例（安装程序）](upgrade-a-sql-server-failover-cluster-instance-setup.md)。  

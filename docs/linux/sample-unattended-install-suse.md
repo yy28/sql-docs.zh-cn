@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 91ff8bfa90fd691d4314e56e751d3ebde1079180
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759950"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579698"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>示例：适用于 SUSE Linux Enterprise Server 的无人参与的 SQL Server 安装脚本
 
@@ -178,7 +178,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解脚本
-Bash 脚本执行的第一项操作是设置几个变量。 这些可以是脚本变量，如以下示例或环境变量。 在变量``` MSSQL_SA_PASSWORD ```是**必需**通过 SQL Server 安装，有些则是为脚本创建的自定义变量。 示例脚本执行以下步骤：
+Bash 脚本执行的第一项操作是设置几个变量。 这些可以是脚本变量，如以下示例或环境变量。 在变量`MSSQL_SA_PASSWORD`是**必需**通过 SQL Server 安装，有些则是为脚本创建的自定义变量。 示例脚本执行以下步骤：
 
 1. 导入公共 Microsoft GPG 密钥。
 

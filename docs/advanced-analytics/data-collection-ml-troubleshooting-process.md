@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017933"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579127"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>机器学习的数据集合疑难解答
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果未运行机器学习服务，可以通过查看 pythonlauncher.config 文件来确定已安装的 Python 版本。 我们建议您创建并打开文件的副本，以便不会意外更改的任何属性。
 
-1. 对于 SQL Server 2017 仅： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. 对于 SQL Server 2017 仅： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. 获取的值**PYTHONHOME**。
 3. 获取当前工作目录的值。
 
@@ -209,7 +209,7 @@ SQL Server 生成单独的外部脚本语言运行时的日志。 这些错误�
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > 根据实例名称的确切的文件夹名称有所不同。 具体取决于您的配置，该文件夹可能是不同的驱动器上。

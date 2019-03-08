@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3af17b9ee12846fc89e406420fa6405cb59e0af3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367923"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579117"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>为可用性组配置只读路由 (SQL Server)
   若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中支持只读路由，您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 只读路由指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读次要副本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)（即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备[可用性组侦听器](../../listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
@@ -100,7 +100,7 @@ ms.locfileid: "53367923"
   
     -   若要配置主角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 选项，如下所示：  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ('*`server`*'** [ **，**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
   
          其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。  
   
@@ -215,7 +215,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
  有关只读应用程序意向和只读路由器详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)。  
   
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>如果只读路由未正确工作  
- 有关解决只读路由配置问题的信息，请参阅[只读路由未正确工作是](troubleshoot-always-on-availability-groups-configuration-sql-server.md)。  
+ 有关解决只读路由配置问题的信息，请参阅 [只读路由未正确工作](troubleshoot-always-on-availability-groups-configuration-sql-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **查看只读路由配置**  
@@ -255,7 +255,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [活动辅助副本：可读辅助副本 （AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读辅助副本 （AlwaysOn 可用性组）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
   
