@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程补充课程： 不规则层次结构 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程补充课程：不规则层次结构 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074827"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685394"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>补充课程 - 不规则层次结构
 
@@ -26,9 +27,9 @@ ms.locfileid: "43074827"
 
 在 1400年兼容级别表格模型有一个额外**隐藏成员**层次结构的属性。 **默认**设置假定在任何级别上没有空白成员。 **隐藏空白成员**设置添加到数据透视表或报表时，层次结构中排除空白成员。  
   
-学完本课的估计时间： **20 分钟**  
+学完本课的预计时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 本文补充课程是表格建模教程的一部分。 执行任务之前在本补充课程中，应当已完成前面的课程或具有已完成的 Adventure Works Internet Sales 示例模型项目。 
 
 如果已创建 AW Internet Sales 项目作为本教程的一部分，您的模型不尚未包含任何数据或不规则的层次结构。 若要完成本补充课程中，首先需要通过添加一些其他表中创建问题、 创建关系、 计算的列、 度量值和新的组织层次结构。 该部分需要花费大约 15 分钟。 然后，您可以解决此问题在几分钟。  
@@ -47,10 +48,10 @@ ms.locfileid: "43074827"
 
     | 表 1           | “列”       | 筛选器方向   | 表 2     | “列”      | 在职 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | ，则“默认”            | DimDate     | date        | 用户帐户控制    |
-    | FactResellerSales | DueDate      | ，则“默认”            | DimDate     | date        | 否     |
-    | FactResellerSales | ShipDateKey  | ，则“默认”            | DimDate     | date        | 否     |
-    | FactResellerSales | ProductKey   | ，则“默认”            | DimProduct  | ProductKey  | 用户帐户控制    |
+    | FactResellerSales | OrderDateKey | 默认            | DimDate     | date        | 用户帐户控制    |
+    | FactResellerSales | DueDate      | 默认            | DimDate     | date        | 否     |
+    | FactResellerSales | ShipDateKey  | 默认            | DimDate     | date        | 否     |
+    | FactResellerSales | ProductKey   | 默认            | DimProduct  | ProductKey  | 用户帐户控制    |
     | FactResellerSales | EmployeeKey  | 对两个表 | DimEmployee | EmployeeKey | 用户帐户控制    |
 
 5. 在中**DimEmployee**表中，创建以下[计算列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
@@ -60,22 +61,22 @@ ms.locfileid: "43074827"
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **fullName** 
+    **FullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
 
-    **级别 1** 
+    **Level1** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```
 
-    **级别 2** 
+    **Level2** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],2,1)) 
     ```
 
-    **级别 3** 
+    **Level3** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],3,1)) 
     ```
@@ -90,7 +91,7 @@ ms.locfileid: "43074827"
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  在中**DimEmployee**表中，创建[层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)名为**组织**。 以下列按顺序添加： **Level1**， **Level2**， **Level3**， **Level4**， **Level5**。
+6.  在中**DimEmployee**表中，创建[层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)名为**组织**。 以下列按顺序添加：**Level1**， **Level2**， **Level3**， **Level4**， **Level5**。
 
 7.  在中**FactResellerSales**表中，创建以下[度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 

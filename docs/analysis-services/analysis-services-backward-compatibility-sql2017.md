@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services 向后兼容性 |Microsoft Docs
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185073"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685734"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 向后兼容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "54185073"
 |多维|数据挖掘|
 |多维|远程链接的度量值组|
 |表格|1100年和 1103年兼容级别模型|
-|表格|表格对象模型属性：Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
+|表格|表格对象模型属性：Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 替代功能使用 SQL Server Management Studio 中嵌入的扩展事件探查器。  <br /> 请参阅 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|跟踪重播 <br />替代功能的 Server Profiler。 没有替代功能。|  
 |跟踪管理对象和跟踪 API|Microsoft.AnalysisServices.Trace 对象（包含 Analysis Services 跟踪和重播对象的 API）。 替代功能由多个部分组成：<br /><br /> -跟踪配置：Microsoft.SqlServer.Management.XEvent<br />-跟踪读取：Microsoft.SqlServer.XEvent.Linq<br />-跟踪重播：None|  

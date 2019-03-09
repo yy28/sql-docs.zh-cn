@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 4 课：创建关系 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394513"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685598"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -41,7 +42,7 @@ ms.locfileid: "52394513"
 
     在模型设计器现在将显示在关系图视图以图形格式显示所有表导入了它们之间的行。 表之间的线条指示当您导入数据时自动创建的关系。
     
-    ![作为 lesson4 图](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > 如果看不到任何表之间的关系，则可能意味着在数据源的这些表之间没有任何关系。
@@ -71,11 +72,11 @@ ms.locfileid: "52394513"
 
 在关系图视图中，请注意一个箭头、 一个星号，以及显示表之间的关系的线条上的数字。
 
-![作为 lesson4 行](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 箭头显示筛选器方向。 星号显示此表是*许多*端中关系的基数，而是显示此表是*一个*端的关系。 如果您需要编辑关系;例如，更改关系的筛选器方向或基数，双击以打开编辑关系对话框中的关系线。
 
-![作为 lesson4 编辑](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 这些功能适用于高级数据建模，并不在本教程的范围。 若要了解详细信息，请参阅[双向交叉筛选器中 Analysis Services 表格模型的](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)。
 
@@ -87,7 +88,7 @@ ms.locfileid: "52394513"
 
     显示一条实线，说明已创建活动之间的关系**OrderDate**中的列**Internet Sales**表中，和**日期**中的列**日期**表。 
   
-      ![作为-lesson4-新](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > 创建关系时，会自动选择主表与相关的查找表之间的基数和筛选器方向。  

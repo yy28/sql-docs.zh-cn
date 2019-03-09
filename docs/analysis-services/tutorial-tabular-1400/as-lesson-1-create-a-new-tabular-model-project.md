@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 1 课：创建新的表格模型项目 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417228"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685214"
 ---
 # <a name="create-a-tabular-model-project"></a>创建表格模型项目
 
@@ -63,11 +64,11 @@ ms.locfileid: "52417228"
 
 单击**解决方案资源管理器**选项卡。在这里，请参阅你**Model.bim**文件。 如果您看不到左 （包含 Model.bim 选项卡的空窗口），在设计器窗口中**解决方案资源管理器**下**AW Internet Sales 项目**，双击**Model.bim**文件。 Model.bim 文件包含您的模型项目的元数据。 
 
-![作为 lesson1 se](../tutorial-tabular-1400/media/as-lesson1-se.png)
+![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
 单击**Model.bim**。 在中**属性**窗口中，您可以看到模型属性，最重要的是**DirectQuery 模式下**属性。 此属性指定是否在内存中模式 （关闭） 或 DirectQuery 模式 （打开） 中部署模型。 对于本教程，创作并部署在内存中模式下模型。
 
-![作为 lesson1 属性](../tutorial-tabular-1400/media/as-lesson1-properties.png)
+![as-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
 当您创建某一模型项目时，可以在指定的数据建模设置根据相应某些模型属性自动设置**工具**菜单 >**选项**对话框。 “数据备份”、“工作区保持期”和“工作区服务器”属性指定备份、在内存中保留以及构建工作区数据库（模型创作数据库）的方式和位置。 您可以稍后更改这些设置，如有必要，但现在，将这些属性保留原样。  
 

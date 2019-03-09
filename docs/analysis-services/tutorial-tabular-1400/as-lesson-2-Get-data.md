@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程第 2 课： 获取数据 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程第 2 课：获取数据 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062208"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685314"
 ---
 # <a name="get-data"></a>获取数据
 
@@ -27,11 +28,11 @@ ms.locfileid: "43062208"
 > [!NOTE]
 > 任务和图像在本教程演示如何连接到的本地服务器上的 AdventureWorksDW2014 数据库。 在某些情况下，Azure SQL 数据仓库上的 AdventureWorksDW 数据库可能会显示不同的对象;但是，它们是完全相同。
   
-学完本课的估计时间： **10 分钟**  
+学完本课的预计时间：**10 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 1 课： 创建新的表格模型项目](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 1 课：创建新的表格模型项目](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>创建连接  
   
@@ -56,9 +57,9 @@ ms.locfileid: "43062208"
   
 5.  在导航器中，选择**AdventureWorksDW**数据库，然后依次**确定**。这将创建数据库的连接。 
   
-6.  在导航器中，选择以下表的复选框： **DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，和**FactInternetSales**。  
+6.  在导航器中，选择以下表的复选框：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，并**FactInternetSales**。  
 
-    ![作为-lesson2-选择的表](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 单击确定后，将打开查询编辑器。 在下一部分中，选择你想要导入的数据。
 
@@ -144,7 +145,7 @@ AdventureWorksDW 示例数据库中的表具有不需要包括在模型中的数
   
 1.  检查所做选择。 如果一切看上去没什么问题，请单击**导入**。 数据处理对话框中显示的要导入数据从数据源到工作区数据库的状态。
   
-    ![作为第 2 课成功](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  单击 **“关闭”**。  
 
@@ -159,7 +160,7 @@ AdventureWorksDW 示例数据库中的表具有不需要包括在模型中的数
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 3 课： 标记为日期表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。
+[第 3 课：标记为日期表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。
 
   
   

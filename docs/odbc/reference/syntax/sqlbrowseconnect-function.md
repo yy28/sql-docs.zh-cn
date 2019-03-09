@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211707"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683607"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函数
 **符合性**  
@@ -112,11 +113,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 参数  
  浏览请求连接字符串具有以下语法：  
   
- *连接字符串*:: =*特性*[`;`] &#124; *特性* `;` *连接字符串*;<br>
- *特性*:: =*特性关键字*`=`*属性值* &#124; `DRIVER=`[`{`]*属性-值*[`}`]<br>
- *零个以上*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *驱动程序的定义的属性的关键字*<br>
- *属性值*:: =*字符字符串*<br>
- *驱动程序的定义的零个以上*:: =*标识符*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  其中*字符串*具有零个或多个字符;*标识符*具有一个或多个字符;*特性关键字*不区分大小写;*属性值*可能是区分大小写; 和的值**DSN**关键字不会包含单独的空格。 由于连接字符串和初始化文件语法、 关键字和属性值包含字符 **[]{}（)，;？\*= ！ @** 应避免使用。 由于系统信息中的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。 适用于 ODBC 2。*x*驱动程序，大括号，则必须在 DRIVER 关键字的特性值。  
   
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 参数  
  浏览结果连接字符串是连接属性的列表。 连接属性包括特性关键字和相应的属性值。 浏览结果连接字符串具有以下语法：  
   
- *连接字符串*:: =*特性*[`;`] &#124; *特性* `;` *连接字符串*<br>
- *特性*:: = [`*`]*特性关键字*`=`*属性值*<br>
- *零个以上*:: = *ODBC 属性关键字* &#124; *驱动程序的定义的属性的关键字*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC 属性关键字*= {`UID` &#124; `PWD`} [`:`*本地化标识符*]*驱动程序的定义的零个以上*:: = *标识符*[`:`*本地化标识符*]*属性值*:: = `{` *属性值列表* `}` &#124; `?` （大括号都是文本; 中返回的驱动程序。）<br>
- *属性值列表*:: =*字符串*[`:`*本地化字符的字符串*] &#124; *字符串*[`:`*本地化字符的字符串*] `,` *属性值列表*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  其中*字符串*并*本地化字符的字符串*具有零个或多个字符;*标识符*并*本地化标识符*具有一个或多个字符;*特性关键字*不区分大小写; 并*属性值*可能区分大小写。 由于连接字符串和初始化文件语法、 关键字、 本地化的标识符和属性值包含字符 **[]{}（)，;？\*= ！ @** 应避免使用。 由于系统信息中的语法，关键字和数据源名称不能包含反斜杠 (\\) 字符。  
   

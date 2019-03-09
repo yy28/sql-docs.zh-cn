@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 10 课：创建分区 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401140"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685694"
 ---
 # <a name="create-partitions"></a>创建分区
 
@@ -46,7 +47,7 @@ ms.locfileid: "52401140"
 
 6.  在筛选行对话框中，在**显示行，其中：OrderDate**，保留**是晚于或等于**，然后在日期字段中，输入**2010 年 1 月 1 日**。 将保留**并**运算符选择，然后选择**早**，然后在日期字段中，输入**2011 年 1 月 1 日**，然后单击**确定**。
 
-    ![作为-lesson10-筛选的行](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     请注意，在查询编辑器中，在应用的步骤，你将看到名为筛选的行的另一个步骤。 此筛选器是仅选择订单日期 2010 年。
 
@@ -54,7 +55,7 @@ ms.locfileid: "52401140"
 
     在分区管理器中，请注意，查询表达式现在具有附加的 Filtered Rows 子句。
 
-    ![作为 lesson10 查询](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     此语句指定此分区应只包含的数据行，orderdate 对应处于 filtered 的 rows 子句中指定的 2010年日历年中的位置。  
   
@@ -107,13 +108,13 @@ ms.locfileid: "52401140"
   
 4.  在“处理”列中选中所创建的全部五个分区的复选框，然后单击“确定”。  
 
-    ![作为-lesson10-处理的分区](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     如果系统提示输入模拟凭据，则输入 Windows 用户名和第 2 课中指定的密码。  
   
     “数据处理”对话框将出现，并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 每个分区包括 SQL 语句中的 WHERE 子句中指定的年份的那些行。 完成处理后，继续操作并关闭“数据处理”对话框。  
   
-    ![作为 lesson10-过程-完成](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步是什么？
 

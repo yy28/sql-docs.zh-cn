@@ -1,6 +1,6 @@
 ---
 title: Analysis Services Adventure Works 教程 (1400) |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084710"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685484"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>表格建模（1400 兼容级别）
 
@@ -40,7 +41,7 @@ ms.locfileid: "43084710"
   
 -   如何部署到的表格模型**Azure Analysis Services**服务器或**SQL Server 2017 Analysis Services**使用 SSDT 的服务器。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
 若要完成本教程，需要：  
   
@@ -48,7 +49,7 @@ ms.locfileid: "43084710"
 
 -   [Azure SQL 数据仓库](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)与**示例 AdventureWorksDW 数据库**，或使用本地 SQL Server 数据仓库[AdventureWorksDW 示例数据库](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 在 AdventureWorksDW 数据库安装到本地 SQL Server 数据仓库时，使用与服务器版本相对应的示例数据库版本。 
 
-    **重要说明：** 示例数据库安装到本地 SQL Server 数据仓库，并将模型部署到 Azure Analysis Services 服务器，如果[本地数据网关](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)是必需的。
+    **重要提示：** 如果将示例数据库安装到本地 SQL Server 数据仓库，并将模型部署到 Azure Analysis Services 服务器，[的本地数据网关](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)是必需的。
 
 -   最新版[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。 或者，如果已有 Visual Studio 2017，可以下载并安装[Microsoft Analysis Services 项目](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(VSIX) 包。 对于本教程中，对 SSDT 和 Visual Studio 的引用是同义的。 
 
@@ -100,7 +101,7 @@ ms.locfileid: "43084710"
   
 ## <a name="next-steps"></a>后续步骤  
 
-若要开始，请参阅[第 1 课： 创建新的表格模型项目](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
+若要开始，请参阅[第 1 课：创建新的表格模型项目](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
   
   
   

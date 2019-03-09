@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程第 7 课： 创建关键绩效指标 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程第 7 课：创建关键绩效指标 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087562"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685403"
 ---
 # <a name="create-key-performance-indicators"></a>创建关键绩效指标
 
@@ -22,11 +23,11 @@ ms.locfileid: "43087562"
 
 在本课程中，您将创建关键绩效指标 (Kpi)。 Kpi 用于测量由定义的值的性能*Base*度量值，针对*目标*同样由度量值或绝对值定义的值。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 6 课： 创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 6 课：创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>创建关键绩效指标  
   
@@ -52,7 +53,7 @@ ms.locfileid: "43087562"
   
 8.  在“选择图标样式”中，选择钻石（红色）、三角形（黄色）、圈（绿色）图标类型。
   
-    ![作为 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > 请注意**说明**可用图标样式下方的标签。 按照说明为各种 KPI 元素使其更易于识别在客户端应用程序中。  
@@ -81,6 +82,6 @@ ms.locfileid: "43087562"
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 8 课： 创建透视](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。
+[第 8 课：创建透视](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。
   
   

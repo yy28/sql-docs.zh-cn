@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 11 课：创建角色 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544346"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685454"
 ---
 # <a name="create-roles"></a>创建角色
 
@@ -72,7 +73,7 @@ ms.locfileid: "52544346"
     ```
     
     行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 通过此公式中，指定的国家/地区区域代码值为"US"行对用户可见。  
-    ![作为 lesson11-角色-筛选器](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   

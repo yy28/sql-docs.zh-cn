@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程第 6 课： 创建度量值 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程第 6 课：创建度量值 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685644"
 ---
 # <a name="create-measures"></a>创建度量值
 
@@ -28,11 +29,11 @@ ms.locfileid: "43093960"
   
 在本课中，您将创建度量值，通过这两个输入 DAX 公式在公式栏中，并使用自动求和功能。  
   
-学完本课的估计时间： **30 分钟**  
+学完本课的预计时间：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 5 课： 创建计算的列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 5 课：创建计算的列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>创建度量值  
   
@@ -50,7 +51,7 @@ ms.locfileid: "43093960"
   
     请注意，左上角单元格现在包含度量值名称， **DaysCurrentQuarterToDate**后, 跟结果**92**。 结果不相关现在因为应用用户筛选器。
     
-      ![作为 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     与计算列不同使用度量值公式可以键入度量值名称后, 跟一个冒号和公式表达式。
 
@@ -89,13 +90,13 @@ ms.locfileid: "43093960"
     |“列”|度量值名称|自动求和 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   
 2.  通过单击度量值网格中的空单元格并使用公式栏中，创建，按顺序的以下自定义度量值：  
   
@@ -127,6 +128,6 @@ ms.locfileid: "43093960"
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 7 课： 创建关键绩效指标](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
+[第 7 课：创建关键绩效指标](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
 
   

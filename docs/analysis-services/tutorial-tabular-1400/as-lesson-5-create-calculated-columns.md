@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程第 5 课： 创建计算的列 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程第 5 课：创建计算的列 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063856"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685553"
 ---
 # <a name="create-calculated-columns"></a>创建计算列
 
@@ -26,11 +27,11 @@ ms.locfileid: "43063856"
 
 本课程也是首次使用数据分析表达式 (DAX)。 DAX 是一种特殊语言用于创建表格模型的可高度自定义公式表达式。 在本教程中，使用 DAX 创建计算的列、 度量值和角色筛选器。 若要了解详细信息，请参阅[表格模型中的 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)。 
   
-学完本课的估计时间： **15 分钟**  
+学完本课的预计时间：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 4 课： 创建关系](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)。 
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 4 课：创建关系](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>创建计算列  
   
@@ -46,7 +47,7 @@ ms.locfileid: "43063856"
   
     一个名为“Calculated Column 1”的新列插入到“Calendar Quarter”列的左侧。  
   
-4.  在表上方公式栏中键入以下 DAX 公式： 记忆式键入功能可帮助你键入的完全限定的名称的列和表，并列出可用的函数。  
+4.  在表上方公式栏中，键入以下 DAX 公式：自动完成功能将帮助您键入列和表的完全限定名称，并且列出可用的函数。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -130,7 +131,7 @@ ProductCategoryName 计算的列用于在 DimProduct 表中，其中包括 DimPr
   
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 6 课： 创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。
+[第 6 课：创建度量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。
   
   
   

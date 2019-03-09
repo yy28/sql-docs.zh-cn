@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教程第 9 课： 创建层次结构 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教程第 9 课：创建层次结构 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071810"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685414"
 ---
 # <a name="create-hierarchies"></a>创建层次结构
 
@@ -24,11 +25,11 @@ ms.locfileid: "43071810"
   
 若要创建层次结构，使用模型设计器中的*关系图视图*。 在数据视图中不支持创建和管理层次结构。  
   
-学完本课的估计时间： **20 分钟**  
+学完本课的预计时间：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 8 课： 创建透视](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 8 课：创建透视](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>创建层次结构  
   
@@ -78,6 +79,6 @@ ms.locfileid: "43071810"
   
  ## <a name="whats-next"></a>下一步是什么？
 
-[第 10 课： 创建分区](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。 
+[第 10 课：创建分区](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。 
   
   

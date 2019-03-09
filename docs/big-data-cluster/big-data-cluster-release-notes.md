@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556229"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683627"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 大数据群集的发行说明
 
@@ -74,6 +74,32 @@ ms.locfileid: "57556229"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 如果大数据群集部署失败，则不会删除关联的命名空间。 这可能导致在群集上的孤立命名空间。 一种解决方法是在部署具有相同名称的群集之前手动删除该命名空间。
+
+#### <a name="kubeadm-deployments"></a>kubeadm 部署
+
+如果您使用 kubeadm Kubernetes 部署多台计算机上，群集管理门户不正确显示连接到大数据群集所需的终结点。 如果遇到此问题，请使用以下解决方法来发现服务终结点 IP 地址：
+
+- 如果从连接在群集中，查询你想要连接到的终结点的服务 IP Kubernetes。 例如，以下**kubectl**命令显示 SQL Server 主实例的 IP 地址：
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- 如果您正在连接从群集外部的使用以下步骤连接：
+
+   1. 获取运行 SQL Server 主实例的节点的 IP 地址： `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`。
+
+   1. 连接到 SQL Server 主实例使用此 IP 地址。
+
+   1. 查询**cluster_endpoint_table** master 数据库中的其他外部终结点。
+
+      如果失败，并且连接超时，就可以单独节点之间设有防火墙。 在这种情况下，必须与 Kubernetes 群集管理员联系并要求向外部公开的节点 ip。 这可能是任何节点。 然后可以使用该 IP 和相应的端口连接到群集中运行的各种服务。 例如，管理员可以通过运行来查找此 IP:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 

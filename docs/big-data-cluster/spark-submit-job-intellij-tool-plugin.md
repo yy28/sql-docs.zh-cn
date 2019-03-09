@@ -7,12 +7,12 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 06ce1d325caa0835381fd6f9ecd5428d2bbb6f66
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018473"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683617"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>将在 SQL Server 大数据群集，在 IntelliJ 中的 Spark 作业提交
 
@@ -21,14 +21,14 @@ SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功�
 ## <a name="prerequisites"></a>先决条件
 
 - SQL Server 大数据群集。
-- Oracle Java 开发工具包。 您可以从中进行安装[Oracle 网站](https://aka.ms/azure-jdks)。
+- Oracle Java 开发工具包。 您可以从中进行安装[Oracle 网站](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 - IntelliJ IDEA。 您可以从中进行安装[JetBrains 网站](https://www.jetbrains.com/idea/download/)。
 - Azure Toolkit for IntelliJ 扩展。 有关安装说明，请参阅[安装用于 IntelliJ 的 Azure 工具包](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)。
 
 ## <a name="link-sql-server-big-data-cluster"></a>链接的 SQL Server 大数据群集
 1. 打开 IntelliJ IDEA 工具。
 
-2. 如果使用自签名的证书，请禁用 SSL 证书验证从**工具**菜单中，选择**Azure**，**验证 Spark 群集的 SSL 证书**，然后**禁用**。
+2. 如果使用自签名的证书，禁用从 SSL 证书验证**工具**菜单中，选择**Azure**，**验证 Spark 群集的 SSL 证书**，然后**禁用**。
 
     ![链接 SQL Server 大数据群集-禁用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
@@ -66,7 +66,7 @@ SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功�
 
    ![Scala 插件安装对话框](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. 在中**新的项目**窗口中，执行以下操作：  
+5. 在中**新的项目**窗口中，执行以下步骤：  
 
     ![选择 Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -78,7 +78,7 @@ SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功�
 
 6. 选择“完成”。
 
-7. Spark 项目会自动为你创建项目。 若要查看该项目，请执行以下操作：
+7. Spark 项目会自动为你创建项目。 若要查看该项目，请执行以下步骤操作：
 
    a. 上**文件**菜单中，选择**项目结构**。
 
@@ -120,6 +120,75 @@ SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功�
 2. 单击**SparkJobRun**提交您的项目与所选分类。 **远程群集中的 Spark 作业**选项卡在底部显示的作业执行进度。 可以通过单击红色按钮停止应用程序。  
 
     ![链接大数据群集的运行](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+
+## <a name="spark-console"></a>Spark 控制台
+您可以运行 Spark 本地 Console(Scala) 或运行 Spark Livy 交互式会话 Console(Scala)。
+
+### <a name="spark-local-consolescala"></a>Spark 本地 Console(Scala)
+请确保你已经满足 WINUTILS。EXE 必备组件。
+
+1. 从菜单栏中，导航到**运行** > **编辑配置...**.
+
+2. 从**运行/调试配置**窗口中的，在左窗格中，导航到**SQL Server 大数据群集上的 Apache Spark** > **[SQL 上的 Spark] myApp**。
+
+3. 从主窗口中，选择**本地运行**选项卡。
+
+4. 提供以下值，然后选择**确定**:
+
+    |属性 |ReplTest1 |
+    |----|----|
+    |作业的主类|默认值是从所选文件的主类。 可以通过选择省略号更改类 (**...**)，然后选择另一个类。|
+    |环境变量|请确保 HADOOP_HOME 的值正确。|
+    |WINUTILS.exe 位置|请确保路径正确无误。|
+
+    ![本地控制台设置配置](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. 从项目中，导航到**myApp** > **src** > **主要** > **scala**  >  **myApp**。  
+
+6. 从菜单栏中，导航到**工具** > **Spark 控制台** > **运行 Spark 本地 Console(Scala)**。
+
+7. 然后可能会显示两个对话框询问你是否想要自动修复依赖项。 如果是这样，选择**自动修复**。
+
+    ![Spark 自动 Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Spark 自动 Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. 在控制台应类似于下面的图片。 在控制台窗口中键入`sc.appName`，然后按 ctrl + Enter。  将显示结果。 可以通过单击红色按钮来终止本地控制台。
+
+    ![本地控制台结果](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### <a name="spark-livy-interactive-session-consolescala"></a>Spark Livy 交互式会话 Console(Scala)
+IntelliJ 2018.2 和 2018.3 仅支持 Spark Livy 交互式会话 Console(Scala)。
+
+1. 从菜单栏中，导航到**运行** > **编辑配置...**.
+
+2. 从**运行/调试配置**窗口中的，在左窗格中，导航到**SQL Server 大数据群集上的 Apache Spark** > **[SQL 上的 Spark] myApp**。
+
+3. 从主窗口中，选择**在群集中远程运行**选项卡。
+
+4. 提供以下值，然后选择**确定**:
+
+    |属性 |ReplTest1 |
+    |----|----|
+    |Spark 群集 (仅限 Linux)|选择你想要运行你的应用程序的 SQL Server 大数据群集。|
+    |主类名|默认值是从所选文件的主类。 可以通过选择省略号更改类 (**...**)，然后选择另一个类。|
+
+    ![交互式控制台设置配置](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. 从项目中，导航到**myApp** > **src** > **主要** > **scala**  >  **myApp**。  
+
+6. 从菜单栏中，导航到**工具** > **Spark 控制台** > **运行 Spark Livy 交互式会话 Console(Scala)**。
+
+7. 在控制台应类似于下面的图片。 在控制台窗口中键入`sc.appName`，然后按 ctrl + Enter。  将显示结果。 可以通过单击红色按钮来终止本地控制台。
+
+    ![交互式控制台结果](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### <a name="send-selection-to-spark-console"></a>将所选内容发送到 Spark 控制台
+
+为方便起见，您可以通过将一些代码发送到本地控制台或 Livy 交互式会话 Console(Scala) 看到的脚本结果。 可以突出显示一些代码放在 Scala 文件，然后右击**将所选内容发送到 Spark 控制台**。 所选的代码将发送到控制台并执行。 在控制台中的代码后，将显示结果。 如果现有，控制台将检查错误。  
+
+   ![将所选内容发送到 Spark 控制台](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>后续步骤
 SQL Server 大数据群集和相关的方案的详细信息，请参阅[什么是 SQL Server 2019 大数据群集](big-data-cluster-overview.md)？

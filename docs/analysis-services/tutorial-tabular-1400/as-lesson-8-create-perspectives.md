@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第课 8： 创建透视 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085318"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57684924"
 ---
 # <a name="create-perspectives"></a>创建透视
 
@@ -26,11 +27,11 @@ ms.locfileid: "43085318"
   
 本课程的目的是介绍如何创建透视以及如何逐步熟悉表格模型创作工具。 如果您以后扩展此模型以包括其他表，可以创建其他透视以定义不同视点的模型，例如，库存和销售额。  
   
-学完本课程中估计时间：**五分钟**  
+学完本课的预计时间：**五分钟**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 
-本文是表格建模教程应按顺序完成的一部分。 在之前在本课程中执行的任务，您应已完成上一课：[第 7 课： 创建关键绩效指标](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
+本文是表格建模教程应按顺序完成的一部分。 执行任务之前在本课程中，您应当已完成上一课：[第 7 课：创建关键绩效指标](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>创建透视  
   
@@ -50,7 +51,7 @@ ms.locfileid: "43085318"
 
 ## <a name="whats-next"></a>下一步是什么？
 
-[第 9 课： 创建层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。
+[第 9 课：创建层次结构](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。
   
   
   
