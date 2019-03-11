@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529871"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334734"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,10 +134,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  column_name  
- 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED.column\_name。  
+ 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED **.**_column\_name_。  
   
  $action  
- 仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 nvarchar(10) 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”，返回哪个值取决于对该行执行的操作。  
+ 仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 **nvarchar(10)** 类型的列，该子句为每行返回以下三个值之一：'INSERT'、'UPDATE' 或 'DELETE'，返回哪个值取决于对该行执行的操作。  
   
 ## <a name="remarks"></a>Remarks  
  OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table\_variable | output\_table }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  

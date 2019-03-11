@@ -25,46 +25,53 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a552fccb69476e5c8fc0f0d19f75071cfa6c3383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74b302ba4dcf4637acdcfebaf8c33f1b338cb36a
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804535"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56853012"
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定当表达式中的舍入导致精度损失时生成的错误报告级别。  
+指定当表达式中的舍入导致精度损失时生成的错误报告级别。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "文章链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>语法
 
-```
+```sql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
 ## <a name="remarks"></a>Remarks  
- 当 SET NUMERIC_ROUNDABORT 为 ON 时，在表达式中出现精度损失时将生成错误。 当设置为 OFF 时，精度损失不生成错误信息，并且将结果舍入为存储结果的列或变量的精度。  
+当 SET NUMERIC_ROUNDABORT 为 ON 时，在表达式中出现精度损失时将生成错误。 如果设置为 OFF，精度的降低不会生成错误消息。 结果会根据存储结果的列或变量的精度进行舍入。  
   
- 在精度较低的列或变量中，当尝试以固定精度存储值时，会出现精度损失。  
+在精度较低的列或变量中，当尝试以固定精度存储值时，会出现精度降低的情况。  
   
- 如果 SET NUMERIC_ROUNDABORT 为 ON，则 SET ARITHABORT 决定生成错误的严重级别。 该表显示当出现精度损失时这两个设置的效果。  
+如果 SET NUMERIC_ROUNDABORT 为 ON，则 SET ARITHABORT 决定生成错误的严重级别。 该表显示当出现精度损失时这两个设置的效果。  
   
 |设置|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
 |-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|生成错误；不返回结果集。|没有错误和警告；对结果进行舍入。|  
 |SET ARITHABORT OFF|返回警告；表达式返回 NULL。|没有错误和警告；对结果进行舍入。|  
 
- SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分析时设置。
+SET NUMERIC_ROUNDABORT 的设置是在执行或运行时设置，而不是在分析时设置。
 
- 在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，则用于计算列或索引视图中带索引的表的 CREATE、UPDATE、INSERT 和 DELETE 语句将失败。 有关计算列的索引视图和索引需要的 SET 选项设置的详细信息，请参阅 [SET Statements (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md) 中的“使用 SET 语句时的注意事项”。
+在对计算列或索引视图创建或更改索引时，SET NUMERIC_ROUNDABORT 必须为 OFF。 如果 SET NUMERIC_ROUNDABORT 为 ON，则对包含计算列或索引视图中索引的表执行以下语句将失败：
+
+- CREATE 
+- UPDATE 
+- Insert 
+- 删除 
+
+有关计算列的索引视图和索引所需的 SET 选项设置的详细信息，请参阅[使用 SET 语句时的注意事项](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)。
   
- 要查看此设置的当前设置，请运行以下查询：
+要查看此设置的当前设置，请运行以下查询：
   
-```  
+```sql
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
 IF ( (8192 & @@OPTIONS) = 8192 ) SET @NUMERIC_ROUNDABORT = 'ON';  
 SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;  
@@ -72,12 +79,12 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- 要求 **公共** 角色具有成员身份。  
+要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
- 以下示例显示将两个精度为四位小数的值添加并存储在一个精度为两位小数的变量中。 这些表达式演示了不同的 `SET NUMERIC_ROUNDABORT` 和 `SET ARITHABORT` 设置所造成的影响。  
+以下示例显示精确到四个小数位的两个值。 它们会添加并存储到精确到两个小数位的变量中。 这些表达式演示了不同的 `SET NUMERIC_ROUNDABORT` 和 `SET ARITHABORT` 设置所造成的影响。  
   
-```  
+```sql
 -- SET NOCOUNT to ON,   
 -- SET NUMERIC_ROUNDABORT to ON, and SET ARITHABORT to ON.  
 SET NOCOUNT ON;  
@@ -142,8 +149,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
+[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+[SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
+[SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

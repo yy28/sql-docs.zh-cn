@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401120"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007580"
 ---
 # <a name="always-encrypted-cryptography"></a>始终加密的加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401120"
   本文档介绍加密算法和机制，以派生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的加密材料。  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>密钥、密钥存储和密钥加密算法  
- 始终加密使用两种类型的密钥：列主密钥和列加密密钥。  
+ Always Encrypted 使用两种类型的密钥：列主密钥和列加密密钥。  
   
  列主密钥 (CMK) 是密钥加密密钥（即用来加密其他密钥的密钥），它会始终处于客户端的控制之下并存储在外部密钥存储区中。 启用了始终加密的客户端驱动程序通过 CMK 存储提供程序与密钥存储进行交互，提供程序可以是驱动程序库（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system 提供程序）或客户端应用程序（自定义提供程序）的一部分。 客户端驱动程序库目前包括 [Windows 证书存储](/windows/desktop/SecCrypto/using-certificate-stores)的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 密钥存储提供程序和硬件安全模块 (HSM)。  （有关提供程序的当前列表信息，请参阅 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)。）应用程序开发人员可以为任意存储提供自定义提供程序。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52401120"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用下列步骤计算给定纯文本值的密码文本值。  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>步骤 1：生成初始化向量 (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>步骤 1：生成初始化矢量 (IV)  
  始终加密支持 **AEAD_AES_256_CBC_HMAC_SHA_256**的两种变体：  
   
 -   具有随机性  
@@ -69,11 +69,11 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  为了根据 IV 需要适应 1 个数据块，将执行 HMAC 值截断。    
-结果是，确定加密始终会生成给定纯文本值的相同密码文本，从而能够通过比较其对应的密码文本值推断两个纯文本值是否相等。 有限的信息泄露允许数据库系统支持对加密的列值的相等性比较。  
+因此，确定加密始终会为给定纯文本值生成相同的已加密文本，从而能够通过比较其对应的已加密文本值推断两个纯文本值是否相等。 有限的信息泄露允许数据库系统支持对加密的列值的相等性比较。  
   
  与其他同类方法相比（如使用预定义 IV 值），确定加密在隐藏模式下更有效。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>步骤 2：计算 AES_256_CBC 密码文本  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>步骤 2：计算 AES_256_CBC 已加密文本  
  计算 IV 后，将生成 **AES_256_CBC** 已加密文本：  
   
 ```  
@@ -100,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>步骤 4：串联  
+### <a name="step-4-concatenation"></a>步骤 4：Concatenation  
  最后，只需串联算法版本字节、MAC、IV 和 AES_256_CBC 密码文本，便可生成加密值：  
   
 ```  

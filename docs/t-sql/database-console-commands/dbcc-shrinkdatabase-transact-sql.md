@@ -28,12 +28,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 9e2c6d0dff9606ec3e199d168ed70cd9f4a050ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ebabe4403d65447bcf7ab4d88f36b9fd9715843
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670185"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956018"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,26 +54,26 @@ DBCC SHRINKDATABASE
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name | database_id | 0  
- 要收缩的数据库的名称或 ID。 如果指定 0，则使用当前数据库。  
+_database\_name_ | _database\_id_ | 0  
+要收缩的数据库名称或 ID。 0 指定使用当前数据库。  
   
- *target_percent*  
- 数据库收缩后的数据库文件中所需的剩余可用空间百分比。  
+_target\_percent_  
+数据库收缩后的数据库文件中所需的剩余可用空间百分比。  
   
- NOTRUNCATE  
- 通过将已分配的页从文件末尾移动到文件前面的未分配页来压缩数据文件中的数据。 target_percent 为可选。 Azure SQL 数据仓库不支持此选项。 
+NOTRUNCATE  
+将分配的页面从文件的末尾移动到文件前面的未分配页面。 此操作会压缩文件中的数据。 _target\_percent_ 是可选的。 Azure SQL 数据仓库不支持此选项。 
   
- 文件末尾的可用空间不会返回给操作系统，文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，数据库看起来未收缩。  
+文件末尾的可用空间不会返回给操作系统，并且文件的物理大小也不会更改。 因此，指定 NOTRUNCATE 时，数据库似乎不会收缩。  
   
- NOTRUNCATE 只适用于数据文件。 日志文件不受影响。  
+NOTRUNCATE 只适用于数据文件。 NONTRUNCATE 不会影响日志文件。  
   
- TRUNCATEONLY  
- 将文件末尾的所有可用空间释放给操作系统，但不在文件内部执行任何页移动。 数据文件只收缩到最后分配的区。 如果使用 TRUNCATEONLY 指定，则会忽略 target_percent。 Azure SQL 数据仓库不支持此选项。
+TRUNCATEONLY  
+将文件末尾的所有可用空间释放给操作系统。 不移动文件内的任何页面。 数据文件仅收缩到最后指定的盘区。 如果使用 TRUNCATEONLY 指定，则会忽略 _target\_percent_。 Azure SQL 数据仓库不支持此选项。
   
- TRUNCATEONLY 将影响日志文件。 若要仅截断数据文件，请使用 DBCC SHRINKFILE。  
+TRUNCATEONLY 将影响日志文件。 若要仅截断数据文件，请使用 DBCC SHRINKFILE。  
   
- WITH NO_INFOMSGS  
- 取消严重级别从 0 到 10 的所有信息性消息。  
+WITH NO_INFOMSGS  
+取消严重级别从 0 到 10 的所有信息性消息。  
   
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的列进行了说明。
@@ -83,7 +83,7 @@ DBCC SHRINKDATABASE
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]试图收缩的文件的数据库标识号。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试收缩的文件的文件标识号。|  
 |**CurrentSize**|文件当前占用的 8 KB 页数。|  
-|**MinimumSize**|文件最低可以占用的 8 KB 页数。 这与文件的最小大小或最初创建时的大小相对应。|  
+|**MinimumSize**|文件最低可以占用的 8 KB 页数。 此值与文件的最小大小或最初创建时的大小相对应。|  
 |**UsedPages**|文件当前使用的 8 KB 页数。|  
 |**EstimatedPages**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]估计文件能够收缩到的 8 KB 页数。|  
   
@@ -101,38 +101,42 @@ DBCC SHRINKDATABASE
   
 可在进程中的任一点停止 DBCC SHRINKDATABASE 操作，任何已完成的工作都将保留。
   
-收缩后的数据库不能小于数据库的最小大小。 最小大小是在数据库最初创建时指定的大小，或是使用文件大小更改操作（如 DBCC SHRINKFILE 或 ALTER DATABASE）显式设置的最后大小。 例如，如果数据库最初创建时的大小为 10 MB，后来增长到 100 MB，则该数据库最小只能收缩到 10 MB，即使已经删除数据库的所有数据也是如此。
+数据库不能小于配置的数据库最小大小。 在最初创建数据库时指定最小大小。 或者，最小大小可以是使用文件大小更改操作显式设置的最后大小。 DBCC SHRINKFILE 或 ALTER DATABASE 等操作是文件大小更改操作的示例。 
+
+假设最初创建的数据库大小为 10 MB。 然后，它增长到 100 MB。 即使数据库中的所有数据都已删除，数据库可以减少到的最小大小也为 10 MB。
   
-运行 DBCC SHRINKDATABASE 而不指定 NOTRUNCATE 选项或 TRUNCATEONLY 选项等价于带 NOTRUNCATE 运行 DBCC SHRINKDATABASE 操作，然后再带 TRUNCATEONLY 运行 DBCC SHRINKDATABASE 操作。
+运行 DBCC SHRINKDATABASE 时，请指定 NOTRUNCATE 选项或 TRUNCATEONLY 选项。 如果不这样做，结果与使用 NOTRUNCATE 运行 DBCC SHRINKDATABASE 操作，然后再使用 TRUNCATEONLY 运行 DBCC SHRINKDATABASE 操作相同。
   
-要收缩的数据库不必在单用户模式下；其他的用户仍可以在数据库收缩时对其进行工作。 这也包括系统数据库。
+收缩数据库不必处于单用户模式。 其他用户可以在数据库收缩时在其中工作，包括系统数据库。
   
-不能在备份数据库时收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。
+备份数据库时，无法收缩数据库。 反之，也不能在数据库执行收缩操作时备份数据库。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 的工作原理  
 DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而，DBCC SHRINKDATABASE 在对日志文件进行收缩时，它将视为所有的日志文件都存在于一个连续的日志池中。 文件始终从末尾开始收缩。
   
-假设名为 mydb 的数据库有一个数据文件和两个日志文件。 数据文件和日志文件分别是 10 MB，并且数据文件包含 6 MB 数据。
+假设拥有几个日志文件、一个数据文件和一个名为 **mydb** 的数据库。 数据文件和日志文件分别是 10 MB，并且数据文件包含 6 MB 数据。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算每个文件的目标大小。 此值是文件要收缩到的大小。 如果使用 _target\_percent_ 指定 DBCC SHRINKDATABASE ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出的目标大小为收缩后文件中可用空间的 _target\_percent_ 数量。 
+
+例如，如果为收缩 **mydb** 将 _target\_percent_ 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出此文件的目标大小为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据文件后 2 MB 中的所有数据移动到数据文件前 8 MB 的任何可用空间中，然后对该文件进行收缩。
   
-对于每个文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)]都会计算一个目标大小。 这就是文件将要收缩到的大小。 将 target_percent 与 DBCC SHRINKDATABASE 一起指定时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算的目标大小是收缩后文件中的 target_percent 可用空间大小。 例如，如果在收缩 mydb 时将 target_percent 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将此文件的目标大小计算为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将任何数据从数据文件的后 2 MB 中移动到数据文件前 8 MB 的可用空间中，然后对该文件进行收缩。
+假设 mydb 的数据文件包含 7 MB 的数据。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
+
+还可以用另一种方法来思考此问题：40% 的所要求可用空间加上 70% 的整个数据文件大小（10 MB 中的 7 MB）超过了 100%。 任何大于 30 的 _target\_size_ 都不会收缩数据文件。 它不会收缩是因为所需的可用百分比加上数据文件当前占用的百分比大于 100%。
   
-假设 mydb 的数据文件包含 7 MB 的数据。 将 target_percent 指定为 30，以允许将此数据文件收缩到可用空间的 30％。 但是，将 target_percent 指定为 40 却不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 收缩文件的目标大小不能小于数据当前占用空间大小。 还可以用另一种方法来考虑此问题：所要求的 40％ 可用空间加上整个数据文件大小的 70％（10 MB 中的 7 MB），超过了 100％。 因为所要求的可用百分比加上数据文件占用的当前百分比大于 100%（多出 10%），所以任何大于 30 的 target_size 都不会收缩此数据文件。
+对于日志文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 _target\_percent_ 计算整个日志的目标大小。 这就是为什么 _target\_percent_ 是收缩操作后日志中的可用空间量的原因。 之后，整个日志的目标大小转换为每个日志文件的目标大小。
   
-对于日志文件，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 target_percent 来计算整个日志的目标大小；因此，target_percent 是收缩操作后日志中的可用空间大小。 之后，整个日志的目标大小转换为每个日志文件的目标大小。
+DBCC SHRINKDATABASE 尝试立即将每个物理日志文件收缩到其目标大小。 假设逻辑日志没有任何部分位于超出日志文件目标大小的虚拟日志中。 然后文件成功截断，DBCC SHRINKDATABASE 完成且没有生成任何消息。 但是，如果部分逻辑日志位于超出目标大小的虚拟日志中，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将释放尽可能多的空间，并发出一条信息性消息。 该消息说明需要执行哪些操作来将逻辑日志移出位于文件末尾的虚拟日志。 运行操作后，DBCC SHRINKDATABASE 可用于释放剩余空间。
   
-DBCC SHRINKDATABASE 尝试立即将每个物理日志文件收缩到其目标大小。 如果虚拟日志中的所有逻辑日志部分都没有超出日志文件的目标大小，则该文件将成功截断，DBCC SHRINKDATABASE 完成且不显示任何消息。 但是，如果部分逻辑日志位于超出目标大小的虚拟日志中，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将释放尽可能多的空间，并发出一条信息性消息。 该消息说明需要执行哪些操作来将逻辑日志移出位于文件末尾的虚拟日志。 执行该操作以后，DBCC SHRINKDATABASE 可用于释放剩余空间。
-  
-因为日志文件只能收缩到虚拟日志文件边界，所以可能无法将日志文件收缩到比虚拟日志文件更小（即使现在没有使用该文件）。 虚拟日志文件的大小在创建或扩展这些日志文件时由[!INCLUDE[ssDE](../../includes/ssde-md.md)]动态选择。
+日志文件只能收缩到虚拟日志文件边界。 这就是为什么不可能将日志文件收缩到小于虚拟日志文件大小的原因。 即使未在使用它也可能无法实现。 虚拟日志文件的大小在创建或扩展这些日志文件时由[!INCLUDE[ssDE](../../includes/ssde-md.md)]动态选择。
   
 ## <a name="best-practices"></a>最佳实践  
 当您计划收缩数据库时，请考虑以下信息：
--   在执行会产生许多未使用空间的操作（如截断表或删除表操作）后，执行收缩操作最有效。  
--   大多数数据库都需要一些可用空间，以供常规日常操作使用。 如果反复收缩数据库并注意到数据库大小变大，则表明收缩的空间是常规操作所必需的。 在这种情况下，反复收缩数据库是一种无谓的操作。  
--   收缩操作不会保留数据库中索引的碎片状态，通常还会在一定程度上增加碎片。 这是不要反复收缩数据库的另一个原因。  
+-   收缩操作在执行某个操作后最有效。 此操作会创建未使用的空间，例如截断表或删除表操作。  
+-   大多数数据库都需要一些可用空间，以供常规日常操作使用。 可能会反复收缩数据库，并注意到数据库大小再次增长。 这种增长表明常规操作需要使用收缩的空间。 在这种情况下，反复收缩数据库是一种无谓的操作。  
+-   收缩操作不保留数据库中索引的碎片状态，通常还会在一定程度上增加碎片。 此结果是不要反复收缩数据库的另一个原因。  
 -   除非有特定要求，否则不要将 AUTO_SHRINK 数据库选项设置为 ON。  
   
 ## <a name="troubleshooting"></a>故障排除  
- 在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务可能会阻塞收缩操作。 例如，执行 DBCC SHRINK DATABASE 操作时，如果在基于行版本控制的隔离级别下运行的大型删除操作正在进行中，则收缩操作将等到删除操作完成才会收缩文件。 出现这种情况时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会在第一个小时每五分钟将信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）输出到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志，之后每一个小时输出一次。 例如，如果错误日志包含以下错误消息：  
+收缩操作可能会被在[基于行版本控制的隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)下运行的事务阻止。 例如，在执行 DBCC SHRINK DATABASE 操作时，正在基于行版本控制的隔离级别下运行大型删除操作。 当这种情况发生时，收缩操作会等到删除操作完成后再收缩文件。 收缩操作在等待时，DBCC SHRINKFILE 和 DBCC SHRINKDATABASE 操作会打印输出信息性消息（对于 SHRINKDATABASE 为 5202，对于 SHRINKFILE 为 5203）。 此消息在第一个小时内每五分钟打印到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志一次，然后在后续每个小时打印一次。 例如，如果错误日志包含以下错误消息：  
   
 ```sql
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
@@ -140,20 +144,20 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-这意味着收缩操作被时间戳早于 109 的快照事务阻塞，它是收缩操作所完成的上一事务。 它还说明 [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含值 15。 如果该视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含的数字小于收缩操作完成的上一事务 (109)，则收缩操作将等待这些事务完成。
+此错误表示时间戳早于 109 的快照事务将阻止收缩操作。 该事务是收缩操作完成的最后一个事务。 它还说明 [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 列包含值 15。 该视图中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 列可能包含小于收缩操作完成的最后一个事务 (109) 的数字。 如果是这样，收缩操作将等待这些事务完成。
   
 若要解决此问题，请执行下列任务之一：
--   终止阻塞收缩操作的事务。  
--   终止收缩操作。 将保留任何已完成的工作。  
+-   终止阻止收缩操作的事务。  
+-   终止收缩操作。 所有已完成的工作都会保留。  
 -   不执行任何操作，并允许收缩操作等到阻塞事务完成。  
   
 ## <a name="permissions"></a>Permissions  
- 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
+要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. 收缩数据库并指定可用空间的百分比  
- 以下示例将减小 `UserDB` 用户数据库中数据文件和日志文件的大小，以便在数据库中留出 10% 的可用空间。  
+以下示例将减小 `UserDB` 用户数据库中数据文件和日志文件的大小，以便在数据库中留出 10% 的可用空间。  
   
 ```sql  
 DBCC SHRINKDATABASE (UserDB, 10);  
@@ -161,7 +165,7 @@ GO
 ```  
   
 ### <a name="b-truncating-a-database"></a>B. 截断数据库  
- 以下示例使 `AdventureWorks` 示例数据库中的数据和日志文件收缩到最后分配的区。  
+以下示例将 `AdventureWorks` 示例数据库中的数据和日志文件收缩到最后指定的盘区。  
   
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/19/2018
+ms.date: 03/02/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fc30593980e92b5f510550a4181c4f3a5b6f91
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334834"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,69 +25,89 @@ ms.locfileid: "56802921"
 
 
 
-## <a name="ssms-180-preview-6download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0（预览版 6）](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-180-preview-7download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0（预览版 7）](download-sql-server-management-studio-ssms.md)
 
-生成号：15.0.18075.0<br>
-发布日期：2018 年 12 月 18 日
+生成号：15.0.18092.0<br>
+发布日期：2019 年 3 月 1 日
 
-预览版 6 是 SSMS 18.0 的最新公共预览版。 有关 SSMS 的最新正式发布 (GA) 版本，请[下载并安装 SSMS 17.9.1](#ssms-1791-latest-ga-release)。
+预览版 7 是 SSMS 18.0 的最新公共预览版。 有关 SSMS 的最新正式发布 (GA) 版本，请[下载并安装 SSMS 17.9.1](#ssms-1791-latest-ga-release)。
 
-### <a name="whats-new-in-preview-6"></a>预览版 6 中的新增功能
+### <a name="whats-new-in-preview-7"></a>预览版 7 中的新增功能
 
-本节列出了 SSMS 18.0 预览版 6 中的新增功能。 有关从 SSMS 17.9.1 开始的完整变更日志，请参阅 [SSMS 18.0 预览版 - 直至预览版 6 的累积变更日志](#ssms-180-preview---cumulative-changelog-through-preview-6)。
+本部分列出了 SSMS 18.0 预览版 7 中的新增功能。 有关从 SSMS 17.9.1 开始的完整更改日志，请参阅 [SSMS 18.0 预览版 - 直至预览版 7 的累积更改日志](#ssms-180-preview---cumulative-changelog-through-preview-7)。
 
 - **SSMS**
-  - 在工具菜单下添加了“迁移到 Azure” – 我们集成了[数据库迁移助手](https://aka.ms/get-dma)和 [Azure 数据库迁移服务](https://aka.ms/get-dms)，提供快速便捷的访问，帮助加快迁移到 Azure 的过程。
-  - 上一版本的 SSMS 18.0（< 预览版 6）将“可用数据库”快捷键绑定为 CTRL+ALT+J。 在预览版 6 和更高版本中，键绑定已还原为 CTRL+U，如同在 SSMS 17.x 中一样。
-  - 添加了逻辑，提示用户在使用“更改连接”时提交打开的事务。
+  - 添加了在第一次启动 SSMS 时，从之前版本的 SSMS（17.x 或较早的 18.0 预览版）迁移 SSMS 用户设置的功能。
+  - 添加了对 `UTF8_BIN2` 排序规则的支持。
+  - 在 SMO 和 SSMS 中添加了对[边缘约束](../relational-databases/tables/graph-edge-constraints.md)的支持。
+  - 在 SMO 和 SSMS 中添加了**云见证**作为新的仲裁类型，以及作为新的资源类型。
+  - 添加了用于通知用户平面文件导入可能已导致重命名列的逻辑。
+  - 为 `DW ROLLUP` 和 `CUBE` 添加了对 LocalCube RelOp 的显示计划支持。
+  - 添加了对使用图形表导入/导出数据层应用程序的支持。
+  - 更改了在 Azure SQL 数据库托管实例上运行的漏洞评估规则集，以便漏洞评估扫描结果与 SQL Azure DB 保持一致。
+  - [SQL 漏洞评估](../relational-databases/security/sql-vulnerability-assessment.md)现在支持 Azure SQL DW。
+  - 向 SMO 添加了**数据分类**功能。 列对象公开新属性：`SensitivityLabelName`、`SensitivityLabelId`、`SensitivityInformationTypeName`、`SensitivityInformationTypeId` 和 `IsClassified`（只读）。
+    有关详细信息，请参阅： https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql。
+  - 向“数据分类”菜单添加了“分类报表”菜单项。
+  - 连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了 **AAD 登录**作为新登录类型。
+  - 在 Azure Data Studio 中，如果在对象资源管理器中右键单击数据库，则运行查询或创建新笔记本。
+  - 在 XEvent 查看器中，启用了显示计划窗口以获取更多 XEvent。
+  - 数据掩码：
+    - 现在支持 JSON 配置文件
+    - XML 配置文件格式已变得更加灵活。  需要重新创建现有的配置文件。
+    - 现在可以屏蔽包含内存优化表和时态表的数据库。  一些限制仍然适用于内存优化表和时态表本身。
+    - 本地数据库的数据库复制操作现在使用 `BACKUP DATABASE` 步骤的 `COPY_ONLY` 选项。
+    - 屏蔽数据库现在在屏蔽操作正在进行时设置为 `SIMPLE` 恢复模式，以减少对日志的使用，然后在完成后回到其原始值。
+    - 屏蔽数据库现在在操作正在进行时命名为 `<output database name>-MaskInProgress`，然后在屏蔽操作成功后重命名为 `<output database name>`。
+    - 将配置 UI 中列的显示顺序更改为按序号顺序显示，而不是按字母顺序显示。
+    - 删除了在配置 UI 中批量选择列的选项，以防止意外行为。
+    - 改进了连接和命令失败的内部重试逻辑。
 
 - **SSIS**
-  - 通过 SSMS 使用 MI 的 SQL 代理时，可以在 SSIS 代理作业步骤中配置参数和连接管理器。
-
+    - 连接到 Azure SQL DB 或 Azure SQL DB 托管实例时，可以使用 `<default>` 作为初始数据库与它进行连接。
+    - 在 Azure 数据工厂的 **Integration Services 目录**节点下添加了**尝试 SSIS** 的新条目项，此条目项可用于启动 **Integration Runtime 创建向导**并快速创建 **Azure-SSIS Integration Runtime**。
+    - 在**目录创建向导**中添加了“创建 SSIS IR”按钮，该按钮可用于启动 **Integration Runtime 创建向导**并快速创建 **Azure-SSIS Integration Runtime**。
+    - `ISDeploymentWizard` 现在支持命令行模式下的 SQL Server 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。
 
 ### <a name="bug-fixes"></a>Bug 修复
 
-- **SSMS 编辑器**
-  - 新 TRANSLATE 函数当前由 intellisense 识别。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430。
-  - 针对 FORMAT 内置函数改进了 IntelliSense。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676。
-  - LAG 和 LEAD 当前被识别为内置函数。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757。
-  - 修复了使用“ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)”时 IntelliSense 发出警告的问题
+- **SMO**
+    - 修复了从外部表传输的性能回归问题。
+    - 修复了 `ServerConnection` 线程安全问题，该问题导致 SMO 在定位 Azure SQL DB 时泄漏 `SqlConnection` 实例。
+    - 修复了在尝试还原名称中带有大括号 `{}` 的数据库时导致 `StringBuilder.FormatError` 的问题。
+
+- **常规 SSMS**
+    - 修复了在编辑 T-SQL 时导致 SSMS 挂起/崩溃的问题。
+    - 修复了在 `Registered Servers` 中的连接中未传递 `ApplicationIntent` 的问题。
+    - 修复了在高 DPI 监视器上未正确呈现**新 XEvent 会话向导 UI** 表单的问题。
+    - 修复了尝试导入 `.bacpac` 文件时出现的问题。
+    - 修复了尝试使用 `FILEGROWTH > 2048GB` 显示数据库属性时引发算术溢出错误的问题。
+    - 修复了双击时阻止 SSMS 打开 .sql 文件的问题。
 
 - **对象脚本**
-  - 修复了在 Azure SQL 数据库上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 编写空间索引脚本时引发错误的问题。
+    - 修复了即使**对象资源管理器**脚本设置已设为与源匹配，也会导致 SQL Azure 数据库的数据库脚本始终以本地 SQL Server 实例为目标的问题。
+    - 修复了尝试对 Azure SQL 数据仓库数据库中的表（涉及生成错误 T-SQL 语句的聚集索引和非聚集索引）编写脚本时出现的问题。
+    - 修复了尝试对 Azure SQL 数据仓库数据库中的表（包含生成错误 T-SQL 语句[重复语句]的聚集列存储索引和非聚集索引）编写脚本时出现的问题。
+    - 修复了没有范围值的分区表脚本编写的问题（Azure SQL 数据仓库数据库）。
+    - 修复了阻止对审计或审计规范 `SERVER_PERMISSION_CHANGE_GROUP` 编写脚本的问题。
+    - 修复了阻止对 Azure SQL 数据仓库的统计信息编写脚本的问题。 请参阅 [Microsoft Azure 反馈论坛](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)。
 
-- **SMO**
-  - 修复了使用 SMO 编写的应用程序在多个线程上试图枚举来自同一服务器的数据库时遇到错误（即使在每个线程上使用单独的 SqlConnection 实例）的问题。
+- **Azure SQL 数据库托管实例**
+    - 修复了导致右键单击数据库并选择“导入数据层应用程序”失败的问题。
+    - 修复了导致右键单击 `TempDB` 以显示错误的问题。
+    - 修复了对 SMO 中的 `ALTER DB ADD FILE` 语句编写脚本导致生成的 T-SQL 脚本为空的问题。
 
-- **数据分类**
-  - 修复了在数据分类窗格中保存分类时，其他数据分类窗格在其他数据库中打开的问题。
-
-- **Azure SQL 数据库**
-  - 在 Azure 的菜单统计信息下启用了“统计信息属性”子菜单选项，因为它已受到相当长一段时间的完全支持。
-
-- **查询数据存储**
-  - 修复了可能引发“DocumentFrame (SQLEditors)”异常的问题。
-  - 修复了尝试在内置查询存储报表中设置自定义时间间隔时，用户无法对开始/结束时间间隔选择 AM 或 PM 的问题。
-
-- **复制数据库向导**
-  - 生成脚本/传输/复制数据库向导尝试创建一个表，其内存中表不强制将 ansi_padding 设置为 on。
-  - SQL Server 2017 和 SQL Server 2019 上的传输数据库任务/复制数据库向导中断。
-  - 先创建生成脚本/传输/复制数据库向导脚本表，再创建关联的外部数据源。
-
-- **探查器**
-  - 将“聚合表重写查询”事件添加到了探查器事件。
-
-- **显示计划**
-  - 有多个线程时，新的内存授予运算符属性显示错误。
-
+- **平面文件向导**
+    - 修复了向导无法从单列 CSV 文件导入的问题。
+    - 修复了导入向导无法处理负十进制值的问题。
+    
 ### <a name="known-issues"></a>已知问题
 
-- 双击 .sql 文件将启动 SSMS，但不会打开实际脚本。
-  - 解决方法：将 .sql 文件拖放到 SSMS 编辑器上。
+- N/A
 
-## <a name="ssms-180-preview---cumulative-changelog-through-preview-6"></a>SSMS 18.0 预览版 - 直至预览版 6 的累积变更日志
+## <a name="ssms-180-preview---cumulative-changelog-through-preview-7"></a>SSMS 18.0 预览版 - 直至预览版 7 的累积更改日志
 
-如果没有预览版 5 或预览版 6 标签，则表示 SSMS 18.0 的第一个公共预览版（即 SSMS 18.0 预览版 4）中出现的更改。
+如果没有*预览版 5*、*预览版 6* 或*预览版 7* 标签，则表示 SSMS 18.0 的第一个公共预览版（即 SSMS 18.0 *预览版 4*）中出现的更改。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -140,6 +160,7 @@ ms.locfileid: "56802921"
   - [预览版 6 中的新增功能] 在工具菜单下添加了“迁移到 Azure” - 我们集成了[数据库迁移助手](https://aka.ms/get-dma)和 [Azure 数据库迁移服务](https://aka.ms/get-dms)，提供快速便捷的访问，帮助加快迁移到 Azure 的过程。
   - [预览版 6 中的新增功能] 上一版本的 SSMS 18.0（< 预览版 6）将“可用数据库”快捷键绑定为 CTRL+ALT+J。 在预览版 6 和更高版本中，键绑定已还原为 CTRL+U，如同在 SSMS 17.x 中一样。
   - [预览版 6 中的新增功能] 添加了逻辑，提示用户在使用“更改连接”时提交打开的事务。
+  - [预览版 7 中的新增功能] 添加了对 `UTF8_BIN2` 排序规则的支持。
 
 - **SMO**
   - 为可恢复索引创建扩展 SMO 支持
@@ -148,16 +169,21 @@ ms.locfileid: "56802921"
   - [预览版 5 中的新增功能] 公开了 Server 对象上新的 ProductUpdateLevel 属性，该属性映射到正在使用的 SQL 版本（例如 CU12、RTM 等）的服务级别
   - [预览版 5 中的新增功能] 公开了 Database 对象上新的 LastGoodCheckDbTime 属性，该属性映射到“lastgoodcheckdbtime”数据库属性。 如果该属性不可用，则将返回默认值 1900/1/1 凌晨 12:00:00。
   - [预览版 5 中的新增功能] 将 RegSrvr.xml 文件（注册服务器配置文件）的位置移动到了“%AppData%\Microsoft\SQL Server Management Studio”（未进行版本管理，因此可以跨 SSMS 版本共享）
+  - [预览版 7 中的新增功能] 在 SMO 和 SSMS 中添加了**云见证**作为新的仲裁类型，以及作为新的资源类型。
+  - [预览版 7 中的新增功能] 在 SMO 和 SSMS 中添加了对[边缘约束](../relational-databases/tables/graph-edge-constraints.md)的支持。
+
 
 - **Azure Data Studio 集成**
   - 添加了启动/下载 Azure Data Studio 的菜单项
   - [预览版 5 中的新增功能] 向对象资源管理器添加了“启动 Azure Data Studio”菜单项
+  - [预览版 7 中的新增功能] 在 Azure Data Studio 中，如果在对象资源管理器中右键单击数据库，则运行查询或创建新笔记本。
 
 - **显示计划**
   - 如果可用，则在显示计划运算符节点下添加实际运行时间、实际行与估计行。 这将使实际计划看起来与实时查询统计信息计划一致。
   - 为显示计划单击“编辑查询”按钮时修改了工具提示并添加了注释，以向用户表明如果查询超过 4000 个字符，则 SQL 引擎可能会截断该显示计划。
   - 添加了显示“Materializer 运算符（外部选择）”的逻辑
   - 添加新的显示计划属性 BatchModeOnRowStoreUsed 以轻松识别正在使用“行存储的批处理模式扫描”功能的查询。 每当查询执行行存储的批处理模式扫描时，都会将新属性 (BatchModeOnRowStoreUsed="true") 添加到 StmtSimple 元素。
+  - [预览版 7 中的新增功能] 为 `DW ROLLUP` 和 `CUBE` 添加了对 LocalCube RelOp 的显示计划支持。
 
 - **数据库兼容性级别升级**
   - [预览版 5 中的新增功能] 在“<Database name>”->“任务”->“数据库升级”下添加了新选项。 此选项将启动新的查询优化助手 (QTA)，引导用户完成以下过程：
@@ -166,15 +192,24 @@ ms.locfileid: "56802921"
     - 对同一工作负荷收集第 2 轮性能数据。
     - 检测工作负荷回归并提供测试建议，以提高工作负荷性能。
 
-  此功能类似于在 https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade 中记录的数据库升级过程，最后一步（QTA 不依赖之前已知的良好状态来生成建议）除外。
+    这类似于[在升级到较新版 SQL Server 期间保持性能稳定](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中记录的数据库升级过程，最后一步（其中 QTA 不依赖之前已知的良好状态来生成建议）除外。
 
 - **查询存储**
   - [预览版 5 中的新增功能] 向图表 Y 轴上显示的数字添加千位分隔符，改善了部分报表（资源总消耗）的可用性。
   - [预览版 5 中的新增功能] 添加了新的查询等待统计信息报表。
 
 - **数据掩码**
-  - [预览版 5 中的新增功能，Add2018114 ] 添加了静态数据掩码。 静态数据掩码是一种数据保护工具，用户可通过它为 SQL 数据库创建副本并对副本上的敏感数据进行掩码操作。 对于与非生产用户（如开发/测试团队或分析团队）共享其生产数据库的用户而言，该功能非常有用。 有关详细信息，请参阅 [Azure SQL 数据库和 SQL Server 的静态数据掩码](https://azure.microsoft.com/blog/static-data-masking-preview/)。
-
+  - [预览版 5 中的新增功能] 添加了静态数据掩码。 静态数据掩码是一种数据保护工具，用户可通过它为 SQL 数据库创建副本并对副本上的敏感数据进行掩码操作。 对于与非生产用户（如开发/测试团队或分析团队）共享其生产数据库的用户而言，该功能非常有用。 有关详细信息，请参阅 [Azure SQL 数据库和 SQL Server 的静态数据掩码](https://azure.microsoft.com/blog/static-data-masking-preview/)。
+  - [预览版 7 中的新增功能] 现在支持 JSON 配置文件
+  - [预览版 7 中的新增功能] XML 配置文件格式已变得更加灵活。  需要重新创建现有的配置文件。
+  - [预览版 7 中的新增功能] 现在可以屏蔽包含内存优化表和时态表的数据库。  一些限制仍然适用于内存优化表和时态表本身。
+  - [预览版 7 中的新增功能] 本地数据库的数据库复制操作现在使用 `BACKUP DATABASE` 步骤的 `COPY_ONLY` 选项。
+  - [预览版 7 中的新增功能] 屏蔽数据库现在在屏蔽操作正在进行时设置为 `SIMPLE` 恢复模式，以减少对日志的使用，然后在完成后回到其原始值。
+  - [预览版 7 中的新增功能] 屏蔽数据库现在在操作正在进行时命名为 `<output database name>-MaskInProgress`，然后在屏蔽操作成功后重命名为 `<output database name>`。
+  - [预览版 7 中的新增功能] 将配置 UI 中列的显示顺序更改为按序号顺序显示，而不是按字母顺序显示。
+  - [预览版 7 中的新增功能] 删除了在配置 UI 中批量选择列的选项，以防止意外行为。
+  - [预览版 7 中的新增功能] 改进了连接和命令失败的内部重试逻辑。
+ 
 - **Always On**
   - 在 SSMS Always On 仪表板中重新处理 RTO（估计恢复时间）和 RPO（估计的数据丢失）。 文档正在 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups 进行更新
 
@@ -184,12 +219,20 @@ ms.locfileid: "56802921"
 - **SSIS**
   - [预览版 5 中的新增功能] 添加了支持，使客户能够在 Azure 政府云中的 Azure-SSIS IR 上安排 SSIS 包
   - [预览版 6 中的新增功能] 通过 SSMS 使用 MI 的 SQL 代理时，可以在 SSIS 代理作业步骤中配置参数和连接管理器。
+  - [预览版 7 中的新增功能] 连接到 Azure SQL DB/托管实例时，可以使用“\<default\>”作为初始数据库与它进行连接。
+  - [预览版 7 中的新增功能] 在 Azure 数据工厂的“Integration Services 目录”节点下添加了“尝试 SSIS”的新条目项，此条目项可用于启动“Integration Runtime 创建向导”并快速创建“Azure-SSIS Integration Runtime”。
+  - [预览版 7 中的新增功能] 在“目录创建向导”中添加了“创建 SSIS IR”按钮，该按钮可用于启动“Integration Runtime 创建向导”并快速创建“Azure-SSIS Integration Runtime”。
+  - [预览版 7 中的新增功能] ISDeploymentWizard 现在支持命令行模式下的 SQL 身份验证、Azure Active Directory 集成身份验证和 Azure Active Directory 密码身份验证。
 
 - **数据分类**
   - 重新组织了数据分类任务菜单：将子菜单添加到了数据库任务菜单中，并添加了从菜单中打开报表而无需先打开分类数据窗口的选项。
+  - [预览版 7 中的新增功能] 向 SMO 添加了新功能“数据分类”。 列对象公开新属性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId 和 IsClassified（只读）。 有关详细信息，请参阅： https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
+  - [预览版 7 中的新增功能] 向“数据分类”浮出控件添加了新的“分类报表”菜单项。
 
 - **漏洞评估**
   - [预览版 5 中的新增功能] 在 SQL Azure DW 上启用了漏洞评估任务菜单。
+  - [预览版 7 中的新增功能] 更改了在 SQL Azure 托管实例服务器上运行的漏洞评估规则集，以便“漏洞评估”扫描结果与 SQL Azure DB 保持一致。 
+  - [预览版 7 中的新增功能]“漏洞评估”现在支持 Azure SQL DW。
 
 - **始终加密**
   - “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。 
@@ -199,6 +242,20 @@ ms.locfileid: "56802921"
     - “连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。
     - “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。
     - 其他 Always Encrypted 密钥管理对话框现在可公开列主密钥允许 Enclave 计算的信息。
+
+- **平面文件导入向导**
+  - [预览版 7 中的新增功能] 添加了用于通知用户平面文件导入可能已导致重命名列的逻辑。
+
+- **数据层应用程序向导**
+  - [预览版 7 中的新增功能] 添加了对使用图形表导入/导出数据层应用程序的支持。
+
+- **Azure SQL 托管实例**
+  - [预览版 7 中的新增功能] 连接到 Azure SQL 托管实例时，在 SMO 和 SSMS 中添加了 **AAD 登录**作为新登录类型。
+
+- **XEvent 查看器**
+  - [预览版 7 中的新增功能] 在 XEvent 查看器中，启用了显示计划窗口以获取更多 XEvent。
+
+
 
 
 ### <a name="bug-fixes"></a>Bug 修复
@@ -212,6 +269,7 @@ ms.locfileid: "56802921"
   - [预览版 5 中的新增功能] 修复了尝试使用中央管理服务器和 SQL Azure 服务器时 SSMS 中出现的故障。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035/suggestions/33374884。 
   - [预览版 5 中的新增功能] 通过优化检索 IsFullTextEnabled 属性的方式，修复了对象资源管理器中的挂起现象
   - [预览版 5 中的新增功能] 通过避免生成检索数据库属性的不必要查询，修复了“复制数据库向导”中的挂起现象
+  - [预览版 7 中的新增功能] 修复了编辑 T-SQL 时导致 SSMS 挂起/崩溃的问题。 
 
 - **连接对话框**
   - 启用了通过按 DEL 键从以前的用户名列表中删除用户名（有关详细信息，请参阅 https://feedback.azure.com/forums/908035/suggestions/32897632)
@@ -227,6 +285,14 @@ ms.locfileid: "56802921"
   - 修复了“工具”|“选项”|“SQL Server 对象资源管理器”|“命令”页未正确调整大小的问题。
   - SSMS 现在默认禁用在 XMLA 编辑器中自动下载 DTD - XMLA 脚本编辑器（使用 xml 语言服务）现在因可能存在恶意 xmla 文件而默认阻止自动下载 DTD。  这通过关闭“工具”->“选项”->“环境”->“文本编辑器”->“XML”->“杂项”中的“自动下载 DTD 和架构”设置来进行控制。  
   - [预览版 5 中的新增功能] 将 CTRL+D 还原成了 SSMS 早期版本中那样的快捷方式。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035/suggestions/35544754
+
+- **常规 SSMS**
+  - [预览版 7 中的新增功能] 修复了编辑 T-SQL 时导致 SSMS 挂起/崩溃的问题。
+  - [预览版 7 中的新增功能] 修复了在 `Registered Servers` 中的连接中未传递 `ApplicationIntent` 的问题。
+  - [预览版 7 中的新增功能] 修复了在高 DPI 监视器上未正确呈现**新 XEvent 会话向导 UI** 表单的问题。
+  - [预览版 7 中的新增功能] 修复了尝试导入 `.bacpac` 文件时出现的问题。
+  - [预览版 7 中的新增功能] 修复了尝试使用 `FILEGROWTH > 2048GB` 显示数据库属性时引发算术溢出错误的问题。
+  - [预览版 7 中的新增功能] 修复了双击时阻止 SSMS 打开 .sql 文件的问题。
 
 - **SSMS 编辑器**
   - 修复了在“SQL 系统表”中还原默认颜色会使颜色更改为暗黄绿色，而不是默认的绿色，使其很难在白色背景上辨别的问题（有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
@@ -249,7 +315,7 @@ ms.locfileid: "56802921"
   - 修复了尝试重命名对象时 Delete 键在对象资源管理器中不工作这一长期未解决的问题。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
   - 显示现有数据库文件的属性时，大小显示在列“大小 (MB)”而不是“初始大小 (MB)”下，这是创建新数据库时显示的内容。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
   - 由于当前版本的 SSMS 中不支持此类表，已禁用“图形表”的“设计”上下文菜单项。
-  - [预览版 5 中的新增功能，循环内] 修复了“新建作业计划”对话框在高 DPI 监视器上无法正确呈现的问题。 有关详细信息，请参阅 https://feedback.azure.com/admin/v3/suggestions/35541262 
+  - [预览版 5 中的新增功能] 修复了“新建作业计划”对话框在高 DPI 监视器上无法正确呈现的问题。 有关详细信息，请参阅 https://feedback.azure.com/admin/v3/suggestions/35541262 
   - [预览版 5 中的新增功能] 修复了在对象资源管理器详细信息中显示数据库大小（“大小(MB)”）时出现的问题并改进了显示方式：仅 2 位小数并使用千位分隔符格式，。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035/suggestions/34379308
   - [预览版 5 中的新增功能] 修复了导致创建空间索引因“要完成此操作，请设置 PartitionScheme 属性”等错误而失败的问题。
   - [预览版 5 中的新增功能] 在对象资源管理器中进行了一些小的性能改进，以尽可能避免发出额外的查询。
@@ -266,6 +332,12 @@ ms.locfileid: "56802921"
   - 在 SQL Server 2016 及更早版本中对表编写脚本时，省略图形语法“as edge”和“as node”。
   - 修复了使用 AAD 和 MFA 连接到 Azure SQL 数据库时数据库对象脚本编写失败的问题。
   - [预览版 6 中的新增功能] 修复了“在 Azure SQL 数据库上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 编写空间索引脚本时出现错误”的问题。
+  - [预览版 7 中的新增功能] 修复了即使**对象资源管理器**脚本设置已设为与源匹配，也会导致 SQL Azure 数据库的数据库脚本始终以本地 SQL Server 实例为目标的问题。
+- [预览版 7 中的新增功能] 修复了尝试对 Azure SQL 数据仓库数据库中的表（涉及生成错误 T-SQL 语句的聚集索引和非聚集索引）编写脚本时出现的问题。
+- [预览版 7 中的新增功能] 修复了尝试对 Azure SQL 数据仓库数据库中的表（包含生成错误 T-SQL 语句[重复语句]的聚集列存储索引和非聚集索引）编写脚本时出现的问题。
+- [预览版 7 中的新增功能] 修复了没有范围值的分区表脚本编写的问题（Azure SQL 数据仓库数据库）。
+- [预览版 7 中的新增功能] 修复了阻止对审计或审计规范 `SERVER_PERMISSION_CHANGE_GROUP` 编写脚本的问题。
+- [预览版 7 中的新增功能] 修复了阻止对 Azure SQL 数据仓库的统计信息编写脚本的问题。 请参阅 [Microsoft Azure 反馈论坛](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)。
 
 - **表设计器**
   - [预览版 X 中的新增功能，X<4] 修复了"编辑 200 行"时的故障
@@ -274,7 +346,10 @@ ms.locfileid: "56802921"
 - **SMO**
   - 修复了 SMO/ServerConnection 未正确处理基于 SqlCredential 的连接的问题。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941
   - [预览版 6 中的新增功能] 修复了使用 SMO 编写的应用程序在多个线程上试图枚举来自同一服务器的数据库时遇到错误（即使在每个线程上使用单独的 SqlConnection 实例）的问题。
-
+  - [预览版 7 中的新增功能] 修复了从外部表传输的性能回归问题。
+  - [预览版 7 中的新增功能] 修复了 `ServerConnection` 线程安全问题，该问题导致 SMO 在定位 Azure SQL DB 时泄漏 `SqlConnection` 实例。
+  - [预览版 7 中的新增功能] 修复了在尝试还原名称中带有大括号 `{}` 的数据库时导致 `StringBuilder.FormatError` 的问题。
+ 
 - **AS**
   - 修复了 AS Xevent UI 的“高级设置”被剪辑的问题
   - [预览版 5 中的新增功能] 修复了 DAX 分析引发“找不到文件”异常的问题
@@ -292,6 +367,8 @@ ms.locfileid: "56802921"
   - 修复了与浮点类型的错误处理相关的问题（有关使用不同浮点分隔符的区域设置）
   - 修复了与值为 0 或 1 时的导入位数相关的问题。 有关详细信息，请参阅 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535
   - 修复了浮点数输入为 null 的问题。 
+  - [预览版 7 中的新增功能] 修复了导入向导无法处理负十进制值的问题。
+  - [预览版 7 中的新增功能] 修复了向导无法从单列 CSV 文件导入的问题。
 
 - **HADR/AG**
   - [预览版 5 中的新增功能] 修复了“故障转移可用性组”向导中角色始终显示为“正在解析”的问题 
@@ -324,6 +401,9 @@ ms.locfileid: "56802921"
   - [预览版 5 中的新增功能] 改进了 SMO 文件组对象的脚本编写。
   - [预览版 5 中的新增功能] 改进了凭据和审核的 UI。
   - [预览版 5 中的新增功能] 添加了对逻辑复制的支持。
+  - [预览版 7 中的新增功能] 修复了导致右键单击数据库并选择“导入数据层应用程序”失败的问题。
+  - [预览版 7 中的新增功能] 修复了导致右键单击 `TempDB` 以显示错误的问题。
+  - [预览版 7 中的新增功能] 修复了对 SMO 中的 `ALTER DB ADD FILE` 语句编写脚本导致生成的 T-SQL 脚本为空的问题。
 
 - **Azure SQL 数据库**
   - 修复了连接到 Azure SQL DB 中的用户数据库而不是主数据库时 Azure SQL Db 查询窗口中未正确填充数据库列表的问题。
@@ -362,6 +442,9 @@ ms.locfileid: "56802921"
 - **显示计划**
   - [预览版 6 中的新增功能] 有多个线程时，新的内存授予运算符属性显示错误。
 
+- **数据掩码**
+  - [预览版 7 中的新增功能] 修复了具有多个日志和文件流内存优化表文件的本地数据库无法自动复制的 bug。
+
 ### <a name="deprecated-features"></a>已弃用的功能
 
 SSMS 中不再提供以下功能：
@@ -385,8 +468,7 @@ SSMS 中不再提供以下功能：
 
 ### <a name="known-issues"></a>已知问题
 
-- 双击 .sql 文件将启动 SSMS，但不会打开实际脚本。
-  - 解决方法：将 .sql 文件拖放到 SSMS 编辑器上。
+- N/A
 
 
 ## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1（最新公开发布版本）
@@ -410,13 +492,6 @@ SSMS 中不再提供以下功能：
 
 [中文（中国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-
-
-
-
-
-
-
 ## <a name="ssms-179"></a>SSMS 17.9
 
 ![下载](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
@@ -433,7 +508,6 @@ SSMS 中不再提供以下功能：
 ### <a name="whats-new"></a>新增功能
 
 **常规 SSMS**
-
 
 显示计划：
 

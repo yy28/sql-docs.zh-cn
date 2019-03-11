@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,48 +15,93 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205156"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017883"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-从指定的字节流或文件路径上传 R 包文件至数据库。 此语句充当一种通用机制，数据库管理员上传任何新的外部语言运行时（当前仅为 R）和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目时要使用此机制。 
+从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
 
-在 SQL Server 2017 及更高版本中，支持 R 语言和 Windows 平台。 计划在之后发布的版本中提供对 Python 和 Linux 的支持。
+> [!NOTE]
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支持 Windows 平台上的 R、Python 和 Java。 计划在之后发布的版本中提供对 Linux 的支持。
 
-## <a name="syntax"></a>语法
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
-    [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,...2]  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = <language> )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
+}  
+
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 语法
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
 <file_spec> ::=  
 {  
-(CONTENT = { <client_library_specifier> | <library_bits> }  
-[, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
 }  
 
-<client_library_specifier> :: =  
-  '[\\computer_name\]share_name\[path\]manifest_file_name'  
-| '[local_path\]manifest_file_name'  
-| '<relative_path_in_external_data_source>'  
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
 
 <library_bits> :: =  
-{ varbinary_literal | varbinary_expression }  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>参数
 
@@ -64,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 
 将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。 不过，如果 RUser1 要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
 
-不能随意分配库名称；库名称应与从 R 上传 R 库时所需的名称相同。
+不能随意分配库名称；库名称应与在外部脚本中加载库时所需的名称相同。
 
 **owner_name**
 
@@ -72,7 +117,7 @@ WITH ( LANGUAGE = 'R' )
 
 对于数据库和运行时，数据库所有者所拥有的库均视为全局性的库。 换言之，数据库所有者可以创建库，而这些库包含一组由许多用户共享的公共库或包。 当由用户而不是 `dbo` 用户创建外部库时，该外部库便由该用户专用。
 
-当用户 RUser1 执行 R 脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径。
+当用户 **RUser1** 执行外部脚本时，`libPath` 值可包含多个路径。 第一个路径始终为数据库所有者创建的共享库的路径。 `libPath` 的第二部分指定包含由 RUser1 单独上传的包的路径。
 
 **file_spec**
 
@@ -94,9 +139,19 @@ WITH ( LANGUAGE = 'R' )
 
 Windows 是当前唯一受支持的平台。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+指定包的语言。 该值可以是 `R`、`Python` 或 `Java`。
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 目前仅支持 Windows 平台。 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 Python 语言，必须以压缩存档文件的形式准备 .whl 或 .zip 文件中的包。 如果包已经是 .zip 文件，则必须将其包含在新的 .zip 文件中。 目前不支持将包作为 .whl 或 .zip 文件直接上传。
+::: moniker-end
 
 `CREATE EXTERNAL LIBRARY` 语句将库位上载到数据库。 当用户使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 运行外部脚本并调用包或库时，会安装该库。
 
@@ -126,6 +181,10 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
+::: moniker-end
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. 安装具有依赖项的包
 
@@ -173,9 +232,12 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    print(packageVersion("packageA"))
     '
     ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 SQL Server 2019 中的 Python 语言，可通过将 `'R'` 替换为 `'Python'` 使用示例。
+::: moniker-end
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. 从字节流创建库
 
@@ -185,6 +247,10 @@ EXEC sp_execute_external_script
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 SQL Server 2019 中的 Python 语言，可通过将 **“R”** 替换为 **“Python”** 使用示例。
+::: moniker-end
+
 > [!NOTE]
 > 此代码示例只用于展示语法；为了提高可读性，`CONTENT =` 中的二进制值已遭截断，无法创建能够正常运行的库。 二进制变量的实际内容要长得多。
 
@@ -193,6 +259,28 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 `ALTER EXTERNAL LIBRARY` DDL 语句可用于向新库添加内容或更改现有库的内容。 修改现有库需要 `ALTER ANY EXTERNAL LIBRARY` 权限。
 
 有关详细信息，请参阅 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="e-add-a-java-jar-file-to-a-database"></a>E. 向数据库添加 Java .jar 文件  
+
+下面的示例将一个名为 `customJar` 的外部 jar 文件添加到数据库。
+
+```sql
+CREATE EXTERNAL LIBRARY customJar
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\customJar.jar') 
+WITH (LANGUAGE = 'Java');
+```
+
+在库成功上传到实例之后，用户可执行 `sp_execute_external_script` 步骤来安装库。
+
+```sql
+EXEC sp_execute_external_script
+    @language = N'Java'
+    , @script = N'customJar.MyCLass.myMethod'
+    , @input_data_1 = N'SELECT * FROM dbo.MyTable'
+WITH RESULT SETS ((column1 int))
+```
+::: moniker-end
 
 ## <a name="see-also"></a>另请参阅
 

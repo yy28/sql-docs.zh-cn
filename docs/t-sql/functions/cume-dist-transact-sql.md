@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980423"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955738"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 *r* 中 `CUME_DIST` 的值定义为低于或等于行 *r* 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 _r_ 中 `CUME_DIST` 的值定义为低于或等于行 _r_ 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>参数  
-OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-partition_by_clause 将 FROM 子句结果集划分为要应用函数的分区。 如果未指定 partition_by_clause 参数，则 `CUME_DIST` 将查询结果集的所有行视为单个组。 order_by_clause 确定操作发生的逻辑顺序。 `CUME_DIST` 需要 order_by_clause。 `CUME_DIST` 将不接受 OVER 语法的 \<行或 range 子句>。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
+_partition\_by\_clause_ 将 FROM 子句结果集划分为要应用函数的分区。 如果未指定 _partition\_by\_clause_ 参数，则 `CUME_DIST` 将查询结果集的所有行视为单个组。 _order\_by\_clause_ 确定操作发生的逻辑顺序。 `CUME_DIST` 需要 _order\_by\_clause_。 `CUME_DIST` 将不接受 OVER 语法的 \<行或 range 子句>。 有关详细信息，请参阅 [OVER 子句 (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float(53)**
@@ -53,10 +53,10 @@ partition_by_clause 将 FROM 子句结果集划分为要应用函数的分区。
 ## <a name="remarks"></a>Remarks  
 `CUME_DIST` 返回一系列大于 0 且小于或等于 1 的值。 关联值始终计算为相同的累积分布值。 `CUME_DIST` 默认包含 NULL 值，且将这些值视为最低的可能值。
   
-`CUME_DIST` 具有不确定性。 请参阅[确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)获取详细信息。
+`CUME_DIST` 具有不确定性。 有关详细信息，请参阅 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>示例  
-此示例使用 `CUME_DIST` 函数计算给定部门内每个雇员的薪金百分比。 `CUME_DIST` 返回表示薪金低于或等于同一个部门中当前雇员的雇员百分比的值。 `PERCENT_RANK` 函数计算雇员的薪金在部门内的百分比排名。 为按部门对结果集行进行分区，示例会指定 partition_by_clause 值。 OVER 子句中的 ORDER BY 子句在逻辑上对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句确定结果集的显示顺序。
+此示例使用 `CUME_DIST` 函数计算给定部门内每个雇员的薪金百分比。 `CUME_DIST` 返回表示薪金低于或等于同一个部门中当前雇员的雇员百分比的值。 `PERCENT_RANK` 函数计算雇员的薪金在部门内的百分比排名。 为了按部门对结果集行进行分区，示例指定 _partition\_by\_clause_ 值。 OVER 子句中的 ORDER BY 子句在逻辑上对每个分区中的行进行排序。 SELECT 语句中的 ORDER BY 子句确定结果集的显示顺序。
   
 ```sql
 USE AdventureWorks2012;  

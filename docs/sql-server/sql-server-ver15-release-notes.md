@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 发行说明 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 9e717104c2bc75bd056aa513566e12db6bd5c2b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 1afd1c7c1c3c142745e667662f51027218598e2f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802383"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017723"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "56802383"
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 SQL Server 2019](../linux/quickstart-install-connect-docker.md)。
 
-## <a name="ctp-22-december-2018"></a>CTP 2.2（2018 年 12 月）
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开发行版。
+## <a name="ctp-23"></a>CTP 2.3
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开发行版。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 仅作为评估版提供。 不提供任何其他版本。 安装介质随附的 `license_Eval.rtf` 中描述了对 CTP 2.2 的支持。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 仅作为评估版提供。 不提供任何其他版本。 安装介质随附的 `license_Eval.rtf` 中描述了对 CTP 2.3 的支持。
 
 可在以下其中一个位置找到有限的支持：
 
@@ -49,7 +49,7 @@ ms.locfileid: "56802383"
 
 - 或使用 [#sqlhelp](https://twitter.com/search?q=%23sqlhelp) 发布推文 [@SQLServer](https://twitter.com/SQLServer)
 
-### <a name="documentation-ctp-22"></a>文档 (CTP 2.2)
+### <a name="documentation-ctp-23"></a>文档 (CTP 2.3)
 
 - **问题及其对客户的影响**：SQL Server 2019 (15.x) 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 文档集中。 文章中特定于 SQL Server 2019 (15.x) 的内容通过“适用于”进行标注。
 
@@ -57,7 +57,7 @@ ms.locfileid: "56802383"
 
 - **问题及其对客户的影响**：SQL Server 2019 (15.x) 没有可用的脱机内容。
 
-### <a name="hardware-and-software-requirements"></a>硬件和软件要求
+### <a name="hardware-and-software-requirements-ctp-23"></a>硬件和软件要求 (CTP 2.3)
 
 - **问题及其对客户的影响**：硬件和软件要求仍在审核中，还不是产品发布的最终版本。
 
@@ -71,21 +71,11 @@ ms.locfileid: "56802383"
 
 ### <a name="updated-compiler"></a>更新后的编译器
 
-- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 2.2 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
+- **问题及其对客户的影响**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 是通过更新后的编译器构建的。 CTP 2.1 具有一项已知问题，即浮点和其他转换方案的结果可能因更新后的编译器而返回与先前版本不同的值。 CTP 2.2 内附可确保受影响的方案与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 先前版本返回相同结果的任务。 自 CTP 2.3 版本起，已解决所有历史问题。 请将与 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] 比较得出的所有结果异常立即报告给 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](http://aka.ms/sqlfeedback)。
 
 - **解决方法**：N/A
 
-- **适用对象**：SQL Server 2019 CTP 2.2 和 CTP 2.1
-
-### <a name="sql-server-integration-services-ssis-page-deployment-after-switching-db-to-single-user-mode-and-then-switching-back"></a>将 DB 切换到单用户模式然后再切换回来后的 SQL Server Integration Services (SSIS) 页面部署
-
-- **问题及其对客户的影响**：SSISDB 从单用户模式切换回多用户模式后，部署包时可能会报告以下错误：
-
-  `Cannot continue the execution because the session is in the kill state.`
-
-- **解决方法**：停止并重启 SQL Server 实例，并将 SSISDB 切换回多用户模式。
-
-- **适用对象**：SQL Server 2019 预览版 CTP 2.2 和 CTP 2.1
+- **适用对象**：SQL Server 2019 CTP 2.3、CTP 2.2 和 CTP 2.1
 
 ### <a name="utf-8-collations"></a>UTF-8 排序规则
 
@@ -100,7 +90,7 @@ ms.locfileid: "56802383"
  
 - **解决方法**：没有针对 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 的解决方法。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2、CTP 2.1 和 CTP 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3、CTP 2.2、CTP 2.1 和 CTP 2.0。
 
 ### <a name="sql-graph"></a>SQL 图形
 
@@ -108,7 +98,7 @@ ms.locfileid: "56802383"
 
 - **解决方法**：编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本并使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 SQLCMD 将能针对服务器运行这些脚本。 无法导出或导入创建边缘约束、具有新的合并 DML 语法或在图形对象上创建派生表/视图的数据库对象。 用户必须使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本在其数据库中手动创建此类对象。 
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2、CTP 2.1 和 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3、CTP 2.2、CTP 2.1 和 CTP 2.0。
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 
@@ -116,42 +106,23 @@ ms.locfileid: "56802383"
 
 - **解决方法**：若要启用富计算，请运行 `DBCC traceon(127,-1)`。 有关详细信息，请参阅[启用富计算](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2、CTP 2.1 和 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3、CTP 2.2、CTP 2.1 和 CTP 2.0。
 
-## <a name="ctp-21-october-2018"></a>CTP 2.1（2018 年 10 月）
+### <a name="system-dynamic-management-views"></a>系统动态管理视图
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的上一公开发行版。
+- **问题及其对客户的影响**：系统表值函数 [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) 返回 `dependency` 列中的随机值。
 
-### <a name="udf-inlining"></a>UDF 内联
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3。
 
-- **问题及其对客户的影响**：在一些极端情况下，对用户定义函数内联的嵌套调用无法正确验证安全性。
-  
-- **解决方法**：使用 `INLINE = OFF` 设置禁用此类 UDF 的 UDF 内联。
+### <a name="sql-server-analysis-services-ssas"></a>SQL Server Analysis Services (SSAS)
 
-- **适用对象**：SQL Server 2019 CTP 2.1
+- **问题及其对客户的影响**：对于具有动态安全的表格模型，在某些情况下，用户可以查看属于同一角色的另一个用户的数据。
 
-### <a name="sql-server-integration-service---fuzzy-lookup-transformation"></a>SQL Server Integration Service - 模糊查找转换
+  **方案**：模型中至少有两个角色。 其中一个角色没有包含 `USERNAME` 或 `USERPRINCIPALNAME` 的任何动态安全表达式。 第二个角色具有通过使用包含 `USERNAME` 或 `USERPRINCIPLENAME` 的表达式，为用户 A 和用户 B 定义的动态行级安全。 用户 A 和用户 B 可以连接及查询数据，但是，用户 B 在某些情况下可看到仅为用户 A 保护的数据。
 
-- **问题/对客户的影响**：果将模糊查找转换设置为重用索引，则模糊查找转换将失败并显示以下错误：
+- **解决方法**：在模型中添加虚拟度量值。 例如 `[DummyMeasure] := UserName()`。 这可确保针对行级安全表达式计算动态表达式。
 
-  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
-
-- **解决方法**：N/A
-
-- **详细信息**：N/A  
-
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
-
-### <a name="lightweight-query-profiling-infrastructure"></a>轻型查询分析基础结构
-
-- **问题及其对客户的影响**：执行命令 `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` 会返回一个语法错误。 任何依赖于执行此命令的方案都将失败。
-
-  > [!NOTE]
-  > 目前，轻型查询分析基础结构 (LWP) 无法在单个数据库级别进行控制，并且在默认情况下为所有数据库保持启用状态。 有关 LWP 的详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
-
-- **解决方法**：没有针对 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 的解决方法。
-
-- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 和 CTP 2.0。
+- **适用对象**：[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

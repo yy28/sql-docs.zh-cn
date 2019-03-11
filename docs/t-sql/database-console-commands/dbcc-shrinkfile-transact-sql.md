@@ -30,17 +30,17 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ebb817cc2d9359a04e2661a17ab4ce99a55165ba
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286475"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955908"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-收缩当前数据库的指定数据或日志文件大小。 可以使用它将一个文件中的数据移到同一文件组中的其他文件，这会清空文件，并可便于删除数据库。 可以将文件收缩到小于创建大小，同时将最小文件大小重置为新值。
+收缩当前数据库的指定数据或日志文件大小。 可以使用它将一个文件中的数据移到同一文件组中的其他文件，这会清空文件，从而允许删除数据库。 可以将文件收缩到小于创建大小，同时将最小文件大小重置为新值。
   
 ![文章链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408804"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334784"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -230,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
  指定从指定时态表及其链接的系统版本控制的历史记录表返回特定版本的数据  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-适用范围：SQL Server、SQL 数据库 
+**适用范围：** SQL Server、SQL 数据库 
  
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。  
   
@@ -256,7 +256,7 @@ FROM { <table_source> [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于生成随机数的常量整数表达式。 repeat_seed 是 bigint。 如果未指定 repeat_seed，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将随机分配值。 对于特定的 repeat_seed 值，如果尚未对表应用任何更改，抽样结果始终相同。 repeat_seed 表达式的值必须是大于零的整数。  
   
 ### <a name="tablesample-clause"></a>Tablesample 子句
-适用范围：SQL 数据仓库
+**适用范围：** SQL 数据仓库
 
  指定返回来自表的数据样本。 该样本可以是近似的。 此子句可对 SELECT 或 UPDATE 语句中的任何主表或联接表使用。 不能对视图指定 TABLESAMPLE。 
 

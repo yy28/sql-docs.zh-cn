@@ -1,5 +1,5 @@
 ---
-title: 合并故障转移集群与可用性组
+title: 合并故障转移群集实例与可用性组
 description: 通过合并 SQL Server 故障转移集群实例和 Always On 可用性组的功能，增强高可用性和灾难恢复能力。
 ms.custom: seodec18
 ms.date: 07/02/2017
@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8257490dfae7e46cdca2a5ad4c0339da857a2e34
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213036"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956078"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -37,21 +37,21 @@ ms.locfileid: "53213036"
   
   
 ##  <a name="WSFC"></a> Windows Server 故障转移群集和可用性组  
- 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一个 Windows Server 故障转移群集 (WSFC) 群集。 若要启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须驻留在某一 WSFC 节点上，并且该 WSFC 群集和节点必须处于联机状态。 此外，给定可用性组的每个可用性副本必须位于相同 WSFC 群集的不同节点上。 唯一的例外是在迁移到另一个 WSFC 群集时，此时一个可用性组可能会暂时跨两个群集。  
+ 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要 Windows Server 故障转移群集 (WSFC)。 若要为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须驻留在某一 WSFC 节点上，并且该 WSFC 和节点必须处于联机状态。 此外，给定可用性组的每个可用性副本都必须位于相同 WSFC 的不同节点上。 唯一的例外是在迁移到另一个 WSFC 时，此时一个可用性组可能会暂时跨两个群集。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 依赖 Windows 故障转移群集 (WSFC) 群集来监视和管理属于某一指定可用性组的可用性副本的当前角色，并且确定故障转移事件是如何影响可用性副本的。 为您创建的每个可用性组创建一个 WSFC 资源组。 WSFC 群集将监视此资源组，以便评估主副本的运行状况。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 依赖 Windows Server 故障转移群集 (WSFC) 来监视和管理属于给定可用性组的可用性副本的当前角色，以及确定故障转移事件如何影响可用性副本。 为您创建的每个可用性组创建一个 WSFC 资源组。 WSFC 监视此资源组，以评估主要副本的运行状况。  
   
- 针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的仲裁基于 WSFC 群集中的所有节点，而与某一给定群集节点是否承载任何可用性副本无关。 与数据库镜像相反，在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]中没有见证服务器角色。  
+ 针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的仲裁基于 WSFC 中的所有节点，而与给定群集节点是否托管任何可用性副本无关。 与数据库镜像相反，在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]中没有见证服务器角色。  
   
- WSFC 群集的总体运行状况是由群集中节点仲裁的投票决定。 如果 WSFC 群集由于计划外灾难或由于持续的硬件或通信故障而导致脱机，则需要管理员手动干预。 Windows Server 或 WSFC 群集管理员将需要“强制仲裁”，并在非容错配置中将仍有效的群集节点变为联机状态。  
+ WSFC 的总体运行状况由群集中节点的仲裁投票决定。 如果 WSFC 因计划外灾难或由于持续的硬件或通信故障而脱机，则需要管理员手动干预。 Windows Server 或 WSFC 管理员将需要“强制仲裁”，然后在非容错配置中将仍有效的群集节点重新变为联机状态。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 注册表项是 WSFC 群集的子项。 如果您删除后重新创建了 WSFC 群集，则必须在其原始 WSFC 群集上承载可用性副本的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上都禁用然后重新启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 注册表项是 WSFC 的子项。 如果删除后重新创建了 WSFC，则必须在其原始 WSFC 上托管可用性副本的每个 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上都禁用然后重新启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
   
- 有关在 Windows Server 故障转移群集 (WSFC) 节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息以及有关 WSFC 仲裁的信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
+ 有关在 WSFC 节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的信息以及有关 WSFC 仲裁的信息，请参阅 [Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 和可用性组  
- 您可以通过将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集与 WSFC 群集一起实现，在服务器-实例级别设置第二层的故障转移。 可用性副本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的独立实例或 FCI 实例承载。 对于某一给定可用性组，一个 FCI 伙伴只能承载一个副本。 当某一可用性副本正在一个 FCI 上运行时，可用性组的可能所有者列表将只包含活动的 FCI 节点。  
+ 可以通过将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 与 WSFC 一起实现，在服务器-实例级别设置第二层故障转移。 可用性副本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的独立实例或 FCI 实例承载。 对于某一给定可用性组，一个 FCI 伙伴只能承载一个副本。 当某一可用性副本正在一个 FCI 上运行时，可用性组的可能所有者列表将只包含活动的 FCI 节点。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于任何共享存储形式。 但是，如果使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 来承载一个或多个可用性副本，每个 FCI 将需要标准 SQL Server 故障转移群集实例安装所要求的共享存储。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53213036"
   
 ||FCI 内的节点|可用性组内的副本|  
 |-|-------------------------|-------------------------------------------|  
-|**使用 WSFC 群集**|是|是|  
+|**使用 WSFC**|是|是|  
 |**保护级别**|实例|“数据库”|  
 |**存储类型**|共享|非共享<br /><br /> 尽管可用性组中的副本不共享存储，但是，由 FCI 承载的副本将使用该 FCI 所要求的共享存储解决方案。 该存储解决方案仅由 FCI 内的节点共享，不在可用性组的副本之间共享。|  
 |**存储解决方案**|直连、SAN、装入点、SMB|取决于节点类型|  
@@ -75,7 +75,7 @@ ms.locfileid: "53213036"
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中故障转移群集内的节点数和 Always On 可用性组的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 FCI 内的**节点数**和 **Always On 可用性组**的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473))。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   
@@ -84,19 +84,19 @@ ms.locfileid: "53213036"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 不支持通过可用性组来自动进行故障转移，因此只能为手动故障转移配置任何由 FCI 承载的可用性副本。  
   
- 您可能需要配置 Windows Server 故障转移群集 (WSFC) 群集以包含所有节点上不可用的共享磁盘。 例如，考虑一个跨两个数据中心、包含三个节点的 WSFC 群集。 其中的两个节点在主数据中心中承载 SQL Server 故障转移群集实例 (FCI)，并且有权访问相同的共享磁盘。 第三个节点在另一个数据中心中承载独立 SQL Server 实例，并且无权访问主数据中心的共享磁盘。 如果 FCI 承载主副本且独立实例承载辅助副本，则此 WSFC 群集配置支持部署可用性组。  
+ 可能需要配置 WSFC 以包含并非在所有节点上可用的共享磁盘。 例如，考虑跨两个数据中心、包含三个节点的 WSFC。 其中两个节点在主数据中心托管 SQL Server 故障转移群集实例 (FCI)，并且有权访问相同的共享磁盘。 第三个节点在另一个数据中心中承载独立 SQL Server 实例，并且无权访问主数据中心的共享磁盘。 如果 FCI 托管主要副本，而独立实例托管次要副本，则此 WSFC 配置支持部署可用性组。  
   
  选择 FCI 承载给定可用性组的可用性副本时，请确保 FCI 故障转移不会导致单个 WSFC 节点尝试承载同一可用性组的两个可用性副本。  
   
  下面的示例方案说明此配置是如何导致问题的：  
   
- Marcel 配置具有两个节点 `NODE01` 和 `NODE02`的一个 WSFC 群集。 他在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 `fciInstance1`上安装一个 `NODE01` 故障转移群集实例 `NODE02` ，其中 `NODE01` 是 `fciInstance1`的当前所有者。  
+ Marcel 配置具有两个节点（`NODE01` 和 `NODE02`）的 WSFC。 他在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 `fciInstance1`上安装一个 `NODE01` 故障转移群集实例 `NODE02` ，其中 `NODE01` 是 `fciInstance1`的当前所有者。  
  在 `NODE02`上，Marcel 安装了另一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例 `Instance3`，该实例是一个独立实例。  
  在 `NODE01`上，Marcel 为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]启用了 fciInstance1。 在 `NODE02`上，他为 `Instance3` 启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 然后，他设置了一个可用性组，其中 `fciInstance1` 承载主副本， `Instance3` 承载辅助副本。  
- 在某些时候， `fciInstance1` 在 `NODE01`上将变得不可用，并且 WSFC 群集导致 `fciInstance1` 故障转移到 `NODE02`。 在故障转移后， `fciInstance1` 将是启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的实例并且在 `NODE02`上以主角色运行。 但是， `Instance3` 现在驻留在与 `fciInstance1`相同的 WSFC 节点上。 这违反了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 约束。  
- 为了纠正此应用场景产生的问题，独立实例 `Instance3`必须驻留在与 `NODE01` 和 `NODE02`处于相同 WSFC 群集中的另一个节点上。  
+ 在某些时候，`fciInstance1` 会在 `NODE01` 上变得不可用，并且 WSFC 会导致 `fciInstance1` 故障转移到 `NODE02`。 在故障转移后， `fciInstance1` 将是启用了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的实例并且在 `NODE02`上以主角色运行。 但是， `Instance3` 现在驻留在与 `fciInstance1`相同的 WSFC 节点上。 这违反了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 约束。  
+ 若要纠正此方案产生的问题，独立实例 `Instance3` 必须驻留在与 `NODE01` 和 `NODE02` 相同的 WSFC 中的另一个节点上。  
   
- 有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 的详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ##  <a name="FCMrestrictions"></a> 将 WSFC 故障转移群集管理器用于可用性组的限制  
  不要使用故障转移群集管理器来操作可用性组，例如：  

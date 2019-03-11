@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509016"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334534"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,6 +82,9 @@ SELECT…INTO 在默认文件组中创建一个新表，并将来自查询的结
 -   标识列来自远程数据源。  
   
 如果这些条件中的一个为真，列将被创建为 NOT NULL 而不继承 IDENTITY 属性。 如果在新表中需要某一标识列，但此类列不可用，或者您需要不同于源标识列的种子或增量值，则使用 IDENTITY 函数在选择列表中定义该列。 请参阅下面的“示例”部分中的“使用 IDENTITY 函数创建标识列”。  
+
+## <a name="remarks"></a>Remarks  
+`SELECT...INTO` 语句的操作分为两个部分：创建新表，然后插入行。  这意味着如果插入失败，它们将全部回滚，但新的（空）表将保留。  如果需要整个操作以整体的形式成功或失败，请使用[显式事务](../language-elements/begin-transaction-transact-sql.md)。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  不能将表变量或表值参数指定为新表。  

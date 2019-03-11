@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403642"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017913"
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 以数据库功能的形式引入了对版本由系统控制的临时表的支持，其附带的内置支持可以提供表中存储的数据在任意时间点的相关信息，而不仅仅是数据在当前时刻正确的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能。  
+  SQL Server 2016 以数据库功能的形式引入了对时态表（也称为由系统控制版本的时态表）的支持，其附带的内置支持可以提供表中存储的数据在任意时间点的相关信息，而不仅仅是数据在当前时刻正确的信息。 临时表是 ANSI SQL 2011 中引入的数据库功能。  
   
  **快速入门**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403642"
   
     -   [在系统版本控制临时表中查询数据](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **下载 Adventure Works 示例数据库：** 若要开始使用临时表，请下载包含脚本示例的[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库](https://www.microsoft.com/download/details.aspx?id=49502)，并遵循文件夹“Temporal”中的说明  
+    -   **下载 Adventure Works 示例数据库：** 若要开始使用时态表，请下载包含脚本示例的[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库](https://www.microsoft.com/download/details.aspx?id=49502)，并遵循文件夹“Temporal”中的说明  
   
 -   **语法：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403642"
   
     -   [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
--   **视频：** 有关临时表的 20 分钟讨论，请参阅 [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)（SQL Server 2016 中的临时表）。  
+-   **视频：** 有关时态表的 20 分钟讨论，请参阅 [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)（SQL Server 2016 中的时态表）。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>什么是版本由系统控制的临时表？  
  版本由系统控制的临时表是用户表的一种类型，旨在保留完整的数据更改历史记录，并实现轻松的时间点分析。 这种类型的临时表之所以称为版本由系统控制的临时表，是因为每一行的有效期由系统（即数据库引擎）管理。  
@@ -81,9 +81,9 @@ ms.locfileid: "52403642"
 ## <a name="how-does-temporal-work"></a>临时表的工作原理是什么？  
  表的系统版本控制是以一对表（当前表和历史记录表）的形式实现的。 在其中每个表中，以下两个附加 **datetime2** 列用于定义每行的有效期：  
   
--   期限开始列：系统在此列（通常表示为 **SysStartTime** 列）中记录行的开始时间。  
+-   期限开始时间列：系统在此列（通常表示为 **SysStartTime** 列）中记录行的开始时间。  
   
--   期限结束列：系统在此列（通常表示为 **SysEndTime** 列）中记录行的结束时间。  
+-   期限结束时间列：系统在此列（通常表示为 **SysEndTime** 列）中记录行的结束时间。  
   
  当前表包含每个行的当前值。 历史记录表包含每个行的每个先前值（如果有），以及该行生效的开始时间和结束时间。  
   
@@ -113,7 +113,7 @@ CREATE TABLE dbo.Employee
   
  **DELETES：** 对于 **DELETE**，系统将行的先前值存储在历史记录表中，并基于系统时钟将 **SysEndTime** 列的值设置为当前事务的开始时间（位于 UTC 时区）。 这会将行标记为已关闭，并记录前一行有效的期限。 在当前表中，该行将被删除。 对当前表的查询不会返回此行。 处理历史记录数据的查询将返回已关闭的行的数据。  
   
- **MERGE：** 对于 **MERGE**，根据 **MERGE**语句中被指定为操作的内容，该操作将执行多达三个语句（ **INSERT**、 **UPDATE**和/或 **DELETE** ）。  
+ **MERGE：** 对于 **MERGE**，根据 **MERGE**语句中被指定为操作的内容，该操作的行为与最多执行了三个语句（**INSERT**、**UPDATE** 和/或 **DELETE**）完全一样。  
   
 > [!IMPORTANT]  
 >  系统 datetime2 列中记录的时间基于事务本身的开始时间。 例如，在单个事务中插入的所有行具有对应于 **SYSTEM_TIME** 的开始时间段列中记录的相同 UTC 时间。  

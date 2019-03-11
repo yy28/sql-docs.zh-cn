@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的标量 UDF 内联 | Microsoft Docs
 description: 标量 UDF 内联功能可提高在 SQL Server（2018 及更高版本）和 Azure SQL 数据库中调用标量 UDF 的查询性能。
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222073"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017923"
 ---
 # <a name="scalar-udf-inlining"></a>标量 UDF 内联
 
@@ -38,8 +38,8 @@ ms.locfileid: "51222073"
 标量 UDF 通常会由于以下原因造成性能欠佳。
 
 - **迭代调用：** 以迭代方式调用 UDF，每个符合条件的元组一次。 由于函数调用，这会导致重复上下文切换的额外成本。 尤其是在其定义中执行 SQL 查询的 UDF 会受到严重影响。
-- **缺乏成本计算：** 在优化期间，只有关系运算符会计算成本，而标量运算符则不计算成本。 在引入标量 UDF 之前，其他标量运算符通常很便宜并且不需要成本计算。 为标量运算添加的小 CPU 成本就足够了。 有些情况下实际成本很高，但仍然没有得到充分代表。
-- **解释执行：** UDF 以一批语句进行计算，并按逐个语句执行。 编译每个语句本身，并缓存编译的计划。 尽管此缓存策略能够通过避免重新编译节省一些时间，但每个语句仍需单独执行。 不执行跨语句优化。
+- **缺乏成本计算：** 在优化期间，只有关系运算符会计算成本，标量运算符则不计算成本。 在引入标量 UDF 之前，其他标量运算符通常很便宜并且不需要成本计算。 为标量运算添加的小 CPU 成本就足够了。 有些情况下实际成本很高，但仍然没有得到充分代表。
+- **解释型执行：** UDF 以一批语句的形式进行计算，并按逐个语句执行。 编译每个语句本身，并缓存编译的计划。 尽管此缓存策略能够通过避免重新编译节省一些时间，但每个语句仍需单独执行。 不执行跨语句优化。
 - **串行执行：** SQL Server 不允许在调用 UDF 的查询中进行查询内并行操作。 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>标量 UDF 自动内联
@@ -141,16 +141,17 @@ SQL Server 2017 （兼容级别 140 及更早版本）中此查询的执行计�
 如果满足所有以下条件，则标量 T-SQL UDF 可以内联：
 
 - UDF 使用以下构造编写：
-    - `DECLARE`，`SET`：变量声明和分配。
-    - `SELECT`：使用单个/多个变量赋值 SQL 查询<sup>1</sup>。
-    - `IF`/`ELSE`：分支与任意级别的嵌套。
-    - `RETURN`：单个或多个返回语句。
-    - `UDF`：嵌套/递归函数调用<sup>2</sup>。
-    - 其他：关系操作，例如 `EXISTS`，`ISNULL`。
+    - `DECLARE`、`SET`：变量声明和赋值。
+    - `SELECT`设置用户帐户 ：具有单个/多个变量赋值的 SQL 查询<sup>1</sup>。
+    - `IF`/`ELSE`：具有任意级别嵌套的分支。
+    - `RETURN`设置用户帐户 ：单个或多个返回语句。
+    - `UDF`设置用户帐户 ：嵌套/递归函数调用<sup>2</sup>。
+    - 其他：关系操作，例如 `EXISTS`、`ISNULL`。
 - UDF 不会调用任何与时间相关的内部函数（例如 `GETDATE()`）或具有副作用的函数<sup>3</sup>（例如 `NEWSEQUENTIALID()`）。
 - UDF使用 `EXECUTE AS CALLER` 子句（如果未指定 `EXECUTE AS` 子句，则为默认行为）。
 - UDF 不引用表变量或表值参数。
 - 调用标量 UDF 的查询不会在其 `GROUP BY` 子句中引用标量 UDF 调用。
+- 使用 `DISTINCT` 子句在其 SELECT 列表中调用标量 UDF 的查询不会在其 `ORDER BY` 子句中引用标量 UDF 调用。
 - UDF 不是本机编译的（支持互操作）。
 - UDF 不用于计算列或检查约束定义。
 - UDF 不引用用户定义类型。

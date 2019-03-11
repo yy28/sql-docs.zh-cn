@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334514"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对系统版本的临时表的系统版本控制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52409155"
 -   作为常规表的历史记录表  
   
 ### <a name="important-remarks"></a>重要提示  
-  
--   设置  **SYSTEM_VERSIONING = OFF** 或删除 **SYSTEM_TIME** 时间段时不会出现数据丢失的情况。  
+-   历史记录表会**停止**捕获 **SYSTEM_VERSIONING = OFF** 的持续时间更新。
+-   设置 **SYSTEM_VERSIONING = OFF** 或删除 **SYSTEM_TIME** 时间段时，**时态表**上不会出现数据丢失的情况。
   
 -   设置 **SYSTEM_VERSIONING = OFF** 且不删除 **SYSTEM_TIME** 时间段时，系统将继续更新每个插入和更新操作的时间段列。 在当前表中执行的删除操作是永久性的。  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   将 **SWITCH IN** 分区到历史记录表  
   
- 此示例暂时停止了 SYSTEM_VERSIONING 以便可以执行特定的维护操作。 如果作为表维护的先决条件暂时停止了版本控制，那么强烈建议在事务内执行此操作以保持数据一致性。  
+ 此示例暂时停止了 SYSTEM_VERSIONING 以便可以执行特定的维护操作。 如果作为表维护的先决条件暂时停止了版本控制，那么强烈建议在事务内执行此操作以保持数据一致性。
+ 
+> [!NOTE]  
+>  重新打开系统版本控制时，不要忘记指定 HISTORY_TABLE 参数。  如果不这样做，将导致创建新的历史记录表并将其与当前表关联。  原始历史记录表仍将作为普通表存在，但不会与当前表关联。  
   
 ```  
 BEGIN TRAN   

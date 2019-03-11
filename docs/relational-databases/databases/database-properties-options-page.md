@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659366"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007590"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659366"
  通过从列表中进行选择来指定数据库的排序规则。 有关详细信息，请参阅 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)。  
   
  **恢复模式**  
- 指定下列模式之一来恢复数据库：“完整”、“大容量日志”或“简单”。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模式之一来恢复数据库：**完整**、**大容量日志**或**简单**。 有关恢复模式的详细信息，请参阅[恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
  **兼容级别**  
  指定数据库支持的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关可能的值，请参阅 [ALTER DATABASE (Transact-SQL) 兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。 升级 SQL Server 数据库时，如果可能，保留该数据库的兼容性级别，或更改为新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的最低级别。 
@@ -44,7 +44,7 @@ ms.locfileid: "51659366"
 ## <a name="automatic"></a>自动  
  **自动关闭**  
  指定在上一个用户退出后，数据库是否完全关闭并释放资源。 可能的值包括 **True** 和 **False**。 如果设置为 **True**，则在上一个用户注销之后，数据库会完全关闭并释放其资源。  
-  
+
  自动创建增量统计信息  
  指定在创建每个分区的统计信息时是否使用增量选项。 有关增量统计信息的信息，请参阅 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659366"
  如果设置为 **False**，则启动自动更新过期统计信息的查询将等待，直到更新的统计信息可在查询优化计划中使用。  
   
  将该选项设置为 **True** 不会产生任何影响，除非 **“自动更新统计信息”** 也设置为 **True**。  
+
+## <a name="azure"></a>Azure
+如果连接到 Azure SQL 数据库，此部分具有控制服务级别目标 (SLO) 的设置。 新数据库的默认 SLO 为标准 S2。
+
+  **当前服务级别目标** 要使用的特定 SLO。 有效值受所选版本约束。 如果列表中没有所需的 SLO 值，则可键入值。
+
+  **版本** 要使用的 Azure SQL 数据库版本，例如“基本”或“高级”。 如果列表中没有所需的版本值，则可键入值，该值必须与 Azure REST API 中使用的值匹配。
+  
+  **最大大小** 数据库的最大大小。 如果列表中没有所需的大小值，则可键入值。 保留空白则会使用给定版本和 SLO 的默认大小。
   
 ## <a name="containment"></a>Containment  
  在包含数据库中，可以在数据库级别配置通常在服务器级别配置的某些设置。  
@@ -123,7 +132,7 @@ ms.locfileid: "51659366"
  为与所选数据库相关联的 FILESTREAM 数据指定目录名称。  
   
  **FILESTREAM 非事务访问**  
- 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一： **OFF**、 **READ_ONLY**或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
+ 为从文件系统到 FileTables 中存储的 FILESTREAM 数据的非事务性访问指定以下选项之一：**OFF**、**READ_ONLY** 或 **FULL**。 如果在服务器上未启用 FILESTREAM，则该值将设置为 OFF 并且被禁用。 有关详细信息，请参阅 [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>杂项  
 允许快照隔离  

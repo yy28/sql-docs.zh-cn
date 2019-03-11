@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509054"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227189"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -266,7 +267,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 适用范围：SQL Server 和 Azure SQL 数据库
 
-注意：提供此语法的目的只是为了实现向后兼容。 未来的版本中会将其删除。 请避免在新的开发工作中使用该语法，并考虑修改当前使用该语法的应用程序。
+注意：提供此语法的目的只是为了实现后向兼容性。 未来的版本中会将其删除。 请避免在新的开发工作中使用该语法，并考虑修改当前使用该语法的应用程序。
 
 指定将所有组包含在结果中，无论它们是否满足 WHERE 子句中的搜索条件。 不满足搜索条件的组的聚合为 NULL。 
 
@@ -279,7 +280,7 @@ GROUP BY ALL：
 
 DISTRIBUTED_AGG 查询提示强制大规模并行处理 (MPP) 系统以在执行聚合之前重新分发特定列上的表。 GROUP BY 子句中只有一列可以拥有 DISTRIBUTED_AGG 查询提示。 查询完成后，重新分发的表被删除。 不会更改原始表格。  
 
-注意：提供 DISTRIBUTED_AGG 查询提示是为了与早期的并行数据仓库版本向后兼容，对大多数查询而言，并不会提高其性能。 默认情况下，MPP 已根据需要重新分发数据以提高聚合的性能。 
+注意：提供 DISTRIBUTED_AGG 查询提示的目的是为了实现与早期并行数据仓库版本后向兼容性，对大多数查询而言，并不会提高其性能。 默认情况下，MPP 已根据需要重新分发数据以提高聚合的性能。 
   
 ## <a name="general-remarks"></a>一般备注
 
@@ -344,7 +345,7 @@ NULL 值：
 |功能|SQL Server Integration Services|SQL Server 兼容级别 100 或更高|SQL Server 2008 或兼容级别为 90 的更高版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 聚合|WITH CUBE 或 WITH ROLLUP 不支持。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP 支持。|与兼容级别 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回下面的错误消息：“关键字 'cube'&#124;'rollup' 附近有语法错误”。<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名称的用户定义函数|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 子句中不允许使用用户定义函数 dbo.cube (arg1,...argN) 或 dbo.rollup(arg1,...argN)。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 返回以下错误消息：“Incorrect syntax near the keyword 'cube'&#124;'rollup'.”（关键字 'cube'|'rollup' 附近有语法错误。）<br /><br /> 为了避免出现此问题，请将 `dbo.cube` 替换为 `[dbo].[cube]` 或将 `dbo.rollup` 替换为 `[dbo].[rollup]`。<br /><br /> 允许使用下面的示例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 子句中允许使用用户定义函数 dbo.cube(arg1,...argN) 或 dbo.rollup(arg1,...argN)<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支持|是否支持|是否支持|  
 |CUBE|不支持|是否支持|不支持|  
 |ROLLUP|不支持|是否支持|不支持|  
