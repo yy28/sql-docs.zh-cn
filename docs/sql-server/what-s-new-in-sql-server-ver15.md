@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 02/28/2019
-ms.prod: sql-server-2018
+ms.date: 03/01/2019
+ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334814"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579767"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -189,7 +189,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>静态数据掩码与动态数据掩码
 
-数据掩码是在数据库上应用掩码以隐藏敏感信息并将其替换为新数据或经过清理的数据的过程。 Microsoft 提供两个掩码选项，静态数据掩码和动态数据掩码。 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中已引入动态数据掩码。 下表将比较这两种解决方案：
+数据掩码是在数据库上应用掩码以隐藏敏感信息并将其替换为新数据或经过清理的数据的过程。 Microsoft 提供两个掩码选项，静态数据掩码和动态数据掩码。 [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] 中已引入动态数据掩码。 下表将比较这两种解决方案：
 
 |静态数据掩码 |动态数据屏蔽|
 |:----|:----|
@@ -463,7 +463,7 @@ FROM sys.dm_exec_requests AS d
   - 支持使用 SQL Server 大数据群集方案。 (CTP 2.0)
   
   > [!TIP]
-  > 有关 Azure Data Studio 的最新改进，请参阅 [Azure Data Studio 发行说明](../azure-data-studio/release-notes.md)。
+  > 有关 Azure Data Studio 的最新改进，请参阅 [Azure Data Studio 发行说明](../azure-data-studio/release-notes-azure-data-studio.md)。
 
 - [**SQL Server Management Studio (SSMS) 18.0（预览版）**](../ssms/sql-server-management-studio-ssms.md)：支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
