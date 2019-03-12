@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512542"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579257"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C 信任服务器证书。  
 
-- -d *database_name*问题`USE ` *database_name*语句在启动时`sqlcmd`。  
+- -d *database_name*问题`USE` *database_name*语句在启动时`sqlcmd`。  
 
 - -D 使值传递给将解释为数据源名称 (DSN) 的 `sqlcmd` -S 选项。 有关详细信息，请参阅本主题末尾的“`sqlcmd` 和 `bcp` 中的 DSN 支持”。  
   
@@ -64,7 +64,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -k 删除或替换控制字符。  
   
-- **-K**_应用程序\_意向_  
+- -Kapplication\_intent  
 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 -K，`sqlcmd` 将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[ODBC 驱动程序在 Linux 和 macOS 的高可用性和灾难恢复](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -m error_level 控制将哪些错误消息发送到 stdout。  
   
-- **-M**_单子\_故障转移_  
+- -Mmultisubnet\_failover  
 在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果 -M 未指定，-M 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -210,13 +210,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 -   ApplicationIntent=ReadOnly  
 
--   **数据库 =**_数据库\_名称_  
+-   Database=database\_name  
   
 -   **驱动程序适用于 SQL Server = ODBC Driver 11**或**驱动程序适用于 SQL Server = ODBC Driver 13**
   
 -   MultiSubnetFailover=Yes  
   
--   **Server =**_服务器\_名称\_或\_IP\_地址_  
+-   Server=server\_name\_or\_IP\_address  
   
 -   **Trusted_Connection=yes**|**no**  
   
@@ -224,7 +224,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 如果在 DSN 和 `sqlcmd` 或 `bcp` 命令行中指定了相同的选项，命令行选项将替代 DSN 中使用的值。 例如，如果 DSN 具有 DATABASE 项且 `sqlcmd` 命令行包含 -d，将使用传递给 -d 的值。 如果在 DSN 中指定了 Trusted_Connection=yes，便会使用 Kerberos 身份验证，并忽略用户名 (-U) 和密码 (-P)（若有）。
 
-可以通过定义以下别名对调用 `isql` 的现有脚本进行修改来使用 `sqlcmd`：`alias isql="sqlcmd -D"`。  
+通过定义别名 `alias isql="sqlcmd -D"`，可将调用 `isql` 的现有脚本修改为使用 `sqlcmd`。  
 
 ## <a name="see-also"></a>另请参阅  
 [使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

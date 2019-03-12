@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679785"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578137"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   通过本主题，可以了解有关创建、修改和删除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共享计划的信息。  若要在本机模式下管理共享计划，请使用 Web 门户中的“计划”页或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的“共享计划”文件夹。 对于 SharePoint 模式，请使用针对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的管理页。  
@@ -138,7 +138,7 @@ ms.locfileid: "47679785"
   
 ## <a name="see-also"></a>另请参阅  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [暂停和恢复共享的计划](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [暂停和恢复共享计划](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [缓存报表（报表管理器）](../../reporting-services/report-server/cache-a-report-report-manager.md)   
  [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f38b700f998babd9af54c3bf8a27409a4d2b6ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623935"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579057"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 驱动程序的 JDBC 4.3 符合性
 
@@ -31,5 +31,5 @@ ms.locfileid: "47623935"
 
 |新的 API|描述|值得注意的实现|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|对请求的工作，独立的单元开始的此连接的驱动程序的提示。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)。|将保存的值是通过公共 API 方法可修改的连接字段： `databaseAutoCommitMode`， `transactionIsolationLevel`， `networkTimeout`， `holdability`， `sendTimeAsDatetime`， `statementPoolingCacheSize`， `disableStatementPooling`， `serverPreparedStatementDiscardThreshold`， `enablePrepareOnFirstPreparedStatementCall `，`catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.beginRequest()|对请求的工作，独立的单元开始的此连接的驱动程序的提示。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)。|将保存的值是通过公共 API 方法可修改的连接字段： `databaseAutoCommitMode`， `transactionIsolationLevel`， `networkTimeout`， `holdability`， `sendTimeAsDatetime`， `statementPoolingCacheSize`， `disableStatementPooling`， `serverPreparedStatementDiscardThreshold`， `enablePrepareOnFirstPreparedStatementCall`，`catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|对已完成请求，独立的单元的工作，该驱动程序的提示。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)。|关闭期间的工作单元创建的语句，并回滚任何打开的事务。 该方法还将恢复对上面列出的连接字段的更改。|
