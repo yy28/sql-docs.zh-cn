@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616678"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578287"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft SQL 数据平台，要在移动设备和桌面系统对 web 服务器、 企业服务器和云之间创建以数据为中心的解决方案。  
@@ -28,7 +28,7 @@ ms.locfileid: "52616678"
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)： 在开发期间使用 LocalDB 可以编写和测试而无需管理 SQL Server 的完整服务器实例的 TRANSACT-SQL 代码。
 
 ## <a name="sql-data-tools"></a>SQL 数据工具
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) ： 生成关系数据库、 Azure SQL 数据库、 Integration Services 包、 Analysis Services 数据模型和 Reporting Services 使用 SSDT 报告。
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ： 生成关系数据库、 Azure SQL 数据库、 Integration Services 包、 Analysis Services 数据模型和 Reporting Services 使用 SSDT 报告。
 * [SQL Server 管理工具](../ssms/download-sql-server-management-studio-ssms.md)： 使用 SSMS 配置、 监视和管理 SQL Server 的实例。
 
 ## <a name="sql-data-access"></a>SQL 数据访问

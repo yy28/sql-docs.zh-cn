@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 创建适用于 SQL Server、Azure SQL 数据库、Azure SQL 数据仓库和 Analytics Platform System 的数据库语法
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828217"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683687"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1258,7 +1258,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 - 服务器级别主体登录名
 - 本地 Azure SQL Server 的 Azure AD 管理员
-- 登录名为 `dbmanager` 数据库角色的成员
+- 登录名为 `dbcreator` 数据库角色的成员
 
 ## <a name="examples"></a>示例
 

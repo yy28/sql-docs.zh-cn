@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515484"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579707"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -198,9 +198,9 @@ FROM dbo.ufn_FindReports(1);
 可以在 `FROM` 子句中加入 MSTVF，但是会降低性能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法对可以加入 MSTVF 的某些语句使用所有优化技术，导致生成的查询计划不佳。 若要获得最佳的性能，尽可能在基表之间使用联接而不是函数。  
 
 > [!IMPORTANT]
-> MSTVF 具有固定的基数猜测，从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始为“100”，而早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本为“1”。    
+> 自 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 起，MSTVF 的固定基数猜测为“100”，而早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本为“1”。    
 > 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，如果要优化使用 MSTVF 的执行计划，可以利用交错执行，这样会使用实际基数而不是上述启发。     
-> 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+> 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。
 
 > [!NOTE]  
 > 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 `INSERT` 或 `UPDATE` 语句可以成功执行。

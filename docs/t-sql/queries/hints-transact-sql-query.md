@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334794"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556156"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -269,13 +269,13 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为了进行关联而对筛选的 AND 谓词进行估值时使用最小选择性来生成计划。 此提示名称与用于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更低版本的基数估计模型的[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 是并行的；与用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本的基数估计模型的[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 的效果相似。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
+   禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)。
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。   
+   禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   禁用表变量延迟编译。 有关详细信息，请参阅[表变量延迟编译](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)。
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   对多语句表值函数禁用交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+   对多语句表值函数禁用交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    指示查询处理器在生成查询计划时不对优化的嵌套循环联接使用排序操作（批处理排序）。 此提示名称与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 是并行的。
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,7 +290,7 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    指示查询优化器在使用一个或多个参数编译查询时，使用平均数据分布。 此指令让查询计划独立于编译查询时首次使用的参数值。 此提示名称与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[数据库范围内配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 PARAMETER_SNIFFING=OFF 是并行的。
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  禁用行模式内存授予反馈。 有关详细信息，请参阅[模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)。
+  禁用行模式内存授予反馈。 有关详细信息，请参阅[模式内存授予反馈](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)。
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   禁用标量 UDF 内联。 有关详细信息，请参阅[标量 UDF 内联](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
 * 'DISALLOW_BATCH_MODE'    

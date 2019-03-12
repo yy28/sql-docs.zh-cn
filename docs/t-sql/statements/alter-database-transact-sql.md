@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e13fd0eacc1bb9584b59ac309724516e83e9698
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828157"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683697"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -728,49 +728,41 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL 数据库语法 ALTER DATABASE { database_name | CURRENT } {     <file_and_filegroup_options>   | SET <option_spec> [ ,...n ]   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } } [;]
-
-<file_and_filegroup_options>::=   <add_or_modify_files>::=   <filespec>::=   <add_or_modify_filegroups>::=   <filegroup_updatability_option>::=
-
-<option_spec> ::= {     <auto_option>   | <change_tracking_option>   | <cursor_option>   | <db_encryption_option>   | <db_update_option>   | <db_user_access_option>   | <delayed_durability_option>   | <parameterization_option>   | <query_store_options>   | <snapshot_option>   | <sql_option>   | <target_recovery_time_option>   | <temporal_history_retention> }
-
-```
-
-## Arguments
+## <a name="arguments"></a>参数
 
 *database_name*
 
-Is the name of the database to be modified.
+要修改的数据库的名称。
 
 CURRENT
 
-Designates that the current database in use should be altered.
+指定应更改当前使用的数据库。
 
-## Remarks
+## <a name="remarks"></a>Remarks
 
-To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+若要删除数据库，请使用 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)。
+若要减小数据库的大小，请使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。
 
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
+在下列情况下，也会刷新过程缓存：针对具有默认选项的数据库运行多个查询。 然后，删除数据库。
 
-## Viewing Database Information
+## <a name="viewing-database-information"></a>查看数据库信息
 
-You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。
 
-## Permissions
+## <a name="permissions"></a>Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+只有服务器级主体登录名（由设置过程创建）或 `dbcreator` 数据库角色的成员可以更改数据库。
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> 数据库的所有者不能更改数据库，除非他们是 `dbcreator` 角色的成员。
 
-## Examples
+## <a name="examples"></a>示例
 
-The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+以下示例显示如何设置自动优化以及如何在托管实例中添加文件。
 
 ```sql
 ALTER DATABASE WideWorldImporters

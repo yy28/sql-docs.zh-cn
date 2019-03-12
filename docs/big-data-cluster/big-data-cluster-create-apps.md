@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017823"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756632"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序
 
 本文介绍如何部署和管理 R 和 Python 脚本为 SQL Server 2019 大数据群集 （预览版） 内的应用程序。
- 
-## <a name="whats-new-and-improved"></a>新增功能和改进 
+
+## <a name="whats-new-and-improved"></a>新增功能和改进
 
 - 用于管理群集和应用程序的单个命令行实用工具。
 - 简化应用程序部署，同时通过规范文件提供精细的控制。
@@ -80,13 +80,12 @@ mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
 
 如果使用 Kubeadm 或 Minikube 运行以下命令以获取到群集中的登录名的 IP 地址
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>创建应用
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 以下命令显示了此命令可能如下所示的示例：
 
-这假定你具有名为的文件`spec.yaml`内`addpy`文件夹。 `addpy`文件夹包含`add.py`并`spec.yaml``spec.yaml`是包含规范文件`add.py`应用。
+这假定你具有名为的文件`spec.yaml`内`addpy`文件夹。
+`addpy`文件夹包含`add.py`并`spec.yaml``spec.yaml`是包含规范文件`add.py`应用。
 
 
-`add.py` 创建以下 python 应用程序： 
+`add.py` 创建以下 python 应用程序：
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ result=add(x,y)
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ mssqlctl app create --spec ./addpy
 mssqlctl app list
 ```
 
-如果部署未完成您应看到`state`显示`WaitingforCreate`如下面的示例： 
+如果部署未完成您应看到`state`显示`WaitingforCreate`如下面的示例：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ mssqlctl app list
 
 部署成功后，你应看到`state`更改为`Ready`状态：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 应看到类似于下面的示例输出：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 如果成功运行，您应看到在输出与创建该应用程序时指定。 下面是一个示例。
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 ## <a name="create-an-app-skeleton"></a>创建应用框架
 
-Init 命令提供了相关项目所需部署应用程序不一定使用基架。 下面的示例创建你好，你可以通过运行以下命令来执行此操作。
+Init 命令提供了部署应用程序需要使用相关的项目基架。 下面的示例创建你好，你可以通过运行以下命令来执行此操作。
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-这将创建一个名为你好文件夹。  你可以更改为该目录并检查生成的文件的文件夹中。 spec.yaml 定义应用程序中，如名称、 版本和源的代码。 您可以编辑规范来更改名称、 版本、 输入和输出。
+这将创建一个名为你好文件夹。  你可以`cd`到目录并检查生成的文件的文件夹中。 spec.yaml 定义应用程序中，如名称、 版本和源的代码。 您可以编辑规范来更改名称、 版本、 输入和输出。
 
 下面是您将看到文件夹中的 init 命令的示例输出
 
@@ -255,7 +255,7 @@ spec.yaml
 
 描述命令提供有关应用程序包括在群集中的终结点的详细的信息。 这通常用于由应用开发人员生成的应用程序使用 swagger 客户端和使用 web 服务与应用交互以 RESTful 方式。
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ spec.yaml
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>删除应用

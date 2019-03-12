@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029576"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556239"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
@@ -20,7 +20,7 @@ ms.locfileid: "50029576"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“Power BI 集成”页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
-##  <a name="bkmk_requirements"></a> Power BI 集成的要求
+## <a name="bkmk_requirements"></a> Power BI 集成的要求
 
 除了具有活动的 Internet 连接，以便你可以浏览到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服务以外，还需要满足以下 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]集成的要求。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50029576"
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> 集成并注册报表服务器
+## <a name="bkmk_steps2integrate"></a> 集成并注册报表服务器
 
 完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的以下步骤。 有关详细信息，请参阅 [Reporting Services 配置管理器](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50029576"
 
 5. 选择“结果”窗口中的“复制”按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
 
-##  <a name="bkmk_unregister"></a> 注销 Power BI
+## <a name="bkmk_unregister"></a> 注销 Power BI
 
 **注销：** 从 Azure Active Directory 注销报表服务器，会导致下面的结果：
 
@@ -145,12 +145,16 @@ ms.locfileid: "50029576"
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>注意事项和限制
+
+* 不支持病毒性和政府租户。
 
 ## <a name="next-steps"></a>后续步骤
 
 [我的 Power BI 集成设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Reporting Services 项固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

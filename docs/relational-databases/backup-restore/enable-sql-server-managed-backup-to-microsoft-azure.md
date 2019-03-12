@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab667a25583a8415d44cbc40f1116cac2fb254c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527080"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>对 Microsoft Azure 启用 SQL Server 托管备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,33 +50,33 @@ ms.locfileid: "54326618"
   
 4.  **生成共享访问签名 (SAS)：** 必须创建 SAS 才能访问容器。 使用某些工具、代码和 Azure PowerShell 可以完成此操作。 以下 `New-AzureStorageContainerSASToken` 命令为一年后过期的 `backupcontainer` Blob 容器创建 SAS 令牌。  
   
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-    ```  
-    对于 Azure，使用以下命令：
-       ```powershell
-    Connect-AzAccount
-    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-   ```  
+  ```powershell  
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
+  ```  
+
+对于 Azure，使用以下命令：
+  ```powershell
+  Connect-AzAccount
+  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+  ```  
   
-     此命令的输出将包含容器的 URL 和 SAS 令牌。 以下是一个示例：  
+此命令的输出将包含容器的 URL 和 SAS 令牌。 以下是一个示例：  
   
-    ```  
-    https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl  
-    ```  
+  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-     上述示例中，容器 URL 从问号处的 SAS 令牌（不包括问号）分隔开来。 例如，前面的输出会得出以下两个值。  
+上述示例中，容器 URL 从问号处的 SAS 令牌（不包括问号）分隔开来。 例如，前面的输出会得出以下两个值。  
   
-    |||  
-    |-|-|  
-    |**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-    |**SAS 令牌：**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||  
+|-|-|  
+|**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**SAS 令牌：**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||
   
-     将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅[共享访问签名，第一部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+将容器 URL 和 SAS 记录下来，以便在创建 SQL 凭据时使用。 有关 SAS 的详细信息，请参阅[共享访问签名，第一部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>启用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "54326618"
   
 8.  **监视运行状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -161,7 +161,7 @@ ms.locfileid: "54326618"
   
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
@@ -169,7 +169,7 @@ ms.locfileid: "54326618"
   
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -179,12 +179,9 @@ ms.locfileid: "54326618"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
-    ```  
+    ```
   
  本节中描述的步骤是专门用于在数据库上首次配置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 你可以使用相同的系统存储过程来修改现有配置，并提供新值。  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  

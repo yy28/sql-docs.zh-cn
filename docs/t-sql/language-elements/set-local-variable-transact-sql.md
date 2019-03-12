@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425862"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572820"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ field_name
 udt_name  
 公共语言运行时 (CLR) 用户定义类型的名称。  
   
-{ . | :: }  
+`{ . | :: }`  
 指定 CLR 用户定义类型的方法。 对于实例（非静态）方法，请使用句点 (**.**)。 对于静态方法，请使用两个冒号 (::)。 若要调用 CLR 用户定义类型的方法、属性或字段，必须对类型具有 EXECUTE 权限。  
   
 method_name ( argument [ ,... n ] )  
@@ -91,7 +91,7 @@ method_name ( argument [ ,... n ] )
 mutator_method  
 程序集中可更改对象状态的方法。 SQLMethodAttribute.IsMutator 会应用于此方法。  
   
-{ += | -= | \*= | /= | %= | &= | ^= | |= }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 复合赋值运算符：  
   
  += 相加并赋值  
@@ -166,7 +166,7 @@ FOR select_statement
 READ ONLY  
 禁止通过该游标进行更新。 在 UPDATE 或 DELETE 语句的 WHERE CURRENT OF 子句中不能引用游标。 该选项优先于要更新的游标的默认功能。 该关键字与早期的 READ_ONLY 关键字的不同之处是 READ 和 ONLY 之间是一个空格，而不是下划线。  
   
-UPDATE [OF column_name[ ,... n ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 定义游标中可更新的列。 如果提供了 OF column_name [,...n]，则只允许修改列出的列。 如果没有提供列表，则可更新所有列，除非已将游标定义为 READ_ONLY。  
   
 ## <a name="remarks"></a>Remarks  

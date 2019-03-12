@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720315"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736770"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` 将按从左到右的顺序返回一个或多个字节。 每个字节的最右侧位是最低有效位。 最左侧字节的最右侧位表示表中的第一表列；向左的下一位表示第二列，依此类推。 如果创建了触发器的表中包含八列以上，`COLUMNS_UPDATED` 则将返回多个字节，最低有效字节位于最左侧。 在 INSERT 操作中，`COLUMNS_UPDATED` 将为所有列返回 TRUE，因为这些列已插入了显式值或隐式 (NULL) 值。
   
-若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法。 若要测试是否只更新了列 C2，请指定 & 2。 有关实际示例，请参阅[示例 A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns)。
+若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法。 若要测试是否只更新了列 C2，请指定 & 2。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
   
 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 `COLUMNS_UPDATED`。
   

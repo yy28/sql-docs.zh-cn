@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246736"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578327"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -77,7 +77,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 ### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 更新用于日志记录的连接字符串。
 使用下列参数值调用存储过程 `[catalog].[update_logdb_info]`：
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 

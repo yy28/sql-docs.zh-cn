@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7752dc7d83424be107190c01abfd99a787e5fba
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7561c69a9a0e0186f9564441839816247797998b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803142"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578227"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ string
 返回一个字符串参数类型的字符表达式，其中已从两侧删除空格字符 `char(32)` 或其他指定字符。 如果输入字符串是 `NULL`，则返回 `NULL`。
 
 ## <a name="remarks"></a>Remarks   
-默认情况下，`TRIM` 函数会删除 `char(32)` 两侧的空格字符。 此行为等同于 `LTRIM(RTRIM(@string))`。 具有指定字符的 `TRIM ` 函数的行为与 `REPLACE` 函数（其中开头或末尾处的字符替换为空字符串）的行为相同。
+默认情况下，`TRIM` 函数会删除 `char(32)` 两侧的空格字符。 此行为等同于 `LTRIM(RTRIM(@string))`。 具有指定字符的 `TRIM` 函数的行为与 `REPLACE` 函数（其中开头或末尾处的字符替换为空字符串）的行为相同。
 
 
 ## <a name="examples"></a>示例

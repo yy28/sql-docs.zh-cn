@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9f218c3ff39e16ec656f9bbca24400920d99b76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3ffde66939be441877add9b5a3ee4c843b031bc3
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377009"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556249"
 ---
 # <a name="joins-sql-server"></a>联接 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,7 +236,7 @@ NULL        three  NULL        NULL
 [比较运算符 (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [数据类型转换（数据库引擎）](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [子查询](../../relational-databases/performance/subqueries.md)      
-[自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)    
+[自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
 
 
   

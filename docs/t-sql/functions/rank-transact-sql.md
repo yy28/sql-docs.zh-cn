@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe9d543b9772bfef11fa31cfce0ce35c58b68b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: aa7bd2ea2812df56e1f4b2f642c3abca3102a8d9
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802841"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756752"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ROW_NUMBER 和 RANK 类似。 ROW_NUMBER 按顺序对所有行进行编号（例
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -66,7 +66,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 对分区中的行进行排名  
  以下示例按照数量对指定清单位置的清单中的产品进行了排名。 结果集按 `LocationID` 分区并在逻辑上按 `Quantity` 排序。 注意，产品 494 和 495 具有相同的数量。 因为它们是关联的，所以两者均排名第一。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -82,7 +82,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -102,7 +102,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 对结果集中的所有行排名  
  下面的示例返回按薪金排名的前十名员工。 因为未指定 PARTITION BY 子句，所以，RANK 函数应用于结果集中的所有行。  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -115,7 +115,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -135,7 +135,7 @@ BusinessEntityID Rate                  RankBySalary
 ### <a name="c-ranking-rows-within-a-partition"></a>C:对分区中的行进行排名  
  下面的示例根据销售代表的销售总额将每个销售区域中的销售代表进行排名。 行集按 `SalesTerritoryGroup` 分区，按 `SalesAmountQuota` 排序。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -149,7 +149,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
+```sql
 LastName          TotalSales     SalesTerritoryGroup  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1

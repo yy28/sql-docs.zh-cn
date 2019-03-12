@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305355"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756712"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -103,6 +103,7 @@ ms.locfileid: "57305355"
 |参数  |Description |
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。<br/>有关详细信息，请参阅[创建的 SQL Server 清单](#create-inventory)。 |
+|**csvPath** | 在 CSV 清单文件的路径。  使用的时，才**getServerListFrom**设置为**CSV**。 |
 |**serverName** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
 |**databaseName** | 托管库存表的数据库。 |
 |**AssessmentName** | DMA 评估的名称。 |

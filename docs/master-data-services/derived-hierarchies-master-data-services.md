@@ -15,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767809"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736786"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生层次结构 (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "52767809"
  这种类型的层次结构防止将成员移到无效的级别。 例如，可以将 Road-650 自行车从子类别“公路自行车”移到另一个子类别“山地车”。 不能直接将 Road-650 移到某个类别下，如 1 {自行车}。 每次在层次结构树中移动成员时，将更改该成员基于域的属性值以反映移动。  
   
 ## <a name="notes"></a>说明  
- 派生层次结构树中的所有成员都按代码排序。 不能更改排序顺序。  
+ 派生层次结构树中的所有成员都按 ID 都排序。 不能更改排序顺序。  
   
  如果成员基于域的属性为空且该属性用于派生层次结构，则该成员不会显示在层次结构中。 创建业务规则来要求填充属性。 有关详细信息，请参阅[要求属性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   

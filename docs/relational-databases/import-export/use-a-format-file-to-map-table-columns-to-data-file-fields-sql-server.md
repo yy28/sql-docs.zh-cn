@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256372"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579097"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式化文件将表列映射到数据文件字段 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 
 ```
 修改的格式化文件现在可反映：
-* `myRemap.bcp` 中的第一个数据字段映射到第一列， ` myRemap.. PersonID`
+* `myRemap.bcp` 中的第一个数据字段映射到第一列， `myRemap.. PersonID`
 * `myRemap.bcp` 中的第二个数据字段映射到第三列， `myRemap.. LastName`
 * `myRemap.bcp` 中的第三个数据字段映射到第二列， `myRemap.. FirstName`
-* `myRemap.bcp` 中的第四个数据字段映射到第四列， ` myRemap.. Gender`
+* `myRemap.bcp` 中的第四个数据字段映射到第四列， `myRemap.. Gender`
 
 ### 创建 XML 格式化文件 <a name="xml_format_file"></a>  
 有关详细信息，请查看 [XML 格式化文件 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下面的命令使用 [bcp 实用工具](../../tools/bcp-utility.md) 基于 `myRemap.xml`的架构创建 xml 格式化文件 `myRemap`。  此外，限定符 `c` 用于指定字符数据， `t,` 用于将逗号指定为字段终止符，而 `T` 用于指定使用集成安全性的信任连接。  `x` 限定符必须用于生成基于 XML 的格式化文件。  在命令提示符处输入以下命令：
