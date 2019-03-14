@@ -18,7 +18,7 @@ ms.locfileid: "53432300"
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上使用 R 和 Python 安装 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-您可以在Azure中的SQL Server虚拟机上安装R和Python与机器学习服务的集成，从而消除安装和配置任务。一旦虚拟机部署好，这些特性就可以使用了。
+可以在 Azure 中的 SQL Server 虚拟机上安装 R 和 Python 与机器学习服务的集成，这样就不需执行安装和配置任务。一旦虚拟机部署好，这些功能就可以使用了。
  
 有关分步说明，请参阅[如何预配 Windows SQL Server 虚拟机在 Azure 门户中](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)。
 
