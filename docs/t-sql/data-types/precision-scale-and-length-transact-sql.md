@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401789"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>精度、小数位数和长度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56020418"
 -   两个表达式都是 decimal 类型。  
 -   一个表达式是 decimal 类型，而另一个是比 decimal 优先级低的数据类型。  
   
-操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，与对此表达式数据类型定义的一致。
+操作数表达式由表达式 e1（精度为 p1，小数位数为 s1）和表达式 e2（精度为 p2，小数位数为 s2）来表示。 非 decimal 类型的任何表达式的精度和小数位数，是对此表达式数据类型定义的精度和小数位数。 函数 max(a,b) 的涵义如下：取 "a" 和 "b" 中较大的值。 同样，min(a,b) 表示取 "a" 和 "b" 中较小的值。
   
 |运算|结果精度|结果小数位数 *|  
 |---|---|---|

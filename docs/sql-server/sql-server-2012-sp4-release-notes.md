@@ -11,19 +11,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017058"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579637"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 本主题包含有关 SQL Server 2012 的四个服务包的聚合发行说明。 每个服务包都是之前服务包的累积。
 
 服务包仅在线提供，安装介质中不包含，可下载为：
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -177,7 +177,7 @@ ms.locfileid: "56017058"
   
 **解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (spPowerPivot.msi)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
   
-#### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>在执行计划的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
+#### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>在执行预定的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
 **问题**：在 PowerPivot for SharePoint 加载项中，如果对带有 Power View 的工作簿使用“计划的数据刷新”，则将删除所有 Power View 工作表。  
   
 **解决方法**：要将“计划的数据刷新”用于 Power View 工作簿，请创建仅用作数据模型的 PowerPivot 工作簿。 使用您的 Excel 工作表和 Power View 工作表创建单独的工作簿，将它链接到包含数据模型的 PowerPivot 工作簿。 应只对包含数据模型的 PowerPivot 工作簿安排执行数据刷新。  
@@ -246,7 +246,7 @@ MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](https://msdn.microsoft
 - [安装 SQL Server 2012 服务更新](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [如何识别 SQL Server 的版本](https://support.microsoft.com/help/321185)
 - [安装 SQL Server 2012 服务更新](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [如何确定 SQL Server 的版本和版本类别](https://support.microsoft.com/help/321185) 
+- [如何识别 SQL Server 的版本](https://support.microsoft.com/help/321185) 
 - [如何确定 SQL Server 的版本和版本类别](https://support.microsoft.com/kb/321185)  
 - [SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 

@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327778"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556159"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -150,6 +150,8 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
   
 > [!IMPORTANT]  
 >  CREDENTIAL NAME 参数需要名称与容器路径匹配，以 https 开头并且末尾不包含正斜杠。 IDENTITY 参数需要名称 SHARED ACCESS SIGNATURE。 SECRET 参数需要共享访问签名令牌。  
+>
+>  共享访问签名密钥不应具有前导值？。
   
 ```  
 USE master  

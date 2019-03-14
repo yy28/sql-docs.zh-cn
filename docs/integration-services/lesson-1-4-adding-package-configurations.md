@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605685"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756672"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>第 1-4 课 — 添加包配置
 在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
@@ -32,6 +32,8 @@ ms.locfileid: "47605685"
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 识别出 DataTransferConfig.dtsConfig 和 LoadXMLData.dtsConfig 是 DataTransfer 和 LoadXMLData 包的依赖项，在下一课中创建部署捆绑包时它会自动包括配置文件。  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>为 DataTransfer 包创建间接配置  
+
+检查项目的当前部署模型，并根据需要将其设置为“包部署模型”。 在“项目”菜单上，单击“转换为包部署模型”
   
 1.  在解决方案资源管理器中，双击 DataTransfer.dtsx。  
   

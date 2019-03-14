@@ -1,7 +1,7 @@
 ---
 title: Windows 排序规则名称 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827987"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572840"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56827987"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 CollationDesignator 指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
 
-- 指定按字典排序时应用的排序规则。 排序规则基于字母表或语言。
-- 用于存储非 Unicode 字符数据的代码页。
+- 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
+- 用于存储 varchar数据 的代码页。
 
 以下是一些示例：
 
-- Latin1_General 或法语：都使用代码页 1252。
+- Latin1\_General 或法语：都使用代码页 1252。
 - 土耳其语：使用代码页 1254。
 
-CaseSensitivity
+CaseSensitivity  
 CI 指定不区分大小写，CS 指定区分大小写。
 
-AccentSensitivity
- AI 指定不区分重音，AS 指定区分重音。
+*AccentSensitivity*  
+AI 指定不区分重音，AS 指定区分重音。
 
-KanatypeSensitive
+KanatypeSensitive  
 Omitted 指定不区分假名类型，KS 指定区分假名类型。
 
-WidthSensitivity
+WidthSensitivity  
 Omitted 指定不区分全半角，WS 指定区分全半角。
 
-BIN 指定使用向后兼容的二进制排序顺序。
+VariationSelectorSensitivity  
+适用于：[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-BIN2 指定使用码位比较语义的二进制排序顺序。
+“省略”指定区分不区分选择器，“VSS”指定区分区分选择器。
+
+**BIN**  
+指定使用向后兼容的二进制排序顺序。
+
+**BIN2**  
+指定使用码位比较语义的二进制排序顺序。
 
 ## <a name="remarks"></a>Remarks
 
- 根据排序规则的版本，有些码位也许是未定义的。 例如比较：
+某些码位可能未定义排序权重和/或大写/小写映射，具体取决于排序规则的版本。 例如，在 `LOWER` 函数给定相同字符但在不同版本的同一排序规则中，比较该函数的输出：
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-当排序规则为 Latin1_General_CI_AS 时第一行返回一个大写字符，因为未在该排序规则中定义该码位。
+在早期版本的排序规则中，第一条语句会同时显示该字符的大写和小写形式（使用 Unicode 数据时，排序规则不会影响字符的可用性）。 但第二条语句显示，如果排序规则为 Latin1\_General\_CI\_AS，则会返回大写字符，这是因为该码位未包含排序规则中定义的小写映射。
 
 使用某些语言时，这对避免旧排序规则至关重要。 例如，这适用于 Telegu。
 
@@ -95,24 +107,24 @@ GO
 
 下面是一些 Windows 排序规则名称示例：
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  排序规则使用 Latin1 General 字典排序规则，代码页 1252。 不区分大小写且区分重音。 排序规则使用 Latin1 General 字典排序规则，并映射到代码页 1252。 如果是 Windows 排序规则，则显示排序规则的版本号：_90 或 _100。 不区分大小写 (CI)，但区分重音 (AS)。
+  排序规则使用 Latin1 General 字典排序规则，并映射到代码页 1252。 这是版本 \_100 的排序规则，不区分大小写 (CI)，但区分重音 (AS)。
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  排序规则使用爱沙尼亚文字典排序规则，代码页 1257。 区分大小写且区分重音。
+  排序规则使用 Estonian 字典对规则进行排序，并映射到代码页 1257。 这是版本 \_80 的排序规则（暗示名称中无版本号），并且区分大小写 (CS) 和区分重音 (AS)。
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  排序规则使用代码页 1252 和二进制排序规则。 忽略 Latin1 General 字典排序规则。
+  排序规则使用二进制码位对规则进行排序，并映射到代码页 932。 这是版本 \_140 的排序规则，Japanese Bushu Kakusu 字典排序规则将被忽略。
 
 ## <a name="windows-collations"></a>Windows 排序规则
 
 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例支持的 Windows 排序规则，请执行以下查询。
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 下表列出了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中支持的所有 Windows 排序规则。

@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652596"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736842"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -136,7 +136,7 @@ ms.locfileid: "55652596"
 |**9347**|禁用 Sort 运算符的批处理模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了新的批处理模式 Sort 运算符，可以提高许多分析查询的性能。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3172787)。<br /><br />**作用域**：全局、会话或查询|
 |**9349**|禁用 Top N Sort 运算符的批处理模式。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 引入了新的批处理模式 top sort 运算符，可以提高许多分析查询的性能。<br /><br />**作用域**：全局、会话或查询|
 |**9389**|为批处理模式运算符启用额外动态内存授予。 如果查询未获取所需的所有内存，则会将数据溢出到 tempdb，从而导致额外的 I/O 并可能影响查询性能。 如果启用动态内存授予跟踪标志，批处理模式运算符可能会要求提供更多内存，如果有更多内存可用，则会避免溢出到 tempdb。 有关详细信息，请参阅[内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query)中的“min memory per query 的影响”部分。<br /><br />**作用域**：全局或会话| 
-|**9398**|禁用[自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)运算符，在扫描第一个输入后可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，如 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中引入的那样。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4099126)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话和查询|
+|**9398**|禁用[自适应联接](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)运算符，在扫描第一个输入后可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，如 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中引入的那样。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4099126)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话和查询|
 |**9453**|禁用批处理模式执行。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4016902)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域：** 全局、会话和查询|
 |**9471**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用最小选择性为单表筛选器生成一个计划。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />注意：此跟踪标志不适用于 CE 版本 70。 请改用跟踪标志 4137。<br /><br />**作用域**：全局、会话或查询| 
 |**9476**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用简单包含假设而非默认的基本包含假设来生成计划。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3189675)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询| 
@@ -167,7 +167,7 @@ ms.locfileid: "55652596"
      例如，若要全局启用 2528 跟踪标志，请在使用 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) 时使用 -1 参数：`DBCC TRACEON (2528, -1)`。 重新启动服务器时，使用 DBCC TRACEON 启用全局跟踪标志的方法将失效。 若要关闭全局跟踪标志，请在使用 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) 时使用 -1 参数。  
 -   使用 **-T** 启动选项可以指定跟踪标志在启动期间设置为开。  
      **-T** 启动选项会全局启用跟踪标志。 使用启动选项无法启动会话级别的跟踪标志。 这样可确保跟踪标志在服务器重新启动后保持活动状态。 有关启动选项的详细信息，请参阅 [数据库引擎服务启动选项](../../database-engine/configure-windows/database-engine-service-startup-options.md)。
--   在查询级别，通过使用 QUERYTRACEON [查询提示](https://support.microsoft.com/kb/2801413)。
+-   在查询级别，通过使用 QUERYTRACEON [查询提示](https://support.microsoft.com/kb/2801413)。 QUERYTRACEON 选项只能用于上表中所述的查询优化器跟踪标志。
   
 使用 `DBCC TRACESTATUS` 命令确定哪些跟踪标志当前是活动的。
   

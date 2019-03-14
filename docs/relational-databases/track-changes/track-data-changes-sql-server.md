@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
+ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666406"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725458"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 有关支持变更数据捕获和更改跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]支持更改跟踪。 变更数据捕获仅在 SQL Server 和 Azure SQL 数据库托管实例中受支持。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>使用变更数据捕获或更改跟踪的好处  
  对于某些注重效能的应用程序来说，查询数据库中已更改的数据的能力是一项很重要的要求。 通常，为了确定数据更改，应用程序开发人员必须在其应用程序中使用触发器、时间戳列和其他表的组合来实现自定义跟踪方法。 创建这些应用程序通常涉及多项工作，导致架构更新，并且通常带来较高的性能开销。  
@@ -56,11 +56,11 @@ ms.locfileid: "51666406"
 |功能|变更数据捕获|更改跟踪|  
 |-------------|-------------------------|---------------------|  
 |**跟踪的更改**|||  
-|DML 更改|用户帐户控制|用户帐户控制|  
+|DML 更改|是|是|  
 |**跟踪的信息**|||  
-|历史数据|用户帐户控制|否|  
-|是否更改了列|用户帐户控制|用户帐户控制|  
-|DML 类型|用户帐户控制|用户帐户控制|  
+|历史数据|是|否|  
+|是否更改了列|是|是|  
+|DML 类型|是|是|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
@@ -88,11 +88,11 @@ ms.locfileid: "51666406"
   
 |列类型|在更改表中捕获更改|限制|  
 |--------------------|---------------------------------------|-----------------|  
-|稀疏列|用户帐户控制|不支持在使用列集时捕获更改。|  
+|稀疏列|是|不支持在使用列集时捕获更改。|  
 |计算列|否|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
-|XML|用户帐户控制|不跟踪对单个 XML 元素的更改。|  
-|timestamp|用户帐户控制|更改表中的数据类型将转换为 binary。|  
-|BLOB 数据类型|用户帐户控制|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
+|XML|是|不跟踪对单个 XML 元素的更改。|  
+|timestamp|是|更改表中的数据类型将转换为 binary。|  
+|BLOB 数据类型|是|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能  
  本节说明下列功能如何与变更数据捕获交互：  
@@ -155,7 +155,7 @@ ms.locfileid: "51666406"
   
 -   [Microsoft Sync Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文档中，“如何使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
+     提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] 的文档中，“如何：使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
   
 ## <a name="related-tasks-required"></a>相关任务（必需）  
   

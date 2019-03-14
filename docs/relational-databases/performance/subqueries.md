@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356024"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579387"
 ---
 # <a name="subqueries-sql-server"></a>子查询 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 此语句无法转换为一个联接。 这种类似但不相等的联接有不同的含义：它在某个非成品自行车的子类别中查找产品名称。      
 
 ### <a name="upsert"></a> UPDATE、DELETE 和 INSERT 语句中的子查询
-可以在 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT `数据操作 (DML) 语句中嵌套子查询。    
+可以在 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 数据操作 (DML) 语句中嵌套子查询。    
 
 以下示例使 Production.Product 表的 ListPrice 列中的值加倍。 `WHERE` 子句中的子查询将引用 Purchasing.ProductVendor 表以便将 Product 表中更新的行仅限制为 BusinessEntity 1540 对应的那些行。
 

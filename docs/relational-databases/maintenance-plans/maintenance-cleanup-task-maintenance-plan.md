@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154742"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736757"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>“清除维护”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56154742"
  要删除的文件所在的文件夹的路径和名称。  
   
  **文件扩展名**  
- 提供要删除的文件的文件扩展名。 请勿在扩展名前后添加其他任何字符（例如，不要添加 BAK 或 TRN）。 
+ 提供要删除的文件的文件扩展名。 请勿在扩展名前后添加其他任何字符（例如，使用 BAK 或 TRN）。 
   
  **包括一级子文件夹**  
  从“文件夹”下的一级子文件夹中删除具有为“文件扩展名”指定的扩展名的文件。  

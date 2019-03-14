@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419812"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578807"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
 
 Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求执行任务。 然后，Worker 通过 `ISServerExec.exe` 在本地运行包。
 
 ## <a name="configure-the-scale-out-worker-service"></a>配置 Scale Out Worker 服务
-可使用 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 文件配置 Scale Out Worker 服务。 更新配置文件之后，必须重启服务。
+可使用 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 文件配置 Scale Out Worker 服务。 更新配置文件之后，必须重启服务。
 
 |配置  |描述  |默认值|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ Scale Out Worker 运行 Scale Out Worker 服务以从 Scale Out Master 中请求
 |StoreName|Worker 证书所在位置的存储名称。|My|
 |AgentHeartbeatInterval|Scale Out Worker 检测信号的间隔时间。|00:01:00|
 |TaskHeartbeatInterval|Scale Out Worker 报告任务状态的间隔时间。|00:00:10|
-|HeartbeatErrorTollerance|上一次任务检测信号成功后，如果接收到检测信号的错误响应，任务将终止。|00:10:00|
+|HeartbeatErrorTolerance|上一次任务检测信号成功后，如果接收到检测信号的错误响应，任务将终止。|00:10:00|
 |TaskRequestMaxCPU|Scale Out Worker 请求任务的 CPU 上限。|70.0|
 |TaskRequestMinMemory|Scale Out Worker 请求任务的内存（以 MB 表示）下限。|100.0|
 |MaxTaskCount|Scale Out Worker 可保留的最大任务数。|10|
-|LeaseInternval|Scale Out Worker 可保留任务的租用间隔。|00:01:00|
+|LeaseInterval|Scale Out Worker 可保留任务的租用间隔。|00:01:00|
 |TasksRootFolder|任务日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty|
 |TaskLogLevel|Scale Out Worker 的任务日志级别。 (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126（信息、警告、错误、进度、CriticalError 和审核）|
 |TaskLogSegment|任务日志文件的时间跨度。|00:00:00|
 |TaskLogEnabled|指定是否启用任务日志。|true|
-|ExecutionLogCacheFolder|用于缓存包执行日志的文件夹。 如果值为空，则使用 ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty|
+|ExecutionLogCacheFolder|用于缓存包执行日志的文件夹。 如果值为空，则使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 文件夹路径。 [account] 是运行 Scale Out Worker 服务的帐户。 默认情况下，该帐户为 SSISScaleOutWorker140。|Empty|
 |ExecutionLogMaxBufferLogCount|在内存的一个执行日志缓冲区中，缓存的执行日志的最大数量。|10000|
 |ExecutionLogMaxInMemoryBufferCount|用于执行日志的内存中，执行日志缓冲区的最大数量。|10|
 |ExecutionLogRetryCount|执行日志记录失败时的重试次数。|3|

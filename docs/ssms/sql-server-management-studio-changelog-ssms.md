@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334834"
+ms.locfileid: "57401929"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "57334834"
   - 减小了下载大小
     - 捆绑包当前的大小不到 SSMS 17.x 的一半（大约 400 MB）。 当 IS 组件重新添加到 SSMS 时，大小最终会增长一些，但应该不会像以前那样大。
   - SSMS 基于新的 VS 2017 独立 Shell
-    - 这意味着新式 shell（我们选取了 VS 2107 15.6.4）。 新的 shell 可解锁 SSMS 和 Visual Studio 提供的所有辅助功能修补程序。
+    - 这意味着新式 shell（我们选取了 VS 2017 15.6.4）。 新的 shell 可解锁 SSMS 和 Visual Studio 提供的所有辅助功能修补程序。
   - SSMS 辅助功能改进
     - 我们进行了大量工作以解决所有工具（SSMS、DTA 和探查器）中的辅助功能问题
   - SSMS 可以安装在自定义文件夹中

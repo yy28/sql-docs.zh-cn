@@ -1,7 +1,7 @@
 ---
 title: 数据库实例文件初始化 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204916"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683597"
 ---
 # <a name="database-file-initialization"></a>数据库文件初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ ms.locfileid: "53204916"
   
 要向一个帐户授予 `Perform volume maintenance tasks` 权限：  
   
-1.  在将要创建备份文件的计算机上打开**本地安全策略**应用程序 (`secpol.msc`)。  
+1.  在将要创建数据文件的计算机上打开本地安全策略应用程序 (`secpol.msc`)。  
   
 2.  在左侧窗格中，展开“本地策略” ，然后单击“用户权限指派” 。  
   
 3.  在右侧窗格中，双击“执行卷维护任务”。  
   
-4.  单击“添加用户或组”  ，添加用于备份的任何用户帐户。  
+4.  单击“添加用户或组”并添加可运行 SQL Server 服务的帐户。  
   
 5.  单击“应用” ，然后关闭所有“本地安全策略”  对话框。  
+
+1. 重启 SQL Server 服务。
 
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可在安装期间授予服务帐户此权限。 如果使用[命令提示符安装](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，请添加 /SQLSVCINSTANTFILEINIT 参数，或选中[安装向导](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中“授予 SQL Server 数据库引擎服务执行卷维护任务权限”复选框。
@@ -71,15 +73,11 @@ ms.locfileid: "53204916"
 ## <a name="remarks"></a>Remarks
 如果授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME，则会在启动时在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中记录类似以下内容的消息： 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 如果未授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME，则不会在启动时在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中记录类似以下内容的消息： 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **适用范围：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 开始）
 

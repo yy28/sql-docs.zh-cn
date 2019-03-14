@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01459443d4fbcfeb770f24fad61adabc0bc1dc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785915"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572790"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函数返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定排序规则的属性。
+此函数返回指定排序规则请求的属性。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +49,10 @@ property
   
 |属性名称|描述|  
 |---|---|
-|**CodePage**|排序规则的非 Unicode 代码页。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)（附录 H 代码页）以转换这些值并查看它们的字符映射。|  
-|**LCID**|排序规则的 Windows LCID。 请参阅 [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)（LCID 结构）以转换这些值（首先需要转换为 varbinary）。|  
-|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则（(\_BIN) 和 (\_BIN2)），以及需区分所有属性的大小写时，将返回 0。 位掩码值：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> 注意：尽管会影响比较行为，但此值中不会显示区分变体选择符 (\_VSS) 选项。|  
-|**版本(Version)**|从排序规则 ID 版本字段派生的排序规则的版本。 返回一个介于 0 到 3 之间的整数值。<br /><br /> 名称中含有“140”的排序规则返回 3。<br /><br /> 名称中含有“100”的排序规则返回 2。<br /><br /> 名称中含有“90”的排序规则返回 1。<br /><br /> 所有其他排序规则均返回 0。|  
+|**CodePage**|排序规则的非 Unicode 代码页。 这是 varchar 数据使用的字符集。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)（附录 H 代码页）以转换这些值并查看它们的字符映射。<br /><br />基本数据类型：int|  
+|**LCID**|排序规则的 Windows 区域设置 ID。 此区域性用于排序和比较规则。 请参阅 [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)（LCID 结构）以转换这些值（首先需要转换为 varbinary）。<br /><br />基本数据类型：int|  
+|**ComparisonStyle**|排序规则的 Windows 比较样式。 对于二进制排序规则（(\_BIN) 和 (\_BIN2)），以及需区分所有属性时（ (\_CS\_AS\_KS\_WS)、(\_CS\_AS\_KS\_WS\_SC) 和 (\_CS\_AS\_KS\_WS\_VSS)），返回 0。 位掩码值：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> 注意：尽管会影响比较行为，但此值中不会显示区分变体选择符 (\_VSS) 选项。<br /><br />基本数据类型：int|  
+|**版本(Version)**|排序规则的版本。 返回的值介于 0 到 3 之间。<br /><br /> 名称中含有“140”的排序规则返回 3。<br /><br /> 名称中含有“100”的排序规则返回 2。<br /><br /> 名称中含有“90”的排序规则返回 1。<br /><br /> 所有其他排序规则均返回 0。<br /><br />基本数据类型：tinyint|  
   
 ## <a name="return-types"></a>返回类型
 **sql_variant**

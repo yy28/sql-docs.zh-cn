@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125419"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527120"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>启用或禁用 AlwaysOn 可用性组功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -243,7 +243,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  如果你在禁用 AlwaysOn 前未删除本地可用性副本，则删除服务器实例正为其承载可用性副本的每个可用性组。 有关删除可用性组的信息，请参阅[删除可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)。  
   
-2.  若要删除留在原地的元数据，请删除服务器实例上作为原始 WSFC 群集一部分的受影响的可用性组。  
+2.  若要删除留在原地的元数据，请删除服务器实例上作为原始 WSFC 一部分的受影响的可用性组。  
   
 3.  所有连接仍可以访问任何主数据库，但是主数据库和辅助数据库之间的数据同步将停止。  
   

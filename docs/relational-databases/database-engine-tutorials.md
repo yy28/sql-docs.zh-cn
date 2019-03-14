@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7e3f28304a61d79736a0c51450dc57d0a1ef97d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669326"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579617"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.locfileid: "51669326"
 [教程：使用证书为存储过程签名](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
 本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  
   
-[Tutorial: Ownership Chains and Context Switching](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
+[教程：所有权链和上下文切换](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
 本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 [教程：使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 本教程教授如何创建强制执行网站管理标准的策略。  
   
-[教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 本教程说明如何将 SQL Server 备份和还原到 Windows Azure Blob 存储服务。  
   
-[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+[教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server 2016 教程](../sql-server/tutorials-for-sql-server-2016.md)  
-[TechNet WIKI：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
+[：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   
