@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734955"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973496"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>检索流中的结果集
 而不是接收结果中的传统**记录集**对象，ADO 改成流检索查询结果。 ADO **Stream**对象 (或其他支持 COM 的对象**IStream**接口，如 ASP**请求**并**响应**对象) 可用于包含这些结果。 此功能的一个用途是检索 XML 格式的结果。 借助 SQL Server，例如，XML 可以返回结果在多个方面，例如使用 SQL SELECT 查询使用 FOR XML 子句或使用 XPath 查询。  
@@ -30,7 +30,7 @@ ms.locfileid: "47734955"
 ## <a name="for-xml-query-example"></a>FOR XML 查询示例  
  下面的示例是用 VBScript 编写到 Northwind 数据库：  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ ms.locfileid: "47734955"
   
 ### <a name="for-xml-syntax"></a>有关 XML 语法  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  FOR XML 中选择的 SQL 语句示例如下：  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  作为 XML 模板查询，FOR XML 查询如下所示：  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  此示例指定 ASP**响应**对象**输出 Stream**属性：  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  接下来，指定**adExecuteStream**的参数**Execute**。 此示例包装在 XML 标记，以便创建 XML 数据岛中的流：  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

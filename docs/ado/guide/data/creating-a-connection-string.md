@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611377"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972766"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
 连接字符串包含用分号分隔的参数/值对 （即，参数） 的列表。 例如：  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47611377"
   
  其他参数传递给提供程序中名为*提供程序*参数，而无需通过 ADO 任何处理。  
   
- 中的 HelloData 应用程序[HelloData: 简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用以下连接字符串：  
+ HelloData 应用程序中的[HelloData:一个简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用以下连接字符串：  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  根据 OLE DB Provider for SQL Server 文档，您可以替换为"服务器"*数据源*参数和"数据库"，使*Initial Catalog*参数。 因此，以下连接字符串会生成与上面相同的结果：  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

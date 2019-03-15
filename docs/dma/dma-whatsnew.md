@@ -1,7 +1,7 @@
 ---
 title: 什么是数据迁移助手 (SQL Server) 中的新增功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,20 +11,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410404"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973206"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 本文列出了每个版本中添加的数据迁移助手 (DMA)。
 
-## <a name="dma-v41"></a>DMA 4.1 版
+## <a name="dma-v41"></a>DMA v4.1
 DMA 4.1 版版本引入了对在本地 SQL Server 数据库迁移到 Azure SQL 数据库托管实例的综合评估的支持。
 
 评估工作流可帮助你检测可能会影响迁移到 Azure SQL 数据库托管实例的以下问题：
@@ -86,7 +86,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 SQL Server 2
 ### <a name="migrating-windows-logins"></a>迁移 Windows 登录名
 虽然在 Linux 上的 SQL Server 2017 正式支持的 Active Directory (AD) 的登录名迁移，但它需要额外的配置才能正常工作。 请参阅文章[使用 Linux 上的 SQL Server 的 Active Directory 身份验证](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)有关 Active Directory 上设置登录名在 Linux 上的 SQL Server 2017 的详细信息。 在执行所需的配置，安装程序完成后可以将 Active Directory 登录名迁移像往常一样。 标准 SQL 身份验证的工作与不能有任何其他设置。
 
-## <a name="dma-v32"></a>DMA 3.2 版
+## <a name="dma-v32"></a>DMA v3.2
 DMA 3.2 版版本还包括以下新增功能：
 
 - 迁移架构和数据与新的迁移工作流启用从本地 SQL Server 数据库到 Azure SQL 数据库。
@@ -104,7 +104,7 @@ DMA 的 3.0 版版本扩展了 Azure SQL 数据库评估提供全面的建议，
 - 迁移阻塞问题。
 - 部分或不受支持的特性和功能。
 
-## <a name="dma-v21"></a>DMA 2.1 版
+## <a name="dma-v21"></a>DMA v2.1
 DMA v2.1 版本还包括以下新增功能：
 - 命令行支持在无人参与模式下，这有助于大规模运行评估运行评估。 更多详细信息，请参阅文章[运行数据迁移助手从命令行](dma-commandline.md)。
 - 当用户启动和关闭 DMA 的性能改进。

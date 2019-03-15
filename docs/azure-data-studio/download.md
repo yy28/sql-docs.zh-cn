@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801341"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973127"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -38,11 +38,12 @@ ms.locfileid: "56801341"
 
 ## <a name="get-azure-data-studio-for-windows"></a>获取 Windows Azure Data Studio
 
-此版本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含一个标准的 Windows 安装程序体验和一个 .zip 文件：
+此版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括标准 Windows 安装程序体验和一个.zip 文件。
+
+*用户的安装程序*建议，因为它不需要管理员权限，这简化了安装和升级。 用户的安装程序不需要管理员权限，因为位置是在用户本地 AppData (LOCALAPPDATA) 文件夹下。 用户的安装程序还提供了更流畅的后台更新体验。 有关详细信息，请参阅[的 Windows 用户设置](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)。
+
 
 **用户的安装程序**（推荐）
-
-建议用户安装程序，因为它不需要管理员权限，这简化了安装和升级。
 
 1. 下载并运行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *用户*适用于 Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=2072725)。
 2. 启动[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]应用。

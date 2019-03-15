@@ -2,7 +2,7 @@
 title: 数据迁移助手 (SQL Server) 的最佳做法 |Microsoft Docs
 description: 了解有关使用数据迁移助手将 SQL Server 数据库迁移最佳实践
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643825"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973666"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>运行数据迁移助手的最佳做法
 本文提供有关安装、 评估和迁移的一些最佳实践信息。
@@ -41,4 +41,4 @@ ms.locfileid: "49643825"
 
 - 连接到源和目标服务器时，启用加密连接。 使用 SSL 加密将增强通过数据迁移助手和 SQL Server 实例，是有益的尤其是在迁移 SQL 登录名之间的网络传输的数据的安全性。 如果不使用 SSL 加密网络攻击的攻击者，要迁移的 SQL 登录名了可能能够截取和/或修改在实时的攻击者。
 
-    但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 启用加密会降低性能，因为这是进行加密和解密数据包所需的额外系统开销。 有关详细信息，请参阅[加密与 SQL Server 的连接](https://go.microsoft.com/fwlink/?linkid=832513)。
+    但是，如果所有访问都具有某项安全 Intranet 配置，则可能不需要使用加密。 启用加密会降低性能，因为这是进行加密和解密数据包所需的额外系统开销。 有关详细信息，请参阅 [加密与 SQL Server 的连接](https://go.microsoft.com/fwlink/?linkid=832513)。

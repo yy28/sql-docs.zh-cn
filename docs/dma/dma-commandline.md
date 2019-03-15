@@ -2,7 +2,7 @@
 title: 从命令行 (SQL Server) 中运行数据迁移助手 |Microsoft Docs
 description: 了解如何从命令行来评估要迁移的 SQL Server 数据库运行数据迁移助手
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464723"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974176"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
@@ -34,6 +34,7 @@ ms.locfileid: "56464723"
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -45,8 +46,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | Y
 |`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | Y
-|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017。 默认值是 SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | N
+|`/AssessmentSourcePlatform`     | 源平台进行评估，支持的值：SqlOnPrem，RdsSqlServer。 目标准备情况评估还支持 Cassandra 作为源平台。 默认值是 SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017。 目标准备情况评估还支持 CosmosDB 作为目标平台。 默认值是 SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则。 如果源平台是 RdsSqlServer，不支持将功能奇偶校验计算为目标平台 AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
 |`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
 |`/AssessmentOverwriteResult`     | 覆盖结果文件    | N
@@ -146,15 +148,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**目标平台 SQL Azure 数据库的单一数据库评估将结果保存到.json 和.csv 文件**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **多个数据库目标准备情况评估**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **使用 Windows 身份验证的服务器上的所有数据库的目标准备情况评估**
@@ -191,6 +211,8 @@ DmaCmd.exe /Action=AssessTargetReadiness
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

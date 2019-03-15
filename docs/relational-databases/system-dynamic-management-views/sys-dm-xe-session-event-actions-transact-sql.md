@@ -20,17 +20,17 @@ ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6725ebaf9aa90e8ab3ae768ad30199a3a8b9b2aa
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: b237cfca3f64335d74b340189b5eddfa02d1e9a5
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785828"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973226"
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回有关事件会话操作的信息。 激发事件时将执行操作。 此管理视图聚合了有关操作已经执行的次数及操作的总执行时间的统计信息。  
+  返回有关事件会话操作的信息。 激发事件时将执行操作。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,8 +48,8 @@ ms.locfileid: "53785828"
 |From|若要|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|多对一|  
-|sys.dm_xe_session_event_actions.action_name，<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_session_events.event_package_guid|多对一|  
-|sys.dm_xe_session_event_actions.event_name，<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
+|sys.dm_xe_session_event_actions.action_name,<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_session_events.event_package_guid|多对一|  
+|sys.dm_xe_session_event_actions.event_name,<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
   
 ## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

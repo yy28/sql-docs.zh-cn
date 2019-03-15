@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579556"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976307"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更
 若要验证安装，可以使用内置的 Jupyter 笔记本，这篇文章中所述或[链接库](#install-ide)PyCharm 或任何你通常使用的另一个 IDE。
 
 > [!Tip]
-> 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
+> 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://youtu.be/D5erljpJDjE)。
 
 > [!Note]
 > 客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来完成更深入的方案工作。 从 SQL Server 完全分离的独立服务器，但因其具有相同的 Python 库，你可以使用它作为客户端的 SQL Server 数据库内分析。 还可以将其用于与SQL无关的工作，包括从其他数据平台导入数据和对数据建模。 如果安装在独立服务器，可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 若要验证你的安装，[打开 Jupyter notebook](#python-tools)以使用 Python.exe，在该位置运行命令。

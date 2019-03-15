@@ -3,17 +3,17 @@ title: 安装 R 语言和没有 internet 访问权限的 SQL Server 机器学习
 description: 脱机或已断开连接机器学习 R 和 Python 安装程序在网络防火墙后面的独立 SQL Server 实例上。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596988"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976317"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ ms.locfileid: "53596988"
 
 数据库内分析包括数据库引擎实例，以及用于R和Python集成的其他组件，具体取决于SQL Server的版本。 
 
-+ SQL Server 2017 包括 R 和 Python。 
-+ SQL Server 2016 的仅限 R 的。 
++ SQL Server 2017 包括 R 和 Python 
++ SQL Server 2016 的仅限 R 的。
 
 在独立服务器上，通过CAB文件添加机器学习和特定于R/Python语言的功能。 
 
@@ -42,8 +42,8 @@ ms.locfileid: "53596988"
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 打开     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2-获取 SQL Server 2017 安装介质
 
@@ -55,7 +55,7 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 脱机安装
 
-SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装这些版本之一：RTM，SP 1，SP 2。 基础安装到位后，便可应用累积更新。
+SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用于产品包和Microsoft开源R分发。 首先安装这些版本之一：RTM, SP 1, SP 2. 基础安装到位后，便可应用累积更新。
 
 在连接到Internet的计算机上，下载安装程序使用的CAB文件，用于在SQL Server 2016上安装数据库内分析。 
 
@@ -75,7 +75,9 @@ SQL Server 2016数据库内分析仅限R，仅包含两个CAB文件，分别用�
 
 ## <a name="transfer-files"></a>传输文件
 
-将 SQL Server 安装介质 （.iso 或.cab） 和数据库内分析 CAB 文件复制到目标计算机。 将 CAB 文件和安装媒体文件置于目标计算机上的相同文件夹如**下载**或安装程序用户的 %temp * 文件夹。
+将 SQL Server 安装介质 （.iso 或.cab） 和数据库内分析 CAB 文件复制到目标计算机。 在目标计算机，例如安装程序用户的 %temp * 文件夹上的相同文件夹中放置的 CAB 文件和安装媒体文件。
+
+在 %TEMP%文件夹是必需的 Python CAB 文件。 对于 R，可以使用 %TEMP%或将 myrcachedirectory 参数设置为 CAB 路径。
 
 下面的屏幕截图显示了 SQL Server 2017 CAB 和 ISO 文件。 SQL Server 2016 下载看起来不同： 较少的文件 (没有 Python) 和安装媒体文件的名称是 2016。
 

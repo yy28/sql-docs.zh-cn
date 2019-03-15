@@ -2,7 +2,7 @@
 title: 确定适当的 Azure SQL 数据库 SKU 的本地数据库 （数据迁移助手） |Microsoft Docs
 description: 了解如何使用数据迁移助手来识别你的本地数据库的权限 Azure SQL 数据库 SKU
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226494"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973817"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -76,21 +76,21 @@ ms.locfileid: "54226494"
 使用以下参数运行 dmacmd.exe:
 
 - **/ 操作 = SkuRecommendation**:输入此参数，以执行 SKU 评估。
-- **/ SkuRecommendationInputDataFilePath**:在上一节中收集计数器文件的路径。
+- **/SkuRecommendationInputDataFilePath**:在上一节中收集计数器文件的路径。
 - **/ SkuRecommendationTsvOutputResultsFilePath**:要写入的输出结果以 TSV 格式的路径。
 - **/ SkuRecommendationJsonOutputResultsFilePath**:要以 JSON 格式写入输出结果的路径。
-- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式写入输出结果的路径。
+- **/SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式写入输出结果的路径。
 
 此外，您需要选择以下参数之一：
 - 防止价格刷新
-    - **/ SkuRecommendationPreventPriceRefresh**:防止发生价格刷新。 如果在脱机模式下运行，请使用此选项。
+    - **/SkuRecommendationPreventPriceRefresh**:防止发生价格刷新。 如果在脱机模式下运行，请使用此选项。
 - 获取最新的价格 
     - **/ SkuRecommendationCurrencyCode**:要在其中显示的价格 （例如货币"美元"）。
     - **/ SkuRecommendationOfferName**:产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。
     - **/ SkuRecommendationRegionName**:区域名称 （例如"WestUS")。
     - **/ SkuRecommendationSubscriptionId**:订阅的 ID。
-    - **/ AzureAuthenticationTenantId**:身份验证租户中。
-    - **/ AzureAuthenticationClientId**:用于身份验证的 AAD 应用客户端 ID。
+    - **/AzureAuthenticationTenantId**:身份验证租户中。
+    - **/AzureAuthenticationClientId**:用于身份验证的 AAD 应用客户端 ID。
     - 以下身份验证选项之一：
         - 交互
             - **AzureAuthenticationInteractiveAuthentication**:设置为 true 的身份验证弹出窗口。

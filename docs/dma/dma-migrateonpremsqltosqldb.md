@@ -2,7 +2,7 @@
 title: 使用数据迁移助手的到 Azure SQL 数据库迁移的本地 SQL Server 或 Azure Vm 上的 SQL Server |Microsoft Docs
 description: 了解如何使用数据迁移助手将本地 SQL Server 迁移到 Azure SQL 数据库
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643845"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974056"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>将本地 SQL Server 或 Azure Vm 上的 SQL Server 迁移到 Azure SQL 数据库使用数据迁移助手
 
 数据迁移助手的 Azure Vm 或 Azure SQL 数据库上提供 SQL Server 内部部署和更高版本的 SQL Server 的升级或迁移到 SQL Server 的无缝的评估。
 
-本文提供分步说明迁移 SQL Server 的本地到 Azure SQL 数据库通过使用数据迁移助手。   
+本文提供分步说明迁移 SQL Server 的本地到 Azure SQL 数据库通过使用数据迁移助手。   
 
 ## <a name="create-a-new-migration-project"></a>创建新的迁移项目
 
@@ -58,7 +58,7 @@ ms.locfileid: "49643845"
 
     ![选择源数据库](../dma/media/select-source-database.png)
 
-5. 选择“下一步” 。
+5. 选择“**下一步**”。
 
 ## <a name="specify-the-target-server-and-database"></a>指定目标服务器和数据库
 
@@ -80,7 +80,7 @@ ms.locfileid: "49643845"
 
     ![选择目标数据库](../dma/media/select-target-database.png)
 
-5. 选择“下一步” 。
+5. 选择“**下一步**”。
 
 ## <a name="select-schema-objects"></a>选择架构对象
 
@@ -119,8 +119,8 @@ ms.locfileid: "49643845"
 
    ![迁移状态](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
-- [数据迁移助手： 配置设置](../dma/dma-configurationsettings.md)
-- [数据迁移助手： 最佳实践](../dma/dma-bestpractices.md)
+- [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)
+- [数据迁移助手：最佳做法](../dma/dma-bestpractices.md)

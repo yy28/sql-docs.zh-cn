@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b42f0a70765744147a44c8b4d274b87cc00ca43
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a5bc7dfcfd36c16b6f281db8eb57e74e97601b6
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215420"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974146"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>部署 SQL Server Always On 可用性组上的 Kubernetes 群集
 
@@ -29,17 +29,20 @@ ms.locfileid: "53215420"
 
 ## <a name="requirements"></a>要求
 
-- Kubernetes 群集
-- Kubernetes 1.11.0 版本或更高版本
+- 包含最新版本的 AKS 的 Kubernetes 群集
 - 至少三个节点
-- [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - 访问权限[sql server 示例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)GitHub 存储库
 
 > [!NOTE]
 > 可以使用任何类型的 Kubernetes 群集。 若要在 Azure Kubernetes 服务 (AKS) 创建 Kubernetes 群集，请参阅[创建 AKS 群集](https://docs.microsoft.com/azure/aks/create-cluster)。
-> 以下脚本在 Azure 中创建四个节点 Kubernetes 群集。
+>
+> 使用 Kubernetes 的最新版本。 特定版本取决于你的订阅和区域。 请参阅[在 AKS 中的支持 Kubernetes 版本](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions)。  
+>
+> 以下脚本在 Azure 中创建四个节点 Kubernetes 群集。 在运行脚本替换为之前`<latest version>`使用最新的版本。 例如 `1.12.5`。
+>
 > ```azure-cli
-> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version <latest version> --generate-ssh-keys
 > ```
 
 ## <a name="deploy-the-operator-sql-server-containers-and-load-balancing-services"></a>部署运算符、 SQL Server 容器和负载均衡的服务
@@ -140,7 +143,7 @@ kubectl apply -f ag-services.yaml --namespace ag1
 
 - `sqlcmd`连接到主副本与`sa`通过负载均衡器终结点的帐户。
 
-![“连接”](./media/sql-server-linux-kubernetes-deploy/connect.png)
+![连接](./media/sql-server-linux-kubernetes-deploy/connect.png)
 
 ## <a name="add-a-database-to-the-availability-group"></a>将数据库添加到可用性组
 

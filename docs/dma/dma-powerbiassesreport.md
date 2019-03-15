@@ -2,7 +2,7 @@
 title: 分析合并的数据迁移助手的评估报告使用 Power BI (SQL Server) |Microsoft Docs
 description: 了解如何使用 Power BI 来分析您已导入和合并到 SQL Server 中的数据迁移评估报表
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208286"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974116"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
 

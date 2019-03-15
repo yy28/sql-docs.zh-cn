@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540296"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973676"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>参数  
- **@dbname** = _database_name_  
- 指示要运行垃圾回收器的数据库的名称。  
+ **@dbname** = *database_name*表示数据库上运行垃圾回收器的名称。  
   
 > [!NOTE]  
 >  *dbname*是**sysname**。 如果未指定，则假定为当前数据库。  
@@ -111,6 +110,6 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目录视图 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+<br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   
