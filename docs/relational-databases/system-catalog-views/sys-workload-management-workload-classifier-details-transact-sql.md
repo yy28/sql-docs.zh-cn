@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifier_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 02/08/2019
+ms.date: 03/13/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e4b884f779de2bf535b58d88659efffbd7901627
-ms.sourcegitcommit: aa8bec762be29a29aed651d98ed4d868da85ba67
+ms.openlocfilehash: 421f47aee86c2e5bbdffe485ffea0cffef73bafd
+ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57975361"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988773"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL) （预览版）
 
@@ -37,4 +37,4 @@ ms.locfileid: "57975361"
 
 ## <a name="next-steps"></a>后续步骤
   
- 适用于 SQL 数据仓库和并行数据仓库的所有目录视图的列表，请参阅[SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要创建工作负荷分类器，请参阅[创建工作负荷分类器](../../t-sql/statements/create-workload-classifier-transact-sql.md)。 工作负荷分类的详细信息请参阅[SQL 数据仓库工作负荷分类](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ 适用于 SQL 数据仓库和并行数据仓库的所有目录视图的列表，请参阅[SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。 若要创建工作负荷分类器，请参阅[创建工作负荷分类器](../../t-sql/statements/create-workload-classifier-transact-sql.md)。 工作负荷分类的详细信息，请参阅[SQL 数据仓库工作负荷分类](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

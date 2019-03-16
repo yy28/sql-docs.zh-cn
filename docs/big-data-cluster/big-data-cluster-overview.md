@@ -5,23 +5,23 @@ description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241988"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072122"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什么是 SQL Server 2019 大数据群集？
 
 从开始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 大数据群集允许你部署的 Kubernetes 上运行的 SQL Server、 Spark 和 HDFS 容器的可缩放群集。 并行运行这些组件，以使您能够读取、 写入，并处理从 TRANSACT-SQL 或 Spark 的大数据、 使您轻松合并和分析大数据大容量高价值关系数据。
 
-有关新增功能和最新版本的已知的问题的详细信息，请参阅[发行说明](big-data-cluster-release-notes.md)。
+有关新增功能和最新版本的已知的问题的详细信息，请参阅[发行说明](release-notes-big-data-cluster.md)。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ SQL Server 大数据群集是由协调的 Linux 容器的群集[Kubernetes](http
 Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器部署，根据需求。 下表定义了一些重要的 Kubernetes 术语：
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
 | **Node** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
 | **Pod** | Pod 是 Kubernetes 的原子部署单位。 Pod 是一个或多个容器的逻辑组-和关联的资源需要运行应用程序。 每个 pod 的节点; 上运行节点可以运行一个或多个 pod。 Kubernetes 主机会自动分配到群集中节点的 pod。 |
+| &nbsp; ||
 
 在 SQL Server 大数据群集中，Kubernetes 负责 SQL Server 大数据群集; 的状态Kubernetes 构建和配置群集节点，将 pod 分配给节点，并监视群集的运行状况。
 

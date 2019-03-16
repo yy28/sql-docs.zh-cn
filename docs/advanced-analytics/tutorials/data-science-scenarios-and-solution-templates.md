@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596120"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072151"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53596120"
 
 ## <a name="customer-churn"></a>客户流失
 
-[客户流失预测模板 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[客户流失预测模板 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **什么：** 分析和预测客户流失在必须管理和阻止的客户和竞争对手丢失任何行业中很重要： 银行业、 电信业和零售业，仅举几例。 流失分析的目的是确认哪些客户可能会流失，然后采取适当措施维系这些客户及其业务。
 
@@ -64,7 +64,7 @@ ms.locfileid: "53596120"
   
 ## <a name="predictive-maintenance"></a>预测维护
 
-[预测维护模板 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[预测维护模板 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **什么：** 预测性维护的目标是通过捕获以前的故障并将该信息来预测设备何时或在何处可能会失败来提高维护任务的效率。 尤其是有价值的应用程序依赖于分布式的数据或传感器预测设备过时的功能。 此方法还可以应用来监视或预测 IoT （物联网） 设备时出错。
 

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services OLAP 属性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072514"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072341"
 ---
 # <a name="olap-properties"></a>OLAP 属性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
@@ -266,7 +266,10 @@ ms.locfileid: "53072514"
   
  **MaxRolapOrConditions**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
-  
+ 
+ **RowsetSerializationLimit**   
+ 适用于 Azure Analysis Services。 在行集返回到客户端的行数的限制。 默认值为-1，这意味着无限制应用。 适用于 DAX 和 MDX 查询。 它可以用于保护从广泛的数据导出的服务器资源。 查询提交到服务器超出该限制的连接将被取消并且返回错误。  
+
  **UseCalculationCacheRegistry**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   

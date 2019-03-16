@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044623"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072301"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。 请参阅知识库[3190871](https://support.microsoft.com/en-us/help/3190871)
 
-此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。  
-  
-**标准**可以使用启用统计信息分析基础结构：
-  -  [在 SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [集上的统计信息配置文件](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  `query_post_execution_showplan`扩展的事件。  
-  
-**轻型**统计信息分析基础结构现已推出[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，可以启用：
-  -  全局使用跟踪标志 7412。
-  -  使用[ *query_thread_profile* ](https://support.microsoft.com/kb/3170113)扩展的事件。
-  
-> [!NOTE]
-> 一旦启用跟踪标志 7412，将向分析基础结构而不是标准分析，如 DMV 的查询执行统计信息的任何使用者启用轻量分析[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)。
-> 但是，标准分析仍用于 SET STATISTICS XML*包括实际的计划*中的操作[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]，和`query_post_execution_showplan`xEvent。
-
-> [!IMPORTANT]
-> TPC C 与工作负荷测试一样，在启用轻型统计信息分析基础结构添加 1.5 到 2%的开销。 与此相反，标准统计信息分析基础结构可以添加多达 90%开销的相同工作负荷方案。
+此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)。  
 
 ## <a name="permissions"></a>权限  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
