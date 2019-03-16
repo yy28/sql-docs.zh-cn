@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860090"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080404"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  正执行查询时监视实时查询进度。 例如，使用此 DMV 确定运行缓慢的查询部分。 可使用说明字段中标识的列，将此 DMV 与其他系统 DMV 相联接。 或者，使用时间戳列，将此 DMV 与其他性能计数器（如性能计数器 xperf）相联接。  
+正执行查询时监视实时查询进度。 例如，使用此 DMV 确定运行缓慢的查询部分。 可使用说明字段中标识的列，将此 DMV 与其他系统 DMV 相联接。 或者，使用时间戳列，将此 DMV 与其他性能计数器（如性能计数器 xperf）相联接。  
   
 ## <a name="table-returned"></a>返回的表  
  返回的计数器基于每个运算符和每个线程。 结果是动态的，并且与仅在完成查询时创建输出的现有选项（如，SET STATISTICS XML ON）的结果不匹配。  
@@ -40,8 +40,8 @@ ms.locfileid: "52860090"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|标识运行此查询的会话。 引用 dm_exec_sessions.session_id。|  
 |request_id|**int**|确定目标请求。 引用 dm_exec_sessions.request_id。|  
-|sql_handle|**varbinary(64)**|确定目标查询。 引用 dm_exec_query_stats.sql_handle。|  
-|plan_handle|**varbinary(64)**|确定目标查询（引用 dm_exec_query_stats.plan_handle）。|  
+|sql_handle|**varbinary(64)**|是一个令牌，用于唯一标识批处理或存储的过程的查询。 引用 dm_exec_query_stats.sql_handle。|  
+|plan_handle|**varbinary(64)**|是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 引用 dm_exec_query_stats.plan_handle。|  
 |physical_operator_name|**nvarchar(256)**|物理运算符名称。|  
 |node_id|**int**|标识查询树中的运算符节点。|  
 |thread_id|**int**|区分属于同一个查询运算符节点的线程（针对并行查询）。|  
@@ -76,30 +76,22 @@ ms.locfileid: "52860090"
 |estimated_read_row_count|**bigint**|**适用范围：** 从[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估计剩余谓词应用之前，操作员要读取的行数。|  
   
 ## <a name="general-remarks"></a>一般备注  
- 如果查询计划节点没有任何 IO，则所有与 IO 相关的计数器均设置为 NULL。  
+ 如果查询计划节点没有任何 I/O，所有 O 相关的计数器都设置为 NULL。  
   
- 此 DMV 报告的与 IO 相关的计数器比 SET STATISTICS IO 报告的计数器更精细，这体现在以下两方面：  
+ 此 dmv 报告 O 相关的计数器是比所报告的粒度更细`SET STATISTICS IO`以下两种方式：  
   
--   SET STATISTICS IO 将所有 IO 的计数器组合到给定的表中。 通过此 DMV，你将获得对表执行 IO 的查询计划中每个节点的单独的计数器。  
+-   `SET STATISTICS IO` 为所有 I/O 到给定组合在一起的表组计数器。 通过此 DMV，你将获得对表执行 IO 的查询计划中每个节点的单独的计数器。  
   
 -   如果存在并行扫描，则此 DMV 将报告处理扫描的每个并行线程的计数器。
  
-从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，标准查询执行统计信息分析基础结构存在同时使用轻量查询执行统计信息分析基础结构。 新查询执行统计信息分析基础结构极大地减少了收集按运算符查询执行统计信息，如实际行数的性能开销。 可以使用全局启用此功能启动[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 扩展的事件时自动打开。
+从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，标准查询执行统计信息分析基础结构存在同时使用轻量查询执行统计信息分析基础结构。 
 
->[!NOTE]
-> 轻型查询执行统计信息分析基础结构以减少对性能的影响下不支持 CPU 和经过的时间。
+`SET STATISTICS XML ON` 和`SET STATISTICS PROFILE ON`始终使用标准查询执行统计信息分析基础结构。
 
-设置统计信息 XML ON 和 SET STATISTICS PROFILE ON 始终使用旧查询执行统计信息分析基础结构。
-
-若要启用输出 sys.dm_exec_query_profiles 中的执行以下步骤：
-
-在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 和更高版本使用 SET STATISTICS PROFILE ON 或 SET STATISTICS XML ON 与正在调查的查询。 这使分析基础结构，其中执行 SET 命令的会话的输出结果为 DMV。 如果你正在调查从应用程序运行的查询，不能启用与它的 SET 选项，可以创建扩展事件使用 query_post_execution_showplan 事件，它会将分析基础结构上。 
-
-在中[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 中，您可以或者开启[跟踪标志 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)或使用 query_thread_profile 扩展的事件。
+若要启用输出中的`sys.dm_exec_query_profiles`启用分析基础结构的查询。 有关详细信息，请参阅[查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。    
 
 >[!NOTE]
 > 正在调查该查询必须启动后已启用分析基础结构。 如果查询已运行，启动扩展事件会话不会产生 sys.dm_exec_query_profiles 中的结果。
-
 
 ## <a name="permissions"></a>权限  
 
@@ -107,14 +99,14 @@ ms.locfileid: "52860090"
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
    
 ## <a name="examples"></a>示例  
- 步骤 1：登录一个会话，在此会话中，你计划运行将使用 sys.dm_exec_query_profiles 分析的查询。 若要配置用于探查的查询上使用 SET STATISTICS PROFILE。 在同一会话中运行你的查询。  
+ 步骤 1：登录到你打算运行将使用分析的查询的会话`sys.dm_exec_query_profiles`。 若要配置查询以分析使用`SET STATISTICS PROFILE ON`。 在同一会话中运行你的查询。  
   
-```  
+```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
 SET STATISTICS PROFILE ON;  
 GO  
 
---Or enable query profiling globally under SQL Server 2016 SP1 or above  
+--Or enable query profiling globally under SQL Server 2016 SP1 or above (not needed in SQL Server 2019)  
 DBCC TRACEON (7412, -1);  
 GO 
   
@@ -125,7 +117,7 @@ GO
   
  以下语句总结当前在会话 54 中运行的查询的进度。 为此，它基于每个节点的所有线程计算输出行的总数，然后将其与该节点的输出行的估算数目进行比较。  
   
-```  
+```sql  
 --Run this in a different session than the session in which your query is running. 
 --Note that you may need to change session id 54 below with the session id you want to monitor.
 SELECT node_id,physical_operator_name, SUM(row_count) row_count, 

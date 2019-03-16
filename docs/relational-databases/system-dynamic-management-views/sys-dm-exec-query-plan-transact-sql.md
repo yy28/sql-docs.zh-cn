@@ -19,40 +19,43 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956008"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080249"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
+以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
   
- 显示计划 XML 架构已发布并可在[此 Microsoft 网站上](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
+显示计划 XML 架构已发布并可在[此 Microsoft 网站上](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>参数  
- *plan_handle*  
- 为已缓存或当前正在执行的批查询唯一标识查询计划。  
+*plan_handle*  
+是一个标记，用于唯一标识已执行的批次查询执行计划，其计划驻留在计划缓存中，或当前正在执行。 *plan_handle*是**varbinary(64)**。   
+
+*Plan_handle*可以从以下动态管理对象中获得：
   
- *plan_handle*是**varbinary(64)**。 *plan_handle*可以从以下动态管理对象中获得：  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -78,7 +81,7 @@ sys.dm_exec_query_plan ( plan_handle )
  由于在允许的嵌套级别数的限制造成**xml**数据类型**sys.dm_exec_query_plan**不能返回达到或超过 128 级的嵌套元素的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更高版本**query_plan**列返回 NULL。 可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)动态管理函数以文本格式返回查询计划的输出。  
   
 ## <a name="permissions"></a>权限  
- 若要执行**sys.dm_exec_query_plan**，用户必须是属于**sysadmin**固定服务器角色或对服务器具有 VIEW SERVER STATE 权限。  
+ 若要执行**sys.dm_exec_query_plan**，用户必须是属于**sysadmin**固定服务器角色或具有`VIEW SERVER STATE`服务器上的权限。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用**sys.dm_exec_query_plan**动态管理视图。  
@@ -95,7 +98,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  首先，使用 `sp_who` 存储过程检索正在执行查询或批查询的进程的服务器进程 ID (SPID)。  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -104,7 +107,7 @@ GO
   
  由 `sp_who` 返回的结果集指示 SPID 为 `54`。 可以在 `sys.dm_exec_requests` 动态管理视图中使用该 SPID，以便使用以下查询来检索计划句柄：  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -114,39 +117,44 @@ GO
   
  通过返回的表**sys.dm_exec_requests**指示运行速度缓慢的查询或批处理的计划句柄`0x06000100A27E7C1FA821B10600`，你可以指定*plan_handle* 参数`sys.dm_exec_query_plan`来检索 XML 格式的执行计划，如下所示。 中包含的执行计划中运行速度缓慢的查询或批处理的 XML 格式**query_plan**返回的表的列`sys.dm_exec_query_plan`。  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
  若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_query_plan`，如下所示。 当前在计划缓存中的每个计划的 XML 显示计划输出位于返回的表的 `query_plan` 列中。  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>C. 检索服务器已从计划缓存中收集了其查询统计信息的每个查询计划  
  若要检索服务器已收集了其当前驻留在计划缓存中的统计信息的所有查询计划的快照，请通过查询 `sys.dm_exec_query_stats` 动态管理视图来检索缓存中这些计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_query_stats` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_query_plan`，如下所示。 服务器已收集了其驻留在计划缓存中的统计信息的每个计划的 XML 显示计划输出在返回的表的 `query_plan` 列中。  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>D. 按平均 CPU 时间检索有关前五个查询的信息  
  以下示例为前五个查询返回查询计划和平均 CPU 时间。  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -163,4 +171,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-
