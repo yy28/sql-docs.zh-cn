@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
 ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/15/2019
 ms.locfileid: "56297395"
@@ -83,7 +83,7 @@ Reporting Services 与“传统”分页文档样式报表相关联，这种报�
 
 可将自己的自定义品牌应用到 Web 门户。 可在 Web 门户中创建 KPI。 KPI 可结合浏览器查看关键业务指标，而无需打开报表。 
 
-新的 Web 门户是完全重写的报表管理器。 它现在是基于标准的单页 HTML5 应用程序，更适合在以下新式浏览器中使用：Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 和所有主流浏览器。
+新的 Web 门户是完全重写的报表管理器。 它现在是基于标准的单页 HTML5 应用程序，更适合在以下新式浏览器中使用：Microsoft Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 和所有主流浏览器。
 
 Web 门户内容按类型进行整理：Reporting Services 移动报表和分页报表，以及 KPI、Excel 工作簿、共享数据集和用作报表构建基块的共享数据源。 可在此处安全存储和管理它们，并采用传统的文件夹层次结构。 可以标记收藏夹并管理内容（如果拥有该角色）。
 

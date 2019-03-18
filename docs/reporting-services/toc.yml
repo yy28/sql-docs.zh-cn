@@ -158,7 +158,7 @@ items:
     href: ../reporting-services/working-with-kpis-in-reporting-services.md
   - name: 我的 Power BI 集成设置
     href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
-- name: 概述
+- name: Reporting Services 报表服务器本机模式概述
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
 - name: 配置和管理报表服务器（SSRS 本机模式）
   href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
@@ -280,7 +280,7 @@ items:
     href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
   - name: 创建报表历史记录
     href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
-- name: 概述
+- name: Reporting Services 报表服务器概述
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
 - name: 报表服务器 (SharePoint)
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
@@ -334,7 +334,7 @@ items:
   href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: 固定到 Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: 概述
+- name: SQL Server 中的报表生成器概述
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
 - name: 启动报表生成器
   href: ../reporting-services/report-builder/start-report-builder.md
@@ -900,7 +900,7 @@ items:
   href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
 - name: 管理报表部件
   href: ../reporting-services/report-design/managing-report-parts.md
-- name: 概述
+- name: Reporting Services 报表概述
   href: ../reporting-services/reports/reporting-services-reports-ssrs.md
 - name: 发布数据源和报表
   href: ../reporting-services/reports/publishing-data-sources-and-reports.md
@@ -933,7 +933,7 @@ items:
   href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: 使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
-- name: 概述
+- name: SSRS 中的报告数据概述
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Reporting Services 支持的数据源
   href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
@@ -1122,7 +1122,7 @@ items:
     href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
   - name: 向 Reporting Services 移动报表添加自定义地图
     href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
-- name: 概述
+- name: Reporting Services 安全性和保护概述
   href: ../reporting-services/security/reporting-services-security-and-protection.md
 - name: Reporting Services 针对验证的扩展保护
   href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
@@ -1192,7 +1192,7 @@ items:
       href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
 - name: 配置本机模式报表服务器上的 SSL 连接
   href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
-- name: 概述
+- name: SSRS 计划概述
   href: ../reporting-services/subscriptions/schedules.md
 - name: Create, Modify, and Delete Schedules
   href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
@@ -1234,7 +1234,7 @@ items:
     href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
   - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
     href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
-- name: 概述
+- name: Reporting Services 工具概述
   href: ../reporting-services/tools/reporting-services-tools.md
 - name: SQL Server Data Tools 中的 Reporting Services
   href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
@@ -1338,7 +1338,7 @@ items:
     href: ../reporting-services/tools/rsconfig-utility-ssrs.md
   - name: RS.exe 实用工具 (SSRS)
     href: ../reporting-services/tools/rs-exe-utility-ssrs.md
-- name: 教程：如何查找并启动 Reporting Services 工具
+- name: 如何查找并启动 Reporting Services 工具
   href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: 数据警报 (SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
@@ -1385,7 +1385,31 @@ items:
     href: ../reporting-services/search-a-report-using-url-access.md
   - name: 使用 URL 访问呈现报表历史记录快照
     href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
-- name: 概述
+- name: 关系数据库
+  items:
+  - name: 如何管理登录名、用户和架构
+    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+  - name: 动态数据屏蔽
+    href: ../relational-databases/security/dynamic-data-masking.md
+  - name: SQL Server Express LocalDB 参考
+    href: ../relational-databases/sql-server-express-localdb-reference.md
+  - name: SqlToolsVSNativeHelpers
+    href: ../relational-databases/sqltoolsvsnativehelpers.md
+  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
+    href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: sp_enum_sqlagent_subsystems
+    href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
+  - name: sysmail_delete_principalprofile_sp
+    href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
+  - name: 优化建议
+    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
+  - name: 枚举 SQL 代理子系统
+    href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
+  - name: 删除主体配置文件
+    href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
+  - name: WMI 提供程序错误 0x8007052f
+    href: ../relational-databases/wmi-provider-error-0x8007052f.md
+- name: WMI 提供程序库引用概述
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: MSReportServer_Instance 类
   href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
@@ -1541,7 +1565,7 @@ items:
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
     - name: ConfigurationSetting 方法 - SetExtendedProtectionSettings
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
-- name: 概述
+- name: 排除 Reporting Services 故障
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
 - name: 错误和事件参考
   href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
@@ -1565,7 +1589,7 @@ items:
       href: ../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md
 - name: 排查 Reporting Services 报表问题
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md
-- name: Reporting Services 订阅和传递的疑难解答
+- name: 对 Reporting Services 订阅和传递进行故障排除
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md
 - name: 解决 Reporting Services 报表设计问题
   href: ../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md
@@ -1900,7 +1924,7 @@ items:
     - name: 第 9 课：生成并运行应用程序
       href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: 报表生成器教程
-    href: ../reporting-services/report-builder-tutorials.md
+    href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
     items:
     - name: 教程先决条件
       href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
@@ -1932,9 +1956,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 教程：表达式简介
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 07d625881bacee05f8fdf6e3034857cc91d6739a
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 0557511d395eaac697bcf609582dc69a8ee5cfd4
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401889"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974526"

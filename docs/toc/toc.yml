@@ -50,7 +50,7 @@ items:
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: 发行说明
       href: ../big-data-cluster/big-data-cluster-release-notes.md
-  - name: Install
+  - name: 安装
     items:
     - name: 安装工具
       items:
@@ -1052,7 +1052,7 @@ items:
       href: ../relational-databases/collations/write-international-transact-sql-statements.md
     - name: 设置会话语言
       href: ../relational-databases/collations/set-a-session-language.md
-  - name: “数据库”
+  - name: 数据库
     href: ../toc/redirectfrom-databases.md
     items:
     - name: 概述
@@ -1219,15 +1219,15 @@ items:
     items:
     - name: 概述
       items:
-      - name: Filestream
+      - name: 文件流
         href: ../relational-databases/blob/filestream-sql-server.md
-      - name: Filetable
+      - name: FileTable
         href: ../relational-databases/blob/filetables-sql-server.md
       - name: 比较用于存储 Blob 的选项
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: 远程 Blob 存储区 (RBS)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: 文件流
       items:
       - name: 启用和配置
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -1664,7 +1664,7 @@ items:
         href: ../relational-databases/triggers/get-information-about-dml-triggers.md
       - name: 删除或禁用 DML 触发器
         href: ../relational-databases/triggers/delete-or-disable-dml-triggers.md
-  - name: 用户定义函数
+  - name: 用户定义的函数
     href: ../relational-databases/user-defined-functions/user-defined-functions.md
     items:
     - name: 确定性函数和不确定性函数
@@ -2419,7 +2419,7 @@ items:
         href: ../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: Dbmslpcn.dll 共享内存中的 ConnectionValidSharedMemory 函数
         href: ../relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-      - name: Install
+      - name: 安装
         href: ../relational-databases/native-client/applications/installing-sql-server-native-client.md
       - name: 支持策略
         href: ../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -3249,7 +3249,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md
       - name: 数据库对象
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-database-objects.md
-      - name: “数据库”
+      - name: 数据库
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md
       - name: 默认值
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-defaults.md
@@ -3271,7 +3271,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
       - name: 视图
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
-      - name: Permissions
+      - name: 权限
         href: ../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
       - name: 终结点
         href: ../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: 页和盘区体系结构
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: 读取页
+      href: ../relational-databases/reading-pages.md
+    - name: 写入页
+      href: ../relational-databases/writing-pages.md
   - name: 迁移后验证和优化
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: 查询处理体系结构
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: 内存管理体系结构
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: 读取页
-      href: ../relational-databases/reading-pages.md
-    - name: 写入页
-      href: ../relational-databases/writing-pages.md
 - name: 安装
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: “高级”页
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 迁移和加载数据
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4698,7 +4699,7 @@ items:
               href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
             - name: 重新初始化订阅
               href: ../relational-databases/replication/reinitialize-subscriptions.md
-      - name: Administer
+      - name: 管理员
         items:
         - name: Dist 和 Pub 信息脚本
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
@@ -5793,7 +5794,7 @@ items:
         href: ../ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
       - name: 转换 DB2 架构
         href: ../ssma/db2/converting-db2-schemas-db2tosql.md
-      - name: SQL Server Migration Assistant
+      - name: SQL Server 迁移助手
         href: ../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
       - name: 生成报告
         href: ../ssma/db2/generating-reports-db2tosql.md
@@ -6764,7 +6765,7 @@ items:
         items:
         - name: 游标
           href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
-        - name: “数据库”
+        - name: 数据库
           href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
         - name: 垃圾回收
           href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
@@ -6827,7 +6828,7 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
           - name: 数据库副本
             href: ../relational-databases/performance-monitor/sql-server-database-replica.md
-          - name: “数据库”
+          - name: 数据库
             href: ../relational-databases/performance-monitor/sql-server-databases-object.md
           - name: 已弃用的功能
             href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
@@ -7203,7 +7204,7 @@ items:
         href: ../relational-databases/polybase/polybase-scale-out-groups.md
     - name: 操作指南
       items:
-      - name: Install
+      - name: 安装
         items:
         - name: 在 Windows 上安装
           href: ../relational-databases/polybase/polybase-installation.md
@@ -7950,7 +7951,7 @@ items:
         href: ../relational-databases/security/choose-an-authentication-mode.md
       - name: 元数据可见性
         href: ../relational-databases/security/metadata-visibility-configuration.md
-      - name: Permissions
+      - name: 权限
         href: ../relational-databases/security/permissions-database-engine.md
       - name: 权限层次结构
         href: ../relational-databases/security/permissions-hierarchy-database-engine.md
@@ -8009,7 +8010,7 @@ items:
   - name: Azure Data Studio
     href: ../azure-data-studio/what-is.md
     items:
-    - name: Install
+    - name: 安装
       href: ../azure-data-studio/download.md
     - name: 发行说明
       href: ../azure-data-studio/release-notes-azure-data-studio.md
@@ -8211,12 +8212,12 @@ items:
   - name: 分布式重播
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Install
+    - name: 安装
       href: ../tools/distributed-replay/install-distributed-replay-overview.md
       items:
       - name: 要求
         href: ../tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
+      - name: 安装
         href: ../tools/distributed-replay/install-distributed-replay.md
       - name: 完成安装后步骤
         href: ../tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: 下载 SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: 概述
-      items:
-      - name: SSDT 更改日志
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: 数据层应用程序框架 - 许可条款
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: 早期版本的 SSDT 和 SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory 支持
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server 工具
-        href: ../ssdt/sql-server-tools.md
-      - name: 许可条款 - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: 许可条款 - SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: SSDT 更改日志
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: 早期版本的 SSDT 和 SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory 支持
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server 工具
+      href: ../ssdt/sql-server-tools.md
     - name: 面向项目的脱机数据库开发
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Resources
       items:
-      - name: 许可条款
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: SSMS 中的用户协助
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 匿名使用情况数据
@@ -9789,7 +9780,7 @@ items:
       href: ../tools/sqlpackage-release-notes.md
     - name: sqlpackage 参考
       href: ../tools/sqlpackage.md
-  - name: SQL Server 事件探查器
+  - name: SQL Server Profiler
     href: ../tools/sql-server-profiler/sql-server-profiler.md
     items:
     - name: 运行 SQL Server Profiler
@@ -9797,7 +9788,7 @@ items:
     - name: 跟踪模板
       href: ../tools/sql-server-profiler/sql-server-profiler-templates.md
       items:
-      - name: Permissions
+      - name: 权限
         href: ../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md
       - name: 创建
         href: ../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md
@@ -10009,7 +10000,7 @@ items:
       href: ../linux/sql-server-linux-replication-tutorial-tsql.md
   - name: 概念
     items:
-    - name: Install
+    - name: 安装
       items:
       - name: 安装 SQL Server
         href: ../linux/sql-server-linux-setup.md
@@ -10140,7 +10131,7 @@ items:
             href: ../linux/sql-server-linux-kubernetes-deploy.md
           - name: 管理
             href: ../linux/sql-server-linux-kubernetes-manage.md
-          - name: “连接”
+          - name: 连接
             href: ../linux/sql-server-linux-kubernetes-connect.md
           - name: 创建部署脚本
             href: ../linux/sql-server-linux-kubernetes-create-deployment.md
@@ -11322,10 +11313,6 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: 对 SQL Server 标识符进行转义
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: Resources
-      items:
-      - name: SQL Server PowerShell 许可条款
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Cmdlet 引用
       items:
       - name: SqlServer cmdlet
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -12072,7 +12063,7 @@ items:
   - name: 系统动态管理视图
     href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
     items:
-    - name: Always On 可用性组
+    - name: AlwaysOn 可用性组
       href: ../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md
       items:
       - name: sys.dm_hadr_auto_page_repair
@@ -12651,7 +12642,7 @@ items:
   - name: 系统函数
     href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
     items:
-    - name: Always On 可用性组
+    - name: AlwaysOn 可用性组
       href: ../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md
       items:
       - name: sys.fn_hadr_is_primary_replica
@@ -14322,7 +14313,7 @@ items:
         href: ../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: ../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: SQL Server 事件探查器
+    - name: SQL Server Profiler
       href: ../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
       - name: sp_trace_create
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: 工作负载分类器
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,11 +16774,13 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: 工作负载分类器
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
           href: ../t-sql/statements/drop-xml-schema-collection-transact-sql.md
-      - name: Permissions
+      - name: 权限
         items:
         - name: ADD SIGNATURE
           href: ../t-sql/statements/add-signature-transact-sql.md
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 处理 XQuery 中的命名空间
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579787"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974566"
