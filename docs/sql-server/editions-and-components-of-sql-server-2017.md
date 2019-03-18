@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556169"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974496"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ ms.locfileid: "57556169"
 |NUMA 感知、大型页内存和缓冲区数组分配|是|否|否|否|否|
 |缓冲池扩展|是|是|否|否|否|
 |IO 资源调控|是|否|否|否|否|  
+|预读|是|否|否|否|否|
+|高级扫描|是|否|否|否|否|
 |延迟持续性|是|是|是|是|是|
 |自动优化|是|否|否|否|否|
 |批处理模式自适应联接|是|否|否|否|否|
@@ -407,7 +409,3 @@ ms.locfileid: "57556169"
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-这是测试
