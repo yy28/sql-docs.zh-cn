@@ -1,24 +1,23 @@
 ---
 title: 语义搜索 DDL、函数、存储过程和视图 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 9af723a7f3dc964550f006885c844fc14e6777b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d1ca2fc989fb2447b0d81e43f4da99a9313ab5c
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769685"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974136"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>语义搜索 DDL、函数、存储过程和视图
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e4f1c945bd09c4d2878ebb441027e32898f24c56
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+ms.openlocfilehash: 44ba203fcd7445add8fce00dd64913f85bcf4cc1
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807467"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161654"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -36,7 +36,7 @@ ms.locfileid: "55807467"
 ## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>连接到 SQL Server 大数据群集终结点
 
 你可以连接到群集中的不同终结点。 您可以连接到 Microsoft SQL Server 连接类型或 SQL Server 大数据群集终结点。
-在 Azure 数据 Studio （预览版） 中，按 F1，并单击**新的连接** 并且可以连接到你的 SQL Server 大数据群集终结点。
+在 Azure 数据 Studio 中，按 F1，并单击**新的连接** 并且可以连接到你的 SQL Server 大数据群集终结点。
 
 ![image1](media/notebooks-guidance/image1.png)
 

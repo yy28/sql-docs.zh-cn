@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e593e7ce4de4ad4535bf59868e01419e74e2bf8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591281"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973821"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性组：互操作性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "53591281"
   [迁移指南：从结合数据库镜像和日志传送的先前部署迁移到 Always On 可用性组](https://msdn.microsoft.com/library/jj635217)
   [Microsoft SQL Server Always On 解决方案高可用性和灾难恢复指南](https://go.microsoft.com/fwlink/?LinkId=227600)
   [Microsoft SQL Server 2012 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)
-  [SQL Server 客户咨询团队白皮书](https://sqlcat.com/)
+  [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>另请参阅
 

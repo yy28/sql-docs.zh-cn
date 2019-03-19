@@ -1,6 +1,5 @@
 ---
-title: sp_rxPredict |Microsoft Docs
-ms.custom: ''
+title: sp_rxPredict | Microsoft Docs
 ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: addca46cd1ebf05212b0e8721d1799eefbad3bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842925"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161594"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,6 @@ ms.locfileid: "47842925"
 提供了 R 和 Python 机器学习模型中近实时地评分。 `sp_rxPredict` 为提供包装的存储的过程`rxPredict`中的 R 函数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)并[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)，和[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数中[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)并[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 它用 c + + 编写的并专门针对计分操作进行了优化。
 
 虽然必须序列化并存储在目标数据库引擎实例上的二进制格式后使用 R 或 Python，创建模型，但可以使用它从该数据库引擎实例，即使未安装 R 或 Python 集成。 有关详细信息，请参阅[实时评分 sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
-
 
 ## <a name="syntax"></a>语法
 
@@ -64,13 +62,11 @@ sp_rxPredict  ( @model, @input )
 
 用户需求`EXECUTE`针对数据库的权限。
 
-
 ### <a name="supported-algorithms"></a>支持的算法
 
 若要创建和训练模型，使用适用于 R 或 Python，受支持的算法之一提供的[SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)， [SQL Server 2016 R Server （独立版）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016)， [SQL Server 2017 机器学习服务 （R 或 Python）](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)，或[SQL Server 2017 服务器 （独立版） （R 或 Python）](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)。
 
-
-#### <a name="r-revoscaler-models"></a>: RevoScaleR 模型
+#### <a name="r-revoscaler-models"></a>:RevoScaleR 模型
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
@@ -78,7 +74,7 @@ sp_rxPredict  ( @model, @input )
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>: MicrosoftML 模型
+#### <a name="r-microsoftml-models"></a>:MicrosoftML 模型
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -87,7 +83,7 @@ sp_rxPredict  ( @model, @input )
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>： 提供的 MicrosoftML 转换
+#### <a name="r-transformations-supplied-by-microsoftml"></a>:转换提供的 MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
@@ -113,7 +109,7 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python： 转换提供的 microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python:转换提供的 microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)

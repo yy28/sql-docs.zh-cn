@@ -14,12 +14,12 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5cb038a9cf6c69023888472a8e69fa6f940f015
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0cf0478f63ab98bda9bf13a7cc5bad0f98bd1795
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211596"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973116"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>“监视 Always On 可用性组的工具”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53211596"
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客户咨询团队白皮书](https://sqlcat.com/)  
+     [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   

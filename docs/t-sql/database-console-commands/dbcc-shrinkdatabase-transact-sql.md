@@ -28,15 +28,16 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e21ffeed024cb6afaa8d1057b1f6819dbe6516d4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: cb2b339314154526af1980edc97c1fdda37aac76
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685601"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161584"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 收缩指定数据库中的数据文件和日志文件的大小。
   
@@ -151,7 +152,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   终止收缩操作。 所有已完成的工作都会保留。  
 -   不执行任何操作，并允许收缩操作等到阻塞事务完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

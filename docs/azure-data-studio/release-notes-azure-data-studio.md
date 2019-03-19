@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581666"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161624"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
+
+## <a name="march-2019"></a>2019 年 3 月
+
+2019 年 3 月 18 日&nbsp;  /  &nbsp;版本：1.5.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 添加[适用于 Azure Data Studio 的 PostgreSQL 扩展](postgres-extension.md) | 支持的功能： <br/>&bull; &nbsp; 连接对话框 <br/>&bull; &nbsp; 对象资源管理器 <br/>&bull; &nbsp; 查询编辑器 <br/>&bull; &nbsp; 绘制图表 <br/>&bull; &nbsp; 仪表板 <br/>&bull; &nbsp; 代码段 <br/>&bull; &nbsp; 编辑数据 <br/>&bull; &nbsp; 笔记本 |
+| 添加了的 SQL 笔记本 | 添加了对内置笔记本查看器 SQL 内核支持： <br/>&bull; &nbsp; 支持的 T-SQL <br/>&bull; &nbsp; 支持 PGSQL |
+| 添加了的 PowerShell 扩展  | 将[PowerShell 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)体验从 VS Code。  |
+| 添加的 SQL Server 的 dacpac 扩展  | 删除数据层应用程序向导从 SQL Server 导入扩展到新的扩展。  |
+| 添加了的社区扩展 QueryPlan.show | 添加了集成的支持来显示查询计划  |
+| 更新的 SQL Server 2019 预览版的扩展 | &bull; &nbsp; Jupyter Notebook 支持，特别是 Python3 和 Spark 内核时，已移到核心 Azure Data Studio 工具。 <br/>&bull; &nbsp; 错误修复的外部数据向导  |
+| 已解决的 bug 和问题。 | 请参阅[Bug 和问题，在 GitHub 上的](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427):单击单元格之前内核上的运行，这是准备要在错误中的 Spark 效果**解决方法：** 等待，直到运行任何单元格之前加载的内核
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493):从 SSMS 使用 SQL 身份验证-提示用户输入密码启动广告**解决方法：** 现在使用 Windows 身份验证。 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494):无法安装 SQL notebook 功能 <br/>
+**解决方法：** 请执行解决方法步骤[此处](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)。 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503):Azure Data Studio 不能从下载文件夹 (Mac) 进行直接打开为 <br />
+**解决方法：** 在解压缩该应用程序后重新启动计算机。 将进行调查。 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):Notebook 另存为失去连接上下文 <br />
+**解决方法：** 将在下一版本中修复。 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458):如果使用无效的版本将 Dacpac 提取崩溃 SqlToolsService <br/>
+**解决方法：** 重新启动 Azure Data Studio，并确保使用正确的版本。
+- 新的 Notebook，并打开笔记本图标都将丢失 <br/> 
+**解决方法：** 不推荐使用旧连接类型。 我们建议连接到 SQL Server 终结点和按预期方式，您将获得 （新的 Notebook，Spark 作业） 的所有操作。 
 
 ## <a name="february-2019"></a>2019 年 2 月
 

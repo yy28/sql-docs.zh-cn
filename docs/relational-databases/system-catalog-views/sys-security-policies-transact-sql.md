@@ -21,16 +21,16 @@ ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c0462984a2c1ff7c28d0ff327eedc415ff2c30c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704665"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161784"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回数据库中的每个安全策略的行。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47704665"
 |uses_database_collation|**bit**|使用与数据库相同的排序规则。|  
 |is_schemabinding_enabled|**bit**|架构绑定的安全策略的状态：<br /><br /> 0 或 NULL = 已启用<br /><br /> 1 = 已禁用|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY SECURITY POLICY**权限有权访问此目录视图以及与任何人中的所有对象**VIEW DEFINITION**对象上。  
   
 ## <a name="see-also"></a>请参阅  

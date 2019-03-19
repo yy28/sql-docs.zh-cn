@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227199"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161635"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -94,6 +94,7 @@ kubectl config view
 | **DOCKER_REPOSITORY** | 用户帐户控制 | TBD | 专用存储库中的上述注册表存储映像。  它是必需的封闭的公共预览版的持续时间。 |
 | **DOCKER_USERNAME** | 用户帐户控制 | 不可用 | 用于访问容器映像，以防在专用存储库中存储的用户名。 它是必需的封闭的公共预览版的持续时间。 |
 | **DOCKER_PASSWORD** | 用户帐户控制 | 不可用 | 用于访问上述的专用存储库的密码。 它是必需的封闭的公共预览版的持续时间。|
+| **DOCKER_EMAIL** | 用户帐户控制 | 不可用 | 你的电子邮件地址。 |
 | **DOCKER_IMAGE_TAG** | 否 | 最新 | 用于标记图像的标签。 |
 | **DOCKER_IMAGE_POLICY** | 否 | 始终 | 始终强制的映像拉取。  |
 | **DOCKER_PRIVATE_REGISTRY** | 用户帐户控制 | 不可用 | 封闭的公共预览版的时间范围内，你必须设置此值设置为"1"。 |
@@ -139,7 +140,8 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_EMAIL=<your email address>
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### <a name="linux"></a>Linux
@@ -147,8 +149,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 初始化以下环境变量。 在 bash 中，可以使用引号将每个值。
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -159,6 +161,7 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

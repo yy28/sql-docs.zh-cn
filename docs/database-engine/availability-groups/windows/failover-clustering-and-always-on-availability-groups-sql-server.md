@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8257490dfae7e46cdca2a5ad4c0339da857a2e34
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 7246ad4ef1aae3120b2e01563a8a849f8d421f9f
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956078"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974166"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -128,7 +128,7 @@ ms.locfileid: "56956078"
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客户咨询团队白皮书](https://sqlcat.com/)  
+     [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

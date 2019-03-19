@@ -1,6 +1,8 @@
 ---
 title: Reporting Services 开发人员文档 | Microsoft Docs
-ms.date: 03/17/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,15 +11,13 @@ helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
-ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89a5bcc19baead2f0ba8413635fe330048963cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.date: 03/17/2017
+ms.openlocfilehash: 6d107e0f2a02397306cabf2f8a8a20f79cda4212
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835495"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57972846"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 开发人员文档
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  

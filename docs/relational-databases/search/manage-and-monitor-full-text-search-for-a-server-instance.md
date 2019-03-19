@@ -1,26 +1,25 @@
 ---
 title: 管理和监视服务器实例的全文搜索 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f83639c130910c8e6e23f489c2de114af34f9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623535"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974126"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "47623535"
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数。  
   
-|“属性”|描述|函数|  
+|属性|描述|函数|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例中。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

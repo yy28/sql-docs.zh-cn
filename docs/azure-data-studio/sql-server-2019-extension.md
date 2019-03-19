@@ -3,7 +3,7 @@ title: SQL Server 2019 扩展 （预览版）
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 预览适用于 Azure Data Studio 扩展
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231054"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161545"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展 （预览版）
 
@@ -31,9 +30,9 @@ SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送�
 
    |平台|下载|发布日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|2019 年 2 月 13日日 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|2019 年 2 月 13日日 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|2019 年 2 月 13日日 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 年 3 月 18日日 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 年 3 月 18日日 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 年 3 月 18日日 |0.11.0
 
 1. 在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。
 
@@ -44,6 +43,14 @@ SQL Server 2019 扩展 （预览版） 提供新功能和工具支持的寄送�
 1. 重新加载后，该扩展将安装依赖项。 你可以查看在输出窗口中，进度，可能需要几分钟的时间。
 
 1. 依赖项后完成的安装，关闭并重新打开 Azure Data Studio。 **SQL Server 大数据群集**之前重新启动 Azure Data Studio，连接类型不可用。
+
+## <a name="release-notes-v0110"></a>发行说明 (v0.11.0)
+  * Jupyter Notebook 支持，专门为 Python3 和 Spark 内核时，支持已移到 Azure Data Studio。 此扩展插件不再需要使用笔记本。
+  * 在外部数据向导中的多个 bug 修复：
+    * Oracle 类型映射已更新以匹配在 SQL Server 2019 CTP 2.3 中提供的更改。
+    * 修复了其中已丢失的表映射控件中键入新架构。
+    * 修复了在其中检查表映射中的数据库节点没有导致所有表和视图被检查。
+
 
 ## <a name="release-notes-v0102"></a>发行说明 (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支持

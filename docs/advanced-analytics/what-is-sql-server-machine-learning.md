@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032948"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161844"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ SQL Server 2017机器学习服务是数据库引擎实例的加载项，用于�
 
 在 Azure SQL 数据库中，[机器学习服务（使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前处于公共预览状态。
 
-机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。
+## <a name="bring-compute-power-to-the-data"></a>引入数据的计算能力
+
+机器学习服务的关键价值主张是其企业R和Python软件包的强大功能，可以大规模提供高级分析，并能够将计算和处理带到数据所在的位置，从而消除了在网络上提取数据的需求。 这提供了多个优点：
+
++ 数据安全性。 将 R 和 Python 与数据源执行更接近避免了浪费性的或不安全的数据移动。
++ 速度。 数据库针对基于集的操作进行了优化。 如内存中表的数据库的最新创新请摘要和聚合既，和是对数据科学的完美补充。
++ 易于部署和集成。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是用于许多其他数据管理任务和应用程序的操作的中心点。 通过使用驻留在数据库或报告仓库中的数据，可以确保使用机器学习解决方案的数据是一致且最新。 
++ 跨云和本地的效率。 而不是处理 R 或 Python 的会话中的数据，您可以依赖于企业数据管道，其中包括[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]和 Azure 数据工厂。 可以通过 Power BI 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 轻松执行结果报告或分析。
+
+通过恰当地组合 SQL 和 R 来执行不同的数据处理和分析任务，数据科学家和开发人员变得更加高效。
 
 <a name="components"></a>
 

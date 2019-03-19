@@ -15,12 +15,12 @@ ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849ce18b25d3a6708ff248717b8a57d40ea7a14f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9d00998a513f5f6a3b3127eccaeb8fb6325849e0
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213726"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974206"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>有关创建和配置 Always On 可用性组的引用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.locfileid: "53213726"
   
      [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 客户咨询团队白皮书](https://sqlcat.com/)  
+     [SQL Server 客户咨询团队白皮书](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

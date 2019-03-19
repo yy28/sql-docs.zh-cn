@@ -14,17 +14,17 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12dd39283fbea786f83465deeba27e8dbc78e831
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8db5bf0ed872ed55b2578ed106e84645f5517df8
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421204"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161724"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
   
