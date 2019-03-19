@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802373"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974516"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,23 +54,23 @@ ms.locfileid: "56802373"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下载最新版本的 sqlcmd 实用工具
 
-**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![下载](../ssdt/media/download.png) 下载 Microsoft Command Line Utilities 15.0.x for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 命令行工具是正式版 (GA)，但它们一同发行的安装程序包为[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
 **版本信息**
 
 版本号：15.0 <br>
-生成号：15.0.1000.34<br>
-发布日期： 2018 年 10 月 18 日
+生成号：15.0.1300.359<br>
+发布日期：2019 年 3 月 13 日
 
 SQLCMD 的新版本支持 Azure AD 身份验证，包括对 SQL 数据库、 SQL 数据仓库和始终加密功能的多重身份验证 (MFA) 支持。
 新的 BCP 支持 Azure AD 身份验证，包括多重身份验证 (MFA) 支持用于 SQL 数据库和 SQL 数据仓库。
 
-**系统要求**Windows 10、 Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1、 Windows Server 2012 中，Windows Server 2012 R2 此组件要求[Windows 安装程序4.5](https://www.microsoft.com/download/details.aspx?id=8483)并[SQL Server 的 Microsoft ODBC 驱动程序 17.2](https://www.microsoft.com/download/details.aspx?id=56567)。
+**系统要求**Windows 10、 Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1、 Windows Server 2012 中，Windows Server 2012 R2 此组件要求[Windows 安装程序4.5](https://www.microsoft.com/download/details.aspx?id=8483)并[SQL Server 的 Microsoft ODBC 驱动程序 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567)。
  
-若要检查的 SQLCMD 版本执行`sqlcmd -?`命令并确认该 15.0.1000.34 版本或更高版本中使用。
+若要检查的 SQLCMD 版本执行`sqlcmd -?`命令并确认该 15.0.1300.359 版本或更高版本中使用。
 
 
 
