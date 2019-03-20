@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b2723d437a8171570436fb42f7cd9e305e3a8fea
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974286"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198196"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -37,15 +37,15 @@ ms.locfileid: "57974286"
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
     - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下载并提取：
-    - [DMA 报表 Power BI 模板](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip)。
-    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip)。
+    - [DMA 报表 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。
+    - [LoadWarehouse 脚本](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
 保存到 PowerShell 模块目录的 PowerShell 模块，可调用而无需使用之前显式加载的模块。
 
 若要加载模块，请执行以下步骤：
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
-2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip)，然后将它们保存到你创建的文件夹。
+2. 打开[PowerShell 模块](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)，然后将它们保存到你创建的文件夹。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
