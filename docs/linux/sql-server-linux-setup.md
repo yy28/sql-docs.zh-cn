@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675456"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280621"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的安装指南
 
@@ -38,7 +38,7 @@ Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubunt
 
 | 平台 | 受支持的版本 | 获取
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 或 7.4 | [获取 RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [获取 SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [获取 Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Docker 引擎** | 1.8+ | [获取 Docker](https://www.docker.com/products/overview)
@@ -193,7 +193,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
     > [!NOTE]
     > 您还可以使用安装 RPM 包 （RHEL 和 SLES）`rpm -ivh`命令，但在上表中的命令会自动安装依赖项如果可从已批准的存储库。
 
-1. **解决缺少的依赖项**： 必须在此时缺少依赖项。 如果没有，可以跳过此步骤。 在 Ubuntu，如果你有权访问已批准存储库包含这些依赖项，最简单的解决方案是使用`apt-get -f install`命令。 此命令还完成了 SQL Server 的安装。 若要手动检查依赖项，请使用以下命令：
+1. **解决缺少的依赖项**:你可能在此时缺少依赖项。 如果没有，可以跳过此步骤。 在 Ubuntu，如果你有权访问已批准存储库包含这些依赖项，最简单的解决方案是使用`apt-get -f install`命令。 此命令还完成了 SQL Server 的安装。 若要手动检查依赖项，请使用以下命令：
 
    | 平台 | 依赖项列表命令 |
    |-----|-----|

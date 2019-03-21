@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227309"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290773"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
@@ -30,7 +30,7 @@ ms.locfileid: "57227309"
 
 | 平台 | 文件系统 | 安装指南 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 或 7.4 工作站、 服务器和桌面 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3、 7.4、 7.5 或 7.6 Server | XFS 或 EXT4 | [安装指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安装指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安装指南](quickstart-install-connect-ubuntu.md) | 
 | Windows、Mac 或 Linux 上的 Docker 引擎 1.8 及更高版本 | 不可用 | [安装指南](quickstart-install-connect-docker.md) | 
@@ -401,7 +401,7 @@ sudo systemctl start mssql-server
 
     - **解析**:更改语言**sa**具有登录名**ALTER LOGIN**语句。
 
-#### <a name="databases"></a>“数据库”
+#### <a name="databases"></a>数据库
 
 - 不能使用 mssql-conf 实用工具移动 master 数据库。 可以使用 mssql-conf 移动其他系统数据库
 
