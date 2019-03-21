@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027128"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305935"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027128"
   
 1.  **在 DQS 中配置引用数据提供程序详细信息**：必须在 DQS 中配置引用数据服务详细信息，才能在 DQS 中使用引用数据。  
   
-    1.  如果您正在使用市场，则提供一个有效的市场帐户密钥，浏览至市场中的 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 数据类别，并订阅所需的提供程序。  
+    1.  如果您正在使用 Marketplace，提供有效的 Marketplace 帐户密钥，浏览至[Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services)数据类别在 Marketplace 中，并订阅所需的提供程序。  
   
     2.  如果您正在使用直接联机引用数据提供程序，则在使用之前，必须在 DQS 中添加直接引用数据提供程序详细信息。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "56027128"
   
 3.  **对数据质量项目中的“清理”活动使用映射域**：在为“清理”活动创建数据质量项目时，请选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
   
 |任务说明|主题|  
 |----------------------|-----------|  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979913"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306035"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集
 
@@ -203,7 +203,7 @@ NFS 服务器上执行以下步骤：
 
 * [NFS 服务器和 firewalld |Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [装载 NFS 卷 |Linux 网络管理员指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 服务器配置](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [NFS 服务器配置 |Red Hat 客户门户](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>装载数据库文件目录，指向共享存储
 

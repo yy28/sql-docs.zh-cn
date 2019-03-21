@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663777"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305975"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51663777"
   
 |事件|Description|  
 |-----------|-----------------|  
-|[Assembly Load 事件类](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|用于监视程序集加载请求（成功和失败）。|  
+|[Assembly Load 事件类](/sql/database-engine/assembly-load-event-class)|用于监视程序集加载请求（成功和失败）。|  
 |[Sql: batchstarting 事件类](../../relational-databases/event-classes/sql-batchstarting-event-class.md)， [sql: batchcompleted 事件类](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|提供有关已开始或完成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理的信息。|  
 |[SP: Starting 事件类](../../relational-databases/event-classes/sp-starting-event-class.md)， [SP: Completed 事件类](../../relational-databases/event-classes/sp-completed-event-class.md)|用于监视 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的执行。|  
 |[Sql: stmtstarting 事件类](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)， [sql: stmtcompleted 事件类](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|用于监视 CLR 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程的执行。|  
@@ -58,16 +58,16 @@ ms.locfileid: "51663777"
   
 |目录视图|Description|  
 |------------------|-----------------|  
-|[sys.assemblies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|返回有关在数据库中注册的程序集的信息。|  
-|[sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|标识引用其他程序集的程序集。|  
+|[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|返回有关在数据库中注册的程序集的信息。|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|标识引用其他程序集的程序集。|  
 |[sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|返回有关在程序集中定义的每个函数、存储过程和触发器的信息。|  
-|[sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|返回有关在数据库中注册的程序集文件的信息。|  
-|[sys.assembly_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|标识由程序集定义的用户定义类型 (UDT)。|  
-|[sys.module_assembly_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|标识在其中定义 CLR 模块的程序集。|  
-|[sys.parameter_type_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|返回有关属于用户定义类型的参数的信息。|  
+|[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|返回有关在数据库中注册的程序集文件的信息。|  
+|[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|标识由程序集定义的用户定义类型 (UDT)。|  
+|[sys.module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|标识在其中定义 CLR 模块的程序集。|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|返回有关属于用户定义类型的参数的信息。|  
 |[sys.server_assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|标识在其中定义 CLR 触发器的程序集。|  
 |[sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|标识服务器上的服务器级别 DDL 触发器，包括 CLR 触发器。|  
-|[sys.type_assembly_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|标识在其中定义用户定义类型的程序集。|  
+|[sys.type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|标识在其中定义用户定义类型的程序集。|  
 |[sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|返回在数据库中注册的系统和用户定义类型。|  
   
 ## <a name="dynamic-management-views"></a>动态管理视图  
@@ -75,14 +75,14 @@ ms.locfileid: "51663777"
   
 |DMV|Description|  
 |---------|-----------------|  
-|[sys.dm_clr_appdomains &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|提供有关服务器中每个应用程序域的信息。|  
-|[sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|标识在服务器上注册的每个托管程序集。|  
-|[sys.dm_clr_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|返回有关宿主 CLR 的信息。|  
-|[sys.dm_clr_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|标识当前正在运行的所有 CLR 任务。|  
+|[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|提供有关服务器中每个应用程序域的信息。|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|标识在服务器上注册的每个托管程序集。|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|返回有关宿主 CLR 的信息。|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|标识当前正在运行的所有 CLR 任务。|  
 |[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为加快查询执行而缓存的查询执行计划的信息。|  
 |[sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|返回缓存查询计划的聚合性能统计信息。|  
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。|  
-|[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前处于活动状态的所有内存分配器，包括 CLR 内存分配器。|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前处于活动状态的所有内存分配器，包括 CLR 内存分配器。|  
   
 ## <a name="see-also"></a>请参阅  
  [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

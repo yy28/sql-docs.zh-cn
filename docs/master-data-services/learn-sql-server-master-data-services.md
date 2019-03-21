@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809439"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305835"
 ---
 # <a name="learn-sql-server-master-data-services"></a>了解 SQL Server Master Data Services
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809439"
   
   
 ## <a name="training"></a>培训  
-* 探索 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中引入的新特性和功能，请尝试访问此 [**TechNet 虚拟实验室**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) （需要使用你的 Microsoft 帐户进行登录）。  
-* 开发 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 解决方案来存储和管理地理数据的主列表（使用 Excel 外接程序和 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]），请尝试访问此 [**TechNet 虚拟实验室**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
+* 若要浏览的新特性和功能中引入[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，试用[自控进度实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用你的 Microsoft 帐户登录为必需）。  
+* 若要开发[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]解决方案来存储和管理地理数据，使用 Excel 外接程序的主列表并[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]，试用[自控进度实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
   
 ## <a name="videos"></a>视频  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中的新功能，请 [**观看此视频**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

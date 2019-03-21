@@ -5,18 +5,18 @@ description: 了解可用性组群集时运行 Red Hat Enterprise Linux (RHEL)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160592"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305626"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>对 SQL Server 可用性组配置 RHEL 群集
 
@@ -89,7 +89,7 @@ ms.locfileid: "53160592"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-有关详细信息，请参阅[Pacemaker-打开源服务器，高可用性群集](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)。 
+有关详细信息，请参阅[Pacemaker-打开源服务器，高可用性群集](https://clusterlabs.org/pacemaker/)。 
 
 配置了订阅后，完成配置 Pacemaker 的以下步骤：
 
@@ -111,7 +111,7 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 有关 STONITH 和隔离的信息，请参阅以下文章：
 
-* [从零开始的 pacemaker 群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [从零开始的 pacemaker 群集](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [隔离和 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Red Hat Pacemaker 高可用性加载项：隔离](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ sudo pcs property set cluster-recheck-interval=2min
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-若要更新`ag1`资源属性`failure-timeout`到`60s`运行：
+若要更新`ag_cluster`资源属性`failure-timeout`到`60s`运行：
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
