@@ -14,12 +14,12 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa7266cf88cacae049df1c9bf98a2979e3fa0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: befdec64de1b12370eea84a64cb8502172a4d3b3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766485"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974076"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ catalog.validate_package [ @folder_name = ] folder_name
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -55,7 +55,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  指示是否应使用 32 位运行时在 64 位操作系统上运行包。 在 64 位操作系统上运行时，使用值 `1` 以便使用 32 位运行时执行此包。 在 64 位操作系统上运行时，使用值 `0` 以便使用 64 位运行时执行此包。 此参数可选。 use32bitruntime 为 bit。  
   
  [ @environment_scope = ] environment_scope  
- 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 默认情况下使用字符 `D`。 environment_scope 为 Char(1)。  
+ 指示由验证考虑的环境引用。 如果值为 `A`，则验证中包括与项目关联的所有环境引用。 值为 `S` 时，只包括一个环境引用。 当值为 `D` 时，不包括环境引用，并且每个参数必须有文字默认值才能通过验证。 此参数可选。 默认情况下使用字符 `D`。 environment_scope 为 char(1)。  
   
  [ @reference_id = ] reference_id  
  环境引用的唯一 ID。 如果 environment_scope 为 `S`，仅当在验证中包含单个环境引用时，才需要此参数。 reference_id 为 bigint。  
@@ -66,7 +66,7 @@ catalog.validate_package [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  

@@ -1,23 +1,22 @@
 ---
 title: 改进全文查询的性能 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bff25614ff82a274e5c98bc62cc25a6f1003a1b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a618f039e4a882318f8be00ebd0a05aef9d80efb
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677356"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973416"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改进全文查询的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "51677356"
 -   对于包含选择性关系谓词的应用程序，如果将使用选择性关系谓词和非选择性全文谓词的查询编写成使用查询优化器，则这样的查询可能会有最佳性能。 这将允许查询优化器决定它是否可以利用谓词或范围下推来生成有效的查询计划。 与将关系数据作为全文数据建立索引相比，此方法更简单，通常也更有效。  
   
 ## <a name="related-resources"></a>相关资源  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements（SQL Server 2008 全文搜索：内在变化与增强功能）](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 Full-Text Search:Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)（SQL Server 2008 全文搜索：内部机制和增强功能）  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.dm_fts_memory_buffers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591641"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072202"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ ms.locfileid: "53591641"
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>为 SQL Server 提供最大内存量  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)。
-  
-## <a name="examples"></a>示例  
-  
-### <a name="example-a"></a>示例 A  
- 以下示例将 `max server memory` 选项设置为 4 GB：  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>示例
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>示例 A. 将最大服务器内存选项设置为 4 GB。
+ 以下示例将 `max server memory` 选项设置为 4 GB。  请注意，虽然 `sp_configure` 将选项的名称指定为 `max server memory (MB)`，但该示例的演示省略了 `(MB)`。
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+此操作输出的语句类似于：
+
+> 配置选项“最大服务器内存 (MB)”从 2147483647 更改为 4096。 请运行 RECONFIGURE 语句进行安装。
+
 ### <a name="example-b-determining-current-memory-allocation"></a>示例 B. 确定当前内存分配  
  以下查询返回有关当前分配内存的信息。  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>示例 C. 确定“最大服务器内存 (MB)”的值
+以下查询返回有关当前配置的值和 SQL Server 使用的值的信息。  无论“显示高级选项”是否为 true，此查询都将返回结果。
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>另请参阅  
  [内存管理体系结构指南](../../relational-databases/memory-management-architecture-guide.md)   

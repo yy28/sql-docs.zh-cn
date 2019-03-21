@@ -1,10 +1,8 @@
 ---
 title: 使用全文索引向导 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
@@ -21,16 +19,17 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbe86b8a0deb419854e3ec364317872507a20e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731755"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973846"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文索引向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47731755"
 4. **断字符语言。** 从下拉列表中选择语言。 此选项用于为索引标识正确的断字符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用断字符在全文索引的数据中标识词的边界。  
   
 5.  **类型列。** 选择存储作为全文索引列的文档类型的列名称。  
-> **注意：** 只有当“可用列”列中命名的列为 **varbinary(max)** 或 **image** 类型时，才会启用“类型列”。  
+> **注意**：只有当“可用列”列中命名的列为“varbinary(max)”或“image”类型时，才会启用“类型列”。  
   
 6. **统计语义。** 选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md)。  
   

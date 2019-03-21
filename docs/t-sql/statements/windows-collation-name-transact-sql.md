@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572840"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974346"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -42,8 +42,9 @@ ms.locfileid: "57572840"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ WidthSensitivity
 Omitted 指定不区分全半角，WS 指定区分全半角。
 
 VariationSelectorSensitivity  
-适用于：[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
 “省略”指定区分不区分选择器，“VSS”指定区分区分选择器。
+
+**UTF8**  
+**适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
+
+指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **BIN**  
 指定使用向后兼容的二进制排序顺序。
@@ -83,7 +89,6 @@ VariationSelectorSensitivity
 指定使用码位比较语义的二进制排序顺序。
 
 ## <a name="remarks"></a>Remarks
-
 某些码位可能未定义排序权重和/或大写/小写映射，具体取决于排序规则的版本。 例如，在 `LOWER` 函数给定相同字符但在不同版本的同一排序规则中，比较该函数的输出：
 
 ```sql

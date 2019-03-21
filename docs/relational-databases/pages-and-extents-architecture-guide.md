@@ -1,7 +1,7 @@
 ---
 title: 页和区体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748479"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974366"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ ms.locfileid: "52748479"
 对于包含 varchar、nvarchar、varbinary 或 sql_variant 列的表，可以放宽此限制。 当表中的所有固定列和可变列的行的总大小超过限制的 8,060 字节时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将从最大长度的列开始以动态方式将一个或多个可变长度列移动到 ROW_OVERFLOW_DATA 分配单元中的页。 
 
 每当插入或更新操作将行的总大小增大到超过限制的 8,060 字节时，将会执行此操作。 将列移动到 ROW_OVERFLOW_DATA 分配单元中的页后，将在 IN_ROW_DATA 分配单元中的原始页上维护 24 字节的指针。 如果后续操作减小了行的大小，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会动态将列移回到原始数据页。 
+
+##### <a name="row-overflow-considerations"></a>行溢出注意事项 
+
+合并每行超过 8,060 字节的 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列时，请注意下列事项： 
+-  如果更新操作使记录变长，大型记录将被动态移动到另一页。 如果更新操作使记录变短，记录可能会移回 IN_ROW_DATA 分配单元中的原始页。 执行查询和其他选择操作（例如，对包含行溢出数据的大型记录进行排序或合并）将延长处理时间，因为这些记录将同步处理，而不是异步处理。   
+   因此，当要设计的表中包含多个 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列时，请考虑可能溢出的行的百分比，以及可能查询这些溢出数据的频率。 如果可能需要经常查询行溢出数据中的许多行，请考虑对表格进行规范化处理，以使某些列移动到另一个表中。 然后可以在异步 JOIN 操作中执行查询。 
+-  对于 varchar、nvarchar、varbinary、sql_variant 或 CLR 用户定义类型的列，单个列的长度仍然必须在 8,000 字节的限制之内。 只有它们的合并长度可以超过表的 8,060 字节的行限制。
+-  其他数据类型列的和（包括 char 和 nchar 数据）必须在 8,060 字节的行限制之内。 大型对象数据也不受 8,060 字节行限制的制约。 
+-  聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 varchar 列。 如果对 varchar 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。 有关分配单元的详细信息，请参阅表和索引组织。
+-  可以包括包含行溢出数据的列，作为非聚集索引的键列或非键列。
+-  对于使用稀疏列的表，记录大小限制为 8,018 字节。 转换后的数据加上现有记录数据超过 8,018 字节时，会返回 [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md)。 在稀疏和非稀疏类型之间转换列时，数据库引擎会保存当前记录数据的副本。 这样，记录所需的存储会临时加倍。
+-  若要获得有关可能包含行溢出数据的表或索引的信息，请使用 [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理函数。
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ DCM 页和 BCM 页的间隔与 GAM 和 SGAM 页的间隔相同，都是 64,000 �
 
 ## <a name="see-also"></a>另请参阅
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[堆（没有聚集索引的表）](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[堆（没有聚集索引的表）](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[读取页](../relational-databases/reading-pages.md)   
+[写入页](../relational-databases/writing-pages.md)   

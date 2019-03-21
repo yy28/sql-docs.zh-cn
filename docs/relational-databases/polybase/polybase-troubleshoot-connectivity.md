@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803152"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976327"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 连接疑难解答
 
@@ -38,7 +38,7 @@ ms.locfileid: "56803152"
 1. 受保护的资源（HDFS、MR2、YARN、作业历史记录等）
 1. 密钥发行中心（在 Active Directory 中称为域控制器）
 
-在 Hadoop 集群上配置 Kerberos 时，每个 Hadoop 安全资源均会在“密钥发行中心(KDC)”中注册一个唯一的服务主体名称 (SPN) ****  ****。 目的是让客户端获取名为票证授予票证 (TGT) 的临时用户票证，以针对其想要访问的特定 SPN 从 KDC 请求另一个名为服务票证 (ST) 的临时票证 **** ****。  
+在 Hadoop 群集上配置 Kerberos 时，每个 Hadoop 安全资源均会在“密钥发行中心 (KDC)”中注册一个唯一的“服务主体名称 (SPN)”。 目的是让客户端获取名为票证授予票证 (TGT) 的临时用户票证，以针对其想要访问的特定 SPN 从 KDC 请求另一个名为服务票证 (ST) 的临时票证。  
 
 在 PolyBase 中，请求对任何受 Kerberos 保护的资源进行身份验证时，均将发生下列四步往返握手：
 
@@ -102,7 +102,7 @@ PolyBase 具有以下包含 Hadoop 群集属性的配置 XML 文件：
 | *Name Node Port* | 名称节点的端口。 指的是 CREATE EXTERNAL DATA SOURCE T-SQL 中的“LOCATION”参数。 例如，8020。 |
 | *Service Principal* | KDC 的管理服务主体。 匹配 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中的“IDENTITY”参数。|
 | *Service Password* | 将密码存储在文件中并在此处传递该文件路径，而非在控制台上键入密码。 该文件的内容应与 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中用作“SECRET”参数的内容一致。 |
-| 远程 HDFS 文件路径（可选）* * | 要访问的现有文件的路径。 如果未指定，将使用根路径“/”。 |
+| *Remote HDFS file path (optional) * | 要访问的现有文件的路径。 如果未指定，将使用根路径“/”。 |
 
 ## <a name="example"></a>示例
 
@@ -210,11 +210,12 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 
 ## <a name="debugging-tips"></a>调试提示
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-在 KDC 主机或任何经过配置的 KDC 客户端上运行 kadmin.local  >（管理员登录）> listprincs  可查看已注册 KDC 的所有 SPN，包括管理员 **** ****。 如果在 Hadoop 群集上正确配置了 Kerberos，则群集中的每个可用服务均应有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）默认情况下，其对应的 keytab 文件（密码替换项）位于  **/etc/security/keytabs** 下。 已使用 KDC 私钥对它们进行加密。  
+在 KDC 主机或任何经过配置的 KDC 客户端上运行 kadmin.local >（管理员登录）> listprincs 可查看已注册 KDC 的所有 SPN，包括管理员。 如果在 Hadoop 群集上正确配置了 Kerberos，则群集中的每个可用服务均应有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）默认情况下，其对应的 keytab 文件（密码替换项）位于 /etc/security/keytabs 下。 已使用 KDC 私钥对它们进行加密。  
 
-也可考虑使用 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 在本地 KDC 上验证管理员凭据。 用法示例为： `kinit identity@MYREALM.COM`。 密码提示框指示存在标识。  默认情况下，可在 /var/log/krb5kdc.log 中获取 KDC 日志，其中包括所有票证请求（包括生成请求的客户端 IP） ****。 应有来自 SQL Server 计算机 IP（此工具的运行位置）的两个请求：第一个是针对身份验证服务器的 TGT 的 AS\_REQ ，第二个是针对票证授予服务器的 ST 的 TGS\_REQ **** ****。
+也可考虑使用 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 在本地 KDC 上验证管理员凭据。 用法示例为：`kinit identity@MYREALM.COM`。 密码提示框指示存在标识。  
+默认情况下，可在 /var/log/krb5kdc.log 中获取 KDC 日志，其中包括所有的票证请求（包括生成请求的客户端 IP）。 应有来自 SQL Server 计算机 IP（此工具的运行位置）的两个请求：第一个是针对身份验证服务器的 TGT 的 AS\_REQ，第二个是针对票证授予服务器的 ST 的 TGS\_REQ。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
 
 ### <a name="active-directory"></a>Active Directory 
 
-在 Active Directory 中，可通过浏览至“控制面板”>“Active Directory 用户和计算机”>“MyRealm”>MyOrganizationalUnit”查看 SPN。 **  ** 如果在 Hadoop 群集上正确配置了 Kerberos，则每个可用服务均有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）
+在 Active Directory 中，可通过浏览至“控制面板 > Active Directory 用户和计算机 > MyRealm >  MyOrganizationalUnit”查看 SPN。 如果在 Hadoop 群集上正确配置了 Kerberos，则每个可用服务均有一个 SPN（例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等）
 
 ### <a name="general-debugging-tips"></a>常规调试提示
 

@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319398"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973806"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319398"
 |内存优化表中的每个索引键的字节数||非聚集索引为 2,500 字节。 哈希索引没有限制，只要全部索引键均适应行内即可。|在内存优化表上，非聚集索引不能具有声明的最大大小超过 2500 个字节的键列。 这与键列中实际数据是否短于声明的最大大小并不相关。<br /><br /> 因为，哈希索引没有硬性大小限制。<br /><br /> 对于内存优化表的索引，不存在“包含的列”这一概念，因为所有索引本来就覆盖了所有的列。<br /><br /> 对于内存优化表，即使行大小为 8060 个字节，一些可变长度列也可以物理方式存储于这 8060 个字节以外的空间。 但是，表上所有索引的所有键列，加上表中任何其他固定长度列，其最大声明大小不得超过 8060 个字节。|  
 |每个外键的字节数||900||  
 |每个主键的字节数||900||  
-|每行的字节数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 只有 24 字节的根存储在推送出行外的可变长度列的主记录中；因此，此版本中的有效行限制高于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的有效行限制。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的“行溢出数据超过 8 KB”这一主题。|  
+|每行的字节数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持行溢出存储，行溢出存储使长度可变的列可以被推送到行外。 只有 24 字节的根存储在推送出行外的可变长度列的主记录中；因此，此版本中的有效行限制高于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的有效行限制。 有关更多信息，请参阅[大型行支持](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)。|  
 |内存优化表中的每行字节数||8,060|启动 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 内存优化表支持行外存储。 如果表中的所有列的最大大小超过 8060 个字节，则可变长度列将被挤出行，这是编译时的决定。 存储于行外的列仅有 8 字节的引用存储于行内。 有关详细信息，请参阅 [内存优化表中的表和行大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|  
 |存储过程源文本中的字节数||批处理大小中的较小者或 250 MB||  
 |每个 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 列的字节||2^31-1||  

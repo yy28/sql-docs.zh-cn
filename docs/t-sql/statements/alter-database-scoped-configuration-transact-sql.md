@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579671"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974386"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ ms.locfileid: "57579671"
 - 启用或禁用对本机编译的 T-SQL 模块的执行统计信息收集。
 - 对支持 ONLINE= 语法的 DDL 语句启用或禁用“默认联机”选项。
 - 对支持 RESUMABLE= 语法的 DDL 语句启用或禁用“默认可恢复”选项。
-- 启用或禁用全局临时表的自动删除功能
+- 启用或禁用全局临时表的自动删除功能。 
+- 启用或禁用[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能。
+- 启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 指定辅助数据库的设置（所有辅助数据库必须具有相同的值）。
+
+CLEAR PROCEDURE_CACHE    
+
+清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。
 
-CLEAR PROCEDURE_CACHE
-
-清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。
-
 IDENTITY_CACHE = { ON | OFF }
 
 **适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ IDENTITY_CACHE = { ON | OFF }
 
 > [!NOTE]
 > 仅可为 PRIMARY 设置此选项。 有关详细信息，请参阅[标识列](create-table-transact-sql-identity-property.md)。
+
+INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
+
+> [!NOTE]
+> 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+允许用户在数据库范围内启用或禁用批处理模式内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 批处理模式内存授予反馈是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
+
+> [!NOTE]
+> 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+允许用户在数据库范围内启用或禁用批处理模式自适应联接，同时将数据库兼容性级别维持在 140 或更高。 批处理模式自适应联接是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
+
+> [!NOTE]
+> 对于数据库兼容性级别 130 或更低级别，此数据库范围配置无效。
+
+TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+
+允许用户在数据库范围启用或禁用 T-SQL 标量 UDF 内联，同时将数据库兼容性级别维持在 150 或更高。 T-SQL 标量 UDF 内联是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
+
+> [!NOTE] 
+> 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+
+允许你选择选项，使引擎自动将支持的操作提升为联机。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为联机。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_ONLINE 的当前值。 这些选项只适用于支持联机的操作。
+
+FAIL_UNSUPPORTED
+
+此值可将所有支持的 DDL 操作提升为 ONLINE。 不支持联机执行的操作会失败并引发警告。
+
+WHEN_SUPPORTED
+
+此值可提升支持 ONLINE 的操作。 不支持联机的操作将脱机运行。
+
+> [!NOTE]
+> 通过提交指定了 ONLINE 选项的语句，可替代默认设置。
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**适用对象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+
+允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于支持可恢复的操作。
+
+FAIL_UNSUPPORTED
+
+此值可将所有支持的 DDL 操作提升为 RESUMABLE。 不支持可恢复执行的操作会失败并引发警告。
+
+WHEN_SUPPORTED
+
+此值可提升支持 RESUMABLE 的操作。 不支持可恢复的操作以不可恢复的方式运行。
+
+> [!NOTE]
+> 通过提交指定了 RESUMABLE 选项的语句，可替代默认设置。
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 
@@ -176,39 +250,32 @@ XTP_QUERY_EXECUTION_STATISTICS = { ON |OFF  }
 
 有关本机编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的性能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
-允许你选择选项，使引擎自动将支持的操作提升为联机。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为联机。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_ONLINE 的当前值。 这些选项只适用于支持联机的操作。
-
-FAIL_UNSUPPORTED
-
-此值可将所有支持的 DDL 操作提升为 ONLINE。 不支持联机执行的操作会失败并引发警告。
-
-WHEN_SUPPORTED
-
-此值可提升支持 ONLINE 的操作。 不支持联机的操作将脱机运行。
+允许用户在数据库范围内启用或禁用行模式内存授予反馈，同时将数据库兼容性级别维持在 150 或更高。 行模式内存授予反馈是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能（[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中支持行模式）。
 
 > [!NOTE]
-> 通过提交指定了 ONLINE 选项的语句，可替代默认设置。
+> 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 
-适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
-允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于支持可恢复的操作。
-
-FAIL_UNSUPPORTED
-
-此值可将所有支持的 DDL 操作提升为 RESUMABLE。 不支持可恢复执行的操作会失败并引发警告。
-
-WHEN_SUPPORTED
-
-此值可提升支持 RESUMABLE 的操作。 不支持可恢复的操作以不可恢复的方式运行。
+允许用户在数据库范围内的行存储上启用或禁用批处理模式，同时将数据库兼容性级别维持在 150 或更高。 行存储上的批处理模式是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
 
 > [!NOTE]
-> 通过提交指定了 RESUMABLE 选项的语句，可替代默认设置。
+> 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+
+允许用户在数据库范围内启用或禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 表变量延迟编译是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
+
+> [!NOTE]
+> 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
 GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
@@ -219,47 +286,11 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 单一数据库和弹性池，可以在 SQL 数据库服务器的单个用户数据库中设置此选项。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例中，要在 `TempDB` 中设置此选项且单个用户数据库的设置不起作用。
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-允许用户在数据库或语句范围内启用或禁用自适应联接，同时将数据库兼容性级别维持在 140 或更高。 自适应联接是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
-
-允许用户在数据库范围内启用或禁用行模式内存授予反馈，同时将数据库兼容性级别维持在 150 或更高。 行模式内存授予反馈是 SQL Server 2017 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能（SQL Server 2019 和 Azure SQL 数据库支持行模式）。
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-允许用户在数据库范围内启用或禁用批处理模式内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 批处理模式内存授予反馈是 SQL Server 2017 中推出的[查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-允许用户在数据库范围内启用或禁用批处理模式自适应联接，同时将数据库兼容性级别维持在 140 或更高。 批处理模式自适应联接是 SQL Server 2017 中推出的[查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
-
-允许用户在数据库范围内的行存储上启用或禁用批处理模式，同时将数据库兼容性级别维持在 150 或更高。 行存储上的批处理模式是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
-
-允许用户在数据库范围内启用或禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 表变量延迟编译是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
+允许启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。 轻型查询分析基础结构 (LWP) 比标准分析机制更有效地提供查询性能数据，并且默认启用。
 
 ## <a name="Permissions"></a> Permissions
 

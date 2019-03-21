@@ -1,7 +1,7 @@
 ---
 title: 从命令提示符安装 SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1aa7350ca8232f0b57a8d7ecf960d69838b26d8b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662981"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976431"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -274,7 +274,7 @@ ms.locfileid: "56662981"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Python 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 Python 组件时，通常使用此设置。|  
+|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|保留供将来使用。 使用 %TEMP% 存储 Python .CAB 文件，以便在没有 Internet 连接的计算机上安装。 |  
 |R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 R 组件时，通常使用此设置。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  

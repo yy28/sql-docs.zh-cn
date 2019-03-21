@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046577"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072311"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教程介绍如何开始使用[具有安全 enclave 的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它将介绍：
-- 如何创建简单环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
+- 如何创建基本环境，以便测试和评估具有安全 enclave 的 Always Encrypted。
 - 如何使用 SQL Server Management Studio (SSMS) 就地加密数据并就加密列发出各种查询。
 
 ## <a name="prerequisites"></a>必备条件
@@ -139,11 +139,11 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 在此步骤中，将在 SQL Server 实例中启用使用 enclave 的 Always Encrypted 功能。
 
 1. 打开 SSMS，以系统管理员身份连接到 SQL Server 实例，并打开新的查询窗口。
-2. 将安全 enclave 类型配置为 VBS。
+2. 将安全 enclave 类型设置为基于虚拟化的安全性 (VBS)。
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. 重启 SQL Server 实例，前述更改才会生效。 可在“对象资源管理器”中右键单击实例并选择“重启”，从而在 SSMS 中重启实例。 重启实例后，请重新连接到它。
@@ -152,10 +152,10 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    查询应返回类似于以下的行：  
+    该查询应返回以下结果：  
 
     | NAME                           | 值 | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 5. 若要启用对加密列的大量计算，请运行以下查询：
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 2. 创建名为 ContosoHR 的新数据库。
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. 确保已连接到新建的数据库。 创建名为“员工”的新表。
@@ -190,8 +190,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. 向“员工”表添加多条员工记录。
@@ -206,9 +205,8 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>步骤 5：预配已启用 enclave 的密钥
@@ -238,7 +235,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     7. 选择“确定”。
 
         ![允许 enclave 计算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. 创建已启用 enclave 的新列加密密钥：
 
     1. 右键单击“Always Encrypted 密钥”，然后选择“新建列加密密钥”。
@@ -254,40 +251,40 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     1. 在 SSMS 中，打开一个新的查询窗口。
     2. 右键单击新查询窗口中的任意位置。
     3. 选择“连接”\>“更改连接”。
-    4. 选择“选项”。 导航到“Always Encrypted”选项卡，选择“启用 Always Encrypted”，然后指定 enclave 证明 URL。
+    4. 选择“选项”。 导航到“Always Encrypted”选项卡，选择“启用 Always Encrypted”，然后指定 enclave 证明 URL（例如，ht<span>tp://</span>hgs.bastion.local/Attestation）。
     5. 选择“连接”。
-2. 在 SSMS 中，为数据库连接配置另一个禁用了 Always Encrypted 的查询窗口。
+    6. 将数据库上下文更改为 ContosoHR 数据库。
+1. 在 SSMS 中，为数据库连接配置另一个禁用了 Always Encrypted 的查询窗口。
     1. 在 SSMS 中，打开一个新的查询窗口。
     2. 右键单击新查询窗口中的任意位置。
     3. 选择“连接”\>“更改连接”。
     4. 选择“选项”。 导航到“Always Encrypted”选项卡，请确保未选中“启用 Always Encrypted”。
     5. 选择“连接”。
-3. 加密 SSN 和“工资”列。 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下语句：
+    6. 将数据库上下文更改为 ContosoHR 数据库。
+1. 加密 SSN 和“工资”列。 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下脚本：
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > 请注意上面的脚本中用于为数据库清除查询计划缓存的 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 语句。 更改表后，需要清除访问该表的所有批处理和存储过程的计划，以刷新参数加密信息。 
 
 4. 若要验证 SSN 和“工资”列现在是否已加密，请在禁用了 Always Encrypted 的查询窗口中，粘贴并执行以下语句。 查询窗口应返回 SSN 和“工资”列中的加密值。 在启用了 Always Encrypted 的查询窗口中尝试执行同一查询，查看解密数据。
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>步骤 7：对加密列运行丰富查询
@@ -298,13 +295,13 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     1. 在 SSMS 的主菜单中，选择“查询”。
     2. 选择“查询选项…”。
     3. 导航到“执行” > “高级”。
-    4. 选择或取消选择“启用 Always Encrypted 参数化”。
+    4. 选择“启用 Always Encrypted 参数化”。
     5. 选择“确定”。
 2. 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下查询。 该查询应返回满足指定搜索条件的纯文本值和行。
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

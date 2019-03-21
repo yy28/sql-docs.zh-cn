@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579727"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161684"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579727"
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可处理对各种数据存储体系结构（例如，本地表、已分区表和分布在多个服务器上的表）执行的查询。 下面的主题介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何处理查询并通过执行计划缓存来优化查询重用。
 
 ## <a name="execution-modes"></a>执行模式
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可使用两种不同的处理模式处理 SQL 语句：
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可使用两种不同的处理模式处理 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句：
 - 行模式执行
 - 批模式执行
 
@@ -51,7 +51,7 @@ ms.locfileid: "57579727"
 > 批模式执行是非常高效的数据仓库方案，可读取和聚合大量数据。
 
 ## <a name="sql-statement-processing"></a>SQL 语句处理
-处理单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 SQL 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
+处理单个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的最基本方法。 用于处理只引用本地基表（不引用视图或远程表）的单个 `SELECT` 语句的步骤说明了这个基本过程。
 
 ### <a name="logical-operator-precedence"></a>逻辑运算符的优先顺序
 当一个语句中使用了多个逻辑运算符时，计算顺序依次为：`NOT`、`AND`最后是 `OR`。 算术运算符和位运算符优先于逻辑运算符处理。 有关详细信息，请参阅[运算符优先级](../t-sql/language-elements/operator-precedence-transact-sql.md)。
@@ -215,22 +215,22 @@ END;
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中优化 *MyProc2* 中的 `SELECT`语句时，`@d2` 的值是未知的。 因此，查询优化器为 `OrderDate > @d2` 的选择性使用默认估计值（在此示例中为 30%）。
 
 ### <a name="processing-other-statements"></a>处理其他语句
-上述处理 `SELECT` 语句的基本步骤也适用于其他 SQL 语句，例如 `INSERT`、 `UPDATE`和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT` 语句，该语句提供要更新或插入的数据值。
+上述处理 `SELECT` 语句的基本步骤也适用于其他 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，例如 `INSERT`、`UPDATE` 和 `DELETE`。 `UPDATE` 和 `DELETE` 语句必须把要修改或要删除的行集作为目标。 识别这些行的过程与识别组成 `SELECT` 语句结果集的源行的过程相同。 `UPDATE` 和 `INSERT` 语句都可以包含嵌入式 `SELECT` 语句，该语句提供要更新或插入的数据值。
 
 即使像 `CREATE PROCEDURE` 或 `ALTER TABLE` 这样的数据定义语言 (DDL) 语句也被最终解析为系统目录表上的一系列关系操作，而有时则根据数据表解析（如 `ALTER TABLE ADD COLUMN`）。
 
 ### <a name="worktables"></a>工作表
-关系引擎可能需要生成一个工作表以执行 SQL 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 tempdb 中生成，并在不再需要时自动删除。
+关系引擎可能需要生成一个工作表以执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中指定的逻辑操作。 工作表是用于保存中间结果的内部表。 某些 `GROUP BY`、 `ORDER BY`或 `UNION` 查询会生成工作表。 例如，如果 `ORDER BY` 子句引用了不为任何索引涵盖的列，则关系引擎可能需要生成一个工作表以按所请求的顺序对结果集进行排序。 工作表有时也用作临时保存执行部分查询计划所得结果的假脱机。 工作表在 tempdb 中生成，并在不再需要时自动删除。
 
 ### <a name="view-resolution"></a>视图解析
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器对索引视图和非索引视图将区别对待： 
 
 * 索引视图的行以表的格式存储在数据库中。 如果查询优化器决定使用查询计划的索引视图，则索引视图将按照基表的处理方式进行处理。
-* 只有非索引视图的定义才存储，而不存储视图的行。 查询优化器将视图定义中的逻辑纳入执行计划，而该执行计划是它为引用非索引视图的 SQL 语句生成的。 
+* 只有非索引视图的定义才存储，而不存储视图的行。 查询优化器将视图定义中的逻辑纳入执行计划，而该执行计划是它为引用非索引视图的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句生成的。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器用于决定何时使用索引视图的逻辑与用于决定何时对表使用索引的逻辑相似。 如果索引视图中的数据包括所有或部分 SQL 语句，而且查询优化器确定视图的某个索引是低成本的访问路径，则不论查询中是否引用了该视图的名称，查询优化器都将选择此索引。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器用于决定何时使用索引视图的逻辑与用于决定何时对表使用索引的逻辑相似。 如果索引视图中的数据包括所有或部分 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，而且查询优化器确定视图的某个索引是低成本的访问路径，则不论查询中是否引用了该视图的名称，查询优化器都将选择此索引。
 
-当 SQL 语句引用非索引视图时，分析器和查询优化器将分析 SQL 语句的源和视图的源，然后将它们解析为单个执行计划。 没有单独用于 SQL 语句或视图的计划。
+当 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句引用非索引视图时，分析器和查询优化器将分析 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的源和视图的源，然后将它们解析为单个执行计划。 没有单独用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或视图的计划。
 
 例如，请看下面的视图：
 
@@ -245,7 +245,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-根据此视图，这两个 SQL 语句在基表上执行相同的操作且生成相同的结果：
+根据此视图，这两个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句在基表上执行相同的操作且生成相同的结果：
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -371,7 +371,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成智能的动态计划，以便有效地利用分布式查询访问远程成员表中的数据： 
 
 * 查询处理器首先使用 OLE DB 从每个成员表中检索 CHECK 约束定义。 这样，查询处理器就可以在各成员表之间映射键值的分布。
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 子句中指定的键范围与显示行在成员表中如何分布的映射进行比较。 然后查询处理器生成查询执行计划，该计划使用分布式查询只检索那些完成 SQL 语句所需的远程行。 也可以采用这种方式生成执行计划：任何对远程成员表数据或元数据的访问，都被延迟到需要这些信息时。
+* 查询处理器将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句 `WHERE` 子句中指定的键范围与显示行在成员表中如何分布的映射进行比较。 然后查询处理器生成查询执行计划，该计划使用分布式查询只检索那些完成 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句所需的远程行。 也可以采用这种方式生成执行计划：任何对远程成员表数据或元数据的访问，都被延迟到需要这些信息时。
 
 例如，有这样一个系统：其中的客户表在 Server1（`CustomerID` 从 1 到 3299999）、Server2（`CustomerID` 从 3300000 到 6599999）和 Server3（`CustomerID` 从 6600000 到 9999999）间进行分区。
 
@@ -385,7 +385,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 该查询的执行计划从本地成员表中提取 `CustomerID` 键值从 3200000 到 3299999 的行，并发出分布式查询以从 Server2 中检索键值从 3300000 到 3400000 的行。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器还可以在查询执行计划中创建动态逻辑，用于必须生成计划时键值未知的 SQL 语句。 例如下面的存储过程：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询处理器还可以在查询执行计划中创建动态逻辑，用于必须生成计划时键值未知的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。 例如下面的存储过程：
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -410,7 +410,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>存储过程和触发器执行
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅存储存储过程和触发器的源。 第一次执行存储过程或触发器时，源被编译为执行计划。 如果在执行计划从内存老化掉之前再次执行该存储过程或触发器，则关系引擎将检测现有计划并重新使用它。 如果该计划已从内存老化掉，将生成新的计划。 此进程类似于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对所有 SQL 语句采用的进程。 与动态 SQL 的批处理相比，存储过程和触发器在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的主要性能优势是它们的 SQL 语句始终相同。 因此，关系引擎能够轻松地将它们与任何现有执行计划相匹配。 可以轻松地重新使用存储过程和触发器计划。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 仅存储存储过程和触发器的源。 第一次执行存储过程或触发器时，源被编译为执行计划。 如果在执行计划从内存老化掉之前再次执行该存储过程或触发器，则关系引擎将检测现有计划并重新使用它。 如果该计划已从内存老化掉，将生成新的计划。 此进程类似于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句采用的进程。 与动态 [!INCLUDE[tsql](../includes/tsql-md.md)] 的批处理相比，存储过程和触发器在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的主要性能优势是它们的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句始终相同。 因此，关系引擎能够轻松地将它们与任何现有执行计划相匹配。 可以轻松地重新使用存储过程和触发器计划。
 
 存储过程和触发器的执行计划与调用存储过程或激发触发器的批处理的执行计划是独立执行的。 这样就有更大的机会重用存储过程和触发器的执行计划。
 
@@ -420,16 +420,21 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 执行计划包含下列主要组件： 
 
-* 查询执行计划 — 执行计划的主体是一个重入的只读数据结构，可由任意数量的用户使用。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
-* 执行上下文 — 正在执行查询的每个用户都有一个数据结构，用于保存特定于其执行的数据（如参数值）。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
+- **查询执行计划**     
+  执行计划的主体是一个重入的只读数据结构，可由任意数量的用户使用。 这称为查询计划。 查询计划中不存储用户上下文。 内存中查询计划副本永远不超过两个：一个副本用于所有的串行执行，另一个用于所有的并行执行。 并行副本覆盖所有的并行执行，与并行执行的并行度无关。 
+- **执行上下文**     
+  每个正在执行查询的用户都有一个包含其执行专用数据（如参数值）的数据结构。 此数据结构称为执行上下文。 执行上下文数据结构可以重新使用。 如果用户执行查询而其中的一个结构未使用，将会用新用户的上下文重新初始化该结构。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 SQL 语句时，关系引擎将首先查看计划缓存，以确认是否存在用于同一 SQL 语句的现有执行计划。 如果 SQL 语句与先前根据缓存计划执行的 SQL 语句（每个字符的字符）完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用找到的任何现有计划，从而节省重新编译 SQL 语句的开销。 如果没有现有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中执行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，关系引擎将首先查看计划缓存，以确认是否存在用于同一 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与先前根据缓存计划执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的每个字符完全匹配，则该语句符合现有条件。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用使用找到的任何现有计划，从而节省重新编译 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的开销。 如果没有现有执行计划，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将为查询生成新的执行计划。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个高效的算法，可查找用于任何特定 SQL 语句的现有执行计划。 在大多数系统中，这种扫描所使用的最小资源比通过重新使用现有计划而不是编译每个 SQL 语句所节省的资源要少。
+> [!NOTE]
+> 有些 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句未缓存，如在行存储上运行大容量操作语句或包含大于 8 KB 的字符串文字的语句。
 
-该算法将新的 SQL 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全合法。 例如，假定 `Person` 是用户执行以下 `SELECT` 语句的默认架构。 虽然在此示例中不需要 `Person` 表完全限定执行，但这意味着第二个语句与现有计划不匹配，但第三个语句匹配：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一个高效的算法，可查找用于任何特定 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的现有执行计划。 在大多数系统中，这种扫描所使用的最小资源比通过重新使用现有计划而不是编译每个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句所节省的资源要少。
+
+该算法将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与缓存内现有的未用执行计划相匹配，并要求所有的对象引用完全限定。 例如，假定 `Person` 是用户执行以下 `SELECT` 语句的默认架构。 虽然在此示例中不需要 `Person` 表完全限定执行，但这意味着第二个语句与现有计划不匹配，但第三个语句匹配：
 
 ```sql
 SELECT * FROM Person;
@@ -499,8 +504,8 @@ GO
 
 > [!NOTE]
 > 在 xEvents 不可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 探查器 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 跟踪事件同样可用于报告语句级重新编译。
-> 跟踪事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 SP:Recompile 仅针对存储过程和触发器生成，而 SQL:StmtRecompile 则针对存储过程、触发器、即席批处理、使用 `sp_executesql` 执行的批处理、预定义查询和动态 SQL 生成。
-> SP:Recompile 和 SQL:StmtRecompile 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
+> 跟踪事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也报告语句级重新编译，并且此跟踪事件还可用于跟踪和调试重新编译。 SP:Recompile 仅针对存储过程和触发器生成，而 `SQL:StmtRecompile` 则针对存储过程、触发器、即席批处理、使用 `sp_executesql` 执行的批处理、预定义查询和动态 SQL 生成。
+> `SP:Recompile` 和 `SQL:StmtRecompile` 的 EventSubClass 列都包含一个整数代码，用以指明重新编译的原因。 [此处](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)对代码进行了说明。
 
 > [!NOTE]
 > 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `ON` 时，如果查询以表或索引视图为目标，而自上次执行后，表或索引视图的统计信息已更新或其基数已发生很大变化，查询将被重新编译。 此行为适用于标准用户定义表、临时表以及由 DML 触发器创建的插入表和删除表。 如果过多的重新编译影响到查询性能，请考虑将此设置更改为 `OFF`。 当 `AUTO_UPDATE_STATISTICS` 数据库选项设置为 `OFF` 时，不会因统计信息或基数的更改而发生任何重新编译，但是，由 DML `INSTEAD OF` 触发器创建的插入表和删除表除外。 因为这些表是在 tempdb 中创建的，因此，是否重新编译访问这些表的查询取决于 tempdb 中 `AUTO_UPDATE_STATISTICS` 的设置。 请注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此设置为 `OFF`，查询也将继续基于 DML 触发器插入表和删除表的基数更改进行重新编译。
@@ -526,9 +531,9 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-这两个查询的执行计划之间的唯一区别是为与 `ProductSubcategoryID` 列进行比较而存储的值。 虽然目的是要让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 总是认为语句实际生成了相同的计划并重复使用这些计划，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有时不能在复杂的 SQL 语句中检测到上述情况。
+这两个查询的执行计划之间的唯一区别是为与 `ProductSubcategoryID` 列进行比较而存储的值。 虽然目的是要让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 总是认为语句实际生成了相同的计划并重复使用这些计划，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有时不能在复杂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中检测到上述情况。
 
-使用参数将常量与 SQL 语句分隔开有助于关系引擎识别重复计划。 可以按下列方式使用参数： 
+使用参数将常量与 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句分隔开有助于关系引擎识别重复计划。 可以按下列方式使用参数： 
 
 * 在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中，使用 `sp_executesql`： 
 
@@ -576,12 +581,12 @@ WHERE AddressID = 1 + 2;
 
 ### <a name="SimpleParam"></a>简单参数化
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 SQL 语句与现有的、以前编译的执行计划相匹配的能力。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，在 Transact-SQL 语句中使用参数或参数标记可以提高关系引擎将新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与现有的、以前编译的执行计划相匹配的能力。
 
 > [!WARNING] 
 > 与将最终用户键入的值串联到字符串中，然后使用数据访问 API 方法、 `EXECUTE` 语句或 `sp_executesql` 存储过程来执行该字符串相比，使用参数或参数标记来保存这些值更安全。
 
-如果执行不带参数的 SQL 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在内部对该语句进行参数化以增加将其与现有执行计划相匹配的可能性。 此过程称为简单参数化。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，此过程称为自动参数化。
+如果执行不带参数的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在内部对该语句进行参数化以增加将其与现有执行计划相匹配的可能性。 此过程称为简单参数化。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，此过程称为自动参数化。
 
 请看下面的语句：
 
@@ -601,7 +606,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-处理复杂的 SQL 语句时，关系引擎可能很难确定哪些表达式可以参数化。 若要提高关系引擎将复杂的 SQL 语句与现有的、未使用的执行计划相匹配的能力，请使用 sp_executesql 或参数标记显式指定参数。 
+处理复杂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，关系引擎可能很难确定哪些表达式可以参数化。 若要提高关系引擎将复杂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与现有的、未使用的执行计划相匹配的能力，请使用 sp_executesql 或参数标记显式指定参数。 
 
 > [!NOTE]
 > 当使用 +、-、\*、/ 或 % 算术运算符将 int、smallint、tinyint 或 bigint 常量值隐式或显式转换为 float、real、decimal 或 numeric 数据类型时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将应用特定规则，计算表达式结果的类型和精准率。 但这些规则各不相同，取决于查询是否被参数化。 因此，在某些情况下，查询中的相似表达式可能会产生不同的结果。
@@ -620,7 +625,7 @@ WHERE ProductSubcategoryID = 4;
 * 存储过程、触发器或用户定义函数的正文中包含的语句。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已对这些例程重用了查询计划。
 * 已在客户端应用程序中参数化的预定义语句。
 * 包含 XQuery 方法调用的语句，此方法将出现在其参数通常都会被参数化的上下文（例如， `WHERE` 子句）中。 如果在方法所在的上下文中方法的参数不参数化，则语句的其余部分将参数化。
-* Transact-SQL 游标内的语句。 （API 游标内的`SELECT` 语句将参数化。）
+* [!INCLUDE[tsql](../includes/tsql-md.md)] 游标内的语句。 （API 游标内的`SELECT` 语句将参数化。）
 * 不推荐使用的查询构造。
 * 在 `ANSI_PADDING` 或 `ANSI_NULLS` 上下文中运行的任何语句都设置为 `OFF`。
 * 包含 2,097 个以上的可参数化文字的语句。
@@ -644,7 +649,7 @@ WHERE ProductSubcategoryID = 4;
   * 表达式包含 `CASE` 子句。  
 * 查询提示子句的参数。 这些参数包括 `number_of_rows` 查询提示的 `FAST` 参数、 `number_of_processors` 查询提示的 `MAXDOP` 参数以及 `MAXRECURSION` 查询提示的 number 参数。
 
-参数化在单条 Transact-SQL 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
+参数化在单条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句内发生。 即，批处理中的单条语句将参数化。 在编译之后，参数化查询将在它最初提交时所在的批的上下文中执行。 如果缓存了查询的执行计划，则可以通过引用 sys.syscacheobjects 动态管理视图的 sql 列来确定此查询是否已参数化。 如果查询已参数化，参数的名称和数据类型在此列中已提交批的文本前面，如 (\@1 tinyint)。
 
 > [!NOTE]
 > 参数名称是任意的。 用户或应用程序不必拘泥于特定的命名顺序。 此外，以下内容可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升级版之间进行更改：参数名称、参数化文字的选择以及参数化文本中的间距。
@@ -678,15 +683,15 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="preparing-sql-statements"></a>准备 SQL 语句
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系引擎完全支持在执行 SQL 语句前准备 SQL 语句。 如果应用程序需要多次执行 SQL 语句，可以使用数据库 API 来执行下列操作： 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系引擎完全支持在执行 SQL 语句前准备 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。 如果应用程序需要多次执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，可以使用数据库 API 来执行下列操作： 
 
-* 准备一次语句。 这将 SQL 语句编译为执行计划。
-* 每当需要执行语句时都会执行预编译的执行计划。 这将防止在第一次执行 SQL 语句后对每个执行计划必须重新编译 SQL 语句。   
-  语句的准备和执行由 API 函数和方法控制。 它不是 Transact-SQL 语言的一部分。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持用于执行 SQL 语句的准备/执行模型。 在准备请求中，提供程序或驱动程序将语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，其中包含准备语句的请求。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 编译执行计划，并向提供程序或驱动程序返回该计划的句柄。 在请求执行时，访问接口或驱动程序向服务器发送请求以执行与句柄相关联的计划。 
+* 准备一次语句。 这将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句编译为执行计划。
+* 每当需要执行语句时都会执行预编译的执行计划。 这可防止第一次执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句后，必须在每次执行时重新编译。   
+  语句的准备和执行由 API 函数和方法控制。 它不是 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言的一部分。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持用于执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的准备/执行模型。 在准备请求中，提供程序或驱动程序将语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，其中包含准备语句的请求。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 编译执行计划，并向提供程序或驱动程序返回该计划的句柄。 在请求执行时，访问接口或驱动程序向服务器发送请求以执行与句柄相关联的计划。 
 
 预定义语句不能用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上创建临时对象。 预定义语句不能引用创建临时对象（如临时表）的系统存储过程。 必须直接执行这些过程。
 
-过多地使用准备/执行模型会降低性能。 如果一条语句只执行一次，直接执行只需要与服务器进行一次网络往返。 准备并执行只执行一次的 SQL 语句，则需要多进行一次网络往返；一次是准备语句，一次是执行语句。
+过多地使用准备/执行模型会降低性能。 如果一条语句只执行一次，直接执行只需要与服务器进行一次网络往返。 准备并执行只执行一次的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，则需要多进行一次网络往返；一次是准备语句，一次是执行语句。
 
 如果使用参数标记，可更有效地准备语句。 例如，假设可能偶尔让应用程序从 `AdventureWorks` 示例数据库检索产品信息。 应用程序可以采用两种方法执行此操作。 
 
@@ -709,9 +714,9 @@ WHERE ProductID = 63;
 
 如果执行语句的次数多于三次，第二种方法更有效。
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用执行计划，因此准备/执行模型相对于直接执行没有显著的性能优势。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有有效的算法，可以将当前的 SQL 语句与之前执行同一个 SQL 语句时生成的执行计划进行匹配。 如果应用程序使用参数标记多次执行一个 SQL 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在第二次以及后续执行中重新使用第一次执行的执行计划（除非该计划已在计划缓存中老化）。 准备/执行模型还具有下列优点： 
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，由于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会重用执行计划，因此准备/执行模型相对于直接执行没有显著的性能优势。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 具有有效的算法，可以将当前的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与之前执行同一个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时生成的执行计划进行匹配。 如果应用程序使用参数标记多次执行一个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将在第二次以及后续执行中重新使用第一次执行的执行计划（除非该计划已在计划缓存中老化）。 准备/执行模型还具有下列优点： 
 
-* 与通过算法将 SQL 语句与现有执行计划进行匹配的方法相比，通过识别句柄查找执行计划的方法更有效。
+* 与通过算法将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句与现有执行计划进行匹配的方法相比，通过识别句柄查找执行计划的方法更有效。
 * 应用程序可以控制何时创建和重新使用执行计划。
 * 准备/执行模型可移植到其他数据库，包括早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
@@ -908,20 +913,20 @@ Index Seek 运算符上面的 parallelism 运算符正在使用 `O_ORDERKEY` 的
 
 ## <a name="distributed-query-architecture"></a>分布式查询体系结构
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用于在 Transact-SQL 语句中引用异类 OLE DB 数据源的方法：
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种方法在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中引用异类 OLE DB 数据源：
 
 * 链接服务器名称  
-  系统存储过程 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 用于给 OLE DB 数据源提供服务器名称。 可以在 Transact-SQL 语句中使用由四个部分构成的名称引用这些链接服务器中的对象。 例如，如果 `DeptSQLSrvr` 的一个链接服务器名称是用另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例定义的，则下面的语句引用该服务器上的一个表： 
+  系统存储过程 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 用于给 OLE DB 数据源提供服务器名称。 可以使用由四个部分构成的名称在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中引用这些链接服务器中的对象。 例如，如果 `DeptSQLSrvr` 的一个链接服务器名称是用另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例定义的，则下面的语句引用该服务器上的一个表： 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   也可以在 `OPENQUERY` 语句中指定链接服务器名称以从 OLE DB 数据源打开一个行集。 之后，可以在 Transact-SQL 语句中像引用表一样引用该行集。 
+   也可以在 `OPENQUERY` 语句中指定链接服务器名称以从 OLE DB 数据源打开一个行集。 之后，可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中像引用表一样引用该行集。 
 
 * 即席连接器名称  
-  在很少引用数据源时， `OPENROWSET` 或 `OPENDATASOURCE` 函数是用连接到链接服务器所需的信息指定的。 之后，可以在 Transact-SQL 语句中使用与引用表相同的方法引用行集： 
+  在很少引用数据源时， `OPENROWSET` 或 `OPENDATASOURCE` 函数是用连接到链接服务器所需的信息指定的。 之后，可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句中使用与引用表相同的方法引用行集： 
   
   ```sql
   SELECT *
@@ -930,19 +935,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持两种用
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在关系引擎和存储引擎之间通信。 关系引擎将每个 Transact-SQL 语句分解为一系列操作，这些操作在由存储引擎从基表打开的简单 OLE DB 行集上执行。 这意味着关系引擎也可以在任何 OLE DB 数据源上打开简单 OLE DB 行集。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在关系引擎和存储引擎之间通信。 关系引擎将每个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句分解为一系列操作，这些操作在由存储引擎从基表打开的简单 OLE DB 行集上执行。 这意味着关系引擎也可以在任何 OLE DB 数据源上打开简单 OLE DB 行集。  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 关系引擎使用 OLE DB 应用程序编程接口 (API) 打开链接服务器上的行集、提取行并管理事务。
 
-对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 Transact-SQL 操作取决于 OLE DB 提供程序的功能。
+对于每个作为链接服务器访问的 OLE DB 数据源，运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的服务器上必须有 OLE DB 访问接口。 在特定 OLE DB 数据源上可执行哪些 [!INCLUDE[tsql](../includes/tsql-md.md)] 操作取决于 OLE DB 访问接口的功能。
 
-对于每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，`sysadmin` 固定服务器角色的成员可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 SQL 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 访问接口启用即席访问，而对所有其他的 OLE DB 访问接口禁用即席访问。
+对于每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，`sysadmin` 固定服务器角色的成员可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 属性启用或禁用对 OLE DB 提供程序使用即席连接器名称。 如果启用了即席访问，则任何登录到该实例的用户都可以执行包含即席连接器名称的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，该即席连接器名称引用了网络中可以通过 OLE DB 访问接口访问的任何数据源。 为了控制对数据源的访问， `sysadmin` 角色的成员可以对该 OLE DB 提供程序禁用即席访问，从而限制用户只能访问由管理员定义的链接服务器名称所引用的那些数据源。 默认情况下，对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 访问接口启用即席访问，而对所有其他的 OLE DB 访问接口禁用即席访问。
 
 分布式查询可允许用户使用运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务的 Microsoft Windows 帐户的安全上下文来访问其他数据源（例如，文件、非关系数据源 [如 Active Directory] 等）。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以正确模拟 Windows 登录名，但不能模拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名。 这样，就有可能使分布式查询用户能够访问自己本没有访问权限、但运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务的帐户有访问权限的另一数据源。 使用 `sp_addlinkedsrvlogin` 定义被授权访问相应链接服务器的特定登录名。 此控制对即席名称无效，所以对 OLE DB 访问接口启用即席访问时要小心。
 
 如果可能，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将联接、限制、投影、排序以及按操作划分的组等关系操作推送到 OLE DB 数据源。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认不会将基表扫描到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，也不会执行关系操作本身。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会查询 OLE DB 提供程序，确定其支持的 SQL 语法级别，并根据该信息向提供程序推送尽可能多的关系操作。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指定 OLE DB 提供程序返回统计信息的机制，该统计信息指明键值在 OLE DB 数据源内的分布情况。 这使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器可以根据每条 SQL 语句的要求，更好地分析数据源中的数据模式，从而提高查询优化器生成最佳执行计划的能力。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 指定 OLE DB 提供程序返回统计信息的机制，该统计信息指明键值在 OLE DB 数据源内的分布情况。 这使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询优化器可以根据每条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句的要求，更好地分析数据源中的数据模式，从而提高查询优化器生成最佳执行计划的能力。 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>关于已分区表和索引的查询处理增强功能
 
@@ -977,7 +982,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>显示查询执行计划中的分区信息
 
-可以使用 Transact-SQL `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
+可以使用 Transact-SQL [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 语句 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或者使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的图形执行计划输出来检查已分区表和已分区索引上的查询执行计划。 例如，单击“查询编辑器”工具栏上的“显示估计的执行计划”  可以显示编译时执行计划，单击“包括实际的执行计划” 可以显示运行时计划。 
 
 使用这些工具，您可以确定以下信息：
 

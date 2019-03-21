@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997569"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973426"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997569"
 |**Log Pool Total Active Log Size**|共享缓存缓冲区管理器中存储的当前总活动日志（以字节为单位）。|
 |**Log Pool Total Shared Pool Size**|共享缓存缓冲区管理器的当前总内存使用情况（以字节为单位）。|
 |**Log Shrinks**|此数据库的日志收缩总数。|  
-|**Log Truncations**|已收缩事务日志的次数。|  
+|**Log Truncations**|事务日志被截断的次数（在简单恢复模式中）。|  
 |**Percent Log Used**|日志中已用空间所占的百分比。|  
 |**Repl.Pending Xacts**|发布数据库事务日志中已做复制标记但尚未传递到分发数据库的事务数。|  
 |**Repl.Trans.Rate**|每秒从发布数据库事务日志中读出并传递到分发数据库的事务数。|  

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579767"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974446"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -209,13 +209,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 例如：将 `LATIN1_GENERAL_100_CI_AS_SC` 更改为 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 仅适用于支持增补字符的 Windows 排序规则，如 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中所引入的。 `NCHAR` 和 `NVARCHAR` 仅允许 UTF-16 编码，并保持不变。
 
-此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 Latin 字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
+此功能可能会节省大量存储空间，具体取决于正在使用的字符集。 例如，使用已启用 UTF-8 的排序规则将带 ASCII（拉丁）字符串的现有列数据类型从 `NCHAR(10)` 更改为 `CHAR(10)`，意味着将减少 50% 的存储需求。 存储需求减少是因为 `NCHAR(10)` 需要 20 个字节进行存储，而 `CHAR(10)` 需要 10 个字节存储相同的 Unicode 字符串。
 
 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。
 
-CTP 2.1 现支持在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间对默认选择 UTF-8 排序规则。
+**CTP 2.1** 现支持在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安装期间默认选择 UTF-8 排序规则。
 
-CTP 2.2 现支持将 UTF-8 字符编码与 SQL Server 复制结合使用。
+**CTP 2.2** 现支持将 UTF-8 字符编码与 SQL Server 复制结合使用。
+
+**CTP 2.3** 现支持将 UTF-8 字符编码与 BIN2 排序规则 (UTF8_BIN2) 结合使用。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>可恢复联机索引创建 (CTP 2.0)
 
@@ -383,6 +385,8 @@ CTP 2.2 现支持将 UTF-8 字符编码与 SQL Server 复制结合使用。
 相比标准分析机制，轻量查询分析基础结构 (LWP) 能够更有效地提供查询性能数据。 现在，默认情况下启用轻量分析。 已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引入此功能。 轻量分析提供查询执行统计信息集合机制，预期开销为 2% CPU，而标准查询分析机制的开销高达 75% CPU。 在早期版本中，默认禁用此功能。 数据库管理员可通过[跟踪标志 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 来启用它。 
 
 有关此轻量分析的详细信息，请参阅[查询分析基础结构](../relational-databases/performance/query-profiling-infrastructure.md)。
+
+**CTP 2.3** 引入了范围为新数据库的配置 `LIGHTWEIGHT_QUERY_PROFILING`用于启用或禁用轻量级查询分析基础结构。
 
 ### <a id="polybase"></a> 新 PolyBase 连接器
 
