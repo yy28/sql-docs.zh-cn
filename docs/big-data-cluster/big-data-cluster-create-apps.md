@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756632"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222052"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>描述应用程序
 
-描述命令提供有关应用程序包括在群集中的终结点的详细的信息。 这通常用于由应用开发人员生成的应用程序使用 swagger 客户端和使用 web 服务与应用交互以 RESTful 方式。
+描述命令提供有关应用程序包括在群集中的终结点的详细的信息。 这通常用于由应用开发人员生成的应用程序使用 swagger 客户端和使用 web 服务与应用交互以 RESTful 方式。 请参阅[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>后续步骤
 
-您还可以查看其他示例位于[应用程序部署示例](https://aka.ms/sql-app-deploy)。
+了解如何将大数据群集在您的应用程序的 SQL Server 上部署的应用程序进行集成[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。 您还可以查看其他示例位于[应用程序部署示例](https://aka.ms/sql-app-deploy)。
 
 有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。

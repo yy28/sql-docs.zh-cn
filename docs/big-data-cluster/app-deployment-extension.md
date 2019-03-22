@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018463"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222021"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集
 
@@ -40,7 +40,7 @@ ms.locfileid: "57018463"
 
 以下部分逐步完成安装过程，并提供扩展的工作原理的概述。 
 
-### <a name="install"></a>Install
+### <a name="install"></a>安装
 
 在 VS Code 中首次安装应用程序部署扩展：
 
@@ -105,7 +105,7 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
 
 ![部署应用程序按钮](media/vs-extension/deploy_app_lightning.png)
 
-![部署应用 Codelens](media/vs-extension/deploy_app_codelens.png)
+![部署应用 CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 应用可供在侧栏中应用的状态上基于消耗时，你将收到通知：
 
@@ -127,9 +127,11 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
   - swagger
   - 详细信息
 
-如果单击`Links`，你将看到，您可以访问`swagger.json`的已部署的应用，因此，编写你自己的客户端调用您的应用程序：
+如果单击`Links`，你将看到，您可以访问`swagger.json`的已部署的应用，以便您可以编写您自己调用您的应用程序的客户端：
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
+
+请参阅[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。
 
 ### <a name="app-run"></a>应用运行
 
@@ -173,7 +175,7 @@ VS Code 会提示输入相应的终结点、 用户名和密码。 如果给出�
 
 ## <a name="next-steps"></a>后续步骤
 
-此外可以对在其他示例引用[应用程序部署示例](https://aka.ms/sql-app-deploy)来尝试使用该扩展。
+了解如何将大数据群集在您的应用程序的 SQL Server 上部署的应用程序进行集成[使用大数据群集上的应用程序](big-data-cluster-consume-apps.md)有关详细信息。 此外可以对在其他示例引用[应用程序部署示例](https://aka.ms/sql-app-deploy)来尝试使用该扩展。
 
 有关 SQL Server 大数据群集的详细信息，请参阅[什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)。
 
