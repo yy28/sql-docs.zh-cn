@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222211"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342833"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服务的大数据群集上部署的应用
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ mssqlctl app describe --name addpy --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>生成一个 JWT 访问令牌
 
-若要访问已部署的应用的 RESTful web 服务，在浏览器中打开以下 URL:`https://[IP]:[PORT]/api/docs/swagger.json`使用的 IP 地址和端口运行检索`describe`上述命令。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。
+若要访问应用的 RESTful web 服务已部署，首先可以生成一个 JWT 访问令牌。 在你的浏览器中打开以下 URL:`https://[IP]:[PORT]/api/docs/swagger.json`使用的 IP 地址和端口运行检索`describe`上述命令。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。
 
 粘贴的内容`swagger.json`成[Swagger 编辑器](https://editor.swagger.io)可了解哪些方法：
 
@@ -101,9 +101,9 @@ mssqlctl app describe --name addpy --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>执行应用程序使用 RESTful web 服务
 
 > [!NOTE]
-> 如果你想，您可以打开的 URL`swagger`在运行时返回`mssqlctl app describe --name addpy --version [version]`在浏览器中。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。 内容`swagger.json`您可以将其粘贴到[Swagger 编辑器](https://editor.swagger.io)。 你将看到该 web 服务公开了`run`方法。
+> 如果你想，您可以打开的 URL`swagger`在运行时返回`mssqlctl app describe --name [appname] --version [version]`在浏览器中，这应类似于`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。 内容`swagger.json`您可以将其粘贴到[Swagger 编辑器](https://editor.swagger.io)。 你将看到该 web 服务公开了`run`方法。
 
-可以使用你喜欢的工具来调用`run`方法 (`https://[IP]:[PORT]/api/app/addpy/[version]/run`)，并传入 POST 请求以 json 形式的正文中的参数。 在此示例中我们将使用[Postman](https://www.getpostman.com/)。 在调用前，你将需要设置`Authorization`到`Bearer Token`并粘贴在前面检索到的令牌。 这会将设置你的请求标头。 请参见以下屏幕截图。
+可以使用你喜欢的工具来调用`run`方法 (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`)，并传入 POST 请求以 json 形式的正文中的参数。 在此示例中我们将使用[Postman](https://www.getpostman.com/)。 在调用前，你将需要设置`Authorization`到`Bearer Token`并粘贴在前面检索到的令牌。 这会将设置你的请求标头。 请参见以下屏幕截图。
 
 ![Postman 运行标头](media/big-data-cluster-consume-apps/postman_run_1.png)
 
