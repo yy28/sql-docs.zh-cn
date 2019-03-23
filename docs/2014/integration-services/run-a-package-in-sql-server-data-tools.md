@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - SQL Server Integration Services packages, running
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a0d9551f4ad6984ec67bc51e636144195f20b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a4b8a1778fb7e8bcd91df82002ee068ffae22ef
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211207"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386535"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中运行包
   在开发、调试和测试包的过程中，通常在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中运行包。 在从 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器运行包时，包始终可以立即运行。  

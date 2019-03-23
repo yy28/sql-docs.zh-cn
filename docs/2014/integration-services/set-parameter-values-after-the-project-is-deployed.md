@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5cb12795b0aba94da115916b2b09dc0c2675e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151799"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379925"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>在部署项目后设置参数值
   通过部署向导，您可以在将项目部署到目录时设置服务器默认参数值。 在您的项目处于目录中后，您可以使用 SQL Server Management Studio (SSMS) 对象资源管理器或 Transact-SQL 来设置服务器默认值。  
@@ -29,7 +29,7 @@ ms.locfileid: "48151799"
   
 3.  通过在 **“选择页”** 之下单击 **“参数”**，打开参数页。  
   
-4.  在 **“参数”** 列表中选择所需参数。 注意： **“容器”** 列将帮助区分项目参数和包参数。  
+4.  在 **“参数”** 列表中选择所需参数。 注意：**容器**列将帮助区分项目参数和包参数。  
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
   

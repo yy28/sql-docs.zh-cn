@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408174"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386625"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  
@@ -30,7 +30,7 @@ ms.locfileid: "52408174"
   
 1.  创建一个 SSISDB 目录（如果尚未创建）。 有关详细信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
   
-2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明：[若要将项目转换为项目部署模型](#convert)  
+2.  通过运行 **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。 有关详细信息，请参阅下面的说明：[将项目转换为项目部署模型](#convert)  
   
     -   如果在 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]中创建了项目，默认情况下该项目使用项目部署模型。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408174"
   
      有关包升级的详细信息，请参阅 [升级 Integration Services 包](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明：[若要将项目部署到 Integration Services 服务器](#deploy)。  
+3.  将项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关详细信息，请参阅下面的说明：[将项目部署到 Integration Services 服务器](#deploy)。  
   
 4.  （可选）创建已部署项目的环境。 有关详细信息，请参阅 [创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   

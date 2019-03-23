@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212589"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379015"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到分区列。  
@@ -45,7 +45,7 @@ ms.locfileid: "48212589"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [分区处理目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [分区处理目标编辑器&#40;高级页&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器（“连接管理器”页）](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

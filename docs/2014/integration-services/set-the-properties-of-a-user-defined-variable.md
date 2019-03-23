@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075587"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385524"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>设置用户定义变量的属性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中设置用户定义的变量的属性，可以使用下列功能之一：  
   
 -   “变量”窗口。  
   
--   属性窗口。 “属性”窗口中列出了用于配置“变量”窗口中不可用变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   属性窗口。 **属性**窗口中列出了配置中不可用的变量的属性**变量**窗口：说明、 EvaluateAsExpression、 表达式、 ReadOnly、 ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  
@@ -53,7 +53,7 @@ ms.locfileid: "48075587"
   
  **设置 Namespace 和 Name 属性**  
   
- 值`Name`和`Namespace`属性必须以字母字符开头，如 Unicode 标准 2.0 中或下划线 (_) 所定义。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
+ `Name` 和 `Namespace` 属性的值必须以 Unicode 标准 2.0 定义的字母字符或下划线 (_) 开头。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>使用变量窗口设置属性  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48075587"
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
  [添加、删除、更改包中用户定义变量的作用域](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

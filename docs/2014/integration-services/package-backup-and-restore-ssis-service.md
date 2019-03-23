@@ -15,22 +15,22 @@ helpviewer_keywords:
 - restoring packages [Integration Services]
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 586ab104ed802c0d78465d600fccd5f65e213b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad08680bad76fdf35c728974c4d3688a588a9338
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139898"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386757"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>包备份和还原（SSIS 服务）
     
 > [!IMPORTANT]  
->  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
+>  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以保存到文件系统或 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库。 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原功能来备份和还原保存到 msdb 中的包。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以保存到文件系统或 msdb（一种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统数据库）中。 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原功能来备份和还原保存到 msdb 中的包。  
   
  有关备份和还原 msdb 数据库的详细信息，请单击下列某个主题：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48139898"
   
 -   [备份和还原系统数据库 (SQL Server)](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括**dtutil**命令提示实用工具 (dtutil.exec) 可用于管理包。 有关详细信息，请参阅 [dtutil Utility](dtutil-utility.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括可用于管理包的 **dtutil** 命令提示实用工具 (dtutil.exec)。 有关详细信息，请参阅 [dtutil Utility](dtutil-utility.md)。  
   
 ## <a name="configuration-files"></a>配置文件  
  包所包括的所有配置文件都存储在文件系统中。 在备份 msdb 数据库时并不会备份这些文件；因此，你应该确保定期备份配置文件，以便保护保存到 msdb 中的包。 若要将配置包括在 msdb 数据库的备份中，应该考虑使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型，而不使用基于文件的配置。  

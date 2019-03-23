@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065137"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377515"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  
@@ -55,10 +55,10 @@ ms.locfileid: "48065137"
  显示此列中值的最大长度。  
   
  **忽略前导空格**  
- 显示计算此配置文件时`IgnoreLeadingSpaces`的 True 或 False 值。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
+ 显示计算此配置文件时 `IgnoreLeadingSpaces` 值是设置为 True 还是 False。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
   
  **忽略尾随空格**  
- 显示计算此配置文件时`IgnoreTrailingSpaces`的 True 或 False 值。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
+ 显示计算此配置文件时 `IgnoreTrailingSpaces` 值是设置为 True 还是 False。 此属性已在数据事件探查任务编辑器的 **“配置文件请求”** 页中设置。  
   
  **行计数**  
  显示表或视图中的行数。  
@@ -200,7 +200,7 @@ ms.locfileid: "48065137"
  显示指定的列具有第一列中显示的值的行数。  
   
 ## <a name="see-also"></a>请参阅  
- [数据配置文件查看器](control-flow/data-profile-viewer.md)   
+ [数据配置文件查看器 (Data Profile Viewer)](control-flow/data-profile-viewer.md)   
  [数据事件探查任务和查看器](control-flow/data-profiling-task-and-viewer.md)  
   
   

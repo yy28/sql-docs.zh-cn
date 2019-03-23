@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置 Foreach 循环容器 |Microsoft Docs
+title: 步骤 2：添加和配置 Foreach 循环容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360110"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378855"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
   在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -24,7 +24,7 @@ ms.locfileid: "53360110"
   
  目前，第 1 课中的平面文件连接管理器只连接一个特定的平面文件。 若要循环地连接该文件夹中的每个平面文件，必须同时对 Foreach 循环容器和平面文件连接管理器进行如下配置：  
   
--   **Foreach 循环容器：** 将容器的枚举的值映射到用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
+-   **Foreach 循环容器：** 将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
   
 -   **平面文件连接管理器：** 您将修改通过使用用户定义的变量填充连接管理器的第 1 课中创建的连接管理器`ConnectionString`属性。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360110"
 -   拖动**Extract Sample Currency Data**数据流任务拖动到 Foreach 循环容器现重命名`Foreach File in Folder`。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
- [步骤 3:修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [步骤 3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>请参阅  
  [配置 Foreach 循环容器](control-flow/foreach-loop-container.md)   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51897dbc1b7cde8707e28678d8de7f3cd7913e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e7a9fb71dca2e99bebe3f23486ff6331bd843de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144655"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387705"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
   可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -48,7 +48,7 @@ ms.locfileid: "48144655"
  输入每个输出列的唯一名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 输入的名称显示在 SSIS 设计器中。  
   
 ## <a name="see-also"></a>请参阅  
- [ODBC 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [ODBC 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [ODBC 源编辑器（“连接管理器”页）](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 源编辑器（“错误输出”页）](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

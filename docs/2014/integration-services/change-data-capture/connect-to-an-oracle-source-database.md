@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202186"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377315"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
@@ -34,9 +34,9 @@ ms.locfileid: "53202186"
  **Oracle 日志挖掘身份验证**  
  若要输入授权执行日志挖掘的 Oracle 数据库用户的凭据，请选择下列选项之一：  
   
--   **Windows 身份验证**:选择此选项可将当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
+-   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**为要连接到 Oracle 数据库中的用户。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”。  
   
 > [!NOTE]
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  

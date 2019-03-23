@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3538e768fafbf310850fecf9899e70409b7b2758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157809"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387165"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
@@ -43,7 +43,7 @@ ms.locfileid: "48157809"
 |选项|Description|  
 |------------|-----------------|  
 |表或视图|将数据加载到 Excel 数据源中的工作表或指定范围。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**:[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  
@@ -83,8 +83,8 @@ ms.locfileid: "48157809"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目标编辑器&#40;映射页&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Excel 目标编辑器&#40;错误输出页&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Excel 目标编辑器（“映射”页）](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 目标编辑器（“错误输出”页）](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   
   

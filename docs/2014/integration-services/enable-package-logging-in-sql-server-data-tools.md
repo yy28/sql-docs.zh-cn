@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172494"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387015"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中启用包日志记录
   本过程介绍如何将日志添加到包中，如何配置包级日志记录，以及如何将日志记录配置保存为 XML 文件。 您只能在包级添加日志，但包不必执行日志记录，就可以在包所包括的容器中启用日志记录。  
@@ -44,7 +44,7 @@ ms.locfileid: "48172494"
   
     -   对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 OLE DB 连接管理器。 有关详细信息，请参阅 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)。  
   
-    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 自动创建日志。  
+    -   对于 Windows 事件日志，无需执行任何操作。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 会自动创建日志。  
   
     -   对于 XML 文件，请使用文件连接管理器。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48172494"
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services &#40;SSIS&#41;日志记录](performance/integration-services-ssis-logging.md)   
+ [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)   
  [Integration Services (SSIS) 日志记录](performance/integration-services-ssis-logging.md)  
   
   

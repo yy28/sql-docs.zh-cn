@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052447"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380145"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 源编辑器（“连接管理器”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -71,8 +71,8 @@ ms.locfileid: "48052447"
  使用“打开”对话框可定位到包含 SQL 查询文本的文件。  
   
 ## <a name="see-also"></a>请参阅  
- [ADO NET 源编辑器&#40;列页&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [ADO NET 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO NET 源编辑器（“列”页）](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO NET 源编辑器（“错误输出”页）](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)  
   
   

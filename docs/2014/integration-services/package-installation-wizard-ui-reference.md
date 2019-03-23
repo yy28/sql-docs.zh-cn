@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129627"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380185"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
@@ -152,7 +152,7 @@ ms.locfileid: "48129627"
  若要在“SSIS 包”对话框中选择该文件夹，请单击“浏览(...)”。但是，该对话框不提供用来选择默认文件夹的方法。 如果要使用默认文件夹，则必须在该文本框中输入 "/"。  
   
 > [!NOTE]  
->  如果您没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效”。  
+>  如果没有输入有效的包路径，则会出现下面的错误消息：“一个或多个参数无效。”  
   
  **依靠服务器存储进行加密**  
  选择此项可以使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全功能来帮助保护包。  

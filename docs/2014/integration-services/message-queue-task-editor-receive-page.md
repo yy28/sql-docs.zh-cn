@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545633"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387105"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
@@ -74,7 +74,7 @@ ms.locfileid: "52545633"
  **Identifier**  
  如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
- **相关的主题：**[选择包](control-flow/select-a-package.md)  
+ **相关主题：**[选择包](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 变量消息  
  **Filter**  
@@ -88,7 +88,7 @@ ms.locfileid: "52545633"
  **变量**  
  键入变量名称，或单击“\<新建变量…>”，然后配置新的变量。  
   
- **相关的主题：**[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Filter 动态选项  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52545633"
  **Identifier**  
  如果选择应用筛选器，请键入可以从中接收消息的包的唯一标识符，或者单击省略号按钮 (…)，再指定包。  
   
- **相关的主题：**[选择包](control-flow/select-a-package.md)  
+ **相关主题：**[选择包](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **比较**  
@@ -133,7 +133,7 @@ ms.locfileid: "52545633"
  **变量**  
  键入保存接收到的消息的变量名，或单击“\<新建变量…>”，然后配置新的变量。  
   
- **相关的主题：**[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

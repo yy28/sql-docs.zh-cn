@@ -11,15 +11,15 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5dd09ba81c6bdf79abdb5d668821442fad7acab0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b2491a03e0d0121f3aa3b31f354f71b36088e5d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114603"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375366"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在优先约束中使用表达式
   此过程介绍如何使用 **“优先约束编辑器”** 对话框将表达式添加到优先约束中。 包中必须包含至少两个可执行文件（可以是任务或容器），并且它们必须由优先约束连接起来，才能将表达式添加到优先约束。  
@@ -47,6 +47,6 @@ ms.locfileid: "48114603"
  [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [使用快捷菜单设置优先约束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [设置优先约束的属性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; 表达式](expressions/integration-services-ssis-expressions.md)  
   
   

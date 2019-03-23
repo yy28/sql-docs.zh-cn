@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b8c58ba2eef86ec9c827ea1722abea441ac8ae48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86392b3851af7a5774b5acb572cfc19c62266ab6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192067"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387315"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 项目的开发
   您将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包添加到项目。 若要创建和使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，必须安装 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 环境。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  

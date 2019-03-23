@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8724345c7fc043e4e87f2026fe07d5fc1c8e80b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b482fcd6f03a3a5b20a1b1825cc9a045b891224
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202349"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379435"
 ---
 # <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
   可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
@@ -34,12 +34,12 @@ ms.locfileid: "48202349"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对执行进程任务的说明。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [执行进程任务编辑器&#40;处理页&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [执行进程任务编辑器（“进程”页）](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [“表达式”页](expressions/expressions-page.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130827"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385045"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -43,14 +43,14 @@ ms.locfileid: "48130827"
  **连接管理器名称**  
  为工作流中的缓存连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好根据连接的用途对其进行说明，以使包的说明一目了然，且更便于维护。  
   
  **使用文件缓存**  
  指示是否使用缓存文件。  
   
 > [!NOTE]  
->  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅[访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
+>  包的保护级别不适用于缓存文件。 如果缓存文件包含敏感信息，可使用访问控制列表 (ACL) 来限制对存储该文件的位置或文件夹的访问。 应只允许访问某些帐户。 有关详细信息，请参阅 [访问包使用的文件](../../2014/integration-services/access-to-files-used-by-packages.md)。  
   
  如果将缓存连接管理器配置为使用缓存文件，则连接管理器将执行下列操作之一：  
   
@@ -88,18 +88,18 @@ ms.locfileid: "48130827"
  指定列的数据类型。  
   
  `Length`  
- 指定列数据类型。 如果适用于数据类型，则可以更新`Length`。  
+ 指定列数据类型。 如果适用于该数据类型，则可更新`Length`。  
   
  `Precision`  
- 指定特定列数据类型的精度。 精度指数字的位数。 如果适用于数据类型，则可以更新`Precision`。  
+ 指定特定列数据类型的精度。 精度指数字的位数。 如果适用于该数据类型，则可更新`Precision`。  
   
  `Scale`  
- 指定特定列数据类型的小数位数。 小数位数指小数点后的数字位数。 如果适用于数据类型，则可以更新`Scale`。  
+ 指定特定列数据类型的小数位数。 小数位数指小数点后的数字位数。 如果适用于该数据类型，则可更新`Scale`。  
   
  `Code Page`  
- 指定列类型的代码页。 如果适用于数据类型，则可以更新`Code Page`。  
+ 指定列类型的代码页。 如果适用于该数据类型，则可更新`Code Page`。  
   
 ## <a name="see-also"></a>请参阅  
- [查找转换](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

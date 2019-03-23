@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS projects, adding
 - projects [Integration Services], adding
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75e3727bcfc28ac60819c09068db4ae54711b72f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2581aaffaeeba033e92cff305f0e9904cfb9a970
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050072"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385515"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>在解决方案中添加或删除 Integration Services 项目
   下列过程介绍如何在解决方案中添加或删除 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  

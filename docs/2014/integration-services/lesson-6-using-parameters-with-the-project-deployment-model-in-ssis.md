@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355370"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384955"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>第 6 课：对项目部署模型使用参数
   SQL Server 2012 引入了一个新的部署模型，可用于将您的项目部署到 Integration Services 服务器。 通过 Integration Services 服务器，您可以管理和运行包，以及为包配置运行时值。  
@@ -34,11 +34,11 @@ ms.locfileid: "53355370"
   
 1.  [第 1 步：复制第 5 课包](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [步骤 2:将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [步骤 2：将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [步骤 3:测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [步骤 4:部署第 6 课包](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [步骤 4：部署第 6 课包](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
  [第 1 步：复制第 5 课包](lesson-6-1-copying-the-lesson-5-package.md)  

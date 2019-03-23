@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 355b736066084ed0a30a72c2d3b30010a8277674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b792290b4c774a9a16dfed685fff83a5a8495f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217307"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379765"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>字词查找转换编辑器（“字词查找”选项卡）
   可以使用 **“字词查找转换编辑器”** 对话框的 **“字词查找”** 选项卡，将输入列映射到引用表中的查找列，以及为每个输出列提供别名。  
@@ -45,8 +45,8 @@ ms.locfileid: "48217307"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [字词查找转换编辑器&#40;引用表选项卡&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [字词查找转换编辑器&#40;高级选项卡&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [字词查找转换编辑器（“引用表”选项卡）](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [字词查找转换编辑器（“高级”选项卡）](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [字词提取转换](data-flow/transformations/term-extraction-transformation.md)  
   
   

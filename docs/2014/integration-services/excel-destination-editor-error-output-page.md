@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125027"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387365"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“高级”** 页指定错误处理选项。  
@@ -42,19 +42,19 @@ ms.locfileid: "48125027"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 目标编辑器&#40;映射页&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 目标编辑器（“连接管理器”页）](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Excel 目标编辑器（“映射”页）](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   
   

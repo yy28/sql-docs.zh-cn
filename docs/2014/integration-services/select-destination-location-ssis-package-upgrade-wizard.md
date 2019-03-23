@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63e06bc579879f552fa8406fef463738b96e8459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 167e8deb4009e7bf9398f89665cad9b3d368b1eb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172987"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378027"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>选择目标位置（SSIS 包升级向导）
   使用 **“选择目标位置”** 页可以指定要将升级包保存到的目标位置。  

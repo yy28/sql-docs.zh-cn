@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146317"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381046"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
   使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务可以将大量的数据复制到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或视图中。  
@@ -63,9 +63,9 @@ ms.locfileid: "48146317"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大容量插入任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [大容量插入任务编辑器&#40;连接页&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [大容量插入任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [大容量插入任务编辑器（“连接”页）](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [控制流](control-flow/control-flow.md)  
   
   

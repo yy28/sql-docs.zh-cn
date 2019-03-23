@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123397"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376675"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>配置检查点以重新启动失败的包
   通过设置应用于检查点的属性，可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包配置为从失败点重新启动，而不是重新运行整个包。  
@@ -46,7 +46,7 @@ ms.locfileid: "48123397"
         > [!IMPORTANT]  
         >  如果检查点文件不可用，将出现错误。  
   
-    -   选择`IfExists`才提供了检查点文件重新启动包。  
+    -   选择 `IfExists`，仅当检查文件可用时才重新启动包。  
   
 8.  配置包可以从中重新启动的任务和容器。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48123397"
     -   将 FailPackageOnFailure 属性设置为`True`每个所选任务和容器。  
   
 ## <a name="see-also"></a>请参阅  
- [通过使用检查点重启包](packages/restart-packages-by-using-checkpoints.md)  
+ [通过使用检查点重新启动包](packages/restart-packages-by-using-checkpoints.md)  
   
   

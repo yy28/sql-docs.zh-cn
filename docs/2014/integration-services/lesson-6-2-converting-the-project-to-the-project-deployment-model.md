@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752549"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385348"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步骤 2：将项目转换为项目部署模型
   在本任务中，你将使用 Integration Services 项目转换向导将项目转换为项目部署模型。  
@@ -51,6 +51,6 @@ ms.locfileid: "52752549"
 13. 单击“参数”选项卡，然后验证包现在是否包含用于 VarFolderName 的参数，以及值是否为第 5 课配置文件中为 New Sample Data 文件夹指定的相同路径。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 3:测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步骤 3：测试第 6 课包](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

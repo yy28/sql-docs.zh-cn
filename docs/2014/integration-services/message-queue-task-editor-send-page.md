@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e203bd95b4e3d42747614dc9aa688cc549338f19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516100"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376046"
 ---
 # <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包发送消息。  
@@ -59,7 +59,7 @@ ms.locfileid: "52516100"
  **VariableMessage**  
  键入变量名称，或单击省略号 (…) 后再选择相应的变量。 各变量之间用逗号分隔。  
   
- **相关的主题：** 选择变量  
+ **相关主题：** 选择变量  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字符串消息  
  **StringMessage**  

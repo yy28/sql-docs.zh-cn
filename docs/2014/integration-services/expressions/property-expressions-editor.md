@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1735499424ffa426babd81d4914ff35dfa69717
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784809"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384625"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
   可以使用 **“属性表达式编辑器”** 对话框创建、编辑或删除用于更新属性值的属性表达式。  

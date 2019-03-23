@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361383"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380265"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”对话框的“集合”页，指定枚举器类型以及配置枚举器。  
@@ -44,7 +44,7 @@ ms.locfileid: "53361383"
  **表达式**  
  单击或展开 **表达式** 可以查看现有属性表达式的列表。 单击省略号按钮 (…) 可以添加枚举器属性的属性表达式，或编辑并计算现有属性表达式。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;表达式](expressions/integration-services-ssis-expressions.md)，[属性表达式编辑器](expressions/property-expressions-editor.md)，[表达式生成器](expressions/expression-builder.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;表达式](expressions/integration-services-ssis-expressions.md)，[属性表达式编辑器](expressions/property-expressions-editor.md)，[表达式生成器](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>枚举器动态选项  
   
@@ -110,7 +110,7 @@ ms.locfileid: "53361383"
  **“列”**  
  单击此项可以配置项中的列的数据类型。  
   
- **相关的主题：**[“For Each Item 列”对话框 UI 参考](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
+ **相关主题：**[“For Each Item 列”对话框 UI 参考](../../2014/integration-services/for-each-item-columns-dialog-box-ui-reference.md)  
   
 ### <a name="enumerator--foreach-ado-enumerator"></a>Enumerator = Foreach ADO 枚举器  
  您可以使用 Foreach ADO 枚举器枚举变量中存储的 ADO 或 ADO.NET 对象中的行或表。 例如，如果 Foreach 循环包括可将数据集写入变量的脚本任务，则可以使用 Foreach ADO 枚举器枚举数据集中的行。 如果变量包含 ADO.NET 数据集，则可以将枚举器配置为枚举多个表中的行或枚举表。  
@@ -121,7 +121,7 @@ ms.locfileid: "53361383"
 > [!NOTE]  
 >  变量必须有 Object 数据类型，否则会发生错误。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
  **第一个表中的行**  
  选择此项将只枚举第一个表中的行。  
@@ -141,7 +141,7 @@ ms.locfileid: "53361383"
 > [!IMPORTANT]  
 >  ADO.NET 连接管理器必须使用 .NET provider for OLE DB。 如果连接到 SQL Server，则建议使用的访问接口为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **“连接管理器”** 对话框的 **.Net Providers for OleDb** 部分中列出的  Native Client。  
   
- **相关的主题：**[ADO 连接管理器](connection-manager/ado-connection-manager.md)，[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)  
+ **相关主题：**[ADO 连接管理器](connection-manager/ado-connection-manager.md)，[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)  
   
  **架构**  
  选择要枚举的架构。  
@@ -149,7 +149,7 @@ ms.locfileid: "53361383"
  **设置限制**  
  设置要应用于指定架构的限制。  
   
- **相关的主题：**[“架构限制”对话框](../../2014/integration-services/schema-restrictions-dialog-box.md)  
+ **相关主题：**[“架构限制”对话框](../../2014/integration-services/schema-restrictions-dialog-box.md)  
   
 ### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerator = Foreach 源变量枚举器  
  您可以使用 Foreach 源变量枚举器枚举指定变量中的可枚举对象。 例如，如果 Foreach 循环包括运行查询并在变量中存储结果的执行 SQL 任务，则可以使用 Foreach 源变量枚举器枚举查询结果。  
@@ -157,7 +157,7 @@ ms.locfileid: "53361383"
  **变量**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList 枚举器  
  您可以使用 Foreach Nodelist 枚举器枚举一组通过将 XPath 表达式应用到 XML 文件而生成的 XML 节点。 例如，如果 Foreach 循环包括脚本任务，则可以使用 Foreach NodeList 枚举器将满足 XPath 表达式条件的值从 XML 文件传递到脚本任务。  
@@ -180,11 +180,11 @@ ms.locfileid: "53361383"
   
  如果将 **DocumentSourceType** 设置为“文件连接”，请选择文件连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   
- **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果将 **DocumentSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **EnumerationType**  
  从列表中选择枚举类型。 此属性具有下表所列的选项。  
@@ -210,11 +210,11 @@ ms.locfileid: "53361383"
   
  如果将 **OuterXPathStringSourceType** 设置为“文件连接”，请选择文件连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   
- **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果将 **OuterXPathStringSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
  如果**EnumerationType**设置为`ElementCollection`，列表中选择内部元素的类型。  
@@ -233,11 +233,11 @@ ms.locfileid: "53361383"
   
  如果将 **InnerXPathStringSourceType** 设置为“文件连接”，请选择文件连接管理器，或单击 **“新建连接...”\<**> 创建新的连接管理器。  
   
- **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果将 **InnerXPathStringSourceType** 设置为“变量”，请选择现有变量，或单击 **“新建变量...”\<**> 创建新变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 枚举器  
  您可以使用 Foreach SMO 枚举器枚举 SQL Server 管理对象 (SMO) 对象。 例如，如果 Foreach 循环包括执行 SQL 任务，则可以使用 Foreach SMO 枚举器枚举 **AdventureWorks** 数据库中的表并运行计算每个表中行数的查询。  
@@ -253,7 +253,7 @@ ms.locfileid: "53361383"
  **“浏览”**  
  选择 SMO 枚举。  
   
- **相关的主题：**[“选择 SMO 枚举”对话框](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
+ **相关主题：**[“选择 SMO 枚举”对话框](../../2014/integration-services/select-smo-enumeration-dialog-box.md)  
   
 ### <a name="enumerator--foreach-azure-blob-enumerator"></a>枚举器 = Foreach Azure Blob 枚举器  
  **Azure Blob 枚举器**允许 SSIS 程序包在指定的 blob 位置枚举 blob 文件。 枚举的 blob 文件名可以存储在变量中并用于 Foreach 循环容器内的任务。  

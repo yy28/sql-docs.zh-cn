@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 102988ac347543a4d2e2110d4c8511c398be9348
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d03f6d705707683195ad58b8562d2b964955b8e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060677"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387375"
 ---
 # <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
@@ -36,7 +36,7 @@ ms.locfileid: "48060677"
 |**Description**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
 |**名称**|为组件键入说明性名称。|  
-|**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 值为`false`会延迟到执行时才验证。|  
+|**ValidateExternalMetadata**|指示在设计时脚本转换是否要根据外部数据源对列的元数据进行验证。 如果值为 `false`，则会将验证延迟到执行时。|  
 |**ReadOnlyVariables**|以逗号分隔的形式键入一列可供脚本转换只读访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ReadWriteVariables**|以逗号分隔的形式键入一列可供脚本转换读/写访问的变量。<br /><br /> 注意：变量名称区分大小写。|  
 |**ScriptLanguage**|选择脚本组件要使用的脚本语言。<br /><br /> 若要设置脚本组件和脚本任务的默认脚本语言，请使用 **“选项”** 对话框的 **“常规”** 页上的 **“脚本语言”** 选项。 有关详细信息，请参阅 [General Page](general-page-of-integration-services-designers-options.md)。|  
@@ -48,9 +48,9 @@ ms.locfileid: "48060677"
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [选择脚本组件类型](../../2014/integration-services/select-script-component-type.md)   
- [脚本转换编辑器&#40;输入列页&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [脚本转换编辑器&#40;输入和输出页&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [脚本转换编辑器&#40;连接管理器页&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [脚本转换编辑器（“输入列”页）](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [脚本转换编辑器（“输入和输出”页）](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [脚本转换编辑器（“连接管理器”页）](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [其他脚本组件示例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

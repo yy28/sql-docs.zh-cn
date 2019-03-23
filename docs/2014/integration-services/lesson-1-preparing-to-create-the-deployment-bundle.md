@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4549800144012991b4d154eecb2f9bd67dee352
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9e4695575aba2e43435c4e26d5a47ccb2cfa39d6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364899"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387775"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>第 1 课：准备创建部署捆绑
   在本课中，将创建支持教程的工作文件夹和环境变量，创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，将几个包及其支持文件添加到项目，然后在包中实现配置。  
@@ -33,13 +33,13 @@ ms.locfileid: "53364899"
   
 -   [第 1 步：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
--   [步骤 2:创建部署项目](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+-   [步骤 2：创建部署项目](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [步骤 3:添加包和其他文件](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [步骤 3：添加包和其他文件](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [步骤 4:添加包配置](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [步骤 4：添加包配置](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
--   [步骤 5:测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+-   [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
  [第 1 步：创建工作文件夹和环境变量](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  

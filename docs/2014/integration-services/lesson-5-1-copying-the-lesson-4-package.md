@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360849"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386275"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>步骤 1：复制第 4 课包
   在本任务中，将为第 4 课中创建的 Lesson 4.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 4 包添加到项目中，然后再对其进行复制。 将使用这一新副本来完成第 5 课剩余部分。  
@@ -61,6 +61,6 @@ ms.locfileid: "53360849"
 5.  按先前过程中的步骤 3-8 中所述，复制并粘贴 Lesson 4 包。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2:启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [步骤 2：启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

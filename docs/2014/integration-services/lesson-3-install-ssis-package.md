@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9b1bc021ba009ffe00805c0479a6fa9d91416d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361789"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379065"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 课：安装包
   在[第 2 课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，生成部署实用工具，并创建部署捆绑包包含的项，必须在另一台计算机上安装包。 您还验证了部署捆绑中的文件列表，检查了在生成部署实用工具时创建的清单文件的内容。  
@@ -30,9 +30,9 @@ ms.locfileid: "53361789"
   
 -   [第 1 步：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [步骤 2:运行包安装向导](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [步骤 2：运行包安装向导](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [步骤 3:测试已部署的包](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [步骤 3：测试已部署的包](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
  [第 1 步：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 313c56f6f5a9b5bfd2ecf5662b5862ee7b1265c1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195337"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381085"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>数据挖掘查询转换编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“挖掘模型”** 选项卡选择数据挖掘结构及其挖掘模型。  
@@ -42,6 +42,6 @@ ms.locfileid: "48195337"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘查询转换编辑器&#40;查询选项卡&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [数据挖掘查询转换编辑器（“查询”选项卡）](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

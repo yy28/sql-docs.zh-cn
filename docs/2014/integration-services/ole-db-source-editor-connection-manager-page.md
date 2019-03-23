@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172977"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384480"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 源编辑器（“连接管理器”页）
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 OLE DB 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -56,7 +56,7 @@ ms.locfileid: "48172977"
 |选项|Description|  
 |------------|-----------------|  
 |表或视图|从 OLE DB 数据源中的表或视图中检索数据。|  
-|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定表或视图名称。<br /><br /> **相关的信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询从 OLE DB 数据源中检索数据。|  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
@@ -98,8 +98,8 @@ ms.locfileid: "48172977"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 源编辑器&#40;列页&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [OLE DB 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [OLE DB 源编辑器（“列”页）](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [OLE DB 源编辑器（“错误输出”页）](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [使用 OLE DB 源提取数据](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)  
   

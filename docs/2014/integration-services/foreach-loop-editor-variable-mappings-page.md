@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068069"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386695"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 循环编辑器（“变量映射”页）
   可以使用 **“Foreach 循环编辑器”** 对话框的 **“变量映射”** 页，将变量映射到集合值。 循环每次迭代时，都会用集合值更新变量的值。  
@@ -34,7 +34,7 @@ ms.locfileid: "48068069"
 > [!NOTE]  
 >  映射一个变量之后，“变量”列表中会自动增加一行。  
   
- **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题**：[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  如果使用的是 Foreach Item 枚举器，请指定集合值中要映射到变量的列的索引。 对于其他枚举器类型，索引是只读的。  
@@ -42,7 +42,7 @@ ms.locfileid: "48068069"
 > [!NOTE]  
 >  索引以 0 为基数。  
   
- **相关主题**:[循环遍历 Excel 文件和表使用 Foreach 循环容器](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **相关主题**：[使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **删除**  
  选择一个变量，再单击“删除”。  
@@ -51,7 +51,7 @@ ms.locfileid: "48068069"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach 循环编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
  [Foreach 循环编辑器&#40;集合页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [For 循环容器](control-flow/for-loop-container.md)  
   
   

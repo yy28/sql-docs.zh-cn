@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0125281c3438f12e8dd7b27ec3d9bff89790d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218037"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387385"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>“数字签名”对话框 UI 参考
   使用 **“数字签名”** 对话框可以使用数字签名对包进行签名或删除签名。 在 **中，** SSIS **菜单的** “数字签名” **选项中提供了** “数字签名” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框。  
@@ -35,6 +35,6 @@ ms.locfileid: "48218037"
  单击此项将删除数字签名。  
   
 ## <a name="see-also"></a>请参阅  
- [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
+ [安全性概述 (Integration Services)](security/security-overview-integration-services.md)  
   
   

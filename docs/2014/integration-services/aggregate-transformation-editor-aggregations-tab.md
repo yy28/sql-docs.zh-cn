@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224457"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378028"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
@@ -67,7 +67,7 @@ ms.locfileid: "48224457"
  **运算**  
  参照下表，从可用操作列表中选择。  
   
-|运算|Description|  
+|操作|Description|  
 |---------------|-----------------|  
 |**GroupBy**|将数据集划分为组。 可以将任何数据类型的列用于分组。 有关详细信息，请参阅 GROUP BY。|  
 |**Sum**|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 SUM。|  
@@ -85,7 +85,7 @@ ms.locfileid: "48224457"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|“未指定”|`CountDistinctScale`不使用属性。|  
+|“未指定”|不使用 `CountDistinctScale` 属性。|  
 |Low|聚合可以写入大约 500,000 个非重复值。|  
 |Medium|聚合可以写入大约 5,000,000 个非重复值。|  
 |High|聚合可以写入 25,000,000 个以上的非重复值。|  
@@ -95,7 +95,7 @@ ms.locfileid: "48224457"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [聚合转换编辑器&#40;高级选项卡&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [聚合转换编辑器（“高级”选项卡）](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [使用聚合转换来聚合数据集中的值](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

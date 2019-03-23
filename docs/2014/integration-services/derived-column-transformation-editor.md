@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfeb30098a0c82f1e494575db04de639cc8401c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075317"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386675"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列转换编辑器
   可以使用 **“派生列转换编辑器”** 对话框，创建填充新列或替换列的表达式。  
@@ -45,7 +45,7 @@ ms.locfileid: "48075317"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题**：[Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](expressions/functions-ssis-expression.md)  
+ **相关主题**:[Integration Services &#40;SSIS&#41;表达式](expressions/integration-services-ssis-expressions.md)，[运算符&#40;SSIS 表达式&#41;](expressions/operators-ssis-expression.md)，并且[函数&#40;SSIS 表达式&#41;](expressions/functions-ssis-expression.md)  
   
  **数据类型**  
  如果向新列中添加数据，“派生列转换编辑器”对话框将自动计算表达式的值并设置相应的数据类型。 该列的值是只读的。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  

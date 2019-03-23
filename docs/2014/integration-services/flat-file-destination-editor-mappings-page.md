@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecdc542e8bea3717a37c40c6addb2b35b9a5f03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195307"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379755"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
@@ -42,6 +42,6 @@ ms.locfileid: "48195307"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [平面文件目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [平面文件目标编辑器（“连接管理器”页）](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369929"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383886"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -54,14 +54,14 @@ ms.locfileid: "53369929"
   
  有关详细信息，请参阅 [使用 SQL Server 代理计划包](../schedule-a-package-by-using-sql-server-agent.md)。  
   
- 有关演示如何使用的视频[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理以运行包，请参阅视频主页[如何：使用 SQL Server 代理 （SQL Server 视频） 自动执行包](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN 库中。  
+ 有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请观看 MSDN 库中的视频主页[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
 ##  <a name="trouble"></a> 故障排除  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅下列资源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  
   
--   视频中，[故障排除：使用 SQL Server 代理 （SQL Server 视频） 执行包](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN 库中。  
+-   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤启动某个包后，该包可能无法执行，或者包可能成功运行但出现意外结果。 可以使用下列工具来解决这些问题。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369929"
   
 -   [网站上的知识库文章：](https://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   视频中，[故障排除：使用 SQL Server 代理 （SQL Server 视频） 执行包](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN 库中  
+-   MSDN 库中的视频[排除故障：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)  
   
--   视频中，[如何：使用 SQL Server 代理 （SQL Server 视频） 自动执行包](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN 库中  
+-   MSDN 库中的视频[操作说明：使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)  
   
 -   mssqltips.com 上的技术文章 [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)（使用 Windows PowerShell 检查 SQL Server 代理作业）  
   

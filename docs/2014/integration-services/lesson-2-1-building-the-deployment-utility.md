@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356338"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381195"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步骤 1：生成部署实用工具
   在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
@@ -56,12 +56,12 @@ ms.locfileid: "53356338"
   
      生成完成 -- 0 个错误，0 个警告  
   
-     === 生成中：成功的 0，0 失败，1 最新，0 已跳过 ===  
+     ========== 生成：成功的 0，0 失败，1 最新，0 已跳过 ===  
   
 5.  在 **“文件”** 菜单中，单击 **“退出”**。 如果提示保存对 Deployment Tutorial 的各项所做的更改，请单击“是”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2:验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [步骤 2：验证部署捆绑](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   

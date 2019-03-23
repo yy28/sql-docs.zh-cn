@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1e28433026156cc1dbe4a8d62008d59dbc55a16
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804677"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385876"
 ---
 # <a name="edit-instance-properties"></a>编辑实例属性
   使用属性编辑器可在您创建初始配置后对 CDC 实例进行更改。 您可以在属性编辑器中执行以下操作。  

@@ -3,7 +3,7 @@ title: 发行说明
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161624"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381585"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
+
+## <a name="march-2019-hotfix"></a>2019 年 3 月 （修补程序）
+
+2019 年 3 月 22 日&nbsp;  /  &nbsp;版本：1.5.2 &nbsp;  /  &nbsp;修补程序版本
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修复了在 1.5.1 中发现的几个问题。 | 请参阅[年 3 月在 GitHub 上的修补程序版本](https://github.com/Microsoft/azuredatastudio/milestone/28)。<br/> <br/>&bull; &nbsp; 修复了用户无法关闭 notebook 仪表板中的"打开笔记本"任务从打开的问题 <br/>&bull; &nbsp; 修复的问题 Notebook JSON 了额外} 保存后 <br/>&bull; &nbsp; 修复了问题，notebook 网格未响应主题更改 <br/>&bull; &nbsp; 完整的笔记本路径所示的选项卡标头的已修复的问题。 现在显示仅文件名。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 年 3 月
 
