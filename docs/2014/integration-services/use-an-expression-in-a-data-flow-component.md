@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083457"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378066"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在数据流组件中使用表达式
   本过程介绍如何将表达式添加到有条件拆分转换或派生列转换中。 有条件拆分转换使用表达式定义将数据行定向到转换输出的条件，而派生列转换使用表达式定义分配给列的值。  
@@ -67,8 +67,8 @@ ms.locfileid: "48083457"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)   
- [有条件拆分转换](data-flow/transformations/conditional-split-transformation.md)   
- [派生的列转换](data-flow/transformations/derived-column-transformation.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
  [数据流任务](control-flow/data-flow-task.md)   
  [数据流](data-flow/data-flow.md)  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193057"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377225"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  
@@ -34,7 +34,7 @@ ms.locfileid: "48193057"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入数据挖掘查询任务的说明。  
   
 ## <a name="build-query-tab-options"></a>“生成查询”选项卡选项  
@@ -46,7 +46,7 @@ ms.locfileid: "48193057"
  **生成新查询**  
  使用图形工具创建数据挖掘查询。  
   
- **相关主题：** [Data Mining Query](control-flow/data-mining-query.md)  
+ **相关主题：**[数据挖掘查询](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>“参数映射”选项卡选项  
  **参数名称**  
@@ -81,8 +81,8 @@ ms.locfileid: "48193057"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [数据挖掘查询任务编辑器&#40;挖掘模型选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [数据挖掘查询任务编辑器&#40;输出选项卡&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [数据挖掘查询任务编辑器（“挖掘模型”选项卡）](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [数据挖掘查询任务编辑器（“输出”选项卡）](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [数据挖掘设计器](../analysis-services/data-mining/data-mining-designer.md)  
   
   

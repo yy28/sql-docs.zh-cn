@@ -11,15 +11,15 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9952b191e2469d56bd7ba3098f1f8a24f206a55a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374799"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377965"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以编程方式枚举可用的包
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定个别包或文件夹是否存在，或枚举可用于加载和执行的已保存的包。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。  

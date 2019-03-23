@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 154778d2c3a4056e1b16743ff629e4c4a5dae0a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515820"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389675"
 ---
 # <a name="analysis-of-data-flow"></a>数据流分析
   可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`数据库视图分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  

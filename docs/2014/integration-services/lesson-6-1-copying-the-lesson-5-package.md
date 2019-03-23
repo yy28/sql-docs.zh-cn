@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357855"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389585"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
   在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
@@ -63,6 +63,6 @@ ms.locfileid: "53357855"
      在复制 Lesson 5 包后，如果当前解决方案中有来自以前课程的包，请右键单击来自课程 1-5 的每个包并单击“从项目中排除”。 完成后，您的解决方案中应只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 2:将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步骤 2：将项目转换为项目部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isfolderprop.general.f1
 - sql12.ssis.ssms.isfolderprop.permissions.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cbca0592074b34250d5d07003494800942affaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804559"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375995"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
   文件夹包含 `SSISDB` 目录中的项目和环境。 每个文件夹都定义应用于该文件夹的内容的权限。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 权限的详细信息 ，请参阅 [catalog.grant_permission（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)。  

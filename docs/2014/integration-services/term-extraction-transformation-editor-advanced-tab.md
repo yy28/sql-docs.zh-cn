@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185327"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385035"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
@@ -41,7 +41,7 @@ ms.locfileid: "48185327"
  指定分数为字词的频率。  
   
  **TFIDF**  
- 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )。  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率，定义为产品：TFIDF a Term T = (frequency of T) * log ((#rows 输入中的) / (#rows having T))  
   
  **频率阈值**  
  指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  
@@ -57,8 +57,8 @@ ms.locfileid: "48185327"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [字词提取转换编辑器&#40;字词提取选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [字词提取转换编辑器&#40;排除选项卡&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [字词提取转换编辑器（“字词提取”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [字词提取转换编辑器（“排除”选项卡）](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [字词查找转换](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a230d6118d68c588c7671d3b9f410ecd9b5071da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29d9d3f4cd9e6c4d1e652e52ea464df58eac279d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135257"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385985"
 ---
 # <a name="audit-transformation-editor"></a>审核转换编辑器
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  

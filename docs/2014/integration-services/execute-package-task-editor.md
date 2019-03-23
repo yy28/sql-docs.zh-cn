@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff63c6568f0a34a43caf6765e7e01ce8022e10f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504520"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382255"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
   可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -91,7 +91,7 @@ ms.locfileid: "52504520"
  **“连接”**  
  在列表中选择 OLE DB 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关的主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)，[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  键入子包的名称，或单击省略号 (…) 再定位到包。  
@@ -100,7 +100,7 @@ ms.locfileid: "52504520"
  **“连接”**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关的主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  显示包的名称。  

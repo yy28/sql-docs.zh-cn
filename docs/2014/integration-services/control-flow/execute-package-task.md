@@ -13,15 +13,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365769"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387135"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121057"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377105"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
   可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。  
@@ -42,19 +42,19 @@ ms.locfileid: "48121057"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [平面文件源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [平面文件源编辑器&#40;列页&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [平面文件源编辑器（“连接管理器”页）](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [平面文件源编辑器（“列”页）](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [平面文件连接管理器](connection-manager/file-connection-manager.md)  
   
   

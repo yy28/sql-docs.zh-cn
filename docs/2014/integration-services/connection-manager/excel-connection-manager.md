@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc1f62f1e30b3fb49a66c16715cc6837e703425d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774159"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377215"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
   Excel 连接管理器使包可以连接到现有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 Excel 源和 Excel 目标的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括使用 Excel 连接管理器。  

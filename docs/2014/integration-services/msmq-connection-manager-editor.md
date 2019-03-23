@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42fe0f316914a83ab87deed68ff7095b66b80402
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226547"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393065"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
   可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。  
@@ -34,7 +34,7 @@ ms.locfileid: "48226547"
  **名称**  
  为工作流中的 MSMQ 连接管理器提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **路径**  

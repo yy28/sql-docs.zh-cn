@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3942480268d5a9e6e51b324dea3afba69d4eb331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769290"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386467"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>“预览数据”对话框（SQL Server 导入和导出向导）
   使用**预览数据**对话框中查看的查询的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导将发送到数据源。 您也可使用此对话框预览多达 200 行的示例数据。  

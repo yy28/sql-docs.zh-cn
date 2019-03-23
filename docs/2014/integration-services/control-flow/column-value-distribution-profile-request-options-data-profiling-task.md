@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394565"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列值分布配置文件请求”** 设置选项。 列值分布配置文件将报告选定列中的所有非重复值以及表中每个值表示的行的百分比。 该配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，对表示美国州的列进行事件探查，发现有 50 多个非重复值。  

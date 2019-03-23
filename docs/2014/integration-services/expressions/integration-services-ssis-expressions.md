@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352318"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376235"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367089"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379226"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
@@ -60,7 +60,7 @@ ms.locfileid: "53367089"
   
  **详细信息：**[设置数据事件探查任务](data-profiling-task.md)  
   
- **步骤 2:查看数据事件探查任务计算的配置文件**  
+ **步骤 2：查看数据事件探查任务计算的配置文件**  
  若要查看数据事件探查任务计算的数据配置文件，请将输出发送到文件，然后使用数据配置文件查看器。 此查看器是一种独立的实用工具，可以通过可选的明细功能以摘要的格式和以详细信息的格式显示配置文件输出。  
   
  **详细信息：**[数据配置文件查看器](data-profile-viewer.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ff623b3a360cf1a77962135fe288e03b3b83d2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e486f089ca261cbe5ea09cf7c9d38bc8fcdedbc9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147177"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379726"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>平面文件源编辑器（“连接管理器”页）
   可以使用 **“平面文件源编辑器”** 对话框的 **“连接管理器”** 页，选择平面文件源将使用的连接管理器。 平面文件源从文本文件中读取数据，文本文件可以采用分隔符分隔、固定宽度或混合格式。  
@@ -48,8 +48,8 @@ ms.locfileid: "48147177"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [平面文件源编辑器&#40;列页&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [平面文件源编辑器&#40;错误输出页&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [平面文件源编辑器（“列”页）](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [平面文件源编辑器（“错误输出”页）](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [平面文件连接管理器](connection-manager/file-connection-manager.md)  
   
   

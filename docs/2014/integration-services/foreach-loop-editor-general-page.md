@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47350cc4d809110d0bc3d0543b53e147dbd9be4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047487"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383067"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach 循环编辑器（“常规”页）
   可以使用 **“Foreach 循环编辑器”** 对话框的 **“常规”** 页，对 Foreach 循环容器进行命名和说明，该容器使用指定的枚举器重复集合中每个成员的工作流。  
@@ -32,14 +32,14 @@ ms.locfileid: "48047487"
 > [!NOTE]  
 >  对象名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入对 Foreach 循环容器的说明。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach 循环编辑器&#40;集合页面&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach 循环编辑器&#40;变量映射页&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [表达式页](expressions/expressions-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [Foreach 循环容器](control-flow/foreach-loop-container.md)   
  [For 循环容器](control-flow/for-loop-container.md)  
   

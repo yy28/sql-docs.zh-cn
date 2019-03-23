@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756359"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379425"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>确定变更数据是否已准备就绪
   在用于执行变更数据的增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第二个任务是确保所选间隔的变更数据已准备就绪。 此步骤是必需的，因为异步捕获进程可能尚未处理完到达所选端点的所有更改。  

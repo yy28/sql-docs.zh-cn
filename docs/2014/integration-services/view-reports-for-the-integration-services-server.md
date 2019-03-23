@@ -8,18 +8,18 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9ccae1f9ff9d2ab69408e36d8c8ef1cc071eaf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4948973576eb0b541892fe84bc86edea1514fe92
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077217"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389045"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告
-  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中, 均提供标准报表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
+  在当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  有关报表的详细信息，请参阅 [Integration Services 服务器的报表](../../2014/integration-services/reports-for-the-integration-services-server.md)。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>查看 Integration Services 服务器的报告  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48077217"
     -   **所有连接**  
   
 ## <a name="see-also"></a>请参阅  
- [Integration Services 服务器的报告](../../2014/integration-services/reports-for-the-integration-services-server.md)   
+ [Integration Services 服务器的报表](../../2014/integration-services/reports-for-the-integration-services-server.md)   
  [将项目部署到 Integration Services 服务器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

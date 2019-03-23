@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dad9b912d6202c79b21ee1e8638f5ce9b42f7cf2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7e2fc735cd4834fcb6e59550604b831b5d8790fb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376189"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379975"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用脚本组件创建同步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换在等到接收所有输入行之后才能完成处理。 本主题讨论同步转换。 有关异步转换的信息，请参阅[使用脚本组件创建异步转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771879"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376455"
 ---
 # <a name="pivot-transformation"></a>透视转换
   通过透视列值的输入数据，透视转换将规范的数据集转变成规范程度稍低、但更为简洁的版本。 例如，在列有客户名称、产品和购买数量的规范的 **Orders** 数据集中，任何购买多种产品的客户都有多行，每一行显示一种产品的详细订购信息。 此时，如果对产品列透视数据集，透视转换可以输出每个客户只有一行的数据集。 这一行列出该客户购买的所有产品，产品名称显示为列名，而数量则显示为产品列的值。 并非每个客户都购买所有产品，所以很多列可能包含空值。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2f539a48bf503de1f84bf490d565782ca685f05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796149"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374835"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
   执行比较来确定两个表达式是否相等。 在执行比较前表达式计算器会自动转换多种数据类型。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  

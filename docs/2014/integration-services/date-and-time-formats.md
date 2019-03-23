@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112737"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377505"
 ---
 # <a name="date-and-time-formats"></a>日期和时间格式
   快速分析提供一组快速、简单的数据分析例程。 快速分析支持下列日期和时间数据类型格式。  
@@ -33,7 +33,7 @@ ms.locfileid: "48112737"
   
 -   ISO 8601 格式，如下表中所示：  
   
-    |“格式”|Description|  
+    |格式|Description|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|用四位数表示年、两位数表示月和两位数表示日的基本和扩展格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
     |YYYY-MM|用四位数表示年和两位数表示月的基本和扩展简化精度格式。 在扩展格式中，日期部分以连字符 (-) 分隔。|  
@@ -64,7 +64,7 @@ ms.locfileid: "48112737"
   
 -   ISO 8601 时间格式，如下表中所示：  
   
-    |“格式”|Description|  
+    |格式|Description|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|用两位数表示小时、两位数表示分钟和两位数表示秒的基本和扩展格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|用两位数表示小时和两位数表示分钟的基本和扩展截断格式。 在扩展格式中，时间部分以冒号 (:) 分隔。|  
@@ -73,7 +73,7 @@ ms.locfileid: "48112737"
   
 -   指定时区的时间格式，如下表所示：  
   
-    |“格式”|Description|  
+    |格式|Description|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|指示为得出本地时间而在协调世界时 (UTC) 基础上加上的小时和分钟数的基本和扩展格式。|  
     |-HH:MI<br /><br /> -HHMI|指示为得出本地时间而从 UTC 减去的小时和分钟数的基本和扩展格式。|  
@@ -91,7 +91,7 @@ ms.locfileid: "48112737"
   
 -   包含小数的时间格式，如下表所示：  
   
-    |“格式”|Description|  
+    |格式|Description|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示小时的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介于 0 和 9999999 之间的值，表示分钟的小数部分。 方括号表明该值是可选的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  

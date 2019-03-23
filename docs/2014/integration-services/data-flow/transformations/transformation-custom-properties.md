@@ -38,15 +38,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 890ea72e56eb2fa8e54a06ef115a9e7e73c96dfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750650"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387645"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  

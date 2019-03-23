@@ -1,5 +1,5 @@
 ---
-title: 步骤 4：向包添加数据流任务 |Microsoft Docs
+title: 步骤 4：将数据流任务添加到包 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793939"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381185"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>步骤 4：在包中添加数据流任务
   为源数据和目标数据创建了连接管理器后，下一个任务是在包中添加一个数据流任务。 数据流任务将封装在源和目标之间移动数据的数据流引擎，并提供在移动数据时转换、清除和修改数据的功能。 大部分的数据提取、转换和加载 (ETL) 进程均在数据流任务中完成。  
@@ -39,7 +39,7 @@ ms.locfileid: "52793939"
 4.  右键单击数据流任务中，单击**属性**，然后在属性窗口中，确保`LocaleID`属性设置为**英语 （美国）**。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 5:添加并配置平面文件源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [步骤 5：添加并配置平面文件源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据流任务](control-flow/data-flow-task.md)  

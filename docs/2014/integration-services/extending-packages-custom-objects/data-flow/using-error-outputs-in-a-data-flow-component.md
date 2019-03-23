@@ -20,15 +20,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e264922c991b3c8297838d920961cd390ee0eabc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a330fea71ce84e7af82dd2bd92fc2e14f0883a0c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357557"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381395"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>在数据流组件中使用错误输出
   称为错误输出的特殊的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 对象可添加到组件中，以使组件重定向无法在执行期间处理的行。 组件可能遇到的问题通常分为错误或截断，这些问题特定于每个组件。 提供错误输出的组件为组件用户处理错误条件提供了灵活性，既可以筛选出结果集中的错误行，也可以在出现问题时中止组件运行，还可以忽略错误并继续。  

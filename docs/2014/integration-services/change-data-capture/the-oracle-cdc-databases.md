@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370169"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377115"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1687baf77bcecedb61a3d1ecee3a9e3c9e155431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e48018f3bbc3f266a4e537f067b3fa9466dea275
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133727"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381948"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例之间的连接。  
@@ -48,7 +48,7 @@ ms.locfileid: "48133727"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [维度处理目标编辑器&#40;映射页&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [维度处理目标编辑器&#40;高级页&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [维度处理目标编辑器（“映射”页）](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [维度处理目标编辑器（“高级”页）](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

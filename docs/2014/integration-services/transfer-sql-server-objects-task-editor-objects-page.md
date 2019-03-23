@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c8cfc6a1f16e03025a1560b09918518c9b2575b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a5105e162441375ab011510acb2b7fc6d25bbb4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053227"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383374"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>传输 SQL Server 对象任务编辑器（“对象”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“对象”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 可复制的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的几个示例包括表、视图、存储过程和用户定义函数。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)。  
@@ -213,7 +213,7 @@ ms.locfileid: "48053227"
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
  [传输 SQL Server 对象任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
- [表达式页](expressions/expressions-page.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [用于批量导入或导出的数据格式 (SQL Server)](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [安装 SQL Server 的安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

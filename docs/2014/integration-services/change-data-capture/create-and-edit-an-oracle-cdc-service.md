@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785459"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379367"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>创建和编辑 Oracle CDC 服务
   您从 CDC 服务配置控制台创建和编辑新的 Oracle CDC Windows 服务。  
@@ -61,7 +61,7 @@ ms.locfileid: "52785459"
  **身份验证**  
  选择下列选项之一：  
   
--   **Windows 身份验证**:如果选择此选项，则 Oracle CDC 服务连接到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的服务帐户标识。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
+-   **Windows 身份验证**：如果选择此选项，则 Oracle CDC 服务连接到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的服务帐户标识。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例正在不同的计算机上运行，则必须将 Windows 身份验证用于域帐户。  
   
 -   **SQL Server 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]你想要使用的登录名。 Oracle CDC 服务在连接到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时使用这些凭据。  
   

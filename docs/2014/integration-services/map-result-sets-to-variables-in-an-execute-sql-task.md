@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069649"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379627"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将结果集映射到变量
   本主题介绍如何在执行 SQL 任务中创建结果集和变量之间的映射。 将结果集映射到变量以便使结果集对包中其他元素可用。 例如，脚本任务中的脚本可以读取该变量，然后使用结果集中的值，或者 XML 源可以使用集存储在变量中的结果。 如果结果集是由父包生成的，那么通过将结果集映射到父包中的变量，然后在子包中创建父包变量配置以存储父变量值，就可以使结果集对执行包任务所调用的子包可用。  
@@ -64,9 +64,9 @@ ms.locfileid: "48069649"
  [执行 SQL 任务](control-flow/execute-sql-task.md)   
  [中的结果集执行 SQL 任务](result-sets-in-the-execute-sql-task.md)   
  [执行包任务](control-flow/execute-package-task.md)   
- [包配置](../../2014/integration-services/package-configurations.md)   
+ [“包配置”](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
  [在子包中使用变量和参数的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)  
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   
   

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8b8095d7358e86007abaead1887f4f8cb8bf5b4a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508685"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381365"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 连接管理器编辑器
   使用 **“SAP BW 连接管理器编辑器”** 指定用于连接 SAP Netweaver BW 版本 7 系统的属性。  
@@ -89,7 +89,7 @@ ms.locfileid: "52508685"
 > [!NOTE]  
 >  只有在已选择“使用负载平衡”选项的情况下，此选项才可用。  
   
- SID  
+ **SID**  
  要连接一组负载平衡的服务器，请指定连接的“系统 ID”。  
   
 > [!NOTE]  

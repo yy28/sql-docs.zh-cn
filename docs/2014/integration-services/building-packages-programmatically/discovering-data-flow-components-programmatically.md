@@ -16,15 +16,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04ad9b053e337ff9c32498ff3f735c9a58148c27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92cd83935ef4cb76c40aae0964100c7b88d847e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374349"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378255"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以编程方式查找数据流组件
   向包中添加数据流任务后，下一步是确定可用的数据流组件。 可以用编程方式查找本地计算机上安装并且可用的数据流源、转换和目标。 有关向包添加数据流任务的信息，请参阅[以编程方式添加数据流任务](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1f0761f0485cea055e2317ca24b2931302431e5c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391285"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  

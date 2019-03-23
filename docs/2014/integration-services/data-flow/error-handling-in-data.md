@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd4f907c45007942d7185decac2f958576647fed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787629"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378558"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
   数据流组件将转换应用到列数据、从源提取数据或将数据加载到目标中时，可能会发生错误。 错误常因意外数据值而发生。 例如，如果列包含字符串而不是数字，数据转换将失败；在数据库列中执行插入操作时，如果数据是日期而列的数据类型为数值，此操作将失败；如果因列值为零而导致数学运算无效，表达式将无法计算。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fd9233061b51da56b036526c3cac55c96a4e7fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802839"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385915"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步骤 4：测试第 2 课教程包
   使用现在配置的 Foreach 循环容器和平面文件连接管理器，Lesson 2 包可以迭代遍历示例数据文件夹中由 14 个平面文件组成的集合。 每次找到与指定的文件名条件匹配的文件名时，Foreach 循环容器都将用该文件名填充用户定义的变量。 该变量又会更新平面文件连接管理器的 ConnectionString 属性，并与新平面文件建立连接。 然后，在连接到文件夹中的下一个文件之前，Foreach 循环容器将对新平面文件中的数据运行未修改的数据流任务。  

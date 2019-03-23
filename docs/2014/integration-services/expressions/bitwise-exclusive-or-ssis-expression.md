@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d29154f00659680bbd0dd7106d65fe1e058ad7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b5153a210c1d276b481cea240e1f28b77751ad4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793599"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377469"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^（位异或）（SSIS 表达式）
   对两个整数值执行“位异或”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果一位是 0，另一对应位是 1，则相应结果位设置为 1。 如果两位都是 0 或两位都是 1，则相应结果位设置为 0。  

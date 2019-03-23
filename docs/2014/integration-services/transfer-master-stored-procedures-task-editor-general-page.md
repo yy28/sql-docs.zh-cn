@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 089b12c07b57b24d4c462605af92ed1bf7f0d417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2eff925b3aa3278c5b662e5848d979f017936ce
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168764"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384995"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>传输主存储过程任务编辑器（“常规”页）
   可以使用 **“传输主存储过程任务编辑器”** 对话框的 **“常规”** 页，对传输主存储过程任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48168764"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输主存储过程任务的说明。  
   
 ## <a name="see-also"></a>请参阅  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106429"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383214"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
   可以使用“ADO NET 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -44,8 +44,8 @@ ms.locfileid: "48106429"
  为每个输出列提供唯一的名称。 默认值为所选外部（源）列的名称；不过，您也可以任选一个唯一的描述性名称。 所提供的名称将显示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中。  
   
 ## <a name="see-also"></a>请参阅  
- [ADO NET 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO NET 源编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 源编辑器（“错误输出”页）](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)  
   
   

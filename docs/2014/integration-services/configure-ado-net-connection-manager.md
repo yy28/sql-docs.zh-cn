@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1da34cc7b964824f25939bcbafcecd71ec71a86d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090517"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380225"
 ---
 # <a name="configure-adonet-connection-manager"></a>配置 ADO.NET 连接管理器
   可以使用 **“配置 ADO.NET 连接管理器”** 对话框，添加与可使用 .NET Framework 数据访问接口（例如，SqlClient 访问接口）访问的数据源之间的连接。 连接管理器可使用现有连接，或者您也可以创建一个新的连接。  

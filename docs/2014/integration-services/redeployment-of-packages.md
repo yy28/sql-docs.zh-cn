@@ -11,15 +11,15 @@ helpviewer_keywords:
 - redeploying packages [Integration Services]
 - deploying packages [Integration Services], redeploying
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2612fa2930147c5a655ec13bd3adbdf3c4bd7cd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195588"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378942"
 ---
 # <a name="redeployment-of-packages"></a>重新部署包
   在部署项目后，您可能需要更新或扩展包功能，然后重新部署包含更新包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 在重新部署包的过程中，您应该检查部署实用工具中包括的配置属性。 例如，您可能不希望在重新部署包后允许对配置进行更改。  

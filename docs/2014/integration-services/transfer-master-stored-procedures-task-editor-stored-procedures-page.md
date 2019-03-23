@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5dbc012d6f6e14847f38d7fe4a8de2f47eb907d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1168d12153233a3b904a36e601d9163f34e76b7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218878"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385419"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>传输主存储过程任务编辑器（“存储过程”页）
   可以使用“传输主存储过程任务编辑器”对话框的“存储过程”页，指定用于将一个或多个用户定义存储过程从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库复制到另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库的属性。 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  
@@ -60,8 +60,8 @@ ms.locfileid: "48218878"
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
- [传输主存储的过程任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [表达式页](expressions/expressions-page.md)   
+ [传输主存储过程任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)  
   
   

@@ -12,27 +12,27 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f1a294c808850407fccb25f5661fc18083d94f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351697"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393675"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用脚本组件分析非标准文本文件格式
   当源数据以非标准格式排列时，您可能会发现在一个脚本中合并所有分析逻辑要比将多个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换链接在一起以实现相同结果更方便。  
   
- [示例 1:分析以行分隔的记录](#example1)  
+ [示例 1：分析以行分隔的记录](#example1)  
   
- [示例 2:拆分父记录和子记录](#example2)  
+ [示例 2：拆分父记录和子记录](#example2)  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
   
-##  <a name="example1"></a> 示例 1:分析以行分隔的记录  
+##  <a name="example1"></a> 示例 1：分析以行分隔的记录  
  本示例演示如何采用其中包含的每列数据显示在单独一行中的文本文件，并使用脚本组件对该文件进行分析，分析结果写入目标表。  
   
  有关如何使用脚本组件配置为数据流中的数据转换的详细信息，请参阅[使用脚本组件创建同步转换](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)和[创建异步使用脚本组件转换](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 示例 2:拆分父记录和子记录  
+##  <a name="example2"></a> 示例 2：拆分父记录和子记录  
  本示例演示如何采用格式为父记录行的前面有一个分隔符行，父记录行后跟任意个子记录行的文本文件，并使用脚本组件对其进行分析，分析结果写入已适当规范化的父目标表和子目标表中。 这是一个简单的示例，它易于调整以适合每个父记录和子记录使用多行或多列的源文件，只要有办法识别每个记录的开始和结尾。  
   
 > [!CAUTION]  

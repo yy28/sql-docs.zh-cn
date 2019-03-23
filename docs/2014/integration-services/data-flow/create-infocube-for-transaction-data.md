@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd8f60348ea511aaadb730bd252a45db70a7aed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777749"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375045"
 ---
 # <a name="create-infocube-for-transaction-data"></a>“创建事务数据的 InfoCube”
   使用 **“创建事务数据的 InfoCube”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoCube。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802039"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381415"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  

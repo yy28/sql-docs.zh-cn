@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3714264bceaf4ac334df96a054e933d6814904cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121767"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378605"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 连接管理器编辑器
   可以使用“WMI 连接管理器”对话框指定到服务器的 Microsoft Windows Management Instrumentation (WMI) 连接。  
@@ -31,7 +31,7 @@ ms.locfileid: "48121767"
  **名称**  
  为连接管理器提供唯一的名称。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **服务器名称**  
@@ -54,7 +54,7 @@ ms.locfileid: "48121767"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI 提供程序的配置管理概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [用于配置管理的 WMI 提供程序的概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [WMI Provider for Server Events 的概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

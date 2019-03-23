@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e2d995b06d30157ae46669696e9f8d4095a4646
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378825"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的包配置
   包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
@@ -40,11 +40,11 @@ ms.locfileid: "53362199"
   
 -   [第 1 步：复制第 4 课包](lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [步骤 2:启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [步骤 2：启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [步骤 3:修改目录属性配置值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [步骤 3：修改目录属性配置值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [步骤 4:测试第 5 课教程包](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [步骤 4：测试第 5 课教程包](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
   

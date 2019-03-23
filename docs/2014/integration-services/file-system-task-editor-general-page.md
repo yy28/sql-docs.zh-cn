@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6778bd585d84601d35846cafca3822a81a3bb60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208747"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377275"
 ---
 # <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
   可以使用 **“文件系统任务编辑器”** 对话框的 **“常规”** 页，配置任务执行的文件系统操作。  
@@ -55,7 +55,7 @@ ms.locfileid: "48208747"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入文件系统任务的说明。  
   
  **运算**  
@@ -70,8 +70,8 @@ ms.locfileid: "48208747"
 |**删除目录内容**|删除目录的内容。 选择此值将显示源的动态选项。|  
 |**删除文件**|删除文件。 选择此值将显示源的动态选项。|  
 |**移动目录**|移动目录。 选择此值将显示源和目标的动态选项。|  
-|**移动文件**|移动文件。 选择此值将显示源和目标的动态选项。<br /><br /> 注意： 当移动文件，不包括文件名称作为目标提供的目录路径中。|  
-|**重命名文件**|重命名文件。 选择此值将显示源和目标的动态选项。<br /><br /> 注意： 当重命名文件，包括新的文件名称提供目标的目录路径中。|  
+|**移动文件**|移动文件。 选择此值将显示源和目标的动态选项。<br /><br /> 注意：移动文件时，在作为目标提供的目录路径中不要包含文件名。|  
+|**重命名文件**|重命名文件。 选择此值将显示源和目标的动态选项。<br /><br /> 注意：重命名文件时，请在为目标提供的目录路径中包含新文件名。|  
 |**设置属性**|设置文件或目录的属性。 选择此值将显示源和操作的动态选项。|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "48208747"
  **DestinationVariable**  
  在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 动态选项  
   
@@ -102,13 +102,13 @@ ms.locfileid: "48208747"
  **SourceVariable**  
  在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Operation 动态选项  
   

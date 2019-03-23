@@ -19,15 +19,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b40c30e870e7f2a945643dbaadb88e1880ad5b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362049"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376505"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>为数据流组件开发用户界面
   组件开发人员可以为组件提供自定义用户界面，编辑该组件时，此界面会显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中。 通过实现自定义用户界面，您可以在组件添加到数据流任务中或从数据流任务中删除以及请求该组件的帮助时获得通知。  

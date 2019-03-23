@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129797"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376136"
 ---
 # <a name="data-conversion-transformation-editor"></a>数据转换编辑器
   可以使用 **“数据转换编辑器”** 对话框，选择要转换的列和要将列转换成的数据类型以及设置转换属性。  
@@ -38,7 +38,7 @@ ms.locfileid: "48129797"
  从可用输入列的列表中选择要转换的列。 通过选中上述相应的复选框即可选择输入列。  
   
  **输出别名**  
- 为每一个新列键入一个别名。 默认值是`Copy of`后接输入的列名; 但是，可以选择任何唯一的描述性名称。  
+ 为每一个新列键入一个别名。 默认为 `Copy of` 后接输入列名。不过，你也可以任选一个唯一的描述性名称。  
   
  **数据类型**  
  从列表中选择可用的数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。  

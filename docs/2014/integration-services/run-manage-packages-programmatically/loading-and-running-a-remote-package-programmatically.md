@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370389"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379105"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
   若要从未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包，请启动这些包，以便它们可在安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的远程计算机上运行。 为此，可在本地计算机上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、Web 服务或远程组件来启动远程计算机上的包。 如果尝试直接从本地计算机启动远程包，则这些包将加载到本地计算机上，并尝试在本地计算机上运行。 如果本地计算机未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这些包将不会运行。  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部资源  
   
--   视频中，[如何：使用 SQL Server 代理 （SQL Server 视频） 自动执行 SSIS 包](https://technet.microsoft.com/sqlserver/ff686764.aspx)，technet.microsoft.com 上  
+-   MSDN 库中的视频[操作说明：使用 SQL Server 代理 （SQL Server 视频） 自动执行 SSIS 包](https://technet.microsoft.com/sqlserver/ff686764.aspx)，technet.microsoft.com 上  
   
 ![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 983d83c8724db0e517175f120b20a3f2ff197487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136957"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384185"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
   很多数据流组件支持错误输出，根据组件的不同， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供几种不同的错误输出配置方法。 除了配置错误输出外，您还可以配置错误输出的列。 其中包括配置由该组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  

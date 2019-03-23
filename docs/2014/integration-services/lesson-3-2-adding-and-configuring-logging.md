@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e14cbca906a57f7b15da719a79b45a2291a38d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780269"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392035"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>步骤 2：添加和配置日志记录
   在本任务中，将为 Lesson 3.dtsx 包中的数据流启用日志记录。 然后，将配置一个文本文件日志提供程序，以记录 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 该文本文件日志提供程序可以创建便于查看并可轻松传输的日志。 由于便于使用，因此，这些日志文件在包的基本测试阶段非常有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的“日志事件”窗口中查看日志条目。  
@@ -58,6 +58,6 @@ ms.locfileid: "52780269"
 14. 单击“确定” 。  
   
 ## <a name="next-steps"></a>后续步骤  
- [步骤 3:测试第 3 课教程包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [步骤 3：测试第 3 课教程包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

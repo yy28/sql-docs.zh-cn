@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 118b164b0200aad0185313ccc1bf68946c177ee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0739bb7100e61147e0ba35cb1cc75b1367634924
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216317"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376241"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查找转换编辑器（“高级”选项卡）
   可以使用 **“模糊查找转换编辑器”** 对话框的 **“高级”** 选项卡设置模糊查找的参数。  
@@ -39,7 +39,7 @@ ms.locfileid: "48216317"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [模糊查找转换编辑器&#40;引用表选项卡&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [模糊查找转换编辑器&#40;列选项卡&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
+ [模糊查找转换编辑器（“引用表”选项卡）](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [模糊查找转换编辑器（“列”选项卡）](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
   
   

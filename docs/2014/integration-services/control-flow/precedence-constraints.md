@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349666"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394475"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  

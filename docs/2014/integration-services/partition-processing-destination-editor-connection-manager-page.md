@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2822193b536423e29f0d838ad64dda20664c7f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b86348e6e7fa8331697c4a0aa3b23a494ae54a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200957"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374755"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“连接管理器”** 页，指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例之间的连接。  
@@ -51,7 +51,7 @@ ms.locfileid: "48200957"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [分区处理目标编辑器&#40;映射页&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [分区处理目标编辑器&#40;高级页&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [分区处理目标编辑器（“映射”页）](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [分区处理目标编辑器（“高级”页）](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   
