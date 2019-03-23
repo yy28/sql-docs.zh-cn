@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c626f2bf1f1c886b432091636f37554720e9969c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142837"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375355"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>传输 SQL Server 对象任务编辑器（“常规”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“常规”** 页，对传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48142837"
 > [!NOTE]  
 >  任务名称在一个包内必须是唯一的。  
   
- **Description**  
+ **说明**  
  键入传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象任务的说明。  
   
 ## <a name="see-also"></a>请参阅  

@@ -15,24 +15,24 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047838"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389245"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>将迭代添加到控制流
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 For 循环容器，此控制流元素使得可以更简便地包含按条件重复包中控制流的循环。 有关详细信息，请参阅 [For Loop Container](control-flow/for-loop-container.md)。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 For 循环容器，此控制流元素使得可以更简便地包含按条件重复包中控制流的循环。 有关详细信息，请参阅 [For 循环容器](control-flow/for-loop-container.md)。  
   
  For 循环容器计算每次循环迭代的条件，并在该条件的计算结果为 false 时停止。 For 循环容器含有用于对循环进行初始化的表达式，并指定停止执行重复控制流的求值条件，以及为表达式（其更新与求值条件进行比较的值）赋值。 必须提供求值条件，但初始化表达式和赋值表达式为可选。  
   
  For 循环容器不提供功能，只提供用来生成可重复的控制流的结构。 若要提供容器功能，则 For 循环容器中必须至少包含一个任务。 有关详细信息，请参阅 [Integration Services Tasks](control-flow/integration-services-tasks.md)。  
   
- For 循环容器可包含具有多个任务的控制流，还可包含其他容器。 将任务和容器添加到 For 循环容器的过程与将它们添加到包的过程相似，不同的是将任务和容器拖动到 For 循环容器而不是拖动到包。 如果 For 循环容器包含多个任务或容器，可以使用优先约束连接它们，就像在包中操作一样。 有关详细信息，请参阅 [Precedence Constraints](control-flow/precedence-constraints.md)。  
+ For 循环容器可包含具有多个任务的控制流，还可包含其他容器。 将任务和容器添加到 For 循环容器的过程与将它们添加到包的过程相似，不同的是将任务和容器拖动到 For 循环容器而不是拖动到包。 如果 For 循环容器包含多个任务或容器，可以使用优先约束连接它们，就像在包中操作一样。 有关详细信息，请参阅 [优先约束](control-flow/precedence-constraints.md)。  
   
 ## <a name="using-expressions-in-for-loop-configuration"></a>在 For 循环配置中使用表达式  
  用指定求值条件、初始化值或赋值值的方法配置 For 循环容器时，可以使用文字或表达式。  
@@ -58,7 +58,7 @@ ms.locfileid: "48047838"
 4.  配置 For 循环容器。 有关详细信息，请参阅[配置 For 循环容器](../../2014/integration-services/configure-a-for-loop-container.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [添加或删除任务或容器控制流中](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [在控制流中添加或删除任务或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [组或取消分组的组件](group-or-ungroup-components.md)   
  [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [将枚举添加到控制流](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

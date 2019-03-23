@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191257"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388695"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“错误输出”** 页，选择错误处理选项以及设置错误输出列的属性。  
@@ -48,18 +48,18 @@ ms.locfileid: "48191257"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
- [ADO NET 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 源编辑器&#40;列页&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO NET 源编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 源编辑器（“列”页）](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)  
   
   

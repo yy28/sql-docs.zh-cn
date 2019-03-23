@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102197"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392856"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  
@@ -30,7 +30,7 @@ ms.locfileid: "48102197"
   
  下表列出了部署实用工具属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|一个指定在部署过程中是否可以更新配置的值。|  
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 `True` 才能创建部署实用工具。|  
@@ -50,7 +50,7 @@ ms.locfileid: "48102197"
   
 4.  若要部署包时更新包配置，请设置**AllowConfigurationChanges**到`True`。  
   
-5.  设置`CreateDeploymentUtility`到`True`。  
+5.  将 `CreateDeploymentUtility` 设置为 `True`。  
   
 6.  还可以通过修改 `DeploymentOutputPath` 属性来更新部署实用工具的位置。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48102197"
 9. 在 **“输出”** 窗口中查看生成进度和生成错误。  
   
 ## <a name="see-also"></a>请参阅  
- [包配置](../../2014/integration-services/package-configurations.md)   
+ [“包配置”](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
  [使用部署实用工具部署包](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [打包部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  

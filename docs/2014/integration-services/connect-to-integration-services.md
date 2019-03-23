@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5959d49f6bc9c2ac140da6b16e7926cfa94634e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155917"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389192"
 ---
 # <a name="connect-to-integration-services"></a>连接到 Integration Services
   在您连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务之前，管理员必须授予您该服务的访问权限。 有关详细信息，请参阅 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48155917"
   
 3.  在对象资源管理器工具栏上，单击 **“连接”**，然后单击 **“Integration Services”**。  
   
-4.  在 **“连接到服务器”** 对话框中，提供服务器名。 可以使用句点 （.）、 (local) 或`localhost`来指示本地服务器。  
+4.  在 **“连接到服务器”** 对话框中，提供服务器名。 可以使用句点 (.)、(local) 或 `localhost` 来指示本地服务器。  
   
 5.  单击 **“连接”**。  
   

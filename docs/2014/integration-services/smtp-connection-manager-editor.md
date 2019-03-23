@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 03e02d95d9f4ba358c85b0c90f4c5ab1b2029e63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4895a0fb7f3b64ff7db52aea9ab9319aeb8b9c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118569"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391505"
 ---
 # <a name="smtp-connection-manager-editor"></a>SMTP 连接管理器编辑器
   使用“SMTP 连接管理器编辑器”对话框可以指定简单邮件传输协议 (SMTP) 服务器。  
@@ -31,7 +31,7 @@ ms.locfileid: "48118569"
  **名称**  
  为连接管理器提供唯一的名称。  
   
- **Description**  
+ **说明**  
  描述连接管理器。 最好按照连接管理器的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
  **SMTP 服务器**  

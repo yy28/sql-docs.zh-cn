@@ -13,21 +13,21 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221537"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389235"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用默认优先约束来连接任务和容器
   优先约束连接两个可执行文件。 可执行文件可以是任何任务，也可以是 For 循环容器、Foreach 循环容器或序列容器。 此过程介绍如何设置优先约束的默认行为，以及如何用默认优先约束来连接可执行文件。  
   
 ## <a name="creating-default-precedence-constraints"></a>创建默认优先约束  
- 当你首次使用[!INCLUDE[ssIS](../includes/ssis-md.md)]设计器中，优先约束的默认值是`Success`。 按照下列步骤将 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器配置为使用不同的优先约束默认值。  
+ 首次使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器时，优先约束的默认值为 `Success`。 按照下列步骤将 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器配置为使用不同的优先约束默认值。  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>设置优先约束的默认值  
   

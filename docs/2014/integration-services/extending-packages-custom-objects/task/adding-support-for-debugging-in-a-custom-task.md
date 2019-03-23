@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a16f1bae7c824d61d379e79b983077db44069709
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 44b583c062280cb080228d7db3bd24a312a350fd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394335"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>在自定义任务中添加对调试的支持
   使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时引擎可以通过断点在执行过程中将包、任务和其他类型的容器挂起。 通过断点可以检查和纠正那些导致应用程序或任务不能正常运行的错误。 断点体系结构使客户端能够在任务处理被挂起的同时在定义的执行点评估包中对象的运行时值。  

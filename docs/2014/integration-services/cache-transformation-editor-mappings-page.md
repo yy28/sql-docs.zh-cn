@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157417"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391155"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>缓存转换编辑器（“映射”页）
   可以使用 **“缓存转换编辑器”** 的 **“映射”** 页，将“缓存转换”转换中的输入列映射到缓存连接管理器中的目标列。  
@@ -48,6 +48,6 @@ ms.locfileid: "48157417"
  查看每个可用的目标列。  
   
 ## <a name="see-also"></a>请参阅  
- [缓存转换编辑器&#40;连接管理器页&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [缓存转换编辑器（“连接管理器”页）](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

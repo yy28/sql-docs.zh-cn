@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533330"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390025"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
   可以使用 **“FTP 任务编辑器”** 对话框的 **“文件传输”** 页配置任务执行的 FTP 操作。  
@@ -70,13 +70,13 @@ ms.locfileid: "52533330"
  **RemoteVariable**  
  选择现有的用户定义变量，或单击“\<新建变量...>”以创建用户定义变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，添加变量  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、添加变量  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  选择现有 FTP 连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关的主题：**[FTP 连接管理器](connection-manager/ftp-connection-manager.md)， [FTP 连接管理器编辑器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相关主题：**[FTP 连接管理器](connection-manager/ftp-connection-manager.md)、[FTP 连接管理器编辑器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 动态选项  
   
@@ -84,13 +84,13 @@ ms.locfileid: "52533330"
  **LocalVariable**  
  选择现有的用户定义变量，或单击“\<新建变量...>”以创建变量。  
   
- **相关的主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，添加变量  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、添加变量  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  选择现有文件连接管理器，或单击“\<新建连接...>”以创建连接管理器。  
   
- **相关主题**:[平面文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题**：[平面文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

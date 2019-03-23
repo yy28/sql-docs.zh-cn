@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366859"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392097"
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -86,7 +86,7 @@ ms.locfileid: "53366859"
   
  许多日志事件都写入多个项，并且多个日志条目的消息都包含复杂的数据。 为了便于理解和交流复杂消息的内容，可以对消息文本进行分析。 根据日志的位置，可以使用 Transact-SQL 语句或脚本组件用列或其他更有用的格式来分离复杂文本。  
   
- 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185:OLE DB 源输出：1180:排序：1181:对输入进行排序：76"，并解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
+ 例如，下表包含消息“已经为数据流组件提供了若干行作为输入。 :  :1185 :OLE DB 源输出：1180 :排序：1181 :对输入进行排序：76"，并解析为列。 该消息由 `OnPipelineRowsSent` 事件在将行从 OLE DB 源发送到排序转换时写入。  
   
 |“列”|Description|ReplTest1|  
 |------------|-----------------|-----------|  

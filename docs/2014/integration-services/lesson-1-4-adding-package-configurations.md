@@ -1,5 +1,5 @@
 ---
-title: 步骤 4：添加包配置 |Microsoft Docs
+title: 步骤 4：添加包配置 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364009"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388327"
 ---
 # <a name="step-4-adding-package-configurations"></a>步骤 4：添加包配置
   在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
@@ -129,7 +129,7 @@ ms.locfileid: "53364009"
 12. 在“包配置管理器”对话框中，验证是否第一个列出“LoadXMLData EV 配置”，第二个列出“LoadXMLData 配置”，然后单击“关闭”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 5:测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [步骤 5：测试更新的包](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374019"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388095"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server 代理计划包
   下面的过程提供了通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤运行包来自动执行该包的步骤。  
@@ -64,7 +64,7 @@ ms.locfileid: "53374019"
     > [!IMPORTANT]  
     >  如果包受密码保护，当单击“新建作业步骤”的“常规”页上除“包”选项卡之外的任何选项卡时，需要在出现的“包密码”对话框中输入密码。 如果不输入， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业将无法运行该包。  
   
-     **包源**:SSIS 目录  
+     **包源**：SSIS 目录  
   
     |Tab|选项|  
     |---------|-------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "53374019"
     ||**出错时转储**:指定在包执行过程中发生任何错误时是否生成调试转储文件。<br /><br /> 这些文件包含有关包的执行信息，可帮助您解决出现的问题。<br /><br /> 若选择此选项，当在执行过程中出现错误时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会创建一个 .mdmp 文件（二进制文件）和一个 .tmp 文件（文本文件）。 默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。|  
     ||**32 位运行时**指示是否具有 64 位版本的 64 位计算机上使用 32 位版本的 dtexec 实用工具运行包[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装代理。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
   
-     **包源**:SQL Server、SSIS 包存储或文件系统  
+     **包源**：SQL Server、SSIS 包存储或文件系统  
   
      您可以为存储在 SQL Server、SSIS 包存储区或文件系统中的包设置的许多选项都对应于 `dtexec` 命令提示实用工具的命令行选项。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   

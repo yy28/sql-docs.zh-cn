@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d45ea589ee41aa5895acf0ee1c475aea19bbaeed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225207"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374575"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>“包角色”对话框 UI 参考
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 数据库中存储的包。  
@@ -43,6 +43,6 @@ ms.locfileid: "48225207"
   
 ## <a name="see-also"></a>请参阅  
  [数据库级别的角色](../relational-databases/security/authentication-access/database-level-roles.md)   
- [安全概述&#40;集成服务&#41;](security/security-overview-integration-services.md)  
+ [安全性概述 (Integration Services)](security/security-overview-integration-services.md)  
   
   

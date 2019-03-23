@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 543ab9724f44e5db1f4532eeadcce79b36de52b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530635"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374495"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
@@ -43,7 +43,7 @@ ms.locfileid: "52530635"
  **StandardInputVariable**  
  选择为进程提供输入的变量，或单击“\<新建变量...>”创建一个新变量：  
   
- **相关的主题：**[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[添加变量](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  选择用于捕获进程输出的变量，或单击“\<新建变量...>”创建一个新变量。  

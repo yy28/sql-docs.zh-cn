@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161989"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392715"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -85,7 +85,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果是 PostgreS
 
 |内核|Description
 |:-----|:-----
-| SQL Kernel | 编写针对您的 SQL Server 的 SQL 代码。
+| SQL Kernel | 编写针对关系数据库的 SQL 代码。
 |PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。
 |Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
 |Python Kernel|编写 Python 代码进行本地开发。

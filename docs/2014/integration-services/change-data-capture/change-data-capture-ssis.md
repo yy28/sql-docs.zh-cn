@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362389"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375876"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
@@ -61,14 +61,14 @@ ms.locfileid: "53362389"
   
      **详细信息：**[准备查询变更数据](prepare-to-query-for-the-change-data.md)  
   
- **步骤 2:设置对变更数据查询**  
+ **步骤 2：设置对变更数据的查询**  
  创建将查询数据的表值函数。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 开发并保存查询。  
   
  **详细信息：**[检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
   
- **步骤 3:设计数据流**  
+ **步骤 3：设计数据流**  
  在包的数据流中，需要定义下列任务：  
   
 -   从变更表中检索变更数据。  

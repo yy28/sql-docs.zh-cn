@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 998124711ec5bfe4a9da8b4737c357cb07bcbde2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075599"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390986"
 ---
 # <a name="odata-source-editor-error-output-page"></a>OData 源编辑器（“错误输出”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
@@ -38,18 +38,18 @@ ms.locfileid: "48075599"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
- [OData 源编辑器&#40;连接页&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [OData 源编辑器&#40;列页&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData 源编辑器（“连接”页）](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [OData 源编辑器（“列”页）](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData 源](data-flow/odata-source.md)   
  [OData 连接管理器](connection-manager/odata-connection-manager.md)  
   

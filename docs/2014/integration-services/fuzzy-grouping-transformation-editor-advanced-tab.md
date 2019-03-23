@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150819"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389016"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
@@ -32,7 +32,7 @@ ms.locfileid: "48150819"
   
 ## <a name="options"></a>选项  
  **输入键列名**  
- 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in`列具有唯一标识每行的值。  
+ 指定包含每个输入行的唯一表示符的输出列名称。 `_key_in` 列包含的值可唯一标识每个行。  
   
  **输出键列名**  
  对于一组重复的行，指定包含其规范行的唯一标识符的输出列名称。 `_key_out` 列对应于规范数据行的 `_key_in` 值。  

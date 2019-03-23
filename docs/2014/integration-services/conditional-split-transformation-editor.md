@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9098fcc54fde98a8fa04579fe49154e41fa78943
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097442"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392956"
 ---
 # <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
   可以使用 **“有条件拆分转换编辑器”** 对话框创建表达式，设置表达式计算顺序，以及对有条件拆分输出进行命名。 此对话框包含可以用于生成表达式的数学、字符串和日期/时间函数及运算符。 计算结果为 True 的第一个条件确定了行定向到的输出。  
@@ -42,7 +42,7 @@ ms.locfileid: "48097442"
   
  此属性的值可以使用属性表达式来指定。  
   
- **相关主题：**[Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)、[运算符（SSIS 表达式）](expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](expressions/functions-ssis-expression.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41;表达式](expressions/integration-services-ssis-expressions.md)，[运算符&#40;SSIS 表达式&#41;](expressions/operators-ssis-expression.md)，并且[函数&#40;SSIS 表达式&#41;](expressions/functions-ssis-expression.md)  
   
  **默认输出名称**  
  为默认输出键入名称，或使用默认名称。  

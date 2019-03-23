@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 877d7d8e4831a785586680ce57d21975443da645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070047"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388535"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>传输登录名任务编辑器（“登录名”页）
   可以使用 **“传输登录名任务编辑器”** 对话框的 **“登录名”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 有关此任务的详细信息，请参阅 [Transfer Logins Task](control-flow/transfer-logins-task.md)。  
@@ -67,8 +67,8 @@ ms.locfileid: "48070047"
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 任务](control-flow/integration-services-tasks.md)   
- [传输登录名任务编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [表达式页](expressions/expressions-page.md)   
+ [传输登录名任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [“表达式”页](expressions/expressions-page.md)   
  [SMO 连接管理器](connection-manager/smo-connection-manager.md)   
  [强密码](../relational-databases/security/strong-passwords.md)   
  [安装 SQL Server 的安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

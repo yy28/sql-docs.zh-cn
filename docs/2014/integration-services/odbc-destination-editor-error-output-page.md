@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fba1021e4152d5d810b54d29417864936f067800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183367"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389005"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目标编辑器（“错误输出”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -71,7 +71,7 @@ ms.locfileid: "48183367"
  将引起错误或截断的行定向到 ODBC 目标的错误输出。 有关详细信息，请参阅 ODBC 目标。  
   
 ## <a name="see-also"></a>请参阅  
- [ODBC 目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 目标编辑器&#40;映射页&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [ODBC 目标编辑器（“连接管理器”页）](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目标编辑器（“映射”页）](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

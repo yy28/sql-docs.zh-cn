@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: beb37b92c2a6924d2e382d8a3e9971e680103d51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376529"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394516"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>使用脚本任务扩展包
   脚本任务通过以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写，在包运行时编译和执行的自定义代码来扩展 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的运行时功能。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的任务不能满足您的要求时，脚本任务可简化自定义运行时任务的开发。 脚本任务可用于编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  

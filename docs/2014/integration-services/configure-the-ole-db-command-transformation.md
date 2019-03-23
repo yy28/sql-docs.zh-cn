@@ -11,15 +11,15 @@ helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 307773a82206cc1c804a41525b733175ffbb12da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d71ffe723df317733841450713ddccc3d03ddb36
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540169"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377235"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
   若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  

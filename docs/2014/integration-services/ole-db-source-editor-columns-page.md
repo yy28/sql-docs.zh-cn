@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125490"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390825"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 源编辑器（“列”页）
   可以使用“OLE DB 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -39,8 +39,8 @@ ms.locfileid: "48125490"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [OLE DB 源编辑器（“连接管理器”页）](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 源编辑器（“错误输出”页）](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [使用 OLE DB 源提取数据](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)  
   

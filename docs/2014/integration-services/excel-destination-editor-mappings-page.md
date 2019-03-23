@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047568"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387795"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 目标编辑器（“映射”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
@@ -42,8 +42,8 @@ ms.locfileid: "48047568"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 目标编辑器&#40;错误输出页&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Excel 目标编辑器（“连接管理器”页）](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Excel 目标编辑器（“错误输出”页）](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   
   

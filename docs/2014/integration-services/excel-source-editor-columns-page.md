@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4400fda395854a71d8023648b08c99d27a0c7b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a46cdfd73b7339f40cf92555e45c07d8d5dc482
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211857"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390295"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
   可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -39,8 +39,8 @@ ms.locfileid: "48211857"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Excel 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Excel 源编辑器（“连接管理器”页）](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Excel 源编辑器（“错误输出”页）](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel 连接管理器](connection-manager/excel-connection-manager.md)   
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   

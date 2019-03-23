@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8369b2cb34c6355d9957e2a41ed382b25b11f537
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111738"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389525"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 源编辑器（“错误输出”页）
   可以使用 **“XML 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
@@ -42,19 +42,19 @@ ms.locfileid: "48111738"
  **截断**  
  指定发生截断时应执行的操作：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  查看对错误的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [XML 源编辑器&#40;列页&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML 源编辑器（“连接管理器”页）](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [XML 源编辑器（“列”页）](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [使用 XML 源提取数据](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

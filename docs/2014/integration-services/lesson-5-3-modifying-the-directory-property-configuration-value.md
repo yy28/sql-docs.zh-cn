@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 011cd07c0f28f884f460d78d5f2f88631bfe2fd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cb83ac5bb1b811c23b782b01167c437e9b989518
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807499"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391215"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>步骤 3：修改目录属性配置值
   在此任务中，将针对包级变量 `User::varFolderName`的 Value 属性，修改存储在 SSISTutorial.dtsConfig 文件中的配置设置。 该变量可以更新 Foreach 循环容器的 Directory 属性。 修改后的值将指向`New Sample Data`你在上一任务中创建的文件夹。 修改了配置设置并运行包以后，该变量将使用从配置文件填充的值（而不是包中最初配置的目录值），来更新 Directory 属性。  
@@ -33,6 +33,6 @@ ms.locfileid: "52807499"
 3.  保存更改，再关闭文本编辑器。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 4:测试第 5 课教程包](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+ [步骤 4：测试第 5 课教程包](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   

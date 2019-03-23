@@ -12,15 +12,15 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145597"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388375"
 ---
 # <a name="use-variables-in-packages"></a>在包中使用变量
   变量是对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的有效补充，而且使用非常灵活。它们可以在包中的对象之间以及父包和子包之间提供通信。 变量还可以用在表达式和脚本中。  
@@ -43,7 +43,7 @@ ms.locfileid: "48145597"
   
  **参数和返回代码** ：为输入参数提供值，或存储输出参数和返回代码的值。 可通过将变量映射到参数和返回值来执行上述操作。 例如，如果将变量 `varProductId` 设置为 23 并运行 SQL 语句 `SELECT * from Production.Product WHERE ProductID = ?`，查询将检索 `ProductID` 为 23 的产品。 有关详细信息，请参阅 [执行 SQL 任务](control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
- **For 循环表达式** ：提供要在 FOR 循环的初始化表达式、求值表达式和赋值表达式中使用的值。 例如，如果变量 `varCount` 为 2， `varMaxCount` 为 10，初始化表达式为 `@varCount`，求值表达式为  `@varCount < @varMaxCount`，赋值表达式为 `@varCount =@varCount +1`，则循环将重复 8 次。 有关详细信息，请参阅 [For Loop Container](control-flow/for-loop-container.md)。  
+ **For 循环表达式** ：提供要在 FOR 循环的初始化表达式、求值表达式和赋值表达式中使用的值。 例如，如果变量 `varCount` 为 2， `varMaxCount` 为 10，初始化表达式为 `@varCount`，求值表达式为  `@varCount < @varMaxCount`，赋值表达式为 `@varCount =@varCount +1`，则循环将重复 8 次。 有关详细信息，请参阅 [For 循环容器](control-flow/for-loop-container.md)。  
   
  **父包变量配置** ：将值由父包传递给子包。 子包可通过使用父包变量配置来访问父包中的变量。 例如，如果子包必须与父包使用相同日期，则子包可以定义一个父包变量配置，该配置将指定 GETDATE 函数在父包中设置的变量。 有关详细信息，请参阅 [Execute Package Task](control-flow/execute-package-task.md) 和 [Package Configurations](../../2014/integration-services/package-configurations.md)。  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372519"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394585"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -193,7 +193,7 @@ ms.locfileid: "53372519"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|指定的包路径不包含包名称。 如果路径未包含至少一个反斜杠或正斜杠，会出现这种情况。|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|找不到文件夹“%1”。|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|尝试在 SQL 上查找某个文件夹时遇到 OLE DB 错误，错误代码为 0x%1!8.8X! (%2)。|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|SSIS 日志记录提供程序无法打开该日志。 错误代码：0x%1!8.8X ！。|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|SSIS 日志记录提供程序无法打开该日志。 错误代码:0x%1!8.8X ！。|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|无法获取 ConnectionInfos 集合，错误为 0x%1!8.8X! “%2”。 当对 IDTSApplication100::get_ConnectionInfos 的调用失败时，会出现此错误。|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|试图锁定变量时检测到死锁。 尝试了 16 次后仍无法获取锁。 锁已超时。|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|尚未从 VariableDispenser 返回 Variables 集合。 试图执行只允许对分配的集合执行的操作。|  
@@ -358,7 +358,7 @@ ms.locfileid: "53372519"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|对象名“%1”无效。 名称必须以字母字符开头。|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|对象名“%1”无效。 名称必须以字母字符或下划线“_”开头。|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|对象名“%1”无效。 名称只能包含字母数字字符或下划线“_”。|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|对象名“%1”无效。 该名称不能包含以下任何字符: / \ : ? " \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|对象名“%1”无效。 该名称不能包含以下任何字符: / \ : ? " \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|无法使用默认持久性加载值属性“%1”。|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|连接管理器“%1”不属于类型“%2”|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|“%1”为空|  
@@ -375,7 +375,7 @@ ms.locfileid: "53372519"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|将包文件“%3”加载到 XML 文档时 出现错误 0x%1!8.8X!。 %2。|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|该任务的 Validate 方法失败，返回错误代码 0x%1!8.8X! (%2)。 Validate 方法必须成功，并使用 "out" 参数指示结果。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|任务的 Execute 方法返回错误代码 0x%1!8.8X! (%2)。 Execute 方法必须成功，并使用 "out" 参数指示该结果。|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|任务"%1"上出现错误：0x%2!8.8X ！ 。 出现错误时，运行库正从任务的依赖项集合中检索依赖项。 可能该任务未能正确地实现一个依赖关系接口。|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|任务"%1"上出现错误：0x%2!8.8X! 。 出现错误时，运行库正从任务的依赖项集合中检索依赖项。 可能该任务未能正确地实现一个依赖关系接口。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|任务验证期间出错。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|连接字符串的格式无效。 它必须包含一个或多个形式为 X=Y 并以分号分隔的成分。 如果为数据库连接管理器设置了不含任何成分的连接字符串，会出现此错误。|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|连接字符串成分中不能包含分号却不加引号。 如果值必须包含分号，请用引号将整个值引起来。 如果连接字符串中的值包含分号，却未加引号(例如 InitialCatalog 属性)，会出现此错误。|  
@@ -1239,12 +1239,12 @@ ms.locfileid: "53372519"
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 错误代码 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED:Excel 连接管理器不支持在 64 位版本的 SSIS，因为没有 OLE DB 访问接口可用。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|缓存文件损坏，或文件不是使用缓存连接管理器创建的。  请提供一个有效的缓存文件。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL 命令的设置不正确。 请检查 SQLCommand 属性。|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|已获得 COM 错误对象信息。  源:"%1"错误代码：0x%2!8.8X ！  说明:“%3”。|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|已获得 COM 错误对象信息。  源:"%1"错误代码：0x%2!8.8X!  说明:“%3”。|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|无法访问获取的连接。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|列数不正确。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|在数据源中找不到列“%1”。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|已获得 OLE DB 记录。  源:"%1"Hresult:0x%2!8.8X ！  说明:“%3”。|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS 错误代码 DTS_E_OLEDBERROR。  出现 OLE DB 错误。 错误代码：0x%1!8.8X ！。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|已获得 OLE DB 记录。  源:"%1"Hresult:0x%2!8.8X!  说明:“%3”。|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS 错误代码 DTS_E_OLEDBERROR。  出现 OLE DB 错误。 错误代码:0x%1!8.8X ！。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|组件已连接。 若要连接此组件，需要先断开其连接。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|属性“%1”的值不正确。|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|无法打开数据文件“%1”。|  
@@ -1686,7 +1686,7 @@ ms.locfileid: "53372519"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|无法按指定方式映射列“%1”的数据类型。|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|不支持预先存在的匹配索引“%2”的版本(%1)。 预期的版本应为“%3”。 如果索引元数据的版本与生成当前代码时针对的版本不匹配，将发生此错误。 请使用当前版本的代码重新生成索引，以修复此错误。|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|表“%1”似乎不是有效的预建匹配索引。 当无法从指定的预建索引加载元数据记录时将发生此错误。|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|无法读取指定的预建匹配索引“%1”。  OLEDB 错误代码：0x%2!8.8X ！。|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|无法读取指定的预建匹配索引“%1”。  OLEDB 错误代码：0x%2!8.8X!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|没有任何输入列具有到引用表列的有效联接。  请确保至少有一个联接是使用输入列属性 JoinToReferenceColumn 和 JoinType 定义的。|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|指定的预先存在的匹配索引“%1”不是使用模糊匹配信息为列“%2”生成的。  必须重新生成此索引以包含该信息。 当生成索引所使用的列不是模糊联接列时，将发生此错误。|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|为属性“%2”提供的名称“%1”不是有效的 SQL 标识符名称。 如果属性名称不符合有效 SQL 标识符名称的规范，将发生此错误。|  
@@ -1991,8 +1991,8 @@ ms.locfileid: "53372519"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|提交失败。|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|%2 的自定义属性“%1”只能用于 ansi 文件。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|%2 的自定义属性“%1”只能用于 DT_BYTES。|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册。 错误代码：0x%1!8.8X ！。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码：0x%1!8.8X ！。|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册。 错误代码:0x%1!8.8X ！。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码:0x%1!8.8X ！。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|缓存列“%1”映射至多个列。 请删除重复的列映射。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 未映射到有效的缓存列。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|由于数据类型不匹配，无法映射输入列“%1”和缓存列“%2”。|  
@@ -2036,7 +2036,7 @@ ms.locfileid: "53372519"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|配置条目“%1”的格式不正确， 可能是缺少分隔符或格式有误，如数组分隔符无效。|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|由于没有父变量集合，父变量“%1”中的配置没有出现。|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|导入配置文件失败:“%1”。|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|由于没有父变量，父变量“%1”中的配置没有出现。 错误代码：0x%2!8.8X ！。|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|由于没有父变量，父变量“%1”中的配置没有出现。 错误代码:0x%2!8.8X!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|配置文件为空，不包含配置条目。|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|配置“%1”的配置类型无效。 尝试将配置对象的类型属性设置为无效的配置类型时，可能会出现此情况。|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|在注册表项“%1”中找不到注册表配置的配置类型。 请将名为 ConfigType 的值添加到此注册表项，并赋予它一个字符串值“Variable”、“Property”、“ConnectionManager”、“LoggingProvider”或“ForEachEnumerator”。|  

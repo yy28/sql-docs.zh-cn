@@ -13,25 +13,25 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204147"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388105"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>设置或更改包的保护级别
   若要控制对包内容以及其中包含的敏感值（如密码）的访问，请设置 `ProtectionLevel` 属性的值。 项目中所含的包需要具有与项目相同的保护级别才能生成项目。 如果更改项目的 `ProtectionLevel` 属性设置，需要为包手动更新该属性设置。  
   
  有关如何确定`ProtectionLevel`设置适用于您的包的不同阶段中的包的生命周期，请参阅[包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)。 有关 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中安全功能的概述，请参阅[安全性概述 (Integration Services)](security/security-overview-integration-services.md)。  
   
- 本主题中的过程描述如何使用两种[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]或 dtutil 命令提示实用工具来更改`ProtectionLevel`属性。  
+ 本主题中的过程介绍如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 dtutil 命令提示实用工具来更改 `ProtectionLevel` 属性。  
   
 > [!NOTE]  
->  除了本主题中的过程，您通常可以设置或更改`ProtectionLevel`包时导入或导出包的属性。 当使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导保存包时，您也可以更改包的 `ProtectionLevel` 属性。  
+>  除了本主题中的过程外，当导入或导出包时，您通常可以设置或更改包的 `ProtectionLevel` 属性。 当使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导保存包时，您也可以更改包的 `ProtectionLevel` 属性。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48204147"
   
 3.  打开命令提示符窗口。  
   
-4.  在命令提示符处，导航到包含你想要设置的包的文件夹`ProtectionLevel`属性。  
+4.  在命令提示符下，导航到您要为其设置 `ProtectionLevel` 属性的包所在的文件夹。  
   
      下面步骤中所示的语法示例假设此文件夹是当前文件夹。  
   
 5.  使用与下列示例之一相类似的命令，设置或更改包的保护级别。  
   
-    -   下面的命令集`ProtectionLevel`为级别 2"使用密码加密敏感"，密码为"strongpassword"文件系统中的单个包属性：  
+    -   下面的命令将文件系统中的单个包的 `ProtectionLevel` 属性设置为级别 2“使用密码加密敏感数据”，密码为“strongpassword”：  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48204147"
          如果您在批文件中使用类似的命令，则请输入文件占位符“%f”作为批文件中的“%%f”。  
   
 ## <a name="see-also"></a>请参阅  
- [dtutil 实用工具](dtutil-utility.md)  
+ [Encrypt](dtutil-utility.md)  
   
   

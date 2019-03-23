@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363159"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377305"
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -82,7 +82,7 @@ ms.locfileid: "53363159"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>相关内容  
- 视频中，[如何：使用 Web 服务任务 （SQL Server 视频） 调用 Web 服务](https://go.microsoft.com/fwlink/?LinkId=259642)，technet.microsoft.com 上。  
+ MSDN 库中的视频[操作说明：使用 Web 服务任务 （SQL Server 视频） 调用 Web 服务](https://go.microsoft.com/fwlink/?LinkId=259642)，technet.microsoft.com 上。  
   
  curatedviews.cloudapp.net 上的专业回答： [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996)（通过脚本在 SSIS 中使用 Web 服务）。  
   

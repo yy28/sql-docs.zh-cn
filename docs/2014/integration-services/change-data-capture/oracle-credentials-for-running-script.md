@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca3f76c49b950f6830c4d60f011bbdb158055179
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796089"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388807"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   若要从 Oracle CDC 设计器控制台运行 Oracle 补充日志记录脚本，程序将提示您输入正运行该脚本的 Oracle 用户的凭据。 若要运行该脚本，Oracle 用户必须对要捕获的所有表具有 ALTER TABLE 权限，并且对 DBA_LOG_GROUPS 视图具有 SELECT 权限。  
@@ -27,9 +27,9 @@ ms.locfileid: "52796089"
   
  选择下列选项之一：  
   
--   **Windows 身份验证**:选择此选项可将当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
+-   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**:如果选择此选项，则必须键入**用户名**并**密码**要连接到源 Oracle 数据库中的用户。  
+-   **Oracle 身份验证**：如果选择此选项，则必须键入**用户名**并**密码**要连接到源 Oracle 数据库中的用户。  
   
 ## <a name="see-also"></a>请参阅  
  [如何管理 CDC 实例](manage-a-cdc-instance.md)   

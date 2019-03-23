@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822101"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389695"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步骤 3：修改平面文件连接管理器
   在本任务中，您将修改在第 1 课中创建和配置的平面文件连接管理器。 平面文件连接管理器在最初创建时配置为静态加载单个文件。 若要启用平面文件连接管理器以重复加载文件，必须修改连接管理器的 ConnectionString 属性以接受用户定义的变量 `User:varFileName`，该变量包含要在运行时加载的文件的路径。  
@@ -41,6 +41,6 @@ ms.locfileid: "52822101"
 8.  再次单击 **“确定”** 关闭 **“属性表达式编辑器”** 对话框。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
- [步骤 4:测试第 2 课教程包](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [步骤 4：测试第 2 课教程包](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

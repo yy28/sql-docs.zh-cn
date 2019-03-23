@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374956"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子包中使用变量和参数的值
   此过程介绍如何创建使用父变量配置类型的包配置。 通过此配置类型，从父包运行的子包可以访问父包中的变量。  
@@ -105,9 +105,9 @@ ms.locfileid: "48055628"
 13. 单击 **“关闭”**。  
   
 ## <a name="see-also"></a>请参阅  
- [包配置](../../2014/integration-services/package-configurations.md)   
+ [“包配置”](../../2014/integration-services/package-configurations.md)   
  [创建包配置](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)  
   
   

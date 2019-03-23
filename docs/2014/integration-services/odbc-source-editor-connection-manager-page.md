@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17cb397a383df0618b9abc9e2eef6ba5094ed82a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129547"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378585"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
   可以使用 **“ODBC 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -46,7 +46,7 @@ ms.locfileid: "48129547"
 |选项|Description|  
 |------------|-----------------|  
 |表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
-||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
+||**表或视图的名称**:从列表中选择一个可用表或视图，或键入正则表达式以便标识表。|  
 ||该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
 |SQL 命令|使用 SQL 查询从 ODBC 数据源中检索数据。 您应该采用正在使用的源数据库的语法编写查询。 选择此选项后，请采用以下方法之一输入查询：|  
 ||在 **“SQL 命令文本”** 字段中，输入 SQL 查询的文本。|  
@@ -59,6 +59,6 @@ ms.locfileid: "48129547"
 ## <a name="see-also"></a>请参阅  
  [ODBC 源自定义属性](data-flow/odbc-source-custom-properties.md)   
  [ODBC 源编辑器（“列”页）](../../2014/integration-services/odbc-source-editor-columns-page.md)   
- [ODBC 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [ODBC 源编辑器（“错误输出”页）](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

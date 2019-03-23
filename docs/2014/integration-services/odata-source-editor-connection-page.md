@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203967"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390458"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“连接”** 页，为 OData 源选择 OData 连接管理器。 通过此页还可以指定集合或资源路径和任何查询选项以指示需要从 OData 源检索的数据。 若要了解有关 OData 源的详细信息，请参阅 [OData Source](data-flow/odata-source.md)。  
@@ -58,8 +58,8 @@ ms.locfileid: "48203967"
  键入资源路径。 例如：Employees  
   
 ## <a name="see-also"></a>请参阅  
- [OData 源编辑器&#40;列页&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData 连接管理器](connection-manager/odata-connection-manager.md)  
+ [OData 源编辑器（“列”页）](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData 源编辑器（“错误输出”页）](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

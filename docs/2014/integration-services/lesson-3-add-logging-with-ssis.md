@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 088afb5cdd4640aab550552d4fc15c25f3a852e1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375279"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390955"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 课：添加日志记录
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含日志记录功能，可通过提供任务和容器事件跟踪监控包执行情况以及进行故障排除。 日志记录功能非常灵活，可以在包级别或在包中的各个任务和容器上启用。 可以选择要记录的事件，也可以对单个包创建多个日志。  
@@ -42,9 +42,9 @@ ms.locfileid: "53375279"
   
 -   [第 1 步：复制第 2 课包](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [步骤 2:添加和配置日志记录](lesson-3-2-adding-and-configuring-logging.md)  
+-   [步骤 2：添加和配置日志记录](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [步骤 3:测试第 3 课教程包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [步骤 3：测试第 3 课教程包](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
  [第 1 步：复制第 2 课包](lesson-3-1-copying-the-lesson-2-package.md)  

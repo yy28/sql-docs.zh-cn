@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43085040e3bc1fde5f01b9ccb769695ea877341
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a5a98644dc9c8f887b72cd5cc76c1d7c38ae174
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129837"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389305"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 源编辑器（“错误输出”页）
   可以使用 **“CDC 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -47,13 +47,13 @@ ms.locfileid: "48129837"
  **截断**  
  选择 CDC 源应该如何处理流中的截断：忽略失败、重定向行或使组件失败。  
   
- **Description**  
+ **说明**  
  未使用。  
   
  **将此值设置到选定的单元格**  
  选择发生错误或截断时 CDC 源应如何处理所有选定的单元格：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="error-handling-options"></a>错误处理选项  
@@ -69,7 +69,7 @@ ms.locfileid: "48129837"
  错误或截断数据行定向到 CDC 源的错误输出。 在此情况下使用 CDC 源错误处理。 有关详细信息，请参阅 [CDC Source](data-flow/cdc-source.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 源编辑器&#40;列页&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [CDC 源编辑器（“连接管理器”页）](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 源编辑器（“列”页）](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

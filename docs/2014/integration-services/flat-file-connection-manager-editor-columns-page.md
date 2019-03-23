@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374643"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>平面文件连接管理器编辑器（“列”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“列”** 页，指定行和列的信息以及预览相应的文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "48123877"
  **连接管理器名称**  
  为工作流中的平面文件连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
 ## <a name="flat-file-format-dynamic-options"></a>平面文件格式动态选项  
@@ -63,9 +63,9 @@ ms.locfileid: "48123877"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {|}。**|列由竖线分隔。|  
+|**竖线 {|}**。|列由竖线分隔。|  
   
- **“刷新”**  
+ **刷新**  
  通过单击“刷新”查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
   
  **预览行**  
@@ -117,8 +117,8 @@ ms.locfileid: "48123877"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [平面文件连接管理器编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [平面文件连接管理器编辑器&#40;高级页&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [平面文件连接管理器编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [平面文件连接管理器编辑器（“高级”页）](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [平面文件连接管理器编辑器（“预览”页）](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176837"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390075"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目标编辑器（“错误输出”页）
   可以使用 **“OLE DB 目标编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  
@@ -42,19 +42,19 @@ ms.locfileid: "48176837"
  **截断**  
  未使用。  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 目标编辑器&#40;映射页&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目标编辑器（“连接管理器”页）](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 目标编辑器（“映射”页）](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [通过使用 OLE DB 目标来加载数据](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

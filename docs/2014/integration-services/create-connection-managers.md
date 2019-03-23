@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074446"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374085"
 ---
 # <a name="create-connection-managers"></a>创建连接管理器
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含多种连接管理器以满足连接不同类型的服务器和数据源的任务的需要。 在不同类型的数据存储中提取和加载数据的数据流组件，以及将日志写入服务器、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或文件的日志提供程序，都使用连接管理器。 例如，具有发送邮件任务的包使用 SMTP 类型的连接管理器来连接到简单邮件传输协议 (SMTP) 服务器。 具有执行 SQL 任务的包可以使用 OLE DB 连接管理器来连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](connection-manager/integration-services-ssis-connections.md)。  
@@ -56,8 +56,8 @@ ms.locfileid: "48074446"
  两种版本的提供程序都有相同的 ID。 若要指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 运行时是否使用可用的 64 位版本的提供程序，需要设置 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的 Run64BitRuntime 属性。 如果将 Run64BitRuntime 属性设置为`true`，在运行时发现并使用 64 位提供程序; 如果 Run64BitRuntime 为`false`，运行时查找并使用 32 位提供程序。 有关可以对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目进行设置的属性的详细信息，请参阅 [Integration Services (SSIS) 与 Studio 环境](integration-services-ssis-development-and-management-tools.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [控制流](control-flow/control-flow.md)   
+ [“控制流”](control-flow/control-flow.md)   
  [数据流](data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41;事件处理程序](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43403bd87ba8cd836e035f14a9456b6338e0c92d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216747"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393275"
 ---
 # <a name="data-flow-path-editor-general-page"></a>数据流路径编辑器（“常规”页）
   可以使用 **“数据流路径编辑器”** 对话框设置路径属性，查看列元数据以及管理附加到路径的数据查看器。  
@@ -37,7 +37,7 @@ ms.locfileid: "48216747"
  **IdentificationString**  
  用于标识路径的字符串。 从上面输入的名称自动生成。  
   
- **Description**  
+ **说明**  
  描述该路径。  
   
  **PathAnnotation**  

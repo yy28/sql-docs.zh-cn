@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d20e7102df982f961aed770aedc19812c5aca949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388015"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
@@ -28,13 +28,13 @@ ms.locfileid: "48185877"
   
  **您希望做什么？**  
   
-1.  [打开活动操作对话框](#open_dialog)  
+1.  [打开“活动操作”对话框](#open_dialog)  
   
 2.  [配置选项](#options)  
   
 ##  <a name="open_dialog"></a> 打开“活动操作”对话框  
   
-1.  打开[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
+1.  打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
 2.  连接 Microsoft SQL Server 数据库引擎  
   

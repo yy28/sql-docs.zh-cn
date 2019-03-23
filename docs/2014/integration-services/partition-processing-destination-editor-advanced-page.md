@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9b37af7069468bff1235c713f82f0b3444d0683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062357"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374893"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>分区处理目标编辑器（“高级”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“高级”** 页配置错误处理方式。  
@@ -103,6 +103,6 @@ ms.locfileid: "48062357"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [分区处理目标编辑器&#40;映射页&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [分区处理目标编辑器（“映射”页）](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

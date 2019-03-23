@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36f44d123216d11034092806a4f7d616f8968d90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172647"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393897"
 ---
 # <a name="variable-grid-options"></a>变量网格选项
-  使用 **“变量网格选项”** 对话框，可以选择将在 **“变量”** 窗口中显示的列并选择要应用于变量列表的筛选器。 有关相应变量属性的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
+  使用 **“变量网格选项”** 对话框，可以选择将在 **“变量”** 窗口中显示的列并选择要应用于变量列表的筛选器。 有关相应变量属性的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。  
   
 ## <a name="options-for-filter"></a>筛选器选项  
  **显示系统变量**  
@@ -34,7 +34,7 @@ ms.locfileid: "48172647"
  **显示所有作用域的变量**  
  选择以显示包范围内的变量以及包中的容器、任务和事件处理程序范围内的变量。 清除此选项以仅显示包范围内的变量以及所选容器、任务或事件处理程序范围内的变量。  
   
- 有关变量作用域的详细信息，请参阅[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)。  
+ 有关变量作用域的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。  
   
 ## <a name="options-for-columns"></a>列选项  
  选择希望在 **“变量”** 窗口中显示的列。  
@@ -49,14 +49,14 @@ ms.locfileid: "48172647"
   
 -   **变量值更改时引发事件**  
   
--   **Description**  
+-   **说明**  
   
 -   **表达式**  
   
 ## <a name="see-also"></a>请参阅  
- [变量窗口](../../2014/integration-services/variables-window.md)   
- [Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)   
+ [“变量”窗口](../../2014/integration-services/variables-window.md)   
+ [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)   
  [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;SSIS&#41;事件处理程序](integration-services-ssis-event-handlers.md)  
+ [Integration Services (SSIS) 事件处理程序](integration-services-ssis-event-handlers.md)  
   
   

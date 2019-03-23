@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d788fd54caf4bddfedb0dc8cfdf2946ba9f4a8db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d2417c844998547480a2f03f6dcf9409ff7656
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229427"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388085"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查找转换编辑器（“错误输出”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  
@@ -54,7 +54,7 @@ ms.locfileid: "48229427"
   
 -   使组件失败。  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将选定的单元格设置为此值**  

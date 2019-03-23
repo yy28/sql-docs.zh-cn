@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096167"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394085"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 服务器的报表
-  在当前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中, 均提供标准报表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来帮助你监视[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]已部署到的项目[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
+  在当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了标准报告，帮助你监视部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 这些报告有助于您查看包状态和历史记录，并根据需要确定包执行失败的原因。  
   
  在每个报告页的顶部，后退图标会将您转到查看过的上一页，刷新图标会刷新在该页上显示的信息，打印图标则可以打印当前页。  
   

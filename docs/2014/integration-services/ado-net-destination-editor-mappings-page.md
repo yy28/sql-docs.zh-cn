@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df784ef4601cac9d6fbb574deda90cc6828c122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102917"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392163"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
@@ -47,7 +47,7 @@ ms.locfileid: "48102917"
  查看每个可用目标列，而不管是否已对其进行映射。  
   
 ## <a name="see-also"></a>请参阅  
- [ADO NET 目标编辑器&#40;连接管理器页&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 目标编辑器&#40;错误输出页&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [ADO NET 目标编辑器（“连接管理器”页）](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 目标编辑器（“错误输出”页）](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

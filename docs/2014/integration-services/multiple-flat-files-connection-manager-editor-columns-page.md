@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c349dc8c445d2ac117533fde3b1c47c6761d58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 241bd91cf05f3a7317dcdbfe6684b7266fee947c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058177"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373937"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“列”** 节点指定行和列的信息，以及预览选定的第一个文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "48058177"
  **连接管理器名称**  
  为工作流中的“多平面文件连接”提供一个唯一名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
- **Description**  
+ **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
 ## <a name="flat-file-format-dynamic-options"></a>平面文件格式动态选项  
@@ -63,7 +63,7 @@ ms.locfileid: "48058177"
 |**冒号 {:}**|列由冒号分隔。|  
 |**逗号 {,}**|列由逗号分隔。|  
 |**制表符 {t}**|列由制表符分隔。|  
-|**竖线 {|}。**|列由竖线分隔。|  
+|**竖线 {|}**。|列由竖线分隔。|  
   
  **重置列**  
  通过单击“重置列”可以删除除原始列之外的所有列。  
@@ -111,8 +111,8 @@ ms.locfileid: "48058177"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [多平面文件连接管理器编辑器&#40;常规页&#41;](general-page-of-integration-services-designers-options.md)   
- [多平面文件连接管理器编辑器&#40;高级页&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [多平面文件连接管理器编辑器&#40;预览页&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多平面文件连接管理器编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)   
+ [多平面文件连接管理器编辑器（“高级”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [多平面文件连接管理器编辑器（“预览”页）](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

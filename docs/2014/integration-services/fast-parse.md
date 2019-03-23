@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41e7848dff95d531db44bef2b45b11d7c3c5f85a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d080df993035bc34783bb39991d80d6a8e692618
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054287"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373814"
 ---
 # <a name="fast-parse"></a>Fast Parse
   快速分析提供一组快速、简单的数据分析例程。 这些例程是不区分区域设置的，并且它们只支持日期、时间和整数格式的一个子集。  

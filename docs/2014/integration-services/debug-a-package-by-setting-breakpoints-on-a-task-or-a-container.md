@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098177"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374615"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  
@@ -46,9 +46,9 @@ ms.locfileid: "48098177"
 6.  若要保存包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [用于包开发故障排除工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [包开发的故障排除工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [通过在脚本任务和脚本组件中设置断点来调试脚本](data-flow/transformations/script-component.md)   
- [编码和调试脚本任务](control-flow/script-task.md)   
+ [脚本任务的编码和调试](control-flow/script-task.md)   
  [脚本组件的编码和调试](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

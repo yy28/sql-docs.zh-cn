@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 279cacedf44d237de2821cb0ec7da837a43c2f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162197"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376745"
 ---
 # <a name="configure-error-output"></a>配置错误输出
   可以使用 **“配置错误输出”** 对话框，为支持错误输出的数据流转换配置错误处理选项。  
@@ -42,13 +42,13 @@ ms.locfileid: "48162197"
   
  **相关主题：**[数据中的错误处理](data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **说明**  
  查看操作的说明。  
   
  **将此值设置到选定的单元格**  
  指定发生错误或截断时应对所有选定单元格执行的操作：忽略失败、重定向行或使组件失败。  
   
- **应用**  
+ **Apply**  
  将错误处理选项应用到选定的单元格。  
   
 ## <a name="see-also"></a>请参阅  

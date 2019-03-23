@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4369ab3606310e38a4bf6927f6abfae10fdc0ffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389925"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 源编辑器（“列”页）
   可以使用“CDC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -45,7 +45,7 @@ ms.locfileid: "48187877"
  输入每个输出列的唯一名称。 默认值为所选外部（源）列的名称，不过，也可以任选一个唯一的描述性名称。 输入的名称显示在 SSIS 设计器中。  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 源编辑器&#40;连接管理器页&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 源编辑器（“连接管理器”页）](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 源编辑器（“错误输出”页）](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

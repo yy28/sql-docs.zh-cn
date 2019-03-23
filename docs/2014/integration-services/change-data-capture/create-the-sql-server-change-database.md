@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770969"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391175"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  
@@ -37,7 +37,7 @@ ms.locfileid: "52770969"
   
 -   **名称**：键入新服务的名称。 该名称将是新的更改数据库的名称。  
   
--   **说明**:键入新的实例，以帮助你识别它的说明。 此为可选项。  
+-   **说明**：键入新的实例，以帮助你识别它的说明。 此为可选项。  
   
  **SQL Server 更改数据库**  
  此部分用于创建数据库。  

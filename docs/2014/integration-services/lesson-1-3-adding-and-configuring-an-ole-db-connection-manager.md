@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c04f6fe6e414e2468277644ef74bb2dab395af33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757109"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374435"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步骤 3：添加和配置 OLE DB 连接管理器
   添加了用于连接到数据源的平面文件连接管理器以后，下一个任务是添加用于连接到目标的 OLE DB 连接管理器。 通过 OLE DB 连接管理器，包可以在任何 OLE DB 兼容的数据源中提取数据或加载数据。 使用 OLE DB 连接管理器，可以为连接指定服务器、身份验证方法和默认数据库。  
@@ -47,7 +47,7 @@ ms.locfileid: "52757109"
 10. 单击“确定” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [步骤 4:向包添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [步骤 4：向包添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157727"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388056"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
   使用 **“Excel 源编辑器”** 对话框的 **“连接管理器”** 节点可以为源选择要使用的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿。 Excel 源从现有工作簿中的工作表或指定范围中读取数据。  
@@ -43,7 +43,7 @@ ms.locfileid: "48157727"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |表或视图|从 Excel 文件的工作表或指定范围中检索数据。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关的信息：**[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询从 Excel 文件中检索数据。 有关查询语法的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。|  
 |变量中的 SQL 命令|在变量中指定 SQL 查询文本。|  
   
@@ -82,8 +82,8 @@ ms.locfileid: "48157727"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 源编辑器&#40;列页&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Excel 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Excel 源编辑器（“列”页）](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Excel 源编辑器（“错误输出”页）](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel 连接管理器](connection-manager/excel-connection-manager.md)   
  [使用 Foreach 循环容器循环遍历 Excel 文件和表](control-flow/foreach-loop-container.md)  
   

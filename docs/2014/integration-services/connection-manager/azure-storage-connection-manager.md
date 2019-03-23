@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
 - sql11.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1e19ee8c9b565f1b0333e68aad4353741511bcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799729"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374105"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
   Azure 存储连接管理器使一个 SSIS 包来连接到 Azure 存储帐户通过使用指定的值为以下属性：存储帐户名称和帐户密钥。  

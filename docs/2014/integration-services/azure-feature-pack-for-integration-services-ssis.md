@@ -10,15 +10,15 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787039"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394517"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -94,17 +94,17 @@ ms.locfileid: "52787039"
   
 5.  使用 Azure HDInsight Blob 下载任务可从 Azure Blob 存储下载 Pig/Hive 输出数据。  
   
- ![SSIS AzureConnector BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS AzureConnector BigDataScenario")  
+ ![SSIS-AzureConnector-BigDataScenario](media/ssis-azureconnector-bigdatascenario.png "SSIS-AzureConnector-BigDataScenario")  
   
 ### <a name="cloud-data-archiving"></a>云数据存档  
  使用 SSIS 包中的 Azure Blob 目标可将输出数据写入 Azure Blob 存储，或使用 Azure Blob 源可从 Azure Blob 存储读取数据。  
   
- ![SSIS AzureConnector CloudArchive 1](media/ssis-azureconnector-cloudarchive-1.png "SSIS AzureConnector CloudArchive 1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
   
- ![SSIS AzureConnector CloudArchive 2](media/ssis-azureconnector-cloudarchive-2.png "SSIS AzureConnector CloudArchive 2")  
+ ![SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "SSIS-AzureConnector-CloudArchive-2")  
   
  将 Foreach 循环容器与 Azure Blob 枚举器一起使用可处理多个 bob 文件中的数据。  
   
- ![SSIS AzureConnector CloudArchive 3](media/ssis-azureconnector-cloudarchive-3.png "SSIS AzureConnector CloudArchive 3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

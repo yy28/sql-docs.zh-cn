@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096047"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393885"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
   可以使用 **“XML 源编辑器”** 的 **“连接管理器”** 页指定 XML 文件和转换 XML 数据的 XSD。  
@@ -34,7 +34,7 @@ ms.locfileid: "48096047"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
-|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**:[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |来自变量的 XML 数据|从变量检索 XML 数据。|  
   
  **使用内联架构**  
@@ -68,8 +68,8 @@ ms.locfileid: "48096047"
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML 源编辑器&#40;列页&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [XML 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [XML 源编辑器（“列”页）](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML 源编辑器（“错误输出”页）](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [使用 XML 源提取数据](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

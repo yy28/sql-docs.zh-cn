@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.ssisupgradewizard.f1
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4b494bb112aec4a1bac96a84c733af9932cc194
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187213"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393864"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS 升级向导（SSIS 包升级向导）
   可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导将在 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 中开发的包迁移为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的当前版本使用的包格式。  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748259"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378815"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
   您可以使用 CDC 设计器控制台查看与您创建的实例有关的信息，以及管理实例操作。  
@@ -65,13 +65,13 @@ ms.locfileid: "52748259"
  **“状态”**  
  此选项卡提供有关 CDC 实例的当前状态的信息和统计信息。 其中包含以下信息。  
   
--   **状态**:一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  
+-   **状态**：一个指示 CDC 实例的当前状态的图标。 下面将介绍这些状态。  
   
     |||  
     |-|-|  
     |![错误](../media/error.gif "错误")|**错误**。 Oracle CDC 实例因为发生了不可重试的错误而未运行。 以下子状态可用：<br /><br /> **配置错误**:配置错误发生了需要手动干预。<br /><br /> **需要密码**:为 Oracle CDC 实例设置无密码或密码无效。<br /><br /> **意外**。 所有其他不可恢复错误。|  
-    |![正常](../media/okay.gif "Okay")|**运行**:CDC 实例正在运行，并且正在处理更改记录。 以下子状态可用。<br /><br /> **空闲**:已处理并存储在目标更改表中所有更改记录。 没有活动事务。<br /><br /> **处理**:有正在进程但尚未写入更改表的更改记录。|  
-    |![停止](../media/stop.gif "停止")|**停止**:CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
+    |![正常](../media/okay.gif "Okay")|**正在运行**：CDC 实例正在运行，并且正在处理更改记录。 以下子状态可用。<br /><br /> **空闲**:已处理并存储在目标更改表中所有更改记录。 没有活动事务。<br /><br /> **处理**:有正在进程但尚未写入更改表的更改记录。|  
+    |![停止](../media/stop.gif "停止")|**已停止**：CDC 实例未在运行。 该已停止状态指示 CDC 实例已正常停止。|  
     |![已暂停](../media/paused.gif "已暂停")|**暂停**:CDC 实例正在运行，但由于可重试错误处理已挂起。 以下子状态可用：<br /><br /> **断开连接**:无法建立到源 Oracle 数据库的连接。 在连接恢复时会继续处理。<br /><br /> **存储**:存储已满。 在其他存储变为可用时将继续处理。<br /><br /> **记录器**:记录器连接到 Oracle，但无法读取 Oracle 事务日志由于临时问题，例如，所需的事务日志不可用。|  
   
 -   **详细状态**:当前子状态。  

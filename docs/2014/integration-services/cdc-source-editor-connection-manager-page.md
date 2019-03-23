@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190477"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391485"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
   可以使用“CDC 源编辑器”对话框的“连接管理器”页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
@@ -52,21 +52,21 @@ ms.locfileid: "48190477"
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
--   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
+-   **所有**:返回当前 CDC 范围中没有的情况下所做的更改**更新前**值。  
   
--   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
+-   **全部且具有旧值**:返回当前 CDC 处理范围包括旧值中的更改 (**更新前**)。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   
--   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
+-   **Net**:返回每个源行修改当前 CDC 处理范围中只有一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）。  
+-   **具有更新掩码的净值**:此模式类似于一般的净值模式，但它还添加了命名模式的布尔值列 **__ $\<列名称 >\___changed** ，指示已更改的列，在当前更改行。  
   
--   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
+-   **净值且具有合并**:此模式非常类似于一般的净值模式，但使用 Insert 和 Update 操作合并到单个合并操作 (UPSERT)。  
   
 > [!NOTE]  
 >  对于所有净更改选项，源表必须具有主键或唯一索引。 对于不具有主键或唯一索引的表，您必须选择 **“全部”** 选项。  
   
  **包含 CDC 状态的变量**  
- 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅[定义状态变量](data-flow/define-a-state-variable.md)。  
+ 选择为当前 CDC 上下文维护 CDC 状态的 SSIS 字符串包变量。 有关 CDC 状态变量的详细信息，请参阅 [定义状态变量](data-flow/define-a-state-variable.md)。  
   
  **包括重新处理指示器列**  
  选中此复选框可以创建称作 **__$reprocessing**的特殊输出列。  
@@ -76,7 +76,7 @@ ms.locfileid: "48190477"
  有关详细信息，请参阅 [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [CDC 源编辑器&#40;列页&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [CDC 源编辑器&#40;错误输出页&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 源编辑器（“列”页）](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [CDC 源编辑器（“错误输出”页）](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

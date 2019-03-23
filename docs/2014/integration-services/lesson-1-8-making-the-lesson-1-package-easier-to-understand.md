@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750610"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393115"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8：使 Lesson 1 包更易理解
   因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
@@ -51,6 +51,6 @@ ms.locfileid: "52750610"
      如果未将文本添加到批注框，则当您在批注框外部单击时，该文本便会消失。  
   
 ## <a name="next-steps"></a>后续步骤  
- [步骤 9:测试第 1 课教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [步骤 9：测试第 1 课教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
