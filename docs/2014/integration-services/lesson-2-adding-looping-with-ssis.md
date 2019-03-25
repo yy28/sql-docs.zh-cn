@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361759"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385295"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 课：添加循环
-  在[第 1 课：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建一个包，从单个平面文件源提取数据、 转换使用 Lookup 转换的数据，最后将数据加载到**FactCurrency**事实数据表**AdventureWorksDW2012**示例数据库。  
+  在[第 1 课中：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建一个包，从单个平面文件源提取数据、 转换使用 Lookup 转换的数据，最后将数据加载到**FactCurrency**事实数据表**AdventureWorksDW2012**示例数据库。  
   
  但是，提取、转换和加载 (ETL) 过程很少使用单个平面文件。 典型的 ETL 过程从多个平面文件源提取数据。 从多个源提取数据需要采用迭代控制流。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最可能出现的功能之一是可以方便快捷地向包中添加迭代或循环。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "53361759"
   
 -   [第 1 步：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [步骤 2:添加和配置 Foreach 循环容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [步骤 2：添加和配置 Foreach 循环容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [步骤 3:修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [步骤 3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [步骤 4:测试第 2 课教程包](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [步骤 4：测试第 2 课教程包](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
  [第 1 步：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
