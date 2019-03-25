@@ -108,7 +108,7 @@ column_name <data_type>
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]
     [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]
-    [ IDENTITY [ ( seed,increment ) ]
+    [ IDENTITY [ ( seed,increment ) ] ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
     [ NULL | NOT NULL ]
