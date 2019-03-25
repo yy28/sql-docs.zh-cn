@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372009"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381845"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   安装在本地计算机上的所有组件（包括为 SQL Server 2008 和 2008 R2 生成的第三方组件）现在都自动显示在新的“SSIS 工具箱”中。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。  
@@ -31,7 +31,7 @@ ms.locfileid: "53372009"
   
  在 **“SSIS 工具箱”** 中，控制流组件和数据流组件组织为不同的类别。  您可以展开和折叠类别方便查看，也可以根据您的喜好更改组件的组织方式。  通过在此工具箱内右键单击，然后单击“还原工具箱默认值”，可以还原默认组织方式。  
   
- 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”** 选项卡时， **“收藏夹”** 和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 “数据流”选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
+ 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”** 选项卡时， **“收藏夹”** 和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 **“数据流”** 选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
   
  创建新的 SSIS 项目或打开现有的项目时， **“SSIS 工具箱”** 自动显示。 也可以通过单击位于包设计图面右上角的工具箱按钮打开 SSIS 工具箱。  
   
