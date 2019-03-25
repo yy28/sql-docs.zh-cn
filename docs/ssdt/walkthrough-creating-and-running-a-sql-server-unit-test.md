@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143587"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305955"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 在本演练中，将创建一个 SQL Server 单元测试，该测试验证多个存储过程的行为。 创建 SQL Server 单元测试可帮助确定可能会引发不正确的应用程序行为的代码缺陷。 可以将 SQL Server 单元测试和应用程序测试作为一组自动执行的测试的一部分来运行。  
@@ -968,7 +968,7 @@ ms.locfileid: "54143587"
     您指定希望看到特定异常。 您可以选择指定特定错误编号。 如果不添加此属性，单元测试将失败，并且“测试结果”窗口中将显示一则消息  
   
     > [!IMPORTANT]  
-    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test)。  
   
 3.  在“文件”菜单上，单击“保存 SqlServerUnitTests1.cs”。  
   

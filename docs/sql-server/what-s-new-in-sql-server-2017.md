@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579357"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306045"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 引入了许多可用于表格模型的增强�
 - 用于 SSDT 的 DAX 编辑器。 (CTP 2.0)
 - 编码提示，一种用于优化大型内存中表格模型的数据刷新的高级功能。 (CTP 1.3)
 - 支持针对表格模型的 1400 兼容级别。 若要新建或将现有表格模型项目升级到 1400 兼容级别，请下载并安装 [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)。 (CTP 1.1)
-- 1400 兼容级别的表格模型的新式获取数据体验。 请参阅 [Analysis Services 团队博客](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
+- 1400 兼容级别的表格模型的新式获取数据体验。 请参阅 [Analysis Services 团队博客](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)。 (CTP 1.1)
 - Hide Members 属性可隐藏不规则层次结构中的空白成员。 (CTP 1.1)
 - 新的详细信息行最终用户操作可显示聚合信息的详细信息。 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 和 DETAILROWS 函数用于创建详细信息行表达式。 (CTP 1.1)
 - DAX IN 运算符可指定多个值。 (CTP 1.1)
