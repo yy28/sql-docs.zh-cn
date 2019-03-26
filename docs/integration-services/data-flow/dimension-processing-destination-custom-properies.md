@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f64f37b7d07a970d71005ec06a521e67c8a65dc1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8c14320079573ffe63980a4ee0d27a0562b45333
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641274"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283052"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>维度处理目标自定义属性
   维度处理目标具有自定义属性和所有数据流组件通用的属性。  
   
  下表介绍了纬度处理目标的自定义属性。 所有属性均可读/写。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的连接字符串。|  
 |KeyDuplicate|Integer（枚举）|UseDefaultConfiguration 为 **False**时，指示如何处理重复键错误的值。 可能的值有 **IgnoreError** (0)、 **ReportAndContinue** (1) 和 **ReportAndStop** (2)。 此属性的默认值为 **IgnoreError** (0)。|  

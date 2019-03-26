@@ -13,15 +13,15 @@ helpviewer_keywords:
 - containers [Integration Services], Task Host
 - Task Host container
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e4cbadcc7f2b31147403e24f943d9a88ed91ee1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ca1549c1116f21cd19d0b9aa7fb6669711e7855c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640264"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276106"
 ---
 # <a name="task-host-container"></a>任务宿主容器
   任务宿主容器封装单个任务。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，无需对任务宿主进行单独配置；设置其要封装任务的属性时即可对其进行配置。 有关任务宿主容器所封装任务的详细信息，请参阅 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)。  

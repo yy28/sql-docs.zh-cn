@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac1c56583d59c44d77a3fe6e35454f0527d94c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff792df1514336de298bbc452e95276a80425db2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808775"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275810"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47808775"
 |50|控制流容器|  
 |60|数据流任务|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  

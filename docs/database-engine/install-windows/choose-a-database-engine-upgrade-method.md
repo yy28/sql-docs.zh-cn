@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802264"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306245"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56802264"
   
 -   若要下载 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server)**。  
   
--   已经拥有 Azure 帐户？  然后转到**[此处](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 启动装有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 开发人员版的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到**[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 启动装有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 开发人员版的虚拟机。  
   
 > [!NOTE]  
 >  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833527"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277736"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   合并联接转换提供了一个输出，该输出是通过使用 FULL、LEFT 或 INNER 联接将两个已排序数据集进行联接而生成的。 例如，可使用 LEFT 联接来联接包含产品信息的表与列出产品的制造国家/地区的表。 结果是一个列出所有产品及其产地国家/地区的表。  
@@ -89,7 +89,7 @@ ms.locfileid: "47833527"
   
 ## <a name="see-also"></a>另请参阅  
  [合并转换](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

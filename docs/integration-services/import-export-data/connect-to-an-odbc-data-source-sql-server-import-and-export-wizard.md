@@ -3,20 +3,19 @@ title: 连接到 ODBC 数据源（SQL Server 导入和导出向导）| Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af153d88ea5ce3a5d10e0a1eb8840889c5cd0d50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 261f29d8cebfcb9837bae0640df50913d96f05ea
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642275"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222053"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>连接到 ODBC 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 ODBC 数据源。

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639594"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289793"
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -41,10 +41,10 @@ ms.locfileid: "51639594"
 |True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |False|True|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |True|True|否|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
-|False|False|用户帐户控制|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
-|False|True|用户帐户控制|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
-|True|False|用户帐户控制|转换将打开文件并将数据写入到文件末尾。|  
-|True|True|用户帐户控制|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
+|False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
+|True|False|是|转换将打开文件并将数据写入到文件末尾。|  
+|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
  可以按照下列方式配置导出列转换：  

@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273f26e789c4743695051e7ec6bbe660751dad5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710251"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277626"
 ---
 # <a name="data-sources"></a>“数据源”
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包括一个可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用的设计时对象：数据源。  
   
  数据源对象是对连接的引用，它至少包括一个连接字符串和一个数据源标识符。 数据源对象还可以包括其他元数据，如说明、名称、用户名和密码。  
   
-> **注意：** 只能将数据源添加到配置为使用包部署模型的项目。 如果将项目配置为使用项目部署模型，您使用在项目级别创建的连接管理器来共享连接，而不使用数据源。  
+> **注意**：只能将数据源添加到配置为使用包部署模型的项目。 如果将项目配置为使用项目部署模型，您使用在项目级别创建的连接管理器来共享连接，而不使用数据源。  
 >   
 >  有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)。 有关将项目转换为项目部署模型的详细信息，请参阅 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)。  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b8ccaac651915cb79814999c1e3ffd0e37aeb715
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a1a82c380a26d2de22c5f66dbf67f23f4cef14d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641934"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282371"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
   “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关更多信息，请参见 [Statistics](../../relational-databases/statistics/statistics.md)。  

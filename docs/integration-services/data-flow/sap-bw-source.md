@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f2191132ecd09b2ebc8744927542e524af601bf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641194"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273365"
 ---
 # <a name="sap-bw-source"></a>SAP BW 源
   SAP BW 源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件。 因此，SAP BW 源从 SAP Netweaver BW 版本 7 系统提取数据，并将这些数据提供给 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据流。  
@@ -111,7 +111,7 @@ ms.locfileid: "51641194"
   
 -   使用您选择的选项预览要提取的数据。  
   
- 您还可以启用源 RFC 函数调用的日志记录功能。 （此日志记录与您可对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包启用的可选日志记录是分开进行的。）配置源将要使用的 SAP BW 连接管理器时，会启用 RFC 函数调用的日志记录功能。 有关如何配置 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
+ 您还可以启用源 RFC 函数调用的日志记录功能。 （此日志记录与可对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包启用的可选日志记录是分开进行的。）配置源将要使用的 SAP BW 连接管理器时，会启用 RFC 函数调用的日志记录功能。 有关如何配置 SAP BW 连接管理器的详细信息，请参阅 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)。  
   
  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  
   

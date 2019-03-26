@@ -19,15 +19,15 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54c01591842965bcd45cff732295d2769fd6c661
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189f7de48e4a4e48c6fd12cc569bdc4c4a9d9e0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639584"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281951"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
   在“脚本任务编辑器”中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。  

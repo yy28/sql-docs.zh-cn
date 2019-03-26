@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105f32a1e95852a0c08b47da0632b53522718957
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780486"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276083"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  

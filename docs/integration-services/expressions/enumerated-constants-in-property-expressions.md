@@ -15,15 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279127"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置 **LoggingMode** 属性，则必须使用数值 2 而不是友好名称“Disabled”。  

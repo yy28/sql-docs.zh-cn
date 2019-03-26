@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802751"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305995"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "56802751"
 如果此时收到一个错误，则必须先解决它，然后才能继续操作。 有许多可能属于问题的情况。 你的登录名可能未获权进行连接。 你的默认数据库可能已丢失。
 
 > [!NOTE]
->    某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 如果收到错误 18456“用户登录失败”，联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 包含有关错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx) 中提供了非常详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
+>    某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 如果收到错误 18456“用户登录失败”，联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 包含有关错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) 中提供了非常详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共享内存进行连接，请使用 TCP 测试连接。 你可以通过在名称前指定 **tcp:** 来强制建立 TCP 连接。 例如：
 

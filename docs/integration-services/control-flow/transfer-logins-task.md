@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cea93d9a41b2cd7cbac8f35588ae9c071fbcf0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: feed75c71d49f64ad7fd8285fd45f36ed19a7eda
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642174"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282502"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
   传输登录名任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输一个或多个登录名。  

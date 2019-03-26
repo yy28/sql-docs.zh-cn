@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d0c5cff603978b1de729dfc0504befaa708cda7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 247b0b7a1f54417257d3af0e59f07dadf6d669e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641924"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280391"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>在脚本组件中连接数据源
   连接管理器是一个封装和存储连接特定类型数据源所需信息的便利单元。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)。  

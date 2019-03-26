@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530266"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282661"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>设置数据流组件的属性
   若要设置数据流组件（包括源、目标和转换）的属性，请使用下列功能之一：  
@@ -124,7 +124,7 @@ ms.locfileid: "52530266"
   
  下表介绍了数据流中的组件的属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|组件的 CLSID。|  
 |ContactInfo|String|组件开发人员的联系信息。|  
@@ -144,7 +144,7 @@ ms.locfileid: "52530266"
   
  下表描述了数据流中的组件的输入属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |描述|String|输入的说明。|  
 |ErrorOrTruncationOperation|String|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
@@ -164,7 +164,7 @@ ms.locfileid: "52530266"
   
  下表描述了数据流中的组件的输入列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |描述|String|对输入列的说明。|  
@@ -188,7 +188,7 @@ ms.locfileid: "52530266"
   
  下表描述了数据流中的组件的输出属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
 |描述|String|对输出的说明。|  
@@ -209,7 +209,7 @@ ms.locfileid: "52530266"
   
  下表描述了数据流中的组件的输出列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|一组标志，用于指定数据类型为 character 的列的比较方式。 有关详细信息，请参阅 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)。|  
 |描述|String|对输出列的说明。|  
@@ -232,7 +232,7 @@ ms.locfileid: "52530266"
   
  下表描述了数据流中的组件的外部元数据列属性。 其中某些属性的值是只读的，由数据流引擎在运行时分配。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |描述|String|对外部列的说明。|  
 |ID|Integer|用于唯一标识列的值。|  
@@ -246,7 +246,7 @@ ms.locfileid: "52530266"
   
  下表描述了输出列和外部元数据列的数据类型属性。  
   
-|“属性”|数据类型|描述|  
+|属性|数据类型|描述|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|指定非 Unicode 字符串数据的代码页。|  
 |DataType|Integer（枚举）|列的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。|  
@@ -351,7 +351,7 @@ ms.locfileid: "52530266"
 ### <a name="data-flow-transformations"></a>数据流转换  
  有关这些自定义属性的详细信息，请参阅 [Transformation Custom Properties](../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
-|数据流对象|“属性”|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |有条件拆分转换|FriendlyExpression 属性|  
 |派生列转换|FriendlyExpression 属性|  
@@ -367,7 +367,7 @@ ms.locfileid: "52530266"
   
 ### <a name="data-flow-destinations"></a>数据流目标  
   
-|数据流对象|“属性”|  
+|数据流对象|属性|  
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  

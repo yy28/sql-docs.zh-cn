@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1dbf1b9582cc49bf2881840629ecc42f38260234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bafb09fb682f241724927c73dd417283de9bddc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786215"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273102"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ## <a name="result-set"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 MODIFY 权限  

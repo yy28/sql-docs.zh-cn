@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f191ce84bc89b2958b4d72d6ec3d491e4f34eeb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be57f4c502aae46719e25b4f0dfce56ad44246d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689435"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283011"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
   自定义任务开发人员使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型可以轻松地为任务创建自定义用户界面，该任务随后可以集成并显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中。 用户界面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户提供有用的信息，并指导用户正确配置自定义任务的属性和设置。  
@@ -50,7 +50,7 @@ ms.locfileid: "47689435"
   
  下表介绍了 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 特性的各属性。  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|在“控制流”工具箱中显示任务名称。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|任务说明（继承自 <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>）。 此属性显示在工具提示中。|  

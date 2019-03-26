@@ -14,15 +14,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c620b8da5b94e3437ecbf17f889c8caa518e743a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 89643620c85dcd453d86a972f46156f11137ce3a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640184"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290753"
 ---
 # <a name="execute-t-sql-statement-task"></a>执行 T-SQL 语句任务
   执行 T-SQL 语句任务运行 Transact-SQL 语句。 有关详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../../t-sql/transact-sql-reference-database-engine.md)和 [Integration Services (SSIS) 查询](../../integration-services/integration-services-ssis-queries.md)。  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4073c16f5918b6e9e92431233f2ae7daec475193
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639489"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289283"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -42,7 +42,7 @@ ms.locfileid: "51639489"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>设置注册表值以检查包的签名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 还支持可选的注册表值 **BlockedSignatureStates**。你可以使用该值来管理组织用于加载签名包和未签名包的策略。 如果包未签名、签名无效或不可信，使用该注册表值将不允许加载该包。 有关如何设置此注册表值的详细信息，请参阅 [通过设置注册表值实现签名策略](#registry)。  
   
-> **注意：** 可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
+> **注意**：可选的 **BlockedSignatureStates** 注册表值可指定比在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中或 **dtexec** 命令行中设置的数字签名选项限制性更强的设置。 在这种情况下，限制性更强的注册表设置将覆盖其他设置。  
 
 ## <a name="registry"></a> 通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  

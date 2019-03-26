@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd08837dffff9fb77ff8dd0f43d3b558fc6af2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac20c9f13bbf39bc4ffd46cb6b036c8314684ca
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688785"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274953"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>函数依赖关系配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“函数依赖关系配置文件请求”** 设置选项。 函数依赖关系配置文件报告一个列（依赖列）中的值对另一个列或另一个列集（决定列）中的值的依赖程度。 此配置文件还有助于标识数据中的问题，如值无效。 例如，您对邮政编码列与美国的州列之间的依赖关系进行事件探查， 在此配置文件中，同一邮政编码应始终对应相同的州，但配置文件发现依赖关系冲突。  

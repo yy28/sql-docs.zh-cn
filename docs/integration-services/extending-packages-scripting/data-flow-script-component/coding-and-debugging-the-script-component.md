@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb86e0b92b34878573b44a6323094e536ff3dc40
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d6e21c28260876a557485db8dca5eee89a34a526
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637631"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279921"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  

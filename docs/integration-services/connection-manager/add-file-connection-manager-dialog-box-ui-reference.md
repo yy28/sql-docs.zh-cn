@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b238ff33975944483906f91fa360159eacd05b71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54dc72a80f2ad6d49353662ded956608d7eadd66
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783487"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282461"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>“添加文件连接管理器”对话框 UI 参考
   可以使用 **“添加文件连接管理器”** 对话框定义与一组文件或文件夹的连接。  

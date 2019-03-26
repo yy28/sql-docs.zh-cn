@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a30138401f1a5e81b710278de46dad1be383889
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b077a211fdbf1a9550863fd1cec63dbea5de138f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750825"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282181"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>升级数据流组件的版本
   通过较早版本的组件创建的包可能包含不再有效的元数据，例如已在更新版本的组件中修改其用法的自定义属性。 可以重写 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法来更新之前保存在较早的包中的元数据，从而反映组件的当前属性。  

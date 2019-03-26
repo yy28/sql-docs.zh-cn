@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55a224b9fec672cbb240831ba2ea850a90dbe10c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c7ee4cff732acbd068dc50ff9f009c26dc41c1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656795"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281291"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ （位非）（SSIS 表达式）
   对整数执行位求反运算。 此运算符可应用于有符号和无符号整数数据类型。  

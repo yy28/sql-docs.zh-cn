@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1ece0a03760f8619196d311d3829376955692b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c68ab205087358682959685953266ad962a7e9a6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817914"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281101"
 ---
 # <a name="additional-script-component-examples"></a>其他脚本组件示例
   脚本组件是一个可配置的工具，您可以在包的数据流中使用，它可以满足几乎所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 附带的源、转换和目标所无法满足的要求。 本节包含一些脚本组件代码示例，这些示例演示了各种类型的可用功能。  

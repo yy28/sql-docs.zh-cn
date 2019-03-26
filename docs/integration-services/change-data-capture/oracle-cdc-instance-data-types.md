@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f351b2e30e5ccb3dc80cb61e48ef65d4c185e6b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f373cf121a0368508e9b4b3380ef5c674a9fc9f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614186"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271667"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 实例数据类型
   Oracle CDC 实例支持大多数 Oracle 数据类型。 下面的部分介绍支持的数据类型和不支持的数据类型。  

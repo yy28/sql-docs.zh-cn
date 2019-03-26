@@ -1,7 +1,7 @@
 ---
 title: 查看与 SQL 跟踪事件类等效的扩展事件 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,46 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537603"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417179"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>查看与 SQL 跟踪事件类等效的扩展事件
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   如果您想要使用扩展事件来收集与 SQL 跟踪事件类和列等效的事件数据，则理解 SQL 跟踪事件映射到扩展事件的事件和操作的方式将很有用。  
   
  您可以使用以下过程查看与各 SQL 跟踪事件及其关联列等效的扩展事件的事件和操作。  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>使用查询编辑器查看与 SQL 跟踪事件等效的扩展事件  
-  
--   从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查询编辑器中，运行以下查询：  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- 在查看结果时，请注意以下事项：  
-  
--   如果除“事件类”列之外的所有列都返回 NULL，则表示该事件类不是从 SQL 跟踪迁移的。  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>使用查询编辑器查看与 SQL 跟踪事件等效的扩展事件
+
+- 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查询编辑器中，运行以下查询：
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+在查看结果时，请注意以下事项：  
+
+- 如果除“事件类”列之外的所有列都返回 NULL，则表示该事件类不是从 SQL 跟踪迁移的。  
   
 -   如果只有“扩展事件操作”列中的值为 NULL，则表示以下两个条件之一成立：  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 296055ef99184d1ea38bf4811bc9ec8b9fb6c690
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640234"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289393"
 ---
 # <a name="maintenance-cleanup-task"></a>“清除维护”任务
   “清除维护”任务将删除与维护计划相关的文件，包括维护计划所创建的数据库备份文件和报表。 有关详细信息，请参阅 [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md) 和 [SQL Server 数据库的备份和还原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  

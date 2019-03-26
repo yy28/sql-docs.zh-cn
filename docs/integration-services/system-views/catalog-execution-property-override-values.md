@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc61ad3dee4b77454ff4ae5008d4061dc4b0a995
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 245073c8bef9fa62acce86ecfb742524bc821443
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658638"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277496"
 ---
 # <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47658638"
 ## <a name="remarks"></a>Remarks  
  此视图为每次执行显示一行，在每次执行中都使用“执行包”对话框上“高级”选项卡中的“属性覆盖”部分覆盖属性值。 该属性的路径从包任务的“包路径”属性派生。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  

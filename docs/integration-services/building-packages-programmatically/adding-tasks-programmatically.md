@@ -14,15 +14,15 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0d7ed0444b123ff0b5bc5d52727d2fcf83724b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0099a76c75e601712c54df2189f32ccadd3ce298
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543880"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282901"
 ---
 # <a name="adding-tasks-programmatically"></a>以编程方式添加任务
   可在运行时引擎中将任务添加到下列对象类型中：  
@@ -411,7 +411,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章 [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI - 为 SQL Server 2012 更新）。  
+ blogs.msdn.com 上的博客文章 [EzAPI - 为 SQL Server 2012 更新](https://go.microsoft.com/fwlink/?LinkId=243223)。  
 
 ## <a name="see-also"></a>另请参阅  
  [以编程方式连接任务](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

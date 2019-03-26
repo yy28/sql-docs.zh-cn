@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a594b214153c838b1b6f50ca29a3a478b94cf96f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b093d11e0a54b9e2c744358de82f7d5b09e7c33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689395"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274654"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
  当配置目录时，将向操作记录中写入一个条目。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   **ssis_admin** 数据库角色的成员资格  

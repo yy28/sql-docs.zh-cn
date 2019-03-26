@@ -14,15 +14,15 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 858ca145f28e8f0ea4dd5543b4f6ff6eb6b3e9f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61aabb951b05da511ccea7315ed7f4bddbecb4e1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793685"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279601"
 ---
 # <a name="script-task-examples"></a>脚本任务示例
   脚本任务是一个多用途工具，您可以在包中使用该工具以满足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 附带的任务无法满足的几乎所有要求。 本主题列出了用于演示一些可用功能的脚本任务代码示例。  

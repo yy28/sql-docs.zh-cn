@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ebe5d9e8ec650a05eb92667dbf5d357965352e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05b8024ababbe6e0c07ee72e50d844609c7a816c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658640"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281491"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47658640"
 ## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个执行参数显示一行。 执行参数值时在单个执行实例中分配给项目参数或包参数的执行参数值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  

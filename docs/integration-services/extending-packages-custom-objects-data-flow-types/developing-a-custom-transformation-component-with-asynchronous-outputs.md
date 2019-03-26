@@ -21,15 +21,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b64d9d1410e7a5020689b4f057eb2f08051268e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bffb4abd200c1a67c6115f3c890192d5ee375e75
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836475"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273532"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>开发具有异步输出的自定义转换组件
   如果某个转换直到组件收到其所有输入行后才输出行，或者该转换不是为收到的每个输入行生成一个输出行，则可以使用具有异步输出的组件。 例如，聚合转换只有在它读取所有行之后才能计算各行的总和。 与之相反，如果可以在每个数据行传递给组件时就修改该行，则可以使用具有同步输出的组件。 您可以就地修改每行的数据，或者创建一个或多个新列，其中每一列的值与每个输入行对应。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
