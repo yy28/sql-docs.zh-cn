@@ -18,15 +18,16 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3ea6f1d57c9f6afef91d9d66a5db001302aabb6
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803112"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342944"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 
 返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中以指定的格式和可选的区域性格式化的值。 使用 FORMAT 函数将日期/时间和数字值格式化为识别区域设置的字符串。 对于一般的数据类型转换，请使用 CAST 或 CONVERT。  

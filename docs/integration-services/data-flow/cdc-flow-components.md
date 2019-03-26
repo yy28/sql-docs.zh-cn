@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641184"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271183"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -134,7 +134,7 @@ ms.locfileid: "51641184"
   
  CDC 状态变量的值需在永久性存储中留存和维护。 应在启动 CDC 处理前读取该值，并在处理完成后以当前状态保存。 加载和存储 CDC 状态的任务可由 SSIS 开发人员处理，但是 CDC 控制组件可以通过在数据库表中维护 CDC 状态值来自动处理此任务。  
   
-## <a name="security-considerations"></a>安全注意事项  
+## <a name="security-considerations"></a>需要考虑的安全性因素  
  本节列出了与在 SSIS 中使用 CDC 组件相关的一些安全注意事项。  
   
 ### <a name="access-authorization-to-change-data"></a>针对更改数据的访问授权  

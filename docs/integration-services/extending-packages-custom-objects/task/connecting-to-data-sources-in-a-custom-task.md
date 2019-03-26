@@ -19,15 +19,15 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78b71fea28e31ca6bba5c7c1aa3f65b89a3ed57e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 65dad92f0d005e24e6cc7f5a1846c5c29cbd7d1c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640894"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289973"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>在自定义任务中连接数据源
   任务使用连接管理器连接外部数据源，以检索或保存数据。 在设计时，连接管理器表示逻辑连接，并提供诸如服务器名称和任何身份验证属性的关键信息。 在运行时，任务调用连接管理器的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 方法，以建立与数据源的物理连接。  

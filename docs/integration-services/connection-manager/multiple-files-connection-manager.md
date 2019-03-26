@@ -15,15 +15,15 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40e285c2979b476aff34465adfbc5862aaf1171e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012cbb7f850d638e8934dd59d344eb7efadebfd8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840405"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275274"
 ---
 # <a name="multiple-files-connection-manager"></a>多文件连接管理器
   多文件连接管理器使包可以在运行时引用现有的文件和文件夹，或者创建文件和文件夹。  

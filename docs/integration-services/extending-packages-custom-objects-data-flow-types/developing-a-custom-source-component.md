@@ -19,15 +19,15 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528768"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275761"
 ---
 # <a name="developing-a-custom-source-component"></a>开发自定义源组件
   开发人员可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到自定义数据源的源组件，并可以将这些自定义数据源中的数据提供给数据流任务中的其他组件。 如果必须连接到无法使用现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源之一进行访问的数据源，则创建自定义源是非常重要的。  

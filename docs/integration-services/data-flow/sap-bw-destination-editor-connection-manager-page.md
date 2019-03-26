@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 032cce243ef7bdf9f688074915770cf29d95df15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed9d2a03f0982f90aae9c57334a4fa543d176ab4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749768"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289483"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目标编辑器（“连接管理器”页）
   使用 **“SAP BW 目标编辑器”** 的 **“连接管理器”** 页，选择 SAP BW 目标要使用的 SAP BW 连接管理器。 在该页中，您还可选择用于向 SAP Netweaver BW 系统加载数据的参数。  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b47a0f007ce94e432ee85f5547a0d290b028888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 037f5403ec6cb77fe934f58b43ee7701197ca88b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853275"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288903"
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47853275"
 |Execution_result|SMALLINT|下面是可能的值：<br /><br /> 0（成功）<br /><br /> 1（失败）<br /><br /> 2（完成）<br /><br /> 3（已取消）|  
 |Execution_value|sql_variant|由执行返回的值。 这是用户定义的值。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限。  

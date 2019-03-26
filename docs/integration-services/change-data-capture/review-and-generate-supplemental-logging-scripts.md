@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c659c24c0a13c96a6c9dca275e8483ad3c0df26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8655c40533650c7656ff6e5fad49de2ebd14c88e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789796"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279971"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>查看和生成补充日志记录脚本
   使用“脚本”选项卡可对 Oracle 源数据库运行或重新运行一个设置补充日志记录的脚本。  
@@ -56,6 +56,6 @@ ms.locfileid: "47789796"
   
 ## <a name="see-also"></a>另请参阅  
  [如何编辑 CDC 实例属性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [用于运行脚本的 Oracle 凭据](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

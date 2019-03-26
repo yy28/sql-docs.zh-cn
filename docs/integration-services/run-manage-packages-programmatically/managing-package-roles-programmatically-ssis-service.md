@@ -12,15 +12,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - packages [Integration Services], roles
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfc826b47bdd58e11a912a320eb3e71ff389c413
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 4bcd4325e776e1b9d369f17f0f1aa456dadeb974
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864165"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282931"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>以编程方式管理包角色（SSIS 服务）
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定哪些角色可以应用于包，或确定或设置应用于各个包的角色。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: afbbc80ce19c2820d24d65a9caa0736d00e7f8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283f668b1c751a1808c8254eaaceb523de757081
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833155"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275251"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE（SSIS 表达式）
   以 DT_DBTIMESTAMP 格式返回系统的当前日期。 GETDATE 函数不使用参数。  

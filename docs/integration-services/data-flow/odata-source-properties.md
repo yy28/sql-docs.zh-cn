@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19b7bf852fcebd390d3659fcd2bff53fa0446d0c
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 9d1eacda4e9c37c861b323b306865f829a240610
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045050"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273803"
 ---
 # <a name="odata-source-properties"></a>OData 源属性
 在数据流中右键单击“OData 源”并单击“属性”时，可在“属性”窗口中看到“OData 源”组件的属性。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7995aa96d83925659458dfb46d3fffb2a3ccbfb1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 40019c35b3e7b7374b0b0c2066a5ba3e5c2656e1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640994"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281910"
 ---
 # <a name="check-database-integrity-task"></a>“检查数据库完整性”任务
   “检查数据库完整性”任务检查指定数据库中所有对象的分配和结构完整性。 此任务可以检查单个数据库或多个数据库，您还可以选择是否也检查数据库索引。  

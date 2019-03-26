@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6246042a70aca4edc07a36bc0dabe95be56c6d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657967"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271636"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
   使用 **“查找 InfoObject”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoObject。 当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后 SAP BW 目标将使用需要的值填充关联的选项。  
@@ -82,9 +82,9 @@ ms.locfileid: "47657967"
 ## <a name="see-also"></a>另请参阅  
  [“创建事务数据的 InfoCube”](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [“创建 InfoSource”](../../integration-services/data-flow/create-infosource.md)   
- [创建事务数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [“创建事务数据的 InfoSource”](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [创建主数据的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [新建 InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
+ [“查找 InfoObject”](../../integration-services/data-flow/create-new-infoobject.md)   
  [SAP BW 目标编辑器（“连接管理器”页）](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 帮助](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

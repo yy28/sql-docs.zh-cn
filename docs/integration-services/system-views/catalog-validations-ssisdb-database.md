@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb300ad961ded0b49ae8a9d36d3ccaeacf635e5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c57087e46ec596ae002ef00b802b62b97ee65e0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733745"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280531"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47733745"
 ## <a name="remarks"></a>Remarks  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个验证显示一行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   针对相应操作的 READ 权限  

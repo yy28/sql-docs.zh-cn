@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ab6a6670a2ccb10054108b49724291eed899a1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 140fcb93c3259a1a7c4c43c710f52a387f3f2956
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742475"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282271"
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  

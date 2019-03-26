@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b2350302302723816cab5fa0287a700915583d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102d6139594bb0fd8aa36ea6b038ae897213634
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656875"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272340"
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47656875"
 ## <a name="remarks"></a>Remarks
 此视图对于使用 SSISDB 目录连接到 Scale Out Master 的每个 Scale Out Worker 显示一行。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 此视图需要下列权限之一：
 
 - **ssis_admin** 数据库角色的成员资格

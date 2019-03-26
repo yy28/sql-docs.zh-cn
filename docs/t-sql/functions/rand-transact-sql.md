@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba195e0bf295f47a6668376ee755bd7754aa44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4bb4fa9817c49d82a3d6c50dad6f9a97c405e9a
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830615"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325490"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -54,14 +54,14 @@ RAND ( [ seed ] )
   
  对于一个连接，如果使用指定的种子值调用 RAND()，则 RAND() 的所有后续调用将基于使用该指定种子值的 RAND() 调用生成结果。 例如，以下查询将始终返回相同的数字序列。  
   
-```  
+```sql  
 SELECT RAND(100), RAND(), RAND()   
 ```  
   
 ## <a name="examples"></a>示例  
  以下示例将产生由 RAND 函数生成的四个不同的随机数。  
   
-```  
+```sql  
 DECLARE @counter smallint;  
 SET @counter = 1;  
 WHILE @counter < 5  

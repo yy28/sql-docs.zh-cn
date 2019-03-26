@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f277acbaa9713e5fcb0906551ba902fba05a390b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d16caca028889b5b9fa6f122c3590208b5c5a793
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788605"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282881"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以编程方式选择输入列
   以编程方式连接组件后，可从上游组件选择将要转换或传递到下游组件的列。 如果不为组件选择输入列，则组件将不会接收任何来自数据流任务的行。  

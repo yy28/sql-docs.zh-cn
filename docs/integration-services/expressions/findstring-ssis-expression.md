@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 601d6b6f3cff35ace4ec64b7c24215696dbc4520
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 016f87c324178da5852c5f829f95e6dcd7004ee6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694895"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274100"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING（SSIS 表达式）
   返回一个字符串的指定出现在字符表达式中的位置。 返回结果是该出现的索引（索引从 1 开始）。 字符串参数的取值必须为字符表达式，而 occurrence 参数的取值必须为整数。 如果找不到字符串，则返回值是 0。 如果字符串的出现次数少于所指定的 occurrence 参数，则返回值为 0。  

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533342"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306215"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -42,15 +42,15 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
 |功能|是否支持|其他信息|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制||  
-|全文搜索|用户帐户控制||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是||  
+|全文搜索|是||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|是||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否||  
-|客户端工具连接|用户帐户控制||  
-|Integration Services 服务器|用户帐户控制||  
+|客户端工具连接|是||  
+|Integration Services 服务器|是||  
 |客户端工具向后兼容性|否||  
 |客户端工具 SDK|否||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|否||  
@@ -58,8 +58,8 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 |管理工具 - 完整|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |Distributed Replay 控制器|否||  
 |Distributed Replay 客户端|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
-|SQL 客户端连接 SDK|用户帐户控制||  
-|Microsoft Sync Framework|用户帐户控制|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
+|SQL 客户端连接 SDK|是||  
+|Microsoft Sync Framework|是|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
@@ -333,7 +333,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [安装 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [通过 Sconfig.cmd 配置 Windows Server 2016 的 Server Core 安装](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell 中的故障转移群集 Cmdlet](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Windows PowerShell 中的故障转移群集 Cmdlet](/powershell/module/failoverclusters/)
 
   
   

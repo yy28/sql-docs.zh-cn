@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6f64820f77d5e50b9a004e38f1d1573217938f0c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328917"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274886"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53328917"
 |**VERSION_CLEANUP_ENABLED**|值为 `TRUE` 时，将仅在目录中存储数量为 MAX_PROJECT_VERSIONS 的项目版本，而删除所有其他项目版本。 如果值为 FALSE，将在目录中存储所有项目版本。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业执行清理操作。|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此视图需要下列权限之一：  
   
 -   **ssis_admin** 数据库角色的成员资格  

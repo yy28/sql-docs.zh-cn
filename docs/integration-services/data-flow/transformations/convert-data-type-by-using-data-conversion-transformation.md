@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2e09b272d8daa0f24936b0489dfe40ce58506bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750405"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283111"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>通过使用数据转换进行数据类型的转换
   若要添加并配置数据转换，包必须已经包含至少一个数据流任务和一个源。  

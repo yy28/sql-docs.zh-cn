@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1b29acddc7dc110d66e59f7829c822f10e23ac5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522956"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280551"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  

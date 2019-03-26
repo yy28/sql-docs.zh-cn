@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5aa23c62ecf5a171a7b440ef73a61f60d620b301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727245"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280111"
 ---
 # <a name="edit-the-oracle-database-properties"></a>编辑 Oracle 数据库属性
   使用属性编辑器中的“Oracle”选项卡可对在新建实例向导的“创建 CDC 数据库”页中提供的说明进行更改，以及对 Oracle 日志挖掘数据库连接信息进行更改。  
@@ -39,7 +39,7 @@ ms.locfileid: "47727245"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须在您连接到的 Oracle 数据库中为用户键入 **“用户名”** 和 **“密码”** 。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的 Oracle 数据库中为用户键入“用户名”和“密码”。  
   
  您可以在查看器中查看 Oracle 数据库属性。 在使用查看器时，信息是只读的。 查看器还在表中包括捕获列的列表。 有关如何访问查看器的信息，请参阅 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)。  
   

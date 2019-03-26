@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623675"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271210"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>监视运行包和其他操作
   您可以使用以下一个或多个工具监视 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包执行、项目验证和其他操作。 某些工具（如数据分流）只适用于部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的项目。  
@@ -206,4 +206,4 @@ ms.locfileid: "47623675"
 
 ## <a name="see-also"></a>另请参阅  
  [项目和包的执行](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [包执行的疑难解答报告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [对包执行进行故障排除的报告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

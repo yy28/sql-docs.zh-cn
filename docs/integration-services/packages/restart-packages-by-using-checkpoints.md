@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0ad7a0d2d994b71527cede05a25935771646ce9b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637734"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289493"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  
@@ -54,7 +54,7 @@ ms.locfileid: "51637734"
   
  下表列出了可设置为实现检查点的包属性。  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |CheckpointFileName|指定检查点文件的名称。|  
 |CheckpointUsage|指定是否使用检查点。|  

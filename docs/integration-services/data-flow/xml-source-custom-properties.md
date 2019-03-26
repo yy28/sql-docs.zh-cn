@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60748312c4169eafa50bdf7685c9b5111b3bc66a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a1bd4c6866f7090a00567240350f1355f5c7f5e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639154"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270358"
 ---
 # <a name="xml-source-custom-properties"></a>XML 源自定义属性
   XML 源具有自定义属性和所有数据流组件通用的属性。  

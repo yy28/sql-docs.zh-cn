@@ -18,15 +18,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24c1d81d9bdeb290c95a8675b39964b8232d923d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04b491ef87eae73feedcb342badf559a213b9cc2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506367"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274722"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以编程方式加载和运行本地包
   可以使用[运行包](../packages/run-integration-services-ssis-packages.md)中介绍的方法，根据需要或在预定时间运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  

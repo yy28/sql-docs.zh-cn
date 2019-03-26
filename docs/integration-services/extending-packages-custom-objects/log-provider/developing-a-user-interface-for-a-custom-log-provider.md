@@ -11,15 +11,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom log providers
 - custom log providers [Integration Services], developing custom user interface
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c272d73175b5030e734955bb8789d3768412817a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e09f31efe4f92b26bd600dbf6ab55c956faada
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857295"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282955"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>为自定义日志提供程序开发用户界面
   许多 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日志提供程序都有一个自定义用户界面，该界面实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>，并用已筛选的可用连接管理器下拉列表替换“配置 SSIS 日志”对话框中的“配置”文本框。 但是，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中不实现自定义日志提供程序的自定义用户界面。  

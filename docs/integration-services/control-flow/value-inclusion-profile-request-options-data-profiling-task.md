@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da5839c81489a278c3e013886ae7b1eeba6834f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793526"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278086"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“值包含配置文件请求”** 设置选项。 值包含配置文件计算两列或列集之间的值的重叠 因此，它可以确定一个列或列集是否适于用作两个选定表之间的外健。 此配置文件还有助于标识数据中的问题，如值无效。 例如，使用值包含配置文件对 Sales 表中的 ProductID 列进行事件探查。 在配置文件中发现，该列所包含的某些值不能在 Products 表的 ProductID 列中找到。  

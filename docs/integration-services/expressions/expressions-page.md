@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27acd1fcf2cd79ce7d681f9491ee77ffc7ad9d71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2fc767224bb77f3ddbb0f6f562a5d5fce2a56981
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503921"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270862"
 ---
 # <a name="expressions-page"></a>“表达式”页
   可以使用 **“表达式”** 页编辑属性表达式以及访问 **“属性表达式编辑器”** 和 **“属性表达式生成器”** 对话框。  
