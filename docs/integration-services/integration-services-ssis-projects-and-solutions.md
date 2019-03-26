@@ -16,15 +16,15 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f74f80b4d20f3314184d8fba891632f2aaa1d82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703245"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272862"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) 项目和解决方案
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 用于开发 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。  
@@ -107,7 +107,7 @@ ms.locfileid: "47703245"
   
 7.  如果源代码管理软件是 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe， **“Visual SourceSafe 登录”** 对话框就会打开。 在 **“Visual SourceSafe 登录”** 对话框中，提供用户名、密码和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库的名称。 单击 **“浏览”** 查找数据库。  
   
-    > **注意：** 若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
+    > **注意**：若要查看和更改选定的源代码管理插件以及配置源代码管理环境，请单击“工具”菜单上的“选项”，然后展开“源代码管理”节点。  
   
 8.  单击“确定”  ，将解决方案添加到 **解决方案资源管理器** ，并将项目添加到解决方案。  
   
