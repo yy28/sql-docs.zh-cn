@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10e742d11000214bf663627d842e6ace3e68e13e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619275"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271663"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
   此对话框显示 Oracle 补充日志记录脚本。  
@@ -38,7 +38,7 @@ ms.locfileid: "47619275"
  将脚本复制到剪贴板。 在就绪后，在 Oracle 数据库管理员 (DBA) 需要检查和执行补充日志记录脚本时，您可以将该脚本粘贴到您需要的任何位置。  
   
 ## <a name="see-also"></a>另请参阅  
- [如何管理 CDC 实例](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [管理 CDC 实例](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   

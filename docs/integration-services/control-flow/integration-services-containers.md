@@ -14,15 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 407716195293b4ff362019b3becf9887f3dffe82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c147c5fc44f8dcb96679ecc83d3b88fd474830a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700655"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289853"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
@@ -50,7 +50,7 @@ ms.locfileid: "47700655"
 ### <a name="summary-of-container-properties"></a>容器属性摘要  
  通常，所有容量类型都有一组属性。 如果使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的图形工具创建包，“属性”窗口将列出 Foreach 循环容器、For 循环容器和序列容器的以下属性。 配置任务宿主容器属性是配置任务宿主容器所封装的任务的一部分。 配置任务时需要设置任务宿主属性。  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |**DelayValidation**|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值为 **False**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>为止。|  
 |**Description**|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>为止。|  

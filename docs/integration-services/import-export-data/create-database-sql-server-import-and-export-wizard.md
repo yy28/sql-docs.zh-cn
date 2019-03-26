@@ -3,22 +3,21 @@ title: 创建数据库（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807285"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222011"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
 如果在“选择目标”  页上选择“新建”  以创建新 SQL Server 目标数据库，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“创建数据库”  对话框。 在此页上，可以为新数据库提供名称。 （可选）还可以更改新数据库及其日志文件的初始大小和自动增长设置。 

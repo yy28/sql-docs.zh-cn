@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dc7d069aeba4c494aa07c852b265fcdae7fc82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fad3dbcd1a181fd2343fc37fb5227a439011c4b6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724185"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273505"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
   本过程介绍如何使用 CDC 服务配置控制台准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便使用 Oracle CDC 服务和创建新的 CDC 服务。  

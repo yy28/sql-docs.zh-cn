@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 158c55b3b05920a5fddbf0afb429e12b49f52682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44f3d605e9110271fc104842a58df992ede0eeb0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784815"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276017"
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47784815"
 ## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个对象版本显示一行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要查看此视图中的行，您必须具有以下权限之一：  
   
 -   针对对象的 READ 权限  

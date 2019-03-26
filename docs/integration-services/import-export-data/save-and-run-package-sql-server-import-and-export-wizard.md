@@ -3,22 +3,21 @@ title: 保存并运行包（SQL Server 导入和导出向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78fb4a1905e53fce60e7d2461e33782e24441ee5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0299a7b8bc6f43989b83bb24fa7cc23833ed4c09
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742505"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276531"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>保存并运行包（SQL Server 导入和导出向导）
   在你指定并配置数据源和目标之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“保存并运行包” 。 在此页上，你可以指定是否要立即运行复制操作。 根据配置，或许还可以将设置保存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 包，以对其进行自定义并在以后重新使用。

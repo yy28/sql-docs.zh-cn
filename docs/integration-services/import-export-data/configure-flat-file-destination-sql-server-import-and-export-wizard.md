@@ -3,22 +3,21 @@ title: 配置平面文件目标（SQL Server 导入和导出向导）| Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694145"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222031"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
   如果选择了平面文件目标，则在指定要复制表或提供查询之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导会显示“配置平面文件目标”。 在此页上，可为目标平面文件指定格式设置选项。 （可选）查看单个列的映射并预览示例数据。  
@@ -64,7 +63,7 @@ ms.locfileid: "47694145"
 |**冒号 {:}**|使用冒号分隔列。|  
 |**逗号 {,}**|使用逗号分隔列。|  
 |**制表符 {t}**|使用制表符分隔列。|  
-|**竖线 {&#124;}。**|使用竖线分隔列。|  
+|**竖线 {|}**。|使用竖线分隔列。|  
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>（可选）查看列映射和预览数据
 
