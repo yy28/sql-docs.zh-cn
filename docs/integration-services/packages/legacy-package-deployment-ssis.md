@@ -29,15 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204726"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276764"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
