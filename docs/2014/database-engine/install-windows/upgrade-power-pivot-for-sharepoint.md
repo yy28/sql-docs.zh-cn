@@ -1,7 +1,7 @@
 ---
 title: 升级 PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366119"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434498"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
   本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
@@ -74,7 +74,7 @@ ms.locfileid: "53366119"
   
 2.  重新启动服务器。  
   
-3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[下载 Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=40737)并[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  在 SharePoint 2013 场中的每个服务器上运行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 外接程序 (**spPowerPivot.msi**) 以安装数据访问接口。 您从中运行 SQL Server 安装向导的服务器除外，安装向导也将升级数据访问接口。 有关详细信息，请参阅[安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 4.  **运行 PowerPivot for SharePoint 2013 配置**上某个 SharePoint 应用程序服务器以使用外接程序安装的更新的解决方案文件配置 SharePoint 场的工具。 不能使用 SharePoint 管理中心执行此步骤。 有关详细信息，请参见以下内容：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53366119"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当您单击**运行**，出现以下警告，提醒你在批处理模式下处理操作："**所有标记为有效工具中的配置设置将应用于 SharePoint 场。是否继续?**”。  
+    7.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场 **。是否继续?**”。  
   
     8.  单击 **“是”** 继续操作。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "53366119"
         > [!IMPORTANT]  
         >  第一项操作 **“升级场解决方案”** 必须始终最先处理。 它注册用于配置服务器的 PowerShell cmdlet。 如果此操作出错，不要继续操作。 应该使用错误中提供的信息诊断并解决该问题，然后继续处理任务列表中的其他操作。  
   
-    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当您单击**运行**，出现以下警告，提醒你在批处理模式下处理操作："所有标记为在该工具中有效的配置设置将应用于 SharePoint 场。 是否继续?”  
+    8.  单击 **“运行”** 执行对此任务有效的所有操作。 只有通过验证检查后，**“运行”** 才可用。 当你单击“运行”时，出现以下警告，提醒你将在批处理模式下执行操作：“该工具中所有标记为有效的配置设置将应用于 SharePoint 场。 是否继续?”  
   
     9. 单击 **“是”** 继续操作。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53366119"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  检查现有部署的以下信息：**类型**是收回或部署，**文件**为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  检查现有部署的以下信息：“类型”是收回或部署，“文件”为 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  对于部署或收回与 PowerPivot 解决方案，将复制的 GUID 值**JobId**然后将其粘贴到以下命令 （使用的标记、 复制和粘贴命令外壳的编辑菜单上复制该 GUID）：  
   
@@ -278,7 +278,7 @@ Get-PowerPivotSystemService
   
  ProductVersion   FileVersion           FileName  
   
- **12.0.2000.8** 2014.0120.200 C:\Program Files\Microsoft SQL Server\MSAS12。POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
+ **12.0.2000.8** 2014.0120.200    C:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT2000\OLAP\bin\msmdsrv.exe  
   
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>验证 SharePoint 上的 MSOLAP 数据访问接口版本  
  使用以下指令来检查 Excel Services 信任的 Analysis Services OLE DB 访问接口版本。 您必须是场或服务应用程序管理员，才能检查 Excel Services 信任的数据访问接口设置。  

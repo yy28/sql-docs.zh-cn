@@ -1,7 +1,7 @@
 ---
 title: Analysis Services 数据库的备份和还原 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352690"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434468"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  
@@ -36,7 +36,7 @@ ms.locfileid: "53352690"
   
  若要进行包括源数据在内的完整备份，则必须备份包含详细数据的数据库。 具体而言，如果使用的是 ROLAP 或 DirectQuery 数据库存储，则详细信息数据存储在与 Analysis Services 数据库分开的外部 SQL Server 关系数据库中。 否则，如果所有对象都是表格或多维对象，Analysis Services 备份将既包含元数据又包含源数据。  
   
- 自动备份的一个显著优点是：数据快照将按照自动备份频率所规定的时间或间隔始终保持最新状态。 自动计划程序可确保备份不会被忘记。 此外，还原数据库也可以自动进行，并且是一种复制数据的好方法，但务必要备份所复制实例的加密密钥文件。 同步功能专门用于复制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但仅限过期数据。 此处提及的所有功能都可以通过用户界面、XML/A 命令实现或通过 AMO 以编程方式运行。 有关备份策略的详细信息，请参阅 [Backup Strategies with SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888)（SQL Server 2005 Analysis Services 的备份策略）。  
+ 自动备份的一个显著优点是：数据快照将按照自动备份频率所规定的时间或间隔始终保持最新状态。 自动计划程序可确保备份不会被忘记。 此外，还原数据库也可以自动进行，并且是一种复制数据的好方法，但务必要备份所复制实例的加密密钥文件。 同步功能专门用于复制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但仅限过期数据。 此处提及的所有功能都可以通过用户界面、XML/A 命令实现或通过 AMO 以编程方式运行。  
   
  本主题包含以下各节：  
   

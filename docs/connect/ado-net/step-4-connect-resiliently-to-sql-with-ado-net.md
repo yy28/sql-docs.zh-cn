@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607097"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342865"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接
 
@@ -68,7 +68,7 @@ ms.locfileid: "51607097"
 注意： 服务器名称的连接字符串专门针对 Azure SQL 数据库，因为它包含的四个字符前缀**tcp:**。 但是，您可以调整要连接到 Microsoft SQL Server 的服务器字符串。  
   
   
-```CSharp  
+```csharp
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  

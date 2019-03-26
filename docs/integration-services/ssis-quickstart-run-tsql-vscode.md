@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a23e0bcefc098f0e70f5515cb12253c10446f846
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 3ab178c2f5a3cd8aaeb5a341275956e6bf87dd93
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216701"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281701"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 从 Visual Studio Code 运行 SSIS 包
 本快速入门演示如何使用 Visual Studio Code 连接到 SSIS 目录数据库，然后使用 Transact-SQL 语句运行存储在 SSIS 目录中的 SSIS 包。
@@ -78,7 +78,7 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
    | **身份验证** | SQL 登录名 | 使用 SQL Server 身份验证，可连接到 SQL Server 或 Azure SQL 数据库。 如果连接到 Azure SQL 数据库服务器，则无法使用 Windows 身份验证。 |
    | **User name** | 服务器管理员帐户 | 此帐户是在创建服务器时指定的帐户。 |
    | **密码（SQL 登录名）** | 服务器管理员帐户的密码 | 此密码是在创建服务器时指定的密码。 |
-   | **是否保存密码？** | 是或否 | 如果不希望每次都输入密码，请选择“是”。 |
+   | **是否保存密码？** |  是或否 | 如果不希望每次都输入密码，请选择“是”。 |
    | **输入此配置文件的名称** | 一个配置文件名称，如 mySSISServer | 保存一个配置文件名称可以加快后续登录时的连接速度。 | 
 
 5. 按 ESC 键关闭提示配置文件已创建并连接的提示消息。

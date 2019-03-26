@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419068"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305885"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,13 +67,13 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS。  
   
-若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](https://www.unixodbc.org/doc/conn_pool.html)。  
+若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
 
 在重复使用之前，应用程序必须通过执行 `sp_reset_connection` 重置已入池的连接。  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理用户身份
 
-应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
+应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用链接服务器和分布式查询
 
@@ -99,7 +99,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 以下是 SPN 在连接字符串或连接属性中使用的语法：  
 
-|语法|说明|  
+|语法|描述|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。 *port* 是 TCP 端口号。 *fqdn* 是一个完全限定域名。|  
   
