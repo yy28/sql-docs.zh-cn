@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91099edbdbd2f1b25fd77dc1f076acd5b4647708
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66baf6b01ecdafd87b0c748d8802dad19da928f9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397390"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290714"
 ---
 # <a name="ssis-designer"></a>SSIS 设计器
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器是用于创建和维护 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的图形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器作为 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目的一部分，位于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中。  
@@ -99,7 +99,7 @@ ms.locfileid: "52397390"
 ### <a name="progressexecution-result-tab"></a>“进度/执行结果”选项卡  
  在包运行过程中， **“进度”** 选项卡显示包的执行进度。 在包运行完毕后， **“执行结果”** 选项卡上就一直显示执行结果。  
   
-> **注意：** 若要允许或禁止在“进度”选项卡上显示消息，请在“SSIS”菜单上切换“调试进度报告”选项。  
+> **注意**：若要允许或禁止在 **“进度”** 选项卡上显示消息，请在 **SSIS** 菜单上切换 **“调试进度报告”** 选项。  
   
 #### <a name="connection-managers-area"></a>连接管理器区域  
  **“连接管理器”** 区域用于添加和修改包使用的连接管理器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括连接到多种数据源（如文本文件、OLE DB 数据库和 .Net 提供程序）的连接管理器。  

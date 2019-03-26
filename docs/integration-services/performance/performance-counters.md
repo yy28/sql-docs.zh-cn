@@ -14,20 +14,20 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374e977eafce0dcb679997e85655302aa7de0b4d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641154"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271010"
 ---
 # <a name="performance-counters"></a>性能计数器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 安装一组性能计数器，可用于监视数据流引擎的性能。 例如，可以监视 "Buffers spooled" 计数器，以确定在运行包时数据缓冲区是否正在临时写入磁盘。 此交换会降低性能并指示计算机内存不足。  
   
-> **注意：** 如果在运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的计算机上安装 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然后将该计算机升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，则升级过程会从该计算机删除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器。 若要还原计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器，请在修复模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
+> **注意**：如果在运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的计算机上安装 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]，然后将该计算机升级到 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]，则升级过程会从该计算机删除 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器。 若要还原计算机上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 性能计数器，请在修复模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。  
   
  下表介绍了这些性能计数器：  
   

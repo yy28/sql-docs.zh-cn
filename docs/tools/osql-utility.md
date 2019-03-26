@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589991"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356460"
 ---
 # <a name="osql-utility"></a>osql 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  使用 **osql**时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  
   
 ## <a name="inserting-comments"></a>插入注释  
- 可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交给**的 Transact-SQL 语句中包含注释。 允许使用两种类型的注释样式：-- 和 /*...\*/。  
+ 可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交给**的 Transact-SQL 语句中包含注释。 允许使用两种类型的注释样式：`/*...*/` 和 `--`。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>使用 EXIT 返回 osql 中的结果  
  可以使用 SELECT 语句的结果作为 **osql**的返回值。 如果为数值，则最后一个结果行的最后一列将转换为 4 字节的整数（长整型）。 MS-DOS 将低字节传递给父进程或操作系统错误级别。 Windows 则传递整个 4 字节整数。 语法为：  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401879"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282981"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
   **dtexec** 命令提示实用工具用于配置和执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 使用 **dtexec** 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 使用 **dtexec** 实用工具，可以加载来自以下源的包： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器、.ispac 项目文件、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。  
@@ -158,7 +158,7 @@ dtexec /option [value] [/option [value]]...
   
 ##  <a name="parameter"></a> Parameters  
   
--   **/?** [option_name]**：（可选）。 显示命令提示符选项，或显示指定的 *option_name* 的帮助，然后关闭实用工具。  
+-   **/?** [option_name]：（可选）。 显示命令提示符选项，或显示指定的 *option_name* 的帮助，然后关闭实用工具。  
   
      如果指定 *option_name* 参数，则 **dtexec** 将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书并显示 dtexec 实用工具主题。  
   

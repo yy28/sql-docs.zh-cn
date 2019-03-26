@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640824"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289633"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   本地计算机上安装的所有组件都自动显示在“SSIS 工具箱”中。 当安装其他组件时，在此工具箱内右键单击，然后单击“刷新工具箱”即会添加组件。  
@@ -38,7 +38,7 @@ ms.locfileid: "51640824"
 ## <a name="toolbox-categories"></a>工具箱类别
  在 **“SSIS 工具箱”** 中，控制流组件和数据流组件组织为不同的类别。  可以展开和折叠类别，并重新排列组件。  通过在此工具箱内右键单击，然后单击“还原工具箱默认值”，可以还原默认组织方式。  
   
- 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”** 选项卡时， **“收藏夹”** 和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 “数据流”选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
+ 选定 **“控制流”** 、 **“数据流”** 和 **“事件处理程序”** 选项卡时， **“收藏夹”** 和 **“公共”** 类别会显示在此工具箱中。 选定 **“控制流”** 选项卡或 **“事件处理程序”** 选项卡时， **“其他任务”** 类别会显示在此工具箱中。选定 **“数据流”** 选项卡时， **“其他转换”**、 **“其他源”** 和 **“其他目标”** 类别会显示在此工具箱中。  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>将 Azure 组件添加到工具箱  
  用于 Integration Services 的 Azure 功能包包含连接到 Azure 数据源的连接管理器，以及用于执行常用 Azure 操作的任务。 安装该功能包，可将这些项添加到工具箱。 有关详细信息，请参阅[用于 Integration Services 的 Azure 功能包 (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
