@@ -16,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588282"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493639"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,59 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@sub_table=**] **'**_sub_table_  
- 订阅服务器表的名称。 *sub_table*是**sysname**，无默认值。  
+`[ @sub_table = ] 'sub_table'` 是订阅服务器表的名称。 *sub_table*是**sysname**，无默认值。  
   
- [  **@sub_table_owner=**] **'**_sub_table_owner_  
- 订阅服务器表的所有者名称。 *sub_table_owner*是**sysname**，无默认值。  
+`[ @sub_table_owner = ] 'sub_table_owner'` 是订阅服务器表的名称。 *sub_table_owner*是**sysname**，无默认值。  
   
- [  **@publisher=**] **'**_发布服务器上_  
- 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=**] **'**_publisher_db_  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 如果为 NULL，则使用当前数据库。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 如果为 NULL，则使用当前数据库。  
   
- [  **@publication=**] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@ins_proc=**] **'**_ins_proc_  
- 在发布服务器上支持同步事务插入的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
+`[ @ins_proc = ] 'ins_proc'` 是支持在发布服务器同步事务插入的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@upd_proc=**] **'**_upd_proc_  
- 在发布服务器上支持同步事务更新的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
+`[ @upd_proc = ] 'upd_proc'` 是支持同步事务更新发布服务器上的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@del_proc=**] **'**_del_proc_  
- 在发布服务器上支持同步事务删除的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
+`[ @del_proc = ] 'del_proc'` 是支持同步事务删除发布服务器上的存储过程的名称。 *ins_proc*是**sysname**，无默认值。  
   
- [  **@cftproc =** ] **'**_cftproc_  
- 允许排队更新的发布使用的自动生成过程的名称。 *cftproc*是**sysname**，无默认值。 对于允许立即更新的发布，该值为 NULL。 此参数应用于允许排队更新（排队更新和将排队更新作为故障转移的立即更新）的发布。  
+`[ @cftproc = ] 'cftproc'` 是允许排队更新的发布使用的自动生成过程的名称。 *cftproc*是**sysname**，无默认值。 对于允许立即更新的发布，该值为 NULL。 此参数应用于允许排队更新（排队更新和将排队更新作为故障转移的立即更新）的发布。  
   
- [  **@proc_owner =** ] **'**_proc_owner_  
- 指定发布服务器中的用户帐户，在该帐户下创建了用于更新发布（排队和/或立即）的所有自动生成存储过程。 *proc_owner*是**sysname** ，无默认值。  
+`[ @proc_owner = ] 'proc_owner'` 指定用于更新发布 （排队和/或立即） 的自动生成的存储的过程创建在用的所有发布服务器中的用户帐户。 *proc_owner*是**sysname** ，无默认值。  
   
- [  **@identity_col=**] **'**_identity_col_  
- 发布服务器上标识列的名称。 *identity_col*是**sysname**，默认值为 NULL。  
+`[ @identity_col = ] 'identity_col'` 是发布服务器上的标识列的名称。 *identity_col*是**sysname**，默认值为 NULL。  
   
- [  **@ts_col=**] **'**_timestamp_col_  
- 是的名称**时间戳**发布服务器上的列。 *timestamp_col*是**sysname**，默认值为 NULL。  
+`[ @ts_col = ] 'timestamp_col'` 是的名称**时间戳**发布服务器上的列。 *timestamp_col*是**sysname**，默认值为 NULL。  
   
- [  **@filter_clause=**] **'**_filter_clause_  
- 是定义水平筛选器的限制 (WHERE) 子句。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @filter_clause = ] 'filter_clause'` 是的限制 (WHERE) 子句，用于定义水平筛选器。 当输入限制子句时，将省略关键字 WHERE。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。  
   
- [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_  
- 表内主键列的位图。 *primary_key_bitmap*是**varbinary(4000)**，无默认值。  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 是表中的主键列的位图。 *primary_key_bitmap*是**varbinary(4000)**，无默认值。  
   
- [  **@identity_support =** ] *identity_support*  
- 使用排队更新时启用和禁用自动标识范围处理。 *identity_support*是**位**，默认值为**0**。 **0**表示没有标识范围支持， **1**启用自动标识范围处理。  
+`[ @identity_support = ] identity_support` 启用和禁用自动标识范围处理时使用排队更新。 *identity_support*是**位**，默认值为**0**。 **0**表示没有标识范围支持， **1**启用自动标识范围处理。  
   
- [  **@independent_agent =** ] *independent_agent*  
- 指示只有一个用于该发布的分发代理（独立代理），还是每个发布数据库和订阅数据库对都有一个分发代理（共享代理）。 该值反映了发布服务器上所定义发布的 independent_agent 属性值。 *independent_agent*为 bit，默认值为**0**。 如果**0**，则代理为共享代理。 如果**1**，代理是一个独立的代理。  
+`[ @independent_agent = ] independent_agent` 指示是否存在用于此发布的单个分发代理 （独立代理） 或每个发布数据库和订阅数据库对 （共享代理） 的一个分发代理。 该值反映了发布服务器上所定义发布的 independent_agent 属性值。 *independent_agent*为 bit，默认值为**0**。 如果**0**，则代理为共享代理。 如果**1**，代理是一个独立的代理。  
   
- [  **@distributor =** ] **'**_分发服务器上_  
- 是分发服务器的名称。 *分发服务器*是**sysname**，无默认值。  
+`[ @distributor = ] 'distributor'` 是分发服务器的名称。 *分发服务器*是**sysname**，无默认值。  
   
- [ **@pubversion**=] *pubversion*  
- 指示发布服务器的版本。 *pubversion*是**int**，默认值为 1。 **1**意味着，发布服务器的版本是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更低版本;**2**意味着，发布服务器是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 或更高版本。 *pubversion*必须显式设置为**2**发布服务器的版本时[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 或更高版本。  
+`[ @pubversion = ] pubversion` 指示发布服务器的版本。 *pubversion*是**int**，默认值为 1。 **1**意味着，发布服务器的版本是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更低版本;**2**意味着，发布服务器是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 或更高版本。 *pubversion*必须显式设置为**2**发布服务器的版本时[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 或更高版本。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -123,7 +105,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 ## <a name="see-also"></a>请参阅  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

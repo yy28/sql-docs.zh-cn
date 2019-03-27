@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018073"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494389"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -511,8 +511,8 @@ sudo systemctl restart mssql-server
 
 | mssql-conf 设置 | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | 配置安全的唯一 rpc 调用的分布式事务 |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式配置安全的唯一 rpc 调用 |事务
+| distributedtransaction.allowonlysecurerpccalls | 配置安全的分布式事务的唯一 RPC 调用 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式配置安全仅 RPC 调用 |事务
 | distributedtransaction.maxlogsize | 以 mb 为单位，DTC 事务日志文件大小。 默认值为 64 MB |
 | distributedtransaction.memorybuffersize | 循环缓冲区跟踪存储大小。 此大小是以 mb 为单位，默认值为 10 MB |
 | distributedtransaction.servertcpport | MSDTC rpc 服务器端口 |
@@ -664,7 +664,7 @@ outboundnetworkaccess = 1
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. 重新启动 SQL Server 服务。
+1. 重启 SQL Server 服务。
 
    ```bash
    sudo systemctl restart mssql-server

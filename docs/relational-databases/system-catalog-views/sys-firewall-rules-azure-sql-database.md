@@ -1,6 +1,6 @@
 ---
 title: sys.firewall_rules （Azure SQL 数据库） |Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6901ac9e301906569a54e763ecd213602ec1410c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494030"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,24 +36,27 @@ ms.locfileid: "47705485"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|服务器级防火墙设置的标识符。|  
-|NAME|**NVARCHAR （128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
-|start_ip_address|**VARCHAR(50)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR(50)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意： Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
-|create_date|**日期时间**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意： UTC 是协调世界时的首字母缩写。|  
-|modify_date|**日期时间**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
+|NAME|**NVARCHAR(128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
+|start_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
+|end_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
+|create_date|**DATETIME**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意：UTC 为通用协调时间的首字母缩略词。|  
+|modify_date|**DATETIME**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
   
-## <a name="remarks"></a>备注  
- 若要删除数据库防火墙规则，请使用[sp_delete_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)。 若要设置为单个数据库的防火墙规则，请参阅[sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。 若要返回有关现有防火墙规则的信息，请查询 sys.firewall_rules （Azure SQL 数据库）。  
+## <a name="remarks"></a>备注
+
+ 返回到 Microsoft Azure SQL 数据库，使用与关联的数据库级防火墙设置有关的信息[sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限
+
  对此视图的只读访问可供有权连接到的所有用户**主**数据库。  
   
-## <a name="see-also"></a>请参阅  
- [sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_set_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
- [为进行 FILESTREAM 访问配置防火墙](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
- [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
- [如何：配置防火墙设置（Azure SQL 数据库）](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
-  
-  
+## <a name="see-also"></a>请参阅
+
+[sp_set_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+[sp_delete_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
+[sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+[sp_delete_database_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
+[sys.database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+[为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
+[将防火墙配置为进行 FILESTREAM 访问](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
+[将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 

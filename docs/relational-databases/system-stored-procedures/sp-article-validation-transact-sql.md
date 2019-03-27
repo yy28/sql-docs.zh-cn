@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125103"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493259"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 为该项目存在的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'**_文章_  
- 要验证的项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是要验证的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- 指定是否只返回表的行计数。 *type_of_check_requested*是**smallint**，默认值为**1**。  
+`[ @rowcount_only = ] type_of_check_requested` 指定是否只返回表的行计数。 *type_of_check_requested*是**smallint**，默认值为**1**。  
   
  如果**0**，执行行计数和一个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  如果**2**，执行行计数和二进制校验和。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 用于计算行计数的方法。 *full_or_fast*是**tinyint**，可以是下列值之一。  
+`[ @full_or_fast = ] full_or_fast` 用于计算行计数方法。 *full_or_fast*是**tinyint**，可以是下列值之一。  
   
 |**ReplTest1**|**说明**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|执行快速计数从**sysindexes.rows**。 对行进行计数**sysindexes**比实际表中对行计数要快。 但是， **sysindexes**为惰性更新，因此行计数可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法执行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，而且该存储的过程正在使用来获取此值，则始终使用完整 COUNT(*)。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，分发代理不会关闭。 如果**1**，则在验证项目之后关闭分发代理。  
+`[ @shutdown_agent = ] shutdown_agent` 指定如果分发代理应在后立即关闭完成验证。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，分发代理不会关闭。 如果**1**，则在验证项目之后关闭分发代理。  
   
- [  **@subscription_level=**] *subscription_level*  
- 指定是否由订阅服务器集来拾取验证。 *subscription_level*是**位**，默认值为**0**。 如果**0**，验证应用于所有订阅服务器。 如果**1**，验证仅适用于通过调用指定的订阅服务器的子集**sp_marksubscriptionvalidation**中当前打开的事务。  
+`[ @subscription_level = ] subscription_level` 指定验证由选取一组订阅服务器。 *subscription_level*是**位**，默认值为**0**。 如果**0**，验证应用于所有订阅服务器。 如果**1**，验证仅适用于通过调用指定的订阅服务器的子集**sp_marksubscriptionvalidation**中当前打开的事务。  
   
- [  **@reserved=**]*保留*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*上请求验证时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -97,9 +89,9 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [验证复制的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

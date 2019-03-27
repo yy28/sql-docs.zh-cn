@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126837"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492809"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tsqlbatch =**] **'**_tsqlbatch_  
- 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理信息是所需的参数。 *tsqlbatch*是**nvarchar （max)** 或隐式转换为**nvarchar （max)**。  
+`[ @tsqlbatch = ] 'tsqlbatch'` 是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理信息是所需的参数。 *tsqlbatch*是**nvarchar （max)** 或隐式转换为**nvarchar （max)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -50,7 +49,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**参数名称**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在批处理中找到的参数的名称。|  
+|**PARAMETER_NAME**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在批处理中找到的参数的名称。|  
 |**COLUMN_TYPE**|**smallint**|此字段返回下列值之一：<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> 此列始终为 0。|  
 |**DATA_TYPE**|**smallint**|参数的数据类型（ODBC 数据类型的整数代码）。 如果此数据类型无法映射到 ISO 类型，则值为 NULL。 中返回的本机数据类型名称**TYPE_NAME**列。 此值始终为 NULL。|  
 |**TYPE_NAME**|**sysname**|数据类型的字符串表示形式，通过基础 DBMS 提供。 此值为 NULL。|  

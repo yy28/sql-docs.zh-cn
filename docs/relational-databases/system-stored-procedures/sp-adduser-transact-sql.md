@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (TRANSACT-SQL) |Microsoft Docs
+title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492935"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@loginame =** ] **'***login***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 Windows 登录的名称。 *登录名*是**sysname**，无默认值。 *登录名*必须是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。  
+`[ @loginame = ] 'login'` 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 *登录名*是**sysname**，无默认值。 *登录名*必须是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。  
   
- [  **@name_in_db =** ] **'用户**   
- 新数据库用户的名称。 *用户*是**sysname**，默认值为 NULL。 如果*用户*未指定，则新的数据库用户的名称默认为*登录名*名称。 指定*用户*为新用户提供不同的服务器级别登录名从数据库中的名称。  
+`[ @name_in_db = ] 'user'` 是新的数据库用户的名称。 *用户*是**sysname**，默认值为 NULL。 如果*用户*未指定，则新的数据库用户的名称默认为*登录名*名称。 指定*用户*为新用户提供不同的服务器级别登录名从数据库中的名称。  
   
- [  **@grpname =** ] **'角色**   
- 新用户成为其成员的数据库角色。 *角色*是**sysname**，默认值为 NULL。 *角色*必须是当前数据库中的有效的数据库角色。  
+`[ @grpname = ] 'role'` 是的新用户成为其成员的数据库角色。 *角色* 是 **sysname** ，默认值为 NULL。 *角色*必须是当前数据库中的有效的数据库角色。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -77,7 +74,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有数据库的所有权。  
   
 ## <a name="examples"></a>示例  

@@ -18,12 +18,12 @@ ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ea36ea5efe4c693193761887659a445affe2855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b41cc93b9f7158ab682a1a8569901899c258328
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758375"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494169"
 ---
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@group_name=** ] **'***group_name***'**  
- 组的名称。 *group_name*是**sysname**，无默认值。  
+`[ @group_name = ] 'group_name'` 组的名称。 *group_name*是**sysname**，无默认值。  
   
- [ **@server_name=** ] **'***server_name***'**  
- 应添加到指定组中的服务器的名称。 *server_name*是**nvarchar(30)**，无默认值。  
+`[ @server_name = ] 'server_name'` 应添加到指定组的服务器的名称。 *server_name*是**nvarchar(30)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -55,7 +53,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="remarks"></a>备注  
  一个目标服务器可以是多个目标服务器组的成员。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色才能执行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -72,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_targetsvrgrp_member &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
+ [sp_delete_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356413"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493499"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
-  [事件和错误消息中心](https://go.microsoft.com/fwlink/?LinkId=47660)TechNet 上是信息的错误消息的主要来源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 客户可对其执行全文搜索并可根据产品、版本、源和数字或符号标识符筛选结果，从而改善了客户搜索有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息及其他 Microsoft 产品的信息时的体验。 此外，新界面还提供多语言支持。 该中心将不断更新，为经常遇到的错误提供新故障排除信息。  
-  
- 未来为事件和错误消息中心附加增强功能后，将能够以可下载的形式获得故障排除内容，从而可以在没有连接到 Internet 的计算机上查看这些内容。  
+
+本部分包含需要进一步说明的所选的数据库引擎错误消息。
   
 ## <a name="in-this-section"></a>本节内容  
- [数据库引擎错事件和错误](数据库-引擎-事件-和-errors.md0  
- 介绍 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息的格式，并说明如何查看错误消息并将错误消息返回应用程序。  
+ [数据库引擎错事件和错误](database-engine-events-and-errors.md)描述的格式[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误消息，并说明如何查看错误消息和错误消息返回到应用程序。  
   
  介绍 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息、可能原因以及为更正问题可以采取的所有操作。  
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835665"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494249"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@defname=** ] **'***default***'**  
- 由 CREATE DEFAULT 创建的默认值的名称。 *默认值*是**nvarchar(776)**，无默认值。  
+`[ @defname = ] 'default'` 是由 CREATE DEFAULT 创建的默认值的名称。 *默认值*是**nvarchar(776)**，无默认值。  
   
- [ **@objname=** ] **'***object_name***'**  
- 将默认值绑定到的表名、列名或别名数据类型。 *object_name*是**nvarchar(776)** ，无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR用户定义类型。  
+`[ @objname = ] 'object_name'` 是的表和列或别名数据类型默认值是要绑定的名称。 *object_name*是**nvarchar(776)** ，无默认值。 *object_name*不能使用定义**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**，或 CLR用户定义类型。  
   
  如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两个或三部分名称，首先解析为表和列;并且，如果此解析失败，则将它解析为别名数据类型。 默认情况下，别名数据类型的现有列继承*默认*，除非默认值已经直接绑定到列。 默认值不能绑定到**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar （max)**，**varbinary （max)**， **xml**，**时间戳**，或 CLR 用户定义类型列、 具有 IDENTITY 属性的列、 计算的列，已具有 DEFAULT 约束。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 仅当将默认值绑定到别名数据类型时才能使用。 *futureonly_flag*是**varchar(15)** 默认值为 NULL。 如果此参数设置为**futureonly**，该数据类型的现有列不能继承新默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，将新的默认值绑定到别名数据类型的任何列的当前没有默认值或使用别名数据类型的现有默认值的。  
+`[ @futureonly = ] 'futureonly_flag'` 仅当将默认值绑定到别名数据类型时使用。 *futureonly_flag*是**varchar(15)** 默认值为 NULL。 如果此参数设置为**futureonly**，该数据类型的现有列不能继承新默认值。 将默认值绑定到列时，从不使用此参数。 如果*futureonly_flag*为 NULL，将新的默认值绑定到别名数据类型的任何列的当前没有默认值或使用别名数据类型的现有默认值的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,7 +67,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
  当默认值绑定到列时，相关的信息添加到**sys.columns**目录视图。 默认值绑定到别名数据类型时，相关的信息添加到**sys.types**目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有表，或者是的成员**sysadmin**固定服务器角色或**db_owner**并**db_ddladmin**固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -120,7 +117,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT (Transact-SQL)](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

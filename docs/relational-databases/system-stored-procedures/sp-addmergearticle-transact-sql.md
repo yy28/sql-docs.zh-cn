@@ -1,5 +1,5 @@
 ---
-title: sp_addmergearticle (TRANSACT-SQL) |Microsoft Docs
+title: sp_addmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8852aaf6b8d6baa7a5451f0ccc31229d6f521a33
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494369"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,17 +74,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'**_发布_  
- 包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是包含的项目的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=** ] **'**_文章_  
- 项目的名称。 该名称在发布中必须唯一。 *文章*是**sysname**，无默认值。 *文章*必须是运行在本地计算机上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须符合有关标识符的规则。  
+`[ @article = ] 'article'` 是的名称。 该名称在发布中必须唯一。 *文章*是**sysname**，无默认值。 *文章*必须是运行在本地计算机上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须符合有关标识符的规则。  
   
- [  **@source_object=** ] **'**_source_object_  
- 要发布的数据库对象。 *source_object*是**sysname**，无默认值。 有关可以使用合并复制发布的对象的类型的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
+`[ @source_object = ] 'source_object'` 是要发布的数据库对象。 *source_object*是**sysname**，无默认值。 有关可以使用合并复制发布的对象的类型的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
- [  **@type=** ] **'**_类型_  
- 项目的类型。 *类型*是**sysname**，默认值为**表**，可以是下列值之一。  
+`[ @type = ] 'type'` 是项目的类型。 *类型*是**sysname**，默认值为**表**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -95,36 +91,30 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**仅同义词架构**|仅具有架构的同义词。|  
 |**仅限视图架构**|仅具有架构的视图。|  
   
- [  **@description=** ] **'**_说明_  
- 是项目的说明。 *描述*是**nvarchar(255)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是项目的说明。 *描述*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@column_tracking=** ] **'**_column_tracking_  
- 列级跟踪的设置。 *column_tracking*是**nvarchar(10)**，默认值为 FALSE。 **true**将打开列跟踪。 **false**将关闭列跟踪，并在行级别进行冲突检测。 如果已经在其他合并发布中发布过该表，则使用的列跟踪值必须与基于此表的现有项目所用的值相同。 此参数只适用于表项目。  
+`[ @column_tracking = ] 'column_tracking'` 是列级跟踪的设置。 *column_tracking*是**nvarchar(10)**，默认值为 FALSE。 **true**将打开列跟踪。 **false**将关闭列跟踪，并在行级别进行冲突检测。 如果已经在其他合并发布中发布过该表，则使用的列跟踪值必须与基于此表的现有项目所用的值相同。 此参数只适用于表项目。  
   
 > [!NOTE]  
 >  如果行跟踪用于冲突检测（默认值），则基表最多可包含 1,024 列，但是必须从项目中筛选列，以便最多发布 246 列。 如果使用列跟踪，则基表最多可包含 246 列。  
   
- [  **@status=** ] **'**_状态_  
- 项目的状态。 *状态*是**nvarchar(10)**，默认值为**unsynced**。 如果**active**，用于发布表的初始处理脚本运行。 如果**unsynced**，在下次运行快照代理运行发布表的初始处理脚本。  
+`[ @status = ] 'status'` 为项目的状态。 *状态*是**nvarchar(10)**，默认值为**unsynced**。 如果**active**，用于发布表的初始处理脚本运行。 如果**unsynced**，在下次运行快照代理运行发布表的初始处理脚本。  
   
- [  **@pre_creation_cmd=** ] **'**_pre_creation_cmd_  
- 指定应用快照时，如果订阅服务器上存在该表，系统将采取的操作。 *pre_creation_cmd*是**nvarchar(10)**，可以是下列值之一。  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` 指定系统将执行操作时，如果表存在订阅服务器上应用快照。 *pre_creation_cmd*是**nvarchar(10)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
+|**none**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 |**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 |**删除**（默认值）|删除该表，然后重新创建一个表。 支持所需[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器。|  
 |**truncate**|截断目标表。|  
   
- [  **@creation_script=** ] **'**_creation_script_  
- 用于创建订阅数据库中项目的可选项目架构脚本的路径和名称。 *creation_script*是**nvarchar(255)**，默认值为 NULL。  
+`[ @creation_script = ] 'creation_script'` 是的路径和用于在订阅数据库中创建项目的可选项目架构脚本的名称。 *creation_script*是**nvarchar(255)**，默认值为 NULL。  
   
 > [!NOTE]  
 >  创建脚本不在 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器上运行。  
   
- [  **@schema_option=** ] *schema_option*  
- 给定项目的架构生成选项的位图。 *schema_option*是**binary(8)**，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个值。  
+`[ @schema_option = ] schema_option` 为给定项目的架构生成选项位图。 *schema_option*是**binary(8)**，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -144,11 +134,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x8000**|此选项对运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的发布服务器无效。|  
 |**0x10000**|以 NOT FOR REPLICATION 方式复制 CHECK 约束，以便在同步期间不强制执行约束。|  
 |**0x20000**|以 NOT FOR REPLICATION 方式复制 FOREIGN KEY 约束，以便在同步期间不强制执行约束。|  
-|**而 0x40000 可**|复制与已分区表或已分区索引相关联的文件组。|  
+|**0x40000**|复制与已分区表或已分区索引相关联的文件组。|  
 |**0x80000**|复制已分区表的分区方案。|  
 |**0x100000**|复制已分区索引的分区方案。|  
 |**0x200000**|复制表统计信息。|  
-|**0x400000 处**|复制默认绑定。|  
+|**0x400000**|复制默认绑定。|  
 |**0x800000**|复制规则绑定。|  
 |**0x1000000**|复制全文索引。|  
 |**0x2000000**|XML 架构集合绑定到**xml**列不会复制。|  
@@ -173,70 +163,55 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Schema_option*参数只影响初始快照的复制选项。 发布到订阅服务器架构更改复制后由快照代理生成初始架构并将其应用到订阅服务器，会根据架构更改复制规则并*replicate_ddl*参数中指定的设置[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- [  **@subset_filterclause=** ] **'**_subset_filterclause_  
- WHERE 子句，用于指定表项目的水平筛选，但不含单词 WHERE。 *subset_filterclause*属于**nvarchar(1000)**，默认值为空字符串。  
+`[ @subset_filterclause = ] 'subset_filterclause'` WHERE 子句，指定水平筛选表项目不带有单词 WHERE。 *subset_filterclause*属于**nvarchar(1000)**，默认值为空字符串。  
   
 > [!IMPORTANT]  
 >  为提高性能，建议您不要在参数化行筛选子句中对列名应用函数，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在筛选器子句并覆盖 HOST_NAME 值，您可能需要使用转换数据类型[转换](../../t-sql/functions/cast-and-convert-transact-sql.md)。 有关这种情况下的最佳做法的详细信息，请参阅"覆盖 host_name （） 值"一节中[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
- [  **@article_resolver=** ] **'**_article_resolver_  
- 基于 COM 的冲突解决程序，用于解决表项目中的冲突或解决调用来对表项目执行自定义业务逻辑的 .NET Framework 程序集中的冲突。 *article_resolver*是**varchar(255)**，默认值为 NULL。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序中列出了此参数的可用值。 如果提供的值并不属于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用指定的冲突解决程序代替系统提供的冲突解决程序。 使用**sp_enumcustomresolvers**枚举可用的自定义冲突解决程序的列表。 有关详细信息，请参阅[业务逻辑合并同步期间执行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)并[高级合并复制冲突检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+`[ @article_resolver = ] 'article_resolver'` 基于 COM 的冲突解决程序用于解决表项目的冲突或调用以对表项目执行自定义业务逻辑的.NET Framework 程序集。 *article_resolver*是**varchar(255)**，默认值为 NULL。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自定义冲突解决程序中列出了此参数的可用值。 如果提供的值并不属于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用指定的冲突解决程序代替系统提供的冲突解决程序。 使用**sp_enumcustomresolvers**枚举可用的自定义冲突解决程序的列表。 有关详细信息，请参阅[业务逻辑合并同步期间执行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)并[高级合并复制冲突检测和解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
- [  **@resolver_info=** ] **'**_resolver_info_  
- 用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 *resolver_info*是**nvarchar(255)**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
+`[ @resolver_info = ] 'resolver_info'` 用于指定所需的自定义冲突解决程序的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 *resolver_info*是**nvarchar(255)**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
- [  **@source_owner=** ] **'**_source_owner_  
- 是的所有者的名称*source_object*。 *source_owner*是**sysname**，默认值为 NULL。 如果值为 NULL，则假定当前用户为所有者。  
+`[ @source_owner = ] 'source_owner'` 是的所有者的名称*source_object*。 *source_owner*是**sysname**，默认值为 NULL。 如果值为 NULL，则假定当前用户为所有者。  
   
- [  **@destination_owner=** ] **'**_destination_owner_  
- 订阅数据库中对象的所有者（如果不是“dbo”）。 *destination_owner*是**sysname**，默认值为 NULL。 如果值为 NULL，则假定‘dbo’为所有者。  
+`[ @destination_owner = ] 'destination_owner'` 是订阅数据库中，如果不是对象的 'dbo' 中的所有者。 *destination_owner*是**sysname**，默认值为 NULL。 如果值为 NULL，则假定‘dbo’为所有者。  
   
- [  **@vertical_partition=** ] **'**_column_filter_  
- 启用和禁用对表项目的列筛选。 *vertical_partition*是**nvarchar(5)** 默认值为 FALSE。  
+`[ @vertical_partition = ] 'column_filter'` 启用和禁用对表项目进行筛选的列。 *vertical_partition*是**nvarchar(5)** 默认值为 FALSE。  
   
  **false**指示没有垂直筛选并且发布所有列。  
   
  **true**清除除声明的主键的所有列和 ROWGUID 列。 通过使用添加列**sp_mergearticlecolumn**。  
   
- [  **@auto_identity_range=** ] **'**_automatic_identity_range_  
- 在创建表项目时允许或禁止在发布中对此表项目执行自动标识范围处理。 *auto_identity_range*是**nvarchar(5)**，默认值为 FALSE。 **true**启用自动标识范围处理，而**false**禁用它。  
+`[ @auto_identity_range = ] 'automatic_identity_range'` 启用和禁用自动标识范围处理在创建的时发布此表项目。 *auto_identity_range*是**nvarchar(5)**，默认值为 FALSE。 **true**启用自动标识范围处理，而**false**禁用它。  
   
 > [!NOTE]  
 >  *auto_identity_range*已弃用，并提供用于向后兼容性。 应使用*identityrangemanagementoption*用于指定标识范围管理选项。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
- [  **@pub_identity_range=** ] *pub_identity_range*  
- 使用自动标识范围管理时，控制分配给包含服务器订阅的订阅服务器的标识范围大小。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 *pub_identity_range*是**bigint**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
+`[ @pub_identity_range = ] pub_identity_range` 控件的标识范围大小分配给具有服务器订阅的订阅服务器时使用自动标识范围管理。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 *pub_identity_range*是**bigint**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
   
- [  **@identity_range=** ] *identity_range*  
- 使用自动标识范围管理时，控制分配给发布服务器和订阅服务器的标识范围大小。 *identity_range*是**bigint**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
+`[ @identity_range = ] identity_range` 控件的标识范围大小分配给发布服务器和订阅服务器上同时使用自动标识范围管理时。 *identity_range*是**bigint**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
   
 > [!NOTE]  
 >  *identity_range*控制重新发布使用以前版本的订阅服务器上的标识范围大小[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- [  **@threshold=** ]*阈值*  
- 百分比值，用于控制合并代理分配新标识范围的条件。 在指定的值的百分比*阈值*是使用，合并代理将创建一个新的标识范围。 *阈值*是**int**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
+`[ @threshold = ] threshold` 控制合并代理何时分配新标识范围的百分比值。 在指定的值的百分比*阈值*是使用，合并代理将创建一个新的标识范围。 *阈值*是**int**，默认值为 NULL。 如果满足以下条件，则必须指定此参数*identityrangemanagementoption*是**自动**或者，如果*auto_identity_range*是**true**。  
   
- [  **@verify_resolver_signature=** ] *verify_resolver_signature*  
- 指定在合并复制中使用冲突解决程序之前是否验证数字签名。 *verify_resolver_signature*是**int**，默认值为 1。  
+`[ @verify_resolver_signature = ] verify_resolver_signature` 指定是否在合并复制中使用冲突解决程序之前验证数字签名。 *verify_resolver_signature*是**int**，默认值为 1。  
   
  **0**指定将验证签名。  
   
  **1**指定将验证签名以查看它是否来自受信任的源。  
   
- [  **@destination_object=** ] **'**_destination_object_  
- 订阅数据库中的对象的名称。 *destination_object*是**sysname**，默认值中的内容**@source_object**。 仅当项目为仅架构项目（如存储过程、视图和 UDF 等）时，才能指定此参数。 指定项目是否是表项目中的值*@source_object*重写中的值*destination_object*。  
+`[ @destination_object = ] 'destination_object'` 是订阅数据库中的名称。 *destination_object*是**sysname**，默认值中的内容**@source_object**。 仅当项目为仅架构项目（如存储过程、视图和 UDF 等）时，才能指定此参数。 指定项目是否是表项目中的值*@source_object*重写中的值*destination_object*。  
   
- [  **@allow_interactive_resolver=** ] **'**_allow_interactive_resolver_  
- 启用或禁用对项目使用交互式冲突解决程序。 *allow_interactive_resolver*是**nvarchar(5)**，默认值为 FALSE。 **true**允许使用项目; 交互式冲突解决程序**false**禁用它。  
+`[ @allow_interactive_resolver = ] 'allow_interactive_resolver'` 启用或禁用对项目的交互式冲突解决程序使用。 *allow_interactive_resolver*是**nvarchar(5)**，默认值为 FALSE。 **true**允许使用项目; 交互式冲突解决程序**false**禁用它。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 订阅服务器不支持交互式冲突解决程序。  
   
- [  **@fast_multicol_updateproc=** ] **'**_fast_multicol_updateproc_  
- 不推荐使用此参数，保留它是为了让脚本能够向后兼容。  
+`[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'` 此参数已弃用，为了保持向后兼容性的脚本。  
   
- [  **@check_permissions=** ] *check_permissions*  
- 表级权限的位图，合并代理将更改应用于发布服务器时将验证该权限。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions*是**int**，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个以下值。  
+`[ @check_permissions = ] check_permissions` 是的位图时合并代理将更改应用于发布服务器验证的表级权限。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions*是**int**，可以为[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)产品的一个或多个以下值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -245,25 +220,21 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x20**|检查了发布服务器上的权限后，才能上载订阅服务器上的更新操作。|  
 |**0x40**|检查了发布服务器上的权限后，才能上载订阅服务器上的删除操作。|  
   
- [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为 0。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为 0。  
   
  **0**指定添加项目不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
  **1**指定添加项目可能导致快照无效，如果有现有订阅需要新快照，向其授予权限将现有快照标记为过时并生成新快照。 *force_invalidate_snapshot*设置为**1**时将项目添加到包含现有快照的发布。  
   
- [  **@published_in_tran_pub=** ] **'**_published_in_tran_pub_  
- 指示合并发布中的项目也将在事务发布中发布。 *published_in_tran_pub*是**nvarchar(5)**，默认值为 FALSE。 **true**指定事务发布中也发布了一文。  
+`[ @published_in_tran_pub = ] 'published_in_tran_pub'` 指示事务发布中也发布了合并发布中的项目。 *published_in_tran_pub*是**nvarchar(5)**，默认值为 FALSE。 **true**指定事务发布中也发布了一文。  
   
- [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为 0。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为 0。  
   
  **0**指定添加项目不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   
  **1**表示对合并项目的更改导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。 *force_reinit_subscription*设置为**1**时*subset_filterclause*指定参数化的行筛选器。  
   
- [  **@logical_record_level_conflict_detection=** ] **'**_logical_record_level_conflict_detection_  
- 指定作为逻辑记录成员的项目的冲突检测级别。 *logical_record_level_conflict_detection*是**nvarchar(5)**，默认值为 FALSE。  
+`[ @logical_record_level_conflict_detection = ] 'logical_record_level_conflict_detection'` 指定的逻辑记录成员项目的冲突检测级别。 *logical_record_level_conflict_detection*是**nvarchar(5)**，默认值为 FALSE。  
   
  **true**指定的逻辑记录中任何位置发生更改，将检测冲突。  
   
@@ -272,8 +243,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  因为不支持逻辑记录[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，必须指定的值**false**有关*logical_record_level_conflict_detection*以支持这些订阅服务器。  
   
- [  **@logical_record_level_conflict_resolution=** ] **'**_logical_record_level_conflict_resolution_  
- 为作为逻辑记录成员的项目指定冲突解决级别。 *logical_record_level_conflict_resolution*是**nvarchar(5)**，默认值为 FALSE。  
+`[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'` 指定的逻辑记录成员项目的冲突解决级别。 *logical_record_level_conflict_resolution*是**nvarchar(5)**，默认值为 FALSE。  
   
  **true**指定整个入选逻辑记录覆盖落选逻辑记录。  
   
@@ -282,8 +252,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  因为不支持逻辑记录[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器，必须指定的值**false**有关*logical_record_level_conflict_resolution*以支持这些订阅服务器。  
   
- [  **@partition_options=** ] *partition_options*  
- 定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *partition_options*是**tinyint**，可以是下列值之一。  
+`[ @partition_options = ] partition_options` 定义在其中一文中的数据进行分区，就启用性能优化，当所有行都属于中只有一个分区或者只有一个订阅中的方式。 *partition_options*是**tinyint**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -295,11 +264,9 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  如果在另一个发布，再选择的值已发布项目的源表*partition_options*必须是两个项目相同的。  
   
- [  **@processing_order=** ] *processing_order*  
- 指示合并发布中项目的处理顺序。 *processing_order*是**int**，默认值为 0。 **0**指定项目未经排序，以及任何其他值表示此项目处理顺序的序数值。 项目按值的由低到高顺序进行处理。 如果两个项目具有相同的值，处理顺序由顺序中的项目别名[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系统表。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
+`[ @processing_order = ] processing_order` 指示合并发布中项目的处理顺序。 *processing_order*是**int**，默认值为 0。 **0**指定项目未经排序，以及任何其他值表示此项目处理顺序的序数值。 项目按值的由低到高顺序进行处理。 如果两个项目具有相同的值，处理顺序由顺序中的项目别名[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系统表。 有关详细信息，请参阅[指定合并复制属性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
- [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
- 定义在包含客户端订阅的订阅服务器上进行更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*是**tinyint**，可以是下列值之一。  
+`[ @subscriber_upload_options = ] subscriber_upload_options` 定义具有客户端订阅的订阅服务器所做的更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*是**tinyint**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -312,20 +279,18 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  如果另一个发布的值中已发布项目的源表*subscriber_upload_options*必须是两个项目相同的。  
   
- [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
- 指定如何处理项目的标识范围管理。 *identityrangemanagementoption*是**nvarchar(10)**，可以是下列值之一。  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` 指定对项目中如何处理标识范围管理。 *identityrangemanagementoption*是**nvarchar(10)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**无**|禁用标识范围管理。|  
-|**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
-|**自动**|指定自动管理标识范围。|  
+|**none**|禁用标识范围管理。|  
+|**manual**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
+|**auto**|指定自动管理标识范围。|  
 |NULL（默认值）|默认情况下**无**时的值*auto_identity_range*不是**true**。|  
   
  为了向后兼容时的值*identityrangemanagementoption*为 NULL，则*auto_identity_range*检查。 但是，如果的值*identityrangemanagementoption*为 NULL，则值不是*auto_identity_range*将被忽略。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
- [  **@delete_tracking=** ] **'**_delete_tracking_  
- 指示是否复制删除内容。 *delete_tracking*是**nvarchar(5)**，默认值为 TRUE。 **false**指示不复制删除，并**true**指示删除复制的这是合并复制的常见行为。 当*delete_tracking*设置为**false**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。  
+`[ @delete_tracking = ] 'delete_tracking'` 指示是否复制删除内容。 *delete_tracking*是**nvarchar(5)**，默认值为 TRUE。 **false**指示不复制删除，并**true**指示删除复制的这是合并复制的常见行为。 当*delete_tracking*设置为**false**、 必须在发布服务器，手动删除在订阅服务器中删除的行和删除发布服务器上的行必须手动删除在订阅服务器。  
   
 > [!IMPORTANT]  
 >  设置*delete_tracking*到**false**导致非收敛性。 如果在另一个发布，再选择的值已发布项目的源表*delete_tracking*必须是两个项目相同的。  
@@ -333,14 +298,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking*不能使用设置选项**新建发布向导**或**发布属性**对话框。  
   
- [  **@compensate_for_errors=** ] **'**_compensate_for_errors_  
- 指示在同步期间遇到错误时是否采取补救措施。 *compensate_for_errors 我*s **nvarchar(5)**，默认值为 FALSE。 如果设置为 **，则返回 true**，更改不能在订阅服务器上应用，或在始终同步过程中的发布服务器会导致采取补救措施来撤消更改; 但是，有一个未正确配置的订阅服务器生成错误可以导致撤消其他订阅服务器和发布服务器上的更改。 **false**禁用这些采取补救措施，但是，这些错误都将记录仍为补偿和后续的合并将继续尝试应用更改，直到成功。  
+`[ @compensate_for_errors = ] 'compensate_for_errors'` 指示在同步过程中遇到错误时是否采取补救措施。 *compensate_for_errors 我*s **nvarchar(5)**，默认值为 FALSE。 如果设置为 **，则返回 true**，更改不能在订阅服务器上应用，或在始终同步过程中的发布服务器会导致采取补救措施来撤消更改; 但是，有一个未正确配置的订阅服务器生成错误可以导致撤消其他订阅服务器和发布服务器上的更改。 **false**禁用这些采取补救措施，但是，这些错误都将记录仍为补偿和后续的合并将继续尝试应用更改，直到成功。  
   
 > [!IMPORTANT]  
 >  尽管受影响行中的数据可能会无法收敛，但是只要解决了发生的错误，就可应用更改，并且数据也会收敛。 如果在另一个发布，再选择的值已发布项目的源表*compensate_for_errors*必须是两个项目相同的。  
   
- [  **@stream_blob_columns=** ] **'**_stream_blob_columns_  
- 指定在复制二进制大型对象列时使用数据流优化。 *stream_blob_columns*是**nvarchar(5)**，默认值为 FALSE。 **true**意味着将尝试进行优化。 *stream_blob_columns*设置为 true 时启用 FILESTREAM。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请使用**sp_changemergearticle**若要设置*stream_blob_columns*为 false。  
+`[ @stream_blob_columns = ] 'stream_blob_columns'` 指定在复制二进制大型对象列时使用数据流优化。 *stream_blob_columns*是**nvarchar(5)**，默认值为 FALSE。 **true**意味着将尝试进行优化。 *stream_blob_columns*设置为 true 时启用 FILESTREAM。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请使用**sp_changemergearticle**若要设置*stream_blob_columns*为 false。  
   
 > [!IMPORTANT]  
 >  启用此内存优化可能会降低在同步期间合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。  

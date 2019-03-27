@@ -16,12 +16,12 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 529ad27a4ebc220f8d17a58e9c05605e785237a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807719"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494219"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,32 +44,26 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_login** =] **'***job_login*****  
- 是用于运行代理的帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *这是无法更改为非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
+`[ @job_login = ] 'job_login'` 是用于运行代理的帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *这是无法更改为非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
- [ **@job_password** =] **'***job_password*****  
- 是用于运行代理的帐户的密码。 *job_password*是**sysname**，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 是用于运行代理的帐户的密码。 *job_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- 连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*是**smallint**，默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并**1**指定 Windows 身份验证。  
+`[ @publisher_security_mode = ] publisher_security_mode` 安全模式使用代理连接到发布服务器时。 *publisher_security_mode*是**smallint**，默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并**1**指定 Windows 身份验证。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'***publisher_login***’**  
- 连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*时使用连接到发布服务器。  
+`[ @publisher_login = ] 'publisher_login'` 是连接到发布服务器时使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*时使用连接到发布服务器。  
   
- [ **@publisher_password** =] **'***publisher_password*****  
- 连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
+`[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [ **@publisher** =] **'***发布服务器*****  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 仅非 SQL Server 发布服务器支持此参数。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 仅非 SQL Server 发布服务器支持此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -86,7 +80,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_helplogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
+ [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

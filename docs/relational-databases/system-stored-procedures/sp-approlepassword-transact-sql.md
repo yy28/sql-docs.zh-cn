@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a226b17a1394cdb37982367d5c4b367f72a84ffe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131507"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492252"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'**_角色_  
- 是应用程序角色的名称。 *角色* 是 **sysname** ，无默认值。 *角色*必须存在于当前数据库。  
+`[ @rolename = ] 'role'` 是应用程序角色的名称。 *角色* 是 **sysname** ，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@newpwd =** ] **'**_密码_  
- 应用程序角色的新密码。 *密码* 是 **sysname** ，无默认值。 *密码*不能为 NULL。  
+`[ @newpwd = ] 'password'` 是应用程序角色的新密码。 *密码* 是 **sysname** ，无默认值。 *密码*不能为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
@@ -71,7 +69,7 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -5,17 +5,17 @@ description: 本教程演示如何查询 SQL Server 2019 大数据群集 （预�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494399"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
 
@@ -33,7 +33,7 @@ ms.locfileid: "54241668"
 ## <a id="prereqs"></a> 先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
 - [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)
@@ -44,18 +44,18 @@ ms.locfileid: "54241668"
 
 1. 在 Azure Data Studio，连接到你的大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-2. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
+1. 在该连接上双击**服务器**窗口以显示 SQL Server 主实例的服务器仪表板。 选择**新查询**。
 
    ![SQL Server 主实例查询](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. 运行以下 TRANSACT-SQL 命令，以将上下文更改为**销售**主实例中的数据库。
+1. 运行以下 TRANSACT-SQL 命令，以将上下文更改为**销售**主实例中的数据库。
 
    ```sql
    USE Sales
    GO
    ```
 
-4. 定义要从 HDFS 读取的 CSV 文件格式。 按 F5 运行该语句。
+1. 定义要从 HDFS 读取的 CSV 文件格式。 按 F5 运行该语句。
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ ms.locfileid: "54241668"
    );
    ```
 
-5. 创建外部表可以读取`/clickstream_data`从存储池。 **SqlStoragePool**可从大数据群集的主实例进行访问。
+1. 如果尚不存在，请创建存储池到外部数据源。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. 创建外部表可以读取`/clickstream_data`从存储池。 **SqlStoragePool**可从大数据群集的主实例进行访问。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

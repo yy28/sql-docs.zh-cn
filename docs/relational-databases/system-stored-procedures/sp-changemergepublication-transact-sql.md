@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788479"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493257"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@property=**] **'***属性*****  
- 给定发布的要更改的属性。 *属性*是**sysname**，可以是值中的一个列在后面的表。  
+`[ @property = ] 'property'` 要为给定发布更改的属性。 *属性*是**sysname**，可以是值中的一个列在后面的表。  
   
- [ **@value=**] **'***值*****  
- 指定属性的新值。 *值*是**nvarchar(255)**，可以是值中的一个列在后面的表。  
+`[ @value = ] 'value'` 指定属性的新值。 *值*是**nvarchar(255)**，可以是值中的一个列在后面的表。  
   
  下表说明的发布，可以更改，以及限制对这些属性值的属性。  
   
@@ -95,7 +92,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**generation_leveling_threshold**|**int**|指定生成中包含的更改数。 生成是指传递到发布服务器或订阅服务器的更改的集合。|  
 |**keep_partition_changes**|**true**|对同步进行优化，只有所包含的一些行位于已更改分区中的订阅服务器才会受影响。 若要更改此属性，则需要新的快照。|  
 ||**false**|不优化同步，分区中的数据发生更改时，对发送到订阅服务器的分区进行验证。 若要更改此属性，则需要新的快照。|  
-|**达到**||这是**int**表示的最大可以对发布运行的并发合并进程数。 如果为 0，则没有限制。如果计划同时运行的合并进程数超出这一数值，则将多出的作业放在队列中等待，直到当前的合并进程完成。|  
+|**max_concurrent_merge**||这是**int**表示的最大可以对发布运行的并发合并进程数。 如果为 0，则没有限制。如果计划同时运行的合并进程数超出这一数值，则将多出的作业放在队列中等待，直到当前的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**||这是**int** ，表示要生成已筛选的数据快照会话的最大数目快照可同时运行的合并发布使用参数化行筛选器。 如果**0**，没有任何限制。 如果计划同时执行的快照进程数超出这一数值，则多出的作业将被放到队列中等待，直到当前运行的合并进程完成。|  
 |**post_snapshot_script**||指定一个指向 **.sql**文件位置。 在初始同步过程中应用了所有其他复制的对象脚本和数据之后，分发代理或合并代理才运行快照后脚本。 若要更改此属性，则需要新的快照。|  
 |**pre_snapshot_script**||指定一个指向 **.sql**文件位置。 合并代理运行任何复制的对象脚本之前的快照前脚本时应用于订阅服务器上的快照。 若要更改此属性，则需要新的快照。|  
@@ -105,7 +102,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|将发布信息从 Active Directory 上删除。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。|  
 ||**0**|不复制 DDL 语句。|  
-|**保留期**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
+|**retention**||这是**int**表示的数*retention_period_unit*单元要保存为给定发布的更改。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：对于合并发布的保持期具有 24 小时的宽限期，以适应不同的时区中的订阅服务器。|  
 |**retention_period_unit**|**day**|按天指定保持期。|  
 ||**week**|按周指定保持期。|  
 ||month|按月指定保持期。|  
@@ -114,8 +111,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|快照文件存储在由指定的备用位置*alt_snapshot_folder*。 此组合指定将快照文件同时存储在默认位置和备用位置中。|  
 |**snapshot_ready**|**true**|用于发布的快照已准备就绪。|  
 ||**false**|用于发布的快照尚未准备就绪。|  
-|**status**|**活动**|发布处于活动状态。|  
-||**非活动状态**|发布处于非活动状态。|  
+|**status**|**active**|发布处于活动状态。|  
+||**inactive**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
 ||**character**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
 |**use_partition_groups**<br /><br /> 注意：在使用 partition_groups 后，如果要恢复为使用**setupbelongs**，并设置**use_partition_groups = false**中**changemergearticle**，这可能不正确反映后拍摄快照。 快照生成的触发器符合分区组的要求。<br /><br /> 与此方案的解决方法是将状态设置为 Inactive，修改**use_partition_groups**，然后将状态设置为处于活动状态。|**true**|发布使用预计算分区。|  
@@ -124,8 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||用于 Web 同步的 Internet URL 的默认值。|  
 |NULL（默认值）||返回支持的值的列表*属性*。|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作可能会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作可能会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定更改发布不使快照。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  请参阅备注部分的属性，更改时需要生成新快照。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 确认此存储过程所执行的操作是否需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定更改发布不不是需要重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   
@@ -195,8 +190,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

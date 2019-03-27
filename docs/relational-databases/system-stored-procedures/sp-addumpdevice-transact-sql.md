@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209446"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492869"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
 
 将备份设备添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   
@@ -48,19 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@devtype=** ] **'***device_type***'**  
- 备份设备的类型。 *设备类型*是**varchar （20)**，无默认值，并且可以是以下值之一。  
+`[ @devtype = ] 'device_type'` 为备份设备的类型。 *设备类型*是**varchar （20)**，无默认值，并且可以是以下值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**disk**|硬盘文件作为备份设备。|  
-|**磁带**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
   
- [ **@logicalname =** ] **'***logical_name***'**  
- 在 BACKUP 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name*是**sysname**，无默认值，且不能为 NULL。  
+`[ @logicalname = ] 'logical_name'` 是在 BACKUP 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name*是**sysname**，无默认值，且不能为 NULL。  
   
- [ **@physicalname =** ] **'***physical_name***'**  
- 备份设备的物理名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name*是**nvarchar(260)**，无默认值，且不能为 NULL。  
+`[ @physicalname = ] 'physical_name'` 是物理备份设备的名称。 物理名称必须遵从操作系统文件名规则或网络设备的通用命名约定，并且必须包含完整路径。 *physical_name*是**nvarchar(260)**，无默认值，且不能为 NULL。  
   
  在远程网络位置上创建备份设备时，请确保启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]时所用的名称对远程计算机有相应的写权限。  
   
@@ -69,11 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  此过程会在目录中输入指定的物理名称。 此过程不会尝试访问或创建设备。  
   
- [ **@cntrltype =** ] **'***controller_type***'**  
- 已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
+`[ @cntrltype = ] 'controller_type'` 已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
   
- [ **@devstatus =** ] **'***device_status***'**  
- 已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
+`[ @devstatus = ] 'device_status'` 已过时。 如果指定该选项，则忽略此参数。 支持它完全是为了向后兼容。 新的使用**sp_addumpdevice**应省略此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

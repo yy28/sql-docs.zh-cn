@@ -4,18 +4,18 @@ description: 了解如何建模、 定型和使用分区时使用的 SQL Server 
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493329"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 上的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "57017893"
 
 + SQL Server 2019 预览版数据库引擎实例中使用机器学习服务和 R 集成。
 
-检查版本，通过执行**`SELECT @@Version`** 作为查询工具中的 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.3)-15.0.x"。
+检查版本，通过执行**`SELECT @@Version`** 作为查询工具中的 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
 
 检查可用性的 R 包通过返回格式正确的数据库引擎实例与当前安装的所有 R 包列表：
 

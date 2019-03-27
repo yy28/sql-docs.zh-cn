@@ -5,17 +5,17 @@ description: 本文介绍了最新的更新以及 SQL Server 2019 大数据群�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/05/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4c178c5868789bec2dc80a4b68558f12afbc90d2
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58073223"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494179"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -23,37 +23,28 @@ ms.locfileid: "58073223"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp23"></a> CTP 2.3 (SQL 2019)
+## <a id="ctp24"></a> CTP 2.4 （年 3 月）
 
-2019 年 2 月&nbsp; &nbsp;  /  &nbsp; &nbsp; SQL Server 2019 &nbsp; &nbsp;  /  &nbsp; &nbsp; CTP2.3
+以下部分介绍的新功能和 SQL Server 2019 CTP 2.4 中的大数据群集的已知的问题。
 
-### <a name="new-features"></a>新增功能
+### <a name="whats-new"></a>新增功能
 
-| 新功能 | 详细信息 |
-| :---------- | :------ |
-| [将在 SQL Server 大数据群集，在 IntelliJ 中的 Spark 作业提交](spark-submit-job-intellij-tool-plugin.md)。 | &nbsp; |
-| [适用于应用程序部署和管理群集的常见 CLI](big-data-cluster-create-apps.md)。 | &nbsp; |
-| [VS Code 扩展应用程序部署到 SQL Server 大数据群集](app-deployment-extension.md)。 | &nbsp; |
-| [将更改为**mssqlctl**工具命令的用法](#mssqlctlctp23)。 | &nbsp; |
-| [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md)。 | &nbsp; |
-| 外部 HDFS 兼容存储装载到大数据群集**HDFS 分层**。 | 请参阅[HDFS 分层](hdfs-tiering.md)。 |
-| SQL Server 主实例和 HDFS/Spark 网关的新统一的连接体验。 | 请参阅[SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。 |
-| 删除与群集**mssqlctl 群集删除**现在删除仅在命名空间中的对象的大数据群集的一部分。 | 命名空间不会删除。 但是，在早期版本的此命令未删除整个命名空间。 |
-| _安全_终结点名称已更改并且合并。 | _上一个终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-security-nodeport**<br/><br/>_新的终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-security** |
-| _代理_终结点名称已更改并且合并。 | _上一个终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-proxy-nodeport**<br/><br/>_新的终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-service-proxy** |
-| _控制器_终结点名称已更改并且合并。 | _上一个终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-lb**<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **service-mssql-controller-nodeport**<br/><br/>_新的终结点：_<br/> &nbsp; &nbsp; &nbsp; &bull; &nbsp; **endpoint-controller** |
-| &nbsp; | &nbsp; |
+| 新的功能更新 | 详细信息 |
+|:---|:---|
+| 用于运行深度学习与 Spark 中的 TensorFlow 支持 GPU 的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md) |
+| **SqlDataPool**并**SqlStoragePool**默认情况下不能再创建数据源。 | 根据需要手动创建这些文件。 请参阅[已知问题](#externaltablesctp24)。 |
+| Spark 运行时升级到 Spark 2.4。 | |
 
-### <a name="known-issues-deployment"></a>已知问题：部署
+### <a name="known-issues"></a>已知问题
+
+以下部分介绍的已知的问题和在此版本的限制。
+
+#### <a name="deployment"></a>部署
 
 - 不支持从以前的版本升级的大数据数据群集。
 
    > [!IMPORTANT]
    > 必须备份您的数据，然后删除现有的大数据群集 (使用以前版本的**mssqlctl**) 之前部署的最新版本。 有关详细信息，请参阅[升级到新版本](deployment-guidance.md#upgrade)。
-
-- **ACCEPT_EULA**环境变量必须是"yes"是"以接受 EULA。 以前的版本中允许使用"y"和"Y"，但这些不再被接受，并将导致部署失败。
-
-- **CLUSTER_PLATFORM**像在以前的版本中，环境变量不具有默认值。
 
 - 在部署后在 AKS 上，可能会看到从部署的以下两个警告事件。 这两个这些事件已知问题，但它们不会阻止您成功部署 AKS 上的大数据群集。
 
@@ -63,7 +54,7 @@ ms.locfileid: "58073223"
 
 - 如果大数据群集部署失败，则不会删除关联的命名空间。 这可能导致在群集上的孤立命名空间。 一种解决方法是在部署具有相同名称的群集之前手动删除该命名空间。
 
-### <a name="known-issues-kubeadm-deployments"></a>已知问题： kubeadm 部署
+#### <a name="kubeadm-deployments"></a>kubeadm 部署
 
 如果您使用 kubeadm Kubernetes 部署多台计算机上，群集管理门户不正确显示连接到大数据群集所需的终结点。 如果遇到此问题，请使用以下解决方法来发现服务终结点 IP 地址：
 
@@ -89,19 +80,20 @@ ms.locfileid: "58073223"
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
-### <a id="mssqlctlctp23"></a> 已知问题： mssqlctl
+#### <a id="externaltablesctp24"></a> 外部表
 
-- **Mssqlctl**工具更改从动词-名词命令名词谓词顺序的排序。 例如，`mssqlctl create cluster`现在`mssqlctl cluster create`。
+- 大数据群集部署将不再创建**SqlDataPool**并**SqlStoragePool**外部数据源。 可以创建这些数据源手动来支持对数据池和存储池数据虚拟化。
 
-- `--name`参数现在是在创建与群集时所需`mssqlctl cluster create`。
+   ```sql
+   -- Create data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
-   ```bash
-   mssqlctl cluster create --name <cluster_name>
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
    ```
-
-- 有关升级到最新版本的大数据群集的重要信息和**mssqlctl**，请参阅[升级到新版本](deployment-guidance.md#upgrade)。
-
-### <a name="known-issues-external-tables"></a>已知问题：外部表
 
 - 它是可以创建一个表，其中包含不支持的列类型的数据池外部表。 如果查询外部表，您会收到类似于以下内容一条消息：
 
@@ -113,11 +105,11 @@ ms.locfileid: "58073223"
 
 - 如果要创建向 Oracle 使用字符数据类型的外部表，Azure Data Studio 的虚拟化向导将这些列作为 VARCHAR 解释外部表定义中。 外部表 DDL 中，这将导致失败。 请修改使用 NVARCHAR2 类型，或手动创建 EXTERNAL TABLE 语句，而不是使用向导指定 NVARCHAR 的 Oracle 架构。
 
-### <a name="known-issues-application-deployment"></a>已知问题：应用程序部署
+#### <a name="application-deployment"></a>应用程序部署
 
 - 在从 RESTful API 调用 R、 Python 或 MLeap 应用程序，该调用将超时在 5 分钟内。
 
-### <a name="known-issues-spark-and-notebooks"></a>已知问题：Spark 和笔记本
+#### <a name="spark-and-notebooks"></a>Spark 和笔记本
 
 - POD IP 地址可能会更改 Kubernetes 环境中，为 Pod 重新启动。 在 master pod 将重新启动的方案中，Spark 会话可能会因`NoRoteToHostException`。 这由于不使用新的 IP 获取刷新的 JVM 缓存的地址。
 
@@ -125,7 +117,7 @@ ms.locfileid: "58073223"
 
 - 在笔记本中，如果单击**添加文本**命令，在预览模式而非编辑模式中添加文本单元格。 您可以单击预览图标以切换到编辑模式和编辑该单元格。
 
-### <a name="known-issues-hdfs"></a>已知问题：HDFS
+#### <a name="hdfs"></a>HDFS
 
 - 如果右键单击来预览它的 HDFS 中的某个文件时，可能会看到以下错误：
 
@@ -135,7 +127,129 @@ ms.locfileid: "58073223"
 
 - 不支持对 HDFS 涉及对 hdfs-site.xml 更改的配置更改。
 
-### <a name="known-issues-security"></a>已知问题：安全性
+#### <a name="security"></a>安全性
+
+- SA_PASSWORD 是一部分的环境和可发现性 （例如在 cord 转储文件中）。 在部署后，必须重置 SA_PASSWORD 主实例上。 这不是一个 bug，但安全步骤。 有关如何更改 SA_PASSWORD Linux 容器中的详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
+
+- AKS 日志可能包含用于大数据群集部署的 SA 密码。
+
+## <a id="ctp23"></a> CTP 2.3 （年 2 月）
+
+以下部分介绍的新功能和 SQL Server 2019 CTP 2.3 中的大数据群集的已知的问题。
+
+### <a name="new-features"></a>新增功能
+
+| 新功能 | 详细信息 |
+| :---------- | :------ |
+| 将在 IntelliJ 中的大数据群集上的 Spark 作业提交。 | [提交在 IntelliJ 中的 SQL Server 大数据群集上的 Spark 作业](spark-submit-job-intellij-tool-plugin.md) |
+| 应用程序部署和群集管理的的常见 CLI。 | [如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序](big-data-cluster-create-apps.md) |
+| VS Code 扩展部署到的大数据群集的应用程序。 | [如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集](app-deployment-extension.md) |
+| 将更改为**mssqlctl**工具命令的用法。 | 有关更多详细信息，请参阅[mssqlctl 的已知问题](#mssqlctlctp23)。 |
+| 在大数据群集中使用 Sparklyr | [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md) |
+| 外部 HDFS 兼容存储装载到大数据群集**HDFS 分层**。 | 请参阅[HDFS 分层](hdfs-tiering.md)。 |
+| SQL Server 主实例和 HDFS/Spark 网关的新统一的连接体验。 | 请参阅[SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。 |
+| 删除与群集**mssqlctl 群集删除**现在删除仅在命名空间中的对象的大数据群集的一部分。 | 命名空间不会删除。 但是，在早期版本的此命令未删除整个命名空间。 |
+| _安全_终结点名称已更改并且合并。 | **服务安全 lb**并**服务安全 nodeport**已合并到**终结点安全**终结点。 |
+| _代理_终结点名称已更改并且合并。 | **服务代理 lb**并**服务代理 nodeport**已合并到**终结点服务代理**终结点。 |
+| _控制器_终结点名称已更改并且合并。 | **服务 mssql 控制器 lb**并**服务 mssql 控制器 nodeport**已合并到**终结点控制器**终结点。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知问题
+
+以下部分介绍的已知的问题和在此版本的限制。
+
+#### <a name="deployment"></a>部署
+
+- 不支持从以前的版本升级的大数据数据群集。
+
+   > [!IMPORTANT]
+   > 必须备份您的数据，然后删除现有的大数据群集 (使用以前版本的**mssqlctl**) 之前部署的最新版本。 有关详细信息，请参阅[升级到新版本](deployment-guidance.md#upgrade)。
+
+- **ACCEPT_EULA**环境变量必须是"yes"是"以接受 EULA。 以前的版本中允许使用"y"和"Y"，但这些不再被接受，并将导致部署失败。
+
+- **CLUSTER_PLATFORM**像在以前的版本中，环境变量不具有默认值。
+
+- 在部署后在 AKS 上，可能会看到从部署的以下两个警告事件。 这两个这些事件已知问题，但它们不会阻止您成功部署 AKS 上的大数据群集。
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- 如果大数据群集部署失败，则不会删除关联的命名空间。 这可能导致在群集上的孤立命名空间。 一种解决方法是在部署具有相同名称的群集之前手动删除该命名空间。
+
+#### <a name="kubeadm-deployments"></a>kubeadm 部署
+
+如果您使用 kubeadm Kubernetes 部署多台计算机上，群集管理门户不正确显示连接到大数据群集所需的终结点。 如果遇到此问题，请使用以下解决方法来发现服务终结点 IP 地址：
+
+- 如果从连接在群集中，查询你想要连接到的终结点的服务 IP Kubernetes。 例如，以下**kubectl**命令显示 SQL Server 主实例的 IP 地址：
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- 如果您正在连接从群集外部的使用以下步骤连接：
+
+   1. 获取运行 SQL Server 主实例的节点的 IP 地址： `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`。
+
+   1. 连接到 SQL Server 主实例使用此 IP 地址。
+
+   1. 查询**cluster_endpoint_table** master 数据库中的其他外部终结点。
+
+      如果失败，并且连接超时，就可以单独节点之间设有防火墙。 在这种情况下，必须与 Kubernetes 群集管理员联系并要求向外部公开的节点 ip。 这可能是任何节点。 然后可以使用该 IP 和相应的端口连接到群集中运行的各种服务。 例如，管理员可以通过运行来查找此 IP:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- **Mssqlctl**工具更改从动词-名词命令名词谓词顺序的排序。 例如，`mssqlctl create cluster`现在`mssqlctl cluster create`。
+
+- `--name`参数现在是在创建与群集时所需`mssqlctl cluster create`。
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- 有关升级到最新版本的大数据群集的重要信息和**mssqlctl**，请参阅[升级到新版本](deployment-guidance.md#upgrade)。
+
+#### <a name="external-tables"></a>外部表
+
+- 它是可以创建一个表，其中包含不支持的列类型的数据池外部表。 如果查询外部表，您会收到类似于以下内容一条消息：
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 如果查询存储池外部表，可能会遇到错误，如果基础文件要在同一时间复制到 HDFS。
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 如果要创建向 Oracle 使用字符数据类型的外部表，Azure Data Studio 的虚拟化向导将这些列作为 VARCHAR 解释外部表定义中。 外部表 DDL 中，这将导致失败。 请修改使用 NVARCHAR2 类型，或手动创建 EXTERNAL TABLE 语句，而不是使用向导指定 NVARCHAR 的 Oracle 架构。
+
+#### <a name="application-deployment"></a>应用程序部署
+
+- 在从 RESTful API 调用 R、 Python 或 MLeap 应用程序，该调用将超时在 5 分钟内。
+
+#### <a name="spark-and-notebooks"></a>Spark 和笔记本
+
+- POD IP 地址可能会更改 Kubernetes 环境中，为 Pod 重新启动。 在 master pod 将重新启动的方案中，Spark 会话可能会因`NoRoteToHostException`。 这由于不使用新的 IP 获取刷新的 JVM 缓存的地址。
+
+- 如果您有在 Windows 上的已安装的 Jupyter 和单独的 Python，Spark 笔记本可能会失败。 若要解决此问题，请升级到最新版本的 Jupyter。
+
+- 在笔记本中，如果单击**添加文本**命令，在预览模式而非编辑模式中添加文本单元格。 您可以单击预览图标以切换到编辑模式和编辑该单元格。
+
+#### <a name="hdfs"></a>HDFS
+
+- 如果右键单击来预览它的 HDFS 中的某个文件时，可能会看到以下错误：
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   目前没有办法来预览文件大于 30 MB 的 Azure Data Studio。
+
+- 不支持对 HDFS 涉及对 hdfs-site.xml 更改的配置更改。
+
+#### <a name="security"></a>安全性
 
 - SA_PASSWORD 是一部分的环境和可发现性 （例如在 cord 转储文件中）。 在部署后，必须重置 SA_PASSWORD 主实例上。 这不是一个 bug，但安全步骤。 有关如何更改 SA_PASSWORD Linux 容器中的详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。
 
@@ -145,7 +259,7 @@ ms.locfileid: "58073223"
 
 以下部分介绍的新功能和 SQL Server 2019 CTP 2.2 中的大数据群集的已知的问题。
 
-### <a name="whats-in-the-ctp-22-release"></a>在 CTP 2.2 版本是什么？
+### <a name="new-features"></a>新增功能
 
 - 使用群集管理门户的访问`/portal`(**https://\<ip 地址\>: 30777/门户**)。
 - 更改从主池服务名称`service-master-pool-lb`并`service-master-pool-nodeport`到`endpoint-master-pool`。
@@ -154,7 +268,7 @@ ms.locfileid: "58073223"
 
 ### <a name="known-issues"></a>已知问题
 
-以下部分提供有关 SQL Server CTP 2.2 中的大数据群集的已知的问题。
+以下部分介绍的已知的问题和在此版本的限制。
 
 #### <a name="deployment"></a>部署
 
@@ -214,7 +328,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 以下部分介绍的新功能和 SQL Server 2019 CTP 2.1 中的大数据群集的已知的问题。
 
-### <a name="whats-in-the-ctp-21-release"></a>在 CTP 2.1 版本是什么？
+### <a name="new-features"></a>新增功能
 
 - [将 Python 和 R 的应用部署](big-data-cluster-create-apps.md)大数据群集中。
 - 新版本**mssqlctl**和更新映像。 
@@ -278,7 +392,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 以下部分介绍的新功能和 SQL Server 2019 CTP 2.0 中的大数据群集的已知的问题。
 
-### <a name="whats-in-the-ctp-20-release"></a>在 CTP 2.0 版中是什么？
+### <a name="new-features"></a>新增功能
 
 - 使用 mssqlctl 管理工具的简单的部署体验
 - 在 Azure Data Studio 的本机笔记本体验

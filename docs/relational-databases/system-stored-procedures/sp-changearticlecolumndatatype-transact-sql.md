@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133557"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492467"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'**_发布_  
- Oracle 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 为 Oracle 发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =** ] **'**_文章_  
- 项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@column**=] **'**_列_  
- 要更改数据类型映射的列的名称。 *列*是**sysname**，无默认值。  
+`[ @column = ] 'column'` 要为其更改的数据类型的列的名称映射。 *列*是**sysname**，无默认值。  
   
- [ **@type** =] **'**_类型_  
- 是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *类型*是**sysname**，默认值为 NULL。  
+`[ @type = ] 'type'` 是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *类型*是**sysname**，默认值为 NULL。  
   
- [ **@length** =]*长度*  
- 目标列中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的长度。 *长度*是**bigint**，默认值为 NULL。  
+`[ @length = ] length` 长度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *长度*是**bigint**，默认值为 NULL。  
   
- [ **@precision**=]*精度*  
- 目标列中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的精度。 *精度*是**bigint**，默认值为 NULL。  
+`[ @precision = ] precision` 精度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *精度*是**bigint**，默认值为 NULL。  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

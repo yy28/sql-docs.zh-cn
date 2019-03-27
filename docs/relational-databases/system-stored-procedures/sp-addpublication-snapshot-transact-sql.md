@@ -16,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc55175177aec3db50df14bc27ec425c5eedf97f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493970"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@frequency_type=**] *frequency_type*  
- 执行快照代理的频率。 *frequency_type*是**int**，可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 是用于执行快照代理的频率。 *frequency_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -74,8 +72,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。|  
 |**128**|计算机空闲时运行|  
   
- [ **@frequency_interval=**] *frequency_interval*  
- 是要将应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，可以是下列值之一。  
+`[ @frequency_interval = ] frequency_interval` 是要将应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，可以是下列值之一。  
   
 |frequency_type 的值|对 frequency_interval 的影响|  
 |------------------------------|-----------------------------------|  
@@ -87,8 +84,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|*frequency_interval*是未使用。|  
 |**128**|*frequency_interval*是未使用。|  
   
- [ **@frequency_subday=**] *frequency_subday*  
- 是的单位*freq_subday_interval*。 *frequency_subday*是**int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 是的单位*freq_subday_interval*。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -97,56 +93,42 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** （默认值）|Minute|  
 |**8**|Hour|  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
- 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 5，这意味着每隔 5 分钟。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 5，这意味着每隔 5 分钟。  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
- 快照代理运行的日期。 *frequency_relative_interval*是**int**，默认值为 1。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 为运行快照代理的日期。 *frequency_relative_interval*是**int**，默认值为 1。  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 0。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 0。  
   
- [ **@active_start_date=**] *active_start_date*  
- 第一次安排快照代理的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 0。  
+`[ @active_start_date = ] active_start_date` 是第一个快照代理的日期安排，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 0。  
   
- [ **@active_end_date=**] *active_end_date*  
- 停止安排快照代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 99991231，表示年 12 月 31 日到 9999。  
+`[ @active_end_date = ] active_end_date` 是正在计划停止快照代理的日期格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 99991231，表示年 12 月 31 日到 9999。  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- 第一次安排快照代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 0。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 是第一个快照代理时的时间安排，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 0。  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
- 停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 235959，表示 11:59:59 PM 24 小时制。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 是的停止快照代理的时间安排，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 235959，表示 11:59:59 PM 24 小时制。  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_  
- 使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)** 默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果*snapshot_agent_name*指定了，则*job_login*并*job_password*必须为 NULL。  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` 如果使用现有作业，则，是一个现有的快照代理作业名称的名称。 *snapshot_agent_name*是**nvarchar(100)** 默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果*snapshot_agent_name*指定了，则*job_login*并*job_password*必须为 NULL。  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- 连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*是**smallint**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并**1**指定 Windows 身份验证。 值为**0**必须为指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` 安全模式使用代理连接到发布服务器时。 *publisher_security_mode*是**smallint**，默认值为 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并**1**指定 Windows 身份验证。 值为**0**必须为指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_  
- 连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的帐户*job_login*时要使用连接到发布服务器。  
+`[ @publisher_login = ] 'publisher_login'` 是连接到发布服务器时使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的帐户*job_login*时要使用连接到发布服务器。  
   
- [ **@publisher_password**=] **'**_publisher_password_  
- 连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
+`[ @publisher_password = ] 'publisher_password'` 连接到发布服务器时使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@job_login**=] **'**_job_login_  
- 是用于运行代理的帐户的登录名。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
+`[ @job_login = ] 'job_login'` 是用于运行代理的帐户的登录名。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!NOTE]
 >  对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，这必须是相同的登录名中指定[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)。  
   
- [ **@job_password**=] **'**_job_password_  
- 用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 创建新的快照代理作业时，必须提供此参数。  
+`[ @job_password = ] 'job_password'` 是用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*创建中的快照代理时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -166,9 +148,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="see-also"></a>请参阅  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [创建并应用快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

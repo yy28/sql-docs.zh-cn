@@ -3,18 +3,18 @@ title: 在 SQL Server 2019-SQL Server 机器学习服务的 Java 语言扩展
 description: 安装、 配置和验证 Linux 和 Windows 系统上 SQL Server 2019 的 Java 语言扩展。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a18886ea4daff3fb87853a556b67ad0562c2efd3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494259"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 Java 语言扩展 
 
@@ -39,7 +39,7 @@ SQL Server 2019 预览实例是必需的。 早期版本不具有 Java 集成。
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 用户帐户控制 | 用户帐户控制 |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 用户帐户控制 | 否 |
 
-在 Linux 上， **mssql server 扩展性 java**包会自动安装 JRE 8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JAVA_HOME 的环境变量。
+在 Linux 上， **mssql server 扩展性 java**包会自动安装 JRE 8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JRE_HOME 环境变量。
 
 在 Windows 中，我们建议安装下默认 JDK`/Program Files/`文件夹在可能的情况。 否则，需要额外配置，以授予对可执行文件的权限。 有关详细信息，请参阅[授予的权限 (Windows)](#perms-nonwindows)本文档中的部分。
 
@@ -72,22 +72,18 @@ sudo zypper install mssql-server-extensibility-java
 
 ### <a name="grant-permissions-on-linux"></a>Linux 上的授予权限
 
-若要向 SQL Server 提供有权执行的 Java 类，需要设置权限。
+不需要执行此步骤中，如果您使用的外部库。 工作的推荐的方法使用外部库。 从 jar 文件创建外部库的帮助，请参阅[创建外部库](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
-若要授予读取和执行 jar 文件或类文件的访问权限，请运行以下**chmod**命令上每个类或 jar 文件。 我们建议将类文件放在一个 jar，当您使用 SQL Server 时。 创建一个 jar 的帮助，请参阅[如何创建一个 jar 文件](#create-jar)。
+如果不使用外部库，您需要向 SQL Server 提供有权在 jar 中执行的 Java 类。
+
+若要授予读取和执行 jar 文件的访问权限，请运行以下**chmod**命令上的 jar 文件。 我们建议始终将类文件放在一个 jar，当您使用 SQL Server 时。 创建一个 jar 的帮助，请参阅[如何创建一个 jar 文件](#create-jar)。
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
-您还需要为 mssql_satellite 权限授予读取/执行的目录或 jar 文件。
+此外需要为要读取/执行的 jar 文件提供 mssql_satellite 权限。
 
-* 如果你正在从 SQL Server 调用的类文件，mssql_satellite 将需要读取/执行权限*每个*在文件夹层次结构中，从根下的直接父目录。
 
-* 如果你正在从 SQL Server 调用 jar 文件，它就足以 jar 文件本身上运行命令。
-
-```cmd
-chown mssql_satellite:mssql_satellite <directory>
-```
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -107,19 +103,21 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 4. 完成安装向导，然后继续执行下面的两个任务。
 
-### <a name="add-the-javahome-variable"></a>添加 JAVA_HOME 变量
+### <a name="add-the-jrehome-variable"></a>添加 JRE_HOME 变量
 
-JAVA_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤中，系统环境变量为其创建在 Windows 上。
+JRE_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤中，系统环境变量为其创建在 Windows 上。
 
-1. 查找并复制 JDK/JRE 路径 (例如， `C:\Program Files\Java\jdk1.8.0_201`)。
+1. 查找并复制 JRE 主目录路径 (例如， `C:\Program Files\Zulu\zulu-8\jre\`)。
 
-    具体取决于你的首选 Java 分发，你的 JRE 的 JDK 的位置可能不同于上面的示例路径。
+    具体取决于你的首选 Java 分发，你的 JRE 的 JDK 的位置可能不同于上面的示例路径。 
+    即使已安装 JDK，则通常时间将获取 JRE 子文件夹作为该安装的一部分。 
+    Java 扩展将尝试从路径 %jre_home%\bin\server 加载 jvm.dll。
 
 2. 在控制面板中，打开**系统和安全**，打开**系统**，然后单击**高级系统属性**。
 
 3. 单击**环境变量**。
 
-4. 创建新的系统变量用于`JAVA_HOME`JDK/JRE 路径 （在步骤 1 中找到） 的值。
+4. 创建新的系统变量用于`JRE_HOME`JDK/JRE 路径 （在步骤 1 中找到） 的值。
 
 5. 重新启动[快速启动板](../concepts/extensibility-framework.md#launchpad)。
 
@@ -129,24 +127,24 @@ JAVA_HOME 是一个环境变量，指定 Java 解释器的位置。 在此步骤
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>授予对非默认 JDK 文件夹 (仅 Windows) 访问权限
+### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>授予对非默认 JRE 文件夹 (仅 Windows) 访问权限
 
-如果在默认文件夹中安装 JDK/JRE，可以跳过此步骤。 
-
-对于非默认文件夹安装，运行**icacls**命令从*提升*行，以授予访问权限**SQLRUsergroup**和 SQL Server 服务帐户 （在**ALL_APPLICATION_PACKAGES**) 用于访问 JVM 和 Java classpath。 命令将以递归方式授予对所有文件和给定的目录路径下的文件夹的访问权限。
+运行**icacls**命令从*提升*行，以授予访问权限**SQLRUsergroup**和 SQL Server 服务帐户 (在**ALL_APPLICATION_包**) 用于访问 JRE。 命令将以递归方式授予对所有文件和给定的目录路径下的文件夹的访问权限。
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 的权限
 
 对于命名实例，将实例名追加到 SQLRUsergroup (例如， `SQLRUsergroupINSTANCENAME`)。
 
 ```cmd
-icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 ```
+
+如果在 Windows 上的程序文件下的默认文件夹中安装 JDK/JRE，可以跳过此步骤。
 
 #### <a name="appcontainer-permissions"></a>AppContainer 权限
 
 ```cmd
-icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
 <a name="configure-script-execution"></a>
@@ -165,11 +163,11 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 若要确认安装是否正常工作，请创建并运行[示例应用程序](java-first-sample.md)使用您刚安装，将文件放在之前配置的类路径中的 JDK。
 
-## <a name="differences-in-ctp-23"></a>CTP 2.3 中的差异
+## <a name="differences-in-ctp-24"></a>CTP 2.4 中的差异
 
 如果你已熟悉机器学习服务，扩展的授权和隔离模型已在此版本中更改。 有关详细信息，请参阅[SQL Server 机器 2019年学习服务安装中的差异](../install/sql-machine-learning-services-ver15.md)。
 
-## <a name="limitations-in-ctp-23"></a>CTP 2.3 中的限制
+## <a name="limitations-in-ctp-24"></a>CTP 2.4 中的限制
 
 * 输入和输出缓冲区中值的数目不能超过`MAX_INT (2^31-1)`，因为它是可以在 Java 中的数组中分配的元素的最大数目。
 
@@ -183,7 +181,8 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="how-to-create-a-jar-file-from-class-files"></a>如何从类文件中创建的 jar 文件
 
-导航到包含您的类文件的文件夹并运行以下命令：
+我们建议执行从 SQL Server 时始终将类文件打包成 jar。
+若要从类文件创建一个 jar，请导航到包含您的类文件的文件夹并运行以下命令：
 
 ```cmd
 jar -cf <MyJar.jar> *.class

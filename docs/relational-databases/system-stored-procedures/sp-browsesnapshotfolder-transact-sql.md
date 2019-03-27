@@ -16,12 +16,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bd85e4d3e76df8cf5fe0b30350fb1a02959516f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a2ace8d02997b7c0647be0b7abe26ff098849905
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591151"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493999"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是包含的项目的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=**] **'**_订阅服务器上_  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=**] **'**_subscriber_db_  
- 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

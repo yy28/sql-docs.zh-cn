@@ -3,18 +3,18 @@ title: Java 示例，并适用于 SQL Server 2019-SQL Server 机器学习服务�
 description: 若要了解有关使用 SQL Server 数据的 Java 语言扩展的步骤的 SQL Server 2019 上运行 Java 示例代码。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493422"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 示例演练
 
@@ -205,9 +205,22 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
 
 如果你打算打包您的类和依赖项的.jar 文件，提供 sp_execute_external_script CLASSPATH 参数中的.jar 文件的完整路径。 例如，如果 jar 文件调用 ngram.jar，将为类路径 / home/myclasspath/ngram.jar Linux 上。
 
-## <a name="6---set-permissions"></a>6-设置权限
+## <a name="6---create-external-library"></a>6-创建外部库
 
-如果进程标识有权访问你的代码，才会成功执行脚本。 
+通过创建外部库，SQL Server 将自动获取访问权限，该 jar 文件并不需要设置为类路径中的任何特殊权限。
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-设置权限 （跳过如果执行步骤 6）
+
+如果您使用外部库，则无需此步骤。 工作的推荐的方法是从您的 jar 中创建的外部库。 
+
+如果不想要使用外部库，需要设置必要的权限。 如果进程标识有权访问你的代码，才会成功执行脚本。 
 
 ### <a name="on-linux"></a>Linux 上
 
@@ -232,7 +245,7 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 若要从 SQL Server 调用的代码，指定的 Java 方法**getNgrams()** sp_execute_external_script 的"脚本"参数中。 此方法属于名为"pkg"和一个名为的类文件的包**Ngram.java**。
 
@@ -246,8 +259,6 @@ Classpath 是代码的已编译的位置。 例如，在 Linux 上，如果类�
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ GO
 
 ### <a name="if-you-get-an-error"></a>如果收到错误
 
-排除与相关的类路径中的任何问题。 
-
-+ 类路径中应包含父文件夹和任何子文件夹，但不是"pkg"子文件夹。 虽然 pkg 子文件夹必须存在，它具有不应在存储过程中指定的类路径值。
-
-+ "Pkg"子文件夹应包含所有三个类的已编译的代码。
++ 在编译您的类时，"pkg"子文件夹应包含所有三个类的已编译的代码。
 
 + 类路径的长度不能超过声明的值 (`DECLARE @myClassPath nvarchar(50)`)。 如果是这样，路径截断至前 50 个字符，并且将不会加载已编译的代码。 可以执行`SELECT @myClassPath`检查的值。 如果是不够的 50 个字符的长度提高。 
 

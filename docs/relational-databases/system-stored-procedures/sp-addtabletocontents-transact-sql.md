@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810939"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493509"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_name=**] **'**_table_name_  
- 是表的名称。 *table_name*是**sysname**，无默认值。  
+`[ @table_name = ] 'table_name'` 是表的名称。 *table_name*是**sysname**，无默认值。  
   
- [  **@owner_name=**] **'**_owner_name_  
- 是表的名称。 *owner_name*是**sysname**，默认值为 NULL。  
+`[ @owner_name = ] 'owner_name'` 是表的名称。 *owner_name*是**sysname**，默认值为 NULL。  
   
- [  **@filter_clause=** ] **'**_filter_clause_  
- 指定一个筛选子句，该子句控制应将新加载的数据的哪些行添加到合并跟踪表。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行已添加。  
+`[ @filter_clause = ] 'filter_clause'` 指定控制应将新加载数据的哪些行添加到合并跟踪表的筛选器子句。 *filter_clause*是**nvarchar(4000)**，默认值为 NULL。 如果*filter_clause*是**null**，所有大容量加载的行已添加。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492889"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname=** ] **'***dbname***'**  
- 要附加到该服务器的数据库的名称。 该名称必须是唯一的。 *dbname*是**sysname**，默认值为 NULL。  
+`[ @dbname = ] 'dbname'` 是要连接到服务器的名称。 该名称必须是唯一的。 *dbname*是**sysname**，默认值为 NULL。  
   
- [ **@physname=** ] **'***physical_name***'**  
- 是物理名称，包括数据库文件的路径。 *physical_name*是**nvarchar(260)**，默认值为 NULL。  
+`[ @physname = ] 'physical_name'` 是物理名称，包括数据库文件的路径。 *physical_name*是**nvarchar(260)**，默认值为 NULL。  
   
 > [!NOTE]  
 >  此参数映射到 CREATE DATABASE 语句的 FILENAME 参数。 有关详细信息，请参阅 [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -74,7 +72,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
   
  不要针对复制数据库使用此过程。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  有关附加数据库时如何处理权限的信息，请参阅[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  

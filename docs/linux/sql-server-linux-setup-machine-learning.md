@@ -4,18 +4,18 @@ description: 在 Red Hat 和 Ubuntu 上了解如何安装 SQL Server 机器学�
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 833c6f2083d9532ecc4120e5f65be81a75a86d24
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f1ca66c5e376704737a092f21fd25401d20bbdbb
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579516"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493869"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安装 SQL Server 2019 机器学习服务 (R、 Python、 Java) 在 Linux 上
 
@@ -25,9 +25,11 @@ ms.locfileid: "57579516"
 
 R、 Python 和 Java 扩展包位置是在 SQL Server Linux 源存储库中。 如果你已配置的数据库引擎安装源代码存储库，则可以运行**mssql mlservices**包使用相同的存储库注册的安装命令。
 
+机器学习服务还支持在 Linux 容器上。 使用机器学习服务，我们不会提供预建的容器，但您可以创建一个从使用 SQL Server 容器[可在 GitHub 上的示例模板](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)。
+
 ## <a name="uninstall-previous-ctp"></a>卸载以前的 CTP
 
-在过去几个 CTP 版本中，从而导致较少的包已更改的包列表。 我们建议卸载 CTP 2.x CTP 2.3 在安装之前删除所有以前的包。 不支持通过并行安装多个版本。
+在过去几个 CTP 版本中，从而导致较少的包已更改的包列表。 我们建议卸载 CTP 2.x 安装 CTP 2.4 之前删除所有以前的包。 不支持通过并行安装多个版本。
 
 ### <a name="1-confirm-package-installation"></a>1.确认包安装
 
@@ -37,7 +39,7 @@ R、 Python 和 Java 扩展包位置是在 SQL Server Linux 源存储库中。 �
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-ctp-20-or-21-packages"></a>2.卸载 CTP 2.0 或 2.1 包
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.卸载以前的 CTP 2.x 包
 
 卸载包最低级别。 会自动卸载依赖于较低级别程序包任何上游包。
 
@@ -61,7 +63,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-23-install"></a>3.继续 CTP 2.3 安装
+### <a name="3-proceed-with-ctp-24-install"></a>3.继续 CTP 2.4 安装
 
 安装的最高级别包为操作系统在本文中使用的说明。
 
@@ -73,7 +75,7 @@ ls /opt/microsoft/mssql/bin
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
-   + [SUSE](#SUSE)
+   + [SUSE](#suse)
 
 ## <a name="prerequisites"></a>先决条件
 

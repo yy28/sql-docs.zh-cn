@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822071"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492350"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 重新分配新标识范围的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 是在其中重新分配新标识范围的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [ **@table_name=**] **'***table_name***'**  
- 重新分配新标识范围的表的名称。 *table_name*是**sysname**，默认值为 NULL。  
+`[ @table_name = ] 'table_name'` 是在其中重新分配新标识范围的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [ **@table_owner=**] **'***table_owner***'**  
- 发布服务器上表的所有者。 *table_owner*是**sysname**，默认值为 NULL。 如果*table_owner*未指定，则使用当前用户的名称。  
+`[ @table_owner = ] 'table_owner'` 是发布服务器上的所有者。 *table_owner*是**sysname**，默认值为 NULL。 如果*table_owner*未指定，则使用当前用户的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

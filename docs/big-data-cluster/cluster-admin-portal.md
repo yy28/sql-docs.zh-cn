@@ -5,17 +5,17 @@ description: 了解如何使用群集管理门户监视 SQL Server 2019 大数�
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492859"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
 
@@ -35,7 +35,7 @@ ms.locfileid: "57017853"
 控制器 pod 运行后，可以使用群集管理门户来监视部署。 您可以访问在门户中使用的外部 IP 地址和端口号`endpoint-service-proxy`(例如： **https://\<ip 地址\>: 30777/门户**)。 凭据的访问管理门户中的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的环境变量。
 
 > [!NOTE]
-> CTP 2.3 开始，对于没有安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
+> 对于 CTP 2.4，没有一条安全警告时访问 web 页，因为它使用自动生成的 SSL 证书。
 
 ## <a name="overview"></a>概述
 

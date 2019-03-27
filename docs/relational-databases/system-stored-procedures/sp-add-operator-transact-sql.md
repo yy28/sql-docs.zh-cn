@@ -1,5 +1,5 @@
 ---
-title: sp_add_operator (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751575"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494071"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name=** ] **'***name***'**  
- 操作员（通知收件人）的名称。 此名称必须唯一且不能含有百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 操作员 （通知收件人） 的名称。 此名称必须唯一且不能含有百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
   
- [  **@enabled=** ]*启用*  
- 指示操作员的当前状态。 *已启用*是**tinyint**，默认值为**1** （启用）。 如果**0**，运算符未启用，并且不会收到通知。  
+`[ @enabled = ] enabled` 指示操作员的当前状态。 *已启用*是**tinyint**，默认值为**1** （启用）。 如果**0**，运算符未启用，并且不会收到通知。  
   
- [ **@email_address=** ] **'***email_address***'**  
- 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*是**nvarchar(100)**，默认值为 NULL。  
+`[ @email_address = ] 'email_address'` 操作员电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*是**nvarchar(100)**，默认值为 NULL。  
   
  您可以指定物理电子邮件地址或别名*email_address*。 例如：  
   
@@ -69,29 +66,21 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  必须对数据库邮件使用电子邮件地址。  
   
- [ **@pager_address=** ] **'***pager_address***'**  
- 操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_address*是**narchar(100)**，默认值为 NULL。  
+`[ @pager_address = ] 'pager_address'` 操作员寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_address*是**narchar(100)**，默认值为 NULL。  
   
- [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
- 工作日（星期一到星期五）中的时间，在到达此时间后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把寻呼通知发送给指定的操作员。 *weekday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` 此时间后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理将寻呼通知发送给指定操作员在工作日，从星期一到星期五。 *weekday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
- [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
- 此时间后， **SQLServerAgent**服务不再发送寻呼通知向指定操作员在平日，从星期一到星期五。 *weekday_pager_end_time*是**int**，默认值为 180000，表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` 此时间后， **SQLServerAgent**服务不再发送寻呼通知向指定操作员在平日，从星期一到星期五。 *weekday_pager_end_time*是**int**，默认值为 180000，表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
- [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
- 此时间后， **SQLServerAgent**服务在星期六将寻呼通知发送到指定的运算符。 *saturday_pager_start_time*是**int**，默认值为 090000，表示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` 此时间后， **SQLServerAgent**服务在星期六将寻呼通知发送到指定的运算符。 *saturday_pager_start_time*是**int**，默认值为 090000，表示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
- [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
- 此时间后， **SQLServerAgent**服务在星期六中不再将寻呼通知发送到指定的运算符。 *saturday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` 此时间后， **SQLServerAgent**服务在星期六中不再将寻呼通知发送到指定的运算符。 *saturday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
- [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
- 此时间后， **SQLServerAgent**服务在星期日将寻呼通知发送到指定的运算符。 *sunday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` 此时间后， **SQLServerAgent**服务在星期日将寻呼通知发送到指定的运算符。 *sunday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
- [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- 此时间后， **SQLServerAgent**服务在星期日中不再将寻呼通知发送到指定的运算符。 *sunday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` 此时间后， **SQLServerAgent**服务在星期日中不再将寻呼通知发送到指定的运算符。 *sunday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
- [  **@pager_days=** ] *pager_days*  
- 表示操作员可以接收寻呼的天数（受限于指定的开始/结束时间）。 *pager_days*是**tinyint**，默认值为**0** ，该值指示该运算符永远不会是可以接收到一个页面。 有效值为从**0**通过**127**。 *pager_days*通过将所需天数的对应值相加。 例如，从星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出了一周中每天的值。  
+`[ @pager_days = ] pager_days` 是一个数字，指示该运算符 （受限于指定的开始/结束时间） 的寻呼的天数。 *pager_days*是**tinyint**，默认值为**0** ，该值指示该运算符永远不会是可以接收到一个页面。 有效值为从**0**通过**127**。 *pager_days*通过将所需天数的对应值相加。 例如，从星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出了一周中每天的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -103,11 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|星期五|  
 |**64**|星期六|  
   
- [ **@netsend_address=** ] **'***netsend_address***'**  
- 要将网络消息发送到的操作员的网络地址。 *netsend_address*是**nvarchar(100)**，默认值为 NULL。  
+`[ @netsend_address = ] 'netsend_address'` 向其发送网络消息的操作员网络地址。 *netsend_address*是**nvarchar(100)**，默认值为 NULL。  
   
- [ **@category_name=** ] **'***category***'**  
- 此操作员的类别名称。 *类别*是**sysname**，默认值为 NULL。  
+`[ @category_name = ] 'category'` 此运算符类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -122,7 +109,7 @@ sp_add_operator [ @name = ] 'name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_operator**。  
   
 ## <a name="examples"></a>示例  
@@ -144,9 +131,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18467e53e2edec21ab91e91a0fe912e9382b35d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492899"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,9 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@plan_name =**] **'***plan_name***'**  
- 指定要添加的维护计划的名称。 *plan_name*是**varchar （128)**。  
+`[ @plan_name = ] 'plan_name'` 指定要添加的维护计划的名称。 *plan_name*是**varchar （128)**。  
   
- **@plan_id = '** *plan_id*   
+ **@plan_id = '** *plan_id* **'**  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +57,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="remarks"></a>备注  
  **sp_add_maintenance_plan**必须从运行**msdb**数据库并创建新的但为空，维护计划。 若要添加一个或多个数据库并将它们与作业或作业相关联，请执行**sp_add_maintenance_plan_db**并**sp_add_maintenance_plan_job**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_maintenance_plan**。  
   
 ## <a name="examples"></a>示例  

@@ -6,16 +6,16 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494109"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>部署具有 GPU 支持的大数据群集和运行 TensorFlow
 
@@ -196,7 +196,7 @@ ms.locfileid: "58161908"
 将相应笔记本文件到本地计算机，然后打开并在 Azure Data Studio 使用的 PySpark3 内核中运行它。 除非有特定需要 CUDA 或 TensorFlow 的较旧版本，否则选择 CUDA 9/CUDNN 7/TensorFlow 1.12.0。 有关如何使用大数据群集上笔记本的详细信息，请参阅[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。
 
 > [!NOTE]
-> 请注意笔记本系统位置中安装软件。 这可能是因为笔记本目前以 CTP 2.3 中的 root 权限运行。
+> 请注意笔记本系统位置中安装软件。 这可能是因为笔记本目前以 CTP 2.4 中的 root 权限运行。
 
 在对于 GPU 安装 NVIDIA GPU 库和 TensorFlow，笔记本列出可用的 GPU 设备。 然后，它们适合，并评估 TensorFlow 模型来识别手写的数字使用 MNIST 数据集。 在检查可用磁盘空间后, 它们下载并运行从 CIFAR 10 图像分类示例[ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git)。 通过在群集具有不同的 Gpu 上运行 CIFAR 10 示例，可以观察到的速度增长提供 GPU 可用在 Azure 中的每个生成。
 

@@ -5,17 +5,17 @@ description: 本教程演示如何将数据引入到在 Azure Data Studio 中使
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491900"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程：将数据引入到 Spark 作业的 SQL Server 数据池
 
@@ -49,7 +49,15 @@ ms.locfileid: "57017733"
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. 创建命名的外部表**web_clickstreams_spark_results**中数据池。 `SqlDataPool`数据源是可以从任何大数据群集的主实例使用的特殊数据源类型。
+1. 如果尚不存在，请创建到数据池外部数据源。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. 创建命名的外部表**web_clickstreams_spark_results**中数据池。
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ ms.locfileid: "57017733"
       );
    ```
   
-1. CTP 2.3 中的数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 2.4 数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 

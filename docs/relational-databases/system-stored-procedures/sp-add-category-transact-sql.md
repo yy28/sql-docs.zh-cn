@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591011"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492979"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =** ] **'**_类_  
- 要添加的类别的类。 *类*是**varchar(8)** 的作业，默认值可以是下列值之一。  
+`[ @class = ] 'class'` 要添加的类别的类。 *类*是**varchar(8)** 的作业，默认值可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -52,17 +51,15 @@ sp_add_category
 |ALERT|添加警报类别。|  
 |OPERATOR|添加操作员类别。|  
   
- [  **@type =** ] **'**_类型_  
- 要添加的类别的类型。 *类型*是**varchar(12)**，默认值为**本地**，可以是下列值之一。  
+`[ @type = ] 'type'` 要添加的类别的类型。 *类型*是**varchar(12)**，默认值为**本地**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
-|多服务器|多服务器作业类别。|  
+|MULTI-SERVER|多服务器作业类别。|  
 |无|非 JOB 类类别 **。**|  
   
- [  **@name =** ] **'**_名称_  
- 要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -91,11 +88,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo.sysjobservers &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

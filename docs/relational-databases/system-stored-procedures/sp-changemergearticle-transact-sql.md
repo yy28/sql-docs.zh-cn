@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493702"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 包含该项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 为该项目存在的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article=**] **'***文章*****  
- 要更改的项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是要更改的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@property=**] **'***属性*****  
- 给定项目和发布的要更改的属性。 *属性*是**nvarchar(30)**，并可以将值中的一个表中列出。  
+`[ @property = ] 'property'` 是要更改的给定的项目和发布的属性。 *属性*是**nvarchar(30)**，并可以将值中的一个表中列出。  
   
- [ **@value=**] **'***值*****  
- 是指定的属性的新值。 *值*是**nvarchar(1000)**，并可以将值中的一个表中列出。  
+`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)**，并可以将值中的一个表中列出。  
   
  下表说明项目的属性和这些属性的值。  
   
@@ -76,8 +72,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||项目的说明项。|  
 |**destination_owner**||如果不订阅数据库中对象的所有者的名称**dbo**。|  
 |**identity_range**||**bigint**指定如果将项目的分配新标识值时要使用的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_范围**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-|**identityrangemanagementoption**|**手动**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**无**|禁用所有标识范围管理。|  
+|**identityrangemanagementoption**|**manual**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+||**none**|禁用所有标识范围管理。|  
 |**logical_record_level_conflict_detection**|**true**|如果逻辑记录中发生了更改，则将检测到冲突。 要求**logical_record_level_conflict_resolution**设置为**true**。|  
 ||**false**|使用默认冲突检测所指定的**column_tracking**。|  
 |**logical_record_level_conflict_resolution**|**true**|整个入选逻辑记录覆盖落选逻辑记录。|  
@@ -86,16 +82,16 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|分区是重叠的，订阅服务器上执行的 DML 更新无法更改行所属的分区。|  
 ||**2**|对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收到相同的分区。|  
 ||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意：如果指定的值**3**有关**partition_options**，可以仅单个订阅的每个分区的这篇文章中的数据。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
-|**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
+|**pre_creation_command**|**none**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
-||**删除**|删除该表，然后重新创建一个表。|  
+||**drop**|删除该表，然后重新创建一个表。|  
 ||**truncate**|截断目标表。|  
 |**processing_order**||**int** ，该值指示合并发布中项目的处理顺序。|  
 |**pub_identity_range**||**bigint** ，指定分配给具有服务器订阅的订阅服务器，如果将项目的范围大小**identityrangemanagementoption**设置为**自动**或**auto_identity_range**设置为**true**。 此标识范围是为重新发布订阅服务器保留的，用于分配给其自身的订阅服务器。 仅适用于表项目。 有关详细信息，请参阅的"合并复制"部分[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**published_in_tran_pub**|**true**|项目也在事务发布中发布。|  
 ||**false**|项目不在事务发布中发布。|  
 |**resolver_info**||用于指定自定义冲突解决程序所需的其他信息。 某些 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 冲突解决程序需要提供列作为冲突解决程序的输入。 **resolver_info**是**nvarchar(255)**，默认值为 NULL。 有关详细信息，请参阅 [Microsoft 基于 COM 的冲突解决程序](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。|  
-|**schema_option** （位图）||有关详细信息，请参阅本主题后面备注部分。|  
+|**schema_option** (bitmap)||有关详细信息，请参阅本主题后面备注部分。|  
 ||**0x00**|禁用快照代理编写脚本，并使用中提供的脚本**creation_script**。|  
 ||**0x01**|生成对象创建脚本（CREATE TABLE、CREATE PROCEDURE 等）。|  
 ||**0x10**|生成对应的聚集索引。|  
@@ -112,11 +108,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000**|在编写约束脚本时生成 ALTER TABLE 语句。|  
 ||**0x10000**|以 NOT FOR REPLICATION 方式复制 CHECK 约束，以便在同步期间不强制执行约束。|  
 ||**0x20000**|以 NOT FOR REPLICATION 方式复制 FOREIGN KEY 约束，以便在同步期间不强制执行约束。|  
-||**而 0x40000 可**|复制与已分区表或已分区索引相关联的文件组。|  
+||**0x40000**|复制与已分区表或已分区索引相关联的文件组。|  
 ||**0x80000**|复制已分区表的分区方案。|  
 ||**0x100000**|复制已分区索引的分区方案。|  
 ||**0x200000**|复制表统计信息。|  
-||**0x400000 处**|复制默认绑定|  
+||**0x400000**|复制默认绑定|  
 ||**0x800000**|复制规则绑定。|  
 ||**0x1000000**|复制全文索引。|  
 ||**0x2000000**|XML 架构集合绑定到**xml**列不会复制。|  
@@ -136,7 +132,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|将转换**地理**并**geometry**数据类型与**varbinary （max)** ，以使这些类型的列可以复制到订阅服务器运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|复制类型的列的索引**地理**并**geometry**。|  
 ||NULL|系统自动为项目生成一个有效的架构选项。|  
-|**status**|**活动**|用于发布表的初始处理脚本已运行。|  
+|**status**|**active**|用于发布表的初始处理脚本已运行。|  
 ||**unsynced**|用于发布表的初始处理脚本在下一次运行快照代理时运行。|  
 |**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 *stream_blob_columns*设置为 true 时启用 FILESTREAM。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请设置*stream_blob_columns*为 false。<br /><br /> **\*\* 重要\* \*** 启用此内存优化可能会降低在同步期间合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
 ||**false**|复制二进制大型对象列时不使用优化。|  
@@ -149,8 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|不通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 |NULL（默认值）||返回支持的值的列表*属性*。|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
@@ -158,8 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  有关在更改时需要生成新快照的属性，请参阅“备注”部分。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   
@@ -246,7 +240,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

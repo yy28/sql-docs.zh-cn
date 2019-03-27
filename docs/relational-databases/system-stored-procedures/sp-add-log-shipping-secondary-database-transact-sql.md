@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493219"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@secondary_database** =] '*secondary_database*  
- 辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 为辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
- [ **@primary_server** =] '*primary_server*  
- 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
+`[ @primary_server = ] 'primary_server'` 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
   
- [ **@primary_database** =] '*primary_database*  
- 主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 是主服务器上的名称。 *primary_database*是**sysname**，无默认值。  
   
- [ **@restore_delay** = ] '*restore_delay*'  
- 辅助服务器在还原给定备份文件之前等待的时间（分钟）。 *restore_delay*是**int**且不能为 NULL。 默认值为 0。  
+`[ @restore_delay = ] 'restore_delay'` 在辅助服务器还原给定备份文件之前等待的分钟的时间量。 *restore_delay*是**int**且不能为 NULL。 默认值为 0。  
   
- [ **@restore_all** =] '*restore_all*  
- 如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，辅助服务器将在还原一个文件后停止。 *restore_all*是**位**且不能为 NULL。  
+`[ @restore_all = ] 'restore_all'` 如果设置为 1，辅助服务器还原所有可用的事务日志备份还原作业运行时。 否则，辅助服务器将在还原一个文件后停止。 *restore_all*是**位**且不能为 NULL。  
   
- [ **@restore_mode** =] '*restore_mode*  
- 辅助数据库的还原模式。  
+`[ @restore_mode = ] 'restore_mode'` 辅助数据库的还原模式。  
   
  0 = 使用 NORECOVERY 还原日志。  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *还原*是**位**且不能为 NULL。  
   
- [ **@disconnect_users** =] '*disconnect_users*  
- 如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。 *断开*用户是**位**且不能为 NULL。  
+`[ @disconnect_users = ] 'disconnect_users'` 如果设置为 1，用户断开连接从辅助数据库执行还原操作时。 默认值 = 0。 *断开*用户是**位**且不能为 NULL。  
   
- [ **@block_size** =] '*block_size*  
- 用作备份设备的块大小（字节）。 *block_size*是**int**与默认值为-1。  
+`[ @block_size = ] 'block_size'` 大小 （字节），用作备份设备的块大小。 *block_size*是**int**与默认值为-1。  
   
- [ **@buffer_count** =] '*buffer_count*  
- 备份或还原操作使用的缓冲区总数。 *buffer_count*是**int**与默认值为-1。  
+`[ @buffer_count = ] 'buffer_count'` 使用备份或还原操作的缓冲区的总数。 *buffer_count*是**int**与默认值为-1。  
   
- [ **@max_transfer_size** =] '*max_transfer_size*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。 *max_transfersize*是**int** ，可以为 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'` 大小，以字节为单位的最大输入或输出请求发出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向备份设备。 *max_transfersize*是**int** ，可以为 NULL。  
   
- [ **@restore_threshold** =] '*restore_threshold*  
- 两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 *restore_threshold*是**int**且不能为 NULL。  
+`[ @restore_threshold = ] 'restore_threshold'` 之间允许等待的分钟数还原操作，就会生成警报。 *restore_threshold*是**int**且不能为 NULL。  
   
- [ **@threshold_alert** =] '*threshold_alert*  
- 是要超过备份阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14,420。  
+`[ @threshold_alert = ] 'threshold_alert'` 是要超过备份阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14,420。  
   
- [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*  
- 指定是否引发警报时*backup_threshold*超出。 默认值一 (1) 表示要引发警告。 *threshold_alert_enabled*是**位**。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定是否引发警报时*backup_threshold*超出。 默认值一 (1) 表示要引发警告。 *threshold_alert_enabled*是**位**。  
   
- [ **@history_retention_period** =] '*history_retention_period*  
- 历史记录的保留时间（分钟）。 *history_retention_period*是**int**，默认值为 NULL。 如果不指定值，则使用值 14420。  
+`[ @history_retention_period = ] 'history_retention_period'` 是以分钟为单位历史记录保留在其中长度。 *history_retention_period*是**int**，默认值为 NULL。 如果不指定值，则使用值 14420。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -119,7 +105,7 @@ sp_add_log_shipping_secondary_database
   
 4.  如果监视服务器不同于辅助服务器时，监视器中添加记录**log_shipping_monitor_secondary**监视器服务器使用提供的参数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  

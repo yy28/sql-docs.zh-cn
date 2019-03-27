@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494329"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,32 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@primary_server** =] '*primary_server*  
- 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
+`[ @primary_server = ] 'primary_server'` 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
   
- [ **@primary_database** =] '*primary_database*  
- 主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 是主服务器上的名称。 *primary_database*是**sysname**，无默认值。  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
- 存储主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)** 且不能为 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'` 存储从主服务器的事务日志备份文件的目录。 *backup_source_directory*是**nvarchar(500)** 且不能为 NULL。  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*  
- 备份文件复制到的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)** 且不能为 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 备份文件复制到的位置的辅助服务器上的目录。 *backup_destination_directory*是**nvarchar(500)** 且不能为 NULL。  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
- 要创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业使用的名称，此代理作业用于将事务日志备份复制到辅助服务器。 *copy_job_name*是**sysname**且不能为 NULL。  
+`[ @copy_job_name = ] 'copy_job_name'` 要用于名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在创建用于将事务日志备份复制到辅助服务器的代理作业。 *copy_job_name*是**sysname**且不能为 NULL。  
   
- [ **@restore_job_name** = ] '*restore_job_name*'  
- 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将备份还原到辅助数据库的辅助服务器上的代理作业。 *restore_job_name*是**sysname**且不能为 NULL。  
+`[ @restore_job_name = ] 'restore_job_name'` 是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将备份还原到辅助数据库的辅助服务器上的代理作业。 *restore_job_name*是**sysname**且不能为 NULL。  
   
- [ **@file_retention_period** =] '*file_retention_period*  
- 时间，以分钟为单位指定的路径中的辅助服务器保留备份文件的长度@backup_destination_directory之前被删除的参数。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
+`[ @file_retention_period = ] 'file_retention_period'` 时间，以分钟为单位指定的路径中的辅助服务器保留备份文件的长度@backup_destination_directory之前被删除的参数。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
- [ **@monitor_server** =] '*monitor_server*  
- 监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，且不能为 NULL。  
+`[ @monitor_server = ] 'monitor_server'` 是监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，且不能为 NULL。  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*  
- 用于连接到监视服务器的安全模式。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 用来连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证。  
   
@@ -87,20 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode*是**位**且不能为 NULL。  
   
- [ **@monitor_server_login** =] '*monitor_server_login*  
- 访问监视服务器所用的帐户的用户名。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 是用于访问监视服务器的用户名。  
   
- [ **@monitor_server_password** =] '*monitor_server_password*  
- 用于访问监视服务器的帐户的密码。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 是用于访问监视服务器的密码。  
   
- [ **@copy_job_id** =] '*copy_job_id*输出  
- 与辅助服务器上的复制作业关联的 ID。 *copy_job_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` 与辅助服务器上的复制作业关联的 ID。 *copy_job_id*是**uniqueidentifier**且不能为 NULL。  
   
- [ **@restore_job_id** =] '*restore_job_id*输出  
- 与辅助服务器上的还原作业关联的 ID。 *restore_job_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` 与辅助服务器上的还原作业关联的 ID。 *restore_job_id*是**uniqueidentifier**且不能为 NULL。  
   
- [ **@secondary_id** =] '*secondary_id*输出  
- 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -125,7 +111,7 @@ sp_add_log_shipping_secondary_primary
   
     5.  在中设置的还原作业 ID **log_shipping_secondary**还原作业的作业 id 的条目。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  

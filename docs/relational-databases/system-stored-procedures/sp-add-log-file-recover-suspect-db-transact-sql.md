@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_file_recover_suspect_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 525af6370b7e1af1591162109382005adbbf0bac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b170d26aa67be39c6e41af37033de3c6a90dc582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505652"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493439"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,19 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbName =** ] **'**_数据库_  
- 数据库的名称。 *数据库*是**sysname**，无默认值。  
+`[ @dbName = ] 'database'` 是数据库的名称。 *数据库*是**sysname**，无默认值。  
   
- [  **@name=** ] **'**_logical_file_name_  
- 名称中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引用该文件时。 名称在服务器中必须是唯一的。 *logical_file_name*是**nvarchar(260)**，无默认值。  
+`[ @name = ] 'logical_file_name'` 名称中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]引用该文件时。 名称在服务器中必须是唯一的。 *logical_file_name*是**nvarchar(260)**，无默认值。  
   
- [  **@filename =** ] **'**_os_file_name_  
- 由操作系统使用的文件的路径和文件名。 该文件必须驻留在安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]的服务器上。 *os_file_name*是**nvarchar(260)**，无默认值。  
+`[ @filename = ] 'os_file_name'` 是的路径和文件名称用于由操作系统文件。 该文件必须驻留在安装[!INCLUDE[ssDE](../../includes/ssde-md.md)]的服务器上。 *os_file_name*是**nvarchar(260)**，无默认值。  
   
- [  **@size=** ] **'**_大小_   
- 文件的初始大小。 *大小*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果*大小*未指定，默认值为 1 MB。  
+`[ @size = ] 'size_ '` 是该文件的初始大小。 *大小*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果*大小*未指定，默认值为 1 MB。  
   
- [  **@maxsize=** ] **'**_max_size_   
- 文件可增至的最大文件大小。 *max_size*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。  
+`[ @maxsize = ] 'max_size_ '` 是该文件可增长到的最大大小。 *max_size*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。  
   
  如果*max_size*未指定，则文件将增长到磁盘变满为止。 当磁盘将满时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志会向管理员发出警告。  
   
- [  **@filegrowth=** ] **'**_growth_increment_   
- 每次需要新空间时添加到文件中的空间量。 *growth_increment*是**nvarchar(20)**，默认值为 NULL。 0 值表示不增长。 指定一个整数，不包含小数位。 该值可按 MB、KB 或百分比 (%) 形式指定。 如果指定百分比 (%)，则增量大小为发生增长时文件大小的指定百分比。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。  
+`[ @filegrowth = ] 'growth_increment_ '` 每次需要新空间时添加到该文件的空间量。 *growth_increment*是**nvarchar(20)**，默认值为 NULL。 0 值表示不增长。 指定一个整数，不包含小数位。 该值可按 MB、KB 或百分比 (%) 形式指定。 如果指定百分比 (%)，则增量大小为发生增长时文件大小的指定百分比。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。  
   
  如果*growth_increment*为 NULL，默认值是 10%，最小值为 64 KB。 指定的大小舍入为最接近的 64 KB 的倍数。  
   

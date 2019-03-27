@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133007"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494279"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@functname =** ] **'**_过程_  
- 在动态链接库 (DLL) 内调用的函数名称。 *过程*是**nvarchar(517)**，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
+`[ @functname = ] 'procedure'` 是要动态链接库 (DLL) 内调用的名称。 *过程*是**nvarchar(517)**，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
   
- [  **@dllname =** ] **'**_dll_  
- 包含该函数的 DLL 名称。 *dll*是**varchar(255)**，无默认值。 建议指定 DLL 的完整路径。  
+`[ @dllname = ] 'dll'` 是包含该函数的 DLL 的名称。 *dll*是**varchar(255)**，无默认值。 建议指定 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -82,8 +80,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_dropextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

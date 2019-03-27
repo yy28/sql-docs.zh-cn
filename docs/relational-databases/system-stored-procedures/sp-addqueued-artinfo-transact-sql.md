@@ -1,5 +1,5 @@
 ---
-title: sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590892"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493180"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@artid=** ] **'**_artid_  
- 项目 ID 的名称。 *artid*是**int**，无默认值  
+`[ @artid = ] 'artid'` 是的名称的文章 id。 *artid*是**int**，无默认值  
   
- [  **@article=**] **'**_文章_  
- 要写入脚本的项目的名称。 *文章*是**sysname**，无默认值  
+`[ @article = ] 'article'` 是要为其编写脚本的名称。 *文章*是**sysname**，无默认值  
   
- [  **@publisher=**] **'**_发布服务器上_  
- 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=**] **'**_publisher_db_  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication=**] **'**_发布_  
- 要写入脚本的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要为其编写脚本的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@dest_table=** ] _' dest_table_  
- 目标表的名称。 *dest_table*是**sysname**，无默认值。  
+`[ @dest_table = ] _'dest_table'` 是目标表的名称。 *dest_table*是**sysname**，无默认值。  
   
- [ **@owner =** ] **'**_所有者_  
+ [**@owner =** ] **'**_owner_**'**  
  是订阅的所有者。 *所有者*是**sysname**，无默认值。  
   
- [  **@cft_table=** ] **'**_cft_table_  
- 针对该项目的已排队的更新冲突表的名称。 *cft_table*是**sysname**，无默认值。  
+`[ @cft_table = ] 'cft_table'` 这篇文章的排队更新冲突表的名称。 *cft_table*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -80,15 +73,15 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="remarks"></a>备注  
  **sp_addqueued_artinfo**由分发代理作为订阅初始化的一部分。 此存储过程通常不能由用户运行，但如果用户需要手动设置订阅，则此过程很有用。  
   
- [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)而不是**sp_addqueued_artinfo**。  
+ [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) instead of **sp_addqueued_artinfo**.  
   
 ## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addqueued_artinfo**。  
   
 ## <a name="see-also"></a>请参阅  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;Transact SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

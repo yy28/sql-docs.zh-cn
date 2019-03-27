@@ -1,5 +1,5 @@
 ---
-title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft Docs
+title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492769"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=**] **'**_发布服务器上_  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@distribution_db=**] **'**_distribution_db_  
- 是分发数据库的名称。 *distributor_db*是**sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
+`[ @distribution_db = ] 'distribution_db'` 是分发数据库的名称。 *distributor_db*是**sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
   
- [ **@security_mode=**] *security_mode*  
- 所实现的安全模式。 此参数仅由复制代理连接到发布服务器为排队更新订阅或与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *security_mode*是**int**，可以是下列值之一。  
+`[ @security_mode = ] security_mode` 是实现的安全模式。 此参数仅由复制代理连接到发布服务器为排队更新订阅或与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *security_mode*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
- [  **@login=**] **'**_登录_  
- 登录。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
+`[ @login = ] 'login'` 是的登录名。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
- [  **@password=**] **'**_密码_]  
- 是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
+`[ @password = ] 'password']` 是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
- [  **@working_directory=**] **'**_working_directory_  
- 用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
+`[ @working_directory = ] 'working_directory'` 是用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
 
  对于 Azure SQL 数据库，请使用`\\<storage_account>.file.core.windows.net\<share>`。
 
- [  **@storage_connection_string =**] **'**_storage_connection_string_  
- 是必需的 SQL 数据库。 使用下存储访问密钥从 Azure 门户 > 设置。
+`[ @storage_connection_string = ] 'storage_connection_string'` 是必需的 SQL 数据库。 使用下存储访问密钥从 Azure 门户 > 设置。
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'**_受信任_  
- 该参数已不推荐使用，提供它只是为了向后兼容。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
+`[ @trusted = ] 'trusted'` 此参数已弃用，提供是为了向后兼容性。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
   
- [  **@encrypted_password=**] *encrypted_password*  
- 设置*encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
+`[ @encrypted_password = ] encrypted_password` 设置*encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
- [  **@thirdparty_flag =**] *thirdparty_flag*  
- 发布服务器何时为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *thirdparty_flag*是**位**，可以是下列值之一。  
+`[ @thirdparty_flag = ] thirdparty_flag` 发布服务器时，是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *thirdparty_flag*是**位**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
- [ **@publisher_type**=] **'**_publisher_type_  
- 指定当发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的发布服务器类型。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
+`[ @publisher_type = ] 'publisher_type'` 当发布服务器不是指定的发布服务器类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -121,7 +110,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>请参阅  
  [配置发布和分发](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [配置分发](../../relational-databases/replication/configure-distribution.md)  

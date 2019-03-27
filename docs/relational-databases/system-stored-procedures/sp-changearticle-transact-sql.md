@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493449"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 包含项目的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 是包含的项目的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@article=**] **'**_文章_  
- 将更改其属性的项目的名称。 *文章*是**sysname**，默认值为 NULL。  
+`[ @article = ] 'article'` 是要更改其属性的名称。 *文章*是**sysname**，默认值为 NULL。  
   
- [  **@property=**] **'**_属性_  
- 要更改的项目属性。 *属性*是**nvarchar(100)**。  
+`[ @property = ] 'property'` 若要更改的项目属性。 *属性*是**nvarchar(100)**。  
   
- [  **@value=**] **'**_值_  
- 项目属性的新值。 *值*是**nvarchar(255)**。  
+`[ @value = ] 'value'` 是的项目属性的新值。 *值*是**nvarchar(255)**。  
   
  下表说明项目的属性和这些属性的值。  
   
@@ -72,8 +68,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
 |**pre_creation_cmd**||可以在应用同步之前除去、删除或截断目标表的预创建命令。|  
-||**无**|不使用命令。|  
-||**删除**|删除目标表。|  
+||**none**|不使用命令。|  
+||**drop**|删除目标表。|  
 ||**delete**|删除目标表。|  
 ||**truncate**|截断目标表。|  
 |**pub_identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
@@ -97,11 +93,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x8000**|使用 ALTER TABLE 语句将表项目上的主键和唯一键作为约束复制。<br /><br /> 注意：已不推荐使用此选项。 使用**0x80**并**0x4000**相反。|  
 ||**0x10000**|以 NOT FOR REPLICATION 方式复制 CHECK 约束，以便在同步期间不强制执行约束。|  
 ||**0x20000**|以 NOT FOR REPLICATION 方式复制 FOREIGN KEY 约束，以便在同步期间不强制执行约束。|  
-||**而 0x40000 可**|复制与已分区表或已分区索引相关联的文件组。|  
+||**0x40000**|复制与已分区表或已分区索引相关联的文件组。|  
 ||**0x80000**|复制已分区表的分区方案。|  
 ||**0x100000**|复制已分区索引的分区方案。|  
 ||**0x200000**|复制表统计信息。|  
-||**0x400000 处**|默认值绑定|  
+||**0x400000**|默认值绑定|  
 ||**0x800000**|规则绑定|  
 ||**0x1000000**|全文本索引|  
 ||**0x2000000**|XML 架构集合绑定到**xml**列不会复制。|  
@@ -128,11 +124,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**包括列名称**|复制的 INSERT 语句中包括列名。|  
 ||**没有列名称**|复制的 INSERT 语句中不包括列名。|  
 ||**没有任何 dts 水平分区**|项目的水平分区不由可转换的订阅定义。|  
-||**无**|清除中的所有状态选项[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表，并将标记为非活动状态的文章。|  
+||**none**|清除中的所有状态选项[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表，并将标记为非活动状态的文章。|  
 ||**参数**|使用参数化命令将更改传播给订阅服务器。 这是新项目的默认设置。|  
 ||**字符串文本**|使用字符串文字值将更改传播给订阅服务器。|  
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
-|**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
+|**tablespace**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**threshold**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
 |**类型**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
@@ -146,8 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||要执行的 UPDATE 语句，否则从日志构造。|  
 |NULL|NULL|返回可更改的项目属性列表。|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
@@ -155,8 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要生成新快照的属性，请参阅“备注”部分。  
   
- [  **@force_reinit_subscription=]**_force_reinit_subscription_  
- 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   
@@ -164,8 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要重新初始化所有现有订阅的属性，请参阅“备注”部分。  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*在更改项目属性时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -247,7 +240,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="see-also"></a>请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

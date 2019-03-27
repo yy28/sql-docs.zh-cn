@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128227"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494020"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'**_发布服务器上_  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@property=** ] **'**_属性_  
- 要更改的给定发布服务器的属性。 *属性*是**sysname**可以是下列值之一。  
+`[ @property = ] 'property'` 是要更改的给定发布服务器的属性。 *属性*是**sysname**可以是下列值之一。  
   
- [ **@value=** ] **'**_value_**'**  
- 为给定属性的值。 *值*是**nvarchar(255)**，默认值为 NULL。  
+`[ @value = ] 'value'` 为给定属性的值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_  
- SQL 数据库托管实例需要的、 应与 Azure SQL 数据库存储卷的访问密钥相匹配。 
+`[ @storage_connection_string = ] 'storage_connection_string'` SQL 数据库托管实例需要的、 应与 Azure SQL 数据库存储卷的访问密钥相匹配。 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,7 +56,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |属性|值|Description|  
 |--------------|------------|-----------------|  
-|**活动**|**true**|激活发布服务器。|  
+|**active**|**true**|激活发布服务器。|  
 ||**false**|停用发布服务器|  
 |**distribution_db**||分发数据库的名称。|  
 |**login**||登录名。|  
@@ -82,8 +78,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

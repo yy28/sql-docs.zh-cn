@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802379"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493839"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start_  
- 指定要返回的取值最低的精确序列号。 *xact_seqno_start*是**nchar(22)**，默认值为 0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定要返回的最低的精确序列号。 *xact_seqno_start*是**nchar(22)**，默认值为 0x00000000000000000000。  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end_  
- 指定要返回的取值最高的精确序列号。 *xact_seqno_end*是**nchar(22)**，默认值为 0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定要返回的最高精确序列号。 *xact_seqno_end*是**nchar(22)**，默认值为 0xFFFFFFFFFFFFFFFFFFFF。  
   
- [  **@originator_id =**] **'**_originator_id_  
- 指定如果具有指定的命令*originator_id*返回。 *originator_id*是**int**，默认值为 NULL。  
+`[ @originator_id = ] 'originator_id'` 指定如果具有指定的命令*originator_id*返回。 *originator_id*是**int**，默认值为 NULL。  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_  
- 指定如果具有指定的命令*publisher_database_id*返回。 *publisher_database_id*是**int**，默认值为 NULL。  
+`[ @publisher_database_id = ] 'publisher_database_id'` 指定如果具有指定的命令*publisher_database_id*返回。 *publisher_database_id*是**int**，默认值为 NULL。  
   
- [  **@article_id =**] **'**_article_id_  
- 指定如果具有指定的命令*article_id*返回。 *article_id*是**int**，默认值为 NULL。  
+`[ @article_id = ] 'article_id'` 指定如果具有指定的命令*article_id*返回。 *article_id*是**int**，默认值为 NULL。  
   
- [  **@command_id =**] *command_id*  
- 是中的命令的位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解码。 *command_id*是**int**，默认值为 NULL。 如果指定，则必须还，指定所有其他参数和*xact_seqno_start*必须与相同*xact_seqno_end*。  
+`[ @command_id = ] command_id` 是中的命令的位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解码。 *command_id*是**int**，默认值为 NULL。 如果指定，则必须还，指定所有其他参数和*xact_seqno_start*必须与相同*xact_seqno_end*。  
   
- [  **@agent_id =**] *agent_id*  
- 指定仅返回特定复制代理的命令。 *agent_id*是**int**，默认值为 NULL。  
+`[ @agent_id = ] agent_id` 指定返回的只有命令特定复制代理。 *agent_id*是**int**，默认值为 NULL。  
   
- [  **@compatibility_level =**] *compatibility_level*  
- 是的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]依据*compatibility_level*是**int**，默认值为 9000000。  
+`[ @compatibility_level = ] compatibility_level` 是的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]依据*compatibility_level*是**int**，默认值为 9000000。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -99,7 +91,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>请参阅  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

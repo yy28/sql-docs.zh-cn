@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494299"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 向其中添加计划的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 向其中添加计划的作业作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =** ] **'***job_name***'**  
- 向其中添加计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 向其中添加计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@schedule_id =** ] *schedule_id*  
- 为作业设置的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id` 若要为作业设置计划的计划标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 为作业设置的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
+`[ @schedule_name = ] 'schedule_name'` 若要为作业设置计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
@@ -68,7 +64,7 @@ sp_attach_schedule
   
  必须从运行此存储的过程**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -112,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

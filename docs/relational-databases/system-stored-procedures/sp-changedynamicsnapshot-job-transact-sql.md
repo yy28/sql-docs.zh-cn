@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130197"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493139"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 要更改的快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为 N '%'。 如果*dynamic_snapshot_jobid*指定，则必须使用的默认值为*dynamic_snapshot_jobname*。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 正在更改的快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为 N '%'。 如果*dynamic_snapshot_jobid*指定，则必须使用的默认值为*dynamic_snapshot_jobname*。  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 要更改的快照作业的 ID。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。 如果*dynamic_snapshot_jobname*指定，则必须使用的默认值为*dynamic_snapshot_jobid*。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 正在更改的快照作业的 ID。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。 如果*dynamic_snapshot_jobname*指定，则必须使用的默认值为*dynamic_snapshot_jobid*。  
   
- [  **@frequency_type =** ] *frequency_type*  
- 安排代理的频率。 *frequency_type*是**int**，可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 已安排代理的频率。 *frequency_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|重复执行|  
 |NULL（默认值）||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 代理运行的天数。 *frequency_interval*是**int**，可以是下列值之一。  
+`[ @frequency_interval = ] frequency_interval` 在运行代理的天。 *frequency_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|周末|  
 |NULL（默认值）||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 在指定期内重新安排计划的频率。 *frequency_subday*是**int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 是如何通常定义的周期内重新计划。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL（默认值）||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- 合并代理运行的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 是运行合并代理的日期。 使用此参数时*frequency_type*设置为**32** （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|上一次|  
 |NULL（默认值）||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
   
- [ **@active_start_date =** ] *active_start_date*  
- 第一次安排合并代理的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
+`[ @active_start_date = ] active_start_date` 是第一个合并代理的日期安排，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
   
- [ **@active_end_date =** ] *active_end_date*  
- 停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
+`[ @active_end_date = ] active_end_date` 为合并代理停止的日期安排，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- 第一次安排合并代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 为合并代理时第一天的时间安排，格式为 HHMMSS。 *active_start_time_of_day* 是 **int**，默认值为 NULL。  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- 停止安排合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 为合并代理停止的时间安排，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@job_login=** ] **'job_login**   
- 为使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
+`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]生成使用参数化的行筛选器订阅的快照时快照代理运行的 Windows 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
   
- [  **@job_password=** ] **'job_password**   
- 为使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户的密码。 *job_password*是**nvarchar(257)**，默认值为 NULL。  
+`[ @job_password = ] 'job_password'` 使用参数化的行筛选器在其下运行快照代理生成订阅的快照时的 Windows 帐户的密码。 *job_password*是**nvarchar(257)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  

@@ -18,12 +18,12 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f361039f611a6b7a383649fb18a4af155a0c2b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710605"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492719"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database =** ] '*数据库*  
- 主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
+`[ @database = ] 'database'` 是主服务器上的名称。 *primary_database*是**sysname**，无默认值。  
   
- [ **@backup_directory =** ] '*backup_directory*'  
- 主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 是主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，且不能为 NULL。  
   
- [  **@backup_share =** ] '*backup_share*  
- 主服务器上备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_share = ] 'backup_share'` 是主服务器上的备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，且不能为 NULL。  
   
- [ **@backup_retention_period =** ] '*backup_retention_period*'  
- 在主服务器上的备份目录中保留日志备份文件的时间长度（分钟）。 *backup_retention_period*是**int**，无默认值，且不能为 NULL。  
+`[ @backup_retention_period = ] 'backup_retention_period'` 是，以分钟为单位保留日志备份文件的备份目录中的主服务器上的长度。 *backup_retention_period*是**int**，无默认值，且不能为 NULL。  
   
- [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
- 用于连接到监视服务器的安全模式。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 用来连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证。  
   
@@ -72,20 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode*是**位**且不能为 NULL。  
   
- [ **@monitor_server_login =** ] '*monitor_server_login*'  
- 访问监视服务器所用的帐户的用户名。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 是用于访问监视服务器的用户名。  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*  
- 用于访问监视服务器的帐户的密码。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 是用于访问监视服务器的密码。  
   
- [  **@backup_threshold =** ] '*backup_threshold*  
- 时间，以分钟为单位，一次备份之前的长度*threshold_alert*引发错误。 *backup_threshold*是**int**，默认值为 60 分钟。  
+`[ @backup_threshold = ] 'backup_threshold'` 时间，以分钟为单位，一次备份之前的长度*threshold_alert*引发错误。 *backup_threshold*是**int**，默认值为 60 分钟。  
   
- [  **@threshold_alert =** ] '*threshold_alert*  
- 超过备份阈值时引发的警报。 *threshold_alert*是**int**且不能为 NULL。  
+`[ @threshold_alert = ] 'threshold_alert'` 超过备份阈值时引发警报。 *threshold_alert*是**int**且不能为 NULL。  
   
- [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- 指定是否引发警报时*backup_threshold*超出。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定是否引发警报时*backup_threshold*超出。  
   
  1 = 启用。  
   
@@ -93,11 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled*是**位**且不能为 NULL。  
   
- [ **@history_retention_period =** ] '*history_retention_period*'  
- 历史记录的保留时间（分钟）。 *history_retention_period*是**int**。如果不指定值，则使用值 14420。  
+`[ @history_retention_period = ] 'history_retention_period'` 是以分钟为单位历史记录保留在其中长度。 *history_retention_period*是**int**。如果不指定值，则使用值 14420。  
   
- [ **@backup_compression**= ] *backup_compression_option*  
- 指定是否使用日志传送配置[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持此参数。  
+`[ @backup_compression = ] backup_compression_option` 指定是否使用日志传送配置[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持此参数。  
   
  0 = 禁用。 从不压缩日志备份。  
   
@@ -120,7 +108,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 3.  如果监视服务器不同于主服务器，更改记录在**log_shipping_monitor_primary**监视器服务器使用提供的参数，如有必要。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -143,6 +131,6 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ## <a name="see-also"></a>请参阅  
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133847"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492489"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] **'**_数据库_  
- 是分发数据库的名称。 *数据库*是**sysname**，无默认值。  
+`[ @database = ] 'database'` 是分发数据库的名称。 *数据库*是**sysname**，无默认值。  
   
- [  **@property=**] **'**_属性_  
- 要更改的给定数据库的属性。 *属性*是**sysname**，可以是下列值之一。  
+`[ @property = ] 'property'` 是要更改给定数据库的属性。 *属性*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|最小分发保持期。|  
 |NULL（默认值）|所有可用*属性*打印值。|  
   
- [  **@value=**] **'**_值_  
- 是指定的属性的新值。 *值*是**nvarchar(255)**，默认值为 NULL。  
+`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -70,8 +67,8 @@ sp_changedistributiondb [ @database= ] 'database'
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa737688a974170ece1817503b4b02de440e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494099"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,57 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=** ] '*数据库*  
- 日志传送主数据库的名称。 *数据库*是**sysname**，无默认值，且不能为 NULL。  
+`[ @database = ] 'database'` 是日志传送主数据库的名称。 *数据库*是**sysname**，无默认值，且不能为 NULL。  
   
- [  **@backup_directory=** ] '*backup_directory*  
- 主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_directory = ] 'backup_directory'` 是主服务器上备份文件夹的路径。 *backup_directory*是**nvarchar(500)**，无默认值，且不能为 NULL。  
   
- [  **@backup_share=** ] '*backup_share*  
- 主服务器上备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，且不能为 NULL。  
+`[ @backup_share = ] 'backup_share'` 是主服务器上的备份目录的网络路径。 *backup_share*是**nvarchar(500)**，无默认值，且不能为 NULL。  
   
- [ **@backup_job_name=** ] '*backup_job_name*'  
- 主服务器上用于将备份复制到备份文件夹中的 SQL Server 代理作业的名称。 *backup_job_name*是**sysname**且不能为 NULL。  
+`[ @backup_job_name = ] 'backup_job_name'` 是将备份复制到备份文件夹的主服务器上的 SQL Server 代理作业的名称。 *backup_job_name*是**sysname**且不能为 NULL。  
   
- [ **@backup_retention_period=** ] *backup_retention_period*  
- 在主服务器上的备份目录中保留日志备份文件的时间长度（分钟）。 *backup_retention_period*是**int**，无默认值，且不能为 NULL。  
+`[ @backup_retention_period = ] backup_retention_period` 是，以分钟为单位保留日志备份文件的备份目录中的主服务器上的长度。 *backup_retention_period*是**int**，无默认值，且不能为 NULL。  
   
- [  **@monitor_server=** ] '*monitor_server*  
- 监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，且不能为 NULL。  
+`[ @monitor_server = ] 'monitor_server'` 是监视服务器的名称。 *Monitor_server*是**sysname**，无默认值，且不能为 NULL。  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
- 用于连接到监视服务器的安全模式。  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` 用来连接到监视服务器的安全模式。  
   
  1 = Windows 身份验证。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 *monitor_server_security_mode*是**位**且不能为 NULL。  
   
- [  **@monitor_server_login=** ] '*monitor_server_login*  
- 访问监视服务器所用的帐户的用户名。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 是用于访问监视服务器的用户名。  
   
- [  **@monitor_server_password=** ] '*monitor_server_password*  
- 用于访问监视服务器的帐户的密码。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 是用于访问监视服务器的密码。  
   
- [  **@backup_threshold=** ] *backup_threshold*  
- 时间，以分钟为单位，一次备份之前的长度*threshold_alert*引发错误。 *backup_threshold*是**int**，默认值为 60 分钟。  
+`[ @backup_threshold = ] backup_threshold` 时间，以分钟为单位，一次备份之前的长度*threshold_alert*引发错误。 *backup_threshold*是**int**，默认值为 60 分钟。  
   
- [  **@threshold_alert=** ] *threshold_alert*  
- 是要超过备份阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14,420。  
+`[ @threshold_alert = ] threshold_alert` 是要超过备份阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14,420。  
   
- [ **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- 指定是否将是警报时引发*backup_threshold*超出。 默认值零 (0) 表示警报被禁用，将不会引发警报。 *threshold_alert_enabled*是**位**。  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` 指定是否将是警报时引发*backup_threshold*超出。 默认值零 (0) 表示警报被禁用，将不会引发警报。 *threshold_alert_enabled*是**位**。  
   
- [ **@history_retention_period=** ] *history_retention_period*  
- 历史记录的保留时间长度（分钟）。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
+`[ @history_retention_period = ] history_retention_period` 是以分钟为单位保留历史记录长度。 *history_retention_period*是**int**，默认值为 NULL。 如果未指定值，则使用值 14420。  
   
- [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
- 与主服务器上的备份作业相关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业 ID。 *backup_job_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @backup_job_id = ] backup_job_id OUTPUT` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与主服务器上的备份作业相关联的代理作业 ID。 *backup_job_id*是**uniqueidentifier**且不能为 NULL。  
   
- [  **@primary_id=** ] *primary_id*输出  
- 日志传送配置的主数据库 ID。 *primary_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @primary_id = ] primary_id OUTPUT` 日志传送配置的主数据库的 ID。 *primary_id*是**uniqueidentifier**且不能为 NULL。  
   
- [ **@backup_compression**= ] *backup_compression_option*  
- 指定是否使用日志传送配置[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持此参数。  
+`[ @backup_compression = ] backup_compression_option` 指定是否使用日志传送配置[备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 只有 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]（或更高版本）支持此参数。  
   
  0 = 禁用。 从不压缩日志备份。  
   
@@ -133,7 +117,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 5.  如果监视服务器从主服务器不同，监视器中添加记录**log_shipping_monitor_primary**监视器服务器使用提供的参数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  

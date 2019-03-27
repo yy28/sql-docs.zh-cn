@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127077"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493079"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=** ] **'**_文章_  
- 项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@filtername=** ] **'**_filtername_  
- 筛选器的当前名称。 *filtername*是**sysname**，无默认值。  
+`[ @filtername = ] 'filtername'` 是筛选器的当前名称。 *filtername*是**sysname**，无默认值。  
   
- [  **@property=** ] **'**_属性_  
- 要更改的属性的名称。 *属性*是**sysname**，无默认值。  
+`[ @property = ] 'property'` 是要更改的名称。 *属性*是**sysname**，无默认值。  
   
- [  **@value=**] **'**_值_  
- 是指定的属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
+`[ @value = ] 'value'` 是指定的属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
   
  下表说明项目的属性和这些属性的值。  
   
@@ -72,15 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|联接位于唯一键上。|  
 ||**false**|联接没有位于唯一键上。|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   
  **1**意味着，对合并项目的更改可能导致快照无效，以及是否有现有订阅需要新快照，提供了将现有快照标记为过时并生成新快照的权限。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   
@@ -103,7 +96,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

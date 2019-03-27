@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126047"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494379"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,37 +45,29 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 *publisher_db* Oracle 发布服务器忽略。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 *publisher_db* Oracle 发布服务器忽略。  
   
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@independent_agent=**] **'***independent_agent*****  
- 指定是否有用于该发布的独立分发代理。 *independent_agent*是**nvarchar(5)**，默认值为 TRUE。 如果 **，则返回 true**，没有用于此发布的独立分发代理。 如果**false**，每个发布服务器数据库/订阅服务器数据库对一个分发代理。 *independent_agent*是发布的属性，必须具有相同的值，因为它具有发布服务器上。  
+`[ @independent_agent = ] 'independent_agent'` 指定是否有用于此发布的独立分发代理。 *independent_agent*是**nvarchar(5)**，默认值为 TRUE。 如果 **，则返回 true**，没有用于此发布的独立分发代理。 如果**false**，每个发布服务器数据库/订阅服务器数据库对一个分发代理。 *independent_agent*是发布的属性，必须具有相同的值，因为它具有发布服务器上。  
   
- [ **@subscription_type=**] **'***subscription_type*****  
- 是订阅的类型。 *subscription_type*是**nvarchar(9)**，默认值为**匿名**。 必须指定的值**拉取**有关*subscription_type*，除非你想要创建订阅，而无需在发布服务器注册此订阅。 在这种情况下，必须指定的值**匿名**。 如果在订阅配置期间无法建立与发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，则匿名订阅是必需的。  
+`[ @subscription_type = ] 'subscription_type'` 是订阅的类型。 *subscription_type*是**nvarchar(9)**，默认值为**匿名**。 必须指定的值**拉取**有关*subscription_type*，除非你想要创建订阅，而无需在发布服务器注册此订阅。 在这种情况下，必须指定的值**匿名**。 如果在订阅配置期间无法建立与发布服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接，则匿名订阅是必需的。  
   
- [ **@description=**] **'***说明*****  
- 是发布的说明。 *描述*是**nvarchar(100)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是发布的说明。 *描述*是**nvarchar(100)**，默认值为 NULL。  
   
- [  **@update_mode=**] **'***update_mode*****  
- 已更新的类型。 *update_mode*是**nvarchar(30)**，可以是下列值之一。  
+`[ @update_mode = ] 'update_mode'` 已更新的类型。 *update_mode*是**nvarchar(30)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**只读**（默认值）|该订阅是只读的。 在订阅服务器上所做的任何更改不会发送回发布服务器。 应在订阅服务器不进行更新时使用。|  
-|**同步事务**|支持立即更新订阅。|  
+|**synctran**|支持立即更新订阅。|  
 |**排队的 tran**|支持订阅进行排队更新。 可以在订阅服务器上进行数据修改，将其存储在队列中，然后传播到发布服务器。|  
-|**故障转移**|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。|  
+|**failover**|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。|  
 |**排队故障转移**|支持将订阅作为排队更新订阅，并允许更改为立即更新模式。 在订阅服务器和发布服务器之间建立连接之前，可以在订阅服务器上修改数据，并将数据修改存储在队列中。 建立起持续连接后，即可将更新模式更改为立即更新。 *对 Oracle 发布服务器不支持*。|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- 每次运行快照代理时是创建还是重新创建同步文件。 *immediate_sync*是**位**默认值为 1，并且必须设置为相同的值*immediate_sync*中**sp_addpublication**。*immediate_sync*是发布的属性，必须具有相同的值，因为它具有发布服务器上。  
+`[ @immediate_sync = ] immediate_sync` 同步文件是否是创建或重新创建每次快照代理运行的时。 *immediate_sync*是**位**默认值为 1，并且必须设置为相同的值*immediate_sync*中**sp_addpublication**。*immediate_sync*是发布的属性，必须具有相同的值，因为它具有发布服务器上。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -95,13 +87,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_addpullsubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [创建请求订阅](../../relational-databases/replication/create-a-pull-subscription.md)   
  [创建事务发布的可更新订阅](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)[订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
- [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -5,17 +5,17 @@ description: 了解如何在 SQL Server 2019 大数据群集中的数据暂留�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017953"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494159"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017953"
 SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 可以创建不同的存储类的不同种类的存储，并在大数据群集部署时指定它们。 你可以配置要用于哪些用途 （池） 的存储类。 SQL Server 大数据群集创建[永久性卷声明](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)替换为需要永久卷每个 pod 的指定的存储类名称。 它然后装载在 pod 中相应的永久性卷。
 
 > [!NOTE]
-> CTP 2.3，仅为`ReadWriteOnce`支持整个群集的访问模式。
+> CTP 2.4，仅为`ReadWriteOnce`支持整个群集的访问模式。
 
 ## <a name="deployment-settings"></a>部署设置
 

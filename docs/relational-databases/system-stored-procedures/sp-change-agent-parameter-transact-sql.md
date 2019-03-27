@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493459"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_id=**] *profile_id*，  
- 配置文件的 ID。 *profile_id*是**int**，无默认值。  
+`[ @profile_id = ] profile_id,` 是配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
- [  **@parameter_name=**] **'parameter_name**   
- 为参数的名称。 *parameter_name*是**sysname**，无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要了解哪种类型的代理这*profile_id*表示时，找到*profile_id*中的列**Msagent_profiles**表，并记下*agent_type*值。  
+`[ @parameter_name = ] 'parameter_name'` 为参数的名称。 *parameter_name*是**sysname**，无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要了解哪种类型的代理这*profile_id*表示时，找到*profile_id*中的列**Msagent_profiles**表，并记下*agent_type*值。  
   
 > [!NOTE]  
 >  如果参数支持的给定*agent_type*，但尚未定义中的代理配置文件中，将返回错误。 若要将参数添加到代理配置文件必须执行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
@@ -61,7 +59,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **输出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -81,7 +79,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **输出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -113,11 +111,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxBcpThreads**  
   
--   **了 MaxDeliveredTransactions**  
+-   **MaxDeliveredTransactions**  
   
 -   **MessageInterval**  
   
--   **输出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -181,7 +179,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **输出**  
+-   **Output**  
   
 -   **OutputMessageFile**  
   
@@ -229,7 +227,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **输出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看为给定配置文件中定义了哪些参数，请运行**sp_help_agent_profile**并记下*profile_name*与关联*profile_id*。 具有相应*profile_id*，接下来运行**sp_help_agent_parameters**使用的*profile_id*若要查看与该配置文件关联的参数。 参数可以通过执行添加到配置文件[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- [  **@parameter_value=**] **'parameter_value**   
- 是该参数的新值。 *parameter_value*是**nvarchar(255)**，无默认值。  
+`[ @parameter_value = ] 'parameter_value'` 是该参数的新值。 *parameter_value*是**nvarchar(255)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -262,9 +259,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [复制合并代理](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
