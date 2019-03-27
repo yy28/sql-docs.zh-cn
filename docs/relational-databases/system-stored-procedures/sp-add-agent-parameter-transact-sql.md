@@ -1,5 +1,5 @@
 ---
-title: sp_add_agent_parameter (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a36f49bb392d8f29ff52bb574f1dff9c9813eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764660"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494009"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_id=** ] *profile_id*  
- 是从配置文件的 ID **MSagent_profiles**表中**msdb**数据库。 *profile_id*是**int**，无默认值。  
+`[ @profile_id = ] profile_id` 是从配置文件的 ID **MSagent_profiles**表中**msdb**数据库。 *profile_id*是**int**，无默认值。  
   
  若要了解什么代理类型这*profile_id*表示时，找到*profile_id*中[MSagent_profiles &#40;-&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表，并记下*agent_type*字段值。 这些值如下所示：  
   
@@ -53,8 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|合并代理|  
 |**9**|队列读取器代理|  
   
- [  **@parameter_name=** ] **'***parameter_name*****  
- 为参数的名称。 *parameter_name*是**sysname**，无默认值。 已在系统配置文件中定义的参数的列表，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
+`[ @parameter_name = ] 'parameter_name'` 为参数的名称。 *parameter_name*是**sysname**，无默认值。 已在系统配置文件中定义的参数的列表，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -66,8 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [复制队列读取器代理](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [  **@parameter_value=**] **'parameter_value**   
- 赋给参数的值。 *parameter_value*是**nvarchar(255)**，无默认值。  
+`[ @parameter_value = ] 'parameter_value'` 是要分配给参数的值。 *parameter_value*是**nvarchar(255)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -81,10 +78,10 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ## <a name="see-also"></a>请参阅  
  [使用复制代理配置文件](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_change_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   
