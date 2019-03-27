@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072122"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477642"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什么是 SQL Server 2019 大数据群集？
 
@@ -100,6 +100,9 @@ Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器
 ### <a id="dataplane"></a> 数据平面
 
 数据平面用于数据暂留和缓存。 它包含的 SQL 数据池和存储池。  SQL 数据池包含在 Linux 上运行 SQL Server 的一个或多个 pod。 它用于从 SQL 查询或 Spark 作业引入数据。 SQL Server 大数据群集的数据集市将保留在数据池。 存储池包含的存储池 pod 组成 Linux、 Spark 和 HDFS 上的 SQL Server。 在 SQL Server 大数据群集中的所有存储节点都是 HDFS 群集的成员。
+
+> [!TIP]
+> 深入了解到大数据群集体系结构和安装，请参阅[研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
 ## <a name="next-steps"></a>后续步骤
 

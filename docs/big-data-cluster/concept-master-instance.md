@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227299"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477943"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集中的主实例？
 
@@ -66,6 +66,7 @@ SQL Server 2019 简化大数据来联接到维度的数据通常存储在企业�
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下概述：
+若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
 
 - [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
+- [研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

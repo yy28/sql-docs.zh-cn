@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 9666192d667a5a2592ab32f346338d1b9963fa3d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434428"
+ms.locfileid: "58477652"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序
 
@@ -139,7 +139,7 @@ mssqlctl app create --spec ./addpy
 ```
 
 > [!NOTE]
-> `spec.yaml`文件，同时指定`poolsize`和许多`replicas`。 数`replicas`指定需要部署的服务副本数。 `poolsize`指定你想要创建副本的每个池的数量。 这些设置会影响部署可以并行处理的请求量。 在一个给定时间的请求最大数目是等于`replicas`时间`poolsize`，即 如果你有 5 个副本和 2 个池每个副本部署可以处理 10 个并行请求。 请参阅下的图以图形表示形式`replicas`和`poolsize`:![Poolsize 和副本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+> `spec.yaml`文件，同时指定`poolsize`和许多`replicas`。 数`replicas`指定需要部署的服务副本数。 `poolsize`指定你想要创建副本的每个池的数量。 这些设置会影响部署可以并行处理的请求量。 在一个给定时间的请求最大数目是否等于`replicas`时间`poolsize`，即 如果你有 5 个副本和 2 个池每个副本部署可以处理 10 个并行请求。 请参阅下的图以图形表示形式`replicas`和`poolsize`:![Poolsize 和副本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 你可以检查是否使用列表命令部署应用：
 

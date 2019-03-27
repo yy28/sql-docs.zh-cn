@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241418"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477982"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
 
@@ -53,16 +53,16 @@ ms.locfileid: "54241418"
 在预配群集时需要使用环境变量进行设置的最终用户密码数。 以下是 SQL 管理员和群集管理员使用来访问服务的密码：
 
 控制器用户名：
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 控制器的密码：  
- + CONTROLLER_PASSWORD = < controller_password >
+ + CONTROLLER_PASSWORD=<controller_password>
 
 SQL 主控形状 SA 密码： 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 用于访问 HDFS/Spark 终结点的密码：
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>群集内身份验证
 
@@ -81,7 +81,7 @@ SQL 主控形状 SA 密码：
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下文章：
+若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
 
 - [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
-- [快速入门：部署 SQL Server 大数据群集在 Kubernetes 上](quickstart-big-data-cluster-deploy.md)
+- [研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227129"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477862"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 大数据群集中的计算池有哪些？
 
@@ -31,6 +31,7 @@ ms.locfileid: "57227129"
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下概述：
+若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
 
 - [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
+- [研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

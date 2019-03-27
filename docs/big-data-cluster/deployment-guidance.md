@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161635"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477692"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -347,4 +347,7 @@ kubectl get svc -n <your-cluster-name>
 
 ## <a name="next-steps"></a>后续步骤
 
-尝试的一些新功能并学习[如何在 SQL Server 2019 预览版中使用笔记本](notebooks-guidance.md)。
+若要了解有关 SQL Server 大数据群集的详细信息，请参阅以下资源：
+
+- [什么是 SQL Server 2019 大数据群集？](big-data-cluster-overview.md)
+- [研讨会：Microsoft SQL Server 大数据群集体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
