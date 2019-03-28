@@ -5798,7 +5798,7 @@ items:
         href: ../ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
       - name: 转换 DB2 架构
         href: ../ssma/db2/converting-db2-schemas-db2tosql.md
-      - name: SQL Server 迁移助手
+      - name: SQL Server Migration Assistant
         href: ../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
       - name: 生成报告
         href: ../ssma/db2/generating-reports-db2tosql.md
@@ -6894,6 +6894,7 @@ items:
     - name: 使用测试服务器的注意事项
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: 智能查询处理
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: 性能中心
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 匿名使用情况数据
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: 安装 sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: 发行说明
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage 参考
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -12704,7 +12705,7 @@ items:
     - name: 变更数据捕获
       href: ../relational-databases/system-functions/change-data-capture-functions-transact-sql.md
       items:
-      - name: cdc.fn_cdc_get_all_changes_<捕获实例>
+      - name: cdc.fn_cdc_get_all_changes_<capture_instance>
         href: ../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md
       - name: cdc.fn_cdc_get_net_changes_<capture_instance>
         href: ../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md
@@ -16161,7 +16162,7 @@ items:
         - name: 位
           href: ../t-sql/language-elements/bitwise-operators-transact-sql.md
           items:
-          - name: '&（位与）'
+          - name: '& (位与)'
             href: ../t-sql/language-elements/bitwise-and-transact-sql.md
           - name: '&=（位与赋值）'
             href: ../t-sql/language-elements/bitwise-and-equals-transact-sql.md
@@ -16182,11 +16183,11 @@ items:
             href: ../t-sql/language-elements/equals-transact-sql.md
           - name: '> （大于）'
             href: ../t-sql/language-elements/greater-than-transact-sql.md
-          - name: <（小于）
+          - name: < (小于)
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>=（大于等于）'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <=（小于等于）
+          - name: <= (小于或等于)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
           - name: <>（不等于）
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 处理 XQuery 中的命名空间
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538679"
