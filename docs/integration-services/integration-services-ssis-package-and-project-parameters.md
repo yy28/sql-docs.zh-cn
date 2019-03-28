@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858697"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281311"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -103,7 +103,7 @@ ms.locfileid: "51858697"
 ## <a name="create-parameters"></a>Create Parameters
 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 可以创建项目参数和包参数。 下面的过程提供了有关创建包参数/项目参数的分步说明。  
   
-> **注意：** 若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用“Integration Services 项目转换向导”来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意**：若要将使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的早期版本创建的项目转换为项目部署模型，则可以使用 **“Integration Services 项目转换向导”** 来创建基于配置的参数。 有关详细信息，请参阅[部署 Integration Services (SSIS) 项目和包](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>创建包参数  
   
@@ -117,7 +117,7 @@ ms.locfileid: "51858697"
   
 3.  为列表自身中或 **“属性”** 窗口中的 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。 下表对这些属性进行了说明：  
   
-    |“属性”|描述|  
+    |属性|描述|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
@@ -126,13 +126,13 @@ ms.locfileid: "51858697"
     |Required|需要首先指定并非设计默认值的值，包才能执行。|  
     |描述|出于可维护性目的而提供的参数的说明。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，当在适用的参数窗口中选择参数时，在“Visual Studio 属性”窗口中设置参数说明。|  
   
-    > **注意：** 在向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
+    > **注意**：在您向目录部署某一项目时，还有几个属性将与该项目相关联。 若要查看目录中所有参数的全部属性，请使用 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。  
   
 4.  保存项目以保存对参数所做的更改。 参数值将存储在项目文件中。  
   
     > **警告！！** 可以直接在列表中编辑，也可以使用“属性”窗口来修改参数属性的值。 可以使用“删除 (X)”工具栏按钮来删除参数。 使用最后一个工具栏按钮，可以为仅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中执行包时使用的参数指定值。  
   
-    > **注意：** 如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
+    > **注意**：如果未在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中打开项目便重新打开包文件，则“参数”选项卡将为空且被禁用。  
   
 ### <a name="create-project-parameters"></a>创建项目参数  
   
@@ -148,7 +148,7 @@ ms.locfileid: "51858697"
   
 4.  为 **“名称”**、 **“数据类型”**、 **“值”**、 **“敏感”** 和 **“必需”** 属性输入值。  
   
-    |“属性”|描述|  
+    |属性|描述|  
     |--------------|-----------------|  
     |“属性”|参数名。|  
     |“名称”|参数的数据类型。|  
@@ -206,7 +206,7 @@ ms.locfileid: "51858697"
   
 3.  通过在 **“选择页”** 之下单击 **“参数”**，打开参数页。  
   
-4.  在 **“参数”** 列表中选择所需参数。 注意： **“容器”** 列将帮助区分项目参数和包参数。  
+4.  在 **“参数”** 列表中选择所需参数。 注意：“容器”列将帮助区分项目参数和包参数。  
   
 5.  在 **“值”** 列中，指定所需的服务器默认参数值。  
 
@@ -214,6 +214,6 @@ ms.locfileid: "51858697"
  若要使用 TRANSACT-SQL 设置服务器默认值，请使用 [catalog.set_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)存储过程。 若要查看当前服务器默认值，请查询 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。 若要清除服务器默认值，请使用 [catalog.clear_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)存储过程。  
   
 ## <a name="related-content"></a>相关内容  
- mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的博客文章：[SSIS 快速提示：必需的参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

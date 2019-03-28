@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6ce28ed249565e051a987ddffbb04d683f9e43
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974236"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305525"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>为 Always On 可用性组配置只读路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,14 @@ ms.locfileid: "57974236"
 -   必须在辅助角色中将一个或多个可用性副本配置为接受只读（即配置为 [可读次要副本](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)）。 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 -   您必须连接到承载当前主副本的服务器实例。  
+
+-   如果使用 SQL 登录名，请确保帐户配置正确无误。 有关详细信息，请参阅[管理可用性组中数据库的登录名和作业 (SQL Server)](logins-and-jobs-for-availability-group-databases.md)。
   
 ###  <a name="RORReplicaProperties"></a> 为支持只读路由，您需要配置哪些副本属性？  
   
 -   对于要支持只读路由的每个可读次要副本，你需要指定 *只读路由 URL*。 此 URL 仅在本地副本在辅助角色下运行时起作用。 必须根据需要在逐个副本的基础上指定只读路由 URL。 每个只读路由 URL 都用于将读意向请求路由到一个特定的可读辅助副本。 通常，向每个可读辅助副本分配一个只读路由 URL。  
   
-     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://web.archive.org/web/20170512023255/https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   对于要在其作为主要副本时支持只读路由的每个可用性副本，都需要指定一个 *只读路由列表*。 一个给定的只读路由列表仅在本地副本在主角色下运行时才起作用。 必须根据需要在逐个副本的基础上指定此列表。 通常，每个只读路由列表中将包含各只读路由 URL，并且在列表的末尾具有本地副本的 URL。  
   

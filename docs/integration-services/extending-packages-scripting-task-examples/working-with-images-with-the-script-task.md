@@ -21,15 +21,15 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de5aa91ae884b8aef977c47a2fa288f179a086fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595706"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270585"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
   除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 System.Drawing 命名空间提供用于操作图像的类。  

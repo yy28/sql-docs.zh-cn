@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31440d6479353467d687467466f9c838a49d5252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a46945b7c7725d680fb303a451327dc2733642aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724145"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277826"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
-  **Azure 存储连接管理器** 使一个 SSIS 包可使用你指定的属性值连接到 Azure 存储帐户：存储帐户名称和帐户密钥。  
+  通过使用你为以下属性指定的值，Azure 存储连接管理器使 SSIS 包能够连接到 Azure 存储帐户：存储帐户名称和帐户密钥。  
    
  Azure 存储连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件。 
   

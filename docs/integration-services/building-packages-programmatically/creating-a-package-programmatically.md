@@ -16,15 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87a757f007b2a4b30172c51971e56dd585c166f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540878"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280653"
 ---
 # <a name="creating-a-package-programmatically"></a>以编程方式创建包
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 对象是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 项目解决方案中的所有其他对象的顶级容器。 作为顶级容器，包是第一个创建的对象，并将后续对象添加到该包，然后在包的上下文中执行这些对象。 包本身并不移动或转换数据。 包依靠自己包含的任务执行工作。 任务执行大多数由包执行的工作，并定义包的功能。 只需三行代码即可完成包的创建和执行，但需要向包中添加各种任务和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象以增加其功能。 本节讨论如何以编程方式创建包。 不提供有关如何创建任务或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的信息。 有关信息，请参阅后续相关章节。  
@@ -72,7 +72,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：LoadPackage 用于平面文件，LoadFromSQLServer 用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包，<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用于保存到文件系统的包。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
+ 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：用于平面文件的 LoadPackage、用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包的 LoadFromSQLServer，或用于保存到文件系统的包的 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
   
 ```csharp  
 using System;  
@@ -153,7 +153,7 @@ End Module
   
 -   blogs.msdn.com 上的博客文章 [API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824)（API 示例 - OleDB 源和 OleDB 目标）。  
   
--   blogs.msdn.com 上的博客文章 [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI - 为 SQL Server 2012 更新）。  
+-   blogs.msdn.com 上的博客文章 [EzAPI - 为 SQL Server 2012 更新](https://go.microsoft.com/fwlink/?LinkId=243223)。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式添加任务](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728165"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279161"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数值、字符串和布尔型文字
  表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  
@@ -111,8 +111,8 @@ ms.locfileid: "47728165"
 |\xhhhh|十六进制表示的 Unicode 字符|  
   
 ## <a name="boolean-literals"></a>布尔值文字  
- 表达式计算器支持常用的布尔值文字： **True** 和 **False**。 表达式计算器不区分大小写，任何大写和小写字母的组合都是允许的。 例如，TRUE 和 True 的作用是一样的。  
+ 表达式计算器支持常用的布尔值文字：True 和 False。 表达式计算器不区分大小写，任何大写和小写字母的组合都是允许的。 例如，TRUE 和 True 的作用是一样的。  
   
-> **注意：** 在表达式中，布尔值文字必须用空格分隔。  
+> **注意**：在表达式中，布尔值文字必须用空格分隔。  
   
   

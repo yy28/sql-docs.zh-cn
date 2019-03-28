@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797465"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273552"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支持自定义组件中的多目标
  现在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 设计器来创建、维护和运行面向 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的包。 若要获取用于 Visual Studio 2015 的 SSDT，请参阅[下载最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 
@@ -94,7 +94,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**错误消息。** 无法将类型为 "System.__ComObject" 的 COM 对象强制转换为接口类型 "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100"。 此操作失败的原因是对 IID 为 "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" 的接口的 COM 组件调用 QueryInterface 因以下错误而失败: 不支持此类接口(异常来自 HRESULT: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
+**错误消息。** 无法将类型为 "System.__ComObject" 的 COM 对象强制转换为接口类型 "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100"。 此操作失败的原因是对 IID 为“{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}”的接口的 COM 组件调用 QueryInterface 因以下错误而失败：不支持此类接口(异常来自 HRESULT:0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
 **解决方案。** 如果自定义扩展引用 Microsoft.SqlServer.DTSPipelineWrap 或 Microsoft.SqlServer.DTSRuntimeWrap 等 SSIS 互操作程序集，将“嵌入互操作类型”属性的值设置为“False”。
 

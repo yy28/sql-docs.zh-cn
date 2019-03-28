@@ -1,22 +1,21 @@
 ---
 title: 步骤 6：添加和配置查找转换 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143373"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221952"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>第 1-6 课：添加和配置查找转换
 
@@ -98,7 +97,7 @@ ms.locfileid: "54143373"
   
 8.  在“列”页上，进行以下选择：  
   
-    1.  在“可用输入列”面板中，将“CurrencyDate”拖到“可用查找列”面板的“FullDateAlternateKey”上。  
+    1.  在“可用输入列”面板中，将“CurrencyDate”拖到“可用查找列”面板的“FullDateAlternateKey”上。  如果出现一条消息，指示数据类型不匹配，则将 CurrencyDate 的数据类型更改为 [DT_DBDATE]。
   
     2.  在“可用查找列”列表中，选中“DateKey”左侧的复选框。  
   
@@ -115,6 +114,3 @@ ms.locfileid: "54143373"
   
 ## <a name="see-also"></a>另请参阅  
 [查找转换](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

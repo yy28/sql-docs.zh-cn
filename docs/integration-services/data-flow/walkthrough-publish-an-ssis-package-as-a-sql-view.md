@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521232"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281861"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -55,7 +55,7 @@ ms.locfileid: "52521232"
   
 5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。   
   
-    1.  为了进行演练，请创建一个包含表 **Employee** 的测试数据库 **TestDB**。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
+    1.  为了进行演练，请创建一个包含表 Employee的测试数据库 TestDB。 创建包含三列： **ID**、 **FirstName** 和 **LastName**的表。  
   
     2.  将 **ID** 设为主键。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52521232"
   
          ![数据馈送发布向导 -“包设置”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing Wizard - Package Settings Pag")  
   
-    2.  单击“路径”字段旁边的“浏览”，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：**SSISDB**->**SSISPackagePublishing**->**Package.dtsx**），然后单击“确定”。  
+    2.  单击“路径”字段旁边的“浏览”，浏览 SSIS 目录，选择要发布的 SSIS 包（例如：SSISDB->SSISPackagePublishing->Package.dtsx），然后单击“确定”。  
   
          ![数据馈送发布向导 - 浏览包](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing Wizard - Browse for Package")  
   

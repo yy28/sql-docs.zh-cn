@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5880f74a5cb7296197e1d5ced383fa2c48aaf84a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400640"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280001"
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  
@@ -38,11 +38,11 @@ ms.locfileid: "52400640"
 |“登录属性”|活动状态代码|错误状态代码|描述|子状态|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Oracle CDC 实例未运行。 ABORTED 子状态指示 Oracle CDC 实例曾处于活动状态但之后已意外停止。|ABORTED 子状态在 Oracle CDC 服务主实例检测到 Oracle CDC 实例未运行而其状态为 ACTIVE 时建立。|  
-|error|0|1|Oracle CDC 实例未运行。 ERROR 状态指示 CDC 实例曾处于活动状态但之后遇到了无法恢复的错误并且禁用了自身。|MISCONFIGURED：检测到无法恢复的配置错误。<br /><br /> PASSWORD-REQUIRED：没有为 Change Data Capture Designer for Oracle by Attunity 设置密码或者配置的密码无效。 这可能是因为对服务的非对称密钥密码进行的更改。|  
-|RUNNING|1|0|CDC 实例正在运行并且正在处理更改记录。|IDLE：所有更改记录都已处理并且存储在目标控制 (**_CT**) 表中。 没有针对控制表的活动事务。<br /><br /> PROCESSING：存在正处理、但尚未写入控制 (**_CT**) 表的更改记录。|  
+|error|0|1|Oracle CDC 实例未运行。 ERROR 状态指示 CDC 实例曾处于活动状态但之后遇到了无法恢复的错误并且禁用了自身。|MISCONFIGURED：检测到无法恢复的配置错误。<br /><br /> PASSWORD-REQUIRED：没有为适用于 Oracle 的 Attunity 更改数据捕获设计器设置密码或者配置的密码无效。 这可能是因为对服务的非对称密钥密码进行的更改。|  
+|RUNNING|1|0|CDC 实例正在运行并且正在处理更改记录。|IDLE：所有更改记录都已处理并存储在目标控制 (_CT) 表中。 没有针对控制表的活动事务。<br /><br /> PROCESSING：存在正处理、但尚未写入控制 (_CT) 表的更改记录。|  
 |STOPPED|0|0|CDC 实例未在运行。|STOP 子状态指示 CDC 实例曾处于活动状态并且之后已正确停止。|  
 |SUSPENDED|1|1|CDC 实例正在运行，但由于无法恢复的错误处理已挂起。|DISCONNECTED：无法建立与源 Oracle 数据库的连接。 在连接恢复后会继续处理。<br /><br /> STORAGE：存储已满。 在存储变为可用时将继续处理。 在某些情况下，此状态可能不会出现，因为状态表无法更新。<br /><br /> LOGGER：记录器连接到 Oracle，但由于临时问题而无法读取 Oracle 事务日志。|  
-|DATAERROR|x|x|此状态代码仅用于 **xdbcdc_trace** 表。 它不显示在 **xdbcdc_state** 表中。 具有此状态的跟踪记录指示 Oracle 日志记录存在问题。 错误日志记录以 BLOB 形式存储于“数据”列中。|BADRECORD：附加的日志记录无法分析。<br /><br /> CONVERT-ERROR：某些列中的数据无法转换到捕获表中的目标列。 只有在配置指定换错误应生成跟踪记录的情况下，才可能会出现此状态。|  
+|DATAERROR|x|x|此状态代码仅用于 **xdbcdc_trace** 表。 它不显示在 **xdbcdc_state** 表中。 具有此状态的跟踪记录指示 Oracle 日志记录存在问题。 错误日志记录以 BLOB 形式存储于“数据”列中。|BADRECORD：无法分析附加的日志记录。<br /><br /> CONVERT-ERROR:某些列中的数据无法转换到捕获表中的目标列。 只有在配置指定换错误应生成跟踪记录的情况下，才可能会出现此状态。|  
   
  因为 Oracle CDC 服务状态存储于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，所以，有时候数据库中的状态值可能不会反映服务的实际状态。 最常见的情形是服务丢失其与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接并且无法恢复（由于任何原因）。 在该情况下，存储在 **cdc.xdbcdc_state** 中的状态会变得陈旧。 如果上次更新时间戳 (UTC) 不止早 1 分钟，则状态可能是陈旧的。 在此情况下，使用 Windows 事件查看器可以查找与服务状态有关的附加信息。  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f056b10aea5144c3d8bda96d7fe049377bc6532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641709"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273383"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>数据事件探查任务编辑器（“配置文件请求”页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“配置文件请求”** 页，选择和配置需要计算的配置文件。 在单个数据事件探查任务中，可以为多列或多个表或视图中的列组合计算多个配置文件。  
@@ -49,15 +49,15 @@ ms.locfileid: "47641709"
 ### <a name="requests-pane-columns"></a>请求窗格列  
  请求窗格显示的列取决于选定的 **“视图”** ：  
   
--   如果选择查看 **“所有请求”**，则请求窗格会显示两列： **“配置文件类型”** 和 **“请求 ID”**。  
+-   如果选择查看“所有请求”，则请求窗格会显示两列：“配置文件类型”和“请求 ID”。  
   
--   如果选择查看五个列配置文件中的一个，则请求窗格会显示四列： **“配置文件类型”**、 **“表或视图”**、 **“列”** 和 **“请求 ID”**。  
+-   如果选择查看五个列配置文件中的一个，则请求窗格会显示四列：“配置文件类型”、“表或视图”、“列”和“请求 ID”。  
   
 -   如果选择查看候选键配置文件，则请求窗格会显示四列：“配置文件类型”、“表或视图”、“键列”和“请求 ID”。  
   
--   如果选择查看函数依赖关系配置文件，则请求窗格会显示五列： **“配置文件类型”**、 **“表或视图”**、 **“决定列”**、 **“依赖列”** 和 **“请求 ID”**。  
+-   如果选择查看函数依赖关系配置文件，则请求窗格会显示五列：“配置文件类型”、“表或视图”、“决定列”、“依赖列”和“请求 ID”。  
   
--   如果选择查看值包含配置文件，则请求窗格会显示六列： **“配置文件类型”**、 **“子集端表或视图”**、 **“超集端表或视图”**、 **“子集端列”**、 **“超集端列”** 和 **“请求 ID”**。  
+-   如果选择查看值包含配置文件，则请求窗格会显示六列：“配置文件类型”、“子集端表或视图”、“超集端表或视图”、“子集端列”、“超集端列”和“请求 ID”。  
   
  以下各节逐一介绍这些列。  
   

@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba5c332b775d379a1b27db5435c29bb84851c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634330"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276680"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 实例
   Oracle CDC 实例是 Oracle CDC 服务为处理从单个 Oracle 源数据库捕获的更改而创建的进程。 Oracle CDC 实例从 **cdc.xdbcdc_config** 表检索其配置并且在 **cdc.xdbcdc_state** 表中维护其状态。 这些表是用于定义 Oracle CDC 实例的 CDC 数据库的一部分。 有关 xdbcdc 数据库和表的详细信息，请参阅 [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)。  
   
  下面介绍 Oracle CDC 实例执行的任务：  
   
--   **处理服务启动验证**：在启动时，CDC 实例从 **xdbcdc_config** 表加载其配置并且执行一系列状态验证，这些验证确保 CDC 实例持久化状态是一致的并且可以开始处理更改。  
+-   **处理服务启动验证**：在启动时，CDC 实例从 xdbcdc_config 表加载其配置并且执行一系列状态验证，这些验证确保 CDC 实例持久化状态是一致的并且可以开始处理更改。  
   
 -   **准备变更捕获**：在成功通过验证后，Oracle CDC 实例将扫描当前定义的所有捕获实例，并且准备 Oracle LogMiner 查询以及变更捕获所需的其他支持结构。 此外，Oracle 实例将重新加载上次 Oracle CDC 实例运行时保存的内部捕获状态。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "47634330"
   
     -   在单独的线程中，在 30 秒的上限内尽可能多地将内存中缓存的记录写入临时事务表（按照从最旧的事务到最新的事务的顺序），然后更新 **xdbcdc_state** 表并提交所有更改。  
   
--   处理配置更改：针对来自 CDC 服务的配置更改或者通过在 **cdc.xdbcdc_config** 表中检测到新版本来通知 Oracle CDC 实例。 大多数更改不需要重新启动 Oracle CDC 实例（例如，添加或删除捕获实例）。 但是，某些更改（例如更改 Oracle 连接字符串和访问凭据）则要求重新启动 CDC 实例。  
+-   **处理配置更改**：针对来自 CDC 服务的配置更改或者通过在 cdc.xdbcdc_config 表中检测到新版本来通知 Oracle CDC 实例。 大多数更改不需要重新启动 Oracle CDC 实例（例如，添加或删除捕获实例）。 但是，某些更改（例如更改 Oracle 连接字符串和访问凭据）则要求重新启动 CDC 实例。  
   
--   **处理恢复**：在某一 Oracle CDC 实例启动时，其内部状态将从 **xdbcdc_state** 和 **xdbcdc_staged_transactions** 表还原。 一旦状态还原后，CDC 实例将照常运行。  
+-   **处理恢复**：在某一 Oracle CDC 实例启动时，其内部状态将从 xdbcdc_state 和 xdbcdc_staged_transactions 表还原。 一旦状态还原后，CDC 实例将照常运行。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误处理](../../integration-services/change-data-capture/error-handling.md)  

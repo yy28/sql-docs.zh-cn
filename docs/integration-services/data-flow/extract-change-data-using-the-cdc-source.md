@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1296ab84f5cf75013b68c72aba435c77ff129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608415"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271120"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -45,7 +45,7 @@ ms.locfileid: "47608415"
   
 8.  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
-    -   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
+    -   **全部**：返回当前 CDC 范围中的更改，不包括“更新前”值。  
   
     -   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527142"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290283"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>第 3-2 课 — 运行包安装向导
 在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
@@ -66,14 +66,14 @@ ms.locfileid: "52527142"
   
 16. 在“配置文件”列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
-    |“属性”|ReplTest1|更新后的值|  
+    |属性|ReplTest1|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. 在“配置文件”列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
-    |“属性”|ReplTest1|更新后的值|  
+    |属性|ReplTest1|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -82,11 +82,11 @@ ms.locfileid: "52527142"
   
     由于目标计算机上环境变量的值与开发计算机上环境变量的值不同，因此会在“包验证”页上出现多个警告。 您可能会看到下列四个警告：  
   
-    -   配置文件 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 无效。 请检查此配置文件名。  
+    -   配置文件：“C:\DeploymentTutorial\DataTransferConfig.dtsConfig”无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   
-    -   配置文件 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" 无效。 请检查此配置文件名。  
+    -   配置文件：“C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig”无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   

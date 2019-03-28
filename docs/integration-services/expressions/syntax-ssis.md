@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638193"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279841"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  
@@ -29,7 +29,7 @@ ms.locfileid: "51638193"
   
  有关使用特定运算符和函数的示例表达式，请参阅以下主题中关于每个运算符和函数的主题：[运算符（SSIS 表达式）](../../integration-services/expressions/operators-ssis-expression.md)和[函数（SSIS 表达式）](../../integration-services/expressions/functions-ssis-expression.md)。  
   
- 有关使用多个运算符和函数以及标识符和文本的示例表达式，请参阅[高级 Integration Services 表达式的示例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)。  
+ 有关使用多个运算符和函数以及标识符和文本的示例表达式，请参阅 [高级 Integration Services 表达式的示例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)。  
   
  有关要在属性表达式中使用的示例表达式，请参阅 [在包中使用属性表达式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   

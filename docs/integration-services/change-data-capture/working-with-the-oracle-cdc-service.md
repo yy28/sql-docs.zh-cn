@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82e08d0cdffd4d9f339b4dc1c35322d8e2dd687d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2500ac75e7b6a34803c822bb8d661ada57130bb8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607857"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274193"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服务
   本节介绍 Oracle CDC 服务的一些重要概念。 本节中包含的概念是：  
@@ -95,7 +95,7 @@ ms.locfileid: "47607857"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中 Oracle 数据库的名称。|  
 |config_version|相应 CDC 数据库 **xdbcdc_config** 表中上次更改的时间戳 (UTC) 或者此表中当前行的时间戳 (UTC)。<br /><br /> UPDATE 触发器将此项的值强制为 GETUTCDATE()。 **config_version** 使 CDC 服务可以标识需要检查是否有配置更改或启用/禁用的 CDC 实例。|  
 |cdc_service_name|此项确定哪一 Oracle CDC 服务处理所选 Oracle 数据库。|  
-|enabled|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：Oracle CDC 实例可能会由于无法重试的错误而成为禁用的实例。 在此情况下，必须在解决错误后手动重新启动该实例。|  
+|enabled|指示 Oracle CDC 实例是处于活动状态 (1) 还是被禁用 (0)。 在 Oracle CDC 服务启动时，只启动标记有启用 (1) 的实例。<br /><br /> **注意**：Oracle CDC 实例可能会由于无法重试的错误而被禁用。 在此情况下，必须在解决错误后手动重新启动该实例。|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  此表列出了与主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例相关联的 CDC 服务。 此表由 CDC 设计器控制台用来确定为本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置的 CDC 服务的列表。 CDC 服务还使用该表确保只有一个正在运行的 Windows 服务处理给定的 Oracle CDC 服务名称。  

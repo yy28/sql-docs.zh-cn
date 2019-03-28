@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808285"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273429"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -35,7 +35,7 @@ ms.locfileid: "47808285"
   
 -   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
   
--   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并且使用“SQL 执行”来一次一行地插入行。  
+-   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并使用“SQL 执行”来一次一行地插入行。  
   
 ## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
@@ -110,9 +110,9 @@ ms.locfileid: "47808285"
 |选项|描述|  
 |------------|-----------------|  
 |表名 - 批处理|选择此选项可将 ODBC 目标配置为在批处理模式下工作。 选择此选项后，以下选项可用：|  
-||**表或视图的名称**：从列表中选择可用的表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果你的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (\*) 通配符输入名称的任何部分以便显示要使用的表。<br /><br /> **批大小**：键入用于大容量加载的批处理的大小。 这是作为一批加载的行数。|  
+||**表或视图的名称**：从该列表中选择可用的表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果你的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (\*) 通配符输入名称的任何部分以便显示要使用的表。<br /><br /> **批大小**：键入用于大容量加载的批处理的大小。 这是作为一批加载的行数。|  
 |表名 - 逐行|选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项后，以下选项可用：|  
-||**表或视图的名称**：从列表中选择数据库中的可用表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
+||**表或视图的名称**：从数据库或列表中选择可用的表或视图。<br /><br /> 该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
   
 #### <a name="preview"></a>预览  
  单击 **“预览”** 可以查看所选表的最多 200 行数据。  

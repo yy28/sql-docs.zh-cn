@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 458df1921c4d5327f06528d356790ed6795ac613
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642154"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280831"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>用于 Azure 的 Integration Services (SSIS) 功能包
 用于 Azure 的 SQL Server Integration Services (SSIS) 功能包是一个扩展包，可为 SSIS 提供本页面上列出的组件，用于连接到 Azure 服务、在 Azure 与本地数据源之间传输数据以及处理 Azure 中存储的数据。
@@ -80,7 +80,7 @@ ms.locfileid: "51642154"
 
 -   Azure Blob 和 Azure Data Lake Store 文件枚举器。 请参阅 [Foreach 循环容器](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
-## <a name="scenario-processing-big-data"></a>应用场景：处理大数据
+## <a name="scenario-processing-big-data"></a>方案：处理大数据
  使用 Azure Connector 可完成以下大数据处理工作：
 
 1.  使用 Azure Blob 上载任务可将输入数据上载到 Azure Blob 存储。
@@ -95,7 +95,7 @@ ms.locfileid: "51642154"
 
 ![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
-## <a name="scenario-managing-data-in-the-cloud"></a>应用场景：管理云数据
+## <a name="scenario-managing-data-in-the-cloud"></a>方案：管理云中的数据
  在 SSIS 包中使用 Azure blob 目标，将输出数据写入 Azure blob 存储区；或使用 Azure blob 源，从 Azure blob 存储区中读取数据。
 
 ![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)

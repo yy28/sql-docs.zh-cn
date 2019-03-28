@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733655"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283053"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -111,10 +111,10 @@ ms.locfileid: "47733655"
   
 ### <a name="options"></a>选项  
  **求值运算**  
- 指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”** 和 **“表达式或约束”**。  
+ 指定优先约束使用的求值运算。 运算包括：“约束”、“表达式”、“表达式和约束”和“表达式或约束”。  
   
  **ReplTest1**  
- 指定约束值：“成功” 、“失败” 或“完成” 。  
+ 指定约束值：“成功”、“失败”或“完成”。  
   
 > [!NOTE]  
 >  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”。  

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532172"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306225"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -212,7 +212,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  要求对目标表具有 DELETE 权限。 如果语句包含 WHERE 子句，则还必须有 SELECT 权限。  
   
  默认情况下，将 DELETE 权限授予 **sysadmin** 固定服务器角色成员、**db_owner** 和 **db_datawriter** 固定数据库角色成员以及表所有者。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户。  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
- 以下示例根据 `ProductProductPhoto` 语句的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 子句中定义的搜索条件，删除 `FROM` 数据库 `DELETE` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
+ 以下示例根据 `DELETE` 语句的 `FROM` 子句中定义的搜索条件，删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductProductPhoto` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 通过 DELETE 语句使用标签和查询提示  
- 此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
+ 此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION 子句 (Transact-SQL)](../queries/option-clause-transact-sql.md)。
   
 ```sql
 -- Uses AdventureWorks  

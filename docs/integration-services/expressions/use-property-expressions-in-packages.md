@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531614"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277656"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。  
@@ -126,7 +126,7 @@ ms.locfileid: "52531614"
   
  如果包名称为 EmailRowCountPP，曾经在 2005 年 3 月 4 日运行，运行的持续时间为 9 秒钟，则该表达式的求值结果为下面的字符串。  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression-->Package:(EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>电子邮件正文的属性表达式  
  下面的属性表达式可用于设置发送邮件任务的 MessageSource 属性。 该表达式使用字符串文字、用户定义的变量和串联 (+) 运算符的组合。 用户定义变量命名为 `nasdaqrawrows`、 `nyserawrows`和 `amexrawrows`。 字符串“\n”指明是一个回车符。  
@@ -137,11 +137,11 @@ ms.locfileid: "52531614"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ:7058  
   
- NYSE: 3528  
+ NYSE:3528  
   
- AMEX: 1102  
+ AMEX:1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>执行进程任务的可执行文件属性的属性表达式  
  下面的属性表达式可以用于设置执行进程任务的 Executable 属性。 该表达式使用字符串文字、运算符和函数的组合。 该表达式使用 DATEPART 和 GETDATE 函数以及条件运算符。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638604"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278962"
 ---
 # <a name="data-streaming-destination"></a>数据流目标
   “数据流目标”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 **OLE DB Provider for SSIS** 将 SSIS 包的输出作为表格结果集使用。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
@@ -47,7 +47,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  在 SQL Server Management Studio 中执行 SQL 视图并从 SSIS 包查看结果。 该视图通过你创建的链接服务器将查询发送到 OLE DB Provider for SSIS。 OLE DB Provider for SSIS 执行你在查询中指定的包，然后返回表格结果集。  
   
 > [!IMPORTANT]  
->  有关详细步骤，请参阅 [演练：将 SSIS 包作为 SQL 视图发布](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)。  
+>  有关详细步骤，请参阅[演练：将 SSIS 包作为 SQL 视图发布](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)。  
   
 ## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>通过使用 Power BI 管理中心从 SSIS 包将输出数据作为 OData 馈送公开。  
  通过使用 Power BI 管理中心，IT 管理人员可以从本地数据源将数据作为 OData 馈送向用户公开。 Power BI 管理中心默认情况下仅允许注册 SQL Server 数据源。 但是，你可以通过使用“数据流目标”和 **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** 将 SSIS 包作为数据源注册到门户，并从 SSIS 包将结果数据作为 OData 馈送向用户公开。  
@@ -63,7 +63,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="configure-data-streaming-destination"></a>配置数据流目标
   通过使用“数据流目标高级编辑器”  对话框配置数据流目标。 在数据流设计器中双击该组件或右键单击该组件然后单击“编辑”来打开此对话框。  
   
- 此对话框包含三个选项卡：“组件属性” 、“输入列” 和“输入属性和输出属性” 。  
+ 此对话框包含三个选项卡：“组件属性”、“输入列”和“输入属性和输出属性”。  
   
 ## <a name="component-properties-tab"></a>“组件属性”选项卡  
  该选项卡具有以下可编辑字段：  

@@ -1,5 +1,5 @@
 ---
-title: '? :（条件）（SSIS 表达式）| Microsoft Docs'
+title: '? 解码的字符：（条件）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626015"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272098"
 ---
-# <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
+# <a name="--conditional-ssis-expression"></a>? 解码的字符：（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  
   
 ## <a name="syntax"></a>语法  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **字符串** *expression1* 和 *expression2* 必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
+-   **字符串**：expression1 和 expression2 必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
   
--   **Date、Time 或 Date/Time** *expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  

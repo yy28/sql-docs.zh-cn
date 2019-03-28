@@ -14,15 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523770"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272146"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -90,7 +90,7 @@ ms.locfileid: "52523770"
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressCountLow**|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|String|进度说明。|OnProgress 事件处理程序|  
-|**Propagate**|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 **Propagate** 变量的值。 如果在子包中将 **Propagate** 设置为 **False** ，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|**Propagate**|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 Propagate 变量的值。 如果在子包中将 **Propagate** 设置为 **False** ，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |**SourceDescription**|String|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |**SourceID**|String|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|String|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

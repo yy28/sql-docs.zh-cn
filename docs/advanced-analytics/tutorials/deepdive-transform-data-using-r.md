@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e124825e29392111a453cae0c41b49e8984c9906
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8a339d52b04b297227e28833ea490f615ed268f9
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510374"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>使用 R （SQL Server 和 RevoScaleR 教程） 转换数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53645386"
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>使用 rxDataStep 转换变量
 
-rxDataStep[](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函数一次处理一个数据区块，从一个数据源中读取，并写入另一个数据源。 可以指定要转换的列、要加载的转换等等。
+[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 函数一次处理一个数据区块，从一个数据源中读取，并写入另一个数据源。 可以指定要转换的列、要加载的转换等等。
 
 若要使此示例有趣，让我们使用来自另一个 R 包的函数来转换数据。 **引导** 包是一个“建议”包，也就是说， **引导** 包包含在每个 R 分发版中，但是不会在启动时自动加载。 因此，包应可在上找到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例配置为与 R 集成。
 

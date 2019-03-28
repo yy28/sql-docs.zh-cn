@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739605"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277276"
 ---
 # <a name="deploy-packages-with-ssis"></a>使用 SSIS 部署包
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。    
@@ -49,7 +49,7 @@ ms.locfileid: "47739605"
 熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的新工具、控件和功能的最好方法，就是使用它们。 本教程将引导您完成创建 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目再将包和其他所需文件添加到项目的步骤。 完成项目后，将创建部署捆绑，将该捆绑复制到目标计算机，然后在目标计算机上安装包。    
     
 ## <a name="prerequisites"></a>必备条件    
-本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。 为了更好地理解将在本教程中使用的基本 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念，可能会发现先完成以下 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用： [SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
+本教程适用于已经熟悉基本的文件系统操作，但对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中的新功能认识有限的用户。 为了更好地理解基本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 概念（将在本教程中使用它们），你可能会发现首先学习完下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程很有用：[SSIS 如何创建 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)。    
     
 ### <a name="on-the-source-computer"></a>在源计算机上
 

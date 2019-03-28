@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d9c2725fbb4e237e065a7cfdd7c79ffe83d968a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1f9edd63a9855bf87b653c0b4cbbdfffc5b70db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642114"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280761"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="result-set"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 MODIFY 权限  
@@ -123,7 +123,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>要求  
   
 ## <a name="external-resources"></a>外部资源  
- rafael-salas.com 上的博客文章：[SSIS 2012：数据分流概览](https://go.microsoft.com/fwlink/?LinkId=239983)。  
+ rafael-salas.com 上的博客文章：[SSIS 2012：数据分流点概览](https://go.microsoft.com/fwlink/?LinkId=239983)。  
   
 ## <a name="see-also"></a>另请参阅  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

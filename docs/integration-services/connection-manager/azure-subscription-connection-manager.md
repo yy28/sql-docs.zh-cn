@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506682"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270570"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
-  通过使用你为以下属性指定的值， **Azure 订阅连接管理器** 使 SSIS 包能够连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  
+  通过使用你为以下属性指定的值，Azure 订阅连接管理器使 SSIS 包能够连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  
   
  Azure 订阅连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
   

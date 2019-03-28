@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d437fe81da2d8aefdba67f7a8501202ce79459c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694635"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273656"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>将表添加到 CDC 实例
   使用“表选择”对话框可以将 Oracle 源中的附加表添加到 CDC 实例。 选定的表将添加到属性编辑器的 **“表”** 选项卡的列表中。  
@@ -30,12 +30,12 @@ ms.locfileid: "47694635"
   
 -   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
--   **表名称模式**：输入任意字符串。 将仅显示包含输入的字符串的表。  
+-   **表名称模式**：输入任意字符的字符串。 将仅显示包含输入的字符串的表。  
   
 > [!NOTE]  
 >  您可以在其中一个或全部两个字段中输入条件。  
   
--   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
+-   **显示前 1000 个匹配表**：默认情况下，此复选框处于选中状态。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
  单击要包含的任何表旁边的复选框，然后单击“添加”。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  
@@ -50,7 +50,7 @@ ms.locfileid: "47694635"
   
 ## <a name="see-also"></a>另请参阅  
  [如何编辑 CDC 实例属性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [如何管理 CDC 实例](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [为捕获更改选择 Oracle 表](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

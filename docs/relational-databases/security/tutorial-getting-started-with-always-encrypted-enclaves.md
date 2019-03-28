@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072311"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417149"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ ms.locfileid: "58072311"
 >[!NOTE]
 >建议仅在测试环境中使用主机密钥证明。 对于生产环境，应使用 TPM 证明。
 
-1. 以管理员身份登录 SQL Server，打开提升的 Windows PowerShell 控制台，安装受保护的主机功能，此操作还将同时安装 Hyper-V（如果尚未安装）。
+1. 以管理员身份登录到 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，并通过访问 computername 变量检索计算机名称。
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. 安装受保护的主机功能，还将安装 Hyper-V（如果尚未安装）。
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. 系统提示 Hyper-V 安装完成时，请重启 SQL Server 计算机。
-3. 检索以下变量的值，确定 SQL Server 计算机的名称。
-
-   ```powershell
-   $env:computername 
-   ```
+3. 系统提示 Hyper-V 安装完成时，请重启 SQL Server 计算机。
 
 4. 再次以管理员身份登录 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，生成唯一主机密钥，并将生成的公钥导出到文件。
 
@@ -112,14 +113,15 @@ ms.locfileid: "58072311"
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 将上一步生成的主机密钥文件复制到 HGS 计算机。 以下说明假定文件名为 hostkey.cer 并且计划将其复制到 HGS 计算机的桌面。
+5. 将上一步生成的主机密钥文件手动复制到 HGS 计算机。 以下说明假定文件名为 hostkey.cer 并且你正在将其复制到 HGS 计算机的桌面。
+
 6. 在 HGS 计算机上，打开提升的 Windows PowerShell 控制台并向 HGS 注册 SQL Server 计算机的主机密钥：
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. 在 SQL Server 计算机上，在提升的 Windows PowerShell 控制台中运行以下命令，告诉 SQL Server 计算机前往何处进行证明。 请确保已指定 HGS 计算机的 IP 地址或 DNS 名称。 
+7. 在 SQL Server 计算机上，在提升的 Windows PowerShell 控制台中运行以下命令，告诉 SQL Server 计算机前往何处进行证明。 请确保已指定位于两个地址的 HGS 计算机的 IP 地址或 DNS 名称。 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 3. 确保已连接到新建的数据库。 创建名为“员工”的新表。
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. 在未启用“Always Encrypted”的查询窗口中重试同一查询，并记录发生的故障。
 
 ## <a name="next-steps"></a>Next Steps
 请参阅[配置具有安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)，了解其他用例。 此外，还可以进行以下尝试：

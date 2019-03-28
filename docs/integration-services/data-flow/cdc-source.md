@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642227"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290533"
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -53,7 +53,7 @@ ms.locfileid: "51642227"
   
 -   **错误列**：导致错误（针对转换错误）的源列。  
   
--   **错误行列**：导致了错误的记录数据。  
+-   **错误行列**：导致错误的记录数据。  
   
  根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。  
   
@@ -153,7 +153,7 @@ use <cdc-enabled-database-name>
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
--   **所有**：返回当前 CDC 范围中的更改，但没有 **“更新前”** 值。  
+-   **全部**：返回当前 CDC 范围中的更改，不包括“更新前”值。  
   
 -   **全部且具有旧值**：返回当前 CDC 处理范围中的更改，包括旧值（“更新前”）。 对于每个更新操作将会有两行，一个针对更新前值，一个针对更新后值。  
   

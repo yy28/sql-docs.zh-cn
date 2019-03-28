@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe51d32dee641ddd465ba5c0674900be79a12460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8f00f51ee6db4b93ba56211755e067c008898c4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847385"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271391"
 ---
 # <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -53,7 +53,7 @@ expression1 != expression2
     > [!NOTE]  
     >  字符串比较区分大小写、重音、假名和全半角。  
   
--   **Date、Time 或 Date/Time** *expression1* 和 *expression2* 的计算结果必须为下列数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  
@@ -82,7 +82,7 @@ expression1 != expression2
   
 -   **Binary** ： *expression1* 和 *expression2* 的计算结果必须为 DT_BYTES 数据类型。  
   
--   **BLOB** ： *expression1* 和 *expression2* 的计算结果必须为同一 BLOB（二进制大型对象块）数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB**：expression1 和 expression2 的计算结果必须为同一个二进制大型对象块 (BLOB) 数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  有关数据类型的详细信息，请参阅 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
   

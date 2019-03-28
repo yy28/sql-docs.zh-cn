@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4078dd31ec70008803149835276d22835f26424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753995"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273299"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
   使用此对话框可选择在 CDC 实例中包含的表。 所选表将添加到新建实例向导的 **“选择表和列”** 页的列表中。 可以在此对话框中执行以下操作。  
@@ -30,12 +30,12 @@ ms.locfileid: "47753995"
   
 -   **架构**：从列表中选择数据库架构。 只有具有该架构的表才会出现在列表中。  
   
--   **表名称模式**：输入任意字符串。 将仅显示包含输入的字符串的表。  
+-   **表名称模式**：输入任意字符的字符串。 将仅显示包含输入的字符串的表。  
   
 > [!NOTE]  
 >  您可以在其中一个或全部两个字段中输入条件。  
   
--   **显示前 1000 个匹配表**：默认情况下选中此复选框。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
+-   **显示前 1000 个匹配表**：默认情况下，此复选框处于选中状态。 它将显示限制为前 1000 个匹配表。 如果取消选中该复选框，将显示条件相匹配的所有表。 如果有大量的表，则此方法可能需要较长的时间来显示列表。  
   
  **选择要包括在 CDC 实例中的表**  
  单击要包含的任何表旁边的复选框，然后单击“添加”。 相应的表将添加到新建实例向导的 **“选择表和列”** 页的列表中。  

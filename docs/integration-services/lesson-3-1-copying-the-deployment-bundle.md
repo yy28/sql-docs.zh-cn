@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ef5f5304d9af3459c55e020cb0ca3a5fc8256e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611075"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279461"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>第 3-1 课 - 复制部署捆绑
 在此任务中，将部署捆绑复制到目标计算机。  

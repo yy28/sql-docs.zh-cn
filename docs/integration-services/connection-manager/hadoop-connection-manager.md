@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417909"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281431"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 连接管理器
   Hadoop 连接管理器通过使用你为属性指定的值使 SQL Server Integration Services (SSIS) 包能够连接到 Hadoop 群集。  
@@ -63,10 +63,10 @@ ms.locfileid: "52417909"
 
 ## <a name="connect-with-kerberos-authentication"></a>连接 Kerberos 身份验证
 有两个选项可用来设置本地环境，以便可以配合使用 Kerberos 身份验证和 Hadoop 连接管理器。 可选择更符合你情况的选项。
--   选项 1：[将 SSIS 计算机联接到 Kerberos 领域](#kerberos-join-realm)
--   选项 2：[启用 Windows 域和 Kerberos 领域之间的相互信任](#kerberos-mutual-trust)
+-   方法 1：[将 SSIS 计算机联接到 Kerberos 领域](#kerberos-join-realm)
+-   方法 2：[启用 Windows 域和 Kerberos 领域之间的相互信任](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>选项 1：将 SSIS 计算机联接到 Kerberos 领域
+### <a name="kerberos-join-realm"></a>方法 1：将 SSIS 计算机联接到 Kerberos 领域
 
 #### <a name="requirements"></a>要求：
 
@@ -96,7 +96,7 @@ ms.locfileid: "52417909"
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>选项 2：启用 Windows 域和 Kerberos 领域之间的相互信任
+### <a name="kerberos-mutual-trust"></a>方法 2：启用 Windows 域和 Kerberos 领域之间的相互信任
 
 #### <a name="requirements"></a>要求：
 -   网关计算机必须联接 Windows 域。
@@ -172,7 +172,7 @@ ms.locfileid: "52417909"
 
     1. 转到“服务器管理器” > “组策略管理” > “域”。 从此处转到“组策略对象” > “默认或活动的域策略” > “编辑”。
 
-    2. 在“组策略管理编辑器”弹出窗口中，转到“计算机配置” > “策略” > “Windows 设置”。 从此处转到“安全设置” > “本地策略” > “安全选项”。 配置“网络安全: 配置 Kerberos 允许的加密类型”。
+    2. 在“组策略管理编辑器”弹出窗口中，转到“计算机配置” > “策略” > “Windows 设置”。 从此处转到“安全设置” > “本地策略” > “安全选项”。 配置“网络安全:配置 Kerberos 允许的加密类型”。
 
     3. 选择想要用来连接到 KDC 的加密算法。 通常，可以选择任一选项。
 

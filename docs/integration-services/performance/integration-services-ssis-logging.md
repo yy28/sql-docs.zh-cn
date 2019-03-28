@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542914"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277505"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -71,7 +71,7 @@ ms.locfileid: "52542914"
 |日志提供程序|ProgID|ClassID|位置|  
 |------------------|------------|-------------|--------------|  
 |文本文件|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|日志提供程序使用的文件连接管理器指定此文本文件的路径。|  
-|SQL Server 事件探查器|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|日志提供程序使用的文件连接管理器指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所使用的文件的路径。|  
+|SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|日志提供程序使用的文件连接管理器指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所使用的文件的路径。|  
 |SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|日志提供程序使用的 OLE DB 连接管理器指定包含存储日志项的 sysssislog 表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |Windows 事件日志|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 事件查看器中的应用程序日志包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 日志信息。|  
 |XML 文件|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|日志提供程序使用的文件连接管理器指定 XML 文件的路径。|  
@@ -102,7 +102,7 @@ ms.locfileid: "52542914"
 |运算符|启动包的用户的标识。|  
 |SourceName|发生日志事件的容器或任务的名称。|  
 |SourceID|发生日志事件的包、 For 循环容器、Foreach 循环容器、序列容器或任务的唯一标识符。|  
-|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会创建具有不同的 ExecutionID 元素的值的日志条目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
+|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会创建具有不同 ExecutionID 元素值的日志项。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
 |MessageText|与日志项关联的消息。|  
 |DataBytes|日志项特定的字节数组。 此字段的意义因日志项的不同而不同。|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52542914"
 |**OnVariableValueChanged**|在变量的值更改时写入日志项。|  
 |**OnWarning**|在出现警告时写入日志项。|  
 |**PipelineComponentTime**|对于每个数据流组件，为验证和执行的每个阶段写入日志项。 该日志条目为每个阶段指定处理时间。|  
-|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果你使用 SQL Server 日志提供程序记录 **DiagnosticEx** ，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
+|**诊断**<br /><br /> **DiagnosticEx**|写入提供诊断信息的日志项。<br /><br /> 例如，您可以在每次调用外部数据访问接口之前和之后记录消息。 有关详细信息，请参阅 [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 当你想查找数据流中存在错误的列的列名称时，请记录 **DiagnosticEx** 事件。 此事件将数据流沿袭映射写入到日志中。 然后就可以使用由错误输出捕获的列标识符来查找此沿袭映射中的列名称。 有关详细信息，请参阅[数据中的错误处理](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 请注意，为了缩减日志大小， **DiagnosticEx** 事件不在其 XML 输出中保留空白。 若要提高可读性，请将日志复制到支持 XML 格式和语法突出显示的 XML 编辑器中 - 例如 Visual Studio 中的 XML 编辑器。<br /><br /> 注意：如果使用 SQL Server 日志提供程序记录 DiagnosticEx，输出可能被截断。 SQL Server 日志提供程序的 **消息** 字段属于 nvarchar(2048) 类型。 若要避免截断，请在记录 **DiagnosticEx** 事件时使用其他日志提供程序。|  
   
  包和很多任务都有可以启用日志记录功能的自定义日志项。 例如，发送邮件任务提供了 **SendMailTaskBegin** 自定义日志项，该日志项在发送邮件任务开始运行时（但在发送电子邮件消息之前）记录信息。 有关详细信息，请参阅 [Custom Messages for Logging](#custom_messages)。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "52542914"
   
 1.  为包及其任务启用日志记录。 可以在包级、容器级以及任务级进行日志记录。 可以为包、容器和任务指定不同的日志。  
   
-2.  选择日志提供程序并为包添加日志。 可以仅在包级创建日志，任务或容器必须使用为包创建的日志之一。 每个日志都与下列某个日志提供程序关联：文本文件、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 事件日志或 XML 文件。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](#ssdt)。  
+2.  选择日志提供程序并为包添加日志。 可以仅在包级创建日志，任务或容器必须使用为包创建的日志之一。 每个日志都与以下任一日志提供程序关联：文本文件、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 事件日志或 XML 文件。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](#ssdt)。  
   
 3.  选择要在日志中捕获的事件以及每个事件的日志架构信息。 有关详细信息，请参阅 [使用保存的配置文件配置日志记录](#saved_config)。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "52542914"
  **Configuration**  
  在列表中选择一个现有的连接管理器或单击\<“新建连接...”> 以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
- 相关主题： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 相关主题：[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)管理器、[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **删除**  
  选择一个日志提供程序，然后单击“删除”。  

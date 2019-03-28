@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27a9dae6ed1a05f22c2182ea3eabebd5e489db74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832924"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276996"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何从 CDC 设计器控制台管理 CDC 服务
   本过程介绍如何使用 CDC 设计器控制台来管理 CDC 服务。  
@@ -29,7 +29,7 @@ ms.locfileid: "47832924"
   
 3.  选择要管理的服务。  
   
-     **注意**：如果在 CDC 设计器控制台中没有列出任何服务，则您必须使用 CDC 服务配置控制台创建新的实例。 有关如何创建新服务的信息，请参阅随服务配置控制台一起提供的联机帮助。  
+     **注意**：如果在 CDC 设计器控制台中没有列出任何服务，则必须使用 CDC 服务配置控制台创建新的实例。 有关如何创建新服务的信息，请参阅随服务配置控制台一起提供的联机帮助。  
   
 4.  您可为 CDC 服务执行以下任务：  
   

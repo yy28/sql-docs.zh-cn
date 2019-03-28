@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 851ef2c6eb1ea39a1af9c38996273605b9c8fd55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89f36819720e987a652f99dbd5d1f9edb933c96
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611145"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290373"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
@@ -41,7 +41,7 @@ ms.locfileid: "47611145"
   
     -   插入输出：定向 INSERT 更改行的输出。  
   
-    -   更新输出：之前/之后 UPDATE 更改行和 Merge 更改行定向的输出。  
+    -   更新输出：定向 UPDATE 更改行和 Merge 更改行之前/之后的输出。  
   
 7.  或者，您可以使用 **“高级编辑器”** 对话框配置高级属性。  
   

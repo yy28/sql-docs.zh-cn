@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3c1ee4bf54117a9b2b29aa2e892186d61b44683c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411484"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271224"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT（SSIS 表达式）
   返回包含指定分隔符分隔的标记的字符串中的标记数目。  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  包含分隔符分隔的标记的字符串。  
   
  *delimiter_string*  
- 包含分隔符字符的字符串。 例如，“; ,”包含三个分隔符字符，即一个分号、一个空白格和一个逗号。  
+ 包含分隔符字符的字符串。 例如，”; ,”包含三个分隔符字符，即一个分号、一个空白空间和一个逗号。  
   
 ## <a name="result-types"></a>结果类型  
  DT_I4  

@@ -3,20 +3,19 @@ title: 连接到平面文件数据源（SQL Server 导入和导出向导）| Mic
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393711"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222131"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>连接到平面文件数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到平面文件（文本文件）数据源。 对于平面文件，向导的这两页显示的选项集不同，所以本主题会分别介绍平面文件源和平面文件目标。
@@ -86,7 +85,7 @@ ms.locfileid: "52393711"
 |**冒号 {:}**|标题行由冒号分隔。|  
 |**逗号 {,}**|标题行由逗号分隔。|  
 |**制表符 {t}**|标题行由制表符分隔。|  
-|**竖线 {&#124;}。**|标题行由竖线分隔。|  
+|**竖线 {|}**。|标题行由竖线分隔。|  
   
  **要跳过的标题行数**  
  指定要在文件顶部跳过的行数（若存在）。  
@@ -113,7 +112,7 @@ ms.locfileid: "52393711"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}。**|行由竖线分隔。|  
+|**竖线 {|}**。|行由竖线分隔。|  
   
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
@@ -185,7 +184,7 @@ ms.locfileid: "52393711"
 |**冒号 {:}**|行由冒号分隔。|  
 |**逗号 {,}**|行由逗号分隔。|  
 |**制表符 {t}**|行由制表符分隔。|  
-|**竖线 {&#124;}。**|行由竖线分隔。|  
+|**竖线 {|}**。|行由竖线分隔。|  
   
  **重置列**  
  还原原始列。  
@@ -202,7 +201,7 @@ ms.locfileid: "52393711"
  **配置各列的属性**  
  选择左窗格中的列可在右窗格中查看列的属性。 请参阅下表，获取有关列属性的说明。 所列出的某些属性仅可针对特定平面文件格式和特定数据类型的列进行配置。  
   
-|“属性”|描述|  
+|属性|描述|  
 |--------------|-----------------|  
 |**名称**|提供说明性列名。 如果不输入名称，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将自动创建名称，格式为列 0、列 1，依此类推。|
 |**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}**。 列由回车符和换行符的组合分隔。<br /><br /> **{CR}**。 列由回车符分隔。<br /><br /> **{LF}**。 列由换行符分隔。<br /><br /> **分号 {;}**。 列由分号分隔。<br /><br /> **冒号 {:}**。 列由冒号分隔。<br /><br /> **逗号 {,}**。 列由逗号分隔。<br /><br /> **制表符 {t}**。 列由制表符分隔。<br /><br /> **竖线 {|}**。 列由竖线分隔。|

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188dd47c28e0faae13e7b41ef09faca542f084bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544702"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274151"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 EXECUTE 权限，以及针对引用环境的 READ 权限（如果适用）。  
@@ -75,7 +75,7 @@ catalog.cleanup_server_log
   
      可指定范围或级别（执行与项目）以及要删除的密钥数量。 删除的默认批大小为 1000。 将级别设置为 2 时，仅当删除关联的项目时才会删除密钥和证书。  
   
- 有关详细信息，请参阅以下知识库文章：[修复：在 SQL Server 2012 中使用 SSISDB 作为部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
+ 有关详细信息，请参阅下面的知识库文章：[修复：在 SQL Server 2012 中将 SSISDB 用作部署存储时的性能问题](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>示例  
  以下示例调用 cleanup_server_log 存储过程。  

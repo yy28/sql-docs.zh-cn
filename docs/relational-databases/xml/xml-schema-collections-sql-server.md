@@ -1,7 +1,7 @@
 ---
 title: XML 架构集合 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255712"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375285"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255712"
   
  例如，请看下面的架构：  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255712"
 |**blockDefault**|应用于所有元素声明和类型定义的 **block** 属性，这些声明和定义中不存在此属性并且将值设置为 **blockDefault** 属性的值。|  
 |**finalDefault**|应用于所有元素声明和类型定义的 **final** 属性，这些声明和定义中不存在此属性并且将值设置为 **finalDefault** 属性的值。|  
 |**targetNamespace**|有关属于目标命名空间的组件的信息存储在元数据中。|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> XML 架构集合的权限  
  您必须具有必要的权限才能执行下列操作：  
@@ -163,7 +164,7 @@ ms.locfileid: "54255712"
 ##  <a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数 **XML_SCHEMA_NAMESPACE**（ *schemaName、XmlSchemacollectionName、namespace-uri*）生成 **xml** 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数 XML_SCHEMA_NAMESPACE（schemaName、XmlSchemacollectionName、namespace-uri） 生成 xml 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255712"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例如：枚举 XML 架构集合中的 XML 命名空间  
  对 XML 架构集合“myCollection”使用下面的查询：  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例如：枚举 XML 架构集合的内容  
  以下语句枚举关系架构 dbo 中的 XML 架构集合“myCollection”的内容。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例如：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“<https://www.microsoft.com/books>”的 XML 架构。  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/\/www.microsoft.com/was-books”的 XML 架构。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>查询 XML 架构  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640044"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270778"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>使用脚本任务为 Foreach 循环收集列表
   变量枚举器的 Foreach 枚举通过变量传递给它的各列表项，并对每一项执行相同的任务。 您可以在脚本任务中使用自定义代码来填充用于此目的的列表。 有关枚举器的详细信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "51640044"
  下面的示例使用 **System.IO** 命名空间中的方法，收集计算机中 Excel 工作簿的一个列表，其中的工作簿存在天数大于或小于用户在变量中指定的天数。 它会以递归方式搜索驱动器 C 的各目录中扩展名为 .xls 的文件，并检查每个文件的最新修改日期，以确定该文件是否属于此列表。 它会将符合要求的文件添加到 **ArrayList** 中，并将 **ArrayList** 保存到一个变量中，供以后在 Foreach 循环容器中使用。 Foreach 循环容器配置为使用变量枚举器的 Foreach。  
   
 > [!NOTE]  
->  用于变量枚举器的 Foreach 的变量必须为 **Object** 类型。 放入该变量中的对象必须实现以下接口之一：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 通常会使用 **Array** 或 **ArrayList**。 **ArrayList** 需要引用 **System.Collections** 命名空间，因此需要针对该命名空间的 **Imports** 语句。  
+>  用于变量枚举器的 Foreach 的变量必须为 **Object** 类型。 放入该变量中的对象必须实现以下接口之一：System.Collections.IEnumerable、System.Runtime.InteropServices.ComTypes.IEnumVARIANT、System.ComponentModel IListSource 或 Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost。 通常会使用 **Array** 或 **ArrayList**。 **ArrayList** 需要引用 **System.Collections** 命名空间，因此需要针对该命名空间的 **Imports** 语句。  
   
  您可以对 `FileAge` 包变量使用不同的正值和负值来试用此任务。 例如，可以输入 5 以搜索最近 5 天内创建的文件，或者输入 -3 以搜索 3 天以前创建的文件。 对于要搜索较多文件夹的驱动器，此任务可能会花费一两分钟时间。  
   

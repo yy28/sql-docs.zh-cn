@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 108b3bf1ccd37b92144bcf0aa21d60546dc68979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2aac2558a78133830d305abd587c7603e9ec9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612995"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281691"
 ---
 # <a name="edit-tables"></a>编辑表
   使用 **“表”** 选项卡可对您从 Oracle 源数据库中选择的表和列进行更改。 该选项卡具有以下元素：  
@@ -30,7 +30,7 @@ ms.locfileid: "47612995"
   
 -   **捕获实例**：用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。 如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>.` 。捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。 可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
--   **安全角色**：用于获取对更改数据的访问权限的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
+-   **安全角色**：用于访问变更数据的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
  单击“添加表”可打开“表选择”对话框，从中可以[将表添加到 CDC 实例](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)。 首次访问 Oracle 数据库时，您必须 [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414534"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271109"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  
@@ -47,7 +47,7 @@ ms.locfileid: "52414534"
   
 -   变化的属性更改覆盖现有记录。 此类更改等效于类型 1 更改。 渐变维度转换将这些行定向到名为 **“变化的属性更新输出”** 的输出。  
   
--   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出： **“历史属性插入输出”** 和 **“新输出”**。  
+-   历史属性更改创建新记录而不更新现有记录。 现有记录中允许的唯一更改是对指示记录是当前记录还是过期记录的列的更新。 此类更改等效于类型 2 更改。 渐变维度转换将这些行定向到两个输出：“历史属性插入输出”和“新输出”。  
   
 -   固定的属性更改指示不得更改列值。 渐变维度转换检测更改，并可将带有更改的行定向到名为 **“固定的属性输出”** 的输出。  
   

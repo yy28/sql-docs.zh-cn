@@ -16,12 +16,12 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52cab6d00ad25bdc16a4acf14109ff5c74a4bcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134197"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531299"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>还原差异数据库备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原差异数据库备份。  
@@ -34,7 +34,7 @@ ms.locfileid: "48134197"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要还原差异数据库备份，请使用：**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48134197"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称**。  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48134197"
   
 #### <a name="to-restore-a-differential-database-backup"></a>还原差异数据库备份  
   
-1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅 [如何还原完整备份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
+1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅[如何还原完整备份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
   
 2.  执行 RESTORE DATABASE 语句以还原差异数据库备份，同时指定：  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48134197"
 #### <a name="a-restoring-a-differential-database-backup"></a>A. 还原差异数据库备份  
  以下示例将还原 `MyAdvWorks` 数据库及其差异数据库备份。  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -174,7 +174,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. 还原数据库、差异数据库以及事务日志备份  
  以下示例将还原 `MyAdvWorks` 数据库及其差异数据库和事务日志备份。  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

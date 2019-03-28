@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807375"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281231"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
   若要添加和配置 OLE DB 目标，包中必须已包含至少一个数据流任务和一个源。  
@@ -43,7 +43,7 @@ ms.locfileid: "47807375"
   
     -   **“表或视图”** 在包含该数据的数据库中选择一个表或视图。  
   
-    -   **表或视图 - 快速加载** 选择数据库中包含该数据的表或视图，然后设置快速加载选项：“保留标识”、“保留空值”、“表锁”、“检查约束”、“每批行数”或“最大插入提交大小”。  
+    -   **表或视图 - 快速加载** 在包含该数据的数据库中选择一个表或视图，然后设置快速加载选项：“保留标识”、“保留 NULL”、“表锁”、“CHECK 约束”、“每批行数”或“最大插入提交大小”。  
   
     -   **表名变量或视图名变量** 在数据库中选择包含表名称或视图名称的用户定义变量。  
   

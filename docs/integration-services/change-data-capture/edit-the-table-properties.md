@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686965"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278076"
 ---
 # <a name="edit-the-table-properties"></a>编辑表属性
   使用此对话框可编辑所选表中要捕获更改的特定列。 您还可以编辑 **“安全角色”** 和 **“捕获实例”** 信息。  
@@ -45,9 +45,9 @@ ms.locfileid: "47686965"
   
          **注意**：每个表不能具有超过两个捕获实例。 如果已有两个捕获实例，则此选项不可用。  
   
-    -   **替换现有的**：在此情况下，将删除当前捕获实例并且用您创建的捕获实例替换。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
+    -   **替换现有捕获实例**：在此情况下，将删除当前捕获实例并用你创建的捕获实例替换。 如果为此表定义了两个捕获实例，则您必须选择要替换的一个实例。  
   
- **注意**：您可以从 **“表”** 选项卡的表列表中删除某一捕获实例。  
+ **注意**：可以从“表”选项卡的表列表中删除某一捕获实例。  
   
  在此对话框中输入完信息后，单击 **“确定”** 以接受更改。  
   
