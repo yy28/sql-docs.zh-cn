@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791709"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527449"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filtered_table** =] **'***filtered_table*****  
- 筛选的表的名称。 *filtered_table*是**nvarchar(400)**，无默认值。  
+`[ @filtered_table = ] 'filtered_table'` 是筛选的名称。 *filtered_table*是**nvarchar(400)**，无默认值。  
   
- [ **@subset_filterclause** =] **'***subset_filterclause*****  
- 要测试的筛选子句。 *subset_filterclause*是**nvarchar(1000)**，无默认值。  
+`[ @subset_filterclause = ] 'subset_filterclause'` 是要测试的筛选器子句。 *subset_filterclause*是**nvarchar(1000)**，无默认值。  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- 筛选子句是否是参数化行筛选器。 *has_dynamic_filters*是**位**，默认值为 NULL 并且是输出参数。 返回的值**1**时筛选器子句是参数化的行筛选器。  
+`[ @has_dynamic_filters = ] has_dynamic_filters` 是，如果筛选器子句的参数化的行筛选器。 *has_dynamic_filters*是**位**，默认值为 NULL 并且是输出参数。 返回的值**1**时筛选器子句是参数化的行筛选器。  
   
 ## <a name="result-sets"></a>结果集  
   

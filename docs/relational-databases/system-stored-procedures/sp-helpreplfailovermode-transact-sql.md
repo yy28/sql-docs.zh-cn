@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529529"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
- 参与该订阅服务器的更新的发布服务器的名称。 *发布服务器*是**sysname**，无默认值。 必须已为发布配置了发布服务器。  
+`[ @publisher = ] 'publisher'` 是正在参与该订阅服务器上的更新的发布服务器的名称。 *发布服务器*是**sysname**，无默认值。 必须已为发布配置了发布服务器。  
   
- [  **@publisher_db =**] **'***publisher_db***’**  
- 发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication=**] **'***publication***'**  
- 参与该订阅服务器的更新的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 为参与该订阅服务器上的更新的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***输出**  
- 返回的故障转移模式的整数值并且是**输出**参数。 *failover_mode_id*是**tinyint**默认值为**0**。 它将返回**0**立即更新，并**1**进行排队更新。  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 返回的故障转移模式的整数值并且是**输出**参数。 *failover_mode_id*是**tinyint**默认值为**0**。 它将返回**0**立即更新，并**1**进行排队更新。  
   
- [**@failover_mode=**] **'***failover_mode***输出**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  返回在订阅服务器中修改数据所用的模式。 *failover_mode*是**nvarchar(10)** 默认值为 NULL。 是**输出**参数。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**立即**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
-|**排入队列**|排队更新：将订阅服务器中的更新存储在队列中。|  
+|**immediate**|立即更新：使用两阶段提交协议 (2PC)，将订阅服务器中的更新立即传播到发布服务器。|  
+|**queued**|排队更新：将订阅服务器中的更新存储在队列中。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

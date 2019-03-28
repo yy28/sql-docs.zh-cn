@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527199"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_id** =] *profile_id*  
- 要列出的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id` 是到列表的配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要列出的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'` 是到列表的配置文件的配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@account_id** = ] *account_id*  
- 要列出的帐户 ID。 *account_id*是**int**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
+`[ @account_id = ] account_id` 是列表的帐户 ID。 *account_id*是**int**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 要列出的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
+`[ @account_name = ] 'account_name'` 是列出的名称。 *account_name*是**sysname**，默认值为 NULL。 当*account_id*并*account_name*同时为 null，将列出配置文件中的所有帐户。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -76,7 +72,7 @@ sysmail_help_profileaccount_sp
   
  存储的过程**sysmail_help_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356568"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527799"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在内存优化的表中实现 LOB 列
   内存优化表没有行外或大型对象 (LOB) 存储 (在 SQL Server 2016 及更高的版本，请参阅已取消了此限制[支持内存中 OLTP 的数据类型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md))，和行大小限制为 8060 个字节。 可以通过两种方式存储大的二进制或字符串值：  
@@ -80,7 +80,7 @@ go</code></pre>
   
  或者，您可以为 LOB 列定义基于磁盘的表。 内存优化的表中每行在基于磁盘的表中具有相应的行，它包含该行的所有 LOB 值。 在以下示例中，有关员工的数据存储在内存优化的表中，而每个员工的照片存储在基于磁盘的表中。  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

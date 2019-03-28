@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645446"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512034"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,7 +49,7 @@ SQL Server中的R和Python集成包括开源代码和Microsoft专有包。 在�
 
 请注意，绑定不能保证的最新版本的 R 或 Anaconda。 将绑定到 Microsoft 机器学习服务器 (MLS)，可以获取安装执行安装程序，这可能不会在 web 上找到可用的最新版本的 R 或 Python 版本。
 
-[**SQL Server 2016 R 服务**](../install/sql-r-services-windows-install.md)
+[**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 组件 |初始版本 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
@@ -227,12 +227,12 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 可以还原到初始安装的 R 和 Python 组件建立 SQL Server 安装程序的绑定的实例。 有三个部分恢复到 SQL Server 服务。
 
 + [第 1 步：从 Microsoft Machine Learning Server 取消绑定](#step-1-unbind)
-+ [步骤 2:将实例还原到原始状态](#step-2-restore)
-+ [步骤 3:重新安装任何添加到安装的包](#step-3-reinstall-packages)
++ [步骤 2：将实例还原到原始状态](#step-2-restore)
++ [步骤 3：重新安装任何添加到安装的包](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>步骤 1：取消绑定
+### <a name="step-1-unbind"></a>第 1 步：取消绑定
 
 有两个用于回滚绑定选项： 重新重新运行安装程序或使用 SqlBindR 命令行实用程序。
 
@@ -257,7 +257,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>步骤 2：修复 SQL Server 实例
+###  <a name="step-2-repair-the-sql-server-instance"></a>第 2 步：修复 SQL Server 实例
 
 运行 SQL Server 安装程序修复 R 和 Python 功能的数据库引擎实例。 会保留现有的更新，但如果你错过了任何 SQL Server 服务对 R 和 Python 包的更新，此步骤适用于这些修补程序。
 

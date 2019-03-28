@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594357"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527189"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,11 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@tabname=**] **'***qualified_table_name***'**  
- 由一部分或两部分组成的表的名称。 表必须在当前数据库中。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
+`[ @tabname = ] 'qualified_table_name'` 是一个或两个部分组成的表名。 表必须在当前数据库中。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
   
- [  **@action=**] **'***操作***’**  
- 要执行的操作。 *操作*是**nvarchar （50)**，无默认值，并且可以是下列值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 *操作*是**nvarchar （50)**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|启动表的全文索引的增量填充。|  
 |**停止**|停止完全填充或增量填充。|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- 是有效的现有全文目录名称**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *fulltext_catalog_name*是**sysname**，默认值为 NULL。  
+`[ @ftcat = ] 'fulltext_catalog_name'` 是有效的现有全文目录名称**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *fulltext_catalog_name*是**sysname**，默认值为 NULL。  
   
- [ **@keyname=**] **'***unique_index_name***'**  
- 有效单个键列唯一非空索引*qualified_table_name*有关**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *unique_index_name*是**sysname**，默认值为 NULL。  
+`[ @keyname = ] 'unique_index_name'` 有效单个键列唯一非空索引*qualified_table_name*有关**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *unique_index_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -88,11 +84,11 @@ sp_fulltext_table
   
  如果重新激活该表，但不重新填充索引，则仍可使用旧索引对剩余的启用了全文索引的非新列进行查询。 在指定了完全全文列搜索的查询中，将匹配已删除的列中的数据。  
   
- 后一个表已定义为全文索引编制索引，切换全文唯一键列的一种数据类型到另一个，通过更改该列的数据类型或某一列中的全文唯一键更改为另一个，而无需完全重填可能会导致故障发生在后续查询并返回错误消息:"转换为类型*data_type*失败，全文搜索键值*key_value*。" 若要防止此情况，请删除此表使用的全文索引定义**drop**的操作**sp_fulltext_table**重新定义它使用**sp_fulltext_table**和**sp_fulltext_column**。  
+ 定义了进行全文索引的表后，如果切换全文唯一键列的数据类型（通过更改该列的数据类型或更改全文唯一键列）时不完全重填，则可能导致后续查询失败，并返回以下错误消息："转换为类型*data_type*失败，全文搜索键值*key_value*。" 若要防止此情况，请删除此表使用的全文索引定义**drop**的操作**sp_fulltext_table**重新定义它使用**sp_fulltext_table**和**sp_fulltext_column**。  
   
  必须将全文键列定义为 900 字节或更少。 考虑到性能原因，建议尽量使用较小的键列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定服务器角色**db_owner**并**db_ddladmin**全文目录可以引用权限与固定数据库角色或用户执行**sp_fulltext_table**。  
   
 ## <a name="examples"></a>示例  
@@ -135,9 +131,9 @@ GO
 ## <a name="see-also"></a>请参阅  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文搜索和语义搜索存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

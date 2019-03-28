@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432310"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510294"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安装新的 Python 包
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53432310"
 
   完整路径**脚本**中默认安装文件夹是按如下所示：
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + 如果使用 Visual Studio 2017 或 Visual Studio 2015 使用 Python 扩展，则可以运行`pip install`从**Python 环境**窗口。 单击**包**，并在文本框中提供的名称或要安装的包的位置。 无需键入`pip install`; 它为你自动填充。 
 

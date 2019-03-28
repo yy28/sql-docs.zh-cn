@@ -18,12 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a279a57e014675cc86f72f79ce602bec1bebb1f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526109"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,11 +52,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'角色**   
- 将从中删除成员的角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
+`[ @rolename = ] 'role'` 是从中删除成员的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@membername =** ] **'security_account**   
- 将从角色中删除的安全帐户的名称。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 其他数据库角色、 Windows 登录名或 Windows 组。 *security_account*必须存在于当前数据库。  
+`[ @membername = ] 'security_account'` 正在删除从角色中的安全帐户的名称。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 其他数据库角色、 Windows 登录名或 Windows 组。 *security_account*必须存在于当前数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -68,7 +66,7 @@ sp_droprolemember 'role' ,
   
  使用 sp_helpuser 若要查看的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色，并使用 ALTER ROLE，若要向角色添加成员。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有角色的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -89,8 +87,8 @@ EXEC sp_droprolemember 'Sales', 'JonB'
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

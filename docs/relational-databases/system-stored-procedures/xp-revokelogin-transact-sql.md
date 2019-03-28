@@ -18,12 +18,12 @@ ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e7996e3f5d91c78a83266c6d5b23ce8b3d381064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767935"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528960"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@loginame =** ] **'***login***'**  
- 撤消其访问权限的 Windows 用户或用户组的名称。 *登录名*必须包括域名，例如 **[ADVWKS\sylvester1]**。 *登录名*是**sysname**，无默认值。  
+`[ @loginame = ] 'login'` 是 Windows 用户或从中撤销访问权限组的名称。 *登录名*必须包括域名，例如 **[ADVWKS\sylvester1]**。 *登录名* 是 **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,7 +51,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="remarks"></a>备注  
  请改用 DROP LOGIN。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="see-also"></a>请参阅  
@@ -61,7 +60,7 @@ xp_revokelogin {[@loginame=] 'login'}
  [sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [常规扩展存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_loginconfig &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
- [xp_logininfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

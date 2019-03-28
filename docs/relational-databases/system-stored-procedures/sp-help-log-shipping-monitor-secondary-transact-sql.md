@@ -18,12 +18,12 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb4dad948b38fa4c490263a9dcc08ae98f88bdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfc973f476bfb2f855b42f2b2e4d4486ba631c2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717660"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526249"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@secondary_server =** ] '*secondary_server*'  
- 辅助服务器的名称。 *secondary_server*是**sysname**，无默认值。  
+`[ @secondary_server = ] 'secondary_server'` 是辅助服务器的名称。 *secondary_server*是**sysname**，无默认值。  
   
- [  **@secondary_database =** ] '*secondary_database*  
- 辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 为辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -75,7 +73,7 @@ sp_help_log_shipping_monitor_secondary
 ## <a name="remarks"></a>备注  
  **sp_help_log_shipping_monitor_secondary**必须从运行**主**在监视服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  

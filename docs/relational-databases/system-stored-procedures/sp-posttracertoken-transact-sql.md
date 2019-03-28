@@ -18,12 +18,12 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41053bee3449ae44f843c24069c11a288131950b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8b082958e5bdf7fd12d19a26f8ba2e56bf6cb936
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526059"
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'**_发布_  
- 要测量滞后时间的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是为其测量滞后时间的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@tracer_token_id=** ] _tracer_token_id_**输出**  
- 插入的跟踪令牌的 ID。 *tracer_token_id*是**int** ，默认值为 NULL，它是一个输出参数。 此值可用于执行[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)而不用先执行[sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
+`[ @tracer_token_id = ] _tracer_token_idOUTPUT` 是插入的跟踪令牌的 ID。 *tracer_token_id*是**int** ，默认值为 NULL，它是一个输出参数。 此值可用于执行[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)而不用先执行[sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
- [  **@publisher=** ] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL，不应指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL，不应指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

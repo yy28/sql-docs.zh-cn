@@ -15,12 +15,12 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b71a548dabd286437db73224195622ef576bd28b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748939"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528459"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>查看或更改数据库的属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的属性。 更改数据库属性后，修改内容将立即生效。  
@@ -64,13 +64,13 @@ ms.locfileid: "52748939"
   
 #### <a name="to-view-a-property-of-a-database-by-using-databasepropertyex"></a>使用 DATABASEPROPERTYEX 查看数据库的属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 系统函数返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 AUTO_SHRINK 数据库选项的状态。 返回值 1 表示将该选项设置为 ON，返回值 0 表示将该选项设置为 OFF。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -86,7 +86,7 @@ GO
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图来查看 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的几个属性。 此实例返回数据库 ID 号 (`database_id`)、数据库是只读还是读写的 (`is_read_only`)、数据库的排序规则 (`collation_name`) 和数据库兼容级别 (`compatibility_level`)。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT database_id, is_read_only, collation_name, compatibility_level  
@@ -97,7 +97,7 @@ GO
   
 #### <a name="to-change-the-properties-of-a-database"></a>更改数据库的属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

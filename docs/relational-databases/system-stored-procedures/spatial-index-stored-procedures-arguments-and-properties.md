@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666596"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528809"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程的参数和属性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,25 +32,22 @@ ms.locfileid: "51666596"
 ## <a name="syntax"></a>语法  
  有关特定空间索引存储过程的语法，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname =**] **'***tabname***’**  
- 已为其指定了空间索引的表的限定或非限定名称。  
+`[ @tabname = ] 'tabname'` 是为其指定空间索引的限定或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*是**nvarchar**(776)，无默认值。  
   
- [ **@indexname =** ] **'***indexname***'**  
- 指定的空间索引的名称。 *indexname*是**sysname** ，无默认值。  
+`[ @indexname = ] 'indexname'` 是指定的空间索引的名称。 *indexname*是**sysname** ，无默认值。  
   
- [ **@verboseoutput =** ] **'***verboseoutput***'**  
- 要返回的属性名称和值的范围。  
+`[ @verboseoutput = ] 'verboseoutput'` 是的属性名称和要返回的值的范围。  
   
  0 = 核心属性  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666596"
   
  *verboseoutput*是**tinyint** ，无默认值。  
   
- [ **@query_sample =** ] **'***query_sample***'**  
- 一个具有代表性的查询示例，可用于测试索引的有效性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*是**geometry** ，无默认值。  
+`[ @query_sample = ] 'query_sample'` 是一个有代表性的查询示例，可用于测试索引的有用性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*是**geometry** ，无默认值。  
   
- [ **@xml_output =** ] **'***xml_output***'**  
- 一个在 XML 片段中返回结果集的输出参数。 *xml_output*是**xml** ，无默认值。  
+`[ @xml_output = ] 'xml_output'` 集 XML 片段中返回结果的输出参数。 *xml_output*是**xml** ，无默认值。  
   
 ## <a name="properties"></a>属性  
  设置**@verboseoutput** = 0，以返回下; 表中所示的核心属性**@verboseoutput** > 0，则返回空间索引的所有属性。  
@@ -303,7 +298,7 @@ ms.locfileid: "51666596"
  **Primary_Filter_Efficiency**  
  如果被主要筛选器和 O 选择了 P 行是输出行数，以百分比表示此 returnsO/P。 主要筛选器的效率越高，次要筛选所必须处理的误报就越少。 这是一个核心属性。 值是**float。**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。 这适用于所有空间索引存储过程。  
   
 ## <a name="remarks"></a>备注  
@@ -312,19 +307,19 @@ ms.locfileid: "51666596"
 ## <a name="examples"></a>示例  
  有关示例，请参阅下列主题：  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>请参阅  
  [空间索引存储过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   
  [XQuery 语言参考 (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  

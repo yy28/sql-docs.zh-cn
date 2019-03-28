@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526069"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =**] **'**_类_  
- 类别的类。 *类*是**varchar(8)**，无默认值，并且必须具有下列值之一。  
+`[ @class = ] 'class'` 类别的类。 *类*是**varchar(8)**，无默认值，并且必须具有下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**JOB**|删除作业类别。|  
-|**发出警报**|删除警报类别。|  
+|**ALERT**|删除警报类别。|  
 |**运算符**|删除操作员类别。|  
   
- [  **@name =**] **'**_名称_  
- 要删除的类别的名称。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 要删除的类别的名称。 *名称*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -64,7 +62,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
  如果删除某个类别，则该类别中的所有作业、警报或操作员将重新分类到类的默认类别中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -80,10 +78,10 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>另请参阅  
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

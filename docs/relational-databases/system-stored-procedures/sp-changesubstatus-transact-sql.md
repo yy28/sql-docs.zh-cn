@@ -16,12 +16,12 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa9452d7dc2e611b1b581c12cf33e88950eacc2a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212336"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529610"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,38 +65,29 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果*发布*未指定，则将影响所有发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果*发布*未指定，则将影响所有发布。  
   
- [ **@article=**] **'***文章*****  
- 项目的名称。 该名称对发布必须是唯一的。 *文章*是**sysname**，默认值为**%**。 如果*一文*未指定，则将影响所有项目。  
+`[ @article = ] 'article'` 是的名称。 该名称对发布必须是唯一的。 *文章*是**sysname**，默认值为**%**。 如果*一文*未指定，则将影响所有项目。  
   
- [ **@subscriber=**] **'***订阅服务器*****  
- 要更改其状态的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果*订阅服务器*未指定，则状态将用于所有订阅服务器更改为指定的项目。  
+`[ @subscriber = ] 'subscriber'` 是要更改的状态的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果*订阅服务器*未指定，则状态将用于所有订阅服务器更改为指定的项目。  
   
- [  **@status =**] **'***状态*****  
- 中的订阅状态**syssubscriptions**表。 *状态*是**sysname**，无默认值，并且可以是下列值之一。  
+`[ @status = ] 'status'` 中的订阅状态**syssubscriptions**表。 *状态*是**sysname**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**活动**|订阅服务器已被同步并且正在接收数据。|  
-|**非活动状态**|存在订阅服务器项，但没有订阅。|  
-|**订阅**|订阅服务器正在请求数据，但尚未同步。|  
+|**active**|订阅服务器已被同步并且正在接收数据。|  
+|**inactive**|存在订阅服务器项，但没有订阅。|  
+|**subscribed**|订阅服务器正在请求数据，但尚未同步。|  
   
- [  **@previous_status=**] **'***previous_status*****  
- 订阅的以前的状态。 *previous_status*是**sysname**，默认值为 NULL。 此参数，可更改当前具有该状态，从而允许一组特定的订阅上的组函数的任何订阅 (例如，设置所有活动订阅回**订阅**)。  
+`[ @previous_status = ] 'previous_status'` 是订阅的以前的状态。 *previous_status*是**sysname**，默认值为 NULL。 此参数，可更改当前具有该状态，从而允许一组特定的订阅上的组函数的任何订阅 (例如，设置所有活动订阅回**订阅**)。  
   
- [  **@destination_db=**] **'***destination_db***’**  
- 目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
   
- [ **@frequency_type=**] *frequency_type*  
- 安排分发任务所使用的频率。 *frequency_type*是**int**，默认值为 NULL。  
+`[ @frequency_type = ] frequency_type` 安排分发任务的频率。 *frequency_type*是**int**，默认值为 NULL。  
   
- [ **@frequency_interval=**] *frequency_interval*  
- 是要将应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 NULL。  
+`[ @frequency_interval = ] frequency_interval` 是要将应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为 NULL。  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
- 分发任务的日期。 使用此参数时*frequency_type*设置为 32 （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 是分发任务的日期。 使用此参数时*frequency_type*设置为 32 （每月相对）。 *frequency_relative_interval*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -107,11 +98,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**16**|上一次|  
 |NULL（默认值）||  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为 NULL。  
   
- [ **@frequency_subday=**] *frequency_subday*  
- 在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 是何种频率，以分钟为单位定义的时间段内重新计划。 *frequency_subday*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -121,61 +110,46 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**8**|Hour|  
 |NULL（默认值）||  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
- 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- 第一次安排分发任务的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 是第一个分发任务时的时间安排，格式为 HHMMSS。 *active_start_time_of_day* 是 **int**，默认值为 NULL。  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
- 停止安排分发任务的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 是的停止分发任务的时间安排，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [ **@active_start_date=**] *active_start_date*  
- 第一次安排分发任务的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
+`[ @active_start_date = ] active_start_date` 是第一个分发任务的日期安排，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为 NULL。  
   
- [ **@active_end_date=**] *active_end_date*  
- 停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
+`[ @active_end_date = ] active_end_date` 是正在计划分发任务停止的日期格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [ **@optional_command_line=**] **'***optional_command_line*****  
- 可选的命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @optional_command_line = ] 'optional_command_line'` 是可选的命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
   
- [  **@distribution_jobid=**] *distribution_jobid*  
- 将订阅状态从非活动设置为活动时，订阅的分发服务器上分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid*是**binary(16)**，默认值为 NULL。  
+`[ @distribution_jobid = ] distribution_jobid` 从非活动状态的订阅状态更改为活动时，是针对订阅的分发服务器上的分发代理的作业 ID。 在其他情况下，不定义该参数。 如果对此存储过程的单个调用中涉及多个分发代理，则不定义结果。 *distribution_jobid*是**binary(16)**，默认值为 NULL。  
   
- [  **@from_auto_sync=**] *from_auto_sync*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@ignore_distributor=**] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@offloadagent=** ] *remote_agent_activation*  
+`[ @offloadagent = ] remote_agent_activation`
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_activation*以外的值为**0**生成一个错误。  
   
- [ **@offloadserver=** ] **'***remote_agent_server_name*****  
+`[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_server_name*为任何非 NULL 值生成一个错误。  
   
- [ **@dts_package_name**=] **'***dts_package_name*****  
- 指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name* 是 **sysname** ，默认值为 NULL。 例如，对于名为的包**DTSPub_Package**会指定`@dts_package_name = N'DTSPub_Package'`。  
+`[ @dts_package_name = ] 'dts_package_name'` 指定 Data Transformation Services (DTS) 包的名称。 *dts_package_name* 是 **sysname** ，默认值为 NULL。 例如，对于名为的包**DTSPub_Package**会指定`@dts_package_name = N'DTSPub_Package'`。  
   
- [ **@dts_package_password**=] **'***dts_package_password*****  
- 指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。  
+`[ @dts_package_password = ] 'dts_package_password'` 指定包的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。  
   
 > [!NOTE]  
 >  DTS 包必须具有密码。  
   
- [ **@dts_package_location**=] *dts_package_location*  
- 指定包位置。 *dts_package_location*是**int**，默认值为**0**。 如果**0**，包位置是在分发服务器上。 如果**1**，包位置是在订阅服务器。 包的位置可以是**分发服务器上**或**订阅服务器**。  
+`[ @dts_package_location = ] dts_package_location` 指定包位置。 *dts_package_location*是**int**，默认值为**0**。 如果**0**，包位置是在分发服务器上。 如果**1**，包位置是在订阅服务器。 包的位置可以是**分发服务器上**或**订阅服务器**。  
   
- [ **@skipobjectactivation**=] *skipobjectactivation*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @skipobjectactivation = ] skipobjectactivation` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@distribution_job_name=** ] **'***distribution_job_name*****  
- 分发作业的名称。 *distribution_job_name*是**sysname**，默认值为 NULL。  
+`[ @distribution_job_name = ] 'distribution_job_name'` 是分发作业的名称。 *distribution_job_name*是**sysname**，默认值为 NULL。  
   
- [ **@publisher** =] **'***发布服务器*****  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*在更改项目属性时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -192,10 +166,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  只有的成员**sysadmin**固定服务器角色**db_owner**固定的数据库角色或订阅创建者才能执行**sp_changesubstatus**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

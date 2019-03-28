@@ -18,12 +18,12 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35db2f08be985359de4723cdb9aa393ad608232
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624156"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527279"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@objname=** ] **'***object_name***'**  
- 要取消规则绑定的表和列或别名数据类型的名称。 *object_name*是**nvarchar(776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
+`[ @objname = ] 'object_name'` 是的表和列或别名数据类型从其规则未绑定的名称。 *object_name*是**nvarchar(776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 仅在取消别名数据类型的规则绑定时使用。 *futureonly_flag*是**varchar(15)**，默认值为 NULL。 当*futureonly_flag*是**futureonly**，该数据类型的现有列不会丢失指定的规则。  
+`[ @futureonly = ] 'futureonly_flag'` 仅当取消别名数据类型的规则绑定时使用。 *futureonly_flag*是**varchar(15)**，默认值为 NULL。 当*futureonly_flag*是**futureonly**，该数据类型的现有列不会丢失指定的规则。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -63,7 +61,7 @@ sp_unbindrule [ @objname = ] 'object_name'
   
  当取消别名数据类型的规则绑定时，任何具有该别名数据类型的列也同时取消该规则绑定。 此外，仍可能将规则绑定到更高版本由 ALTER TABLE 语句的 ALTER COLUMN 子句更改其数据类型的列，特别是必须取消这些列的规则绑定通过使用**sp_unbindrule**并指定列名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要取消表列的规则绑定，需要对表具有 ALTER 权限。 若要取消别名数据类型的规则绑定，需要对该类型具有 CONTROL 权限或对该类型所属的架构具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

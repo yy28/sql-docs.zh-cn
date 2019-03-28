@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766609"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527841"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -199,7 +199,7 @@ ms.locfileid: "52766609"
   
 1.  在查询编辑器中，输入以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令以便链接到名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `SRVR002\ACCTG`实例：  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766609"
   
 2.  执行以下代码，以便将链接服务器配置为使用正在使用链接服务器的登录名的域凭据。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -226,7 +226,7 @@ ms.locfileid: "52766609"
   
 -   执行下面的代码，测试与链接服务器的连接。 以下示例返回链接服务器上数据库的名称。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766609"
   
 -   使用由四部分组成的名称引用链接服务器上的对象。 执行以下代码，以便返回本地服务器上所有登录名的列表及其在链接服务器上的匹配登录名。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818018"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528139"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id =**] *job_id*  
- 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  若要查看特定作业，或者*job_id*或*job_name*必须指定。  同时省略*job_id*并*job_name*返回有关所有作业的信息。
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- 要显示的作业属性。 *job_aspect*是**varchar(9)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @job_aspect = ] 'job_aspect'` 要显示的作业属性。 *job_aspect*是**varchar(9)**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -73,23 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|作业步骤信息|  
 |**目标**|目标信息|  
   
- [ **@job_type =**] **'***job_type***'**  
- 报表中要包括的作业类型。 *job_type*是**varchar(12)**，默认值为 NULL。 *job_type*可以是**本地**或**多服务器**。  
+`[ @job_type = ] 'job_type'` 要在报表中包括的作业类型。 *job_type*是**varchar(12)**，默认值为 NULL。 *job_type*可以是**本地**或**多服务器**。  
   
- [ **@owner_login_name =**] **'***login_name***'**  
- 作业所有者的登录名。 *login_name*是**sysname**，默认值为 NULL。  
+`[ @owner_login_name = ] 'login_name'` 作业的所有者的登录名。 *login_name*是**sysname**，默认值为 NULL。  
   
- [ **@subsystem =**] **'***subsystem***'**  
- 子系统的名称。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
+`[ @subsystem = ] 'subsystem'` 子系统的名称。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
   
- [ **@category_name =**] **'***category***'**  
- 类别的名称。 *类别*是**sysname**，默认值为 NULL。  
+`[ @category_name = ] 'category'` 类别的名称。 *类别*是**sysname**，默认值为 NULL。  
   
- [  **@enabled =**]*启用*  
- 一个指示是为启用的作业还是为禁用的作业显示信息的数字。 *已启用*是**tinyint**，默认值为 NULL。 **1**指示已启用的作业，并**0**指示已禁用的作业。  
+`[ @enabled = ] enabled` 一个数字，指示是否显示信息启用作业还是为禁用的作业。 *已启用*是**tinyint**，默认值为 NULL。 **1**指示已启用的作业，并**0**指示已禁用的作业。  
   
- [  **@execution_status =**]*状态*  
- 作业的执行状态。 *状态*是**int**，默认值为 NULL，并且可以是下列值之一。  
+`[ @execution_status = ] status` 作业的执行状态。 *状态*是**int**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|挂起。|  
 |**7**|正在执行完成操作。|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- 要在比较中使用的比较运算符*date_created*并*date_modified*。 *date_comparison*是**char （1)**，可以为 = \<，或 >。  
+`[ @date_comparator = ] 'date_comparison'` 要在比较中使用的比较运算符*date_created*并*date_modified*。 *date_comparison*是**char （1)**，可以为 = \<，或 >。  
   
- [ **@date_created =**] *date_created*  
- 创建作业的日期。 *date_created*是**datetime**，默认值为 NULL。  
+`[ @date_created = ] date_created` 创建作业的日期。 *date_created*是**datetime**，默认值为 NULL。  
   
- [ **@date_last_modified =**] *date_modified*  
- 上次修改作业的日期。 *date_modified*是**datetime**，默认值为 NULL。  
+`[ @date_last_modified = ] date_modified` 上次修改作业的日期。 *date_modified*是**datetime**，默认值为 NULL。  
   
- [ **@description =**] **'***description_pattern***'**  
- 作业的说明。 *description_pattern*是**nvarchar(512)**，默认值为 NULL。 *description_pattern*可以包括模式匹配的 SQL Server 通配符字符。  
+`[ @description = ] 'description_pattern'` 作业的说明。 *description_pattern*是**nvarchar(512)**，默认值为 NULL。 *description_pattern*可以包括模式匹配的 SQL Server 通配符字符。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -128,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
 |**category**|**sysname**|作业类别。|  
-|**所有者**|**sysname**|作业所有者。|  
+|**owner**|**sysname**|作业所有者。|  
 |**notify_level_eventlog**|**int**|**位掩码**，该值指示应在什么情况下在 Microsoft Windows 应用程序日志中记录通知事件。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 当作业成功时<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成时 （而不考虑作业结果） 时|  
 |**notify_level_email**|**int**|**位掩码**，该值指示在作业完成时应在什么情况下发送一个通知电子邮件。 可能的值均为适用于**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|**位掩码**，该值指示在作业完成时应在什么情况下发送网络消息。 可能的值均为适用于**notify_level_eventlog**。|  
@@ -222,7 +209,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_run_outcome**|**tinyint**|作业上一次在此服务器上运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_outcome_message**|**nvarchar(1024)**|作业上一次在这个目标服务器上运行时的结果消息。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -278,8 +265,8 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

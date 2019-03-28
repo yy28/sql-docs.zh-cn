@@ -16,12 +16,12 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47bf5c0ada106a11bdef72debf401de0640ff11f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818919"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527299"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ ms.locfileid: "52818919"
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] **'***original_publisher***’**  
- 最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'` 实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，最初发布数据库。 *original_publisher*是**sysname**，无默认值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***’**  
- 重定向的目标时指定**sp_redirect_publisher**为发布服务器/数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 重定向的目标时指定**sp_redirect_publisher**为发布服务器/数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -68,8 +65,8 @@ ms.locfileid: "52818919"
   
 ## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

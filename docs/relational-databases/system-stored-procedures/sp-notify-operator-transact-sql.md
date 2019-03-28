@@ -18,12 +18,12 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d45252f16703cb52a3e78c1b236dd9d4cbfbde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846395"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526269"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_name=** ] **'***profilename*****  
- 用于发送消息的数据库邮件配置文件的名称。 *profilename*是**nvarchar （128)**。 如果*profilename*未指定，则使用默认数据库邮件配置文件。  
+`[ @profile_name = ] 'profilename'` 要用于发送消息的数据库邮件配置文件的名称。 *profilename*是**nvarchar （128)**。 如果*profilename*未指定，则使用默认数据库邮件配置文件。  
   
- [ **@id=** ] *id*  
- 向其发送消息的操作员的标识符。 *id*是**int**，默认值为 NULL。 之一*id*或*名称*必须指定。  
+`[ @id = ] id` 将消息发送到操作员的标识符。 *id*是**int**，默认值为 NULL。 之一*id*或*名称*必须指定。  
   
- [ **@name=** ] **'***name***'**  
- 向其发送消息的操作员的名称。 *名称*是**nvarchar （128)**，默认值为 NULL。 之一*id*或*名称*必须指定。  
+`[ @name = ] 'name'` 将消息发送到操作员的名称。 *名称*是**nvarchar （128)**，默认值为 NULL。 之一*id*或*名称*必须指定。  
   
-> **注意：** 在可以接收消息之前，必须为该运算符定义的电子邮件地址。  
+> **注意**：必须先为操作员定义一个电子邮件地址，然后他们才能接收消息。  
   
- [ **@subject=** ] **'***subject***'**  
- 电子邮件主题。 *使用者*是**nvarchar(256)** ，无默认值。  
+`[ @subject = ] 'subject'` 电子邮件主题。 *使用者*是**nvarchar(256)** ，无默认值。  
   
- [ **@body=** ] **'***message***'**  
- 电子邮件的正文。 *消息*是**nvarchar （max)** ，无默认值。  
+`[ @body = ] 'message'` 电子邮件的正文。 *消息*是**nvarchar （max)** ，无默认值。  
   
- [  **@file_attachments=** ] **'***附件*****  
- 要将附加到电子邮件的文件的名称。 *附件*是**nvarchar(512)**，无默认值。  
+`[ @file_attachments = ] 'attachment'` 要将附加到电子邮件的文件的名称。 *附件*是**nvarchar(512)**，无默认值。  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
- 指定邮件主机数据库的名称。 *mail_host_database*是**nvarchar （128)**。 如果没有*mail_host_database*指定，则**msdb**默认情况下使用数据库。  
+`[ @mail_database = ] 'mail_host_database'` 指定邮件主机数据库的名称。 *mail_host_database*是**nvarchar （128)**。 如果没有*mail_host_database*指定，则**msdb**默认情况下使用数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -79,7 +72,7 @@ sp_notify_operator
   
  必须先配置数据库邮件和邮件主机数据库才能将通知发送给操作员。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -107,8 +100,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538586"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528291"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
   交叉容器事务是隐式或显式用户事务，这些事务包含对本机编译存储过程的调用或对内存优化表的操作。  
@@ -32,7 +32,7 @@ ms.locfileid: "52538586"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>指定单个操作的隔离级别  
  若要为事务中的一组语句设置不同的隔离级别，可以使用 `SET TRANSACTION ISOLATION LEVEL`。 下面的事务示例使用可序列化隔离级别作为默认级别。 对 t3、t2 和 t1 的插入和选择操作在“可重复读”隔离级别下执行。  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  若要为各个读取操作分别设置不同于事务默认级别的隔离级别，可以使用表提示（例如，可序列化）。 每个选择操作对应于一个读取操作，每个更新操作和每个删除操作对应于一个读取操作，因为始终需要先读取行才能进行更新或删除。 插入操作没有隔离级别，因为在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中始终要隔离写操作。 在下面的示例中，事务的默认隔离级别是“已提交读”，但在可序列化隔离级别下访问表 t1，在快照隔离级别下访问表 t2。  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  请考虑以下事务：  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  该事务的内存优化的方面可达到以下两个级别之一：如果 condition1 为 true，则达到可序列化级别；如果 condition1 为 false，则内存优化的方面只达到快照隔离级别。  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

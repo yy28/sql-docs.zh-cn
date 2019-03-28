@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826545"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529349"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建用户定义事件。  
   
->**注意：** 此存储过程**不**已弃用。 不推荐使用所有其他与跟踪相关的存储过程。  
+>**注意**：此存储过程**不**已弃用。 不推荐使用所有其他与跟踪相关的存储过程。  
   
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,14 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@eventid=**] *event_id*  
- 要打开的事件的 ID。 *event_id*是**int**，无默认值。 ID 必须是一个从 82 到 91，表示为集的用户定义的事件的事件号[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+`[ @eventid = ] event_id` 是要打开的事件的 ID。 *event_id*是**int**，无默认值。 ID 必须是一个从 82 到 91，表示为集的用户定义的事件的事件号[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- [ **@userinfo**=] **'***user_info*****  
- 用于标识事件原因的可选用户定义字符串。 *user_info*是**nvarchar （128)**，默认值为 NULL。  
+`[ @userinfo = ] 'user_info'` 用户定义的可选字符串，标识事件的原因。 *user_info*是**nvarchar （128)**，默认值为 NULL。  
   
- [ **@userdata**=] *user_data*  
- 用于事件的可选的用户指定数据。 *user_data*是**varbinary(8000)**，默认值为 NULL。  
+`[ @userdata = ] user_data` 是事件的可选用户定义数据。 *user_data*是**varbinary(8000)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  下表说明在存储过程完成后用户可能获得的代码值。  
@@ -71,7 +68,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -99,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

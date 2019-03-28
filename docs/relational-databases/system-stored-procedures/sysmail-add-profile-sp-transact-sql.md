@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profile_sp (Transact SQL) |Microsoft Docs
+title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169177"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526479"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_name** =] **'**_配置文件\_名称_  
- 新配置文件的名称。 *profile_name*是**sysname**，无默认值。  
+`[ @profile_name = ] 'profile\_name'` 新的配置文件的名称。 *profile_name*是**sysname**，无默认值。  
   
- [ **@description** =] **'**_说明_  
- 新配置文件的说明（可选）。 *描述*是**nvarchar(256)**，无默认值。  
+`[ @description = ] 'description'` 新的配置文件的可选说明。 *描述*是**nvarchar(256)**，无默认值。  
   
- [ **@profile_id** =]_新\_配置文件\_id_**输出**  
- 返回新配置文件的 ID。 *new_profile_id*是**int**，默认值为 NULL。  
+`[ @profile_id = ] _new\_profile\_idOUTPUT` 返回新的配置文件的 ID。 *new_profile_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -63,7 +60,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
  存储的过程**sysmail_add_profile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

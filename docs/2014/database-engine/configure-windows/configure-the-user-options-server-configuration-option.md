@@ -14,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641470"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528359"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 **user options** 选项允许您更改 SET 选项的默认值（如果服务器的默认设置不合适）。  
@@ -89,13 +89,13 @@ ms.locfileid: "52641470"
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>配置 user options 配置选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 配置 `user options` 以更改 ANSI_WARNINGS 服务器选项的设置。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

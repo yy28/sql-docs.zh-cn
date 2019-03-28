@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XMLDATA option
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d0c7e9c46b4b5ad42192cc4d524e2170a968620
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f93170d78512ba3c79e1dfa4b8e5e9aae83a4862
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088847"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527699"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>生成内联 XDR 架构
   FOR XML 中的 **XMLDATA** 指令将返回一个内联 XDR 架构以及查询结果。 但是，XDR 架构不支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中引入的所有新数据类型和其他增强功能。 您可以改为使用 [XMLSCHEMA](generate-an-inline-xsd-schema.md)指令来请求内联 XSD 架构。  

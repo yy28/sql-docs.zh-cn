@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168757"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527499"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@oldest_date=** ] **'**_最早\_日期_  
- 在备份和还原历史记录表中保留的最早日期。 *oldest_date*是**datetime**，无默认值。  
+`[ @oldest_date = ] 'oldest\_date'` 备份和还原历史记录表中保留的最早日期。 *oldest_date*是**datetime**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -73,7 +72,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
   
  即使所有历史记录都已被删除，物理备份文件也会保留下来。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**固定的服务器角色，但可以将权限授予向其他用户。  
   
 ## <a name="examples"></a>示例  
@@ -86,7 +85,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_database_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

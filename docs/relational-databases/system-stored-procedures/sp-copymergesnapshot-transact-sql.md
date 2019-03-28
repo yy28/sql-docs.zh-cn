@@ -16,12 +16,12 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f308f86de68c672a64f78da0a6b1bd54cde82a2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133797"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526239"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 将复制其快照内容的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要复制其快照内容的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@destination_folder=**] **'**_destination_folder_  
- 是要将发布快照内容复制到其中的文件夹的名称。 *destination_folder*是**nvarchar(255)**，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
+`[ @destination_folder = ] 'destination_folder'` 是的发布快照内容将被复制的名称。 *destination_folder*是**nvarchar(255)**，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

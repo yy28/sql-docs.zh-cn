@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808799"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528249"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
   本主题说明如何管理更改跟踪。 本主题还说明如何配置安全性以及如何确定使用更改跟踪时对存储和性能的影响。  
@@ -96,7 +96,7 @@ ms.locfileid: "52808799"
   
  对于其他内部表，可以使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 存储过程来确定用于更改跟踪表的空间。 可以使用 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) 目录视图来获取这些内部表的名称，如下例所示。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

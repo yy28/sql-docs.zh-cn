@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78405d434ee32270363821077ca436702cb7c797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526349"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>预处理架构以便合并包括的架构
   W3C XSD **include** 元素支持架构模块性，通过功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  

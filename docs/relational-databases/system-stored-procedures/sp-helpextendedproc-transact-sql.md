@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763875"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529129"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@funcname =**] **'***过程***’**  
- 要报告其信息的扩展存储过程的名称。 *过程*是**sysname**，默认值为 NULL。  
+`[ @funcname = ] 'procedure'` 是为其报告信息的扩展存储过程的名称。 *过程*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -59,7 +58,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="remarks"></a>备注  
  当*过程*指定，则**sp_helpextendedproc**上指定的报表扩展存储的过程。 如果未提供此参数， **sp_helpextendedproc**所属的返回所有扩展存储的过程名称和每个扩展存储的过程 DLL 名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行的权限**sp_helpextendedproc**授予**公共**。  
   
 ## <a name="examples"></a>示例  
@@ -85,8 +84,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

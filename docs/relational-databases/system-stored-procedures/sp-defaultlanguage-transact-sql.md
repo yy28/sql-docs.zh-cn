@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520811"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527989"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] **'**_登录_  
- 登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。  
+`[ @loginame = ] 'login'` 是登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。  
   
- [  **@language =** ] **'**_语言_  
- 登录的默认语言。 *语言*是**sysname**，默认值为 NULL。 *语言*必须是服务器上的有效语言。 如果*语言*未指定，则*语言*设置为服务器的默认语言; 默认语言由**sp_configure**配置变量**默认语言**。 更改服务器默认语言不会更改现有登录的默认语言。  
+`[ @language = ] 'language'` 是该登录名的默认语言。 *语言*是**sysname**，默认值为 NULL。 *语言*必须是服务器上的有效语言。 如果*语言*未指定，则*语言*设置为服务器的默认语言; 默认语言由**sp_configure**配置变量**默认语言**。 更改服务器默认语言不会更改现有登录的默认语言。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -78,7 +76,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
  [SET 语句 (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

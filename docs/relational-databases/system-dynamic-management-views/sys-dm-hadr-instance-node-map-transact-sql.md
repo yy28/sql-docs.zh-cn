@@ -15,18 +15,18 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
-- Availability Groups [SQL Server], WSFC clusters
+- Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511384"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "52535733"
    
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar(256)**|作为 WSFC 群集中资源的可用性组的唯一 ID。|  
+|**ag_resource_id**|**nvarchar(256)**|为 WSFC 中的资源的可用性组的唯一 ID。|  
 |**instance_name**|**nvarchar(256)**|名称-*服务器*/*实例*-承载副本的可用性组的服务器实例。|  
-|**node_name**|**nvarchar(256)**|WSFC 群集节点的名称。|  
+|**node_name**|**nvarchar(256)**|WSFC 节点的名称。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

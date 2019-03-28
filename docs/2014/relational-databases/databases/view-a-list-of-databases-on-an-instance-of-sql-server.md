@@ -19,12 +19,12 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe6c63c090ae0200626fb0782b6d36fc9525f18
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cdce1c0fc6f36bb0d58e93abba29ecab9d2dcd54
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788409"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526339"
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>查看 SQL Server 实例的数据库列表
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例上的数据库列表。  
@@ -60,13 +60,13 @@ ms.locfileid: "52788409"
   
 #### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>查看 SQL Server 实例的数据库列表  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的数据库列表。 该列表包含数据库名称、数据库 ID 和创建数据库的日期。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, database_id, create_date  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355343"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528949"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
   如果 FOR XML 查询在 SELECT 子句中指定了 `xml` 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 `xml` 类型的列中的任何 XML 声明都不是序列化的。  

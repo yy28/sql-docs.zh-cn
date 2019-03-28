@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589161"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528789"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
   
- [  **@conflict_table=**] **'**_conflict_table_  
- 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表与格式名称**MSmerge_conflict\__发布\_文章_**，使用每个已发布项目的一个表。  
+`[ @conflict_table = ] 'conflict_table'` 是的冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表与格式名称**MSmerge_conflict\__发布\_文章_**，使用每个已发布项目的一个表。  
   
- [  **@publisher=**] **'**_发布服务器上_  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_db=**] **'**_publisher_db_  
- 是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- 指示结果集是否包含有关逻辑记录冲突的信息。 *logical_record_conflicts*是**int**，默认值为 0。 **1**表示返回逻辑记录冲突信息。  
+`[ @logical_record_conflicts = ] logical_record_conflicts` 指示结果集是否包含有关逻辑记录冲突的信息。 *logical_record_conflicts*是**int**，默认值为 0。 **1**表示返回逻辑记录冲突信息。  
   
 ## <a name="result-sets"></a>结果集  
  **sp_helpmergeconflictrows**返回的结果集由基表结构和这些额外的列组成。  

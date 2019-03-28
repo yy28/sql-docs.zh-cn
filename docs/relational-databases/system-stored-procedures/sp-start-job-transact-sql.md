@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78c6a92d11cc192e2b0643c264352adcfb30d759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715155"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526669"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_name=** ] **'***job_name***'**  
- 要启动的作业的名称。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要启动的作业的名称。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_name*是**sysname**，默认值为 NULL。  
   
- [ **@job_id=** ] *job_id*  
- 要启动的作业标识号。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要启动的作业标识号。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@error_flag=** ] *error_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- 启动作业的目标服务器。 *server_name*是**nvarchar （128)**，默认值为 NULL。 *server_name*必须是一个向其作业当前针对的目标服务器。  
+`[ @server_name = ] 'server_name'` 开始作业的目标服务器。 *server_name*是**nvarchar （128)**，默认值为 NULL。 *server_name*必须是一个向其作业当前针对的目标服务器。  
   
- [ **@step_name=** ] **'***step_name***'**  
- 开始执行作业的步骤名。 只应用于本地作业。 *step_name*是**sysname**，默认值为 NULL  
+`[ @step_name = ] 'step_name'` 要开始执行作业步骤的名称。 只应用于本地作业。 *step_name*是**sysname**，默认值为 NULL  
   
- [ **@output_flag=** ] *output_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -73,7 +67,7 @@ sp_start_job
 ## <a name="remarks"></a>备注  
  此存储的过程是在**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -98,10 +92,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526559"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常情况下，这是存储数据的方案基于`datetime`密钥。  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常，这是基于 `datetime` 键存储数据的方案。  
   
  通过维护架构相同的已分区表和内存优化表，可以用内存优化表模拟已分区表。 当前数据会插入到内存优化表中并进行更新，而不常访问的数据会在传统的已分区表中进行维护。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48123907"
   
  本例的第一部分创建数据库和必要的对象。 本例的第二部分展示如何将数据从内存优化表移至经过分区的表。  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

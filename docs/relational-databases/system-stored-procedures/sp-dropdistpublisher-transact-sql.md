@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127553"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526449"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'**_发布服务器上_  
- 要删除的发布服务器。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是要删除发布服务器。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@no_checks=** ] *no_checks*  
- 指定是否**sp_dropdistpublisher**检查发布服务器已卸载用作分发服务器的服务器。 *no_checks*是**位**，默认值为**0**。  
+`[ @no_checks = ] no_checks` 指定是否**sp_dropdistpublisher**检查发布服务器已卸载用作分发服务器的服务器。 *no_checks*是**位**，默认值为**0**。  
   
  如果**0**，复制将验证远程发布服务器已卸载用作分发服务器的本地服务器。 如果发布服务器是本地服务器，则复制将验证没有发布对象或分发对象保留在本地服务器上。  
   
  如果**1**，即使无法到达远程发布服务器，将删除与分发发布服务器相关联的所有复制对象。 完成后，远程发布服务器必须复制使用卸载[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)与**@ignore_distributor**  =  **1**。  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- 指定删除发布服务器时是否将分发对象保留在分发服务器中。 *ignore_distributor*是**位**可以是下列值之一：  
+`[ @ignore_distributor = ] ignore_distributor` 指定删除发布服务器时是否将分发对象保留在分发服务器。 *ignore_distributor*是**位**可以是下列值之一：  
   
  **1** = 分发对象属于*发布服务器*始终在分发服务器。  
   
@@ -73,7 +70,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

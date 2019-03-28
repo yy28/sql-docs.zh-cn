@@ -1,5 +1,5 @@
 ---
-title: sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126252"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526379"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 要从中删除筛选数据快照作业的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是从中删除筛选的数据快照作业的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_  
- 要删除的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*数据类型为 sysname，并提供的默认设置，如果任意作业名称与相关联*dynamic_snapshot_jobid*。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 正在删除的已筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*数据类型为 sysname，并提供的默认设置，如果任意作业名称与相关联*dynamic_snapshot_jobid*。  
   
- [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_  
- 要删除的筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 正在删除筛选的数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  仅*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*可以指定。 如果值未提供*dynamic_snapshot_jobid*或*dynamic_snapshot_jobname*，删除发布的所有动态快照作业。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor*是**位**，默认值为**0**。 该参数可用于删除动态快照作业但不清除分发服务器上的任务。  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor*是**位**，默认值为**0**。 该参数可用于删除动态快照作业但不清除分发服务器上的任务。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

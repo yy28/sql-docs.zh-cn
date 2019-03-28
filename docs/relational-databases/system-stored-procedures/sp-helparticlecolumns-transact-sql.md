@@ -16,12 +16,12 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527049"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'发布**   
- 包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是包含的项目的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article=**] **'***文章*****  
- 其列已返回的项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 为其列已返回的项目的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@publisher** =] **'***发布服务器*****  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应通过发布请求的项目时指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -61,7 +58,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**列 id**|**int**|列的标识符。|  
 |**column**|**sysname**|列的名称。|  
-|**已发布**|**bit**|指示是否发布列：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
+|**published**|**bit**|指示是否发布列：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**发布服务器类型**|**sysname**|发布服务器上列的数据类型。|  
 |**订阅服务器类型**|**sysname**|订阅服务器上列的数据类型。|  
   
@@ -75,11 +72,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [定义和修改列筛选器](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

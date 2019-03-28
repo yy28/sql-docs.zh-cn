@@ -12,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6958283a8988fd005a491a80f626c1a3d1ef77ba
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124339"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528279"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **最大文本 repl 大小**选项指定的最大大小 （以字节为单位） `text`， `ntext`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`， `xml`，和`image`可以添加到数据复制的列或单个 INSERT、 UPDATE、 WRITETEXT 或 UPDATETEXT 语句中的已捕获的列。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
@@ -63,13 +63,13 @@ ms.locfileid: "54124339"
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>配置 max text repl size 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `max text repl size` 选项的值配置为 `-1`。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;   

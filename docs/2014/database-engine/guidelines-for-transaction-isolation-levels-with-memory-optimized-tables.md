@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527789"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>内存优化表事务隔离级别准则
   在许多情况下，必须指定事务隔离级别。 内存优化表的事务隔离不同于基于磁盘的表。  
@@ -62,7 +62,7 @@ ms.locfileid: "52510022"
   
  下面的自动提交事务示例介绍内存优化表 Customers 与常规表 [Order History] 之间的联接（作为即席批处理的一部分）：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  下面的显式或隐式事务示例介绍同一联接，但这次是在显式用户事务中。 内存优化表 Customers 在快照隔离下访问（如表提示 WITH (SNAPSHOT) 所示），而常规表 [Order History] 在已提交读隔离下访问：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  注意，需要将轮询逻辑放在事务范围之外，因为其使用快照隔离访问表 t1。 在事务范围内使用轮询逻辑会产生一个需要长时间运行的事务，这是个糟糕的做法。  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

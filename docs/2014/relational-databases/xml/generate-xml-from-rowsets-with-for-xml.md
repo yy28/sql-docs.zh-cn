@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21135669cbacdad77e5dcb2da73500c8cdbe8fa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113727"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529059"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 从行集生成 XML
   您可以生成`xml`通过使用带有新的 FOR XML 行集的数据类型实例**类型**指令。  
@@ -26,7 +26,7 @@ ms.locfileid: "48113727"
   
  可以使用新的 **FOR XML TYPE** 指令，采用 SQL 语法来定义关系数据上的只读 XML 视图。 可以使用 SQL 语句和嵌入式 XQuery 查询该视图，如下面的示例所示。 另外，您还可以在存储过程中引用这些 SQL 视图。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>示例：返回生成的 xml 数据类型的 SQL 视图  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>例如：SQL 视图返回生成的 xml 数据类型  
  以下 SQL 视图定义对关系列 pk 和从 XML 列中检索到的书作者创建 XML 视图：  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b70a8327a69496438be7739e3b5eba6b24533f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746385"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528379"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@schedule_id =** ] *schedule_id*  
- 将列出其信息的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
+`[ @schedule_id = ] schedule_id` 要列出信息的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 将列出其信息的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
+`[ @schedule_name = ] 'schedule_name'` 要列出信息的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -63,7 +61,7 @@ sp_help_jobs_in_schedule
 |**description**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
 |**category**|**sysname**|作业类别。|  
-|**所有者**|**sysname**|作业所有者。|  
+|**owner**|**sysname**|作业所有者。|  
 |**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 当作业成功时<br /><br /> **2** = 当作业失败时<br /><br /> **3** = 当作业完成时 （而不考虑作业结果） 时|  
 |**notify_level_email**|**int**|位掩码，它指示当作业完成时，在什么情况下应该发送一个通知电子邮件。 可能的值均为适用于**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个网络消息。 可能的值均为适用于**notify_level_eventlog**。|  
@@ -92,7 +90,7 @@ sp_help_jobs_in_schedule
 ## <a name="remarks"></a>备注  
  此过程列出有关附加到指定计划的作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -119,9 +117,9 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

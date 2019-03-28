@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc50fea28b1dbc3407b86e3af5573f64202e8f26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132179"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526789"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
@@ -51,7 +51,7 @@ ms.locfileid: "48132179"
   
 11. 在查询编辑器中，输入以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码：  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

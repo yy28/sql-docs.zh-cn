@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529579"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
   介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
@@ -42,7 +42,7 @@ ms.locfileid: "52528393"
   
 -   可以对具有任何支持全文索引的数据类型的列创建语义索引。 有关详细信息，请参阅 [创建和管理全文索引](create-and-manage-full-text-indexes.md)。  
   
--   您可为 `varbinary(max)` 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅[How To:确定该文档可以对类型编制索引](#doctypes)本主题中。  
+-   您可为 `varbinary(max)` 列指定支持全文索引的任何文档类型。 有关详细信息，请参阅本主题中的[如何确定可对哪些文档类型编制索引](#doctypes)。  
   
 -   语义索引为你选择的列创建两种类型的索引：关键短语索引和文档相似性索引。 启用语义索引时，您无法只选择其中一种索引类型。 但是，您可以单独查询这两种索引。 有关详细信息，请参阅 [使用语义搜索在文档中查找关键短语](find-key-phrases-in-documents-with-semantic-search.md) 和 [使用语义搜索查找相似和相关文档](find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "52528393"
  **使用 TRANSACT-SQL 创建新的语义索引**  
  为要创建语义索引的每个列调用 **CREATE FULLTEXT INDEX** 语句并指定 **STATISTICAL_SEMANTICS**。 有关此语句的所有选项的详细信息，请参阅 [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)。  
   
- **示例 1:创建唯一索引、 全文索引和语义索引**  
+ **示例 1：创建一个唯一索引、全文索引和语义索引**  
   
  以下示例创建一个默认全文目录 **ft**。然后，该示例对 AdventureWorks2012 示例数据库的 **HumanResources.JobCandidate** 表的 **JobCandidateID** 列创建一个唯一索引。 需要将此唯一索引用作全文索引的键列。 然后，该示例在 **Resume** 列上创建一个全文索引和语义索引。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **示例 2:对具有延迟的索引填充的几个列创建全文索引和语义索引**  
+ **示例 2：对具有延迟索引填充的几个列创建一个全文索引和语义索引**  
   
  以下示例在 AdventureWorks2012 示例数据库中创建一个全文目录 **documents_catalog**。 然后，该示例创建一个使用该新目录的全文索引。 全文索引针对 **Production.Document**表的 **Title**、 **DocumentSummary** 和 **Document** 列创建，而语义索引仅针对 **Document** 列创建。 此全文索引使用新创建的全文目录和现有的唯一键索引 **PK_Document_DocumentID**。 根据建议，此索引键在整数列 **DocumentID**上创建。 该示例指定英语的 LCID 1033，这是列中数据的语言。  
   
  该示例还指定关闭更改跟踪并且不进行填充。 随后，在非峰值时间，该示例使用 **ALTER FULLTEXT INDEX** 语句对新索引开始进行完全填充，并启用自动更改跟踪。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  随后，在非峰值时间，填充索引：  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   若要将语义索引添加到已启用全文索引的列，请使用 **ADD STATISTICAL_SEMANTICS** 选项。 在单个 **ALTER** 语句中只能将语义索引添加到一个列。  
   
- **示例：添加到已有全文索引的列的语义索引**  
+ **示例：将语义索引添加到已有全文索引的列**  
   
  以下示例更改 AdventureWorks2012 示例数据库的 **Production.Document** 表的现有全文索引。 该示例对 **Production.Document** 表的 **Document** 列添加语义索引，该列已有全文索引。 该示例指定将不自动重新填充索引。  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **使用 TRANSACT-SQL 删除语义索引**  
  -   要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句****。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句****。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      **statistical_semantics** 列中的值 1 表示除了启用全文索引编制外，还为指定的列启用了语义索引编制。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  查询目录视图 [sys.fulltext_semantic_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

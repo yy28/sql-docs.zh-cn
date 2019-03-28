@@ -19,12 +19,12 @@ ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2806d42e58bbd60b962f83e8ab58fbe4511e44b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803795"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526399"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@collection_set_id =** ] *collection_set_id*  
- 收集组的唯一本地标识符。 *collection_set_id*是**int**默认值为 NULL。 *collection_set_id*时，必须具有值*名称*为 NULL。  
+`[ @collection_set_id = ] collection_set_id` 是收集组的唯一本地标识符。 *collection_set_id*是**int**默认值为 NULL。 *collection_set_id*时，必须具有值*名称*为 NULL。  
   
- [ **@name =** ] '*name*'  
- 是收集组的名称。 *名称*是**sysname**默认值为 NULL。 *名称*时，必须具有值*collection_set_id*为 NULL。  
+`[ @name = ] 'name'` 是收集组的名称。 *名称*是**sysname**默认值为 NULL。 *名称*时，必须具有值*collection_set_id*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -62,7 +60,7 @@ sp_syscollector_start_collection_set
   
  如果收集组不包含任何收集项，则此操作不起作用。 将以警告的形式返回错误 14685。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行此过程，需具有 dc_operator 固定数据库角色的成员身份。 如果收集组没有代理帐户，则需要具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

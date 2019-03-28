@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509584"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (TRANSACT-SQL) （预览版）
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988744"
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分类器的唯一 ID。 不可为 Null。||
-group_name|**sysname**|分类器所分配到的工作负荷组的名称。 不可为 null。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>动态资源类</br>smallrc</br>mediumrc</br>Largerc</br>xlargerc|
+group_name|**sysname**|分类器所分配到的工作负荷组的名称。 不可为 null。 |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>动态资源类</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 NAME|**sysname**|分类器的名称。 必须是唯一的实例。 不可为 null。||
 |importance|**sysname**|为此工作负荷组中以及跨共享资源的工作负荷组的请求的相对重要性。  分类器中指定的重要性重写工作负荷组的重要性设置。|低，below_normal、 普通、 above_normal 高 |
 |create_time|**datetime**|分类器的创建时间。 不可为 null。||

@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851555"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528971"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@agent_id=** ] **'***agent_id***'**  
- 用于备份的主 ID 或者用于复制或还原的辅助 ID。 *agent_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @agent_id = ] 'agent_id'` 用于备份的主 ID 或者用于复制或还原的辅助 ID。 *agent_id*是**uniqueidentifier**且不能为 NULL。  
   
- [ **@agent_type=** ] **'***agent_type***'**  
- 日志传送作业的类型。  
+`[ @agent_type = ] 'agent_type'` 日志传送作业的类型。  
   
  0 = 备份。  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type*是**tinyint**且不能为 NULL。  
   
- [  **@database=** ] **'***数据库*****  
- 备份或还原代理进行日志记录时使用的主数据库或辅助数据库。  
+`[ @database = ] 'database'` 使用备份或还原代理的日志记录的主要或辅助数据库。  
   
- [ **@mode** ] *n*  
- 指定是否刷新监视器数据或清除数据。 数据类型*m*为 tinyint，和支持的值为：  
+`[ @mode ] n` 指定是否刷新监视器数据或清除数据。 数据类型*m*为 tinyint，和支持的值为：  
   
  1 = 刷新（默认值）。  
   
@@ -79,7 +75,7 @@ sp_refresh_log_shipping_monitor
   
  **sp_refresh_log_shipping_monitor**必须从运行**主**主密钥或辅助服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>请参阅  

@@ -18,12 +18,12 @@ ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f88ec7714528e8ce6e019be25ca4d83e49592096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060867"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527171"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中在现有文件上还原文件和文件组。  
@@ -34,7 +34,7 @@ ms.locfileid: "48060867"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要在现有文件上还原文件和文件组，请使用：**  
   
@@ -89,8 +89,8 @@ ms.locfileid: "48060867"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
@@ -139,7 +139,7 @@ ms.locfileid: "48060867"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例将还原 `MyNwind` 数据库的文件和文件组，并替换任何具有相同名称的现有文件。 为了将数据库还原到当前时间，还将应用两个事务日志。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  

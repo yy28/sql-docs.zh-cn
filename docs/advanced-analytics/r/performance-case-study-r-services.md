@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645466"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510754"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能： 结果和资源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -110,9 +110,9 @@ metric time pct
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression-并行| 4        | 5.1775       |
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
-|                       | PageCompression-并行 | 4        | 5.3225       |
+|                       | PageCompression - parallel | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | RowCompression-并行  | 4        | 5.2375       |
+|                       | RowCompression - parallel  | 4        | 5.2375       |
 
 **结论**
 
@@ -180,7 +180,7 @@ metric time pct
 
 | 表名          | 测试名称   | 平均时间 |
 |---------------------|-------------|--------------|
-| *航空公司*           | *FactorCol* | 10.72        |
+| *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **结论**
@@ -361,7 +361,7 @@ CPU 关联已强制执行在 resume 匹配方案中，若要评估对 R 作业�
 
 + [SQL Server 如何支持 NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [软件 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>了解有关 SQL Server 优化
 

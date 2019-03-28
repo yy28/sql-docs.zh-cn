@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb2671083b62034d4227f232bc062ce46138a3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530281"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526279"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbname=** ] **'**_数据库_  
- 要删除的数据库的名称。 *数据库*是**sysname**，默认值为 NULL。  
+`[ @dbname = ] 'database'` 是要删除的名称。 *数据库*是**sysname**，默认值为 NULL。  
   
- [  **@dropdev=** ] **'**_dropdev_  
- 提供该标志只是为了向后兼容，当前忽略此标志。 *dropdev*具有值**dropdev**。  
+`[ @dropdev = ] 'dropdev'` 该标志仅为了向后兼容，当前忽略。 *dropdev*具有值**dropdev**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

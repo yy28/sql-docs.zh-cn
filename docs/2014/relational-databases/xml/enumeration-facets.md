@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c326c4f6f9d090d99de00580404953fa242586c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2687acdf1c4d9b3decc8fe83f7c967173cdba3a9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529641"
 ---
 # <a name="enumeration-facets"></a>枚举方面
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝包含以下类型的 XML 架构：具有模式方面或违反这些方面的枚举的类型。  

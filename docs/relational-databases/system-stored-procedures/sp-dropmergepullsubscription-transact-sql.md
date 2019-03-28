@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812989"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526499"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为 NULL。 此参数是必需的。 指定的值**所有**若要删除所有发布的订阅  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。 此参数是必需的。 指定的值**所有**若要删除所有发布的订阅  
   
- [ **@publisher=**] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 此参数是必需的。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 此参数是必需的。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 此参数是必需的。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 此参数是必需的。  
   
- [  **@reserved=**] **'保留**   
- 供将来使用的保留参数。 *保留*是**位**，默认值为**0**。  
+`[ @reserved = ] 'reserved'` 已保留供将来使用。 *保留*是**位**，默认值为**0**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -69,9 +65,9 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
   
   

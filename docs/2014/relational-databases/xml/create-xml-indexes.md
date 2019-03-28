@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527511"
 ---
 # <a name="create-xml-indexes"></a>创建 XML 索引
   本主题介绍如何创建主 XML 索引和辅助 XML 索引。  
@@ -46,7 +46,7 @@ ms.locfileid: "48142713"
   
  无法创建 XML 索引`xml`列在视图中，键入上**表**值的变量`xml`类型的列，或`xml`类型变量。  
   
--   若要更改`xml`类型列从非类型化到类型化的 XML，或反之，通过使用 ALTER TABLE ALTER COLUMN 选项，不存在 XML 索引的列上应。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
+-   若要使用 ALTER TABLE ALTER COLUMN 选项将 `xml` 类型列从非类型化的 XML 更改为类型化的 XML，或者从类型化的 XML 更改为非类型化的 XML，则列不应存在 XML 索引。 如果确实存在，则在尝试更改列类型之前必须删除该索引。  
   
 -   创建 XML 索引时必须将选项 ARITHABORT 设置为 ON。 若要使用 XML 数据类型方法查询、删除、更新 XML 列中的值或向 XML 列中插入值，则必须对连接设置相同的选项。 如果没有设置，则 XML 数据类型方法将会失败。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142713"
   
  如果 XML 数据类型列包含类型为 XML 架构类型 **xs:date** 或 **xs:dateTime** （或这些类型的任何子类型）的值且这些值中的年份小于 1，则在对这样的 XML 数据类型列创建或重新创建主 XML 索引时，索引创建操作在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中将失败。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允许使用这些值，因此在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中生成的数据库中创建索引时可能会出现这种问题。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### <a name="example-creating-a-primary-xml-index"></a>示例：创建主 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>例如：创建主 XML 索引  
  在大多数示例中，使用的是包含非类型化的 XML 列的表 T (pk INT PRIMARY KEY, xCol XML)。 可以采用简单的方式将它们扩展为类型化的 XML。 为简化起见，针对 XML 数据实例说明了查询，如下所示：  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列中返回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 对于主 XML 索引而言，返回的值为 NULL。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>示例：创建辅助 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>例如：创建辅助 XML 索引  
  下面的示例说明了如何创建辅助 XML 索引。 此示例还显示了有关您创建的 XML 索引的信息。  
   
 ```  

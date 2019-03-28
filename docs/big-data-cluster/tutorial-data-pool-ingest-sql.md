@@ -1,7 +1,7 @@
 ---
 title: 将数据引入到 SQL Server 数据池
 titleSuffix: SQL Server 2019 big data clusters
-description: 本教程演示如何将数据引入到具有 sp_data_pool_table_insert_data 存储过程的 SQL Server 2019 大数据群集 （预览版） 的数据池。
+description: 本教程演示如何将数据引入到 SQL Server 2019 大数据群集 （预览版） 的数据池。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493809"
+ms.locfileid: "58509934"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
 
@@ -56,7 +56,15 @@ ms.locfileid: "58493809"
    GO
    ```
 
-1. 创建命名的外部表**web_clickstream_clicks_data_pool**中数据池。 `SqlDataPool`数据源是可以从任何大数据群集的主实例使用的特殊数据源类型。
+1. 如果尚不存在，请创建到数据池外部数据源。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. 创建命名的外部表**web_clickstream_clicks_data_pool**中数据池。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -75,21 +83,35 @@ ms.locfileid: "58493809"
 
 以下步骤将示例 web 点击流数据引入到使用前面步骤中创建的外部表的数据池。
 
-1. 为想要用于将数据插入数据池的查询定义变量。 然后，使用**模型...sp_data_pool_table_insert_data**存储过程来将从查询的结果插入到数据池 ( **web_clickstream_clicks_data_pool**外部表)。
+1. 为想要用于将数据插入数据池的查询定义变量。 CTP 2.3 或更早版本，**模型...sp_data_pool_table_insert_data**所需的存储的过程。 CTP 2.4 和更高版本，可以使用`INSERT INTO`语句来查询的结果插入到数据池 ( **web_clickstream_clicks_data_pool**外部表)。
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
-   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
-   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
-   GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
+   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+   BEGIN
+      INSERT INTO web_clickstream_clicks_data_pool
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+        FROM sales.dbo.web_clickstreams_hdfs_parquet
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                              AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;
+   END
 
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+   BEGIN
+      DECLARE @db_name SYSNAME = 'Sales'
+      DECLARE @schema_name SYSNAME = 'dbo'
+      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
+      DECLARE @query NVARCHAR(MAX) = '
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+      FROM sales.dbo.web_clickstreams
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+         AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;'
+
+      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   END
    ```
 
 1. 检查与两个 SELECT 查询插入的数据。

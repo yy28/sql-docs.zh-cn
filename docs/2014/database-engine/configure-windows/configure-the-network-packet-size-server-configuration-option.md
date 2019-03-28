@@ -15,12 +15,12 @@ ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22f78cc38a71f518d5223e9f310588c4d55bdf88
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640018"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528259"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>配置 network packet size 服务器配置选项
   本主题介绍如何配置`network packet size`中的服务器配置选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `network packet size`选项设置整个网络中使用的数据包大小 （以字节为单位）。 数据包是具有固定大小的数据块区，用于在客户端与服务器之间传输请求和结果。 默认数据包大小为 4,096 个字节。  
@@ -83,13 +83,13 @@ ms.locfileid: "52640018"
   
 #### <a name="to-configure-the-network-packet-size-option"></a>配置 network packet size 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明了如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `network packet size` 选项的值设置为 `6500` 字节。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

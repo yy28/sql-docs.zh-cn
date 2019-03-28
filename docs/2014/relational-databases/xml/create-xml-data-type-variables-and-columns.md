@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527289"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
   `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 您可以使用其他内置类型`xml`数据类型作为列类型时创建的表作为变量的类型、 参数类型、 函数返回类型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>分配默认的 XML 实例  
  在表中，可以为 `xml` 类型的列分配默认 XML 实例。 可以通过两种方式提供默认的 XML：通过使用 XML 常量，或通过使用到 `xml` 类型的显式转换。  
   
- 若要提供默认的 XML 作为 XML 常量，请使用下例所示的语法。 请注意，此字符串隐式转换为`xml`类型。  
+ 若要提供默认的 XML 作为 XML 常量，请使用下例所示的语法。 请注意，此字符串将显式转换为 `xml` 类型。  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 使用约束的替代方法是创建一个包装器、 用户定义函数来包装`xml`数据类型方法，并在检查约束中指定用户定义函数，如下面的示例中所示。  
+ 除了使用约束外，还可以创建用户定义函数作为包装来包装 `xml` 数据类型方法，并在检查约束中指定用户定义函数，如下例中所示。  
   
  在以下示例中， `Col2` 的约束指定此列中存储的每个 XML 实例都必须具有包含 `<ProductDescription>` 属性的 `ProductID` 元素。 此约束由如下用户定义函数强制执行：  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   您想要对 `xml` 数据类型列生成 XML 索引，并且主表的主键与它的聚集键相同。 有关详细信息，请参阅 [XML 索引 (SQL Server)](xml-indexes-sql-server.md)。  
   
- 创建`xml`在单独的表，如果满足以下条件的数据类型列：  
+ 如果符合下列条件，则在单独的表中创建 `xml` 数据类型列：  
   
--   你想要生成 XML 索引`xml`数据类型列，但是主表的主键不同于它的聚集键，或者主表没有主键，或者主表为堆 （没有聚集键）。 如果主表已存在，可能会这样。  
+-   您想要对 `xml` 数据类型列生成 XML 索引，但是主表的主键与它的聚集键不同，或者主表没有主键，或者主表为一个堆（没有聚集键）。 如果主表已存在，可能会这样。  
   
 -   您不希望因为表中存在 XML 列而降低表扫描的速度。 无论该列是存储在行内还是行外，都会占用空间。  
   

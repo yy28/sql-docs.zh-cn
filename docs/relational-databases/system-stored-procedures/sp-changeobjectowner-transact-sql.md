@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100477"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526819"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname =** ] **'**_对象_  
- 当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可使用的窗体中的现有对象所有者限定_existing_owner_**。**_对象_如果架构及其所有者具有相同的名称。  
+`[ @objname = ] 'object'` 是现有的表、 视图、 用户定义函数或当前数据库中的存储的过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可使用的窗体中的现有对象所有者限定_existing_owner_**。**_对象_如果架构及其所有者具有相同的名称。  
   
- [  **@newowner=**] **'**_所有者_   
- 将成为对象的新所有者的安全帐户的名称。 *所有者*是**sysname**，无默认值。 *所有者*必须是有效的数据库用户、 服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名或 Windows 组有权访问当前数据库。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
+`[ @newowner = ] 'owner_ '` 是将成为对象的新所有者的安全帐户的名称。 *所有者*是**sysname**，无默认值。 *所有者*必须是有效的数据库用户、 服务器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名或 Windows 组有权访问当前数据库。 如果新所有者是没有对应数据库级主体的 Windows 用户或 Windows 组，则将创建数据库用户。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094358"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527949"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
   索引用于高效访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表中的数据。 指定正确索引可以显著提高查询性能。 例如，请考虑以下查询：  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -67,7 +67,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 ### <a name="operations-on-memory-optimized-and-disk-based-indexes"></a>针对内存优化表和基于磁盘的表的操作。  
   
-|运算|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
+|操作|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引扫描，检索所有表行。|用户帐户控制|是|用户帐户控制|  
 |采用相等谓词 (=) 的索引查找。|用户帐户控制<br /><br /> （需要完整的键。）|是 <sup>1</sup>|用户帐户控制|  
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      如果表上的所有索引都经常使用，则垃圾收集效果最好。 很少使用的索引可能会导致垃圾收集系统对于旧的版本无法以最佳方式执行。  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>创建内存优化的索引：代码示例  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>创建内存优化索引：示例代码  
  列级别哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  表级别哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  列级别主键哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  表级别主键哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  列级非聚集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  表级非聚集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  列级主键非聚集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  表级主键非聚集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  定义列后定义的多列索引：  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

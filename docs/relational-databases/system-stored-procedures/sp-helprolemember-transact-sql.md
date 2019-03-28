@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526939"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'** *角色*   
- 当前数据库中的角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*中未指定，则返回包含从当前数据库的至少一个成员的所有角色。  
+`[ @rolename = ] ' role '` 是当前数据库中的名称。 *角色* 是 **sysname** ，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*中未指定，则返回包含从当前数据库的至少一个成员的所有角色。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -50,8 +49,8 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**数据库角色**|**sysname**|当前数据库中角色的名称。|  
-|**成员名称**|**sysname**|成员的名称**数据库角色。**|  
+|**DbRole**|**sysname**|当前数据库中角色的名称。|  
+|**MemberName**|**sysname**|成员的名称**数据库角色。**|  
 |**MemberSID**|**varbinary(85)**|安全标识符**成员名称。**|  
   
 ## <a name="remarks"></a>备注  
@@ -61,7 +60,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
  使用[IS_ROLEMEMBER &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md)若要检查的指定用户角色成员身份。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -74,9 +73,9 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helpsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

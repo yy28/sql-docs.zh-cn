@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078489"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529119"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
@@ -30,7 +30,7 @@ ms.locfileid: "48078489"
   
 -   您可以编写 Transact-SQL 存储过程和函数，对 XML 列进行处理以满足业务需要。  
   
-## <a name="example-applying-xsl-transformation"></a>示例：应用 XSL 转换  
+## <a name="example-applying-xsl-transformation"></a>例如：应用 XSL 转换  
  请考虑一个 CLR 函数**transformxml （)** 接受`xml`数据类型实例和存储在文件中的 XSL 转换，将转换应用到 XML 数据，然后在结果中返回转换的 XML。 以下是用 C# 编写的主干函数：  
   
 ```  

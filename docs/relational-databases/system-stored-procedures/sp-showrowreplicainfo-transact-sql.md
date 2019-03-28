@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136107"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530359"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@ownername**=] **'***ownername***’**  
- 表所有者的名称。 *ownername*是**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
+`[ @ownername = ] 'ownername'` 是表所有者的名称。 *ownername*是**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
   
- [  **@tablename =**] **'***tablename***’**  
- 包含所返回的信息行的表的名称。 *tablename*是**sysname**，默认值为 NULL。  
+`[ @tablename = ] 'tablename'` 是包含所返回的信息的行的名称。 *tablename*是**sysname**，默认值为 NULL。  
   
- [  **@rowguid =**] *rowguid*  
- 行的唯一标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
+`[ @rowguid = ] rowguid` 是的唯一标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
- [ **@show**=] **'***显示***’**  
- 确定要在结果集中返回的信息量。 *显示*是**nvarchar(20)** 这两者的默认值。 如果**行**，则返回仅行版本信息。 如果**列**，则返回仅列版本信息。 如果**同时**、 行和返回列信息。  
+`[ @show = ] 'show'` 确定要在结果集中返回的信息量。 *显示*是**nvarchar(20)** 这两者的默认值。 如果**行**，则返回仅行版本信息。 如果**列**，则返回仅列版本信息。 如果**同时**、 行和返回列信息。  
   
 ## <a name="result-sets-for-row-information"></a>行信息的结果集  
   
@@ -63,7 +59,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**version**|**int**|项的版本。|  
 |**current_state**|**nvarchar(9)**|返回有关行的当前状态的信息。<br /><br /> **y** -行数据表示行的当前状态。<br /><br /> **n** -行数据不表示行的当前状态。<br /><br /> **\<n/a >** -不适用。<br /><br /> **\<未知 >** -无法确定当前状态。|  
 |**rowversion_table**|**nchar(17)**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表。|  
-|**注释**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
+|**comment**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-sets-for-column-information"></a>列信息的结果集  
   
@@ -74,7 +70,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
 |**colname**|**sysname**|列版本项目表示的项目列的名称。|  
-|**注释**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
+|**comment**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-set-for-both"></a>行信息和列信息的结果集  
  如果该值**两者**为选择*显示*，则返回的行和列结果集。  

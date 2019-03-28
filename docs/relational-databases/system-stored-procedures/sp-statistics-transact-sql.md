@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591701"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527679"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,25 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_name=** ] **'**_table_name_  
- 指定用来返回目录信息的表。 *table_name*是**sysname**，无默认值。 不支持通配符模式匹配。  
+`[ @table_name = ] 'table_name'` 指定用来返回目录信息的表。 *table_name*是**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [  **@table_owner=** ] **'**_所有者_  
- 用于返回目录信息的表的表所有者的名称。 *table_owner*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
+`[ @table_owner = ] 'owner'` 是用来返回目录信息的表所有者的名称。 *table_owner*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的索引。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在这样的表，则返回该表的索引。  
   
- [  **@table_qualifier=** ] **'**_限定符_  
- 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+`[ @table_qualifier = ] 'qualifier'` 表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (_限定符_**。**_所有者_**。**_名称_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [  **@index_name=** ] **'**_index_name_  
- 是索引名称。 *index_name*是**sysname**，默认值为 %。 支持通配符模式匹配。  
+`[ @index_name = ] 'index_name'` 是索引名称。 *index_name*是**sysname**，默认值为 %。 支持通配符模式匹配。  
   
- [  **@is_unique=** ] **'**_is_unique_  
- 是是否只有唯一索引 (如果**Y**) 返回。 *is_unique*是**char （1)**，默认值为**N**。  
+`[ @is_unique = ] 'is_unique'` 是是否只有唯一索引 (如果**Y**) 返回。 *is_unique*是**char （1)**，默认值为**N**。  
   
- [  **@accuracy=** ] **'**_准确性_  
- 统计信息的基数和页准确性的级别。 *准确性*是**char （1)**，默认值为**Q**。指定**E**以确保以便基数和页是准确的则更新统计信息。  
+`[ @accuracy = ] 'accuracy'` 是的基数和页准确性的统计信息级别。 *准确性*是**char （1)**，默认值为**Q**。指定**E**以确保以便基数和页是准确的则更新统计信息。  
   
  该值**E** (SQL_ENSURE) 要求驱动程序无条件地检索统计信息。  
   
@@ -86,7 +80,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**COLUMN_NAME**|**sysname**|每个列的列名**TABLE_NAME**返回。 该列始终返回值。|  
 |**COLLATION**|**char(1)**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行或索引中的唯一值数。|  
-|**页**|**int**|若要存储的索引或表的页的数目。|  
+|**PAGES**|**int**|若要存储的索引或表的页的数目。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -18,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce38780d40347f237f3a09a6dea5376fb1cf47d9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527029"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@secondary_database =** ] '*secondary_database*  
- 辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
+`[ @secondary_database = ] 'secondary_database'` 为辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
- [ **@secondary_id =** ] '*secondary_id*'  
- 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**且不能为 NULL。  
+`[ @secondary_id = ] 'secondary_id'` 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -92,11 +90,11 @@ sp_help_log_shipping_secondary_database
   
  **sp_help_log_shipping_secondary_database**必须从运行**主**辅助服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_help_log_shipping_secondary_primary &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

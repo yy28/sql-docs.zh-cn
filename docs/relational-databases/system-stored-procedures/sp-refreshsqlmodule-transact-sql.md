@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649025"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529212"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,11 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name=** ] **'**_模块\_名称_  
- 是存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是**nvarchar**，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。  
+`[ @name = ] 'module\_name'` 是存储的过程、 用户定义函数、 视图、 DML 触发器、 数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是**nvarchar**，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。  
   
- [ **，** @**命名空间**=] **'** \<类 >   
- 是指定模块的类。 当*module_name*是 DDL 触发器，\<类 > 是必需的。 *\<类 >* 是**nvarchar**(20)。 有效输入为：  
+`[ , @namespace = ] ' \<class> '` 是指定的类。 当*module_name*是 DDL 触发器，\<类 > 是必需的。 *\<类 >* 是**nvarchar**(20)。 有效输入为：  
   
 |||  
 |-|-|  
@@ -81,7 +79,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  在运行时，将删除所有与对象相关联的签名**sp_refreshsqlmodule**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对相应模块拥有 ALTER 权限，对该对象引用的任何 CLR 用户定义类型和 XML 架构集合拥有 REFERENCES 权限。 当指定的模块是数据库级 DDL 触发器时，需要在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。 当指定的模块是服务器级 DDL 触发器时，需要拥有 CONTROL SERVER 权限。  
   
  此外，对于使用 EXECUTE AS 子句定义的模块，要求对指定主体拥有 IMPERSONATE 权限。 通常，刷新对象不会更改其 EXECUTE AS 主体，除非模块是使用 EXECUTE AS USER 定义的，并且主体的用户名现在解析为与创建模块时的用户不同的用户。  

@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813311"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526609"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@maxtrans** =] *maxtrans*  
- 要返回相关信息的事务的数量。 *maxtrans*是**int**，默认值为**1**，它指定的最大挂起复制的事务数**sp_replshowcmds**返回的信息。  
+`[ @maxtrans = ] maxtrans` 是要返回信息的事务数。 *maxtrans*是**int**，默认值为**1**，它指定的最大挂起复制的事务数**sp_replshowcmds**返回的信息。  
   
 ## <a name="result-sets"></a>结果集  
  **sp_replshowcmds**是一个诊断过程返回有关从中执行发布数据库的信息。  
@@ -71,9 +70,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="see-also"></a>请参阅  
  [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

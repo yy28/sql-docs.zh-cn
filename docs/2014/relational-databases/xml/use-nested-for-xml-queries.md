@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211137"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528465"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
   `xml`数据类型和[FOR XML 查询中的 TYPE 指令](type-directive-in-for-xml-queries.md)实现在服务器上以及在客户端上处理由 FOR XML 查询返回的 XML。  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 此外，您可以处理在变量中返回的 XML `@x`，通过使用其中一个`xml`数据类型方法。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
+ 还可以使用 `xml` 数据类型方法之一，处理在变量 `@x` 中返回的 XML。 例如，可以使用 `ProductModelID` value() 方法 [检索](/sql/t-sql/xml/value-method-xml-data-type)属性值。  
   
 ```  
 DECLARE @i int;  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <myRoot>  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 因为所得的结果的`xml`类型，您可以指定其中一个`xml`数据类型对此 XML 直接的方法，如下面的查询中所示。 在此查询中，[query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)用于检索 <`myRoot`> 元素的第一个 <`row`> 子元素。  
+ 由于结果为 `xml` 类型，因此可以对此 XML 直接指定 `xml` 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)用于检索 <`myRoot`> 元素的第一个 <`row`> 子元素。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -76,14 +76,14 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>将内部 FOR XML 查询的结果以 xml 类型实例的形式返回到外部查询  
- 您可以编写嵌套`FOR XML`查询，其中内部查询的结果返回为`xml`到外部查询的类型。 例如：  
+ 您可以编写嵌套 `FOR XML` 查询，其中内部查询的结果将以 `xml` 类型返回到外部查询。 例如：  
   
 ```  
 SELECT Col1,   

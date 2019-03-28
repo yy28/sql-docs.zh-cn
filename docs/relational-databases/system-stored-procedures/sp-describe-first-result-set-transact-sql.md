@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400630"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528159"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **\@tsql =** ] **'***Transact SQL_batch*****  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
- [  **\@params =** ] **N'***参数*****  
- \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于 sp_executesql。 参数可能**nvarchar(n)** 或**nvarchar （max)**。  
   
  是一个字符串，它包含的定义中嵌入的所有参数[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 在语句中指定的每个参数必须定义在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中的批处理不包含参数，\@参数不是必需的。 为此参数默认值为 NULL。  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- 指定是否返回其他键列和源表信息。 如果设置为 1，则分析每个查询，就好像它在查询中包含 FOR BROWSE 选项一样。 将返回其他键列和源表信息。  
+`[ \@browse_information_mode = ] tinyint` 指定是否返回其他键列和源表信息。 如果设置为 1，则分析每个查询，就好像它在查询中包含 FOR BROWSE 选项一样。 将返回其他键列和源表信息。  
   
 -   如果设置为 0，则无信息返回。  
   
@@ -95,11 +92,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**source_schema**|**sysname**|此结果中的列返回的源架构的名称。 如果无法确定该架构，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_table**|**sysname**|此结果中的列返回的源表的名称。 如果无法确定该表，则返回 NULL。 仅在请求浏览信息填充。|  
 |**source_column**|**sysname**|结果列返回的源列的名称。 如果无法确定该列，则返回 NULL。 仅在请求浏览信息填充。|  
-|**is_identity_column**|**位 NULL**|如果列是标识列，则返回 1；否则，返回 0。 如果无法确定列是否为标识列，则返回 NULL。|  
-|**is_part_of_unique_key**|**位 NULL**|如果列是唯一索引的一部分（包括唯一和主要的约束），则返回 1；否则，返回 0。 如果无法确定列是否为唯一索引的一部分，则返回 NULL。 仅在请求浏览信息时填充它。|  
-|**is_updateable**|**位 NULL**|如果可以更新列，则返回 1；否则，返回 0。 如果无法确定是否可以更新列，则返回 NULL。|  
-|**is_computed_column**|**位 NULL**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定该列是计算的列，返回 NULL。|  
-|**is_sparse_column_set**|**位 NULL**|如果列是稀疏列，则返回 1；否则，返回 0。 如果无法确定列是稀疏列集的一部分，则返回 NULL。|  
+|**is_identity_column**|**bit NULL**|如果列是标识列，则返回 1；否则，返回 0。 如果无法确定列是否为标识列，则返回 NULL。|  
+|**is_part_of_unique_key**|**bit NULL**|如果列是唯一索引的一部分（包括唯一和主要的约束），则返回 1；否则，返回 0。 如果无法确定列是否为唯一索引的一部分，则返回 NULL。 仅在请求浏览信息时填充它。|  
+|**is_updateable**|**bit NULL**|如果可以更新列，则返回 1；否则，返回 0。 如果无法确定是否可以更新列，则返回 NULL。|  
+|**is_computed_column**|**bit NULL**|如果列是计算列，则返回 1；否则，返回 0。 如果无法确定该列是计算的列，返回 NULL。|  
+|**is_sparse_column_set**|**bit NULL**|如果列是稀疏列，则返回 1；否则，返回 0。 如果无法确定列是稀疏列集的一部分，则返回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|此列在 ORDER BY 列表中的位置。 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表则返回 NULL。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，此值将是相同的返回的所有行**sp_describe_first_result_set。**|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不为 NULL， **order_by_is_descending**列报告此列的 ORDER BY 子句的方向。 否则，它报告 NULL。|  
@@ -143,15 +140,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** 到**varchar(a')** 其中 >。  
   
-    -   **varchar(a)** 到**varchar （max)**  
+    -   **varchar(a)** to **varchar(max)**  
   
     -   **nvarchar(a)** 到**nvarchar(a')** 其中 >。  
   
-    -   **nvarchar(a)** 到**nvarchar （max)**  
+    -   **nvarchar(a)** to **nvarchar(max)**  
   
     -   **varbinary(a)** 到**varbinary(a')** 其中 >。  
   
-    -   **varbinary(a)** 到**varbinary （max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **sp_describe_first_result_set**不支持间接递归。  
   
@@ -403,7 +400,7 @@ N'
  结果： **int NULL**因为 dbo.t1.a 和 s1.t1.a 同时具有类型**int**和不同的为 null 性。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

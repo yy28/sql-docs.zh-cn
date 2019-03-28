@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777645"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527959"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
- 固定数据库角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*是指定，则返回仅该角色有关的信息; 否则，返回的列表和说明的所有固定的数据库角色。  
+`[ @rolename = ] 'role'` 是固定的数据库角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 如果*角色*是指定，则返回仅该角色有关的信息; 否则，返回的列表和说明的所有固定的数据库角色。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,7 +50,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定的数据库角色的名称。|  
-|**Description**|**nvarchar(70)**|说明**DbFixedRole。**|  
+|**说明**|**nvarchar(70)**|说明**DbFixedRole。**|  
   
 ## <a name="remarks"></a>备注  
  固定数据库角色（如下表所示）在数据库级上定义，具有执行特定数据库级的管理活动的权限。 无法添加或删除固定数据库角色。 无法更改授予固定数据库角色的权限。  
@@ -76,7 +75,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_helprole**|显示固定数据库角色的成员列表。|  
 |**sp_droprolemember**|从固定数据库角色中删除成员。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
  返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -92,10 +91,10 @@ GO
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

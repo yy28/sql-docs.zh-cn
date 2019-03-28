@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (TRANSACT-SQL) |Microsoft Docs
+title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846635"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529299"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@attribute_id =** ] **'***attribute_id*****  
- 属性的整数 ID。 *attribute_id*是**int**，默认值为 NULL。  
+`[ @attribute_id = ] 'attribute_id'` 是该属性的整数 ID。 *attribute_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -51,8 +50,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|属性的 ID 号。|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|属性名称。|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|属性的当前设置。|  
+|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|属性名称。|  
+|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|属性的当前设置。|  
   
  下表列出了各个属性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 客户端库当前使用的属性**1**， **2**， **18**， **22**，并**500**连接时间。  
   
@@ -91,7 +90,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>备注  
  **sp_server_info**返回提供的信息的子集**SQLGetInfo** ODBC 中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="see-also"></a>请参阅  

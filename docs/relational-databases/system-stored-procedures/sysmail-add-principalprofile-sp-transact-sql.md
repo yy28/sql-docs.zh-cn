@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_principalprofile_sp (Transact SQL) |Microsoft Docs
+title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756266"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528499"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@principal_id** = ] *principal_id*  
- 数据库用户或角色中的 ID **msdb**的关联的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 一个*principal_id*的**0**该配置文件将公共配置文件，在数据库中的所有主体授予访问权限。  
+`[ @principal_id = ] principal_id` 数据库用户或角色中的 ID **msdb**的关联的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 一个*principal_id*的**0**该配置文件将公共配置文件，在数据库中的所有主体授予访问权限。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
- 数据库用户或角色中的名称**msdb**的关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 一个*principal_name*的 **'public'** 该配置文件将公共配置文件，在数据库中的所有主体授予访问权限。  
+`[ @principal_name = ] 'principal_name'` 数据库用户或角色中的名称**msdb**的关联的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*必须指定。 一个*principal_name*的 **'public'** 该配置文件将公共配置文件，在数据库中的所有主体授予访问权限。  
   
- [ **@profile_id** =] *profile_id*  
- 关联的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id` 关联的配置文件的 id。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 关联的配置文件的名称。 *profile_name*是**sysname**，无默认值。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'` 关联的配置文件的名称。 *profile_name*是**sysname**，无默认值。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@is_default** = ] *is_default*  
- 指定配置文件是否为主体数据库的默认配置文件。 主体必须且只能有一个默认配置文件。 *is_default*是**位**，无默认值。  
+`[ @is_default = ] is_default` 指定此配置文件是否为主体的默认配置文件。 主体必须且只能有一个默认配置文件。 *is_default*是**位**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -69,7 +64,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
  存储的过程**sysmail_add_principalprofile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

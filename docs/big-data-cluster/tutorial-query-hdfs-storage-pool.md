@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 57851a4e0f4cedde1e630afeca49ff26c971c7b5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494399"
+ms.locfileid: "58511114"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
 
@@ -73,8 +73,14 @@ ms.locfileid: "58494399"
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 1. 创建外部表可以读取`/clickstream_data`从存储池。 **SqlStoragePool**可从大数据群集的主实例进行访问。

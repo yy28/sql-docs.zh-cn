@@ -16,12 +16,12 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0965c656c5c6b0cef690bb3fbaa7bbc2a7965104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528659"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname=**] **'***dbname***'**  
- 数据库的名称。 *dbname* 的数据类型为 **sysname**，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
+`[ @dbname = ] 'dbname'` 是数据库的名称。 *dbname* 的数据类型为 **sysname**，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
   
- [ **@type** =]*类型*  
- 要为其删除数据库对象的复制的类型。 *类型*是**nvarchar(5)** 可以是下列值之一。  
+`[ @type = ] type` 是的复制的数据库内要被删除的对象的类型。 *类型*是**nvarchar(5)** 可以是下列值之一。  
   
 |||  
 |-|-|  
 |**tran**|删除事务复制发布对象。|  
-|**合并**|删除合并复制发布对象。|  
+|**merge**|删除合并复制发布对象。|  
 |**同时**（默认值）|删除所有复制发布对象。|  
   
 ## <a name="return-code-values"></a>返回代码值  

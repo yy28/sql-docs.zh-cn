@@ -18,12 +18,12 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526699"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 您要更新的策略类别订阅的标识符。 *policy_category_subscription_id*是**int**，和是必需的。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 是你想要更新的策略类别订阅的标识符。 *policy_category_subscription_id*是**int**，和是必需的。  
   
- [ **@target_type=** ] **'** target_type **'**  
- 类别订阅的目标类型。 *target_type*是**sysname**，默认值为 NULL。  
+`[ @target_type = ] 'target_type'` 是类别订阅的目标类型。 *target_type*是**sysname**，默认值为 NULL。  
   
  如果指定*target_type*，值必须设置为 'DATABASE'。  
   
- [ **@target_object=** ] **'** target_object **'**  
- 是将策略类别订阅的名称。 *target_object*是**sysname**，默认值为 NULL。  
+`[ @target_object = ] 'target_object'` 是将策略类别订阅的名称。 *target_object*是**sysname**，默认值为 NULL。  
   
- [ **@policy_category=** ] **'** policy_category **'**  
- 您希望数据库订阅的策略类别的名称。 *policy_category*是**sysname**，默认值为 NULL。  
+`[ @policy_category = ] 'policy_category'` 是你想要订阅的数据库的策略类别的名称。 *policy_category*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -73,11 +69,11 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响的实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例更新现有策略类别订阅，以便 AdventureWorks2012 数据库订阅“Finance”策略类别。  
@@ -92,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2019
+ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a218f2a80b755c30dcbf608197a3a306321d41f4
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417159"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509864"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58417159"
 |database_id|**int**|显式上下文 (例如，使用 DB_X) 使用的数据库的标识符。|请参阅中的 ID [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |command|**nvarchar(4000)**|包含用户提交的请求的完整文本。|任何有效的查询或请求文本。 长度超过 4000 字节的查询将被截断。|  
 |resource_class|**nvarchar(20)**|用于此请求的资源类。 请参阅相关**concurrency_slots_used**中[sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)。  资源类的详细信息，请参阅[资源类和工作负荷管理](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |静态资源类</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>动态资源类</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|重要性 （SQL DW 第 2 代为预览版）|**nvarchar(32)**|设置请求的重要性与已提交。 具有重要性较低的请求将保持排队状态处于挂起状态，如果提交较高的重要性请求。  之前已提交的较低重要性请求之前将执行请求的较高的优先级。  重要性的详细信息，请参阅[工作负荷重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>low</br>below_normal</br>正常</br>above_normal</br>high|
+|重要性 （SQL DW 第 2 代为预览版）|**nvarchar(32)**|设置请求的重要性与已提交。 具有重要性较低的请求将保持排队状态处于挂起状态，如果提交较高的重要性请求。  之前已提交的较低重要性请求之前将执行请求的较高的优先级。  重要性的详细信息，请参阅[工作负荷重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>low</br>below_normal</br>正常 （默认值）</br>above_normal</br>high|
   
  此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。   
   

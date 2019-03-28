@@ -10,23 +10,23 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e77025a5cc8e410c1bdbb36b0946dd3134c9ca1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155497"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525839"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>在内存优化的表中实现 SQL_VARIANT
-  使用表的示例，请考虑`SQL_VARIANT`列：  
+  考虑具有 `SQL_VARIANT` 列的表的示例：  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
  假定键列只能是 `BIGINT` 或 `NVARCHAR(300)`。 您可以按以下方式对此表建模：  
   
-```tsql  
+```sql  
 -- original disk-based table  
 CREATE TABLE [dbo].[T1_disk]([Key] int not null primary key,  
        [Value] [sql_variant])  
@@ -66,7 +66,7 @@ from dbo.T1_inmem
   
  现在您可以通过在 T1 上打开游标，将数据加载到 T1 的 [T1_HK]：  
   
-```tsql  
+```sql  
 DECLARE T1_rows_cursor CURSOR FOR    
 select *  
 FROM dbo.T1  
@@ -114,7 +114,7 @@ DEALLOCATE T1_rows_cursor
   
  您可以按以下方式将数据转换回 `SQL_VARIANT`：  
   
-```tsql  
+```sql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
                        else convert(sql_variant, [Key_nv])   
                        end  

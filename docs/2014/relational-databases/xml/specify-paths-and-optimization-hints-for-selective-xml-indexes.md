@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533992"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528799"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
   本主题介绍如何在创建或更改选择性 XML 索引时，如何指定要建立索引的节点路径以及用于索引的优化提示。  
@@ -61,7 +61,7 @@ ms.locfileid: "52533992"
   
  下面是使用默认映射创建的一个选择性 XML 索引的示例。 对于所有三个路径，使用默认节点类型 (**xs:untypedAtomic**) 和基数。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  您可以优化以下方式中所示的选择性 XML 索引：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -116,7 +116,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  请考虑以下查询：  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  该指定的查询从打包到 NVARCHAR(200) 数据类型中的路径 `/a/b/d` 返回一个值，因此，要为该节点指定的数据类型十分明显。 但是，没有用于在非类型化 XML 中指定节点基数的架构。 若要指定节点 `d` 在其父节点 `b`下最多出现一次，请创建一个选择性 XML 索引，该索引使用 SINGLETON 优化提示，如下所示：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      请考虑以下简单查询，它针对本文中的 [示例 XML 文档](#sample) ：  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -238,7 +238,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  为了提高上面所示的 SELECT 语句的性能，您可以创建以下选择性 XML 索引：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>对完全相同的路径建立索引  
  您不能将基于不同路径名称的完全相同的路径提升为相同的数据类型。 例如，以下查询将会引发错误，因为 `pathOne` 和 `pathTwo` 完全相同：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  但是，您可以将完全相同的路径提升为具有不同名称的不同数据类型。 例如，下面的查询现在是可接受的，因为数据类型不同：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  下面是使用 exist() 方法的一个简单的 XQuery：  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  下面是应用了谓词的前面的 XQuery 的更复杂变化形式：  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  下面是具有 value() 子句的更复杂查询：  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  下面是在 exist() 子句内使用 FLWOR 子句的查询。 （FLWOR 这个名称来自于可构成一个 XQuery FLWOR 表达式的五个子句：for、let、where、order by 和 return。）  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  请看下面的示例：  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

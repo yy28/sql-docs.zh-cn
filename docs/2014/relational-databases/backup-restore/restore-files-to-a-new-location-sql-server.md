@@ -17,12 +17,12 @@ ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc0520f7c28804e5534b4334e8f440e263c4f2eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128847"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527909"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>将文件还原到新位置 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将文件还原到新位置。  
@@ -33,7 +33,7 @@ ms.locfileid: "48128847"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将文件还原到新位置，可使用：**  
   
@@ -88,8 +88,8 @@ ms.locfileid: "48128847"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
@@ -105,7 +105,7 @@ ms.locfileid: "48128847"
     |列标题|值|  
     |-----------------|------------|  
     |**原始文件名**|源备份文件的完整路径。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
     |**还原为**|要还原的数据库文件的完整路径。 若要指定新的还原文件，请单击文本框，再编辑建议的路径和文件名。 更改 **“还原为”** 列中的路径或文件名等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中使用 MOVE 选项。|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
@@ -139,7 +139,7 @@ ms.locfileid: "48128847"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例将 `MyNwind` 数据库中原来位于驱动器 C 上的两个文件还原到驱动器 D 上的新位置。为了将数据库还原到当前时间，还将应用两个事务日志。 `RESTORE FILELISTONLY` 语句用于确定待还原数据库内的文件的数目及其逻辑名称和物理名称。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

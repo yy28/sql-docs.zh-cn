@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645187"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510594"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>将 R 模型部署和使用 SQL Server （演练） 中
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -228,5 +228,5 @@ ms.locfileid: "53645187"
 
 + [数据科学方案和解决方案模板](data-science-scenarios-and-solution-templates.md)
 + [数据库内高级分析](sqldev-in-database-r-for-sql-developers.md)
-+ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-+ [其他资源](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
++ [机器学习服务器操作方法指南](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [机器学习服务器的其他资源](https://docs.microsoft.com//machine-learning-server/resources-more)

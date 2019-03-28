@@ -18,12 +18,12 @@ ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f358385205c15954fe033a2f6631964a86fabc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 601be3bb276576aaaf4c13e42e09d0de41b3b0f7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793275"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527979"
 ---
 # <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_id** =] *profile_id*  
- 是要删除的配置文件的配置文件 id。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id` 是要删除的配置文件的配置文件 id。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要删除的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'` 是要删除的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -59,7 +57,7 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
   
  存储的过程**sysmail_delete_profile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

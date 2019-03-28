@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527139"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
   本主题列出了本机编译存储过程的支持的功能 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -142,7 +142,7 @@ ms.locfileid: "52514244"
   
      可通过将行数存储在变量中来获得多于 8,192 的结果：  
   
-    ```tsql  
+    ```sql  
     DECLARE @v INT = 9000  
     SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
@@ -180,7 +180,7 @@ ms.locfileid: "52514244"
   
  使用 TOP N = 8192 的示例：编译  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -193,7 +193,7 @@ GO
   
  使用 TOP N > 8192 的示例：无法编译。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -208,7 +208,7 @@ GO
   
  使用变量的示例：编译  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

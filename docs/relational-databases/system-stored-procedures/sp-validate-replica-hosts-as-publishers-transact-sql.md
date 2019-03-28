@@ -16,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791579"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528419"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] **'***original_publisher***’**  
- 最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'` 实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，最初发布数据库。 *original_publisher*是**sysname**，无默认值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***’**  
- 重定向的目标时**sp_redirect_publisher**原始发布服务器/已发布数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 重定向的目标时**sp_redirect_publisher**原始发布服务器/已发布数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -68,7 +65,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  消息 21899，级别 11，状态 1，过程 **sp_hadr_verify_subscribers_at_publisher**，第 109 行  
 >   
->  重定向发布服务器 MyReplicaHostName 用于确定是否有原始发布服务器的订阅服务器的 sysserver 条目处的查询，查询 MyOriginalPublisher 失败，出现错误"976"，错误消息错误 976，级别 14，状态 1，消息：目标数据库 'MyPublishedDB' 参与可用性组和当前不可访问的查询。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 **联机丛书中的** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。  
+>  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 **联机丛书中的** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句。  
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
@@ -77,8 +74,8 @@ sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

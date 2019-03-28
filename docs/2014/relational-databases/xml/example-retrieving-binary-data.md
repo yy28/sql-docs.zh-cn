@@ -1,5 +1,5 @@
 ---
-title: 示例：检索二进制数据 | Microsoft Docs
+title: 例如：检索二进制数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ebfd863d458231c802f3648e3a53411f13f8bed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144009"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528179"
 ---
-# <a name="example-retrieving-binary-data"></a>示例：检索二进制数据
+# <a name="example-retrieving-binary-data"></a>例如：检索二进制数据
   下面的查询返回在 `varbinary(max)` 类型列中存储的产品照片。 在此查询中指定了 `BINARY BASE64` 选项，以便以 base64 编码格式返回二进制数据。  
   
 ## <a name="example"></a>示例  
@@ -34,7 +34,7 @@ FOR XML RAW, BINARY BASE64 ;
 GO  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  

@@ -16,12 +16,12 @@ ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55fc802a476d22514251f7a399974283603ea853
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4e07931ebbecafdede044582ca06c2636ab195d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135587"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526599"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor =**] **'**_分发服务器上_  
- 自定义冲突解决程序所在的分发服务器的名称。 *分发服务器*是**sysname**，默认值为 NULL。 *此参数已弃用，将在未来的版本中删除。*  
+`[ @distributor = ] 'distributor'` 是自定义冲突解决程序所在的位置的分发服务器的名称。 *分发服务器*是**sysname**，默认值为 NULL。 *此参数已弃用，将在未来的版本中删除。*  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -63,7 +62,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="see-also"></a>请参阅  
  [为合并项目实现业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [为合并项目实现自定义冲突解决程序](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

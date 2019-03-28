@@ -16,12 +16,12 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526469"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器***’**  
- 为其返回属性的发布服务器的名称。 *发布服务器*是**sysname**，默认值为**%**。  
+`[ @publisher = ] 'publisher'` 是为其返回属性的发布服务器。 *发布服务器*是**sysname**，默认值为**%**。  
   
- [  **@check_user=** ] *check_user*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -54,9 +52,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**security_mode**|**int**|复制代理连接到发布服务器进行排队更新订阅时所用的安全模式，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的安全模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
 |**login**|**sysname**|复制代理连接到发布服务器进行排队更新订阅时的登录名，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的登录名。|  
 |**password**|**nvarchar(524)**|返回的密码（采用简单加密格式）。 密码的用户为 NULL 以外**sysadmin**。|  
-|**活动**|**bit**|指示远程发布服务器是否将本地服务器用作分发服务器：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
+|**active**|**bit**|指示远程发布服务器是否将本地服务器用作分发服务器：<br /><br /> 0 = 否<br /><br /> 1 = 是|  
 |**working_directory**|**nvarchar(255)**|工作目录的名称。|  
-|**受信任**|**bit**|指示发布服务器连接到分发服务器时是否需要密码。 有关[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，应该始终返回**0**，这意味着密码是必需。|  
+|**trusted**|**bit**|指示发布服务器连接到分发服务器时是否需要密码。 有关[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，应该始终返回**0**，这意味着密码是必需。|  
 |**thirdparty_flag**|**bit**|指示发布是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用还是由第三方应用程序启用：<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，oracle 或 Oracle 网关发布服务器。<br /><br /> **1** = 发布服务器将其与已集成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用第三方应用程序。|  
 |**publisher_type**|**sysname**|发布服务器的类型；可以为下列值之一：<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE 网关**|  
 |**publisher_data_source**|**nvarchar(4000)**|发布服务器中 OLE DB 数据源的名称。|  
@@ -75,8 +73,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

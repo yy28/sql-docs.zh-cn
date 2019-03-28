@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591461"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530369"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  通过使用先前创建的 OLE 对象的对象令牌**sp_OACreate**。  
   
- *方法名称*  
+ *methodname*  
  要调用的 OLE 对象的方法名。  
   
  _returnvalue_ **输出**  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   方法返回一个数组作为输出参数。  
   
- [ _@parametername_ **=** ]*参数*[**输出**]  
- 一个方法参数。 如果指定，*参数*必须是相应的数据类型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]` 为方法参数。 如果指定，*参数*必须是相应的数据类型的值。  
   
  若要获取输出参数，返回值*参数*必须是相应的数据类型的本地变量和**输出**必须指定。 如果指定常数参数，或如果**输出**未指定，则任何返回输出参数的值将被忽略。  
   

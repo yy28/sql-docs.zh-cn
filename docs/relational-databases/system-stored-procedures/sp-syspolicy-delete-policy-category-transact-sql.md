@@ -18,12 +18,12 @@ ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 944ddb3e319421a92a29f5263f018f3b812e46bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd98f116bfa471797d2e9b340561c4eef121e0a7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793345"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526159"
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name=** ] **'***name***'**  
- 是的策略类别的名称。 *名称*是**sysname**，并且如果必须指定*policy_category_id*为 NULL。  
+`[ @name = ] 'name'` 是的策略类别的名称。 *名称*是**sysname**，并且如果必须指定*policy_category_id*为 NULL。  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- 为策略类别的标识符。 *policy_category_id*是**int**，并且如果必须指定*名称*为 NULL。  
+`[ @policy_category_id = ] policy_category_id` 为策略类别的标识符。 *policy_category_id*是**int**，并且如果必须指定*名称*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -56,11 +54,11 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
   
  若要删除某一策略类别，该类别不得由任何策略引用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响的实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  以下示例将删除名为“Finance”的策略类别。  

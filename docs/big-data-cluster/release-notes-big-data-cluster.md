@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494179"
+ms.locfileid: "58510334"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -29,7 +29,7 @@ ms.locfileid: "58494179"
 
 ### <a name="whats-new"></a>新增功能
 
-| 新的功能更新 | 详细信息 |
+| 新功能或更新 | 详细信息 |
 |:---|:---|
 | 用于运行深度学习与 Spark 中的 TensorFlow 支持 GPU 的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md) |
 | **SqlDataPool**并**SqlStoragePool**默认情况下不能再创建数据源。 | 根据需要手动创建这些文件。 请参阅[已知问题](#externaltablesctp24)。 |
@@ -80,19 +80,44 @@ ms.locfileid: "58494179"
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>删除群集失败
+
+当你尝试删除包含的群集**mssqlctl**，将失败并出现以下错误：
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+新的 Python Kubernetes 客户端 （版本 9.0.0） 更改删除命名空间 API，这当前违反**mssqlctl**。 只有具有更高版本的 Kubernetes python 客户端安装时，才会出现此问题。 可以通过直接删除群集使用来解决此问题**kubectl** (`kubectl delete ns <ClusterName>`)，也可以使用较旧版本安装`sudo pip install kubernetes==8.0.1`。
+
 #### <a id="externaltablesctp24"></a> 外部表
 
 - 大数据群集部署将不再创建**SqlDataPool**并**SqlStoragePool**外部数据源。 可以创建这些数据源手动来支持对数据池和存储池数据虚拟化。
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - 它是可以创建一个表，其中包含不支持的列类型的数据池外部表。 如果查询外部表，您会收到类似于以下内容一条消息：
@@ -137,9 +162,9 @@ ms.locfileid: "58494179"
 
 以下部分介绍的新功能和 SQL Server 2019 CTP 2.3 中的大数据群集的已知的问题。
 
-### <a name="new-features"></a>新增功能
+### <a name="whats-new"></a>新增功能
 
-| 新功能 | 详细信息 |
+| 新功能或更新 | 详细信息 |
 | :---------- | :------ |
 | 将在 IntelliJ 中的大数据群集上的 Spark 作业提交。 | [提交在 IntelliJ 中的 SQL Server 大数据群集上的 Spark 作业](spark-submit-job-intellij-tool-plugin.md) |
 | 应用程序部署和群集管理的的常见 CLI。 | [如何部署 SQL Server 2019 大数据群集 （预览版） 上的应用程序](big-data-cluster-create-apps.md) |

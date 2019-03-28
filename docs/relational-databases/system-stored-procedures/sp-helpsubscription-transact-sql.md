@@ -16,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588931"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527879"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] **'**_发布_  
- 关联的发布的名称。 *发布*是**sysname**，默认值为**%**，这会返回此服务器的所有订阅信息。  
+`[ @publication = ] 'publication'` 是关联的名称。 *发布*是**sysname**，默认值为**%**，这会返回此服务器的所有订阅信息。  
   
- [  **@article=** ] **'**_文章_  
- 项目的名称。 *文章*是**sysname**，默认值为**%**，表示返回所选的发布和订阅服务器的所有订阅信息。 如果**所有**，只有一个条目时返回的完整订阅发布。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，默认值为**%**，表示返回所选的发布和订阅服务器的所有订阅信息。 如果**所有**，只有一个条目时返回的完整订阅发布。  
   
- [  **@subscriber=** ] **'**_订阅服务器上_  
- 要在其上获取订阅信息的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**，表示返回所选的发布和项目的所有订阅信息。  
+`[ @subscriber = ] 'subscriber'` 是在其上获取订阅信息的订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**，表示返回所选的发布和项目的所有订阅信息。  
   
- [  **@destination_db=** ] **'**_destination_db_  
- 目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，默认值为**%**。  
   
- [  **@found=** ] **'**_找到_输出  
- 指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为 23456。  
+`[ @found = ] 'found'OUTPUT` 是一个标志，指示返回行。 *找到*是**int**而且是 OUTPUT 参数，默认值为 23456。  
   
  **1**指示已找到发布。  
   
  **0**指示找不到该发布。  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为当前服务器的名称。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为当前服务器的名称。  
   
 > [!NOTE]  
 >  *发布服务器*应未指定，除非它是 Oracle 发布服务器。  
@@ -73,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**article**|**sysname**|项目的名称。|  
 |**目标数据库**|**sysname**|用于存放复制数据的目标数据库的名称。|  
 |**订阅状态**|**tinyint**|订阅状态：<br /><br /> **0** = 非活动状态<br /><br /> **1** = 订阅<br /><br /> **2** = 活动|  
@@ -111,9 +105,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  执行权限默认授予**公共**角色。 只为用户返回他们创建的订阅的信息。 有关所有订阅的信息返回到的成员**sysadmin**固定的服务器角色的发布服务器或成员**db_owner**上对发布数据库的固定的数据库角色。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

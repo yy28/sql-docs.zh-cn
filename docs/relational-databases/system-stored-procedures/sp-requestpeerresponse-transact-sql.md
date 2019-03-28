@@ -16,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782909"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526199"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication** =] **'***发布*****  
- 要验证其状态的对等拓扑中的发布名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要验证其状态的对等拓扑中发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@description**=] **'***说明***’**  
- 可用于标识各个状态请求的用户定义信息。 *描述*是**nvarchar(4000)**，默认值为 NULL。  
+`[ @description = ] 'description'` 可用于标识各个状态请求的用户定义的信息。 *描述*是**nvarchar(4000)**，默认值为 NULL。  
   
- [ **@request_id** =] *request_id*  
- 返回新请求的 ID。 *request_id*是**int**并且是输出参数。 可以在执行时使用该值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)若要查看所有响应的状态请求。  
+`[ @request_id = ] request_id` 返回新请求的 ID。 *request_id*是**int**并且是输出参数。 可以在执行时使用该值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)若要查看所有响应的状态请求。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -63,7 +60,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_requestpeerresponse**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1426871c70eb905a0defda206d1a331662e3155c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645146"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510204"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR （SQL Server 中的 R 库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,12 +42,12 @@ library(olapR)
 
 产品 | 位置 |
 --------|----------|
-SQL Server 2017 机器学习服务 （使用 R 集成） | C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R 服务 | C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library
+SQL Server 2017 机器学习服务 （使用 R 集成） | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 数据科学虚拟机 （在 Azure) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-（Azure) 上的 SQL Server 虚拟机<sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library |
+（Azure) 上的 SQL Server 虚拟机<sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
 <sup>1</sup> R 集成是可选的 SQL Server 中。 当在 VM 配置期间添加机器学习或 R 功能时，将安装 olapR 库。
 

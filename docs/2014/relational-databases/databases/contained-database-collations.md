@@ -12,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526509"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
   许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)。  
@@ -32,13 +32,13 @@ ms.locfileid: "52789699"
 ### <a name="example-1"></a>示例 1  
  例如，如果我们在北京工作，则可能会使用中文排序规则：  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  现在，如果我们创建一个列，其默认排序规则将是此中文排序规则，但我们可以根据需要选择其他排序规则：  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -51,7 +51,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -63,7 +63,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>示例 2  
  假设在排序规则为 **Latin1_General** 的实例上使用上述（中文）数据库：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -87,7 +87,7 @@ JOIN #T2
   
  通过显式排列临时表可修复此问题。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 `DATABASE_DEFAULT` 子句提供了 `COLLATE` 关键字，使操作在一定程度上得到了简化。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -137,7 +137,7 @@ END;
   
  通过上述临时表示例可以看出，此排序规则行为使大多数临时表不再需要使用显式 `COLLATE` 子句。 在包含数据库中，即使数据库和实例采用不同的排序规则，此代码现在也可以正常运行：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

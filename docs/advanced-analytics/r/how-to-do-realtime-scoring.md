@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432500"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510084"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何生成预测和使用 SQL Server 中机器学习模型的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53432500"
 | 方法           | 接口         | 库要求 | 处理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
 | 可扩展性框架 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 无。 模型可以基于任何 R 或 Python 函数 | 数百毫秒。 <br/>加载运行时环境都有固定的成本，求平均值三到六个 100 毫秒之前的任何新数据进行评分。 |
-| [实时评分的 CLR 扩展](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化模型 | :RevoScaleR MicrosoftML <br/>Python: revoscalepy microsoftml | 数十毫秒，平均。 |
+| [实时评分的 CLR 扩展](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化模型 | :RevoScaleR, MicrosoftML <br/>Python: revoscalepy microsoftml | 数十毫秒，平均。 |
 | [本机计分的 c + + 扩展](../sql-native-scoring.md) | [预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化模型 | :RevoScaleR <br/>Python: revoscalepy | 平均小于 20 毫秒。 | 
 
 加快处理速度并不输出的实质是区别性功能。 假设使用的相同的功能和输入，经过评分的输出应不因你使用的方法。
@@ -109,5 +109,5 @@ _评分_是一个两步过程。 首先，指定要从表加载的已训练的�
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
-+ [sp rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
-+ [预测的 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)
++ [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
++ [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

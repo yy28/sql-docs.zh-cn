@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812417"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527229"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@proxy_id** = ] *id*  
- 要撤消访问权限的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_id = ] id` 要撤消访问权限的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 要撤消访问权限的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_name = ] 'proxy_name'` 要撤消访问权限的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
   
- [ **@subsystem_id** = ] *id*  
- 要撤消对其访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_id = ] id` 若要撤消访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -67,8 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |**12**|PowerShell 脚本|  
   
- [ **@subsystem_name**= ] **'***subsystem_name***'**  
- 要撤消对其访问权限的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_name = ] 'subsystem_name'` 若要撤消访问权限的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -90,7 +86,7 @@ sp_revoke_proxy_from_subsystem
 > [!NOTE]  
 >  若要确定哪些作业步骤引用了代理，请右键单击**代理**节点下的**SQL Server 代理**在 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后单击**属性**。 在中**代理帐户属性**对话框中，选择**引用**页后，可以查看引用此代理的所有作业步骤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_revoke_proxy_from_subsystem**。  
   
 ## <a name="examples"></a>示例  
@@ -108,6 +104,6 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828975"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528589"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname=** ] **'***表*****  
- 当前数据库中将为其返回触发器信息的表的名称。 *表*是**nvarchar(776)**，无默认值。  
+`[ @tabname = ] 'table'` 是要为其返回触发器信息的当前数据库中的名称。 *表*是**nvarchar(776)**，无默认值。  
   
- [ **@triggertype=** ] **'***type***'**  
- 将为其返回有关信息的 DML 触发器的类型。 *类型*是**char(6)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @triggertype = ] 'type'` 是要返回其信息的 DML 触发器的类型。 *类型*是**char(6)**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -69,9 +67,9 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsert**|**int**|1=INSERT 触发器<br /><br /> 0=不是 INSERT 触发器|  
 |**isafter**|**int**|1=AFTER 触发器<br /><br /> 0=不是 AFTER 触发器|  
 |**isinsteadof**|**int**|1=INSTEAD OF 触发器<br /><br /> 0=不是 INSTEAD OF 触发器|  
-|**了 trigger_schema**|**sysname**|触发器所属的架构的名称。|  
+|**trigger_schema**|**sysname**|触发器所属的架构的名称。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要[元数据可见性配置](../../relational-databases/security/metadata-visibility-configuration.md)表的权限。  
   
 ## <a name="examples"></a>示例  

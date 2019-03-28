@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369559"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529329"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>生成内联 XSD 架构
   在 FOR XML 子句中，可以请求在查询返回查询结果的同时返回一个内联架构。 如果需要 XDR 架构，可以在 FOR XML 子句中使用 XMLDATA 关键字。 如果需要 XSD 架构，可以使用 XMLSCHEMA 关键字。  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名称冲突  
  在 FOR XML 中，同一个名称可以用来表示两个子元素。 例如，下面的查询将检索产品的 ListPrice 和 DealerPrice 值，但为这两列指定了同一别名 (Price)。 因此，产生的行集将具有名称相同的两列。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1:两个子元素是相同类型的非键列，可以为 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>事例 1：两个子元素是相同类型的非键列而且可以为 NULL  
  在下面的查询中，两个子元素是相同类型的非键列而且可以为 NULL。  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2:一个键列和相同类型的一个非键列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>事例 2：相同类型的一个键列和一个非键列  
  下面的查询说明了相同类型的一个键列和一个非键列。  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意，在内联 XSD 架构中，对应于 Col2 的 <`Col`> 元素的 minOccurs 被设置为 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3:这两个不同的类型和相应的列的元素可以为 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>事例 3：两个元素都属于不同的类型而且对应的列可以为 NULL  
  对情况 2 中显示的示例表进行下面的查询：  
   
 ```  

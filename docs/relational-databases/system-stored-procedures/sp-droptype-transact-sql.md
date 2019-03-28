@@ -18,12 +18,12 @@ ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00062834702d9d9610994e59bdc5c0f77b85e37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5004bbdefe29ec13142c66d333f346643261aeb2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856935"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527899"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@typename=**] **'***类型*****  
- 您所拥有的别名数据类型的名称。 *类型*是**sysname**，无默认值。  
+`[ @typename = ] 'type'` 是你拥有的别名数据类型的名称。 *类型*是**sysname**，无默认值。  
   
 ## <a name="return-code-type"></a>返回代码类型  
  0（成功）或 1（失败）  
@@ -55,7 +54,7 @@ sp_droptype [ @typename = ] 'type'
 > [!NOTE]  
 >  如果在表定义内使用某个别名数据类型，或者将某个规则或默认值绑定到这种数据类型，则不能删除它。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**固定的数据库角色或**db_ddladmin**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -73,7 +72,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+ [sp_addtype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

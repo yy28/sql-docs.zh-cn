@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetservergroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2b16617a4676e50a105affd5a885c8627b3120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784715"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528844"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>参数  
- [ **@name=** ] **'***name***'**  
- 将返回其信息的目标服务器组的名称。 *名称*是**sysname**，默认值为 NULL。  
+`[ @name = ] 'name'` 是要为其返回信息的目标服务器组的名称。 *名称*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -54,7 +53,7 @@ sp_help_targetservergroup
 |**servergroup_id**|**int**|服务器组的标识号|  
 |**名称**|**sysname**|服务器组的名称|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行此过程的权限默认授予**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -83,9 +82,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

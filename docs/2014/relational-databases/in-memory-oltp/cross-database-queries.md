@@ -10,12 +10,12 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ccf8ea4fc15be567d0e95a66b2e5320fae7dbbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205157"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528519"
 ---
 # <a name="cross-database-queries"></a>跨数据库查询
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，内存优化表不支持跨数据库事务。 不能从也访问某一内存优化表的相同事务或相同查询访问其他数据库。 可以轻松地将来自一个数据库的某个表中的数据复制到其他数据库的内存优化表中。  
@@ -24,7 +24,7 @@ ms.locfileid: "48205157"
   
  例如，若要复制到的行从数据库 db1 中的表 t1 的表 t2 中 db2，使用变量@v1类型 dbo.tt1，您可以使用类似于：  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

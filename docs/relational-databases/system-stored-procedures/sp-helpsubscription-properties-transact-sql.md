@@ -16,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527469"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为**%**，表示返回所有发布服务器的信息。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为**%**，表示返回所有发布服务器的信息。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，表示将返回所有发布服务器数据库的信息。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，表示将返回所有发布服务器数据库的信息。  
   
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**，表示将返回所有发布的信息。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**，表示将返回所有发布的信息。  
   
- [  **@publication_type=**] *publication_type*  
- 是发布的类型。*publication_type*是**int**，默认值为 NULL。 如果提供， *publication_type*必须是以下值之一：  
+`[ @publication_type = ] publication_type` 是发布的类型。*publication_type*是**int**，默认值为 NULL。 如果提供， *publication_type*必须是以下值之一：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -65,12 +61,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库名。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型：<br /><br /> **0** = 事务<br /><br /> **1** = 快照<br /><br /> **2** = 合并|  
 |**publisher_login**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**publisher_password**|**nvarchar(524)**|在发布服务器上所用密码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（加密） 的身份验证。|  
 |**publisher_security_mode**|**int**|发布服务器上使用的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
-|**分发服务器**|**sysname**|分发服务器的名称。|  
+|**distributor**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|分发服务器登录名。|  
 |**distributor_password**|**nvarchar(524)**|分发服务器密码（已加密）。|  
 |**distributor_security_mode**|**int**|分发服务器上使用的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
@@ -88,12 +84,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|指定用于远程激活的服务器所在的网络的名称。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定保存快照文件的文件夹的路径。|  
 |**use_web_sync**|**bit**|指定订阅是否可以通过 HTTPS，当值为同步**1**表示启用此功能。|  
-|**执行**|nvarchar(260)|表示 Web 同步的复制侦听器的位置的 URL。|  
+|**internet_url**|nvarchar(260)|表示 Web 同步的复制侦听器的位置的 URL。|  
 |**internet_login**|**nvarchar(128)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**|**nvarchar(524)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**int**|连接到其中的值承载 Web 同步的 Web 服务器时使用的身份验证模式**1**表示 Windows 身份验证，值为**0**表示基本身份验证。|  
 |**internet_timeout**|**int**|Web 同步请求过期之前的时间长度（秒）。|  
-|**主机名**|**nvarchar(128)**|在 WHERE 子句参数化行筛选器中使用 HOST_NAME() 函数时，指定此函数的值。|  
+|**hostname**|**nvarchar(128)**|在 WHERE 子句参数化行筛选器中使用 HOST_NAME() 函数时，指定此函数的值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

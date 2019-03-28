@@ -18,12 +18,12 @@ ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3337c62cc90eb349158a804ee86eb995255936d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754711"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528209"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
- 表示对象资源管理器中您要清除运行状态的节点。 *target_tree_root_with_id*是**nvarchar(400)**，默认值为 NULL。  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 表示在对象资源管理器想要清除的运行状况状态的节点。 *target_tree_root_with_id*是**nvarchar(400)**，默认值为 NULL。  
   
  您可以从 msdb.dbo.syspolicy_system_health_state 系统视图的 target_query_expression_with_id 列指定值。  
   
@@ -53,11 +52,11 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
   
  如果您运行此存储过程且未带任何参数，则对象资源管理器中所有节点的系统运行状态都将被删除。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响的实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例将删除对象资源管理器中特定节点的运行状态。  

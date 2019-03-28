@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info (TRANSACT-SQL) |Microsoft Docs
+title: sp_datatype_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601125"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527929"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@data_type=** ] *data_type*  
- 所指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
+`[ @data_type = ] data_type` 是指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
   
- [ **@ODBCVer=** ] *odbc_version*  
- 所使用的 ODBC 的版本。 *odbc_version*是**tinyint**，默认值为 2。  
+`[ @ODBCVer = ] odbc_version` 是使用的 ODBC 版本。 *odbc_version*是**tinyint**，默认值为 2。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -78,7 +76,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>备注  
  sp_datatype_info 等价于 ODBC 中的 SQLGetTypeInfo。 返回的结果按 DATA_TYPE 排序，再按数据类型映射到相应 ODBC SQL 数据类型的紧密程度进行排序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  

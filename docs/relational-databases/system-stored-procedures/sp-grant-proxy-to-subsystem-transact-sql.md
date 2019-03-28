@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528129"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@proxy_id =** ] *id*  
- 授予访问权限的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_id = ] id` 要授予访问权限的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
- 要授予访问权限的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
+`[ @proxy_name = ] 'proxy_name'` 要授予访问权限的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*proxy_id*或*proxy_name*必须指定，但不能同时指定两者。  
   
- [ **@subsystem_id =** ] *id*  
- 授予访问权限的子系统的 ID 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_id = ] id` 若要授予访问权限的子系统的 id 号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -64,8 +61,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |**12**|PowerShell 脚本|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
- 授予访问权限的子系统的名称。 **Subsystem_name**是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
+`[ @subsystem_name = ] 'subsystem_name'` 若要授予访问权限的子系统的名称。 **Subsystem_name**是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*必须指定，但不能同时指定两者。 下表列出了每个子系统的值。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -84,7 +80,7 @@ sp_grant_proxy_to_subsystem
 ## <a name="remarks"></a>备注  
  授权代理访问子系统将不更改代理中指定的主体服务器的权限。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_grant_proxy_to_subsystem**。  
   
 ## <a name="examples"></a>示例  
@@ -117,9 +113,9 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

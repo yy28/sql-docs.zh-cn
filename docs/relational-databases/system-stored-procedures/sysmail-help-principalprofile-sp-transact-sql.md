@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591621"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527459"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@principal_id=** ] *principal_id*  
- 是数据库用户或角色中的 ID **msdb**关联要列出的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
+`[ @principal_id = ] principal_id` 是数据库用户或角色中的 ID **msdb**关联要列出的数据库。 *principal_id*是**int**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
   
- [  **@principal_name=** ] **'**_principal_name_  
- 是数据库用户或角色中的名称**msdb**关联要列出的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
+`[ @principal_name = ] 'principal_name'` 是数据库用户或角色中的名称**msdb**关联要列出的数据库。 *principal_name*是**sysname**，默认值为 NULL。 任一*principal_id*或*principal_name*可能指定。  
   
- [  **@profile_id=** ] *profile_id*  
- 关联要列出的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_id = ] profile_id` 是关联要列出的配置文件的 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
- [  **@profile_name=** ] **'**_profile_name_  
- 关联要列出的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_name = ] 'profile_name'` 关联要列出的配置文件的名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641538"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528669"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 配置管理器查看或更改 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例的属性。  
@@ -73,26 +73,26 @@ ms.locfileid: "52641538"
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>通过使用 SERVERPROPERTY 内置函数查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例在 [语句中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 内置函数，以返回有关当前服务器的信息。 如果基于 Windows 的服务器上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而且客户端必须打开另一个到当前连接所使用的同一实例连接，则此方案很有用。  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
   
 #### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>通过使用 sys.servers 目录视图查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目录视图，以返回当前服务器的名称 (`name`) 和 ID (`server_id`)，以及用于连接到链接服务器的 OLE DB 访问接口 (`provider`) 的名称。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -103,7 +103,7 @@ ms.locfileid: "52641538"
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>通过使用 sys.configurations 目录视图查看服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -120,13 +120,13 @@ ms.locfileid: "52641538"
   
 #### <a name="to-change-a-server-property-by-using-spconfigure"></a>通过使用 sp_configure 更改服务器属性  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例显示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 更改服务器属性。 本示例将 `fill factor` 选项的值更改为 `100`。 必须重新启动服务器，更改才会生效。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

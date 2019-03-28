@@ -12,12 +12,12 @@ ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1f9398a700af30876d438b110392215b40337c91
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641308"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527119"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>配置填充因子服务器配置选项
   本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “填充因子” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 提供填充因子是为了优化索引数据存储和性能。 当创建或重新生成索引时，填充因子的值可确定每个叶级页上要填充数据的空间百分比，以便保留一些剩余空间作为以后扩展索引的可用空间。 有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -63,13 +63,13 @@ ms.locfileid: "52641308"
   
 #### <a name="to-configure-the-fill-factor-option"></a>配置填充因子选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `fill factor` 选项的值设置为 `100`。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

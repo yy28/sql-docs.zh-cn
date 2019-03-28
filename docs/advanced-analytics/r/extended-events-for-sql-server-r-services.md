@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aefc4fd3ba5fa1ba69e8e29575037f5e7ac6789a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513114"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>用于 SQL Server 机器学习服务的扩展的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ AND p.name = 'SQLSatellite';
 
 ##  <a name="bkmk_xeventtable"></a> 扩展事件表
 
-|事件|Description|说明|  
+|Event|Description|说明|  
 |-----------|-----------------|---------|  
 |connection_accept|接受一个新连接时发生。 此事件用于记录所有连接尝试。||  
 |failed_launching|启动失败。|指示一个错误。|  

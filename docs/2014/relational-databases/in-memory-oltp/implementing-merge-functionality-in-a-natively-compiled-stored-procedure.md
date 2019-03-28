@@ -10,19 +10,19 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6112fa3f8ec588d00480d09ff072a71051a02
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508157"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526289"
 ---
 # <a name="implementing-merge-functionality"></a>实现 MERGE 功能
   数据库可能需要执行插入或更新，具体取决于数据库中是否已存在特定行。  
   
  如果不使用 `MERGE` 语句，以下是您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中使用的一种方法：  
   
-```tsql  
+```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
 IF @@ROWCOUNT = 0  
     INSERT mytable (columns) VALUES (@parm, @other values)  
@@ -30,7 +30,7 @@ IF @@ROWCOUNT = 0
   
  实现合并的另一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 方法：  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
     UPDATE....  
 ELSE  
@@ -39,7 +39,7 @@ ELSE
   
  对于本机编译的存储过程  
   
-```tsql  
+```sql  
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  

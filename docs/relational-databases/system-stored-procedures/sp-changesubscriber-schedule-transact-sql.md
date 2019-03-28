@@ -16,12 +16,12 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 54098c536fa368c4a2b58d387911e646db15a4d4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526799"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,44 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=**] **'**_订阅服务器上_  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
   
- [ **@agent_type=**]*类型*  
- 代理的类型。 *类型*是**smallint**，默认值为**0**。 **0**指示分发代理。 **1**指示合并代理。  
+`[ @agent_type = ] type` 是代理的类型。 *类型*是**smallint**，默认值为**0**。 **0**指示分发代理。 **1**指示合并代理。  
   
- [ **@frequency_type=**] *frequency_type*  
- 安排分发任务所使用的频率。 *frequency_type*是**int**，默认值为**64**。 有 10 个计划列。  
+`[ @frequency_type = ] frequency_type` 安排分发任务的频率。 *frequency_type*是**int**，默认值为**64**。 有 10 个计划列。  
   
- [ **@frequency_interval=**] *frequency_interval*  
- 是应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为**1**。  
+`[ @frequency_interval = ] frequency_interval` 是应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为**1**。  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
- 分发任务的日期。 *frequency_relative_interval*是**int**，默认值为**1**。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 是分发任务的日期。 *frequency_relative_interval*是**int**，默认值为**1**。  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为**0**。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为**0**。  
   
- [ **@frequency_subday=**] *frequency_subday*  
- 在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，默认值为**4**。  
+`[ @frequency_subday = ] frequency_subday` 是何种频率，以分钟为单位定义的时间段内重新计划。 *frequency_subday*是**int**，默认值为**4**。  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
- 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为**5**。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为**5**。  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- 第一次安排分发任务的时间。 *active_start_time_of_day*是**int**，默认值为**0**。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 是第一次调度分发任务的是时间。 *active_start_time_of_day*是**int**，默认值为**0**。  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
- 停止安排分发任务的时间。 *active_end_time_of_day*是**int**，默认值为**235959**，这意味着 11:59:59 PM 24 小时制。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 是的停止调度分发任务的时间。 *active_end_time_of_day*是**int**，默认值为**235959**，这意味着 11:59:59 PM 24 小时制。  
   
- [ **@active_start_date=**] *active_start_date*  
- 第一次安排分发任务的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为**0**。  
+`[ @active_start_date = ] active_start_date` 是第一个分发任务的日期安排，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为**0**。  
   
- [ **@active_end_date=**] *active_end_date*  
- 停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为**99991231**，表示 9999 年 12 月 31。  
+`[ @active_end_date = ] active_end_date` 是正在计划分发任务停止的日期格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为**99991231**，表示 9999 年 12 月 31。  
   
- [ **@publisher**=] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*在更改项目属性时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -101,7 +88,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changesubscriber_schedule**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscriber_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a7910b943b3d913e419d49fa4641bdc689e4e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528679"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
   本主题讨论要更改为部分包含的数据库模型的准备工作，接着提供了迁移步骤。  
@@ -53,7 +53,7 @@ ms.locfileid: "52803689"
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 启用包含的数据库  
  下面的示例对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例启用包含的数据库。  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -75,7 +75,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>使用 Transact-SQL 将数据库转换为部分包含的数据库  
  下面的示例将名为 `Accounting` 的数据库转换为部分包含的数据库。  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -94,7 +94,7 @@ GO
 ##  <a name="users"></a> 将用户迁移为包含的数据库用户  
  以下示例将所有基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户迁移到具有密码的包含数据库用户。 该示例不包括未启用的登录名。 必须在包含的数据库中执行该示例。  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

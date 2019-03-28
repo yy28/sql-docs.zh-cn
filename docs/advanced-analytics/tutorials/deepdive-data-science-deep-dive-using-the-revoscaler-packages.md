@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596618"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511724"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程：SQL Server 数据使用 RevoScaleR R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53596618"
 如果你需要将客户端和服务器放在同一计算机上，请务必安装另一组用于从"远程"客户端发送 R 脚本的 Microsoft R 库。 不要使用 SQL Server 实例的程序文件中安装的 R 库。 具体而言，如果使用一台计算机，则需要**RevoScaleR**两个来支持客户端和服务器操作这些位置中的库。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 有关客户端配置的说明，请参阅[设置 R 开发数据科学客户端](../r/set-up-a-data-science-client.md)。
 

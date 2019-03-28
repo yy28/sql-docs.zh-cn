@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376419"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526679"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
   有两种类型的空间数据。 `geometry` 数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。  
@@ -123,7 +123,7 @@ ms.locfileid: "53376419"
   
  此示例显示如何使用 `LineString` 实例和 `CircularString` 实例存储上述等腰三角形：  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;  
 DECLARE @g2 geometry;  
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);  
@@ -139,7 +139,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
   
  请看以下代码段：  
   
-```tsql  
+```sql  
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);  
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);  
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];  
@@ -161,7 +161,7 @@ LS LengthCS Length
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比较  
  以下代码示例显示如何使用 `LineString` 和 `CompoundCurve` 实例存储相同的图形：  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');  
@@ -171,7 +171,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  在上述示例中，`LineString` 实例或 `CompoundCurve` 实例都可以存储该图形。  下一个示例使用 `CompoundCurve` 存储饼图切片：  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
@@ -180,7 +180,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 和 CompoundCurve 的比较  
  以下代码示例显示如何将饼图切片存储在 `CircularString` 实例中：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
 SELECT @g.ToString(), @g.STLength();  
@@ -188,13 +188,13 @@ SELECT @g.ToString(), @g.STLength();
   
  要使用 `CircularString` 实例存储饼图切片，要求每个直线线段使用三个点。  如果一个中间点未知，必须计算它或必须将直线线段的端点加倍，如以下代码段所示：  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
  `CompoundCurve` 实例允许 `LineString` 和  `CircularString` 组件，因此只需要知道饼图切片的直线线段的两个点。  此代码示例显示如何使用 `CompoundCurve` 存储相同的图形：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');  
 SELECT @g.ToString(), @g.STLength();  

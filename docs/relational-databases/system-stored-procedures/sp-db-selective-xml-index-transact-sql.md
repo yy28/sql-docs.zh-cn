@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d951cff1b59be87bb8e8dc3d33b6fab50cdb87d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e9b1752b5e567c2a26080422874e5bf6e31bc568
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130587"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528599"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ ms.locfileid: "54130587"
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@ db_name =** ] **'**_db_name_  
- 要对其启用或禁用选择性 XML 索引的数据库名称。 如果*db_name*为 NULL，则假定为当前数据库。  
+`[ @ db_name = ] 'db_name'` 若要启用或禁用选择性 XML 索引上的数据库的名称。 如果*db_name*为 NULL，则假定为当前数据库。  
   
- [  **@action =** ] **'**_操作_  
- 确定是启用还是禁用该索引。 如果 on 传递 true，off 或 false 之外的其他值，将引发错误。  
+`[ @action = ] 'action'` 确定是否启用或禁用索引。 如果 on 传递 true，off 或 false 之外的其他值，将引发错误。  
   
 ```  
   

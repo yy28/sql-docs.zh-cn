@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529289"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>迁移检查约束和外键约束
   检查和外键约束中不支持[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这些构造通常用来强制实施架构中的逻辑数据完整性，可能必须维护相关的功能的应用程序的正确性。  
@@ -40,7 +40,7 @@ ms.locfileid: "48049097"
 ## <a name="table-definition-for-the-workarounds"></a>表定义的解决方法  
  之前将转换为内存优化表，[Sales] 的定义。[SalesOrderDetail] 是按如下所示：  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  请注意该 rowguid 不再 ROWGUIDCOL 因为中不支持[!INCLUDE[hek_2](../includes/hek-2-md.md)]。 已删除了该列。 此外，LineTotal 是计算的列和不在本文的范围内，因此它也已被删除。  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>插入、 更新或删除操作后检查约束  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>强制实施约束之前插入、 更新或删除操作  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

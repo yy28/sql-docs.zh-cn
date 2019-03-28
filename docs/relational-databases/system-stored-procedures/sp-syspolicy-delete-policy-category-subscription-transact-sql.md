@@ -18,12 +18,12 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e93a3272e16af482afaaecb052f7a89ac04100e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39a658a9e2d863f3e4ed8c60a69773e439757cc4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526319"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 策略类别订阅的标识符。 *policy_category_subscription_id*是**int**。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 是的策略类别订阅的标识符。 *policy_category_subscription_id*是**int**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -51,7 +50,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
   
  如果某一策略类别订阅被托管，则不能删除该订阅。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程在其当前所有者的上下文中运行。  
   
  若要获取的值*policy_category_subscription_id*，可以使用以下查询：  
@@ -74,6 +73,6 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

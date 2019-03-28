@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/06/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161844"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512445"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,11 +68,11 @@ SQL Server 2017 支持 R 和 Python。 下表描述了这些组件。
 
 ## <a name="how-to-get-started"></a>如何开始
 
-### <a name="step-1-install-the-software"></a>步骤 1：安装软件
+### <a name="step-1-install-the-software"></a>第 1 步：安装软件
 
 + [SQL Server 机器学习服务 （数据库内）](install/sql-machine-learning-services-windows-install.md)
  
-### <a name="step-2-configure-a-development-tool"></a>步骤 2：配置开发工具
+### <a name="step-2-configure-a-development-tool"></a>第 2 步：配置开发工具
 
 数据科学家通常在他们自己的笔记本电脑或开发工作站上使用 R 或 Python 来探索数据，并构建和调整预测模型，直到获得效果良好的预测模型。 使用 SQL Server 中的数据库内分析则不需要更改此过程。 安装完成后，可以在本地和远程 SQL Server 上运行 R 或 Python 代码。
 

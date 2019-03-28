@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596508"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510524"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,16 +54,16 @@ SQL Server 2016 仅适用于 R。 下表介绍了 SQL Server 2016 中的功能�
 
 从安装开始，将二进制文件附加到您最喜欢的开发工具上，并编写第一个脚本。
 
-**步骤 1:** 安装和配置软件。 
+**步骤 1：** 安装和配置软件。 
 
 + [安装 SQL Server 2016 R Services （数据库内）](../install/sql-r-services-windows-install.md)
 
-**步骤 2:** 获得亲身体验使用这些教程之一：
+**步骤 2：** 获得亲身体验使用这些教程之一：
 
 + [教程：了解使用 R 的数据库内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [教程：使用 R 的端到端演练](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**步骤 3:** 添加你最喜欢的 R 程序包并使用它们以及由 Microsoft 提供的包
+**步骤 3：** 添加你最喜欢的 R 程序包并使用它们以及由 Microsoft 提供的包
 
 + [SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)
 

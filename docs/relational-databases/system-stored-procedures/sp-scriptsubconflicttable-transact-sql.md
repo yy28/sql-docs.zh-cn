@@ -16,12 +16,12 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33aa0ee68e649dbf1fd2d0fa7373cab64560fa5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 91b4cca35fa5de3b6f19190a476ea82a69b53d81
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816199"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526309"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是包含的项目的名称。 名称在数据库中必须是唯一的。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章***’**  
- 订阅项目名。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 订阅项目的名称。 *文章*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

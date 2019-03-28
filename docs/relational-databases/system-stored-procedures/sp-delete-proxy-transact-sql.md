@@ -19,12 +19,12 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db08d96a36112d686ab34db0b7989e910a01960
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd44237699c000447bbdfb2638d0d66550414dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844055"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528869"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@proxy_id**= ] *id*  
- 要删除的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。  
+`[ @proxy_id = ] id` 要删除的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 要删除的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'` 要删除的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,7 +56,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
   
  如果作业步骤引用了指定代理，则无法删除此代理，存储过程也将失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_proxy**。  
   
 ## <a name="examples"></a>示例  

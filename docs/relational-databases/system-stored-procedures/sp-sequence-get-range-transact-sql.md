@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700725"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527939"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@sequence_name** =] **N**'*序列*  
- 序列对象的名称。 架构是可选的。 *sequence_name*是**nvarchar(776)**。  
+`[ @sequence_name = ] N'sequence'` 序列对象的名称。 架构是可选的。 *sequence_name* is **nvarchar(776)**.  
   
- [ **@range_size** =] *range_size*  
- 要从序列中提取的值数目。 **@range_size** 是**bigint**。  
+`[ @range_size = ] range_size` 要从序列中提取的值数目。 **@range_size** 是**bigint**。  
   
- [ **@range_first_value** = ] *range_first_value*  
- 一个输出参数，它返回序列对象的第一个（最小或最大）值以用于计算请求的范围。 **@range_first_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
+`[ @range_first_value = ] range_first_value` 输出参数返回用于计算请求的范围的序列对象的第一个 （最小值或最大） 值。 **@range_first_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
- [ **@range_last_value** = ] *range_last_value*  
- 一个可选的输出参数，它返回请求的范围中的最后一个值。 **@range_last_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
+`[ @range_last_value = ] range_last_value` 可选的输出参数返回所请求的范围的最后一个值。 **@range_last_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
- [ **@range_cycle_count** =] range_cycle_count  
- 一个可选的输出参数，它返回为了返回所请求的范围而需要循环访问序列对象的次数。 **@range_cycle_count** 是**int**。  
+`[ @range_cycle_count = ] range_cycle_count` 可选的输出参数返回的序列对象以便返回所请求的范围重启的次数。 **@range_cycle_count** 是**int**。  
   
- [ **@sequence_increment** = ] *sequence_increment*  
- 一个可选的输出参数，它返回序列对象的增量以用于计算请求的范围。 **@sequence_increment** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
+`[ @sequence_increment = ] sequence_increment` 可选的输出参数返回用于计算请求的范围的序列对象的增量。 **@sequence_increment** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- 一个可选的输出参数，它返回序列对象的最小值。 **@sequence_min_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
+`[ @sequence_min_value = ] sequence_min_value` 可选的输出参数返回序列对象的最小值。 **@sequence_min_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- 一个可选的输出参数，它返回序列对象的最大值。 **@sequence_max_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
+`[ @sequence_max_value = ] sequence_max_value` 可选的输出参数返回序列对象的最大值。 **@sequence_max_value** 是**sql_variant**具有与请求中使用的序列对象相同的基类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -93,7 +85,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对序列对象或序列对象架构具有 UPDATE 权限。  
   
 ## <a name="examples"></a>示例  

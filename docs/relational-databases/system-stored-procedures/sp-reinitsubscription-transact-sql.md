@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207326"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528779"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，使用默认值为 all。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，使用默认值为 all。  
   
- [  **@article=**] **'***文章***’**  
- 项目的名称。 *文章*是**sysname**，使用默认值为 all。 对于立即更新的发布，*一文*必须是**所有**; 否则为该存储的过程将跳过发布并报告错误。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，使用默认值为 all。 对于立即更新的发布，*一文*必须是**所有**; 否则为该存储的过程将跳过发布并报告错误。  
   
- [  **@subscriber=**] **'***订阅服务器***’**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@destination_db=**] **'***destination_db***’**  
- 目标数据库的名称。 *destination_db*是**sysname**，使用默认值为 all。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，使用默认值为 all。  
   
- [  **@for_schema_change=**] **'***for_schema_change***’**  
- 指示发布数据库中的架构更改是否导致重新初始化。 *for_schema_change*是**位**，默认值为 0。 如果**0**，重新激活允许即时更新的发布的活动订阅，只要整个发布而不只是一些其文章中，被重新初始化。 这意味着，架构更改导致启动重新初始化。 如果**1**，活动的订阅不会重新激活，直到运行快照代理。  
+`[ @for_schema_change = ] 'for_schema_change'` 指示是否要重新初始化对发布数据库的架构更改导致。 *for_schema_change*是**位**，默认值为 0。 如果**0**，重新激活允许即时更新的发布的活动订阅，只要整个发布而不只是一些其文章中，被重新初始化。 这意味着，架构更改导致启动重新初始化。 如果**1**，活动的订阅不会重新激活，直到运行快照代理。  
   
- [ **@publisher=** ] **'***发布服务器*****  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- 即使分发服务器不存在或脱机，也可以重新初始化。 *ignore_distributor_failure*是**位**，默认值为 0。 如果**0**，如果分发服务器上不存在或处于脱机状态，重新初始化会失败。  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` 即使分发服务器上不存在或处于脱机状态，则可以重新初始化。 *ignore_distributor_failure*是**位**，默认值为 0。 如果**0**，如果分发服务器上不存在或处于脱机状态，重新初始化会失败。  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- 使现有的发布快照无效。 *invalidate_snapshot*是**位**，默认值为 0。 如果**1**，为发布生成新的快照。  
+`[ @invalidate_snapshot = ] invalidate_snapshot` 使现有的发布快照无效。 *invalidate_snapshot*是**位**，默认值为 0。 如果**1**，为发布生成新的快照。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

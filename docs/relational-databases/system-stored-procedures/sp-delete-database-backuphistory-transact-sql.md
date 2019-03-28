@@ -18,12 +18,12 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5393a2c9808584cfcc52088ad32f63c8a4ec2562
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59581d72f60e4138db7c19cc8f0487abaaeec381
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528409"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@database_name=** ] *database_name*  
- 指定备份和还原操作中所涉及的数据库的名称。 *database_name*是**sysname**，无默认值。  
+`[ @database_name = ] database_name` 指定的备份和还原操作中涉及的数据库的名称。 *database_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,7 +69,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
   
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -84,7 +83,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

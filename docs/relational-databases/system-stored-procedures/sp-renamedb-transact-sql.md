@@ -18,12 +18,12 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528339"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbname=**] **'***old_name 为***’**  
- 数据库的当前名称。 *old_name 为*是**sysname**，无默认值。  
+`[ @dbname = ] 'old_name'` 是当前数据库的名称。 *old_name 为*是**sysname**，无默认值。  
   
- [  **@newname=**] **'***new_name***’**  
- 是数据库的新名称。 *new_name*必须遵循有关标识符的规则。 *new_name*是**sysname**，无默认值。  
+`[ @newname = ] 'new_name'` 是数据库的新名称。 *new_name*必须遵循有关标识符的规则。 *new_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  

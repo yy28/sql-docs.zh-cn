@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759951"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526419"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@tabid =** ] '*tabid*  
+ [**@tabid =** ] '*tabid*'  
  正对检查即时更新触发器的表的对象 ID。 *tabid*是**int** ，无默认值。  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*输出  
+ [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
  指定输出参数是否返回正在调用它的触发器的类型。 *trigger_output_parameters*是**char （10)** 可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -53,8 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|DELETE 触发器|  
 |NULL（默认值）||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- 指定执行存储过程的位置。 *fonpublisher*是**位**，默认值为 0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
+`[ @fonpublisher = ] fonpublisher` 指定执行存储的过程的位置。 *fonpublisher*是**位**，默认值为 0。 如果为 0，则在订阅服务器上执行；如果为 1，则在发布服务器上执行。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0 指示在即时更新触发器的上下文中未调用此存储过程。 1 指示它即时更新触发器的上下文中调用，并且是中所返回的触发器的类型*@trigger_op*。  
