@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538549"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 有关[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]并[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必须指定命名的参数 (例如`sp_spaceused (@objname= N'Table1');`而不是依赖时参数的序号位置。 
 
- [  **@objname=**] **'***objname***’** 
+`[ @objname = ] 'objname'`
    
  请求其空间使用信息的表、索引视图或队列的限定或非限定名称。 仅当指定限定对象名称时，才需要使用引号。 如果提供完全限定对象名称（包括数据库名称），则数据库名称必须是当前数据库的名称。  
 如果*objname*未指定，则返回整个数据库的结果。  
@@ -55,11 +55,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]仅支持数据库和表对象。
   
- [ **@updateusage=**] **'***updateusage***'**  
- 指示应运行 DBCC UPDATEUSAGE 以更新空间使用信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以是 **，则返回 true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
+`[ @updateusage = ] 'updateusage'` 指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以是 **，则返回 true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
   
- [  **@mode=**] **'***模式***’**  
- 指示结果的范围。 为已延伸的表或数据库，*模式下*参数可以包括或排除的对象的远程部分。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+`[ @mode = ] 'mode'` 指示结果的范围。 为已延伸的表或数据库，*模式下*参数可以包括或排除的对象的远程部分。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
  *模式下*自变量可具有以下值：  
   
@@ -71,8 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *模式*是**varchar(11)**，默认值为**N'ALL'**。  
   
- [  **@oneresultset=**] *oneresultset*  
- 指示是否返回单个结果集。 *Oneresultset*自变量可具有以下值：  
+`[ @oneresultset = ] oneresultset` 指示是否返回单个结果集。 *Oneresultset*自变量可具有以下值：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -81,7 +78,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *oneresultset*是**位**，默认值为**0**。  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***’**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]， [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
   
  当@oneresultset= 1，该参数@include_total_xtp_storage确定单结果集是否包含 MEMORY_OPTIMIZED_DATA 存储的列。 默认值为 0，也就是说，默认情况下 （如果省略此参数） XTP 列不包含在结果集中。  
@@ -100,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**保留**|**varchar(18)**|由数据库中对象分配的空间总量。|  
+|**reserved**|**varchar(18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar(18)**|数据使用的空间总量。|  
 |**index_size**|**varchar(18)**|索引使用的空间总量。|  
 |**未使用**|**varchar(18)**|为数据库中的对象保留但尚未使用的空间总量。|  
@@ -112,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|当前数据库的名称。|  
 |**database_size**|**varchar(18)**|当前数据库的大小 (MB)。 **database_size**包括数据和日志文件。|  
 |**未分配的空间**|**varchar(18)**|未保留供数据库对象使用的数据库空间。|  
-|**保留**|**varchar(18)**|由数据库中对象分配的空间总量。|  
+|**reserved**|**varchar(18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar(18)**|数据使用的空间总量。|  
 |**index_size**|**varchar(18)**|索引使用的空间总量。|  
 |**未使用**|**varchar(18)**|为数据库中的对象保留但尚未使用的空间总量。|  
@@ -122,8 +119,8 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的使用[sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)动态管理视图获取等价大小信息。|  
-|**行**|**char(20)**|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
-|**保留**|**varchar(18)**|有关保留空间总量*objname*。|  
+|**rows**|**char(20)**|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
+|**reserved**|**varchar(18)**|有关保留空间总量*objname*。|  
 |**data**|**varchar(18)**|使用中的数据的空间总量*objname*。|  
 |**index_size**|**varchar(18)**|索引中使用的空间总量*objname*。|  
 |**未使用**|**varchar(18)**|为保留的空间总量*objname*但尚未使用。|  
@@ -140,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**保留**|**varchar(18)**|由数据库中对象分配的空间总量。|  
+|**reserved**|**varchar(18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar(18)**|数据使用的空间总量。|  
 |**index_size**|**varchar(18)**|索引使用的空间总量。|  
 |**未使用**|**varchar(18)**|为数据库中的对象保留但尚未使用的空间总量。|
@@ -160,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|当前数据库的名称。|  
 |**database_size**|**varchar(18)**|当前数据库的大小 (MB)。 **database_size**包括数据和日志文件。 如果数据库具有 MEMORY_OPTIMIZED_DATA 文件组，这将包括文件组中的所有检查点文件的总磁盘上大小。|
 |**未分配的空间**|**varchar(18)**|未保留供数据库对象使用的数据库空间。 如果数据库具有 MEMORY_OPTIMIZED_DATA 文件组，这将包括文件组中具有状态 PRECREATED 的检查点文件的总磁盘上大小。|  
-|**保留**|**varchar(18)**|由数据库中对象分配的空间总量。|  
+|**reserved**|**varchar(18)**|由数据库中对象分配的空间总量。|  
 |**data**|**varchar(18)**|数据使用的空间总量。|  
 |**index_size**|**varchar(18)**|索引使用的空间总量。|  
 |**未使用**|**varchar(18)**|为数据库中的对象保留但尚未使用的空间总量。|
@@ -180,7 +177,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，返回的值**sp_spaceused**后立即删除或截断大型对象可能不会反映实际的磁盘空间可用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 **db_owner** 固定数据库角色的成员可以指定 **@updateusage** 参数。  
   
 ## <a name="examples"></a>示例  
@@ -251,9 +248,9 @@ GO
 ## <a name="see-also"></a>请参阅  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

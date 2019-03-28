@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6bcf721158aec7c7aaddd36d0965349582e155bd
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596868"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512234"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils （SQL Server 中的 R 库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "53596868"
 
 |函数 | Description |
 |------|-------------|
-|[ExecuteStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 执行 SQL 存储过程。|
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 执行 SQL 存储过程。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 获取对存储过程的输入参数的列表。| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| 在 SQL Server 中定义将用于 R 数据帧的数据源。 指定 data.frame（在其中存储输入数据）的名称和获取数据的查询或默认值。 仅支持简单的 SELECT 查询。 | 
-|[来执行存储过程](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定义将嵌入 T-SQL 脚本的单个输入参数。 必须提供参数名称及其 R 数据类型。| 
+|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定义将嵌入 T-SQL 脚本的单个输入参数。 必须提供参数名称及其 R 数据类型。| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| 如果 R 函数返回包含 data.frame 的列表，则会生成所需的中间数据对象。 *OutputData* 对象用于存储从列表获取的单个 data.frame 的名称。| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | 如果 R 函数返回列表，则会生成所需的中间数据对象。 *OutputParameter* 对象存储列表中单个成员的名称和数据类型，假定此成员 **不是** 数据帧。 |
 |[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向数据库注册存储的过程。|
