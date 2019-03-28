@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596415"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538569"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@IndexNamePattern=**] **'***table_or_index_name***’**  
- 用户定义的表或索引的限定或非限定名称。 *table_or_index_name*是**nvarchar(1035)**，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 是用户定义的表或索引的限定或非限定名称。 *table_or_index_name*是**nvarchar(1035)**，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
   
- [  **@OptionName =**] **'***option_name***’**  
- 索引选项名。 *option_name*是**varchar(35)**，无默认值。 *option_name*可以具有以下值之一。  
+`[ @OptionName = ] 'option_name'` 是索引选项名。 *option_name*是**varchar(35)**，无默认值。 *option_name*可以具有以下值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -60,8 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|如果为 TRUE，则不使用行锁。 如果为 FALSE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。|  
 |**DisAllowPageLocks**|如果为 TRUE，则不使用页锁。 如果为 FALSE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。|  
   
- [  **@OptionValue =**] **'***值***’**  
- 指定是否*option_name*设置为已启用 （TRUE、 ON、 yes 或 1） 还是禁用 (FALSE、 OFF、 no 或 0)。 *值*是**varchar(12)**，无默认值。  
+`[ @OptionValue = ] 'value'` 指定是否*option_name*设置为已启用 （TRUE、 ON、 yes 或 1） 还是禁用 (FALSE、 OFF、 no 或 0)。 *值*是**varchar(12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或大于 0（失败）  
@@ -83,7 +80,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   当**AllowPageLocks**选项设置为 FALSE 或**DisAllowPageLocks**是设置为 TRUE，则设置完全应用于非聚集索引。 也就是说，对非聚集索引禁用所有页锁。 在堆上，只允许对页禁用共享 (S) 锁、更新 (U) 锁和排他 (X) 锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]仍然可以获取意向页锁（IS、IU 或 IX），供内部使用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对表的 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

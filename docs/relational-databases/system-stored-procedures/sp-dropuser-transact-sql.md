@@ -18,12 +18,12 @@ ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f4e2a7537de3e33ffccd6bf0a9ebb7f4b6e33ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854017"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532949"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name_in_db =**] **'***user***'**  
- 要删除的用户的名称。 *用户*是**sysname**，无默认值。 *用户*必须存在于当前数据库。 指定 Windows 登录时，请使用数据库用于标识该登录的名称。  
+`[ @name_in_db = ] 'user'` 是要删除的名称。 *用户*是**sysname**，无默认值。 *用户*必须存在于当前数据库。 指定 Windows 登录时，请使用数据库用于标识该登录的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -60,7 +59,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  **sp_dropuser**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY USER 权限。  
   
 ## <a name="examples"></a>示例  

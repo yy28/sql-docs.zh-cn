@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 ID 和 IDREFS 指令 | Microsoft Docs
+title: 例如：指定 ID 和 IDREFS 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27c4cd38ee8995e9d60bf2f80297c1140e53f5d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056267"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531249"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
-  可以将元素属性指定为`ID`类型的属性，并`IDREFS`然后可以使用属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例如：指定 ID 和 IDREFS 指令
+  可以将元素属性指定为 `ID` 类型属性，然后就可以使用 `IDREFS` 属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  
   
  此示例说明如何使用 `ID` 和 `IDREFS` 指令来创建 `ID` 和 `IDREFS` 类型的属性。 因为 ID 不能是整数值，所以对此示例中的 ID 值进行了转换。 也就是说，它们进行了类型转换。 ID 值中使用了前缀。  
   

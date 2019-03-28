@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73526621bcd2925b863feb45566ed652484a6d57
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 74837390afe358d4f9a12d4f98ea9d2e4166e146
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131737"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536089"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,14 +41,11 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**] = **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication] = 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@suser_sname**=] **'**_suser_sname_  
- 是的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数用于定义分区。 *suser_sname*是**sysname**，无默认值。  
+`[ @suser_sname = ] 'suser_sname'` 是的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数用于定义分区。 *suser_sname*是**sysname**，无默认值。  
   
- [ **@host_name** =] **'**_host_name_  
- 是的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数用于定义分区。 *host_name*是**sysname**，无默认值。  
+`[ @host_name = ] 'host_name'` 是的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数用于定义分区。 *host_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

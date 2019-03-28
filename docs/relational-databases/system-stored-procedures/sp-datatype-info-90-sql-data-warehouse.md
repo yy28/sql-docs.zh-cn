@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 889c6d1b1a4e61286a96c2b57acd1a1148a069a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043378"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530399"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@data_type=** ] *data_type*  
- 所指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
+`[ @data_type = ] data_type` 是指定的数据类型的代码号。 若要获得所有数据类型的列表，请省略此参数。 *data_type*是**int**，默认值为 0。  
   
- [ **@ODBCVer=** ] *odbc_version*  
- 所使用的 ODBC 的版本。 *odbc_version*是**tinyint**，默认值为 2。  
+`[ @ODBCVer = ] odbc_version` 是使用的 ODBC 版本。 *odbc_version*是**tinyint**，默认值为 2。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  

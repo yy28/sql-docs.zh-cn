@@ -16,12 +16,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b28b574dcbe26796b6fc561b209425f023f0178f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108157"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531449"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
   默认情况下，使用压缩进行备份会显著增加 CPU 的使用，并且压缩进程所消耗的额外 CPU 会对并发操作产生不利影响。 因此，你可能需要在会话中创建低优先级的压缩备份，当发生 CPU 争用时，此备份的 CPU 使用率受[Resource Governor](../resource-governor/resource-governor.md) 限制。 本主题介绍了这样一种方案：通过将特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的会话映射到限制 CPU 使用的资源调控器工作负荷组，来对这些会话进行分类。  
@@ -42,7 +42,7 @@ ms.locfileid: "48108157"
 ##  <a name="setup_login_and_user"></a> 为低优先级操作设置登录名和用户  
  本主题中的方案需要低优先级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和用户。 将使用用户名对运行于此登录中的会话进行分类，并将它们路由到限制 CPU 使用的资源调控器工作负荷组。  
   
- 下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)”。  
+ 下面的过程介绍了出于此目的设置登录名和用户的步骤，之后给出了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例“示例 A：设置登录名和用户 (Transact-SQL)。”  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>设置用于对会话进行分类的登录名和数据库用户  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48108157"
   
  此示例为 *domain_name*`\MAX_CPU` Windows 帐户创建一个登录名，然后对该登录名授予 VIEW SERVER STATE 权限。 使用此权限，您可以验证登录名的会话的资源调控器分类。 本示例为 *domain_name*`\MAX_CPU` 创建一个用户，并将它添加到 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 示例数据库的 db_backupoperator 固定数据库角色。 此用户名将供资源调控器分类器函数使用。  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -197,9 +197,9 @@ GO
  提交事务后，本示例将应用 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 语句中请求的配置更改。  
   
 > [!IMPORTANT]  
->  以下示例使用“示例 A：设置登录名和用户 (Transact-SQL)”中创建的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名 *domain_name*`\MAX_CPU`。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
+>  以下示例使用示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户的用户名，该用户是在“示例 A：设置登录名和用户 (Transact-SQL)” domain_name`\MAX_CPU` 中创建的。 将此用户名替换为您计划在创建低优先级压缩备份时使用的登录名的用户名。  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -241,7 +241,7 @@ GO
 ##  <a name="verifying"></a> 验证当前会话的分类 (Transact-SQL)  
  还可以选择使用在分类器函数中指定的用户身份登录，通过在对象资源管理器中发出以下 [SELECT](/sql/t-sql/queries/select-transact-sql) 语句来验证会话分类：  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -264,7 +264,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>示例 C：创建压缩备份 (Transact-SQL)  
  下面的 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 示例在一个采用新格式的备份文件 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 中创建 `Z:\SQLServerBackups\AdvWorksData.bak`数据库的压缩完整备份。  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533289"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 要为其返回信息的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号为其返回信息。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 要为其返回信息的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 为其返回信息的作业名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
- 指示结果集是否包含上次运行的执行信息。 *show_last_run_details*是**tinyint**，默认值为**0**。 **0**不包括上次运行的信息，并**1** does。  
+`[ @show_last_run_details = ] show_last_run_details` 是上次运行的执行信息是否是结果集的一部分。 *show_last_run_details*是**tinyint**，默认值为**0**。 **0**不包括上次运行的信息，并**1** does。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -77,7 +74,7 @@ sp_help_jobserver
 |**last_outcome_message**|**nvarchar(1024)**|说明作业上一次运行的结果。|  
 |**last_run_outcome**|**int**|作业上一次在此服务器上运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

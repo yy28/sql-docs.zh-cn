@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68e3cd191dc397574e739faa62f315f018bcb466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cdd1fd6120f74030875dbe1d624f3b5b162c3d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836665"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529939"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name=** ] **'***name***'**  
- 是的名称[标识符](../../relational-databases/databases/database-identifiers.md)为要检查其有效性。 *名称*是**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
+`[ @name = ] 'name'` 是的名称[标识符](../../relational-databases/databases/database-identifiers.md)为要检查其有效性。 *名称*是**sysname**，无默认值。 *名称*不能为 NULL，不能为空字符串，并且不能包含二进制零字符。  
   
- [  **@raise_error=** ] *raise_error*  
- 指定是否引发错误。 *raise_error*是**位**，默认值为 1。 这表示将显示错误。 0 表示不会显示错误消息。  
+`[ @raise_error = ] raise_error` 指定是否引发错误。 *raise_error*是**位**，默认值为 1。 这表示将显示错误。 0 表示不会显示错误消息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>请参阅  

@@ -16,12 +16,12 @@ ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de81f6e7f5f375e2b71414385e4c27e2ceb8082f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88b723e47b177c6a505a0821ddd4925c7179a15b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187557"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531339"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>删除备份设备 (SQL Server)
   本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除备份设备。  
@@ -30,7 +30,7 @@ ms.locfileid: "48187557"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除备份设备，请使用：**  
   
@@ -63,13 +63,13 @@ ms.locfileid: "48187557"
   
 #### <a name="to-delete-a-backup-device"></a>删除备份设备  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  复制并将以下示例粘贴到查询中。 此示例演示如何使用 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 删除备份设备。 执行第一个示例以创建 `mybackupdisk` 备份设备和物理名称 `c:\backup\backup1.bak`。 执行`sp_dropdevice`若要删除`mybackupdisk`备份设备。 `delfile` 参数将删除物理名称。  
+3.  复制并将以下示例粘贴到查询中。 此示例演示如何使用 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 删除备份设备。 执行第一个示例以创建 `mybackupdisk` 备份设备和物理名称 `c:\backup\backup1.bak`。 执行 `sp_dropdevice` 以便删除 `mybackupdisk` 备份设备。 `delfile` 参数将删除物理名称。  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

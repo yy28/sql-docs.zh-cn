@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742195"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534429"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,38 +54,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
- [ **@step_id=** ] *step_id*  
- 步骤标识号。 *step_id*是**int**，默认值为 NULL。  
+`[ @step_id = ] step_id` 步骤标识号。 *step_id*是**int**，默认值为 NULL。  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- 执行作业时由 Microsoft SQL Server 返回的错误消息的标识号。 *sql_message_id*是**int**，默认值为 NULL。  
+`[ @sql_message_id = ] sql_message_id` 执行作业时由 Microsoft SQL Server 返回的错误消息的标识号。 *sql_message_id*是**int**，默认值为 NULL。  
   
- [ **@sql_severity=** ] *sql_severity*  
- 执行作业时由 SQL Server 返回的错误消息的严重级别。 *sql_severity*是**int**，默认值为 NULL。  
+`[ @sql_severity = ] sql_severity` 执行作业时由 SQL Server 返回的错误消息严重级别。 *sql_severity*是**int**，默认值为 NULL。  
   
- [ **@start_run_date=** ] *start_run_date*  
- 开始作业的日期。 *start_run_date*是**int**，默认值为 NULL。 *start_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四个字符的年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
+`[ @start_run_date = ] start_run_date` 开始作业的日期。 *start_run_date*是**int**，默认值为 NULL。 *start_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四个字符的年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
   
- [ **@end_run_date=** ] *end_run_date*  
- 完成作业的日期。 *end_run_date*是**int**，默认值为 NULL。 *end_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四位数年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
+`[ @end_run_date = ] end_run_date` 完成该作业的日期。 *end_run_date*是**int**，默认值为 NULL。 *end_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四位数年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
   
- [ **@start_run_time=** ] *start_run_time*  
- 开始作业的时间。 *start_run_time*是**int**，默认值为 NULL。 *start_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
+`[ @start_run_time = ] start_run_time` 启动作业的时间。 *start_run_time*是**int**，默认值为 NULL。 *start_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
- [ **@end_run_time=** ] *end_run_time*  
- 作业完成执行的时间。 *end_run_time*是**int**，默认值为 NULL。 *end_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
+`[ @end_run_time = ] end_run_time` 作业完成其执行的时间。 *end_run_time*是**int**，默认值为 NULL。 *end_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
- 完成作业所用的最短时间。 *minimum_run_duration*是**int**，默认值为 NULL。 *minimum_run_duration*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
+`[ @minimum_run_duration = ] minimum_run_duration` 最小为完成的作业的时间长度。 *minimum_run_duration*是**int**，默认值为 NULL。 *minimum_run_duration*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
- [  **@run_status=** ] *run_status*  
- 作业执行状态。 *run_status*是**int**，默认值为 NULL，并且可以是下列值之一。  
+`[ @run_status = ] run_status` 作业执行状态。 *run_status*是**int**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|进行中的消息|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- 作业应该重试运行的最少次数。 *minimum_retries*是**int**，默认值为 NULL。  
+`[ @minimum_retries = ] minimum_retries` 作业应该重试运行最小次数。 *minimum_retries*是**int**，默认值为 NULL。  
   
- [  **@oldest_first=** ] *oldest_first*  
- 表示是否从最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，表示首先显示最新的作业。 **1**首先显示最早的作业。  
+`[ @oldest_first = ] oldest_first` 要使用最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，表示首先显示最新的作业。 **1**首先显示最早的作业。  
   
- [ **@server=** ] **'***server***'**  
- 执行作业的服务器名称。 *服务器*是**nvarchar(30)**，默认值为 NULL。  
+`[ @server = ] 'server'` 执行作业的服务器的名称。 *服务器*是**nvarchar(30)**，默认值为 NULL。  
   
- [  **@mode=** ] **'***模式***’**  
- 是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)**，默认值为**摘要**。  
+`[ @mode = ] 'mode'` 是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)**，默认值为**摘要**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -137,7 +122,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="remarks"></a>备注  
  **sp_help_jobhistory**返回具有指定的计划作业的历史记录的报表。 如果没有指定参数，则该报表包含所有预定作业的历史记录。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

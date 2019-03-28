@@ -16,12 +16,12 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 383c37219a0c1e901f58bcee7ccc436c36973d1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e116b0350e23f3ae86e3c7de819b47ecae13baf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775269"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534689"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@srv_orig =** ] **'***original_server_name*****  
- 创建备份的服务器的名称。 *original_server_name*是**sysname**，无默认值。  
+`[ @srv_orig = ] 'original_server_name'` 创建备份时所在的服务器的名称。 *original_server_name*是**sysname**，无默认值。  
   
- [  **@db_orig =** ] **'***original_database_name*****  
- 已备份数据库的名称。 *original_database_name*是**sysname**，无默认值。  
+`[ @db_orig = ] 'original_database_name'` 已备份的数据库的名称。 *original_database_name*是**sysname**，无默认值。  
   
- [  **@keep_replication =** ] *keep_replication*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@perform_upgrade=** ] *perform_upgrade*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

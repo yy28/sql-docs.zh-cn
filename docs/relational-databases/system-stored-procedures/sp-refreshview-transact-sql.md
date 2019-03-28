@@ -18,12 +18,12 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640817"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533149"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@viewname=** ] **'***viewname***’**  
- 视图名称。 *viewname*是**nvarchar**，无默认值。 *viewname*可以是多部分标识符，但只能引用当前数据库中的视图。  
+`[ @viewname = ] 'viewname'` 是的名称。 *viewname*是**nvarchar**，无默认值。 *viewname*可以是多部分标识符，但只能引用当前数据库中的视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
@@ -49,7 +48,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="remarks"></a>备注  
  如果不使用 schemabinding 创建视图**sp_refreshview**影响视图定义的对象视图发生更改时，应运行。 否则，当查询视图时，可能会生成意外结果。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对视图具有 ALTER 权限，并对视图列引用的公共语言运行时 (CLR) 用户定义类型和 XML 架构集合具有 REFERENCES 权限。  
   
 ## <a name="examples"></a>示例  
@@ -80,6 +79,6 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

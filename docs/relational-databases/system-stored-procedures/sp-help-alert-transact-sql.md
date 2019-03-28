@@ -1,5 +1,5 @@
 ---
-title: sp_help_alert (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728965"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538459"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@alert_name =**] **'***alert_name***'**  
- 警报名称。 *alert_name*是**nvarchar （128)**。 如果*alert_name*是未指定，则返回有关所有警报的信息。  
+`[ @alert_name = ] 'alert_name'` 警报的名称。 *alert_name* is **nvarchar(128)**. 如果*alert_name*是未指定，则返回有关所有警报的信息。  
   
- [ **@order_by =**] **'***order_by***'**  
- 用于生成结果的排序顺序。 *order_by*是**sysname**，默认值为 N '*名称*。  
+`[ @order_by = ] 'order_by'` 要用于生成的结果排序顺序。 *order_by*是**sysname**，默认值为 N '*名称*。  
   
- [ **@alert_id =**] *alert_id*  
- 报告其有关信息的警报的标识号。 *alert_id*是**int**，默认值为 NULL。  
+`[ @alert_id = ] alert_id` 报告有关信息警报的标识号。 *alert_id*是**int**，默认值为 NULL。  
   
- [ **@category_name =**]  **'***category***'**  
- 警报的类别。 *类别*是**sysname**，默认值为 NULL。  
+`[ @category_name = ] 'category'` 警报类别。 *类别*是**sysname**，默认值为 NULL。  
   
- [ **@legacy_format**=] *legacy_format*  
- 是否要生成早期结果集。 *legacy_format*是**位**，默认值为**0**。 当*legacy_format*是**1**， **sp_help_alert**返回的结果集将返回**sp_help_alert**在 Microsoft SQL Server 2000。  
+`[ @legacy_format = ] legacy_format` 要生成早期结果集。 *legacy_format*是**位**，默认值为**0**。 当*legacy_format*是**1**， **sp_help_alert**返回的结果集将返回**sp_help_alert**在 Microsoft SQL Server 2000。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -68,7 +63,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
-|**名称**|**sysname**|警报名称 (例如，Demo: Full **msdb**日志)。|  
+|**名称**|**sysname**|警报名称 (例如，Demo:完整**msdb**日志)。|  
 |**event_source**|**nvarchar(100)**|事件源。 将始终**MSSQLServer**有关[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -102,7 +97,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系统分配的唯一整数标识符。|  
-|**名称**|**sysname**|警报名称 (例如，Demo: Full **msdb**日志)。|  
+|**名称**|**sysname**|警报名称 (例如，Demo:完整**msdb**日志)。|  
 |**event_source**|**nvarchar(100)**|事件源。 将始终**MSSQLServer**为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 版|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -124,7 +119,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|作业标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的按需作业。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（用 OR 连起来）：<br /><br /> **1**= 有电子邮件通知<br /><br /> **2**= 有寻呼通知<br /><br /> **4**= 已**网络发送**通知。|  
-|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 的用户。|  
 |**performance_condition**|**nvarchar(512)**|如果**类型**是**2**，此列显示性能条件的定义。 如果**类型**是**3**，此列显示 WMI 事件查询。 否则，该列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 将始终为 **[未分类]** 为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**类型**|**int**|警报类型：<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
@@ -132,7 +127,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="remarks"></a>备注  
  **sp_help_alert**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
  有关详细信息**SQLAgentOperatorRole**，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
@@ -150,7 +145,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

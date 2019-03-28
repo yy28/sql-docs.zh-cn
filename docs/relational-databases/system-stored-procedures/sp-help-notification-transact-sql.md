@@ -1,5 +1,5 @@
 ---
-title: sp_help_notification (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833575"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538629"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@object_type =**] **'***object_type***'**  
- 要返回的信息的类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的操作员名称的警报 *，* 或运算符，其中列出了为提供的警报名称负责的操作员 *。*  
+`[ @object_type = ] 'object_type'` 要返回的信息类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的操作员名称的警报 *，* 或运算符，其中列出了为提供的警报名称负责的操作员 *。*  
   
- [ **@name =**]  **'***name***'**  
- 操作员名称 (如果*object_type* is 运算符) 或警报名称 (如果*object_type*为 ALERTS)。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 操作员名称 (如果*object_type* is 运算符) 或警报名称 (如果*object_type*为 ALERTS)。 *名称*是**sysname**，无默认值。  
   
- [ **@enum_type =**] **'***enum_type***'**  
- *Object_type*返回的信息。 *enum_type*是实际在大多数情况下。 *enum_type*是**char （10)**，无默认值，并且可以是下列值之一。  
+`[ @enum_type = ] 'enum_type'` *Object_type*返回的信息。 *enum_type*是实际在大多数情况下。 *enum_type*是**char （10)**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -60,8 +57,7 @@ sp_help_notification
 |ALL|列出所有*object_types*包括那些不与相关联*名称*。|  
 |TARGET|只列出*object_types*匹配所提供*target_name*，而不考虑的与关联*名称*。|  
   
- [  **@notification_method =**] *notification_method*  
- 用于确定要返回的通知方法列的数值。 *notification_method*是**tinyint**，可以是下列值之一。  
+`[ @notification_method = ] notification_method` 用于确定要返回的通知方法列的数值。 *notification_method*是**tinyint**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -70,8 +66,7 @@ sp_help_notification
 |**4**|NetSend： 只返回**use_netsend**列。|  
 |**7**|全部：返回全部列。|  
   
- [ **@target_name =**] **'***target_name***'**  
- 要搜索的警报名称 (如果*object_type*为 ALERTS) 或要搜索的操作员名称 (如果*object_type* is 运算符)。 *target_name*时才需要*enum_type*是目标。 *target_name*是**sysname**，默认值为 NULL。  
+`[ @target_name = ] 'target_name'` 要搜索的警报名称 (如果*object_type*为 ALERTS) 或要搜索的操作员名称 (如果*object_type* is 运算符)。 *target_name*时才需要*enum_type*是目标。 *target_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-valves"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -106,7 +101,7 @@ sp_help_notification
 ## <a name="remarks"></a>备注  
  必须从运行此存储的过程**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要执行此存储过程，用户必须为 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -142,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

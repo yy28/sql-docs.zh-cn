@@ -1,5 +1,5 @@
 ---
-title: 示例：以 XML 形式检索产品型号信息 | Microsoft Docs
+title: 例如：检索以 XML 形式的产品型号信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219877"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537759"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>示例：以 XML 形式检索产品型号信息
+# <a name="example-retrieving-product-model-information-as-xml"></a>例如：以 XML 形式检索产品型号信息
   下面的查询将返回产品型号信息。 `RAW` 子句中指定了 `FOR XML` 模式。  
   
 ## <a name="example"></a>示例  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <row>  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- 您可以选择指定`TYPE`指令检索将结果作为`xml`类型。 `TYPE` 指令不会更改结果的内容。 只影响结果的数据类型。  
+ 您可以选择性地指定 `TYPE` 指令将结果作为 `xml` 类型进行检索。 `TYPE` 指令不会更改结果的内容。 只影响结果的数据类型。  
   
 ```  
 USE AdventureWorks2012;  

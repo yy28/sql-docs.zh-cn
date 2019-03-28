@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207913"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534439"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>第 9 课。 从 Windows Azure 存储还原数据库
   在本课中，您将学习如何将 Windows Azure 存储中的数据库备份文件还原到数据库，该数据库位于本地或 Windows Azure 的虚拟机中。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  
@@ -43,9 +43,9 @@ ms.locfileid: "48207913"
   
 3.  复制以下完整脚本并将其粘贴到查询窗口。 根据需要修改脚本。  
   
-     **注意：** 运行`RESTORE`语句以在 Windows Azure 存储中的数据库备份 (.bak) 还原到另一台计算机中的数据库实例。  
+     **注意：** 在运行`RESTORE`语句以在 Windows Azure 存储中的数据库备份 (.bak) 还原到另一台计算机中的数据库实例。  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207913"
   
     ```  
   
- **教程结束时： 在 Windows Azure 存储服务的 SQL Server 数据文件**  
+ **教程结束时：在 Windows Azure 存储服务的 SQL Server 数据文件**  
   
   

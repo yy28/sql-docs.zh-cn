@@ -16,12 +16,12 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50657e6a14f68ef297871001bc611f1d7cf9337b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ab146ef85ceef8962ccc4ee10e5ea4d3a9e4d3be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211606"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535459"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=** ] **'***发布*****  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@publisher=** ] **'***发布服务器*****  
- 是的一个非名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
+`[ @publisher = ] 'publisher'` 是的一个非名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,7 +56,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [创建并应用初始快照](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)  
   
   

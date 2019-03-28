@@ -18,12 +18,12 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23e80cf3024b238595785f0976f52ae41c8defc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee2dc4474bb2949aba396674da19fcd1e197a042
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739765"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531560"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@ntname =** ] **'***name***'**  
- 是 Windows 组的名称。 *名称*是**sysname**，默认值为 NULL。 *名称*必须有权访问当前数据库的有效 Windows 组。 如果*名称*未指定，则有权访问当前数据库的所有 Windows 组是否都包含在输出中。  
+`[ @ntname = ] 'name'` 是 Windows 组的名称。 *名称*是**sysname**，默认值为 NULL。 *名称*必须有权访问当前数据库的有效 Windows 组。 如果*名称*未指定，则有权访问当前数据库的所有 Windows 组是否都包含在输出中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,13 +51,13 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 组的名称。|  
 |**NTGroupId**|**smallint**|组标识符 (ID)。|  
-|SID|**varbinary(85)**|安全标识符 (SID) 的**NTGroupName**。|  
+|**SID**|**varbinary(85)**|安全标识符 (SID) 的**NTGroupName**。|  
 |**HasDbAccess**|**int**|1 = Windows 组有权访问数据库。|  
   
 ## <a name="remarks"></a>备注  
  若要查看一系列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色在当前数据库中，使用**sp_helprole**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -71,7 +70,7 @@ EXEC sp_helpntgroup;
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

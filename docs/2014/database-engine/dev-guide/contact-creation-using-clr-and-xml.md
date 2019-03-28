@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c96b5b5f7ae92dd85f2c93dcb0423dcc342c5152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371349"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534609"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 和 XML 创建联系信息
   SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。  
@@ -1386,7 +1386,7 @@ End Class
   
  这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装脚本 (`Install.sql`)，该脚本在数据库中部署程序集并创建存储过程。  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

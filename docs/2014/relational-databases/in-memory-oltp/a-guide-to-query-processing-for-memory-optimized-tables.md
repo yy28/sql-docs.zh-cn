@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374819"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535269"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -41,7 +41,7 @@ ms.locfileid: "53374819"
   
  我们考虑 Customer 和 Order 这两个表。 以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本按（传统）基于磁盘的形式定义了这两个表和关联的索引：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -64,7 +64,7 @@ GO
   
  考虑以下查询，这些查询联接 Customer 和 Order 表，并返回订单 ID 和相关客户信息：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  考虑一个与此查询稍有不同的查询，它返回 Order 表的所有行，而不仅是 OrderID：  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -136,7 +136,7 @@ SQL Server 查询处理管道。
   
  下面的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本包含 Order 和 Customer 表的内存优化版本，其中使用哈希索引：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +153,7 @@ GO
   
  考虑对内存优化表执行相同的查询：  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +175,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  本机编译存储过程是编译为机器代码的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程，而不是由查询执行引擎解释。 以下脚本创建一个本机编译存储过程来运行示例查询（来自“示例查询”部分）。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -241,7 +241,7 @@ END
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>为本机编译存储过程检索查询执行计划  
  可使用 **中的** 估计的执行计划 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，或使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 SHOWPLAN_XML 选项，检索本机编译的存储过程的查询执行计划。 例如：  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|请注意，聚合不支持 Hash Match 运算符。 因此，本机编译存储过程中的所有聚合都使用 Stream Aggregate 运算符，即使解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中针对同一查询计划使用 Hash Match 运算符也是如此。<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列统计信息和联接  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]如果显式创建，或在通过谓词查询响应中的查询优化器创建它们，也非索引键列上创建统计信息。)开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在索引键列值中维护统计信息，以帮助估计特定操作的开销，如索引扫描和索引查找。 （如果显式创建非索引键列，或者查询优化器在对于带谓词的查询提供的响应中创建非索引键列，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也会对这些列创建统计信息。）开销估计的主要度量是一个运算符处理的行数。 请注意，对于基于磁盘的表，某一特定运算符处理的页数对于开销估计非常重要。 但是，由于页数对于内存优化表并不重要（始终为零），因此本次讨论重点在于行数。 从计划中的索引查找和扫描运算符开始估计，然后扩展到包含其他运算符，如联接运算符。 对联接运算符要处理的行数的估计基于对基础索引、搜索和扫描运算符的估计。 对于内存优化表的解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问，您可以通过实际执行计划查看计划中运算符的估计行数和实际行计数之差。  
   
  对于图 1 中的示例，  
   

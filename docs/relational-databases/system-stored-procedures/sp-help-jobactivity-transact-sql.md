@@ -18,12 +18,12 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538510"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id =**] *job_id*  
- 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@session_id** = ] *session_id*  
- 报告其信息的会话的 ID。 *session_id*是**int**，默认值为 NULL。  
+`[ @session_id = ] session_id` 报告有关的信息会话的 id。 *session_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -88,7 +85,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  如果未*job_name*或*job_id*提供，将列出所有作业的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下的成员**sysadmin**固定的服务器角色可以运行此存储的过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  

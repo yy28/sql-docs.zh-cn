@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536689"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
   在您创建内存优化表时，必须为 `BUCKET_COUNT` 参数指定值。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  
@@ -38,7 +38,7 @@ ms.locfileid: "53377897"
 ### <a name="primary-key-and-unique-indexes"></a>主键和唯一索引  
  因为主键索引是唯一的，所以，键中非重复值的数目与表中的行数相对应。 对于 AdventureWorks 数据库的表 Sales.SalesOrderDetail 中 (SalesOrderID, SalesOrderDetailID) 上的示例主键，发出以下查询以便计算非重复主键值的数目，该数目与表中的行数相对应：  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>非唯一索引  
  对于其他索引，例如 (SpecialOfferID, ProductID) 上的多列索引，发出以下查询以便确定唯一索引键值的数目：  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Bucket 计数故障排除  
  若要对内存优化表中的 bucket 计数问题进行故障排除，请使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)若要获取的空 bucket 和行链长度有关的统计信息。 可以使用下面的查询获取与当前数据库中所有哈希索引有关的统计信息。 如果数据库中有大型表，查询可能会用几分钟时间运行。  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  例如，考虑以下表和脚本以便在表中插入示例行：  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

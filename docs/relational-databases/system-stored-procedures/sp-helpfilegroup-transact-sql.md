@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741045"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538179"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filegroupname =** ] **'***name***'**  
- 当前数据库中任意文件组的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*未指定，则列出当前数据库中的所有文件组，并只为第一个结果集显示在结果集部分中显示。  
+`[ @filegroupname = ] 'name'` 是当前数据库中的任何文件组的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*未指定，则列出当前数据库中的所有文件组，并只为第一个结果集显示在结果集部分中显示。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -62,10 +61,10 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**fileid**|**smallint**|数字文件标识符。|  
 |**filename**|**nchar(260)**|文件的物理名称，包括目录路径。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  
-|**最大大小**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
+|**maxsize**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
+|**growth**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

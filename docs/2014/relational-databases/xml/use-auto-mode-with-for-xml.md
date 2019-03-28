@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 599707905c1d4c9693f1ccec53abf4933f4a6193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534789"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
   如 [FOR XML (SQL Server)](for-xml-sql-server.md)中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是， [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md) 和 [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md) 在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  

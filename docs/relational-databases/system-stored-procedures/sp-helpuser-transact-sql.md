@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791995"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535959"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name_in_db =** ] **'***security_account***’**  
- 当前数据库中数据库用户或数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定，则**sp_helpuser**返回有关所有数据库主体的信息。  
+`[ @name_in_db = ] 'security_account'` 是数据库用户或当前数据库中的数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定，则**sp_helpuser**返回有关所有数据库主体的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -60,7 +59,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**DefDBName**|**sysname**|默认数据库**用户名**。|  
 |**DefSchemaName**|**sysname**|数据库用户的默认架构。|  
 |**UserID**|**smallint**|ID**用户名**当前数据库中。|  
-|SID|**smallint**|用户的安全标识号 (SID)。|  
+|**SID**|**smallint**|用户的安全标识号 (SID)。|  
   
  下表显示未指定用户帐户，并且当前数据库中存在别名时的结果集。  
   
@@ -81,7 +80,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="remarks"></a>备注  
  若要查看数据库角色的成员身份的信息，请使用[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有关服务器角色成员的信息，请使用[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看有关服务器级别主体的信息，请使用[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
  返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

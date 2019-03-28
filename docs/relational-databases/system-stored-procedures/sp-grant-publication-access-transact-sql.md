@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (TRANSACT-SQL) |Microsoft Docs
+title: sp_grant_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534000"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication** =] **'***发布*****  
- 要访问的发布名称。 **'***出版物***'** 是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要访问的名称。 **'***出版物***'** 是**sysname**，无默认值。  
   
- [ **@login**=] **'***登录***’**  
- 登录名 ID。 **'***登录名***'** 是**sysname**，无默认值。  
+`[ @login = ] 'login'` 登录 id。 **'***登录名***'** 是**sysname**，无默认值。  
   
- [  **@reserved =**] **'***保留*****  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -59,8 +56,8 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_grant_publication_access**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_help_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [保护发布服务器](../../relational-databases/replication/security/secure-the-publisher.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_profile (TRANSACT-SQL) |Microsoft Docs
+title: sp_drop_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60300d796a67627600dfc6680f3aafc94c5c48c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5852bfb2842406e8fa33ca9d99e294c6974e44cd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529779"
 ---
 # <a name="spdropagentprofile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@profile_id=**] *profile_id*  
- 要删除的配置文件的 ID。 *profile_id*是**int**，无默认值。  
+`[ @profile_id = ] profile_id` 是要删除的配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -53,9 +52,9 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_drop_agent_profile**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

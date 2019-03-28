@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368119"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533969"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以对 `xml` 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  

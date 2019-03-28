@@ -1,5 +1,5 @@
 ---
-title: sp_denylogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_denylogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37426d47f2385e02b5469e9c2572aef12a0f6963
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09441d52178090c9970fdcb41ffb8a387f395b93
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510511"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534169"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame =** ] **'**_登录_   
- 是 Windows 用户或组的名称。 *登录名* 是 **sysname** ，无默认值。  
+`[ @loginame = ] 'login_ '` 是 Windows 用户或组的名称。 *登录名* 是 **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

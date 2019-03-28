@@ -16,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131347"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536889"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication** =] **'***发布*****  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@subscriber**=] **'***订阅服务器***’**  
- 订阅服务器的名称。 *订阅服务器*数据类型为 sysname，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器*数据类型为 sysname，无默认值。  
   
- [  **@destination_db=**] **'***destination_db***’**  
- 目标数据库的名称。 *destination_db*是**sysname**，无默认值。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
- [ **@publisher=** ] **'***发布服务器*****  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应属于的发布使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  

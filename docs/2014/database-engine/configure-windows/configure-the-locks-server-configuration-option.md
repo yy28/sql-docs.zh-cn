@@ -12,12 +12,12 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ede6cfa244f703143ae0ad265982c014cf5d7a8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639978"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530544"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>配置 locks 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **locks** 选项设置可用锁的最大数目，以限制 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为锁分配的内存量。 默认设置为 0，即允许 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 根据不断变化的系统要求动态地分配和释放锁结构。  
@@ -76,13 +76,13 @@ ms.locfileid: "52639978"
   
 #### <a name="to-configure-the-locks-option"></a>配置 locks 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 设置 `locks` 选项的值，将所有用户可用的锁数设置为 `20000`。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012 ;  
 GO  
 sp_configure 'show advanced options', 1;  

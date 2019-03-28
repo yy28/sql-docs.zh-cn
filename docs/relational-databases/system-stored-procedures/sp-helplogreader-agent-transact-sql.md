@@ -16,12 +16,12 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 811a6c78400e0030d89067d2998ed8cc0ad32be2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537189"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher**=] **'***发布服务器***’**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -65,7 +64,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addlogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [sp_changelogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   
   

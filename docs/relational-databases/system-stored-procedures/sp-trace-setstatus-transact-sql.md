@@ -18,12 +18,12 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702385"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534799"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@traceid=** ] *trace_id*  
- 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。 有关检索*trace_id*，请参阅[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+`[ @traceid = ] trace_id` 是要修改的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。 有关检索*trace_id*，请参阅[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
- [  **@status=** ]*状态*  
- 指定要在跟踪上实现的操作。 *状态*是**int**，无默认值。  
+`[ @status = ] status` 指定要在跟踪上实现的操作。 *状态*是**int**，无默认值。  
   
  下表列出了可以指定的状态。  
   
@@ -78,13 +76,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  

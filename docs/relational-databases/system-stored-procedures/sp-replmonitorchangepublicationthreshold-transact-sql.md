@@ -16,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538469"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher** = ] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 已发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是已发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication** = ] **'***publication***'**  
- 正在更改其监视阈值属性的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是为其监视阈值属性都将进行更改的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@publication_type** =] *publication_type*  
- 发布的类型。 *publication_type*是**int**，可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果发布的类型。 *publication_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -65,8 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|合并发布。|  
 |NULL（默认值）|复制尝试确定发布类型。|  
   
- [ **@metric_id** =] *metric_id*  
- 正在更改的发布阈值标准的 ID。 *metric_id*是**int**，默认值为 NULL 和可以是下列值之一。  
+`[ @metric_id = ] metric_id` 正在更改的发布阈值标准的 ID。 *metric_id*是**int**，默认值为 NULL 和可以是下列值之一。  
   
 |ReplTest1|标准名称|  
 |-----------|-----------------|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  您必须指定这两*metric_id*或*thresholdmetricname*。 如果*thresholdmetricname*指定了，则*metric_id*应为 NULL。  
   
- [ **@thresholdmetricname** =] **'***thresholdmetricname*****  
- 正在更改的发布阈值标准的名称。 *thresholdmetricname*是**sysname**，默认值为 NULL。 您必须指定这两*thresholdmetricname*或*metric_id*。 如果*metric_id*指定了，则*thresholdmetricname*应为 NULL。  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` 正在更改的发布阈值标准的名称。 *thresholdmetricname*是**sysname**，默认值为 NULL。 您必须指定这两*thresholdmetricname*或*metric_id*。 如果*metric_id*指定了，则*thresholdmetricname*应为 NULL。  
   
- [ **@value** =]*值*  
- 是发布阈值标准的新值。 *值*是**int**，默认值为 NULL。 如果**null**，则不更新指标值。  
+`[ @value = ] value` 是发布阈值标准的新值。 *值*是**int**，默认值为 NULL。 如果**null**，则不更新指标值。  
   
- [ **@shouldalert** =] *shouldalert*  
- 指示达到发布阈值标准时是否生成警报。 *shouldalert*是**位**，默认值为 NULL。 值为**1**意味着，会生成警报，并将值**0**意味着不会生成警报。  
+`[ @shouldalert = ] shouldalert` 为达到发布阈值标准时，如果生成警报。 *shouldalert*是**位**，默认值为 NULL。 值为**1**意味着，会生成警报，并将值**0**意味着不会生成警报。  
   
- [ **@mode** =]*模式*  
- 指示是否启用发布阈值标准。 *模式*是**tinyint**，默认值为**1**。 值为**1**方法，启用该标准的监视，并将值**2**表示禁用该标准的监视。  
+`[ @mode = ] mode` 如果启用发布阈值标准。 *模式*是**tinyint**，默认值为**1**。 值为**1**方法，启用该标准的监视，并将值**2**表示禁用该标准的监视。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

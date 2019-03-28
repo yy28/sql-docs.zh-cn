@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537720"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@logged_before** =] **'**_logged_before_  
- 删除之前的日期和时间所指定的项*logged_before*参数。 *logged_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
+`[ @logged_before = ] 'logged_before'` 删除之前的日期和时间所指定的项*logged_before*参数。 *logged_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
   
- [ **@event_type** =] **'**_event_type_  
- 删除日志条目的类型指定为*event_type*。 *event_type*是**varchar(15)** ，无默认值。 有效输入包括**成功**，**警告**，**错误**，以及**信息性**。 NULL 指示所有事件类型。  
+`[ @event_type = ] 'event_type'` 删除日志条目的类型指定为*event_type*。 *event_type*是**varchar(15)** ，无默认值。 有效输入包括**成功**，**警告**，**错误**，以及**信息性**。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -88,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

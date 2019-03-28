@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538619"
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
   本主题说明了如何生成 XML 实例。  
@@ -79,7 +79,7 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <root><child/></root>  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 参数，或将其值设置为 0，则转换 xml DT 实例时不保留无关紧要的空格。 有关在将字符串数据转换为 xml DT 实例时如何使用 CONVERT 运算符及其 *style* 参数的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>示例：将字符串值转换为类型化的 xml 并将其赋给某列  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例如：将字符串值转换为类型化的 xml 并将其分配到的列  
  下面的示例将包含 XML 片段的字符串变量转换`xml`数据类型，然后将其存储在`xml`类型列：  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>示例：将字符串转换为类型化的 xml 并将其赋给某个变量  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例如：将字符串转换为类型化的 xml 并将其分配给一个变量  
  在以下示例中，字符串转换为`xml`类型并赋给的变量`xml`数据类型：  
   
 ```  
@@ -157,7 +157,7 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
@@ -180,7 +180,7 @@ go
  有关 FOR XML 的详细信息，请参阅 [FOR XML (SQL Server)](for-xml-sql-server.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `xml` 数据类型实例作为不同服务器构造（例如使用 TYPE 指令或在其中使用 `xml` 数据类型从 SQL 列、变量和输出参数返回 XML 的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 访问接口请求这`xml`中以二进制编码形式从服务器发送的数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将作为字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `xml` 数据类型实例作为不同服务器构造（例如使用 TYPE 指令或在其中使用 `xml` 数据类型从 SQL 列、变量和输出参数返回 XML 的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 访问接口请求以二进制编码形式从服务器发送此 `xml` 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将作为字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。  
   
 ## <a name="using-constant-assignments"></a>使用常量赋值  
  可以使用一个字符串常量，其中的一个实例`xml`预期数据类型。 这与将字符串隐式 CAST 为 XML 相同。 例如：  

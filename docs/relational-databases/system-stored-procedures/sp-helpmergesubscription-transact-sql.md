@@ -16,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779369"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530669"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,39 +44,32 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL 或**%**，返回有关所有合并发布和订阅当前数据库中的信息。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL 或**%**，返回有关所有合并发布和订阅当前数据库中的信息。  
   
- [  **@subscriber=**] **'***订阅服务器***’**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
   
- [  **@subscriber_db=**] **'***subscriber_db***’**  
- 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为**%**，表示返回有关所有订阅数据库的信息。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为**%**，表示返回有关所有订阅数据库的信息。  
   
- [ **@publisher=**] **'***publisher***'**  
- 发布服务器的名称。 发布服务器必须为有效服务器。 *发布服务器*是**sysname**，默认值为**%**，表示返回有关所有发布服务器的信息。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 发布服务器必须为有效服务器。 *发布服务器*是**sysname**，默认值为**%**，表示返回有关所有发布服务器的信息。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，表示返回有关所有发布服务器数据库的信息。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，表示返回有关所有发布服务器数据库的信息。  
   
- [  **@subscription_type=**] **'***subscription_type***’**  
- 是订阅的类型。 *subscription_type*是**nvarchar(15)**，可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 是订阅的类型。 *subscription_type*是**nvarchar(15)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**推送**（默认值）|推送订阅|  
-|**请求**|请求订阅|  
+|**pull**|请求订阅|  
 |**两者**|推送订阅和请求订阅|  
   
- [  **@found=**] **'***找到***输出**  
- 指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**指示找不到该发布。  
+`[ @found = ] 'found'OUTPUT` 是一个标志，指示返回行。 *找到*是**int**而且是 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|订阅的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**publisher**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库名。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
@@ -92,7 +85,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|指定复制代理的卸载执行是否设置为在订阅服务器上运行。 如果为 NULL，则执行将在发布服务器上运行。|  
 |**offload_server**|**sysname**|运行代理的服务器名。|  
 |**use_interactive_resolver**|**int**|返回在调节过程中是否使用交互式冲突解决程序。 如果**0**，不使用交互式冲突解决程序。|  
-|**主机名**|**sysname**|订阅筛选的值时提供值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数。|  
+|**hostname**|**sysname**|订阅筛选的值时提供值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数。|  
 |**subscriber_security_mode**|**smallint**|安全模式在订阅服务器上，其中**1**表示 Windows 身份验证，并**0**意味着[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**subscriber_login**|**sysname**|在订阅服务器上的登录名。|  
 |**subscriber_password**|**sysname**|永远不会返回实际的订阅服务器密码。 通过屏蔽结果"**\*\*\*\*\*\***"字符串。|  
@@ -109,9 +102,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  只有的成员**sysadmin**固定服务器角色**db_owner**固定的数据库角色或订阅所属的发布的发布访问列表才能执行**sp_helpmergesubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

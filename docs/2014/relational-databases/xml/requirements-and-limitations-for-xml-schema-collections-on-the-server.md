@@ -21,18 +21,18 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79bff5e280731a52681c36ec4935e8935d460071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073147"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533478"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
-  XML 架构定义语言 (XSD) 验证具有某些限制使用的 SQL 列`xml`数据类型。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
+  XML 架构定义语言 (XSD) 验证对使用 `xml` 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
   
 |项|限制|  
 |----------|----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "48073147"
 |内存不足的情况|在使用大型 XML 架构集合时，可能会出现内存不足的情况。 有关此问题的解决方案，请参阅 [大型 XML 架构集合和内存不足的情况](large-xml-schema-collections-and-out-of-memory-conditions.md)。|  
 |重复的值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝其中的 block 或 final 属性具有重复值（如“restriction restriction”和“extension extension”）的架构。|  
 |架构组件标识符|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将架构组件的标识符限于最大长度为 1000 个 Unicode 字符。 另外，不支持在标识符中使用代理项字符对。|  
-|时区信息|在中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本，完全支持的时区信息`xs:date`， `xs:time`，和`xs:dateTime`进行 XML 架构验证的值。 通过 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 向后兼容模式，始终将时区信息规范化为协调世界时（格林尼治标准时间）。 对于 `dateTime` 类型的元素，服务器将通过使用偏移量值（“-05:00”）和返回相应的 GMT 时间转换提供给 GMT 的时间。|  
+|时区信息|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，完全支持进行 XML 架构验证的 `xs:date`、`xs:time` 和 `xs:dateTime` 值的时区信息。 通过 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 向后兼容模式，始终将时区信息规范化为协调世界时（格林尼治标准时间）。 对于 `dateTime` 类型的元素，服务器将通过使用偏移量值（“-05:00”）和返回相应的 GMT 时间转换提供给 GMT 的时间。|  
 |联合类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持联合类型的限制。|  
 |可变精度小数|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持可变精度小数。 **xs:decimal** 类型表示任意精度十进制数字。 最小符合 XML 处理器必须支持最小值为 `totalDigits=18`的十进制数字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 `totalDigits=38,` ，但将小数位数限制为 10。 所有 **xs:decimal** 实例化的值均由服务器通过使用 SQL 类型数值 (38, 10) 在内部表示。|  
   

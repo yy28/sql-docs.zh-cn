@@ -1,5 +1,5 @@
 ---
-title: sp_invalidate_textptr (TRANSACT-SQL) |Microsoft Docs
+title: sp_invalidate_textptr (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538189"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@TextPtrValue=** ] *textptr_value*  
- 要失效的行内文本指针。 *textptr_value*是**varbinary (** 16 **)**，默认值为 NULL。 如果为 NULL， **sp_invalidate_textptr**使事务中的所有行内文本指针都失效。  
+`[ @TextPtrValue = ] textptr_value` 行内文本指针，可以在失效。 *textptr_value*是**varbinary (** 16 **)**，默认值为 NULL。 如果为 NULL， **sp_invalidate_textptr**使事务中的所有行内文本指针都失效。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -51,7 +50,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
  有关 text in row 选项的详细信息，请参阅[sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="see-also"></a>请参阅  

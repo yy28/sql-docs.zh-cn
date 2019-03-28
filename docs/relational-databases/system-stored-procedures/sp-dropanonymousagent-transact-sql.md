@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818979"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537879"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subid=**] *sub_id*  
- 是匿名订阅的全局标识符。 *sub_id*是**uniqueidentifier**，无默认值。 此标识符可以检索订阅服务器上使用**sp_helppullsubscription**。 中的值**subid**返回的结果集字段是该全局标识符。  
+`[ @subid = ] sub_id` 是匿名订阅的全局标识符。 *sub_id*是**uniqueidentifier**，无默认值。 此标识符可以检索订阅服务器上使用**sp_helppullsubscription**。 中的值**subid**返回的结果集字段是该全局标识符。  
   
- [ **@type=**]*类型*  
- 是订阅的类型。 *类型*是**int**，无默认值。 有效的值为**1**或**2**。 指定**1**，如果快照复制或事务复制使用分发代理。 指定**2**，则合并复制使用合并代理。  
+`[ @type = ] type` 是订阅的类型。 *类型*是**int**，无默认值。 有效的值为**1**或**2**。 指定**1**，如果快照复制或事务复制使用分发代理。 指定**2**，则合并复制使用合并代理。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

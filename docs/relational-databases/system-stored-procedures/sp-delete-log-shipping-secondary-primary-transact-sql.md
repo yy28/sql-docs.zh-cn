@@ -18,12 +18,12 @@ ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3e04d7013b02a00859b5c4e7a630cc0f4267f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a41dfbef005ad0c7a4f6a7c6d1a47c09b046e97b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533499"
 ---
 # <a name="spdeletelogshippingsecondaryprimary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_delete_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@primary_server** =] '*primary_server*  
- 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
+`[ @primary_server = ] 'primary_server'` 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
   
- [ **@primary_database** =] '*primary_database*  
- 主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 是主服务器上的名称。 *primary_database*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -63,7 +61,7 @@ sp_delete_log_shipping_secondary_primary
   
 3.  调用**sp_delete_log_shipping_alert_job**在监视服务器上。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>请参阅  

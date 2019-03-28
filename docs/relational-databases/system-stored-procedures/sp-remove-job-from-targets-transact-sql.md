@@ -18,12 +18,12 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732215"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536829"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,18 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id =**] *job_id*  
- 作业的标识号，将从该指定作业中删除指定目标服务器或目标服务器组。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要从中移除指定的目标服务器或目标服务器组作业作业标识号。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作业的名称，将从该指定作业中删除指定目标服务器或目标服务器组。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要从中移除指定的目标服务器或目标服务器组的作业的名称。 任一*job_id*或*job_name*必须指定，但不能同时指定两者。 *job_name*是**sysname**，默认值为 NULL。  
   
- [ **@target_server_groups =**] **'***target_server_groups***'**  
- 以逗号分隔的目标服务器组列表，这些服务器组将从指定作业中删除。 *target_server_groups*是**nvarchar(1024)**，默认值为 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 逗号分隔的目标服务器组将删除从指定的作业列表。 *target_server_groups*是**nvarchar(1024)**，默认值为 NULL。  
   
- [ **@target_servers =**] **'***target_servers***'**  
- 以逗号分隔的目标服务器列表，这些服务器将从指定作业中删除。 *target_servers*是**nvarchar(1024)**，默认值为 NULL。  
+`[ @target_servers = ] 'target_servers'` 逗号分隔的目标服务器从指定的作业中删除的列表。 *target_servers*是**nvarchar(1024)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下授予 **sysadmin** 固定服务器角色的成员执行此过程的权限。  
   
 ## <a name="examples"></a>示例  
@@ -76,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_apply_job_to_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

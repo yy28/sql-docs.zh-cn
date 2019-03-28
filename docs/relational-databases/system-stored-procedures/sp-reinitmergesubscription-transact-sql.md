@@ -16,12 +16,12 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808669"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531439"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**所有**。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**所有**。  
   
- [  **@subscriber =** ] **'***订阅服务器***’**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**所有**。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**所有**。  
   
- [  **@subscriber_db =** ] **'***subscriber_db***’**  
- 订阅服务器数据库的名称。 *subscriber_db*是**sysname**，默认值为**所有**。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅服务器数据库的名称。 *subscriber_db*是**sysname**，默认值为**所有**。  
   
- [  **@upload_first =** ] **'***upload_first***’**  
- 表示在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
+`[ @upload_first = ] 'upload_first'` 为重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

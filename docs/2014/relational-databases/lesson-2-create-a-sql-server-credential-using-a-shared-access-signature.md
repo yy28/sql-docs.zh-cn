@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524925"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529859"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 课：创建 SQL Server 凭据
   在本课中，您将创建凭据以存储用于访问 Windows Azure 存储帐户的安全信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "52524925"
   
 4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 下面的语句将创建 SQL Server 凭据以存储你的存储容器的共享访问证书。  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524925"
   
 5.  若要查看所有可用的凭据，可在查询窗口中运行以下语句：  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

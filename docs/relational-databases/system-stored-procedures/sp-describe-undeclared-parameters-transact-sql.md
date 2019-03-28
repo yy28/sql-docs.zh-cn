@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679627"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532479"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **\@tsql =** ] **'**_TRANSACT-SQL\_批处理_  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
   
- [  **\@params =** ] **N'**_参数_  
- \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
   
  是一个字符串，它包含的定义中嵌入的所有参数*Transact SQL_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果 TRANSACT-SQL 语句中的批处理不包含参数，\@参数不是必需的。 该参数的默认值为 NULL。  
   
@@ -249,7 +247,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  作为最后一个示例中，给定一个查询`SELECT NULL + @p`， **int**为选择\@p 因为它产生类型 (c) 转换。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有执行权限\@tsql 自变量。  
   
 ## <a name="examples"></a>示例  
@@ -275,6 +273,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

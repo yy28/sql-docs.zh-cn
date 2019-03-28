@@ -13,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772559"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537389"
 ---
 # <a name="set-or-change-the-database-collation"></a>设置或更改数据库排序规则
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置和更改数据库排序规则。 如果未指定排序规则，则使用服务器排序规则。  
@@ -86,13 +86,13 @@ ms.locfileid: "52772559"
   
 #### <a name="to-set-the-database-collation"></a>设置数据库排序规则  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例演示如何使用 [COLLATE](/sql/t-sql/statements/collations) 子句来指定排序规则名称。 此示例创建使用 `MyOptionsTest` 排序规则的数据库 `Latin1_General_100_CS_AS_SC` 。 在创建数据库后，执行 `SELECT` 语句以验证设置。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -112,13 +112,13 @@ GO
   
 #### <a name="to-change-the-database-collation"></a>更改数据库排序规则  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何在 [ALTER DATABASE](/sql/t-sql/statements/collations) 语句中使用 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 子句来更改排序规则名称。 执行 `SELECT` 语句以验证更改。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

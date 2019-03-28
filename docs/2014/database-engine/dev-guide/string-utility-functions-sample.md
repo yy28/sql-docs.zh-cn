@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368869"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531309"
 ---
 # <a name="string-utility-functions-sample"></a>字符串实用工具函数示例
   字符串实用工具示例包含用 Visual C# 和 Visual Basic 编写的流式表值函数，该函数可以将逗号分隔的字符串拆分为具有一列的表。 它也包含一个将字符串列转换为逗号分隔的字符串的聚合函数。  同时实现的还有一个标量函数和一个表值函数，这些函数提供正则表达式替换和正则表达式搜索功能。  
@@ -885,7 +885,7 @@ GO
   
  这是 `test.sql`，该脚本通过执行函数测试该示例。  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

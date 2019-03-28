@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131237"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536816"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =** ] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，默认值为 NULL。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@property =** ] **'**_属性_  
- 要更改的发布属性。 *属性*是**nvarchar(255)**。  
+`[ @property = ] 'property'` 是要更改的发布属性。 *属性*是**nvarchar(255)**。  
   
- [  **@value =** ] **'**_值_  
- 新属性值。 *值*是**nvarchar(255)**，默认值为 NULL。  
+`[ @value = ] 'value'` 新的属性值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  
   
@@ -79,9 +76,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||用于说明发布的可选项。|  
 |**enabled_for_het_sub**|**true**|启用发布以支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 **enabled_for_het_sub**存在对发布的订阅时不能更改。 您可能需要执行[复制存储过程 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)遵守以下要求，然后设置**enabled_for_het_sub**为 true:<br /> - **allow_queued_tran**必须是**false**。<br /> - **allow_sync_tran**必须是**false**。<br /> 更改**enabled_for_het_sub**到**true**可能会更改现有发布设置。 有关详细信息，请参阅 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 ||**false**|发布不支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
-|**enabled_for_internet**|**true**|为 Internet 启用发布，此时可以使用文件传输协议 (FTP) 向订阅服务器传输快照文件。 发布的同步文件将放入以下目录：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp。 *ftp_address*不能为 NULL。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
+|**enabled_for_internet**|**true**|为 Internet 启用发布，此时可以使用文件传输协议 (FTP) 向订阅服务器传输快照文件。 发布的同步文件将放入以下目录：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address*不能为 NULL。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 ||**false**|不为 Internet 启用发布。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
-|**enabled_for_p2p**|**true**|发布支持对等复制。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。<br /> 若要设置**enabled_for_p2p**到**true**，以下限制适用：<br /> - **allow_anonymous**必须是**false**<br /> - **allow_dts**必须是**false**。<br /> - **allow_initialize_from_backup**必须是 **，则返回 true**<br /> - **allow_queued_tran**必须是**false**。<br /> - **allow_sync_tran**必须是**false**。<br /> - **enabled_for_het_sub**必须是**false**。<br /> - **independent_agent**必须是**true**。<br /> - **repl_freq**必须是**连续**。<br /> - **replicate_ddl**必须是**1**。|  
+|**enabled_for_p2p**|**true**|发布支持对等复制。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。<br /> 若要设置**enabled_for_p2p**到**true**，以下限制适用：<br /> - **allow_anonymous** must be **false**<br /> - **allow_dts**必须是**false**。<br /> - **allow_initialize_from_backup**必须是 **，则返回 true**<br /> - **allow_queued_tran**必须是**false**。<br /> - **allow_sync_tran**必须是**false**。<br /> - **enabled_for_het_sub**必须是**false**。<br /> - **independent_agent**必须是**true**。<br /> - **repl_freq**必须是**连续**。<br /> - **replicate_ddl**必须是**1**。|  
 ||**false**|发布不支持对等复制。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 |**ftp_address**||发布快照文件的可访问 FTP 地址。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 |**ftp_login**||用于连接到 FTP 服务的用户名，允许使用值 ANONYMOUS。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
@@ -99,39 +96,37 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**publish_to_ActiveDirectory**|**true**|已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 不能再向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中添加发布信息。|  
 ||**false**|将发布信息从 Active Directory 上删除。|  
 |**queue_type**|**sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。 只有在没有活动订阅时才能更改该属性。<br /><br /> 注意：不再支持使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列。 指定的值**msmq**有关*值*会导致出现错误。|  
-|**repl_freq**|**连续**|发布所有基于日志的事务的输出。|  
-||**快照**|仅发布计划的同步事件。|  
+|**repl_freq**|**continuous**|发布所有基于日志的事务的输出。|  
+||**snapshot**|仅发布计划的同步事件。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
 ||**0**|不复制 DDL 语句。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。 使用对等复制时，无法禁用架构更改复制功能。|  
 |**replicate_partition_switch**|**true**|ALTER TABLE...对已发布数据库执行的 SWITCH 语句应复制到订阅服务器。 此选项才有效才*allow_partition_switch*设置为 TRUE。 有关详细信息，请参阅[复制已分区表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
 ||**false**|ALTER TABLE...SWITCH 语句不应复制到订阅服务器中。|  
-|**保留期**||**int**表示的保持期，以小时为单位，订阅活动。 如果订阅在保持期内不活动，则将其删除。|  
+|**retention**||**int**表示的保持期，以小时为单位，订阅活动。 如果订阅在保持期内不活动，则将其删除。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。 如果*alt_snapshot_folder*还指定，则快照文件存储在默认和备用位置。|  
 ||**false**|快照文件存储在指定的备用位置*alt_snapshot_folder*。|  
-|**status**|**活动**|发布创建后，发布数据立即可用于订阅服务器。 Oracle 发布服务器不支持。|  
-||**非活动状态**|发布创建后，发布数据不可用于订阅服务器。 Oracle 发布服务器不支持。|  
+|**status**|**active**|发布创建后，发布数据立即可用于订阅服务器。 Oracle 发布服务器不支持。|  
+||**inactive**|发布创建后，发布数据不可用于订阅服务器。 Oracle 发布服务器不支持。|  
 |**sync_method**|**native**|同步订阅时，使用所有表的本机模式大容量复制输出。|  
 ||**character**|同步订阅时，使用所有表的字符模式大容量复制输出。|  
-||**并发**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
+||**concurrent**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 ||**concurrent_c**|在快照生成期间生成所有表的字符模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
-|**任务 id**||不推荐使用该属性，也不再支持该属性。|  
+|**taskid**||不推荐使用该属性，也不再支持该属性。|  
 |**allow_drop**|**true**|使`DROP TABLE`DLL 的支持文章都是事务复制的一部分。 支持的最低版本：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更高版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更高版本。 其他参考：[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|禁用`DROP TABLE`属于事务复制的项目的支持 DLL。 这是**默认**此属性的值。|
 |**NULL** （默认值）||返回支持的值的列表*属性*。|  
   
-[ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 确认此存储过程所执行的操作会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   - **0**指定对项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  
   - **1**指定对项目的更改可能导致快照无效。 如果有现有订阅需要新快照，该值授予将现有快照标记为过时快照的权限，并生成新快照。   
 有关在更改时需要生成新快照的属性，请参阅“备注”部分。  
   
-[ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+[**@force_reinit_subscription =** ] *force_reinit_subscription*  
  确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*是**位**默认值为**0**。  
   - **0**指定对项目的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化现有订阅，则会发生错误，并且不进行任何更改。  
   - **1**指定对项目的更改会导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。  
   
-[ **@publisher** =] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
   > [!NOTE]  
   >  *发布服务器*在更改项目属性时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -172,8 +167,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [更改发布和项目属性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

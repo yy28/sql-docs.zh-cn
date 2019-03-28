@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534709"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@old=** ] **'***old_password***’**  
- 是的旧密码。 *old_password*是**sysname**，默认值为 NULL。  
+`[ @old = ] 'old_password'` 是的旧密码。 *old_password*是**sysname**，默认值为 NULL。  
   
- [  **@new=** ] **'***new_password***’**  
- 是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须命名的参数不能指定。  
+`[ @new = ] 'new_password'` 是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须命名的参数不能指定。  
   
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
- [  **@loginame=** ] **'***登录***’**  
- 受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
+`[ @loginame = ] 'login'` 是受密码更改影响的登录名的名称。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -65,7 +62,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
  **sp_password**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。 还需要 CONTROL SERVER 权限才能重置密码而无需提供旧密码，或者所更改的登录名具有 CONTROL SERVER 权限。  
   
  主体可更改其自己的密码。  

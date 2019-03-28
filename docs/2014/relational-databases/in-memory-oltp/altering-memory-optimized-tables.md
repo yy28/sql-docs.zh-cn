@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136477"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533039"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
   不支持对内存优化表执行 ALTER 操作。 其中包括更改 bucket_count、添加或删除索引、添加或删除列等操作。 本主题指导如何更新内存优化表。  
@@ -33,7 +33,7 @@ ms.locfileid: "48136477"
   
      可使用以下查询查找引用表的架构绑定对象：  
   
-    ```tsql  
+    ```sql  
     declare @t nvarchar(255) = N'<table name>'  
   
     select r.referencing_schema_name, r.referencing_entity_name  
@@ -43,7 +43,7 @@ ms.locfileid: "48136477"
   
      使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可对存储过程的权限编写脚本：  
   
-    ```tsql  
+    ```sql  
     declare @sp nvarchar(255) = N'<procedure name>'  
     declare @permissions nvarchar(max) = N''  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48136477"
   
 4.  创建表的副本并将数据从原始表复制到表的副本。 可以使用以下创建副本[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>。  
   
-    ```tsql  
+    ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48136477"
   
  应更新步骤 4 的脚本以反映所需的架构更改。 如果表中的列发生更改，应根据需要更新第 5 步（从临时表复制数据）的脚本和第 6 步（重新创建存储过程）的脚本。  
   
-```tsql  
+```sql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
 # --------  
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
@@ -224,9 +224,9 @@ write-host ""
   
  以下 PowerShell 脚本执行在上一示例中脚本化的架构更改。 此脚本提取作为变量的表，并执行为该表和相关存储过程生成的架构更改脚本。  
   
- 用法： execute_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ Usage: execute_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
   
-```tsql  
+```sql  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   

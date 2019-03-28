@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760219"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530809"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=** ] **'***发布*****  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- 要包含在结果集中的最低编号的架构更改。  
+`[ @starting_schemaversion = ] starting_schemaversion` 是要包含在结果集中的最低架构更改。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -69,6 +67,6 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

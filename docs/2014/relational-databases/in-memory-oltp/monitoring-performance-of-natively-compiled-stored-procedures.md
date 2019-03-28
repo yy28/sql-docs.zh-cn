@@ -10,12 +10,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538059"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
   本主题论述如何监视本机编译的存储过程的性能  
@@ -25,7 +25,7 @@ ms.locfileid: "53359749"
   
  `line_number` 连同扩展事件中的 `object_id` 可用于调查该查询。 可以使用以下查询检索过程定义。 可以使用行号标识该定义内的查询：  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -49,7 +49,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  下面的查询在统计信息收集后返回当前数据库中本机编译的存储过程的过程名称和执行统计信息：  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -71,7 +71,7 @@ order by total_worker_time desc
   
  下面的查询按总工作线程时间的降序返回当前数据库中已为其收集了统计信息的本机编译的存储过程中所有查询的查询文本以及执行统计信息：  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -100,7 +100,7 @@ order by qs.total_worker_time desc
   
  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]获取 Showplan XML：  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

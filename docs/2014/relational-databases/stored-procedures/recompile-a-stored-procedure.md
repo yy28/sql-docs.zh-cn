@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406536"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536563"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法来执行此操作：`WITH RECOMPILE`选项在过程定义中或当调用过程时，`RECOMPILE`各个语句上或通过使用查询提示`sp_recompile`系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
@@ -69,7 +69,7 @@ ms.locfileid: "52406536"
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -97,7 +97,7 @@ AS
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>使用 WITH RECOMPILE 选项重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -105,7 +105,7 @@ AS
   
      然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此操作将执行该过程，并重新编译过程的查询计划。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -115,7 +115,7 @@ GO
   
 #### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>使用 sp_recompile 重新编译存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -123,7 +123,7 @@ GO
   
      然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

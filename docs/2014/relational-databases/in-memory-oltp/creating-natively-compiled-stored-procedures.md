@@ -10,12 +10,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712458"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531129"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
   本机编译的存储过程未实现完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可编程性和查询外围应用。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造不能在本机编译的存储过程内使用。 有关详细信息，请参阅[本机编译存储过程中支持的构造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "52712458"
   
  使用 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql) 创建本机编译的存储过程。 下面的示例显示内存优化表以及用于将行插入表的本机编译存储过程。  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -98,7 +98,7 @@ go
   
      使用一个包装（基于磁盘的）存储过程，并修改该过程以指向 SP_Vnew。 此方法的缺点是间接影响性能。  
   
-    ```tsql  
+    ```sql  
     ALTER PROCEDURE dbo.SP p1,...,pn  
     AS  
       EXEC dbo.SP_Vnew p1,...,pn  

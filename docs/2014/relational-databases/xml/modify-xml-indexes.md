@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b41139bf7d2261f884ea078b6e3b8bafcb8c0197
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536560"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
   [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可用于修改现有的 XML 和非 XML 索引。 但是，并非所有的 ALTER INDEX 选项都适用于 XML 索引。 修改 XML 索引时以下选项不可用：  
@@ -29,7 +29,7 @@ ms.locfileid: "48088747"
   
 -   如果指定了 ALTER INDEX ALL，则它将应用于非 XML 索引和 XML 索引。 指定的索引选项可能对两种索引无效。 在这种情况下，整个语句将失败。  
   
-## <a name="example-modifying-an-xml-index"></a>示例：修改 XML 索引  
+## <a name="example-modifying-an-xml-index"></a>例如：修改 XML 索引  
  在以下示例中，创建了 XML 索引，然后通过将选项 `ALLOW_ROW_LOCKS` 设置为 `OFF`来修改该索引。 当 `ALLOW_ROW_LOCKS` 为 `OFF`时，不会锁定行，并且可以使用页级锁和表级锁获得对指定索引的访问权限。  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>示例：禁用和启用 XML 索引  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>例如：禁用和启用 XML 索引  
  默认情况下，启用 XML 索引。 如果禁用 XML 索引，则对 XML 列运行的查询不使用 XML 索引。 若要启用 XML 索引，请将 `ALTER INDEX` 和 `REBUILD` 选项一起使用。  
   
 ```  

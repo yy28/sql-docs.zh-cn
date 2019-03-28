@@ -1,5 +1,5 @@
 ---
-title: sp_help (TRANSACT-SQL) |Microsoft Docs
+title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146042"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537109"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@objname=**] **'***name***'**  
- 是中的任何对象名称**sysobjects**或中的任何用户定义数据类型**systypes**表。 *名称*是**nvarchar (** 776 **)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+`[ @objname = ] 'name'` 是中的任何对象名称**sysobjects**或中的任何用户定义数据类型**systypes**表。 *名称*是**nvarchar (** 776 **)**，默认值为 NULL。 不能接受数据库名称。  两个或三个部分的名称必须进行分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
    
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +57,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar(** 128 **)**|对象名称|  
     |**“所有者”**|**nvarchar(** 128 **)**|对象所有者（拥有对象的数据库主体。 默认为包含对象的架构所有者。）|  
-    |**Object_type**|**nvarchar (** 31 **)**|对象类型|  
+    |**Object_type**|**nvarchar(** 31 **)**|对象类型|  
   
 2.  如果*名称*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型或用户定义数据类型**sp_help**返回以下结果集。  
   
@@ -67,9 +66,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Type_name**|**nvarchar(** 128 **)**|数据类型名称。|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型名称。|  
     |**长度**|**smallint**|数据类型的物理长度（以字节为单位）。|  
-    |**prec**|**int**|精度（数字总位数）。|  
+    |**Prec**|**int**|精度（数字总位数）。|  
     |**小数位数**|**int**|在小数点右侧的数字的位数。|  
-    |**可以为 Null**|**varchar (** 35 **)**|指示是否允许 NULL 值：“是”或“否”。|  
+    |**可以为 Null**|**varchar(** 35 **)**|指示是否允许 NULL 值:“是”或“否”。|  
     |**Default_name**|**nvarchar(** 128 **)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**Rule_name**|**nvarchar(** 128 **)**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**排序规则**|**sysname**|数据类型的排序规则。 如果是非字符数据类型，则为 NULL。|  
@@ -80,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**名称**|**nvarchar(** 128 **)**|表名|  
     |**“所有者”**|**nvarchar(** 128 **)**|表所有者|  
-    |**类型**|**nvarchar (** 31 **)**|表类型|  
+    |**类型**|**nvarchar(** 31 **)**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      根据指定的数据库对象**sp_help**返回其他结果集。  
@@ -93,13 +92,13 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|列名称。|  
         |**类型**|**nvarchar(** 128 **)**|列数据类型。|  
-        |**计算**|**varchar (** 35 **)**|指示是否计算列中的值：“是”或“否”。|  
-        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意： 如果列数据类型是大值类型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**)，将的值显示为-1。|  
-        |**prec**|**char (** 5 **)**|列精度。|  
-        |**小数位数**|**char (** 5 **)**|列小数位数。|  
-        |**可以为 Null**|**varchar (** 35 **)**|指示是否允许列中包含 NULL 值：“是”或“否”。|  
-        |**TrimTrailingBlanks**|**varchar (** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
-        |**FixedLenNullInSource**|**varchar (** 35 **)**|仅为保持向后兼容。|  
+        |**计算**|**varchar(** 35 **)**|指示是否计算列中的值：“是”或“否”。|  
+        |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**)，将的值显示为-1。|  
+        |**Prec**|**char(** 5 **)**|列精度。|  
+        |**小数位数**|**char(** 5 **)**|列小数位数。|  
+        |**可以为 Null**|**varchar(** 35 **)**|指示是否允许列中的 NULL 值:“是”或“否”。|  
+        |**TrimTrailingBlanks**|**varchar(** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
+        |**FixedLenNullInSource**|**varchar(** 35 **)**|仅为保持向后兼容。|  
         |**排序规则**|**sysname**|列的排序规则。 对于非字符数据类性为 NULL。|  
   
     -   针对标识列返回的其他结果集：  
@@ -121,42 +120,42 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的文件组：主要文件组、次要文件组或事务日志文件组。|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的 FileGroup：主级、次级或事务日志。|  
   
     -   针对索引返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|索引名。|  
-        |**Index_description**|**varchar (** 210 **)**|索引的说明。|  
-        |**index_keys**|**nvarchar (** 2078年 **)**|要生成索引的列的列名。 对于 xVelocity 内存优化的列存储索引返回 NULL。|  
+        |**Index_description**|**varchar(** 210 **)**|索引的说明。|  
+        |**index_keys**|**nvarchar(** 2078 **)**|要生成索引的列的列名。 对于 xVelocity 内存优化的列存储索引返回 NULL。|  
   
     -   针对约束返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**constraint_type**|**nvarchar (** 146 **)**|约束的类型。|  
+        |**constraint_type**|**nvarchar(** 146 **)**|约束的类型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|约束的名称。|  
-        |**delete_action**|**nvarchar (** 9 **)**|指示 DELETE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**update_action**|**nvarchar (** 9 **)**|指示 UPDATE 操作是 NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 还是 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**status_enabled**|**varchar (** 8 **)**|指示是否启用约束：Enabled、Disabled 或 N/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
-        |**status_for_replication**|**varchar (** 19 **)**|指示约束是否用于复制。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
-        |**constraint_keys**|**nvarchar (** 2078年 **)**|构成约束的列的名称。对于默认值和规则而言，则为定义默认值或规则的文本。|  
+        |**delete_action**|**nvarchar(** 9 **)**|指示 DELETE 操作是否是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**update_action**|**nvarchar(** 9 **)**|指示 UPDATE 操作是否是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**status_enabled**|**varchar(** 8 **)**|指示是否启用约束：Enabled、Disabled 或 N/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
+        |**status_for_replication**|**varchar(** 19 **)**|指示约束是否用于复制。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
+        |**constraint_keys**|**nvarchar(** 2078 **)**|构成约束的列的名称。对于默认值和规则而言，则为定义默认值或规则的文本。|  
   
     -   针对执行引用的对象返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**引用表**|**nvarchar (** 516 **)**|标识引用表的其他数据库对象。|  
+        |**引用表**|**nvarchar(** 516 **)**|标识引用表的其他数据库对象。|  
   
     -   针对存储过程、函数或扩展存储过程返回的其他结果集：  
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**参数名称**|**nvarchar(** 128 **)**|存储过程参数名。|  
+        |**Parameter_name**|**nvarchar(** 128 **)**|存储过程参数名。|  
         |**类型**|**nvarchar(** 128 **)**|存储过程参数的数据类型。|  
         |**长度**|**smallint**|最大物理存储长度（以字节为单位）。|  
-        |**prec**|**int**|精度，即数字总位数。|  
+        |**Prec**|**int**|精度，即数字总位数。|  
         |**小数位数**|**int**|小数点右边的数字位数。|  
         |**Param_order**|**smallint**|参数的顺序。|  
   
@@ -167,7 +166,7 @@ sp_help [ [ @objname = ] 'name' ]
   
  **sp_help**只显示可排序的索引列; 因此，不显示关于 XML 索引或空间索引的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 用户必须具有至少一个权限*objname*。 若要查看列约束键、默认值或规则，必须对表具有 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  
@@ -192,14 +191,14 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sysobjects &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

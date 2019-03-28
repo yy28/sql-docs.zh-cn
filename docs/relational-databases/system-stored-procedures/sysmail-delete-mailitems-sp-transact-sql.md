@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650767"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531759"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@sent_before=** ] **'***sent_before***'**  
- 删除之前的日期和时间作为提供的电子邮件*sent_before*参数。 *sent_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
+`[ @sent_before = ] 'sent_before'` 删除之前的日期和时间作为提供的电子邮件*sent_before*参数。 *sent_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- 删除指定的类型的电子邮件*sent_status*。 *sent_status*是**varchar(8)** ，无默认值。 有效输入包括**发送**，**未发送**，**重试**，以及**失败**。 NULL 指示所有状态。  
+`[ @sent_status = ] 'sent_status'` 删除指定的类型的电子邮件*sent_status*。 *sent_status*是**varchar(8)** ，无默认值。 有效输入包括**发送**，**未发送**，**重试**，以及**失败**。 NULL 指示所有状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -55,7 +53,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  删除电子邮件也会删除与这些邮件相关的附件。 删除电子邮件不会删除中的相应条目**sysmail_event_log**。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)从日志中删除项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，此存储的过程授予执行成员关闭**sysadmin**固定的服务器角色和**DatabaseMailUserRole**。 成员**sysadmin**固定的服务器角色才能执行此过程来删除所有用户发送电子邮件。 成员**DatabaseMailUserRole**可以仅删除由该用户发送电子邮件。  
   
 ## <a name="examples"></a>示例  
@@ -89,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

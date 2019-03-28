@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_columns_cursor (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_fulltext_columns_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb380be46723ce605a3021e1796a42bcb824ef36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaf967abcce0cdce2ed232446016c57138fd56d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755977"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531779"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@cursor_return =**] *@cursor_variable*输出  
- 类型的输出变量**游标**。 结果游标是只读的可滚动动态游标。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 类型的输出变量**游标**。 结果游标是只读的可滚动动态游标。  
   
- [ **@table_name =**] **'***table_name***'**  
- 为其请求全文索引信息的表的名称，由一部分或两部分组成。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
+`[ @table_name = ] 'table_name'` 是为其请求全文索引信息的一部分或两个表名称。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
   
- [ **@column_name =**] **'***column_name***'**  
- 需要全文索引元数据的列的名称。 *column_name*是**sysname**默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文索引列信息*table_name*。 如果*table_name*也未指定或为 NULL，为数据库中的所有表的每个全文索引列返回全文索引列信息。  
+`[ @column_name = ] 'column_name'` 是为其全文索引元数据所需的名称。 *column_name*是**sysname**默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文索引列信息*table_name*。 如果*table_name*也未指定或为 NULL，为数据库中的所有表的每个全文索引列返回全文索引列信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,7 +67,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_BLOBTP_COLID**|**int**|文档类型列的列 ID。 全文本索引的列时，此值才适用**varbinary （max)** 或**映像**列。|  
 |**FULLTEXT_LANGUAGE**|**sysname**|用于对列进行全文索引的语言。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予的成员**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +91,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
- [sp_help_fulltext_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

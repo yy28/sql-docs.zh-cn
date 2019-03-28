@@ -13,12 +13,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416718"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537599"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   说明用于管理 FileTable 的常见管理任务。  
@@ -30,7 +30,7 @@ ms.locfileid: "52416718"
   
 -   [sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)（检查 **is_filetable** 列的值。）  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -40,7 +40,7 @@ GO
   
  若要获取在创建关联的 FileTable 时创建的系统定义对象的列表，请查询目录视图 [sys.filetable_system_defined_objects (Transact-SQL) ](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)。  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
     FROM sys.filetable_system_defined_objects  
     WHERE object_id = filetable_object_id;  
@@ -85,7 +85,7 @@ GO
  **禁用完全非事务性访问权限**  
  调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS 的值设置** 为 **READ_ONLY** 或 **OFF**。  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
@@ -100,7 +100,7 @@ GO
  **重新启用完全非事务性访问权限**  
  调用 **ALTER DATABASE** 语句并将 **NON_TRANSACTED_ACCESS** 的值设置为 **FULL**。  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
@@ -142,14 +142,14 @@ GO
  使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 选项调用 ALTER TABLE 语句。  
   
  **禁用 FileTable 命名空间**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **重新启用 FileTable 命名空间**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     ENABLE FILETABLE_NAMESPACE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ###  <a name="HowToListOpen"></a> 如何：获取与 FileTable 关联的打开的文件句柄的列表  
  查询目录视图 [sys.dm_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -194,7 +194,7 @@ GO
  **确定打开的文件和关联锁**  
  将动态管理视图 [sys.dm_tran_locks (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 中的 **request_owner_id** 字段与 [sys.dm_filestream_non_transacted_handles (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)中的 **fcb_id** 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
     FROM sys.dm_filestream_non_transacted_handles  
     WHERE fcb_id IN  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537039"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
   RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<row> 或可能提供元素名称的 XML 元素。 默认情况下，非 NULL 行集中的每列值都将映射到 \<row> 元素的一个属性。 如果将 ELEMENTS 指令添加到 FOR XML 子句，则每列值都将映射到 \<row> 元素的子元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 xsi:nil=`"`true`"`属性的元素。  
@@ -43,11 +43,11 @@ ms.locfileid: "48084229"
   
 -   [示例：检索二进制数据](example-retrieving-binary-data.md)  
   
--   [示例：重命名 &lt;row&gt; 元素](example-renaming-the-row-element.md)  
+-   [示例：重命名&#60;行&#62;元素](example-renaming-the-row-element.md)  
   
--   [示例：为 FOR XML 生成的 XML 指定根元素](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [示例：FOR XML 生成的 xml 指定根元素](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [示例：查询 XML 类型的列](example-querying-xmltype-columns.md)  
+-   [示例：查询 xml 类型的列](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

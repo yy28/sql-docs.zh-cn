@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0798359bedc959e792f56b3d81507329b618f217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781321"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536609"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@account_id** = ] *account_id*  
- 列出其帐户信息的帐户的 ID。 *account_id*是**int**，默认值为 NULL。  
+`[ @account_id = ] account_id` 要列出信息的帐户的帐户 ID。 *account_id*是**int**，默认值为 NULL。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 列出其帐户信息的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。  
+`[ @account_name = ] 'account_name'` 要列出信息的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -73,7 +71,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
  存储的过程**sysmail_help_account_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

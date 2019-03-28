@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538129"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>在内存优化的表中实现 IDENTITY
   内存优化表支持 IDENTITY(1, 1)。 但是，内存优化表不支持使用 IDENTITY(x, y)（其中 x != 1 或 y != 1 ）定义的标识列。 标识值的解决方法使用 SEQUENCE 对象 ([序列号](../sequence-numbers/sequence-numbers.md))。  
   
  从要转换到内存中 OLTP 的表首先删除 IDENTITY 属性。 然后，为表中的列定义新的 SEQUENCE 对象。 作为标识列的 SEQUENCE 对象依赖为列创建 DEFAULT 值的能力，这些列使用 NEXT VALUE FOR 语法获取新的标识值。 因为在内存中 OLTP 中不支持 DEFAULT，您需要将新生成的 SEQUENCE 值传给 INSERT 语句或执行插入的本机编译存储过程。 下面的示例对此模式进行了演示。  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

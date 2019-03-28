@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773709"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530189"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@verbose_level**=] *verbose_level*  
- 指定返回的信息量。 *verbose_level*是**int**，默认值为**1**。 值为**1**表示的错误返回如果不能获取必需的锁**MSsnapshotdeliveryprogress**表，并**0**意味着不会返回错误。  
+`[ @verbose_level = ] verbose_level` 指定返回的信息量。 *verbose_level*是**int**，默认值为**1**。 值为**1**表示的错误返回如果不能获取必需的锁**MSsnapshotdeliveryprogress**表，并**0**意味着不会返回错误。  
   
- [ **@drop_table**=] **'***drop_table***’**  
- 要删除或截断表包含信息的进度的快照。*drop_table*是**nvarchar(5)**，默认值为**FALSE**。 false 表示截断表，true 表示删除表。  
+`[ @drop_table = ] 'drop_table'` 要删除或截断表包含信息的进度的快照。*drop_table*是**nvarchar(5)**，默认值为**FALSE**。 false 表示截断表，true 表示删除表。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

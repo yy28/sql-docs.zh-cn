@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f2886a261ebe760616dade945e652b620918a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c210de9c84602467d1ed7b147037970ef672655
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531499"
 ---
 # <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@action=**] **'***操作*****  
- 要执行的操作。 **操作**是**varchar （20)**，可以是下列值之一。  
+`[ @action = ] 'action'` 是要执行的操作。 **操作**是**varchar （20)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -61,7 +60,7 @@ sp_fulltext_database [@action=] 'action'
 ## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，无法禁用全文索引。 禁用全文索引不会删除中的行**sysfulltextcatalogs**并不表示已启用的全文的表不再标记为全文索引。 所有的全文元数据定义仍然在系统表中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_fulltext_database**。  
   
 ## <a name="see-also"></a>请参阅  

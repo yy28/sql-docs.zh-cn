@@ -13,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1bcaade651e2e63bb2cabf6f0a8fc016781ba45b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748970"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534559"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>将收集项添加到收集组中 (Transact-SQL)
   可以使用随数据收集器一起提供的存储过程将收集项添加到现有收集组中。  
@@ -29,7 +29,7 @@ ms.locfileid: "52748970"
   
 1.  通过运行 **sp_syscollector_stop_collection_set** 存储过程停止要向其中添加收集项的收集组。 例如，若要停止名为“Test Collection Set”的收集组，请运行下列语句：  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -44,7 +44,7 @@ ms.locfileid: "52748970"
   
 2.  声明要向其中添加收集项的收集组。 下面的代码提供了一个演示如何声明收集组 ID 的示例。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -52,7 +52,7 @@ ms.locfileid: "52748970"
   
 3.  声明收集器类型。 下面的代码提供了一个演示如何声明一般 T-SQL 查询收集器类型的示例。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -60,7 +60,7 @@ ms.locfileid: "52748970"
   
      可以运行下面的代码以获取已安装收集器类型的列表：  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -68,7 +68,7 @@ ms.locfileid: "52748970"
   
 4.  运行 **sp_syscollector_create_collection_item** 存储过程来创建收集项。 必须声明收集项的架构，以便它映射到所需收集器类型要求的架构。 下面的示例使用一般 T-SQL 查询输入架构。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

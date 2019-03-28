@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533429"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname=** ] **'***name***'**  
- 要报告其信息的数据库的名称。 *名称*是**sysname**，无默认值。 如果*名称*未指定，则**sp_helpdb**中的所有数据库上的报表**sys.databases**目录视图。  
+`[ @dbname = ] 'name'` 是为其报告信息的名称。 *名称*是**sysname**，无默认值。 如果*名称*未指定，则**sp_helpdb**中的所有数据库上的报表**sys.databases**目录视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -52,11 +51,11 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|数据库名称。|  
 |**db_size**|**nvarchar(13)**|数据库总计大小。|  
-|**所有者**|**sysname**|数据库所有者，例如**sa**。|  
+|**owner**|**sysname**|数据库所有者，例如**sa**。|  
 |**dbid**|**smallint**|数据库 ID。|  
 |**创建**|**nvarchar(11)**|数据库创建的日期。|  
 |**status**|**nvarchar(600)**|以逗号分隔的值列表，这些值是当前在数据库上设置的数据库选项的值。<br /><br /> 只有启用布尔值选项时，才将这些选项列出。 非布尔选项及其对应值的形式列出*option_name*=*值*。<br /><br /> 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
-|**compatibility_level**|**tinyint**|数据库兼容级别：60、65、70、80 或 90。|  
+|**compatibility_level**|**tinyint**|数据库兼容性级别：60、 65、 70、 80 或 90。|  
   
  如果*名称*没有显示指定的数据库的文件分配的其他结果集的指定。  
   
@@ -67,14 +66,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**filename**|**nchar(260)**|操作系统文件名（物理文件名称）。|  
 |**filegroup**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
 |size|**nvarchar(18)**|文件大小 (MB)。|  
-|**最大大小**|**nvarchar(18)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**增长**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间的新空间所需的文件的空间量。|  
-|**使用情况**|**varchar(9)**|文件用法。 对于数据文件，值是**仅限数据**并为日志文件的值是**仅记录**。|  
+|**maxsize**|**nvarchar(18)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
+|**growth**|**nvarchar(18)**|文件的增量。 这表示添加到每个时间的新空间所需的文件的空间量。|  
+|**usage**|**varchar(9)**|文件用法。 对于数据文件，值是**仅限数据**并为日志文件的值是**仅记录**。|  
   
 ## <a name="remarks"></a>备注  
  **状态**结果集中列的选项已设置为 ON 的数据库中的报表。 不报告所有数据库选项**状态**列。 若要查看当前数据库选项设置的完整列表，请使用**sys.databases**目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  当指定单个数据库时中的成员身份**公共**数据库中的角色是必需的。 当不指定任何数据库时中的成员身份**公共**中的角色**master**数据库是必需的。  
   
  如果不能访问数据库， **sp_helpdb**会显示错误消息 15622 和尽可能有关数据库的信息。  

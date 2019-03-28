@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 417954df470313af7ea90e7c0cdf2ff5ba9f1f7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf0e4f54334d84aea5a33392655110374e893cc4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162697"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531082"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合类型和简单内容
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将混合类型限制为简单内容。  

@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a66591f5cc2eefcf60a9ea9b0a584a61c215df85
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537569"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 要从中删除计划的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 要从中删除计划的作业作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name=** ] **'**_job_name_  
- 要从中删除计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 要从中删除计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@schedule_id=** ] *schedule_id*  
- 要从作业中删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id` 要从作业中删除的计划的计划标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [  **@schedule_name=** ] **'**_schedule_name_  
- 要从作业中删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
+`[ @schedule_name = ] 'schedule_name'` 要从作业中删除的计划名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 指定是否删除未使用的作业计划。 *delete_unused_schedule*是**位**，默认值为**0**，这意味着将保留所有计划，即使没有作业引用。 如果设置为**1**，如果没有作业引用，则删除未使用的作业计划。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否删除未使用的作业计划。 *delete_unused_schedule*是**位**，默认值为**0**，这意味着将保留所有计划，即使没有作业引用。 如果设置为**1**，如果没有作业引用，则删除未使用的作业计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -99,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

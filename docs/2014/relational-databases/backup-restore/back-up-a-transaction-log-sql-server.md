@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12500b5e327be1de7f201af4c3040b1368c63c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154273"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535299"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>备份事务日志 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份事务日志。  
@@ -32,7 +32,7 @@ ms.locfileid: "48154273"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要备份事务日志，使用：**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "48154273"
   
  以下示例将在以前创建的已命名备份设备 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 上创建 `MyAdvWorks_FullRM_log1`数据库的事务日志备份。  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

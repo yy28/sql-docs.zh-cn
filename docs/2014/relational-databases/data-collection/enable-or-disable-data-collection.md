@@ -13,12 +13,12 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31b2bd29c2a9e0a8e8e29f08bee0016e7b3dc55d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61a5e8c1e3dad99318f14a49f1386757a4ebabe3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536759"
 ---
 # <a name="enable-or-disable-data-collection"></a>启用或禁用数据收集
   本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中启用或禁用数据收集。  
@@ -60,13 +60,13 @@ ms.locfileid: "52802879"
   
 #### <a name="to-enable-the-data-collector"></a>启用数据收集器  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) 启用数据收集器。  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_enable_collector ;  
@@ -74,13 +74,13 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 #### <a name="to-disable-the-data-collector"></a>禁用数据收集器  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) 禁用数据收集器。  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_disable_collector;  

@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124887"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530749"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建完整数据库备份。  
@@ -204,7 +204,7 @@ ms.locfileid: "54124887"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          仅在 SQL Server 2014 或更高版本中，指定要使用的加密算法以及要用于保护加密的证书或非对称密钥。  
   
-         描述**=** { **'*`text`*'** | **@**_text_变量_}  
+         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
          指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
          NAME **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
@@ -227,7 +227,7 @@ ms.locfileid: "54124887"
 #### <a name="a-backing-up-to-a-disk-device"></a>A. 备份到磁盘设备  
  下面的示例通过使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 创建新的介质集，将整个 `FORMAT` 数据库备份到磁盘。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -241,7 +241,7 @@ GO
 #### <a name="b-backing-up-to-a-tape-device"></a>B. 备份到磁带设备  
  下面的示例将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库备份到磁带上，并将该备份追加到以前的备份中。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -254,7 +254,7 @@ GO
 #### <a name="c-backing-up-to-a-logical-tape-device"></a>C. 备份到逻辑磁带设备  
  下例为某个磁带驱动器创建一个逻辑备份设备， 然后将完整的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到该设备上。  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

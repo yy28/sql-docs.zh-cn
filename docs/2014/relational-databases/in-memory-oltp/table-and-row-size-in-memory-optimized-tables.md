@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822531"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530339"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
   内存优化表由行和索引的集合组成，其中包含行的指针。 在一个内存优化表中，行不能长于 8,060 字节。 了解内存优化表的大小将帮助您了解计算机是否具有足够的内存。  
@@ -135,7 +135,7 @@ ms.locfileid: "52822531"
   
  考虑具有以下定义的 Orders 表：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -149,7 +149,7 @@ GO
   
  请注意，此表有一个哈希索引和一个非聚集索引（主键）。 它还有三个固定长度列和一个可变长度列，其中一列可以为 NULL (OrderDescription)。 我们假设 Orders 表有 8379 行，OrderDescription 列中的值的平均长度为 78 个字符。  
   
- 要确定表大小，首先需要确定索引大小。 两个索引的 bucket_count 都指定为 10000。 这舍入为最近的 2 次幂：16384。 因此，Orders 表的索引的总大小为：  
+ 要确定表大小，首先需要确定索引大小。 两个索引的 bucket_count 都指定为 10000。 这舍入为最近的 2 次幂：16384. 因此，Orders 表的索引的总大小为：  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   总填充为 24 – 22 = 2 字节。  
   
--   没有固定长度深表类型列 (固定长度深表类型列：为 0。)。  
+-   没有固定长度深表类型列 (固定长度深表类型列：0.).  
   
 -   深表类型列的实际大小为 2 * 78 = 156。 唯一的深表类型列 OrderDescription 的类型为 nvarchar。  
   
@@ -217,7 +217,7 @@ GO
   
  实际分配的内存和此表及其索引使用的内存可以通过以下查询获得：  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

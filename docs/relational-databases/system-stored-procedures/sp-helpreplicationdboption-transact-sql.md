@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812029"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536699"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname=**] **'***dbname***'**  
- 数据库的名称。 *dbname*是**sysname**，默认值为**%**。 如果**%**，则结果集包含发布服务器上的所有数据库，否则指定的数据库上的唯一信息返回。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
+`[ @dbname = ] 'dbname'` 是数据库的名称。 *dbname*是**sysname**，默认值为**%**。 如果**%**，则结果集包含发布服务器上的所有数据库，否则指定的数据库上的唯一信息返回。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
   
- [  **@type=**] **'***类型***’**  
- 结果集要包含仅在其上的数据库限制为指定的复制选项*类型*值已启用。 *类型*是**sysname**，可以是下列值之一。  
+`[ @type = ] 'type'` 结果集要包含仅在其上的数据库限制为指定的复制选项*类型*值已启用。 *类型*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**发布**|允许事务复制。|  
+|**publish**|允许事务复制。|  
 |**合并发布**|允许合并复制。|  
 |**复制允许**（默认值）|允许事务复制或合并复制。|  
   
- [ **@reserved=** ]*保留*  
- 指定是否返回有关现有发布和订阅的信息。 *保留*是**位**，默认值为 0。 如果**1**，则结果集包含有关指定的数据库具有任何现有发布或订阅的信息。  
+`[ @reserved = ] reserved` 指定是否返回有关现有发布和订阅信息。 *保留*是**位**，默认值为 0。 如果**1**，则结果集包含有关指定的数据库具有任何现有发布或订阅的信息。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -78,7 +75,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  成员**sysadmin**固定的服务器角色可以执行**sp_helpreplicationdboption**的任何数据库。 成员**db_owner**固定的数据库角色可以执行**sp_helpreplicationdboption**该数据库。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

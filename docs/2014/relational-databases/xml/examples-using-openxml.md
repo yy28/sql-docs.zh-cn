@@ -1,5 +1,5 @@
 ---
-title: 示例：使用 OPENXML | Microsoft Docs
+title: 示例：使用 OPENXML |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106887"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536899"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 oid   date                        amount  
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  具体而言，是将 xml 类型变量 (\@x) 传递给 sp_xml_preparedocument() 函数。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 id  lname   xmlname                   OverFlow  

@@ -16,12 +16,12 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3cce9577f609a0216b5d96e82eeacbdc295b26d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802199"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534409"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@request_id**=] *request_id*  
- 特定状态请求的 ID。 *request_id*是**int**，无默认值。  
+`[ @request_id = ] request_id` 是的特定状态请求的 ID。 *request_id*是**int**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|状态请求的 ID。|  
-|**对等**|**sysname**|生成响应的对等方的名称。|  
+|**peer**|**sysname**|生成响应的对等方的名称。|  
 |**peer_db**|**sysname**|对等方上生成响应的数据库名称。|  
 |**received_date**|**datetime**|请求程序收到对等方发送的响应的日期和时间。|  
   
@@ -62,7 +61,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppeerresponses**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

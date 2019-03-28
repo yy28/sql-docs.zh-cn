@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533979"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
+# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 更新指定的非绑定到架构的存储的过程、 用户定义函数、 视图、 DML 触发器、 数据库级 DDL 触发器或当前数据库中的服务器级 DDL 触发器的参数的 Always Encrypted 元数据。 
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>参数
 
-[  **@name =** ] **'***module_name***’**   
-是存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是`nvarchar`，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。
+`[ @name = ] 'module_name'` 是存储的过程、 用户定义函数、 视图、 DML 触发器、 数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是`nvarchar`，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。
 
-[  **@namespace =** ] **'** < 类 > **‘**   
-是指定模块的类。 当*module_name*是 DDL 触发器，`<class>`是必需的。 `<class>` 为 `nvarchar(20)`。 有效输入包括`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
+`[ @namespace = ] ' < class > '` 是指定的类。 当*module_name*是 DDL 触发器，`<class>`是必需的。 `<class>` 为 `nvarchar(20)`。 有效输入包括`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
 
 ## <a name="return-code-values"></a>返回代码值  
 

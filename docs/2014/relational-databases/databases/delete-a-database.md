@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789039"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538539"
 ---
 # <a name="delete-a-database"></a>删除数据库
   本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除用户定义的数据库。  
@@ -84,13 +84,13 @@ ms.locfileid: "52789039"
   
 #### <a name="to-delete-a-database"></a>删除数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例删除 `Sales` 和 `NewSales` 数据库。  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  

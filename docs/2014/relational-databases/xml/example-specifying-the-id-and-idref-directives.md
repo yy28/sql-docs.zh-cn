@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 ID 和 IDREF 指令 | Microsoft Docs
+title: 例如：指定 ID 和 IDREF 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7daf7eb63adf5b1c0978879225f161e2e00cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532019"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>示例：指定 ID 和 IDREF 指令
+# <a name="example-specifying-the-id-and-idref-directives"></a>例如：指定 ID 和 IDREF 指令
   此示例与 [指定 ELEMENTXSINIL 指令](example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesPersonID** 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
   
 ```  

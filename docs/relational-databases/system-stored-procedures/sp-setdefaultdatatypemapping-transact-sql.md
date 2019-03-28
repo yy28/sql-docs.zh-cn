@@ -16,12 +16,12 @@ ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c229fe6355e4fe463038dd7ef44d89217b0de77
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538199"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,9 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@mapping_id=** ] *mapping_id*  
- 标识现有数据类型映射。  *mapping_id*是**int**，默认值为 NULL。 如果指定*mapping_id*，则剩余的参数不需要。  
+`[ @mapping_id = ] mapping_id` 标识现有的数据类型映射。  *mapping_id*是**int**，默认值为 NULL。 如果指定*mapping_id*，则剩余的参数不需要。  
   
- [ **@source_dbms**=] **'***source_dbms***’**  
- 从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
+`[ @source_dbms = ] 'source_dbms'` 是从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -69,35 +67,25 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
- [  **@source_version=** ] **'***source_version***’**  
- 源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
+`[ @source_version = ] 'source_version'` 是源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@source_type**=] **'***source_type***’**  
- 源 DBMS 中的数据类型。 *source_type*是**sysname**。 如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
+`[ @source_type = ] 'source_type'` 源 DBMS 中的数据类型。 *source_type*是**sysname**。 如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
- [  **@source_length_min=** ] *source_length_min*  
- 源 DBMS 中的数据类型的最小长度。 *source_length_min*是**bigint**，默认值为 NULL。  
+`[ @source_length_min = ] source_length_min` 源 DBMS 中的数据类型的最小长度。 *source_length_min*是**bigint**，默认值为 NULL。  
   
- [  **@source_length_max=** ] *source_length_max*  
- 源 DBMS 中的数据类型的最大长度。 *source_length_max*是**bigint**，默认值为 NULL。  
+`[ @source_length_max = ] source_length_max` 源 DBMS 中的数据类型的最大长度。 *source_length_max*是**bigint**，默认值为 NULL。  
   
- [  **@source_precision_min=** ] *source_precision_min*  
- 源 DBMS 中的数据类型的最小精度。 *source_precision_min*是**bigint**，默认值为 NULL。  
+`[ @source_precision_min = ] source_precision_min` 源 DBMS 中的数据类型的最小精度。 *source_precision_min*是**bigint**，默认值为 NULL。  
   
- [  **@source_precision_max=** ] *source_precision_max*  
- 源 DBMS 中的数据类型的最大精度。 *source_precision_max*是**bigint**，默认值为 NULL。  
+`[ @source_precision_max = ] source_precision_max` 源 DBMS 中的数据类型的最大精度。 *source_precision_max*是**bigint**，默认值为 NULL。  
   
- [  **@source_scale_min=** ] *source_scale_min*  
- 源 DBMS 中的数据类型的最小小数位数。 *source_scale_min*是**int**，默认值为 NULL。  
+`[ @source_scale_min = ] source_scale_min` 源 DBMS 中的数据类型最小小数位数。 *source_scale_min*是**int**，默认值为 NULL。  
   
- [  **@source_scale_max=** ] *source_scale_max*  
- 源 DBMS 中的数据类型的最大小数位数。 *source_scale_max*是**int**，默认值为 NULL。  
+`[ @source_scale_max = ] source_scale_max` 源 DBMS 中的数据类型的最大规模。 *source_scale_max*是**int**，默认值为 NULL。  
   
- [  **@source_nullable=** ] *source_nullable*  
- 源 DBMS 中的数据类型是否支持 NULL 值。 *source_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
+`[ @source_nullable = ] source_nullable` 在源 DBMS 中的数据类型支持的值为 NULL。 *source_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
   
- [ **@destination_dbms** =] **'***destination_dbms***’**  
- 目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
+`[ @destination_dbms = ] 'destination_dbms'` 是目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -107,23 +95,17 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目标为 Sybase 数据库。|  
 |NULL（默认值）||  
   
- [ **@destination_version**=] **'***destination_version***’**  
- 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
+`[ @destination_version = ] 'destination_version'` 目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@destination_type**=] **'***destination_type***’**  
- 目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
+`[ @destination_type = ] 'destination_type'` 目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   
- [  **@destination_length=** ] *destination_length*  
- 目标 DBMS 中的数据类型的长度。 *destination_length*是**bigint**，默认值为 NULL。  
+`[ @destination_length = ] destination_length` 是目标 DBMS 中的数据类型的长度。 *destination_length*是**bigint**，默认值为 NULL。  
   
- [  **@destination_precision=** ] *destination_precision*  
- 目标 DBMS 中的数据类型的精度。 *destination_precision*是**bigint**，默认值为 NULL。  
+`[ @destination_precision = ] destination_precision` 目标 DBMS 中的数据类型的精度。 *destination_precision*是**bigint**，默认值为 NULL。  
   
- [  **@destination_scale=** ] *destination_scale*  
- 目标 DBMS 中的数据类型的小数位数。 *destination_scale*是**int**，默认值为 NULL。  
+`[ @destination_scale = ] destination_scale` 目标 DBMS 中的数据类型的小数位数。 *destination_scale*是**int**，默认值为 NULL。  
   
- [  **@destination_nullable=** ] *destination_nullable*  
- 目标 DBMS 中的数据类型是否支持 NULL 值。 *destination_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
+`[ @destination_nullable = ] destination_nullable` 在目标 DBMS 中的数据类型支持的值为 NULL。 *destination_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -138,7 +120,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="see-also"></a>请参阅  
  [指定 Oracle 发布服务器的数据类型映射](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

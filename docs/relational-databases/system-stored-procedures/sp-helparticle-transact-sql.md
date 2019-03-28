@@ -1,5 +1,5 @@
 ---
-title: sp_helparticle (TRANSACT-SQL) |Microsoft Docs
+title: sp_helparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212498"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536142"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,31 +42,26 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'发布**   
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章***’**  
- 是发布中的名称。 *文章*是**sysname**，默认值为**%**。 如果*一文*是未提供，则返回指定发布的所有项目的信息。  
+`[ @article = ] 'article'` 是发布中的名称。 *文章*是**sysname**，默认值为**%**。 如果*一文*是未提供，则返回指定发布的所有项目的信息。  
   
- [  **@returnfilter=**] *returnfilter*  
- 指定是否应返回筛选子句。 *returnfilter*是**位**，默认值为**1**，表示返回筛选器子句。  
+`[ @returnfilter = ] returnfilter` 指定是否应返回筛选子句。 *returnfilter*是**位**，默认值为**1**，表示返回筛选器子句。  
   
- [ **@publisher** =] **'***发布服务器*****  
- 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不应通过请求对项目的信息发布时指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@found=** ]*找到*输出  
- 仅限内部使用。  
+`[ @found = ] found OUTPUT` 仅限内部使用。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**文章 id**|**int**|项目的 ID。|  
+|**article id**|**int**|项目的 ID。|  
 |**项目名称**|**sysname**|项目的名称。|  
-|**基对象**|**nvarchar(257)**|项目或存储过程所表示的基础表的名称。|  
+|**base object**|**nvarchar(257)**|项目或存储过程所表示的基础表的名称。|  
 |**目标对象**|**sysname**|目标（订阅）表的名称。|  
 |**同步对象**|**nvarchar(257)**|用于定义已发布项目的视图的名称。|  
 |**类型**|**smallint**|项目的类型：<br /><br /> **1** = 基于日志的。<br /><br /> **3** = 基于日志的具有手动筛选器。<br /><br /> **5** = 具有手动视图并且基于日志。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **96** = 聚合函数 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。<br /><br /> **257** = 基于日志的索引的视图。<br /><br /> **259** = 具有手动筛选器基于日志的索引的视图。<br /><br /> **261** = 具有手动视图并且基于日志的索引的视图。<br /><br /> **263** = 具有手动筛选器基于日志的索引的视图和手动视图。<br /><br /> **320** = 索引视图 （仅限架构）。<br /><br />|  
@@ -109,7 +104,7 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

@@ -18,12 +18,12 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaeb391fabb112ed2a530148baf61e829e6b80a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857078"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538279"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,47 +47,38 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 要为其返回信息的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号为其返回信息。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [  **@operation=** ] **'***操作*****  
- 指定作业的有效操作。 *操作*是**varchar(64)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @operation = ] 'operation'` 针对指定的作业的有效操作。 *操作*是**varchar(64)**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**DEFECT**|服务器操作，请求从主目标服务器脱离**SQLServerAgent**服务。|  
 |**DELETE**|作业操作，删除整个作业。|  
 |**INSERT**|作业操作，插入整个作业或者刷新现有作业。 如果可用，此操作将包含所有作业步骤与作业计划。|  
-|**重新登记**|服务器操作，使目标服务器再次将其登记信息（包括轮询间隔和时区）发送到多服务器域。 目标服务器还将重新下载**MSXOperator**详细信息。|  
+|**RE-ENLIST**|服务器操作，使目标服务器再次将其登记信息（包括轮询间隔和时区）发送到多服务器域。 目标服务器还将重新下载**MSXOperator**详细信息。|  
 |**SET-POLL**|服务器操作，设置目标服务器轮询多服务器域的间隔（以秒为单位）。 如果指定，*值*被解释为所需的时间间隔值，并且可以为值**10**到**28,800**。|  
-|**启动**|作业操作，请求开始执行作业。|  
+|**START**|作业操作，请求开始执行作业。|  
 |**停止**|作业操作，请求停止执行作业。|  
-|**同步时间**|服务器作业，使目标服务器将其系统时钟与多服务器域时钟同步。 因为此操作的开销很大，所以只能有限制地偶尔执行。|  
+|**SYNC-TIME**|服务器作业，使目标服务器将其系统时钟与多服务器域时钟同步。 因为此操作的开销很大，所以只能有限制地偶尔执行。|  
 |**UPDATE**|作业操作，只更新**sysjobs**作业，而不是作业步骤或计划的信息。 将自动调用**sp_update_job**。|  
   
- [ **@object_type=** ] **'***object_type***'**  
- 指定作业的对象类型。 *object_type*是**varchar(64)**，默认值为 NULL。 *object_type*可以是 JOB 或 SERVER。 有关有效的详细信息*object_type*值，请参阅[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
+`[ @object_type = ] 'object_type'` 指定作业的对象的类型。 *object_type*是**varchar(64)**，默认值为 NULL。 *object_type*可以是 JOB 或 SERVER。 有关有效的详细信息*object_type*值，请参阅[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
- [ **@object_name=** ] **'***object_name***'**  
- 对象的名称。 *object_name*是**sysname**，默认值为 NULL。 如果*object_type*是作业*object_name*是作业名称。 如果*object_type*是服务器， *object_name*是服务器名称。  
+`[ @object_name = ] 'object_name'` 对象的名称。 *object_name*是**sysname**，默认值为 NULL。 如果*object_type*是作业*object_name*是作业名称。 如果*object_type*是服务器， *object_name*是服务器名称。  
   
- [ **@target_server=** ] **'***target_server***'**  
- 目标服务器的名称。 *target_server*是**nvarchar （128)**，默认值为 NULL。  
+`[ @target_server = ] 'target_server'` 目标服务器的名称。 *target_server*是**nvarchar （128)**，默认值为 NULL。  
   
- [ **@has_error=** ] *has_error*  
- 作业是否应确认错误。 *has_error*是**tinyint**，默认值为 NULL，指示应确认没有错误。 **1**指示应确认所有错误。  
+`[ @has_error = ] has_error` 为作业是否应确认错误。 *has_error*是**tinyint**，默认值为 NULL，指示应确认没有错误。 **1**指示应确认所有错误。  
   
- [  **@status=** ]*状态*  
- 作业的状态。 *状态*是**tinyint**，默认值为 NULL。  
+`[ @status = ] status` 作业的状态。 *状态*是**tinyint**，默认值为 NULL。  
   
- [ **@date_posted=** ] *date_posted*  
- 日期和时间，在指定的日期和时间或之后建立的所有项都应包括在结果集中。 *date_posted*是**datetime**，默认值为 NULL。  
+`[ @date_posted = ] date_posted` 日期和时间上所做的所有条目，或指定的日期和时间应包含在结果中之后设置。 *date_posted*是**datetime**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -102,12 +93,12 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|受指令影响的对象。|  
 |**object_id**|**uniqueidentifier**|受指令影响的对象标识号 (**job_id**一个作业对象，或对服务器对象 0x00) 或特定于的数据值**operation_code**。|  
 |**target_server**|**nvarchar(30)**|下载此指令的目标服务器。|  
-|**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意： 任何错误都将阻止目标服务器更多下载。|  
+|**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：任何错误消息都将阻止目标服务器的所有下载继续进行。|  
 |**date_posted**|**datetime**|指令发布到表的日期。|  
 |**date_downloaded**|**datetime**|目标服务器下载指令的日期。|  
 |**status**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 成功下载。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下授予 **sysadmin** 固定服务器角色的成员执行此过程的权限。  
   
 ## <a name="examples"></a>示例  

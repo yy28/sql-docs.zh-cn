@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetservergroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33fc8e5f4b454cd4780948291fa84af34154bac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23eb166d4e601f9e126c8b4254a08153664ace19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535149"
 ---
 # <a name="spdeletetargetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name=** ] **'***name***'**  
- 要删除的目标服务器组的名称。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 要删除的目标服务器组的名称。 *名称*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -49,7 +48,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -65,8 +64,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  
   
   

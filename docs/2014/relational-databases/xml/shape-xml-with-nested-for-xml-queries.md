@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530069"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用嵌套的 FOR XML 查询形成 XML
   下面的示例查询 `Production.Product` 表以检索特定产品的 `ListPrice` 值和 `StandardCost` 值。 为使查询具有趣味性，这两个价格都在 <`Price`> 元素中返回，每个 <`Price`> 元素都有 `PriceType` 属性。  

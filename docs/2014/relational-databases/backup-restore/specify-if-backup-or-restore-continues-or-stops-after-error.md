@@ -15,12 +15,12 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537379"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>指定备份或还原操作在遇到错误后是继续还是停止 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中遇到错误后备份或还原操作是继续还是停止。  
@@ -29,7 +29,7 @@ ms.locfileid: "48203677"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要指定备份或还原操作在遇到错误后是停止还是继续，请使用：**  
   
@@ -64,13 +64,13 @@ ms.locfileid: "48203677"
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>指定备份操作在遇到错误后是继续还是停止  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句中，指定 CONTINUE_AFTER ERROR 选项可继续操作，指定 STOP_ON_ERROR 选项可停止操作。 默认行为是遇到错误后停止。 下面的示例指示备份操作在遇到错误时仍继续。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -79,13 +79,13 @@ GO
   
 #### <a name="to-specify-whether-a-restore-operation-continues-or-stops-after-encountering-an-error"></a>指定还原操作在遇到错误后是继续还是停止  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中，指定 CONTINUE_AFTER ERROR 选项可继续操作，指定 STOP_ON_ERROR 选项可停止操作。 默认行为是遇到错误后停止。 下面的示例指示还原操作在遇到错误时仍继续。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

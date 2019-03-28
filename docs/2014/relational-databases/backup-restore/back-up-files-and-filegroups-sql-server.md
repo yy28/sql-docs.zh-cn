@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530759"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中备份文件和文件组。 当数据库大小和性能要求使完整数据库备份显得不切实际，则可以创建文件备份。 文件备份包含一个或多个文件（或文件组）中的所有数据。 有关文件备份的详细信息，请参阅 [完整文件备份 (SQL Server)](full-file-backups-sql-server.md) 和 [差异备份 (SQL Server)](differential-backups-sql-server.md)。  
@@ -178,7 +178,7 @@ ms.locfileid: "52537370"
 #### <a name="a-creating-a-file-backup-of-two-files"></a>A. 为两个文件创建文件备份  
  下面的示例仅为 `SGrp1Fi2` 文件组的 `SalesGroup1` 文件和 `SGrp2Fi2` 文件组的 `SalesGroup2` 文件创建差异文件备份。  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -190,7 +190,7 @@ GO
 #### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. 创建辅助文件组的完整文件备份  
  下面的示例将对两个辅助文件组中的各个文件创建完整文件备份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -202,7 +202,7 @@ GO
 #### <a name="c-creating-a-differential-file-backup-of-the-secondary-filegroups"></a>C. 创建辅助文件组的差异文件备份  
  下面的示例将对两个辅助文件组中的各个文件创建差异文件备份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

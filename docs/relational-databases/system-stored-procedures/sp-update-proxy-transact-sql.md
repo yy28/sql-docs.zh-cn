@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763515"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534459"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@proxy_id**= ] *id*  
- 要更改的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。  
+`[ @proxy_id = ] id` 要更改的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 要更改的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
+`[ @proxy_name = ] 'proxy_name'` 要更改的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。  
   
- [ **@credential_name** =] **'***credential_name*****  
- 代理的新凭据的名称。 *Credential_name*是**sysname**，默认值为 NULL。 任一*credential_name*或*credential_id*可能指定。  
+`[ @credential_name = ] 'credential_name'` 代理的新凭据的名称。 *Credential_name*是**sysname**，默认值为 NULL。 任一*credential_name*或*credential_id*可能指定。  
   
- [ **@credential_id** = ] *credential_id*  
- 代理的新凭据的标识号。 *Credential_id*是**int**，默认值为 NULL。 任一*credential_name*或*credential_id*可能指定。  
+`[ @credential_id = ] credential_id` 新凭据的代理标识号。 *Credential_id*是**int**，默认值为 NULL。 任一*credential_name*或*credential_id*可能指定。  
   
- [ **@new_name**=] **'***new_name*****  
- 代理的新名称。 *New_name*是**sysname**，默认值为 NULL。 如果提供，则过程将更改为代理的名称*new_name*。 当此参数为 NULL 时，代理名称保持不变。  
+`[ @new_name = ] 'new_name'` 代理的新名称。 *New_name*是**sysname**，默认值为 NULL。 如果提供，则过程将更改为代理的名称*new_name*。 当此参数为 NULL 时，代理名称保持不变。  
   
- [ **@enabled** = ] *is_enabled*  
- 是否启用代理。 *Is_enabled*标志**tinyint**，默认值为 NULL。 当*is_enabled*是**0**，代理未启用，并不能由作业步骤。 当此参数为 NULL 时，代理的状态保持不变。  
+`[ @enabled = ] is_enabled` 是代理是否已启用。 *Is_enabled*标志**tinyint**，默认值为 NULL。 当*is_enabled*是**0**，代理未启用，并不能由作业步骤。 当此参数为 NULL 时，代理的状态保持不变。  
   
- [ **@description**=] **'***说明*****  
- 代理的新说明。 *描述*是**nvarchar(512)**，默认值为 NULL。 当此参数为 NULL 时，代理的说明保持不变。  
+`[ @description = ] 'description'` 新的代理的说明。 *描述*是**nvarchar(512)**，默认值为 NULL。 当此参数为 NULL 时，代理的说明保持不变。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -79,7 +72,7 @@ sp_update_proxy
   
  此过程将更改代理，但不更改对代理的访问权限。 若要更改对代理服务器访问权限，请使用**sp_grant_login_to_proxy**并**sp_revoke_login_from_proxy**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的安全角色才能执行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -99,7 +92,7 @@ GO
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

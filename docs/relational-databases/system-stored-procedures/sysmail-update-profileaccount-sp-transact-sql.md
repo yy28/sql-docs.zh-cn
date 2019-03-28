@@ -18,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96dc0a33c15f1547088c3fe7c79824da55cd1d35
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538119"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_id** =] *profile_id*  
- 要更新的配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_id = ] profile_id` 要更新该配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要更新的配置文件的配置文件名。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
+`[ @profile_name = ] 'profile_name'` 要更新的配置文件配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*必须指定。  
   
- [ **@account_id** = ] *account_id*  
- 要更新的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
+`[ @account_id = ] account_id` 要更新的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 要更新的帐户名。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
+`[ @account_name = ] 'account_name'` 要更新的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*必须指定。  
   
- [ **@sequence_number** = ] *sequence_number*  
- 帐户的新序列号。 *sequence_number*是**int**，无默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
+`[ @sequence_number = ] sequence_number` 新的帐户的序列号。 *sequence_number*是**int**，无默认值。 序列号可以确定帐户在配置文件中的使用顺序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -73,7 +68,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  存储的过程**sysmail_update_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

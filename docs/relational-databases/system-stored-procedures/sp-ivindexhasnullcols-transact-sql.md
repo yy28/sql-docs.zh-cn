@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823322"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531569"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@viewname**=] **'***view_name*****  
- 要验证的视图的名称。 *view_name*是**sysname**，无默认值。  
+`[ @viewname = ] 'view_name'` 是要验证的名称。 *view_name*是**sysname**，无默认值。  
   
- [ **@fhasnullcols**=] *field_has_null_columns*输出  
- 指示视图索引是否具有允许 NULL 值的列的标志。 *view_name*是**sysname**，无默认值。 返回的值**1**视图索引是否允许 NULL 的列。 返回的值**0**如果视图不包含允许 null 值的列。  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 标志，指示视图索引是否具有允许 null 值的列。 *view_name*是**sysname**，无默认值。 返回的值**1**视图索引是否允许 NULL 的列。 返回的值**0**如果视图不包含允许 null 值的列。  
   
 > [!NOTE]  
 >  如果存储的过程本身返回的返回代码**1**，这意味着存储的过程执行出现故障，此值是**0** ，应当忽略。  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_change_job (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536099"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_type=** ] **'**_job_type_  
- 要修改的作业类型。 *job_type*是**nvarchar(20)** 默认值为 'capture'。 有效的输入为 'capture' 和 'cleanup'。  
+`[ @job_type = ] 'job_type'` 要修改的作业的类型。 *job_type*是**nvarchar(20)** 默认值为 'capture'。 有效的输入为 'capture' 和 'cleanup'。  
   
- [ **@maxtrans** ] **=** _max_trans_  
- 每个扫描循环中要处理的最大事务数。 *max_trans*是**int** ，默认值为 NULL，指示未更改此参数。 如果指定值，则该值必须是一个正整数。  
+`[ @maxtrans ] = max_trans_` 事务中每个扫描循环要处理的最大数目。 *max_trans*是**int** ，默认值为 NULL，指示未更改此参数。 如果指定值，则该值必须是一个正整数。  
   
  *max_trans*仅对捕获作业有效。  
   
- [ **@maxscans** ] **=** _max_scans_  
- 为了从日志中提取所有行而要执行的最大扫描循环次数。 *max_scans*是**int** ，默认值为 NULL，指示未更改此参数。  
+`[ @maxscans ] = max_scans_` 最大扫描循环要执行，以从日志提取所有行数。 *max_scans*是**int** ，默认值为 NULL，指示未更改此参数。  
   
  *max_scan*仅对捕获作业有效。  
   
- [ **@continuous** ] **=**_连续_  
- 指示捕获作业是要连续运行 (1) 还是仅运行一次 (0)。 *持续*是**位**，默认值为 NULL，指示未更改此参数。  
+`[ @continuous ] = continuous_` 指示捕获作业是连续运行 (1)，或仅运行一次 (0)。 *持续*是**位**，默认值为 NULL，指示未更改此参数。  
   
  当*连续*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作业将扫描日志并且最多可处理 (*max_trans* \* *max_scans*)事务。 然后，在等待中指定的秒数*polling_interval*开始下一次日志扫描之前。  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *连续*仅对捕获作业有效。  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- 日志扫描循环之间相隔的秒数。 *polling_interval*是**bigint** ，默认值为 NULL，指示未更改此参数。  
+`[ @pollinginterval ] = polling_interval_` 日志扫描循环之间相隔的秒数。 *polling_interval*是**bigint** ，默认值为 NULL，指示未更改此参数。  
   
  *polling_interval*仅对捕获的有效作业*连续*设置为 1。  
   
- [ **@retention** ] **=**_保留期_  
- 要更改表中保留更改行的分钟数。 *保留期*是**bigint** ，默认值为 NULL，指示未更改此参数。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
+`[ @retention ] = retention_` 要更改表中保留更改行的分钟数。 *保留期*是**bigint** ，默认值为 NULL，指示未更改此参数。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
   
  *保留期*仅对清除作业有效。  
   
- [  **@threshold=** ] **'**_删除阈值_  
- 可以使用一条语句上清理已删除的删除项的最大数目。 *删除阈值*是**bigint** ，默认值为 NULL，指示未更改此参数。 *删除阈值*仅对清除作业有效。  
+`[ @threshold = ] 'delete threshold'` 可以使用一条语句上清理已删除的删除项的最大数目。 *删除阈值*是**bigint** ，默认值为 NULL，指示未更改此参数。 *删除阈值*仅对清除作业有效。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -131,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769779"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535639"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher** = ] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db***’**  
- 发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication =** ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] **'***订阅服务器***’**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db***’**  
- 是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
- [  **@property =** ] **'***属性***’**  
- 要更改的发布属性。 *属性*是**sysname**，无默认值。  
+`[ @property = ] 'property'` 是要更改的发布属性。 *属性*是**sysname**，无默认值。  
   
- [  **@value =** ] **'***值***’**  
- 新属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
+`[ @value = ] 'value'` 新的属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
   
  下表说明了可以更改的合并代理作业属性及对这些属性值的限制。  
   
@@ -96,7 +89,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_merge_agent_properties**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addmergepushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

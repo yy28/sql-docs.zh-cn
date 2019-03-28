@@ -1,5 +1,5 @@
 ---
-title: sp_defaultdb (TRANSACT-SQL) |Microsoft Docs
+title: sp_defaultdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625045"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532979"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame=**] **'***登录*****  
- 登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
+`[ @loginame = ] 'login'` 是登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*可以是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户或组。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不存在 Windows 用户或用户组的登录名，则会自动添加该登录名。  
   
- [  **@defdb=**] **'***数据库*****  
- 新的默认数据库的名称。 *数据库*是**sysname**，无默认值。 *数据库*必须已经存在。  
+`[ @defdb = ] 'database'` 为新的默认数据库的名称。 *数据库*是**sysname**，无默认值。 *数据库*必须已经存在。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,7 +55,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
   
  **sp_defaultdb**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  

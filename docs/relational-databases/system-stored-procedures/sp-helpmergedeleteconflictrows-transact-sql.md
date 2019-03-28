@@ -16,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591171"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536479"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。  
   
- [  **@source_object=**] **'**_source_object_  
- 是源对象的名称。 *source_object*是**nvarchar(386)**，默认值为 NULL。  
+`[ @source_object = ] 'source_object'` 是源对象的名称。 *source_object*是**nvarchar(386)**，默认值为 NULL。  
   
- [  **@publisher=**] **'**_发布服务器上_  
- 是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_db=**] **'**_publisher_db_  
- 是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
+`[ @publisher_db = ] 'publisher_db'` 是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
   

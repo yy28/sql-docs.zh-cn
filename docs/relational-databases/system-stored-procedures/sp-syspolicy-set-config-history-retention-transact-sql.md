@@ -18,12 +18,12 @@ ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0a754e7a0e66e0ca59d1b973fafb32cd7ce00d4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f810cc775e79da6d01a2856afb04f80756be68a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533109"
 ---
 # <a name="spsyspolicysetconfighistoryretention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@value=** ]*值*  
- 要保留基于策略的管理历史纪录的天数。 *值*是**sqlvariant**。  
+`[ @value = ] value` 是要保留基于策略的管理历史记录的天数。 *值*是**sqlvariant**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,11 +57,11 @@ SELECT current_value FROM msdb.dbo.syspolicy_configuration
 WHERE name = 'HistoryRetentionInDays'  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响的实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例将策略评估历史记录保持期设置为 28 天。  
@@ -75,6 +74,6 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [sp_syspolicy_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

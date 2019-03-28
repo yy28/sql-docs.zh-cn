@@ -16,12 +16,12 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773949"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535219"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher=**] **'***publisher***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。 该发布必须已存在。  
+`[ @publisher = ] 'publisher'` 是发布的名称。 *发布*是**sysname**，无默认值。 该发布必须已存在。  
   
- [  **@publisher_db =**] **'***publisher_db***’**  
- 发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
  [**@failover_mode=**] **'***failover_mode***’**  
  订阅的故障转移模式。 *failover_mode*是**nvarchar(10)** 可以是下列值之一。  
@@ -57,13 +54,12 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**立即**或**同步**|订阅服务器上的数据修改将被大容量复制到发布服务器。|  
-|**排入队列**|数据修改存储在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列。|  
+|**queued**|数据修改存储在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]队列。|  
   
 > [!NOTE]  
 >  不再推荐使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列，也不再为其提供支持。  
   
- [ **@override**=]*重写*  
- 仅限内部使用。  
+`[ @override = ] override` 仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

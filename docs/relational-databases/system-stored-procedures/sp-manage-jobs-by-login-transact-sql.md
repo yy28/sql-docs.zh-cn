@@ -1,5 +1,5 @@
 ---
-title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft Docs
+title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742435"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530259"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@action=** ] **'***操作***’**  
- 要对指定登录名进行的操作。 *操作*是**varchar(10)**，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
+`[ @action = ] 'action'` 要为指定的登录名执行的操作。 *操作*是**varchar(10)**，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- 当前作业所有者的登录名。 *current_owner_login_name*是**sysname**，无默认值。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 当前作业所有者的登录名。 *current_owner_login_name*是**sysname**，无默认值。  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- 新作业所有者的登录名。 使用此参数仅当*操作*是**重新分配**。 *new_owner_login_name*是**sysname**，默认值为 NULL。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新作业所有者的登录名。 使用此参数仅当*操作*是**重新分配**。 *new_owner_login_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,7 +55,7 @@ sp_manage_jobs_by_login
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -76,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

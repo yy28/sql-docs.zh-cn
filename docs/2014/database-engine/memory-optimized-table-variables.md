@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530739"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
-  此外，内存优化表 （用于高效的数据访问） 和本机编译存储的过程 （用于高效的查询处理和业务逻辑执行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]引入了第三种对象： 内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
+  除了内存优化表（用于高效的数据访问）和本机编译的存储过程（用于高效的查询处理和业务逻辑执行）之外，[!INCLUDE[hek_2](../includes/hek-2-md.md)] 还引入了第三种对象：内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
   
  与基于磁盘的表变量相比，内存优化表变量提供以下好处：  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065787"
   
 -   表变量可以用于模拟本机编译的存储过程中的游标，从而可帮助您解决本机编译的存储过程中的外围应用限制。  
   
- 与内存优化表相似[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成对每个内存优化表类型的 DLL。 （在创建内存优化表类型时调用编译，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
+ 与内存优化表相似， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个内存优化表类型都生成一个 DLL。 （在创建内存优化表类型时调用编译，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
   
  下面的示例显示了基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型 ([SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   该类型必须有至少一个索引。 与内存优化表一样，可以使用哈希索引和非聚集索引。  
   
-     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅[哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
+     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
   
 -   针对内存优化表的数据类型和约束限制也适用于内存优化表类型。 例如，在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中支持默认约束，但不支持 CHECK 约束。  
   
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>表值参数  
  下面的示例脚本显示如何将表变量声明为内存优化表类型 `Sales.SalesOrderDetailType_inmem`、将三行插入到该变量中以及将变量以 TVP 的形式传递到 `Sales.usp_InsertSalesOrder_inmem` 中。  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>#temp 表替换  
  下面的示例显示内存优化表类型和表变量，用来代替对于存储过程而言处于本地的 #temp 表。  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>创建单个结果集  
  下面的示例显示如何基于本机编译的存储过程中的多个查询，存储临时结果和创建单个结果集。 该示例计算并集 `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`。  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

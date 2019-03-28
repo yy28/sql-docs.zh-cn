@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531869"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 要访问的发布名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要访问的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@return_granted=**] **'***return_granted*****  
- 登录名 ID。 *return_granted*是**位**，默认值为 1。 如果**0**指定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用身份验证，返回出现在发布服务器而不是在分发服务器上的可用登录。 如果**0**指定和使用 Windows 身份验证、 登录名没有被明确拒绝访问在发布服务器或分发服务器返回。  
+`[ @return_granted = ] 'return_granted'` 登录 id。 *return_granted*是**位**，默认值为 1。 如果**0**指定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用身份验证，返回出现在发布服务器而不是在分发服务器上的可用登录。 如果**0**指定和使用 Windows 身份验证、 登录名没有被明确拒绝访问在发布服务器或分发服务器返回。  
   
- [ **@login=**] **'***登录*****  
- 标准安全登录 ID。 *登录名*是**sysname**，默认值为**%**。  
+`[ @login = ] 'login'` 标准安全登录 id。 *登录名*是**sysname**，默认值为**%**。  
   
- [  **@initial_list =**] *initial_list*  
- 指定是返回具有发布访问权的所有成员，还是只返回那些在新成员添加到列表之前具有访问权的成员。 *initial_list*为 bit，默认值为**0**。  
+`[ @initial_list = ] initial_list` 指定是否返回具有发布访问权限或只是那些新成员已添加到列表之前具有访问权的所有成员。 *initial_list*为 bit，默认值为**0**。  
   
  **1**返回的所有成员的信息**sysadmin**与已存在时创建发布，分发服务器上的有效登录名，以及当前登录名的固定的服务器角色。  
   
@@ -63,7 +59,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**Loginname**|**nvarchar(256)**|实际登录名。|  
 |**isntname**|**int**|**0** = 登录名不是 Windows 用户。<br /><br /> **1** = 登录名是 Windows 用户。|  
-|**isntgroup**|**int**|**0** = 登录名不是 Windows 组。<br /><br /> **1** = 登录名是 Windows 组。|  
+|**Isntgroup**|**int**|**0** = 登录名不是 Windows 组。<br /><br /> **1** = 登录名是 Windows 组。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -77,8 +73,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_help_publication_access**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

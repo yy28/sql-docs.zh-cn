@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d5d2dbded8a1dff8a0445dbafd64b017640357f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843175"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533509"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rmtsrvname =** ] **'***rmtsrvname*****  
- 链接服务器的名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应用登录映射。 *rmtsrvname*是**sysname**，无默认值。 *rmtsrvname*必须已经存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'` 链接服务器的名称，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应用登录映射。 *rmtsrvname*是**sysname**，无默认值。 *rmtsrvname*必须已经存在。  
   
- [  **@locallogin =** ] **'***locallogin*****  
- 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映射到链接服务器的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，无默认值。 映射*locallogin*到*rmtsrvname*必须已经存在。 如果为 NULL，默认映射创建的**sp_addlinkedserver**，这将在本地服务器上的所有登录名映射到链接服务器上的登录名被删除。  
+`[ @locallogin = ] 'locallogin'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映射到链接服务器的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，无默认值。 映射*locallogin*到*rmtsrvname*必须已经存在。 如果为 NULL，默认映射创建的**sp_addlinkedserver**，这将在本地服务器上的所有登录名映射到链接服务器上的登录名被删除。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,7 +55,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
  **sp_droplinkedsrvlogin**不能从用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  
@@ -78,7 +76,7 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
   
 ## <a name="see-also"></a>请参阅  
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

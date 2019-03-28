@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53c4b27fe3907b4098f5b4ef1bcce83eec416ddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 459536c3e7e97b98605f3322a3c7eb78db11b98f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535589"
 ---
 # <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@cursor_return=**] *@cursor_variable* **输出**  
- 类型的输出变量**游标**。 游标是只读的可滚动动态游标。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 类型的输出变量**游标**。 游标是只读的可滚动动态游标。  
   
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- 全文目录名称。 *fulltext_catalog_name*是**sysname**。 如果省略该参数或该参数值为 NULL，则返回与当前数据库关联的所有全文目录的信息。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文目录的名称。 *fulltext_catalog_name*是**sysname**。 如果省略该参数或该参数值为 NULL，则返回与当前数据库关联的所有全文目录的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -59,12 +57,12 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
-|**名称**|**sysname**|全文目录的名称。|  
+|**NAME**|**sysname**|全文目录的名称。|  
 |PATH|nvarchar(260)|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +85,8 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

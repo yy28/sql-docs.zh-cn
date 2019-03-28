@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category_subscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca1196f986da94ed17b1efb6f4284362e68b84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595335"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530249"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@target_type=** ] **'***target_type***'**  
- 类别订阅的目标类型。 *target_type*是**sysname**，是必需的且必须设置为 'DATABASE'。  
+`[ @target_type = ] 'target_type'` 是类别订阅的目标类型。 *target_type*是**sysname**，是必需的且必须设置为 'DATABASE'。  
   
- [ **@target_object=** ] **'***target_object***'**  
- 将订阅类别的数据库的名称。 *target_object*是**sysname**，和是必需的。  
+`[ @target_object = ] 'target_object'` 将订阅类别的数据库的名称。 *target_object*是**sysname**，和是必需的。  
   
- [ **@policy_category=** ] **'***policy_category***'**  
- 是要订阅的策略类别的名称。 *policy_category*是**sysname**，和是必需的。  
+`[ @policy_category = ] 'policy_category'` 是要订阅的策略类别的名称。 *policy_category*是**sysname**，和是必需的。  
   
  若要获取的值*policy_category*，查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
   
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 类别订阅的标识符。 *policy_category_subscription_id*是**int**，并作为 OUTPUT 返回。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 是类别订阅的标识符。 *policy_category_subscription_id*是**int**，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -65,7 +61,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
  如果您指定的策略类别不存在，将创建新的策略类别，并且在您执行存储过程时对于所有数据库都将托管订阅。 如果你为新的类别清除托管的订阅，则该订阅将只适用于你指定为 *target_object* 的数据库。 有关如何更改托管的订阅设置的详细信息，请参阅 [sp_syspolicy_update_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  此存储过程在其当前所有者的上下文中运行。  
   
 ## <a name="examples"></a>示例  
@@ -81,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

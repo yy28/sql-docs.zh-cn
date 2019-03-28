@@ -19,12 +19,12 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac8f9e32aac94d7e565b9166102702ba4b747a88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189257"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535029"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原事务日志备份。  
@@ -35,7 +35,7 @@ ms.locfileid: "48189257"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要还原事务日志备份，请使用：**  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48189257"
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |标题|ReplTest1|  
+    |Header|ReplTest1|  
     |------------|-----------|  
     |**还原**|如果复选框处于选中状态，则指示要还原相应的备份集。|  
     |**名称**|备份集的名称。|  
-    |**组件**|已备份的组件：**数据库**、**文件**或 \<blank>（用于事务日志）。|  
+    |**组件**|备份组件：**数据库**，**文件**，或\<空白 > （对于事务日志）。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间（按客户端的区域设置显示）。|  
     |**完成日期**|备份操作完成的日期和时间（按客户端的区域设置显示）。|  
@@ -128,12 +128,12 @@ ms.locfileid: "48189257"
   
          下表列出了网格的列标题并对列值进行了说明。  
   
-        |标题|ReplTest1|  
+        |Header|ReplTest1|  
         |------------|-----------|  
         |\<blank>|显示一个用于选择标记的复选框。|  
         |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
         |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
-        |**Description**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
+        |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
         |**LSN**|所标记事务的日志序列号。|  
         |**“数据库”**|提交标记的事务时所在数据库的名称。|  
         |**用户名**|提交标记事务的数据库用户的名称。|  
@@ -237,14 +237,14 @@ ms.locfileid: "48189257"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  默认情况下， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库使用简单恢复模式。 以下示例要求修改数据库以使用完整恢复模式，如下所示：  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 应用单个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例应用名为 `AdventureWorks2012_log`备份设备上的第一个事务日志备份。 最后，该示例恢复数据库。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -262,7 +262,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 应用多个事务日志备份  
  以下示例开始时使用名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 备份设备上的完整数据库备份来还原 `AdventureWorks2012_1`数据库。 然后该示例逐一使用名为 `AdventureWorks2012_log`备份设备上的前三个事务日志备份。 最后，该示例恢复数据库。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

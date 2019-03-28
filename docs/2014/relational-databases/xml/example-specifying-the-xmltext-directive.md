@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 XMLTEXT 指令 | Microsoft Docs
+title: 例如：指定 XMLTEXT 指令 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075817"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537349"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
-  此示例演示了如何通过处理溢出列中的数据`XMLTEXT`指令`SELECT`使用 EXPLICIT 模式的语句。  
+# <a name="example-specifying-the-xmltext-directive"></a>例如：指定 XMLTEXT 指令
+  此示例说明如何在使用 EXPLICIT 模式的 `SELECT` 语句中使用 `XMLTEXT` 指令处理溢出列中的数据。  
   
  请考虑一下 `Person` 表。 此表含有存储 XML 文档的未使用部分的 `Overflow` 列。  
   
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   因为 <`xmltext`> 元素中的 `PersonID` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
   
- 结果如下：  
+ 下面是结果：  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   

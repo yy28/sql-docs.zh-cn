@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852335"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530239"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@configname=** ] **'***option_name***'**  
- 配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
+`[ @configname = ] 'option_name'` 是一种配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]能够识别构成配置名称的任何唯一字符串。 如果未指定该参数，则返回选项的完整列表。  
   
  有关可用配置选项和其设置的信息，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- [ @configvalue= ] 'value'****  
- 新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
+`[ @configvalue = ] 'value'` 为新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  若要查看每个选项的最大值，请参阅**最大**的列**sys.configurations**目录视图。  
   
@@ -77,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>结果集  
  执行不带任何参数时**sp_configure**返回的结果集具有五个列和排序选项按字母顺序升序排序下, 表中所示。  
   
- 值**config_value**并**run_value**不自动等价。 通过使用更新配置设置后**sp_configure**，系统管理员必须使用 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE 更新正在运行的配置值。 有关详细信息，请参见“备注”部分。  
+ 值**config_value**并**run_value**不自动等价。 通过使用更新配置设置后**sp_configure**，系统管理员必须使用 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE 更新正在运行的配置值。 有关详细信息，请参阅“备注”部分。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -112,7 +110,7 @@ RECONFIGURE
   
  有关配置选项和其设置的详细信息，请参阅[服务器配置选项&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行**sp_configure**带两个参数以更改配置选项或运行 RECONFIGURE 语句，您必须被授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ## <a name="examples"></a>示例  
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- 以下是显示的消息：“配置选项 'show advanced options' 已从 0 改为 1。 请运行 RECONFIGURE 语句进行安装。”  
+ 下面是该消息："配置选项 'show advanced 的 options' 已从 0 到 1。 请运行 RECONFIGURE 语句进行安装。”  
   
  运行 `RECONFIGURE` 并显示全部配置选项：  
   

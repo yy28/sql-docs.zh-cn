@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125365"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531889"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=**] **'**_发布_  
- 要从中删除项目的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要从中删除项目的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'**_文章_  
- 要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*一文*是**所有**，发布仍必须分开删除文章。  
+`[ @article = ] 'article'` 是要从给定发布中删除的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*一文*是**所有**，发布仍必须分开删除文章。  
   
- [ **@ignore_distributor=**] *ignore_distributor*  
- 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**位**，默认值为**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指示是否无需连接到分发服务器上执行此存储的过程。 *ignore_distributor*是**位**，默认值为**0**。  
   
- [  **@reserved=**]*保留*  
- 供将来使用的保留参数。 *保留*是**nvarchar(20)**，默认值为 NULL。  
+`[ @reserved = ] reserved` 已保留供将来使用。 *保留*是**nvarchar(20)**，默认值为 NULL。  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。  
   
  **1**表示对合并项目的更改可能导致快照无效，如果是这种情况的值**1**提供了新快照的权限。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 确认删除项目是否要求重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 确认删除项目，需要重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为**0**。  
   
  **0**指定删除项目不会导致重新初始化订阅。  
   
  **1**意味着的删除文章导致现有订阅重新初始化，并使订阅重新初始化发生的权限。  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 仅限内部使用。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 仅限内部使用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -165,7 +158,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [删除项目](../../relational-databases/replication/publish/delete-an-article.md)   
  [向现有发布添加项目和从中删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536021"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
   说明如何将文件加载或迁移到 FileTable 中。  
@@ -54,7 +54,7 @@ ms.locfileid: "52507801"
   
 3.  通过使用类似于以下内容的代码修复 `PhotoMetadata` 表中的元数据：  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779359"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534699"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article=**] **'***文章*****  
- 项目的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
   
- [  **@filtername=**] **'***filtername***’**  
- 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为**%**，表示返回有关项目或发布上定义的所有筛选器的信息。  
+`[ @filtername = ] 'filtername'` 是要返回其信息的筛选器的名称。 *filtername*是**sysname**，默认值为**%**，表示返回有关项目或发布上定义的所有筛选器的信息。  
   
 ## <a name="result-sets"></a>结果集  
   

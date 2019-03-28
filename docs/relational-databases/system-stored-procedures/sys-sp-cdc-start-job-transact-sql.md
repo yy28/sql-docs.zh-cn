@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_start_job (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf77af877a0598481cdbda2ac9938b6787aa1ba2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589141"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533459"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [[  **@job_type=** ] **'**_job_type_ ]  
- 要添加的作业类型。 *job_type*是**nvarchar(20)** 默认值为**捕获**。 有效输入包括**捕获**并**清理**。  
+`[ [ @job_type = ] 'job_type' ]` 要添加的作业的类型。 *job_type*是**nvarchar(20)** 默认值为**捕获**。 有效输入包括**捕获**并**清理**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -79,7 +78,7 @@ EXEC sys.sp_cdc_start_job @job_type = N'cleanup';
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 320b2e33ed1f36ab2e67625047897a5e8710b2c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533569"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>查看或更改数据库的兼容级别
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的兼容级别。 在更改数据库的兼容级别之前，应先了解此更改对应用程序的影响。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -65,13 +65,13 @@ ms.locfileid: "52783749"
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>查看数据库的兼容级别  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的兼容级别。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT compatibility_level  
@@ -82,13 +82,13 @@ GO
   
 #### <a name="to-change-the-compatibility-level-of-a-database"></a>更改数据库的兼容级别  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例中的兼容性级别更改[!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 120;  
 GO  

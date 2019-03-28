@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256972"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535779"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，并且如果它为的 NULL，它将自动创建并作为 OUTPUT 返回。  
+`[ @collector_type_uid = ] 'collector_type_uid'` 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**，并且如果它为的 NULL，它将自动创建并作为 OUTPUT 返回。  
   
- [ **@name =** ] **'***name***'**  
- 收集器类型的名称。 *名称*是**sysname** ，并且必须指定。  
+`[ @name = ] 'name'` 是收集器类型的名称。 *名称*是**sysname** ，并且必须指定。  
   
- [ **@parameter_schema =** ] **'***parameter_schema***'**  
- 此收集器类型的 XML 架构。 *parameter_schema*是**xml**和可能所必需的某些收集器类型。 如果它不是必需的，此参数可为 NULL。  
+`[ @parameter_schema = ] 'parameter_schema'` 是此收集器类型的 XML 架构。 *parameter_schema*是**xml**和可能所必需的某些收集器类型。 如果它不是必需的，此参数可为 NULL。  
   
- [ **@collection_package_id =** ] *collection_package_id*  
- 指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集包的本地唯一标识符。 *collection_package_id*是**uniqueidentifer**和是必需的。 若要获取的值*collection_package_id*，查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
+`[ @collection_package_id = ] collection_package_id` 指向的本地唯一标识符[!INCLUDE[ssIS](../../includes/ssis-md.md)]由收集组的收集包。 *collection_package_id*是**uniqueidentifer**和是必需的。 若要获取的值*collection_package_id*，查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
- [ **@upload_package_id =** ] *upload_package_id*  
- 指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier**和是必需的。 若要获取的值*upload_package_id*，查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
+`[ @upload_package_id = ] upload_package_id` 指向的本地唯一标识符[!INCLUDE[ssIS](../../includes/ssis-md.md)]上载收集组使用的包。 *upload_package_id*是**uniqueidentifier**和是必需的。 若要获取的值*upload_package_id*，查询 msdb 数据库中的 dbo.syscollector_collector_types 系统视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

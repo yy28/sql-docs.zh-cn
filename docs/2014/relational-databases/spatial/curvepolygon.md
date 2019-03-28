@@ -9,12 +9,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350566"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536709"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` 是由一个外部边界环以及零个或多个内环界定的在拓扑结构上闭合的图面。  
@@ -125,7 +125,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 实例化具有空 CurvePolygon 的几何图形实例  
  该示例说明如何创建一个空的 `CurvePolygon` 实例：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -133,21 +133,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 在同一语句中声明和实例化一个具有 CurvePolygon 的几何图形实例  
  此代码段说明如何在同一语句中声明和实例化一个具有 `CurvePolygon` 的几何图形实例：  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. 实例化一个具有 CurvePolygon 的几何图形实例  
  此代码段说明如何声明和实例化一个具有 `geography` 的 `CurvePolygon` 实例：  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. 存储仅具有一个外部边界环的 CurvePolygon  
  此示例说明如何在一个 `CurvePolygon` 实例中存储一个简单的圆形（仅有一个外部边界环用于界定该圆形）：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -156,7 +156,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 存储包含内环的 CurvePolygon  
  此示例在 `CurvePolygon` 实例中创建一个圆环图（使用一个外部边界环和一个内环来界定该圆环图）：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -164,7 +164,7 @@ SELECT @g.STArea() AS Area;
   
  此示例说明在使用内环时的一个有效的 `CurvePolygon` 实例和一个无效的实例：  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

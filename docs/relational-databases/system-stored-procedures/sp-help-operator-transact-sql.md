@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733825"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534379"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@operator_name=** ] **'***operator_name***'**  
- 运算符名称。 *operator_name*是**sysname**。 如果*operator_name*是未指定，则返回有关所有运算符的信息。  
+`[ @operator_name = ] 'operator_name'` 运算符名称。 *operator_name*是**sysname**。 如果*operator_name*是未指定，则返回有关所有运算符的信息。  
   
- [ **@operator_id=** ] *operator_id*  
- 为其请求信息的操作员的标识号。 *operator_id*是**int**，默认值为 NULL。  
+`[ @operator_id = ] operator_id` 为其请求信息的操作员的标识号。 *operator_id*是**int**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*operator_id*或*operator_name*必须指定，但不能同时指定两者。  
@@ -83,7 +81,7 @@ sp_help_operator
 ## <a name="remarks"></a>备注  
  **sp_help_operator**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -107,9 +105,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

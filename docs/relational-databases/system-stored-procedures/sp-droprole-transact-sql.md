@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_droprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a823427067ca1c6d06a6d26b6ab3553d17df9489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535766"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538395"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'**_角色_  
- 要从当前数据库中删除的数据库角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须已存在于当前数据库。  
+`[ @rolename = ] 'role'` 是要从当前数据库中删除的数据库角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须已存在于当前数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -76,7 +75,7 @@ GO
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE (Transact-SQL)](../../t-sql/statements/drop-role-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_dropapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
+ [sp_dropapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

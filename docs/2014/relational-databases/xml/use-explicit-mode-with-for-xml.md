@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533029"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
   如主题 [使用 FOR XML 构造 XML](../xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
@@ -147,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>本节内容  
  下列示例说明了 EXPLICIT 模式的用法。  
   
--   [示例：检索雇员信息](../xml/example-retrieving-employee-information.md)  
+-   [示例：检索员工信息](../xml/example-retrieving-employee-information.md)  
   
 -   [示例：指定 ELEMENT 指令](../xml/example-specifying-the-element-directive.md)  
   

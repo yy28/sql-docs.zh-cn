@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 ELEMENTXSINIL 指令 | Microsoft Docs
+title: 例如：指定 ELEMENTXSINIL 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 597efb8e1385bf869e4109bd6961b64e477f2fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534809"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>示例：指定 ELEMENTXSINIL 指令
+# <a name="example-specifying-the-elementxsinil-directive"></a>例如：指定 ELEMENTXSINIL 指令
   当指定 ELEMENT 指令检索以元素为中心的 XML 时，如果列具有 NULL 值，则 EXPLICIT 模式将不生成相应的元素。 另外，也可以指定 ELEMENTXSINIL 指令以请求为 `xsi:nil` 属性设置为 TRUE 值的 NULL 值生成元素。  
   
  以下查询构造包括雇员地址的 XML。 对于 `AddressLine2` 和 `City` 列，列名指定 `ELEMENTXSINIL` 指令。 这将为行集中的 `AddressLine2` 和 `City` 列中的 NULL 值生成元素。  

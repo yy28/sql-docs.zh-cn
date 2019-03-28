@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818349"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535179"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。  
@@ -34,7 +34,7 @@ ms.locfileid: "52818349"
  完全持久事务在将控制权归还给客户端之前将事务日志写入磁盘。 只要存在以下情况，就应使用完全持久事务：  
   
 -   系统无法承受任何数据丢失。   
-    有关可能在何种情况下会丢失一些数据的信息，请参阅 [在什么情况下会丢失数据？](control-transaction-durability.md#bkmk_dataloss) 部分。  
+    有关可能在何种情况下会丢失一些数据的信息，请参阅 [在什么情况下会丢失数据？](#when-can-i-lose-data) 部分。  
   
 -   造成瓶颈的原因不是事务日志写入延迟。  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52818349"
   
 ## <a name="how-to-control-transaction-durability"></a>如何控制事务持续性  
   
-###  <a name="bkmk_DbControl"></a> 数据库级别控制  
+### <a name="database-level-control"></a>数据库级别控制  
  您作为 DBA，可以控制用户是否可通过以下语句对数据库使用延迟事务持续性。 您必须使用 ALTER DATABASE 来设置延迟持续性设置。  
   
-```tsql  
+```sql  
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
@@ -98,27 +98,27 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [默认] 使用此设置时，不管提交级别设置如何 (DELAYED_DURABILITY=[ON | OFF])，对数据库提交的所有事务都是完全持久事务。 无需更改和重新编译存储过程。 这样能确保任何数据都不会因延迟持续性面临风险。  
   
  `ALLOWED`  
- 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 有关详细信息，请参阅 [原子块级别控制 - 本机编译存储过程](control-transaction-durability.md#compiledproccontrol)和[提交级别控制 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol)。  
+ 使用此设置时，每个事务的持续性都在事务级别确定 - DELAYED_DURABILITY = { OFF | ON }。 请参阅[原子块级别控制-本机编译存储过程](#atomic-block-level-control---natively-compiled-stored-procedures)并[提交级别控制-Transact SQL](#commit-level-control---t-sql)有关详细信息。  
   
  `FORCED`  
  使用此设置，对数据库提交的每个事务都是延迟持久事务。 无论事务指定完全持久 (DELAYED_DURABILITY = OFF) 还是不进行任何指定，事务都是延迟持久事务。 当数据库适合使用延迟事务持续性，并且您不希望更改任何应用程序代码时，此设置很有用。  
   
-###  <a name="CompiledProcControl"></a> 原子块级别控制 - 本机编译存储过程  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>原子块级别控制-本机编译存储过程  
  下面的代码面向原子块内部。  
   
-```tsql  
+```sql  
 DELAYED_DURABILITY = { OFF | ON }  
 ```  
   
  `OFF`  
- [默认] 事务是完全持久事务，除非数据库选项 DELAYED_DURABLITY = FORCED 有效（在这种情况下，提交是异步的，因而是延迟持久事务）。 有关详细信息，请参阅 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 。  
+ [默认] 事务是完全持久事务，除非数据库选项 DELAYED_DURABLITY = FORCED 有效（在这种情况下，提交是异步的，因而是延迟持久事务）。 有关详细信息，请参阅 [Database level control](#database-level-control) 。  
   
  `ON`  
- 事务是延迟持久事务，除非数据库选项 DELAYED_DURABLITY = DISABLED 有效（在这种情况下，提交是同步的，因而是完全持久事务）。  有关详细信息，请参阅 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 。  
+ 事务是延迟持久事务，除非数据库选项 DELAYED_DURABLITY = DISABLED 有效（在这种情况下，提交是同步的，因而是完全持久事务）。  有关详细信息，请参阅 [Database level control](#database-level-control) 。  
   
  **示例代码：**  
   
-```tsql  
+```sql  
 CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -138,19 +138,19 @@ END
 |`DELAYED_DURABILITY = OFF`|原子块启动新的完全持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
 |`DELAYED_DURABILITY = ON`|原子块启动新的延迟持久事务。|原子块在现有事务中创建一个保存点，然后开始新事务。|  
   
-###  <a name="bkmk_T-SQLControl"></a> 提交级别控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="commit-level-control---t-sql"></a>提交级别控制-(T-SQL)
  COMMIT 语法已扩展，您可以强制实施延迟事务持续性。 如果 DELAYED_DURABILITY 在数据库级别设置为 DISABLED 或 FORCED（请参阅上文），则忽略此 COMMIT 选项。  
   
-```tsql  
+```sql  
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
   
 ```  
   
  `OFF`  
- [默认] 事务 COMMIT 是完全持久事务，除非数据库选项 DELAYED_DURABLITY = FORCED 有效（在这种情况下，提交是异步的，因而是延迟持久事务）。 有关详细信息，请参阅 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 。  
+ [默认] 事务 COMMIT 是完全持久事务，除非数据库选项 DELAYED_DURABLITY = FORCED 有效（在这种情况下，提交是异步的，因而是延迟持久事务）。 有关详细信息，请参阅 [Database level control](#database-level-control) 。  
   
  `ON`  
- 事务 COMMIT 是延迟持久事务，除非数据库选项 DELAYED_DURABLITY = DISABLED 有效（在这种情况下，提交是同步的，因而是完全持久事务）。 有关详细信息，请参阅 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 。  
+ 事务 COMMIT 是延迟持久事务，除非数据库选项 DELAYED_DURABLITY = DISABLED 有效（在这种情况下，提交是同步的，因而是完全持久事务）。 有关详细信息，请参阅 [Database level control](#database-level-control) 。  
   
 ### <a name="summary-of-options-and-their-interactions"></a>各个选项及其交互的总结  
  此表总结了数据库级别延迟持续性设置与提交级别设置之间的交互。 数据库级别设置始终优先于提交级别设置。  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   执行系统存储过程 `sp_flush_log`。 此过程会强制将之前提交的所有延迟持久事务的日志记录刷新到磁盘。 有关详细信息，请参阅 [sys.sp_flush_log (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql)。  
   
-##  <a name="bkmk_OtherSQLFeatures"></a> 延迟持续性和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>延迟持续性和其他 SQL Server 功能  
  **更改跟踪和更改数据捕获**  
  具有更改跟踪属性的所有事务都是完全持久事务。 如果一个事务对支持更改跟踪的表执行了任何写入操作，则该事务具有更改跟踪属性。 使用变更数据捕获 (CDC) 的数据库不支持使用延迟的持续性。   
   
@@ -194,13 +194,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **日志备份**  
  备份中仅包含已成为持久事务的事务。  
   
-##  <a name="bkmk_DataLoss"></a> 在什么情况下会丢失数据？  
+## <a name="when-can-i-lose-data"></a>在什么情况下会丢失数据？  
  如果你对表实施延迟持续性，则应了解某些情况会导致数据丢失。 如果无法容忍任何数据丢失，则不要对表使用延迟持续性。  
   
 ### <a name="catastrophic-events"></a>灾难性事件  
  发生灾难性事件（如服务器崩溃）时，将丢失已提交但未保存到磁盘的所有事务的数据。 根据数据库中的任何表（持久内存优化或基于磁盘）执行完全持久的事务时，或调用 `sp_flush_log` 时，延迟的持久事务保存到磁盘。 如果你在使用延迟的持久事务，那么你可能想要在数据库中创建一个小型表，你可定期更新该表或调用 `sp_flush_log` ，以保存所有未完成的已提交事务。 事务日志还会在变满时刷新，但这难以预测，也无法进行控制。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关闭和重启  
+### <a name="sql-server-shutdown-and-restart"></a>SQL Server 关闭和重新启动  
  对于延迟的持久性， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的意外关闭和预期关闭/重新启动没有区别。 与灾难性事件类似，应制定针对数据丢失的计划。 在进行计划的关闭/重新启动时，一些尚未写入磁盘的事务可能会首先保存到磁盘，但不应对其进行计划。 虽然计划了关闭/重启，但无论是否计划，都会像灾难性事件一样丢失数据。  
   
 ## <a name="see-also"></a>请参阅  

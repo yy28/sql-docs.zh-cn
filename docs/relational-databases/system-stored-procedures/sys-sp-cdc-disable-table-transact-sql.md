@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0b1c2f30758987c902e5610ef3fa9f8b26809889
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169167"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533739"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@source_schema=** ] **'**_源\_架构_  
- 包含源表的架构的名称。 *source_schema*是**sysname**，无默认值，且不能为 NULL。  
+`[ @source_schema = ] 'source\_schema'` 是在其中包含源表的名称。 *source_schema*是**sysname**，无默认值，且不能为 NULL。  
   
  *source_schema*必须存在于当前数据库。  
   
- [  **@source_name=** ] **'**_源\_名称_  
- 要禁用其变更数据捕获的源表的名称。 *source_name*是**sysname**，无默认值，且不能为 NULL。  
+`[ @source_name = ] 'source\_name'` 是其变更数据捕获是源表的要禁用的名称。 *source_name*是**sysname**，无默认值，且不能为 NULL。  
   
  *source_name*必须存在于当前数据库。  
   
- [  **@capture_instance=** ] **'**_捕获\_实例_**'** | 所有  
- 要对指定的源表禁用的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 是要为指定的源表禁用的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
  当指定 all 时，所有捕获实例的定义*source_name*处于禁用状态。  
   
@@ -71,7 +68,7 @@ sys.sp_cdc_disable_table
 ## <a name="remarks"></a>备注  
  **sys.sp_cdc_disable_table**删除变更数据捕获更改表和系统函数与指定的源表和捕获实例相关联。 删除任何与来自变更数据捕获系统表和集的指定的捕获实例关联的行**is_tracked_by_cdc**列中的表项[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)目录视图为 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -87,6 +84,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

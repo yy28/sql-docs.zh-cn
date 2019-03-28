@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266098"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538579"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@traceid=** ] *trace_id*  
- 要修改的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。  
+`[ @traceid = ] trace_id` 是要修改的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。  
   
- [ **@eventid=** ] *event_id*  
- 要打开的事件的 ID。 *event_id*是**int**，无默认值。  
+`[ @eventid = ] event_id` 是要打开的事件的 ID。 *event_id*是**int**，无默认值。  
   
  下表列出了可以在跟踪中添加或删除的事件。  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|指示 SQL Server 无法为包含计划指南的查询或批处理生成执行计划。 SQL Server 已尝试在不应用计划指南的情况下为此查询或批生成执行计划。 导致此问题的原因可能是计划指南无效。 您可以通过使用 sys.fn_validate_plan_guide 系统函数验证该计划指南。|  
 |235|审核全文||  
   
- [ **@columnid=** ] *column_id*  
- 要为该事件添加的列的 ID。 *column_id*是**int**，无默认值。  
+`[ @columnid = ] column_id` 是要为该事件添加的 ID。 *column_id*是**int**，无默认值。  
   
  下表列出了可以为事件添加的列。  
   
@@ -311,7 +308,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 **sys.dm_exec_sql_text()** 以检索关联的 SQL 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
   
- **[ @on=]** *上*  
+ **[ @on=]** *on*  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *上*是**位**，无默认值。  
   
  如果*上*设置为**1**，并*column_id*为 NULL，则将事件设置为 ON 并清除所有列。 如果*column_id*不为 null，则该事件将该列设置为 ON。  
@@ -361,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件类参考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   

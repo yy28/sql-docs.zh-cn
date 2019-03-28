@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727695"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534019"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@objname=** ] **'***name***'**  
- 用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *名称*是**nvarchar(776)**，无默认值。  
+`[ @objname = ] 'name'` 是用户定义的表或视图的限定或非限定名称。 仅当指定限定的表或视图名称时，才需要使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *名称*是**nvarchar(776)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -62,7 +61,7 @@ sp_helpindex [ @objname = ] 'name'
   
  **sp_helpindex**只显示可排序的索引列; 因此，不显示关于 XML 索引或空间索引的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

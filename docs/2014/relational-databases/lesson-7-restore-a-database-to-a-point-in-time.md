@@ -11,12 +11,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532559"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 课. 将数据库还原到 Windows Azure 存储
   在本课中，您将学习如何在本地创建备份文件，然后将其还原到 Windows Azure 存储。 注意，数据库可在本地，也可在 Windows Azure 的虚拟机中。 不需要学完第 4、5、6 和 7 课即可听懂本课。  
@@ -39,7 +39,7 @@ ms.locfileid: "48056657"
   
 2.  连接到新创建的数据库时，打开查询窗口。 运行以下语句：  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +53,7 @@ ms.locfileid: "48056657"
   
 3.  接下来，将以下语句复制到查询窗口中并运行这些语句。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

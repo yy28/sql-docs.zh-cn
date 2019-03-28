@@ -27,12 +27,12 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b31249dda65f427ce53d3418e7a62f4bb0abf6d1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533385"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -78,7 +77,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
  [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

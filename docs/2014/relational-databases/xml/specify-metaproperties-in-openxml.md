@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107613"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535379"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
   XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    

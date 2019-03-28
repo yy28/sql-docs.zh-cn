@@ -1,5 +1,5 @@
 ---
-title: 演示：内存中 OLTP 的性能改进 | Microsoft Docs
+title: 演示：内存中 OLTP 的性能改进 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127987"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537280"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
   此示例通过比较针对内存优化表和传统的基于磁盘的表运行完全相同的 TRANSACT-SQL 查询时响应时间上的差异，演示了使用内存中 OLTP 时的性能改进。 另外，还将创建本机编译存储过程（基于相同的查询），然后运行以演示你通常可在使用本机编译存储过程查询内存优化表时，获取最佳响应时间。 此示例只显示访问内存优化表数据时一个方面的性能改进；执行插入操作时的数据访问效率。 此示例是单线程的，未能利用内存中 OLTP 的并发利益。 使用并发的工作负荷将带来更高的性能提升。  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "48127987"
   
  若要设置适用于我们的示例的 **imoltp** 数据库，请先创建一个空文件夹： **c:\imoltp_data**，然后运行以下代码：  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -55,7 +55,7 @@ GO
   
  接下来，运行以下代码创建基于磁盘的表、两 (2) 张内存优化表，以及将用于演示不同数据访问方法的本机编译存储过程：  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -120,7 +120,7 @@ GO
   
  若要完成示例，请多次运行下面的代码。 忽略第一次运行所返回的结果，第一次运行受到初始内存分配的负面影响。  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

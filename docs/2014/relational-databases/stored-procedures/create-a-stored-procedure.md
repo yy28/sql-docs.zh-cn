@@ -14,20 +14,20 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fd45b97011060aab0dd79519648542ec5255c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084117"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530049"
 ---
 # <a name="create-a-stored-procedure"></a>创建存储过程
   本主题介绍了如何通过使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 语句来创建 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。  
   
 ##  <a name="Top"></a>   
--   **开始之前：**  [权限](#Permissions)  
+-   **开始之前：**[权限](#Permissions)  
   
--   **要创建存储过程，请使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **要创建该过程，请使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissions  
  需要在数据库中有 CREATE PROCEDURE 权限，对在其中创建过程的架构有 ALTER 权限。  
@@ -69,7 +69,7 @@ ms.locfileid: "48084117"
   
 7.  在 **“查询编辑器”** 中，使用以下语句替换 SELECT 语句：  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -92,7 +92,7 @@ ms.locfileid: "48084117"
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **在查询编辑器中创建过程**  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  从 **“文件”** 菜单中，单击 **“新建查询”**。  
   

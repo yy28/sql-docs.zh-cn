@@ -18,12 +18,12 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677155"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537129"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_id** =] *profile_id*  
- 要删除的配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_id = ] profile_id` 若要删除配置文件的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要删除的配置文件的配置文件名。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
+`[ @profile_name = ] 'profile_name'` 要删除的配置文件配置文件名称。 *profile_name*是**sysname**，默认值为 NULL。 任一*profile_id*或*profile_name*可能指定。  
   
- [ **@account_id** = ] *account_id*  
- 要删除的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
+`[ @account_id = ] account_id` 要删除的帐户 ID。 *account_id*是**int**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 要删除的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
+`[ @account_name = ] 'account_name'` 若要删除的帐户的名称。 *account_name*是**sysname**，默认值为 NULL。 任一*account_id*或*account_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -68,7 +64,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  存储的过程**sysmail_delete_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

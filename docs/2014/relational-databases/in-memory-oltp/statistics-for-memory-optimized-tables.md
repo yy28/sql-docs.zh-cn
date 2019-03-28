@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530829"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
@@ -41,7 +41,7 @@ ms.locfileid: "48136067"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>部署内存优化的表时统计信息的指南  
  要确保查询优化器在创建查询计划时具有最新统计信息，请执行以下五个步骤部署内存优化表：  
   
-1.  创建表和索引。 索引是中的内联指定`CREATE TABLE`语句。  
+1.  创建表和索引。 在 `CREATE TABLE` 语句中内联指定索引。  
   
 2.  将数据加载到表。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136067"
   
 4.  创建访问表的存储过程。  
   
-5.  运行工作负荷，本机编译并解释可以包含多种[!INCLUDE[tsql](../../../includes/tsql-md.md)]存储过程，以及即席批处理。  
+5.  运行该工作负荷（它可以包含本机编译的和解释的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程）以及即席批处理。  
   
  在加载数据并更新统计信息后创建本机编译的存储过程可确保优化器为内存优化的表提供统计信息。 这将确保在编译过程时生成高效的查询计划。  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  要更新当前数据库中所有内存优化表的统计信息，请运行以下脚本：  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  下面的示例报告有关内存优化表的统计信息上次是在何时更新的。 此信息可帮助您决定是否需要更新统计信息。  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

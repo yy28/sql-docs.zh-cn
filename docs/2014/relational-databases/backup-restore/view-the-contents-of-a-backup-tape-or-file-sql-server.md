@@ -17,12 +17,12 @@ ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbfe09a2d8110a98885686e078146cfccc305c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051519"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537281"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>查看备份磁带或文件的内容 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看备份磁带或文件的内容。  
@@ -34,7 +34,7 @@ ms.locfileid: "48051519"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看备份磁带或文件的内容，可使用：**  
   
@@ -72,13 +72,13 @@ ms.locfileid: "48051519"
   
 #### <a name="to-view-the-content-of-a-backup-tape-or-file"></a>查看备份磁带或文件的内容  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  使用 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) 语句。 此示例将返回有关名为 `AdventureWorks2012-FullBackup.bak`的文件的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  

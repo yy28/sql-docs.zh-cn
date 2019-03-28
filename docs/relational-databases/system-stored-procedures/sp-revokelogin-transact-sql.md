@@ -18,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532999"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame=**] **'***登录***’**  
- Windows 用户或用户组的名称。 *登录名*是**sysname**，无默认值。 *登录名*可以是任何现有 Windows 用户名或组的形式*计算机名*\\*用户或域*\\*用户*。  
+`[ @loginame = ] 'login'` 是 Windows 用户或组的名称。 *登录名* 是 **sysname** ，无默认值。 *登录名*可以是任何现有 Windows 用户名或组的形式*计算机名*\\*用户或域*\\*用户*。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -64,7 +63,7 @@ sp_revokelogin [ADVWORKS\john]
   
  **sp_revokelogin**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  

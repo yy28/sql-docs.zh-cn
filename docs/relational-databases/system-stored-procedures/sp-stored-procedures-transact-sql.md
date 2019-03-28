@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588457"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535189"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@sp_name =** ] **'**_名称_  
- 用于返回目录信息的过程名。 *名称*是**nvarchar(390)**，默认值为 NULL。 支持通配符模式匹配。  
+`[ @sp_name = ] 'name'` 是用于返回目录信息的名称。 *名称*是**nvarchar(390)**，默认值为 NULL。 支持通配符模式匹配。  
   
- [  **@sp_owner =** ] **'**_架构_  
- 过程所属架构的名称。 *架构*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
+`[ @sp_owner = ] 'schema'` 是该过程所属的架构的名称。 *架构*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前架构包含具有指定名称的过程，则返回此过程。 如果指定了非限定存储过程，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]按以下顺序搜索此过程：  
   
@@ -57,11 +55,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
- [  **@qualifier =** ] **'**_限定符_  
- 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持窗体中的表的三部分命名方式 (_限定符_**。**_架构_**。**_名称_。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+`[ @qualifier = ] 'qualifier'` 过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持窗体中的表的三部分命名方式 (_限定符_**。**_架构_**。**_名称_。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_  
- 确定是否将下划线 (_)、百分号 (%) 或 方括号 ([ ]) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  
+`[ @fUsePattern = ] 'fUsePattern'` 确定是否下划线 (_)、 百分号 （%） 或方括号 []) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  
   
  **0** = 启用模式匹配为关闭状态。  
   
@@ -76,11 +72,11 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|过程限定符名称。 该列可以为 NULL。|  
 |**PROCEDURE_OWNER**|**sysname**|过程所有者名称。 该列始终返回值。|  
-|**过程名称**|**nvarchar(134)**|过程名。 该列始终返回值。|  
+|**PROCEDURE_NAME**|**nvarchar(134)**|过程名。 该列始终返回值。|  
 |**NUM_INPUT_PARAMS**|**int**|保留供将来使用。|  
 |**NUM_OUTPUT_PARAMS**|**int**|保留供将来使用。|  
 |**NUM_RESULT_SETS**|**int**|保留供将来使用。|  
-|**备注**|**varchar(254)**|对过程的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**REMARKS**|**varchar(254)**|对过程的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
 |**PROCEDURE_TYPE**|**smallint**|过程类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 2.0。 此值可以为下列值之一：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>备注  

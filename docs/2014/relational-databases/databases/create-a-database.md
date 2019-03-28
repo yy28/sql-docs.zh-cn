@@ -14,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530459"
 ---
 # <a name="create-a-database"></a>创建数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建数据库。  
@@ -104,13 +104,13 @@ ms.locfileid: "52799109"
   
 #### <a name="to-create-a-database"></a>创建数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将创建数据库 `Sales`。 因为没有使用关键字 PRIMARY，第一个文件 (`Sales`_`dat`) 将成为主文件。 因为在 `Sales`\_`dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 创建、修改或删除用户数据库后，应备份 `Sales`\_`log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 CREATE DATABASE Sales  

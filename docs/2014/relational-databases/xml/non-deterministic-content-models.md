@@ -10,22 +10,22 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df49312f86513e1860fbb3bc14cd33ca1edc845e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531269"
 ---
 # <a name="non-deterministic-content-models"></a>不确定性内容模型
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) 之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝包含不确定性内容模型的 XML 架构。  
   
  不过从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 开始，如果匹配项约束为 0、1 或不受限制，则会接受不确定性内容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>示例：拒绝的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>例如：已拒绝的不确定性内容模型  
  下面的示例尝试创建具有不确定的内容模型的 XML 架构。 此代码失败，因为不清楚 `<root>` 元素应有一个包含两个 `<a>` 元素的序列，还是 `<root>` 元素应有两个序列，其中每个序列有一个 `<a>` 元素。  
   
 ```  
@@ -59,7 +59,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>示例：接受的不确定性内容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>例如：已接受的不确定性内容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，会拒绝下面的架构。  
   
 ```  

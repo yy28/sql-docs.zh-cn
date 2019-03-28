@@ -12,12 +12,12 @@ ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cd07bd559c1f21eb6ea055a6c132437a63a4b71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65de151b2ea2bb59330bae0fa94c9e15d67e4a47
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533539"
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
   本主题说明如何创建支持 FILESTREAM 的数据库。 由于 FILESTREAM 使用一种特殊类型的文件组，因此，在创建数据库时，必须至少为一个文件组指定 CONTAINS FILESTREAM 子句。  
@@ -38,7 +38,7 @@ ms.locfileid: "48184647"
 ## <a name="example"></a>示例  
  下面的代码示例创建一个名为 `Archive`的数据库。 该数据库包含三个文件组： `PRIMARY`、 `Arch1`和 `FileStreamGroup1`。 `PRIMARY` 和 `Arch1` 是不能包含 FILESTREAM 数据的常规文件组。 `FileStreamGroup1` 是 `FILESTREAM` 文件组。  
   
-```tsql  
+```sql  
 CREATE DATABASE Archive   
 ON  
 PRIMARY ( NAME = Arch1,  

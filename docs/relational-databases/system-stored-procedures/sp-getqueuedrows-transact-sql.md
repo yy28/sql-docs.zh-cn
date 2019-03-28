@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535409"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tablename =**] **'***tablename***’**  
- 是表的名称。 *tablename*是**sysname**，无默认值。 该表必须是排队订阅的一部分。  
+`[ @tablename = ] 'tablename'` 是表的名称。 *tablename*是**sysname**，无默认值。 该表必须是排队订阅的一部分。  
   
- [  **@owner =**] **'***所有者*****  
- 是订阅所有者。 *所有者*是**sysname**，默认值为 NULL。  
+`[ @owner = ] 'owner'` 是订阅所有者。 *所有者*是**sysname**，默认值为 NULL。  
   
- [  **@tranid =** ] **'***transaction_id*****  
- 允许按事务 ID 筛选输出。 *transaction_id*是**nvarchar(70)**，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
+`[ @tranid = ] 'transaction_id'` 允许按事务 ID 筛选输出 *transaction_id*是**nvarchar(70)**，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -59,7 +56,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |-----------------|---------------|-----------------|  
 |**操作**|**nvarchar(10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
 |**tranid**|**nvarchar(70)**|执行命令的事务 ID。|  
-|**表 column1...n**||指定的表中每个列的值*tablename*。|  
+|**table column1...n**||指定的表中每个列的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  
   
 ## <a name="remarks"></a>备注  

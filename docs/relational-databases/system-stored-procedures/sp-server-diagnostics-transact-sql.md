@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213766"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535259"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 捕获有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的诊断数据和运行状况信息，以检测潜在故障。 该过程以重复模式运行，并定期发送结果。 可通过常规连接或 DAC 连接调用该过程。  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***’**  
- 指示存储过程重复运行以发送运行状况信息的时间间隔。  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 指示在该存储的过程将重复运行，以发送运行状况信息的时间间隔。  
   
  *repeat_interval_in_seconds*是**int**默认值为 0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
   
@@ -62,9 +61,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级别组件或 Always On 可用性组：<br /><br /> instance<br /><br /> Alwayson： 可用性组|  
-|**组件**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
+|**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
 |State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0:Unknown<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
+|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0：Unknown<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
 |**data**|**varchar (max)**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  

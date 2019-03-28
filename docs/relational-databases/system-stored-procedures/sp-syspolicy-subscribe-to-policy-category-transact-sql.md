@@ -18,12 +18,12 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4af05ca0f4b4f042bcd2a59cda213f35537592ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb53d5d24bb450773bd1b421d749f7c8195fccc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743376"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532489"
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@policy_category=** ] **'***policy_category***'**  
- 您希望数据库订阅的策略类别的名称。 *policy_category*是**sysname**，和是必需的。  
+`[ @policy_category = ] 'policy_category'` 是你想要订阅的数据库的策略类别的名称。 *policy_category*是**sysname**，和是必需的。  
   
  若要获取的值*policy_category*，查询 msdb.dbo.syspolicy_policy_categories 系统视图。  
   
@@ -51,7 +50,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="remarks"></a>备注  
  您必须在要添加策略类别订阅的数据库的上下文中运行 sp_syspolicy_subscribe_to_policy_category。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="examples"></a>示例  

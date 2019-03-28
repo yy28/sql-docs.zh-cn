@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783029"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532724"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@article_resolver =** ] **'***article_resolver***’**  
- 指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
+`[ @article_resolver = ] 'article_resolver'` 指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***’** 输出  
- 中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar （50)**，默认值为 NULL。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar （50)**，默认值为 NULL。  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***’** 输出  
- 指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**位**，默认值为 0。 **1**指示正在注册的自定义业务逻辑是业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**位**，默认值为 0。 **1**指示正在注册的自定义业务逻辑是业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***’** 输出  
- 实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)**，默认值为 NULL。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 是实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***’** 输出  
- 实现业务逻辑处理程序时优先级高于 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的名称。 *dotnet_class_name*是**nvarchar(255)**，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 是替代的类名称<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>实现业务逻辑处理程序。 *dotnet_class_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@publisher=** ] **'***发布服务器***’**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -79,7 +73,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [在合并同步期间执行业务逻辑](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [为合并项目实现业务逻辑处理程序](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [指定合并项目冲突解决程序](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

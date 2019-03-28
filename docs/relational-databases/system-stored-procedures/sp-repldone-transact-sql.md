@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538229"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@xactid=**] *xactid*  
- 是服务器的最后一个分布式事务的第一个记录的日志序列号 (LSN)。 *xactid*是**binary(10)**，无默认值。  
+`[ @xactid = ] xactid` 是服务器的最后一个分布式事务的第一个记录的日志序列号 (LSN)。 *xactid*是**binary(10)**，无默认值。  
   
- [  **@xact_seqno=**] *xact_seqno*  
- 是服务器的最后一个分布式事务的最后一个记录的 LSN。 *xact_seqno*是**binary(10)**，无默认值。  
+`[ @xact_seqno = ] xact_seqno` 是服务器的最后一个分布式事务的最后一个记录的 LSN。 *xact_seqno*是**binary(10)**，无默认值。  
   
- [  **@numtrans=**] *numtrans*  
- 是分布的事务数。 *对于 numtrans*是**int**，无默认值。  
+`[ @numtrans = ] numtrans` 是分布的事务数。 *对于 numtrans*是**int**，无默认值。  
   
- [  **@time=**]*时间*  
- 分发最后一批事务所需的毫秒数（如果提供）。 *时间*是**int**，无默认值。  
+`[ @time = ] time` 毫秒数，如果提供，将所需的事务在上一批处理。 *时间*是**int**，无默认值。  
   
- [  **@reset=**]*重置*  
- 重置状态。 *重置*是**int**，无默认值。 如果**1**、 所有已复制事务日志中的标记为已分发。 如果**0**、 事务日志将重置为第一个复制的事务和没有复制的事务标记为已分发。 *重置*仅当同时*xactid*并*xact_seqno*均为 NULL。  
+`[ @reset = ] reset` 重置状态。 *重置*是**int**，无默认值。 如果**1**、 所有已复制事务日志中的标记为已分发。 如果**0**、 事务日志将重置为第一个复制的事务和没有复制的事务标记为已分发。 *重置*仅当同时*xactid*并*xact_seqno*均为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -87,8 +82,8 @@ EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 
   
 ## <a name="see-also"></a>请参阅  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

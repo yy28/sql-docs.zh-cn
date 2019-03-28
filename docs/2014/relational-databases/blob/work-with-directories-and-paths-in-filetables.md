@@ -12,12 +12,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393290"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536499"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
   说明 FileTable 中用于存储文件的目录结构。  
@@ -34,7 +34,7 @@ ms.locfileid: "52393290"
 ##  <a name="BestPracticeRelativePaths"></a> 如何：使用相对路径编写可移植代码  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact SQL )](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下，`GetFileNamespacePath` 函数返回数据库根路径下的文件的相对路径。  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  

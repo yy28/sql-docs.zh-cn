@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854197"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534659"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@profile_id** =] *profile_id*  
- 要更新的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
+`[ @profile_id = ] profile_id` 要更新的配置文件 id。 *profile_id*是**int**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要更新的配置文件名称或配置文件的新的名称。 *profile_name*是**sysname**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
+`[ @profile_name = ] 'profile_name'` 要更新的配置文件的名称或配置文件的新名称。 *profile_name*是**sysname**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
- [ **@description** = ] **'***description***'**  
- 对配置文件的新的说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
+`[ @description = ] 'description'` 对配置文件的新说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -58,7 +55,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
  存储的过程**sysmail_update_profile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_account_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_add_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b41b0c0ae805923a10d0ee9c4fd066b1202fa94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830015"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537889"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,44 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@account_name** = ] **'***account_name***'**  
- 要添加的帐户的名称。 *account_name*是**sysname**，无默认值。  
+`[ @account_name = ] 'account_name'` 要添加的帐户的名称。 *account_name*是**sysname**，无默认值。  
   
- [ **@email_address** = ] **'***email_address***'**  
- 要从其发送消息的电子邮件地址。 该地址必须是 Internet 电子邮件地址。 *email_address*是**nvarchar （128)**，无默认值。 例如，为帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送电子邮件发件人地址**SqlAgent@Adventure-Works.com**。  
+`[ @email_address = ] 'email_address'` 要从其发送消息的电子邮件地址。 该地址必须是 Internet 电子邮件地址。 *email_address*是**nvarchar （128)**，无默认值。 例如，为帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送电子邮件发件人地址**SqlAgent@Adventure-Works.com**。  
   
- [ **@display_name** =] **'***display_name*****  
- 在从该帐户发出的电子邮件中使用的显示名称。 *display_name*是**nvarchar （128)**，默认值为 NULL。 例如，为帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会显示名称**SQL Server Agent Automated Mailer**发出的电子邮件。  
+`[ @display_name = ] 'display_name'` 要从该帐户的电子邮件上使用的显示名称。 *display_name*是**nvarchar （128)**，默认值为 NULL。 例如，为帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会显示名称**SQL Server Agent Automated Mailer**发出的电子邮件。  
   
- [ **@replyto_address** =] **'***replyto_address*****  
- 对于来自此帐户的邮件发送答复的地址。 *replyto_address*是**nvarchar （128)**，默认值为 NULL。 例如，给的帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送给数据库管理员**danw@Adventure-Works.com**。  
+`[ @replyto_address = ] 'replyto_address'` 此帐户从响应消息发送到的地址。 *replyto_address*是**nvarchar （128)**，默认值为 NULL。 例如，给的帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理可能会发送给数据库管理员**danw@Adventure-Works.com**。  
   
- [ **@description** = ] **'***description***'**  
- 帐户说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
+`[ @description = ] 'description'` 是帐户的说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
- 此帐户所用 SMTP 邮件服务器的名称或 IP 地址。 运行的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须能够解析*server_name*为 IP 地址。 *server_name*是**sysname**，无默认值。  
+`[ @mailserver_name = ] 'server_name'` 名称或要用于此帐户的 SMTP 邮件服务器的 IP 地址。 运行的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须能够解析*server_name*为 IP 地址。 *server_name*是**sysname**，无默认值。  
   
- [ **@mailserver_type** = ] '*server_type*'  
- 电子邮件服务器的类型。 *server_type*是**sysname**，默认值为 **'SMTP'**...  
+`[ @mailserver_type = ] 'server_type'` 电子邮件服务器的类型。 *server_type*是**sysname**，默认值为 **'SMTP'**...  
   
- [ **@port** = ] *port_number*  
- 电子邮件服务器端口号。 *port_number*是**int**，默认值为 25。  
+`[ @port = ] port_number` 电子邮件服务器端口号。 *port_number*是**int**，默认值为 25。  
   
- [ **@username** =] **'***用户名*****  
- 用于登录到电子邮件服务器的用户名。 *用户名*是**nvarchar （128)**，默认值为 NULL。 如果此参数为 NULL，则数据库电子邮件不对此帐户进行身份验证。 如果邮件服务器不要求身份验证，则使用 NULL 作为用户名。  
+`[ @username = ] 'username'` 要用于登录到电子邮件服务器上的用户名称。 *用户名*是**nvarchar （128)**，默认值为 NULL。 如果此参数为 NULL，则数据库电子邮件不对此帐户进行身份验证。 如果邮件服务器不要求身份验证，则使用 NULL 作为用户名。  
   
- [ **@password** =] **'***密码*****  
- 用于登录电子邮件服务器的密码。 *密码*是**nvarchar （128)**，默认值为 NULL。 除非指定了用户名，否则无需提供密码。  
+`[ @password = ] 'password'` 要用于登录到电子邮件服务器上的密码。 *密码*是**nvarchar （128)**，默认值为 NULL。 除非指定了用户名，否则无需提供密码。  
   
- [ **@use_default_credentials** =] use_default_credentials  
- 指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**为 bit，默认值为 0。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为 0 时，数据库邮件将发送**@username**并**@password**参数，如果存在，否则将发送邮件，而无需**@username**并**@password**参数。  
+`[ @use_default_credentials = ] use_default_credentials` 指定是否将邮件发送到 SMTP 服务器使用的凭据[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 **use_default_credentials**为 bit，默认值为 0。 当此参数为 1 时，数据库邮件使用[!INCLUDE[ssDE](../../includes/ssde-md.md)]的凭据。 当此参数为 0 时，数据库邮件将发送**@username**并**@password**参数，如果存在，否则将发送邮件，而无需**@username**并**@password**参数。  
   
- [ **@enable_ssl** =] enable_ssl  
- 指定数据库邮件是否使用安全套接字层对通信进行加密。 **Enable_ssl**为 bit，默认值为 0。  
+`[ @enable_ssl = ] enable_ssl` 指定数据库邮件是否对使用安全套接字层的通信进行加密。 **Enable_ssl**为 bit，默认值为 0。  
   
- [ **@account_id** =] *account_id*输出  
- 返回新帐户的帐户 ID。 *account_id*是**int**，默认值为 NULL。  
+`[ @account_id = ] account_id OUTPUT` 返回新的帐户的帐户 id。 *account_id*是**int**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -103,7 +90,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  存储的过程**sysmail_add_account_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

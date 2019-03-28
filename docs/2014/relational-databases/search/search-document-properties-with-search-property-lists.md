@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec774e4c8500df0fe9af42bf6cf48f5f691f72bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530289"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 `varbinary`、`varbinary(max)`（包括 `FILESTREAM`）或 `image` 二进制数据列中支持的文档类型，您可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  
@@ -169,7 +169,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
  针对属性范围的全文查询的基本 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 语法如下：  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

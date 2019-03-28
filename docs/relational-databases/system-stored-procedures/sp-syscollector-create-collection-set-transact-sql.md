@@ -19,12 +19,12 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536909"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name =** ] '*name*'  
- 是收集组的名称。 *名称*是**sysname**且不能为空字符串或 NULL。  
+`[ @name = ] 'name'` 是收集组的名称。 *名称*是**sysname**且不能为空字符串或 NULL。  
   
  *名称*必须是唯一的。 有关当前收集组名称的列表，请查询 syscollector_collection_sets 系统视图。  
   
- [  **@target =** ] '*目标*  
- 保留供将来使用。 *名称*是**nvarchar （128)** 默认值为 NULL。  
+`[ @target = ] 'target'` 保留供将来使用。 *名称*是**nvarchar （128)** 默认值为 NULL。  
   
- [ **@collection_mode =** ] *collection_mode*  
- 指定收集和存储数据的方式。 *collection_mode*是**smallint** ，可以具有以下值之一：  
+`[ @collection_mode = ] collection_mode` 指定在其中收集和存储数据的方式。 *collection_mode*是**smallint** ，可以具有以下值之一：  
   
  0 - 缓存模式。 数据收集和上载分别位于各自的计划中。 为连续收集指定缓存模式。  
   
@@ -73,25 +70,19 @@ sp_syscollector_create_collection_set
   
  默认值为*collection_mode*为 0。 当*collection_mode*为 0， *schedule_uid*或*schedule_name*必须指定。  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
- 是收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*是**smallint**与默认值为 730 （两年）。 *days_until_expiration*必须为 0 或正整数。  
+`[ @days_until_expiration = ] days_until_expiration` 是收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*是**smallint**与默认值为 730 （两年）。 *days_until_expiration*必须为 0 或正整数。  
   
- [ **@proxy_id =** ] *proxy_id*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的唯一标识符。 *proxy_id*是**int**默认值为 NULL。 如果指定， *proxy_name*必须为 NULL。 若要获取*proxy_id*，查询 sysproxies 系统表。 dc_admin 固定数据库角色必须拥有访问代理的权限。 有关详细信息，请参阅[创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+`[ @proxy_id = ] proxy_id` 是的唯一标识符[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户。 *proxy_id*是**int**默认值为 NULL。 如果指定， *proxy_name*必须为 NULL。 若要获取*proxy_id*，查询 sysproxies 系统表。 dc_admin 固定数据库角色必须拥有访问代理的权限。 有关详细信息，请参阅[创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
- [ **@proxy_name =** ] '*proxy_name*'  
- 代理帐户的名称。 *proxy_name*是**sysname**默认值为 NULL。 如果指定， *proxy_id*必须为 NULL。 若要获取*proxy_name*，查询 sysproxies 系统表。  
+`[ @proxy_name = ] 'proxy_name'` 是代理帐户的名称。 *proxy_name*是**sysname**默认值为 NULL。 如果指定， *proxy_id*必须为 NULL。 若要获取*proxy_name*，查询 sysproxies 系统表。  
   
- [ **@schedule_uid =** ] '*schedule_uid*'  
- 指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**默认值为 NULL。 如果指定， *schedule_name*必须为 NULL。 若要获取*schedule_uid*，查询 sysschedules 系统表。  
+`[ @schedule_uid = ] 'schedule_uid'` 是指向计划的 GUID。 *schedule_uid*是**uniqueidentifier**默认值为 NULL。 如果指定， *schedule_name*必须为 NULL。 若要获取*schedule_uid*，查询 sysschedules 系统表。  
   
  当*collection_mode*设置为 0， *schedule_uid*或*schedule_name*必须指定。 当*collection_mode*设置为 1， *schedule_uid*或*schedule_name*如果指定，则忽略。  
   
- [  **@schedule_name =** ] '*schedule_name*  
- 为计划的名称。 *schedule_name*是**sysname**默认值为 NULL。 如果指定， *schedule_uid*必须为 NULL。 若要获取*schedule_name*，查询 sysschedules 系统表。  
+`[ @schedule_name = ] 'schedule_name'` 为计划的名称。 *schedule_name*是**sysname**默认值为 NULL。 如果指定， *schedule_uid*必须为 NULL。 若要获取*schedule_name*，查询 sysschedules 系统表。  
   
- [ **@logging_level =** ] *logging_level*  
- 表示日志记录级别。 *logging_level*是**smallint**使用以下值之一：  
+`[ @logging_level = ] logging_level` 为日志记录级别。 *logging_level*是**smallint**使用以下值之一：  
   
  0 - 记录执行信息和跟踪以下内容的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
   
@@ -113,14 +104,11 @@ sp_syscollector_create_collection_set
   
  默认值为*logging_level*为 1。  
   
- [  **@description =** ] '*说明*  
- 收集组的说明。 *描述*是**nvarchar(4000)** 默认值为 NULL。  
+`[ @description = ] 'description'` 是收集组的描述。 *描述*是**nvarchar(4000)** 默认值为 NULL。  
   
- [ **@collection_set_id =** ] *collection_set_id*  
- 收集组的唯一本地标识符。 *collection_set_id*是**int**输出，并且需要。  
+`[ @collection_set_id = ] collection_set_id` 是收集组的唯一本地标识符。 *collection_set_id*是**int**输出，并且需要。  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
- 是收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**具有 OUTPUT 的默认值为 NULL。  
+`[ @collection_set_uid = ] 'collection_set_uid'` 是收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**具有 OUTPUT 的默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -128,7 +116,7 @@ sp_syscollector_create_collection_set
 ## <a name="remarks"></a>备注  
  sp_syscollector_create_collection_set 必须在 msdb 系统数据库的上下文中运行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

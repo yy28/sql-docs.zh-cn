@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534001"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@indexonly=** ] **indexonly**  
- 仅对位于现有索引中并且不是任何索引定义中的第一列的列创建统计信息。 **indexonly**是**char(9)**。 默认值为 NO。  
+`[ @indexonly = ] 'indexonly'` 仅在位于现有索引中并且不是任何索引定义中的第一列的列上创建统计信息。 **indexonly**是**char(9)**。 默认值为 NO。  
   
- [  **@fullscan=** ]**完全扫描**  
- 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**FULLSCAN**选项。 **fullscan**是**char(9)**。  默认值为 NO。  
+`[ @fullscan = ] 'fullscan'` 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**FULLSCAN**选项。 **fullscan**是**char(9)**。  默认值为 NO。  
   
- [  **@norecompute=** ] **norecompute**  
- 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**NORECOMPUTE**选项。 **norecompute**是**char(12)**。  默认值为 NO。  
+`[ @norecompute = ] 'norecompute'` 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**NORECOMPUTE**选项。 **norecompute**是**char(12)**。  默认值为 NO。  
   
- [  **@incremental=** ]**增量**  
- 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**增量 = ON**选项。 **增量**是**char(12)**。  默认值为 NO。  
+`[ @incremental = ] 'incremental'` 使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句**增量 = ON**选项。 **增量**是**char(12)**。  默认值为 NO。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -72,7 +68,7 @@ sp_createstats
   
  当表包含列集时，sp_createstats 不会在稀疏列上创建统计信息。 有关列集和稀疏列的详细信息，请参阅[使用列集](../../relational-databases/tables/use-column-sets.md)并[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。  
   
 ## <a name="examples"></a>示例  

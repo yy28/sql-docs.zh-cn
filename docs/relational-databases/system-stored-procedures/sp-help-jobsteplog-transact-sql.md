@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535689"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id =**] **'***job_id***'**  
- 要为其返回作业步骤日志信息的作业标识号。 *job_id*是**int**，默认值为 NULL。  
+`[ @job_id = ] 'job_id'` 作业标识号为其返回作业步骤日志信息。 *job_id*是**int**，默认值为 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
- [ **@step_id =**] *step_id*  
- 作业中步骤的标识号。 如果尚未包括，则包括作业中的所有步骤。 *step_id*是**int**，默认值为 NULL。  
+`[ @step_id = ] step_id` 在作业中步骤的标识号。 如果尚未包括，则包括作业中的所有步骤。 *step_id*是**int**，默认值为 NULL。  
   
- [ **@step_name =**] **'***step_name***'**  
- 作业中步骤的名称。 *step_name*是**sysname**，默认值为 NULL。  
+`[ @step_name = ] 'step_name'` 在作业中步骤的名称。 *step_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -73,12 +69,12 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**date_created**|**datetime**|创建步骤的日期。|  
 |**date_modified**|**datetime**|上次修改步骤的日期。|  
 |**log_size**|**float**|作业步骤日志的大小 (MB)。|  
-|**日志**|**nvarchar(max)**|作业步骤日志输出。|  
+|**log**|**nvarchar(max)**|作业步骤日志输出。|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_jobsteplog**处于**msdb**数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -119,11 +115,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

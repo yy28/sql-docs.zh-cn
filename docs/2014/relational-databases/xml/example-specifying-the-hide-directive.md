@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 HIDE 指令 |Microsoft Docs
+title: 例如：指定 HIDE 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357095"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531799"
 ---
 # <a name="example-specifying-the-hide-directive"></a>例如：指定 HIDE 指令
   此示例说明如何使用 **HIDE** 指令。 当希望查询返回一个属性以对该查询所返回的通用表中的行进行排序，但是不希望该属性出现在最终所得到的 XML 文档中时，该指令很有用。  

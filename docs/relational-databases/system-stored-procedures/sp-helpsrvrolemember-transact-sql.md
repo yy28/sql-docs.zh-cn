@@ -18,12 +18,12 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723765"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533489"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@srvrolename =** ] **'***角色***’**  
- 是固定的服务器角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*未指定，则结果集包含有关所有固定的服务器角色的信息。  
+`[ @srvrolename = ] 'role'` 是固定的服务器角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 如果*角色*未指定，则结果集包含有关所有固定的服务器角色的信息。  
   
  *角色*可以是以下值之一。  
   
@@ -76,7 +75,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  sp_helpsrvrolemember 才会作为自变量的用户定义服务器角色。 若要确定用户定义的服务器角色的成员，请参阅中的示例[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +86,8 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [安全函数 (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)  

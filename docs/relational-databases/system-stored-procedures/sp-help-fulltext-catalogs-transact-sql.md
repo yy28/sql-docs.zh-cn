@@ -18,12 +18,12 @@ ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89e46b81abfc50f8d793d55da850cf0ce9ee12c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06429303e70cd63e15b35d4d88181379c65bb09b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680998"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532989"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- 全文目录名称。 *fulltext_catalog_name*是**sysname**。 如果省略该参数或参数值为 NULL，则返回与当前数据库相关的所有全文目录的信息。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文目录的名称。 *fulltext_catalog_name*是**sysname**。 如果省略该参数或参数值为 NULL，则返回与当前数据库相关的所有全文目录的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,12 +54,12 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文目录的标识符。|  
-|**名称**|**sysname**|全文目录的名称。|  
+|**NAME**|**sysname**|全文目录的名称。|  
 |PATH|nvarchar(260)|从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，此子句没有任何作用。|  
 |**状态**|**int**|目录的全文索引填充状态：<br /><br /> 0 = 空闲<br /><br /> 1 = 正在进行完全填充<br /><br /> 2 = 已暂停<br /><br /> 3 = 已中止<br /><br /> 4 = Recovering<br /><br /> 5 = 关闭<br /><br /> 6 = 正在进行增量填充<br /><br /> 7 = 正在生成索引<br /><br /> 8 = 磁盘已满。 已暂停<br /><br /> 9 = 更改跟踪<br /><br /> NULL = 用户没有对全文目录的 VIEW 权限，或者未全文启用数据库，或者未安装全文组件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|与目录关联的全文索引表的数量。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予的成员**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -75,8 +74,8 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

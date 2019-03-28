@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591181"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534499"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name =** ] **'**_object_statement_  
- 当前数据库或语句中具有报告权限的对象的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_**。**_对象_。  
+`[ @name = ] 'object_statement'` 是当前数据库中或具有报告权限的语句中的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符_所有者_**。**_对象_。  
   
  如果*object_statement*是一条语句，它可以是 CREATE 语句。  
   
- [  **@username =** ] **'**_security_account_  
- 为其返回权限的主体的名称。 *security_account*是**sysname**，默认值为 NULL，表示将返回所有主体在当前数据库中。 *security_account*必须存在于当前数据库。  
+`[ @username = ] 'security_account'` 是为其返回权限的名称。 *security_account*是**sysname**，默认值为 NULL，表示将返回所有主体在当前数据库中。 *security_account*必须存在于当前数据库。  
   
- [  **@grantorname =** ] **'**_grantor_  
- 是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
+`[ @grantorname = ] 'grantor'` 是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
   
- [  **@permissionarea =** ] **'**_类型_  
- 是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)**，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
+`[ @permissionarea = ] 'type'` 是一个字符串，该值指示是否显示对象权限 (字符串**o**)，语句权限 (字符串**s**)，和 / 或 (**os**)。 *类型*是**varchar(10)**，默认值为**os**。 *类型*可以是任何组合**o**并**s**用或者不用逗号或空格之间**o**并**s**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

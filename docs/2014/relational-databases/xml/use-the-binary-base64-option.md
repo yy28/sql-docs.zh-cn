@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 591f2c00534f00529870b4eaa3742eef886d8e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533759"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 选项
   如果查询中指定了 BINARY BASE64 选项，则以 base64 编码格式返回二进制数据。 默认情况下，如果未指定 BINARY BASE64 选项，则 AUTO 模式支持二进制数据的 URL 编码。 也就是说，不返回二进制数据，而返回执行查询的数据库的虚拟根目录的相对 URL 的引用。 通过使用 SQLXML ISAPI dbobject 查询，可在后续操作中利用此引用访问实际二进制数据。 查询必须提供足够的信息（如主键列），才能标识图像。  
@@ -49,7 +49,7 @@ FROM MyTable
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <MyTable Col1="1" Col2="Bw==" />  

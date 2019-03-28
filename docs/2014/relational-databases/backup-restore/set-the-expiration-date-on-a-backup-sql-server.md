@@ -14,12 +14,12 @@ ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cccf999eba70242cc259b7063654c56e82b28fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075637"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533799"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>设置备份的过期日期 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中设置备份的过期日期。  
@@ -28,7 +28,7 @@ ms.locfileid: "48075637"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要设置备份的过期日期，请使用**  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48075637"
   
 #### <a name="to-set-the-expiration-date-on-a-backup"></a>设置备份的过期日期  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句中，指定 EXPIREDATE 或 RETAINDAYS 选项以便确定 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 何时可以覆盖备份。 如果这两个选项均未指定，则过期日期由 [介质保持期](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) 服务器配置设置确定。 下面的示例使用 `EXPIREDATE` 选项指定过期日期为 2015 年 6 月 30 日 (`6/30/2015`)。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  

@@ -16,12 +16,12 @@ ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f702d62c14825cc6bdfa261a8a94a33a285c343
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe50eb497c0bcaf4ba62bb4260567df5ee81c962
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783059"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531629"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@agent_type =** ] **'***agent_type*****  
- 要添加其参数的复制代理。 *agent_type*是**int**，可以是下列值之一：  
+`[ @agent_type = ] 'agent_type'` 是要添加其参数的复制代理。 *agent_type*是**int**，可以是下列值之一：  
   
 |ReplTest1|代理|  
 |-----------|-----------|  
@@ -58,10 +57,10 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_getagentparameter**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

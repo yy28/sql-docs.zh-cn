@@ -16,12 +16,12 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535609"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] **'***original_publisher***’**  
- 最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'` 实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，最初发布数据库。 *original_publisher*是**sysname**，无默认值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***’**  
- 与将成为新发布服务器的可用性组相关联的可用性组侦听器名称。 *redirected_publisher*是**sysname**，无默认值。 将可用性组侦听器配置到非默认端口时，请随侦听器名称一并指定端口号，如 `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` 将新的发布服务器的可用性组与关联的可用性组侦听器名称。 *redirected_publisher*是**sysname**，无默认值。 将可用性组侦听器配置到非默认端口时，请随侦听器名称一并指定端口号，如 `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -66,8 +63,8 @@ sp_redirect_publisher
   
 ## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

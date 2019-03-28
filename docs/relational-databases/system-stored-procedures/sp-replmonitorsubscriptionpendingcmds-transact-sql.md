@@ -16,12 +16,12 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175718b9d53556c5b24e65cb31e117fdf9a27418
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73494ded33f5fc67c86bc5976f16c2e3b0e8b083
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532619"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher** = ] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 已发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
+`[ @publisher_db = ] 'publisher_db'` 是已发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication** = ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@subscriber** = ] **'***subscriber***'**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
- [ **@subscription_type** =] *subscription_type*  
- 订阅的类型。 *publication_type*是**int**，无默认值可以是下列值之一。  
+`[ @subscription_type = ] subscription_type` 如果订阅的类型。 *publication_type*是**int**，无默认值可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

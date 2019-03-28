@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635682"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534319"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  返回所有全文组件的信息。  
   
- [ **@component_type=** ] *component_type*  
- 指定组件的类型。 *component_type*可以是以下之一：  
+`[ @component_type = ] component_type` 指定的组件的类型。 *component_type*可以是以下之一：  
   
 -   **wordbreaker**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  如果指定完整路径，则*param*还必须使用组件 DLL 的完整路径来指定或返回错误消息。  
   
- [ **@param=** ] *param*  
- 根据组件类型，此参数可以是：区域设置标识符 (LCID)、带“.”前缀的文件扩展名、协议处理程序的完整组件名称或组件 DLL 的完整路径。  
+`[ @param = ] param` 根据组件类型，这是以下值之一： 区域设置标识符 (LCID)、 文件扩展名与"。"前缀的协议处理程序或组件 DLL 的完整路径的完整组件名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -84,7 +82,7 @@ sp_help_fulltext_system_components
 |**dbid**|**int**|数据库 ID。|  
 |**ftcatid**|**int**|全文目录的 ID。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**公共**角色; 但是，用户只能看到他们具有 VIEW DEFINITION 权限的全文目录有关的信息。 只有的成员**serveradmin**固定的服务器角色可以看到中的值**fullpath**列。  
   
 ## <a name="remarks"></a>备注  
@@ -129,7 +127,7 @@ GO
  默认情况下，未安装此筛选器，所以结果集为空。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定 .dll 文件  
- 下面的示例列出了特定的 .ddl 文件 `nlhtml.dll`，默认情况下会安装该文件。  
+ `nlhtml.dll`下面的示例列出了特定的 .ddl 文件 ，默认情况下会安装该文件。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   

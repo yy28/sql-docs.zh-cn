@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530429"
 ---
 # <a name="native-compilation-advisor"></a>本机编译顾问
   事务性能报告工具 (请参阅[确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 会通知你哪些解释型存储的过程在数据库中受益如果移植到使用本机编译。 在您标识要移植到使用本机编译的存储过程后，可以使用本机编译顾问来帮助您将已解释的存储过程迁移到本地编译。 有关本机编译的存储过程的详细信息，请参阅 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "53358699"
 ## <a name="code-sample"></a>代码示例  
  下面的示例显示了一个已解释的存储过程以及针对本机编译的等效存储过程。 该示例假定名为 c:\data 的目录。  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

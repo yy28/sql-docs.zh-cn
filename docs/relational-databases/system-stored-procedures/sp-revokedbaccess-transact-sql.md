@@ -18,12 +18,12 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1db15a2f8c8e1d7616065ff88aa40b08f92127a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806767"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530269"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name_in_db =** ] **'***name***'**  
- 要删除的数据库用户名称。 *名称*是**sysname** ，无默认值。 *名称*可以是服务器登录名、 Windows 登录名或 Windows 组的名称，并且必须存在于当前数据库中。 当您指定 Windows 登录或 Windows 组时，请指定其在数据库中所使用的名称。  
+`[ @name_in_db = ] 'name'` 是要删除的数据库用户的名称。 *名称*是**sysname** ，无默认值。 *名称*可以是服务器登录名、 Windows 登录名或 Windows 组的名称，并且必须存在于当前数据库中。 当您指定 Windows 登录或 Windows 组时，请指定其在数据库中所使用的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -56,7 +55,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
  **sp_revokedbaccess**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对数据库具有 ALTER ANY USER 权限。  
   
 ## <a name="examples"></a>示例  

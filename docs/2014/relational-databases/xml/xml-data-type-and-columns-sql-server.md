@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369999"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530819"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
   本主题讨论的优势和限制`xml`中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并帮助您选择如何存储 XML 数据。  
@@ -113,7 +113,7 @@ ms.locfileid: "53369999"
   
  如果您的 XML 文档具有多种结构，或您的 XML 文档符合不同的或复杂的架构，而这些架构很难映射到关系结构，本机 XML 存储很有用。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例如：XML 数据使用 xml 数据类型建模  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>例如：使用 XML 数据类型对 XML 数据进行建模  
  例如有一个 XML 格式的产品手册，其中每个主题对应单独的一章，而每章中又包含多节。 一节可以包含多个小节。 因此，\<section> 是一个递归元素。 产品手册包含大量混合内容、关系图和技术材料；数据是半结构化的。 用户可能希望对感兴趣的主题执行上下文搜索，例如，在有关“索引”的章中搜索有关“聚集索引”的节，并查询技术数量。  
   
  适合 XML 文档的存储模型为 `xml` 数据类型列。 这可保留 XML 数据的 InfoSet 内容。 对 XML 列创建索引有利于提高查询性能。  
@@ -142,7 +142,7 @@ ms.locfileid: "53369999"
   
  这方面的例子有，作为用于数据交换和 Web 服务的 XML 公开的关系数据，以及具有固定架构的 XML 数据。 有关详细信息，请参阅 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例如：使用带批注的 XML 架构 (AXSD) 的数据建模  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>例如：使用带批注的 XML 架构 (AXSD) 对数据进行建模  
  为了进行说明，假定您具有希望将其作为 XML 处理的关系数据（如客户、订单和行项）。 请使用 AXSD 在关系数据上定义 XML 视图。 通过使用 XML 视图可以将 XML 数据大容量加载到表，以及使用 XML 视图查询和更新关系数据。 如果必须在 SQL 应用程序不间断工作时与其他应用程序交换包含 XML 标记的数据，该模型很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  

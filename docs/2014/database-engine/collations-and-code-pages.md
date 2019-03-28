@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118167"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536529"
 ---
 # <a name="collations-and-code-pages"></a>排序规则和代码页
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 对于内存优化表中的 (var)char 列的支持代码页，以及在索引和本机编译存储过程中使用的支持的排序规则方面存在限制。  
@@ -31,7 +31,7 @@ ms.locfileid: "48118167"
 > [!IMPORTANT]  
 >  无法对不使用 BIN2 排序规则的索引字符串列使用 order by 或 group by。  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   内存优化表中的 (var)char 列必须使用代码页 1252 排序规则。 此限制不适用于 n(var)char 列。 下列代码检索所有 1252 排序规则：  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   (n)(var)char 列的索引只能以 BIN2 排序规则指定（参阅第一个示例）。 下面的查询检索所有支持的 BIN2 排序规则：  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   本机编译的存储过程内部不支持 UTF-16 数据截断。 这意味着该 n (var) char (*n*) 的值无法转换为类型 n (var) char (*我*)，如果*我* < *n*，如果排序规则具有 _SC 属性。 例如，不支持以下操作：  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  下面的示例演示了内存中 OLTP 中排序规则限制的一些影响和解决方法。 该示例使用上面指定的 Employees 表。 此示例列出所有雇员。 注意，对于 LastName，出于二进制排序规则的原因，大写名称将排在小写名称之前。 因此，'Thomas' 排在 'nolan' 之前（因为大写字符的码位在前）。 FirstName 拥有不区分大小写的排序规则。 因此，字符以其在字母表中的位置而非该字符的码位进行排序。  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

@@ -15,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768819"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530209"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
@@ -112,13 +112,13 @@ ms.locfileid: "52768819"
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例基于系统提供的 `varchar` 数据类型创建一个数据类型别名。 `ssn` 数据类型别名用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

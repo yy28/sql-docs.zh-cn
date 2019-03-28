@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124147"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535169"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@msgnum =** ] *message_number*  
- 要删除的消息号。 *message_number*必须是一个消息号大于 50000 的用户定义的消息。 *message_number*是**int**，默认值为 NULL。  
+`[ @msgnum = ] message_number` 若要删除的消息号。 *message_number*必须是一个消息号大于 50000 的用户定义的消息。 *message_number*是**int**，默认值为 NULL。  
   
- [  **@lang =** ] **'**_语言_  
- 要删除的消息语言。 如果**所有**指定的所有语言版本*message_number*将被删除。 *语言*是**sysname**，默认值为 NULL。  
+`[ @lang = ] 'language'` 是要删除的语言。 如果**所有**指定的所有语言版本*message_number*将被删除。 *语言*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -136,7 +134,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -18,12 +18,12 @@ ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4ffde27fb1b0362debfc4809a79de05e4e966d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96fb6d88431e0740f17db8c00c0e3e490220561c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537090"
 ---
 # <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@account_id** = ] *account_id*  
- 要删除的帐户的 ID 号。 *account_id*是**int**，无默认值。 任一*account_id*或*account_name*必须指定。  
+`[ @account_id = ] account_id` 要删除的帐户 ID 号。 *account_id*是**int**，无默认值。 任一*account_id*或*account_name*必须指定。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 要删除的帐户的名称。 *account_name*是**sysname**，无默认值。 任一*account_id*或*account_name*必须指定。  
+`[ @account_name = ] 'account_name'` 若要删除的帐户的名称。 *account_name*是**sysname**，无默认值。 任一*account_id*或*account_name*必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -57,7 +55,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
   
  存储的过程**sysmail_delete_account_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -72,12 +70,12 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [sysmail_add_account_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
- [sysmail_delete_profile_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
- [sysmail_delete_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
- [sysmail_help_account_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
- [sysmail_help_profile_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
- [sysmail_help_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
- [sysmail_update_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
+ [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
+ [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
+ [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
+ [sysmail_help_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
+ [sysmail_help_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
+ [sysmail_help_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
+ [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
   
   

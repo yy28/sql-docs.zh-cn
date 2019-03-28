@@ -16,12 +16,12 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6b9190a22d89e98a683361ba9460d2fd68a9dde
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126877"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534399"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=** ] **'**_订阅服务器上_  
- 要删除的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是要删除的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@reserved=** ] **'**_保留_  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -66,7 +63,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="see-also"></a>请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   

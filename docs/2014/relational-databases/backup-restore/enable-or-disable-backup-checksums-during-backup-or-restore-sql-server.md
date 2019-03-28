@@ -14,12 +14,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b72f07b6cd2e223cb0556bd1fb32d03206122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536140"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在备份或还原期间启用或禁用备份校验和 (SQL Server)
   本主题说明当备份或还原数据库时如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中启用或禁用备份校验和。  
@@ -28,7 +28,7 @@ ms.locfileid: "48214807"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要启用或禁用备份校验和，请使用：**  
   
@@ -63,13 +63,13 @@ ms.locfileid: "48214807"
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-backup-operation"></a>为备份操作启用或禁用备份校验和  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  若要启用备份校验和，请在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句中指定 WITH CHECKSUM 选项。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行校验和。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -78,13 +78,13 @@ GO
   
 #### <a name="to-enable-or-disable-backup-checksum-for-a-restore-operation"></a>为还原操作启用或禁用备份校验和  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  若要启用备份校验和，请在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中指定 WITH CHECKSUM 选项。 这是压缩备份的默认行为。 若要禁用备份校验和，请指定 WITH NO_CHECKSUM 选项。 这是默认行为，但压缩备份除外。 下面的示例指定执行备份校验和。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

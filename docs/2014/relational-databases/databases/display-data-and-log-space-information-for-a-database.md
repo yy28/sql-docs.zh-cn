@@ -19,12 +19,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a0c32ad8dbbdd38ff0741e6b1f38c9cc084b27a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787119"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533229"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>显示数据库的数据和日志空间信息
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中显示数据库的数据和日志空间信息。  
@@ -62,13 +62,13 @@ ms.locfileid: "52787119"
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>使用 sp_spaceused 显示数据库的数据和日志空间信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 系统存储过程报告 `Vendor` 表及其索引的磁盘空间信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -77,13 +77,13 @@ GO
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>通过查询 sys.database_files 显示数据库的数据和日志空间信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 目录视图以便返回与 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的数据和日志文件有关的特定信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT file_id, name, type_desc, physical_name, size, max_size  

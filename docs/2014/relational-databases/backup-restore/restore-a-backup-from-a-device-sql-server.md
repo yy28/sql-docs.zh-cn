@@ -15,12 +15,12 @@ ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52ff2085413e3bdcf082012dd5e616b0816a99a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e272dde5ca7a3c0ff7246d42131f1e70331689
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200027"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530859"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>从设备还原备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中从设备还原备份。  
@@ -32,7 +32,7 @@ ms.locfileid: "48200027"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要从设备还原备份，请使用：**  
   
@@ -73,13 +73,13 @@ ms.locfileid: "48200027"
   
 #### <a name="to-restore-a-backup-from-a-device"></a>从设备还原备份  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句中，指定用于备份操作的逻辑备份设备或物理备份设备。 此示例从具有物理名称 `Z:\SQLServerBackups\AdventureWorks2012.bak`的磁盘文件还原。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
   

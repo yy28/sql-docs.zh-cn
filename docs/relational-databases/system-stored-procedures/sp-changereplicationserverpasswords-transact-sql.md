@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125707"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531809"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@login_type**  =] *login_type*  
- 提供的凭据的身份验证类型。 *login_type*是**tinyint**，无默认值。  
+`[ @login_type = ] login_type` 是针对提供的凭据的身份验证类型。 *login_type*是**tinyint**，无默认值。  
   
  **1** = Windows 集成身份验证  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证  
   
- [ **@login** =] **'**_登录_  
- 要更改的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 *登录名*是**nvarchar(257)**，无默认值  
+`[ @login = ] 'login'` 是 Windows 帐户的名称或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进行更改登录名。 *登录名*是**nvarchar(257)**，无默认值  
   
- [ **@password** =] **'**_密码_  
- 要存储的新密码为指定*登录名*。 *密码* 是 **sysname** ，无默认值。  
+`[ @password = ] 'password'` 要存储的新密码为指定*登录名*。 *密码* 是 **sysname** ，无默认值。  
   
 > [!NOTE]  
 >  更改复制密码后，必须停止并重新启动使用该密码的每个代理，这样代理的更改才能生效。  
   
- [ **@server** =] **'**_server_  
- 要为其更改存储密码的服务器连接。 *服务器*是**sysname**，可以是下列值之一：  
+`[ @server = ] 'server'` 是为其更改存储的密码的服务器连接。 *服务器*是**sysname**，可以是下列值之一：  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**分发服务器**|所有指向分发服务器的代理连接。|  
+|**distributor**|所有指向分发服务器的代理连接。|  
 |**publisher**|所有指向发布服务器的代理连接。|  
 |**订阅服务器**|所有指向订阅服务器的代理连接。|  
 |**%** （默认值）|指向复制拓扑中所有服务器的代理连接。|  

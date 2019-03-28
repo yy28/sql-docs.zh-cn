@@ -13,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b0575c3be5e0a5ce30267f32934ff073c5c3d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536121"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)
   可以使用与数据收集器一起提供的存储过程创建包含使用一般 T-SQL 查询收集器类型的收集项的自定义收集组。 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器来执行以下过程：  
@@ -78,7 +78,7 @@ ms.locfileid: "52748879"
   
 1.  由于新的收集项基于已经安装的一般收集器类型，因此可以运行以下代码来设置 GUID，使其与一般 T-SQL 查询收集器类型相对应。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -87,7 +87,7 @@ ms.locfileid: "52748879"
   
 2.  使用 sp_syscollector_create_collection_item 存储过程来创建收集项。 声明收集项的架构，这样它将映射到一般 T-SQL 查询收集器类型所需的架构。  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -108,7 +108,7 @@ ms.locfileid: "52748879"
   
 1.  在启动新的收集组之前，运行以下查询以验证新的收集组及其收集项是否已创建。  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -120,7 +120,7 @@ ms.locfileid: "52748879"
 ## <a name="example"></a>示例  
  下面的代码示例汇集了上面步骤中记录的示例。 请注意，为收集项设置的收集频率（5 秒钟）将被忽略，因为收集组的收集模式设置为 0，即缓存模式。 有关详细信息，请参阅 [Data Collection](data-collection.md)。  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

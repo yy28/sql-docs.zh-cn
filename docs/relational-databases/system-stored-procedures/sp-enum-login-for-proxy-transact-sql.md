@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799428"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535579"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name**=] '*名称*  
- 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**列出代理的数据库角色。 名称是**nvarchar(256)**，默认值为 NULL。  
+`[ @name = ] 'name'` 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主体、 登录名、 服务器角色或**msdb**列出代理的数据库角色。 名称是**nvarchar(256)**，默认值为 NULL。  
   
- [ **@proxy_id**= ] *id*  
- 要列出信息的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_id = ] id` 要列出信息的代理代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'` 要列出信息的代理服务器的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -72,7 +69,7 @@ sp_enum_login_for_proxy
   
  此存储的过程位于**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -101,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_help_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

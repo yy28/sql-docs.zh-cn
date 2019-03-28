@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817859"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534649"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器***’**  
- 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db***’**  
- 发布数据库的名称。 *publisher_db*是**sysname**，无默认值。 对于非 SQL Server 发布服务器， *publisher_db*是分发数据库的名称。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，无默认值。 对于非 SQL Server 发布服务器， *publisher_db*是分发数据库的名称。  
   
- [  **@publication=** ] **'***发布***’**  
- 发布的名称。 *发布*是**sysname**，无默认值。 当通过多个发布共享分发代理时，必须指定值为 ALL*发布*。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。 当通过多个发布共享分发代理时，必须指定值为 ALL*发布*。  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- 要应用于订阅服务器的分发服务器上的下一个事务的 LSN。 *xact_seqno*是**varbinary(16)**，无默认值。  
+`[ @xact_seqno = ] xact_seqno` 是要应用于订阅服务器上的分发服务器上的下一个事务的 LSN。 *xact_seqno*是**varbinary(16)**，无默认值。  
   
 ## <a name="result-set"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**原始 XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的原始 LSN。|  
-|**已更新的 XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的更新后的 LSN。|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的原始 LSN。|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的更新后的 LSN。|  
 |**订阅流计数**|**int**|上次同步期间使用的订阅流数。|  
   
 ## <a name="return-code-values"></a>返回代码值  

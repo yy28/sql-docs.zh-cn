@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e620d178ae22a9572497b32f19348b5d027e30f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703395"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535399"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@loginame =** ] **'***login***'**  
- 是 Windows 用户或组的名称。 必须使用窗体中的 Windows 域名限定 Windows 用户或组*域*\\*用户*; 例如， **London\Joeb**。 *登录名*是**sysname**，无默认值。  
+`[ @loginame = ] 'login'` 是 Windows 用户或组的名称。 必须使用窗体中的 Windows 域名限定 Windows 用户或组*域*\\*用户*; 例如， **London\Joeb**。 *登录名* 是 **sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -53,7 +52,7 @@ sp_grantlogin [@loginame=] 'login'
   
  **sp_grantlogin**不能在用户定义的事务内执行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  

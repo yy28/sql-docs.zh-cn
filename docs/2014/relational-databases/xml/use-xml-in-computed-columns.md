@@ -10,15 +10,15 @@ helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 734b19d9b0098759831eb71fa36fc6d737f6f6e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9bfa88e56e5f914afd4f027634d0f069406c009
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094937"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530599"
 ---
 # <a name="use-xml-in-computed-columns"></a>在计算列中使用 XML
   XML 实例可作为计算列的源或计算列的类型出现。 本主题中的示例演示如何将 XML 用于计算列。  

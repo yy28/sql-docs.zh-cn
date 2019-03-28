@@ -19,12 +19,12 @@ ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726765"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538639"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@cache_directory =** ] **'***cache_directory***'**  
- 文件系统中临时存储所收集数据的目录。 *cache_directory*是**nvarchar(255)**，默认值为 NULL。 如果未指定值，则使用默认临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。  
+`[ @cache_directory = ] 'cache_directory'` 在文件系统中收集的数据中临时存储目录。 *cache_directory*是**nvarchar(255)**，默认值为 NULL。 如果未指定值，则使用默认临时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -52,7 +51,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  在执行 sp_syscollector_set_cache_directory 时指定的目录不需要已经存在；但是，在创建该目录之前，无法成功地缓存和上载数据。 我们建议您在执行此存储过程之前先创建目录。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

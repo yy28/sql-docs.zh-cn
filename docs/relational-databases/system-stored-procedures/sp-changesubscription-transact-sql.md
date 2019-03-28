@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534039"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'**_发布_  
- 要更改的发布的名称。 *发布*是**sysname**，无默认值  
+`[ @publication = ] 'publication'` 是要更改的名称。 *发布*是**sysname**，无默认值  
   
- [ **@article** =] **'**_文章_  
- 要更改的项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是要更改的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@subscriber** =] **'**_订阅服务器上_  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [ **@destination_db** =] **'**_destination_db_  
- 是订阅数据库的名称。 *destination_db*是**sysname**，无默认值。  
+`[ @destination_db = ] 'destination_db'` 是订阅数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
- [  **@property=**] **'**_属性_  
- 要更改的给定订阅的属性。 *属性*是**nvarchar(30)**，可以是表中的值之一。  
+`[ @property = ] 'property'` 是要更改给定订阅的属性。 *属性*是**nvarchar(30)**，可以是表中的值之一。  
   
- [  **@value=**] **'**_值_  
- 为指定的新值*属性*。 *值*是**nvarchar(4000)**，可以是表中的值之一。  
+`[ @value = ] 'value'` 为指定的新值*属性*。 *值*是**nvarchar(4000)**，可以是表中的值之一。  
   
 |属性|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
@@ -80,13 +74,12 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|连接订阅服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**subscriber_provider**||唯一编程标识符 (PROGID)，用于注册非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口。 *此属性才是有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器。*|  
 |**subscriber_providerstring**||OLE DB 访问接口特定的连接字符串，用于标识数据源。 *此属性才是有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器。*|  
-|**订阅流**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 值范围**1**到**64**支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 此属性必须是**0**为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，Oracle 发布服务器或对等订阅。|  
+|**subscriptionstreams**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 值范围**1**到**64**支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 此属性必须是**0**为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，Oracle 发布服务器或对等订阅。|  
 |**subscriber_type**|**1**|ODBC 数据源服务器|  
 ||**3**|OLE DB 访问接口|  
 |**memory_optimized**|**bit**|指示订阅支持内存优化表。 *memory_optimized*是**位**，1 为 true （订阅支持内存优化表）。|  
   
- [  **@publisher =** ] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*不能为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -105,7 +98,7 @@ sp_changesubscription [ @publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707325"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536319"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@objname =** ] **'***name***'**  
- 架构范围内的用户定义对象的限定名称和非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *名称*是**nvarchar(776)**，无默认值。  
+`[ @objname = ] 'name'` 是用户定义的架构范围内对象的限定或非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *名称*是**nvarchar(776)**，无默认值。  
   
- [  **@columnname =** ] **'***computed_column_name***’**  
- 要显示其定义信息的计算列的名称。 包含的列的表必须指定为*名称*。 *column_name*是**sysname**，无默认值。  
+`[ @columnname = ] 'computed_column_name'` 是要显示其定义信息的计算列的名称。 包含的列的表必须指定为*名称*。 *column_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -54,12 +52,12 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**Text**|**nvarchar(255)**|对象定义|  
+|**文本**|**nvarchar(255)**|对象定义|  
   
 ## <a name="remarks"></a>备注  
  sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于**定义**中的列[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
 ## <a name="examples"></a>示例  

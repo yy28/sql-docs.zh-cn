@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738315"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537179"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**并且必须具有一个值，如果*名称*为 NULL。  
+`[ @collector_type_uid = ] 'collector_type_uid'` 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**并且必须具有一个值，如果*名称*为 NULL。  
   
- [ **@name =** ] **'***name***'**  
- 收集器类型的名称。 *名称*是**sysname**并且必须具有一个值，如果*collector_type_uid*为 NULL。  
+`[ @name = ] 'name'` 是收集器类型的名称。 *名称*是**sysname**并且必须具有一个值，如果*collector_type_uid*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -56,7 +54,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
  如果存在这种收集类型的收集项，此过程将引发错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**dc_admin** （拥有 EXECUTE 权限） 固定的数据库角色来执行此过程。  
   
 ## <a name="example"></a>示例  

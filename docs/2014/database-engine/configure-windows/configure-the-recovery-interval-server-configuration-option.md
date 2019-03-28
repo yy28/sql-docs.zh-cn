@@ -19,12 +19,12 @@ ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07e9e5c6b96e33dc416f7e81e363b988a0f615e3
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641238"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530909"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>配置恢复间隔服务器配置选项
   本主题说明了如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “恢复间隔” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **“恢复间隔”** 选项定义恢复某一数据库所需时间的上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用为该选项指定的值确定 [自动检查点](../../relational-databases/logs/database-checkpoints-sql-server.md) 对给定数据库发出自动检查点的大致频率。  
@@ -81,13 +81,13 @@ ms.locfileid: "52641238"
   
 #### <a name="to-set-the-recovery-interval"></a>设置恢复间隔  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `recovery interval` 选项的值设置为 `3` 分钟。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

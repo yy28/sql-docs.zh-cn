@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533009"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
   本主题说明如何对数据库和表启用和禁用变更数据捕获。  
@@ -37,7 +37,7 @@ ms.locfileid: "53202106"
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后选择 **“SQL Server 模板”**。 **Change Data Capture** 为一个子文件夹。 在此文件夹下，您会找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -57,7 +57,7 @@ GO
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找到模板，请转至 **“视图”**，单击 **“模板资源管理器”**，然后单击 **“SQL Server 模板”**。 **“变更数据捕获”** 为子文件夹，在该文件夹中您将找到本主题中提到的所有模板。 **工具栏上还有一个** “模板资源管理器” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 图标。  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -80,7 +80,7 @@ GO
   
  默认情况下，更改表位于数据库的默认文件组中。 希望控制各个更改表放置位置的数据库所有者可以使用 *@filegroup_name* 参数为与该捕获实例相关的更改表指定一个特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 请参阅`Enable a Table Specifying Filegroup Option`的示例演示如何使用模板*@filegroup_name*参数。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  如果不想使用访问控制角色，请将 *@role_name* 参数显式设置为 NULL。 有关如何在没有访问控制角色的情况下启用表的示例，请参阅`Enable a Table Without Using a Gating Role`模板。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  有关演示如何创建同时具有这两个查询函数的捕获实例的示例，请参阅`Enable a Table for All and Net Changes Queries`模板。  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  有关禁用表的示例，请参阅 Disable a Capture Instance for a Table 模板。  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

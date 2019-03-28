@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590591"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531699"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@queue_type** =] **'**_queue_type_  
- 可选参数，删除作为指定类型的电子邮件*queue_type*。 *queue_type*是**nvarchar(6)** ，无默认值。 有效输入包括**邮件**并**状态**。  
+`[ @queue_type = ] 'queue_type'` 可选参数，删除作为指定类型的电子邮件*queue_type*。 *queue_type*是**nvarchar(6)** ，无默认值。 有效输入包括**邮件**并**状态**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -53,8 +52,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|队列的类型。 可能的值为**邮件**并**状态**。|  
 |**length**|**int**|指定队列中邮件项的数量。|  
 |State|**nvarchar(64)**|监视器的状态。 可能的值为**非活动**（队列处于非活动状态）， **NOTIFIED** (队列已被通知发生)，并且**RECEIVES_OCCURRING** （接收队列）。|  
-|**last_empty_rowset_time**|**日期时间**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
-|**last_activated_time**|**日期时间**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
+|**last_empty_rowset_time**|**DATETIME**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
+|**last_activated_time**|**DATETIME**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   
 ## <a name="remarks"></a>备注  
  当数据库邮件故障排除，使用**sysmail_help_queue_sp**若要查看队列中有多少项，状态队列，以及上一次激活。  

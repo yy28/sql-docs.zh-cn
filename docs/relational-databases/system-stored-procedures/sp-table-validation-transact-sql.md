@@ -16,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211277"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537209"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table=**] **'***表*****  
- 是表的名称。 *表*是**sysname**，无默认值。  
+`[ @table = ] 'table'` 是表的名称。 *表*是**sysname**，无默认值。  
   
- [  **@expected_rowcount=**] *expected_rowcount*输出  
- 指定是否返回表中的预期行数。 *expected_rowcount*是**int**，默认值为 NULL。 如果为 NULL，则将实际行数作为输出参数返回。 如果提供了一个值，则针对实际行数检查该值，以标识二者之间的差异。  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` 指定是否在表中返回预期的行数。 *expected_rowcount*是**int**，默认值为 NULL。 如果为 NULL，则将实际行数作为输出参数返回。 如果提供了一个值，则针对实际行数检查该值，以标识二者之间的差异。  
   
- [  **@expected_checksum=**] *expected_checksum*输出  
- 指定是否返回表的预期校验和。 *expected_checksum*是**数值**，默认值为 NULL。 如果为 NULL，则将实际校验和作为输出参数返回。 如果提供了一个值，则针对实际校验和检查该值，以标识二者之间的差异。  
+`[ @expected_checksum = ] expected_checksumOUTPUT` 指定是否返回表的预期校验和。 *expected_checksum*是**数值**，默认值为 NULL。 如果为 NULL，则将实际校验和作为输出参数返回。 如果提供了一个值，则针对实际校验和检查该值，以标识二者之间的差异。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- 指定要执行的校验和或行数的类型。 *type_of_check_requested*是**smallint**，默认值为**1**。  
+`[ @rowcount_only = ] type_of_check_requested` 指定哪种类型的校验和或行计数来执行。 *type_of_check_requested*是**smallint**，默认值为**1**。  
   
  如果**0**，执行行计数和一个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。  
   
@@ -64,11 +60,9 @@ sp_table_validation [ @table = ] 'table'
   
  如果**2**，执行行计数和二进制校验和。  
   
- [  **@owner=**] **'***所有者*****  
- 是表的名称。 *所有者*是**sysname**，默认值为 NULL。  
+`[ @owner = ] 'owner'` 是表的名称。 *所有者*是**sysname**，默认值为 NULL。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 用于计算行计数的方法。 *full_or_fast*是**tinyint**，默认值为**2**，可以是下列值之一。  
+`[ @full_or_fast = ] full_or_fast` 用于计算行计数方法。 *full_or_fast*是**tinyint**，默认值为**2**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -76,14 +70,11 @@ sp_table_validation [ @table = ] 'table'
 |**1**|快速从计数**sysindexes.rows**。 对行进行计数**sysindexes**比对实际表中的行计数要快得多。 但是，由于**sysindexes**是惰性更新，则 rowcount 可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，而且该存储的过程正在使用来获取此值，则始终使用完整 COUNT(*)。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 如果分发代理正在执行**sp_table_validation**，指定是否在分发代理应在后立即关闭完成验证。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**、 引发错误 20578，复制代理发出信号，若要关闭的情况下。 忽略此参数时**sp_table_validation**直接由用户执行。  
+`[ @shutdown_agent = ] shutdown_agent` 如果分发代理正在执行**sp_table_validation**，指定是否在分发代理应在后立即关闭完成验证。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**、 引发错误 20578，复制代理发出信号，若要关闭的情况下。 忽略此参数时**sp_table_validation**直接由用户执行。  
   
- [  **@table_name =**] *table_name*  
- 用于输出消息的视图的表名。 *table_name*是**sysname**，默认值为**@table**。  
+`[ @table_name = ] table_name` 是用于输出消息的表名称。 *table_name*是**sysname**，默认值为**@table**。  
   
- [ **@column_list**=] **'***column_list*****  
- 应该在校验和函数中使用的列的列表。 *column_list*是**nvarchar(4000)**，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
+`[ @column_list = ] 'column_list'` 是应在校验和函数中使用的列的列表。 *column_list*是**nvarchar(4000)**，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
   
 ## <a name="return-code-values"></a>返回代码值  
  如果执行校验和验证并且预期校验和等于表中的校验和**sp_table_validation**返回表通过校验和验证一条消息。 否则，将返回一条消息，指示表可能不同步，并报告预期的行数和实际行数之间的差异。  
@@ -103,10 +94,10 @@ sp_table_validation [ @table = ] 'table'
  若要执行**sp_table_validation**，必须在正在验证的表拥有 SELECT 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [校验和&#40;Transact SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

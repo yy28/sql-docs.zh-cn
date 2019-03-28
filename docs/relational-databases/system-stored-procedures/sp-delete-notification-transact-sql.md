@@ -1,5 +1,5 @@
 ---
-title: sp_delete_notification (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b2c202ae0336884b801160569c62ad469d22aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4a71411fca869d3562481c3e15f6faa5895df22
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758515"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537789"
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@alert_name=** ] **'***alert***'**  
- 警报的名称。 *警报*是**sysname**，无默认值。  
+`[ @alert_name = ] 'alert'` 警报的名称。 *警报*是**sysname**，无默认值。  
   
- [ **@operator_name=** ] **'***operator***'**  
- 操作员的名称。 *运算符*是**sysname**，无默认值。  
+`[ @operator_name = ] 'operator'` 操作员的名称。 *运算符*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -57,7 +55,7 @@ sp_delete_notification
 ## <a name="remarks"></a>备注  
  删除通知时将仅删除通知；警报和操作员不受影响。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -75,13 +73,13 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

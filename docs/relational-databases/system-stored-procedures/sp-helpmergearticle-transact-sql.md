@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533439"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication=**] **'***publication***'**  
- 要检索其相关信息的发布的名称。 *发布*是**sysname**，默认值为**%**，表示返回有关当前数据库中的所有发布中包含的所有合并项目的信息。  
+`[ @publication = ] 'publication'` 有关要检索其信息的发布的名称。 *发布*是**sysname**，默认值为**%**，表示返回有关当前数据库中的所有发布中包含的所有合并项目的信息。  
   
- [  **@article=**] **'***文章***’**  
- 要返回其信息的项目的名称。 *文章*是**sysname**，默认值为**%**，它返回给定发布中所有合并项目的相关信息。  
+`[ @article = ] 'article'` 是要为其返回信息的名称。 *文章*是**sysname**，默认值为**%**，它返回给定发布中所有合并项目的相关信息。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -101,7 +99,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改项目属性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

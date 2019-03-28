@@ -16,12 +16,12 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537159"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,16 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布***’**  
- 对等拓扑中为之发送状态请求的发布名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是为其发送状态请求的对等拓扑中发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@description**=] **'***说明***’**  
- 可用于标识各个状态请求，它使您可以筛选返回的响应基于用户定义的信息调用时提供的值[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*是**nvarchar(4000)**，默认值为**%**。 默认情况下，返回发布的所有状态请求。 使用此参数仅状态请求返回匹配中提供的值的说明*描述*，其中使用匹配字符字符串[如&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
+`[ @description = ] 'description'` 可用于标识各个状态请求，它使您可以筛选返回的响应基于用户定义的信息调用时提供的值[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*是**nvarchar(4000)**，默认值为**%**。 默认情况下，返回发布的所有状态请求。 使用此参数仅状态请求返回匹配中提供的值的说明*描述*，其中使用匹配字符字符串[如&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识一个请求。|  
-|**发布**|**sysname**|为之发送状态请求的发布的名称。|  
+|**publication**|**sysname**|为之发送状态请求的发布的名称。|  
 |**sent_date**|**datetime**|发送状态请求的日期和时间。|  
 |**description**|**nvarchar(4000)**|可用于标识各个状态请求的用户定义的信息。|  
   
@@ -66,7 +64,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helppeerrequests**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

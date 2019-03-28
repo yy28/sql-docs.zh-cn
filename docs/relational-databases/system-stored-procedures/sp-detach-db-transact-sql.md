@@ -1,5 +1,5 @@
 ---
-title: sp_detach_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538219"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname =** ] **'***database_name***'**  
- 要分离的数据库的名称。 *database_name*是**sysname**值，默认值为 NULL。  
+`[ @dbname = ] 'database_name'` 是要在分离的名称。 *database_name*是**sysname**值，默认值为 NULL。  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定跳过还是运行 UPDATE STATISTIC。 *同时将 skipchecks*是**nvarchar(10)** 值，默认值为 NULL。 若要跳过更新统计信息，请指定 **，则返回 true**。 若要显式运行更新统计信息，请指定**false**。  
+`[ @skipchecks = ] 'skipchecks'` 指定是否要跳过还是运行 UPDATE STATISTIC。 *同时将 skipchecks*是**nvarchar(10)** 值，默认值为 NULL。 若要跳过更新统计信息，请指定 **，则返回 true**。 若要显式运行更新统计信息，请指定**false**。  
   
  默认情况下，执行 UPDATE STATISTICS 可更新有关表和索引中的数据的信息。 对于要移动到只读介质的数据库，执行 UPDATE STATISTICS 非常有用。  
   
- [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*是**nvarchar(10)** 值，该值具有默认值为**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据被删除，除非数据库是只读的。 如果为 NULL 或 **，则返回 true**，全文索引相关的元数据保留。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定与所分离的数据库关联的全文索引文件将不删除期间数据库分离操作。 *KeepFulltextIndexFile*是**nvarchar(10)** 值，该值具有默认值为**true**。 如果*KeepFulltextIndexFile*是**false**、 与数据库关联的全文索引的所有文件和全文索引的元数据被删除，除非数据库是只读的。 如果为 NULL 或 **，则返回 true**，全文索引相关的元数据保留。  
   
 > [!IMPORTANT]
 >  **@keepfulltextindexfile**中的未来版本将删除参数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  

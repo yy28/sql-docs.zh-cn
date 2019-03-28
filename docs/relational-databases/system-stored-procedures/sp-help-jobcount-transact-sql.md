@@ -18,12 +18,12 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0274c825b18e1377e337b614068db7fc75c7a917
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732025"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537199"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@schedule_id=** ] *schedule_id*  
- 要列出的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
+`[ @schedule_id = ] schedule_id` 列出的计划的标识符。 *schedule_id*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
- [ **@schedule_name=** ]  **'***schedule_name***'**  
- 列出的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
+`[ @schedule_name = ] 'schedule_name'` 列出的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -61,7 +59,7 @@ sp_help_jobcount
 ## <a name="remarks"></a>备注  
  此过程列出附加到指定计划的作业数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -88,9 +86,9 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532579"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
@@ -89,7 +89,7 @@ ms.locfileid: "48073127"
 ### <a name="examples"></a>示例  
  下面的示例将事务日志还原到名为 `ListPriceUpdate`的标记事务中的标记处。  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  例如，假设多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上存在分区数据库。 每个实例上都有一个名为 `coyote`的数据库。 首先，在每个数据库中创建一个存储过程，例如， `sp_SetMark`。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  然后，创建包含在每个数据库中放置标记的事务的存储过程 `sp_MarkAll` 。 `sp_MarkAll` 可以从任意实例中运行。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

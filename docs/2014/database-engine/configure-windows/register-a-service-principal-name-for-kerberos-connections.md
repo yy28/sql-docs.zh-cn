@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130947"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529659"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
   若要将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则以下两个条件都必须得到满足：  
@@ -100,7 +100,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:port*|使用 TCP 时访问接口生成的默认 SPN。 *port* 是 TCP 端口号。|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。 *fqdn* 为完全限定的域名。|  
-|MSSQLSvc /*fqdn:InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例名称。|  
+|MSSQLSvc/*fqdn:InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例名称。|  
   
 ##  <a name="Auto"></a> 自动注册 SPN  
  当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的实例启动时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务注册 SPN。 实例停止时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将尝试取消此 SPN 的注册。 对于 TCP/IP 连接，注册 SPN 时使用的格式为 MSSQLSvc/\<FQDN>:\<tcpport>。命名实例和默认实例均将注册为 MSSQLSvc，可根据 \<tcpport> 值来区分这些实例。  
@@ -147,7 +147,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  若要确定连接的身份验证方法，请执行下面的查询。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

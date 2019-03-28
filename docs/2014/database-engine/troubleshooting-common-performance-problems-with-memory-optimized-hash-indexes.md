@@ -10,18 +10,18 @@ ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79d986ed5f08c120113bd31ef9bb4f613cc56b66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154967"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535539"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>对内存优化哈希索引的常见性能问题进行故障排除
   本主题主要针对解决与哈希索引有关的常见问题。  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>搜索要求哈希索引键列的子集  
- **问题：** 哈希索引需要的所有值以计算哈希值，索引键列和哈希表中定位相应行。 因此，如果某个查询在 WHERE 子句中仅包含针对索引键的某个子集的相等谓词，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法使用索引查找在 WHERE 子句中定位与这些谓词相对应的行。  
+ **问题：** 哈希索引需要的所有索引键列的值以计算哈希值，并在哈希表中查找相应的行。 因此，如果某个查询在 WHERE 子句中仅包含针对索引键的某个子集的相等谓词，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将无法使用索引查找在 WHERE 子句中定位与这些谓词相对应的行。  
   
  相反，有序索引（例如基于磁盘的非聚集索引和内存优化的非聚集索引）支持在索引键列的子集上的索引查找，只要它们是索引中的首列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48154967"
   
  请参考下面的表和查询：  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[od]  
 (  
      o_id INT NOT NULL,  
@@ -56,7 +56,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
 -   添加与查询的 WHERE 子句中的列匹配的新哈希索引。 在该示例中，最后生成的表定义将如下所示：  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE dbo.od  
      ( o_id INT NOT NULL,  
      od_id INT NOT NULL,  
@@ -70,7 +70,7 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- 请注意，如果对于某一给定的索引键值存在许多重复行，则内存优化的哈希索引不会达到最佳性能：在该示例中，如果针对 o_id 列的唯一值的数目远小于该表中的行数，则在 (o_id) 上添加索引并非最佳选择；将索引 index PK_od 的类型从哈希更改为非聚集应该是更好的解决方法。 有关详细信息，请参阅[哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
+ 请注意，如果对于某一给定的索引键值存在许多重复行，则内存优化的哈希索引不会达到最佳性能：在该示例中，如果针对 o_id 列的唯一值的数目远小于该表中的行数，则在 (o_id) 上添加索引并非最佳选择；将索引 index PK_od 的类型从哈希更改为非聚集应该是更好的解决方法。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [内存优化表上的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

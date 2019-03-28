@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication (TRANSACT-SQL) |Microsoft Docs
+title: sp_helppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205206"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532969"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
- 要查看的发布的名称。 *发布*数据类型为 sysname，默认值为**%**，表示返回有关所有发布的信息。  
+`[ @publication = ] 'publication'` 是要查看的名称。 *发布*数据类型为 sysname，默认值为**%**，表示返回有关所有发布的信息。  
   
- [  **@found =** ] **'***找到***’** 输出  
- 指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为**23456**。 **1**指示已找到发布。 **0**指示找不到该发布。  
+`[ @found = ] 'found' OUTPUT` 是一个标志，指示返回行。 *找到*是**int**而且是 OUTPUT 参数，默认值为**23456**。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
- [ **@publisher** = ] **'***publisher***'**  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*数据类型为 sysname，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*数据类型为 sysname，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*请求中的发布信息时不应指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -123,9 +120,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

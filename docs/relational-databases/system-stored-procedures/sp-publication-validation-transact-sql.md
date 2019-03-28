@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation (TRANSACT-SQL) |Microsoft Docs
+title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591401"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537169"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] **'**_发布_  
+ [**@publication=**] **'**_publication'_  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|快速从计数**sysindexes.rows**。 对行进行计数[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)比对实际表中的行计数要快得多。 但是，由于[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)是惰性更新，则 rowcount 可能不准确。|  
 |**2** （默认值）|首先尝试使用快速方法进行条件性快速计数。 如果快速方法显示出差异，则转而使用完整方法。 如果*expected_rowcount*为 NULL，而且该存储的过程正在使用来获取此值，则始终使用完整 COUNT(*)。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**，验证最后一篇文章后关闭复制代理。  
+`[ @shutdown_agent = ] shutdown_agent` 是分发代理是否应关闭立即验证完成后。 *shutdown_agent*是**位**，默认值为**0**。 如果**0**，复制代理不会关闭。 如果**1**，验证最后一篇文章后关闭复制代理。  
   
- [ **@publisher** =] **'**_发布服务器上_  
- 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'` 指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  *发布服务器*上请求验证时不应使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
@@ -87,8 +85,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [验证订阅服务器上的数据](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

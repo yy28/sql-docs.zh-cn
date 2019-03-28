@@ -20,12 +20,12 @@ ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b5f3392f3dbb21c2aeeed3fc5e34d5cf1c0e63b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229457"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535831"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>查看逻辑备份设备的属性和内容 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看 [!INCLUDE[tsql](../../includes/tsql-md.md)]中逻辑备份设备的属性和内容。  
@@ -34,7 +34,7 @@ ms.locfileid: "48229457"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看逻辑备份设备的属性和内容，请使用：**  
   
@@ -83,13 +83,13 @@ ms.locfileid: "48229457"
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>查看逻辑备份设备的属性和内容  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  使用 [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) 语句。 此示例返回有关 `AdvWrks2008R2Backup` 逻辑备份设备的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE LABELONLY  
    FROM AdvWrks2008R2Backup ;  

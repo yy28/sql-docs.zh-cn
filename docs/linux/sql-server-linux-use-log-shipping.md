@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0db8a92539f83e543623f28067d0408b476c37a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032324"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531279"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux 上的日志传送入门
 
@@ -31,7 +31,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 - 通过网络事务日志备份文件复制到一个或多个辅助 SQL Server 实例
 - 还原的辅助 SQL Server 实例上的事务日志备份文件
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 - [在 Linux 上安装 SQL Server 代理](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>使用 CIFS 为日志传送设置网络共享 
@@ -115,12 +115,12 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 - 从主服务器运行此脚本
 
-    ```tsql
+    ```sql
     BACKUP DATABASE SampleDB
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
-    ```tsql
+    ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
@@ -181,12 +181,12 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 - 从辅助服务器运行此脚本
 
-    ```tsql
+    ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     WITH NORECOVERY;
     ```
     
-    ```tsql
+    ```sql
     DECLARE @LS_Secondary__CopyJobId    AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
@@ -289,7 +289,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 - 验证日志传送工作由主服务器上启动以下作业
 
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -299,7 +299,7 @@ SQL Server 日志传送是一种 HA 配置，支持将数据库从主服务器�
 
 - 验证日志传送工作通过辅助服务器上启动以下作业
  
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 

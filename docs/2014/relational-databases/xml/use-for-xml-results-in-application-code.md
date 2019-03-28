@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368669"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532829"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
@@ -159,7 +159,7 @@ ms.locfileid: "53368669"
   
 -   **BankName:** Primary International  
   
--   **BusinessType:** 操作系统  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_script_synctran_commands (TRANSACT-SQL) |Microsoft Docs
+title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4956a449c0b972fffba462a907e899791fadfa5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791399"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536170"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication** = ] **'***publication***'**  
- 要写入脚本的发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要为其编写脚本的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article** =] **'***文章***’**  
- 要写入脚本的项目的名称。 *文章*是**sysname**，默认值为**所有**，表示指定的所有项目都写入脚本。  
+`[ @article = ] 'article'` 是要为其编写脚本的名称。 *文章*是**sysname**，默认值为**所有**，表示指定的所有项目都写入脚本。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -60,8 +58,8 @@ sp_script_synctran_commands [@publication = ] 'publication'
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_script_synctran_commands**。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_addsynctriggers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530570"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 查询与嵌套 FOR XML 查询的比较
   本主题将单个 FOR XML 查询与嵌套 FOR XML 查询进行了比较。 使用嵌套 FOR XML 查询的好处之一就是可以为查询结果指定一个以属性为中心和以元素为中心的 XML 的组合。 此示例演示了这种好处。  

@@ -18,12 +18,12 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 622a0eafad0c4b029c0fd9512c25defa63229fc0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 60968c70a6b47b53ad0edb38d8245cbcc883bf26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169349"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537919"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_name=**] **'**_表\_名称_  
- 为其请求全文索引信息的表的名称，由一部分或两部分组成。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
+`[ @table_name = ] 'table\_name'` 是为其请求全文索引信息的一部分或两个表名称。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果*table_name*省略，则为每个全文索引表检索全文索引列信息。  
   
- [  **@column_name=**] **'**_列\_名称_  
- 请求全文索引元数据的列的名称。 *column_name*是**sysname**，默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文索引列信息*table_name*。 如果*table_name*也未指定或为 NULL，为数据库中的所有表的每个全文索引列返回全文索引列信息。  
+`[ @column_name = ] 'column\_name'` 是为其请求全文索引元数据的名称。 *column_name*是**sysname**，默认值为 NULL。 如果*column_name*省略或为 NULL，为每个全文索引列返回全文索引列信息*table_name*。 如果*table_name*也未指定或为 NULL，为数据库中的所有表的每个全文索引列返回全文索引列信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -66,7 +64,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**int**|文档类型列的列 ID。 全文本索引的列时，此值才适用**varbinary （max)** 或**映像**列。|  
 |**FULLTEXT_LANGUAGE**|**sysname**|用于对列进行全文索引的语言。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予的成员**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -82,7 +80,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

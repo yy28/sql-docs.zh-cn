@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535759"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0（成功）或 1（失败）  
   
 ## <a name="arguments"></a>参数  
- [ **@resample** =] **'resample'**  
- 指定的**sp_updatestats**将使用的 RESAMPLE 选项[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)语句。 如果 **'resample'** 未指定，则**sp_updatestats**通过使用默认采样来更新统计信息。 **对重新抽样**是**varchar(8)** 默认值为 no。  
+`[ @resample = ] 'resample'` 指定的**sp_updatestats**将使用的 RESAMPLE 选项[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)语句。 如果 **'resample'** 未指定，则**sp_updatestats**通过使用默认采样来更新统计信息。 **对重新抽样**是**varchar(8)** 默认值为 no。  
   
 ## <a name="remarks"></a>备注  
  **sp_updatestats**执行`UPDATE STATISTICS`，通过指定`ALL`关键字，所有用户定义表和内部表在数据库中。 sp_updatestats 将显示指示其进度的消息。 完成更新之后，此存储过程将报告已为所有的表更新了统计信息。  

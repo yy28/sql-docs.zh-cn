@@ -16,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789189"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538499"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@agent_name** =] **'***agent_name*****  
- 为代理的名称。 *agent_name*是**nvarchar(100)** ，无默认值。  
+`[ @agent_name = ] 'agent_name'` 为代理的名称。 *agent_name*是**nvarchar(100)** ，无默认值。  
   
- [ **@hours** =]*小时*  
- 以小时为单位的时间范围，将返回该范围内的历史代理会话信息。 *小时*是**int**，可以是下列范围之一。  
+`[ @hours = ] hours` 是，以小时为单位为其返回历史代理会话信息的范围。 *小时*是**int**，可以是下列范围之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -55,22 +53,18 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** （默认值）|返回代理过去运行的所有信息。|  
 |> **0**|返回在代理上发生的运行中信息上次*小时*数小时。|  
   
- [ **@session_type** =] *session_type*  
- 基于会话最终结果筛选结果集。 *session_type*是**int**，可以是下列值之一。  
+`[ @session_type = ] session_type` 筛选结果集基于会话最终结果。 *session_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|具有重试或成功结果的代理会话。|  
 |**0**|具有失败结果的代理会话。|  
   
- [ **@publisher** = ] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
   
- [ **@publication=** ] **'***发布*****  
- 发布的名称。 *发布*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为 NULL。 执行时使用此参数**sp_replmonitorhelpmergesession**订阅服务器上。  
   
 ## <a name="result-sets"></a>结果集  
   

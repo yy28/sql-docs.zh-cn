@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358579"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533239"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动辅助副本：可读次要副本 (Alwayson 可用性组）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
@@ -210,7 +210,7 @@ GO
   
 -   对于仅对内存优化表运行的查询，只支持快照、可重复读和可序列化隔离级别。 除非在数据库级别启用了 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 选项，否则所有具有未提交读或读提交隔离级别的查询都会返回错误。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   内存优化表不支持锁定提示。 例如，以下所有查询都会因错误失败。 只允许 NOLOCK 提示，用于内存优化表时为 NOOP。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   对于跨容器事务，具有会话隔离级别的事务"快照"的访问不支持内存优化表。 例如，  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

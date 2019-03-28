@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758615"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535749"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@traceid=** ] *trace_id*  
- 要为其设置筛选器的跟踪的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。  
+`[ @traceid = ] trace_id` 是向其设置的筛选器的 ID。 *trace_id*是**int**，无默认值。 用户采用该*trace_id*值来标识、 修改和控制跟踪。  
   
- [ **@columnid=** ] *column_id*  
- 应用了筛选器的列的 ID。 *column_id*是**int**，无默认值。 如果*column_id*为 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除指定的跟踪的所有筛选器。  
+`[ @columnid = ] column_id` 是在其应用筛选器的 ID。 *column_id*是**int**，无默认值。 如果*column_id*为 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除指定的跟踪的所有筛选器。  
   
- [ **@logical_operator** = ] *logical_operator*  
- 指定是否 AND (**0**) 或 OR (**1**) 运算符应用。 *logical_operator*是**int**，无默认值。  
+`[ @logical_operator = ] logical_operator` 指定是否 AND (**0**) 或 OR (**1**) 运算符应用。 *logical_operator*是**int**，无默认值。  
   
- [ **@comparison_operator=** ] *comparison_operator*  
- 指定要执行的比较的类型。 *comparison_operator*是**int**，无默认值。 下表包含比较运算符及其代表的值。  
+`[ @comparison_operator = ] comparison_operator` 指定要进行比较的类型。 *comparison_operator*是**int**，无默认值。 下表包含比较运算符及其代表的值。  
   
 |ReplTest1|比较运算符|  
 |-----------|-------------------------|  
 |**0**|= （等于）|  
-|**1**|<>（不等于）|  
-|**2**|>（大于）|  
-|**3**|<（小于）|  
-|**4**|>=（大于或等于）|  
+|**1**|<> （不等于）|  
+|**2**|> （大于）|  
+|**3**|< （小于）|  
+|**4**|> = (大于或等于)|  
 |**5**|< = （小于或等于）|  
 |**6**|LIKE|  
 |**7**|不类似于|  
   
- [  **@value=** ]*值*  
- 指定要在其上进行筛选的值。 数据类型*值*必须匹配要筛选的列的数据类型。 例如，如果是对对象 ID 列设置的筛选器**int**数据类型*值*必须是**int**。如果*值*是**nvarchar**或**varbinary**，它可以具有最大长度为 8000。  
+`[ @value = ] value` 指定对其进行筛选的值。 数据类型*值*必须匹配要筛选的列的数据类型。 例如，如果是对对象 ID 列设置的筛选器**int**数据类型*值*必须是**int**。如果*值*是**nvarchar**或**varbinary**，它可以具有最大长度为 8000。  
   
  比较运算符为 LIKE 或 NOT LIKE 时，逻辑运算符可以包括“%”或其他适合 LIKE 运算的筛选器。  
   
@@ -104,7 +99,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  

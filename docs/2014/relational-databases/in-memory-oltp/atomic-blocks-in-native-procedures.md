@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532841"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 块
   `BEGIN ATOMIC` 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
@@ -29,13 +29,13 @@ ms.locfileid: "48124097"
 ## <a name="transactions-and-error-handling"></a>事务和错误处理  
  如果某个事务已在会话上存在（因为某一批处理执行了 `BEGIN TRANSACTION` 语句并且该事务保持活动状态），则开始一个原子块将在该事务中创建一个保存点。 如果该原子块退出且没有异常，将创建用于块提交的保存点，但在该事务在会话级别提交前该事务将不提交。 如果该块引发一个异常，则该块的影响将被回滚，但处于会话级别的事务将继续，除非该异常是注定事务终止的。 例如，写入冲突是注定事务终止的，但不是类型转换错误。  
   
- 如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块 （单个本机编译存储的过程） 的事务，您不需要编写显式`BEGIN TRANSACTION`并`COMMIT`或`ROLLBACK`语句。  
+ 如果在会话上没有处于活动状态的事务，则 `BEGIN ATOMIC` 将开始一个新事务。 如果在该块的作用域外未引发异常，则在该块的末尾将提交该事务。 如果该块引发异常（也就是说，未在该块内捕获和处理异常），则该事务将被回滚。 对于跨单个原子块的事务（单个本机编译的存储过程），您无需编写显式的 `BEGIN TRANSACTION` 和 `COMMIT` 或 `ROLLBACK` 语句。  
   
- 本机编译存储的过程支持`TRY`， `CATCH`，和`THROW`构造进行错误处理。 `RAISERROR` 不支持。  
+ 本机编译的存储过程支持使用 `TRY`、`CATCH` 和 `THROW` 构造进行错误处理。 不支持 `RAISERROR`。  
   
  下面的示例说明针对原子块和本机编译存储过程的错误处理行为：  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -126,20 +126,20 @@ GO
  以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332 和 41333。  
   
 ## <a name="session-settings"></a>会话设置  
- 在编译存储过程时原子块中的会话设置是固定的。 可以使用指定的某些设置`BEGIN ATOMIC`而其他设置则始终固定为相同的值。  
+ 在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 `BEGIN ATOMIC` 指定，而其他设置则始终固定为相同值。  
   
  以下选项对于 `BEGIN ATOMIC` 而言是必需的：  
   
 |必需设置|Description|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|支持的值为`SNAPSHOT`， `REPEATABLEREAD`，和`SERIALIZABLE`。|  
+|`TRANSACTION ISOLATION LEVEL`|支持的值为 `SNAPSHOT`、`REPEATABLEREAD` 和 `SERIALIZABLE`。|  
 |`LANGUAGE`|确定日期和时间格式以及系统消息。 支持 [sys.syslanguages (Transact-SQL)](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中的所有语言和别名。|  
   
  以下设置是可选的：  
   
 |可选设置|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定时，`DATEFORMAT`重写与关联的默认日期格式`LANGUAGE`。|  
+|`DATEFORMAT`|支持所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式。 指定后，`DATEFORMAT` 将取代与 `LANGUAGE` 相关联的默认日期格式。|  
 |`DATEFIRST`|指定后，`DATEFIRST` 将取代与 `LANGUAGE` 相关联的默认设置。|  
 |`DELAYED_DURABILITY`|支持的值为`OFF`和`ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、默认或延迟的持久。有关详细信息，请参阅[控制事务持久性](../logs/control-transaction-durability.md)。|  
   

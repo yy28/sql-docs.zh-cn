@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812961"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537139"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'**_发布_  
- 关联的发布的名称。 *发布*是**sysname**，默认值为 NULL。 如果**所有**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是一个必需的参数。  
+`[ @publication = ] 'publication'` 是关联的名称。 *发布*是**sysname**，默认值为 NULL。 如果**所有**，则取消对指定订阅服务器的所有发布的所有订阅。 *发布*是一个必需的参数。  
   
- [  **@article=** ] **'**_文章_  
- 项目的名称。 *文章*是**sysname**，默认值为 NULL。 如果**所有**，每个订阅的所有项目指定删除发布和订阅服务器。 使用**所有**的发布允许立即更新。  
+`[ @article = ] 'article'` 是的名称。 *文章*是**sysname**，默认值为 NULL。 如果**所有**，每个订阅的所有项目指定删除发布和订阅服务器。 使用**所有**的发布允许立即更新。  
   
- [  **@subscriber=** ] **'**_subscribe_r  
- 要删除其订阅的订阅服务器名。 *订阅服务器上*是**sysname**，无默认值。 如果**所有**，所有订阅服务器的所有订阅将被都删除。  
+`[ @subscriber = ] 'subscribe_r'` 是删除其订阅的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。 如果**所有**，所有订阅服务器的所有订阅将被都删除。  
   
- [  **@destination_db=** ] **'**_destination_db_  
- 目标数据库的名称。 *destination_db*是**sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
+`[ @destination_db = ] 'destination_db'` 是目标数据库的名称。 *destination_db*是**sysname**，默认值为 NULL。 如果为 NULL，则删除该订阅服务器中的所有订阅。  
   
- [ **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_保留_  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -77,7 +71,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   

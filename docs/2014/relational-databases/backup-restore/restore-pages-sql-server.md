@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108727"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536389"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 数据库的 **suspect_pages** 表中进行了标识。  
@@ -39,7 +39,7 @@ ms.locfileid: "48108727"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要还原页，请使用：**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48108727"
      此部分执行的功能与 [还原数据库（常规页）](../../integration-services/general-page-of-integration-services-designers-options.md) 上的 **“还原到”** 的功能相同。  
   
      **“数据库”**  
-     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
+     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master** 和 tempdb 之外的所有数据库。  
   
     > [!WARNING]  
     >  若要还原带有密码保护的备份，必须使用 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 语句。  
@@ -133,8 +133,8 @@ ms.locfileid: "48108727"
     |Header|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**组件**|备份组件：“数据库”、“文件”或“\<空白>”（对于事务日志）。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
     |**位置**|备份集在卷中的位置。|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108727"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例使用 `B` 还原文件 `NORECOVERY`的四个损坏页。 随后，将使用 `NORECOVERY`应用两个日志备份，然后是结尾日志备份（使用 `RECOVERY`还原）。 此示例执行联机还原。 此示例中，文件 `B` 的文件 ID 为 `1`，损坏的页的页 ID 分别为 `57`、 `202`、 `916`和 `1016`。  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -218,7 +218,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [管理 suspect_pages 表 (SQL Server)](manage-the-suspect-pages-table-sql-server.md)   
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)  

@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 91b3956f37830d66d6680452b452f2d928551beb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591451"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537119"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] **'**_table_server_  
- 表示从中返回主键信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
+`[ @table_server = ] 'table_server'_` 是从中返回主键信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] **'**_table_name_  
- 表示提供其主键信息的表名。 *table_name*是**sysname**，默认值为 NULL。  
+`[ @table_name = ] 'table_name'` 是要为其提供主键信息的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] **'**_table_schema_  
- 表架构。 *table_schema*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于表所有者。  
+`[ @table_schema = ] 'table_schema'` 是表架构。 *table_schema*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于表所有者。  
   
- [  **@table_catalog =** ] **'**_table_catalog_  
- 是在其中的目录的名称指定*table_name*驻留。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于数据库名称。 *table_catalog*是**sysname**，默认值为 NULL。  
+`[ @table_catalog = ] 'table_catalog'` 是在其中的目录的名称指定*table_name*驻留。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于数据库名称。 *table_catalog*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -63,7 +59,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|表目录。|  
-|**按 TABLE_SCHEM**|**sysname**|表架构。|  
+|**TABLE_SCHEM**|**sysname**|表架构。|  
 |**TABLE_NAME**|**sysname**|表的名称。|  
 |**COLUMN_NAME**|**sysname**|列的名称。|  
 |**KEY_SEQ**|**int**|多列主键中列的序列号。|  
@@ -89,13 +85,13 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
   
 ## <a name="see-also"></a>请参阅  
  [分布式查询存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

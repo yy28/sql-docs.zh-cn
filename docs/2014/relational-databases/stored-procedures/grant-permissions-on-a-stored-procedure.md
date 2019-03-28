@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79abbfe8d9c3fd8d88c883e5fbbdb198f9de4e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529699"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]授予对存储过程的权限。 可以为数据库中的现有用户、数据库角色或应用程序角色授予权限。  
@@ -28,7 +28,7 @@ ms.locfileid: "48223879"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要授予对存储过程的权限，请使用：**  
   
@@ -73,13 +73,13 @@ ms.locfileid: "48223879"
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限  
   
-1.  连接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 该示例授予名为 `EXECUTE` 的应用程序角色对存储过程 `HumanResources.uspUpdateEmployeeHireInfo` 的 `Recruiting11`权限。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  

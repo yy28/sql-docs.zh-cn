@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobschedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100352"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532879"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_id=** ] *job_id*  
- 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
+`[ @job_id = ] job_id` 作业标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
- [  **@job_name=** ] **'**_job_name_  
- 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+`[ @job_name = ] 'job_name'` 作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
-> **注意：** 任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
+> [!NOTE]
+> 任一*job_id*或*job_name*必须指定，但不能同时指定两者。
+
+`[ @schedule_name = ] 'schedule_name'` 作业的计划项的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
- [  **@schedule_name=** ] **'**_schedule_name_  
- 作业的计划项的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id` 作业的计划项的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
- [ **@schedule_id=** ] *schedule_id*  
- 作业的计划项的标识号。 *schedule_id*是**int**，默认值为 NULL。  
-  
- [  **@include_description=** ] *include_description*  
- 指定是否在结果集中包含计划的说明。 *include_description*是**位**，默认值为**0**。 当*include_description*是**0**，计划的说明不包括在结果集中。 当*include_description*是**1**，计划的说明包括在结果集中。  
+`[ @include_description = ] include_description` 指定是否在结果集中包含计划的说明。 *include_description*是**位**，默认值为**0**。 当*include_description*是**0**，计划的说明不包括在结果集中。 当*include_description*是**1**，计划的说明包括在结果集中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -148,9 +144,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

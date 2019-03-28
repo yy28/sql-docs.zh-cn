@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783009"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530679"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@no_checks=**] *no_checks*  
- 指示在删除分发服务器之前是否检查有无依赖对象。 *no_checks*是**位**，默认值为 0。  
+`[ @no_checks = ] no_checks` 指示是否删除分发服务器之前检查依赖对象。 *no_checks*是**位**，默认值为 0。  
   
  如果**0**， **sp_dropdistributor**检查以确保除分发服务器上的所有发布和分发对象已被都删除。  
   
  如果**1**， **sp_dropdistributor**删除然后再卸载分发服务器上的所有发布和分发对象。  
   
- [ **@ignore_distributor=**] *ignore_distributor*  
- 指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**位**，默认值为**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指示是否无需连接到分发服务器上执行此存储的过程。 *ignore_distributor*是**位**，默认值为**0**。  
   
  如果**0**， **sp_dropdistributor**连接到分发服务器，并删除所有复制对象。 如果**sp_dropdistributor**无法连接到分发服务器，则存储的过程将失败。  
   
@@ -71,8 +69,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09bbecf0e0cc308449adde0a462e1641d240b1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe58874e0046a53a33d0580c4477ac89f6cd6e18
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063307"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537581"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>查看备份集中的数据文件和日志文件 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看备份集中的数据文件和日志文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "48063307"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要查看备份集中的数据文件和日志文件，可使用：**  
   
@@ -65,13 +65,13 @@ ms.locfileid: "48063307"
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>查看备份集中的数据文件和日志文件  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  使用 [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) 语句。 此示例返回有关`FILE=2`备份设备上的第二个备份集 ( `AdventureWorksBackups` ) 的信息。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  

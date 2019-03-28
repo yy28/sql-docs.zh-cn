@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537580"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
   说明统计语义搜索的必备组件以及如何安装或检查它们。  
@@ -30,7 +30,7 @@ ms.locfileid: "53377539"
   
  返回值 1 表示安装了全文搜索和语义搜索；返回值 0 表示未安装它们。  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -79,7 +79,7 @@ GO
   
  默认情况下，该数据库的名称为 **semanticsdb**。 也可以选择在附加数据库时为数据库提供其他名称。 当使用后续步骤注册数据库时，必须提供此名称。  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -92,7 +92,7 @@ GO
  **3.注册语义语言统计数据库。**  
  调用 [sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) 存储过程，并提供在附加数据库时向该数据库提供的名称。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  **取消注册语义语言统计数据库。**  
  调用 [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) 存储过程。 由于一个实例仅有一个语义语言统计数据库，因此您不必提供该数据库的名称。  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
  **分离语义语言统计数据库。**  
  调用 [sp_detach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) 存储过程并提供该数据库的名称。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533529"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,28 +46,24 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>参数
 
- [  **@rolename =** ] **'***角色*****  
- 当前数据库中定义的应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
+`[ @rolename = ] 'role'` 是当前数据库中定义的应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@password =** ] **{加密 N'***密码***}**  
- 激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*可以使用 ODBC 进行模糊处理**加密**函数。 当你使用**加密**函数，密码必须通过将转换为 Unicode 字符串**N**之前在第一个引号。  
+`[ @password = ] { encrypt N'password' }` 是激活应用程序角色所需的密码。 *密码* 是 **sysname** ，无默认值。 *密码*可以使用 ODBC 进行模糊处理**加密**函数。 当你使用**加密**函数，密码必须通过将转换为 Unicode 字符串**N**之前在第一个引号。  
   
  正在使用的连接不支持加密选项**SqlClient**。  
   
 > [!IMPORTANT]  
 > ODBC**加密**函数不提供加密。 您不应当依赖该函数来保护通过网络传输的密码。 如果通过网络传输该信息，则使用 SSL 或者 IPSec。
   
- **@encrypt = none**  
+ **@encrypt = 'none'**  
  指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认设置。  
   
- **@encrypt= odbc**  
+ **@encrypt= 'odbc'**  
  指定 ODBC 将模糊密码处理使用 ODBC**加密**发送到密码之前的函数[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 这只能在使用 ODBC 客户端或 OLE DB Provider for SQL Server 时指定。  
   
- [  **@fCreateCookie =** ] **true** | **false**  
- 指定是否创建 cookie。 **true**隐式转换为 1。 **false**隐式转换为 0。  
+`[ @fCreateCookie = ] true | false` 指定是否要创建 cookie。 **true**隐式转换为 1。 **false**隐式转换为 0。  
   
- [  **@cookie =** ]  **@cookie输出**  
- 指定包含 cookie 的输出参数。 仅当生成 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 指定输出参数包含的 cookie。 仅当生成 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。
@@ -86,7 +82,7 @@ sp_setapprole [ @rolename = ] 'role',
 > 若要保护的应用程序角色密码通过网络传输时，应启用应用程序角色时始终使用加密的连接。
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC**加密**选项不受**SqlClient**。 如果必须存储凭据，请使用加密 API 函数对这些凭据进行加密。 将参数*密码*作为单向哈希存储。 若要保持与早期版本的兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不强制密码复杂性策略**sp_addapprole**。 若要强制实施密码复杂性策略，请使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 要求的成员身份**公共**和知识的角色的密码。  
   

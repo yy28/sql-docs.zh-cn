@@ -1,5 +1,5 @@
 ---
-title: sp_droppublication (TRANSACT-SQL) |Microsoft Docs
+title: sp_droppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05845955116454ae23b2cd97e25250dbb1e6331
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0b8cda79919c318b6bee5817731e4ca83aea17aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529749"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'**_发布_  
- 要删除的发布的名称。 *发布*是**sysname**，无默认值。 如果**所有**指定，则将从发布数据库，除了那些具有订阅中删除所有发布。  
+`[ @publication = ] 'publication'` 是要删除的名称。 *发布*是**sysname**，无默认值。 如果**所有**指定，则将从发布数据库，除了那些具有订阅中删除所有发布。  
   
- [ **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -63,7 +61,7 @@ sp_droppublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>请参阅  
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

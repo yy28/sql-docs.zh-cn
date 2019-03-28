@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2b561d83167caf1fa9c3f7a41a9490873fbc484
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f35e6acad099f1a5d68659fa20b9213ff78e0b6c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529889"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] **'**_数据库_  
- 要删除的数据库。 *数据库*是**sysname**，无默认值。  
+`[ @database = ] 'database'` 是要删除的数据库。 *数据库*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -61,8 +60,8 @@ sp_dropdistributiondb [ @database= ] 'database'
   
 ## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

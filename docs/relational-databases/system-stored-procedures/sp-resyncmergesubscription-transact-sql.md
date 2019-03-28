@@ -16,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538149"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,17 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher** = ] **'***publisher***'**  
- 发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 如果存储过程在发布服务器上运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  
+`[ @publisher = ] 'publisher'` 是发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 如果存储过程在发布服务器上运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果存储过程在发布服务器的发布数据库中运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  
+`[ @publisher_db = ] 'publisher_db'` 是发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果存储过程在发布服务器的发布数据库中运行，则 NULL 值有效。 如果在订阅服务器上运行该存储过程，则必须指定发布服务器。  
   
- [ **@publication** = ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@subscriber** = ] **'***subscriber***'**  
- 订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器上运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
+`[ @subscriber = ] 'subscriber'` 是订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器上运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 是订阅数据库的名称。 *subscription_db*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器的订阅数据库中运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
+`[ @subscriber_db = ] 'subscriber_db'` 是订阅数据库的名称。 *subscription_db*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器的订阅数据库中运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
   
- [ **@resync_type** = ] *resync_type*  
- 定义重新同步的开始时间。 *resync_type*是**int**，可以是下列值之一。  
+`[ @resync_type = ] resync_type` 定义重新同步的开始处。 *resync_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -68,8 +62,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|同步从上次成功验证后开始。 自上次成功验证后发生的所有新的或未完成的生成都重新应用于订阅服务器。|  
 |**2**|从中给定的日期开始同步*resync_date_str*。 该日期后发生的所有新的或未完成的生成都重新应用于订阅服务器。|  
   
- [ **@resync_date_str=**] *resync_date_string*  
- 定义重新同步的开始日期。 *resync_date_string*是**nvarchar(30)**，默认值为 NULL。 使用此参数时*resync_type*的值为**2**。 给定的日期转换为其等效**datetime**值。  
+`[ @resync_date_str = ] resync_date_string` 定义重新同步的开始时的日期。 *resync_date_string*是**nvarchar(30)**，默认值为 NULL。 使用此参数时*resync_type*的值为**2**。 给定的日期转换为其等效**datetime**值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

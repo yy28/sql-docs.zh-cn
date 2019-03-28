@@ -16,12 +16,12 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7f489bf0ee637463fa9c7b2552563c09f3faad
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: c220f33a4192ca0757101fe7e862f31413648d8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536999"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication** = ] **'***publication***'**  
- 要为其刷新订阅的发布。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是要为其刷新订阅的发布。 *发布*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

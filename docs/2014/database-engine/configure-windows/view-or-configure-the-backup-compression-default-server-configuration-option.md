@@ -13,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640728"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536599"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>查看或配置 backup compression default 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中查看或配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] backup compression default [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **backup compression default** 选项确定默认情况下服务器实例是否创建压缩的备份。 当安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时， **backup compression default** 选项关闭。  
@@ -80,13 +80,13 @@ ms.locfileid: "52640728"
   
 #### <a name="to-view-the-backup-compression-default-option"></a>查看 backup compression default 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例查询 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 目录视图以确定 `backup compression default`的值。 值为 0 表示禁用备份压缩功能，值为 1 表示启用备份压缩功能。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT value   
@@ -98,13 +98,13 @@ GO
   
 #### <a name="to-configure-the-backup-compression-default-option"></a>配置 backup compression default 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明了如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将服务器实例配置为在默认情况下创建压缩备份。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_configure 'backup compression default', 1 ;  

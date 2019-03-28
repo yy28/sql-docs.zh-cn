@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534419"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色***’**  
- 当前数据库中的角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*是未指定，则返回有关当前数据库中的所有角色信息。  
+`[ @rolename = ] 'role'` 是当前数据库中的名称。 *角色* 是 **sysname** ，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*是未指定，则返回有关当前数据库中的所有角色信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -58,7 +57,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>备注  
  若要查看与角色关联的权限，请使用**sp_helprotect**。 若要查看数据库角色的成员，请使用**sp_helprolemember**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -72,11 +71,11 @@ EXEC sp_helprole
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

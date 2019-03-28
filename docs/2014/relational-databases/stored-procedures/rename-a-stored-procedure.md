@@ -13,12 +13,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6cc6f8ca0c5bb6657cd26350267f557edd014be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536279"
 ---
 # <a name="rename-a-stored-procedure"></a>重命名存储过程
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名存储过程。  
@@ -29,7 +29,7 @@ ms.locfileid: "48092427"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要重命名存储过程，请使用：**  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48092427"
   
 #### <a name="to-rename-a-stored-procedure"></a>重命名存储过程  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何通过删除过程并使用新名称重新创建该过程来重命名过程。 第一个示例将创建 `'HumanResources.uspGetAllEmployeesTest`存储过程。 第二个示例将存储过程重命名为 `HumanResources.uspEveryEmployeeTest`。  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  

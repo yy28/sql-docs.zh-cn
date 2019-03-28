@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536299"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filename =** ] **'***name***'**  
- 当前数据库中任意文件的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*是未指定，将返回当前数据库中的所有文件的属性。  
+`[ @filename = ] 'name'` 是当前数据库中的任何文件的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*是未指定，将返回当前数据库中的所有文件的属性。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,11 +54,11 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**filename**|**nchar(260)**|物理文件名。|  
 |**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是日志文件。 它决不是文件组的一部分。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  
-|**最大大小**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
-|**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
-|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**并为日志文件的值是**仅记录**。|  
+|**maxsize**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
+|**growth**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
+|**usage**|**varchar(9)**|对于数据文件的值是**仅限数据**并为日志文件的值是**仅记录**。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

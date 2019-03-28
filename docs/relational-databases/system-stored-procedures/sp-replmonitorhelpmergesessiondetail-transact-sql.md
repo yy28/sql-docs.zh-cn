@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813049"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534629"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@session_id** = ] *session_id*  
- 指定一个代理会话。 *session_id*是**int** ，无默认值。  
+`[ @session_id = ] session_id` 指定一个代理会话。 *session_id*是**int** ，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -56,8 +55,8 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**冲突**|**int**|会话中发生的冲突数。|  
 |**ErrorID**|**int**|会话错误的 ID。|  
 |**SeqNo**|**int**|结果集中会话的顺序。|  
-|**行类型**|**int**|指示结果集中的每一行所提供的信息类型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上载摘要<br /><br /> **2** = 项目上载详细信息<br /><br /> **3** = 下载摘要<br /><br /> **4** = 项目下载详细信息|  
-|**架构**|**int**|会话中的架构更改数。|  
+|**RowType**|**int**|指示结果集中的每一行所提供的信息类型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上载摘要<br /><br /> **2** = 项目上载详细信息<br /><br /> **3** = 下载摘要<br /><br /> **4** = 项目下载详细信息|  
+|**SchemaChanges**|**int**|会话中的架构更改数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -14,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535719"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定义和修改静态行筛选器
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义和修改静态行筛选器。  
@@ -70,19 +70,19 @@ ms.locfileid: "52771549"
   
     -   **“筛选语句”** 文本区域包括默认的文本，其格式为：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   默认文本无法更改；请使用标准的 SQL 语法在 WHERE 关键字后键入筛选子句。 完整筛选子句如下所示：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   静态行筛选器可以包含用户定义函数。 包含用户定义函数的静态行筛选器的完整筛选子句如下所示：  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   

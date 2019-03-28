@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590071"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538609"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'**_发布_  
- 发布的名称。 *发布*是**sysname**，无默认值。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =**] **'**_文章_  
- 发布中的项目的名称。 *文章*是**sysname**，无默认值。  
+`[ @article = ] 'article'` 是在发布中项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@column =**] **'**_列_  
- 标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*并`@operation = N'drop'`为每个要删除的列从指定*文章*.  
+`[ @column = ] 'column'` 标识要在其中创建垂直分区的列。 *列*是**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 *列*不能为 NULL 时*操作*设置为**删除**。 若要从项目中排除列，请执行**sp_mergearticlecolumn**并指定*列*并`@operation = N'drop'`为每个要删除的列从指定*文章*.  
   
- [  **@operation =**] **'**_操作_  
- 复制状态。 *操作*是**nvarchar(4)**，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
+`[ @operation = ] 'operation'` 是复制状态。 *操作*是**nvarchar(4)**，使用默认值为 ADD。 **添加**会标记列以进行复制。 **删除**清除该列。  
   
- [  **@schema_replication=**] **'**_schema_replication_  
- 指定在合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)**，默认值为 FALSE。  
+`[ @schema_replication = ] 'schema_replication'` 指定合并代理运行时将传播架构更改。 *schema_replication*是**nvarchar(5)**，默认值为 FALSE。  
   
 > [!NOTE]  
 >  仅**FALSE**支持*schema_replication*。  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。  
   
  **1**指定对合并项目的更改可能导致快照无效，如果是这种情况的值**1**提供了新快照的权限。  
   
- [  **@force_reinit_subscription =]**_force_reinit_subscription_  
- 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*为 bit，默认值为**0**。  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*为 bit，默认值为**0**。  
   
  **0**指定对合并项目的更改不会导致重新初始化订阅。  
   

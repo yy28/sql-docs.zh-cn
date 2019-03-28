@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164967"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534469"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
   以下示例显示了如何使用嵌套 AUTO 模式查询来生成同级。 生成此类 XML 的其他方式只有这一种，即使用 EXPLICIT 模式。 但是，这样做可能会很麻烦。  
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   将先前的查询添加到 `FROM` 子句。 查询结果返回为表。 注意添加的 `XmlCol` 别名。  
   
--   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()`方法的`xml`数据类型用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
+-   `SELECT` 子句对 `XmlCol` 子句中返回的 `FROM` 指定 XQuery。 `query()` 数据类型的 `xml` 方法用于指定 XQuery。 有关详细信息，请参阅 [query() 方法（xml 数据类型）](/sql/t-sql/xml/query-method-xml-data-type)。  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

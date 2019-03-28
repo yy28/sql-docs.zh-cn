@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ELEMENTS directive
 - XSINIL parameter
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a99a1ab6c4c051f0a5d063b358b2ad9dbb5e5c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d056959f5e05d3de79fa81d33331390f4decb49a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102397"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530299"
 ---
 # <a name="generate-elements-for-null-values-with-the-xsinil-parameter"></a>使用 XSINIL 参数生成 NULL 值对应的元素
   **ELEMENTS** 指令将构造 XML，其中每个列值映射到 XML 中的一个元素。 如果列值为 NULL，则不添加元素。 通过对 ELEMENTS 指令指定可选的 **XSINIL** 参数，可以请求创建 NULL 值对应的元素。 在这种情况下，将为每个 NULL 列值返回一个元素，其 **xsi:nil** 属性被设置为 TRUE。  

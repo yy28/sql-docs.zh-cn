@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 780616b452865324c3a34abcaa6dd5935123151f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203007"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531859"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中获取有关 DML 触发器的信息。 此信息可包含针对某个表的触发器的类型、触发器的名称、其所有者以及创建或修改日期。 如果在创建触发器时未加密，您可获取该触发器的定义。 通过该定义，可以帮助您了解该触发器如何影响对其定义该触发器的表。 此外，您可以找出特定触发器使用的对象。 通过该信息，可在数据库中影响触发器的对象发生更改或删除它们时确定这些对象。  
@@ -31,7 +31,7 @@ ms.locfileid: "48203007"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要获取有关 DML 触发器的信息，请使用：**  
   
@@ -83,13 +83,13 @@ ms.locfileid: "48203007"
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>查看 DML 触发器的定义  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示您如何查看 `iuPerson` 触发器的定义。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT definition   
@@ -98,7 +98,7 @@ WHERE object_id = OBJECT_ID(N'Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
@@ -116,7 +116,7 @@ GO
   
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>查看 DML 触发器的依赖关系  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -142,7 +142,7 @@ GO
   
 #### <a name="to-view-information-about-dml-triggers-in-the-database"></a>查看有关数据库中的 DML 触发器的信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -158,7 +158,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
@@ -168,7 +168,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
@@ -178,13 +178,13 @@ GO
   
 #### <a name="to-view-information-about-events-that-fire-a-dml-trigger"></a>查看有关激发 DML 触发器的事件的信息  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例之一复制并粘贴到查询窗口中，然后单击 **“执行”**。 每个示例显示如何查看激发 `iuPerson` 触发器的事件。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
@@ -193,7 +193,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO   
 SELECT object_id, type,is_first, is_last  

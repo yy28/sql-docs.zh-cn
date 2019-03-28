@@ -18,12 +18,12 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cbcf4fca5fefa14dd435e5e91b27c8460194db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608816"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537059"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- 全文目录名称。 *fulltext_catalog_name*是**sysname**，默认值为 NULL。 如果*fulltext_catalog_name*省略或为 NULL，则返回所有与数据库关联的全文索引的表。 如果*fulltext_catalog_name*指定，但*table_name*省略或为 NULL，与此目录相关联的每个全文索引表检索全文索引信息。 如果这两个*fulltext_catalog_name*并*table_name*指定，则返回的行，如果*table_name*关联*fulltext_catalog_name*;否则，将引发错误。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文目录的名称。 *fulltext_catalog_name*是**sysname**，默认值为 NULL。 如果*fulltext_catalog_name*省略或为 NULL，则返回所有与数据库关联的全文索引的表。 如果*fulltext_catalog_name*指定，但*table_name*省略或为 NULL，与此目录相关联的每个全文索引表检索全文索引信息。 如果这两个*fulltext_catalog_name*并*table_name*指定，则返回的行，如果*table_name*关联*fulltext_catalog_name*;否则，将引发错误。  
   
- [ **@table_name=**] **'***table_name***'**  
- 请求全文元数据的一段或两段表的名称。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果只有*table_name*指定，则仅与相关行*table_name*返回。  
+`[ @table_name = ] 'table_name'` 是为其请求全文元数据的一部分或两个表名称。 *table_name*是**nvarchar(517)**，默认值为 NULL。 如果只有*table_name*指定，则仅与相关行*table_name*返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -64,7 +62,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**FULLTEXT_INDEX_ACTIVE**|**int**|指定该表中为全文索引标记的列是否适于查询：<br /><br /> 0 = 非活动<br /><br /> 1 = 活动|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|全文索引数据所在的全文目录。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予的成员**公共**角色。  
   
 ## <a name="examples"></a>示例  
@@ -80,8 +78,8 @@ GO
 ## <a name="see-also"></a>请参阅  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_fulltext_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

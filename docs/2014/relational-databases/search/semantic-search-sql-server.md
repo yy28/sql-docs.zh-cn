@@ -15,12 +15,12 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538529"
 ---
 # <a name="semantic-search-sql-server"></a>语义搜索 (SQL Server)
   统计语义搜索通过提取统计上相关的“关键短语” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*并对其进行索引，提供对*中存储的非结构化文档的更深层次剖析。 然后，它还使用这些关键短语标识“相似或相关文档” 并对其进行索引。  
@@ -35,7 +35,7 @@ ms.locfileid: "48215647"
 ###  <a name="find1"></a> 在文档中查找关键短语  
  下面的查询获取在示例文档中已标识的关键短语。 该查询按照对每个关键短语的统计重要性进行排名的分数以降序方式展示结果。 此查询调用 [semantickeyphrasetable (Transact-SQL)](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 函数。  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> 查找使文档相似或相关的关键短语  
  以下查询获取使两个示例文档彼此相似或相关的关键短语。 该查询按照对每个关键短语的权重进行排名的分数以降序方式展示结果。 此查询调用 [semanticsimilaritydetailstable (Transact-SQL)](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 函数。  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706995"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534139"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,29 +43,25 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class=**] **'***类***’**  
- 请求其信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
+`[ @class = ] 'class'` 有关哪些请求信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**JOB**|提供有关作业类别的信息。|  
-|**发出警报**|提供有关警报类别的信息。|  
+|**ALERT**|提供有关警报类别的信息。|  
 |**运算符**|提供有关操作员类别的信息。|  
   
- [ **@type=** ] **'***type***'**  
- 请求其信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以是下列值之一。  
+`[ @type = ] 'type'` 为其请求信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**LOCAL**|本地作业类别。|  
-|**多-服务器**|多服务器作业类别。|  
+|**MULTI -SERVER**|多服务器作业类别。|  
 |**NONE**|以外的其他类的类别**作业**。|  
   
- [ **@name=** ] **'***name***'**  
- 请求其信息的类别的名称。 *名称*是**sysname**，默认值为 NULL。  
+`[ @name = ] 'name'` 为其请求信息的类别的名称。 *名称*是**sysname**，默认值为 NULL。  
   
- [ **@suffix=** ] *suffix*  
- 指定是否**category_type**结果集中的列是 ID 还是名称。 *后缀*是**位**，默认值为**0**。 **1**显示了**category_type**作为名称，并**0**显示为一个 id。  
+`[ @suffix = ] suffix` 指定是否**category_type**结果集中的列是 ID 还是名称。 *后缀*是**位**，默认值为**0**。 **1**显示了**category_type**作为名称，并**0**显示为一个 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -92,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  如果未指定参数，则结果集将提供有关所有作业类别的信息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -131,9 +127,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

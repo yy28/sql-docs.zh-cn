@@ -1,5 +1,5 @@
 ---
-title: sp_helpdynamicsnapshot_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e31562dcec495013b96dd772db2ae85c7702796
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531479"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication =** ] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**，表示将返回具有指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*并*dynamic_snapshot_jobname*的所有发布。  
+`[ @publication = ] 'publication'` 是发布的名称。 *发布*是**sysname**，默认值为**%**，表示将返回具有指定的所有已筛选的数据快照作业的信息*dynamic_snapshot_jobid*并*dynamic_snapshot_jobname*的所有发布。  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 筛选数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为**%**，这会返回包含指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 是已筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*是**sysname**，默认值为**%**，这会返回包含指定的发布的所有动态作业*dynamic_snapshot_jobid*。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL，表示将返回具有指定的所有快照作业*dynamic_snapshot_jobname*。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 是已筛选的数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL，表示将返回具有指定的所有快照作业*dynamic_snapshot_jobname*。  
   
 ## <a name="result-sets"></a>结果集  
   

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756535"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531669"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@language=** ] **'***语言***’**  
- 要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，则返回有关指定的语言信息。 如果未指定语言，有关中的所有语言的信息**sys.syslanguages**返回兼容性视图。  
+`[ @language = ] 'language'` 是要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，则返回有关指定的语言信息。 如果未指定语言，有关中的所有语言的信息**sys.syslanguages**返回兼容性视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,16 +54,16 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|语言标识号。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
 |**datefirst**|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
-|**升级**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
+|**upgrade**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |**名称**|**sysname**|语言名称。|  
 |**alias**|**sysname**|语言的替代名称。|  
 |**几个月**|**nvarchar(372)**|月份名称。|  
 |**shortmonths**|**nvarchar(132)**|月份简称。|  
-|**天**|**nvarchar(217)**|日期名称。|  
+|**days**|**nvarchar(217)**|日期名称。|  
 |**lcid**|**int**|语言的 Windows 区域设置 ID。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

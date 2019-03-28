@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154717"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536669"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
   内存中 OLTP 引入了本机编译的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以本机编译访问内存优化表的存储过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以本机编译内存优化表。 与解释型（传统） [!INCLUDE[tsql](../../includes/tsql-md.md)]相比，本机编译可提高访问数据的速度和执行查询的效率。 表和存储过程的本机编译生成 DLL。  
   
- 还支持内存优化表类型的本机编译。 有关详细信息，请参阅[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)。  
+ 还支持内存优化表类型的本机编译。 有关详细信息，请参阅 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)。  
   
  本机编译是指将编程构造转换为本机代码的过程，这些代码由处理器指令组成，无需进一步编译或解释。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154717"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>内存中 OLTP DLL 的维护  
  以下查询显示当前在服务器上的内存中加载的所有表和存储过程 DLL：  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  请考虑下面的示例脚本，它创建一个数据库和一个内存优化的表：  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  考虑下面的示例存储过程，它在前一示例的表 t1 中插入行：  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>请参阅  
  [内存优化表](memory-optimized-tables.md)   
- [本机编译的存储过程](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

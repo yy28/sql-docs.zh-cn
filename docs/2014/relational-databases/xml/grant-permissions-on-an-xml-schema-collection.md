@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530179"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授予对 XML 架构集合的权限
   您可以授予创建 XML 架构集合的权限，也可以授予对 XML 架构集合对象的某些操作权限。  
@@ -57,11 +57,11 @@ ms.locfileid: "48150916"
   
 -   若要将 XML 架构集合的所有权从一个主体传递到另一个主体，必须具有 TAKE OWNERSHIP 权限。  
   
--   REFERENCES 权限可授权主体使用 XML 架构集合来类型化或约束`xml`类型列，表和视图和参数中。 当一个 XML 架构集合引用另一个 XML 架构集合时，也必须具有 REFERENCES 权限。  
+-   REFERENCES 权限可授权主体使用 XML 架构集合来类型化或约束表和视图中的 `xml` 类型列以及参数。 当一个 XML 架构集合引用另一个 XML 架构集合时，也必须具有 REFERENCES 权限。  
   
 -   如果主体对 XML 架构集合具有 ALTER、REFERENCES 或 CONTROL 权限之一，则 VIEW DEFINITION 权限就使此主体能够通过 XML_SCHEMA_NAMESPACE 或目录视图来查询该集合的内容。  
   
--   验证值插入或更新的主体针对化或约束的 XML 架构集合所需的 EXECUTE 权限`xml`类型列、 变量和参数。 当查询存储在这些列和变量中的 XML 时，也必须具有此权限。  
+-   若要验证主体针对类型化或约束 `xml` 类型列、变量和参数的 XML 架构集合插入或更新的值，必须具有 EXECUTE 权限。 当查询存储在这些列和变量中的 XML 时，也必须具有此权限。  
   
 ## <a name="examples"></a>示例  
  以下示例中的应用场景说明 XML 架构权限的工作机制。 每个示例都创建有必需的测试数据库、关系架构和登录帐户。 这些登录帐户已授予必需的 XML 架构集合权限。 每个示例均在结束时进行了必要的清除。  

@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075277"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537709"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>监视数据与差异文件对的合并以及排除其故障
   内存中 OLTP 使用合并策略自动合并相邻数据和差异文件对。 无法禁用合并活动。  
@@ -31,7 +31,7 @@ ms.locfileid: "48075277"
   
  使用以下查询检索有关数据和差异文件的信息，  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -41,7 +41,7 @@ order by file_type_desc, upper_bound_tsn
   
  假定找到三个尚未合并的数据文件。 可使用第一个数据文件的 `lower_bound_tsn` 值和最后一个数据文件的 `upper_bound_tsn` 发出以下命令：  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

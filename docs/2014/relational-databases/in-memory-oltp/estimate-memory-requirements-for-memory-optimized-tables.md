@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533466"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
   是否要创建一个新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]内存优化的表或将现有的基于磁盘的表迁移到内存优化表，务必要有的合理估计的每个表的内存需求，因此你可以设置与具有足够的服务器内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
@@ -39,7 +39,7 @@ ms.locfileid: "52509231"
 ##  <a name="bkmk_ExampleTable"></a> 内存优化表示例  
  考虑以下内存优化的表架构：  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  哈希索引可实现高速查找，如：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  非聚集索引在执行范围查找时更快，如：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  如果是迁移磁盘表，可使用下面的方法确定索引 t1c2_index 的唯一键的个数。  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  非聚集索引的最佳应用是范围查找，下面的查询即为例证：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

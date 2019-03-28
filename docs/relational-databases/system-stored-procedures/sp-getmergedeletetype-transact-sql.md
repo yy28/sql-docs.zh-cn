@@ -16,12 +16,12 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec9d53433d0b06cfc017fde9d312e943a6a3c6d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816150"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535199"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@source_object =**] **'***source_object***’**  
- 是源对象的名称。 *source_object*是**nvarchar(386)**，无默认值。  
+`[ @source_object = ] 'source_object'` 是源对象的名称。 *source_object*是**nvarchar(386)**，无默认值。  
   
- [  **@rowguid=**] **'***rowguid***’**  
- 删除类型的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
+`[ @rowguid = ] 'rowguid'` 删除类型的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
- [  **@delete_type=**] *delete_type* **输出**  
- 表示删除类型的代码。 *delete_type*是**int**，无默认值。 *delete_type*还是 OUTPUT 参数，并且可以是下列值之一。  
+`[ @delete_type = ] delete_type OUTPUT` 指示删除的类型代码。 *delete_type*是**int**，无默认值。 *delete_type*还是 OUTPUT 参数，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

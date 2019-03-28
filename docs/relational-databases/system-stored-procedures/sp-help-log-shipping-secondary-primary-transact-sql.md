@@ -18,12 +18,12 @@ ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0918f785d1741ccd33d79953db0bbe15acb90d35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ffdc8782951fcee5e94cb4af0467636150ad79a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532682"
 ---
 # <a name="sphelplogshippingsecondaryprimary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@primary_server** =] '*primary_server*  
- 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
+`[ @primary_server = ] 'primary_server'` 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
   
- [ **@primary_database** =] '*primary_database*  
- 主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
+`[ @primary_database = ] 'primary_database'` 是主服务器上的名称。 *primary_database*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -57,7 +55,7 @@ sp_help_log_shipping_secondary_primary
 ## <a name="remarks"></a>备注  
  **sp_help_log_shipping_secondary_primary**必须从运行**主**辅助服务器上的数据库。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>请参阅  

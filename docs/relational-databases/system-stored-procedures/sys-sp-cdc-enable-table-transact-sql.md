@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537609"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,28 +55,23 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@source_schema =** ] **'**_source_schema_  
- 源表所属架构的名称。 *source_schema*是**sysname**，无默认值，且不能为 NULL。  
+`[ @source_schema = ] 'source_schema'` 是源表所属的架构的名称。 *source_schema*是**sysname**，无默认值，且不能为 NULL。  
   
- [  **@source_name =** ] **'**_source_name_  
- 是对其启用变更数据捕获的源表的名称。 *source_name*是**sysname**，无默认值，且不能为 NULL。  
+`[ @source_name = ] 'source_name'` 是要启用的源表名称变更数据捕获。 *source_name*是**sysname**，无默认值，且不能为 NULL。  
   
  *source_name*必须存在于当前数据库。 中的表**cdc**架构不能启用了变更数据捕获。  
   
- [  **@role_name =** ] **'**_role_name_  
- 用于访问变更数据的数据库角色的名称。 *role_name*是**sysname** ，并且必须指定。 如果显式设置为 NULL，则没有控制角色用于限制对更改数据的访问。  
+`[ @role_name = ] 'role_name'` 是用于访问更改数据的数据库角色的名称。 *role_name*是**sysname** ，并且必须指定。 如果显式设置为 NULL，则没有控制角色用于限制对更改数据的访问。  
   
  如果当前存在该角色，则使用它。 如果不存在该角色，则会尝试创建具有指定名称的数据库角色。 在尝试创建该角色之前，将删除角色名称字符串右侧的空格。 如果调用方无权在数据库中创建角色，则存储过程操作将失败。  
   
- [  **@capture_instance =** ] **'**_capture_instance_  
- 是用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
+`[ @capture_instance = ] 'capture_instance'` 是用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
  如果未指定，名称将从源架构名称加上派生源表名称的格式*schemaname_sourcename*。 *capture_instance*不能超过 100 个字符并且在数据库中必须唯一。 指定还是派生的*capture_instance*任何字符串右侧空格剪裁。  
   
  源表最多可以有两个捕获实例。 有关详细信息，请参阅[sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)。  
   
- [  **@supports_net_changes =** ] *supports_net_changes*  
- 指示是否对此捕获实例启用净更改查询支持。 *supports_net_changes*是**位**默认值为 1; 如果表具有主键或表具有一个唯一索引，它已发现的使用@index_name参数。 否则，该参数默认为 0。  
+`[ @supports_net_changes = ] supports_net_changes` 指示是否支持对此捕获实例启用净更改查询是。 *supports_net_changes*是**位**默认值为 1; 如果表具有主键或表具有一个唯一索引，它已发现的使用@index_name参数。 否则，该参数默认为 0。  
   
  如果为 0，则只生成查询所有更改的支持函数。  
   
@@ -84,11 +79,9 @@ sys.sp_cdc_enable_table
   
  如果*supports_net_changes*设置为 1， *index_name*必须指定，或者源表必须具有定义的主键。  
   
- [  **@index_name =** ] **'**_index_name_  
- 用于唯一标识源表中的行的唯一索引的名称。 *index_name*是**sysname** ，可以为 NULL。 如果指定， *index_name*必须是源表的唯一有效索引。 如果*index_name*指定，标识的索引列优先于任何定义的主键列作为表的唯一行标识符。  
+`[ @index_name = ] 'index_name_'` 要用于唯一标识源表中的行的唯一索引的名称。 *index_name*是**sysname** ，可以为 NULL。 如果指定， *index_name*必须是源表的唯一有效索引。 如果*index_name*指定，标识的索引列优先于任何定义的主键列作为表的唯一行标识符。  
   
- [  **@captured_column_list =** ] **'**_captured_column_list_  
- 标识将包括在更改表中的源表列。 *captured_column_list*是**nvarchar （max)** ，可以为 NULL。 如果为 NULL，则所有列都将包括在更改表中。  
+`[ @captured_column_list = ] 'captured_column_list'` 标识包含在更改表中的源列。 *captured_column_list*是**nvarchar （max)** ，可以为 NULL。 如果为 NULL，则所有列都将包括在更改表中。  
   
  列名称必须是源表中的有效列。 在主键索引中, 定义的列或列中引用的索引定义*index_name*必须包含。  
   
@@ -96,13 +89,11 @@ sys.sp_cdc_enable_table
   
  *captured_column_list*不能包含以下保留的列名称： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $操作**，并 **__ $update_mask**。  
   
- [  **@filegroup_name =** ] **'**_filegroup_name_  
- 要用于为捕获实例创建的更改表的文件组。 *filegroup_name*是**sysname** ，可以为 NULL。 如果指定， *filegroup_name*必须为当前数据库中定义。 如果为 NULL，则使用默认文件组。  
+`[ @filegroup_name = ] 'filegroup_name'` 是要用于创建捕获实例的更改表的文件组。 *filegroup_name*是**sysname** ，可以为 NULL。 如果指定， *filegroup_name*必须为当前数据库中定义。 如果为 NULL，则使用默认文件组。  
   
  我们建议为变更数据捕获的更改表创建一个单独的文件组。  
   
- [  **@allow_partition_switch=** ] **'**_allow_partition_switch_  
- 指示是否可以对启用了变更数据捕获的表执行 ALTER TABLE 的 SWITCH PARTITION 命令。 *allow_partition_switch*是**位**，默认值为 1。  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` 指示是否可以对启用了变更数据捕获的表执行 ALTER TABLE 的 SWITCH PARTITION 命令。 *allow_partition_switch*是**位**，默认值为 1。  
   
  对于非分区表，此开关设置始终为 1，并忽略实际的设置。 如果对于非分区表将此开关显式设置为 0，则发出警告 22857 以指示已忽略此开关设置。 如果对于分区表将此开关显式设置为 0，则发出警告 22356 以指示将禁止源表上的分区切换操作。 最后，如果此开关设置显式设置为 1 或允许默认为 1 并且被启用的表已分区，则发出警告 22855 以指示不会阻塞分区切换。 如果发生任何分区切换，则变更数据捕获不会跟踪由此切换产生的更改。 这将导致使用更改数据时数据不一致。  
   
@@ -166,10 +157,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

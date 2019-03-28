@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206237"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534579"
 ---
 # <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
   选择性 XML 索引是除了普通 XML 索引之外可供您使用的另外一种 XML 索引类型。 选择性 XML 索引功能的目标如下：  
@@ -78,7 +78,7 @@ ms.locfileid: "48206237"
   
  如果您仅需要对 `/book/title` 路径和 `/book/subjects` 路径查询此数据，则可以创建以下选择性 XML 索引：  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   对具有二进制 XS 类型的节点建立索引：例如 base64Binary 和 hexBinary。  
   
--   使用在末尾包含通配符 `*` 的 XPath 表达式指定要建立索引的节点：例如  `/a/b/c/*`、 `/a//b/*`或 `/a/b/*:c`。  
+-   指定要使用包含通配符字符的 XPath 表达式编制索引的节点`*`末尾：例如， `/a/b/c/*`， `/a//b/*`，或`/a/b/*:c`。  
   
 -   对子级、属性或后代以外的任何轴建立索引。 `//<step>` 的情况允许作为特例。  
   

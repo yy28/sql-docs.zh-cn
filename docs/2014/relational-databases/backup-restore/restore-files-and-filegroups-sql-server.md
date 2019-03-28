@@ -17,12 +17,12 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cc98f791b4d0a8cba9b2c1030cd207cc2f1092c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d056e61abd08a75b1a1b62117d351b2c55d7e09
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175137"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531359"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>还原文件和文件组 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原文件和文件组。  
@@ -33,7 +33,7 @@ ms.locfileid: "48175137"
   
      [限制和局限](#Restrictions)  
   
--   [Security](#Security)  
+-   [安全性](#Security)  
   
 -   **若要还原文件和文件组，请使用：**  
   
@@ -94,8 +94,8 @@ ms.locfileid: "48175137"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |**类型**|执行的备份类型有： **“完整”**、 **“差异”** 或 **“事务日志”**。|  
+    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  
@@ -131,7 +131,7 @@ ms.locfileid: "48175137"
     |列标题|值|  
     |-----------------|------------|  
     |**原始文件名**|源备份文件的完整路径。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”**、 **“日志”** 或 **“Filestream 数据”**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |**文件类型**|指定备份中的数据类型：**数据**，**日志**，或**Filestream 数据**。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
     |**还原为**|要还原的数据库文件的完整路径。 若要指定新的还原文件，请单击文本框，再编辑建议的路径和文件名。 更改 **“还原为”** 列中的路径或文件名等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 语句中使用 MOVE 选项。|  
   
 11. **“恢复状态”** 面板确定还原操作之后的数据库状态。  
@@ -181,7 +181,7 @@ ms.locfileid: "48175137"
 ###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例将还原 `MyDatabase` 数据库的文件和文件组。 为了将数据库还原到当前时间，将应用两个事务日志。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyDatabase.  

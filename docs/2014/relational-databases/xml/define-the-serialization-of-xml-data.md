@@ -15,15 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814549"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538589"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
   将 xml 数据类型显式或隐式转换为 SQL 字符串或二进制类型时，将根据本主题中所述的规则对 xml 数据类型的内容进行序列化。  

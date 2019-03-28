@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596795"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536369"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@devname =** ] **'***name***'**  
- 将为其报告信息的备份设备的名称。 值*名称*始终**sysname**。  
+`[ @devname = ] 'name'` 是要报告其信息的备份设备的名称。 值*名称*始终**sysname**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -65,7 +64,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
  转储设备通过使用添加到系统**sp_addumpdevice**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

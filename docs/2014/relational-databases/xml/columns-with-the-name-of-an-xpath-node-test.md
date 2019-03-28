@@ -10,15 +10,15 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783919"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530849"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>列名为 XPath 节点测试的列
   如果列名是某个 XPath 节点测试，将如下表所示映射该列的内容。 如果列名是某个 XPath 节点测试，则该列的内容将映射到相应的节点。 如果该列的 SQL 类型是 `xml`，将返回一个错误。  

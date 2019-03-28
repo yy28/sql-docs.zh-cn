@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591491"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537831"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@schedule_id=** ] *schedule_id*  
- 要删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
+`[ @schedule_id = ] schedule_id` 若要删除的计划的计划标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
-> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
+> **注意**：任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
- [  **@schedule_name=** ] **'**_schedule_name_  
- 要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
+`[ @schedule_name = ] 'schedule_name'` 若要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
-> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
+> **注意**：任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
- [ **@force_delete** = ] *force_delete*  
- 指定当计划附加到作业时此过程是否会失败。 *Force_delete*为 bit，默认值为**0**。 当*force_delete*是**0**，如果该计划附加到作业存储的过程将失败。 当*force_delete*是**1**，而不考虑是否将计划附加到作业中删除该计划。  
+`[ @force_delete = ] force_delete` 指定是否将计划附加到作业，此过程是否应失败。 *Force_delete*为 bit，默认值为**0**。 当*force_delete*是**0**，如果该计划附加到作业存储的过程将失败。 当*force_delete*是**1**，而不考虑是否将计划附加到作业中删除该计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

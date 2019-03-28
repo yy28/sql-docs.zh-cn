@@ -10,12 +10,12 @@ ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e3120bc2f18b780101b705200761f868ba94b06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530039"
 ---
 # <a name="mssqlserver1793"></a>MSSQLSERVER_1793
     
@@ -42,7 +42,7 @@ ms.locfileid: "48186897"
   
  下面的示例失败，因为为基础数据指定了分区方案，但没有为 FILESTREAM 数据指定。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY] )  
 GO  
@@ -50,7 +50,7 @@ GO
   
  下面的示例成功，因为既为基础数据指定了 **MOVE TO** 子句，又为 FILESTREAM 数据指定了 **FILESTREAM_ON** 子句。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY], filestream_on 'default' )  
 GO  
@@ -58,7 +58,7 @@ GO
   
  下面的示例也成功，因为既没有为基础数据指定 **MOVE TO** 子句，也没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF )  
 GO  

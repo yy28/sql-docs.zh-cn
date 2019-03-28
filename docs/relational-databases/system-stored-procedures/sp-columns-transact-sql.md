@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100502"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530419"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,22 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **\@table_name =**]*对象*  
- 用于返回目录信息的对象的名称。 *对象*可以是表、 视图或另一个对象，其中包含如表值函数的列。 *对象*是**nvarchar(384)**，无默认值。 支持通配符模式匹配。  
+`[ \@table_name = ] object` 是用于返回目录信息的名称。 *对象*可以是表、 视图或另一个对象，其中包含如表值函数的列。 *对象*是**nvarchar(384)**，无默认值。 支持通配符模式匹配。  
   
- [  **\@table_owner =**]*所有者*  
- 用于返回目录信息的对象的对象所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认对象可见性规则将应用。  
+`[ \@table_owner = ] owner` 是用于返回目录信息的对象所有者。 *所有者*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认对象可见性规则将应用。  
   
  如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果*所有者*未指定当前用户不拥有具有指定的对象和*对象*， **sp_columns**查找具有指定的对象*对象*由数据库所有者拥有。 如果存在这样的对象，则返回该对象的列。  
   
- [  **\@table_qualifier =**]*限定符*  
- 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持三部分命名的对象 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
+`[ \@table_qualifier = ] qualifier` 对象限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持三部分命名的对象 (_限定符_**。**_所有者_**。**_名称_)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
- [  **\@column_name =**]*列*  
- 一个单独的列，当只需要目录信息的一列时可使用该参数。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如下所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
+`[ \@column_name = ] column` 仅包含一列和目录信息的只有一个列在需要时使用。 *列*是**nvarchar(384)**，默认值为 NULL。 如果*列*是未指定，则返回所有列。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*列*表示的列名称，如下所示**syscolumns**表。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
   
- [  **\@ODBCVer =**] *ODBCVer*  
- 是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 版本 2 和 3 之间的行为差异，请参阅 ODBC **SQLColumns**规范。  
+`[ \@ODBCVer = ] ODBCVer` 是正在使用的 ODBC 版本。 *ODBCVer*是**int**，默认值为 2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 版本 2 和 3 之间的行为差异，请参阅 ODBC **SQLColumns**规范。  
   
 ## <a name="return-code-values"></a>返回代码值  
  None  
@@ -82,7 +77,7 @@ sp_columns [ @table_name = ] object
 |**SCALE**|**smallint**|小数点右边的数字位数。|  
 |**RADIX**|**smallint**|数值数据类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**备注**|**varchar(254)**|该字段总是返回 NULL。|  
+|**REMARKS**|**varchar(254)**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|列的默认值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列是与相同**DATA_TYPE**列中，除**datetime**及 SQL-92**间隔**数据类型。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子类型代码**datetime**及 SQL-92**间隔**数据类型。 对于其他数据类型，该列返回 NULL。|  
@@ -120,7 +115,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [目录存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

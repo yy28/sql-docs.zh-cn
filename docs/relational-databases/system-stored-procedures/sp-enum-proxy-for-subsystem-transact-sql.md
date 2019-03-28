@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cc983f79dfa1eafd0f0175448467c3a8d9a69aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736857"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534919"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@proxy_id** = ] *proxy_id*  
- 要列出信息的代理的标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_id = ] proxy_id` 要列出信息的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'` 要列出信息的代理服务器的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
- [ **@subsystem_id** = ] *subsystem_id*  
- 要列出信息的子系统的标识号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
+`[ @subsystem_id = ] subsystem_id` 要列出信息的子系统的标识号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
   
- [ **@subsystem_name** = ] **'***subsystem_name***'**  
- 要列出信息的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
+`[ @subsystem_name = ] 'subsystem_name'` 要列出信息的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -76,7 +72,7 @@ sp_enum_proxy_for_subsystem
   
  此存储的过程位于**msdb**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -106,6 +102,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

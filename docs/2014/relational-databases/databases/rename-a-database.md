@@ -13,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783619"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531421"
 ---
 # <a name="rename-a-database"></a>重命名数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
@@ -66,13 +66,13 @@ ms.locfileid: "52783619"
   
 #### <a name="to-rename-a-database"></a>重命名数据库  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `AdventureWorks2012` 数据库的名称更改为 `Northwind`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

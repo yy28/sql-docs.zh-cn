@@ -12,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639304"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534079"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **index create memory** 选项控制最初为创建索引分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
@@ -77,13 +77,13 @@ ms.locfileid: "52639304"
   
 #### <a name="to-configure-the-index-create-memory-option"></a>配置 index create memory 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
 3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `index create memory` 选项的值设置为 `4096`。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

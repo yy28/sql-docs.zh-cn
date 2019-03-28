@@ -1,5 +1,5 @@
 ---
-title: sp_delete_operator (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b55d44a837cc721761ebe77352962d1dea88f55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca9780759c6d35d6006a0ba2a9af2540c6a4e208
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704655"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531189"
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@name=** ] **'***name***'**  
- 要删除的操作员的名称。 *名称*是**sysname**，无默认值。  
+`[ @name = ] 'name'` 要删除的操作员的名称。 *名称*是**sysname**，无默认值。  
   
- [ **@reassign_to_operator=** ]  **'***reassign_operator***'**  
- 操作员的名称，指定操作员的警报将重新分配给此操作员。 *reassign_operator*是**sysname**，默认值为 NULL。  
+`[ @reassign_to_operator = ] 'reassign_operator'` 可以向其重新分配指定的操作员的警报的操作员的名称。 *reassign_operator*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -56,7 +54,7 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="remarks"></a>备注  
  删除操作员时，将同时删除与此操作员关联的所有通知。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  成员**sysadmin**固定的服务器角色可以执行**sp_delete_operator**。  
   
 ## <a name="examples"></a>示例  
@@ -71,9 +69,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

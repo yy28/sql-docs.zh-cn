@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532135"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_type=** ] **'**_作业\_类型_  
- 要添加的作业类型。 *job_type*是**nvarchar(20)** 且不能为 NULL。 有效输入包括 **'capture'** 并 **'cleanup'**。  
+`[ @job_type = ] 'job\_type'` 要添加的作业的类型。 *job_type*是**nvarchar(20)** 且不能为 NULL。 有效输入包括 **'capture'** 并 **'cleanup'**。  
   
- [  **@start_job=** ] *start_job*  
- 用于指示添加作业后是否立即启动该作业的标志。 *start_job*是**位**默认值为 1。  
+`[ @start_job = ] start_job` 标志，指示是否应添加后立即启动作业。 *start_job*是**位**默认值为 1。  
   
- [ **@maxtrans** ] = *max_trans*  
- 每个扫描循环中要处理的最大事务数。 *max_trans*是**int**默认值为 500。 如果指定值，则该值必须是一个正整数。  
+`[ @maxtrans ] = max_trans` 事务中每个扫描循环要处理的最大数目。 *max_trans*是**int**默认值为 500。 如果指定值，则该值必须是一个正整数。  
   
  *max_trans*仅对捕获作业有效。  
   
- [ **@maxscans** ] **=**_最大\_扫描_  
- 为了从日志中提取所有行而要执行的最大扫描循环次数。 *max_scans*是**int**默认值为 10。  
+`[ @maxscans ] = max\_scans_` 最大扫描循环要执行，以从日志提取所有行数。 *max_scans*是**int**默认值为 10。  
   
  *max_scan*仅对捕获作业有效。  
   
- [ **@continuous** ] **=**_连续_  
- 指示捕获作业是要连续运行 (1) 还是仅运行一次 (0)。 *持续*是**位**默认值为 1。  
+`[ @continuous ] = continuous_` 指示捕获作业是连续运行 (1)，或仅运行一次 (0)。 *持续*是**位**默认值为 1。  
   
  当*连续*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作业将扫描日志并且最多可处理 (*max_trans* \* *max_scans*)事务。 然后，在等待中指定的秒数*polling_interval*开始下一次日志扫描之前。  
   
@@ -74,18 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *连续*仅对捕获作业有效。  
   
- [ **@pollinginterval** ] **=**_轮询\_间隔_  
- 日志扫描循环之间相隔的秒数。 *polling_interval*是**bigint**默认值为 5。  
+`[ @pollinginterval ] = polling\_interval_` 日志扫描循环之间相隔的秒数。 *polling_interval*是**bigint**默认值为 5。  
   
  *polling_interval*仅对捕获的有效作业*连续*设置为 1。 如果指定了此参数，则该值不能负数，且不能超过 24 小时。 如果指定的值为 0，则不会在两次日志扫描之间等待。  
   
- [ **@retention** ] **=**_保留期_  
- 更改数据行要在更改表中保留的分钟数。 *保留期*是**bigint**默认值为 4320 （72 小时）。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
+`[ @retention ] = retention_` 更改表的更改的数据行中保留的分钟数。 *保留期*是**bigint**默认值为 4320 （72 小时）。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
   
  *保留期*仅对清除作业有效。  
   
- [  **@threshold =** ] **'**_删除\_阈值_  
- 可以通过清除上一条语句删除的删除项的最大数目。 *delete_threshold*是**bigint**默认值为 5000。  
+`[ @threshold = ] 'delete\_threshold'` 可以通过清除上一条语句删除的删除项的最大数目。 *delete_threshold*是**bigint**默认值为 5000。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -102,7 +94,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  若要查看清除或捕获作业的当前配置，请使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要更改作业的配置，请使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -130,8 +122,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

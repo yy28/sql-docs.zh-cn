@@ -14,20 +14,20 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211159"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532629"
 ---
 # <a name="delete-a-stored-procedure"></a>删除存储过程
     
 ##  <a name="Top"></a> 本主题介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除存储过程。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[安全性](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
--   **要删除过程，请使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要删除过程，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48211159"
   
 4.  获取要在当前数据库中删除的存储过程的名称。 从对象资源管理器，展开 **“可编程性”** ，再展开 **“存储过程”**。 或者，在查询编辑器中，运行以下语句：  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -83,7 +83,7 @@ ms.locfileid: "48211159"
   
 5.  将以下示例复制并粘贴到查询编辑器，然后插入要从当前数据库中删除的存储过程名称。  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

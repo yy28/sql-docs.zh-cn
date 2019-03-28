@@ -18,12 +18,12 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5ffa31a27809412e2882b410e6745ba475fcb69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660eba76675fbe261af33f647d60456ced839d2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658845"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536959"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@policy_id=** ] *policy_id*  
- 您要删除其执行历史记录的策略的标识符。 *policy_id*是**int**，和是必需的。 可以为 NULL。  
+`[ @policy_id = ] policy_id` 是你想要删除的执行历史记录的标识符。 *policy_id*是**int**，和是必需的。 可以为 NULL。  
   
- [  **@oldest_date=** ] **'***oldest_date***’**  
- 要保留其策略执行历史记录的最早的日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*是**datetime**，和是必需的。 可以为 NULL。  
+`[ @oldest_date = ] 'oldest_date'` 是你想要保留策略执行历史记录的最早日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*是**datetime**，和是必需的。 可以为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -72,11 +70,11 @@ ON a.policy_id = b.policy_id
   
  若要将策略执行历史记录存档，您可以在对象资源管理器中打开策略历史记录日志，然后将执行历史记录导出到某一文件中。 若要访问的策略历史记录日志，请展开**管理**，右键单击**策略管理**，然后单击**查看历史记录**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响的实例的[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例为 ID 为 7 的策略删除特定日期前的策略执行历史记录。  
@@ -90,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   
