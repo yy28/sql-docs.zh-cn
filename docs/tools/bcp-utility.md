@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955988"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538649"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -492,7 +492,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式发送数据。 其效果和指定 **-w** 开关而不指定格式化文件相同。|  
 |SQLBINARY 或 SQLVARYBIN|不经任何转换即发送数据。|  
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
  **bcp out** 操作要求对源表有 SELECT 权限。  
   
@@ -552,7 +552,7 @@ bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.m
 
 下面的脚本创建 `WideWorldImporters.Warehouse.StockItemTransactions` 表的空副本，然后添加主键约束。  在 SQL Server Management Studio (SSMS) 中运行以下 T-SQL 脚本
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

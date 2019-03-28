@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033599"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527589"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ SqlPackage.exe 是一个命令行实用工具，可自动处理以下数据库�
   
 通过 SqlPackage.exe 命令行，可以指定这些操作以及特定于操作的参数和属性。  
 
-[下载最新版本](sqlpackage-download.md)。 有关最新版本的详细信息，请参阅[发行说明](sqlpackage-release-notes.md)。
+[下载最新版本](sqlpackage-download.md)。 有关最新版本的详细信息，请参阅[发行说明](release-notes-sqlpackage.md)。
   
 ## <a name="command-line-syntax"></a>命令行语法
 
@@ -211,7 +211,7 @@ SqlPackage.exe 发布操作增量更新目标数据库的架构以便匹配源�
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定发布操作在存在差异时应始终删除并重新创建程序集，而不是发出 ALTER ASSEMBLY 语句。|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定当在目标数据库中创建新 FileGroup 时，是否也创建新文件。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定是否向数据库服务器注册该架构。|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定在执行其他操作时是否应运行 DeploymentPlanExecutor 参与者。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定是否应在执行其他操作时运行 DeploymentPlanExecutor 参与者。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库排序规则方面的差异。|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库兼容性方面的差异。|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否应作为发布操作的一部分来设置或更新目标数据库属性。|
@@ -428,7 +428,7 @@ SqlPackage.exe 报告操作创建将由发布操作完成的更改的 XML 报表
  |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定发布操作在存在差异时应始终删除并重新创建程序集，而不是发出 ALTER ASSEMBLY 语句。 |
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定当在目标数据库中创建新 FileGroup 时，是否也创建新文件。 |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定是否向数据库服务器注册该架构。 
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定在执行其他操作时是否应运行 DeploymentPlanExecutor 参与者。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定是否应在执行其他操作时运行 DeploymentPlanExecutor 参与者。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库排序规则方面的差异。 |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库兼容性方面的差异。 |
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否应作为发布操作的一部分来设置或更新目标数据库属性。 |
@@ -589,7 +589,7 @@ SqlPackage.exe 脚本操作会创建 Transact-SQL 增量更新脚本，该脚本
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|指定发布操作在存在差异时应始终删除并重新创建程序集，而不是发出 ALTER ASSEMBLY 语句。|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|指定当在目标数据库中创建新 FileGroup 时，是否也创建新文件。|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|指定是否向数据库服务器注册该架构。|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定在执行其他操作时是否应运行 DeploymentPlanExecutor 参与者。|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|指定是否应在执行其他操作时运行 DeploymentPlanExecutor 参与者。|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库排序规则方面的差异。|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|指定在发布到数据库时，是应忽略还是应更新数据库兼容性方面的差异。|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|指定是否应作为发布操作的一部分来设置或更新目标数据库属性。|
