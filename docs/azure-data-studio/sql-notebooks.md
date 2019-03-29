@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392715"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566376"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -45,9 +45,9 @@ ms.locfileid: "58392715"
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支持的内核和将附加到上下文
 
-Azure Data Studio 中的 Notebook 安装以本机方式支持 SQL 内核。 如果是 SQL 开发人员并且想要使用笔记本则这将是你所选择的内核。 
+Azure Data Studio 中的 Notebook 安装以本机方式支持 SQL 内核。 如果是 SQL 开发人员并且想要使用笔记本，则这将是你所选择的内核。 
 
-SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果是 PostgreSQL 开发人员并想要连接到 PostgreSQL 服务器，然后下载[ **PostgreSQL 扩展**](postgres-extension.md) Azure Data Studio 扩展应用商店中。
+SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 PostgreSQL 开发人员，并且想要连接到 PostgreSQL 服务器，然后下载[ **PostgreSQL 扩展**](postgres-extension.md) Azure Data Studio 扩展应用商店中。
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -90,7 +90,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果是 PostgreS
 |Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
 |Python Kernel|编写 Python 代码进行本地开发。
 
-`Attach to` 提供要附加的内核的上下文。 如果使用的 SQL 内核，你可以`Attach to`任何 SQL Server 实例。
+`Attach to` 提供要附加的内核的上下文。 如果使用的 SQL 内核，然后，你可以`Attach to`任何 SQL Server 实例。
 
 如果使用 Python3 内核`Attach to`是`localhost`。 为本地 Python 开发，可以使用此内核。
 
@@ -116,7 +116,7 @@ SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果是 PostgreS
 
 在 Azure Data Studio 中打开笔记本，则进行默认**受信任**。
 
-如果从某个其他源打开笔记本它将在中打开**非受信任**模式，然后你可以使其**受信任**。
+如果从某个其他源中打开笔记本，它将在中打开**非受信任**模式，然后你可以使其**受信任**。
 
 ### <a name="save"></a>保存 
 
