@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374399"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618224"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>将自定义报表与对象资源管理器节点属性一起使用
   如果自定义报表引用所选对象资源管理器节点的报表参数，则将在此节点的上下文中执行自定义报表。 这样，自定义报表可以使用当前上下文（如当前数据库）或者数据库或服务器对象。  
   
-## <a name="report-samples"></a>报表示例  
- 可下载[报表示例](https://go.microsoft.com/fwlink/?LinkId=81792)（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]创建的标准报表）。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
   
 ## <a name="object-explorer-node-report-parameters"></a>对象资源管理器节点的报表参数  
   

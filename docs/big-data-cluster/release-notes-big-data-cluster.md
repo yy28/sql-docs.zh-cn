@@ -5,17 +5,17 @@ description: 本文介绍了最新的更新以及 SQL Server 2019 大数据群�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510334"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618304"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
 
@@ -31,8 +31,11 @@ ms.locfileid: "58510334"
 
 | 新功能或更新 | 详细信息 |
 |:---|:---|
-| 用于运行深度学习与 Spark 中的 TensorFlow 支持 GPU 的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md) |
+| 用于运行深度学习与 Spark 中的 TensorFlow 支持 GPU 的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | **SqlDataPool**并**SqlStoragePool**默认情况下不能再创建数据源。 | 根据需要手动创建这些文件。 请参阅[已知问题](#externaltablesctp24)。 |
+| `INSERT INTO SELECT` 数据池的支持。 | 有关示例，请参阅[教程：将数据引入到 SQL Server 数据池使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
+| `FORCE SCALEOUTEXECUTION` 和`DISABLE SCALEOUTEXECUTION`选项。 | 强制或禁用查询外部表的计算池的使用。 例如，`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`。 |
+| 已更新的 AKS 部署建议。 | 当评估在 AKS 上的大数据群集，我们现在建议使用单个节点的大小**Standard_L8s**。 |
 | Spark 运行时升级到 Spark 2.4。 | |
 
 ### <a name="known-issues"></a>已知问题

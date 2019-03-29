@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376179"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618164"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件 - .bacpac 文件 - 以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
@@ -43,8 +43,7 @@ ms.locfileid: "53376179"
   
 2.  导入过程将从导出文件中大容量复制数据。  
   
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实验室中有一个可用于测试导出和导入 DAC 和数据库的示例应用程序。 有关如何下载和使用此示例的说明，请参阅 [Microsoft Azure SQL Database 的数据库导入和导出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
-  
+ 
 ## <a name="sql-server-utility"></a>SQL Server 实用工具  
  如果您将 DAC 导入到数据库引擎的托管实例，则在下次将实用工具收集组从该实例发送到实用工具控制点时，导入的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617869"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618294"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>参数  
- *database_id* |NULL |0 |默认值  
+ *database_id* | NULL | 0 | DEFAULT  
  是数据库的 ID。 *database_id*是**smallint**。 有效的输入包括数据库的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL 可返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的信息。 如果指定为空， *database_id*，则还必须指定为 NULL *object_id*， *index_id*，以及*partition_number*。  
   
  内置函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 如果在不指定数据库名称的情况下使用 DB_ID，则当前数据库的兼容级别必须是 90 或更高。  
   
- *object_id* |NULL |0 |默认值  
+ *object_id* | NULL | 0 | DEFAULT  
  索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的输入也包含 service broker 队列名称或队列内部表名称。 当应用默认的参数 （即所有对象，所有索引，等等），在结果集中包含的所有队列的碎片信息。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果指定为空， *object_id*，则还必须指定为 NULL *index_id*并*partition_number*。  
   
- *index_id* | 0 |NULL |-1 |默认值  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  索引的 ID。 *index_id*是**int**。有效输入包括索引 0 的 ID 号，如果*object_id*是一个堆，NULL，-1 或默认值。 默认值为-1。 为 NULL，-1，并且默认值是在此上下文中的等效值。  
   
  指定 NULL 可返回基表或视图的所有索引的信息。 如果指定为空， *index_id*，则还必须指定为 NULL *partition_number*。  
   
- *partition_number* |NULL |0 |默认值  
+ *partition_number* | NULL | 0 | DEFAULT  
  对象中的分区号。 *partition_number*是**int**。有效输入包括*partion_number*索引或堆中，NULL、 0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。  
   
  指定 NULL，以返回有关所属对象的所有分区的信息。  
@@ -197,7 +197,7 @@ GO
   
 -   使用 ALTER INDEX REBUILD（代替 DBCC DBREINDEX）联机或脱机重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
- 不需要仅因为碎片的原因而重新组织或重新生成索引。 碎片的主要影响是，在索引扫描过程中会降低页的预读吞吐量。 这将导致响应时间变长。 如果含有碎片的表或索引中的查询工作负荷不涉及扫描（因为工作负荷主要是单独查找），则删除碎片可能不起作用。 有关详细信息，请参阅此[Microsoft 网站上](https://go.microsoft.com/fwlink/?linkid=31012)。  
+ 不需要仅因为碎片的原因而重新组织或重新生成索引。 碎片的主要影响是，在索引扫描过程中会降低页的预读吞吐量。 这将导致响应时间变长。 如果含有碎片的表或索引中的查询工作负荷不涉及扫描（因为工作负荷主要是单独查找），则删除碎片可能不起作用。
   
 > [!NOTE]  
 >  如果对索引进行部分或完全移动在收缩操作，则运行 DBCC SHRINKFILE 或 DBCC SHRINKDATABASE 可能产生碎片。 因此，如果必须执行收缩操作，则应在删除碎片之前进行。  
@@ -428,8 +428,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与索引相关的动态管理视图和函数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

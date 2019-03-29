@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493550"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618144"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -78,14 +78,14 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Docker 用户名** | 向你的有限公共预览版的一部分提供的 Docker 用户名。 |
    | **Docker 密码** | Docker 密码提供给你的有限公共预览版的一部分。 |
    | **Azure 区域** | 新的 AKS 群集的 Azure 区域 (默认**westus**)。 |
-   | **机大小** | [虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)要用于 AKS 群集中的节点 (默认**Standard_L4s**)。 |
-   | **辅助角色节点** | 在 AKS 群集中的辅助角色节点数 (默认**3**)。 |
+   | **机大小** | [虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)要用于 AKS 群集中的节点 (默认**Standard_L8s**)。 |
+   | **辅助角色节点** | 在 AKS 群集中的辅助角色节点数 (默认**1**)。 |
    | **群集名称** | 在 AKS 群集和大数据群集的名称。 仅大小写字母数字字符，且没有空格，必须是群集的名称。 (默认**sqlbigdata**)。 |
    | **密码** | 有关控制器、 HDFS/Spark 网关和主实例密码 (默认**MySQLBigData2019**)。 |
    | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
 
    > [!IMPORTANT]
-   > 默认值**Standard_L4s**机大小不一定在每个 Azure 区域中可用。 如果您选择不同的计算机大小，请确保在群集中节点之间可以附加的磁盘总数大于或等于 24。 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 24 永久性卷声明。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 16 个附加的磁盘，因此，三个节点表示可附加 48 磁盘。
+   > 默认值**Standard_L8s**机大小不一定在每个 Azure 区域中可用。 如果您选择不同的计算机大小，请确保在群集中节点之间可以附加的磁盘总数大于或等于 24。 在群集中的每个永久性卷声明需要附加的磁盘。 目前，大数据群集需要 24 永久性卷声明。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)计算机大小支持 32 个附加的磁盘，以便您可以评估此计算机大小的单个节点的大数据群集。
 
    > [!NOTE]
    > `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建部署之后,`MSSQL_SA_PASSWORD`环境变量是可发现通过运行`echo $MSSQL_SA_PASSWORD`主实例容器中。 出于安全考虑，更改你`sa`部署后的主实例上的密码。 有关详细信息，请参阅[更改 SA 密码](../linux/quickstart-install-connect-docker.md#sapassword)。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017993"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618234"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>配置用于 SQL Server 2019 大数据群集 （预览版） 部署的 Azure Kubernetes 服务
 
@@ -39,9 +39,9 @@ AKS 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程
 - Kubernetes 服务器的最小值 1.10 版本。 适用于 AKS，您需要使用`--kubernetes-version`参数来指定默认值以外的版本。
 
 - 验证在 AKS 上的基本方案时获得最佳体验，请使用：
-   - 3 个代理 Vm 的最小值
-   - 每个 VM 4 个 Vcpu
+   - 在所有节点之间的 8 个 Vcpu
    - 32 GB 的每个虚拟机的内存
+   - 24 或更多附加磁盘的所有节点
 
    > [!TIP]
    > Azure 基础结构提供了多个 Vm 的大小选项，请参阅[此处](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)为计划部署的目标区域中的选择。
@@ -76,18 +76,18 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
 
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
-1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集*kubcluster*具有三个 Linux 代理节点。 请确保你在前面几节中使用同一资源组中创建 AKS 群集。
+1. 在与 AKS 创建 Kubernetes 群集[az aks 创建](https://docs.microsoft.com/cli/azure/aks)命令。 下面的示例创建名为的 Kubernetes 群集*kubcluster*具有一个 Linux 代理节点的大小**Standard_L8s**。 请确保你在前面几节中使用同一资源组中创建 AKS 群集。
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   可以增加或减少 Kubernetes 代理节点数，方法是更改`--node-count <n>`其中`<n>`是你想要使用的代理节点数。 这不包括在后台由 AKS 主 Kubernetes 节点。 因此在上面的示例中，有**3** Vm 的大小**Standard_L4s**用于 AKS 群集的代理节点。
+   可以增加或减少 Kubernetes 代理节点数，方法是更改`--node-count <n>`其中`<n>`是你想要使用的代理节点数。 这不包括在后台由 AKS 主 Kubernetes 节点。 前面的示例仅供评估使用的单个节点。
 
    几分钟后，该命令完成并返回有关群集的 JSON 格式信息。
 

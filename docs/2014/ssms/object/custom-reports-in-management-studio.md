@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354679"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618284"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
@@ -70,8 +70,7 @@ ms.locfileid: "53354679"
 > [!CAUTION]  
 >  可以在报表中嵌入任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并可从报表执行此语句。 如果使用具有较高特权的用户帐户运行报表，则可以不受约束地执行所有这些嵌入的指令。  
   
-## <a name="report-samples"></a>报表示例  
- [报表示例](https://go.microsoft.com/fwlink/?LinkId=81792)，包括由创建的标准报表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下载。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
+
   
 ## <a name="see-also"></a>请参阅  
  [向 Management Studio 添加自定义报表](add-a-custom-report-to-management-studio.md)   

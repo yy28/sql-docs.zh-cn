@@ -12,17 +12,16 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12108fb9d52081b70b87929bacb6882b3463a4a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357171"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618124"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
   本主题介绍如何创建简单的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表并将其保存为 .rdl 文件，然后将该 rdl 文件作为自定义报表添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。 [!INCLUDE[ssRS](../../includes/ssrs.md)] 可以创建各式各样的复杂报表。 若要根据本主题创建报表，计算机上必须安装有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 不必在 [!INCLUDE[ssRS](../../includes/ssrs.md)] 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]运行自定义报表。  
   
- 可下载[报表示例](https://go.microsoft.com/fwlink/?LinkId=81792)（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]创建的标准报表）。 某些示例可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]加以修改。  
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>创建保存为 .rdl 文件的简单报表  
   

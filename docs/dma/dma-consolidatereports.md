@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198196"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618174"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -72,7 +72,11 @@ ms.locfileid: "58198196"
 
 ### <a name="if-using-a-csv-file"></a>如果使用的 CSV 文件
 > [!IMPORTANT]
+>
 > 确保在清单文件保存为逗号分隔 (CSV) 文件。
+>
+> 对于默认实例为 MSSQLServer 设置实例名称。
+>
 
 如果使用 csv 文件导入数据，请确保有只有两个列的数据-**实例名称**并**数据库名称**，和列不包含标头行。
  

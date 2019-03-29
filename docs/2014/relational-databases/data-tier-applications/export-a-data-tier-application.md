@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368699"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618134"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到[!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
@@ -43,8 +43,7 @@ ms.locfileid: "53368699"
   
  导出过程将 DAC 版本设置为 1.0.0.0，并将导出文件中的 DAC 说明设置为空字符串。 如果从 DAC 部署数据库，则导出文件中的 DAC 定义包含为原始 DAC 指定的名称，否则，将把 DAC 名称设置为数据库名称。  
   
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实验室中有一个可用于测试导出和导入 DAC 和数据库的示例应用程序。 有关如何下载和使用此示例的说明，请参阅 [Microsoft Azure SQL Database 的数据库导入和导出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
-  
+ 
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  只能从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更高版本的数据库导出 DAC 或数据库。  
   
