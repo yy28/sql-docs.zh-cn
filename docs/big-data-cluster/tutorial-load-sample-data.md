@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017843"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566516"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 2019 大数据群集
 
@@ -115,4 +115,18 @@ ms.locfileid: "57017843"
 
 ## <a name="next-steps"></a>后续步骤
 
-启动脚本运行大数据群集后，示例数据库和 HDFS 的数据。 若要开始浏览此数据和大数据群集，请参阅[教程](tutorial-query-hdfs-storage-pool.md)在本部分中。
+启动脚本运行大数据群集后，示例数据库和 HDFS 的数据。 以下教程使用示例数据来说明大数据群集功能：
+
+数据虚拟化：
+
+- [教程：在 SQL Server 大数据群集中的查询 HDFS](tutorial-query-hdfs-storage-pool.md)
+- [教程：从 SQL Server 大数据群集查询 Oracle](tutorial-query-oracle.md)
+
+数据引入：
+
+- [教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池](tutorial-data-pool-ingest-sql.md)
+- [教程：将数据引入到 Spark 作业的 SQL Server 数据池](tutorial-data-pool-ingest-spark.md)
+
+Notebook:
+
+- [教程：在 SQL Server 2019 大数据群集上运行的示例笔记本](tutorial-notebook-spark.md)

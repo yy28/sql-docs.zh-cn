@@ -1,164 +1,160 @@
 ---
 title: 在 Azure Data Studio 中运行 notebook
 titleSuffix: SQL Server 2019 big data clusters
-description: 此文章介绍了如何对 SQL Server 2019 大数据群集在 Azure Data Studio conneected 中运行的 Jupyter 笔记本。
+description: 本文介绍如何在 Azure Data Studio 连接到 SQL Server 2019 大数据群集中运行的 Jupyter 笔记本。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/12/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44ba203fcd7445add8fce00dd64913f85bcf4cc1
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 3bdd1a9de5e22a4577bcc8ac38ba1dde6c2ceb7c
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161654"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566436"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
-本文介绍如何在大数据群集上启动 Jupyter 笔记本以及如何开始创作自己的笔记本。 它还演示如何将针对群集的作业提交。
+本文介绍如何启动 Azure 数据 Studio 中的笔记本体验以及如何开始创作自己的笔记本。 它还演示如何编写使用不同的内核的笔记本。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="connect-to-sql-server"></a>连接到 SQL Server
 
-若要使用笔记本，必须安装以下先决条件：
+您可以连接到 Azure Data Studio 中的 Microsoft SQL Server 连接类型。
+在 Azure 数据 Studio 中，您可以还按 F1，并单击**新的连接** 并连接到 SQL Server。
 
-- [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
-   - **Azure Data Studio**
-   - **SQL Server 2019 扩展**
-   - **kubectl**
+![连接信息](media/notebooks-guidance/connection-info.png)
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>连接到 SQL Server 大数据群集终结点
-
-你可以连接到群集中的不同终结点。 您可以连接到 Microsoft SQL Server 连接类型或 SQL Server 大数据群集终结点。
-在 Azure 数据 Studio 中，按 F1，并单击**新的连接** 并且可以连接到你的 SQL Server 大数据群集终结点。
-
-![image1](media/notebooks-guidance/image1.png)
-
-## <a name="browse-hdfs"></a>浏览 HDFS
-
-连接后，你将能够浏览 HDFS 文件夹。 部署完成后，SQL Server 开始 WebHDFS 才开始。 使用 WebHDFS，你可以**刷新**，添加**的新目录**，**上载**文件，并**删除**。
-
-![image2](media/notebooks-guidance/image2.png)
-
-这些简单的操作，让您能够将你自己的数据带到 HDFS。
-
-## <a name="launch-new-notebooks"></a>启动新的笔记本
-
->[!NOTE]
->如果有多个环境中运行的 Python 进程，首先删除`.scaleoutdata`安装目录下的文件夹。 这应触发`Reinstall Notebook dependencies`Azure Data Studio 中的任务。 它将需要几分钟来安装的所有依赖项。
-
-如果有安装笔记本依赖项的问题，请单击 Ctrl + Shift + P 或 Macintosh Cmd + Shift + P，和类型`Reinstall Notebook dependencies`在命令面板中。
-
-![image3](media/notebooks-guidance/image3.png)
+## <a name="launch-notebooks"></a>启动笔记本
 
 有多种方法来启动新的 notebook。
 
-1. 从**管理仪表板**。 新的连接后，您将看到仪表板。 单击**新的 Notebook**从仪表板的任务。
-  
-    ![image4](media/notebooks-guidance/image4.png)
+- 转到**文件菜单**在 Azure Data Studio，然后单击**新的 Notebook**。
 
-1. 右键单击 HDFS/Spark 连接，然后单击**新的 Notebook**的上下文菜单中。
+    ![新的 notebook](media/notebooks-guidance/file-new-notebook.png)
 
-    ![image5](media/notebooks-guidance/image5.png)
+- 右键单击**SQL Server**连接，然后启动**新的 Notebook**。
 
-    名为的新文件`Notebook-0.ipynb`随即打开。
+    ![新的 notebook](media/notebooks-guidance/server-new-notebook.png)
 
-    ![image6](media/notebooks-guidance/image6.png)
-
-当从命令托盘打开笔记本时，笔记本将作为打开`Untitled-0.ipynb`。
+- 打开命令面板 (**Ctrl + Shift + P**))，然后键入**新的 Notebook**。 名为的新文件`Notebook-1.ipynb`随即打开。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支持的内核和将附加到上下文
 
-Notebook 安装支持使用 PySpark 和 Spark，Spark Magic 内核时，可用于编写使用 Spark 的 Python 和 Scala 代码。 （可选） 你可以选择 Python 用于本地开发。
+Azure Data Studio 中的 Notebook 安装以本机方式支持 SQL 内核。 如果是 SQL 开发人员并且想要使用笔记本，则这将是你所选择的内核。 
 
-![image7](media/notebooks-guidance/image7.png)
+SQL 内核还可用来连接到 PostgreSQL 服务器实例。 如果您是 PostgreSQL 开发人员，并且想要连接到 PostgreSQL 服务器，然后下载[ **PostgreSQL 扩展**](../azure-data-studio/postgres-extension.md) Azure Data Studio 扩展应用商店中。
 
-当你选择其中一个这些内核时，安装在虚拟环境中配置该内核，您可以开始在受支持的语言中编写代码。
+![PostgreSQL 连接](media/notebooks-guidance/sql-kernel-dropdown.png)
+
+### <a name="sql-kernel"></a>SQL Kernel
+
+笔记本，类似于我们的查询编辑器中的代码单元中，我们支持现代 SQL 编码的内置功能，例如丰富的 SQL 编辑器、 IntelliSense 和内置代码段简化日常任务的体验。 代码片段，可生成正确的 SQL 语法来创建数据库、 表、 视图、 存储的过程、 等，并更新现有数据库对象。 使用代码片段来快速创建开发或测试用途的数据库的副本并生成和执行脚本。
+
+单击**运行**执行每个单元格。
+
+若要连接到 SQL Server 实例的 SQL 内核
+
+![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+
+查询结果
+
+![查询结果](media/notebooks-guidance/sql-cell-results.png)
+
+若要连接到 PostgreSQL 服务器实例的 SQL 内核 
+
+![PostgreSQL 连接](media/notebooks-guidance/pgsql-code-cell.png)
+
+查询结果
+
+![查询结果](media/notebooks-guidance/pgsql-cell-results.png)
+
+### <a name="configure-python-for-notebooks"></a>适用于笔记本中配置 Python
+
+当您选择任何除了 SQL 之外的其他内核的内核下拉列表中时，这会提示您**配置 Python 笔记本的**。 Notebook 依赖项安装在指定的位置，但您可以决定是否设置的安装位置。 此安装可能需要一些时间，建议在安装完成之前不关闭应用程序。 安装完成后，可以开始在受支持的语言中编写代码。
+
+![配置 python](media/notebooks-guidance/configure-python.png)
+
+安装成功后，您会发现通知任务历史记录以及在输出终端中运行的 Jupyter 后端服务器的位置中。
+
+![Jupyter 后端](media/notebooks-guidance/jupyter-backend.png)
 
 |内核|Description
 |:-----|:-----
+| SQL Kernel | 编写针对关系数据库的 SQL 代码。
 |PySpark3 和 PySpark 内核| 编写使用 Spark 计算群集中的 Python 代码。
 |Spark 内核|编写使用 Spark 计算群集中的 Scala 和 R 代码。
 |Python Kernel|编写 Python 代码进行本地开发。
 
-`Attach to` 提供要附加的内核的上下文。 当连接到 SQL Server 大数据群集终结点，默认值`Attach to`群集该终结点。
+`Attach to` 提供要附加的内核的上下文。 如果使用的 SQL 内核，然后，你可以`Attach to`任何 SQL Server 实例。
 
-在您未连接到 SQL Server 大数据群集终结点，默认内核是 Python 和`Attach to`是`localhost`。
+如果使用 Python3 内核`Attach to`是`localhost`。 为本地 Python 开发，可以使用此内核。
 
-## <a name="hello-world-in-different-contexts"></a>不同的上下文中的 hello world
+当连接到 SQL Server 2019 大数据群集，默认值`Attach to`群集该终结点，让你提交 Python、 Scala 和 R 代码中使用 Spark 群集的计算。
+
+### <a name="code-cells-and-markdown-cells"></a>代码单元格和 Markdown 单元格
+
+通过单击来添加新的代码单元格 **+ Code**命令工具栏中。
+
+通过单击来添加新的文本单元格 **+ 文本**命令工具栏中。
+
+![Notebook 工具栏](media/notebooks-guidance/notebook-toolbar.png)
+
+单元格更改编辑模式，现在键入 markdown 和你将看到在同一时间的预览
+
+![Markdown 单元格](media/notebooks-guidance/notebook-markdown-cell.png)
+
+文本单元格外单击，则会显示 markdown 文本。
+
+![Markdown 文本](media/notebooks-guidance/notebook-markdown-preview.png)
+
+### <a name="trusted-and-non-trusted"></a>受信任和非受信任
+
+在 Azure Data Studio 中打开笔记本，则进行默认**受信任**。
+
+如果从某个其他源中打开笔记本，它将在中打开**非受信任**模式，然后你可以使其**受信任**。
+
+### <a name="save"></a>保存
+
+您可以保存通过笔记本**Ctrl + S**或单击**文件将保存**，**文件另存为...** 并**文件将保存所有**从文件菜单命令和**文件：保存**在命令面板中输入的命令。
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark 内核
 
-选择 PySpark 内核在下面的代码中的单元格类型。
+选择`PySpark Kernel`和在下面的代码中的单元格类型。
 
 单击 **“运行”**。
 
 Spark 应用程序启动，并返回以下输出：
 
-![image8](media/notebooks-guidance/image8.png)
+![Spark 应用程序](media/notebooks-guidance/pyspark.png)
 
 ### <a name="spark-kernel--scala-language"></a>Spark 内核 |Scala 语言
 
-选择 Spark |Scala 内核和在下面的代码中的单元格类型。
+选择`Spark|Scala Kernel`和在下面的代码中的单元格类型。
 
-![image9](media/notebooks-guidance/image9.png)
-
-通过单击来添加新的代码单元格 **+ Code**命令工具栏中。
-
-现在，选择 Spark |Scala 内核在下拉列表中和在 – 在单元格中键入/粘贴
-
-![image10](media/notebooks-guidance/image10.png)
+![Spark Scala](media/notebooks-guidance/spark-scala.png)
 
 单击下 – 的选项图标上时，还可以查看"单元格选项"
 
-![image11](media/notebooks-guidance/image11.png)
+![单元格选项](media/notebooks-guidance/scala-cell-options.png)
 
 ### <a name="spark-kernel--r-language"></a>Spark 内核 |R 语言
 
 选择 Spark |R 内核在下拉列表中。 在单元格中，键入或粘贴代码。 单击**运行**看到以下输出。
 
-![image13](media/notebooks-guidance/image13.png)
+![Spark R](media/notebooks-guidance/spark-r.png)
 
 ### <a name="local-python-kernel"></a>本地 Python 内核
 
 选择本地 Python 内核在-中的单元格类型
 
-![image14](media/notebooks-guidance/image14.png)
-
-### <a name="markdown-text"></a>Markdown 文本
-
-通过单击来添加新的文本单元格 **+ 文本**命令工具栏中。
-
-![image15](media/notebooks-guidance/image15.png)
-
-若要更改编辑视图的文本单元格内双击 
-
-![image16](media/notebooks-guidance/image16.png)
-
-要编辑模式的单元格更改
-
-![image17](media/notebooks-guidance/image17.png)
-
-现在类型 markdown 和你将看到在同一时间的预览
-
-![image18](media/notebooks-guidance/image18.png)
-
-单击 **“运行”**。 在 Spark 应用程序启动创建 Spark 会话，作为**spark** ，并定义**HelloWorld**对象。
-
-笔记本应类似于下图。
-
-文本单元格外单击将改为预览模式下，隐藏 markdown。
-
-![image19](media/notebooks-guidance/image19.png)
-
+![本地 python](media/notebooks-guidance/local-python.png)
 
 ## <a name="manage-packages"></a>管理包
+
 我们针对本地 Python 开发优化的项目之一是包括安装包的客户将需要为其方案的能力。 默认情况下，我们包括等常用的程序包`pandas`，`numpy`等，但如果您希望不包括的包然后在笔记本单元中编写以下代码： 
 
 ```python
@@ -167,11 +163,14 @@ import <package-name>
 
 运行此命令时`Module not found`返回。 如果您的包存在，然后将未收到错误。
 
-如果它返回`Module not Found`错误，然后单击**管理包**以标识您 Virtualenv 启动终端中的路径。 现在可以安装本地包。 使用以下命令以安装包：
+如果它返回`Module not Found`错误，然后单击**管理包**启动终端。 现在可以安装本地包。 使用以下命令以安装包：
 
 ```bash
 ./pip install <package-name>
 ```
+
+   > [!Tip]
+   > 在 Mac 上请按照在终端窗口中安装包的说明。 
 
 安装此包后，您应能够处于 Notebook 单元中，并键入以下命令：
 
