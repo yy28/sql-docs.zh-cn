@@ -2,7 +2,7 @@
 title: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744797"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492599"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744797"
 
 Microsoft OLE DB 驱动程序的 SQL Server （版本 18.2.1） 添加了对 UTF-8 server 编码支持。 有关 SQL Server utf-8 支持的信息，请参阅：
 - [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 支持 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [UTF-8 支持](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>数据插入到 utf-8 编码的 CHAR 或 VARCHAR 列
 在创建时插入的输入的参数缓冲区，使用一个数组描述缓冲区[DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)。 每个 DBBINDING 结构将使用者的缓冲区的单个参数相关联，并包含信息，例如长度和数据值的类型。 对于输入的参数的类型为 CHAR，缓冲区*wType*的 DBBINDING 结构应设置为 DBTYPE_STR。 对于输入的参数缓冲区的类型 WCHAR *wType*的 DBBINDING 结构应设置为 DBTYPE_WSTR。
