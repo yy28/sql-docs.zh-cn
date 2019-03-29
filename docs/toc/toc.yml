@@ -44,7 +44,7 @@ items:
 - name: 大数据群集
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: 大数据群集的概述
+  - name: 概述
     items:
     - name: 什么是 SQL Server 大数据群集？
       href: ../big-data-cluster/big-data-cluster-overview.md
@@ -52,6 +52,12 @@ items:
       href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: 安装
     items:
+    - name: 开始操作
+      items:
+      - name: 部署大数据群集
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: 加载示例数据
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: 安装工具
       items:
       - name: 安装大数据工具
@@ -72,20 +78,6 @@ items:
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-  - name: 教程
-    items:
-    - name: 1_加载示例数据
-      href: ../big-data-cluster/tutorial-load-sample-data.md
-    - name: 2_查询 HDFS 数据
-      href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-    - name: 3_查询 Oracle 数据
-      href: ../big-data-cluster/tutorial-query-oracle.md
-    - name: 4_使用 SQL 加载数据池
-      href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-    - name: 5_使用 Spark 加载数据池
-      href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-    - name: 6_运行 Spark 笔记本
-      href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: 概念
     items:
     - name: 控制器
@@ -106,16 +98,28 @@ items:
     items:
     - name: 数据虚拟化
       items:
-      - name: 虚拟化关系数据
-        href: ../relational-databases/polybase/data-virtualization.md
-      - name: 虚拟化 CSV 数据
-        href: ../relational-databases/polybase/data-virtualization-csv.md
-      - name: HDFS 分层
-        href: ../big-data-cluster/hdfs-tiering.md
+      - name: 关系数据
+        items:
+        - name: 虚拟化关系数据
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: 查询 Oracle 数据
+          href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: HDFS 数据
+        items:
+        - name: 虚拟化 CSV 数据
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: 查询 HDFS 数据
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS 分层
+          href: ../big-data-cluster/hdfs-tiering.md
     - name: 数据引入
       items:
       - name: 使用 curl 加载数据
         href: ../big-data-cluster/data-ingestion-curl.md
+      - name: 使用 SQL 加载数据
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: 使用 Spark 加载数据
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
       - name: 还原数据库
         href: ../big-data-cluster/data-ingestion-restore-database.md
     - name: 部署和使用应用
@@ -150,6 +154,8 @@ items:
       items:
       - name: 笔记本概述
         href: ../big-data-cluster/notebooks-guidance.md
+      - name: Notebook 教程
+        href: ../big-data-cluster/tutorial-notebook-spark.md
       - name: 管理现有笔记本
         href: ../big-data-cluster/notebooks-how-to-manage.md
     - name: Spark 作业
@@ -6757,132 +6763,135 @@ items:
       - name: 单独保存 Showplan XML Statistics Profile 事件
         href: ../relational-databases/performance/save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
     - name: 性能监视器
-      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       items:
-      - name: 运行系统监视器
-        href: ../relational-databases/performance-monitor/run-system-monitor.md
-      - name: 监视磁盘使用情况
-        href: ../relational-databases/performance-monitor/monitor-disk-usage.md
-      - name: 监视 CPU 使用率
-        href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-      - name: 监视内存使用量
-        href: ../relational-databases/performance-monitor/monitor-memory-usage.md
-      - name: 创建 SQL Server 数据库警报
-        href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
-      - name: 创建图表、警报、日志和报表
-        href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
-      - name: SQL Server XTP（内存中 OLTP）性能计数器
-        href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
+      - name: 概述
+        href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+      - name: 概念
         items:
-        - name: 游标
-          href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
-        - name: 数据库
-          href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
-        - name: 垃圾回收
-          href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-        - name: IO 调控器
-          href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
-        - name: 虚拟处理器
-          href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
-        - name: 存储器
-          href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
-        - name: 事务日志
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
-        - name: 中的
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
-      - name: 使用对象
-        href: ../relational-databases/performance-monitor/use-sql-server-objects.md
-        items:
-        - name: SQL Server 代理对象
+        - name: 运行系统监视器
+          href: ../relational-databases/performance-monitor/run-system-monitor.md
+        - name: 监视磁盘使用情况
+          href: ../relational-databases/performance-monitor/monitor-disk-usage.md
+        - name: 监视 CPU 使用率
+          href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
+        - name: 监视内存使用量
+          href: ../relational-databases/performance-monitor/monitor-memory-usage.md
+        - name: 创建 SQL Server 数据库警报
+          href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
+        - name: 创建图表、警报、日志和报表
+          href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
+        - name: SQL Server XTP（内存中 OLTP）性能计数器
+          href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
           items:
-          - name: Alerts
-            href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-          - name: 中执行计划的管理任务，即“作业”
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
-          - name: JobSteps
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
-          - name: 统计信息
-            href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
-        - name: SQL Server 对象
-          items:
-          - name: 访问对象
-            href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
-          - name: 可用性副本
-            href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
-          - name: 备份设备
-            href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
-          - name: Batch Resp Statistics
-            href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-          - name: Broker 激活
-            href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
-          - name: Broker 统计信息
-            href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
-          - name: Broker TO Statistics
-            href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
-          - name: Broker - DBM Transport
-            href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
-          - name: Buffer Manager
-            href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
-          - name: Buffer Node
-            href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
-          - name: 目录元数据
-            href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
-          - name: CLR 对象
-            href: ../relational-databases/performance-monitor/sql-server-clr-object.md
-          - name: columnstore
-            href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
-          - name: Cursor Manager by Type
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
-          - name: Cursor Manager Total
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
-          - name: 数据库镜像
-            href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
-          - name: 数据库副本
-            href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+          - name: 游标
+            href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
           - name: 数据库
-            href: ../relational-databases/performance-monitor/sql-server-databases-object.md
-          - name: 已弃用的功能
-            href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
-          - name: ExecStatistics
-            href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
-          - name: 外部脚本
-            href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
-          - name: FileTable
-            href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
-          - name: General Statistics
-            href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
-          - name: HTTP 存储
-            href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
-          - name: 闩锁
-            href: ../relational-databases/performance-monitor/sql-server-latches-object.md
-          - name: 锁
-            href: ../relational-databases/performance-monitor/sql-server-locks-object.md
-          - name: LogPool FreePool
-            href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
-          - name: Memory Broker Clerk
-            href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
-          - name: Memory Manager
-            href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
-          - name: 内存节点
-            href: ../relational-databases/performance-monitor/sql-server-memory-node.md
-          - name: “计划缓存”
-            href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
-          - name: 查询存储
-            href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
-          - name: 资源池统计信息
-            href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
-          - name: SQL 错误
-            href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
-          - name: SQL 统计信息
-            href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
+          - name: 垃圾回收
+            href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
+          - name: IO 调控器
+            href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
+          - name: 虚拟处理器
+            href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
+          - name: 存储器
+            href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
+          - name: 事务日志
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
           - name: 中的
-            href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
-          - name: 用户可设置
-            href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
-          - name: 等待统计信息
-            href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
-          - name: 工作负载组统计信息
-            href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
+        - name: 使用对象
+          href: ../relational-databases/performance-monitor/use-sql-server-objects.md
+          items:
+          - name: SQL Server 代理对象
+            items:
+            - name: Alerts
+              href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
+            - name: 中执行计划的管理任务，即“作业”
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
+            - name: JobSteps
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
+            - name: 统计信息
+              href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
+          - name: SQL Server 对象
+            items:
+            - name: 访问对象
+              href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: 可用性副本
+              href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
+            - name: 备份设备
+              href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
+            - name: Batch Resp Statistics
+              href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
+            - name: Broker 激活
+              href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
+            - name: Broker 统计信息
+              href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
+            - name: Broker TO Statistics
+              href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
+            - name: Broker - DBM Transport
+              href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
+            - name: Buffer Manager
+              href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
+            - name: Buffer Node
+              href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
+            - name: 目录元数据
+              href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
+            - name: CLR 对象
+              href: ../relational-databases/performance-monitor/sql-server-clr-object.md
+            - name: columnstore
+              href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
+            - name: Cursor Manager by Type
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
+            - name: Cursor Manager Total
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
+            - name: 数据库镜像
+              href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
+            - name: 数据库副本
+              href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+            - name: 数据库
+              href: ../relational-databases/performance-monitor/sql-server-databases-object.md
+            - name: 已弃用的功能
+              href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
+            - name: ExecStatistics
+              href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
+            - name: 外部脚本
+              href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
+            - name: FileTable
+              href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
+            - name: General Statistics
+              href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
+            - name: HTTP 存储
+              href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
+            - name: 闩锁
+              href: ../relational-databases/performance-monitor/sql-server-latches-object.md
+            - name: 锁
+              href: ../relational-databases/performance-monitor/sql-server-locks-object.md
+            - name: LogPool FreePool
+              href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
+            - name: Memory Broker Clerk
+              href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
+            - name: Memory Manager
+              href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
+            - name: 内存节点
+              href: ../relational-databases/performance-monitor/sql-server-memory-node.md
+            - name: “计划缓存”
+              href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
+            - name: 查询存储
+              href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
+            - name: 资源池统计信息
+              href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
+            - name: SQL 错误
+              href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
+            - name: SQL 统计信息
+              href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            - name: 中的
+              href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
+            - name: 用户可设置
+              href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
+            - name: 等待统计信息
+              href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
+            - name: 工作负载组统计信息
+              href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: 优化
     items:
     - name: 自动优化
@@ -7139,41 +7148,44 @@ items:
       - name: 升级后验证计划指南
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: Resource Governor
-      href: ../relational-databases/resource-governor/resource-governor.md
       items:
-      - name: 启用
-        href: ../relational-databases/resource-governor/enable-resource-governor.md
-      - name: Disable
-        href: ../relational-databases/resource-governor/disable-resource-governor.md
-      - name: 使用模板配置资源调控器
-        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-      - name: 查看资源调控器属性
-        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-      - name: 资源池
-        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+      - name: 概述
+        href: ../relational-databases/resource-governor/resource-governor.md
+      - name: 操作说明
         items:
-        - name: 创建
-          href: ../relational-databases/resource-governor/create-a-resource-pool.md
-        - name: 更改设置
-          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-      - name: 工作负载组
-        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-        items:
-        - name: 创建
-          href: ../relational-databases/resource-governor/create-a-workload-group.md
-        - name: 更改设置
-          href: ../relational-databases/resource-governor/change-workload-group-settings.md
-        - name: “移动”
-          href: ../relational-databases/resource-governor/move-a-workload-group.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-workload-group.md
-      - name: 分类器函数
-        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-        items:
-        - name: 创建和测试分类器用户定义函数
-          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: 启用
+          href: ../relational-databases/resource-governor/enable-resource-governor.md
+        - name: Disable
+          href: ../relational-databases/resource-governor/disable-resource-governor.md
+        - name: 使用模板配置资源调控器
+          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+        - name: 查看资源调控器属性
+          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+        - name: 资源池
+          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+          items:
+          - name: 创建
+            href: ../relational-databases/resource-governor/create-a-resource-pool.md
+          - name: 更改设置
+            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+        - name: 工作负载组
+          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+          items:
+          - name: 创建
+            href: ../relational-databases/resource-governor/create-a-workload-group.md
+          - name: 更改设置
+            href: ../relational-databases/resource-governor/change-workload-group-settings.md
+          - name: “移动”
+            href: ../relational-databases/resource-governor/move-a-workload-group.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-workload-group.md
+        - name: 分类器函数
+          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+          items:
+          - name: 创建和测试分类器用户定义函数
+            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: 统计信息
       href: ../relational-databases/statistics/statistics.md
       items:
@@ -12260,6 +12272,8 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md
       - name: sys.dm_exec_query_plan
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md
+      - name: sys.dm_exec_query_plan_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md
       - name: sys.dm_exec_query_profiles
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md
       - name: sys.dm_exec_query_resource_semaphores
@@ -12476,10 +12490,14 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md
       - name: sys.dm_resource_governor_resource_pools
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md
+      - name: sys.dm_resource_governor_pools_history_ex（Azure SQL 数据库）
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md
       - name: sys.dm_resource_governor_resource_pool_volumes
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-volumes-transact-sql.md
       - name: sys.dm_resource_governor_workload_groups
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md
+      - name: sys.dm_user_db_resource_governance（Azure SQL 数据库）
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md
     - name: 安全相关
       href: ../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -17227,9 +17245,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 处理 XQuery 中的命名空间
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538679"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618324"
