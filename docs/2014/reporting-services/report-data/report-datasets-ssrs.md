@@ -11,12 +11,12 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0f12d893aa1f37ffa3c35f5e295a991502ed9d85
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040508"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658211"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>向报表添加数据（报表生成器和 SSRS）
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  
@@ -39,7 +39,7 @@ ms.locfileid: "56040508"
   
  您还可以通过添加包括其所依赖的数据集的报表部件，向报表添加数据集。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何创建显示来自数据的报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成的报表，包括其自己的数据，请参阅[教程：创建快速图表报表脱机&#40;报表生成器&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何创建显示来自数据的报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请参阅[教程：生成基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要生成的报表，包括其自己的数据，请参阅[教程：脱机生成快速图表报表（报表生成器）](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -77,9 +77,7 @@ ms.locfileid: "56040508"
 -   [报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)  
   
 -   [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="QuickStart"></a> 通过报表部件添加数据  
  报表部件包含它们所依赖的数据集。 这些数据集是在报表服务器上提供的共享数据源的基础上生成的。 在报表生成器中，在向您的报表中添加报表部件时，相关数据集将添加到报表中，就像您手动添加了它们一样。 例如，一个预定义的图表包含一个数据集。 若要查看数据，请预览报表。  
   
@@ -89,9 +87,7 @@ ms.locfileid: "56040508"
  报表部件、共享数据源和共享数据集将预先定义并保存在某一报表服务器上。 若要访问它们，您必须通过连接到该报表服务器，在服务器模式下打开报表生成器。 如果您对该报表服务器具有写入权限，则可以使用它们创建您自己的新版本。  
   
 -   有关详细信息，请参阅[报表部件（报表生成器和 SSRS）](../report-parts-report-builder-and-ssrs.md)和[报表设计器中的报表部件 (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="Queries"></a> 查询和查询设计器  
  若要指定数据源中所需的数据，您应该生成一个查询命令。 每种数据源类型都提供相关的“查询设计器”  ，以帮助您生成查询。 查询设计器可为图形查询设计器或基于文本的查询设计器。 在图形查询设计器中，可查看表示外部数据源中数据的元数据，并且通过将字段或实体拖到查询设计曲面图，以交互方式生成查询。 在基于文本的查询设计器中，您可以按照外部数据源支持的查询语法编写或导入查询。  
   
@@ -100,9 +96,7 @@ ms.locfileid: "56040508"
  若要运行查询，您必须具有设计时凭据。 有关详细信息，请参阅[在报表生成器中指定凭据](../specify-credentials-in-report-builder.md)并[数据连接、 数据源和 Reporting Services 中的连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
  数据扩展插件和外部数据源之间的通信由数据提供程序处理。 对查询命令语法的支持、查询参数和结果集中值的数据类型由各数据访问接口确定。 有关详细信息，请参阅针对数据扩展插件和[查询设计器（报表生成器）](../query-designers-report-builder.md)的特定类型的主题。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 操作指南主题  
  [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -121,9 +115,7 @@ ms.locfileid: "56040508"
  [将查询参数与报表参数相关联（报表生成器和 SSRS）](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
  [在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="Section"></a> 本节内容  
  [报表生成器中的报表部件和数据集](report-parts-and-datasets-in-report-builder.md)  
   
@@ -134,11 +126,7 @@ ms.locfileid: "56040508"
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>请参阅  
  [报表设计视图（报表生成器）](../report-builder/report-design-view-report-builder.md)   
  [报表创作概念（报表生成器和 SSRS）](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  

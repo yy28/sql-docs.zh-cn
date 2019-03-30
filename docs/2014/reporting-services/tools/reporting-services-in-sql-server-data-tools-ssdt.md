@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289325"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658333"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]包含特定于商业智能解决方案的增强功能的环境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 随 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供。  
@@ -31,9 +31,7 @@ ms.locfileid: "56289325"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> 解决方案和项目  
  报表项目的作用是充当报表定义和资源的容器。 在部署项目时，会将报表项目中的每个文件发布到报表服务器上。 在第一次创建项目时，还将创建一个解决方案作为该项目的容器。 您可以将多个项目添加到一个解决方案中。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> 配置  
  若要创建多组项目属性以部署诸如企业测试和生产报表服务器等变体，请使用配置管理器。 有关详细信息，请参阅 [SQL Server Data Tools 中的部署和版本支持 (SSRS)](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)中。  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289325"
 -   **报表服务器项目向导。** 选择报表服务器向导项目时，将自动创建一个报表服务器项目并打开报表向导。 在该向导中，您可以根据每个页面上的说明来创建报表：创建到数据源的连接字符串，设置数据源凭据，设计查询，添加表或矩阵数据区域，指定报表数据和组，选取字体和颜色样式，将报表发布到报表服务器，在本地预览报表。 使用该向导创建报表之后，您可以通过使用报表服务器项目中的报表设计器来更改报表数据和报表设计器。  
   
  ![SSDT 中新的项目模板](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 报表设计器窗口和窗格  
- 报表设计器支持两种视图：**设计**可以定义报表数据和报表布局，并**预览**以显示报表的呈现的视图。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
+ 报表设计器支持两种视图：“设计”视图（可以定义报表数据和报表布局）；“预览”视图（可以显示报表的呈现视图）。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> “报表数据”窗格  
  “报表数据”窗格显示内置字段、数据源、数据集、字段集合、报表参数和图像。  
@@ -72,9 +68,7 @@ ms.locfileid: "56289325"
   
 > [!NOTE]  
 >  如果未显示报表数据窗格中，在**视图**菜单上，单击**报表数据**。 如果“报表数据”窗格是浮动的，您可以对它进行定位。 有关详细信息，请参阅[在报表设计器中停靠“报表数据”窗格 (SSRS)](dock-the-report-data-pane-in-report-designer-ssrs.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> “分组”窗格  
  使用“分组”窗格可为 Tablix 数据区域定义组。 您可以为表定义行组和详细信息组，为矩阵定义行组和列组。 不能使用“分组”窗格为图表或其他数据区域定义组。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
@@ -90,9 +84,7 @@ ms.locfileid: "56289325"
 >  若要在“默认”和“高级”模式之间切换，请右键单击“列组”图标右侧的向下箭头。  
   
  有关详细信息，请参阅 [Grouping Pane](grouping-pane.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> 工具箱  
  工具箱包含您可以拖到设计图面的报表项。 数据区域是您用于在报表上组织数据的报表项。 表、矩阵、列表、图表、仪表、数据栏、迷你图和指示器都是数据区域。 其他报表项还包括地图、文本框、矩形、线条、图像和子报表。 如果您的系统管理员安装并注册了这些自定义报表项，则它们也会显示在此列表上。  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289325"
 -   为“分组”窗格中的当前所选组成员设置属性。 组成员属性可帮助控制对于每个组实例，静态组头和组尾行是否重复出现。 有关详细信息，请参阅[与组一起显示组头和组尾（报表生成器和 SSRS）](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)。  
   
  若要显示“属性”窗格，请从 **“视图”** 菜单中单击 **“属性窗口”**。 您可以取消停靠此窗格，并将它移到 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]窗口的其他区域，或者将它显示为设计图面上的选项卡式视图。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> 解决方案资源管理器  
  解决方案资源管理器是一个标准的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 组件，可显示项目中的所有项。 对于报表服务器项目，这包括文件夹以便组织共享数据源、共享数据集、报表和资源。 当您打开解决方案文件时，文件夹项自动按字母顺序出现。 若要在“属性”窗格中查看项属性，请选择该项。  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289325"
  “输出”窗口显示预览报表时出现的处理错误，以及部署报表或共享数据源时出现的发布错误。  
   
  使用“输出”和“文档大纲”窗口有助于调试表达式中的错误。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> 文档大纲  
  “文档大纲”窗口显示报表定义中所有报表项的层次结构列表。 若要打开“文档大纲”窗格，请在 **“视图”** 菜单中指向 **“其他窗口”** ，然后单击 **“文档窗口”**。  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289325"
   
 ###  <a name="bkmk_TaskList"></a> 任务列表  
  当从其他应用程序（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access）导入报表时，“任务列表”窗口会显示不受支持功能的生成错误。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> 报表设计器设计视图  
  默认情况下，在创建报表服务器项目时，将在“设计”视图中打开报表设计器并显示设计图面。 默认情况下，设计图面显示包括表体和报表背景。  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289325"
  使用缩放控件增大或减小报表的放大倍数。  
   
  若要设计报表，请从工具箱将报表项拖动到报表设计图面，然后配置它们的属性并更改它们在报表上的排列方式。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> 报表设计器预览  
  使用“预览”可在报表查看器中运行报表并查看呈现的报表。 在本机预览缓存报表数据。 您还可以将配置属性设置为使用浏览器在调试视图中运行报表。  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289325"
 -   **使用配置管理器和调试预览报表。** 在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，项目属性定义您要如何部署和调试报表。 这些属性适用于项目中的所有报表和共享数据源。 若要设置项目属性，请从 **“项目”** 菜单中单击 **“属性”**。 使用这些设置可测试您的报表并将它们发布到报表服务器。  
   
 -   **监视“输出”窗格中是否存在错误消息。** 预览报表时，如果报表处理器检测到问题，则会将错误消息写入到“输出”窗格中。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> 报表设计器菜单  
  当报表设计器项目在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中处于活动状态时，以下工具栏将添加到主工具栏中。 报表设计器菜单仅在“设计”视图中可见。  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289325"
   
 -   **报表属性** 选择可打开 **“报表属性”** 对话框。 在此对话框中，您可以分配常规报表属性（如作者姓名和网格间距）以及指定报表布局的属性（如列数和页面大小）。 还可以包括自定义代码、对程序集和类的引用，以及数据输出元素、数据转换和数据架构的名称。  
   
--   **视图**两个报表设计器选项卡之间切换：“设计”和“预览”。  
+-   **视图**：在以下两个“报表设计器”选项卡之间切换：“设计”和“预览”。  
   
 -   **页眉** 添加或删除报表的页眉。 删除页眉时，页眉中的所有项都将被删除。  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289325"
 -   **刷新项目工具箱项** 当您在项目中安装新的自定义报表项时刷新工具箱缓存。  
   
 -   **属性** 为项目打开 **“属性页”** 对话框。 有关详细信息，请参阅 [“项目属性页”对话框](project-property-pages-dialog-box.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> 报表设计器工具栏  
  报表设计器提供了下列可在设计报表时使用的专用工具栏：  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289325"
 -   **标准** 打开或保存项目，显示窗口，以及选择“调试”配置。  
   
  使用 **“视图”** 菜单可控制是否显示这些工具栏。 如果其他 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 工具栏的功能不适用于报表设计器功能，则它们可能会被禁用。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> 源代码管理  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289325"
  若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于\<驱动器 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
   
  还可以向报表向导添加自定义样式。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> 针对 SQL Server Data Tools 的命令行支持  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 基于[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 和基础 devenv.exe 应用程序。 必须先为以下两项设置有效值，才能使用这些选项：  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289325"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services 中的键盘快捷方式  
  使用键盘快捷键可以：  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289325"
     |在文本框中，选择从当前光标位置到表达式开头的文本|Ctrl+Shift+Home|  
     |在文本框中，选择从当前光标位置到表达式末尾的文本|Ctrl+Shift+End|  
     |打开所选报表项的快捷菜单|Shift+F10+新型键盘上的属性键（右侧 Windows 键旁边的键，代替鼠标右键）|  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>请参阅  
  [解决方案资源管理器](../../ssms/solution/solution-explorer.md)   
  [Reporting Services 报表 (SSRS)](../reports/reporting-services-reports-ssrs.md)   

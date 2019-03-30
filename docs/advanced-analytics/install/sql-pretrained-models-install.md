@@ -3,22 +3,22 @@ title: 安装预先定型的机器学习模型的 SQL Server 机器学习
 description: 将预先训练的情绪分析和图像特征化的模型添加到 SQL Server 2017 机器学习服务 （R 或 Python） 或 SQL Server 2016 R Services。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512294"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645569"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安装预先定型的机器学习模型的 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文介绍如何使用 Powershell 向具有 R 或 Python 集成的 SQL Server 数据库引擎实例添加免费的预训练机器学习模型，以进行*情绪分析*和*图像特征化*。 预先训练的模型由 Microsoft 构建并随时可用，作为安装后任务添加到数据库引擎实例中。 有关这些模型的更多信息，请参阅本文的[资源](#bkmk_resources)部分。
+此文章介绍了如何使用 Powershell 来添加免费预先训练的机器学习模型*情绪分析*并*图像特征化*到 SQL Server 实例具有 R 或 Python 集成。 预先训练的模型构建由 Microsoft 和随时可用，添加到作为安装后任务实例。 有关这些模型的更多信息，请参阅本文的[资源](#bkmk_resources)部分。
 
 安装后，预先训练的模型将被视为 MicrosoftML (R) 和 microsoftml (Python) 库中支持特定功能的实现细节。 不应（也不能） 查看、自定义或重新训练模型，也不能将其视为自定义代码中的独立资源或视为配对的其他函数。 
 
@@ -26,8 +26,8 @@ ms.locfileid: "58512294"
 
 | R 函数 (MicrosoftML) | Python 函数 (microsoftml) | 用法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 生成对文本输入正数负数情绪分数。 [了解详细信息](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)。|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 从图像文件输入中提取文本信息。 [了解详细信息](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)。 |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 生成对文本输入正数负数情绪分数。 |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 从图像文件输入中提取文本信息。 |
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -182,13 +182,7 @@ R 和 Python 模型的安装路径如下所示：
 
 ## <a name="examples-using-pre-trained-models"></a>使用预先训练的模型示例
 
-以下链接包括调用预先训练的模型的演练和示例代码。
-
-+ [使用 SQL Server 机器学习服务中的 Python 进行情绪分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [使用预先训练的深度神经网络模型的图像特征化](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  对于映像预先训练的模型支持您提供的映像的特征化。 若要使用的模型，请调用**featurizeImage**转换。 加载图像时，调整大小，并具有以下特征的训练模型。 然后使用 DNN 特征化器的输出是训练图像分类的线性模型。 若要使用此模型中，所有映像必须调整都大小以满足已训练模型的要求。 例如，如果您使用 AlexNet 模型，映像应调整为 227 x 227 像素。
+以下链接包括调用预先训练的模型的示例代码。
 
 + [代码示例：使用文本特征化器进行情绪分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

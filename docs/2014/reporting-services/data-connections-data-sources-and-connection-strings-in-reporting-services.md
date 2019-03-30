@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291766"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658112"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源（报表生成器和 SSRS）](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)和[嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "56291766"
   
 -   **数据源类型**连接类型，例如， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 请从连接类型的下拉列表中选择该值。  
   
--   **连接信息** 连接信息包含数据源的名称和位置，以及特定于各数据提供程序的连接属性。  “连接字符串”是连接信息的文本表示形式。 例如，如果数据源为某一 SQL Server 数据库，则可以指定该数据库的名称。 对于嵌入数据源，还可以编写在运行时计算的基于表达式的连接字符串。 有关详细信息，请参阅本主题后面部分的 [基于表达式的连接字符串](#Expressions) 。  
+-   **连接信息** 连接信息包含数据源的名称和位置，以及特定于各数据提供程序的连接属性。  “连接字符串”是连接信息的文本表示形式。 例如，如果数据源为某一 SQL Server 数据库，则可以指定该数据库的名称。 对于嵌入数据源，还可以编写在运行时计算的基于表达式的连接字符串。 有关详细信息，请参阅本主题后面部分的 [基于表达式的连接字符串](#bkmk_Expressions_in_connection_strings) 。  
   
 -   **凭据** 你提供访问数据所需的凭据。 数据源所有者必须向您授予访问数据源和数据源上特定数据所需的相应权限。 例如，若要连接到网络服务器上安装的 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 示例数据库，您必须拥有连接到该服务器的权限以及访问该数据库的只读权限。  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291766"
  [设置部署属性 (Reporting Services)](tools/set-deployment-properties-reporting-services.md)   
  [为报表数据源指定凭据和连接信息](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

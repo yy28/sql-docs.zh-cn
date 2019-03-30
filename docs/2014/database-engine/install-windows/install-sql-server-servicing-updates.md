@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374550"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657841"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>安装 SQL Server 2014 服务更新
   本主题提供了有关为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装更新的信息。 本节提供有关以下方面的信息：  
@@ -46,7 +46,7 @@ ms.locfileid: "53374550"
   
 ## <a name="see-also"></a>请参阅  
  [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [将功能添加到 SQL Server 2014 的实例&#40;安装程序&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [从命令提示符安装更新](installing-updates-from-the-command-prompt.md)[到 SQL Server 2014 实例添加功能&#40;安装程序&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [删除 SQL Server 2014 安装](repair-a-failed-sql-server-installation.md)  
   
   

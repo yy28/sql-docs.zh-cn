@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 756943d49a794781d9422071dd5e233ce4e37806
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027358"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658241"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "56027358"
 |source_info|**nvarchar(4000)**|对于读取器，源表和源列的规范。||  
 |destination_info|**nvarchar(4000)**|编写器，目标表的规范。||  
   
- 此视图按保留的最大行有关的信息，请参阅[系统视图的最大值](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)。  
+ 此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题...  
   
 ## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

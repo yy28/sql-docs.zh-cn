@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664816"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657011"
 ---
 # <a name="migration-wizard-accesstosql"></a>迁移向导 (AccessToSQL)
 迁移向导将引导您完成的一个或多个数据库迁移从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 通过使用该向导，将创建一个项目，将数据库添加到项目，选择要迁移，并连接到对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 此外将转换、 加载和迁移 Access 架构和数据。 （可选） 可以链接到访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表。  
@@ -44,7 +44,7 @@ ms.locfileid: "51664816"
 创建新项目页是你在其中输入项目文件名称、 位置和迁移项目类型 （目标用于迁移 SQL Server 的版本）。 有关详细信息，请参阅[新项目 (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>添加访问数据库页  
-添加 Access 数据库页是在其中将一个或多个 Access 数据库添加到项目。 您可以通过单击添加单独的数据库**添加数据库**，然后选择从数据库**打开**窗口。 或者，你可以通过使用查找数据库**查找数据库**按钮。 有关详细信息，请参阅以下主题：  
+添加 Access 数据库页是在其中将一个或多个 Access 数据库添加到项目。 您可以通过单击添加单独的数据库**添加数据库**，然后选择从数据库**打开**窗口。 或者，你可以通过使用查找数据库**查找数据库**按钮。 有关详细信息，请参阅下列主题：  
   
 -   [添加和删除访问数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51664816"
 有关筛选的详细信息，请参阅的选项部分[（SSMA 常见） 的高级对象选择](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)。  
   
 ## <a name="connect-to-sql-server-page"></a>连接到 SQL Server 页  
-在连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]页上，指定连接属性，然后连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[连接到 SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+在连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]页上，指定连接属性，然后连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅[连接到 SQL Server](connect-to-sql-server-accesstosql.md)。
   
 > [!IMPORTANT]  
 > 一旦连接成功，将会遇到**链接表**页面，其中有一个链接表的选项。 单击**下一步**并启动迁移。  

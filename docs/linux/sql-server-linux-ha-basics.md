@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533070"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658401"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>对于 Linux 部署 SQL Server 可用性基础知识
 
@@ -58,7 +58,7 @@ ms.locfileid: "52533070"
 将文件从一台服务器复制到另一个是一项任务的任何人都使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上应该能够执行操作。 此任务是非常重要的可用性组配置。
 
 Linux 上以及在基于 Windows 的安装上，可以存在权限问题等内容。 但是，熟悉如何在 Windows 上，将复制从服务器到服务器可能不熟悉如何在 Linux 上执行。 一种常用方法是使用命令行实用工具`scp`，这代表安全的复制。 在后台，`scp`使用 OpenSSH。 SSH 代表安全外壳。 根据 Linux 分发版，OpenSSH 本身可能未安装。 如果不是这样，OpenSSH 需要先安装。 有关配置 OpenSSH 的详细信息，请参阅以下链接，了解每个分布区中的信息：
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -86,7 +86,7 @@ Samba，这是服务器消息块 (SMB) 的 Linux 变体，也可用于创建共�
 
 | 端口号 | 类型     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba （如果使用） 的终结点映射程序                                                                                          |
 | 137         | UDP      | （如果使用） 的 samba-名称服务                                                                                      |
 | 138         | UDP      | （如果使用） 的 samba-NetBIOS 数据报                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火墙文档：**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安装[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]包可用性
@@ -200,7 +200,7 @@ Wsfc 监视参与节点的状态，并出现问题时处理它们。 Wsfc 的更
 #### <a name="cluster-log-location"></a>群集日志位置
 Pacemaker 群集的日志位置因分发而异。
 -   RHEL 和 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu — `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 若要更改默认日志记录位置，请修改`corosync.conf`。
 

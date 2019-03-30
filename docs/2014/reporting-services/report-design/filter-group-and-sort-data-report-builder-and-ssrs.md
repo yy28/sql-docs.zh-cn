@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294685"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658351"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  
@@ -66,10 +66,8 @@ ms.locfileid: "56294685"
   
  若要让用户能够控制报表中的数据，可以在筛选表达式中包括相应参数。 有关详细信息，请参阅[集合引用（报表生成器和 SSRS）](built-in-collections-parameters-collection-references-report-builder.md)。  
   
- 若要为每个用户自定义视图，可在筛选器中包含对内置 UserID 字段的引用。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+ 若要为每个用户自定义视图，可在筛选器中包含对内置 UserID 字段的引用。 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。
+
 ##  <a name="Grouping"></a> 对报表中的数据进行分组  
  组可以组织报表中的数据，以便显示这些数据或计算聚合值。 了解如何定义组和使用组功能，有助于您设计更简洁的报表。  
   
@@ -104,15 +102,13 @@ ms.locfileid: "56294685"
  若要提供同一数据集的数据的多个视图，可为每个数据区域指定相同的组表达式。 例如，可以在表中显示分类数据，以显示所有详细数据，而在饼图中显示聚合，帮助直观地显示每个类别与整个数据集的关系。 有关详细信息，请参阅 [将多个数据区域链接到同一数据集（报表生成器和 SSRS）](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
  当您在表、矩阵或列表中的某个单元嵌套一个数据区域时，会自动将数据的作用域设置为单元最内部的组成员。 例如，假定您将图表添加到同时位于行组和列组内的单元中。 在运行时，对该图表可用的数据将以最内部行组实例和最内部列组实例作为作用域。 有关详细信息，请参阅 [总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="Sorting"></a> 对报表中的数据进行排序  
  若要控制报表中数据的排序顺序，您可以在数据集查询中对数据进行排序，或者为数据区域或组定义排序表达式。 您也可以向表和矩阵添加交互式排序按钮，以便用户能够更改行的排序顺序。  
   
  所有三种排序类型均可在同一报表中组合使用。 默认情况下，排序顺序取决于数据集查询返回数据的顺序。 排序表达式应用于数据区域和数据区域组。 交互式排序在排序表达式后应用。  
   
- 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 排序顺序会影响以下聚合函数的返回值::第一个、 最后一个，和上一个。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
+ 对于包含聚合函数的表达式，大多数结果不受排序顺序的影响。 以下聚合函数的返回值受排序顺序影响：First、Last 和 Previous。 有关详细信息，请参阅 [聚合函数引用（报表生成器和 SSRS）](report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  
@@ -168,9 +164,7 @@ FROM Production.Product
  若要让用户能够更改表或矩阵中的报表数据的排序顺序，您可向列标题或组头添加交互式排序按钮。 用户可以单击该按钮以切换排序顺序。 允许用户交互的呈现格式（如 HTML）支持交互式排序。  
   
  您向 Tablix 数据区域单元中的文本框添加交互式排序按钮。 默认情况下，每个单元包含一个文本框。 在文本框属性中，可以指定要进行排序的表格或矩阵数据区域的部分（父组值、子组值或详细信息行）、排序依据以及是否对具有对等关系的其他报表项应用排序表达式。 例如，如果提供同一数据集的视图的表和图表均包含在矩形内，则它们为对等数据区域。 用户在表中切换排序顺序时，也将切换图表的排序顺序。 有关详细信息，请参阅[交互式排序（报表生成器和 SSRS）](interactive-sort-report-builder-and-ssrs.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 操作指南主题  
  [在滚动报表时保持标题可见（报表生成器和 SSRS）](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [迷你图和数据条（报表生成器和 SSRS）](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [仪表（报表生成器和 SSRS）](gauges-report-builder-and-ssrs.md)   
  [指示器（报表生成器和 SSRS）](indicators-report-builder-and-ssrs.md)  
-  
-  

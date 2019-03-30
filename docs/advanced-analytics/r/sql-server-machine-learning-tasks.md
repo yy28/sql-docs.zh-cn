@@ -2,17 +2,17 @@
 title: 机器学习生命周期和团队过程的 SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511284"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645429"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>机器学习生命周期和角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "58511284"
 
 > [!TIP]
 > 
-> 机器学习项目中开始之前，我们建议您查看的工具和所提供的最佳实践[Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/)，或 TDSP。 此过程已通过机器学习整合有关规划和迭代机器学习项目的最佳实践的 microsoft 的顾问。 TDSP 起源于 CRISP-DM，等行业标准，但包含最新的行为，例如 DevOps 和可视化效果。
+> 机器学习项目中开始之前，我们建议您查看的工具和所提供的最佳实践[Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)，或 TDSP。 此过程已通过机器学习整合有关规划和迭代机器学习项目的最佳实践的 microsoft 的顾问。 TDSP 起源于 CRISP-DM，等行业标准，但包含最新的行为，例如 DevOps 和可视化效果。
 
 ## <a name="machine-learning-life-cycle"></a>机器学习生命周期
 

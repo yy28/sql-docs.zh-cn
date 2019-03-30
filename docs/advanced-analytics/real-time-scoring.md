@@ -3,17 +3,17 @@ title: 实时评分使用 sp_rxPredict 存储过程的 SQL Server 机器学习�
 description: 生成使用 sp_rxPredict，评分对 SQL Server 上以 R 编写的预先训练模型的数据输入的预测。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509624"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645469"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server 机器学习中 sp_rxPredict 实时评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ ms.locfileid: "58509624"
 2. 加载预先训练的模型以二进制格式。
 3. 提供新的输入的数据进行评分，表格或单个行，作为模型的输入。
 4. 若要生成评分，调用[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)存储过程。
-
-> [!TIP]
-> 在操作中的实时评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 若要禁用实时评分的功能，打开提升的命令提示符，并运行以下命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>后续步骤
-
-有关如何使用 rxPredict 进行评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)。
 
 有关更多背景信息评分在 SQL Server 中，请参阅[如何在 SQL Server 机器学习中生成预测](r/how-to-do-realtime-scoring.md)。

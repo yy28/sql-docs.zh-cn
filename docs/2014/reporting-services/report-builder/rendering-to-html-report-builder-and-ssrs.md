@@ -11,12 +11,12 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 473ff59f217662ea01f8e24335f3723bf26d40ec
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296845"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658021"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>以 HTML 格式呈现（报表生成器和 SSRS）
   HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。  
@@ -35,8 +35,6 @@ ms.locfileid: "56296845"
 ##  <a name="RenderingMHTML"></a> 以 MHTML 格式呈现  
  HTML 呈现扩展插件还可以将报表呈现为 MHTML 格式（聚合 HTML 文档的 MIME 封装）。 MHTML 扩展了 HTML 以实现在 HTML 文档中嵌入图像等编码对象。 使用 MHTML 呈现扩展插件后，可将图像、文档或其他二进制文件等资源作为报表 HTML 内的 MIME 结构嵌入单个文件中。 MHTML 报表也可用于嵌入到电子邮件中，因为所有资源都包含在报表中。 虽然实际上呈现 MHTML 的是 HTML 呈现扩展插件，但此功能也可称为 MHTML 呈现扩展插件。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> 浏览器支持  
  此呈现扩展插件支持以下浏览器版本：  
   
@@ -47,8 +45,6 @@ ms.locfileid: "56296845"
 -   Safari 3.0 和更高版本  
   
  出于跨浏览器的考虑，呈现的报表可能因浏览器的不同而稍有差别。 例如，文本框包含名为 WritingMode 的属性。 Firefox 不支持此属性。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> 特定于 HTML 的呈现规则  
  呈现时将应用下列特定于 HTML 的规则：  
@@ -66,8 +62,6 @@ ms.locfileid: "56296845"
 -   其他所有行和列均允许根据每个报表项的尺寸增长。  
   
 -   所有坐标和报表项尺寸的单位均转换为毫米。 其他所有尺寸（包括样式属性）均保留其原始单位。 小于 0.2mm 的尺寸差和位置差均视为 0mm。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="Interactivity"></a> 交互  
  HTML 支持一些交互元素。 下面是对一些特定行为的说明。  
@@ -92,18 +86,12 @@ ms.locfileid: "56296845"
   
  其他搜索和查找功能由 ReportViewer Web 窗体控件提供。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改设备信息设置来更改此呈现器的某些默认设置（包括以哪个模式呈现）。 有关详细信息，请参阅 [HTML Device Information Settings](../html-device-information-settings.md)。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

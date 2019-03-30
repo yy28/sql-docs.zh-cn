@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160625"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658091"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -221,7 +221,7 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，如服务器不间断电源供应或管理接口卡。
 
-有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文档：隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)，[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文档：隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
 在群集初始化时，如果检测不到任何配置，则将禁用 STONITH。 它可以稍后启用通过运行以下命令：
 

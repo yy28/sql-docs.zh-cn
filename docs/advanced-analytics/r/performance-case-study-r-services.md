@@ -2,17 +2,17 @@
 title: SQL Server R Services 的结果和资源的 SQL Server 机器学习服务的性能
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510754"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645549"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services 的性能： 结果和资源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ CPU 关联已强制执行在 resume 匹配方案中，若要评估对 R 作业�
 
 出于这些原因，没有单一解决方案来缓解此初始加载期间，如变化较大的性能影响取决于任务。 例如，执行缓存的单行批处理; 中的计分因此，后续评分操作都要快得多，并且模型和 R 运行时都不重新加载。 此外可以使用[本机计分](../sql-native-scoring.md)以避免完全加载 R 运行时。
 
-对于训练大型模型或大型批处理中的计分，开销可能会与从避免数据移动或流式处理和并行处理的提升相比最小。 请参阅这些最新博客和示例的更多的性能指南：
+对于训练大型模型或大型批处理中的计分，开销可能会与从避免数据移动或流式处理和并行处理的提升相比最小。 请参阅此博客文章的更多的性能指南：
 
-+ [使用 SQL Server 2016 R Services 的贷款分类](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [早期的客户体验与 R 服务](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [使用 R 检测欺诈行为在 1 百万个事务 / 秒](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>资源

@@ -2,17 +2,17 @@
 title: 数据科学方案和解决方案模板-SQL Server 机器学习
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509842"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645489"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>数据科学方案和解决方案模板
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ ms.locfileid: "58509842"
 > [!TIP]
 > 
 > 大多数模板有多个版本支持在本地和云的机器学习平台。 例如，您可以生成使用只有 SQL Server 的解决方案也可以构建在 Microsoft R Server 或 Azure 机器学习中的解决方案。
-
-+ 有关详细信息和更新，请参阅此公告：[在 Azure ML 中令人兴奋的新模板](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + 有关下载和安装说明，请参阅[如何使用模板](#bkmk_HowTo)。
 
@@ -67,8 +65,6 @@ ms.locfileid: "58509842"
 [预测维护模板 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **什么：** 预测性维护的目标是通过捕获以前的故障并将该信息来预测设备何时或在何处可能会失败来提高维护任务的效率。 尤其是有价值的应用程序依赖于分布式的数据或传感器预测设备过时的功能。 此方法还可以应用来监视或预测 IoT （物联网） 设备时出错。
-
-此公告的详细信息，请参阅：[新的预测维护模板](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **如何：** 该解决方案关注于回答这个问题，"当将目前提供计算机故障？" 输入数据表示飞机引擎的模拟传感器测量值。 获取从监视引擎的当前操作条件，如当前工作周期、 设置和传感器测量值的数据用于创建三种类型的预测模型：
 

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417169"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657821"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58417169"
 |app_name|**nvarchar(255)**|捕获应用程序名称信息 （可选） 设置作为连接过程的一部分。|任何有效的字符串。|  
 |sql_spid|**int**|SPID id 号。 使用`session_id`此会话。 使用`sql_spid`列联接到**sys.dm_pdw_nodes_exec_sessions**。<br /><br /> **\*\* 警告\* \*** 此列包含已关闭的 Spid。||  
   
- 此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。  
+ 此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。  
   
 ## <a name="permissions"></a>权限  
  需要 `VIEW SERVER STATE` 权限。  

@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295886"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658031"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>导出到 XML（报表生成器和 SSRS）
   XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。  
@@ -54,8 +54,6 @@ ms.locfileid: "56295886"
   
 -   将忽略`Images, lines, and custom report items`。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> 数据类型  
  为文本框元素或属性分配的 XSD 数据类型将基于文本框显示的值。  
   
@@ -70,8 +68,6 @@ ms.locfileid: "56295886"
 |`Boolean`|**xsd:boolean**|  
 |`String`， `Char`|**xsd:string**|  
 |其他|**xsd:string**|  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> 特定于 XML 的呈现规则  
  下面一节将说明 XML 呈现扩展插件是如何解释报表内的报表项的。  
@@ -116,8 +112,6 @@ ms.locfileid: "56295886"
 ### <a name="lines"></a>线条  
  不会呈现线条。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ### <a name="tables-matrices-and-lists"></a>表、矩阵和列表  
  表、矩阵和列表将呈现为元素。 元素的名称来自 Tablix DataElementName RDL 属性。  
   
@@ -155,17 +149,11 @@ ms.locfileid: "56295886"
   
  如果 DataElementOutput 属性的值等于 Output，则重复项的表头将呈现为详细信息元素的子级。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> 自定义格式和 XSL 转换  
  使用 XSL 转换 (XSLT) 可以将 XML 呈现扩展插件生成的 XML 文件转换为几乎任意格式的文件。 您可以使用此功能来生成现有呈现扩展插件尚不支持的格式的数据。 在尝试创建自己的呈现扩展插件之前，请首先考虑使用 XML 呈现扩展插件和 XSLT。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> 名称重复  
  如果在同一范围内存在重复的数据元素名称，呈现器将显示一个错误消息。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 转换  
  XML 呈现器可将服务器端 XSLT 转换应用到原始 XML 数据。 应用 XSLT 后，呈现器将输出转换后的内容而不是原始 XML 数据。 转换是在服务器而不是客户端上进行的。  
@@ -173,8 +161,6 @@ ms.locfileid: "56295886"
  应用到输出的 XSLT 可通过报表的 DataTransform 属性在报表定义文件中定义，或者使用 XSLT *DeviceInfo* 参数进行定义。 如果设置了以上值中的任意一个值，则每次使用 XML 呈现器时都会发生转换。 当使用订阅时，则必须在 RDL DataTransform 属性中定义 XSLT。  
   
  如果同时使用了 DataTransform 定义属性和设备信息设置来指定 XSLT 文件，则会先执行在 DataTransform 中指定的 XSLT 转换，然后执行由设备信息设置指定的 XSLT 转换。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 设备信息设置  
  您可以通过更改如下设备信息设置来更改此呈现器的某些默认设置：  
@@ -195,13 +181,9 @@ ms.locfileid: "56295886"
   
  有关详细信息，请参阅 [XML Device Information Settings](../xml-device-information-settings.md)。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
-  
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 中的分页（报表生成器和 SSRS）](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [呈现行为（报表生成器和 SSRS）](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）](interactive-functionality-different-report-rendering-extensions.md)   
  [呈现报表项（报表生成器和 SSRS）](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [表、矩阵和列表（报表生成器和 SSRS）](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

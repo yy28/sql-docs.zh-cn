@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511523"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657971"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式（SSAS 表格）
   Analysis Services 能让你检索数据并从表格模型创建报表，通过直接从关系数据库系统检索数据和聚合使用*DirectQuery 模式下*。 本主题介绍仅驻留在内存中的标准表格模型和可查询关系数据源的表格模型之间的差异，并且说明如何创建和部署要在 DirectQuery 模式下使用的模型。  
@@ -29,7 +29,7 @@ ms.locfileid: "52511523"
   
 -   [创建模型以便用于 DirectQuery 模式](#bkmk_Design)  
   
-    -   [用于 DirectQuery 模型的数据源](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [用于 DirectQuery 模型的数据源](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [验证和 DirectQuery 模式下的设计限制](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511523"
   
  在您执行此操作时，模型设计器自动配置工作区数据库以便在混合模式下运行，使您可以继续使用缓存的数据。 模型设计器还将通知您模型中与 DirectQuery 模式不兼容的任何功能。 下表总结了需要牢记的主要要求：  
   
--   **数据源：** DirectQuery 模型只能使用来自单个 SQL Server 数据源的数据。 如果已经为某一模型启用了 DirectQuery 模式，您将无法在模型设计器中使用任何其他数据类型，包括复制-粘贴操作添加的表。 所有其他导入选项都将被禁用。 在查询中包含的任何表都必须是 SQL Server 数据源的一部分。 请参阅[DirectQuery 模型的数据源](directquery-mode-ssas-tabular.md#bkmk_datasources)有关详细信息。  
+-   **数据源：** DirectQuery 模型只能使用来自单个 SQL Server 数据源的数据。 如果已经为某一模型启用了 DirectQuery 模式，您将无法在模型设计器中使用任何其他数据类型，包括复制-粘贴操作添加的表。 所有其他导入选项都将被禁用。 在查询中包含的任何表都必须是 SQL Server 数据源的一部分。 请参阅[DirectQuery 模型的数据源](directquery-mode-ssas-tabular.md#bkmk_DataSources)有关详细信息。  
   
 -   **对计算列的支持：** DirectQuery 模型不支持计算列。 但是，您可以创建度量值和 KPI，它们都对数据集进行操作。 请参阅章节[验证](#bkmk_Validation)有关详细信息。  
   
@@ -182,5 +182,3 @@ ms.locfileid: "52511523"
  [分区（SSAS 表格）](partitions-ssas-tabular.md)   
  [表格模型项目（SSAS 表格）](tabular-model-projects-ssas-tabular.md)   
  [在 Excel 中分析（SSAS 表格）](analyze-in-excel-ssas-tabular.md)  
-  
-  

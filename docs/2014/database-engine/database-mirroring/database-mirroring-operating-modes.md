@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542927"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658361"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  
@@ -80,7 +80,7 @@ ms.locfileid: "52542927"
 -   如果主体服务器丢失，则强制服务到镜像服务器时需要将镜像服务器连接到见证服务器。  
   
 > [!NOTE]  
->  有关仲裁类型的信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+>  有关仲裁类型的信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="WhenPrincipalFails"></a> 对主体服务器故障的响应  
  当主体服务器出现故障时，数据库所有者有多种选择，如下所示：  
@@ -146,7 +146,7 @@ ms.locfileid: "52542927"
   
  与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器通过验证主体服务器是否已启用并运行来仅支持自动故障转移。 只有在镜像服务器和见证服务器与主体服务器断开连接之后而保持相互连接时，镜像服务器才启动自动故障转移。  
   
- 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）。 有关详细信息，请参阅[数据库镜像见证服务器](database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 设置见证服务器时，会话需要“仲裁”（允许数据库可用的至少两个服务器实例之间的关系）。 有关详细信息，请参阅[数据库镜像见证服务器](database-mirroring-witness.md)和[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自动故障转移需要下列条件：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52542927"
   
 -   SAFETY OFF  
   
-     关闭事务安全可使会话在异步高性能模式下运行。 如果 SAFETY 属性设置为 OFF，则 WITNESS 属性也应该设置为 OFF（默认值）。 有关高性能模式下见证服务器的影响的信息，请参阅本主题后面的 [见证服务器状态](#WitnessState)。 有关在关闭事务安全性的情况下运行的详细信息，请参阅本主题前面的 [异步数据库镜像（高性能模式）](#Async)。  
+     关闭事务安全可使会话在异步高性能模式下运行。 如果 SAFETY 属性设置为 OFF，则 WITNESS 属性也应该设置为 OFF（默认值）。 有关高性能模式下见证服务器的影响的信息，请参阅本主题后面的 [见证服务器状态](#WitnessState)。 有关在关闭事务安全性的情况下运行的详细信息，请参阅本主题前面的 [异步数据库镜像（高性能模式）](#VisualElement)。  
   
  数据库的事务安全性设置记录在每个伙伴的 **sys.database_mirroring** 目录视图中的 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 列内。 有关详细信息，请参阅 [sys.database_mirroring (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52542927"
   
 -   如果见证服务器存在，但是未连接到伙伴，则见证服务器相对于该伙伴处于 UNKOWN 或 DISCONNECTED 状态。 在此情况下，见证服务器和该伙伴缺少仲裁，并且如果伙伴双方未彼此连接，则数据库不可用。  
   
- 有关仲裁的信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 有关仲裁的信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  服务器实例上每个见证服务器的状态都记录在 **sys.database_mirroring** 目录视图中的 **mirroring_witness_state** 和 **mirroring_witness_state_desc** 列中。 有关详细信息，请参阅 [sys.database_mirroring (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52542927"
   
  <sup>1</sup>如果见证服务器断开连接，我们建议您设置 WITNESS OFF 的，直到见证服务器实例变为可用。  
   
- <sup>2</sup>如果见证服务器处在高性能模式下，见证服务器不会参与会话。 但是，若要使数据库可用，必须至少有两个服务器实例保持连接。 因此，建议您在高性能模式会话中，始终将 WITNESS 属性设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ <sup>2</sup>如果见证服务器处在高性能模式下，见证服务器不会参与会话。 但是，若要使数据库可用，必须至少有两个服务器实例保持连接。 因此，建议您在高性能模式会话中，始终将 WITNESS 属性设置为 OFF。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="ViewWitness"></a> 查看安全设置和见证服务器状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>请参阅  
  [监视数据库镜像 (SQL Server)](monitoring-database-mirroring-sql-server.md)   
  [数据库镜像见证服务器](database-mirroring-witness.md)  
-  
-  

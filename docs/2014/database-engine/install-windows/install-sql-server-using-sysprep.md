@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371049"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658332"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。 “安装中心”的“高级”页具有两个选项 -“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)。  
@@ -48,9 +48,9 @@ ms.locfileid: "53371049"
   
 -   [从 SQL Server 的已准备实例删除功能](#RemoveFeatures)  
   
--   [卸载已准备实例](install-sql-server-using-sysprep.md#uninstall)  
+-   [卸载已准备实例](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [修改或卸载 SQL Server 的已完成实例。](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [修改或卸载 SQL Server 的已完成实例。](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 群集支持  
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]开始，SysPrep 支持从命令行安装群集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅 [什么是 Sysprep？](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)。  
@@ -325,5 +325,3 @@ ms.locfileid: "53371049"
 ## <a name="see-also"></a>请参阅  
  [什么是 Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Windows SysPrep 工作原理](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

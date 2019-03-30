@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9e79803a1c06a78f67a37a6a669af1c5ab4683f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021559"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658113"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56021559"
 |end_time|**datetime**|时间的执行将结束、 失败或已取消。|对于正在进行或排入队列的辅助角色为 NULL。 否则为大于 start_time。|  
 |total_elapsed_time|**int**|所用的执行，以毫秒为单位的总时间。|大于或等于 0。<br /><br /> 如果 total_elapsed_time 超出整数的最大值，将持续 total_elapsed_time 可最大值。 这种情况会生成警告"的最大值已超出。"<br /><br /> 以毫秒为单位的最大值相当于 24.8 天。|  
   
- 此视图按保留的最大行有关的信息，请参阅[系统视图的最大值](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)。  
+ 此视图按保留的最大行有关的信息，请参阅中的元数据部分[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题。
   
 ## <a name="see-also"></a>请参阅  
  [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

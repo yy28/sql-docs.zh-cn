@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305935"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658201"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305935"
 -   支持使用来自 Microsoft Azure 市场的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
 ##  <a name="Marketplace"></a> 使用来自 Microsoft Azure 市场的引用数据  
- DQS 支持使用来自 Microsoft Azure 市场的引用数据，使内容提供程序能够通过市场提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关市场的详细信息，请参阅 [了解 Microsoft Azure 市场](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291)。  
+ DQS 支持使用来自 Microsoft Azure 市场的引用数据，使内容提供程序能够通过市场提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅[了解有关 Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about)。
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
   

@@ -3,17 +3,17 @@ title: 设置 R 开发的 SQL Server 机器学习服务的数据科学客户端
 description: 远程连接到 SQL Server 的开发工作站上安装本地 R 库和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510434"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645529"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ ms.locfileid: "58510434"
 ![客户端-服务器组件](media/sqlmls-r-client-revo.png "本地和远程 R 会话和库")
 
 若要验证安装，可以使用内置**RGUI**工具在本文中所述或[链接库](#install-ide)到 RStudio 或任何你通常使用的另一个 IDE。
-
-> [!Tip]
-> 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
 > 客户端库安装的替代方法是使用[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)作为富客户端，一些客户更喜欢使用它来完成更深入的方案工作。 独立服务器与SQL Server完全分离，但由于它具有相同的R库，因此可以将其用作SQL Server数据库内分析的客户端。 还可以将其用于与SQL无关的工作，包括从其他数据平台导入数据和对数据建模。 如果安装独立服务器，则可以在此位置找到R可执行文件：`C:\Program Files\Microsoft SQL Server\140\R_SERVER`。 要验证安装，请[打开 R 控制台应用](#R-tools)以使用该位置的R.exe运行命令。

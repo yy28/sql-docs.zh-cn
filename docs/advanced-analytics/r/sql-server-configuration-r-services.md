@@ -2,17 +2,17 @@
 title: SQL Server 配置 (R Services) 的 SQL Server 机器学习服务
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dd6ee267b7bac933e40f90282d1bf74aa57b62
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511844"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645539"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>与 R 一起使用的 SQL Server 配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -165,10 +165,6 @@ FROM sys.dm_os_memory_clerks
 + [SQL Server 中的软件 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     如何将软件 NUMA 节点映射到 Cpu
-
-+ [自动软件 NUMA:它只需运行速度更快 (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   介绍了历史记录以及实现的详细信息，使用较新的多核服务器的性能。
 
 ## <a name="task-specific-optimizations"></a>特定于任务的优化
 

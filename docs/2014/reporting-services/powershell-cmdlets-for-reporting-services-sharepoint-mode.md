@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c010d299448bbecd7f527b349cf3ca719809493
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013518"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658261"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
   在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式时，会安装 PowerShell cmdlet，以便支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
@@ -56,7 +56,7 @@ ms.locfileid: "56013518"
     -   [更改和列出订阅所有者](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 摘要  
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅[在 Windows Server 上启动 Windows PowerShell](https://technet.microsoft.com/library/hh847814.aspx) (https://technet.microsoft.com/library/hh847814.aspx)。 在以下 cmdlet 摘要中，对服务应用程序数据库，引用的数据库创建和使用的所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序数据库，引用的数据库创建和使用的所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 这包括配置、警报和 temp 数据库。  
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   

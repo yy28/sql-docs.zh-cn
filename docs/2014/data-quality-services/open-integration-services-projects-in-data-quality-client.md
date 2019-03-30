@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020138"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658081"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
   通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，您可以在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
@@ -38,8 +38,6 @@ ms.locfileid: "56020138"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_kb_operator 角色，才能打开 Integration Services 项目。  
   
- ![使用顶部的链接的箭头图标](../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此主题](#Intro)  
-  
 ##  <a name="Open"></a> 打开 Integration Services 项目  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -60,10 +58,6 @@ ms.locfileid: "56020138"
   
 6.  导出数据后，单击 **“完成”** 以关闭 Integration Services 项目。  
   
- ![使用顶部的链接的箭头图标](../2014-toc/media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此主题](#Intro)  
-  
 ## <a name="see-also"></a>请参阅  
  [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services (SSIS) 项目](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

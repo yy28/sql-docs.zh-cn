@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f533591be751375ce5686b7c2998af6410fb311
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366279"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658471"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
   在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
@@ -142,7 +142,7 @@ ms.locfileid: "53366279"
   
 -   支持 /INSTANCEDIR=c:\Path。  
   
--   /INSTANCEDIR ="c:\Path"支持  
+-   /INSTANCEDIR="c:\Path" is supported  
   
 > [!NOTE]
 >  -   关系服务器值支持路径的其他终止反斜杠格式（反斜杠或两个反斜杠字符）。  
@@ -171,18 +171,18 @@ ms.locfileid: "53366279"
   
 -   [功能参数](#Feature)  
   
--   [角色参数](install-sql-server-from-the-command-prompt.md#role)  
+-   [角色参数](install-sql-server-from-the-command-prompt.md#Role)  
   
--   [使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制故障转移行为](install-sql-server-from-the-command-prompt.md#rollownership)  
+-   [使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制故障转移行为](install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [实例 ID 或 InstanceID 配置](install-sql-server-from-the-command-prompt.md#instanceid)  
+-   [实例 ID 或 InstanceID 配置](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
 ##  <a name="Install"></a> 安装参数  
  使用下表中的参数可开发用于安装的命令行脚本。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件|参数|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> Install|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ACTION<br /><br /> **必需**|需要它来指示安装工作流。 支持的值：<br /><br /> 安装|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **仅在为无人参与安装指定了 /Q 或 /QS 参数时才是必需的。**|必需，用于确认接受许可条款。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
@@ -234,10 +234,10 @@ ms.locfileid: "53366279"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。<br /><br /> 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 版本，/SQLSYSADMINACCOUNTS 是必需的。 对于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的各版本，使用 /SQLSYSADMINACCOUNTS 是可选的，但 /SQLSYSADMINACCOUNTS 或 /ADDCURRENTUSERASSQLADMIN 是必需的。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 控制管理器来更改服务帐户和启用全文功能。 默认值：<br /><br /> Local Service 帐户|  
@@ -327,10 +327,10 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 模式。 支持的值：<br /><br /> 自动<br /><br /> 禁用<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 控制管理器来更改服务帐户和启用全文功能。 默认值：<br /><br /> Local Service 帐户|  
@@ -496,7 +496,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的帐户。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|/AGTSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的密码。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：<br /><br /> -Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的排序规则设置。<br /><br /> 默认值：<br /><br /> -   Latin1_General_CI_AS|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **可选**|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 日志文件的目录。 默认值：<br /><br /> 对于 64 位上的 WOW 模式: %Program Files(x86) %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。<br /><br /> 对于所有其他安装: %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log。|  
@@ -507,15 +507,15 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的启动帐户。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和全文筛选器后台程序之间的通信。<br /><br /> 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 控制管理器来更改服务帐户和启用全文功能。 默认值：<br /><br /> Local Service 帐户|  
@@ -634,13 +634,13 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必需**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件的数据目录。<br /><br /> 数据目录必须指定且必须位于共享群集磁盘上。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL 时是必需的**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 帐户的密码。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全模式。<br /><br /> 如果未提供此参数，则支持仅 Windows 身份验证模式。 支持的值：<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **可选**|指定备份文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的排序规则设置。<br /><br /> 默认值基于您的 Windows 操作系统的区域设置。 有关详细信息，请参阅 [Collation Settings in Setup](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)（安装程序中的排序规则设置）。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必需**|使用此参数可将登录帐户设置为 sysadmin 角色的成员。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **可选**|指定 tempdb 的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **可选**|指定 tempdb 日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **可选**|指定用户数据库的数据文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。 默认值：<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **在“仅文件”模式下可用。**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  
@@ -851,5 +851,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [从安装向导安装 SQL Server 2014&#40;安装程序&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [安装 SQL Server 2014 BI 功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  
-  

@@ -13,12 +13,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 38c4cdc0a777fe68d466854a9b2dd7cf1403d07f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757789"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658251"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "52757789"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布］<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> Security<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布］<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> 性能<br /><br /> 静态内容压缩<br /><br /> 安全性<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
   
 ### <a name="features"></a>功能 
  在 Windows Server 2012 和 Windows Server 2012 R2 中，可以使用“服务器管理器”来安装以下必需的功能。  
@@ -69,16 +69,16 @@ Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-
 Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
- 有关 PowerShell 命令的详细信息，请参阅 [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467)。  
+ 有关 PowerShell 命令的详细信息，请参阅 [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)。  
   
 ### <a name="accounts-and-permissions"></a>帐户和权限  
   
-|类型|描述|  
+|类型|Description|  
 |----------|-----------------|  
 |Windows 帐户|您必须使用有权配置 Windows 角色、角色服务和功能以及有权在本地计算机上的 IIS 中创建和管理应用程序池、网站和 Web 应用程序的 Windows 帐户登录到 Web 服务器计算机。|  
 |服务帐户|当您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web 应用程序时，必须为应用程序运行所在的应用程序池指定标识。 此帐户可不同于在创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时指定的服务帐户。<br /><br /> 此标识必须是域用户帐户，并且添加到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色以便用于数据库访问。 有关详细信息，请参阅 [数据库登录、用户和角色](../../master-data-services/database-logins-users-and-roles-master-data-services.md)。 此帐户还添加到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   

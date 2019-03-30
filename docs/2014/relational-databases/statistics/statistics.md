@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367139"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658222"
 ---
 # <a name="statistics"></a>统计信息
   查询优化器使用统计信息来创建可提高查询性能的查询计划。 对于大多数查询，查询优化器已为高质量查询计划生成必要的统计信息；但在少数一些情况下，您需要创建附加的统计信息或修改查询设计以得到最佳结果。 本主题讨论用于高效使用查询优化统计信息的统计信息概念并提供指南。  
@@ -105,8 +105,6 @@ ORDER BY s.name;
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#Top)  
-  
 ##  <a name="CreateStatistics"></a> 何时创建统计信息  
  查询优化器已通过以下方式创建统计信息：  
   
@@ -154,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查询从数据的子集中选择数据  
  在查询优化器为单个列和索引创建统计信息时，它为所有行中的值创建统计信息。 在查询从行的某一子集中选择数据时，这一行子集具有唯一的数据分布，筛选统计信息可以改进查询计划。 可以通过使用 CREATE STATISTICS 语句并在此语句中用 WHERE 子句定义筛选器谓词表达式来创建筛选统计信息。  
   
- 例如，使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，Production.Product 表中的每种产品属于 Production.ProductCategory 表中的四个类别之一：自行车、 组件、 Clothing 和 Accessories。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
+ 例如，使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，Production.Product 表中的每种产品属于 Production.ProductCategory 表中的四个类别之一：自行车、组件、服装或附件。 上述每个类别在重量方面的数据分布均不同：自行车的重量范围为 13.77 到 30.0，部件的重量范围为 2.12 到 1050.00 且有些部件的重量为 NULL 值，服装的重量全部为 NULL，附件的重量也为 NULL。  
   
  使用自行车为例，针对所有自行车重量的筛选统计信息将向查询优化器提供更精确的统计信息，并且与全表统计信息或者针对 Weight 列的不存在的统计信息相比，可以改进查询计划质量。 该自行车重量列很适合于筛选统计信息，但如果重量查找的数目相对较少，则不见得适合于筛选索引。 筛选索引所提供的在查找方面的性能提升可能抵不上将筛选索引添加到数据库所导致的额外维护和存储成本。  
   
@@ -197,8 +195,6 @@ GO
   
  因为临时统计信息存储在 `tempdb` 中，所以，重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#Top)  
-  
 ##  <a name="UpdateStatistics"></a> 何时更新统计信息  
  查询优化器确定统计信息何时可能过期，然后在查询计划需要统计信息时更新它们。 在某些情况下，将 AUTO_UPDATE_STATISTICS 设置为 ON 时，可以通过频繁更新统计信息来优化查询计划，并因此提高查询性能。 可以使用 UPDATE STATISTICS 语句或存储过程 sp_updatestats 来更新统计信息。  
   
@@ -228,8 +224,6 @@ GO
  考虑在执行维护过程（例如截断表或对很大百分比的行执行大容量插入）后更新统计信息。 这可以避免在将来查询等待自动统计信息更新时在查询处理中出现延迟。  
   
  索引的重新生成、碎片整理或重新组织之类的操作不会更改数据的分布。 因此，在执行 ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，您无需更新统计信息。 查询优化器将在您使用 ALTER INDEX REBUILD 或 DBCC DBREINDEX 对表或视图重新生成索引时更新统计信息，但是，此统计信息更新是重新创建索引的副产品。 在 DBCC INDEXDEFRAG 或 ALTER INDEX REORGANIZE 操作后，查询优化器并不更新统计信息。  
-  
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#Top)  
   
 ##  <a name="DesignStatistics"></a> 高效使用统计信息的查询  
  某些查询实现（如查询谓词中的局部变量和复杂的表达式）可能导致查询计划不是最佳的。 遵循有关高效使用统计信息的查询设计指导原则可以避免这种情况。 有关查询谓词的详细信息，请参阅[搜索条件 (Transact-SQL)](/sql/t-sql/queries/search-condition-transact-sql)。  
@@ -328,8 +322,6 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>使用计划指南改进基数估计  
  对于某些应用程序，查询计划指南可能不适用，因为您无法更改查询，或者使用 RECOMPILE 查询提示可能导致过多的重新编译。 您可以使用计划指南来指定 USE PLAN 之类的其他提示，以便在向应用程序供应商调查应用程序变化的同时，控制查询的行为。 有关计划指南的详细信息，请参阅 [Plan Guides](../performance/plan-guides.md)。  
   
- ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#Top)  
-  
 ## <a name="see-also"></a>请参阅  
  [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -340,5 +332,3 @@ GO
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [创建筛选索引](../indexes/create-filtered-indexes.md)  
-  
-  
