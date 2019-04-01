@@ -31,7 +31,7 @@ ms.locfileid: "57973486"
   
  下面的示例演示了语义搜索的功能。 同时，这些示例还展示了你用来查询语义索引和以结构化数据形式检索结果的三个 Transact-SQL 行集函数。  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> 在文档中查找关键短语  
  下面的查询获取在示例文档中已标识的关键短语。 该查询按照对每个关键短语的统计重要性进行排名的分数以降序方式展示结果。
  
  此查询调用 [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 函数。  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> 查找使文档相似或相关的关键短语  
  以下查询获取使两个示例文档彼此相似或相关的关键短语。 该查询按照对每个关键短语的权重进行排名的分数以降序方式展示结果。
  
  此查询调用 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 函数。  

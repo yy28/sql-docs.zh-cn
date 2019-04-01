@@ -51,7 +51,7 @@ ms.locfileid: "57974246"
   
 |不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> | <prefix_term>}<br /><br /> {<br /><br /> { { NEAR | ~ }    {<simple_term> | <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> &#124 <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124 ~ }    {<simple_term> &#124 <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> “应用程序适配器” 区域）<br /><br /> <distance> ::= {*integer* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 选项：<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|无。|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 无。<sup>*</sup>|237<br /><br /> 无。*|  
 |DATABASEPROPERTYEX 属性：IsFullTextEnabled|无。|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db 选项：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|无。|sp_detach_db @keepfulltextindexfile|226|  

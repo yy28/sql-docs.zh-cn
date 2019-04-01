@@ -96,7 +96,7 @@ key_path
   
 -   **提供程序名称：** MSSQL_CERTIFICATE_STORE  
   
-    **密钥路径格式：***CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
+    **密钥路径格式：** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      其中：  
   
@@ -119,7 +119,7 @@ key_path
   
 -   **提供程序名称：** MSSQL_CSP_PROVIDER  
   
-    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
@@ -137,7 +137,7 @@ key_path
   
 -   **提供程序名称：** MSSQL_CNG_STORE  
   
-    **密钥路径格式：***ProviderName*/*KeyIdentifier*  
+    **密钥路径格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
