@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 586a8623e202674cdab644ac882be3ed45adc62a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293985"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658071"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商业智能 (BI) 工具进行分析和报告
 
@@ -22,7 +22,7 @@ ms.locfileid: "56293985"
 
 下表将数据分析和报告的工作负荷映射到最适合这些工作负荷的 Microsoft BI 工具。 有关产品的详细信息，请单击表中的产品链接。  
   
- 如果要查找这些工具的简短概述以帮助确定适合的工具，请参阅 [Microsoft Business Intelligence (BI) 工具简介](https://msdn.microsoft.com/library/dn655131.aspx)。  
+ 如果要查找这些工具的简短概述以帮助确定适合的工具，请参阅 [Microsoft Business Intelligence (BI) 工具简介](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx)。
   
 |工作负荷|用户|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  

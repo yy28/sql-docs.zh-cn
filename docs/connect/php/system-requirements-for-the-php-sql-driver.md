@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2347dc6f1d18afb4f26dc137a1158ceb53663050
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744507"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658407"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 系统要求
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "56744507"
 
 -   某个版本的驱动程序文件必须位于 PHP 扩展目录中。 请参阅[驱动程序版本](#driver-versions)有关不同驱动程序文件信息。  若要下载驱动程序，请参阅[下载 Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md)。 要了解如何配置适用于 PHP 的驱动程序，请参阅[加载 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。
 
--   Web 服务器是必需的。 必须将 Web 服务器配置为运行 PHP。 有关托管 PHP 应用程序使用 IIS 的信息，请参阅[PHP 的网站教程](https://php.net/manual/fa/install.windows.iis.php)。  
+-   Web 服务器是必需的。 必须将 Web 服务器配置为运行 PHP。 有关托管 PHP 应用程序使用 IIS 的信息，请参阅[PHP 的网站教程](http://docs.php.net/manual/da/install.windows.iis7.php)。
 
     已通过结合使用 IIS 10 和 FastCGI 对 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 进行了测试。  
 

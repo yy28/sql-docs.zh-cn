@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805713"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657642"
 ---
 # <a name="always-encrypted-wizard"></a>始终加密向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54805713"
  
    - **将主密钥存储在 AKV 中** 有关详细信息，请参阅 [Azure 密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  
- - 若要在 Azure 密匙保管库中生成列主密匙，用户必须具有密匙保管库的 **WrapKey**、 **UnwrapKey**、 **Verify**和 **Sign** 权限。 用户可能还需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**和 **Restore** 权限。 有关详细信息，请参阅[什么是 Azure 密匙保管库？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
+ - 若要在 Azure 密匙保管库中生成列主密匙，用户必须具有密匙保管库的 **WrapKey**、 **UnwrapKey**、 **Verify**和 **Sign** 权限。 用户可能还需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**和 **Restore** 权限。 有关详细信息，请参阅[什么是 Azure 密匙保管库？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)。  
  
  - 该向导仅支持两个选项。 必须使用 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 配置硬件安全模块和客户商店。  
  

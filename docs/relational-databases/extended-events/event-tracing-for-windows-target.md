@@ -16,14 +16,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656947"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478112"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  

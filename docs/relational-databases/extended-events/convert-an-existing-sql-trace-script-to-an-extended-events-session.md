@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321733"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478192"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>将现有 SQL 跟踪脚本转换为扩展事件会话
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   如果您具有想要转换为扩展事件会话的现有 SQL 跟踪脚本，则可以使用本主题中的过程创建等效的扩展事件会话。 通过使用 trace_xe_action_map 和 trace_xe_event_map 系统表中的信息，你可以收集进行转换所必需的信息。  

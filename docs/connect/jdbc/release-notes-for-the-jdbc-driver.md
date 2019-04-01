@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974356"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657732"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC 驱动程序的发行说明
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 规范 4.1 和 4.2
 >
 > 另一个改进升级到 1.0.0，Azure 密钥保管库依赖的库版本和新的 jar （版本 6.2.2） 已于 2017 年 10 月 19 日发布。
 >
-> 下载最新的更新适用于从 JDBC Driver 6.2 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，并[Maven 中央](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 请更新项目以使用 6.2.2 发布 jar。 有关详细信息，查看发行说明[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)并[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)。
+> 下载最新的更新适用于从 JDBC Driver 6.2 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，并[Maven 中央](https://search.maven.org/search?q=g:com.microsoft.sqlserver)。 请更新项目以使用 6.2.2 发布 jar。 有关详细信息，查看发行说明[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)并[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)。
 
 ### <a name="azure-ad-support-for-linux"></a>适用于 Linux 的 azure AD 支持
 
@@ -290,7 +290,7 @@ Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<u
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 
-### <a name="support-for-jdk-8"></a>支持 JDK 8
+### <a name="support-for-jdk-8"></a>对 JDK 8 的支持
 
 该驱动程序支持 JDK 版本 8.0 除 JDK 7.0、 6.0 和 5.0。
 

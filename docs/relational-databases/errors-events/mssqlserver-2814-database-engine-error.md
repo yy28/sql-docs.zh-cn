@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 895ec797f0c0182fe1579972d3adb3663302d7d4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ea7b59b50d2c1f8a312330879580d6f7ecba28e3
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677629"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657861"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51677629"
     AND qs.plan_handle = *plan_handle*;
     ```
   
-2.  根据原因代码说明，修改相应语句、批处理或过程以避免重新编译。 例如，某一存储过程可能包含一个或多个 SET 语句。 应从此过程中删除这些语句。 有关重新编译原因和解决方法的其他示例，请参阅 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175)（SQL Server 2005 中的批编译、重新编译和计划缓存问题）。  
+2.  根据原因代码说明，修改相应语句、批处理或过程以避免重新编译。 例如，某一存储过程可能包含一个或多个 SET 语句。 应从此过程中删除这些语句。 有关重新编译原因和解决方法的其他示例，请参阅 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966425(v=technet.10))（SQL Server 2005 中的批编译、重新编译和计划缓存问题）。  
   
 3.  如果问题仍然存在，请与 Microsoft 客户支持服务部门联系。  
   

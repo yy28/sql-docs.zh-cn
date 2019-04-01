@@ -1,6 +1,6 @@
 ---
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4296a2b56f5c347a26435a4c192c6dfac7f16538
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494059"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 将有关敏感度分类的元数据添加到一个或多个数据库列中。 分类可以包括敏感度标签和信息类型。  
 
@@ -92,7 +92,7 @@ INFORMATION_TYPE_ID
 - 系统视图 [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) 可用于检索数据库的敏感度分类信息。
 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要“ALTER ANY SENSITIVITY CLASSIFICATION”权限。 “ALTER ANY SENSITIVITY CLASSIFICATION”由数据库权限“ALTER”或服务器权限“CONTROL SERVER”表示。
 

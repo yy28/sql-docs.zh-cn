@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 的功能依赖项 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26402f5b15fa7dd8e24b13f3adc41836ff275228
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 820cc9f7faf3144852b761ac8b9ea3819935215f
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154682"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566406"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖项
 
@@ -99,8 +99,8 @@ ms.locfileid: "56154682"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序：
 
-- JDBC 驱动程序版本 7.2.1-依赖项版本： Azure 密钥保管库 （版本 1.2.0）、 Azure 密钥保管库 Webkey （版本 1.2.0）、 Adal4j （版本 1.6.3），客户端的运行时-为-AutoRest (1.6.5)，以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC 驱动程序版本 7.0.0-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.6.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC 驱动程序版本 7.2.1-依赖项版本： Azure 密钥保管库 （版本 1.2.0）、 Azure 密钥保管库 Webkey （版本 1.2.0）、 Adal4j （版本 1.6.3），客户端的运行时-为-AutoRest (1.6.5)，以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC 驱动程序版本 7.0.0-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.6.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 驱动程序版本 6.4.0-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.4.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC 驱动程序版本 6.2.2-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.4.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC 驱动程序版本 6.0.0-依赖项版本： Azure key Vault （0.9.7 版）、 Adal4j （版本 1.3.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
@@ -127,4 +127,4 @@ ms.locfileid: "56154682"
 ## <a name="see-also"></a>另请参阅
 
 [JDBC 驱动程序 GitHub 存储库](https://github.com/microsoft/mssql-jdbc)  
- [JDBC Driver API 参考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC Driver API 参考](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

@@ -14,12 +14,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 534691457d3365ca8fe676b5fba0fbcef97da46e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0f0ac1d6f89a5612144037e83db3e548f9140a66
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695686"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657502"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51695686"
   
 在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
-默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时，如果指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Windows Azure SQL 数据库概述](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时，如果指定用户数据库，则对象资源管理器中仅显示该数据库及其对象。 如果连接到 master，则会显示所有数据库。 有关详细信息，请参阅 [Microsoft Azure SQL 数据库概述](/azure/sql-database/sql-database-technical-overview)。  
   
 **网络协议**  
 从该列表中选择某个协议。 可用客户端协议是你通过“计算机管理”中的“客户端网络配置”配置的协议。  

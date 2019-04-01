@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee122adb459586f370f2b115f161c56468f4ce7a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ccc802650dd4ba57074d760d2e9b7af176121e8e
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327658"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645419"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  重新生成加密层次结构是一种消耗大量资源的操作。 您应当将该操作安排在资源需求较低的时段进行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -83,6 +83,4 @@ GO
  [服务主密钥](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY (Transact-SQL)](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [加密层次结构](../../relational-databases/security/encryption/encryption-hierarchy.md)

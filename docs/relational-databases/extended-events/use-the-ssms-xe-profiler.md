@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - extended events [SQL Server], system health session
 - extended events [SQL Server], system_health session
@@ -17,14 +17,15 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04c32636d566cca1c5dd280b20b59aba2614dc56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86060ab437019e19c5b6f47e41df96ddc206a582
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043078"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477962"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 探查器
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 XEvent 探查器是 SQL Server Management Studio (SSMS) 的功能，可显示扩展事件的实时查看器窗口。 本概述描述了使用此探查器的原因、关键功能以及查看扩展事件的入门说明。
 

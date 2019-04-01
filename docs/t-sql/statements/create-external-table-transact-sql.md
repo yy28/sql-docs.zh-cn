@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06fc940fad53ee37f4e97a6883a99666722a05bf
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 99f23b651bad438154f1c38117ea1a3f9f3d9a5c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852912"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658371"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -239,7 +239,7 @@ OBJECT_NAME
 分发  
 可选。 只有 SHARD_MAP_MANAGER 类型的数据库才需要此参数。 此参数控制表是被视为分片表还是复制表。 使用 **SHARDED**（*列名*）表时，来自不同表的数据不会重叠。 **REPLICATED** 指定表在每个分片上具有相同数据。 **ROUND_ROBIN** 指示将特定于应用程序的方法用于分发数据。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要以下用户权限：  
   
 -   **CREATE TABLE**  
@@ -555,7 +555,6 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[常见元数据查询示例 (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

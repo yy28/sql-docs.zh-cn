@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - objects [SQL Server], extended events
 - xe
@@ -17,14 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ebd5d6c3d02768895f6db056cec7b9726168d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 038fb2ba6760f01f0a762b3436bb82ba8117ff4f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780185"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478092"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>查找具有最多锁定的对象
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   数据库管理员通常需要识别影响数据库性能的锁定来源。  

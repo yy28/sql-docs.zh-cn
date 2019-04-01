@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434451"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657951"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "58434451"
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>使用 PowerShell 创建自签名证书
 
-使用 [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) cmdlet 创建自签名证书。 以下示例演示如何生成可以用作“始终加密”功能的列主密钥的证书。
+使用 [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 创建自签名证书。 以下示例演示如何生成可以用作“始终加密”功能的列主密钥的证书。
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 如果列主密钥是存储在当前用户证书存储位置的一个证书，你需要导出包含私钥的证书并将其导入到运行应用程序（预期要加密或解密存储在加密列中的数据）的所有用户帐户的当前用户证书存储位置，或用于配置“始终加密”功能和管理“始终加密”密钥（包含这些应用程序/工具的所有计算机上的密钥）的工具。 无需任何权限配置 - 登录计算机后，用户可以访问其当前用户证书存储位置的所有证书。
 
 #### <a name="using-powershell"></a>使用 PowerShell
-使用 [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) 和 [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) cmdlet 导入和导出证书。
+使用 [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) 和 [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 导入和导出证书。
 
 #### <a name="using-microsoft-management-console"></a>使用 Microsoft 管理控制台 
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504288"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657681"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
 
@@ -34,7 +34,7 @@ ms.locfileid: "52504288"
 
 ## <a name="cmdlet-summary"></a>Cmdlet 摘要
 
- 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://technet.microsoft.com/library/hh847814.aspx)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的是由 Reporting Services 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
+ 若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序“数据库”的引用指的是由 Reporting Services 服务应用程序所创建并使用的所有数据库。 这包括配置、警报和 temp 数据库。  
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52504288"
 |Mount-SPRSDatabase|装入 Reporting Services 服务应用程序的数据库。|  
 |New-SPRSDatabase|为指定的 Reporting Services 服务应用程序创建新的服务应用程序数据库。|  
 |Get-SPRSDatabaseCreationScript|将数据库创建脚本输出到 Reporting Services 服务应用程序的屏幕。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
-|Get-SPRSDatabase|获取一个或多个 Reporting Services 服务应用程序数据库。 使用命令来获取服务应用程序数据库的 ID，以便使用 Set-SPRSDatabase cmdlet 来修改属性，例如 `querytimeout`。 请参阅本主题中的示例： [获取和设置 Reporting Service 应用程序数据库的属性](#bkmk_example_db_properties)。|  
+|Get-SPRSDatabase|获取一个或多个 Reporting Services 服务应用程序数据库。 使用命令来获取服务应用程序数据库的 ID，以便使用 Set-SPRSDatabase cmdlet 来修改属性，例如 `querytimeout`。 请参阅本主题中的示例： [获取和设置 Reporting Service 应用程序数据库的属性](#get-and-set-properties-of-the-reporting-service-application-database)。|  
 |Get-SPRSDatabaseRightsScript|将数据库权限脚本输出到 Reporting Services 服务应用程序的屏幕。 系统会提示所需的用户和数据库，然后返回您可以运行以修改权限的 Transact SQL。 然后，您可以在 SQL Server Management Studio 中运行此脚本。|  
 |Get-SPRSDatabaseUpgradeScript|将数据库升级脚本输出到此屏幕。 该脚本将 Reporting Services 服务应用程序数据库升级到当前 Reporting Services 安装的数据库版本。|  
   

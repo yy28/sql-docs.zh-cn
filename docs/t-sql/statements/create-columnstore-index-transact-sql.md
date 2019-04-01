@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128362"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658421"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -287,7 +287,7 @@ filegroup_name
   
 在此上下文中，“default”一词不是关键字。 而是默认文件组的标识符，并且必须进行分隔，如 ON "default" 或 ON [default] 中所示。 如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 这是默认设置。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
 ##  <a name="GenRemarks"></a> 一般备注  
@@ -384,7 +384,7 @@ filegroup_name
 -   计算列。 从 SQL Server 2017 开始，聚集列存储索引可以包含非持久化计算列。 但是，在 SQL Server 2017 中，聚集列存储索引不能包含持久化计算列，并且你不能对计算列创建非聚集索引。 
 -   页和行压缩以及 **vardecimal** 存储格式（列存储索引已采用不同格式压缩）。  
 -   复制  
--   Filestream
+-   文件流
 
 不能在具有聚集列存储索引的表中使用游标或触发器。 此限制不适用于非聚集列存储索引；可以在具有非聚集列存储索引的表中使用游标和触发器。
 
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 将列存储表转换回行存储堆  
- 使用 [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
+ 使用 [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md) 删除聚集列存储索引并将表转换为行存储堆。 此示例会将 cci_xDimProduct 表转换为行存储堆。 可继续分配该表，但将其存储为堆。  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
