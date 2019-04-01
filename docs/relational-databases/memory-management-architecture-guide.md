@@ -79,7 +79,7 @@ ms.locfileid: "56662921"
 -  **单页分配器 (SPA)** 它仅包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中小于或等于 8 KB 的内存分配。 “max server memory (MB)”和“min server memory (MB)”这两个配置选项确定 SPA 消耗的物理内存的限制。 同时，缓冲池也是用于 SPA 的机制，并且还是最大的单页分配使用者。
 -  **多页分配器 (MPA)**，用于需要 8 KB 以上的内存分配。
 -  **CLR 分配器**，包含 CLR 初始化期间创建的 SQL CLR 堆及其全局分配。
--  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的**[线程堆栈](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的内存分配。
+-  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的 **[线程堆栈](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的内存分配。
 -  **直接 Windows 分配 (DWA)**，用于直接向 windows 进行的内存分配请求。 包括由加载到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程中的模块使用 Windows 堆和直接进行虚拟分配。 此类内存分配请求的示例包括从扩展存储过程 DLL 分配、使用自动化过程（sp_OA 调用）创建的对象以及从链接服务器提供程序分配。
 
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，单页分配、多页分配和 CLR 分配全部合并到“任意大小”页分配器中，受到由“max server memory (MB)”和“min server memory (MB)”配置选项控制的内存限制。 此更改使通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存管理器的所有内存要求能更准确地调整大小。 

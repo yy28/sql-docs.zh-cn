@@ -160,7 +160,7 @@ ms.locfileid: "56801991"
   
 3.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，单击 **“SQL Server 服务”**。  
   
-4.  在结果窗格中，右键单击命名实例的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
+4.  在结果窗格中，右键单击命名实例的 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“浏览器”** 或者“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (MSSQLServer)”或“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 (<instance_name>)”，然后单击“开始”、“停止”、“暂停”、“恢复”或“重启”。  
   
 5.  单击 **“确定”** 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "56801991"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>启动、停止或重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例  
   
-1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理”**，然后单击“启动”、“停止”或“重启”。  
+1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，右键单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“代理”** ，然后单击“启动”、“停止”或“重启”。  
   
 2.  如果此时出现 **“用户帐户控制”** 对话框，请单击 **“是”**。  
   
