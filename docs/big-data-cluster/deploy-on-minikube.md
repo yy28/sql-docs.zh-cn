@@ -1,6 +1,6 @@
 ---
 title: 配置 minikube
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何配置用于 SQL Server 2019 大数据群集 （预览版） 部署 minikube 在一台计算机上。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860688"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>配置用于 SQL Server 2019 大数据群集部署 minikube
+# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>配置用于 SQL Server 大数据群集部署 minikube
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍如何配置**minikube**用于 SQL Server 2019 大数据群集 （预览版） 部署一台计算机上。 Minikube 是一种工具，轻松地在一台便携式计算机或桌面等一台计算机上运行 Kubernetes。 Minikube 在 VM 的单节点 Kubernetes 群集在笔记本电脑上运行的用户希望试用 Kubernetes 或使用它开发日常。 
 

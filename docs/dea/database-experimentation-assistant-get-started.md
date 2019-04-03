@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987693"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872237"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>开始使用数据库实验助手
 
@@ -81,7 +81,7 @@ ms.locfileid: "56987693"
 
    - **重播名称**:重播跟踪的文件名称。
    - **控制器计算机的名称**:Distributed Replay 控制器计算机的名称。
-   - **在控制器上的源跟踪文件的路径**:中的源跟踪文件的文件路径[捕获](#Capture)。
+   - **在控制器上的源跟踪文件的路径**:中的源跟踪文件的文件路径[捕获](#capture)。
    - **SQL Server 实例名称**:在其重播跟踪源上的 SQL Server 实例的名称。
    - **用于存储 SQL Server 计算机上的目标跟踪文件路径**:生成重播跟踪文件的文件夹路径。
 

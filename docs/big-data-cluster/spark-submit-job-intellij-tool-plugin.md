@@ -1,20 +1,24 @@
 ---
 title: Spark 作业的 Azure 工具包中用于 IntelliJ 群集上运行 SQL Server 大数据
-titleSuffix: SQL Server Big Data Clusters
-description: Spark 群集上提交作业 SQL Server 大数据的 Azure 工具包中用于 IntelliJ。
+titleSuffix: SQL Server big data clusters
+description: 提交用于 IntelliJ 的 Azure 工具包中的 SQL Server 大数据群集上的 Spark 作业。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683617"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860319"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>将在 SQL Server 大数据群集，在 IntelliJ 中的 Spark 作业提交
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>提交在 IntelliJ 中的 SQL Server 大数据群集上的 Spark 作业
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功能。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
 
@@ -25,12 +29,12 @@ SQL Server 大数据群集的重要方案之一是将提交 Spark 作业的功�
 - IntelliJ IDEA。 您可以从中进行安装[JetBrains 网站](https://www.jetbrains.com/idea/download/)。
 - Azure Toolkit for IntelliJ 扩展。 有关安装说明，请参阅[安装用于 IntelliJ 的 Azure 工具包](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)。
 
-## <a name="link-sql-server-big-data-cluster"></a>链接的 SQL Server 大数据群集
+## <a name="link-sql-server-big-data-cluster"></a>链接 SQL Server 大数据群集
 1. 打开 IntelliJ IDEA 工具。
 
 2. 如果使用自签名的证书，禁用从 SSL 证书验证**工具**菜单中，选择**Azure**，**验证 Spark 群集的 SSL 证书**，然后**禁用**。
 
-    ![链接 SQL Server 大数据群集-禁用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![将 SQL Server 大数据群集链接-禁用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. 打开从 Azure 资源管理器**视图**菜单中，选择**工具 Windows**，然后选择**Azure 资源管理器**。
 4. 右键单击**SQL Server 大数据群集**，选择**链接 SQL Server 大数据群集**。 输入**服务器**，**用户名**，并**密码**，然后单击**确定**。

@@ -1,6 +1,6 @@
 ---
 title: 调试/诊断的 Spark 应用程序
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 使用 Spark History Server 来调试和诊断 SQL Server 2019 大数据群集上运行的 Spark 应用程序。
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241783"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860329"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>调试和诊断的 Spark 应用程序在 Spark History Server 中的 SQL Server 大数据群集上
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文提供有关如何使用扩展的 Spark History Server 来调试和诊断 SQL Server 2019 （预览版） 大数据群集中的 Spark 应用程序的指南。 这些调试和诊断功能是内置于 Spark History Server 且由 Microsoft 提供支持。 扩展插件包括数据和关系图选项卡和诊断选项卡。在数据选项卡上，用户可以检查 Spark 作业的输入和输出数据。 用户可在关系图选项卡上，检查数据流和重播作业图。 在诊断选项卡上，用户可以引用数据偏斜、 时间偏差和执行器使用情况分析。
 

@@ -1,6 +1,6 @@
 ---
 title: 将数据引入到 SQL Server 数据池
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本教程演示如何将数据引入到 SQL Server 2019 大数据群集 （预览版） 的数据池。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509934"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860339"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教程演示如何使用 TRANSACT-SQL 将数据加载到[数据池](concept-data-pool.md)的 SQL Server 2019 大数据群集 （预览版）。 使用 SQL Server 大数据群集时，可以引入并分布在数据池实例从各种源的数据。
 
@@ -34,7 +36,7 @@ ms.locfileid: "58509934"
 ## <a id="prereqs"></a> 先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
 - [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)

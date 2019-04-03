@@ -1,6 +1,6 @@
 ---
 title: 在 Azure Data Studio 中运行 Spark 作业
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 将在 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业提交。
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578237"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860448"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>提交 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 大数据群集的重要方案之一是将提交 Spark 作业的 SQL Server 2019 预览版的功能。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 2019 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
 
@@ -25,7 +27,7 @@ ms.locfileid: "57578237"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **kubectl**
+   - **Kubectl**
 
 - [连接到你的大数据群集的 HDFS/Spark 网关的 Azure Data Studio](connect-to-big-data-cluster.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: 使用 kubeadm 配置 Kubernetes
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何配置多个 Ubuntu 16.04 上的 Kubernetes 或用于 SQL Server 2019 大数据群集 （预览版） 部署 18.04 计算机 （物理或虚拟）。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017983"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860609"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>配置用于 SQL Server 2019 大数据群集 （预览版） 部署多台计算机上的 Kubernetes
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>配置用于 SQL Server 大数据群集部署的多台计算机上的 Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文提供有关如何使用的示例**kubeadm**若要配置用于 SQL Server 2019 大数据群集 （预览版） 部署多台计算机上的 Kubernetes。 在此示例中，多个 Ubuntu 16.04 或 18.04 LTS 计算机 （物理或虚拟） 是目标。 如果要部署到不同的 Linux 平台，你必须更改一些命令，以匹配你的系统。  
 

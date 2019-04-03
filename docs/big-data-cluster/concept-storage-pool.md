@@ -1,6 +1,6 @@
 ---
 title: 什么是存储池？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文介绍在 SQL Server 2019 大数据群集的存储池。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477922"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860568"
 ---
-# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>什么是存储池 （SQL Server 2019 大数据群集）？
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>什么是存储池 （SQL Server 大数据群集）？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍的角色*SQL Server 存储池*SQL Server 2019 大数据群集 （预览版） 中。 以下部分介绍的体系结构和功能的 SQL 存储池。
 

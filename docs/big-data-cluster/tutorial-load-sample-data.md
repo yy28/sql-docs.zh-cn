@@ -1,6 +1,6 @@
 ---
 title: 加载示例数据
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本教程演示如何将示例数据加载到 SQL Server 大数据群集。 示例数据在 SQL Server 主实例中包括关系数据。 它还包括在存储池中的 HDFS 数据。 在本部分中，此数据支持的其他教程。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566516"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859988"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 2019 大数据群集
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教程介绍如何使用脚本将示例数据加载到 SQL Server 2019 大数据群集 （预览版）。 许多其他教程文档中使用此示例数据。
 
@@ -29,7 +31,7 @@ ms.locfileid: "58566516"
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **sqlcmd**
    - **curl**
 

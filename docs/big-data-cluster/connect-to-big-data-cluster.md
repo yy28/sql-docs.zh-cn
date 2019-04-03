@@ -1,6 +1,6 @@
 ---
 title: 连接到主服务器和 HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何连接到 SQL Server 主实例和 SQL Server 2019 大数据群集 （预览版） 的 HDFS/Spark 网关。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017703"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860168"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>连接到 SQL Server 大数据群集使用 Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍如何从 Azure Data Studio 连接到 SQL Server 2019 大数据群集 （预览版）。 有两个用于与大数据群集交互的主终结点：
 
@@ -34,7 +36,7 @@ ms.locfileid: "57017703"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **kubectl**
+   - **Kubectl**
 
 ## <a id="master"></a> 连接到群集
 

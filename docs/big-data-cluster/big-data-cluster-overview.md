@@ -1,6 +1,6 @@
 ---
 title: 什么是大数据群集？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 Kubernetes 上运行并提供 HDFS 数据以及关系的向外缩放选项。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860249"
 ---
-# <a name="what-are-sql-server-2019-big-data-clusters"></a>什么是 SQL Server 2019 大数据群集？
+# <a name="what-are-sql-server-big-data-clusters"></a>什么是 SQL Server 大数据群集？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 从开始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 大数据群集允许你部署的 Kubernetes 上运行的 SQL Server、 Spark 和 HDFS 容器的可缩放群集。 并行运行这些组件，以使您能够读取、 写入，并处理从 TRANSACT-SQL 或 Spark 的大数据、 使您轻松合并和分析大数据大容量高价值关系数据。
 
@@ -76,8 +78,8 @@ Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
-| **Node** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
+| **分类** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
+| **节点** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
 | **Pod** | Pod 是 Kubernetes 的原子部署单位。 Pod 是一个或多个容器的逻辑组-和关联的资源需要运行应用程序。 每个 pod 的节点; 上运行节点可以运行一个或多个 pod。 Kubernetes 主机会自动分配到群集中节点的 pod。 |
 | &nbsp; ||
 

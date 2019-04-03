@@ -1,6 +1,6 @@
 ---
 title: 在 Oracle 中的查询外部数据
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本教程演示如何查询从 SQL Server 2019 大数据群集 （预览版） 的 Oracle 数据。 你对 Oracle 中的数据创建外部表，然后运行查询。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859978"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集查询 Oracle
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教程演示如何查询 SQL Server 2019 大数据群集中的 Oracle 数据。 若要运行本教程中，您需要有权访问 Oracle 服务器。 如果你没有访问权限，本教程可使您的数据虚拟化的 SQL Server 大数据群集中的外部数据源的工作方式。
 

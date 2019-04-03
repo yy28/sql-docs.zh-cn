@@ -1,6 +1,6 @@
 ---
-title: mssqlctl 引用
-titleSuffix: SQL Server 2019 big data clusters
+title: mssqlctl 参考
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 命令的参考文章。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d15b4149fe336b173452030ec67fb7f229e6ae3d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527280"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860349"
 ---
 # <a name="mssqlctl"></a>mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 以下文章提供了参考**mssqlctl**适用于工具[SQL Server 2019 大数据群集 （预览版）](big-data-cluster-overview.md)。 有关如何安装详细信息**mssqlctl**工具，请参阅[安装 mssqlctl 来管理 SQL Server 2019 大数据群集](deploy-install-mssqlctl.md)。
 
@@ -25,10 +27,10 @@ ms.locfileid: "57527280"
 |||
 |---|---|
 | [app](reference-mssqlctl-app.md) | 创建、 删除、 运行和管理应用程序。 |
-| [cluster](reference-mssqlctl-cluster.md) | 选择、 管理和运行群集。 |
+| [群集](reference-mssqlctl-cluster.md) | 选择、 管理和运行群集。 |
 | [login](#login) | 登录到群集。 |
-| [logout](#logout) | 日志移出群集。 |
-| [storage](reference-mssqlctl-storage.md) | 管理群集的存储。 |
+| [注销](#logout) | 日志移出群集。 |
+| [存储](reference-mssqlctl-storage.md) | 管理群集的存储。 |
 
 ## <a id="login"></a> mssqlctl login
 

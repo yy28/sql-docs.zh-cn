@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513064"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860578"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>运行使用 Python 在存储过程中嵌入的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ GO
 
 在本部分中，将了解如何通过调用两个存储的过程创建单个预测：
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy)专为单行计分使用 scikit-了解模型。
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy)专为单行计分使用 revoscalepy 模型。
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy)专为单行计分使用 scikit-了解模型。
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)专为单行计分使用 revoscalepy 模型。
 + 如果未尚未定型模型，返回到[步骤 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)！
 
 作为输入的单个值，例如乘客计数、 行程距离等一系列这两个模型采用。 表值函数， `fnEngineerFeatures`，用于将纬度和经度值从一项新功能的输入转换、 直接距离。 [第 4 课](sqldev-py4-create-data-features-using-t-sql.md)包含此表值函数的说明。

@@ -1,6 +1,6 @@
 ---
 title: 入门
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解步骤以及用于部署 SQL Server 2019 大数据群集 （预览版） 的资源。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860428"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>SQL Server 2019 大数据群集入门
+# <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 大数据群集入门
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文概述了如何部署[SQL Server 2019 大数据群集 （预览版）](big-data-cluster-overview.md)。 它旨在面向您的概念并提供一个框架，用于了解在本部分中的其他部署文章。 根据您为客户端和服务器的平台选择具体的部署步骤可能有所不同。
 
@@ -24,10 +26,10 @@ ms.locfileid: "58567643"
 
 大数据群集需要一组特定的客户端工具。 大数据群集部署到 Kubernetes 之前，应安装以下工具：
 
-| 工具 | Description |
+| Tool | Description |
 |---|---|
 | **mssqlctl** | 部署和管理大数据群集。 |
-| **kubectl** | 创建和管理基础的 Kubernetes 群集。 |
+| **Kubectl** | 创建和管理基础的 Kubernetes 群集。 |
 | **Azure Data Studio** | 使用大数据群集的图形界面。 |
 | **SQL Server 2019 扩展** | Azure Data Studio 扩展使大数据群集功能。 |
 

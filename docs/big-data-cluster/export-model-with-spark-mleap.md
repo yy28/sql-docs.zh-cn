@@ -1,6 +1,6 @@
 ---
 title: 导出具有 MLeap 的 Spark 机器学习模型
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何导出 Spark 机器学习具有 MLeap 的模型。
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242128"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860141"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>导出 Spark 机器学习模型与 MLeap
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 典型的机器学习方案涉及在 Spark 中的模型训练和评分外部 Spark。 导出可移植格式中的模型，以便它可以使用外部 Spark。 [MLeap](https://github.com/combust/mleap)是一个此类模型交换格式。 它允许 Spark 机器学习管道和模型能够被导出为可移植格式并在任何基于 JVM 的系统中使用`Mleap`运行时。
 

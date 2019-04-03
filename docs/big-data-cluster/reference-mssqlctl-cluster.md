@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 群集引用
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 群集命令的参考文章。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527210"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860468"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl 群集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 以下文章提供了参考**群集**中的命令**mssqlctl**工具。 有关其他详细信息**mssqlctl**命令，请参阅[mssqlctl 引用](reference-mssqlctl.md)。
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527210"
 
 |||
 |---|---|
-| [create](#create) | 创建群集。 |
-| [delete](#delete) | 删除群集。 |
+| [创建](#create) | 创建群集。 |
+| [删除](#delete) | 删除群集。 |
 | [config](reference-mssqlctl-cluster-config.md) | 群集配置命令。 |
 | [debug](reference-mssqlctl-cluster-debug.md) | 调试命令。 |
 

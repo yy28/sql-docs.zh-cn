@@ -1,23 +1,26 @@
 ---
 title: 群集管理门户
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何使用群集管理门户监视 SQL Server 2019 大数据群集 （预览版）。
 author: yualan
 ms.author: alayu
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492859"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860498"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 如果你想要监视或进行故障排除 SQL Server 2019 大数据群集 （预览版），使用群集管理门户。
 
@@ -101,7 +104,7 @@ ms.locfileid: "58492859"
 若要了解有关每个池的详细信息：
 - [计算池](concept-compute-pool.md)
 - [存储池](concept-storage-pool.md)
-- [data pool](concept-data-pool.md)
+- [数据池](concept-data-pool.md)
 
 ## <a name="about-page"></a>有关页
 

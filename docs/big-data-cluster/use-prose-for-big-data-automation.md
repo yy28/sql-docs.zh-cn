@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860078"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用 PROSE 代码 Accelerator 数据 Wrangling
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE 代码加速器生成你的数据整理任务的可读 Python 代码。 在 Azure Data Studio 中的笔记本中工作时，可以无缝的方式混合与您手动编写的代码生成的代码。 本文概述了如何使用代码加速器。
 
@@ -117,8 +119,8 @@ builder.learn().code()
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
-| 3 |Viachaslau Gordan Hilario |22 Apr 67      |
-| 4 |Maya de Villiers          |19 年 3 月 60      |
+| 3 |Viachaslau Gordan Hilario |22-Apr-67      |
+| 4 |Maya de Villiers          |19-Mar-60      |
 
 根据的数量和多样性数据中的，编写列中的不同模式的正则表达式可以是非常耗时的任务。 `FindPatternsBuilder`是一个功能强大的代码加速工具，通过生成有关列表的字符串的正则表达式来解决上述问题。
 

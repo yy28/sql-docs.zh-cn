@@ -1,6 +1,7 @@
 ---
-title: 使用 curl 在 SQL Server 2019 大数据群集上将数据加载到 HDFS |Microsoft Docs
-description: ''
+title: 使用 curl 将数据加载到 HDFS |Microsoft Docs
+titleSuffix: SQL Server big data clusters
+description: 使用 curl 在 SQL Server 2019 大数据群集上将数据加载到 HDFS。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1a7c7691ec20f459f39a39270e9a78fc9d8ad96f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860133"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>使用 curl 在 SQL Server 2019 大数据群集上将数据加载到 HDFS
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>使用 curl 在 SQL Server 大数据群集上将数据加载到 HDFS
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍如何使用**curl**将数据加载到 HDFS，SQL Server 2019 大数据群集 （预览版） 上。
 

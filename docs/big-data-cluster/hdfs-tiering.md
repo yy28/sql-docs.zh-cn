@@ -1,6 +1,6 @@
 ---
 title: 配置 HDFS 分层
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文介绍如何配置 HDFS 的分层，从而在 SQL Server 2019 大数据群集 （预览版） 上装载到 HDFS 的外部的 Azure Data Lake 存储文件系统。
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493769"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859639"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>配置 SQL Server 2019 大数据群集上分层的 HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>配置 SQL Server 大数据群集上分层的 HDFS
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 HDFS 分层提供的功能来装载外部的在 HDFS 中的 HDFS 兼容文件系统。 本文介绍如何配置 SQL Server 2019 大数据群集 （预览版） 为分层的 HDFS。 在此期间，CTP 2.4 会仅支持连接到 Azure 数据湖存储第 2 代，这是本文的重点。
 
@@ -35,7 +37,7 @@ HDFS 分层提供的功能来装载外部的在 HDFS 中的 HDFS 兼容文件系
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
 
 ## <a id="load"></a> 将数据加载到 Azure Data Lake 存储
 

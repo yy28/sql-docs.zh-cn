@@ -1,23 +1,26 @@
 ---
 title: 安全性概念
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文介绍了 SQL Server 2019 大数据群集 （预览版） 的安全概念。 这包括描述群集终结点和群集身份验证。
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477982"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860108"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 大数据群集的安全性概念
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 安全的大数据群集在 SQL Server 和 HDFS/Spark 意味着统一且一致的身份验证和授权方案的支持。 身份验证是验证用户或服务的身份并确保它们它们声称自己谁的过程。 授权是指授予或拒绝对基于请求用户的标识的特定资源的访问。 用户标识通过身份验证后，执行此步骤。
 

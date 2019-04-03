@@ -1,23 +1,26 @@
 ---
 title: 什么是控制器？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本指南介绍了 SQL Server 2019 大数据群集 （预览版） 的控制器。
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860068"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什么是 SQL Server 2019 大数据群集上的控制器？
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集上的控制器？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 控制器托管用于部署和管理大数据群集的核心逻辑。 它负责与 Kubernetes，是在群集和 HDFS 和 Spark 等其他组件的一部分的 SQL Server 实例的所有交互。 
 

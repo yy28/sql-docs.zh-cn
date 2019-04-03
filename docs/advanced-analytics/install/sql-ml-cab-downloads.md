@@ -3,17 +3,17 @@ title: SQL Server 累积更新-SQL Server 机器学习的 CAB 下载
 description: R 和 Python CAB 和包的 SQL Server 2017 机器学习服务与 SQL Server 2016 R Services 的下载。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/19/2019
+ms.date: 04/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 22304bb9ec142e8f0c61797ed6907c0aa78c34f8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511374"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872167"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>实例的 SQL Server 数据库内分析的累积更新 CAB 下载
 
@@ -36,8 +36,13 @@ SQL Server 实例配置的数据库内分析包括 R 和 Python 的功能。 安
 
 |发行版本  |组件 | 下载链接  | 已解决的问题 | 
 |---------|----------|----------------|------------------|
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 现在已签名的包中的二进制文件。 |
+| | Microsoft R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 现在已签名的包中的二进制文件。 |
+| | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 现在已签名的包中的二进制文件。 |
+| | Python Server    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| 现在已签名的包中的二进制文件。  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
-| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 从以前的版本未更改。 |
+| | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 从以前的版本未更改。 |
 | | Microsoft R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| 包含的修补程序升级[独立 R Server 操作化](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)，如通过 SQL Server 安装程序安装。 使用 CU13 Cab 并遵循[这些说明](sql-machine-learning-standalone-windows-install.md#apply-cu)来应用此更新。 |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 从以前的版本未更改。 |
 | | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| 包含的修补程序升级[实施独立的 Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)，如通过 SQL Server 安装程序安装。 使用 CU13 Cab 并遵循[这些说明](sql-machine-learning-standalone-windows-install.md#apply-cu)来应用此更新。 |
@@ -91,14 +96,19 @@ SQL Server 2016 R Services 的基线版本是 RTM 版本或 service pack 版本�
 
 |发行版本  |下载链接  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU1-CU4**     |
+|**SQL Server 2016 SP2 CU6**     |
+|Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
+|Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
+|**SQL Server 2016 SP2 CU1-CU5**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
-|**SQL Server 2016 SP1 CU4-CU10**     |
 |**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
-|**SQL Server 2016 SP1 CU1-CU3**     |
+|**SQL Server 2016 SP1 CU14**     |
+|Microsoft R Open     |[SRO_3.2.2.16100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2080130&clcid=1033)|
+|Microsoft R Server    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
+|**SQL Server 2016 SP1 CU1-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 |**SQL Server 2016 SP1**     |

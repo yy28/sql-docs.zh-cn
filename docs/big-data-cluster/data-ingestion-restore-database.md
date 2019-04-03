@@ -1,6 +1,6 @@
 ---
 title: 还原数据库
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文介绍如何将数据库还原为 SQL Server 2019 大数据群集 （预览版） 的主实例。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b6f37f3e82b48a0c56e42cae63f898c3c1089fb
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cc1fddfd7aa2e3400dda3d005eb365cde7364dd4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513204"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860309"
 ---
-# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>将数据库还原为 SQL Server 2019 大数据群集的主实例
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>将数据库还原为 SQL Server 大数据群集的主实例
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍如何将现有数据库还原到 SQL Server 2019 大数据群集 （预览版） 的主实例。 建议的方法是使用备份、 复制和还原方法。
 

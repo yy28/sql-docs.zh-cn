@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974116"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872068"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
 
@@ -34,23 +34,23 @@ ms.locfileid: "57974116"
 
 以下报表可以包含： 
 
-- [仪表板](#dashboard--details)
+- [面板](#dashboard-report)
 
   包括快照统计信息和向下钻取报表。
 
-- [在本地升级就绪情况](#on-premises-upgrade-readiness--details)
+- [在本地升级就绪情况](#on-premises-upgrade-readiness-report)
 
   数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报表显示您已评估的数据库的百分比升级成功。
 
-- [在本地功能奇偶一致性](#on-premise-feature-parity--details)
+- [在本地功能奇偶一致性](#on-premises-feature-parity-report)
 
   显示目标 SQL Server 版本的功能建议。
 
-- [Azure SQL DB 升级就绪情况](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB 升级就绪情况](#azure-sql-db-upgrade-readiness-report)
 
   数据源是 DMAReporting 数据库中的 UpgradeSuccessRanking 视图。  此报表显示针对 Azure SQL DB 迁移评估的数据库的百分比升级成功。
 
-- [Azure SQL 数据库不受支持的功能](#azure-sql-db-unsupported-features--details)
+- [Azure SQL 数据库不受支持的功能](#azure-sql-db-unsupported-features-report)
 
   显示了 Azure SQL 数据库 (V12) 中不支持将现有数据库中的功能。
 
