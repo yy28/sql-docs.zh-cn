@@ -1,6 +1,6 @@
 ---
 title: 使用 Spark 的训练/创建机器学习模型
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 使用 PySpark 训练和 SQL Server 大数据群集 （预览版） 上创建 Spark 机器学习模型。
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: b9217b56da2e00ba50288f1643df809f482c2517
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578107"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860558"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>训练和创建 Spark 的机器学习模型
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 大数据群集中的 Spark，AI 和机器学习。 该示例演示如何培训机器学习模型在 Spark (PySpark) 使用的数据中使用 Python 存储在 HDFS 中。 
 

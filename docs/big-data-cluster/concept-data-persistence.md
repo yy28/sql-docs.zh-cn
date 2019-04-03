@@ -1,6 +1,6 @@
 ---
 title: 在 Kubernetes 上的数据持久性
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何在 SQL Server 2019 大数据群集中的数据暂留工作原理。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494159"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860273"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [永久性卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)提供插件模型，在其中存储如何提供的 Kubernetes 中的存储是抽象的使用方式已完成。 因此，可以将高可用存储，并将其插入 SQL Server 大数据群集群集。 这样，您完全控制的存储、 可用性和性能所需的类型。 Kubernetes 支持各种类型的存储解决方案，包括 Azure 磁盘/文件、 NFS、 本地存储和的详细信息。
 

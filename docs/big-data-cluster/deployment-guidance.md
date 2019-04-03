@@ -1,6 +1,6 @@
 ---
 title: 如何部署
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数据群集 （预览版）。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493729"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860589"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 大数据群集可部署为 docker 容器的 Kubernetes 群集上。 这是安装和配置步骤概述：
 
@@ -42,9 +44,9 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 | 部署 Kubernetes 上： | Description | 链接 |
 |---|---|---|
-| **Minikube** | 在 VM 中的单节点 Kubernetes 群集。 | [说明](deploy-on-minikube.md) |
-| **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
-| **多台计算机** | 物理计算机或使用虚拟机上部署的 Kubernetes 群集**kubeadm** | [说明](deploy-with-kubeadm.md) |
+| **Minikube** | 在 VM 中的单节点 Kubernetes 群集。 | [Instructions](deploy-on-minikube.md) |
+| **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 | [Instructions](deploy-on-aks.md) |
+| **多台计算机** | 物理计算机或使用虚拟机上部署的 Kubernetes 群集**kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
@@ -53,7 +55,7 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 首次部署 SQL Server 2019 大数据群集之前[安装的大数据工具](deploy-big-data-tools.md):
 - **mssqlctl**
-- **kubectl**
+- **Kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 扩展**
 

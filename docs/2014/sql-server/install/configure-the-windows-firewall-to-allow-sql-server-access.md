@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357654"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860708"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -44,7 +44,7 @@ ms.locfileid: "53357654"
   
 -   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+-   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 
   
@@ -101,7 +101,7 @@ ms.locfileid: "53357654"
   
 -   **Microsoft 管理控制台 (MMC)**  
   
-     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。  
+     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
   
 -   **netsh**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53357654"
   
     -   [如何使用 Netsh.exe 工具和命令行开关](https://support.microsoft.com/kb/242468)  
   
-    -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
+    -   [如何使用"netsh advfirewall firewall"上下文而非"netsh firewall"上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
   
     -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](https://support.microsoft.com/kb/947213)  
   
@@ -143,14 +143,14 @@ ms.locfileid: "53357654"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 端口 4022。 若要验证使用的端口，请执行下面的查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]，没有默认端口，不过这是联机丛书示例中使用的常规配置。|  
 |数据库镜像|管理员选择的端口。 若要确定此端口，请执行以下查询：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|对于数据库镜像，没有默认端口，不过联机丛书示例使用 TCP 端口 7022。 务必避免中断正在使用的镜像端点，尤其是处于带有自动故障转移功能的高安全模式下时。 防火墙配置必须避免破坏仲裁。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |复制|与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制连接使用典型的常规 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 端口（供默认实例使用的 TCP 端口 1433 等）<br /><br /> 复制快照的 Web 同步和 FTP/UNC 访问要求在防火墙上打开其他端口。 为了将初始数据和架构从一个位置传输到另一个位置，复制可以使用 FTP（TCP 端口 21）或者通过 HTTP（TCP 端口 80）或文件共享进行的同步。 文件共享使用 UDP 端口 137 和 138，如果使用 NetBIOS，则还有 TCP 端口 139。 文件共享使用 TCP 端口 445。|对于通过 HTTP 进行的同步，复制使用 IIS 端点（其端口可配置，但默认情况下为端口 80），不过 IIS 进程通过标准端口（对于默认实例为 1433）连接到后端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 进行 Web 同步期间，FTP 传输是在 IIS 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器之间进行，而非在订阅服务器和 IIS 之间进行。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_IPsec) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅[配置 TRANSACT-SQL 调试器](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器|TCP 端口 135<br /><br /> 请参阅 [端口 135 的特殊注意事项](#BKMK_port_135)<br /><br /> 可能还需要 [IPsec](#BKMK_additional_ports) 例外。|如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，则在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主机计算机上，还必须将 **Devenv.exe** 添加到“例外”列表中并打开 TCP 端口 135。<br /><br /> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，则在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主机计算机上，还必须将 **ssms.exe** 添加到“例外”列表中并打开 TCP 端口 135。 有关详细信息，请参阅[配置 TRANSACT-SQL 调试器](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
   
  有关为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]配置 Windows 防火墙的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
 ####  <a name="BKMK_dynamic_ports"></a> 动态端口  
  默认情况下，命名实例（包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]）使用动态端口。 也就是说，每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，它都将确定一个可用端口并使用此端口号。 如果命名实例是安装的唯一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能使用 TCP 端口 1433。 如果还安装了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能会使用其他 TCP 端口。 由于所选端口可能会在每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时更改，因而很难配置防火墙以启用对正确端口号的访问。 因此，如果使用防火墙，则建议重新配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以每次都使用同一端口号。 这称为固定端口或静态端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- 另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 **sqlservr.exe** 之类的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”页的“本地端口”列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
+ 另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **之类的** 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”页的“本地端口”列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
   
 > [!NOTE]  
 >  下面的过程将使用“控制面板”中的 **“Windows 防火墙”** 项。 高级安全 Windows 防火墙 MMC 管理单元可以配置更复杂的规则。 其中包括配置服务例外，这对于提供深度防御会非常有用。 请参阅下面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
@@ -324,5 +324,3 @@ ms.locfileid: "53357654"
   
 ## <a name="see-also"></a>请参阅  
  [Windows Server 系统的服务概述和网络端口要求](https://support.microsoft.com/kb/832017)  
-  
-  
