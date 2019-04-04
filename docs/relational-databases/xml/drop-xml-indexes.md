@@ -12,15 +12,15 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c178b093da4fb3fb4c157a56136558ab18de894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fc2c328a58b0fa7bdb69123d1e0b07cd59888b1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639909"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513154"
 ---
 # <a name="drop-xml-indexes"></a>删除 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47639909"
   
  以后将逐步停止使用带有 *TableName.IndexName* 的 DROP 语法，并且 XML 索引不支持该语法。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>示例：创建和删除主 XML 索引  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例如：创建和删除主 XML 索引  
  在以下示例中，XML 索引是对 **xml** 类型列创建的。  
   
 ```  
@@ -70,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>示例：使用 DROP_EXISTING 索引选项创建 XML 索引  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>例如：使用 DROP_EXISTING 索引选项创建 XML 索引  
  在以下示例中，XML 索引是针对列 (`XmlColx`) 创建的。 然后，针对不同的列 (`XmlColy`) 创建同名的另一个 XML 索引。 由于指定了 `DROP_EXISTING` 选项，因此将删除 (`XmlColx)` 现有的 XML 索引并为 (`XmlColy`) 创建新的 XML 索引。  
   
 ```  

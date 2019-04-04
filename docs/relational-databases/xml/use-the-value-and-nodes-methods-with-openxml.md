@@ -12,15 +12,15 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f57a3a564318a0564b80596cc2220fce6d8fafd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dabca94aba07a2d41a70bbee5343fe1eeb61658
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749725"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509894"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47749725"
   
  **nodes()** 方法生成特殊的 **xml** 数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()**、**value()**、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
   
-## <a name="example-using-nodes"></a>示例：使用 nodes()  
+## <a name="example-using-nodes"></a>例如：使用 nodes()  
  假定您希望提取作者的名字和姓氏，而名字不是“David”。 此外，您希望提取该信息作为一个包含两列 FirstName 和 LastName 的行集。 通过使用 **nodes()** 方法和 **value()** 方法便可以完成该操作，如下所示：  
   
 ```  
@@ -42,7 +42,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 提供了通过使用 **OpenXml()** 从 XML 实例生成行集的功能。 您可以指定行集的关系架构，以及如何将 XML 实例中的值映射到行集中的列。  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>示例：对 xml 数据类型使用 OpenXml()  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>例如：对 xml 数据类型使用 OpenXml()  
  可以通过使用 **OpenXml()** 重写上一个示例中的查询，如下所示。 方法是创建一个游标，该游标将每个 XML 实例读取到 XML 变量，然后向其应用 OpenXML：  
   
 ```  

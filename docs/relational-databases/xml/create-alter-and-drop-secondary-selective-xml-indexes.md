@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c82c55eee8267c795ff664081c79f55a9cbd1173
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e3d9d40d12118e618bb5ae5ab45376c29e4f46e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761746"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513094"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>创建、更改和删除辅助选择性 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47761746"
   
 ##  <a name="create"></a> 创建辅助选择性 XML 索引  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>如何创建辅助选择性 XML 索引  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>如何：创建辅助选择性 XML 索引  
  **使用 Transact-SQL 创建辅助选择性 XML 索引**  
  通过调用 CREATE XML INDEX 语句创建辅助选择性 XML 索引。 有关详细信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   
@@ -46,7 +46,7 @@ FOR
 ##  <a name="alter"></a> 更改辅助选择性 XML 索引  
  辅助选择性 XML 索引不支持 ALTER 语句。 若要更改辅助选择性 XML 索引，请删除现有索引，然后重新创建它。  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>如何更改辅助选择性 XML 索引  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>如何：更改辅助选择性 XML 索引  
  **使用 Transact-SQL 更改辅助选择性 XML 索引**  
  1.  通过调用 DROP INDEX 语句删除现有辅助选择性 XML 索引。 有关详细信息，请参阅 [DROP INDEX（选择性 XML 索引）](../../t-sql/statements/drop-index-selective-xml-indexes.md)。  
   
@@ -71,7 +71,7 @@ FOR
   
 ##  <a name="drop"></a> 删除辅助选择性 XML 索引  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>如何删除辅助选择性 XML 索引  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>如何：删除辅助选择性 XML 索引  
  **使用 Transact-SQL 删除辅助选择性 XML 索引**  
  通过调用 DROP INDEX 语句删除辅助选择性 XML 索引。 有关详细信息，请参阅 [DROP INDEX（选择性 XML 索引）](../../t-sql/statements/drop-index-selective-xml-indexes.md)。  
   

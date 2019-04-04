@@ -1,7 +1,7 @@
 ---
 title: SQL 内存中 OLTP 的硬件 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087587"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645439"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>SQL Server 2014 中的内存中 OLTP 的硬件注意事项
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server 中的内存中 OLTP 的硬件注意事项
 
-内存中 OLTP 使用内存和磁盘的方式与传统基于磁盘的表不同。 你将看到的内存中 OLTP 的性能改进取决于所使用的硬件。 在这篇博客文章中我们讨论了一些常规硬件注意事项，并提供了用于内存中 OLTP 的硬件的一般准则。
+内存中 OLTP 使用内存和磁盘的方式与传统基于磁盘的表不同。 你将看到的内存中 OLTP 的性能改进取决于你所使用的硬件。 在这篇博客文章中我们讨论了一些常规硬件注意事项，并提供了用于内存中 OLTP 的硬件的一般准则。
 
 > [!NOTE]
-> 本文是由 Microsoft SQL Server 2014 团队于 2013 年 8 月 1 日发布的博客文章。 博客网页将要停用，本文粗略概括了博客文章内容。 以前链接到博客的文档文章现在已链接到本文。 本文未进行维护。 本文可能会从目录中排除。
-> 
+> 本文是由 Microsoft SQL Server 2014 团队于 2013 年 8 月 1 日发布的博客文章。 博客网页即将停用。
+>
 > [SQL Server 内存中 OLTP](index.md)
 
 <!--
@@ -32,7 +32,7 @@ ms.locfileid: "55087587"
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +47,7 @@ ms.locfileid: "55087587"
 若要确定给定内存优化表使用的内存量，请运行以下查询：
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 结果将显示用于内存优化表及其索引的内存。 表数据包括用户数据，以及运行事务仍需要或尚未被系统清理的所有旧行版本。 哈希索引使用的内存是常量，并且不依赖于表中的行数。
@@ -74,3 +74,6 @@ select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
 
 在磁盘容量方面，建议可用内存优化表大小的 2-3 倍。
 
+## <a name="see-also"></a>另请参阅
+
+[内存中 OLTP 的示例数据库](sample-database-for-in-memory-oltp.md)

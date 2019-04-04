@@ -11,15 +11,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665566"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510544"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51665566"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>基于 xml 数据类型的计算列  
  可以使用调用 **xml** 数据类型方法的用户定义函数来创建计算列。 计算列的类型可以是任何 SQL 类型，包括 XML。 下面的示例说明了这一点。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>示例：基于 xml 数据类型方法的计算列  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例如：基于 xml 数据类型方法的计算列  
  为书的 ISBN 号创建用户定义函数：  
   
 ```  
@@ -52,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以按通常的方式对计算列创建索引。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>示例：对基于 xml 数据类型方法的计算列的查询  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例如：针对基于 xml 数据类型方法的计算列的查询  
  若要获得其 ISBN 为 0-7356-1588-2 的 <`book`>：  
   
 ```  
@@ -86,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   编写对属性表进行 SQL 访问的查询和对基表中的 XML 列进行 XML 访问的查询，这些表之间通过主键联接起来。  
   
-### <a name="example-create-a-property-table"></a>示例：创建属性表  
+### <a name="example-create-a-property-table"></a>例如：创建属性表  
  为了进行说明，假定您希望提升作者的名字。 书有一个或多个作者，因此名字为多值属性。 每个名字都存储在属性表的单独行中。 在属性表中复制基表的主键以便进行后向联接。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>示例：创建用户定义函数以从 XML 实例生成行集  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例如：创建用户定义函数以从 XML 实例生成行集  
  以下表值函数 udf_XML2Table 接受主键值和 XML 实例。 它检索 <`book`> 元素的所有作者的名字，然后返回主键-名字对行集。  
   
 ```  
@@ -109,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>示例：创建触发器以填充属性表  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>例如：创建触发器以填充属性表  
  插入触发器将行插入属性表：  
   
 ```  
@@ -156,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>示例：查找其作者名字相同的 XML 实例  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例如：查找其作者名字相同的 XML 实例  
  可以对 XML 列执行此查询。 此外，它也可以在属性表中搜索名字“David”，然后与基表进行后向联接以返回 XML 实例。 例如：  
   
 ```  
@@ -165,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>示例：使用 CLR 流式表值函数的解决方案  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例如：使用 CLR 流式处理表值函数的解决方案  
  此解决方案包括下列步骤：  
   
 1.  定义 CLR 类 SqlReaderBase，它实现 ISqlReader，并通过在 XML 实例上应用路径表达式来生成流式表值输出。  

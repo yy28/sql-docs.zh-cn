@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503487"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658271"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SQL Server 2014 SP2 包含针对 SQL Server 2014 SP1 CU7 发布的修补程序�
 |对复制的 DROP DDL 支持|允许从数据库和出版物中删除以文章形式包含在事务复制出版物中的表。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |针对 SQL 服务帐户的 IFI 特权|确定即时文件初始化 (IFI) 在 SQL Server 服务启动时是否有效。|[数据库文件初始化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |内存授予 - 处理问题|可以通过设置诊断提示的内存授予上限，在运行查询时利用诊断提示防止内存争用。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|轻型按运算符查询执行分析 |优化按运算符查询执行统计信息（如实际行数）的收集。|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员选择：随时随地查询进度）
+|轻型按运算符查询执行分析 |优化按运算符查询执行统计信息（如实际行数）的收集。|[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）
 |查询执行诊断|现可在查询执行计划中报告读取的实际行，以帮助改进查询性能故障排除。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Tempdb 溢出的查询执行诊断|哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、使用的内存和受影响的行。 |[改进 temptdb 溢出诊断](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb 可支持性 |在服务器启动时，为 tempdb 文件数、tempdb 数据文件更改使用新的错误日志消息。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +83,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 
 - [下载 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 已发布 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -114,7 +114,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 介质/ISO/CAB 上 StreamInsight 客户端的版本不正确  
 错误版本的 StreamInsight.msi 和 StreamInsightClient.msi 位于 SQL Server 介质/ISO/CAB 上的以下路径中 (StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
-**解决方法：** 从 [SQL Server 2014 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=306709)下载并安装正确的版本。  
+**解决方法：** 从 [SQL Server 2014 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=306709)下载和安装正确的版本。  
   
 ### <a name="ProdDoc"></a>产品文档 RTM
   
@@ -160,7 +160,7 @@ SQL Server 2014 Standard 具有以下更改：
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>内存优化顾问将默认约束标记为不兼容  
 **问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
   
-**解决方法：** 如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
+**解决方法：** 如果要使用顾问来识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
   
 1.  从表定义中删除默认约束。    
 2.  使用顾问生成对表的迁移脚本。    
@@ -168,7 +168,7 @@ SQL Server 2014 Standard 具有以下更改：
 4.  执行迁移脚本。  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>信息性消息“文件访问被拒绝”在 SQL Server 2014 错误日志中不正确地报告为错误  
-**问题：** 在重新启动的服务器具有包含内存优化表的数据库时，在 SQL Server 2014 错误日志中可能会看到以下类型的错误消息：  
+**问题：** 重新启动具有包含内存优化表的数据库的服务器时，可在 SQL Server 2014 错误日志中看到以下类型的错误消息：  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -180,19 +180,19 @@ memory-optimized table DLLs.
 **解决方法：** 无。 这是一条信息性消息。  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>缺少索引详细信息不正确地报告内存优化表的包含列  
-**问题：** 如果 SQL Server 2014 检测到对内存优化表的查询缺少索引，它会在 SHOWPLAN_XML 中报告缺少索引，并在缺少索引 DMV 中报告缺少索引，如 sys.dm_db_missing_index_details。 在某些情况下，缺少索引详细信息将包含有包含列。 因为所有列都是使用内存优化表的所有索引隐式包含的，所以不允许使用内存优化索引显式指定包含列。  
+**问题：** 如果 SQL Server 2014 检测到对内存优化表的查询缺失索引，则会在 SHOWPLAN_XML 中和缺失索引 DMV 中（如 sys.dm_db_missing_index_details）中报告缺失索引。 在某些情况下，缺少索引详细信息将包含有包含列。 因为所有列都是使用内存优化表的所有索引隐式包含的，所以不允许使用内存优化索引显式指定包含列。  
   
-**解决方法：** 不使用内存优化表索引指定 INCLUDE 字句。  
+**解决方法：** 不使用内存优化表上的索引指定 INCLUDE 子句。  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>哈希索引存在但不适用于查询时缺失索引详细信息忽略缺失索引  
-**问题：** 如果查询中引用的内存优化表的列存在哈希索引，但该索引不能用于查询，SQL Server 2014 将不会始终在 SHOWPLAN_XML 和 DMV sys.dm_db_missing_index_details 中报告缺失索引。  
+**问题：** 如果查询中引用的内存优化表的列中存在哈希索引，但该索引不能用于查询，则 SQL Server 2014 将不会始终在 SHOWPLAN_XML 和 DMV sys.dm_db_missing_index_details 中报告缺失索引。  
   
 特别是查询包含涉及索引键列子集的相等谓词或包含涉及索引键列的相等谓词时，哈希索引不能原样使用，这时就需要不同的索引才能有效地执行查询。  
   
-**解决方法：** 在使用哈希索引时，检查查询和查询计划，确保查询可以从对索引键子集的 Index Seek 操作或对不等谓词的 Index Seek 操作获益。 如果需要查找索引键子集，请使用非聚集索引或对需要查找的列使用哈希索引。 如果需要查找不等谓词，请使用非聚集索引而不是哈希索引。  
+**解决方法：** 使用哈希索引时，检查查询和查询计划以确定查询是否可受益于对索引键子集的 Index Seek 操作或对不等谓词的 Index Seek 操作。 如果需要查找索引键子集，请使用非聚集索引或对需要查找的列使用哈希索引。 如果需要查找不等谓词，请使用非聚集索引而不是哈希索引。  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>在同一查询中使用内存优化表和内存优化表变量时，如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，就会失败  
-**问题：** 如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，当在用户事务外的同一语句中访问内存优化表和内存优化表变量时，可能会看到这一错误消息：  
+**问题：** 如果数据库选项 READ_COMMITTED_SNAPSHOT 设置为 ON，并访问用户事务上下文之外的同一语句中的内存优化表和内存优化表变量，则可能会看到以下错误消息：  
   
 ```  
 Msg 41359  
@@ -202,7 +202,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**解决方法：** 用表变量使用表提示 WITH (SNAPSHOT) 或者将数据库选项 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设置为 ON，使用以下语句：  
+**解决方法：** 使用包含表变量的表提示 WITH (SNAPSHOT) 或将数据库选项 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设置为 ON，以便使用以下语句：  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,7 +210,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>本机编译存储过程的过程和查询执行统计信息按 1000 倍记录工作线程时间  
-**问题：** 使用 sp_xtp_control_proc_exec_stats 或 sp_xtp_control_query_exec_stats 启用本机编译存储过程的过程或查询执行统计信息收集后，会看到 *_worker_time 在 DMV sys.dm_exec_procedure_stats 和 sys.dm_exec_query_stats 中按 1000 倍报告。 工作线程时间少于 500 毫秒的查询执行将按 worker_time 为 0 报告。  
+**问题：** 使用 sp_xtp_control_proc_exec_stats 或 sp_xtp_control_query_exec_stats 启用本机编译存储过程的过程或查询执行统计信息集合后，将会在 DMV sys.dm_exec_procedure_stats 和 sys.dm_exec_query_stats 中看到按 1000 的倍数报告的 *_worker_time。 工作线程时间少于 500 毫秒的查询执行将按 worker_time 为 0 报告。  
   
 **解决方法：** 无。 对于本机编译存储过程中短时间运行的查询，不要依赖执行状态 DMV 中报告的 worker_time。  
   
@@ -224,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**解决方法：** 有两个建议的解决方法：  
+**解决方法：** 两个建议的解决方法：  
   
 1.  为表达式添加括号，类似以下示例：  
   
@@ -253,9 +253,9 @@ optimized table or natively compiled stored procedure with object ID
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>在本机编译存储过程中对 DATEPART 和相关函数使用字符串参数或变量会导致错误  
-**问题：** 在对内置函数 DATEPART、DAY、MONTH 和 YEAR 使用利用字符串参数或变量的本机编译存储过程时，会显示一条错误消息，说明本机编译存储过程不支持 datetimeoffset。  
+**问题：** 在对内置函数 DATEPART、DAY、MONTH 和 YEAR 使用利用字符串参数或变量的本机编译存储过程时，系统会显示一条错误消息，说明本机编译存储过程不支持 datetimeoffset。  
   
-**解决方法：** 将字符串参数或变量分配给一个新的 datetime2 类型的变量，在函数 DATEPART、DAY、MONTH 或 YEAR 中使用该变量。 例如：  
+**解决方法：** 将字符串参数或变量分配给一个新的 datetime2 类型的变量，并在函数 DATEPART、DAY、MONTH 或 YEAR 中使用该变量。 例如：  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -268,9 +268,9 @@ DATEPART(weekday, @d)
 **解决方法：** 无。  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>通过 SSMS 注册会为 DAC 元数据添加不匹配的实例 ID  
-**问题：** 通过 SQL Server Management Studio 注册或删除数据层应用程序包 (.dacpac) 时，sysdac* 表不会正确更新以允许用户查询数据库的 dacpac 历史记录。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不匹配，无法联接。  
+**问题：** 通过 SQL Server Management Studio 注册或删除数据层应用程序包 (.dacpac) 时，sysdac* 表不会正确更新，使用户无法查询数据库的 dacpac 历史记录。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不匹配，无法联接。  
   
-**解决方法：** 此问题已通过 [数据层应用程序框架](https://www.microsoft.com/download/details.aspx?id=42295)(#数据层应用程序框架) 的功能包再分发得到修复。  应用更新后，所有的新历史记录条目都将使用 sysdac_instances_internal 表中为 instance_id 列出的值。  
+**解决方法：** 此问题已通过 [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=42295) 的功能包再分发得到修复。  应用更新后，所有的新历史记录条目都将使用 sysdac_instances_internal 表中为 instance_id 列出的值。  
   
 如果已经出现 instance_id 值不匹配的问题，纠正不匹配值的唯一方法是以拥有 MSDB 数据库写入权限的用户身份连接到服务器并更新 instance_id 值使其匹配。  如果从同一数据库获取多个注册和撤消注册事件，可能需要查看时间/日期来确定与当前 instance_id 值匹配的记录。  
   
@@ -292,9 +292,9 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 本机模式报表服务器不能与 SQL Server 2014 Reporting Services SharePoint 组件并行运行  
-**问题：** 同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 无法启动。  
+**问题：** 当同一服务器上安装了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件时，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式 Windows 服务“SQL Server Reporting Services”(ReportingServicesService.exe) 将无法启动。  
   
-**解决方法：** 卸载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件并重新启动 Microsoft SQL Server 2012 Reporting Services Windows 服务。  
+**解决方法：** 卸载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 组件并重启 Microsoft SQL Server 2012 Reporting Services Windows 服务。  
   
 **详细信息：**  
   
@@ -326,7 +326,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>多节点 SharePoint 场到 SQL Server 2014 Reporting Services 所需的升级顺序  
-**问题：** 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务实例在 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例前升级，多节点场中的报表呈现将失败。  
+**问题：** 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 共享服务实例在 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序的所有实例之前升级，多节点场中的报表呈现将失败。  
   
 **解决方法：** 在多节点 SharePoint 场中：  
   
@@ -411,10 +411,10 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  
   
-**解决方法：**[SQL Server 2014 SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
+**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server 升级顾问中得到修复。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升级顾问在分析 SQL Server Integration Services 服务器时报告错误  
-**问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Integration Services 服务器时报告错误。  向用户显示的错误如下：  
+**问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 会在分析 SQL Server Integration Services 服务器时报告错误。  向用户显示的错误如下：  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**解决方法：**[SQL Server 2014 SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
+**解决方法：** 此问题已在 [SSUA 的 SQL Server 2014 功能包](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server 升级顾问中得到修复。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e7285fe95307c6ce6308dc27e0076146e86223
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394751"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657761"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>是否从 SQL Server 2005、2008 或 2008R2 进行升级？
 
@@ -41,7 +41,7 @@ ms.locfileid: "52394751"
   
 |关系存储选项|优势|要考虑的其他因素|  
 |-------------------------------|--------------|-------------------------------|  
-|**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果从 SQL Server 的旧实例升级，这是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。<br /><br /> 有关详细信息，请参阅 [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/)。|  
+|**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果从 SQL Server 的旧实例升级，这是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。<br /><br /> 有关详细信息，请参阅 [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。|  
 |**Azure 虚拟机上托管的 SQL Server**<br /><br /> 如果你需要以下内容，请考虑此选项：<br /><br /> 迁移到托管环境的好处。<br /><br /> 对操作环境的控制。<br /><br /> SQL Server 的熟悉功能集。|可以从虚拟机映像库快速进行部署。<br /><br /> 获得完整的 SQL Server 功能集。<br /><br /> 节约硬件和服务器软件的成本。 只需支付每小时的使用费用。|必须配置并管理 SQL Server 和操作系统软件。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Azure 虚拟机上的 SQL Server 概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 有关迁移的详细信息，请参阅 [将数据库迁移到 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|  
 |**Azure SQL Database 托管的数据库服务**<br /><br /> 如果想要实现较少维护的低成本解决方案，请考虑此选项。<br /><br /> 此选项非常适用于不要求一直需要相同容量的应用，或必须提供外部访问的应用。|可以快速部署并轻松纵向扩展。<br /><br /> 只需支付每小时的使用费用。<br /><br /> 该服务的成本不仅包括存储，还包括高可用性和自动执行的备份。|Azure SQL Database 缺少某些在托管的云环境中不适用的 SQL Server 功能。 有关详细信息，请参阅 [Azure SQL 数据库 Transact-SQL 信息](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相较于 SQL Server 的 524 PB，Azure SQL Database 还具有 4 TB 的最大数据库大小。 有关详细信息，请参阅[适用于单一数据库的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)<br /><br /> 有关 SQL 数据库的详细信息，请参阅 [Azure SQL 数据库概述](https://azure.microsoft.com/services/sql-database/)和 [Azure SQL 数据库文档](https://docs.microsoft.com/azure/sql-database/)。<br /><br /> 有关迁移的详细信息，请参阅 [将 SQL Server 数据库迁移到 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52394751"
 ## <a name="plan-your-upgrade"></a>规划升级  
   
 -   阅读以下 SQL Server 团队博客文章系列中有关如何规划升级 SQL Server 2005 实例的内容。 
-    - 规划从 SQL Server 2005 的高效升级：[步骤 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)、[步骤 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)、[步骤 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
+    - 规划从 SQL Server 2005 进行有效的升级：[步骤 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)、[步骤 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)、[步骤 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
 - 做好应对 [SQL Server 2008 终止支持](https://www.microsoft.com/sql-server/sql-server-2008)的准备。
   
 -   查看[规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)中的要求和注意事项，包括[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  

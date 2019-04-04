@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510174"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "47837955"
   
 -   [示例：指定带有 ELEMENTS 指令的 XSINIL](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [示例：使用 XMLDATA 和 XMLSCHEMA 选项作为结果请求架构](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [示例：使用 XMLDATA 和 XMLSCHEMA 选项请求架构作为结果](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [示例：检索二进制数据](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [示例：重命名 <row> 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [示例：重命名 &#60;row&#62; 元素](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
 -   [示例：为 FOR XML 生成的 XML 指定根元素](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [示例：查询 XML 类型的列](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [示例：查询 XMLType 列](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16541fbf8a927d072504d1e6c911614d1e3699b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 760d19dc87634a519030d064623dfcd743a566f5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720185"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513034"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>创建、更改和删除选择性 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47720185"
   
 ##  <a name="create"></a> 创建选择性 XML 索引  
   
-### <a name="how-to-create-a-selective-xml-index"></a>如何创建选择性 XML 索引  
+### <a name="how-to-create-a-selective-xml-index"></a>如何：创建选择性 XML 索引  
  **通过使用 Transact-SQL 创建选择性 XML 索引**  
  通过调用 CREATE SELECTIVE XML INDEX 语句创建选择性 XML 索引。 有关详细信息，请参阅 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。  
   
@@ -49,7 +49,7 @@ FOR(
   
 ##  <a name="alter"></a> 更改选择性 XML 索引  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>如何更改选择性 XML 索引  
+### <a name="how-to-alter-a-selective-xml-index"></a>如何：更改选择性 XML 索引  
  **通过使用 Transact-SQL 更改选择性 XML 索引**  
  通过调用 ALTER INDEX 语句更改现有的选择性 XML 索引。 有关详细信息，请参阅 [ALTER INDEX（选择性 XML 索引）](../../t-sql/statements/alter-index-selective-xml-indexes.md)。  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> 删除选择性 XML 索引  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>如何删除选择性 XML 索引  
+### <a name="how-to-drop-a-selective-xml-index"></a>如何：删除选择性 XML 索引  
  **通过使用 Transact-SQL 删除选择性 XML 索引**  
  通过调用 DROP INDEX 语句删除选择性 XML 索引。 有关详细信息，请参阅 [DROP INDEX（选择性 XML 索引）](../../t-sql/statements/drop-index-selective-xml-indexes.md)。  
   

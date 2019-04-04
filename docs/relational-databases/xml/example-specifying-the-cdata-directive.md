@@ -1,5 +1,5 @@
 ---
-title: 示例：指定 CDATA 指令 | Microsoft Docs
+title: 例如：指定 CDATA 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 604fce70ed6b03b3a3d752ec1ee75eda6aed0a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f2cba1b43d782ef9d9a75d159e245f0f5d4077a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725495"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511094"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>示例：指定 CDATA 指令
+# <a name="example-specifying-the-cdata-directive"></a>例如：指定 CDATA 指令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   如果指令设置为 **CDATA**，则不对包含的数据进行实体编码，而是将其放入 CDATA 部分。 **CDATA** 属性必须没有名称。  
   

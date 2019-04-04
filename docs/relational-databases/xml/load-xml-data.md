@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511034"
 ---
 # <a name="load-xml-data"></a>加载 XML 数据
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52538373"
 ## <a name="bulk-loading-xml-data"></a>大容量加载 XML 数据  
  可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大容量加载功能（如 bcp）将 XML 数据大容量加载到服务器中。 通过使用 OPENROWSET 可以将文件中的数据加载到 XML 列中。 以下示例说明了这一点。  
   
-##### <a name="example-loading-xml-from-files"></a>示例：从文件中加载 XML  
+##### <a name="example-loading-xml-from-files"></a>例如：从文件中加载 XML  
  此示例显示了如何在表 T 中插入行。从文件 C:\MyFile\xmlfile.xml 中将 XML 列的值作为 CLOB 加载，并为整数列提供了值 10。  
   
 ```  
@@ -54,7 +54,7 @@ FROM    (SELECT *
   
 -   若要使用显式编码，请使用不与代码页交互的 **varbinary()** 类型，或使用相应代码页的字符串类型。 然后，将数据赋给 XML 列、变量或参数。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>示例：显式指定编码  
+### <a name="example-explicitly-specifying-an-encoding"></a>例如：显式指定编码  
  假定你的 XML 文档和 vcdoc 存储为不具有显式 XML 声明的 **varchar(max)** 。 下面的语句添加了带有编码“iso8859-1”的 XML 声明，连接了 XML 文档，然后将结果转换为 **varbinary(max)** ，以便保留字节表示形式并最终将它转换为 XML。 这样，XML 处理器就可以根据指定的编码“iso8859-1”分析数据，并为字符串值生成相应的 UTF-16 表示形式。  
   
 ```  

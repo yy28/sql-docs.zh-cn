@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e246624301cdc20fab58f8a59d72a2f8416bae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510613"
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>示例：检索客户、订单和订单详细信息  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例如：检索客户、订单和订单详细信息  
  此查询检索特定客户的客户、订单和订单详细信息。  
   
 ```  
@@ -95,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>示例：指定 GROUP BY 和聚合函数  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>例如：指定 GROUP BY 和聚合函数  
  以下查询将返回各个客户 ID 以及客户已请求的订单数。  
   
 ```  
@@ -115,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>示例：在 AUTO 模式下指定计算列  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>例如：在 AUTO 模式中指定计算列  
  此查询返回串联的各个客户名以及订单信息。 因为计算列被分配到在该点（在此例中是 <`SOH`>）出现的最内层级别， 因此，串联的客户名在结果中作为 <`SOH`> 元素的属性添加。  
   
 ```  
@@ -168,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>示例：返回二进制数据  
+## <a name="example-returning-binary-data"></a>例如：返回二进制数据  
  此查询返回 `ProductPhoto` 表中的产品照片。 `ThumbNailPhoto` 是 **表中的** varbinary(max) `ProductPhoto` 列。 默认情况下， `AUTO` 模式向二进制数据返回一个引用，该引用为执行查询的数据库的虚拟根目录的相对 URL。 必须指定 `ProductPhotoID` 键属性，才能标识图像。 如此示例中所示，检索图像引用时，还必须在 `SELECT` 子句中指定表的主键，才能唯一标识行。  
   
 ```  
@@ -224,7 +224,7 @@ FOR XML AUTO;
   
  这可能成为一个问题，尤其是对区分大小写的数据库执行 dbobject 查询时。 若要避免这个问题，查询中指定的表名或列名的大小写应该与数据库中表名或列名的大小写一致。  
   
-## <a name="example-understanding-the-encoding"></a>示例：了解编码  
+## <a name="example-understanding-the-encoding"></a>例如：了解编码  
  下面的示例显示了结果中出现的各种编码。  
   
  创建下表：  

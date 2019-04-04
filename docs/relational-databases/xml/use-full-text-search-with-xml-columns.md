@@ -11,15 +11,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d144b8bcf9657c793f4d88b9ef875e88cf7bb38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637829"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513024"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47637829"
   
 2.  然后，查询那些使用 XML 列的 XML 索引的 XML 值。  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>示例：将全文搜索和 XML 查询结合起来  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>例如：将全文搜索和 XML 查询结合起来  
  对 XML 列创建了全文索引后，下面的查询将检查 XML 值是否在书的标题中包含“custom”一词：  
   
 ```  
@@ -51,7 +51,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  此外，全文搜索使用词干匹配，而 XQuery **contains()** 是文字匹配。 这一区别在下一个示例中进行说明。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>示例：使用词干匹配对 XML 值进行全文搜索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例如：使用词干分解对 XML 值进行全文搜索  
  通常不能消除上一个示例中执行的 XQuery **contains()** 检查。 请看下面的查询：  
   
 ```  

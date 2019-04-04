@@ -31,15 +31,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ed342b2176d7803092d389b88e95a11f34752ac
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512374"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51669906"
   
 -   辅助 XML 索引  
   
- **xml** 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持下列类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
+ **xml** 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持以下类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
   
 > [!NOTE]  
 >  除非为使用 **xml** 数据类型正确设置了数据库选项，否则无法创建或修改 XML 索引。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)。  
