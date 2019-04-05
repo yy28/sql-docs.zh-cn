@@ -11,15 +11,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9abf5eac7b884106c56d960025a8c15303f9b097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd769a496bd5f9057c6cedfefcf3db371f829760
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851115"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511184"
 ---
 # <a name="create-xml-indexes"></a>创建 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47851115"
   
  如果 XML 数据类型列包含类型为 XML 架构类型 **xs:date** 或 **xs:dateTime** （或这些类型的任何子类型）的值且这些值中的年份小于 1，则在对这样的 XML 数据类型列创建或重新创建主 XML 索引时，索引创建操作在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中将失败。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允许使用这些值，因此在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中生成的数据库中创建索引时可能会出现这种问题。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### <a name="example-creating-a-primary-xml-index"></a>示例：创建主 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>例如：创建主 XML 索引  
  在大多数示例中，使用的是包含非类型化的 XML 列的表 T (pk INT PRIMARY KEY, xCol XML)。 可以采用简单的方式将它们扩展为类型化的 XML。 为简化起见，针对 XML 数据实例说明了查询，如下所示：  
   
 ```  
@@ -101,7 +101,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 列中返回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 对于主 XML 索引而言，返回的值为 NULL。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>示例：创建辅助 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>例如：创建辅助 XML 索引  
  下面的示例说明了如何创建辅助 XML 索引。 此示例还显示了有关您创建的 XML 索引的信息。  
   
 ```  

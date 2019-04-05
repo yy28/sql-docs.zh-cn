@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275503"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657881"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -175,7 +175,7 @@ ms.locfileid: "58275503"
   
 -   technet.microsoft.com 上的技术文章：[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   SQLCAT 针对 BI 和 Analytics 的指南中的技术文章[通过将同步转换拆分为多个任务来增加管道的吞吐量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889978"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645559"
 ---
 # <a name="query-profiling-infrastructure"></a>查询分析基础结构
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包括一个新修订的轻型分析版本，用于收集所有执行的行计数信息。 默认情况下，[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 中已启用轻型分析，跟踪标志 7412 无效。
 
+引入了新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) 以返回大多数查询的最后已知的实际执行计划的等效项。 新的 query_post_execution_plan_profile 扩展事件基于轻型分析收集实际执行计划的等效项，与使用标准分析的 query_post_execution_showplan 不同。 
+
+可以像如下所示对使用 query_post_execution_plan_profile 扩展事件的示例会话进行配置：
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 从轻型分析 v2 开始，其开销很低，任何尚未受 CPU 限制的服务器都可连续运行轻型分析，并允许数据库专业人员随时使用任何正在运行的执行，例如使用活动监视器或直接查询 `sys.dm_exec_query_profiles`，并获取运行时统计信息的查询计划。
 
-有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）。 
+有关查询分析的性能开销的详细信息，请参阅博客文章[Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)（开发人员之选：随时随地查询进度）。 
+
+> [!NOTE]
+> 利用轻型分析的扩展事件将使用来自标准分析的信息，以防早已启用了标准分析基础结构。 例如，使用 `query_post_execution_showplan` 的扩展事件会话正在运行，而另一个使用 `query_post_execution_plan_profile` 的会话已启动。 第二个会话仍将使用来自标准分析的信息。
 
 ## <a name="see-also"></a>另请参阅  
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ WITH (MAX_MEMORY=4096 KB,
  [Showplan 逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)（开发人员之选：随时随地查询进度）
+ [Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)（开发人员之选：随时随地查询进度）

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 49e0704f80105ef0f24cacef43dfdcfb52b053dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493282"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "57017883"
 从指定的字节流或文件路径上传 R、Python 或 Java 包文件至数据库。 此语句充当一种通用机制，可供数据库管理员上传任何新的外部语言运行时和 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的 OS 平台所需的项目。 
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支持 Windows 平台上的 R、Python 和 Java。 计划在之后发布的版本中提供对 Linux 的支持。
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 中支持 Windows 和 Linux 平台上的 R、Python 和 Java。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
@@ -48,7 +48,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    [, PLATFORM = <platform> ])  
 }  
 
 <client_library_specifier> :: = 
@@ -64,12 +64,19 @@ WITH ( LANGUAGE = <language> )
     | varbinary_expression 
 }
 
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
 <language> :: = 
 {
       'R'
     | 'Python'
     | 'Java'
 }
+
 ```
 ::: moniker-end
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -133,13 +140,20 @@ WITH ( LANGUAGE = 'R' )
 
 如果需要创建库或更改现有库（并具有执行此操作的所需权限），但服务器上的文件系统受限，无法将库文件复制到服务器可以访问的位置，此选项会非常有用。
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。 
 
-Windows 是当前唯一受支持的平台。
-
+在 SQL Server 2017 中，Windows 是唯一受支持的平台。
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+为库的内容指定平台。 该值默认为正在运行 SQL Server 的主机平台。 因此，用户不需要指定该值。 如果支持多个平台或用户需要指定不同的平台，则需要此值。
+
+在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
+
 **language**
 
 指定包的语言。 该值可以是 `R`、`Python` 或 `Java`。
@@ -147,9 +161,12 @@ Windows 是当前唯一受支持的平台。
 
 ## <a name="remarks"></a>Remarks
 
-对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 目前仅支持 Windows 平台。 
-
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+对于 R 语言，使用文件时，必须使用 Windows 的 .ZIP 扩展名以压缩存档文件的形式准备包。 在 SQL Server 2017 中，仅支持 Windows 平台。 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 R 语言，使用文件时，必须使用 .ZIP 扩展名以压缩存档文件的形式准备包。  
+
 对于 Python 语言，必须以压缩存档文件的形式准备 .whl 或 .zip 文件中的包。 如果包已经是 .zip 文件，则必须将其包含在新的 .zip 文件中。 目前不支持将包作为 .whl 或 .zip 文件直接上传。
 ::: moniker-end
 
@@ -157,11 +174,13 @@ Windows 是当前唯一受支持的平台。
 
 上传到实例的库可以是公共的也可以是私有的。 如果是由 `dbo` 成员创建的库，则该库是公共的且所有的用户都可以共享。 否则，该库就仅为用户私有。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要 `CREATE EXTERNAL LIBRARY` 权限。 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权创建外部库。 对于其他所有用户，必须使用 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 语句显式授予他们权限，同时将 CREATE EXTERNAL LIBRARY 指定为特权。
 
 更改库需要单独的权限，`ALTER ANY EXTERNAL LIBRARY`。
+
+若要通过使用文件路径创建外部库，用户必须使用经过 Windows 身份验证的登录名或必须是 sysadmin 固定服务器角色的成员。
 
 ## <a name="examples"></a>示例
 
@@ -279,6 +298,26 @@ EXEC sp_execute_external_script
     , @script = N'customJar.MyCLass.myMethod'
     , @input_data_1 = N'SELECT * FROM dbo.MyTable'
 WITH RESULT SETS ((column1 int))
+```
+
+### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. 为 Windows 和 Linux 添加外部包
+
+最多可以指定两个 `<file_spec>`，一个用于 Windows，另一个用于 Linux。
+
+```sql
+CREATE EXTERNAL LIBRARY lazyeval 
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.zip', PLATFORM = WINDOWS),
+(CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.tar.gz', PLATFORM = LINUX)
+WITH (LANGUAGE = 'R')
+```
+
+根据运行 SQL Server 实例的平台，在使用 `sp_execute_external_script` 来安装包时，将使用此平台的库内容。
+
+```sql
+EXECUTE sp_execute_external_script 
+    @LANGUAGE = N'R',
+    @SCRIPT = N'
+library(packageA)
 ```
 ::: moniker-end
 

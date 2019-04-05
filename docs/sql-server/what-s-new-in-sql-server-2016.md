@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699428"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657981"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699428"
 
 此页面收录了摘要信息和链接，可方便读者详细了解 SQL Server 2016，以及每个 SQL Server 组件的最近更新。 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **立即试用 SQL Server！** 
 - 下载免费的 [SQL Server 2016 开发者版！](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下载最新版 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
-- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
+- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 数据库引擎
 - 现在可以在 SQL Server 安装和设置过程中配置多个 tempDB 数据库文件。
@@ -49,9 +49,9 @@ ms.locfileid: "51699428"
     - 支持最大 2TB 的表（之前为最大 256GB）。 
     - 为了实现排序和 AlwaysOn 可用性组支持，增强了列存储索引。
 - 新增安全功能：
-    - **Always Encrypted：** 启用后，只有具有加密密钥的应用程序，才能访问 SQL Server 2016 数据库中的加密敏感数据。 密钥绝不会传递给 SQL Server。
-    - **动态数据掩码：** 如果在表定义中指定，那么大多数用户都看不到已掩码的数据，只有拥有 UNMASK 权限的用户才能看到完整数据。
-    - **行级别安全性：** 可以在数据库引擎一级限制数据访问，这样用户就能只看到与其相关的数据。 
+    - **Always Encrypted：** 启用后，只有具有加密密钥的应用程序才能访问 SQL Server 2016 数据库中的加密敏感数据。 密钥绝不会传递给 SQL Server。
+    - **动态数据屏蔽：** 如果在表定义中指定了，那么大多数用户将看不到已掩码的数据，只有拥有 UNMASK 权限的用户才能看到完整数据。
+    - **行级别安全性：** 可以在数据库引擎级别限制数据访问，这样用户就能只看到与他们相关的数据。 
 
 请参阅[数据库引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

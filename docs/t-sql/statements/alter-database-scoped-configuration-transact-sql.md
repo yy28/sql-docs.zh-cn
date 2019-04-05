@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493775"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ ms.locfileid: "57974386"
 - 在数据库级别启用或禁用标识缓存。
 - 在第一次编译批处理时启用或禁用要存储在缓存中的已编译计划存根。
 - 启用或禁用对本机编译的 T-SQL 模块的执行统计信息收集。
-- 对支持 ONLINE= 语法的 DDL 语句启用或禁用“默认联机”选项。
-- 对支持 RESUMABLE= 语法的 DDL 语句启用或禁用“默认可恢复”选项。
-- 启用或禁用全局临时表的自动删除功能。 
+- 为支持 `ONLINE =` 语法的 DDL 语句启用或禁用默认联机选项。
+- 为支持 `RESUMABLE =` 语法的 DDL 语句启用或禁用默认可恢复选项。
+- 启用或禁用全局临时表的自动删除功能。
 - 启用或禁用[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能。
 - 启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。
+- 启用或禁用新的 `String or binary data would be truncated` 错误消息。
 
 ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 TSQL_SCALAR_UDF_INLINING = { ON | OFF }
 
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]（此功能为公共预览版）
 
-允许用户在数据库范围启用或禁用 T-SQL 标量 UDF 内联，同时将数据库兼容性级别维持在 150 或更高。 T-SQL 标量 UDF 内联是[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列中的一个功能。
+允许用户在数据库范围启用或禁用 T-SQL 标量 UDF 内联，同时将数据库兼容性级别维持在 150 或更高。 T-SQL 标量 UDF 内联属于[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的一部分。
 
-> [!NOTE] 
+> [!NOTE]
 > 对于数据库兼容级别 140 或更低级别，此数据库范围配置无效。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -292,7 +294,21 @@ LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}
 
 允许启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。 轻型查询分析基础结构 (LWP) 比标准分析机制更有效地提供查询性能数据，并且默认启用。
 
-## <a name="Permissions"></a> Permissions
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+允许启用或禁用新的 `String or binary data would be truncated` 错误消息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 针对此情况引入了更具体的新错误消息 (2628)：  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+在数据库兼容性级别 150 下设置为 ON 时，截断错误会引发新的错误消息 2628 以提供更多上下文并简化故障排除过程。
+
+在数据库兼容性级别 150 下设置为 OFF 时，截断错误会引发先前的错误消息 8152。
+
+对于数据库兼容性级别 140 或更低级别，错误消息 2628 仍然是要求启用[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 的“选择加入”错误消息，并且此数据库范围的配置无效。
+
+## <a name="Permissions"></a> 权限
 
 需要数据库上的 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。
 

@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658346"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478232"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
+# <a name="quickstart-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ SELECT
 
 | 术语 | 描述 |
 | :--- | :---------- |
-| 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为 *会话*，但前提是上下文表明了它指的是 *事件会话*。 <br/> <br/> 以下文章介绍了有关事件会话的更多详细信息： [SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
+| 事件会话 | 一种构造，该构造以一个或多个事件为中心，再加上一些支持项（如操作或目标）。 CREATE EVENT SESSION 语句用于构造每个事件会话。 你可以随时使用 ALTER 来启动和停止事件会话。 <br/> <br/> 事件会话有时简称为 *会话*，但前提是上下文表明了它指的是 *事件会话*。 <br/> <br/> 有关事件会话的更多详细信息，请参阅：[SQL Server 扩展事件会话](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | 事件 | 系统中发生的由活动事件会话监视的特定事件。 <br/> <br/> 例如， *sql_statement_completed* 事件表示任何给定 T-SQL 语句完成的那一刻。 该事件可以报告其持续时间和其他数据。 |
 | target | 从捕获的事件接收输出数据的项。 目标会向你显示数据。 <br/> <br/> 示例包括 *event_file*，以及它非常方便的轻量级同类 — 内存 *ring_buffer*。 更加高级的 *histogram* 目标可在显示数据之前对其进行一些处理。 <br/> <br/> 任何目标均可用于任何事件会话。 有关详细信息，请参阅 [SQL Server 中扩展事件的目标](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)。 |
 | action | 事件已知的字段。 该字段中的数据将发送到目标。 操作字段与 *谓词筛选器*密切相关。 |
@@ -485,7 +486,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="sql-trace-event-classes-with-extended-events"></a>SQL 跟踪事件类与扩展事件
 
 
-以下文章介绍了如何将扩展事件与 SQL 跟踪事件类和列配合使用： [查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+有关通过 SQL 跟踪事件类和列使用扩展事件的说明，请参阅：[查看与 SQL 跟踪事件类等效的扩展事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ SQL Server 附带了几个已创建的扩展事件。 它们都配置为每当 S
 ### <a name="powershell-provider-for-extended-events"></a>用于扩展事件的 PowerShell 提供程序
 
 
-你可以使用 SQL Server PowerShell 提供程序来管理 SQL Server 扩展事件。 有关详细信息，请参阅： [对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+你可以使用 SQL Server PowerShell 提供程序来管理 SQL Server 扩展事件。 有关详细信息，请参阅：[对扩展事件使用 PowerShell 提供程序](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>扩展事件的系统视图
@@ -649,7 +650,7 @@ SELECT HAS_PERMS_BY_NAME(
 - [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)（尤其适用于 Azure SQL 数据库）
-- 博客： [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
+- 博客：[Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
 - PDF 形式的可缩放 [海报](https://aka.ms/sql-permissions-poster)，显示所有 SQL Server 权限的层次结构。
 
 

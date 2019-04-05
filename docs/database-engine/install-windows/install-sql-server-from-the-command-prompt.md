@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537419"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -185,7 +185,7 @@ ms.locfileid: "57976431"
 -   [使用 /FAILOVERCLUSTERROLLOWNERSHIP 参数控制故障转移行为](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
 -   [实例 ID 或 InstanceID 配置](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#InstanceID) 
-  
+
 ##  <a name="Install"></a> 安装参数  
  使用下表中的参数可开发用于安装的命令行脚本。  
   
@@ -263,8 +263,8 @@ ms.locfileid: "57976431"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
-|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 用于保护 SQL Server 与全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
-|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。|  
+|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。 ServiceSID 用于保护 SQL Server 与全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
+|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。<br /><br /> 默认值：NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
@@ -371,8 +371,8 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
-|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 用于保护 SQL Server 与全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
-|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。|  
+|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。 ServiceSID 用于保护 SQL Server 与全文筛选器后台程序之间的通信。 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
+|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。|  
 |SQL Server 网络配置|/NPENABLED<br /><br /> **可选**|指定 SQL Server 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
 |SQL Server 网络配置|/TCPENABLED<br /><br /> **可选**|指定 SQL Server 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。|  
@@ -576,8 +576,8 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **可选**|指定用户数据库的日志文件的目录。<br /><br /> 默认值：30`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> **当 FILESTREAMLEVEL 大于 1 时是必需的。**|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
-|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 SQL Server 和全文筛选器后台程序之间的通信。<br /><br /> 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
-|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。|  
+|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。 ServiceSID 是用来帮助保护 SQL Server 和全文筛选器后台程序之间的通信。<br /><br /> 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
+|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。<br /><br /> 默认值：NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
@@ -636,8 +636,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 SQLSVCACCOUNT 的密码。|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **可选**|指定 FILESTREAM 功能的访问级别。 支持的值：<br /><br /> 0＝禁用此实例的 FILESTREAM 支持。 （默认值）<br /><br /> 1=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。<br /><br /> 2=针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和文件 I/O 流访问启用 FILESTREAM。 （对于群集方案无效）<br /><br /> 3＝允许远程客户端针对 FILESTREAM 数据启用流访问。|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **可选**<br /><br /> 当 FILESTREAMLEVEL 大于 1 时是**必需** 的。|指定用来存储 FILESTREAM 数据的 Windows 共享的名称。|  
-|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。 ServiceSID 是用来帮助保护 SQL Server 和全文筛选器后台程序之间的通信。<br /><br /> 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
-|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> 在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]中忽略此参数。|  
+|SQL Server 全文|/FTSVCACCOUNT<br /><br /> **可选**|指定全文筛选器启动器服务的帐户。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。 ServiceSID 是用来帮助保护 SQL Server 和全文筛选器后台程序之间的通信。<br /><br /> 如果未提供这些值，则将禁用全文筛选器启动器服务。 您必须使用 SQL Server 控制管理器来更改服务帐户和启用全文功能。<br /><br /> 默认值：Local Service 帐户|  
+|SQL Server 全文|/FTSVCPASSWORD<br /><br /> **可选**|指定全文筛选器启动器服务的密码。<br /><br /> [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或更高版本中忽略了此参数。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的帐户。<br /><br /> 默认值：NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 密码。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  

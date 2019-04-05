@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2019
+ms.date: 03/29/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: 4e109a44ced3a640ee64f7099dc45da5655c5e3f
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334724"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566536"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ SQL Server Management Studio (SSMS) 是一种集成环境，用于管理从 SQL 
 
 SSMS 是免费的！
 
-[SSMS 18.0 公共预览版 7 现已推出](#ssms-180-preview-7)，它是最新一代的 *SQL Server Management Studio*，可支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+[SSMS 18.0 候选发布 1 (RC1) 现已推出](#ssms-180-rc1)，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio。
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 1 是当前 SSMS 的正式发布 (GA) 版本
 
@@ -74,19 +74,19 @@ SSMS 是免费的！
   * 请确保计算机上已安装所有最新 OS 更新。
   * 所提及的操作通常只需执行一次。 有几种情况需要在额外升级到 SSMS 的同一主版本期间重新启动。 对于次要升级，计算机上已安装 SSMS 的所有先决条件。
 
-## <a name="ssms-180-preview-7"></a>SSMS 18.0（预览版 7）
+## <a name="ssms-180-rc1"></a>SSMS 18.0 (RC1)
 
-**SSMS 18.0 公共预览版 7 现已推出，它是最新一代的 *SQL Server Management Studio*，可支持 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]！**
+**SSMS 18.0 候选发布 1 (RC1) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio！**
 
-**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0（预览版 7）](https://go.microsoft.com/fwlink/?linkid=2078638)**
+**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
-*预览版 7* 是 SSMS 18.0 的最新公共预览版。 如果安装了以前的 SSMS 18.0 预览版，请在安装 SSMS 18.0 预览版 7 之前将其卸载。
+RC1 是 SSMS 18.0 的最新公共预览版。 如果安装了以前的 SSMS 18.0 预览版，请在安装 SSMS 18.0 RC1 之前将其卸载。
 
 **版本信息**
 
-- 版本号：18.0（预览版 7）<br>
-- 生成号：15.0.18092.0<br>
-- 发布日期：2019 年 3 月 1 日
+- 版本号：18.0 (RC1)<br>
+- 生成号：15.0.18098.0<br>
+- 发布日期：2019 年 3 月 28 日
 
 如果你有意见或建议，或想报告问题，最好是通过 [UserVoice](https://aka.ms/sqlfeedback) 与 SSMS 团队取得联系。
 
@@ -94,32 +94,32 @@ SSMS 18.x 安装不会升级或替换 SSMS 17.x 或更早版本。 SSMS 18.x 与
 
 如果计算机包含 SSMS 的并行安装，请验证你是否针对特定需求启动相应的版本。 最新版本标记为 Microsoft SQL Server Management Studio 18：
  
-## <a name="available-languages-ssms-180-preview-7"></a>可用语言（SSMS 18.0 预览版 7）
+## <a name="available-languages-ssms-180-rc1"></a>可用语言 (SSMS 18.0 RC1)
 
 此版本的 SSMS 可以安装在以下语言中：
 
-SQL Server Management Studio 18.0（预览版 7）：<br>
-[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40a)
+SQL Server Management Studio 18.0 (RC1)：<br>
+[中文（中国）](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x804) | [中文（繁体）](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40a)
 
 SQL Server Management Studio 18.0 升级包（升级到 18.0）：<br>
-此时没有可用的升级选项。 如果安装了以前的 SSMS 18.0 预览版，请在安装 SSMS 18.0 预览版 7 之前将其卸载。
+此时没有可用的升级选项。 如果安装了以前的 SSMS 18.0 预览版，请在安装 SSMS 18.0 RC1 之前将其卸载。
 
 > [!NOTE]
 > SQL Server PowerShell 模块可通过 PowerShell 库单独安装。 有关详细信息，请参阅[下载 SQL Server PowerShell 模块](download-sql-server-ps-module.md)。
 
-## <a name="new-in-this-release-ssms-180-preview-7"></a>此版本（SSMS 18.0 预览版 7）中的新增功能
+## <a name="new-in-this-release-ssms-180-rc1"></a>此版本 (SSMS 18.0 RC1) 中的新增功能
 
-SSMS 18.0（预览版 7）是 SQL Server Management Studio 的最新版本。 SSMS 的 18.x 一代提供对 SQL Server 2008 到 SQL Server 2019 预览版几乎所有功能领域的支持。
+SSMS 18.0 (RC1) 是最新版本的 SQL Server Management Studio。 SSMS 的 18.x 一代提供对 SQL Server 2008 到 SQL Server 2019 预览版几乎所有功能领域的支持。
 
 有关此版本中新增功能的详细信息，请参阅 [SSMS 更改日志](sql-server-management-studio-changelog-ssms.md)。
 
-## <a name="supported-sql-offerings-ssms-180-preview-7"></a>受支持的 SQL 产品/服务（SSMS 18.0 预览版 7）
+## <a name="supported-sql-offerings-ssms-180-rc1"></a>受支持的 SQL 产品/服务 (SSMS 18.0 RC1)
 
 * 此版本的 SSMS 适用于所有[受支持 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，并且在最大程度上支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。
 * 此外，SSMS 18.x 可与 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及早期版本并行安装。
 * SQL Server Integration Services (SSIS) - SSMS 版本 17.x 或更高版本不支持连接到旧版 SQL Server Integration Services 服务。 要连接到早期版本的 Integration Services，请使用与 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 连接到旧版 SQL Server 2016 Integration Services 服务。 可以在同一台计算机上并行安装 SSMS 17.x 和 SSMS 16.x。 由于 SQL Server 2012 的发布，建议使用 SSIS 目录数据库 (SSISDB) 来存储、管理、运行和监视 Integration Services 包。 有关详细信息，请参阅 [SSIS 目录](../integration-services/catalog/ssis-catalog.md)。
 
-## <a name="supported-operating-systems-ssms-180-preview-7"></a>受支持的操作系统（SSMS 18.0 预览版 7）
+## <a name="supported-operating-systems-ssms-180-rc1"></a>受支持的操作系统 (SSMS 18.0 RC1)
 
 与最新可用的服务包一起使用时，此版本的 SSMS 支持以下 64 位平台：
 
@@ -134,7 +134,7 @@ SSMS 18.0（预览版 7）是 SQL Server Management Studio 的最新版本。 SS
 > [!NOTE]
 > SSMS 仅在 Windows 上运行。 如果需要在 Windows 以外的平台上运行的工具，请查看 Azure Data Studio。 Azure Data Studio 是一个全新的跨平台工具，可在 macOS、Linux 以及 Windows 上运行。 有关详细信息，请参阅 [Azure Data Studio](../azure-data-studio/what-is.md)。
   
-## <a name="release-notes-ssms-180-preview-7"></a>发行说明（SSMS 18.0 预览版 7）
+## <a name="release-notes-ssms-180-rc1"></a>发行说明 (SSMS 18.0 RC1)
 
 N/A
 

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771343"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535849"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ ms.locfileid: "55771343"
   
 1.  在所有同步提交的副本上删除自动故障转移  
   
-2.  升级运行异步提交次要副本的所有远程次要副本实例  
+2.  升级所有异步提交的次要副本实例。 
   
-3.  升级当前未运行主要副本的所有本地副本的次要实例  
+3.  升级所有远程同步提交的次要副本实例。 
+
+4.  升级所有本地同步提交的次要副本实例。 
   
-4.  将 AG 手动故障转移到本地同步提交的次要副本  
+4.  手动将 AG 故障转移到（新升级的）本地同步提交的次要副本。  
   
-5.  升级或更新以前承载主要副本的本地副本实例  
+5.  升级或更新以前承载主要副本的本地副本实例。  
   
-6.  根据需要配置自动故障转移伙伴  
+6.  根据需要配置自动故障转移伙伴。
   
  如果需要，可以执行额外的手动故障转移将 AG 恢复到原始配置。  
+ 
+   > [!NOTE]
+   > - 升级同步提交的副本并使它处于脱机状态不会延迟主要副本上的事务。 次要副本断开连接后，无需等待在次要副本上强制执行日志操作，事务即可在主要副本上提交。 
+   > - 如果 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 设置为 `1` 或 `2`，那么在更新过程中，当相应数量的同步次要副本不可用时，主要副本则不可用于读/写。 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>具有一个远程次要副本的 AG  
  如果仅为灾难恢复部署了一个 AG，可能需要将该 AG 故障转移到异步提交的次要副本。 这样的配置如下图所示：  

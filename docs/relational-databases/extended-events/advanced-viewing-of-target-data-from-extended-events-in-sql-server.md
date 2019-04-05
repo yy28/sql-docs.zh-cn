@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658876"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478162"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标数据的高级查看功能
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -101,17 +102,17 @@ Microsoft SQL Server 和 Azure SQL 数据库这两个产品的扩展事件的实
 
 SSMS 可以显示来自任何目标的数据。 但是对于不同的目标显示也有所不同：
 
-- *event_file：* 可以很好地显示来自 event_file 目标的数据，并且具有丰富的功能。
+- *event_file：* 可以很好地显示来自 event_file 目标的数据，随附有丰富的功能。
 
 
-- *ring_buffer：* 来自 ring-buffer 目标的数据显示为原始 XML 文件。
+- *ring_buffer：* 来自 ring-buffer 目标的数据显示为原始 XML。
 
 
 - 对于其他目标，显示的能力介于 event_file 和 ring_buffer 之间。
   - 此类的其他目标包括 event_counter、histogram 和 pair_matching。
 
 
-- *etw_classic_sync_target：* SSMS 不能显示来自目标类型 etw_classic_sync_target 的数据。
+- *etw_classic_sync_target：* SSMS 无法显示来自目标类型 etw_classic_sync_target 的数据。
 
 
 
@@ -258,9 +259,9 @@ SSMS UI 提供了几种方式来操作数据，而不只是查看数据。
 
 在扩展事件的区域中可以指定两种主要类型的筛选器：
 
-- *目标前筛选器：* 可减少事件引擎发送到目标的数据量的筛选器。
+- *目标前筛选器：* 可以减少事件引擎发送到目标的数据量的筛选器。
 
-- *目标后筛选器：* 在 SSMS UI 中可选择的筛选器，用于隐藏某些目标记录。
+- *目标后筛选器：* 可以在 SSMS UI 中选择的筛选器，用于排除要显示的某些目标记录。
 
 
 SSMS 显示筛选器如下所示：

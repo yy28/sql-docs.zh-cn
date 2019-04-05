@@ -3,22 +3,39 @@ title: 虚拟化 SQL Server 2019 CTP 2.0 中的外部数据 | Microsoft Docs
 description: 此页面详细介绍了为 CSV 文件使用“创建外部表”向导的步骤
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405668"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512954"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>将外部表向导与 CSV 文件一起使用
 
 SQL Server 2019 还允许从 HDFS 中的 CSV 文件虚拟化数据。  此过程允许将数据保留在其原始位置，但可以虚拟化 SQL Server 实例中的数据，以便可以对这些数据进行查询，如同 SQL Server 中的任何其他表一样。 此功能将最大限度地减少对 ETL 进程的需要。 可以使用 Polybase 连接器。 有关数据虚拟化的详细信息，请参阅 [PolyBase 入门](polybase-guide.md)文档。
+
+## <a name="prerequisite"></a>先决条件
+
+自 CTP 2.4 起，数据池和存储池外部数据源默认不会再创建在大数据群集中。 在使用向导之前，请使用以下 Transact-SQL 查询在目标数据库中创建默认 SqlStoragePool 外部数据源。 请确保首先将查询的上下文更改为目标数据库。
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>启动外部表向导
 

@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215363"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566556"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>配置分布式 Always On 可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-若要创建分布式可用性组，必须在每个 Windows Server 故障转移群集 (WSFC) 上创建可用性组和侦听程序。 然后将这些可用性组合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听程序的所有详细信息，相反，它着重于突出显示关键要求。 
+若要创建分布式可用性组，必须拥有两个各自具有其侦听器的可用性组。 然后将这些可用性组合并到分布式可用性组中。 以下步骤提供了在 Transact-SQL 中实现此操作的基本示例。 此示例不涵盖创建可用性组和侦听器的所有详细信息，相反，它着重于突出显示关键要求。
 
-有关分布式可用性组的技术概述，请参阅[分布式可用性组](distributed-availability-groups.md)。   
+有关分布式可用性组的技术概述，请参阅[分布式可用性组](distributed-availability-groups.md)。
 
 ## <a name="prerequisites"></a>必备条件
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>设置终结点侦听程序以侦听所有 IP 地址
 
-确保终结点可在分布式可用性组中的不同可用性组之间进行通信。 如果将一个可用性组设置为终结点上的特定网络，分布式可用性组将无法正常工作。 在将要托管分布式可用性组中的副本的每个服务器上，将侦听程序配置为 `LISTENER_IP = ALL`。 
+确保终结点可在分布式可用性组中的不同可用性组之间进行通信。 如果将一个可用性组设置为终结点上的特定网络，分布式可用性组将无法正常工作。 在分布式可用性组中承载副本的每台服务器上，将侦听器设置为侦听所有 IP 地址 (`LISTENER_IP = ALL`)。
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>创建侦听程序以侦听所有 IP 地址
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>创建第一个可用性组
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
-在第一个 WSFC 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本。 Server1 是此示例中的全局主要副本。        
+在第一个 Windows Server 故障转移群集 (WSFC) 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本。 Server1 是此示例中的全局主要副本。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -205,15 +205,23 @@ GO
 ```  
 
 ## <a name="failover"></a> 联接第二个可用性组的辅助数据库
-在第二个可用性组的辅助数据库处于还原状态后，必须手动将它联接到可用性组。
+当第二个可用性组的次要副本上的数据库处于正在还原状态后，必须手动将它联接到可用性组。
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a>故障转移到次要可用性组  
-此时仅支持手动故障转移。 以下 Transact-SQL 语句将故障转移名为 `distributedag` 的分布式可用性组：  
 
+此时仅支持手动故障转移。 手动故障转移分布式可用性组：
+
+1. 若要确保不会丢失任何数据，请将分布式可用性组设置为同步提交。
+1. 等待分布式可用性组完成同步。
+1. 在全局主要副本上，将分布式可用性组角色设置为 `SECONDARY`。
+1. 测试故障转移就绪情况。
+1. 故障转移主要可用性组。
+
+以下 Transact-SQL 示例演示了对名为 `distributedag` 的分布式可用性组进行故障转移的详细步骤：
 
 1. 通过在全局主要副本和转发器上同时运行以下代码，将分布式可用性组设置为同步提交。   
     
@@ -242,8 +250,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
       ```  
    >[!NOTE]
-   >与常规可用性组类似，分布式可用性组中的两个可用性组副本的同步状态取决于这两个副本的可用性模式。 例如，为进行同步提交，当前主要可用性组和辅助可用性组必须都配置为 synchronous_commit 可用性模式。  
-
+   >在分布式可用性组中，两个可用性组之间的同步状态取决于两个副本的可用性模式。 对于同步提交模式，当前的主要可用性组和当前的次要可用性组必须具有 `SYNCHRONOUS_COMMIT` 可用性模式。 因此，必须在全局主要副本和转发器上运行上述脚本。
 
 1. 等分布式可用性组的状态变为 `SYNCHRONIZED`。 对全局主要副本（主要可用性组的主要副本）运行以下查询。 
     

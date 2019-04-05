@@ -1,7 +1,7 @@
 ---
 title: SQL Server 使用反馈收集的本地审核 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb5810e787456673d67322823a28df4d79208d1e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493879"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用反馈收集的本地审核
 
@@ -66,7 +66,7 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>为本地审核文件配置新文件夹。    
 
-创建本地审核将在其中写入日志的新文件夹（本地审核目录）。 例如，数据库引擎的默认实例的本地审核目录完整路径是：C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\。 
+创建本地审核将在其中写入日志的新文件夹（本地审核目录）。 例如，数据库引擎默认实例的本地审核目录的完整路径是：C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\。 
  
   >[!NOTE] 
   >将本地审核的目录路径配置为 SQL Server 安装路径之外的其他路径，以避免允许审核功能和修补导致与 SQL Server 有关的潜在问题。
@@ -203,9 +203,9 @@ Microsoft SQL Server 包含了一些支持 Internet 的功能，可以收集和�
 |querySetVersion | 一组查询定义的版本 | 1.0.0.0 
 |traceName | 跟踪的类别：（SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException） | SQLServerPeriodicQueries 
 |queryIdentifier | 查询的标识符 | SQLServerProperties.002 
-|data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|data   | 以 T-SQL 查询、XE 会话或应用程序输出的形式，对 queryIdentifier 收集的信息的输出 |  [{"Collation":"SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled":"0" "SqlIntSec":"1","IsSingleUser":"0","SqlFilestreamMode":"0","SqlPbInstalled":"0","SqlPbNodeRole": "","SqlVersionMajor":"13","SqlVersionMinor":"0","SqlVersionBuild":"2161","ProductBuildType": "","ProductLevel":"RTM","ProductUpdateLevel":"CU2","ProductUpdateReference":"KB3182270","ProductRevision":"3","SQLEditionId": "-1534726760","IsClustered":"0","IsHadrEnabled":"0","SqlAdvAInstalled":"0","PacketReceived":"1210","Version":"Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Query| 如果适用，是与生成数据的 queryIdentifier 相关的 T-SQL 查询定义。        此组件不会由 SQL Server CEIP 服务上传。 它包含在本地审核中仅供客户参考。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 具有以下跟踪类别的查询执行所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
+|queryTimeInTicks | 执行具有以下跟踪类别的查询所需的持续时间：（SQLServerXeQueries、SQLServerPeriodicQueries） |  0 
  
 ### <a name="trace-categories"></a>跟踪类别 
 我们当前收集以下跟踪类别： 

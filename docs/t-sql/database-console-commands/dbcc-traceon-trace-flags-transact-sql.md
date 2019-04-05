@@ -1,7 +1,7 @@
 ---
 title: 跟踪标志 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/10/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736842"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494199"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57736842"
 |**205**|当由于自动更新统计信息而重新编译依赖于统计信息的存储过程时，向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/195565)。<br /><br />**作用域**：仅全局|
 |**260**|打印有关扩展存储过程动态链接库 (DLL) 的版本控制信息。 有关 **GetXpVersion()** 的详细信息，请参阅[创建扩展存储过程](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)。<br /><br />**作用域：** 全局或会话|
 |**272**|在服务器意外重新启动或故障转移到辅助服务器的情况下，禁用标识预分配以避免标识列的值出现差异。 请注意，标识缓存用于提高具有标识列的表的 INSERT 性能。<br /><br />注意：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 IDENTITY_CACHE 选项。<br /><br />**作用域**：仅全局|
-|**460**|将数据截断消息 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 替换为消息 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4468101)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 及更高内部版本。<br /><br />**作用域**：全局或会话|
+|**460**|将数据截断消息 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 替换为消息 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/4468101)。<br /><br />自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 起，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 VERBOSE_TRUNCATION_WARNINGS 选项。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 及更高内部版本。<br /><br />**注意：** 从数据库兼容性级别 150 开始，消息 ID 2628 为默认设置，此跟踪标志无效。<br /><br />**作用域**：全局或会话|
 |**610**|控制对索引表进行的以最低限度记录的插入。 从 SQL Server 2016 开始，不需要此跟踪标志，因为对索引表默认启用了最低限度记录。 在 SQL Server 2016 中，当大容量加载操作导致分配一个新页面时，如果符合最低限度记录的其他所有先决条件，则会以最低限度记录按顺序填充该新页面的所有行。 为了维护索引顺序而插入到现有页面中的行（不分配新页面）仍以完整方式记录，这与在加载过程中由于页面拆分而移动的行一样。 为索引启用 ALLOW_PAGE_LOCKS（默认启用）以便让最低限度记录操作正常工作也很重要，因为在分配期间会获取页锁，从而仅记录页面或盘区分配。有关详细信息，请参阅[数据加载性能指南](https://msdn.microsoft.com/library/dd425070.aspx)。<br /><br />**作用域**：全局或会话|
 |**634**|禁用背景列存储压缩任务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期运行元组发动机后台任务，对含有未压缩数据的列存储索引行组进行压缩，每次压缩一个这种行组。<br /><br />列存储压缩可提高查询性能，但也会占用系统资源。 通过用跟踪标志 634 禁用后台压缩任务，然后随时显式调用 ALTER INDEX...REORGANIZE 或 ALTER INDEX...REBUILD，可以手动控制列存储压缩计时。<br /><br />**作用域：** 仅全局|
 |**652**|禁用页面预提取扫描。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：全局或会话|
@@ -81,6 +81,7 @@ ms.locfileid: "57736842"
 |**2390**|为升序键或未知键启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 2390，并且将前导统计信息列标记为升序或未知，则会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />注意：此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 4139。<br /><br />**作用域**：全局、会话或查询|
 |**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/help/4038419)。<br /><br />注意：此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
 |**2430**|启用备用锁类清除。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2754301)。<br /><br />**作用域**：仅全局| 
+|**2451**|在 sys.dm_exec_query_plan_stats 中启用最后一个实际执行计划的等效项。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 及更高版本。<br /><br />**作用域**：仅全局|  
 |**2453**|当足够数量的行发生更改时，允许表变量触发重新编译。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2952444)。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询|
 |**2467**|启用备用并行工作线程分配策略（基于哪个节点具有最少分配的线程）。 有关详细信息，请参阅[并行查询处理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 请参阅[配置最大工作线程服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，了解有关配置最大工作线程服务器选项的信息。<br /><br />注意：并行查询度 (DOP) 必须适用于要使用的此备用策略的单个节点，或改为使用默认线程分配策略。 使用跟踪标志时，不建议执行指定 DOP 多于单个节点中的计划程序数的查询，因为这会干扰指定 DOP 低于或等于单个节点中的计划程序数的查询。<br /><br />注意：请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
 |**2469**|为已分区列存储索引中的 `INSERT INTO ... SELECT` 启用备用 Exchange。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/3204769)。<br /><br />**作用域**：全局、会话或查询|
