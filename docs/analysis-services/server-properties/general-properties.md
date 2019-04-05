@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 常规属性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072384"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042386"
 ---
 # <a name="general-properties"></a>常规属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072384"
   
  **BackupDir**  
  一个字符串属性，事件作为 Backup 命令的一部分未指定路径中标识的默认情况下，存储备份文件的目录名称。  
+ 
+**ClientCacheRefreshPolicy**适用于仅 Azure Analysis Services。 重写**计划的缓存刷新**设置所有 Power BI 数据集。 Live Connect 的所有报表将都遵循服务器级别设置而不考虑数据集级设置，或在其所在的工作区。
+
+此属性的默认值为-1，允许所有后台缓存都刷新计划的缓存刷新的数据集设置中指定。 若要禁止所有后台缓存刷新中，指定零 (0)。
+
   
  **CollationName**  
  字符串属性，用于标识服务器排序规则。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](../../analysis-services/languages-and-collations-analysis-services.md)。  

@@ -3,17 +3,17 @@ title: 快速入门:"Hello World"基本 Python 代码执行 T-SQL 的 SQL Server
 description: SQL Server 中的 Python 脚本的快速入门。 了解调用 Python 脚本在你好 world 练习使用 sp_execute_external_script 系统存储过程的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042216"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入门：SQL Server 中的"hello world"Python 脚本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "55513767"
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
