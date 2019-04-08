@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055614"
+---
 本文概述 SQL Server 中高可用性和灾难恢复的业务连续性解决方案。 
 
 每个人在部署 SQL Server 时都需执行一项常见任务，即确保所有任务关键型 SQL Server 实例以及其中的数据库在业务和最终用户需要时（无论是朝九晚五还是全天候）可用。 其目标是尽量减少或杜绝中断，保持业务正常运行。 此概念也称为业务连续性。
@@ -128,9 +136,7 @@ FCI 未出现数据丢失，但因为有一个数据副本，所以基础共享�
 * Linux 中 FCI 使用的公用名在 DNS 中定义，并且名称应与为 FCI 创建的资源相同。
 
 #### <a name="log-shipping"></a>日志传送
-如果恢复点和恢复时间目标更灵活，或者数据库中的任务并不是极为关键，则日志传送是 SQL Server 中另一个可靠的可用性功能。 基于 SQL Server 的本机备份，日志传送过程自动生成事务日志备份，并将其复制到一个或多个称为热备用状态的实例，然后自动将事务日志备份应用于该备用实例。 日志传送使用 SQL Server 代理作业自动执行备份、复制和应用事务日志备份的过程。 
-> [!IMPORTANT] 
-> 在 Linux 上，SQL Server 代理作业并不属于 SQL Server 安装的一部分。 它通过包 mssql-server-Agent jobs 提供，必须安装此包才能使用日志传送。
+如果恢复点和恢复时间目标更灵活，或者数据库中的任务并不是极为关键，则日志传送是 SQL Server 中另一个可靠的可用性功能。 基于 SQL Server 的本机备份，日志传送过程自动生成事务日志备份，并将其复制到一个或多个称为热备用状态的实例，然后自动将事务日志备份应用于该备用实例。 日志传送使用 SQL Server 代理作业自动执行备份、复制和应用事务日志备份的过程。
 
 ![日志传送](media/sql-server-ha-story/image5.png)
  
