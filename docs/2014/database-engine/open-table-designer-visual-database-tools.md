@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240715"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>打开表设计器 (Visual Database Tools)
   表设计器是一种可视化工具，允许您对所连接的数据库表进行设计和可视化处理。 您可以使用表设计器来创建、编辑或删除表、列、键、索引、关系和约束。  
@@ -34,7 +34,7 @@ ms.locfileid: "53355654"
      此时，将在主菜单上添加“表设计器”菜单，并打开设计器窗格。  
   
 > [!NOTE]  
->  如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+>  如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](/azure/sql-database/sql-database-technical-overview)。  
   
 ### <a name="open-an-existing-table"></a>打开现有表  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53355654"
      此时，将在主菜单上添加“表设计器”菜单，并在设计器窗格中打开此表。  
   
 ## <a name="see-also"></a>请参阅  
- [设计表&#40;可视化数据库工具&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [设计表 (Visual Database Tools)](../ssms/visual-db-tools/visual-database-tools.md)   
  [表](../relational-databases/tables/tables.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242475"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
   本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
@@ -61,7 +61,7 @@ ms.locfileid: "53354014"
   
  为了阐明在创建多对多关系中使用的步骤，此过程在 Adventure Works 示例多维数据集中重新创建了其中一个多对多关系。 如果您具有在某一关系数据库引擎实例上安装的源数据（即，Adventure Works 示例数据仓库），则可以按照以下步骤执行。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>步骤 1：验证 DSV 关系  
+#### <a name="step-1-verify-dsv-relationships"></a>第 1 步：验证 DSV 关系  
   
 1.  在 SQL Server Data Tools 中，在一个多维项目中创建指向 Adventure Works DW 2012 关系数据仓库的数据源，该数据源在 SQL Server 数据库引擎实例上承载。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53354014"
   
      ![显示相关的表的 DSV](../media/ssas-m2m-dsvpkeys.PNG "显示相关的表的 DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>步骤 2：创建维度和度量值组  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>第 2 步：创建维度和度量值组  
   
 1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”并选择“新建维度”。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "53354014"
 ##  <a name="bkmk_Learn"></a> Learn more  
  使用以下链接可获取帮助您掌握这些概念的其他信息。  
   
- [如何在 Analysis Services 中定义多对多维度](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [如何在 Analysis Services 中定义多对多维度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [多对多变革 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

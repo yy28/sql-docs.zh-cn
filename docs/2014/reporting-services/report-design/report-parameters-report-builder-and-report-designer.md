@@ -18,12 +18,12 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 14d0f9f445717ed7744f5da14eba3e99b16127db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241815"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>报表参数（报表生成器和报表设计器）
   本主题介绍 SSRS 报表参数、可设置的属性以及更多有关参数的常规用法。 通过报表参数，您可以控制报表数据、将相关报表连接在一起以及更改报表显示。  
@@ -131,7 +131,7 @@ ms.locfileid: "56286655"
 |--------------|-----------------|  
 |“属性”|键入区分大小写的参数名称。 名称必须以字母开头，可以包含字母、数字、下划线 (_)。 名称中不能包含空格。 对于自动生成的参数，其名称会与数据集查询中的参数相匹配。 默认情况下，手动创建的参数与 ReportParameter1 相类似。|  
 |提示|在报表查看器工具栏上的参数旁边显示的文本。|  
-|数据类型|即使数据类型是时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean` 的用户。 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime` 的用户。 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text` 的用户。 用户在文本框中键入值。<br /><br /> 有关报表数据类型的详细信息，请参阅 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
+|数据类型|即使数据类型是时为参数定义可用值，用户可从下拉列表中选择值`DateTime`。 报表参数必须为以下数据类型之一：<br /><br /> `Boolean`. 用户通过单选按钮选择 True 或 False。<br /><br /> `DateTime`. 用户从日历控件中选择日期。<br /><br /> **Integer**。 用户在文本框中键入值。<br /><br /> **Float**。 用户在文本框中键入值。<br /><br /> `Text`. 用户在文本框中键入值。<br /><br /> 有关报表数据类型的详细信息，请参阅 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
 |允许空值|如果参数的值可为空字符串或为空白，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将空白值作为有效值之一，则必须在指定的值中包含空白值。 选择此选项并不会自动在可用值中包含空白值。|  
 |允许 Null 值|如果参数的值可为 Null，请选择此选项。<br /><br /> 如果为参数指定有效值，并希望将 Null 作为有效值之一，则必须在指定的值中包含 Null。 选择此选项并不会自动在可用值中包含 Null。|  
 |允许多个值|提供可用值以创建下拉列表，供用户从中选择。 这是确保只在数据集查询中提交有效值的好方法。<br /><br /> 如果参数值可为下拉列表中显示的多个值，请选择此选项。 不允许为 Null 值。 选择此选项后，将向参数下拉列表中的可用值列表添加复选框。 列表的顶部包括 **“全选”** 复选框。 用户可以选中所需的值。<br /><br /> 如果用于提供值的数据快速更改，则用户看到的列表可能不是最新列表。|  
@@ -219,17 +219,17 @@ ms.locfileid: "56286655"
   
 -   [添加子报表和参数（报表生成器和 SSRS）](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [如何使用存储过程的 SSRS 参数](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [参数化存储过程的 SSRS 报表](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们会听取你的反馈，改进内容。 请将你的意见提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> 相关内容  
- [配置 SSRS 报表参数（测验）](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [配置 SSRS 报表参数（测验）](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [爆发宇宙的 InvalidReportParameterException 报告服务中](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [在报告服务中突然意外出现 InvalidReportParameterException](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

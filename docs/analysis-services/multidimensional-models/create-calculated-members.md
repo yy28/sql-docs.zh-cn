@@ -1,5 +1,5 @@
 ---
-title: 创建计算的成员 |Microsoft 文档
+title: 创建计算的成员 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241462"
 ---
 # <a name="create-calculated-members"></a>创建计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  
   
- 计算成员的定义将存储起来，而它们的值则只存在于内存中。 在上面的示例中，虽然马克的值会显示给最终用户，但这些值并没有存储为多维数据集数据。  
+ 计算成员的定义将存储起来，而它们的值则只存在于内存中。 在上述示例中，以欧元显示的值显示给最终用户，但不是存储为多维数据集数据。  
   
  您可以创建多维数据集中的计算成员。 若要创建计算成员，请在多维数据集设计器的 **“计算”** 选项卡中，单击工具栏中的 **“新建计算成员”** 图标。 该命令显示了一个窗体，可指定下列计算成员选项：  
   
- **名称**  
+ **“属性”**  
  选择计算成员的名称。 最终用户浏览多维数据集时，该名称显示为计算成员值的列或行标题。  
   
  **父层次结构**  
@@ -75,7 +75,7 @@ ms.locfileid: "34023174"
   
 -   如果计算成员是在度量值维度中创建的，则计算成员在该维度中是可寻址的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

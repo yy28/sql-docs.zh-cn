@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241755"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
   引用数据指的是可信公共域或高级商业内容提供程序中提供的一组准确和完整的相关或分类全局数据（超越企业的界限）。  
@@ -31,7 +31,7 @@ ms.locfileid: "56038348"
 -   支持使用来自 Microsoft Azure 市场的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
 ##  <a name="Marketplace"></a> 使用来自 Microsoft Azure 市场的引用数据  
- DQS 支持使用来自 Microsoft Azure 市场的引用数据，使内容提供程序能够通过市场提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关市场的详细信息，请参阅 [了解 Microsoft Azure 市场](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291)。  
+ DQS 支持使用来自 Microsoft Azure 市场的引用数据，使内容提供程序能够通过市场提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅[了解有关 Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)。  
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
   
@@ -53,17 +53,17 @@ ms.locfileid: "56038348"
 ##  <a name="HowToCleanse"></a> 如何使用引用数据清理数据  
  在 DQS 中使用引用数据清理您的数据包括以下这些步骤：  
   
-1.  **在 DQS 中配置引用数据提供程序详细信息**:可以在 DQS 中使用引用数据之前，必须在 DQS 中配置引用数据服务详细信息。  
+1.  **在 DQS 中配置引用数据提供程序详细信息**：必须在 DQS 中配置引用数据服务详细信息，才能在 DQS 中使用引用数据。  
   
-    1.  如果您正在使用市场，则提供一个有效的市场帐户密钥，浏览至市场中的 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 数据类别，并订阅所需的提供程序。  
+    1.  如果您正在使用市场，则提供一个有效的市场帐户密钥，浏览至市场中的 [Data Quality Services](../data-quality-services/data-quality-services.md) 数据类别，并订阅所需的提供程序。  
   
     2.  如果您正在使用直接联机引用数据提供程序，则在使用之前，必须在 DQS 中添加直接引用数据提供程序详细信息。  
   
      对于特定数据提供程序，在 DQS 中配置引用数据提供程序详细信息是一个一次性活动。 在 DQS 中，只有 DQS 管理员才能配置引用数据设置。  
   
-2.  **将知识库中的域/复合域映射到引用数据服务**:将域/复合域映射到在步骤 1 中订阅/添加相应引用数据服务。  
+2.  **将知识库中的域/复合域映射到引用数据服务**：将域/复合域映射到步骤 1 中订阅/添加的相应引用数据服务。  
   
-3.  **使用映射域进行数据质量项目中的清理活动**:创建的数据质量项目时**清理**活动，选择包含映射到步骤 2 中的 reference data services 的域/复合域的知识库，然后执行清理活动。  
+3.  **对数据质量项目中的“清理”活动使用映射域**：在为“清理”活动创建数据质量项目时，请选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241665"
 ---
 # <a name="create-tables-database-engine"></a>创建表（数据库引擎）
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新表，对该表进行命名，然后将其添加到现有数据库中。  
   
 > [!NOTE]  
->  如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+>  如果已连接到 SQL Azure 数据库，则新的表选项将启动一个创建表模板脚本。 编辑相关参数，然后运行此脚本以创建一个新表。 有关详细信息，请参阅 [SQL Azure 概述](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)。  
   
  **本主题内容**  
   

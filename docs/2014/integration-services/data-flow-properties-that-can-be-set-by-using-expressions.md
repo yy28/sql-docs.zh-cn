@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240415"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用表达式设置的数据流属性
   可以使用数据流任务容器上的可用属性表达式来指定数据流对象的某些属性的值。  
@@ -71,20 +71,20 @@ ms.locfileid: "58378595"
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact 目标|TableName 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 目标|TableName 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 -   [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://pragmaticworks.com/cheatsheet/)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)。  
   
 ## <a name="see-also"></a>请参阅  
  [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)   
  [通用属性](../../2014/integration-services/common-properties.md)   
- [转换自定义属性](data-flow/transformations/transformation-custom-properties.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [路径属性](../../2014/integration-services/path-properties.md)  
   
   

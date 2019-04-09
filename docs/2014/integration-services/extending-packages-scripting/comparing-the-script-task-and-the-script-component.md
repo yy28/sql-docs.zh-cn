@@ -15,12 +15,12 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba4b259bcb39dcf6a3a52696e4f781cda84d6c7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241335"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比较脚本任务和脚本组件
   脚本任务在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 设计器的“控制流”窗口中，脚本组件在“数据流”窗口中，它们在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的用途非常不同。 任务是一般用途的控制流工具，而组件用作数据流中的源、转换或目标。 尽管它们的用途不同，但是脚本任务和脚本组件在所使用的编码工具和在包中供开发人员使用的对象方面还是有一些相似之处的。 了解它们的相似与不同之处有助于您更有效地使用任务和组件。  
@@ -41,9 +41,9 @@ ms.locfileid: "58389366"
 |功能|脚本任务|脚本组件|  
 |-------------|-----------------|----------------------|  
 |控制流/数据流|脚本任务在设计器的“控制流”选项卡中配置，在包的数据流外部运行。|脚本组件在设计器的“数据流”页中配置，表示数据流任务中的源、转换或目标。|  
-|目标|脚本任务可完成几乎所有一般用途的任务。|必须指定是否要使用脚本组件创建源、转换或目标。|  
+|用途|脚本任务可完成几乎所有一般用途的任务。|必须指定是否要使用脚本组件创建源、转换或目标。|  
 |执行|脚本任务在包工作流中的某个点运行自定义代码。 除非将其放在循环容器或事件处理程序中，否则它只运行一次。|脚本组件也运行一次，但是通常它为数据流中的每行数据运行一次主处理例程。|  
-|编辑器|**脚本任务编辑器**有三个页面：**常规**，**脚本**，和**表达式**。 仅`ReadOnlyVariables`并`ReadWriteVariables`，并**ScriptLanguage**属性会直接影响您可以编写的代码。|**脚本转换编辑器**最多有四个页面：**输入列**，**输入和输出**，**脚本**，并且**连接管理器**。 在其中每个页面上配置的元数据和属性将决定自动生成以供您在编码中使用的基类的成员。|  
+|编辑器|“脚本任务编辑器”有三个页面：“常规”、“脚本”和“表达式”。 仅`ReadOnlyVariables`并`ReadWriteVariables`，并**ScriptLanguage**属性会直接影响您可以编写的代码。|“脚本转换编辑器”最多有四个页面：“输入列”、“输入和输出”、“脚本”和“连接管理器”。 在其中每个页面上配置的元数据和属性将决定自动生成以供您在编码中使用的基类的成员。|  
 |与包交互|在为脚本任务编写的代码中，使用 `Dts` 属性访问包的其他功能。 `Dts` 属性是 `ScriptMain` 类的成员。|在脚本组件代码中，使用类型化的取值函数属性访问特定包功能，如变量和连接管理器。<br /><br /> `PreExecute` 方法仅可访问只读变量。 `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。<br /><br /> 有关这些方法的详细信息，请参阅 [的编码和调试脚本组件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。|  
 |使用变量|脚本任务使用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>的属性`Dts`对象可通过该任务的访问变量<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>和<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>属性。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Dts.Variables("MyStringVariable").Value.ToString`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = Dts.Variables["MyStringVariable"].Value.ToString();`|脚本组件使用自动生成的基类的类型化取值函数属性，这些属性基于组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性创建。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Me.Variables.MyStringVariable`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = this.Variables.MyStringVariable;`|  
 |使用连接|脚本任务使用 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 属性访问在包中定义的连接管理器。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myFlatFileConnection As String myFlatFileConnection = _     DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _     String)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myFlatFileConnection; myFlatFileConnection = (Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);`|脚本组件使用自动生成的基类的类型化取值函数属性，这些属性基于用户在编辑器的“连接管理器”页上输入的连接管理器列表创建。 例如：<br /><br /> **[VB]**<br /><br /> `Dim connMgr As IDTSConnectionManager100 connMgr = Me.Connections.MyADONETConnection`<br /><br /> <br /><br /> **[C#]**<br /><br /> `IDTSConnectionManager100 connMgr; connMgr = this.Connections.MyADONETConnection;`|  
@@ -53,7 +53,7 @@ ms.locfileid: "58389366"
   
 ## <a name="see-also"></a>请参阅  
  [使用脚本任务扩展包](task/extending-the-package-with-the-script-task.md)   
- [使用脚本组件扩展数据流](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [使用 Web 服务在 SSIS 中使用脚本 （专业回答）](https://go.microsoft.com/fwlink/?LinkId=321996)  
+ [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [SQL Server Integration Services SSIS 中使用脚本任务连接到 Web 服务](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

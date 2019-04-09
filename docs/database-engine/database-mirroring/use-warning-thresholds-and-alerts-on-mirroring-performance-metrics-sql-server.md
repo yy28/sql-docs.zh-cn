@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4272345c1da08b79ffd1d76438a88baa9ea581a
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526971"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788034"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,8 +106,6 @@ ms.locfileid: "52526971"
  系统管理员可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理或其他应用程序（例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager）针对这些事件配置警报。  
   
  当针对数据库镜像事件定义警报时，我们建议在伙伴双方服务器实例上同时定义警告阈值和警报。 可以在主体服务器或镜像服务器上生成单独的事件，但是每个伙伴都可以随时执行其中任意一种角色。 为了确保警报在故障转移后继续有效，必须同时在伙伴双方上定义警报。  
-  
- 有关详细信息，请参阅此 [SQL Server 网站](https://go.microsoft.com/fwlink/?linkid=62373)上有关数据库镜像事件警报的白皮书。 此白皮书包含有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、数据库镜像 WMI 事件以及示例脚本配置警报的信息。  
   
 > [!IMPORTANT]  
 >  对于所有镜像会话，我们极力建议您将数据库配置为针对任意状态更改事件发送警报。 除非专门通过手动配置更改来实现状态更改，否则会出现危及数据安全的情况。 为了帮助保护数据，请找出状态发生意外更改的原因并予以纠正。  

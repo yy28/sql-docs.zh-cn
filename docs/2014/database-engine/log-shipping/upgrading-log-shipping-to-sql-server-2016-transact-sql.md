@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518105"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042426"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>将日志传送升级到 SQL Server 2014 (Transact-SQL)
   从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，有可能保留日志传送配置。 本主题介绍升级日志传送配置的备用方案和最佳做法。  
@@ -79,7 +79,7 @@ ms.locfileid: "52518105"
   
  服务器升级完毕后，数据库即自动回到联机状态，随即进行升级。 数据库升级完毕后，日志传送作业将继续进行。  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>方案 2:使用故障转移升级主服务器实例  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>应用场景 2：使用故障转移升级主服务器实例  
  此方案最大限度地提高了可用性，同时使停机时间降低到最短。 此方案采取向辅助服务器实例实行受控故障转移的方式，使数据库在原始主服务器实例升级期间保持可用状态。 停机时间限于故障转移所需的相对短的时间，而不是升级主服务器实例所需的时间。  
   
  借助故障转移升级主服务器实例一般需要三个过程：执行到辅助服务器的受控故障转移，将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 主服务器实例上设置日志传送。 本节后面将对这三个过程进行介绍。  
@@ -130,7 +130,7 @@ ms.locfileid: "52518105"
   
     5.  请注意：辅助数据库在处于联机状态时，它的事务日志并未填满。 若要阻止事务日志填满，可能需要备份此日志。 如果是这样，建议您将它备份到共享位置，即备份到“备份共享” ，以便在其他服务器实例上可以还原这些备份。  
   
-#####  <a name="Procedure2 "></a> 步骤 2:将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> 步骤 2:将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  将原始主服务器实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，数据库仍将处于脱机状态且仍采用该格式。  
   
 #####  <a name="Procedure3"></a> 步骤 3:设置日志传送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518105"
 > [!IMPORTANT]  
 >  必须先对所有辅助服务器实例进行升级，然后再升级主服务器。  
   
- **若要升级使用故障转移，然后切换回原始主服务器**  
+ **借助故障转移进行升级，然后切换回原始主服务器**  
   
 1.  升级全部辅助服务器实例（服务器 B 和服务器 C）。  
   
@@ -224,6 +224,4 @@ ms.locfileid: "52518105"
 ## <a name="see-also"></a>请参阅  
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242165"
 ---
 # <a name="implementation-of-child-packages"></a>子包的实现
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]来实现负载平衡时，子包将安装在其他服务器上，以利用可用的 CPU 或服务器时间。 若要创建和运行子包，需要执行以下步骤：  
@@ -68,8 +68,8 @@ ms.locfileid: "58386758"
   
 ## <a name="related-content"></a>相关内容  
   
--   博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。  
   
--   博客文章[SSIS:应执行子包进程内或进程外？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   文章中，[执行包任务](../integration-services/control-flow/execute-package-task.md)。  
   
   

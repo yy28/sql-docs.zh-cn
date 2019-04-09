@@ -1,5 +1,5 @@
 ---
-title: 第 6 课：添加分组和总计 (Reporting Services) |Microsoft Docs
+title: 第 6 课：添加分组和总计 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241735"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
   向报表中添加分组和总计以便组织和汇总数据。  
   
- 有关向报表添加运行总计的详细信息，请参阅 curah.microsoft.com 上的综合处理：[向 Reporting Services (SSRS) 报表添加总计](https://go.microsoft.com/fwlink/p/?LinkId=403698)。  
+ 有关向报表添加运行总计的信息，请参阅：[向 Reporting Services (SSRS) 报表添加总计](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)。  
   
  **本主题内容：**  
   
--   [对在报表中数据进行分组](#bkmk_groupdata)  
+-   [在报表中对数据进行分组](#bkmk_groupdata)  
   
--   [若要向报表添加总计](#bkmk_addtotals)  
+-   [向报表中添加总计](#bkmk_addtotals)  
   
--   [若要向报表添加每日总计](#bkmk_adddailytotal)  
+-   [向报表添加每日总计](#bkmk_adddailytotal)  
   
--   [若要向报表添加总计](#bkmk_addgrandtotal)  
+-   [向报表添加总计](#bkmk_addgrandtotal)  
   
--   [若要将报表发布到报表服务器 （可选）](#bkmk_publishreport)  
+-   [将报表发布到报表服务器（可选）](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 对在报表中数据进行分组  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296895"
   
 6.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“浅灰色”** 和 **“确定”**。  
   
-     ![设计视图：带有订单总计的基本表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "设计视图：带有订单总计的基本表")  
+     ![设计视图：含订单总计的基本表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "设计视图：含订单总计的基本表")  
   
 ##  <a name="bkmk_adddailytotal"></a> 若要向报表添加每日总计  
   
@@ -113,7 +113,7 @@ ms.locfileid: "56296895"
   
      最后一页的外观应与下图相似：  
   
-     ![预览：带有总计的基本表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "预览：带有总计的基本表")  
+     ![预览：含总计的基本表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "预览：含总计的基本表")  
   
 ##  <a name="bkmk_publishreport"></a> 若要将报表发布到报表服务器 （可选）  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296895"
   
      如果您在输出窗口中看到如下消息，则指示成功部署。  
   
-    > ------ Build started:项目： 教程中，配置：Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started:项目： 教程中，配置：调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成：1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy:1 succeeded, 0 failed, 0 skipped ==========  
+    > ------ Build started:项目：教程，配置：Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started:项目：教程，配置：调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成：1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy:1 succeeded, 0 failed, 0 skipped ==========  
   
      如果您看到如下错误消息，则确认您对报表服务器的权限并且已使用管理员权限启动了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   

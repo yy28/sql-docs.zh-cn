@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3260abf50bf46a703a925f8ad0a7829d2d1c1315
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801041"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042346"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,10 +37,10 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>参数  
- [ database_name . [schema_name] . | schema_name . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  要删除的外部表的一到三部分名称。 表名称可以根据需要包括架构或者数据库和架构。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
   
 -   该表所属架构需要 ALTER 权限。  
   

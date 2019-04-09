@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242215"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
   本主题包含有关一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的信息，可以为这些事件配置和管理用于数据库镜像的警告阈值。 可以使用数据库镜像监视器或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**和 **sp_dbmmonitordropalert** 存储过程。 本主题还包含有关对数据库镜像事件配置警报的信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "53354735"
   
 -   [将警报用于镜像数据库](#UseAlerts)  
   
--   [相关任务](#RelatedTasks)  
+-   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
  下表列出可为其配置警告的性能指标，说明相应的警告阈值并列出相应的数据库镜像监视器标签。  
@@ -105,7 +105,7 @@ ms.locfileid: "53354735"
   
  当针对数据库镜像事件定义警报时，我们建议在伙伴双方服务器实例上同时定义警告阈值和警报。 可以在主体服务器或镜像服务器上生成单独的事件，但是每个伙伴都可以随时执行其中任意一种角色。 为了确保警报在故障转移后继续有效，必须同时在伙伴双方上定义警报。  
   
- 有关详细信息，请参阅此 [SQL Server 网站](https://go.microsoft.com/fwlink/?linkid=62373)上有关数据库镜像事件警报的白皮书。 此白皮书包含有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、数据库镜像 WMI 事件以及示例脚本配置警报的信息。  
+ 有关详细信息，请参阅此 [SQL Server 网站](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)上有关数据库镜像事件警报的白皮书。 此白皮书包含有关如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、数据库镜像 WMI 事件以及示例脚本配置警报的信息。  
   
 > [!IMPORTANT]  
 >  对于所有镜像会话，我们极力建议您将数据库配置为针对任意状态更改事件发送警报。 除非专门通过手动配置更改来实现状态更改，否则会出现危及数据安全的情况。 为了帮助保护数据，请找出状态发生意外更改的原因并予以纠正。  
@@ -137,7 +137,7 @@ ms.locfileid: "53354735"
   
 -   [sp_dbmmonitorresults (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
   
--   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
+-   [sp_dbmmonitorupdate (Transact SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   

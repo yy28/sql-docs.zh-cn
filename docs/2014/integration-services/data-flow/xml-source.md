@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240375"
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -69,9 +69,9 @@ ms.locfileid: "58386635"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring 包含用于配置 XML 源的 **“XML 源编辑器”** 对话框。s此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“XML 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58386635"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [XML 源自定义属性](xml-source-custom-properties.md)  
   
@@ -95,6 +95,6 @@ ms.locfileid: "58386635"
  [使用 XML 源提取数据](xml-source.md)  
   
 ## <a name="related-content"></a>相关内容  
- curatedviews.cloudapp.net 上的专业回答： [如何创建 SSIS 包的 XML 目标](https://go.microsoft.com/fwlink/?LinkId=321993)。  
+ 技术文章[使用 XML 文件来配置 SSIS 包](https://www.sqlshack.com/using-xml-file-configure-ssis-package/)。  
   
   

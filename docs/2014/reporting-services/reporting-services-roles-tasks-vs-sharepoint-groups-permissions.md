@@ -19,12 +19,12 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241555"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
   本主题将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  
@@ -54,7 +54,7 @@ ms.locfileid: "56036638"
 |---|**权限级别组：** 例如，“查看组”组的“仅查看”。|  
 |**任务：** 例如“管理报表”。|**权限：** 例如，在“仅查看”组中，有“查看项”、“查看版本”和“查看应用程序页”权限相关的列表。|  
   
- 有关 SharePoint 权限的详细信息，请参阅 [权限级别和权限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 以及 [在 SharePoint 2013 中确定权限级别和组](https://technet.microsoft.com/library/cc262690.aspx)。  
+ 有关 SharePoint 权限的详细信息，请参阅[用户权限和 SharePoint Server 中的权限级别](/sharepoint/sites/user-permissions-and-permission-levels)并[确定权限级别和 SharePoint 2013 中的组](https://technet.microsoft.com/library/cc262690.aspx)。  
   
 ##  <a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  

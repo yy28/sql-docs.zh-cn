@@ -19,19 +19,19 @@ ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 878b3a349f033464da07104d55e472b44324e941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241825"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和`Collation`属性在安装期间，首次在实例级别设置，但可以以后在不同级别的对象层次结构更改。  
   
  在多维模型中 （仅限），可以在数据库或多维数据集上设置这些属性-还可以为多维数据集内的对象创建的翻译上设置它们。  
   
- 设置 `Language` 和 `Collation` 时，你指定数据模型在处理和查询执行过程中使用的设置，或者（仅对于多维模型）你为模型提供多个翻译，以便说外国语的人可用其母语使用此模型。 在对象（数据库、模型或多维数据集）上明确设置 `Language` 和 `Collation` 属性是针对为不同区域设置配置开发环境和生产服务器的情况，你需要确定语言和排序规则与目标环境的语言和排序规则匹配。  
+ 设置 `Language` 和 `Collation` 时，你可以指定数据模型在处理过程中和执行查询期间所使用的设置，或（仅适用于多维模型）为模型配置多个翻译，以便使用外语的人可以在本地语言环境中使用该模型。 在对象（数据库、模型或多维数据集）上明确设置 `Language` 和 `Collation` 属性是针对为不同区域设置配置开发环境和生产服务器的情况，你需要确定语言和排序规则与目标环境的语言和排序规则匹配。  
   
  本主题包含以下部分：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53372459"
   
 -   **数据库**。 要断开继承，你可在项目级别上显式设置数据库中所有多维数据集使用的语言和排序规则。 除非你另外指示，否则数据库中的所有多维数据集将获得你在此级别上指定的语言和排序规则。 如果你定期编写代码并部署到不同区域设置（例如，在中文计算机上开发解决方案，但将其部署到由法国子公司所有的服务器上），在数据库级别设置语言和排序规则是确保解决方案在目标环境中可用的第一步和最重要的一步。 设置这些属性的最佳位置是在项目中（通过项目上的“编辑数据库”  命令）。  
   
--   **数据库维度**。 虽然设计器在数据库维度上显示 `Language` 和 `Collation` 属性，但在此对象上设置属性是没有用的。 数据库维度不用作单独的对象，因此要利用你定义的属性是困难的（虽然不是不可能的）。 在多维数据集中，维度始终从其父多维数据集继承 `Language` 和 `Collation`。 忽略你可能在单独的数据库维度对象上设置的值。  
+-   **数据库维度**。 虽然设计器在数据库维度上显示 `Language` 和 `Collation` 属性，但在此对象上设置属性是没有用的。 数据库维度不用作单独的对象，因此要利用你定义的属性是困难的（虽然不是不可能的）。 在多维数据集中，维度始终从它的多维数据集父级继承 `Language` 和 `Collation`。 忽略你可能在单独的数据库维度对象上设置的值。  
   
 -   **多维数据集**。 对于主查询结构，你可在多维数据集级别上设置语言和排序规则。 例如，你可能需要在同一个项目中（其中每个多维数据集具有其自己的语言和排序规则）创建多维数据集的多个语言版本，例如英语和中文版本。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "53372459"
   
  此外，可以设置`Language`，其本身而言，在**翻译**对象。  
   
- 当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language` 是翻译定义的一部分。 另一方面，`Collation` 在多维数据集或更高级别上设置并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
+ 当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language` 是翻译定义的一部分。 `Collation`但是，设置多维数据集或更高版本，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
 ##  <a name="bkmk_lang"></a> Analysis Services 中的语言支持  
  `Language` 属性设置在处理过程中使用的对象的区域设置、查询并使用 `Captions` 和 `Translations` 以支持多语情景。 区域设置基于语言标识符（如英语）和区域（如美国或澳大利亚），其进一步优化了数据和时间表示方法。  
   
  在实例级别，该属性在安装过程中设置，并基于 Windows Server 操作系统的语言（37 种语言中的一种，假设安装了语言包）。 你无法更改安装程序中的语言。  
   
- 安装后，你可使用 Management Studio 或 msmdsrv.ini 配置文件中的服务器属性页覆盖 `Language`。 你可从更多语言选择，包括 Windows 客户端支持的所有语言。 在服务器实例级别上设置时，`Language` 决定后续部署的所有数据库的区域设置。 例如，如果你将 `Language` 设置为德语，那么部署到实例的所有数据库将具有语言属性 1031，即德语的 LCID。  
+ 安装后，可以使用 Management Studio 中的服务器属性页或在 msmdsrv.ini 配置文件中覆盖 `Language`。 你可从更多语言选择，包括 Windows 客户端支持的所有语言。 当在服务器的实例级别上设置时，`Language` 决定后续部署的所有数据库的区域设置。 例如，如果你将 `Language` 设置为德语，那么部署到实例的所有数据库将具有语言属性 1031，即德语的 LCID。  
   
 ###  <a name="bkmk_lcid"></a> 语言属性的值是区域设置标识符 (LCID)  
  有效值包括出现在下拉列表中的任何 LCID。 在 Management Studio 和 SQL Server Data Tools 中，LCID 通过等效的字符串表示。 每当显示 `Language` 属性时，出现相同的语言，无论是什么工具。 具有相同的语言列表可确保你可在整个模型中一致地实施和测试翻译。  
@@ -94,7 +94,7 @@ ms.locfileid: "53372459"
   
 -   0x0416 或 1046 为“葡萄牙语（巴西）” 。  
   
- 要查看更完整的列表，请参阅 [Microsoft 分配的语言 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 有关详细背景，请参阅 [编码和代码页](https://msdn.microsoft.com/goglobal/bb688114.aspx)。  
+ 要查看更完整的列表，请参阅 [Microsoft 分配的语言 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 有关详细背景信息，请参阅[代码页](/windows/desktop/Intl/code-pages)。  
   
 > [!NOTE]  
 >  `Language` 属性不决定返回系统消息的语言或哪些字符串出现在用户界面中。 错误、警告和消息本地化为 Office 和 Office 365 中支持的所有语言，并当客户端连接指定其中一种支持区域设置时自动使用。  
@@ -118,7 +118,7 @@ ms.locfileid: "53372459"
      二进制排序规则按 Unicode 码位排序，不是根据语言值。 例如，当针对 Unicode 数据使用二进制排序规则时，Latin1_General_BIN 和 Japanese_BIN 会生成相同的排序结果。 语言排序可能产生 aAbBcCdD 这样的结果，但二进制排序将是 ABCDabcd，因为所有大写字符的码位都高于小写字符的码位。  
   
 ###  <a name="bkmk_sortorder"></a> 排序顺序选项  
- 排序选项用于优化基于区分大小写、重音、假名和全半角的排序和比较规则。 例如，`Collation` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 配置属性的默认值为 Latin1_General_AS_CS，指定使用 Latin1_General 排序规则，并且使用区分重音、区分大小写的排序顺序。  
+ 排序选项用于优化基于区分大小写、重音、假名和全半角的排序和比较规则。 例如，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 `Collation` 配置属性的默认值为 Latin1_General_AS_CS，指定使用 Latin1_General 排序规则，并且使用区分重音、区分大小写的排序顺序。  
   
  注意：BIN 和 BIN2 与其他排序选项相斥，如果你要使用 BIN 或 BIN2，应清除排序选项“区分重音”。 类似地，如果选中“BIN2”，则不可使用“区分大小写”、“不区分大小写”、“区分重音”、“不区分重音”、“区分假名”以及“区分全半角”等选项。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "53372459"
 ##  <a name="bkmk_XMLA"></a> 使用 XMLA 更改数据模型中的语言和排序规则  
  创建对象后，继承语言和排序规则设置一次。 对这些属性的后续更改必须手动完成。 快速更改排序规则多个对象的一个方法是在 XMLA 脚本上使用 ALTER 命令。  
   
- 默认情况下，排序规则在数据库级别设置一次。 在剩下的对象层次结构中，继承是隐含的。 如果你在多维数据集中的对象上显式设置 `Collation`（这在各维度属性上是允许的），它将出现在 XMLA 定义中。 否则，仅存在顶级排序规则属性。  
+ 默认情况下，排序规则在数据库级别设置一次。 在剩下的对象层次结构中，继承是隐含的。 如果在多维数据集的对象上显式设置 `Collation`（允许在单独的维度属性上进行此操作），该设置将在 XMLA 定义中显示。 否则，仅存在顶级排序规则属性。  
   
  在使用 XMLA 修改现有数据库前，请确保你不会引入数据库和用于创建数据库的源文件之间的差异。 例如，你可能需要使用 XMLA 快速更改语言和排序规则进行概念证明测试，但然后跟踪源文件的更改（请参见 [更改多维数据集上的语言或排序规则](#bkmk_cube)），使用现有的操作程序重新部署解决方案。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "53372459"
  GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 在 Analysis Services 中，处理来自外部源的数据时没有数据转换。 数据仅存储为 Unicode。 在查询时，当查询结果中返回文本数据时，通过 Analysis Services 客户端库（具体指 MSOLAP.dll OLE DB 提供程序）根据客户端 OS 设置执行 GB18030 转换。 数据库引擎还支持 GB18030。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

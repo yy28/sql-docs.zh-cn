@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241355"
 ---
 # <a name="data-flow"></a>数据流
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 提供三种不同类型的数据流组件：源、转换和目标。n源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。l转换修改、汇总和清除数据。s目标将数据加载到数据存储区，或创建内存中的数据集。  
   
 > [!NOTE]  
 >  在您使用自定义提供程序时，需要使用元数据列值更新 ProviderDescriptors.xml 文件。  
@@ -100,7 +100,7 @@ ms.locfileid: "58394395"
 |源|Description|  
 |------------|-----------------|  
 |Oracle 源|Oracle 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle 和 Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://go.microsoft.com/fwlink/?LinkId=110393)。|  
+|SAP BI 源|SAP BI 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=16978)。|  
 |Teradata 源|Teradata 源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 的源组件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata 还包括连接管理器和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  有关如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 提高性能的演示，请参阅 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
@@ -189,7 +189,7 @@ ms.locfileid: "58394395"
  有关详细信息，请参阅 [数据中的错误处理](error-handling-in-data.md)。  
   
 ### <a name="columns"></a>“列”  
- 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同的列属性设置方法：编程方式、使用组件特定对话框，或使用“高级编辑器”对话框。  
+ 输入、输出和错误输出是列的集合。 每一列都可配置并且根据列类型（输入、输出或外部），[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 会为列提供不同的属性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三种不同的设置列属性的方法，你可以以编程方式、使用组件特定对话框或使用“高级编辑器”对话框来设置列属性。  
   
 ## <a name="paths"></a>路径  
  路径连接数据流组件。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，可以查看和修改路径属性，查看路径开始点的输出元数据，以及将数据查看器附加到路径。  
@@ -205,7 +205,7 @@ ms.locfileid: "58394395"
   
 -   在列级，除了组件为列提供的任何自定义属性之外，还可以设置所有列共有的属性。 如果组件支持添加输出列，则可向输出添加列。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，您可以使用为每个元素类型提供的自定义对话框，或者使用“属性”窗口或 **“高级编辑器”** 对话框来设置元素属性。  
   
  有关如何使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器设置属性的详细信息，请参阅 [设置数据流组件的属性](set-the-properties-of-a-data-flow-component.md)。  
   
@@ -218,6 +218,6 @@ ms.locfileid: "58394395"
 ## <a name="related-content"></a>相关内容  
  technet.microsoft.com 上的视频 [Microsoft Connector for Oracle by Attunity 的性能（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
- curatedviews.cloudapp.net 上的专业回答： [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)（如何在 SSIS 中创建动态连接字符串）。  
+ 回答[如何在 SSIS 中创建的动态连接字符串](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html)。  
   
   

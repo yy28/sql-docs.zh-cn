@@ -1,5 +1,5 @@
 ---
-title: 在多维模型中创建度量值和度量值组 |Microsoft 文档
+title: 在多维模型中创建度量值和度量值组 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde4dd3ac818935319f0331448e552163a6e148f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241965"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026494"
 |-|-|  
 |多维数据集向导|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行多维数据集向导以创建多维数据集。<br /><br /> 在“解决方案资源管理器”中，右键单击“多维数据集”，然后选择“新建多维数据集”。 如果在执行这些步骤中需要帮助，请参阅[多维建模（Adventure Works 教程）](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 创建基于来自现有数据仓库的表的多维数据集时，度量值和度量值组的定义具体化为多维数据集创建过程的一部分。 在向导中，你将选择要用作多维数据集中度量值和度量值组对象的基础的事实和事实数据表。|  
 |新建度量值对话|假定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已存在该多维数据集，则双击“解决方案资源管理器”中的多维数据集名称，在“多维数据集设计器”中打开该多维数据集。 在“度量值”窗格中，通过指定源表、列和聚合类型，右键单击顶端节点以创建新度量值组或新度量值。 使用此方法需从预构建函数固定列表中选择聚合方法。 有关更常用的聚合的讨论，请参阅 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 。|  
-|“计算成员”|计算成员会增加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中多维数据集的灵活性，并提高其分析能力，因为你可以控制创建它们的时间和方式。 有时你只是临时需要一个度量值，需要度量值的时间仅为用户会话持续时间，或需要位于 Management Studio 中作为调查的一部分的度量值。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开“计算”选项卡创建新计算成员。<br /><br /> 度量值基于 MDX 表达式时，请选择这种方法。 有关详细信息，请参阅这些主题：[在 MDX 中生成度量值](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)、[计算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)和 [MDX 脚本编写基础知识 (Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)。|  
+|“计算成员”|计算成员会增加 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中多维数据集的灵活性，并提高其分析能力，因为你可以控制创建它们的时间和方式。 有时你只是临时需要一个度量值，需要度量值的时间仅为用户会话持续时间，或需要位于 Management Studio 中作为调查的一部分的度量值。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开“计算”选项卡创建新计算成员。<br /><br /> 度量值基于 MDX 表达式时，请选择这种方法。 请参阅以下主题，获取详细信息：[构建在 MDX 中的度量值](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)，[计算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)，[多维模型中的计算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)并[MDX 脚本编写基础知识&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 或 XMLA|在 SQL Server Management Studio 中，你可以执行 MDX 或 XMLA 以更改数据库，从而以包含新的计算度量值。 在该解决方案已部署到服务器之后，这种方法对数据的临时测试有用。 请参阅 [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)。|  
   
 ##  <a name="bkmk_comps"></a> 度量值的组件  
@@ -58,7 +58,7 @@ ms.locfileid: "34026494"
   
  下面的关系图表示 **FactSalesQuota** 事实数据表和两个与其关联的维度表： **DimTime** 和 **DimEmployee**。 在 Adventure Works 示例多维数据集中，这些表用作 Sales Quotas 量值组以及 Time 和 Employee 维度的基础。  
   
- ![有两个维度表的 FactSalesQuota 表](../../analysis-services/multidimensional-models/media/factsalesquota.gif "FactSalesQuota 表有两个维度表")  
+ ![具有两个维度表的 FactSalesQuota 表](../../analysis-services/multidimensional-models/media/factsalesquota.gif "具有两个维度表的 FactSalesQuota 表")  
   
  事实数据表包含两种基本类型的列：属性列和度量值列。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026494"
   
 -   度量值列定义度量值组包含的度量值。  
   
- 运行“多维数据集向导”时，会筛选掉外键。在可供选择的剩余列的列表中，你将看到度量值列和未被标识为外键的属性列。 在 **FactSalesQuote** 示例中，除 **SalesAmountQuota** 外，该向导还将提供 **CalendarYear** 和 **CalendarQuarter**。 只有 **SalesAmountQuota** 度量值列将得出多维模型的可操作度量值。 其他基于日期的列用于限定每个配额数量。 你应从“多维数据集向导”中的度量值列表中排除其他列（ **CalendarYear** 和 **CalendarQuarter**），或稍后从“设计器”的度量值组中删除它们。  
+ 运行“多维数据集向导”时，会筛选掉外键。在可供选择的剩余列的列表中，你将看到度量值列和未被标识为外键的属性列。 在中**FactSalesQuota**示例中，该向导将提供**CalendarYear**并**CalendarQuarter**除了**SalesAmountQuota**。 只有 **SalesAmountQuota** 度量值列将得出多维模型的可操作度量值。 其他基于日期的列用于限定每个配额数量。 你应从“多维数据集向导”中的度量值列表中排除其他列（ **CalendarYear** 和 **CalendarQuarter**），或稍后从“设计器”的度量值组中删除它们。  
   
  本讨论的重点是，并非所有由该向导提供的列都可用作度量值。 决定要将哪些列用作度量值，主要取决于你对数据的理解以及使用数据的方式。 请记住，可以右键单击数据源视图中的表以浏览数据，这可帮助你识别用作度量值的列。 有关详细信息，请参阅[在数据源视图中浏览数据 (Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34026494"
   
  您可以通过使用多维数据集设计器的 **“维度用法”** 选项卡来指定与特定维度相关的度量值组的粒度。 有关维度关系的详细信息，请参阅 [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的多维数据集](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208793"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872297"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -77,7 +77,7 @@ ms.locfileid: "53208793"
    
    > [!IMPORTANT] 
    >
-   >在 PolyBase 横向扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。 请参阅 [PolyBase 横向扩展组](#Enable)。
+   >在 PolyBase 横向扩展组中，所有节点上的 PolyBase 引擎和 PolyBase 数据移动服务必须在同一个域帐户下运行。 请参阅 [PolyBase 横向扩展组](#enable)。
    
 5. 在“PolyBase 配置页”上，选择两个选项之一。 有关详细信息，请参阅 [PolyBase 横向扩展组](../../relational-databases/polybase/polybase-scale-out-groups.md)。  
    
@@ -105,7 +105,7 @@ ms.locfileid: "53208793"
 
 |SQL Server 组件 (SQL Server component)|参数和值|描述|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBase|选择 PolyBase 功能。|  
+|SQL Server 安装程序控件|**Required**<br /><br /> /FEATURES=PolyBase|选择 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCPASSWORD|指定引擎服务帐户的密码。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的启动模式：自动（默认）、禁用和手动。|  
@@ -121,7 +121,7 @@ ms.locfileid: "53208793"
 
 |SQL Server 组件 (SQL Server component)|参数和值|描述|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server 安装程序控件|**必需**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 安装对除 Hadoop 连接外的所有 PolyBase 功能的支持。 PolyBaseJava 支持 Hadoop 连接。 PolyBase 安装两者。 |  
+|SQL Server 安装程序控件|**Required**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 安装对除 Hadoop 连接外的所有 PolyBase 功能的支持。 PolyBaseJava 支持 Hadoop 连接。 PolyBase 安装两者。 |  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCACCOUNT|指定引擎服务的帐户。 默认为 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCPASSWORD|指定引擎服务帐户的密码。|  
 |SQL Server PolyBase 引擎|**可选**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的启动模式：自动（默认）、禁用和手动。|  

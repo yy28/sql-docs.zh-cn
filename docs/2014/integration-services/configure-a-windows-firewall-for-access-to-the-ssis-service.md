@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241889"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>为访问 SSIS 服务配置 Windows 防火墙
     
@@ -36,7 +36,7 @@ ms.locfileid: "58387455"
 > [!IMPORTANT]  
 >  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](configuring-the-integration-services-service-ssis-service.md)的早期版本向后兼容。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议通过防火墙的工作原理的详细信息，请参阅本文中，"[与防火墙配合使用分布式 COM](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
   
  有很多可用的防火墙系统。 如果您运行的防火墙不是 Windows 防火墙，请查阅您的防火墙文档来获取特定于您所使用的系统的信息。  
   

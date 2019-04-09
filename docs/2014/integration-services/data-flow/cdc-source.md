@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241785"
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -45,11 +45,11 @@ ms.locfileid: "58382723"
 ## <a name="error-handling"></a>错误处理  
  CDC 源有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**:值始终为-1。  
+-   **错误代码**：值始终为 -1。  
   
--   **错误列**:导致错误 （针对转换错误） 的源列。  
+-   **错误列**：导致错误（针对转换错误）的源列。  
   
--   **错误行列**:导致错误的记录数据。  
+-   **错误行列**：导致错误的记录数据。  
   
  根据错误行为设置，CDC 源支持在错误输出中返回在提取过程中发生的错误（数据转换、截断）。 有关详细信息，请参阅 [CDC 源编辑器（“错误输出”页）](../cdc-source-editor-error-output-page.md)。  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足。  
+ **提供的参数数目不足的过程或函数 cdc.fn_cdc_get_net_changes_\<...>。**  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>相关内容  
   
--   mattmasson.com 上的博客文章 [CDC 源的处理模式](https://go.microsoft.com/fwlink/?LinkId=242541)。  
+-   mattmasson.com 上的博客文章 [CDC 源的处理模式](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
   
   

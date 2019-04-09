@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240395"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
   基于使用情况的优化向导用于为分区设计聚合，它在输出方面与聚合设计向导相似。 但是，基于使用情况的优化向导设计聚合时所基于的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例查询日志中所记录的特定使用模式的查询。 聚合允许 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接从多维数据集存储区中检索预先计算好的汇总数据，而不必为每一个查询从基础数据源重新计算数据，从而提高了性能。  
@@ -44,28 +44,28 @@ ms.locfileid: "53365259"
  通常，可以同时使用这两个向导来改进在部署时和一段时间后的性能。 在完成分区（或包含分区的多维数据集或度量值组）的初期部署后，应当首先使用聚合设计向导，以改进整体性能。 经过一段时间（在此期间您已在查询日志中记录了业务用户对分区的所有查询）之后，则可以使用基于使用情况的优化向导来进一步完善聚合设计，以便更好地满足业务用户的性能和查询要求。  
   
 > [!NOTE]  
->  有关配置查询日志的信息，请参阅 [配置 Analysis Services 查询日志](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)。  
+>  有关配置查询日志的信息，请参阅 [配置 Analysis Services 查询日志](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [选择要修改的分区&#40;基于使用情况的优化向导&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [选择要修改的分区（基于使用情况的优化向导）](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [指定查询条件&#40;基于使用情况的优化向导&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [指定查询条件（基于使用情况的优化向导）](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [查看将要优化的查询&#40;基于使用情况的优化向导&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [查看将要优化的查询（基于使用情况的优化向导）](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [查看聚合使用情况&#40;基于使用情况的优化向导&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [查看聚合使用情况（基于使用情况的优化向导）](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [指定对象计数&#40;基于使用情况的优化向导&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [指定对象计数（基于使用情况的优化向导）](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [设置聚合选项&#40;基于使用情况的优化向导&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [设置聚合选项（基于使用情况的优化向导）](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [完成向导&#40;基于使用情况的优化向导&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [完成向导（基于使用情况的优化向导）](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>请参阅  
  [聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [聚合设计向导的 F1 帮助](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services 向导（多维数据）](analysis-services-wizards-multidimensional-data.md)  
   
   

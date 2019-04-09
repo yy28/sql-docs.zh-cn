@@ -20,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241655"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 包
   包是一个有组织的集合，其中可包括连接、控制流元素、数据流元素、事件处理程序、变量、参数和配置，您可使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形设计工具将这些对象组合到包中，或以编程方式生成包含这些对象的包。  然后将完成的包保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区或文件系统中，还可以将 ssISnoversion 项目部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 服务器。 包是可被检索、执行和保存的工作单元。  
@@ -112,11 +112,6 @@ ms.locfileid: "58381375"
 -   [在 SQL Server Data Tools 中创建包](create-packages-in-sql-server-data-tools.md)  
   
 -   请参阅开发人员指南中的 **以编程方式生成包** 一节。  
-  
-## <a name="related-content"></a>相关内容  
-  
--   [实现 SQL Server Integration Services 与 Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [如何：适用于 Microsoft Dynamics AX 配置 SQL Server Integration Services 包](https://msdn.microsoft.com/library/bb986852)  
+
   
   
