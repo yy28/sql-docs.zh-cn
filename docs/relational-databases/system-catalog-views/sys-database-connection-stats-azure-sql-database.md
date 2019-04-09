@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d9e6f23d9e73295f34f23777c76253d27671ed8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242325"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -38,11 +38,11 @@ ms.locfileid: "56012358"
 |**database_name**|**sysname**|数据库的名称。|  
 |**start_time**|**datetime2**|聚合间隔开始的 UTC 日期和时间。 时间始终为 5 分钟的倍数。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|聚合间隔结束的 UTC 日期和时间。 **End_time**始终是相应之后恰好 5 分钟**start_time**同一行中。|  
-|**success_count**|**int**|成功连接数。|  
-|**total_failure_count**|**int**|失败连接的总数。 这是总和**connection_failure_count**， **terminated_connection_count**，并**throttled_connection_count**，并且不包括死锁事件。|  
-|**connection_failure_count**|**int**|登录失败数。|  
-|**terminated_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 终止连接数。|  
-|**throttled_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 中止的连接数。|  
+|**success_count**|**ssNoversion**|成功连接数。|  
+|**total_failure_count**|**ssNoversion**|失败连接的总数。 这是总和**connection_failure_count**， **terminated_connection_count**，并**throttled_connection_count**，并且不包括死锁事件。|  
+|**connection_failure_count**|**ssNoversion**|登录失败数。|  
+|**terminated_connection_count**|**ssNoversion**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 终止连接数。|  
+|**throttled_connection_count**|**ssNoversion**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 中止的连接数。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>请参阅
 
- [Windows Azure SQL 数据库故障排除](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [对 Azure SQL 数据库的连接问题进行故障排除](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

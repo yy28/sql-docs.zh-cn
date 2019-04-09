@@ -13,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240365"
 ---
 # <a name="syntax-ssis"></a>语法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语法与 C 和 C# 语言使用的语法类似。 表达式可包括多种元素，例如标识符（列和变量）、文字、运算符和函数。 本主题概述了表达式计算器语法在应用于不同的表达式元素时的特殊要求。  
@@ -26,7 +26,7 @@ ms.locfileid: "58389845"
 > [!NOTE]  
 >  在以前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，如果某表达式的计算结果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型 DT_WSTR 或 DT_STR，则结果将具有 4000 个字符的限制。 这一限制已被取消。  
   
- 有关使用特定运算符和函数的示例表达式，请参阅以下主题中关于每个运算符和函数的主题：[运算符&#40;SSIS 表达式&#41;](operators-ssis-expression.md)并[函数&#40;SSIS 表达式&#41;](functions-ssis-expression.md)。  
+ 有关使用特定运算符和函数的示例表达式，请参阅以下主题中关于每个运算符和函数的主题：[运算符（SSIS 表达式）](operators-ssis-expression.md)和[函数（SSIS 表达式）](functions-ssis-expression.md)。  
   
  有关使用多个运算符和函数以及标识符和文本的示例表达式，请参阅 [高级 Integration Services 表达式的示例](examples-of-advanced-integration-services-expressions.md)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58389845"
   
 ## <a name="related-content"></a>相关内容  
   
--   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
+-   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)。  
   
 -   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   

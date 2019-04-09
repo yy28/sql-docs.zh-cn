@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241575"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>用于 Reporting Services SharePoint 模式的 PowerShell cmdlet
   在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式时，会安装 PowerShell cmdlet，以便支持 SharePoint 模式下的报表服务器。 这些 cmdlet 涵盖三个功能类别。  
@@ -43,20 +43,22 @@ ms.locfileid: "58658261"
   
 -   [基本示例](#bkmk_basic_samples)  
   
--   [详细的示例](#bkmk_detailedsamples)  
+-   [详细示例](#bkmk_detailedsamples)  
   
     -   [创建 Reporting Services 服务应用程序和代理](#bkmk_example_create_service_application)  
   
     -   [查看和更新 Reporting Services 传递扩展插件](#bkmk_example_delivery_extension)  
   
-    -   [获取和设置 Reporting Service 应用程序数据库，例如数据库超时的属性](#bkmk_example_db_properties)  
+    -   [获取和设置 Reporting Service 应用程序数据库的属性，例如，数据库超时值](#bkmk_example_db_properties)  
   
     -   [列出 reporting services 数据扩展-SharePoint 模式](#bkmk_example_list_data_extensions)  
   
-    -   [更改和列出订阅所有者](#bkmk_change_subscription_owner)  
+    -   [更改并列出订阅所有者](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 摘要  
+
  若要运行 cmdlet，您需要打开 SharePoint Management Shell。 还可以使用 Microsoft Windows 附带的图形用户界面编辑器 **Windows PowerShell 集成脚本环境 (ISE)**。 有关详细信息，请参阅 [在 Windows Server 上启动 Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在以下 cmdlet 摘要中，对服务应用程序数据库，引用的数据库创建和使用的所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 这包括配置、警报和 temp 数据库。  
+
   
  如果您在键入 PowerShell 示例时看到类似以下内容的错误消息：  
   
@@ -129,7 +131,7 @@ ms.locfileid: "58658261"
 |New-SPRSExtension|向 Reporting Services 服务应用程序注册新的扩展插件。|  
 |Set-SPRSExtension|设置现有 Reporting Services 扩展插件的属性。|  
 |Remove-SPRSExtension|从 Reporting Services 服务应用程序删除扩展插件。|  
-|Get-SPRSExtension|获取一个或多个用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 扩展插件。<br /><br /> 有效值为<br /><br /> **传递**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **安全性**<br /><br /> **身份验证**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|获取一个或多个用于 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 扩展插件。<br /><br /> 有效值为<br /><br /> **传递**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **数据**<br /><br /> **安全性**<br /><br /> **身份验证**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **设计器**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|基于是否启用了“ReportingService”功能来获取 SharePoint 站点。 默认情况下，将返回启用“ReportingService”功能的站点。|  
   
 ##  <a name="bkmk_basic_samples"></a> 基本示例  
@@ -301,8 +303,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
  请参阅 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 PowerShell 更改和列出 Reporting Services 订阅所有者并运行订阅](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [清单：使用 PowerShell 验证 PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [核对清单：使用 PowerShell 验证 PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex SharePoint Management PowerShell 脚本](http://sharepointpsscripts.codeplex.com/)   
  [如何使用 PowerShell 管理 SSRS](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

@@ -15,15 +15,15 @@ ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a9dbcf9efdb4febaf6a6647e754d31380e575727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf09c6f06cbdb4e24949ad1f078312869c81444d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241635"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>使用 ReportViewer 控件集成 Reporting Services
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供两个 ReportViewer 控件将报表查看功能到应用程序。 一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。 每个控件都提供类似的功能，但分别设计为针对其各自的环境。 这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] provides two ReportViewer controls for integrating提供两个 ReportViewer 控件，用于将报表查看功能集成到您的应用程序中。a一个控件版本针对基于 Windows 窗体的应用程序，另一个版本针对 Web 窗体应用程序。a每个控件都提供类似的功能，但分别设计为针对其各自的环境。d这两个控件都可以处理已部署到报表服务器（远程处理模式）的报表或已复制到尚未安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的计算机（本地处理模式）的报表。  
   
  ReportViewer 控件不包括对动态适应具有不同屏幕分辨率的不同设备的内置支持。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "56009549"
   
 ## <a name="see-also"></a>请参阅  
  [将 Reporting Services 集成到应用程序中](../application-integration/integrating-reporting-services-into-applications.md)   
- [创建 SSRS 报表使用 Visual Studio （专业回答）](https://go.microsoft.com/fwlink/?LinkId=321991)  
+ [创建 SSRS 报表使用 Visual Studio （博客）](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
   
   

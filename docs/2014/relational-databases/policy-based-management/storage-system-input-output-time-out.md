@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241975"
 ---
 # <a name="storage-system-input-output-time-out"></a>存储系统输入输出超时
   此规则检查系统事件日志中是否存在 EventId 9。 此消息指示存储系统中出现 I/O 超时。  
@@ -30,6 +30,6 @@ ms.locfileid: "53364399"
 -   [Microsoft 知识库文章 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>有关详细信息  
- [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

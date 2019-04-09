@@ -19,12 +19,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241885"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services Multidimensional 的全球化方案
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在表格数据模型和多维数据模型中存储和操作多语言数据和元数据。 数据以 Unicode (UTF-16) 格式存储为使用 Unicode 编码的字符集。 如果将 ANSI 数据加载进一个数据模型，字符会使用 Unicode 等效码位进行存储。  
@@ -56,7 +56,7 @@ ms.locfileid: "53357875"
 -   开发和生产环境在地理上位于不同国家。 在一个国家/地区开发一个解决方案然后将其部署到另一个国家/地区的情况越来越常见。 如果你的任务是准备将以一种语言开发的解决方案部署到使用另一种语言包的服务器上，了解如何设置语言和排序规则属性是十分必要的。 设置这些属性让你能够覆盖从原始主机系统继承的默认设置。 有关详细信息，请参阅下方的 [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md) 。  
   
 ##  <a name="bkmk_features"></a> 用于生成全球化多维解决方案的功能  
- 仅 [!INCLUDE[applies](../includes/applies-md.md)] 多维数据模型  
+ [!INCLUDE[applies](../includes/applies-md.md)] 多维数据模型  
   
  在客户端级别，使用和操作 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据的全球化应用程序可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的多语言和多文化功能：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53357875"
   
 ## <a name="see-also"></a>请参阅  
  [Windows 应用程序的国际化](/windows/desktop/Intl/international-support)   
- [转到全球开发人员中心](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Microsoft 全球化文档](/globalization/)   
  [使用基于区域设置的自适应设计编写 Windows 应用商店应用](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [使用 C# 和 XAML 开发通用 Windows 应用](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

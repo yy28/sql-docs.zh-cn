@@ -12,12 +12,12 @@ ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5c3830a1bc86d927043e78a42b7ead94ca52a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240736"
 ---
 # <a name="mssqlserver5515"></a>MSSQLSERVER_5515
     
@@ -36,6 +36,6 @@ ms.locfileid: "53350143"
  无法打开为 FILESTREAM 文件指定的容器目录。  
   
 ## <a name="user-action"></a>用户操作  
- 请查看具体的 Windows 状态代码以了解错误原因。 有关详细信息，请参阅[事件和错误消息中心](https://go.microsoft.com/fwlink/?linkid=47660)。  
+ 请查看具体的 Windows 状态代码以了解错误原因。 有关详细信息，请参阅[事件和错误消息的支持中心](https://support.microsoft.com/search?query=events%20and%20errors)。  
   
   

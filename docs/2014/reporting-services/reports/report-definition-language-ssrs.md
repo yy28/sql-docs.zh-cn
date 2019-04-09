@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241148"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -71,7 +71,7 @@ ms.locfileid: "56010413"
 |`Language`|具有包含语言和区域性代码（例如 "en-us" 表示“美国英语”）的文本值的属性。 该值必须是特定语言，或者是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中为其定义了默认语言的非特定语言。|  
 |`Name`|具有字符串文本值的属性。 名称在该项的命名空间中必须唯一。 如果未指定，则项的命名空间为具有名称的最内层包含对象。|  
 |`NormalizedString`|具有已规范化的字符串文本值的属性。|  
-|`Size`|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257)（CSS 长度单位参考）。<br /><br /> 在 RDL 中，`Size` 的最大值为 160 in。 最小大小为 0 in。|  
+|`Size`|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](https://www.w3schools.com/CSSref/css_units.asp)（CSS 长度单位参考）。<br /><br /> 在 RDL 中，`Size` 的最大值为 160 in。 最小大小为 0 in。|  
 |`String`|具有字符串文本值的属性。|  
 |`UnsignedInt`|具有无符号整数 (uint32) 值的属性。|  
 |`Variant`|具有任何简单 XML 类型的属性。|  

@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242255"
 ---
 # <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
@@ -78,7 +78,7 @@ ms.locfileid: "58390927"
     -   双精度 Excel 数值列与其他类型的数值列之间的转换  
   
 ## <a name="excel-source-configuration"></a>Excel 源配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“Excel 源编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "58390927"
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [Excel 自定义属性](excel-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "58390927"
   
 ## <a name="related-tasks"></a>Related Tasks  
 
--   [使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据](../load-data-to-from-excel-with-ssis.md)
+-   [使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel](../load-data-to-from-excel-with-ssis.md)
 
 -   [将查询参数映射到数据流组件中的变量](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58390927"
   
 -   博客文章[Integration Services 中的 Excel、 3 的第 3 部分：问题和替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)，dougbert.com 上的。  
   
--   博客文章[在 SSIS 中的使用 XLSX 文件](https://go.microsoft.com/fwlink/?LinkId=233704)，sqlservergeeks.com 上。  
+-   博客文章[连接到 Excel (XLSX) 在 SSIS 中](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)。  
   
   

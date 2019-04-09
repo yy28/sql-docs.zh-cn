@@ -11,17 +11,17 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95785ceee0db65aef6f61281cb5e6079c76bc1f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241675"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
   本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
   
- 在应用程序代码中生成自定义连接字符串的开发人员应查看 ADOMD.NET 客户端的 API 文档，以查看更详细的列表： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
+ 生成应用程序代码中的自定义连接字符串的开发人员应查看 ADOMD.NET 客户端，若要查看更详细的列表的 API 文档： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
  本主题中所述的属性由以下 Analysis Services 客户端库使用：ADOMD.NET、AMO 和 Analysis Services 的 OLE DB 访问接口。 大多数连接字符串属性可用于所有这三种客户端库。 例外将专门进行说明。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "53377599"
   
  [特殊用途的参数](#bkmk_special)  
   
- [保留供将来使用](#bkmk_reserved)  
+ [保留以供将来使用](#bkmk_reserved)  
   
  [连接字符串示例](#bkmk_examples)  
   
@@ -51,10 +51,10 @@ ms.locfileid: "53377599"
   
 |属性|Description|示例|  
 |--------------|-----------------|-------------|  
-|`Data Source` 或 `DataSource`|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
+|`Data Source` 或 `DataSource`|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。|`Data source=AW-SRV01` 用于默认实例和端口 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 用于命名实例 ($Finance) 和固定端口。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> `Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
 |`Initial Catalog` 或 `Catalog`|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|有效值包括 MSOLAP 或 MSOLAP。\<版本 >，其中\<版本 > 为 3、 4 或 5。 在文件系统上，数据访问接口名称对于 SQL Server 2012 版本为 msolap110.dll，对于 SQL Server 2008 和 2008 R2 为 msolap100.dll，对于 SQL Server 2005 为 msolap90.dll。<br /><br /> 当前版本为 MSOLAP.5。 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据访问接口时才需要设置此属性，例如要连接到 SQL Server 2008 实例。<br /><br /> 数据访问接口对应于 SQL Server 的版本。 如果您的组织使用当前和以前版本的 Analysis Services，很可能需要指定在手动创建的连接字符串上使用哪个访问接口。 您可能还需要在缺少所需版本的计算机上下载并安装特定版本的数据访问接口。 可以从下载中心的“SQL Server 功能包”页上下载 OLE DB 访问接口。 转到 [Microsoft SQL Server 2012 功能包](https://go.microsoft.com/fwlink/?LinkId=296473) 以下载用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 PowerPivot 工作簿，有时需要在 SharePoint 服务器上手动安装。 若要区分这些版本，必须检查提供程序的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)。<br /><br /> MSOLAP.3 已在 SQL Server 2005 中发布。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 再次发布<br /><br /> MSOLAP.5 已在 SQL Server 2012 中发布|`Provider=MSOLAP.3` 用于需要 SQL Server 2005 版本的 Analysis Services OLE DB 访问接口的连接。|  
-|`Cube`|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示你可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
+|`Cube`|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示您可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证和安全  
  本节介绍与身份验证和加密有关的连接字符串属性。 Analysis Services 只使用 Windows 身份验证，但是您可以在连接字符串上设置属性以传递特定用户名和密码。  
@@ -63,18 +63,18 @@ ms.locfileid: "53377599"
   
 |属性|Description|  
 |--------------|-----------------|  
-|`EffectiveUserName`|必须在服务器上模拟最终用户标识时使用。 按“域\用户”格式指定帐户。 要使用此属性，调用方在 Analysis Services 中必须具有管理权限。 有关在 SharePoint 的 Excel 工作簿中使用此属性的详细信息，请参阅 [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](https://go.microsoft.com/fwlink/?LinkId=311905)。 有关如何将此属性用于 Reporting Services 的说明，请参阅 [使用 EffectiveUserName 在 SSAS 中模拟](https://go.microsoft.com/fwlink/?LinkId=301385)。<br /><br /> 在 PowerPivot for SharePoint 安装中使用 `EffectiveUserName` 来捕获使用情况信息。 将用户标识提供给服务器以便可以在日志文件中记录包含用户标识的事件或错误。 在 PowerPivot 中，它不用于授权目的。|  
+|`EffectiveUserName`|必须在服务器上模拟最终用户标识时使用。 按“域\用户”格式指定帐户。 要使用此属性，调用方在 Analysis Services 中必须具有管理权限。 有关在 SharePoint 的 Excel 工作簿中使用此属性的详细信息，请参阅 [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](https://go.microsoft.com/fwlink/?LinkId=311905)。 有关如何将此属性用于 Reporting Services 的说明，请参阅 [使用 EffectiveUserName 在 SSAS 中模拟](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas)。<br /><br /> `EffectiveUserName` 用于在 PowerPivot for SharePoint 安装中捕获使用情况信息。 将用户标识提供给服务器以便可以在日志文件中记录包含用户标识的事件或错误。 在 PowerPivot 中，它不用于授权目的。|  
 |**Encrypt Password**|指定是否使用本地密码来加密本地多维数据集。 有效值为 True 或 False。 默认值为 False。|  
 |`Encryption Password`|用于对加密的本地多维数据集进行解密的密码。 默认值为空。 此值必须由用户显式设置。|  
 |`Impersonation Level`|指示模拟客户端时服务器可以使用的模拟级别。 有效值包括：<br /><br /> **匿名**:客户端对服务器而言是匿名的。 服务器进程无法获取有关客户端的信息，并且不能模拟客户端。<br /><br /> **标识**:服务器进程可以获取客户端标识。 服务器可以模拟客户端标识进行授权，但不能作为客户端访问系统对象。<br /><br /> **模拟**:这是默认值。 可以模拟客户端标识，但是仅在建立连接时，并非每次调用时都可以模拟。<br /><br /> **委托**:代表客户端操作时，服务器进程可以模拟客户端安全上下文。 代表客户端操作时，服务器进程还可以进行针对其他服务器的传出调用。|  
 |`Integrated Security`|调用方的 Windows 标识用于连接到 Analysis Services。 有效值为空、SSPI 和 BASIC。<br /><br /> `Integrated Security`=`SSPI` 是 TCP 连接，从而允许 NTLM、 Kerberos 或匿名身份验证的默认值。 HTTP 连接的默认值为空。<br /><br /> 使用 `SSPI` 时，`ProtectionLevel` 必须设置为以下值之一：`Connect`、`PktIntegrity`、`PktPrivacy`。|  
 |`Persist Encrypted`|当客户端应用程序需要数据源对象以加密形式保存敏感身份验证信息（如密码）时设置此属性。 默认情况下，不保存身份验证信息。|  
 |`Persist Security Info`|有效值为 True 和 False。 设置为 True 时，在建立连接后可以从连接获取安全信息（如以前在连接字符串上指定的用户标识或密码）。 默认值为 False。|  
-|`ProtectionLevel`|确定连接上使用的安全级别。 有效值为<br /><br /> `None` 的用户。 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect` 的用户。 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity` 的用户。 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy` 的用户。 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
+|`ProtectionLevel`|确定连接上使用的安全级别。 有效值为<br /><br /> `None`. 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect`. 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity`. 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy`. 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
 |`Roles`|指定逗号分隔的预定义的角色列表，以使用该角色具有的权限连接到服务器或数据库。 如果忽略此属性，则使用所有角色且有效权限为所有角色的组合权限。 将属性设置为空值 (例如，角色 =) 的客户端连接已没有任何角色成员身份。<br /><br /> 管理员使用此属性通过角色具有的权限进行连接。 如果角色的权限不足，一些命令可能失败。|  
 |`SSPI`|显式指定将 `Integrated Security` 设置为 `SSPI` 时要将哪个安全包用于客户端身份验证。 SSPI 支持多个包，但是您可以使用此属性指定特定的包。 有效值为“协商”、Kerberos、NTLM 和“匿名用户”。 如果未设置此属性，则所有包可用于连接。|  
 |`Use Encryption for Data`|加密数据传输。 有效值为 True 和 False。|  
-|`User ID`=...; `Password`=|将 `User ID` 和 `Password` 一起使用。 Analysis Services 模拟通过这些凭据指定的用户标识。 在 Analysis Services 连接上，仅当为 HTTP 访问配置了服务器并且您在 IIS 虚拟目录上指定了基本身份验证替代集成安全性时才在命令行上列出凭据。<br /><br /> 用户名和密码必须是 Windows 标识（本地用户帐户或域用户帐户）的凭据。 请注意 `User ID` 包含嵌入的空格。 此属性的其他别名包括 `UserName`（无空格）和 `UID`。 `Password` 的别名为 `PWD`。|  
+|`User ID`=...; `Password`=|`User ID` 和`Password`一起使用。 Analysis Services 模拟通过这些凭据指定的用户标识。 在 Analysis Services 连接上，仅当为 HTTP 访问配置了服务器并且您在 IIS 虚拟目录上指定了基本身份验证替代集成安全性时才在命令行上列出凭据。<br /><br /> 用户名和密码必须是 Windows 标识（本地用户帐户或域用户帐户）的凭据。 请注意 `User ID` 包含嵌入的空格。 此属性的其他别名包括 `UserName`（无空格）和 `UID`。 `Password` 的别名为 `PWD`。|  
   
 ##  <a name="bkmk_special"></a> 特殊用途的参数  
  本节介绍其余连接字符串参数。 这些参数用于确保应用程序所需的特定连接行为。  
@@ -98,7 +98,7 @@ ms.locfileid: "53377599"
 |`Safety Options`|设置用户定义的函数和操作的安全级别。 有效值为 0、1、2。 在 Excel 连接中，此属性为 Safety Options=2。 有关此选项的详细信息可以在 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。|  
 |`SQLQueryMode`|指定 SQL 查询是否包含计算。 有效值为 Data、Calculated、IncludeEmpty。 Data 表示不允许计算。 Calculated 表示允许计算。 IncludeEmpty 表示允许计算并在查询结果中返回空行。|  
 |`Timeout`|指定在生成错误前客户端库等待命令完成的最长时间（毫秒）。|  
-|`Transport Compression`|定义在通过 `Protocol Format` 属性指定压缩时如何压缩客户端和服务器通信。 有效值为 Default、None、Compressed 和 `gzip`。 Default 表示不压缩 TCP，或对 HTTP 使用 `gzip`。 None 指示不使用压缩。 Compressed 使用 XPRESS 压缩（SQL Server 2008 和更高版本）。 `gzip` 仅对于 HTTP 连接有效，其中 HTTP 请求包括 Accept-Encoding=gzip。|  
+|`Transport Compression`|定义在通过 `Protocol Format` 属性指定压缩时如何压缩客户端和服务器通信。 有效值为 Default、None、Compressed 和 `gzip`。 Default 表示不压缩 TCP，或对 HTTP 使用 `gzip`。 None 指示不使用压缩。 Compressed 使用 XPRESS 压缩（SQL Server 2008 和更高版本）。 `gzip` 仅对于 HTTP 连接有效，其中 HTTP 请求包括 Accept-encoding = gzip。|  
 |`UseExistingFile`|连接到本地多维数据集时使用。 此属性指定是否覆盖本地多维数据集。 有效值为 True 或 False。 如果设置为 True，则多维数据集文件必须存在。 现有文件将是连接目标。 如果设置为 False，则覆盖多维数据集文件。|  
 |`VisualMode`|设置此属性以控制在应用维度安全性时如何聚合成员。<br /><br /> 对于允许每个人查看的多维数据集数据，聚合所有成员有意义，因为组成总计的所有值是可见的。 但是，如果您基于用户标识筛选或限制了维度，基于所有成员显示总计（将受限制的值和允许的值合并为一个总计）可能令人困惑，或导致显示的信息比应揭示的信息多。<br /><br /> 要在应用维度安全性时指定如何聚合成员，您可以将此属性设置为 True 以仅在聚合中使用允许的值，或将其设置为 False 以将受限制的值从总计中排除。<br /><br /> 在连接字符串上设置时，此值适用于多维数据集或透视级别。 在模型内，您可以在更精细的级别上控制可视总计。<br /><br /> 有效值为 0、1 和 2。<br /><br /> 0 是默认值。 当前，默认行为与 2 等效，其中聚合包含未显示给用户的值。<br /><br /> 1 表示从总计中排除隐藏的值。 这对 Excel 为默认值。<br /><br /> 2 表示在总计中包含隐藏的值。 这是服务器上的默认值。<br /><br /> <br /><br /> 此属性的别名包括 `Visual Total` 或 `Default MDX Visual Mode`。|  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53377599"
   
  `Data Source=<URL>`，其中，URL 是包含 msmdpump.dll 的虚拟 IIS 文件夹的 HTTP 或 HTTPS 地址。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
- **Http （s） 连接到 PowerPivot 工作簿 （.xlsx、.xlsb 或.xlsm 文件）**  
+ **与 PowerPivot 工作簿（.xlsx、.xlsb 或 .xlsm 文件）的 Http(s) 连接**  
   
  `Data Source=<URL>`，其中，URL 是指向已发布到某一 SharePoint 库的 PowerPivot 工作簿的 SharePoint 路径。 例如，"数据源 =<http://localhost/Shared> Documents/Sales.xlsx"。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "53377599"
   
  **嵌入的 PowerPivot 连接**  
   
- `Data Source=$Embedded$`，其中，$embedded$ 是一个引用工作薄内嵌入的 PowerPivot 数据模型的名字对象。 此连接字符串在内部创建并管理。 请不要修改它。 嵌入的连接字符串由客户端工作站上的 PowerPivot for Excel 外接程序解析，或由 SharePoint 场中的 PowerPivot for SharePoint 实例解析。  
+ `Data Source=$Embedded$` ，其中，$embedded$ 是一个引用工作薄内嵌入的 PowerPivot 数据模型的名字对象。 此连接字符串在内部创建并管理。 请不要修改它。 嵌入的连接字符串由客户端工作站上的 PowerPivot for Excel 外接程序解析，或由 SharePoint 场中的 PowerPivot for SharePoint 实例解析。  
   
  **Analysis Services 存储过程中的本地服务器环境**  
   
@@ -184,12 +184,12 @@ ms.locfileid: "53377599"
 ##  <a name="bkmk_encrypt"></a> 加密连接字符串  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对它所使用的连接字符串进行加密和存储以连接到它的每个数据源。 如果与数据源的连接需要用户名和密码，则可以让 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将名称和密码与连接字符串存储在一起，也可以在每次需要连接到数据源时再提示您输入名称和密码。 如果让 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提示您输入用户信息，则不必存储和加密此信息。 但是，如果将此信息存储在连接字符串中，则需要对此信息加密并加以保护。  
   
- 若要对连接字符串信息进行加密和保护， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用数据保护 API。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用一个单独的加密密钥对每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接字符串信息进行加密。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在你创建数据库时创建此密钥，并基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动帐户对该连接字符串信息进行加密。 当 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动时，将读取、解密并存储每个数据库的加密密钥。 当[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要连接某个数据源时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会使用适当的解密密钥对该数据源的连接字符串信息解密。  
+ 若要对连接字符串信息进行加密和保护， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用数据保护 API。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用一个单独的加密密钥对每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接字符串信息进行加密。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在您创建数据库时创建此密钥，并基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动帐户对该连接字符串信息加密。 当 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动时，将读取、解密并存储每个数据库的加密密钥。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要连接某个数据源时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会使用适当的解密密钥对该数据源的连接字符串信息解密。  
   
 ## <a name="see-also"></a>请参阅  
- [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [针对 Kerberos 约束委派对 Analysis Services 进行配置](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [用于 Analysis Services 连接的数据访问接口](data-providers-used-for-analysis-services-connections.md)   
+ [在 Internet Information Services &#40;IIS&#41; 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Kerberos 约束委派配置 Analysis Services](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [用于 Analysis Services 连接的数据提供程序](data-providers-used-for-analysis-services-connections.md)   
  [连接到 Analysis Services](connect-to-analysis-services.md)  
   
   

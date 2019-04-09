@@ -16,26 +16,28 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d439464e4066e395fc9e420cc0d506e5c15c1691
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 7774bec919a494ceac674b764eef2e38ca99414c
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291517"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>创建图形数据库并运行一些模式匹配使用 T-SQL 查询
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 此示例提供了[!INCLUDE[tsql-md](../../includes/tsql-md.md)]脚本使用的节点和边缘创建图形数据库，然后使用新的 MATCH 子句匹配的一些模式，并遍历关系图。 此示例脚本将用于这两个 Azure SQL 数据库和 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
- 
-## <a name="sample-schema"></a>示例架构  
-此示例创建关系图架构，正如图 1 中所演示的假设的社交网络的人员、 餐馆和市/县的节点。 这些节点连接到使用朋友、 点赞、 LivesIn 和 LocatedIn 边缘。 
+
+## <a name="sample-schema"></a>示例架构
+
+此示例创建关系图架构，正如图 1 中所演示的假设的社交网络的人员、 餐馆和市/县的节点。 这些节点连接到使用朋友、 点赞、 LivesIn 和 LocatedIn 边缘。
 
 ![人员城市餐馆表](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql 图形数据库示例")  
-图 1： 示例架构包含餐馆、 城市、 人员节点和 LivesIn，LocatedIn，点赞边缘。
-
+图 1:示例架构包含餐馆、 城市、 人员节点和 LivesIn，LocatedIn，点赞边缘。
 
 ## <a name="sample-script"></a>示例脚本
+
 ```
 -- Create a graph demo database
 CREATE DATABASE graphdemo;
@@ -46,19 +48,19 @@ go
 
 -- Create NODE tables
 CREATE TABLE Person (
-  ID INTEGER PRIMARY KEY, 
+  ID INTEGER PRIMARY KEY,
   name VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE Restaurant (
-  ID INTEGER NOT NULL, 
-  name VARCHAR(100), 
+  ID INTEGER NOT NULL,
+  name VARCHAR(100),
   city VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE City (
-  ID INTEGER PRIMARY KEY, 
-  name VARCHAR(100), 
+  ID INTEGER PRIMARY KEY,
+  name VARCHAR(100),
   stateName VARCHAR(100)
 ) AS NODE;
 
@@ -83,43 +85,43 @@ INSERT INTO City VALUES (1,'Bellevue','wa');
 INSERT INTO City VALUES (2,'Seattle','wa');
 INSERT INTO City VALUES (3,'Redmond','wa');
 
--- Insert into edge table. While inserting into an edge table, 
+-- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 1), 
-       (SELECT $node_id FROM Restaurant WHERE id = 1),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 2), 
-      (SELECT $node_id FROM Restaurant WHERE id = 2),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 3), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 4), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 5), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 1), 
+       (SELECT $node_id FROM Restaurant WHERE ID = 1),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 2), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 2),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 3), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 4), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 5), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
 
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id = 1));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id = 2));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 4),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 5),
-      (SELECT $node_id FROM City WHERE id = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID = 2));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 4),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 5),
+      (SELECT $node_id FROM City WHERE ID = 1));
 
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id =1));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id =2));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id =3));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID =1));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID =2));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID =3));
 
--- Insert data into the friendof edge.
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 1), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 2), (SELECT $NODE_ID FROM person WHERE ID = 3));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 3), (SELECT $NODE_ID FROM person WHERE ID = 1));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 4), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 5), (SELECT $NODE_ID FROM person WHERE ID = 4));
+-- Insert data into the friendOf edge.
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
 
 
 -- Find Restaurants that John likes
@@ -138,11 +140,11 @@ AND person1.name='John';
 SELECT Person.name
 FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
-
 ```
 
 ## <a name="clean-up"></a>清理  
 清理的架构和创建示例数据库。
+
 ```
 USE graphdemo;
 go
@@ -159,8 +161,6 @@ USE master;
 go
 DROP DATABASE graphdemo;
 go
-
-
 ```
 
 ## <a name="script-explanation"></a>脚本说明  
@@ -170,4 +170,4 @@ go
 |---  |---  |
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |创建图形节点或边界表  |
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |插入节点或边界表  |
-|[匹配&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |使用匹配来匹配模式或遍历关系图  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |使用匹配来匹配模式或遍历关系图  |

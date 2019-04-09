@@ -12,12 +12,12 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff6a91f14242d79c3fec543632f74eeb9f452bd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5cdcc410cc83d7f7fa53d937f6011ad2624655fb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241845"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>检查磁盘输入和输出子系统是否存在 IO 延迟问题
   此规则检查计算机事件日志中是否存在错误消息 833。 该消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已从磁盘发出读取或写入请求，并且表明该请求返回所用的时间已超过 15 秒。 此错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报告，表示磁盘 I/O 子系统有问题。 延迟此长度的时间可能会严重损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的性能。  
@@ -40,6 +40,6 @@ ms.locfileid: "53354815"
   
  [Microsoft 知识库文章 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241605"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集是一种配置，其中，每个故障转移群集节点都连接到其他子网或其他子网组。 这些子网可位于同一位置或在地理上分散的地点中。 跨地理上分散的站点进行群集有时称为拉伸群集。 因为没有所有节点都可以访问的共享存储，所以在多个子网上的数据存储之间应该复制数据。 对于数据复制，有多个可用数据的副本。 因此，多子网故障转移群集除了具备高可用性之外，还提供了灾难恢复解决方案。  
@@ -82,7 +82,7 @@ ms.locfileid: "53349211"
 |安装 SQL Server 故障转移群集|[创建新的 SQL Server 故障转移群集（安装程序）](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |您的现有 SQL Server 故障转移群集的就地升级|[升级 SQL Server 故障转移群集实例（安装程序）](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |维护您的现有 SQL Server 故障转移群集|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Windows 故障转移群集|[Windows 2008 R2 故障转移多站点群集](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|Windows 故障转移群集|[Microsoft Windows 多站点故障转移群集最佳实践](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   

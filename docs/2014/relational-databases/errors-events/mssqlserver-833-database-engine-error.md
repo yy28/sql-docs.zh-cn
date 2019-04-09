@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241645"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -54,6 +54,6 @@ ms.locfileid: "53377519"
 > [!NOTE]  
 >  防病毒程序可能会减慢磁盘访问速度。 若要提高访问速度，请将错误消息中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件从实时病毒扫描中排除。  
   
- 有关 I/O 错误的详细信息，请参阅 [Microsoft SQL Server I/O 基础知识，第 2 章](https://go.microsoft.com/fwlink/?LinkId=69370)以及 [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us) 上的知识库文章。  
+ 有关 I/O 错误的详细信息，请参阅 [Microsoft SQL Server I/O 基础知识，第 2 章](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))以及 [https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284) 上的知识库文章。  
   
   

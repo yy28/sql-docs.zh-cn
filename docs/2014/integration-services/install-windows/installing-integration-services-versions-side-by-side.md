@@ -13,12 +13,12 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5552780cdc4a2f4e3faf39b9111882fcf4ffdd63
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240665"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互操作性和共存 (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 并存。  
@@ -28,7 +28,7 @@ ms.locfileid: "58380115"
   
 |功能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|开发环境|[SQL Server 2014 Data Tools-Business Intelligence for Visual Studio 2012 CTP 2](https://www.microsoft.com/download/details.aspx?id=40736)<br /><br /> [SQL Server 2014 Data Tools-Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|开发环境|[以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[用于 Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |管理环境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |msdb 中用于存储包的主系统表|sysssispackages|sysssispackages|sysssispackages|  
 |用于运行包的主命令提示实用工具|**dtexec** (dtexec.exe)，2014 版|**dtexec** (dtexec.exe), 2012 版|**dtexec** (dtexec.exe), 2008 版|  
@@ -40,7 +40,7 @@ ms.locfileid: "58380115"
   
 -   **在 SQL Server Data Tools 中设计包**。 您使用以下工具基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的相应版本开发和维护包。  
   
-    -   使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 Business Intelligence Development Studio 开发和维护基于 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的包。  
+    -   使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的 Business Intelligence Development Studio 开发和维护基于 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
   
     -   使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 开发和维护基于 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]的包。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "58380115"
   
     |包格式|“数据库”|  
     |--------------------|--------------|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 集成服务|实例的 msdb 数据库 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services|实例的 msdb 数据库 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
      对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例，可以从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]实例导入包，但不能将包导出到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]实例。  
   

@@ -12,12 +12,12 @@ ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1072668681a7e989e0ebb1bbcc385cc53e5a7b2d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 68c8cdb91f4c850618d19b26f0125205bfd045b9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242315"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>检查磁盘 I/O 子系统是否存在读取重试问题
   此规则检查事件日志中是否存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息 825。 此错误消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法在第一次尝试时从磁盘读取数据。 此消息指示磁盘 I/O 子系统存在严重问题。 此消息当前不指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 问题。 但是，如果不解决此磁盘问题，可能导致数据丢失或数据库损坏。  
@@ -36,6 +36,6 @@ ms.locfileid: "53362409"
 ## <a name="for-more-information"></a>有关详细信息  
  [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](https://go.microsoft.com/fwlink/?linkid=69370)  
+ [SQL Server I/O Basics, Chapter 2（SQL Server I/O 基础知识第 2 章）](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

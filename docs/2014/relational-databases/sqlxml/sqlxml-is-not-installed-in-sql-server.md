@@ -10,20 +10,20 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a300c3e5c3f5bc800637ef4c31c886a23db8b544
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7561d2d22439112ea084f1f8a62c32aeb5591cfc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240755"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQL Server 中未安装 SQLXML
-  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前，SQLXML 4.0 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起发布，是所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 除外）默认安装的一部分。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1 可用时，将其从下载[SQLXML SP1 的安装位置](https://www.microsoft.com/download/details.aspx?id=3522)。  
+  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前，SQLXML 4.0 随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起发布，是所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本（[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 除外）默认安装的一部分。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再包括 SQLXML 的最新版本 (SQLXML 4.0 SP1)。 若要安装 SQLXML 4.0 SP1 可用时，将其从下载[SQLXML SP1 的安装位置](https://www.microsoft.com/download/details.aspx?id=16978)。  
   
  当某个应用程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上运行并且需要使用 SQLXML 4.0 时，如果计算机上没有安装 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，则必须下载 SQLXML 4.0 SP1 并安装它。  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>在使用 SQLOLEDB 和 SQL Server Native Client OLE DB 访问接口的新数据类型时 SQLXML 4.0 SP1 的行为  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入了以下数据类型，使用 SQLXML 的开发人员可能需要使用这些数据类型：  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了以下使用 SQLXML 的开发人员可能想要使用的数据类型：  
   
 -   `Date`  
   

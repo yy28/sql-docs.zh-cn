@@ -21,12 +21,12 @@ ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e591982dfccbc06d705879bc63fb8aa87c041d40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242445"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>为残障人士提供的辅助功能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力于使所有用户更轻松地使用其产品和服务。 本主题提供了一些有关可使 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 系列产品更便于残障人士使用的功能、产品和服务的信息。  
@@ -48,12 +48,12 @@ ms.locfileid: "53360709"
   
 ### <a name="free-step-by-step-tutorials"></a>免费的分步教程  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供了一系列分步教程，可以帮助您了解如何调整计算机上的辅助选项和设置。 该教程提供了有关如何调整选项、功能和设置的详细过程，以满足需要使用辅助功能的残障人士的需要。 此信息可并排显示在屏幕上，以使您能快速查看如何使用鼠标、键盘或将二者结合使用。 你可以从 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=67163)上找到多种产品的分步教程。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供了一系列分步教程，可以帮助你了解如何调整计算机上的辅助选项和设置。 该教程提供了有关如何调整选项、功能和设置的详细过程，以满足需要使用辅助功能的残障人士的需要。 此信息可并排显示在屏幕上，以使您能快速查看如何使用鼠标、键盘或将二者结合使用。 你可以从 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=67163)上找到多种产品的分步教程。  
   
 ## <a name="assistive-technology-products-for-windows"></a>Windows 的辅助技术产品  
  有大量辅助技术产品可以帮助残障人士更方便地使用计算机。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供在 Windows 操作系统上运行的辅助技术产品的可搜索目录[Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=67166)。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 在 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=67166)上提供了可在 Windows 操作系统上运行的辅助技术产品的可搜索目录。  
   
  可以获取下列类型的产品：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "53360709"
  如果您使用了某种辅助技术产品，请在进行升级之前与您的辅助技术供应商联系，以检查该产品与计算机上的产品的兼容性。 辅助技术供应商还能帮助您了解如何调整设置，以便优化与您使用的 Windows 版本或其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品的兼容性。  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>其他格式的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文档  
- 其他格式的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档同样能够满足客户对辅助功能的需要。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 若要帮助我们的客户需要使用辅助功能的替代格式提供了产品文档。  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>获取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的文档  
  可以在线获取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文档。 有关详细信息，请参阅[使用 SQL Server 产品文档](../2014-toc/books-online-for-sql-server-2014.md)。  
@@ -81,16 +81,18 @@ ms.locfileid: "53360709"
 ## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>获取其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品的文档  
  你可以获取可访问文档[!INCLUDE[msCoName](../includes/msconame-md.md)]中的产品[Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=67164)。  
   
-### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
+### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic，Inc.  
  可以从 Blind & Dyslexic, Inc 获取其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 出版物。这些文档以录音带或软盘的形式分发给其分发服务的合格注册成员。 文档集中包含 80,000 多篇文章，其中包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书。 有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书的适用性和可用性信息，请联系：  
   
- Recording for the Blind & Dyslexic, Inc.20 Roszel Road Princeton, NJ 08540  
+ Recording for the Blind & Dyslexic，Inc.20 Roszel Road Princeton, NJ 08540  
   
  从美国境内电话：(800) 221-4792  
   
  美国和加拿大，从外部美国电话：(609) 452-0606  
   
- 传真：(609) 987-8116 web: [http://www.rfbd.org/](https://go.microsoft.com/fwlink/?LinkId=48621)  
+ 传真：(609) 987-8116 web: 
+
+[Microsoft 辅助功能网站](https://www.microsoft.com/accessibility/)  
   
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>为存在听觉障碍的人士提供的客户服务  
  如果存在听觉障碍，可以通过文本电话 (TTY/TDD) 服务访问所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品和客户服务。  
@@ -109,7 +111,7 @@ ms.locfileid: "53360709"
  免费的每月电子新闻稿可以帮助您了解有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品的最新辅助功能信息。 若要订阅，请访问 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=8287)。  
   
 ## <a name="see-also"></a>请参阅  
- [开始使用 SQL Server 的产品文档](../2014-toc/books-online-for-sql-server-2014.md)   
+ [SQL Server 的产品文档入门](../2014-toc/books-online-for-sql-server-2014.md)   
  [获取 SQL Server 帮助](getting-sql-server-assistance.md)  
   
   

@@ -18,22 +18,22 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be0252b31deb78762844711c7dda8779bb6e5c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ce999e5a301fc6c6a9fd50f241e6863e0ad2cca9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241775"
 ---
 # <a name="calculations"></a>“新建命名集”
-  计算是多维表达式 (MDX) 表达式或脚本，用于定义中的多维数据集中的计算的成员、 命名的集或指定了作用域的分配[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关编写计算脚本的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](https://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
+  计算是多维表达式 (MDX) 表达式或脚本，用于定义中的多维数据集中的计算的成员、 命名的集或指定了作用域的分配[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关编写计算脚本的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](https://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="calculated-members"></a>计算的成员  
  计算成员是在运行时使用对其进行定义时所指定的多维表达式 (MDX) 表达式来计算其值的成员。 计算成员就像其他任何成员一样，可用于商业智能应用程序。 计算成员不会增加多维数据集的大小，因为多维数据集中只存储定义；值的计算则在需要回答查询时才在内存中执行。  
   
  可以为任何维度（包括度量值维度）定义计算成员。 在度量值维度中创建的计算成员称为计算度量值。  
   
- 尽管计算成员通常基于多维数据集中已存在的数据，但是可以通过将数据与算术运算符、数字和函数进行组合而创建复杂的表达式。 还可以使用 MDX 函数（例如，LookupCube）来访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内其他多维数据集中的数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括标准化 Visual Studio 函数库，可以使用存储过程从除当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的源中检索数据。 有关存储过程的详细信息，请参阅[定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
+ 尽管计算成员通常基于多维数据集中已存在的数据，但是可以通过将数据与算术运算符、数字和函数进行组合而创建复杂的表达式。 还可以使用 MDX 函数（例如，LookupCube）来访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内其他多维数据集中的数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括标准化 Visual Studio 函数库，可以使用存储的过程从当前以外的源检索数据和[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 有关存储过程的详细信息，请参阅[定义存储过程](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
   
  例如，假设货运公司的行政人员希望基于每体积单位的利润确定运输哪种类型的货物利润更高。 他们使用包含“货物”、“船队”和“时间”维度以及 Price_to_Ship、Cost_to_Ship 和 Volume_in_Cubic_Meters 度量值的“发运”多维数据集；但是，该多维数据集中未包含盈利率的度量值。 通过在下列表达式中合并现有度量值，可以在多维数据集中创建一个计算成员来作为度量值，并将它命名为 Profit_per_Cubic_Meter：  
   

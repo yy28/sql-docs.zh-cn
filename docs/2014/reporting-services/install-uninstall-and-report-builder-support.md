@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241715"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安装、卸载和报表生成器支持
   报表生成器是一种可用于创建、更新和共享报表、报表部件和共享数据集的报表创作工具。 报表生成器有两个版本：独立版本和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]版本。 独立版本由您或管理员安装到您的计算机上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自动安装，是从报表管理器或与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点下载到您的计算机中的。  
@@ -59,7 +59,7 @@ ms.locfileid: "56298315"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>在计算机上安装报表生成器 ClickOnce 版本  
  报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本随 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安装。 它通过 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的本机安装和 SharePoint 集成安装进行安装。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是 Microsoft 用于部署 Windows 应用程序的一种技术。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 使得用户可以通过在网页上单击链接来安装和运行 Windows 应用程序（例如报表生成器）。 有关部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序、应用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序安全性或在 Internet 区域中运行 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 应用程序的详细信息，请参阅 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network 网站 [www.microsoft.com/msdn](https://www.microsoft.com/msdn)中的“用于 Windows 窗体应用程序的 ClickOnce 部署”、“Windows 窗体中的安全性概述”或“受信任的应用程序部署概述”等文章。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是 Microsoft 用于部署 Windows 应用程序的一种技术。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 使得用户可以通过在网页上单击链接来安装和运行 Windows 应用程序（例如报表生成器）。 有关部署的详细信息[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序、 应用[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序安全性或运行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]应用程序在 Internet 区域中，请参阅"ClickOnce 部署的 Windows 窗体应用程序""中的安全性Windows 窗体概述"受信任的应用程序部署概述"文章[!INCLUDE[msCoName](../includes/msconame-md.md)]开发人员网络网站，网址[ https://developer.microsoft.com/ ](https://developer.microsoft.com/)。  
   
  报表生成器的 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本位于报表服务器上，并且在您单击报表管理器中的 **“报表生成器”** 按钮或单击 SharePoint 库中的 **“新建文档”** 菜单中的 **“报表生成器报表”** 选项时，将会安装在您的计算机上。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298315"
 |1030|丹麦语|da-DK|  
 |1031|德语|de-DE|  
 |1032|希腊语|el-GR|  
-|2052|英语|en-US|  
+|2052|英语|zh-CN|  
 |1035|芬兰语|fi-FI|  
 |1036|法语|fr-FR|  
 |1038|匈牙利语|hu-HU|  

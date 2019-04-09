@@ -11,12 +11,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 026ed516989bde6f2c0b305d6af159f13a82f156
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241615"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 混合云简介
  大多数应用程序都面临一些重要挑战，如高效率、商业价值、复杂的硬件配置、大量峰值需求以及遵守行业和公司管理规定。 考虑所有这些因素构建企业级技术非常富有挑战性。 Microsoft 混合云策略为传统的私有云、公共云和混合云环境提供支持，从而克服这些重要挑战。 
@@ -111,7 +111,7 @@ ms.locfileid: "53358446"
 ## <a name="see-also"></a>另请参阅 
  [SQL Server 2014 CTP2 产品指南](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Microsoft SQL Server 混合云博客系列](https://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  
- [迁移到 Azure 数据中心的应用程序](https://msdn.microsoft.com/library/jj156154.aspx) 
+ [Microsoft SQL Server 混合云博客系列](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [迁移到 Azure 数据中心的应用程序](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

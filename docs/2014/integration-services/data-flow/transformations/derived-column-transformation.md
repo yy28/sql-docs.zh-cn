@@ -18,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240992"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
@@ -56,7 +56,7 @@ ms.locfileid: "58377660"
   
  此转换有一个输入、一个常规输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“派生列转换编辑器”** 对话框中设置的属性的详细信息，请参阅 [Derived Column Transformation Editor](../../derived-column-transformation-editor.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "58377660"
   
 -   [通用属性](../../common-properties.md)  
   
--   [转换自定义属性](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   
@@ -77,6 +77,6 @@ ms.locfileid: "58377660"
 ## <a name="related-content"></a>相关内容  
  social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- curatedviews.cloudapp.net 上的专业回答： [如何使用 SSIS 拆分列数据](https://go.microsoft.com/fwlink/?LinkId=321995)。  
+ 博客[如何使用 SSIS 拆分列数据](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)。  
   
   

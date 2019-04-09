@@ -3,7 +3,7 @@ title: Linux 上的 SQL Server 的 active Directory 身份验证
 titleSuffix: SQL Server
 description: 本文概述了 Linux 上的 SQL Server 的 Active Directory 身份验证。
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241017"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 身份验证
 
@@ -42,9 +42,11 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 
 在本教程中，提供了有关如何配置 AD 身份验证详细信息[教程：使用 Active Directory 身份验证与 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md)。 在本教程中，以下列表提供了指向每个部分的摘要：
 
-1. [加入到 Active Directory 域的 SQL Server 主机](sql-server-linux-active-directory-authentication.md#join)。
+1. [加入到 Active Directory 域的 SQL Server 主机](sql-server-linux-active-directory-join-domain.md)。
 1. [为 SQL Server 创建 AD 用户并设置 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
 1. [配置 SQL Server 服务 keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [保护 keytab 文件](sql-server-linux-active-directory-authentication.md#securekeytab)。
+1. [SQL Server 配置为使用 Kerberos 身份验证的 keytab 文件](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
 1. [在 TRANSACT-SQL 中创建基于 AD 的 SQL Server 登录名](sql-server-linux-active-directory-authentication.md#createsqllogins)。
 1. [连接到 SQL Server 使用 AD 身份验证](sql-server-linux-active-directory-authentication.md#connect)。
 

@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241235"
 ---
 # <a name="define-attribute-relationships"></a>定义属性关系
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，属性是维度的基本构造块。 维度包含一组在属性关系基础上组织而成的属性。  
@@ -35,7 +35,7 @@ ms.locfileid: "53360429"
 -   如果用户定义的层次结构是沿关系路径定义的，则聚合设计算法会选择更有效的聚合。  
   
     > [!NOTE]  
-    >  有关的重要性和意义的定义和配置属性关系的详细信息，请参阅部分中，"提高查询性能"中[SQL Server 2005 Analysis Services 性能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
+    >  有关的重要性和意义的定义和配置属性关系的详细信息，请参阅部分中，"提高查询性能"中[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="attribute-relationship-considerations"></a>属性关系注意事项  
  当基础数据支持时，还应定义属性间唯一的属性关系。 若要定义唯一属性关系，请使用维度设计器的 **“属性关系”** 选项卡。  
@@ -48,6 +48,6 @@ ms.locfileid: "53360429"
 >  属性关系定义不正确会导致查询结果无效。  
   
 ## <a name="see-also"></a>请参阅  
- [中的维度设计器的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [的维度设计器中，可以在“维度结构”视图的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

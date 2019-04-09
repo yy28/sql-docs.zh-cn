@@ -1,23 +1,24 @@
 ---
-title: 教程：Linux 上的 SQL Server 的 active Directory 身份验证
+title: 教程：Linux 上的 SQL Server 使用 AD 身份验证
 titleSuffix: SQL Server
-description: 本教程提供了 Linux 上的 SQL Server 的 AAD 身份验证的配置步骤。
-author: meet-bhagdev
-ms.date: 02/23/2018
-ms.author: meetb
+description: 本教程提供了 Linux 上的 SQL Server 的 AD 身份验证的配置步骤。
+author: Dylan-MSFT
+ms.author: Dylan.Gray
+ms.reviewer: rothja
+ms.date: 04/01/2019
 manager: craigg
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 82f4df8607af55a4b50f0ecfaf7b66a8c088c43a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240775"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程：Linux 上的 SQL Server 使用 Active Directory 身份验证
 
@@ -31,12 +32,10 @@ ms.locfileid: "58657931"
 > * 加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 AD 域的主机
 > * 创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]并设置 SPN
 > * 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
+> * 保护 keytab 文件
+> * SQL Server 配置为使用 keytab 文件进行 Kerberos 身份验证
 > * 在 TRANSACT-SQL 中创建基于 AD 的登录名
 > * 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
-
-> [!NOTE]
->
-> 如果你想要配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Linux 上使用第三方 AD 提供程序，请参阅[Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序](./sql-server-linux-active-directory-third-party-providers.md)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -44,173 +43,20 @@ ms.locfileid: "58657931"
 
 * 设置你的网络上的 AD 域控制器 (Windows)  
 * 安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-  * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+  * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+  * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> 加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]到 AD 域的主机
 
-使用以下步骤以加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机到 Active Directory 域：
+您必须加入 Active Directory 域控制器与在 SQL Server Linux 主机。 有关如何加入 active directory 域的信息，请参阅[联接到 Active Directory 域 Linux 主机上的 SQL Server](sql-server-linux-active-directory-join-domain.md)。
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 将主机加入 AD 域。 如果你尚未安装 realmd 和 Kerberos 客户端包上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机使用 Linux 分发的包管理器：
+## <a id="createuser"></a> 为创建 AD 用户 （或 MSA）[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]并设置 SPN
 
-   ```bash
-   # RHEL
-   sudo yum install realmd krb5-workstation
+> [!NOTE]
+> 以下步骤使用你[完全限定的域名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必须**[创建一个](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 在继续操作之前。
 
-   # SUSE
-   sudo zypper install realmd krb5-client
-
-   # Ubuntu
-   sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
-   ```
-
-1. 如果 Kerberos 客户端程序包安装将提示您输入的领域名称，输入你的域名以大写形式。
-
-   > [!NOTE]
-   > 本演练中使用"contoso.com"和"CONTOSO.COM"作为示例域和领域名称，分别。 应将其替换为自己的值为。 这些命令是区分大小写，因此请确保你使用大写它在本演练中使用的位置。
-
-1. 配置你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机以使用 AD 域控制器的 IP 地址作为 DNS 名称服务器。 
-
-   - **Ubuntu**:
-
-      编辑`/etc/network/interfaces`文件，以便你的 AD 域控制器的 IP 地址被列为 dns 名称服务器。 例如： 
-
-      ```/etc/network/interfaces
-      <...>
-      # The primary network interface
-      auto eth0
-      iface eth0 inet dhcp
-      dns-nameservers **<AD domain controller IP address>**
-      dns-search **<AD domain name>**
-      ```
-
-      > [!NOTE]
-      > 对于不同的计算机，网络接口 (eth0) 可能会有所不同。 若要确定使用哪一个，请运行 ifconfig 并复制具有一个 IP 地址和传输和接收的字节数的接口。
-
-      编辑此文件之后，重启网络服务：
-
-      ```bash
-      sudo ifdown eth0 && sudo ifup eth0
-      ```
-
-      现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：  
-
-      ```/etc/resolv.conf
-      nameserver **<AD domain controller IP address>**
-      ```
-
-   - **RHEL**:
-
-     编辑`/etc/sysconfig/network-scripts/ifcfg-eth0`文件 （或其他界面配置文件根据需要），以便你的 AD 域控制器的 IP 地址列出 DNS 服务器：
-
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     ```
-
-     编辑此文件之后，重启网络服务：
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：  
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-   - **SLES**:
-
-     编辑`/etc/sysconfig/network/config`文件，以便你的 AD 域控制器 IP 将用于 DNS 查询和你的 AD 域是域搜索列表中：
-
-     ```/etc/sysconfig/network/config
-     <...>
-     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
-     ```
-
-     编辑此文件之后，重启网络服务：
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-1. 加入域
-
-   一旦确认您的 DNS 配置正确后，通过运行以下命令来加入域。 您必须进行身份验证使用 AD 将新计算机加入到域中有足够的特权的 AD 帐户。
-
-   具体而言，此命令将在 AD 中创建新的计算机帐户，创建`/etc/krb5.keytab`托管 keytab 文件和配置的域中`/etc/sssd/sssd.conf`:
-
-   ```bash
-   sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
-   <...>
-   * Successfully enrolled machine in realm
-   ```
-
-   > [!NOTE]
-   > 如果你看到的错误，"未安装必要的包，"，则应安装这些包使用你的 Linux 分发的包管理器运行之前`realm join`试命令。
-   >
-   > 如果收到错误，"权限不足，无法加入域，"，然后需要与域管理员检查有足够的权限将 Linux 计算机加入到你的域。
-   >
-   > 如果收到错误，"KDC 答复与预期值，不匹配"您可能未指定用户的正确的领域名称。 领域名称区分大小写、 通常大写，并可以使用命令标识`realm discover contoso.com`。
-   
-   > SQL Server 使用 SSSD 和 NSS 用于映射到的安全标识符 (SID) 的用户帐户和组。 SSSD 必须配置并运行 SQL Server 已成功创建 AD 的登录名的顺序。 Realmd 通常自动执行此操作一部分的加入域，但在某些情况下您必须单独执行此操作。
-   >
-   > 请查看以下内容，以配置[SSSD 手动](https://access.redhat.com/articles/3023951)，和[配置 NSS 用于 SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/Configuring_Services#Configuration_Options-NSS_Configuration_Options)
-
-5. 验证您的域配置中 `/etc/krb5.conf`
-    ```/etc/krb5.conf
-    [libdefaults]
-    default_realm = CONTOSO.COM
-
-    [realms]
-    CONTOSO.COM = {
-    }
-
-    [domain_realm]
-    contoso.com = CONTOSO.COM
-    .contoso.com = CONTOSO.COM
-    ```
-
-  
-6. 验证，可以现在从域中，收集有关用户的信息，以及你可以获取作为该用户的 Kerberos 票证。
-
-   下面的示例使用**id**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 这样的命令。
-
-   ```bash
-   id user@contoso.com
-   uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
-
-   kinit user@CONTOSO.COM
-   Password for user@CONTOSO.COM:
-
-   klist
-   Ticket cache: FILE:/tmp/krb5cc_1000
-   Default principal: user@CONTOSO.COM
-   <...>
-   ```
-
-   > [!NOTE]
-   > 如果`id user@contoso.com`返回，"没有这种用户，"请确保 SSSD 服务成功启动运行命令`sudo systemctl status sssd`。 如果该服务正在运行并且您仍然看到"没有此类用户"错误，请尝试启用详细日志记录的 SSSD。 有关详细信息，请参阅 Red Hat 文档[故障诊断 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)。
-   >
-   > 如果`kinit user@CONTOSO.COM`返回，"KDC 应答不符期望获取初始的凭据，同时"确保大写指定领域。
-
-有关详细信息，请参阅 Red Hat 文档[发现和加入标识域](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)。 
-
-## <a id="createuser"></a> 创建 AD 用户[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]并设置 SPN
-
-  > [!NOTE]
-  > 下一个步骤使用您[完全合格的域名称](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您是在**Azure**，您必须**[创建一个](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 在继续操作之前。
-
-1. 在您的域控制器上运行[New ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令来创建一个新的 AD 用户使用永不过期的密码。 本示例名称帐户"mssql，"但该帐户名称可以是您喜欢的任何。 系统将提示您为帐户输入新密码：
+1. 在您的域控制器上运行[New ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令来创建一个新的 AD 用户使用永不过期的密码。 下面的示例的帐户名称`mssql`，但帐户名称可以是您喜欢的任何。 系统将提示您输入帐户的新密码。
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -219,152 +65,288 @@ ms.locfileid: "58657931"
    ```
 
    > [!NOTE]
-   > 这样，SQL Server 凭据并不与其他服务使用同一帐户共享是有专门的广告帐户为 SQL Server 安全最佳做法。 但是，您可以重用现有的 AD 帐户如果您愿意，如果您知道该帐户的密码 （所需的下一步生成 keytab 文件）。
+   > 这样，SQL Server 凭据并不与其他服务使用同一帐户共享是有专门的广告帐户为 SQL Server 安全最佳做法。 但是，如果您知道该帐户的密码 （需要在下一步中生成的 keytab 文件） （可选） 可以重用现有的 AD 帐户。
 
-2. 设置为此帐户使用的 ServicePrincipalName (SPN)`setspn.exe`工具。 SPN 必须完全按照下面的示例中指定的方式进行格式化。 可以找到的完全限定的域名[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机通过运行`hostname --all-fqdns`在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机和 TCP 端口应是 1433年，除非您已配置了[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用不同的端口号。
+2. 设置此帐户使用的 ServicePrincipalName (SPN) **setspn.exe**工具。 SPN 必须完全按照下面的示例中指定的方式进行格式化。 您可以找到的完全限定的域名[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过运行主机`hostname --all-fqdns`上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机。 TCP 端口应为 1433年，除非已配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]若要使用不同的端口号。
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
    ```
 
    > [!NOTE]
-   > 如果您收到错误，"没有足够的访问权限，"则需要与域管理员联系，检查您具有足够的权限对该帐户设置 SPN。
+   > 如果收到错误， `Insufficient access rights`，请与您的域管理员具有足够的权限来对此帐户设置 SPN。
    >
-   > 如果您在以后更改 TCP 端口，则需要再次运行 setspn 命令，使用新的端口号。 您还需要在下一节中的步骤添加 SQL Server 服务 keytab 新 SPN。
+   > 如果在将来更改 TCP 端口，则必须运行**setspn**命令再次使用新的端口号。 您还需要在下一节中的步骤添加 SQL Server 服务 keytab 新 SPN。
 
-3. 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
+有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。
 
 ## <a id="configurekeytab"></a> 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
 
-1. 检查上一步中创建的广告帐户密钥版本编号 (kvno)。 它通常为 2，但它可能是另一个整数，如果多次更改该帐户的密码。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主机，运行以下命令：
+有两种不同的方式来配置 SQL Server 服务 keytab 文件。 第一个选项是 keytab 配置中使用计算机帐户 (UPN)，而第二个选项使用托管服务帐户 (MSA)。 这两种机制可以同样正常运行，并且可以选择最适合您的环境的方法。
+
+在这两种情况下，在前面步骤中创建的 SPN 是必需的并在 keytab 中必须注册 SPN。
+
+若要配置 SQL Server 服务 keytab 文件：
+
+1. 配置[SPN keytab 条目](#spn)下一节中。
+
+1. 接着可以[添加 UPN](#upn) （选项 1） 或[MSA](#msa) keytab 文件在其各自的节中的步骤中的 （选项 2） 条目。
+
+> [!IMPORTANT]
+> 如果 UPN/MSA 的密码已更改，或更改了的 Spn 分配给该帐户的密码，则必须使用新密码和密钥版本数量 (KVNO) 更新 keytab。 某些服务可能还会自动轮换密码。 查看帐户相关的任何密码轮换策略，它们符合计划的维护活动，以避免意外停机时间。
+
+### <a id="spn"></a> SPN keytab 条目
+
+1. 检查上一步中创建的 AD 帐户密钥版本数量 (KVNO)。 它通常为 2，但它可能是另一个整数，如果多次更改该帐户的密码。 SQL Server 主机上，运行以下命令：
 
    ```bash
    kinit user@CONTOSO.COM
-
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
    > [!NOTE]
-   > Spn 可能需要几分钟时间才能传播到你的域，尤其是域较大。 如果收到错误，"kvno:找不到服务器 Kerberos 数据库中时获取凭据的 MSSQLSvc /\*\*\<主机计算机的完全限定的域名\>\*\*:\* \* \<tcp 端口\>\*\*\@CONTOSO.COM"，请等待几分钟然后重试。
+   > Spn 可能需要几分钟时间才能传播到你的域，尤其是域较大。 如果收到错误， `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`，请等待几分钟然后重试。  
 
-2. 创建具有的 keytab 文件**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** AD 用户在上一步中创建的。 出现提示时，输入密码的 AD 帐户。
+1. 启动**ktutil**:
 
    ```bash
    sudo ktutil
+   ```
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+1. 为每个 SPN，使用以下命令添加 keytab 条目：
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   ```bash
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   ```
 
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+1. Keytab 写入文件，然后退出 ktutil:
 
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
    quit
    ```
 
    > [!NOTE]
-   > Ktutil 工具不验证密码，所以请确保您正确地输入。
+   > **Ktutil**工具不会验证密码，因此请确保在出现提示时输入正确。
 
-3. 将计算机帐户添加到与你 keytab  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 （也称为 UPN） 的计算机帐户是否处在`/etc/krb5.keytab`在窗体"\<主机名\>$\@\<realm.com\>"(例如 sqlhost$\@CONTOSO.COM)。 我们会将复制从这些条目`/etc/krb5.keytab`到`mssql.keytab`。
+### <a id="upn"></a> 选项 1:使用 UPN 配置 keytab
+
+将计算机帐户添加到与你 keytab **ktutil**。 （也称为 UPN） 的计算机帐户是否处在 **/etc/krb5.keytab**形式`<hostname>$@<realm.com>`(例如， `sqlhost$@CONTOSO.COM`)。 复制从这些条目 **/etc/krb5.keytab**到**mssql.keytab**。
+
+1. 启动**ktuil**使用以下命令：
 
    ```bash
    sudo ktutil
+   ```
 
-   # Read all entries from /etc/krb5.keytab
-   ktutil: rkt /etc/krb5.keytab
+1. 使用**rkt**命令读取中的项的所有 **/etc/krb5.keytab**。
 
-   # List all entries
-   ktutil: list
+   ```bash
+   rkt /etc/krb5.keytab
+   ```
 
-   # Delete all entries by their slot number which are not the UPN one at a
-   # time.
-   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
-   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
-   # 1's entry is deleted)
-   ktutil: delent <slot num>
-   ktutil: delent <slot num>
-   ...
+1. 接下来，列出的条目。
 
-   # List all entries to ensure only UPN entries are left
-   ktutil: list
+   ```bash
+   list
+   ```
 
-   # When only UPN entries are left, append these values to mssql.keytab
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+1. 删除由其槽编号不是 UPN 的所有条目。 通过重复以下命令来执行这一次执行一个操作：
 
+   ```bash
+   delent <slot num>
+   ```
+
+   > [!IMPORTANT]
+   > 当项被删除，如槽 1 中上, 一个好接替它的所有值滑。 这表示插槽 2 中的项移至插槽 1 时删除在槽 1 的项。
+
+1. 列出出条目再次之前保留仅 UPN 条目。
+
+   ```bash
+   list
+   ```
+
+1. 当保留仅 UPN 条目时，将这些值与**mssql.keytab**:
+
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
+   ```
+
+1. 退出**ktutil**。
+
+   ```bash
    quit
    ```
 
-4. 任何人都有权访问此`keytab`文件可以模拟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]域，因此，请确保您限制访问此类文件，仅`mssql`帐户具有读取访问权限：
+### <a id="msa"></a> 选项 2:使用 MSA 配置 keytab
+
+MSA 选项时，必须创建 SQL Server 的 Kerberos keytab。 它应包含的所有[第一步中注册的 Spn](#spn)和 Spn 注册到 msa 凭据。 
+
+1. SPN keytab 条目被创建后，从已加入域的 Linux 计算机上运行以下命令：
 
    ```bash
-   sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-   sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+   kinit <AD user>
+   kvno <any SPN registered in step 1>
+      <spn>@CONTOSO.COM: kvno = <KVNO>
    ```
 
-5. 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用此`keytab`Kerberos 身份验证的文件：
+   此步骤中显示为用户帐户分配 SPN 所有权 KVNO。 若要运行此步骤，为 SPN 必须具有已分配给 MSA 帐户在其创建期间。 如果 SPN 不分配给 MSA，显示 KVNO 将是当前 SPN 所有者帐户，并且是用于配置不正确的。  
+
+1. 启动**ktutil**:
 
    ```bash
-   sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-   sudo systemctl restart mssql-server
+   sudo ktutil
    ```
 
-6. 可选:禁用 UDP 连接到域控制器，以提高性能。 在许多情况下，UDP 连接将始终失败连接到域控制器，因此你可以设置配置选项时`/etc/krb5.conf`要跳过 UDP 调用。 编辑`/etc/krb5.conf`并设置以下选项：
+1. 添加以下两个命令使用 MSA:
 
-   ```/etc/krb5.conf
-   [libdefaults]
-   udp_preference_limit=0
+   ```bash
+   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
+   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
    ```
+
+1. Keytab 写入文件，然后退出 ktutil:
+
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
+   quit
+   ```
+
+1. 使用 MSA 方法时，需要使用设置的配置选项**mssql conf**指定 MSA 时访问 keytab 文件要使用的工具。 确保在下面的值 **/var/opt/mssql/mssql.conf**。
+
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ```
+
+   > [!NOTE]
+   > 仅包括 MSA 名称而不是域 \ 帐户名称。
+
+## <a id="securekeytab"></a> 保护 keytab 文件
+
+此 keytab 文件访问权的任何人都可以模拟域上的 SQL Server，因此请确保你到文件限制访问，以便仅 mssql 帐户具有读取权限：
+
+```bash
+sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+```
+
+## <a id="keytabkerberos"></a> SQL Server 配置为使用 keytab 文件进行 Kerberos 身份验证
+
+使用以下步骤配置 SQL Server 以开始使用 keytab 文件进行 Kerberos 身份验证。
+
+```bash
+sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+sudo systemctl restart mssql-server
+```
+
+（可选） 禁用 UDP 连接到域控制器，以提高性能。 在许多情况下，UDP 连接总是出现故障时连接到域控制器，因此你可以设置配置选项 **/etc/krb5.conf**要跳过 UDP 调用。 编辑 **/etc/krb5.conf**并设置以下选项：
+
+```/etc/krb5.conf
+[libdefaults]
+udp_preference_limit=0
+```
+
+此时，已准备好，如下所示在 SQL Server 中使用基于 AD 的登录名。
 
 ## <a id="createsqllogins"></a> 在 TRANSACT-SQL 中创建基于 AD 的登录名
 
-1. 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，并创建一个新的、 基于 AD 的登录：
+1. 连接到 SQL Server 并创建新的、 基于 AD 的登录名：
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. 验证登录名现在列在[sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)系统目录视图：
+1. 验证登录名现在列在[sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)系统目录视图：
 
    ```sql
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
+## <a id="connect"></a> 连接到 SQL Server 使用 AD 身份验证
 
-登录到客户端计算机使用您的域凭据。 现在，您可以连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]无需密码，重新输入使用 AD 身份验证。 如果您创建了一个 AD 组的登录名，任何 AD 用户是该组的成员可以以相同的方式连接。
+登录到客户端计算机使用您的域凭据。 现在你可以连接到 SQL Server 而不使用 AD 身份验证密码需重新输入。 如果您创建了一个 AD 组的登录名，任何 AD 用户是该组的成员可以以相同的方式连接。
 
-客户端以使用 AD 身份验证的特定连接字符串参数取决于你正在使用哪个驱动程序。 请考虑下列示例：
+客户端以使用 AD 身份验证的特定连接字符串参数取决于你正在使用哪个驱动程序。 请考虑以下各节中的示例。
 
-* `sqlcmd` 已加入域的 Linux 客户端上
+### <a name="sqlcmd-on-a-domain-joined-linux-client"></a>已加入域的 Linux 客户端上的 sqlcmd
 
-   登录到已加入域的 Linux 客户端使用`ssh`和您的域凭据：
+登录到已加入域的 Linux 客户端使用**ssh**和您的域凭据：
 
-   ```bash
-   ssh -l user@contoso.com client.contoso.com
-   ```
-
-   请确保已安装[mssql 工具](sql-server-linux-setup-tools.md)包，然后使用连接`sqlcmd`无需指定任何凭据：
-
-   ```bash
-   sqlcmd -S mssql-host.contoso.com
-   ```
-
-* 已加入域的 Windows 客户端上的 SSMS
-
-   登录到已加入域的 Windows 客户端使用你的域凭据。 请确保[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]安装，则连接到你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过指定的实例 (例如"mssql-host.contoso.com") **Windows 身份验证**中**连接到服务器**对话框。
-
-* 使用其他客户端驱动程序的 AD 身份验证
-
-  * JDBC:[使用 Kerberos 集成身份验证的 SQL Server 连接](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC：[使用集成身份验证](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET:[连接字符串语法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-
-## <a name="performance-improvements"></a>性能改进
-如果注意到 AD 帐户查找需要花费一段时间，并且已选中您 AD 配置为有效，且在步骤[使用 Active Directory 身份验证通过第三方 AD 提供程序的 Linux 上的 SQL Server](sql-server-linux-active-directory-third-party-providers.md)，可以添加到行下面`/var/opt/mssql/mssql.conf`跳过 SSSD 调用并直接使用 LDAP 调用。
-
-```/var/opt/mssql/mssql.conf
-[network]
-disablesssd = true
+```bash
+ssh -l user@contoso.com client.contoso.com
 ```
+
+请确保已安装[mssql 工具](sql-server-linux-setup-tools.md)包，然后使用连接**sqlcmd**无需指定任何凭据：
+
+```bash
+sqlcmd -S mssql-host.contoso.com
+```
+
+### <a name="ssms-on-a-domain-joined-windows-client"></a>已加入域的 Windows 客户端上的 SSMS
+
+登录到已加入域的 Windows 客户端使用你的域凭据。 请确保已安装 SQL Server Management Studio，然后连接到 SQL Server 实例 (例如， `mssql-host.contoso.com`) 通过指定**Windows 身份验证**中**连接到服务器**对话框。
+
+### <a name="ad-authentication-using-other-client-drivers"></a>使用其他客户端驱动程序的 AD 身份验证
+
+下表介绍了其他客户端驱动程序的建议：
+
+| 客户端驱动程序 | 建议 |
+|---|---|
+| **JDBC** | 使用 Kerberos 集成身份验证连接 SQL Server。 |
+| **ODBC** | 使用集成身份验证。 |
+| **ADO.NET** | 连接字符串语法。 |
+
+## <a id="additionalconfig"></a> 其他配置选项
+
+如果你使用第三方实用程序，如[PBI](https://www.beyondtrust.com/)， [VAS](https://www.oneidentity.com/products/authentication-services/)，或[Centrify](https://www.centrify.com/)将 AD 到 Linux 主机加入域，并且你想要强制使用 openldap 中的 SQL server库直接，你可以配置**disablesssd**选项与**mssql conf** ，如下所示：
+
+```bash
+sudo mssql-conf set network.disablesssd true
+systemctl restart mssql-server
+```
+
+> [!NOTE]
+> 如有实用程序**realmd**这设置 SSSD，而其他工具如 PBI、 VAS 和 Centrify 不安装 SSSD。 如果加入 AD 域使用该实用工具不设置 SSSD，建议配置**disablesssd**选项设为`true`。 虽然它不需要为 SQL Server 将尝试使用 SSSD ad 再回退到 openldap 机制，则会更高的性能配置它，使 SQL Server 进行直接跳过 SSSD 机制 openldap 调用。
+
+如果你的域控制器支持 LDAPS，则可以强制所有从 SQL Server 到域控制器无法通过 LDAPS 连接。 若要检查您的客户端可以通过 ldaps，运行以下 bash 命令，与域控制器`ldapsearch -H ldaps://contoso.com:3269`。 若要设置 SQL Server 仅使用 LDAPS，运行以下命令：
+
+```bash
+sudo mssql-conf set network.forceldaps true
+systemctl restart mssql-server
+```
+
+这将通过 SSSD 使用 LDAPS，如果在加入 AD 域主机已通过 SSSD 包和**disablesssd**未设置为 true。 如果**disablesssd**设置为 true 连同**forceldaps**设置为 true，则它将通过 SQL Server 发出的 openldap 库调用使用 LDAPS 协议。
+
+### <a name="post-sql-server-2017-cu14"></a>发布 SQL Server 2017 CU14
+
+从 SQL Server 2017 CU14，开始，如果 SQL Server 已加入 AD 域控制器使用第三方提供程序和配置要用于常规 AD 查找 openldap 调用通过设置**disablesssd**到为 true，还可以使用**enablekdcfromkrb5**选项来强制 SQL Server 以使用 krb5 库进行 KDC 查找而不是 KDC 服务器的反向 DNS 查找。
+
+这可能是你想要手动配置 SQL Server 尝试与通信的域控制器的方案非常有用。 并且通过使用中的 KDC 列表使用 openldap 库机制**krb5.conf**。
+
+首先，设置**disablessd**并**enablekdcfromkrb5conf**为 true，然后重新启动 SQL Server:
+
+```bash
+sudo mssql-conf set network.disablesssd true
+sudo mssql-conf set network.enablekdcfromkrb5conf true
+systemctl restart mssql-server
+```
+
+然后配置中的 KDC 列表 **/etc/krb5.conf** ，如下所示：
+
+```/etc/krb5.conf
+[realms]
+CONTOSO.COM = {
+  kdc = dcWithGC1.contoso.com
+  kdc = dcWithGC2.contoso.com
+}
+```
+
+> [!NOTE]
+> 尽管不推荐这样做，则可以使用实用程序，如**realmd**，，配置时加入到域，Linux 主机时将其设置 SSSD **disablesssd**为 true，以便使用 SQL Serveropenldap 调用改为 SSSD Active directory 相关的调用。
 
 ## <a name="next-steps"></a>后续步骤
 

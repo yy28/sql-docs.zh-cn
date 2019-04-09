@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241027"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  
@@ -53,9 +53,9 @@ ms.locfileid: "58378265"
   
  有关详细信息，请参阅下列主题：  
   
--   [== &#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
+-   [==（等于）（SSIS 表达式）](equal-ssis-expression.md)  
   
--   [!= &#40;不等于&#41; &#40;SSIS 表达式&#41;](unequal-ssis-expression.md)  
+-   [!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)  
   
 -   [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "58378265"
   
 -   [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;小于或等于&#41; &#40;SSIS 表达式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [<=（小于或等于）（SSIS 表达式）](less-than-or-equal-to-ssis-expression.md)  
   
  使用单个参数的函数将返回与参数具有相同数据类型的结果，但下列情况除外：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378265"
   
 -   传递给数学函数的参数的取值必须为数值数据类型。 根据函数或运算的不同，可能需要特定的数值数据类型。 例如，HEX 函数需要有符号或无符号整数。  
   
--   传递给字符串函数的参数的计算结果必须为字符数据类型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字符串函数（如 SUBSTRING）需要其他整数参数来作为字符串的起始位置和长度。  
+-   传递给字符串函数的参数的取值必须为字符数据类型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字符串函数（如 SUBSTRING）需要其他整数参数来作为字符串的起始位置和长度。  
   
 -   传递给日期和时间函数的参数的取值必须为有效日期。 例如，DAY(GETDATE())。 某些函数（如 DATEADD）需要其他整数参数来作为函数加到某个日期的天数。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378265"
   
 ## <a name="related-content"></a>相关内容  
   
--   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=217683)。  
+-   pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)。  
   
 -   social.technet.microsoft.com 上的技术文章 [SSIS 表达式示例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   

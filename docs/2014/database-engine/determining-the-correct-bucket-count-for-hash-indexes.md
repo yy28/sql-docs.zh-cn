@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241955"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
   在您创建内存优化表时，必须为 `BUCKET_COUNT` 参数指定值。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  
@@ -26,7 +26,7 @@ ms.locfileid: "58536689"
   
  将为内存优化表上的每个哈希索引分配一个哈希表。 为指定的索引分配的哈希表的大小`BUCKET_COUNT`中的参数[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). Bucket 数将在内部舍入到 2 的下一次幂。 例如，指定 300,000 的 Bucket 计数将导致 524,288 的实际 Bucket 计数。  
   
- 有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](https://go.microsoft.com/fwlink/p/?LinkId=525853)。  
+ 有关 Bucket 计数的文章和视频链接，请参阅 [如何确定哈希索引（内存 OLTP）的正确 Bucket 计数](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)。  
   
 ## <a name="recommendations"></a>建议  
  在大多数情况下，Bucket 计数应该介于索引键中非重复值数目的 1 到 2 倍之间。 如果索引键包含许多重复值，且平均而言对于每个索引键值超过 10 行，则改用非聚集索引  
@@ -186,6 +186,6 @@ GO
 -   在优化点查找的性能时，Bucket 计数最好是唯一索引值的两倍甚至三倍。 较高的 Bucket 计数意味着内存使用量的增加，并且也意味着全文检索扫描所需时间的增加。  
   
 ## <a name="see-also"></a>请参阅  
- [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240695"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>脚本编写和带 Reporting Services 的 PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支持广泛的开发和管理方案（通过脚本进行），包括 rs.exe 命令行实用工具、适用于 SharePoint 模式报告服务器的 PowerShell cmdlet 以及利用 PowerShell 中的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 对象模式实现本机模式和 SharePoint 模式。  
@@ -57,7 +57,7 @@ ms.locfileid: "56024518"
   
 -   请参阅[访问 Reporting Services WMI 提供程序](access-the-reporting-services-wmi-provider.md)中的“使用 PowerShell 访问 WMI 类”一节。  
   
--   [如何使用 PowerShell 管理 SSRS](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell).scriptin  
+-   [如何使用 PowerShell 管理 SSRS](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin  
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe 脚本示例  
   
