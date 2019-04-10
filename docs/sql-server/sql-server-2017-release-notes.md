@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290253"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797007"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "58290253"
 
 - **解决方法：** 
   - 向树视图中的子节点而非根级别授予权限。
-  - 或多个
-  - 运行以下 MDS 团队博客中介绍的脚本：[在实体级别上应用权限时出错](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
 - **问题及其对客户的影响：** 对于 1400 兼容性级别的表格模型，适用于以下源的数据连接器尚不可用。
@@ -96,9 +94,9 @@ ms.locfileid: "58290253"
     1. 在管理员模式下启动命令提示符。
     2. 转到安装其余报表服务器的目录。
 
-        Power BI 报表服务器的默认位置：C:\Program Files\Microsoft Power BI Report Server
+        Power BI 报表服务器的默认位置：C:\Program Files\Microsoft Power BI Report Server*
 
-        SQL Server Reporting Services 的默认位置：C:\Program Files\Microsoft SQL Server Reporting Services
+        SQL Server Reporting Services 的默认位置：C:\Program Files\Microsoft SQL Server Reporting Services*
 
     3. 然后，转到下一个文件夹（SSRS 或 PBIRS，具体视剩余报表服务器而定）
     4. 转到 WMI 文件夹。
@@ -116,7 +114,7 @@ ms.locfileid: "58290253"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题及其对客户的影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 在 2016 版程序集上具有依赖项的任何应用程序停止运行并生成类似以下内容的错误：错误:无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”或其任何依赖项。系统找不到指定文件。
+- **问题及其对客户的影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 在 2016 版程序集上具有依赖项的任何应用程序停止运行并生成类似以下内容的错误：错误:无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”或其任何依赖项。系统找不到指定文件。*
 
    另外，尝试重新安装 2016 版 TSqlLanguageService.msi 失败，并显示以下消息：安装 Microsoft SQL Server 2016 T-SQL 语言服务失败，因为计算机上已存在更高版本。
 
