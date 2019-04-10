@@ -11,12 +11,12 @@ ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa6db168e9bcaf6fa16def53a35fc2626d6a24fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241805"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2013（PowerPivot 配置工具）
   若要配置或修复 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安装，请使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "53363909"
   
  [开始之前](#bkmk_before)  
   
- [若要使用 PowerPivot for SharePoint 2013 配置工具](#bkmk_using)  
+ [使用 PowerPivot for SharePoint 2013 配置工具](#bkmk_using)  
   
  [配置步骤](#bkmk_steps)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "53363909"
 ||SharePoint 管理中心端口|默认值（如果需要）|如果未配置场，则该工具将提供用于创建场的选项，包括创建指向管理中心的 HTTP 端点。 它会选取一个未在使用中的随机生成的端口号。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([服务器名称]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|用户输入|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器是 Excel Services 启用核心 PowerPivot 功能所必需的。 您在此页上键入的服务器名称还将添加到 **“配置 PowerPivot 服务器”** 页上的列表中。|  
 |**配置新场**|数据库服务器<br /><br /> 场帐户<br /><br /> 通行短语<br /><br /> SharePoint 管理中心端口|默认值（如果需要）|这些设置默认为在主页上输入的设置。|  
-|**创建 PowerPivot 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称的默认名称为**默认 PowerPivot 服务应用程序**。 您可以在该工具中替换为不同的值。|  
+|**创建 PowerPivot 服务应用程序**|服务应用程序名称|默认|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序名称，默认名称为 **“默认的 PowerPivot 服务应用程序”**。 您可以在该工具中替换为不同的值。|  
 ||数据库服务器|默认|承载 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库的数据库服务器。 默认服务器名称与用于该场的数据库服务器相同。 您可以将默认服务器名称替换为其他值。|  
 ||数据库名称|默认|要为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库创建的数据库的名称。 默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|  
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听端口 80。 最大文件上载大小设为 2047，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳将上载到服务器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 文件。|  
@@ -131,7 +131,7 @@ ms.locfileid: "53363909"
 ||联系人电子邮件|默认值（如果需要）|如果在服务器上配置了 Microsoft Outlook，则该工具将使用当前用户的电子邮件地址。 否则，将使用占位符值。|  
 ||站点 URL|默认值（如果需要）|该工具将创建网站 URL，并且使用与 SharePoint 相同的 URL 命名约定。|  
 ||网站标题|默认值（如果需要）|此工具将添加 **“PowerPivot 网站”** 作为默认标题。|  
-|**激活网站集中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能**|站点 URL||激活 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能的网站集的 URL。|  
+|**激活网站集中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能**|网站 URL||激活 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能的网站集的 URL。|  
 ||为此网站启用高级功能||启用 SharePoint 网站功能"PremiumSite"。|  
 |**创建 Secure Store Service 应用程序**|服务应用程序名称|默认值（如果需要）|键入 Secure Store Service 应用程序的名称。|  
 ||数据库服务器|用户输入|键入用于 Secure Store Service 应用程序的数据库服务器的名称。|  
@@ -192,10 +192,10 @@ ms.locfileid: "53363909"
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>生成 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿  
  在您在场中安装了服务器组件后，可以创建使用嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的第一个 Excel 2013 工作簿，然后将其发布到 SharePoint 库。 或者，您可以上载或发布示例 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿以验证 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 有关详细信息，请参见以下内容：  
+
+-   [什么是 Excel 2013 中 PowerPivot 中的新增功能](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/)。  
   
--   [什么是 Excel 2013 中 PowerPivot 中的新增功能](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)(http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)。  
-  
--   [启动 Excel 2013 外接程序中的 PowerPivot](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)。  
+-   [启动 Excel 2013 外接程序中的 PowerPivot](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)。  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>在 SharePoint 模式下添加其他 Analysis Services 服务器  
  一段时间后，如果您确定需要额外的数据存储和处理能力，则可以向场中添加更多的在 SharePoint 模式下运行 Analysis Services 的服务器。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，你可在 SharePoint 模式下安装新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器，然后配置 Excel Services。 有关详细信息，请参阅"的单服务器安装之外"部分的[PowerPivot for SharePoint 2013 安装](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
@@ -205,8 +205,8 @@ ms.locfileid: "53363909"
   
 ## <a name="see-also"></a>请参阅  
  [安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot 配置工具](power-pivot-configuration-tools.md)   
- [在管理中心的 PowerPivot 服务器管理和配置](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
+ [在管理中心中管理和配置 PowerPivot 服务器](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

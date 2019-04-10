@@ -15,12 +15,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241126"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>高级 Integration Services 表达式的示例
   本节提供合并多个运算符和函数的高级表达式示例。 如果表达式用于优先约束或有条件拆分转换中，则其计算结果必须为布尔值。 但是，这一限制并不适用于属性表达式、变量、派生列转换或 For 循环容器中使用的表达式。  
@@ -103,6 +103,6 @@ ms.locfileid: "58381665"
  [在数据流组件中使用表达式](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://pragmaticworks.com/cheatsheet/)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)。  
   
   

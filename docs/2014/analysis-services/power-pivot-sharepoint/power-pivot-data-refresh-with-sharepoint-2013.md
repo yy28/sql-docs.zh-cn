@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241935"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
   SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
@@ -127,7 +127,7 @@ ms.locfileid: "53352708"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 有关详细信息，请参阅[充当操作系统的一部分](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(https://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 有关详细信息，请参阅[充当操作系统的一部分](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> 计划的数据刷新  
  **计划的数据刷新的关键相关点：**  
@@ -233,10 +233,10 @@ ms.locfileid: "53352708"
 ##  <a name="bkmk_moreinformation"></a> 详细信息  
  [PowerPivot 数据刷新故障排除](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
- [SharePoint 2013 中的 excel Services](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>))。  
+ [SharePoint 2013 中的 excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)。 
   
 ## <a name="see-also"></a>请参阅  
- [升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [PowerPivot for SharePoint 2013 安装](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
