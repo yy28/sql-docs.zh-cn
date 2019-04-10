@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241245"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -97,7 +97,7 @@ ms.locfileid: "58387135"
  有关详细信息，请参阅 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>访问父包变量  
- 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+ 子包可以通过使用脚本任务访问父包变量。 在“脚本任务编辑器”的“脚本”页上输入父包变量的名称时，不要在变量名称中包括“用户:”。 否则，子包在运行父包时找不到该变量。 有关使用脚本任务访问父包变量的详细信息，请参阅此博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)。  
   
 ## <a name="configuring-the-execute-package-task"></a>配置执行包任务  
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
@@ -118,6 +118,6 @@ ms.locfileid: "58387135"
   
 -   博客文章[SSIS:应执行子包进程内或进程外？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
--   博客文章[SSIS:访问父包中的变量](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   博客文章[SSIS:访问父包中的变量](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。 
   
   

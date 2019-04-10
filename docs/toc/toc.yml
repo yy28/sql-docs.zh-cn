@@ -3345,7 +3345,7 @@ items:
       items:
       - name: 客户端和服务器端
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: 客户端 与服务器端
+      - name: 客户端与服务器端
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: 客户端
         href: ../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: 按版本划分的计算能力限制
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: 客户体验改善计划 (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: 隐私补充
-      href: ../sql-server/sql-server-privacy.md
-    - name: 配置 SQL Server 以向 Microsoft 发送反馈
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: 发行说明
     items:
     - name: 向后兼容性
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: 文件位置
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: 使用情况和诊断数据收集
+      items:
+      - name: 隐私补充
+        href: ../sql-server/sql-server-privacy.md
+      - name: 配置 SQL Server 使用情况和诊断数据
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: 配置工具使用情况和诊断数据
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: SQL Server 本地审核
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: 安装 SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: 多宿主计算机
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: 使用情况反馈集合的本地审核
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: 配置数据库引擎实例
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: 数据文件的默认位置
@@ -7878,7 +7880,7 @@ items:
       items:
       - name: 确定有效权限
         href: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
-      - name: 创建登录
+      - name: 创建登录名
         href: ../relational-databases/security/authentication-access/create-a-login.md
       - name: 创建数据库用户
         href: ../relational-databases/security/authentication-access/create-a-database-user.md
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: 配置永久性内存 PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: 客户反馈
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: 配置为向 Microsoft 发送使用情况和诊断数据
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: 开发
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Active Directory 身份验证
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: 加入 AD 域
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: 加密连接
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: 第三方 AD 身份验证
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: “性能”
       items:
       - name: 最佳做法
@@ -11151,7 +11153,7 @@ items:
     - name: Progress Report 事件类别
       href: ../relational-databases/event-classes/progress-report-event-category.md
       items:
-      - name: 'Progress Report: Online Index Operation 事件类'
+      - name: Progress Report:Online Index Operation 事件类
         href: ../relational-databases/event-classes/progress-report-online-index-operation-event-class.md
     - name: Query Notifications 事件类别
       href: ../relational-databases/event-classes/query-notifications-event-category.md
@@ -11314,25 +11316,25 @@ items:
         href: ../relational-databases/event-classes/dtctransaction-event-class.md
       - name: SQLTransaction 事件类
         href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: 'TM: Begin Tran Completed 事件类'
+      - name: TM:Begin Tran Completed 事件类
         href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: 'TM: Begin Tran Starting 事件类'
+      - name: TM:Begin Tran Starting 事件类
         href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: 'TM: Commit Tran Completed 事件类'
+      - name: TM:Commit Tran Completed 事件类
         href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: 'TM: Commit Tran Starting 事件类'
+      - name: TM:Commit Tran Starting 事件类
         href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: 'TM: Promote Tran Completed 事件类'
+      - name: TM:Promote Tran Completed 事件类
         href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: 'TM: Promote Tran Starting 事件类'
+      - name: TM:Promote Tran Starting 事件类
         href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: 'TM: Rollback Tran Completed 事件类'
+      - name: TM:Rollback Tran Completed 事件类
         href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: 'TM: Rollback Tran Starting 事件类'
+      - name: TM:Rollback Tran Starting 事件类
         href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: 'TM: Save Tran Completed 事件类'
+      - name: TM:Save Tran Completed 事件类
         href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: 'TM: Save Tran Starting 事件类'
+      - name: TM:Save Tran Starting 事件类
         href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
       - name: TransactionLog 事件类
         href: ../relational-databases/event-classes/transactionlog-event-class.md
@@ -16237,7 +16239,7 @@ items:
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
           - name: '!<（不小于）'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
-          - name: '!= (Not Equal To)'
+          - name: '!=（不等于）'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
           - name: '!>（不大于）'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 处理 XQuery 中的命名空间
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242355"
