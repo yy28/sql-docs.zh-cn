@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327883"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872147"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 
@@ -144,7 +144,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 - 将在数据库的列主密钥元数据中设置 ENCLAVE_COMPUTATIONS 属性。
 - 列主密钥属性值（包括 ENCLAVE_COMPUTATIONS 设置）已进行数字签名。 此工具将添加签名，该签名是使用元数据的实际列主密钥生成的。 签名的目的是为了防止恶意 DBA 和计算机管理员篡改 ENCLAVE_COMPUTATIONS 设置。 SQL 客户端驱动程序验证签名之后才会允许使用 enclave。 这使安全管理员能够控制可以在 enclave 内计算哪些列数据。
 
-列主密钥的 ENCLAVE_COMPUTATIONS 属性是固定不变 - 预配密钥后不能更改它。 但是，可以使用具有不同 ENCLAVE_COMPUTATIONS 属性值的新密钥而非原始密钥来替换列主密匙，通过名为[列主密钥轮替](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key)的进程来完成。 有关 ENCLAVE_COMPUTATIONS 属性的详细信息，请参阅[创建列主密钥](../../../t-sql/statements/create-column-master-key-transact-sql.md)。
+列主密钥的 ENCLAVE_COMPUTATIONS 属性是固定不变 - 预配密钥后不能更改它。 但是，可以使用具有不同 ENCLAVE_COMPUTATIONS 属性值的新密钥而非原始密钥来替换列主密匙，通过名为[列主密钥轮替](#make-columns-enclave-enabled-by-rotating-their-column-master-key)的进程来完成。 有关 ENCLAVE_COMPUTATIONS 属性的详细信息，请参阅[创建列主密钥](../../../t-sql/statements/create-column-master-key-transact-sql.md)。
 
 若要预配已启用 enclave 的列加密密钥，需要确保加密列加密密钥的列主密钥已启用 enclave。
 
@@ -152,7 +152,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 
 - 已启用 enclave 的列主密钥必须存储在 Windows 证书存储或 Azure Key Vault 中。 当前不支持将已启用 enclave 的列主密钥存储在其他类型的密钥存储中（硬件安全模块或自定义密钥存储）。
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 预配已启用 enclave 的密钥
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 预配已启用 enclave 的密钥**
 
 以下步骤创建已启用 enclave 的密钥（需要 SSMS 18.0 或更高版本）：
 
@@ -177,7 +177,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
     3. 在“列主密匙”下拉列表中，选择在上一步骤创建的列主密钥。
     4. 单击“确定” 。
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 预配已启用 enclave 的密钥
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 预配已启用 enclave 的密钥**
 
 以下各节提供示例 PowerShell 脚本来预配已启用 enclave 的密钥。 将突出显示特定于具有安全 enclave 的 Always Encrypted 的（新）步骤。 有关使用 PowerShell 预配密钥的详细信息（不特定于具有安全 enclave 的 Always Encrypted），请参阅[使用 PowerShell 配置 Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)。
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**步骤 2：在数据库中创建列主密钥元数据、创建列加密密钥以及在数据库中创建列加密密钥元数据**
+**第 2 步：在数据库中创建列主密钥元数据、创建列加密密钥以及在数据库中创建列加密密钥元数据**
 
 
 ```powershell

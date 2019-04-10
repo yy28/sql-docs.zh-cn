@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828367"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797037"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -140,9 +140,9 @@ ASYMMETRIC KEY asym_key_name 指定将与此登录名关联的非对称密钥的
 - 服务器的[身份验证模式](../../relational-databases/security/choose-an-authentication-mode.md)必须匹配登录名类型才能允许访问。
 - 有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-- 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 - 如果使用 CREDENTIAL 选项，则还需要对此服务器的 ALTER ANY CREDENTIAL 权限。
 
 ## <a name="after-creating-a-login"></a>创建登录后
@@ -309,9 +309,9 @@ SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server
 
 有关 SQL 数据库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>)。
+只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
 ## <a name="logins"></a>登录名
 
@@ -323,7 +323,7 @@ SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server
 创建登录后，该登录可以连接到 SQL 数据库，但是只具有授予 public 角色的权限。 考虑执行以下部分活动。
 
 - 要连接到数据库，请在该数据库中创建登录对应的数据库用户。 有关详细信息，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) 和 [GRANT](grant-transact-sql.md) 语句。
+- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[其他服务器级管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 语句。
 - 若要授予服务器范围内的权限，请在 master 数据库中创建数据库用户，并使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个管理服务器角色。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和[服务器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 使用 GRANT 语句将服务器级别权限授予新的登录名或包含该登录名的角色。 有关详细信息，请参阅 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
 
@@ -418,7 +418,9 @@ SID = sid 用于重新创建登录名。 仅适用于 SQL Server 身份验证登
 - 创建映射到 Azure AD 帐户的服务器级主体 (FROM EXTERNAL PROVIDER) 时引入了新语法
 - 指定 FROM EXTERNAL PROVIDER 时：
 
-  - login_name 必须表示现有 Azure AD 帐户（用户、组或应用程序），当前 Azure SQL 托管实例可在 Azure AD 中访问该帐户。
+  - login_name 必须表示现有 Azure AD 帐户（用户、组或应用程序），当前 Azure SQL 托管实例可在 Azure AD 中访问该帐户。 对于 Azure AD 主体，CREATE LOGIN 语法需要：
+    - Azure AD 用户的 Azure AD 对象的 UserPrincipalName。
+    - Azure AD 组和 Azure AD 应用程序的 Azure AD 对象的 DisplayName。
   - 不能使用 PASSWORD 选项。
   - 目前，第一个 Azure AD 登录名必须由标准 SQL Server 帐户（非 Azure AD）创建，该帐户是使用上述语法的 `sysadmin`。
   - 使用 Azure AD 管理员为 SQL 数据库托管实例创建 Azure AD 登录名时，会出现以下错误：</br>
@@ -448,7 +450,7 @@ SID = sid 用于重新创建登录名。 仅适用于 SQL Server 身份验证登
 创建登录名后，该登录名可以连接到 SQL 数据库托管实例，但只具有授予 public 角色的权限。 考虑执行以下部分活动。
 
 - 若要通过 Azure AD 登录名创建 Azure AD 用户，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) 和 [GRANT](grant-transact-sql.md) 语句。
+- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[其他服务器级管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 语句。
 - 若要授予服务器范围内的权限，请在 master 数据库中创建数据库用户，并使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个管理服务器角色。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和[服务器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
   - 使用以下命令将 `sysadmin` 角色添加到 Azure AD 登录名：`ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - 使用 GRANT 语句将服务器级别权限授予新的登录名或包含该登录名的角色。 有关详细信息，请参阅 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
@@ -606,16 +608,16 @@ SQL Server 规则允许你创建 \<loginname>@\<servername> 格式的 SQL Server
 
 有关 SQL 数据仓库登录的详细信息，请参阅[管理 Microsoft Azure SQL 数据库中的数据库和登录](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>)。
+只有服务器级别主体登录（由预配过程创建）或 master 数据库中的 `loginmanager` 数据库角色成员可以创建新的登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
 ## <a name="after-creating-a-login"></a>创建登录后
 
 创建登录后，该登录可以连接到 SQL 数据仓库，但是只具有授予 public 角色的权限。 考虑执行以下部分活动。
 
 - 要连接到数据库，请创建登录名对应的数据库用户。 有关详细信息，请参阅 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) 和 [GRANT](grant-transact-sql.md) 语句。
+- 若要向数据库中的用户授予权限，请使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个内置数据库角色或自定义角色中，或者使用 [GRANT](grant-transact-sql.md) 语句直接向用户授予权限。 有关详细信息，请参阅[非管理员角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[其他服务器级管理角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和 [GRANT](grant-transact-sql.md) 语句。
 - 若要授予服务器范围内的权限，请在 master 数据库中创建数据库用户，并使用 ALTER SERVER ROLE ...ADD MEMBER 语句将用户添加到其中一个管理服务器角色。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 和[服务器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
 - 使用 GRANT 语句将服务器级别权限授予新的登录名或包含该登录名的角色。 有关详细信息，请参阅 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
@@ -728,9 +730,9 @@ WINDOWS 指定将登录名映射到 Windows 登录名。
 - 自动创建登录名将启用新的登录名，并授予它服务器级 CONNECT SQL 权限。
 - 有关设计权限系统的信息，请参阅 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
-只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) (<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>)。
+只有具有针对服务器的 ALTER ANY LOGIN 权限或 securityadmin 固定服务器角色的成员身份的用户才可创建登录。 有关详细信息，请参阅[服务器级别角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。
 
 ## <a name="after-creating-a-login"></a>创建登录后
 

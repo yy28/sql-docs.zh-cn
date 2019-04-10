@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880540"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872327"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
     例如，雇员 ID 唯一地标识雇员。 `EmployeeID` 列的聚集索引或[主键](../relational-databases/tables/create-primary-keys.md)约束可提高基于雇员 ID 号搜索雇员信息的查询的性能。 另外，可对 `LastName`、 `FirstName`、 `MiddleName` 列创建聚集索引，因为经常以这种方式分组和查询雇员记录，而且这些列的组合还可提供高区分度。 
 
     > [!TIP]
-    > 如果没有另行指定，在创建[主键](../relational-databases/tables/create-primary-keys.md)约束时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会创建一个[聚集索引](#clustered_index)来支持该约束。
+    > 如果没有另行指定，在创建[主键](../relational-databases/tables/create-primary-keys.md)约束时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会创建一个[聚集索引](#Clustered)来支持该约束。
     > 虽然可使用 [uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md) 来强制实施作为主键的唯一性，但它不是有效的聚集键。
     > 如果使用 uniqueidentifier 作为主键，建议将其创建为非聚集索引，然后使用另一列（如 `IDENTITY`）创建聚集索引。   
   
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  在某些情况下，筛选索引涵盖查询，但没有将筛选索引表达式中的列作为键或包含列包括在筛选索引定义中。 以下准则说明了筛选索引表达式中的列何时应为筛选索引定义中的键或包含列。 这些示例引用了此前创建的筛选索引 `FIBillOfMaterialsWithEndDate` 。  
   
- 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如， `FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate` 。 `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
+ 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如，`FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate`。 `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -892,7 +892,7 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 [CREATE SPATIAL INDEX (Transact-SQL)](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [重新组织和重新生成索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [使用 SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[已分区表和已分区索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [创建主键](../relational-databases/tables/create-primary-keys.md)    
 [内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [列存储索引概述](../relational-databases/indexes/columnstore-indexes-overview.md)  

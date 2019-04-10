@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207566"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860628"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>配置 AlwaysOn 可用性组扩展事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [error_reported (1480)：数据库副本角色更改](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a>availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a>availability_replica_state_change  
  更改可用性副本的状态时发生。 创建可用性组或联接可用性副本可触发此事件。 它对诊断自动故障转移失败非常有用。 还可用于跟踪故障转移步骤。  
   
 #### <a name="event-information"></a>事件信息  
@@ -101,8 +101,8 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
 |availability_replica_id|guid|可用性副本的 ID。|  
-|previous_state|availability_replica_state|更改前副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-|current_state|availability_replica_state|更改后副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|previous_state|availability_replica_state|更改前副本的角色。<br /><br /> **可能的值有：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|current_state|availability_replica_state|更改后副本的角色。<br /><br /> **可能的值有：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
   
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>后续步骤  
  [查看事件会话数据](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

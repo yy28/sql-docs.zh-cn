@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973646"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042266"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING AUTO  
   
-    **示例 - 更改全文索引以使用自动更改跟踪**  
+    **示例 - 更改全文检索以使用自动更改跟踪**  
     以下示例更改 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表的全文索引以使用自动填充的更改跟踪。  
   
     ```sql  
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING MANUAL  
   
-    **示例 - 使用手动更改跟踪创建全文索引**  
+    **示例 - 使用手动更改跟踪创建全文检索**  
     以下示例对 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表创建全文索引，该全文索引将使用具有手动填充的更改跟踪。  
   
     ```sql
@@ -217,8 +217,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 爬网日志文件名的可变部分如下。
--   <**DatabaseID**> - 数据库的 ID。 <dbid> 是一个带有前导零的五位数。  
--   <**FullTextCatalogID**> - 全文目录 ID。 <catid>是一个带有前导零的五位数。  
+-   <**DatabaseID**> - 数据库的 ID。 \<dbid> 是一个带有前导零的五位数。  
+-   <**FullTextCatalogID**> - 全文目录 ID。 \<catid>是一个带有前导零的五位数。  
 -   <**n**> 是一个整数，指示同一全文目录现有的一个或多个爬网日志。  
   
  例如，`SQLFT0000500008.2` 是一个数据库 ID 为 5、全文目录 ID 为 8 的数据库爬网日志文件。 文件名结尾的 2 指示此数据库/目录对具有两个爬网日志文件。  

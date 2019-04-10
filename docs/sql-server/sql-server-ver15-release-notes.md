@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492849"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860058"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "58492849"
 > [!NOTE]
 > 提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 预览版以便体验即将发布版本的功能。 不支持或不许可将其用于生产。 不显式支持以下方案：
 >
-> - 与其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 并行安装
+> - 并行安装其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - 从任意版本升级现有的 SQL Server 实例
 
-试用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！
+**试用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！**
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下载 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以在 Windows 上安装](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 SQL Server 2019](../linux/quickstart-install-connect-docker.md)。
@@ -37,7 +37,7 @@ ms.locfileid: "58492849"
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公开版本。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 仅作为评估版提供。 不提供任何其他版本。 安装介质随附的 `license_Eval.rtf` 中描述了对 CTP 版本的支持。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 仅以评估版形式提供。 不提供任何其他版本。 安装介质随附的 `license_Eval.rtf` 中描述了对 CTP 版本的支持。
 
 可在以下其中一个位置找到有限的支持：
 

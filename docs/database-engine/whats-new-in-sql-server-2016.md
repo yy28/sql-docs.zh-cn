@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266078"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872307"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>数据库引擎中的新增功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53266078"
 > 有关最新发行说明，请参阅 [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)。
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` 语法现可用于[过程](../t-sql/statements/create-procedure-transact-sql.md)、[视图](../t-sql/statements/create-view-transact-sql.md)[函数](../t-sql/statements/create-function-transact-sql.md)和[触发器](../t-sql/statements/create-trigger-transact-sql.md)。
+-  `CREATE OR ALTER <object>` 语法现可用于[过程](../t-sql/statements/create-procedure-transact-sql.md)、[视图](../t-sql/statements/create-view-transact-sql.md)、[函数](../t-sql/statements/create-function-transact-sql.md)和[触发器](../t-sql/statements/create-trigger-transact-sql.md)。
 -   已添加对更具一般性的查询提示模型的支持：`OPTION (USE HINT('<hint1>', '<hint2>'))`。 有关详细信息，请参阅 [查询提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)。  
 - [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) DMV 已添加到列表提示。  
 - 已添加 [Sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV 以返回显示计划 XML 临时统计信息。  
@@ -56,28 +56,28 @@ ms.locfileid: "53266078"
 ##  <a name="Feature"></a> SQL Server 2016 RTM
 本节包含以下小节：
 
--   [列存储索引](#columnstore)
--   [数据库作用域配置](#scopedconfiguration)
--   [内存中 OLTP](#InMemory)
--   [查询优化器](#QueryOptimizer)
--   [实时查询统计信息](#LiveStats)
--   [查询存储](#QueryStore)
--   [临时表](#TT)
--   [向 Microsoft Azure Blob 存储进行条带备份](#StripedBackupToAzure)
--   [向 Microsoft Azure Blob 存储进行文件快照备份](#FileSnapshotBackup)
--   [托管备份](#ManagedBackup)
--   [TempDB 数据库](#multipleTempDB)
--   [内置的 JSON 支持](#ForJson)
--   [PolyBase](#bkPolyBase)
--   [Stretch 数据库](#stretch)
--   [支持 UTF-8](#UTF8)
--   [新的默认数据库大小和自动增长值](#DefaultDB)
--   [Transact-SQL 增强功能](#TSQL)
--   [系统视图增强功能](#SystemTable)
--   [安全性改进](#Security)
--   [高可用性增强功能](#HighAvailability)
--   [复制增强功能](#Repl)
--   [工具增强功能](#Tools)
+-   [列存储索引](#columnstore-indexes)
+-   [数据库作用域配置](#database-scoped-configurations)
+-   [内存中 OLTP](#in-memory-oltp)
+-   [查询优化器](#query-optimizer)
+-   [实时查询统计信息](#live-query-statistics)
+-   [查询存储](#query-store)
+-   [临时表](#temporal-tables)
+-   [向 Microsoft Azure Blob 存储进行条带化备份](#striped-backups-to-microsoft-azure-blob-storage)
+-   [向 Microsoft Azure Blob 存储进行文件快照备份](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [托管备份](#managed-backup)
+-   [TempDB 数据库](#tempdb-database)
+-   [内置的 JSON 支持](#built-in-json-support)
+-   [PolyBase](#polybase)
+-   [Stretch Database](#stretch-database)
+-   [支持 UTF-8](#support-for-utf-8)
+-   [新的默认数据库大小和自动增长值](#new-default-database-size-and-autogrow-values)
+-   [Transact-SQL 增强功能](#transact-sql-enhancements)
+-   [系统视图增强功能](#system-view-enhancements)
+-   [安全性改进](#security-enhancements)
+-   [高可用性增强](#high-availability-enhancements)
+-   [复制增强](#replication-enhancements)
+-   [工具增强](#tools-enhancements)
 
 ## <a name="columnstore-indexes"></a>列存储索引
 
@@ -95,9 +95,9 @@ ms.locfileid: "53266078"
 
 - [列存储索引数据加载](../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
-- [列存储索引查询性能](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
+- [Columnstore Indexes Query Performance](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
 
-- [开始使用列存储进行实时运行分析](../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
+- [开始使用列存储适进行实时运行分析](../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
 - [针对数据仓库的列存储索引](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
@@ -120,7 +120,7 @@ ms.locfileid: "53266078"
 
 内存优化表的存储格式在 SQL Server 2014 和 2016 之间更改。 对于升级和从 SQL Server 2014 附加/还原，在数据库恢复过程中，序列化新的存储格式，并重启一次数据库。
 
-- [升级到 SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE 进行了日志优化且并行运行
@@ -202,9 +202,9 @@ ms.locfileid: "53266078"
 
 - 支持对内存中 OLTP 使用临时版本由系统控制。 有关详细信息，请参阅 [系统版本控制临时表与内存优化表](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 
-- 从内存中 OLTP 工作负载提供对本机编译代码的查询存储支持。 有关详细信息，请参阅 [通过内存中 OLTP 使用查询存储](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
+- 从内存中 OLTP 工作负载提供对本机编译代码的查询存储支持。 有关详细信息，请参阅[通过内存中 OLTP 使用查询存储](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
 
-- [内存优化表中的行级安全性](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
+- [内存优化表中的行级安全](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
 - [使用多个活动的结果集 &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 连接现在可以访问内存优化表和本机编译的存储过程。
 
@@ -361,7 +361,7 @@ SQL Server 2016 针对导入和导出 JSON 以及处理 JSON 字符串添加了�
 有关整体信息，请参阅：
 
 - [本机编译的 T-SQL 模块支持的功能](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [更改本机编译的 T-SQL 模块](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>系统视图增强功能
 - 两个新视图支持行级安全性。 有关详细信息，请参阅 [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) 和 [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)。
@@ -414,9 +414,9 @@ SQL Server 2016 标准版现在支持 Always On 基本可用性组。 基本可�
 
  支持自动故障转移的副本数已从两个增加到三个。
 
- Always On 故障转移群集现在支持组托管服务帐户。 有关详细信息，请参阅 [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx)（组托管服务帐户）。 对于 Windows Server 2012 R2，需要安装一项更新来避免更改密码后出现临时停机。 若要获取该项更新，请参阅 [在 Windows Server 2012 R2 域中更改密码后基于 gMSA 的服务无法登录](https://support.microsoft.com/kb/2998082/)。
+ Always On 故障转移群集现在支持组托管服务帐户。 有关详细信息，请参阅 [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx)（组托管服务帐户）。 对于 Windows Server 2012 R2，需要安装一项更新来避免更改密码后出现临时停机。 若要获取该项更新，请参阅[在 Windows Server 2012 R2 域中更改密码后基于 gMSA 的服务无法登录](https://support.microsoft.com/kb/2998082/)。
 
- [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 支持 Windows Server 2016 上的分布式事务和 DTC。 有关详细信息，请参阅 [对分布式事务的支持](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)。
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 支持 Windows Server 2016 上的分布式事务和 DTC。 有关详细信息，请参阅[对分布式事务的支持](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)。
 
  现在，你可以将 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 配置为在数据库脱机时进行故障转移。 此项更改需要在 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) 语句中将 **DB_FAILOVER** 选项设置为 **ON**。
 
@@ -437,7 +437,7 @@ Always On 现在支持加密的数据库。 当你创建新的可用性组、添
 ### <a name="management-studio"></a>Management Studio
 下载最新的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支持正在开发的、用于连接到 Microsoft Azure 的 Active Directory 身份验证库 (ADAL)。 它取代了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中使用的基于证书的身份验证。
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支持正在开发的、用于连接到 Microsoft Azure 的 Active Directory 身份验证库 (ADAL)。 它取代了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用的基于证书的身份验证。
 - 新的查询结果网格支持在从结果网格中复制或保存文本时保留回车符/换行符。 可以从“工具”-“选项”菜单设置此功能。
 - 不再从主功能树安装 SQL Server 管理工具；有关详细信息，请参阅 [安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
 

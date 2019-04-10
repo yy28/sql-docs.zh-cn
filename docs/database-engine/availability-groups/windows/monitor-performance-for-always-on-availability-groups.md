@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203346"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872317"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203346"
   
  所涉及的主题如下：  
   
--   [数据同步过程](#BKMK_DATA_SYNC_PROCESS)  
+-   [数据同步过程](#data-synchronization-process)  
   
--   [流控制门](#BKMK_FLOW_CONTROL_GATES)  
+-   [流控制门](#flow-control-gates)  
   
--   [估计故障转移时间 (RTO)](#BKMK_RTO)  
+-   [估计故障转移时间 (RTO)](#estimating-failover-time-rto)  
   
--   [估计可能的数据丢失 (RPO)](#BKMK_RPO)  
+-   [估计可能的数据丢失 (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [监视 RTO 和 RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [监视 RTO 和 RPO](#monitoring-for-rto-and-rpo)  
   
 -   [性能故障排除方案](#BKMK_SCENARIOS)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53203346"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**门数**|**消息数量**|**有用的指标**|  
+|**级别**|**门数**|**消息数量**|**有用的指标**|  
 |Transport|每个可用性副本 1 个|8192|扩展事件 database_transport_flow_control_action|  
 |“数据库”|每个可用性数据库 1 个|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 扩展事件 hadron_database_flow_control_action|  
   
@@ -331,7 +331,7 @@ ms.locfileid: "53203346"
 ##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
  本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2:Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第 2 部分：扩展运行状况模型）中给出的 GUI 教程。  
   
- [估计故障转移时间 (RTO)](#BKMK_RTO) 和[估计可能的数据丢失 (RPO)](#BKMK_RPO) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
+ [估计故障转移时间 (RTO)](#estimating-failover-time-rto) 和[估计可能的数据丢失 (RPO)](#estimating-potential-data-loss-rpo) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
   
  演示的脚本创建了两个系统策略，它们按各自计划运行，并具有以下特征：  
   
@@ -357,43 +357,43 @@ ms.locfileid: "53203346"
   
 4.  使用以下规范创建[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`RTO`  
+    -   **名称**： `RTO`  
   
     -   **Facet**：**数据库副本状态**  
   
-    -   **字段**：`Add(@EstimatedRecoveryTime, 60)`  
+    -   **字段**： `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **运算符**：<=  
   
-    -   **值**：`600`  
+    -   “值”： `600`  
   
      如果潜在故障转移时间超过 10 分钟（包含用于故障检测和故障转移的 60 秒开销），此条件会失败。  
   
 5.  使用以下规范创建第二个[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`RPO`  
+    -   **名称**： `RPO`  
   
     -   **Facet**：**数据库副本状态**  
   
-    -   **字段**：`@EstimatedDataLoss`  
+    -   **字段**： `@EstimatedDataLoss`  
   
     -   **运算符**：<=  
   
-    -   **值**：`3600`  
+    -   “值”： `3600`  
   
      如果可能的数据丢失超过 1 小时，则此条件会失败。  
   
 6.  使用以下规范创建第三个[基于策略的管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名称**：`IsPrimaryReplica`  
+    -   **名称**： `IsPrimaryReplica`  
   
     -   **Facet**：**可用性组**  
   
-    -   **字段**：`@LocalReplicaRole`  
+    -   **字段**： `@LocalReplicaRole`  
   
     -   **运算符**：=  
   
-    -   **值**：`Primary`  
+    -   “值”： `Primary`  
   
      此条件会检查给定的可用性组的本地可用性副本是否为主要副本。  
   
@@ -401,9 +401,9 @@ ms.locfileid: "53203346"
   
     -   “常规”页：  
   
-        -   **名称**：`CustomSecondaryDatabaseRTO`  
+        -   **名称**： `CustomSecondaryDatabaseRTO`  
   
-        -   **检查条件**：`RTO`  
+        -   **检查条件**： `RTO`  
   
         -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
@@ -429,9 +429,9 @@ ms.locfileid: "53203346"
   
     -   “常规”页：  
   
-        -   **名称**：`CustomAvailabilityDatabaseRPO`  
+        -   **名称**： `CustomAvailabilityDatabaseRPO`  
   
-        -   **检查条件**：`RPO`  
+        -   **检查条件**： `RPO`  
   
         -   **针对目标**：IsPrimaryReplica AvailabilityGroup 中的每个 DatabaseReplicaState  
   
@@ -458,9 +458,9 @@ ms.locfileid: "53203346"
   
 |应用场景|描述|  
 |--------------|-----------------|  
-|[故障排除：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
-|[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
-|[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
+|[排除故障：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
+|[排除故障：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
+|[排除故障：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
   
 ##  <a name="BKMK_XEVENTS"></a>有用的扩展事件  
  在对“正在同步”状态下的副本进行故障排除时，以下扩展事件很有用。  
@@ -474,5 +474,3 @@ ms.locfileid: "53203346"
 |hadr_dump_primary_progress|`alwayson`|调试|主|  
 |hadr_dump_log_progress|`alwayson`|调试|主|  
 |hadr_undo_of_redo_log_scan|`alwayson`|分析|辅助副本|  
-  
-  

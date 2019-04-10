@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306245"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872257"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58306245"
 > [!NOTE]  
 >  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
 >   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   
 ## <a name="upgrade-in-place"></a>就地升级  
@@ -77,7 +77,7 @@ ms.locfileid: "58306245"
  迁移用户数据库之后，可使用多种方法中的一种将新用户指向到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如重命名服务器、使用 DNS 条目、修改连接字符串）。  与就地升级相比，新的安装方法可以降低风险和停机时间，并可有助于同时完成操作系统的升级和升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#RollingUpgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510260.aspx) 作为永久的 HA 解决方案。  
+>  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#rolling-upgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510260.aspx) 作为永久的 HA 解决方案。  
   
  例如，可以使用这种方法来升级：  
   
@@ -109,7 +109,5 @@ ms.locfileid: "58306245"
 -   SQL Server Reporting Services 横向扩展部署：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤
- [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  

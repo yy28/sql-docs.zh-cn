@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685824"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872267"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>参数  
-file_name  
+*file_name*  
 要收缩的文件的逻辑名称。
   
-file_id  
+*file_id*  
 要收缩的文件的标识 (ID) 号。 若要获取文件 ID，请使用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) 系统函数，或查询当前数据库中的 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。
   
-target_size  
+*target_size*  
 整数，文件的新大小（以 MB 为单位）。 如果未指定，DBCC SHRINKFILE 缩小到文件创建大小。
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ FILESTREAM 文件组容器不支持此选项。
 如果 target_size 已指定，DBCC SHRINKFILE 会尝试将文件收缩到目标大小。 要释放的文件区域中的已用页移到文件保留区域中的可用空间。 例如，对于 10MB 数据文件，target_size 为 8 的 DBCC SHRINKFILE 操作会将文件最后 2MB 中的所有已用页移到文件前 8MB 中的任何未分配页区域中。 DBCC SHRINKFILE 不会收缩已超过所需存储数据大小的文件。 例如，如果使用 10 MB 数据文件中的 7 MB，则带有 target_size 为 6 的 DBCC SHRINKFILE 语句只能将该文件收缩到 7 MB，而不能收缩到 6 MB。
   
 EMPTYFILE  
-将指定文件中的所有数据迁移到同一文件组中的其他文件。 也就是说，EMPTYFILE 将指定文件中的数据迁移到同一文件组中的其他文件。 ENPTYFILE 确保不会将任何新数据添加到文件中（尽管此文件不是只读文件）。 可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句删除文件。 如果你使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句更改文件大小，只读标志会重置，并能添加数据。
+将指定文件中的所有数据迁移到同一文件组中的其他文件。 也就是说，EMPTYFILE 将指定文件中的数据迁移到同一文件组中的其他文件。 EMPTYFILE 确保不会将任何新数据添加到文件中（尽管此文件不是只读文件）。 可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句删除文件。 如果你使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句更改文件大小，只读标志会重置，并能添加数据。
 
 对于 FILESTREAM 文件组容器，无法使用 ALTER DATABASE 删除文件，除非 FILESTREAM 垃圾回收器已运行，并删除了 EMPTYFILE 已复制到另一个容器的所有不必要文件组容器文件。 有关详细信息，请参阅 [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
@@ -169,7 +169,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   终止收缩操作。 如果收缩操作终止，所有已完成的工作都会保留。  
 -   不执行任何操作，并允许收缩操作等到阻塞事务完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  
@@ -242,7 +242,7 @@ GO
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID (Transact-SQL)](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [收缩文件](../../relational-databases/databases/shrink-a-file.md)
   

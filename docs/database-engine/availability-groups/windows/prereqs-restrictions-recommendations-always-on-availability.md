@@ -2,7 +2,7 @@
 title: 针对可用性组的先决条件、限制和建议
 description: 有关部署 Always On 可用性组的先决条件、限制和建议的说明。
 ms.custom: seodec18
-ms.date: 01/31/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570800"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042436"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,13 +118,13 @@ ms.locfileid: "55570800"
   
  **本节内容：**  
   
--   [清单：先决条件](#PrerequisitesSI)  
+-   [清单：必备条件](#PrerequisitesSI)  
   
 -   [可用性组的线程使用情况](#ThreadUsage)  
   
 -   [权限](#PermissionsSI)  
   
--   [相关任务](#RelatedTasksSI)  
+-   [Related Tasks](#RelatedTasksSI)  
   
 -   [相关内容](#RelatedContentSI)  
   
@@ -137,7 +137,7 @@ ms.locfileid: "55570800"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和要求](#FciArLimitations)（本文后面将作介绍）|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例必须运行相同版本的 SQL Server 才能参加 AlwaysOn 可用性组。|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016) 和 [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) 的各版本和支持的功能。|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为某一可用性组承载可用性副本的所有服务器实例必须都使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。|[设置或更改服务器排序规则](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\*重要提示\*\*</b> 如果销毁并重新创建了 WSFC，则必须在每个服务器实例上禁用并重新启用已在原始群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\*重要提示\*\*</b> 如果销毁并重新创建了 WSFC，则必须在每个服务器实例上禁用并重新启用已在原始群集上为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> <br /><br /> <b>\*\* 安全说明 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的传输安全性与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果使用 FILESTREAM 的任何数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上将 **contained database authentication** 服务器选项都设置为 **1** 。|[contained database authentication 服务器配置选项](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
@@ -145,7 +145,7 @@ ms.locfileid: "55570800"
 ###  <a name="ThreadUsage"></a> 可用性组的线程使用情况  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的工作线程具有以下要求：  
   
--   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的一个空闲实例上， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用 0 线程。  
+-   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个空闲实例上，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]使用 0 线程。  
   
 -   可用性组使用的最大线程数为配置的最大服务器线程数（“**最大工作线程**”）减去 40。  
   
@@ -202,9 +202,9 @@ ms.locfileid: "55570800"
   
 -   [限制](#RestrictionsFCI)  
   
--   [清单：先决条件](#PrerequisitesFCI)  
+-   [清单：必备条件](#PrerequisitesFCI)  
   
--   [相关任务](#RelatedTasksFCIs)  
+-   [Related Tasks](#RelatedTasksFCIs)  
   
 -   [相关内容](#RelatedContentFCIs)  
   
@@ -252,9 +252,9 @@ ms.locfileid: "55570800"
   
 -   [要求](#RequirementsAG)  
   
--   [安全性](#SecurityAG)  
+-   [Security](#SecurityAG)  
   
--   [相关任务](#RelatedTasksAGs)  
+-   [Related Tasks](#RelatedTasksAGs)  
   
 ###  <a name="RestrictionsAG"></a> 限制（可用性组）  
   
@@ -267,7 +267,7 @@ ms.locfileid: "55570800"
   
 -   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
--   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
+-   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 已测试每台物理计算机多达 10 个 AG 和 100 个数据库，但这不是绑定限制。 根据服务器上的硬件规范和工作负载，可以在 SQL Server 的实例上放置更多数据库和可用性组。 系统过载的信号可能包括但不限于工作线程用尽、可用性组系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
 -   **不要使用故障转移群集管理器来操作可用性组：**  
   
@@ -330,7 +330,7 @@ ms.locfileid: "55570800"
   
 -   [权限](#PermissionsDbs)  
   
--   [相关任务](#RelatedTasksADb)  
+-   [Related Tasks](#RelatedTasksADb)  
   
 ###  <a name="RequirementsDb"></a>清单：要求（可用性数据库）  
  为了符合添加到可用性组的条件，数据库必须：  
@@ -350,7 +350,7 @@ ms.locfileid: "55570800"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将包含的数据库添加到某一可用性组之前，请确保在将承载该可用性组的可用性副本的每个服务器实例上 **contained database authentication** 服务器选项都设置为 **1** 。|[contained database authentication 服务器配置选项](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可使用任何受支持的数据库兼容性级别。  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可使用任何受支持的数据库兼容级别。  
   
 ###  <a name="RestrictionsDb"></a> 限制（可用性数据库）  
   
@@ -377,7 +377,7 @@ ms.locfileid: "55570800"
   
 |任务|项目|  
 |----------|-----------|  
-|准备辅助数据库（手动）|[为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
+|准备辅助数据库（手动）|[手动为可用性组准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |将辅助数据库联接到可用性组（手动）|[将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |修改可用性数据库的数目|[将数据库添加到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [将辅助数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [将主数据库从可用性组删除 (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   

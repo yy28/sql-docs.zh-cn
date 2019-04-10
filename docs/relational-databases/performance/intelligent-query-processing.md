@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493972"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042226"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -28,7 +28,7 @@ ms.locfileid: "58493972"
 
 ![智能查询处理](./media/3_iqpfeaturefamily.png)
 
-可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。  可使用 Transact-SQL 进行此设置。 例如：  
+可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。 可使用 Transact-SQL 进行此设置。 例如：  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -36,11 +36,11 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表详细列出了所有智能查询处理功能，以及针对数据库兼容性级别必须具备的任何要求。
 
-| **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**Description** |
+| **IQP 功能** | **在 Azure SQL 数据库中受支持** | **在 SQL Server 中受支持** |**描述** |
 | --- | --- | --- |--- |
 | [自适应联接（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
 | [非重复近似计数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，公共预览版|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
-| [行存储上的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
+| [行存储的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
 | [交错执行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
 | [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询占用了 50% 的内存，则为以后的执行减少内存授予。|
 | [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询占用了 50% 的内存，则为以后的执行减少内存授予。|
@@ -51,7 +51,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 借助此功能，可以在执行期间使用一个缓存计划，将计划动态切换为采用更优质的联接策略。
 
-通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
+通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。
 工作原理如下：
 -  如果生成联接输入的行计数足够小，以致于嵌套循环联接优于哈希联接，则计划将切换到嵌套循环算法。
 -  如果生成联接输入超过特定行计数阈值，则不会进行切换并且计划将通过哈希联接继续。
@@ -66,13 +66,13 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
 WHERE [fo].[Quantity] = 360;
 ```
 
-查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)后，将看到以下计划：
+查询将返回 336 行。 启用[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)后，将看到以下计划：
 
 ![查询生成 336 行](./media/4_AQPStats336Rows.png)
 
 在计划中，将看到以下信息：
 1. 我们具有用于为哈希联接生成阶段提供行的列存储索引扫描。
-1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于该示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
+1. 我们拥有新的自适应联接运算符。 此运算符可定义用于决定何时切换到嵌套循环计划的阈值。 对于该示例，阈值为 78 行。 包含 &gt;= 78 行的任何示例均将使用哈希联接。 如果小于阈值，将使用嵌套循环联接。
 1. 由于我们将返回 336 行，超过了阈值，因此第二个分支表示标准哈希联接操作的探测阶段。 请注意，实时查询统计信息将显示流经运算符的行，在本示例中为“672 行，共 672 行”。
 1. 并且，最后一个分支是供未超出阈值的嵌套循环联接使用的聚集索引查找。 请注意，我们将看到显示“0 行，共 336 行”（未使用分支）。
  现将计划与同一查询进行对比，但此次针对表格中只有一行的的 Quantity 值：
@@ -84,7 +84,7 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-查询将返回一行。 启用实时查询统计信息后，将看到以下计划：
+查询将返回一行。 启用实时查询统计信息后，将看到以下计划：
 
 ![查询生成一行](./media/5_AQPStatsOneRow.png)
 
@@ -96,7 +96,7 @@ WHERE [fo].[Quantity] = 361;
 小型和大型联接输入扫描之间频繁振荡的工作负荷将从此功能获益最大。
 
 ### <a name="adaptive-join-overhead"></a>自适应联接开销
-自适应联接引入了比索引嵌套循环联接等效计划更高的内存要求。 它会请求额外的内存，就像嵌套循环属于哈希联接一样。 此外还有作为断断续续操作而不是嵌套循环流式处理等效联接的生成阶段的开销。 这笔额外成本产生的同时也实现了行计数可在生成输入中波动的方案灵活性。
+自适应联接引入了比索引嵌套循环联接等效计划更高的内存要求。 它会请求额外的内存，就像嵌套循环属于哈希联接一样。 此外还有作为断断续续操作而不是嵌套循环流式处理等效联接的生成阶段的开销。 这笔额外成本产生的同时也实现了行计数可在生成输入中波动的方案灵活性。
 
 ### <a name="adaptive-join-caching-and-re-use"></a>自适应联接缓存和重复使用
 批处理模式自适应联接适用于语句的初始执行，编译后，根据编译的自适应联结阈值和流经外部输入生成阶段的运行时行，连续执行将保持自适应状态。
@@ -162,8 +162,8 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
 
 ## <a name="batch-mode-memory-grant-feedback"></a>批处理模式内存授予反馈
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询执行后的计划包括执行所需的最小内存和能将所有行纳入内存的理想内存授予大小。 如果内存授予大小不正确，性能将受到影响。 如果授予过量，则会导致内存浪费，减少并发执行。 如果内存授予不足，则会导致到磁盘的昂贵溢出。 通过解决重复工作负荷，批处理模式内存授予反馈可重新计算查询所需的实际内存，并更新缓存计划的授予值。  执行相同的查询语句时，查询将使用修改后的内存授予大小，减少影响并发的过量内存授予，并修复造成到磁盘的昂贵溢出的估计不足的内存授予。
-下图是使用批处理模式自适应内存授予反馈的一个示例。 对于首次执行查询，由于高溢出，持续时间为  **88 秒** ：   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查询执行后的计划包括执行所需的最小内存和能将所有行纳入内存的理想内存授予大小。 如果内存授予大小不正确，性能将受到影响。 如果授予过量，则会导致内存浪费，减少并发执行。 如果内存授予不足，则会导致到磁盘的昂贵溢出。 通过解决重复工作负荷，批处理模式内存授予反馈可重新计算查询所需的实际内存，并更新缓存计划的授予值。 执行相同的查询语句时，查询将使用修改后的内存授予大小，减少影响并发的过量内存授予，并修复造成到磁盘的昂贵溢出的估计不足的内存授予。
+下图是使用批处理模式自适应内存授予反馈的一个示例。 对于首次执行查询，由于高溢出，持续时间为 88 秒：   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -177,7 +177,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![高溢出](./media/2_AQPGraphHighSpills.png)
 
-启用内存授予反馈后，对于第二次执行，持续时间为  **1 秒** （从 88 秒减少），完全消除溢出，且授予内存更高： 
+启用内存授予反馈后，对于第二次执行，持续时间为 1 秒（从 88 秒减少），完全消除溢出，且授予内存更高： 
 
 ![无溢出](./media/3_AQPGraphNoSpills.png)
 
@@ -186,14 +186,14 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 对于内存授予大小不足，造成批处理模式运算符溢出到磁盘的情况，内存授予反馈将触发内存授予的重新计算。 将向内存授予反馈报告溢出事件，并可通过 spilling_report_to_memory_grant_feedback xEvent 显露。 此事件将返回计划的节点 ID 和该节点溢出的数据大小。
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>内存授予反馈和参数敏感型方案
-为保持最优，不同的参数值可能还需要不同的查询计划。 此类查询被定义为“参数敏感型”。 对于参数敏感型计划，如果查询具有不稳定的内存要求，则内存授予反馈对该查询禁用。 在重复运行查询后禁用计划，并且可以通过监视 memory_grant_feedback_loop_disabled xEvent 观察到这一切。 有关参数截取和参数敏感度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
+为保持最优，不同的参数值可能还需要不同的查询计划。 此类查询被定义为“参数敏感型”。 对于参数敏感型计划，如果查询具有不稳定的内存要求，则内存授予反馈对该查询禁用。 在重复运行查询后禁用计划，并且可以通过监视 memory_grant_feedback_loop_disabled xEvent 观察到这一切。 有关参数截取和参数敏感度的详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
 
 ### <a name="memory-grant-feedback-caching"></a>内存授予反馈缓存
-反馈可以存储在单个执行的缓存计划中。 它是该语句的连续执行，但受益于内存授予反馈调整。 此功能适用于重复执行语句。 内存授予反馈将只更改缓存的计划。 当前未在查询存储中捕获更改。
-如果从缓存中逐出计划，则不会保存反馈。 如果存在故障转移，则反馈也将丢失。 使用 `OPTION (RECOMPILE)` 的语句可创建新的计划，但不会缓存它。 由于它未被缓存，因此不会产生内存授予反馈，也不会针对编译和执行存储。  但是，如果已缓存未使用 `OPTION (RECOMPILE)` 的等效语句（即包含相同的查询哈希）并重新执行，连续语句可从内存授予反馈中受益。
+反馈可以存储在单个执行的缓存计划中。 它是该语句的连续执行，但受益于内存授予反馈调整。 此功能适用于重复执行语句。 内存授予反馈将只更改缓存的计划。 当前未在查询存储中捕获更改。
+如果从缓存中逐出计划，则不会保存反馈。 如果存在故障转移，则反馈也将丢失。 使用 `OPTION (RECOMPILE)` 的语句可创建新的计划，但不会缓存它。 由于它未被缓存，因此不会产生内存授予反馈，也不会针对编译和执行存储。 但是，如果已缓存未使用 `OPTION (RECOMPILE)` 的等效语句（即包含相同的查询哈希）并重新执行，连续语句可从内存授予反馈中受益。
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>跟踪内存授予反馈活动
-可以使用 memory_grant_updated_by_feedback xEvent 跟踪内存授予反馈事件。 此事件可跟踪当前执行计数历史记录，内存授予反馈更新计划的次数，修改前理想的额外内存授予，以及内存授予反馈修改缓存计划后理想的额外内存授予。
+可以使用 memory_grant_updated_by_feedback xEvent 跟踪内存授予反馈事件。 此事件可跟踪当前执行计数历史记录，内存授予反馈更新计划的次数，修改前理想的额外内存授予，以及内存授予反馈修改缓存计划后理想的额外内存授予。
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>内存授予反馈、资源调控器和查询提示
 实际内存授予服从资源调控器或查询提示确定的查询内存限制。

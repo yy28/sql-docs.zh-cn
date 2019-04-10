@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072202"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042186"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "58072202"
 <a name="min_server_memory"></a> 使用 min_server_memory 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器使用的最小内存量。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会在启动时立即分配 **min server memory** 中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。 例如，同一个主机中可同时存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，为了给实例保留内存，请设置 min_server_memory 参数而不是 max_server_memory。 此外，为了确保来自基础主机的内存压力不会尝试从来宾 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟机 (VM) 上的缓冲池释放超过可接受性能所需的内存，在虚拟环境中设置 min_server_memory 值非常必要。
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配“最小服务器内存”中指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不一定分配 **min server memory**指定的内存量。 如果服务器上的负荷从不需要分配 **min server memory**指定的内存量，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以较少的内存运行。  
   
 <a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
  -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
@@ -86,7 +86,8 @@ ms.locfileid: "58072202"
 设置此选项可实现根据其他内存分配器的请求扩大或缩小内存，不影响[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 使用“锁定内存页”用户权限时，建议按[如上所述](#max_server_memory)，为 max server memory 设置一个上限。
 
 > [!IMPORTANT]
-> 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：
+> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，Standard Edition 不需要[跟踪标志 845 ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)来使用“锁定页”。 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>启用“锁定内存页”  
@@ -120,7 +121,7 @@ ms.locfileid: "58072202"
  您可以在不重新启动实例的情况下更改这些设置，以便可以轻松地进行尝试以找到适合使用模式的最佳设置。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>为 SQL Server 提供最大内存量  
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016)。
 
 ## <a name="examples"></a>示例
 
@@ -178,4 +179,3 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux 上 SQL Server 2017 的各版本和支持的功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 

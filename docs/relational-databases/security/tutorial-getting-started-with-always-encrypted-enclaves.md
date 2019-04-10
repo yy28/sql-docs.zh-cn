@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417149"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042126"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,8 +36,16 @@ ms.locfileid: "58417149"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server 计算机要求
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更高版本
-- Windows 10 企业版 1809 或 Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 或更高版本。
+- Windows 10 企业版 1809 或 Windows Server 2019 Datacenter。
+- 如果 SQL Server 计算机是物理计算机，它必须满足 [Hyper-V 硬件要求](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)：
+   - 具有二级地址转换 (SLAT) 的 64 位处理器
+   - CPU 支持 VM 监视器模式扩展（Intel CPU 上的 VT-c）
+   - 启用了虚拟化支持（Intel VT-x 或 AMD-V）
+- 如果 SQL Server 计算机是虚拟机，必须将 VM 配置为允许嵌套虚拟化。
+   - 在 Hyper-V 2016 或更高版本中，在 VM 处理器上[启用嵌套虚拟化扩展](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
+   - 在 Azure 中，请确保正在运行的 VM 大小支持嵌套虚拟化，例如 Dv3 和 Ev3 系列 VM。 请参阅[创建可嵌套的 Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
+   - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
 - [SQL Server Management Studio (SSMS) 18.0 或更高版](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，可在另一台计算机上安装 SSMS。
@@ -55,7 +63,7 @@ ms.locfileid: "58417149"
 >[!NOTE]
 >在开始之前，不应将 HGS 计算机加入域。
 
-## <a name="step-1-configure-the-hgs-computer"></a>步骤 1：配置 HGS 计算机
+## <a name="step-1-configure-the-hgs-computer"></a>第 1 步：配置 HGS 计算机
 
 在此步骤中，将配置 HGS 计算机，以运行支持主机密钥证明的主机保护者服务。
 
@@ -87,7 +95,7 @@ ms.locfileid: "58417149"
 >[!NOTE]
 >或者，如果想通过 DNS 名称来引用 HGS 计算机，可设置一个转发器，从公司 DNS 服务器指向新的 HGS 域控制器。  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>步骤 2：将 SQL Server 计算机配置为受保护的主机
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>第 2 步：将 SQL Server 计算机配置为受保护的主机
 在此步骤中，需将 SQL Server 计算机配置为受保护的主机，并使用主机密钥证明向 HGS 注册。
 >[!NOTE]
 >建议仅在测试环境中使用主机密钥证明。 对于生产环境，应使用 TPM 证明。
@@ -105,6 +113,21 @@ ms.locfileid: "58417149"
    ```
 
 3. 系统提示 Hyper-V 安装完成时，请重启 SQL Server 计算机。
+
+4. 如果 SQL Server 计算机是虚拟机，或者是不支持 UEFI 安全启动或未配备 IOMMU 的旧物理计算机，则需要删除平台安全功能的 VBS 要求。
+    1. 在 Windows 注册表中删除要求。
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. 再次重启计算机，使 VBS 以较低的要求联机。
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. 再次以管理员身份登录 SQL Server 计算机，打开提升的 Windows PowerShell 控制台，生成唯一主机密钥，并将生成的公钥导出到文件。
 
@@ -236,7 +259,7 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     3. 请确保选择“Windows 证书存储(当前用户或本地计算机)”或“Azure Key Vault”。
     4. 选择“允许 enclave 计算”。
     5. 如果选择了 Azure Key Vault，请登录到 Azure 并选择密钥保管库。 若要深入了解如何创建 Always Encrypted 的密钥保管库，请参阅 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)（从 Azure 门户管理密钥保管库）。
-    6. 如已存在，则请选择密钥，或按照窗体上的说明创建新密钥。
+    6. 选择证书或 Azure Key Value 密钥（如果已存在），或单击“生成证书”按钮，创建新证书。
     7. 选择“确定”。
 
         ![允许 enclave 计算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
     3. 选择“连接”\>“更改连接”。
     4. 选择“选项”。 导航到“Always Encrypted”选项卡，选择“启用 Always Encrypted”，然后指定 enclave 证明 URL（例如，ht<span>tp://</span>hgs.bastion.local/Attestation）。
     5. 选择“连接”。
-    6. 将数据库上下文更改为 ContosoHR 数据库。
-1. 在 SSMS 中，为数据库连接配置另一个禁用了 Always Encrypted 的查询窗口。
+    6. 如果系统提示启用 Always Encrypted 查询参数化，请单击“启用”。
+2. 在 SSMS 中，为数据库连接配置另一个禁用了 Always Encrypted 的查询窗口。
     1. 在 SSMS 中，打开一个新的查询窗口。
     2. 右键单击新查询窗口中的任意位置。
     3. 选择“连接”\>“更改连接”。
@@ -296,11 +319,11 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 
 现在，可对加密列运行丰富查询。 部分查询处理将在服务器端 enclave 内执行。 
 
-1. 启用 Always Encrypted 参数化。
+1. 确保启用 Always Encrypted 参数化。
     1. 在 SSMS 的主菜单中，选择“查询”。
     2. 选择“查询选项…”。
     3. 导航到“执行” > “高级”。
-    4. 选择“启用 Always Encrypted 参数化”。
+    4. 确保选中“启用 Always Encrypted 参数化”。
     5. 选择“确定”。
 2. 在启用了 Always Encrypted 的查询窗口中，粘贴并执行以下查询。 该查询应返回满足指定搜索条件的纯文本值和行。
 
