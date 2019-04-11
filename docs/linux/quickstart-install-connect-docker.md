@@ -5,7 +5,7 @@ description: 本快速入门介绍如何使用 Docker 运行 SQL Server 2017 和
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/10/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 794fe2353767da890c6998e8d858555dbef1eb78
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d9b00170520d4c0b7202f7d81d3427912d8725d1
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566416"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476683"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -288,11 +288,9 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 
 2. 一旦位于容器内部，使用 sqlcmd 进行本地连接。 默认情况下，sqlcmd 不在路径之中，因此需要指定完整路径。
 
-   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
-   ::: zone-end
 
    > [!TIP]
    > 可以省略命令行上提示要输入的密码。
@@ -408,7 +406,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [适用于 Windows 的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
-- [mssql-cli（预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>删除容器
 

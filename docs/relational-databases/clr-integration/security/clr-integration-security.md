@@ -15,14 +15,15 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677716"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476653"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的安全模式用于管理和保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内运行的不同类型 CLR 对象和非 CLR 对象之间的访问。 这些对象可能由 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句或服务器上运行的其他 CLR 对象调用。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "51677716"
   
 -   用户定义代码不应能通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程中运行而获得对系统资源的未经授权访问。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在集成了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于用户的安全模式和 CLR 基于代码访问的安全模式。 本节将讨论此组合安全方法的某些优势。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现已集成的基于用户的安全模型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR 的代码访问基于安全模型。 本节将讨论此组合安全方法的某些优势。  
   
  下表列出了本节的主题。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "51677716"
  [允许部分可信任的调用方](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  讨论当托管方法调用其他程序集中所包含类的方法时所产生的问题。  
   
- [应用程序域和 CLR 集成安全性](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [应用程序域和 CLR 集成安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何将程序集加载到应用程序域。  
   
 ## <a name="see-also"></a>请参阅  

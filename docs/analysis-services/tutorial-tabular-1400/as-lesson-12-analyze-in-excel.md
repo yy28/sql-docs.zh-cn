@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685425"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476713"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -33,7 +33,7 @@ ms.locfileid: "57685425"
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用默认透视和“Internet Sales”透视进行浏览  
 
-在这些首要任务，您浏览您的模型通过使用这两个默认透视，其中包括所有模型对象，以及通过使用 Internet 销售透视你之前。 “Internet Sales”透视将排除 Customer 表对象。  
+在这些首要任务，使用默认透视，其中包括所有模型对象，浏览您的模型以及还通过使用 Internet 销售透视你之前创建。 “Internet Sales”透视将排除 Customer 表对象。  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>使用默认透视进行浏览  
   
