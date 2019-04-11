@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240435"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480273"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。  
@@ -157,7 +157,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 有关详细信息，请参阅 [sys.dm_db_xtp_table_memory_stats](https://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)。  
+ 有关详细信息，请参阅[sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部系统结构的内存使用情况  
  系统对象也会使用内存，例如事务结构、针对数据和差异文件的缓冲区以及垃圾回收结构等。 您可以通过按如下所示查询 `sys.dm_xtp_system_memory_consumers` ，查找用于这些系统对象的内存。  
@@ -195,8 +195,9 @@ PGPOOL:256K               768                  768                  3
 PGPOOL: 64K               0                    0                    0  
 PGPOOL:  4K               0                    0                    0  
 ```  
-  
+
  有关详细信息，请参阅 [sys.dm_xtp_system_memory_consumers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
+
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>访问内存优化表时在运行时的内存使用情况  
  您可以确定运行时结构使用的内存，例如使用以下查询确定过程缓存使用的内存：运行此查询可获取运行时结构（例如用于过程缓存的运行时结构）使用的内存。 所有运行时结构都用 XTP 进行标记。  
@@ -229,7 +230,7 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 有关详细信息，请参阅 [sys.dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
+ 有关详细信息，请参阅[sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>跨实例的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎使用的内存  
  管理分配给 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎和内存优化对象的内存的方式与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内任何其他内存消耗者的方式完全相同。 MEMORYCLERK_XTP 类型的内存分配器计算分配给 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的所有内存。 使用下面的查询可查找 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎使用的所有内存。  
@@ -255,7 +256,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 有关详细信息，请参阅 [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
+ 有关详细信息，请参阅[sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>管理内存优化对象使用的内存  
  你可以按主题 [将具有内存优化表的数据库绑定至资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)中所述，通过将内存优化表绑定到一个命名的资源池，控制内存优化表所占用的总内存。  
@@ -267,7 +268,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  确定内存使用的增长方式以及保留多少空间。 通过定期监视内存使用情况，可以知道内存使用的增长方式。 例如，如果您将数据库映射到了某一命名资源池，则可以监视性能计数器 Used Memory (KB) 来查看内存使用情况的增长方式。  
   
-3.  可采取相应措施来缓解潜在的内存问题。 有关详细信息，请参阅 [解决内存不足问题](resolve-out-of-memory-issues.md)。  
+3.  可采取相应措施来缓解潜在的内存问题。 有关详细信息，请参阅[解决内存不足问题](resolve-out-of-memory-issues.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [将具有内存优化表的数据库绑定至资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
