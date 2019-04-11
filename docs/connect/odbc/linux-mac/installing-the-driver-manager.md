@@ -1,7 +1,7 @@
 ---
 title: 安装驱动程序管理器 （SQL Server ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305805"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041916"
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "58305805"
   
 1.  请确保具有根权限。  
   
-2.  转到 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 驱动程序下载放置名为 `msodbcsql-11.0.2270.0.tar.gz` 的文件的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：**tar xvzf msodbcsql-11.0.2270.0.tar.gz**。  
+2.  转到 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver 下载放置 `msodbcsql-11.0.2270.0.tar.gz` 文件的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：**tar xvzf msodbcsql-11.0.2270.0.tar.gz**。  
 
 3.  转到 `msodbcsql-11.0.2270.0` 目录，你应在此处看到一个名为 `build_dm.sh` 的文件。 你可以运行`build_dm.sh`来安装 unixODBC 驱动程序管理器。
 
@@ -52,7 +52,7 @@ ms.locfileid: "58305805"
   
 5.  当已准备好安装且计算机可以通过 FTP 访问外部站点时，执行以下命令：**./build_dm.sh**。
 
-如果计算机无法通过 FTP 访问外部站点，请获取 `unixODBC-2.3.0.tar.gz`。 可以获取`unixODBC-2.3.0.tar.gz`从[ http://www.unixodbc.org ](http://www.unixodbc.org/)。单击页面左侧的“下载”链接，转到下载页面。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 unixODBC-2.3.1。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
+如果计算机无法通过 FTP 访问外部站点，请获取 `unixODBC-2.3.0.tar.gz`。 可以从 [http://www.unixodbc.org](http://www.unixodbc.org/) 获取 `unixODBC-2.3.0.tar.gz`。单击页面左侧的“下载”链接，转到下载页面。 然后，单击相应链接以下载 unixODBC-2.3.0（而非 unixODBC-2.3.1）。 该版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支持 unixODBC-2.3.1。 执行以下命令以开始 unixODBC 驱动程序管理器安装： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
 
 6.  键入 YES 以继续解压缩文件。 完成这部分过程最多需要 5 分钟。  
 
@@ -85,8 +85,8 @@ ms.locfileid: "58305805"
 现在可以随时安装该驱动程序。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server Linux 和 macOS 上](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅
-[在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes.md)
+[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
