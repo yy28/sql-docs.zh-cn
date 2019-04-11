@@ -1,7 +1,7 @@
 ---
-title: 使用集成身份验证 |Microsoft Docs
+title: 使用集成身份验证 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305885"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042246"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,15 +33,15 @@ macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-当使用 DSN 连接，您还可以添加**Trusted_Connection = yes**中的 DSN 项`odbc.ini`。
+使用 DSN 连接时，还可以向 `odbc.ini` 中的 DSN 条目添加 Trusted_Connection=yes。
   
-`-E`的选项`sqlcmd`并`-T`的选项`bcp`还可用于指定集成身份验证; 请参阅[使用连接**sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用连接**bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)有关详细信息。
+`sqlcmd` 的 `-E` 选项和 `bcp` 的 `-T` 选项也可用于指定集成身份验证；有关详细信息，请参阅[使用 sqlcmd 进行连接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用 bcp 进行连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
 
 确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
 **ServerSPN** 和 **FailoverPartnerSPN** 不受支持。  
   
-## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>运行部署的 Linux 或 macOS ODBC 驱动程序应用程序设计，为服务
+## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>部署用于作为服务运行的 Linux 或 macOS ODBC Driver 应用程序
 
 系统管理员可以将应用程序部署为作为服务运行，以便使用 Kerberos 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -55,7 +55,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   确保已使用 Kerberos PAM（可插入身份验证模块）登录到系统。
 
-应用程序作为服务运行时，因为按照设计 Kerberos 凭据会过期，所以需续订这些凭据以确保服务持续可用。 ODBC 驱动程序不续订凭据重试。请确保有`cron`作业或定期运行以续订其过期前的凭据的脚本。 若要避免为每个续订需要密码，可以使用 keytab 文件。  
+应用程序作为服务运行时，因为按照设计 Kerberos 凭据会过期，所以需续订这些凭据以确保服务持续可用。 ODBC 驱动程序本身不会续订凭据；请确保有定期运行的 `cron` 作业或脚本在凭据过期之前进行续订。 要避免每次续订都使用密码，可以使用 keytab 文件。  
   
 [“Kerberos 配置和使用”](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 提供有关 Linux 上的 Kerberize 服务的详细信息。
   
@@ -73,7 +73,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理用户身份
 
-应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
+应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 有关详细信息，请参阅 [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用链接服务器和分布式查询
 
@@ -88,12 +88,12 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行的帐户`sqlcmd`与默认 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行 `sqlcmd` 的帐户与默认的 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行的帐户`bcp`与默认 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行 `bcp` 的帐户与默认的 Kerberos 客户端主体相关联。 
   
-它是使用错误`-T`与`-U`或`-P`选项。
+将 `-T` 与 `-U` 或 `-P` 选项结合使用是错误的。
   
 ## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 注册的 SPN 的受支持语法
 
@@ -105,7 +105,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 对 Linux 或 macOS 计算机进行身份验证
 
-若要配置 Kerberos，在其中输入数据`krb5.conf`文件。 `krb5.conf` 处于`/etc/`但你可以引用另一个文件，例如使用语法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 以下是一个示例 `krb5.conf` 文件：  
+要配置 Kerberos，请在 `krb5.conf` 文件中输入数据。 `krb5.conf` 位于 `/etc/` 中，但可以使用语法（例如，`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`）引用其他文件。 以下是一个示例 `krb5.conf` 文件：  
   
 ```  
 [libdefaults]  
@@ -120,17 +120,17 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-如果在 Linux 或 macOS 计算机配置为使用 Windows DHCP 服务器提供的 DNS 服务器使用动态主机配置协议 (DHCP) 来使用，则可以使用**dns_lookup_kdc = true**。 现在，可以使用 Kerberos 通过发出命令登录到你的域`kinit alias@YYYY.CORP.CONTOSO.COM`。 参数传递给`kinit`区分大小写并[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置为在域中的计算机必须具有该用户`alias@YYYY.CORP.CONTOSO.COM`添加为登录名。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）。  
+如果 Linux 或 macOS 计算机配置为结合使用动态主机配置协议 (DHCP) 和 Windows DHCP 服务器（提供要使用的 DNS 服务器），则可以使用 dns_lookup_kdc=true。 现在，可以通过发出命令 `kinit alias@YYYY.CORP.CONTOSO.COM` 来使用 Kerberos 登录域。 传递给 `kinit` 的参数区分大小写，并且配置为在域中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机必须添加用户 `alias@YYYY.CORP.CONTOSO.COM` 才能进行登录。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）。  
   
-必须关闭 Linux 或 macOS 计算机上的时间和 Kerberos 密钥分发中心 (KDC) 的时间。 确保系统时间已正确设置，例如通过使用网络时间协议 (NTP)。  
+必须关闭 Linux 或 macOS 计算机上的时间和 Kerberos 密钥发行中心 (KDC) 上的时间。 确保系统时间已正确设置，例如通过使用网络时间协议 (NTP)。  
 
 如果 Kerberos 身份验证失败，则 Linux 或 macOS 上的 ODBC 驱动程序不使用 NTLM 身份验证。  
 
-有关 Linux 或 macOS 计算机与 Active Directory 进行身份验证的详细信息，请参阅[使用 Active Directory 对 Linux 客户端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[OS X 与 Active Directory集成的最佳做法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 有关配置 Kerberos 的详细信息，请参阅[MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+有关将 Linux 或 macOS 计算机向 Active Directory 进行身份验证的详细信息，请参阅[将 Linux 客户端向 Active Directory 进行身份验证](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[将 OS X 与 Active Directory 集成的最佳做法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 有关配置 Kerberos 的详细信息，请参阅 [MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另请参阅  
 [编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes.md)
+[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [使用 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

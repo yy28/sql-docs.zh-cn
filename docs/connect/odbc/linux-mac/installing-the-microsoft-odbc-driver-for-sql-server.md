@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 12/05/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,22 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a9e02676c12cf3257ba509dbee46cf46f5e0f876
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956038"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042326"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本文介绍如何安装[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有关 Linux 和 macOS，以及适用于 SQL Server 的可选命令行工具 (`bcp`和`sqlcmd`) 和 unixODBC 开发标头。
+本文介绍如何在 Linux 和 macOS 上安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以及适用于 SQL Server（`bcp` 和 `sqlcmd`）和 unixODBC 开发标头的可选命令行工具。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
 > [!IMPORTANT]
-> 如果安装了暂时可用的 v17 `msodbcsql` 包，应先删除它，再安装 `msodbcsql17` 包。 这可以避免冲突。 `msodbcsql17`可以并行安装包`msodbcsql`v13 包。
+> 如果安装了暂时可用的 v17 `msodbcsql` 包，应先删除它，再安装 `msodbcsql17` 包。 这样可避免冲突。 `msodbcsql17` 包可以与 `msodbcsql` v13 包并行安装。
 
 ### <a name="debian-8-and-9"></a>Debian 8 和 9
 ```
@@ -110,7 +110,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### <a name="ubuntu-1404-1604-1710-and-1804"></a>Ubuntu 14.04、 16.04、 17.10 和 18.04
+### <a name="ubuntu-1404-1604-1710-and-1804"></a>Ubuntu 14.04、16.04、17.10 和 18.04
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -142,10 +142,10 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> - Ubuntu 18.04 支持需要驱动程序版本 17.2 或更高版本。
-> - Ubuntu 18.10 支持需要驱动程序版本 17.3 或更高版本。   
+> - Ubuntu 18.04 支持需要 17.2 或更高版本的驱动程序。
+> - Ubuntu 18.10 支持需要 17.3 或更高版本的驱动程序。   
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-macos-1013-high-sierra-and-macos-1014-mojave"></a>OS X 10.11 (El Capitan)、 macOS 10.12 (Sierra)、 macOS 10.13 (High Sierra) 和 macOS 10.14 (Mojave)
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-macos-1013-high-sierra-and-macos-1014-mojave"></a>OS X 10.11 (El Capitan)、macOS 10.12 (Sierra)、macOS 10.13 (High Sierra) 和 macOS 10.14 (Mojave)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -369,17 +369,17 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### <a name="offline-installation"></a>脱机安装
-如果更喜欢/需要[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 若要在无 internet 连接的计算机上安装，你将需要手动解决包依赖项。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 具有以下直接依赖项：
-- Ubuntu: libc6 (> = 2.21)，libstdc + + 6 (> = 4.9)，libkrb5-3、 libcurl3、 openssl、 debconf (> = 0.5)，unixodbc (> = 2.3.1-1)
-- Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
+如果希望/需要在未连接 Internet 的计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13，则需要手动解析包依赖项。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 具有以下直接依赖项：
+- Ubuntu：libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
+- Red Hat： ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE： ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-每个这些包反过来有其自己的依赖项，可能会或可能不会显示在系统上。 有关此问题的常规解决方案，请参阅分发的包管理器文档： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
+所有这些包都具有自己的依赖项，这些依赖性可能会显示在系统上，也可能不会显示。 有关此问题的常规解决方案，请参阅分发对应的包管理器文档：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
-它也是很常见手动下载所有依赖包并将它们一起放安装在计算机上，然后手动安装反过来，每个包使用[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 包。
+还有一种常见做法是，手动下载所有相关包并将其一起放置在安装计算机上，然后依次手动安装每个包，最后安装 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 包。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 下载最新`msodbcsql``.rpm`从此处： https://packages.microsoft.com/rhel/7/prod/
+  - 从 https://packages.microsoft.com/rhel/7/prod/ 下载最新的 `msodbcsql` `.rpm`
   - 安装依赖项和驱动程序
   
 ```
@@ -388,7 +388,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 下载最新`msodbcsql``.deb`从此处： https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- 从 https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 下载最新的 `msodbcsql` `.deb` 
 - 安装依赖项和驱动程序 
 
 ```
@@ -397,7 +397,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 下载最新`msodbcsql``.rpm`从此处： https://packages.microsoft.com/sles/12/prod/
+- 从 https://packages.microsoft.com/sles/12/prod/ 下载最新的 `msodbcsql` `.rpm`
 - 安装依赖项和驱动程序
 
 ```
@@ -405,7 +405,7 @@ zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install 
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-完成包安装后，你可以验证[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 可以通过运行 ldd 并检查其输出的缺少库来查找其所有依赖项：
+完成包安装后，可以通过运行 ldd 并检查其输出是否缺少库来验证 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 是否可以找到其所有依赖项：
 ```
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```
@@ -423,7 +423,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 
 1.  请确保具有根权限。  
 
-2.  将更改为下载放置文件的目录`msodbcsql-11.0.2270.0.tar.gz`。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：`tar xvzf msodbcsql-11.0.2270.0.tar.gz`。  
+2.  转到下载放置文件 `msodbcsql-11.0.2270.0.tar.gz` 的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：`tar xvzf msodbcsql-11.0.2270.0.tar.gz`。  
   
 3.  转到 `msodbcsql-11.0.2270.0` 目录，你应在此处看到一个名为 install.sh 的文件。  
   
@@ -437,7 +437,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 8.  查看许可协议之后，键入 **YES** 以继续安装。  
   
-安装将驱动程序放置`/opt/microsoft/msodbcsql/11.0.2270.0`。 该驱动程序和及其支持文件必须位于`/opt/microsoft/msodbcsql/11.0.2270.0`。  
+安装会将驱动程序放在 `/opt/microsoft/msodbcsql/11.0.2270.0` 中。 驱动程序及其支持文件必须位于 `/opt/microsoft/msodbcsql/11.0.2270.0` 中。  
   
 若要验证 Linux 上的 Microsoft ODBC 驱动程序是否已成功注册，请执行以下命令：```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```。  
   
@@ -460,7 +460,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 最常见的连接问题是安装两个 UnixODBC 驱动程序管理器的副本。 搜索 /usr 以查找 libodbc\*.so\*。 如果看到多个版本的文件，则（可能）安装了多个驱动程序管理器。 你的应用程序可能会使用错误的版本。
   
-通过编辑来启用连接日志在`/etc/odbcinst.ini`文件应包含具有以下这些项目的以下部分：
+通过编辑 `/etc/odbcinst.ini` 文件以包含具有这些条目的如下部分来启用连接日志：
 
 ```
 [ODBC]
@@ -489,7 +489,7 @@ TraceFile = (path to log file, or /dev/stdout to output directly to the terminal
 UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
 ```  
   
-没有多个安装的驱动程序管理器和你的应用程序使用了一个，或驱动程序管理器没有正确生成的错误。  
+安装了多个驱动程序管理器并且应用程序使用的是错误的管理器，或者驱动程序管理器未正确构建。  
   
 有关解决这种连接失败的详细信息，请参阅：  
   
@@ -506,36 +506,36 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
     应更改在 URL 中指定的错误号 (11001) 以与你看到的错误相匹配。  
   
 ## <a name="driver-files"></a>驱动程序文件
-在 Linux 和 MacOS 上 ODBC 驱动程序由以下组件构成：
+Linux 和 MacOS 上的 ODBC Driver 由以下组件构成：
 
 ### <a name="linux"></a>Linux
 
 |组件|描述|  
 |---------------|-----------------|  
-|libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
-|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
-|LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
-|RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|
+|libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|包含该驱动程序所有功能的共享对象 (`so`) 动态库文件。 此文件安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/lib64/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/lib64/` 中。|  
+|`msodbcsqlr17.rll` 或多个 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/opt/microsoft/msodbcsql17/include/` 中和 ODBC Driver 13 的 `/opt/microsoft/msodbcsql/include/` 中。 |
+|LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
+|RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/share/doc/msodbcsql/` 中。|
 
 
 ### <a name="macos"></a>MacOS
 
 |组件|描述|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在`/usr/local/lib/`。|  
-|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在`[driver .dylib directory]../share/msodbcsql17/resources/en_US/`Driver 17 并在`[driver .dylib directory]../share/msodbcsql/resources/en_US/`为 Driver 13。 | 
-|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/usr/local/include/msodbcsql17/`Driver 17 并在`/usr/local/include/msodbcsql/`为 Driver 13。 |
-|LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
-|RELEASE_NOTES|包含发行说明的文本文件。 此文件放在`/usr/local/share/doc/msodbcsql17/`Driver 17 并在`/usr/local/share/doc/msodbcsql/`为 Driver 13。 |
+|libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|包含该驱动程序所有功能的动态库 (`dylib`) 文件。 此文件安装在 `/usr/local/lib/` 中。|  
+|`msodbcsqlr17.rll` 或多个 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 ODBC Driver 17 的 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 中和 ODBC Driver 13 的 `[driver .dylib directory]../share/msodbcsql/resources/en_US/` 中。 | 
+|msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在 ODBC Driver 17 的 `/usr/local/include/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/include/msodbcsql/` 中。 |
+|LICENSE.txt|包含最终用户许可协议条款的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
+|RELEASE_NOTES|包含发行说明的文本文件。 此文件位于 ODBC Driver 17 的 `/usr/local/share/doc/msodbcsql17/` 中和 ODBC Driver 13 的 `/usr/local/share/doc/msodbcsql/` 中。 |
 
 ## <a name="resource-file-loading"></a>资源文件加载
 
-该驱动程序需要才能正常加载资源文件。 此文件称为`msodbcsqlr17.rll`或`msodbcsqlr13.rll`具体取决于驱动程序版本。 位置`.rll`文件是相对于驱动程序本身的位置 (`so`或`dylib`)，如上述表中所述。 自版本 17.1 驱动程序也会尝试加载`.rll`从默认目录，如果从相对路径加载失败。 默认资源文件路径是：
+驱动程序需要加载资源文件才能正常运行。 此文件称为 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，具体取决于驱动程序版本。 `.rll` 文件的位置与驱动程序本身的位置（`so` 或 `dylib`）相对，如上表中所述。 自版本 17.1 开始，如果从相对路径加载失败，驱动程序还将尝试从默认目录加载 `.rll`。 默认资源文件路径为：
 
-Linux：`/opt/microsoft/msodbcsql17/share/resources/en_US/`
+Linux： `/opt/microsoft/msodbcsql17/share/resources/en_US/`
 
-MacOS：`/usr/local/share/msodbcsql17/resources/en_US/`
+MacOS： `/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   
@@ -543,6 +543,6 @@ MacOS：`/usr/local/share/msodbcsql17/resources/en_US/`
 
 [安装驱动程序管理器](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes.md)
+[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [系统要求](../../../connect/odbc/linux-mac/system-requirements.md)

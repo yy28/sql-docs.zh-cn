@@ -1,5 +1,5 @@
 ---
-title: 通过 JDBC 驱动程序使用大容量复制 |Microsoft Docs
+title: 通过 JDBC Driver 使用大容量复制 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860638"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>通过 JDBC 驱动程序使用大容量复制
 
@@ -118,7 +118,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 > [!NOTE]  
 > 如果在发生错误时需要回滚全部或部分大容量复制，可以使用 SQLServerBulkCopy 托管的事务，或者在现有事务内执行大容量复制操作。  
-> 有关详细信息，请参阅[事务和大容量复制操作](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
+> 有关详细信息，请参阅[事务和大容量复制操作](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)  
   
  执行大容量复制操作的常规步骤如下：  
   
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 下面的应用程序演示了如何使用 SQLServerBulkCopy 类加载数据。 在此示例中，ResultSet 用于将数据从 SQL Server AdventureWorks 数据库中的 Production.Product 表复制到同一数据库中的一个类似表。  
   
 > [!IMPORTANT]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 在使用同一 SQLServerBulkCopy 对象执行多次大容量复制操作时，对于每个操作中的源信息或目标信息相同与否没有限制。 但是，必须确保每次写入服务器时正确设置列关联信息。  
   
 > [!IMPORTANT]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ public class BulkCopyMultiple {
 执行大容量复制操作，并将 BatchSize 属性设置为 10。 当操作遇到无效行时，将引发异常。 在此第一个示例中，大容量复制操作是非事务的。 将提交在发生错误之前复制的所有批；将回滚包含重复项的批，并且在处理任何其他批之前中止大容量复制操作。  
   
 > [!NOTE]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -460,7 +460,7 @@ public class BulkCopyNonTransacted {
 > [!NOTE]  
 > 因为不同批在不同的事务中执行，因此如果在大容量复制操作期间出现错误，将回滚当前批中的所有行，但之前批中的行将保留在数据库中。  
   
-当指定**UseInternalTransaction**选项**BulkCopyNonTransacted**，大容量复制操作包含在更大的外部事务。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
+在 BulkCopyNonTransacted 中指定 UseInternalTransaction 选项时，大容量复制操作将包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
 
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 下面的应用程序与 BulkCopyNonTransacted 类似，但有一个例外：在此示例中，大容量复制操作包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。
 
 > [!NOTE]  
-> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
+> 除非已按[表设置](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)中所述创建了工作表，否则将不会运行此示例。 提供的这一代码演示了仅供 SQLServerBulkCopy 使用的语法。 如果源表和目标表位于同一 SQL Server 实例中，可以更便捷地使用 TRANSACT-SQL INSERT ...用于复制数据的 SELECT 语句。  
 
 ```java
 import java.sql.Connection;
@@ -653,20 +653,20 @@ public class BulkCopyCSV {
 }
 ```  
 
-### <a name="bulk-copy-with-always-encrypted-columns"></a>使用始终加密列的大容量复制  
+### <a name="bulk-copy-with-always-encrypted-columns"></a>大容量复制 Always Encrypted 列  
 
-从 Microsoft JDBC Driver 6.0 for SQL Server，使用始终加密列中支持大容量复制。  
+从 Microsoft JDBC Driver 6.0 for SQL Server 开始，Always Encrypted 列支持大容量复制。  
   
-具体取决于大容量复制选项和加密的源和目标表的 JDBC 驱动程序可能会以透明方式解密，然后加密或它的数据类型可能会发送已加密的数据按原样。 例如，大容量时将从加密列的数据复制到未加密的列，该驱动程序以透明方式解密数据发送到 SQL Server 之前。 类似地大容量复制到加密列的数据从未加密的列 （或从 CSV 文件），该驱动程序以透明方式加密数据发送到 SQL Server 之前。 如果源域和目标进行加密，然后根据**allowEncryptedValueModifications**大容量复制选项为是，或将对数据进行解密并发送到 SQL Server 之前再次对其进行加密，驱动程序将发送数据。  
+根据大容量复制选项以及源和目标表的加密类型，JDBC 驱动程序可以透明地解密并加密数据，或者按原样发送加密数据。 例如，将加密列的数据大容量复制到未加密列时，驱动程序会透明地解密数据，然后将其发送给 SQL Server。 同样，将未加密列（或者 CSV 文件）的数据大容量复制到加密列时，驱动程序会透明地加密数据，然后将其发送给 SQL Server。 如果源和目标均已加密，则根据 allowEncryptedValueModifications 大容量复制选项，驱动程序将按原样发送数据，或解密数据并在将其发送到 SQL Server 之前再次对其进行加密。  
   
-有关详细信息，请参阅**allowEncryptedValueModifications**大容量复制选项，并[JDBC 驱动程序中使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
+有关详细信息，请参阅下面的 allowEncryptedValueModifications 大容量复制选项，和[结合使用 JDBC Driver 和 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
   
 > [!IMPORTANT]  
-> Microsoft JDBC Driver 6.0 for SQL Server 大容量将数据从 CSV 文件复制到加密列时的限制：  
+> 将 CSV 文件中的数据大容量复制到加密列时 Microsoft JDBC Driver 6.0 for SQL Server 的限制：  
 >
-> 日期和时间类型支持仅 TRANSACT-SQL 默认字符串文字格式  
+> 日期和时间类型仅支持 Transact-SQL 默认字符串文字格式  
 >
-> DATETIME 和 SMALLDATETIME 数据类型不受支持  
+> 不支持 DATETIME 和 SMALLDATETIME 数据类型  
   
 ## <a name="bulk-copy-api-for-jdbc-driver"></a>用于 JDBC 驱动程序的大容量复制 API  
   
@@ -678,24 +678,24 @@ Microsoft SQL Server 包含名为“bcp”的受欢迎的命令提示符实用�
   
 SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源并不局限于 SQL Server；可以使用任何数据源，只要数据可以使用 ResultSet 实例或 ISQLServerBulkRecord 实现进行读取即可。  
   
-| 构造函数                             | 说明                                                                                                                                                                                                                    |
+| 构造函数                             | 描述                                                                                                                                                                                                                    |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SQLServerBulkCopy(Connection)           | 使用指定的 SQLServerConnection 开放实例初始化 SQLServerBulkCopy 类的新实例。 如果 Connection 已启用事务，将在该事务内执行复制操作。 |
-| SQLServerBulkCopy (字符串 connectionURL) | 基于提供的 connectionURL，初始化并打开 SQLServerConnection 的新实例。 构造函数使用 SQLServerConnection 来初始化 SQLServerBulkCopy 类的新实例。                     |
+| SQLServerBulkCopy(String connectionURL) | 基于提供的 connectionURL，初始化并打开 SQLServerConnection 的新实例。 构造函数使用 SQLServerConnection 来初始化 SQLServerBulkCopy 类的新实例。                     |
   
-| 属性                    | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 属性                    | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 字符串 DestinationTableName | 服务器上的目标表的名称。<br /><br /> 如果在调用 writeToServer 时尚未设置 DestinationTableName，将引发 SQLServerException。<br /><br /> DestinationTableName 名称包含三个部分 (\<database>.\<owningschema>.\<name>)。 可以使用表名称的数据库和所属架构（如果选择）对表名称进行限定。 但是，如果表名称使用下划线（“_”）或任何其他特殊字符，则必须使用方括号将名称括起来以对其进行转义。 有关详细信息，请参阅 SQL Server 联机丛书中的“标识符”。 |
+| String DestinationTableName | 服务器上的目标表的名称。<br /><br /> 如果在调用 writeToServer 时尚未设置 DestinationTableName，将引发 SQLServerException。<br /><br /> DestinationTableName 名称包含三个部分 (\<database>.\<owningschema>.\<name>)。 可以使用表名称的数据库和所属架构（如果选择）对表名称进行限定。 但是，如果表名称使用下划线（“_”）或任何其他特殊字符，则必须使用方括号将名称括起来以对其进行转义。 有关详细信息，请参阅 SQL Server 联机丛书中的“标识符”。 |
 | ColumnMappings              | 列映射定义数据源中的列与目标中的列之间的关系。<br /><br /> 如果未定义映射，将基于序号位置隐式映射该列。 对于这种方式，源架构和目标架构必须匹配。 如果它们不匹配，将引发异常。<br /><br /> 如果映射不为空，则并非数据源中存在的每一列均需要指定。 将忽略那些未映射的列。<br /><br /> 可以按名称或序号引用源列和目标列。               |
   
-| 方法                                                                | 说明                                                                                                                                                                |
+| 方法                                                                | 描述                                                                                                                                                                |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Void addColumnMapping （int sourceColumn (int destinationColumn）       | 使用序号指定源列和目标列来添加一个新的列映射。                                                                                  |
-| Void addColumnMapping （int sourceColumn (字符串 destinationColumn）   | 对源列使用序号，对目标列使用列名，来添加一个新的列映射。                                                            |
-| Void addColumnMapping （字符串 sourceColumn (int destinationColumn）   | 使用列名描述源列，同时使用序号指定目标列，来添加一个新的列映射。                                             |
-| Void addColumnMapping （字符串 sourceColumn，字符串 destinationColumn） | 使用列名指定源列和目标列，来添加一个新的列映射。                                                                              |
+| Void addColumnMapping((int sourceColumn, int destinationColumn)       | 使用序号指定源列和目标列来添加一个新的列映射。                                                                                  |
+| Void addColumnMapping ((int sourceColumn, String destinationColumn)   | 对源列使用序号，对目标列使用列名，来添加一个新的列映射。                                                            |
+| Void addColumnMapping ((String sourceColumn, int destinationColumn)   | 使用列名描述源列，同时使用序号指定目标列，来添加一个新的列映射。                                             |
+| Void addColumnMapping (String sourceColumn, String destinationColumn) | 使用列名指定源列和目标列，来添加一个新的列映射。                                                                              |
 | Void clearColumnMappings()                                            | 清除列映射的内容。                                                                                                                                |
-| Void close （)                                                          | 关闭 SQLServerBulkCopy 实例。                                                                                                                                     |
+| Void close()                                                          | 关闭 SQLServerBulkCopy 实例。                                                                                                                                     |
 | SQLServerBulkCopyOptions getBulkCopyOptions()                         | 检索当前的 SQLServerBulkCopyOptions 集。                                                                                                                     |
 | String getDestinationTableName()                                      | 检索当前的目标表名称。                                                                                                                               |
 | Void setBulkCopyOptions(SQLServerBulkCopyOptions copyOptions)         | 根据提供的选项更新 SQLServerBulkCopy 实例的行为。                                                                                  |
@@ -708,61 +708,61 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
 
  控制 writeToServer 方法在 SQLServerBulkCopy 实例中的行为方式的设置集合。  
   
-| 构造函数                | 说明                                                                                              |
+| 构造函数                | 描述                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | SQLServerBulkCopyOptions() | 使用所有设置的默认值初始化 SQLServerBulkCopyOptions 类的新实例。 |
   
  Getter 和 setter 存在以下选项：  
   
-| 选项                                   | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 默认                                                              |
+| 选项                                   | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | ，则“默认”                                                              |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 布尔 CheckConstraints                 | 在插入数据的同时检查约束。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False-不会检查约束                                   |
-| 布尔 FireTriggers                     | 当指定后，导致服务器对于行插入数据库触发插入触发器。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - 不会触发触发器                                        |
-| 布尔 KeepIdentity                     | 保留源标识值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | False - 由目标分配标识值              |
-| 布尔 KeepNulls                        | 无论默认值的设置为何，在目标表中都将保留 null 值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | False - null 值将替换为默认值（适用默认值的位置）。 |
-| 布尔 TableLock                        | 获取大容量复制操作期间的大容量更新锁定。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | False - 使用行锁定。                                          |
-| 布尔 UseInternalTransaction           | 当指定后，每批大容量复制操作将在事务中进行。 如果 SQLServerBulkCopy 使用现有连接（由构造函数指定），将引发 SQLServerException。  如果 SQLServerBulkCopy 已创建专用连接，将启用事务。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 没有事务                                               |
+| Boolean CheckConstraints                 | 在插入数据的同时检查约束。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False - 不会检查约束                                   |
+| Boolean FireTriggers                     | 当指定后，导致服务器对于行插入数据库触发插入触发器。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - 不会触发触发器                                        |
+| Boolean KeepIdentity                     | 保留源标识值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | False - 由目标分配标识值              |
+| Boolean KeepNulls                        | 无论默认值的设置为何，在目标表中都将保留 null 值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | False - null 值将替换为默认值（适用默认值的位置）。 |
+| Boolean TableLock                        | 获取大容量复制操作期间的大容量更新锁定。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | False - 使用行锁定。                                          |
+| Boolean UseInternalTransaction           | 当指定后，每批大容量复制操作将在事务中进行。 如果 SQLServerBulkCopy 使用现有连接（由构造函数指定），将引发 SQLServerException。  如果 SQLServerBulkCopy 已创建专用连接，将启用事务。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 没有事务                                               |
 | Int BatchSize                            | 每批中的行数。 在每批结束时，会将批中的行发送到服务器。<br /><br /> 当处理完 BatchSize 行或没有要发送到目标数据源的更多行时，即表示批已完成。  在已声明 SQLServerBulkCopy 实例而 UseInternalTransaction 选项不生效的情况下，会将行发送到服务器 BatchSize 行一次，但不执行任何与事务相关的操作。 如果 UseInternalTransaction 有效，每批行作为单独的事务插入。                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 指示每个 writeToServer 操作是单个批    |
 | Int BulkCopyTimeout                      | 超时之前要完成操作的秒数。值为 0 表示没有限制；大容量复制将无限期等待。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 秒。                                                          |
-| 布尔 allowEncryptedValueModifications | 此选项才可用的 Microsoft JDBC Driver 6.0 （或更高版本） 的 SQL Server。<br /><br /> 指定时， **allowEncryptedValueModifications**启用大容量复制的表或数据库之间加密数据而无需解密数据。 应用程序通常情况下，将无需解密 （应用程序将使用连接到数据库列加密设置关键字设置为已禁用） 的数据从一个表中的加密列选择数据，以及如何将大容量插入数据，此选项这仍然进行加密。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 allowEncryptedValueModifications 时需谨慎，因为这可能会导致损坏数据库，因为驱动程序不会检查数据是否确实已加密，也不会检查是否使用与目标列相同的加密类型、算法和密钥对数据进行了正确加密。 |
+| Boolean allowEncryptedValueModifications | Microsoft JDBC Driver 6.0 for SQL Server（或更高版本）提供该选项。<br /><br /> 指定后，allowEncryptedValueModifications 即可在表或数据库之间大容量复制加密数据，无需解密数据。 通常，应用程序将从一个表中的加密列中选择数据并且无需密该数据（应用将连接到其列加密设置关键字设置为禁用的数据库），然后会使用此选项批量插入数据，这些数据仍然是加密的。 有关详细信息，请参阅[对 JDBC 驱动程序使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 allowEncryptedValueModifications 时需谨慎，因为这可能会导致损坏数据库，因为驱动程序不会检查数据是否确实已加密，也不会检查是否使用与目标列相同的加密类型、算法和密钥对数据进行了正确加密。 |
   
- Getter 和 setter:  
+ getters 和 setters：  
   
-| 方法                                                                            | 说明                                                                                                                                                                               |
+| 方法                                                                            | 描述                                                                                                                                                                               |
 | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 布尔 isCheckConstraints()                                                       | 指示是否要检查在插入数据的同时检查约束。                                                                                                      |
-| Void setCheckConstraints(Boolean checkConstraints)                                 | 设置是否要检查在插入数据的同时检查约束。                                                                                                           |
-| 布尔 isFireTriggers()                                                           | 指示服务器应触发插入到数据库的行的 insert 触发器。                                                                                    |
-| Void setFireTriggers(Boolean fireTriggers)                                         | 设置是否应设置服务器激发插入到数据库的行的触发器。                                                                                     |
-| 布尔 isKeepIdentity()                                                           | 指示保留任何源标识值。                                                                                                                          |
-| Void setKeepIdentity(Boolean keepIdentity)                                         | 设置要保留标识值。                                                                                                                                          |
-| 布尔 isKeepNulls()                                                              | 指示是否保留空值而不考虑默认值，设置目标表中的，或如果它们应替换为默认值 （如果适用）。 |
-| Void setKeepNulls(Boolean keepNulls)                                               | 设置是否保留空值而不考虑默认值，设置目标表中的，或如果它们应替换为默认值 （如果适用）。      |
-| 布尔 isTableLock()                                                              | 指示是否 SQLServerBulkCopy 应大容量复制操作期间获取大容量更新锁。                                                                         |
-| Void setTableLock(Boolean tableLock)                                               | 设置是否 SQLServerBulkCopy 应大容量复制操作期间获取大容量更新锁。                                                                              |
-| 布尔 isUseInternalTransaction()                                                 | 指示每批大容量复制操作是否将在事务中进行。                                                                                                  |
+| Boolean isCheckConstraints()                                                       | 指示是否在插入数据时检查约束。                                                                                                      |
+| Void setCheckConstraints(Boolean checkConstraints)                                 | 设置是否在插入数据时检查约束。                                                                                                           |
+| Boolean isFireTriggers()                                                           | 指示服务器是否应对插入数据库的行触发插入触发器。                                                                                    |
+| Void setFireTriggers(Boolean fireTriggers)                                         | 设置是否应将服务器设置为对插入数据库的行触发触发器。                                                                                     |
+| Boolean isKeepIdentity()                                                           | 指示是否保留任何源标识值。                                                                                                                          |
+| Void setKeepIdentity(Boolean keepIdentity)                                         | 设置是否保留标识值。                                                                                                                                          |
+| Boolean isKeepNulls()                                                              | 指示是否在目标表中保留空值，而不考虑默认值的设置，或者是否应将其替换为默认值（如果适用）。 |
+| Void setKeepNulls(Boolean keepNulls)                                               | 设置是否在目标表中保留空值，而不考虑默认值的设置，或者是否应将其替换为默认值（如果适用）。      |
+| Boolean isTableLock()                                                              | 指示 SQLServerBulkCopy 是否应在大容量复制操作期间获取大容量更新锁。                                                                         |
+| Void setTableLock(Boolean tableLock)                                               | 设置 SQLServerBulkCopy 是否应在大容量复制操作期间获取大容量更新锁。                                                                              |
+| Boolean isUseInternalTransaction()                                                 | 指示每批大容量复制操作是否将在事务中进行。                                                                                                  |
 | Void setUseInternalTranscation(Boolean useInternalTransaction)                     | 设置每批大容量复制操作是否将在事务中进行。                                                                                               |
 | Int getBatchSize()                                                                 | 获取每批的行数。 在每批结束时，会将批中的行发送到服务器                                                                             |
 | Void setBatchSize(int batchSize)                                                   | 设置每批的行数。 在每批结束时，会将批中的行发送到服务器。                                                                            |
 | Int getBulkCopyTimeout()                                                           | 获取超时之前要完成操作的秒数。                                                                                                             |
-| Void setBulkCopyTimeout(int timeout)                                              | 设置超时之前要完成操作的秒数。                                                                                                             |
-| 布尔 isAllowEncryptedValueModifications()                                       | 指示是启用还是禁用 allowEncryptedValueModifications 设置。                                                                                                        |
-| void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) | 配置用于通过始终加密列的大容量复制的 allowEncryptedValueModifications 设置。                                                                         |
+| Void  setBulkCopyTimeout(int timeout)                                              | 设置超时之前要完成操作的秒数。                                                                                                             |
+| boolean isAllowEncryptedValueModifications()                                       | 指示是启用还是禁用 allowEncryptedValueModifications 设置。                                                                                                        |
+| void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) | 配置用于大容量复制 Always Encrypted 列的 allowEncryptedValueModifications 设置。                                                                         |
   
 ### <a name="isqlserverbulkrecord"></a>ISQLServerBulkRecord  
 
  ISQLServerBulkRecord 接口可用于创建读取来自任何源（如文件）的数据的类，并且允许 SQLServerBulkCopy 实例大容量加载带有该数据的 SQL Server 表。  
   
-| 接口方法                   | 说明                                                                                                                                                                                                                                                                                            |
+| 接口方法                   | 描述                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 设置\<整数 > getColumnOrdinals()   | 获取此数据记录中所表示的每个列的序号。                                                                                                                                                                                                                              |
-| 字符串 getColumnName(int column)    | 获取给定列的名称。                                                                                                                                                                                                                                                                      |
-| Int getColumnType （int 列）       | 获取给定列的 JDBC 数据类型。                                                                                                                                                                                                                                                            |
-| Int getPrecision （int 列）        | 获取给定列的精度。                                                                                                                                                                                                                                                                |
-| 对象 [] getRowData()               | 获取作为对象数组的当前行的数据。<br /><br /> 每个对象必须匹配 Java 语言类型，该类型用于代表针对给定列指示的 JDBC 数据类型。  有关详细信息，请参阅“‘了解 JDBC Driver 数据类型”，以了解相应映射。 |
-| Int getScale （int 列）            | 获取给定列的小数位数。                                                                                                                                                                                                                                                                    |
-| 布尔 isAutoIncrement （int 列） | 指示列是否表示一个标识列。                                                                                                                                                                                                                                            |
-| 布尔 next （)                      | 前移到下一数据行。                                                                                                                                                                                                                                                                         |
+| Set\<Integer> getColumnOrdinals()   | 获取此数据记录中所表示的每个列的序号。                                                                                                                                                                                                                              |
+| String getColumnName(int column)    | 获取给定列的名称。                                                                                                                                                                                                                                                                      |
+| Int getColumnType(int column)       | 获取给定列的 JDBC 数据类型。                                                                                                                                                                                                                                                            |
+| Int getPrecision(int column)        | 获取给定列的精度。                                                                                                                                                                                                                                                                |
+| Object[] getRowData()               | 获取作为对象数组的当前行的数据。<br /><br /> 每个对象必须匹配 Java 语言类型，该类型用于代表针对给定列指示的 JDBC 数据类型。  有关详细信息，请参阅“‘了解 JDBC Driver 数据类型”，以了解相应映射。 |
+| Int getScale(int column)            | 获取给定列的小数位数。                                                                                                                                                                                                                                                                    |
+| Boolean isAutoIncrement(int column) | 指示列是否表示一个标识列。                                                                                                                                                                                                                                            |
+| Boolean next()                      | 前移到下一数据行。                                                                                                                                                                                                                                                                         |
   
 ### <a name="sqlserverbulkcsvfilerecord"></a>SQLServerBulkCSVFileRecord  
 
@@ -780,22 +780,21 @@ SQLServerBulkCopy 类可用于只将数据写入 SQL Server 表。 但数据源�
   
 5. 新的换行符用作行终止符，并且不允许出现在数据中的任意位置。  
   
-| 构造函数                                                                                                                                                                 | 说明                                                                                                                                                                                                                                                                                                                        |
+| 构造函数                                                                                                                                                                 | 描述                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SQLServerBulkCSVFileRecord （字符串 fileToParse、 字符串编码、 字符串分隔符，布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字符串、 字符串、 字符串、 布尔值） | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用提供的分隔符和编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。            |
-| SQLServerBulkCSVFileRecord (字符串 fileToParse，字符串编码布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String，String，boolean)                           | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和提供的编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。 |
-| SQLServerBulkCSVFileRecord (字符串 fileToParse，布尔 firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字符串、 布尔值）                                                    | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和默认编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。                                                           |
+| SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, String, boolean) | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用提供的分隔符和编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。            |
+| SQLServerBulkCSVFileRecord(String fileToParse, String encoding, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, boolean)                           | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和提供的编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。  如果编码为 NULL，将使用默认编码。 |
+| SQLServerBulkCSVFileRecord(String fileToParse, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)                                                    | 初始化 SQLServerBulkCSVFileRecord 类的新实例，这将使用逗号分隔符和默认编码分析 fileToParse 中的每一行。 如果 firstLineIsColumnNames 设置为 True，则该文件中的第一行将分析为列名称。                                                           |
   
-| 方法                                                                                                 | 说明                                                                                         |
+| 方法                                                                                                 | 描述                                                                                         |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
-| Void addColumnMetadata （int positionInFile，字符串列名称、 int jdbcType、 int 精度，int 规模）  | 为文件中的给定列添加元数据。                                                     |
-| Void close （)                                                                                           | 释放与文件读取器关联的任何资源。                                             |
-| Void setTimestampWithTimezoneFormat (DateTim eFormatter dateTimeFormatter                               | 将用于分析来自文件的时间戳数据格式设置为 java.sql.Types.TIMESTAMP_WITH_TIMEZONE。 |
+| Void addColumnMetadata(int positionInFile, String columnName, int jdbcType, int precision, int scale)  | 为文件中的给定列添加元数据。                                                     |
+| Void close()                                                                                           | 释放与文件读取器关联的任何资源。                                             |
+| Void setTimestampWithTimezoneFormat(DateTim eFormatter dateTimeFormatter                               | 将用于分析来自文件的时间戳数据格式设置为 java.sql.Types.TIMESTAMP_WITH_TIMEZONE。 |
 | Void setTimestampWithTimezoneFormat(String dateTimeFormat)setTimeWithTimezoneFormat(DateTimeFormatter) | 将用于分析来自文件的时间数据格式设置为 java.sql.Types.TIME_WITH_TIMEZONE。           |
-| Void setTimeWithTimezoneFormat (DateTimeForm 散 dateTimeFormatter)                                   | 将用于分析来自文件的时间数据格式设置为 java.sql.Types.TIME_WITH_TIMEZONE。           |
+| Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | 将用于分析来自文件的时间数据格式设置为 java.sql.Types.TIME_WITH_TIMEZONE。           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | 将用于分析来自文件的时间数据格式设置为 java.sql.Types.TIME_WITH_TIMEZONE。           |
   
 ## <a name="see-also"></a>另请参阅  
 
 [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  

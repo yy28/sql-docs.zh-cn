@@ -1,7 +1,7 @@
 ---
 title: 系统要求 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 287e6d44e3d816952f5802edd739a0af1160e82b
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: c2b4aca8fcd4f18f6e70c9e6f98b415402e19621
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955789"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042316"
 ---
 # <a name="system-requirements"></a>系统要求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "56955789"
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13、13.1 和 17 for SQL Server
 
-Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本：
+Linux 和 macOS 驱动程序仅适用于以下操作系统的 64 位版本：
 
 |操作系统|支持的驱动程序版本|
 |------------------------------------|--------------------------------|
@@ -54,7 +54,7 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
 
-安装包[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13、 13.1 和 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 和 macOS 上解决驱动程序的依赖项时自动启动中所述使用您的发布的程序包管理系统的安装[安装驱动程序](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+如[安装 ODBC Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)中所述，使用分发的程序包管理系统安装时，Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 13、13.1 和 17 版的安装包会自动解析驱动程序的依赖项。
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   
@@ -89,4 +89,4 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
 
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
-[发行说明](../../../connect/odbc/linux-mac/release-notes.md)  
+[发行说明](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
