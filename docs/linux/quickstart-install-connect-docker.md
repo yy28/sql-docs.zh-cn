@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: d9b00170520d4c0b7202f7d81d3427912d8725d1
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.openlocfilehash: 2436eb17a41a5ca0e1e98da3102ac6bde7e976fb
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476683"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516503"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -28,7 +28,7 @@ ms.locfileid: "59476683"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入门教程中，你使用 Docker 请求和运行 SQL Server 2017 容器映像 [mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)。 然后使用 **sqlcmd** 进行连接，以便创建第一个数据库并运行查询。
+在本快速入门教程中，你使用 Docker 请求和运行 SQL Server 2017 容器映像 [mssql server linux](https://hub.docker.com/_/microsoft-mssql-server)。 然后使用 **sqlcmd** 进行连接，以便创建第一个数据库并运行查询。
 
 > [!TIP]
 > 如果你想要试用 SQL Server 2019 预览图像，请参阅[这篇文章的 SQL Server 2019 预览版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)。
@@ -170,7 +170,7 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > 本快速入门使用 SQL Server 2019 预览 Docker 映像。 如果你想要运行 SQL Server 2017 映像，请参阅[这篇文章的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
 
-   前一个命令请求基于 Ubuntu 的最新 SQL Server 2019 预览容器图像。 若要改为使用基于 RedHat 的容器映像，请参阅[基于运行 RHEL 的容器映像](sql-server-linux-configure-docker.md#rhel)。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `mcr.microsoft.com/mssql/server:2017-GA`。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+   前一个命令请求基于 Ubuntu 的最新 SQL Server 2019 预览容器图像。 若要改为使用基于 RedHat 的容器映像，请参阅[基于运行 RHEL 的容器映像](sql-server-linux-configure-docker.md#rhel)。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `mcr.microsoft.com/mssql/server:2017-GA`。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/_/microsoft-mssql-server)。
 
    在本文中，bash 命令`sudo`使用。 在 MacOS 上，`sudo`可能不需要。 在 Linux 上，如果不想要使用`sudo`若要运行 Docker，可以配置**docker**组，并将用户添加到该组。 有关详细信息，请参阅[安装后步骤适用于 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
 
@@ -406,7 +406,7 @@ SA  帐户是安装过程中在 SQL Server 实例上创建的系统管理员。 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [适用于 Windows 的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
-- [mssql cli （预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql-cli（预览版）](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>删除容器
 

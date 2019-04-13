@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205746"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542227"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>创建和配置 Linux 上的 SQL Server 可用性组
 
@@ -243,7 +243,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10.  还原 LinAGN1_Cert 和 LinAGN3_Cert LinAGN2 上。 
+10. 还原 LinAGN1_Cert 和 LinAGN3_Cert LinAGN2 上。
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. 授予与连接到的终结点上 LinAGN2 LinAG1 和 LinAGN3 权限相关联的登录名。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12.  创建实例级登录名和用户与 LinAGN1 和 LinAGN2 LinAGN3 上的相关联。
+12. 创建实例级登录名和用户与 LinAGN1 和 LinAGN2 LinAGN3 上的相关联。
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13.  还原 LinAGN1_Cert 和 LinAGN2_Cert LinAGN3 上。 
+13. 还原 LinAGN1_Cert 和 LinAGN2_Cert LinAGN3 上。 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. 授予与连接到的终结点上 LinAGN3 LinAG1 和 LinAGN2 权限相关联的登录名。
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -369,7 +371,7 @@ sudo systemctl restart mssql-server
 
 16. 可用性组创建完成后，单击**关闭**的结果。 现在可以对副本中的动态管理视图以及在 SSMS 中的 Always On 高可用性文件夹下看到可用性组。
 
-### <a name="use-transact-sql"></a>使用 Transact SQL
+### <a name="use-transact-sql"></a>使用 Transact-SQL
 
 本部分介绍创建使用 Transact SQL AG 的示例。 创建可用性组后，可以配置侦听器和只读路由。 可以通过修改可用性组本身`ALTER AVAILABILITY GROUP`，但不能完成的群集类型的更改[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]。 如果您不打算使用的外部群集类型创建一个 AG，必须将其删除并重新创建该群集类型为 None。 可以在以下链接中找到详细信息和其他选项：
 
@@ -416,7 +418,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  在查询窗口中连接到仅配置副本，请将其联接到可用性组。
+3. 在查询窗口中连接到仅配置副本，请将其联接到可用性组。
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Pacemaker 实现高可用性群集基础[!INCLUDE[ssnoversion-md](../includes/ss
 1.  在查询窗口中连接到第一个副本，执行以下脚本：
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

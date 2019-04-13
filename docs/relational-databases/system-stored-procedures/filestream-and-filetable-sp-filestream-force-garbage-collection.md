@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973676"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542207"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973676"
 ## <a name="syntax"></a>语法  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- **@dbname** = *database_name*表示数据库上运行垃圾回收器的名称。  
+ `[ @dbname = ]  'database_name'`  
+ 指示要运行垃圾回收器的数据库的名称。  
   
 > [!NOTE]  
->  *dbname*是**sysname**。 如果未指定，则假定为当前数据库。  
+> `@dbname` 是**sysname**。 如果未指定，则假定为当前数据库。  
   
- **@filename** = *logical_file_name*  
- 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 **@filename** 是可选的。 如果不指定任何逻辑文件名，垃圾回收器清除指定的数据库中的所有 FILESTREAM 容器。  
+ `[ @filename = ] 'logical_file_name'`  
+ 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 `@filename` 是可选的。 如果不指定任何逻辑文件名，垃圾回收器清除指定的数据库中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>返回代码值  
   

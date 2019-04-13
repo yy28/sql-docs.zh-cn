@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626317"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516603"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS)
 
@@ -155,7 +155,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](https://kubernetes.io/
 
 在此示例中，托管 SQL Server 实例的容器被描述为 Kubernetes 部署对象。 部署创建的副本集。 副本集创建 pod。 
 
-在此步骤中，创建一个清单来描述基于 SQL Server 容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 清单的引用`mssql-server`永久性卷声明和`mssql`已应用于 Kubernetes 群集的机密。 清单还描述[服务](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服务是负载均衡器。 负载均衡器可确保 IP 地址后恢复 SQL Server 实例仍存在。 
+在此步骤中，创建一个清单来描述基于 SQL Server 容器[mssql server linux](https://hub.docker.com/_/microsoft-mssql-server) Docker 映像。 清单的引用`mssql-server`永久性卷声明和`mssql`已应用于 Kubernetes 群集的机密。 清单还描述[服务](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服务是负载均衡器。 负载均衡器可确保 IP 地址后恢复 SQL Server 实例仍存在。 
 
 1. 创建清单 （YAML 文件） 来描述部署。 下面的示例介绍了部署，包括基于 SQL Server 容器映像的容器。
 
@@ -253,7 +253,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](https://kubernetes.io/
    在上图中，pod 的状态为`Running`。 此状态指示容器已准备。 这可能需要几分钟的时间。
 
    >[!NOTE]
-   >创建部署后，它可能需要几分钟之后是可见的 pod。 延迟是因为群集中拉取[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)从 Docker hub 映像。 第一次拉取映像后，后续部署可能更快，如果部署到已有图像缓存在其上的节点。 
+   >创建部署后，它可能需要几分钟之后是可见的 pod。 延迟是因为群集中拉取[mssql server linux](https://hub.docker.com/_/microsoft-mssql-server)从 Docker hub 映像。 第一次拉取映像后，后续部署可能更快，如果部署到已有图像缓存在其上的节点。 
 
 1. 验证服务正在运行。 运行下面的命令：
 

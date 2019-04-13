@@ -1,7 +1,7 @@
 ---
 title: sys.internal_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2efa30de8307a33ea9d0f537f687b4f73c48ed1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845115"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516473"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "47845115"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**internal_type**|**tinyint**|内部表的类型：<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** （如空间索引）<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 236 = **selective_xml_index_node_table**|  
-|**internal_type_desc**|**nvarchar(60)**|内部表的类型说明：<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE|  
-|**parent_id**|**int**|父项的 ID，无论该父项的是否在架构范围内。 否则，其值为 0（如果没有父项）。<br /><br /> **queue_messages** = **object_id**的队列<br /><br /> **xml_index_nodes** = **object_id**的 xml 索引<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**的全文目录<br /><br /> **fulltext_index_map** = **object_id**的全文索引<br /><br /> **query_notification**，或**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**的扩展索引，如空间索引<br /><br /> **object_id**表中的已启用跟踪的表的 = **change_tracking**|  
+|**internal_type**|**tinyint**|内部表的类型：<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** （如空间索引）<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
+|**internal_type_desc**|**nvarchar(60)**|内部表的类型说明：<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**parent_id**|**int**|父项的 ID，无论该父项的是否在架构范围内。 否则，其值为 0（如果没有父项）。<br /><br /> **queue_messages** = **object_id** of queue<br /><br /> **xml_index_nodes** = **object_id**的 xml 索引<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**的全文目录<br /><br /> **fulltext_index_map** = **object_id**的全文索引<br /><br /> **query_notification**，或**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**的扩展索引，如空间索引<br /><br /> **object_id**表中的已启用跟踪的表的 = **change_tracking**|  
 |**parent_minor_id**|**int**|父项的次要 ID。<br /><br /> **xml_index_nodes** = **index_id**的 XML 索引<br /><br /> **extended_indexes** = **index_id**的扩展索引，如空间索引<br /><br /> 0 = **queue_messages**， **fulltext_catalog_freelist**， **fulltext_index_map**， **query_notification**， **service_broker_map**，或**change_tracking**|  
 |**lob_data_space_id**|**int**|对于该表，非零值是存放大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。|  
 |**filestream_data_space_id**|**int**|保留供将来使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="remarks"></a>备注  

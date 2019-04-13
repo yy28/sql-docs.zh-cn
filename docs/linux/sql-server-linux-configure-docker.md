@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566626"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516513"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-此文章介绍了如何配置和使用[mssql server linux 容器映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)使用 Docker。 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。
+此文章介绍了如何配置和使用[mssql server linux 容器映像](https://hub.docker.com/_/microsoft-mssql-server)使用 Docker。 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。
 
 > [!NOTE]
 > 本文专门重点介绍使用 mssql server linux 映像。 未介绍 Windows 映像，但您可以了解有关它的[mssql server windows Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)。
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 提供了的方案，您可能不想要使用最新的 SQL Server 容器映像。 若要运行特定的 SQL Server 容器映像，请使用以下步骤：
 
-1. 标识 Docker**标记**对于你想要使用的版本。 若要查看可用的标记，请参阅[mssql server linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+1. 标识 Docker**标记**对于你想要使用的版本。 若要查看可用的标记，请参阅[mssql server linux Docker 中心页](https://hub.docker.com/_/microsoft-mssql-server)。
 
 2. 提取 SQL Server 容器映像的标记。 例如，若要提取 RC1 映像，替换`<image_tag>`在以下命令中使用`rc1`。
 

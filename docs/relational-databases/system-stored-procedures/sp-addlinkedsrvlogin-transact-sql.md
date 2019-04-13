@@ -1,5 +1,5 @@
 ---
-title: sp_addlinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838105"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542187"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838105"
 ## <a name="syntax"></a>语法  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  应用登录映射的链接服务器的名称。 *rmtsrvname*是**sysname**，无默认值。  
   
- [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  确定是否连接到*rmtsrvname*通过模拟本地登录名或显式提交登录名和密码。 数据类型是**varchar (** 8 **)**，默认值为 TRUE。  
   
  值为 TRUE 指定登录名使用自己的凭据来连接到*rmtsrvname*，使用*rmtuser*并*rmtpassword*参数被忽略。 FALSE 指定*rmtuser*并*rmtpassword*参数用于连接到*rmtsrvname*指定*locallogin*. 如果*rmtuser*并*rmtpassword*也是设置为 NULL、 没有登录名或密码用于连接到链接服务器。  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  本地服务器上的登录。 *locallogin*是**sysname**，默认值为 NULL。 NULL 指定此项应用于连接到的所有本地登录*rmtsrvname*。 如果不为 NULL， *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 对于 Windows 登录来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
- [ @rmtuser **=** ] **'***rmtuser*****  
+ `[ @rmtuser = ] 'rmtuser'`  
  用于连接到的远程登录名*rmtsrvname*时@useself为 FALSE。 远程服务器时的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不使用 Windows 身份验证*rmtuser*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 *rmtuser*是**sysname**，默认值为 NULL。  
   
- [ @rmtpassword **=** ] **'***rmtpassword*****  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  使用关联的密码*rmtuser*。 *rmtpassword*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -87,7 +86,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  不能从用户定义的事务中执行 sp_addlinkedsrvlogin。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对服务器拥有 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  
@@ -121,7 +120,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 ## <a name="see-also"></a>请参阅  
  [链接的服务器目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
