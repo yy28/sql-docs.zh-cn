@@ -1,6 +1,6 @@
 ---
 title: 设置 Web 门户的品牌 | Microsoft Docs
-ms.date: 12/06/2018
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +8,21 @@ description: 本文介绍了如何通过品牌包根据业务设置 Web 门户�
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201037"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506504"
 ---
 # <a name="branding-the-web-portal"></a>设置 Web 门户的品牌
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-你可以根据业务设置 Web 门户品牌，从而改变 Web 门户的外观。 使用品牌包可以实现此目的。 品牌包已经设计好，所以无需深入了解级联样式表即可进行创建。  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+你可以根据业务设置 Web 门户品牌，从而改变 Web 门户的外观。 使用品牌包可以实现此目的。 品牌包已经设计好，所以无需深入了解级联样式表即可进行创建。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>创建品牌包
   
 Reporting Services 的品牌包由三项组成，被打包为一个 zip 文件。   
