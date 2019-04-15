@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407856"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516583"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407856"
 ##  <a name="VisualElement"></a> SQL Server 多子网故障转移群集（两个节点，两个子网）  
  下图表示 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的一个两节点、两子网的故障转移群集实例 (FCI)。  
   
- ![具有 MultiSubnetFailover 的多子网体系结构](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "具有 MultiSubnetFailover 的多子网体系结构")  
+ ![具有 MultiSubnetFailover 的多子网体系结构](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "具有 MultiSubnetFailover 的多子网体系结构")  
   
   
 ##  <a name="Configurations"></a> 多子网故障转移群集实例配置  
@@ -45,12 +45,12 @@ ms.locfileid: "52407856"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包括 Node1 和 Node2。 Node1 连接到 Subnet1 和 Subnet2。 Node2 也连接到 Subnet1 和 Subnet2。 **安装程序将 IP 地址资源依赖关系设置为** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-    > **注意：** 此配置不视作多子网故障转移群集配置，因为群集的节点位于同一组子网中。  
+    > **注意**：此配置不视作多子网故障转移群集配置，因为群集的节点位于同一组子网中。  
   
 ##  <a name="ComponentsAndConcepts"></a> IP 地址资源注意事项  
  在一个多子网故障转移群集配置中，IP 地址不由该故障转移群集中的所有节点所拥有，并且在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 启动期间可能不是全都处于联机状态。 从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]开始，您可以将 IP 地址资源依赖关系设置为 **OR**。 这使得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以在存在至少一个它可以绑定到的有效 IP 地址时处于联机状态。  
   
-> **注意：** 在早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，在多站点群集配置中使用了拉伸 V-LAN 技术，以便为跨站点的故障转移公开单个 IP 地址。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨不同子网对节点建立群集的新功能，您现在无需实现拉伸 V-LAN 技术，便可以跨多个站点配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
+> **注意**：在早于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，在多站点群集配置中使用了拉伸 V-LAN 技术，以便为跨站点的故障转移公开单个 IP 地址。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨不同子网对节点建立群集的新功能，您现在无需实现拉伸 V-LAN 技术，便可以跨多个站点配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 地址资源 OR 依赖关系注意事项  
  如果您将 IP 地址资源依赖关系设置为 **OR**，则可能要考虑以下故障转移行为：  

@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280541"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291557"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
@@ -381,7 +381,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 > [!IMPORTANT]  
 >  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。
   
  有很多可用的防火墙系统。 如果运行的防火墙不是 Windows 防火墙，请参阅防火墙文档，获取特定于所用系统的信息。  
   

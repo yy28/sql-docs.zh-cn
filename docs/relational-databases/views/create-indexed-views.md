@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191047"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533345"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191047"
 > <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 操作。   
   
 ###  <a name="Restrictions"></a> 索引视图所需的 SET 选项  
-如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 `'abc' + NULL` 会返回值 NULL`NULL`。 但将 `CONCAT_NULL_YIEDS_NULL` 设置为 OFF 后，同一表达式会生成 `'abc'`。  
+如果执行查询时启用不同的 SET 选项，则在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中对同一表达式求值会产生不同结果。 例如，将 SET 选项 `CONCAT_NULL_YIELDS_NULL` 设置为 ON 后，表达式 `'abc' + NULL` 会返回值 NULL`NULL`。 但将 `CONCAT_NULL_YIELDS_NULL` 设置为 OFF 后，同一表达式会生成 `'abc'`。  
   
 为了确保能够正确维护视图并返回一致结果，索引视图需要多个 SET 选项具有固定值。 如果下列条件成立，则下表中的 SET 选项必须设置为“必需的值”列中显示的值：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52191047"
   
 -   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。   
   
-    |“属性”|注意|  
+    |属性|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必须显式声明为 Microsoft .NET Framework 方法的属性。|  
     |PRECISE = TRUE|必须显式声明为 .NET Framework 方法的属性。|  
@@ -158,9 +158,9 @@ ms.locfileid: "52191047"
 <a name="nondeterministic"></a> 将字符串隐式转换为 datetime 或 smalldatetime 所涉及的表达式被视为具有不确定性。 有关详细信息，请参阅[文字日期字符串转换为日期值的不确定性转换](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
 
 
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  要求在数据库中具有 CREATE VIEW 权限，并具有在其中创建视图的架构的 ALTER 权限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

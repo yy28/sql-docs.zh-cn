@@ -1,7 +1,7 @@
 ---
 title: 创建 PowerShell 脚本作业步骤 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1da40c8cc57b1f31447304717034b5c574d68143
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 268f504a717769a3b7ac9836349eb12273b49f5b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240355"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,12 +45,14 @@ ms.locfileid: "51695385"
     [Transact-SQL](#TSQL)  
   
     [SQL Server 管理对象](#SMO)  
-  
+
 ## <a name="BeforeYouBegin"></a>开始之前  
   
 ### <a name="Security"></a>安全性  
-有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
-  
+有关详细信息，请参阅[实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>创建 PowerShell 脚本作业步骤  

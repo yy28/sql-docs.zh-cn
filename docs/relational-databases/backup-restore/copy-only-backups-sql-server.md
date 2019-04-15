@@ -1,7 +1,7 @@
 ---
 title: 仅复制备份 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/08/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240685"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "58658191"
 ### <a name="examples"></a>示例  
 ###  <a name="SSMSProcedure"></a> A.  使用 SQL Server Management Studio  
 在此示例中，`Sales` 数据库的仅复制备份将备份到磁盘的默认备份位置。
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  在“对象资源管理器”中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。
 
@@ -95,7 +97,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
 ## <a name="see-also"></a>另请参阅  

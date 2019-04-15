@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801912"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533335"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ ms.locfileid: "56801912"
   
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 若频繁备份，这些成功消息会迅速累积，从而生成巨大的错误日志！ 这会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些备份日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
  针对数据库备份，TRUSTWORTHY 设置为 OFF。 有关如何将 TRUSTWORTHY 设置为 ON 的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始， **PASSWORD** 和 **MEDIAPASSWORD** 选项不再可用于创建备份。 不过，您仍可以还原使用密码创建的备份。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户 **必须** 具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
@@ -211,19 +211,19 @@ ms.locfileid: "56801912"
 *
     5.  从“Azure 存储容器：”文本框中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
 
-    6.  在“备份文件”文本框中输入 `Sales_stripe1of2_20160601.bak`。
+   6.  在“备份文件”文本框中输入 `Sales_stripe1of2_20160601.bak`。
 
-    7.  单击“确定” 。
+   7.  单击“确定” 。
 
-    8.  重复步骤 **4** 和 **5**。
+   8.  重复步骤 **4** 和 **5**。
 
-    9.  在“备份文件”文本框中输入 `Sales_stripe2of2_20160601.bak`。
+   9.  在“备份文件”文本框中输入 `Sales_stripe2of2_20160601.bak`。
 
-    10.  单击“确定” 。
+   10.  单击“确定” 。
 
-    11.   单击“确定” 。
+   11.   单击“确定” 。
 
-    **D2.存在共享访问签名，但不存在 SQL Server 凭据**
+   **D2.存在共享访问签名，但不存在 SQL Server 凭据**
   5.    在“Azure 存储容器：”文本框中输入 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`
   
   6.    在“共享访问策略：”文本框中输入共享访问签名。

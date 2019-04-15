@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295665"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516553"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查询优化助手升级数据库
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 从较低版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本，且将[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)升级到最新可用级别时，工作负载可能会面临性能回归风险。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级到任何较新版本时，出现此情况的可能性更小。
 
@@ -206,7 +206,7 @@ QTA 是一种基于会话的功能，它将会话状态存储在首次创建会�
     > 如果删除已部署计划指南的会话，则无法使用 QTA 进行回滚。    
     > 改为使用 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 系统表搜索计划指南，然后使用 [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md) 手动删除。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要的成员资格为 db_owner 角色。
   
 ## <a name="see-also"></a>另请参阅  

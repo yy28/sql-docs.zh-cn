@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242495"
 ---
 # <a name="data-streaming-destination"></a>数据流目标
   “数据流目标”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 **OLE DB Provider for SSIS** 将 SSIS 包的输出作为表格结果集使用。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
@@ -48,18 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  有关详细步骤，请参阅[演练：将 SSIS 包作为 SQL 视图发布](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)。  
-  
-## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>通过使用 Power BI 管理中心从 SSIS 包将输出数据作为 OData 馈送公开。  
- 通过使用 Power BI 管理中心，IT 管理人员可以从本地数据源将数据作为 OData 馈送向用户公开。 Power BI 管理中心默认情况下仅允许注册 SQL Server 数据源。 但是，你可以通过使用“数据流目标”和 **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** 将 SSIS 包作为数据源注册到门户，并从 SSIS 包将结果数据作为 OData 馈送向用户公开。  
-  
- 管理中心让你能够在 SQL Server 数据库中发布视图。 因此，你可以使用 SSIS 包发布向导将 SSIS 包作为 SQL 视图发布。 然后可以在 Power BI 管理中心选择将包括在 OData 馈送源中的视图。 数据专员可以通过使用 Power Query Add-in for Excel 来使用 SSIS 包中的馈送。  
-  
- 有关详细演练，请参阅 [将 SSIS 包作为 OData 馈送源发布](https://go.microsoft.com/fwlink/?LinkID=317367)。  
-  
-## <a name="in-this-section"></a>本节内容  
-  
--   [演练：将 SSIS 包作为 SQL 视图发布](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## <a name="configure-data-streaming-destination"></a>配置数据流目标
   通过使用“数据流目标高级编辑器”  对话框配置数据流目标。 在数据流设计器中双击该组件或右键单击该组件然后单击“编辑”来打开此对话框。  
   
@@ -78,9 +67,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  在此选项卡的顶部窗格中，你会看到所有可用输入列。 选择你想要在此组件的输出中包含的列。 所选的列会显示在底部窗格的列表中。 可以通过在列表中 **输出别名** 字段中输入新名称来更改输出列名。  
   
 ## <a name="input-output-properties-tab"></a>“输入属性和输出属性”选项卡  
- 类似于“输入列”选项卡，可以在此选项卡中更改输出列的名称。在左侧树视图中，展开“数据流目标输入”  ，然后展开“输入列” 。 在右窗格中单击输入列名称并更改输出列名称。  
-  
-## <a name="see-also"></a>另请参阅  
- [将 SSIS 包作为 OData 馈送源发布](https://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ 类似于“输入列”选项卡，可以在此选项卡中更改输出列的名称。在左侧树视图中，展开“数据流目标输入”  ，然后展开“输入列” 。 在右窗格中单击输入列名称并更改输出列名称。

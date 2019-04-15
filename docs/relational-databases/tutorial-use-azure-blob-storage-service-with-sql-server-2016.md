@@ -1,7 +1,7 @@
 ---
 title: 教程：将 Azure Blob 存储服务用于 SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: bcc5709a87939caf415f1b91b58e05a932aea14a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241865"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教程：将 Azure Blob 存储服务用于 SQL Server 2016
 
@@ -42,7 +42,9 @@ Microsoft Azure Blob 存储服务的 SQL Server 集成支持最初是 SQL Server
 - 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下载 [AdventureWorks2016 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
 - 将用户帐户分配到 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 角色，并授予[更改任意凭据](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)权限。 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 创建存储访问策略和共享访问存储
 
 本部分将介绍如何通过使用存储访问策略使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 脚本在 Azure blob 容器上创建共享访问签名。  
@@ -482,11 +484,11 @@ SQL Server 凭据是一个对象，用于存储连接到 SQL Server 以外资源
 ## <a name="see-also"></a>另请参阅
 
 [Microsoft Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Azure 中的数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Azure 中数据库文件的文件快照备份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [将 SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
-[Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
+[创建容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[设置容器 ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
 [凭据（数据库引擎）](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
