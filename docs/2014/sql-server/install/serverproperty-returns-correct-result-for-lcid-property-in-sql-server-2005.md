@@ -13,12 +13,12 @@ ms.assetid: 833a2fc9-b480-4697-aa7b-9677e78ee0b4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05202e19e95e719c8518f785be7ee1a1fbd8fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b85b15ec20579cb748cf3e09c0cded8b9e43fd9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163097"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582213"
 ---
 # <a name="serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005"></a>在 SQL Server 2005 中，SERVERPROPERTY 返回 LCID 属性的正确结果
   当在使用二进制排序规则的服务器上运行 SERVERPROPERTY('LCID') 时，该函数返回与服务器的排序规则相对应的 Windows 区域设置标识符 (LCID)。  
@@ -31,6 +31,6 @@ ms.locfileid: "48163097"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

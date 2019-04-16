@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046763"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583220"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>快速入门：处理输入和输出在 SQL Server 中使用 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM PythonTestData
     ```
 
     中的输入和输出变量的大小写`@input_data_1_name`并`@output_data_1_name`一定要匹配的 Python 代码中的这种情况`@script`，如 Python 是区分大小写。
-
-    此外，参数的顺序非常重要。 必须先指定必需的参数 *@input_data_1* 和 *@output_data_1*，然后才能使用可选参数 *@input_data_1_name* 和 *@output_data_1_name*。
 
     仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，您可以在 Python 代码内部调用从其他数据集，并且可以返回除数据集的其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。 
 

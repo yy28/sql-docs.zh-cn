@@ -3,18 +3,18 @@ title: 在 SQL Server 2019-SQL Server 机器学习服务的 Java 语言扩展
 description: 安装、 配置和验证 Linux 和 Windows 系统上 SQL Server 2019 的 Java 语言扩展。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494259"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582082"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 Java 语言扩展 
 
@@ -36,8 +36,8 @@ SQL Server 2019 预览实例是必需的。 早期版本不具有 Java 集成。
 
 | Distribution | Java 版本 | 操作系统 | JDK | JRE |
 |-|-|-|-|-|
-| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 用户帐户控制 | 用户帐户控制 |
-| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 用户帐户控制 | 否 |
+| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 是 | 是 |
+| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 是 | 否 |
 
 在 Linux 上， **mssql server 扩展性 java**包会自动安装 JRE 8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JRE_HOME 环境变量。
 

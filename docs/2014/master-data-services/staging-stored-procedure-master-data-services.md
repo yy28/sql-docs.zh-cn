@@ -10,12 +10,12 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e66748610d648ec8e427315d2a317d26e699d06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3c254b8b6fea8a356e80d1a7c262228725cbf49e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758809"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582260"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>临时存储过程 (Master Data Services)
   从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]启动临时过程时，您使用三个存储过程之一。  
@@ -56,7 +56,7 @@ GO
   
 ## <a name="see-also"></a>请参阅  
  [验证存储过程 (Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [加载或使用临时过程更新 Master Data Services 中的成员](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [加载或使用临时过程更新 Master Data Services 中的成员](add-update-and-delete-data-master-data-services.md)   
  [查看临时过程中发生的错误&#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

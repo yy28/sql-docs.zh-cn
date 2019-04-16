@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: ac544f145ae5d571f8e4dac979738585b0c13c60
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305626"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581330"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>对 SQL Server 可用性组配置 RHEL 群集
 
@@ -161,7 +161,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 若要创建可用性组资源，请使用`pcs resource create`命令并设置资源属性。 以下命令将创建`ocf:mssql:ag`master/slave 类型的具有名称的可用性组的资源`ag1`。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]

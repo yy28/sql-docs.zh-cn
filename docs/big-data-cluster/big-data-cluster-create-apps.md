@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58871997"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582442"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 大数据群集 （预览版） 上的应用程序
 
@@ -111,7 +111,7 @@ mssqlctl app create --spec ./addpy
 
 若要部署此应用程序示例应用，可在一个名为目录中创建以下文件`addpy`:
 
-- `add.py`. 将以下 Python 代码复制到此文件：
+- `add.py` 的用户。 将以下 Python 代码复制到此文件：
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. 将以下代码复制到此文件：
+- `spec.yaml` 的用户。 将以下代码复制到此文件：
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

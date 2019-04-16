@@ -16,12 +16,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5c46c934dff0e882b50dcf7520ba231ba5187eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa2e74dfc1afdfe25058657d910315a3fb626f1c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181918"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582072"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
   升级顾问检测到有一个或多个用户定义的登录名与固定服务器角色的名称匹配。 固定服务器角色名称是保留名称。 请在升级前重命名相应登录名。  
@@ -65,6 +65,6 @@ ms.locfileid: "48181918"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

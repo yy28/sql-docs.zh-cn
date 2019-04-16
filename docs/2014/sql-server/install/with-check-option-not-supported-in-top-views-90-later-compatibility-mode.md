@@ -14,12 +14,12 @@ ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eeead0e22e38338baf4c24510fba5fb21aad7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b91a4b5bb42ebc86e72d532b9f8d210fbba5506
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138725"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583210"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>在 90 或更高的兼容模式下，包含 TOP 的视图不支持 WITH CHECK OPTION
   升级顾问检测到了使用 WITH CHECK OPTION 的视图，并在该视图或者被引用视图的 SELECT 语句中检测到了 TOP 子句。 当数据库兼容模式设置为 80 或更低时，用此方式定义的视图会错误地允许通过视图修改数据，从而产生不准确的结果。 如果使用 WITH CHECK OPTION 的视图或者被引用视图使用了 TOP 子句，且数据库兼容模式设置为 90 或更高，则无法通过该视图插入或更新数据。  
@@ -32,6 +32,6 @@ ms.locfileid: "48138725"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078201"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582330"
 ---
 # <a name="rename-user-sys"></a>重命名 sys 用户
   升级顾问检测到的用户名称**sys**在数据库中。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
@@ -64,6 +64,6 @@ ms.locfileid: "48078201"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

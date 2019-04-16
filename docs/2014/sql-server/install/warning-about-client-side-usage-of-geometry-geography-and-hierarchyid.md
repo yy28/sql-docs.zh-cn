@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413764"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583130"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
   程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
@@ -27,7 +27,7 @@ ms.locfileid: "52413764"
 ## <a name="description"></a>Description  
  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型，具有已从版本 10.0 升级到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
--   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 你可能会看到以下错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   当引用**SqlTypes**程序集版本 11.0 和也安装了版本 10.0，可能会看到此错误消息： `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -85,6 +85,7 @@ ms.locfileid: "52413764"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md
+)  
   
   

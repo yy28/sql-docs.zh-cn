@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070897"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581922"
 ---
 # <a name="using-reports"></a>使用报表
   系统会针对每个组件生成单独的报表，并且必要时会为升级顾问分析向导在服务器上分析的每个实例生成单独的报表。 报表用于提供有关影响升级的已知问题的详细信息。 它还提供指向信息和建议的操作进行寻址已确定的问题。  
@@ -83,10 +83,10 @@ ms.locfileid: "48070897"
  如果您希望与他人共享信息，可向他们发送 XML 报表。 或者，如果您希望使用其他应用程序，可将报表导出为可用于创建电子表格、文本文件或电子邮件的逗号分隔值文件。  
   
 ## <a name="see-also"></a>请参阅  
- [如何： 查看升级顾问报表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [如何： 导出报表](../../../2014/sql-server/install/how-to-export-reports.md)   
- [如何： 筛选报告](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [如何：查看升级顾问报表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [如何：导出报表](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [如何：筛选报表](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [解决升级问题](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

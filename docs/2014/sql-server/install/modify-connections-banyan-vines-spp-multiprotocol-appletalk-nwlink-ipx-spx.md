@@ -23,12 +23,12 @@ ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b9bd5ee27d0b3ac7c331bdbe58facbc337b58a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cb9d235a02414b589735e7118bfe22f408d1d54
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148407"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581320"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>修改使用 Banyan VINES 顺序包协议 (SPP)、多协议、AppleTalk 或 NWLink IPX SPX 网络协议的连接
   升级顾问已检测到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持的客户端服务器连接协议。 使用 Banyan VINES 顺序包协议 (SPP)、多协议 (RPC)、AppleTalk 或 NWLink IPX/SPX 网络协议的客户端应用程序必须通过支持的协议进行连接。  
@@ -48,6 +48,6 @@ ms.locfileid: "48148407"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

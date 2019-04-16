@@ -5,17 +5,17 @@ description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860589"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582410"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -44,9 +44,9 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 | 部署 Kubernetes 上： | Description | 链接 |
 |---|---|---|
-| **Minikube** | 在 VM 中的单节点 Kubernetes 群集。 | [Instructions](deploy-on-minikube.md) |
-| **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 | [Instructions](deploy-on-aks.md) |
-| **多台计算机** | 物理计算机或使用虚拟机上部署的 Kubernetes 群集**kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Minikube** | 在 VM 中的单节点 Kubernetes 群集。 | [说明](deploy-on-minikube.md) |
+| **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 | [说明](deploy-on-aks.md) |
+| **多台计算机** | 物理计算机或使用虚拟机上部署的 Kubernetes 群集**kubeadm** | [说明](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
@@ -55,7 +55,7 @@ SQL Server 大数据群集至少需要版本最低为 Kubernetes 的 v1.10 服�
 
 首次部署 SQL Server 2019 大数据群集之前[安装的大数据工具](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 扩展**
 
@@ -86,24 +86,24 @@ kubectl config view
 
 | 环境变量 | Required | 默认值 | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | 用户帐户控制 | 不可用 | 接受 SQL Server 许可协议 （例如，是）。  |
-| **CLUSTER_NAME** | 用户帐户控制 | 不可用 | 要部署大数据群集到 SQLServer 的 Kubernetes 命名空间的名称。 |
-| **CLUSTER_PLATFORM** | 用户帐户控制 | 不可用 | 部署 Kubernetes 群集的平台。 可以是`aks`， `minikube`， `kubernetes`|
+| **ACCEPT_EULA** | 是 | 不可用 | 接受 SQL Server 许可协议 （例如，是）。  |
+| **CLUSTER_NAME** | 是 | 不可用 | 要部署大数据群集到 SQLServer 的 Kubernetes 命名空间的名称。 |
+| **CLUSTER_PLATFORM** | 是 | 不可用 | 部署 Kubernetes 群集的平台。 可以是`aks`， `minikube`， `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 计算池副本来构建数。在 ctp 版本 2.4 仅值允许为 1。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | 否 | 2 | 池中的副本，以生成数据的数目。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 否 | 2 | 存储池的副本，以生成数。 |
-| **DOCKER_REGISTRY** | 用户帐户控制 | TBD | 用于部署群集的映像的存储位置的专用注册表。 |
-| **DOCKER_REPOSITORY** | 用户帐户控制 | TBD | 专用存储库中的上述注册表存储映像。  它是必需的封闭的公共预览版的持续时间。 |
-| **DOCKER_USERNAME** | 用户帐户控制 | 不可用 | 用于访问容器映像，以防在专用存储库中存储的用户名。 它是必需的封闭的公共预览版的持续时间。 |
-| **DOCKER_PASSWORD** | 用户帐户控制 | 不可用 | 用于访问上述的专用存储库的密码。 它是必需的封闭的公共预览版的持续时间。|
-| **DOCKER_EMAIL** | 用户帐户控制 | 不可用 | 你的电子邮件地址。 |
+| **DOCKER_REGISTRY** | 是 | TBD | 用于部署群集的映像的存储位置的专用注册表。 |
+| **DOCKER_REPOSITORY** | 是 | TBD | 专用存储库中的上述注册表存储映像。  它是必需的封闭的公共预览版的持续时间。 |
+| **DOCKER_USERNAME** | 是 | 不可用 | 用于访问容器映像，以防在专用存储库中存储的用户名。 它是必需的封闭的公共预览版的持续时间。 |
+| **DOCKER_PASSWORD** | 是 | 不可用 | 用于访问上述的专用存储库的密码。 它是必需的封闭的公共预览版的持续时间。|
+| **DOCKER_EMAIL** | 是 | 不可用 | 你的电子邮件地址。 |
 | **DOCKER_IMAGE_TAG** | 否 | 最新 | 用于标记图像的标签。 |
 | **DOCKER_IMAGE_POLICY** | 否 | 始终 | 始终强制的映像拉取。  |
-| **DOCKER_PRIVATE_REGISTRY** | 用户帐户控制 | 不可用 | 封闭的公共预览版的时间范围内，你必须设置此值设置为"1"。 |
-| **CONTROLLER_USERNAME** | 用户帐户控制 | 不可用 | 对于群集管理员用户名。 |
-| **CONTROLLER_PASSWORD** | 用户帐户控制 | 不可用 | 群集管理员的密码。 |
-| **KNOX_PASSWORD** | 用户帐户控制 | 不可用 | Knox 用户的密码。 |
-| **MSSQL_SA_PASSWORD** | 用户帐户控制 | 不可用 | 对于 master 的 SQL 实例 SA 用户的密码。 |
+| **DOCKER_PRIVATE_REGISTRY** | 是 | 不可用 | 封闭的公共预览版的时间范围内，你必须设置此值设置为"1"。 |
+| **CONTROLLER_USERNAME** | 是 | 不可用 | 对于群集管理员用户名。 |
+| **CONTROLLER_PASSWORD** | 是 | 不可用 | 群集管理员的密码。 |
+| **KNOX_PASSWORD** | 是 | 不可用 | Knox 用户的密码。 |
+| **MSSQL_SA_PASSWORD** | 是 | 不可用 | 对于 master 的 SQL 实例 SA 用户的密码。 |
 | **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。  `false` 使用临时主机存储为 pod 存储。 请参阅[数据暂留](concept-data-persistence.md)一文，了解更多详细信息。 如果部署在 minikube 的大数据群集的 SQL Server 和 USE_PERSISTENT_VOLUME = true，必须设置的值为`STORAGE_CLASS_NAME=standard`。 |
 | **STORAGE_CLASS_NAME** | 否 | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 请参阅[数据暂留](concept-data-persistence.md)一文，了解更多详细信息。 如果部署在 minikube 的大数据群集的 SQL Server 时，默认的存储类名称不同，您必须通过设置重写此`STORAGE_CLASS_NAME=standard`。 |
 | **CONTROLLER_PORT** | 否 | 30080 | 控制器服务在公共网络进行侦听 TCP/IP 端口。 |

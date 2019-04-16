@@ -13,19 +13,19 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374109"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582730"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>报表服务器状态（SSRS 本机模式）
   使用此页可以查看当前连接的报表服务器实例的有关信息。 此页是报表服务器配置的起始页。 此外还提供了用于配置 URL、服务帐户、报表服务器数据库、报表服务器电子邮件传递、扩展部署和加密密钥的其他页。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
- 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器实例。 有关详细信息，请参阅[Reporting Services 配置管理器&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并连接到报表服务器实例。 有关详细信息，请参阅[Reporting Services 配置管理器&#40;del&#41;](reporting-services-configuration-manager-native-mode.md)。  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器 (RSConfigTool.exe) 安装使用"highestavailable"权限级别。 这种行为是默认设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器要求与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 进行通信。 一些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信要求更高级别的权限或管理权限。  

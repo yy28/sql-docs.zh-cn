@@ -14,12 +14,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6dfe3901cb23cff65dd96fa084232310ef91ede
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104567"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582273"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>对 syslockinfo 和 sp_lock 中的行为的更改
   **syslockinfo**并**sp_lock**可能返回意外的值。 它们还可能返回其他行，而以前的版本**syslockinfo**并**sp_lock**返回最多每个锁资源的两个行。  
@@ -34,11 +34,11 @@ ms.locfileid: "48104567"
   
  在中[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]， **syslockinfo**并**sp_lock**在单个事务中返回最多为任何给定的锁资源的两个行。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果启用了锁分区，就可以针对在一个事务中运行的同一资源返回多行。 那里可能最多 N + 1 行返回，其中 N 是 Cpu 的数目。 另外，现在可以针对同一资源显示 GRANTED 和 WAITING 请求，这在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中是不可能实现的。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

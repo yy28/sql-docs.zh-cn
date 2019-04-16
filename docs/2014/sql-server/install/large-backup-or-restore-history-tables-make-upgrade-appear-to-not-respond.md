@@ -14,12 +14,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0cf438c6c5ef374e6119f583ffd72a76a99d3110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105787"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583120"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>很大的备份或还原历史记录表会使升级显得不响应
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，一些备份和还原历史记录表中添加了若干新列。 若要升级这些表，则需要对它们进行更改以便添加新列。 如果一个或多个这样的表包含很多行，则执行向表添加列的 ALTER TABLE 语句时，升级过程将停顿很长时间。  
@@ -54,6 +54,6 @@ ms.locfileid: "48105787"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

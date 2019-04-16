@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254272"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583101"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允许使用用户定义函数
   升级顾问检测到的未记录的用户所拥有的用户定义函数**system_function_schema**。 不能通过指定此用户创建用户定义的系统功能。 **System_function_schema**用户名不存在，并且这是与此名称关联的用户 ID (UID = 4) 保留供**sys**架构和被限制为仅供内部使用。  
@@ -66,7 +66,7 @@ ms.locfileid: "54254272"
 -   “Resource 数据库”  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)   
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [删除用于修改系统对象的语句](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [删除用于删除系统对象的语句](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

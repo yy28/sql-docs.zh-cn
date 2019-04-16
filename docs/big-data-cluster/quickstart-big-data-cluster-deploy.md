@@ -5,17 +5,17 @@ description: 演练的 SQL Server 2019 大数据群集 （预览版） 在 Azure
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860519"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582911"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门：部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -35,7 +35,7 @@ ms.locfileid: "58860519"
 - 一个 Azure 订阅。
 - [大数据工具](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
    - **Azure CLI**
@@ -83,7 +83,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **机大小** | [虚拟机大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)要用于 AKS 群集中的节点 (默认**Standard_L8s**)。 |
    | **辅助角色节点** | 在 AKS 群集中的辅助角色节点数 (默认**1**)。 |
    | **群集名称** | 在 AKS 群集和大数据群集的名称。 仅大小写字母数字字符，且没有空格，必须是群集的名称。 (默认**sqlbigdata**)。 |
-   | **Password** | 有关控制器、 HDFS/Spark 网关和主实例密码 (默认**MySQLBigData2019**)。 |
+   | **密码** | 有关控制器、 HDFS/Spark 网关和主实例密码 (默认**MySQLBigData2019**)。 |
    | **控制器用户** | 控制器用户的用户名 (默认值：**管理员**)。 |
 
    > [!IMPORTANT]

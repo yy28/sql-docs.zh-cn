@@ -5,17 +5,17 @@ description: 本教程演示如何查询 SQL Server 2019 大数据群集 （预�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860039"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581260"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教程：在 SQL Server 大数据群集中的查询 HDFS
 
@@ -35,7 +35,7 @@ ms.locfileid: "58860039"
 ## <a id="prereqs"></a> 先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
 - [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)

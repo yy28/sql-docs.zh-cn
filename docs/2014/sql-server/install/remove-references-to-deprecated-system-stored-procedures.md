@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183349"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582860"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>删除对不推荐使用的系统存储过程的引用
   升级顾问检测到一些语句引用了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不再可用的未记录的系统存储过程和扩展存储过程。 引用这些对象的语句将失败。 请勿使用未记录的系统对象或 API，因为在将来的版本中该功能可能会更改或删除，且不会给出相关通知。  
@@ -104,6 +104,6 @@ ms.locfileid: "48183349"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

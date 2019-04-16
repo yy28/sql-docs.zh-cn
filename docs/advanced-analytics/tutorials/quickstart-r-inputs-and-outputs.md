@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046752"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582680"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入门：处理输入和输出在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM RTestData
     ```
 
     请注意，R 是区分大小写，因此输入和输出变量中的事例`@input_data_1_name`并`@output_data_1_name`必须匹配与中的 R 代码中的`@script`。 
-
-    此外，参数的顺序非常重要。 必须先指定必需的参数 *@input_data_1* 和 *@output_data_1*，然后才能使用可选参数 *@input_data_1_name* 和 *@output_data_1_name*。
 
     仅可将一个输入数据集作为参数传递，且仅可返回一个数据集。 但是，可以从 R 代码内调用其他数据集，并且除数据集以外，还可以返回其他类型的输出。 还可以向任何参数添加 OUTPUT 关键字，使其随结果一起返回。 
 

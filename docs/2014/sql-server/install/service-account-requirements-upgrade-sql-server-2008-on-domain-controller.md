@@ -16,12 +16,12 @@ ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640f0f30991307a56112270d0619f6ea0380021e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc00c4195b54101c24bc05218e4ea7c3abac53e8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126768"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582670"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>在域控制器上升级到 SQL Server 2008 的服务帐户要求
   升级顾问检测到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Network Service 或 Local Service 帐户下运行[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]域控制器。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 域控制器上，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务不能以 Local Service 帐户或 Network Service 帐户特权运行。  
@@ -34,6 +34,6 @@ ms.locfileid: "48126768"
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

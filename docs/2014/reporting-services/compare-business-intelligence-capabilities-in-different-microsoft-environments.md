@@ -1,27 +1,27 @@
 ---
 title: 比较不同 Microsoft 环境中的商业智能功能 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/06/2017
+ms.openlocfilehash: 60ea737f20ba48c6ba8d441d389a124e90444a76
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241685"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582501"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比较不同 Microsoft 环境中的商业智能功能
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可部署在多个不同环境中，包括带有 SharePoint Server、SharePoint Online 和 Power BI for Office 365 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 本主题将比较在各个环境中受支持的组件和功能。  
+
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可部署在多个不同环境中，包括带有 SharePoint Server、SharePoint Online 和 Power BI for Office 365 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 本主题将比较在各个环境中受支持的组件和功能。  
   
- 有关比较 SharePoint Server 和 SharePoint Online 的详细信息，请参阅 [比较 SharePoint 计划和选项](http://products.office.com/SharePoint/compare-sharepoint-plans)。  
+有关比较 SharePoint Server 和 SharePoint Online 的详细信息，请参阅 [比较 SharePoint 计划和选项](http://products.office.com/SharePoint/compare-sharepoint-plans)。  
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>作者和管理 BI 报表和仪表板  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59241685"
   
  **<sup>1</sup>**[了解数据管理中数据专员的角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[视频：Power BI 信息管理和数据管理](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
   
- **<sup>2</sup>**[power BI q&a:优化 Power BI 工作簿 （云建模）](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)。  
+ **<sup>2</sup>**[power BI q&a:优化 Power BI 工作簿 （云建模）](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)。  
   
  **<sup>3</sup>**  [介绍 Power View for Office 365 中的新预测功能](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
   
@@ -64,21 +64,18 @@ ms.locfileid: "59241685"
   
 ## <a name="more-information"></a>详细信息  
   
--   [在 Excel 和 Office 365 中的 BI 功能](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)。  
+- [在 Excel 和 Office 365 中的 BI 功能](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)。  
   
--   使用同义词的要求的信息，请参阅[优化 Power BI 问答使用同义词和表述](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling)pragmaticworks.com 上。  
+- 使用同义词的要求的信息，请参阅[优化 Power BI 问答使用同义词和表述](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling)pragmaticworks.com 上。  
   
--   [Office Online，选择你的企业社交网络：Yammer 还是 Newsfeed？](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online，选择你的企业社交网络：Yammer 还是 Newsfeed？](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
--   [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)。  
+- [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx)。  
   
--   [Power BI 定价](https://www.microsoft.com/powerBI/pricing.aspx).  
+- [Power BI 定价](https://www.microsoft.com/powerBI/pricing.aspx).  
   
--   [将 BI 中心网站与 Power BI for Office 365 网站相比较](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)。  
+- [分析和报告与 Microsoft 商业智能 (BI) 工具](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
--   [使用 Microsoft 商业智能 (BI) 工具进行分析和报告](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
-  
-## <a name="community-content"></a>社区内容  
- [本地的 Microsoft 自服务 BI 对比云](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  
-  
-  
+## <a name="community-content"></a>社区内容
+
+[本地的 Microsoft 自服务 BI 对比云](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).

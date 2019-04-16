@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: e3892d17d25980efe16acea58a0e8a93c28325c4
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617597"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581611"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
 
@@ -31,6 +31,7 @@ ms.locfileid: "52617597"
 ## <a name="downloads"></a>下载 
 >*  从[此 Microsoft 下载中心页面](https://www.microsoft.com/download/details.aspx?id=56838)下载适用于 SQL Server 2016 SP2 的用于 Excel 的 Master Data Services 外接程序。 
 >* 从[此 Microsoft 下载中心页面](https://go.microsoft.com/fwlink/?linkid=836867)下载适用于 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
+>*  Master Data Services 外接程序下载 for Excel，从 SQL Server 2019 ctp[此 Microsoft 下载中心页](https://go.microsoft.com/fwlink/?linkid=2086948)。 
  
   
 ## <a name="terms"></a>术语  
@@ -67,13 +68,13 @@ ms.locfileid: "52617597"
   
 -   [连接（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [刷新数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概述：从 Excel 导入数据&#40;MDS add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [验证数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

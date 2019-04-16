@@ -31,12 +31,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125307"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582234"
 ---
 # <a name="resolving-upgrade-issues"></a>解决升级问题
   本节主题介绍可以检测到的升级问题以及虽然检测不到但可能会对升级和升级后的使用造成影响的问题。 这些问题按 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件编排。  
@@ -70,6 +70,6 @@ ms.locfileid: "48125307"
 -   [使用 sp_rename 重命名重复的索引名称](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 2014 升级顾问&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 升级顾问&#91;新&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

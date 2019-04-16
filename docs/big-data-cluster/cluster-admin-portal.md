@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860498"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582230"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用群集管理门户监视 SQL Server 大数据群集
 
@@ -104,7 +104,7 @@ ms.locfileid: "58860498"
 若要了解有关每个池的详细信息：
 - [计算池](concept-compute-pool.md)
 - [存储池](concept-storage-pool.md)
-- [数据池](concept-data-pool.md)
+- [data pool](concept-data-pool.md)
 
 ## <a name="about-page"></a>有关页
 

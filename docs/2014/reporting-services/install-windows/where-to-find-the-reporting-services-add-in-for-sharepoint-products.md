@@ -1,27 +1,27 @@
 ---
 title: 在何处查找用于 SharePoint 产品的 Reporting Services 外接程序 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041028"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582530"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>在何处查找用于 SharePoint 产品的 Reporting Services 外接程序
-  用于 SharePoint 产品和技术 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 外接程序可通过 Web 进行下载，它提供用于将报表服务器与 SharePoint 的部署进行集成的功能。  
+
+用于 SharePoint 产品和技术 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 外接程序可通过 Web 进行下载，它提供用于将报表服务器与 SharePoint 的部署进行集成的功能。  
   
 > [!IMPORTANT]  
 >  有关支持的组合的列表[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序、 报表服务器和 SharePoint，请参阅有关详细信息，请参阅[将组合支持的 SharePoint 和 Reporting Services 服务器与外接程序&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041028"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services 外接程序的 SharePoint 2007 产品和技术  
  用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 Reporting Services 外接程序提供用于在 Microsoft Windows SharePoint Services 3.0 或 Microsoft Office SharePoint Server 2007 部署中运行报表服务器的功能。  
   
- 您可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies](https://go.microsoft.com/fwlink/?LinkID=204813)（用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 Reporting Services 外接程序）获得此文件的最新版本。  
+ 您可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下载中心的 [Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=622)（用于 Microsoft SharePoint 技术的 Microsoft SQL Server 2008 Reporting Services 外接程序）获得此文件的最新版本。  
   
 ## <a name="see-also"></a>请参阅  
  [安装或卸载 Reporting Services 外接程序的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
