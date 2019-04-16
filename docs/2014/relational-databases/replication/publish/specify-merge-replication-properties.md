@@ -13,15 +13,15 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136344"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582690"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
-本主题说明如何指定为合并复制的各种属性。 
+本主题说明如何为合并复制指定各种属性。 
 
 
 ## <a name="download-only"></a>仅下载
@@ -72,7 +72,7 @@ ms.locfileid: "54136344"
         > [!NOTE]  
         >  如果某个项目的源表已经在另一个发布中发布，则两个项目的仅用于下载行为必须相同。  
  
-## <a name="interactive-conflict-resolution"></a>交互式冲突解决方法
+## <a name="interactive-conflict-resolution">交互式冲突解决方法</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制提供交互式冲突解决程序，可用于在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器中进行按需同步过程中手动解决冲突。 启用交互式冲突解决方法后，在同步过程中即可使用交互式冲突解决程序来交互式解决冲突。 交互式冲突解决程序可以通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器获取。 有关详细信息，请参阅[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
     
@@ -82,7 +82,7 @@ ms.locfileid: "54136344"
   
 ###  <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
-#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>启用项目的交互式冲突解决方法  
+#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>为项目启用交互式冲突解决方法  
   
 1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。    
 2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。    
@@ -93,7 +93,7 @@ ms.locfileid: "54136344"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在中**订阅属性-\<订阅服务器 >:\<订阅数据库 >** 对话框框中，将值指定为**True**有关**交互式解决冲突**选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
+1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框中，为“以交互方式解决冲突”选项指定“True”值**。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -113,7 +113,7 @@ ms.locfileid: "54136344"
     -   合并代理所需的安全帐户信息。 有关详细信息，请参阅 [Create a Pull Subscription](../create-a-pull-subscription.md)。    
 4.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定义项目支持交互式冲突解决程序  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定义支持交互式冲突解决程序的项目  
   
 在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 为 **@publication**指定项目所属的发布的名称，为 **@article**指定项目的名称，为 **@source_object**值，并将 **@value** 指定 **@allow_interactive_resolver**中指定合并项目的交互式冲突解决方法。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
 
@@ -130,11 +130,11 @@ ms.locfileid: "54136344"
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在“项目属性”对话框的“属性“选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
-#### <a name="specify-row--or-column-level-tracking"></a>指定行或列级别跟踪  
+#### <a name="specify-row--or-column-level-tracking"></a>指定行级别或列级别跟踪  
   
 1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表。    
 2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。   
-3.  上**属性**选项卡**项目属性\<文章 >** 对话框中，选择下列任一值**跟踪级别**属性：**行级跟踪**或**列级跟踪**。    
+3.  在“项目属性 \<项目>”对话框的“属性”选项卡上，为“跟踪级别”属性选择以下值之一：“行级别跟踪”或“列级别跟踪”。    
 4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -146,7 +146,7 @@ ms.locfileid: "54136344"
     -   **true** - 为项目使用列级别跟踪。    
     -   **false** - 使用行级别跟踪，这是默认值。  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>更改跟踪选项为合并项目的冲突  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>更改合并项目的冲突跟踪选项  
   
 1.  若要确定某个合并项目的冲突跟踪选项，请执行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)。 请注意项目的结果集中 **column_tracking** 选项的值。 值为 **1** 表明使用的是列级别的跟踪，值为 **0** 表明使用的是行级别的跟踪。    
 2.  在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 将 **column_tracking** 的值指定为 **@property** ，并且将 **@value**指定以下值之一：
@@ -165,14 +165,14 @@ ms.locfileid: "54136344"
 > [!IMPORTANT]  
 >  启用此功能将导致无法收敛，也就是说，位于订阅服务器上的数据将无法准确反映发布服务器上的数据。 您必须实现自己的用于手动删除已删除行的机制。  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定新的合并项目忽略删除  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定对新合并项目忽略删除  
   
 1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定的值`false`有关**@delete_tracking**。 有关详细信息，请参阅 [定义项目](../publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  如果某个项目的源表已在另一个发布中发布，则两个项目的 **delete_tracking** 值必须相同。  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>指定的现有合并项目忽略删除  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>指定对现有合并项目忽略删除  
   
 1.  若要确定是否对项目启用了错误补偿，请执行 [sp_helpmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) 并注意结果集中的 **delete_tracking** 值。 如果该值为 **0**，则删除已被忽略。    
 2.  如果步骤 1 的值为 **1**，则在发布服务器上对发布数据库执行 [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值**delete_tracking**有关**@property**，并将值`false`为**@value**。  

@@ -1,9 +1,6 @@
 ---
 title: 升级和迁移 Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017178"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583070"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  本主题将概述的升级和迁移选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有两种用于升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的常规方法：  
+
+本主题将概述的升级和迁移选项[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有两种用于升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的常规方法：  
   
 -   **升级：** 升级服务器和实例上当前安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 这通常称为“就地”升级。 对于从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的一种模式升级到另一模式，不支持就地升级。 例如，不能将本机模式报表服务器升级到 SharePoint 模式报表服务器。 您可以将报表项从一个模式迁移到另一个模式。 有关详细信息，请参阅后面本文档和相关的主题的本机到 SharePoint 迁移部分[示例 Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017178"
   
     3.  不升级其他客户端工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和联机丛书）。 若要获得这些工具的新版本，可以在运行安装程序时添加它们。 其早期版本将与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本并存。 如果安装了示例，则会保留早期版本。 安装程序不支持升级 SQL Server 示例。  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512)。  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 为单独下载。 有关详细信息，请参阅 [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)。  
   
 6.  安装程序重用服务控制管理器中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 报表服务器服务的服务条目。 此服务条目包括报表服务器 Windows 服务帐户。  
   
