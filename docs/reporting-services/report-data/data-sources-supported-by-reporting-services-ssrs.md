@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242275"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "59242275"
  报表创作客户端和报表服务器对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源有不同的平台要求。  
   
 ### <a name="on-the-report-authoring-client"></a>在报表创作客户端上  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../是 32 位应用程序。 is not supported on an Itanium-based platform. On 在基于 Itanium 的平台上不受支持。n在 x64 平台上，若要在报表设计器中编辑和预览报表，必须在 (x86) 平台目录中安装了 32 位数据访问接口。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 是 32 位应用程序。 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 在基于 Itanium 的平台上不受支持。 在 x64 平台上，若要在报表设计器中编辑和预览报表，必须在 (x86) 平台目录中安装了 32 位数据访问接口。  
   
 ### <a name="on-the-report-server"></a>在报表服务器上  
  将报表部署到 64 位报表服务器时，报表服务器必须安装有在本机编译的 64 位数据访问接口。 不支持将 32 位数据访问接口包装在 64 位接口中。 有关详细信息，请参阅数据访问接口文档。  
@@ -83,7 +83,7 @@ ms.locfileid: "59242275"
   
 -   报表数据源：要访问的数据类型，例如，关系数据库、多维数据库、平面文件或 XML。 此列解答问题：“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可为报表使用哪种类型的数据？”  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型：在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定义数据源时下拉列表中显示的数据源类型之一。 此列表是根据所安装和注册的 DPE 与数据访问接口填充的。 此列解答问题：“在创建报表数据源时，应从下拉列表中选择哪种数据源类型？”  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型：在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中定义数据源时下拉列表中显示的数据源类型之一。 此列表是根据所安装和注册的 DPE 与数据访问接口填充的。 此列解答问题：“在创建报表数据源时，应从下拉列表中选择哪种数据源类型？”  
   
 -   数据处理扩展插件/数据访问接口的名称：对应于所选 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件或其他数据访问接口。 此列解答问题：“我在选择了一种数据源类型时，将使用哪种对应的数据处理扩展插件或数据访问接口？”  
   
@@ -127,7 +127,7 @@ ms.locfileid: "59242275"
  [返回数据源表](#DataSourcesTable)  
   
 ## <a name="reporting-services-data-processing-extensions"></a>Reporting Services 数据处理扩展插件  
- 以下数据处理扩展插件随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]自动安装。 有关详细信息以及安装验证，请参阅 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)和 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+ 以下数据处理扩展插件随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]自动安装。 有关详细信息以及安装验证，请参阅 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) 和 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
 > [!NOTE]
 >  目前不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据处理扩展插件。  
@@ -150,7 +150,7 @@ ms.locfileid: "59242275"
   
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是关系查询设计器，而不是用于“Microsoft SQL Server”数据源类型的 Visual Database Tool 设计器。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft SQL Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器。  
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。   
   
@@ -297,7 +297,7 @@ ms.locfileid: "59242275"
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> SAP BW 数据处理扩展插件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个数据处理扩展，通过此扩展，可以在报表中使用来自 SAP BW 数据源的数据。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个数据处理扩展插件，通过此扩展插件，可以在报表中使用来自 SAP BW 数据源的数据。
   
  [返回数据源表](#DataSourcesTable)  
   
