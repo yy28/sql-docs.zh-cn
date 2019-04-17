@@ -1,7 +1,7 @@
 ---
 title: 教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241535"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ ms.locfileid: "59042126"
    - 在 Hyper-V 2016 或更高版本中，在 VM 处理器上[启用嵌套虚拟化扩展](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)。
    - 在 Azure 中，请确保正在运行的 VM 大小支持嵌套虚拟化，例如 Dv3 和 Ev3 系列 VM。 请参阅[创建可嵌套的 Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)。
    - 在 VMWare vSphere 6.7 或更高版本中，为 VM 启用基于虚拟化的安全支持，如 [VMware 文档](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)中所述。
+   - 只要向 VM 公开虚拟化扩展（有时亦称为“嵌套虚拟化”），其他虚拟机监控程序和公有云就可能支持对 VM 中的安全 enclave 使用 Always Encrypted。 有关兼容性和配置说明，请查看虚拟化解决方案的文档。
 - [SQL Server Management Studio (SSMS) 18.0 或更高版](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，可在另一台计算机上安装 SSMS。

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556239"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506554"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
@@ -34,15 +34,15 @@ ms.locfileid: "57556239"
 
 - 你想要从中固定的报表必须使用存储的凭据。 这不是 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成本身的要求，而是固定项刷新处理的要求。  固定报表项操作会创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅来管理 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]中磁贴的刷新计划。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅需要存储的凭据。 如果报表不使用存储的凭据，用户仍可以固定报表项，但当与之关联的订阅尝试刷新数据到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]时，你将看到与“我的订阅”  页上类似的以下错误消息。
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI 传递错误：仪表板：IT 支出分析示例，直观图：Chart2，错误：无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 请输入用户数据源凭据。
 
 有关如何存储凭据的详细信息，请参阅[在 Reporting Services 数据源中存储凭据中](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)的“为特定于报表的数据源配置存储凭据”部分。
 
 有关详细信息，管理员可以查看  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件。  他们将看到类似于以下内容的消息： 查看和监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件最好的方式是对文件使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query。  有关详细信息和简短视频，请参阅 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e 错误：PowerBI 传递错误：仪表板：IT 支出分析示例，直观图：Chart2，错误：无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 用户数据源凭据未存储在报表服务器数据库中，或用户数据源配置为不需要凭据但未指定无人参与的执行帐户。
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e 错误：处理订阅 fcdb8581-d763-4b3b-ba3e-8572360df4f9 时发生错误：PowerBI 传递错误：仪表板：IT 支出分析示例，直观图：Chart2，错误：无法完成当前操作。 用户数据源凭据不符合运行此报表或共享数据集的要求。 用户数据源凭据未存储在报表服务器数据库中，或用户数据源配置为不需要凭据但未指定无人参与的执行帐户。
 
 ## <a name="bkmk_steps2integrate"></a> 集成并注册报表服务器
 
@@ -149,12 +149,12 @@ ms.locfileid: "57556239"
 
 ## <a name="considerations-and-limitations"></a>注意事项和限制
 
-* 不支持病毒性和政府租户。
+* 不支持病毒性租户和政府租户。
 
 ## <a name="next-steps"></a>后续步骤
 
 [我的 Power BI 集成设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Reporting Services 项固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

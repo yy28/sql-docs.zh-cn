@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241835"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
 
@@ -33,6 +33,8 @@ ms.locfileid: "54257102"
      <value></value>
    </property> 
 ```
+
+若要对 hadoop.rpc.protection 使用“隐私”或“完整性”，SQL Server 必须至少为 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL Server 2017 CU3。
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>CDH 5.X 群集的示例 XML 文件
 

@@ -1,7 +1,7 @@
 ---
 title: 将多个数据库备份到 Azure Blob 存储 - PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/20/2016
+ms.date: 05/21/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e32f92112844e8a291d212e271281636df55e1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242465"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>将多个数据库备份到 Azure Blob 存储 - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,14 @@ ms.locfileid: "52512892"
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>用于多数据库、多实例备份操作的 PowerShell  
  以下几个部分包含用于多种操作的脚本，如在多个 SQL Server 实例上创建 SQL 凭据，备份 SQL Server 实例中的所有用户数据库等。 可使用这些脚本根据所处环境的要求自动进行备份操作或安排备份操作。 此处提供的脚本仅为示例，可针对所处环境修改或扩展这些脚本。  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  以下是这些示例脚本的注意事项：  
   
-1.  **在 SQL Server PowerShell 路径中导航：** Windows PowerShell 实现了一些 cmdlet，可在表示 PowerShell 提供程序支持的对象层次的路径结构中导航。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。  
+1.  **导航 SQL Server PowerShell 路径：** Windows PowerShell 实现了一些 cmdlet，可以导航表示 PowerShell 提供程序支持的对象层次结构的路径结构。 在您导航到该路径中的节点时，可以使用其他 cmdlet 以便针对当前对象执行基本操作。  
   
-2.  **Get-ChildItem** cmdlet： **Get-ChildItem** 返回的信息取决于 SQL Server PowerShell 路径中的位置。 例如，如果该位置在计算机级别，则此 cmdlet 返回计算机上安装的所有 SQL Server 数据库引擎实例。 再举一个例子，如果该位置在数据库等对象级别，则此 cmdlet 返回数据库对象的列表。  默认情况下， **Get-ChildItem** cmdlet 不返回系统对象。  使用 -Force 参数可查看系统对象。  
+2.  Get-ChildItem cmdlet：Get-ChildItem 返回的信息取决于 SQL Server PowerShell 路径中的位置。 例如，如果该位置在计算机级别，则此 cmdlet 返回计算机上安装的所有 SQL Server 数据库引擎实例。 再举一个例子，如果该位置在数据库等对象级别，则此 cmdlet 返回数据库对象的列表。  默认情况下， **Get-ChildItem** cmdlet 不返回系统对象。  使用 -Force 参数可查看系统对象。  
   
      有关详细信息，请参阅 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)。  
   

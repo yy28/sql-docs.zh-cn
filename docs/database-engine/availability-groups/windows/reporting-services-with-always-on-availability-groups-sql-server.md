@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212126"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506514"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53212126"
     -   [发生故障转移时的报表服务器行为](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .Net framework 4.0 并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性与数据源一起使用。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .Net Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53212126"
  有关其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 要求的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 RSreportserver.config），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 **RSreportserver.config** ），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
   
 ##  <a name="bkmk_reportdatasources"></a> 报表数据源和可用性组  
  基于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 数据源行为会根据管理员配置 AG 环境的方式不同而变化。  
@@ -98,7 +98,7 @@ ms.locfileid: "53212126"
   
 -   有关可用性组侦听程序的详细信息，请参阅[创建或配置可用性组侦听程序 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **注意事项：** 在从主要副本接收数据更改时，辅助副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
+ **注意事项：** 在从主要副本接收数据更改时，次要副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
   
 -   辅助副本数目。 向配置中每增加一个辅助副本，延迟时间将增加。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "53212126"
   
 -   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
   
--   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用预览后，你看到与以下内容相似的错误，指出你正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
+-   **远程或服务器模式预览：** 在将报表发布到报表服务器后，或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用预览后，你看到与以下内容相似的错误，指出你正在对报表服务器预览报表，且报表服务器上尚未安装用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   
 > **错误消息：**“关键字不受支持的 "applicationintent"”  
   
@@ -156,13 +156,13 @@ ms.locfileid: "53212126"
   
 -   创建可用性组并配置“侦听器 DNS 名称” 。  
   
--   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分并创建包含所有报表服务器数据库的主副本。  
+-   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分，并创建包含所有报表服务器数据库的主要副本。  
   
--   **次要副本：** 创建一个或多个辅助副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+-   **次要副本：** 创建一个或多个次要副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
--   **报表服务器凭据：** 你需要在针对主要副本创建的辅助副本上，创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **报表服务器凭据：** 需要在针对主要副本创建的次要副本上，创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   更新数据库连接以使用侦听器 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
+-   将数据库连接更新为使用侦听程序 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> 完成报表服务器数据库的灾难恢复所需的步骤  
  在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到辅助副本后，需要完成以下步骤：  
@@ -196,7 +196,7 @@ ms.locfileid: "53212126"
  [AlwaysOn 可用性组入门 (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [关于可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
 

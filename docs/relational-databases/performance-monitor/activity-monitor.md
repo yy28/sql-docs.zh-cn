@@ -1,7 +1,7 @@
 ---
 title: 活动监视器 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,21 +13,21 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 540774d3b6e41bdadc4f7e9cb06a8302f29f7ff5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 6d6f215127e584b73e28ee30339189ef49fa10d0
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367205"
 ---
 # <a name="activity-monitor"></a>活动监视器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例。  
+活动监视器显示有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例。  
   
- 活动监视器是一个带有以下可展开和折叠的窗格的选项卡式文档窗口：“概述”、“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近消耗大量资源的查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
+活动监视器是一个带有以下可展开和折叠的窗格的选项卡式文档窗口：“概述”、“进程”、“资源等待”、“数据文件 I/O”、“最近耗费大量资源的查询”和“耗费大量资源的活动查询”。 展开任何窗格时，活动监视器都将查询实例以获取相关信息。 折叠窗格时，该窗格的所有查询活动都将停止。 你可以同时展开一个或多个窗格，以查看实例上不同种类的活动。  
  
- ## <a name="customize-columns"></a>自定义列 
- 对于在“活动用户任务”、“资源等待”、“数据文件 I/O”和“最近耗费大量资源的查询”窗格中包括的列，用以下方式自定义显示内容：  
+## <a name="customize-columns"></a>自定义列 
+对于在“进程”、“资源等待”、“数据文件 I/O”、“最近耗费大量资源的查询”和“耗费大量资源的活动查询”窗格中的列，用以下方式自定义显示内容：  
   
 1.  若要重排列的顺序，请单击列标题，并将其拖到标题功能区中的另一位置。  
   

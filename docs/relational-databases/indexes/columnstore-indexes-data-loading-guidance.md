@@ -1,7 +1,7 @@
 ---
 title: 列存储索引 - 数据加载指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668926"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506494"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列存储索引 - 数据加载指南
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 使用标准 SQL 大容量加载和渗透插入方法将数据加载到列存储索引的选项和建议。 将数据加载到列存储索引是任何数据仓库过程必不可少的组成部分，因为它会将数据移到索引中，准备进行分析。
@@ -33,19 +34,19 @@ ms.locfileid: "51668926"
 
 ![加载到聚集列存储索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引")  
   
- 如图所示，批量加载：  
+如图所示，大容量加载：
   
-* 不会预先为数据排序。 按接收顺序将数据插入行组。
-* 如果批大小 >= 102400，行将直接插入压缩的行组。 建议选择 >= 102400 的批大小以提高批量导入的效率，因为这样可以避免在后台线程“元组发动机”(TM) 最终将行移到压缩行组之前，将数据行移到增量行组。
-* 如果批大小 < 102,400 或者剩余行数 < 102,400，行会载入增量行组。
+- 不会预先为数据排序。 按接收顺序将数据插入行组。
+- 如果批大小 >= 102400，行将直接插入压缩的行组。 建议选择不低于 102400 的批大小，以提高批量导入的效率，因为这样可以避免在后台线程“元组发动机 (TM)”最终将行移到压缩行组之前，将数据行移到增量行组。
+- 如果批大小 < 102,400 或者剩余行数 < 102,400，行会载入增量行组。
 
 > [!NOTE]
 > 在包含非聚集列存储索引数据的行存储表上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终将数据插入到基表。 数据永远不会直接插入到列存储索引。  
 
 大容量加载有以下这些内置的性能优化：
--   **并行加载：** 可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 使用 `TABLOCK` 会在表中强制使用排他锁，并且会无法并行导入数据。  
+-   **并行加载：** 你可以有多个并发大容量加载（使用 bcp 或批量插入），每个都加载一个单独的数据文件。 与行存储大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同，不需要指定 `TABLOCK`，因为每个批量导入线程以独占方式将数据载入具有排他锁的独立行组（压缩或增量行组）。 使用 `TABLOCK` 会在表中强制使用排他锁，并且会无法并行导入数据。  
 -   **最小日志记录：** 大容量加载对直接进入压缩行组的数据使用最小日志记录。 进入增量行组的任何数据都将被完全记录。 这包括任何少于 102400 行的批大小。 但是，使用大容量加载的目标是让大部分数据绕过增量行组。  
--   **锁优化：** 载入压缩行组时，在行组上获取 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
+-   **锁定优化：** 加载到压缩行组时将获取行组上的 X 锁。 但是，大容量加载到增量行组时，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
 如果列存储索引上有非聚集 B 树索引，则该索引本身没有锁定优化或日志记录优化，但对聚集列存储索引的上述优化仍然存在。  
   
@@ -60,6 +61,7 @@ ms.locfileid: "51668926"
 |145,000|145,000<br /><br /> 行组大小：145,000|0|  
 |1,048,577|1,048,576<br /><br /> 行组大小：1,048,576。|1|  
 |2,252,152|2,252,152<br /><br /> 行组大小：1,048,576、1,048,576、155,000。|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  以下示例显示将 1,048,577 行加载到表的结果。 这些结果显示列存储（作为压缩的列段）中的一个 COMPRESSED 行组以及增量存储中的 1 行。  
   
@@ -89,8 +91,8 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  从临时表加载到聚集列存储索引时，可以使用以下优化：
--   **日志优化：** 将数据载入压缩行组时，尽量减少记录的信息。 将数据载入增量行组时，不会进行少量的日志记录。  
--   **锁优化：** 载入压缩行组时，在行组上获取 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
+-   **日志优化：** 将数据载入压缩行组时，最大限度地减少记录的信息。 将数据载入增量行组时，不会进行少量的日志记录。  
+-   **锁定优化：** 加载到压缩行组时将获取行组上的 X 锁。 但是，对于增量行组，在行组上获取 X 锁，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍会锁定 PAGE/EXTENT 锁，因为 X 行组锁不是锁定层次结构的一部分。  
   
  如果你有一个或多个非聚集索引，则索引本身不会经过锁定或日志记录优化，但是，针对聚集列存储索引的上述优化仍然存在  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>加载到已分区表的工作原理  
  对于已分区数据， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 首先将每一行分配给一个分区，然后对该分区内的数据执行列存储操作。 每个分区都具有自己的行组以及至少一个增量行组。  
   
- ## <a name="next-steps"></a>后续步骤
- 有关加载的进一步讨论，请参阅此[博客文章](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx)。  
+## <a name="next-steps"></a>后续步骤
+
+博客文章现托管在 techcommunity 上，撰写日期为 2015 年 3 月 11 日：[有关聚集列存储索引的数据加载性能注意事项](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)。

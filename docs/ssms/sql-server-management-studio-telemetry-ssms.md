@@ -11,16 +11,17 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240385"
 ---
-# <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用反馈收集的本地审核
+# <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用情况和诊断数据收集的本地审核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [SQL Server 隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。
+
+SQL Server Management Studio (SSMS) 包含已启用 Internet 的功能，这些功能可收集并向 Microsoft 发送匿名功能使用情况和诊断数据。 SSMS 可能会收集标准计算机信息以及有关使用情况和性能的信息，并可能会将这些信息传输给 Microsoft 进行分析，以便改进 SSMS 的质量、安全性和可靠性。 我们不会收集您的姓名、地址或其他联系信息。 有关详细信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隐私补充](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a name="audit-feature-usage-data"></a>审核功能使用情况数据
 
@@ -33,8 +34,34 @@ SQL Server Management Studio (SSMS) 包含支持 Internet 的功能，这些功�
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>在 SSMS 中启用或禁用使用反馈收集
 
-若要选择加入或退出 SSMS 的使用情况数据收集，请参阅：[如何将 SQL Server 2016 配置为向 Microsoft 发送反馈](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)。
+若要选择启用或禁用 SSMS 使用情况数据收集，请执行以下操作：
+
+- 对于 SQL Server Management Studio 17：
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
+
+  注册表项名称 = `UserFeedbackOptIn`
+
+  条目类型 `DWORD`：`0` 表示选择禁用；`1` 表示选择启用
+
+  此外，SSMS 17.x 基于 Visual Studio 2015 shell，且 Visual Studio 安装默认支持客户反馈。  
+
+  若要将 Visual Studio 配置为对各台计算机禁用客户反馈，请将以下注册表子项的值更改为字符串 `0`： `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+
+  例如，将子项更改为下面的内容：  
+  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
+
+  SQL Server 2017 使用情况和诊断数据收集遵循这些注册表子项上基于注册表的组策略。
+
+- 对于 SQL Server Management Studio 18：
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
+
+  注册表项名称 = `UserFeedbackOptIn`
+
+  条目类型 `DWORD`：`0` 表示选择禁用；`1` 表示选择启用
 
 ## <a name="see-also"></a>另请参阅
 
-[SQL Server 使用反馈收集的本地审核](https://msdn.microsoft.com/library/mt743085.aspx)
+- [配置 SQL Server 使用情况和诊断数据收集](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [SQL Server 使用情况和诊断数据收集的本地审核](http://msdn.microsoft.com/library/mt743085.aspx)

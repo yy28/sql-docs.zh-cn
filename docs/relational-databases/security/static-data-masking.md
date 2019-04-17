@@ -1,27 +1,27 @@
 ---
 title: 静态数据掩码 | Microsoft Docs
-ms.date: 11/05/2018
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: egranet
+author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980453"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516463"
 ---
 # <a name="static-data-masking"></a>静态数据掩码
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-静态数据掩码是 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 预览版 5 和更高版本的组成部分。 可在[此处](../../ssms/download-sql-server-management-studio-ssms.md)下载 SQL Server Management Studio 的最新预览版。 
+静态数据掩码作为 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 预览版 5 及更高版本的组件发布。 我们已确定当前原型未达到客户期望。 因此，我们之后不会包含此功能。 如果有替换候选项，我们将在计划中通知你最新动态。
 
 ![静态数据掩码](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

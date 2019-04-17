@@ -1,7 +1,7 @@
 ---
 title: 备份文件和文件组 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2016
+ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e99ded8423879fe62393d3e8c3731780b305eaad
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241925"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,13 @@ ms.locfileid: "48851896"
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
  备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-files-and-filegroups-using-ssms"></a>使用 SSMS 备份文件和文件组   
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
@@ -80,7 +81,7 @@ ms.locfileid: "48851896"
   
 11. 通过单击 **“磁盘”** 或 **“磁带”**，选择备份目标的类型。 若要选择包含单个介质集的多个磁盘驱动器或磁带机（最多为 64 个）的路径，请单击 **“添加”**。 所选路径将显示在 **“备份到”** 列表中。  
   
-    >**注意：** 若要删除备份目标，请选择该备份目标并单击“删除”。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”**。  
+    >**注意**：若要删除备份目标，请选择该备份目标并单击 **“删除”**。 若要查看备份目标的内容，请选择该备份目标并单击 **“内容”**。  
   
 12. 若要查看或选择高级选项，请在 **“选择页”** 窗格中单击 **“选项”** 。  
   
@@ -108,7 +109,7 @@ ms.locfileid: "48851896"
   
 15. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以启用 **“卸载前倒带”** 选项。  
   
-    > **注意：** 除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分中的选项处于不活动状态。  
+    > **注意**：除非备份的是事务日志（如同“常规”页的“备份类型”部分中指定的一样），否则“事务日志”部分中的选项处于不活动状态。  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 及更高版本支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 默认情况下，是否压缩备份取决于 **backup-compression default** 服务器配置选项的值。 但是，不管当前服务器级默认设置如何，都可以通过选中 **“压缩备份”** 来压缩备份，并且可以通过选中 **“不压缩备份”** 来防止压缩备份。  
   
@@ -137,9 +138,9 @@ ms.locfileid: "48851896"
   
      [ WITH with_options [ **,**...*o* ] ] ;  
   
-    |选项|“说明”|  
+    |选项|描述|  
     |------------|-----------------|  
-    |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
+    |*“数据库”*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
     |FILE _=_ logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
     |FILEGROUP _=_ logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
@@ -210,12 +211,12 @@ GO
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [备份数据库（“常规”页）](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   

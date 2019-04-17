@@ -1,7 +1,7 @@
 ---
 title: 配置 SQL Server Managed Backup to Microsoft Azure 的高级选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241745"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>配置 SQL Server Managed Backup to Microsoft Azure 的高级选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,10 @@ ms.locfileid: "47610175"
   
 ## <a name="configure-encryption"></a>配置加密  
  以下步骤说明了如何使用存储过程 [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) 来指定加密设置。  
-  
-1.  **确定加密算法：** 首先确定要使用的加密算法的名称。 选择以下算法之一：  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+1.  **确定加密算法：** 首先，确定要使用的加密算法的名称。 选择以下算法之一：  
   
     -   AES_128  
   
@@ -44,7 +46,7 @@ ms.locfileid: "47610175"
   
     -   NO_ENCRYPTION  
   
-2.  **创建数据库主密钥：** 选择一个密码，用于加密将存储在数据库中的主密钥的副本。  
+2.  **创建数据库主密钥：** 选择密码来对存储于该数据库中的主密钥副本进行加密。  
   
     ```  
     -- Creates a database master key.  
@@ -65,7 +67,7 @@ ms.locfileid: "47610175"
     GO  
     ```  
   
-4.  **设置托管备份加密：** 使用相应的值调用 **managed_backup.sp_backup_config_advanced** 存储过程。 例如，以下示例使用名为 `MyDB` 的证书和 `MyTestDBBackupEncryptCert` 加密算法为加密配置 `AES_128` 数据库。  
+4.  **设置托管备份加密：** 使用相应值调用 managed_backup.sp_backup_config_advanced 存储过程。 例如，以下示例使用名为 `MyDB` 的证书和 `MyTestDBBackupEncryptCert` 加密算法为加密配置 `AES_128` 数据库。  
   
     ```  
     USE msdb;  
@@ -84,17 +86,17 @@ ms.locfileid: "47610175"
 ## <a name="configure-a-custom-backup-schedule"></a>配置自定义备份计划  
  以下步骤说明了如何使用存储过程 [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) 设置自定义计划。  
   
-1.  **确定完整备份的频率：** 确定进行完整数据库备份的频率。 可以选择“每日”或“每周”完整备份。  
+1.  **确定完整备份的频率：** 确定多久对数据库进行一次完整备份。 可以选择“每日”或“每周”完整备份。  
   
-2.  **确定日志备份的频率：** 确定进行日志备份的频率。 此值以分钟或小时为单位。  
+2.  **确定日志备份的频率：** 确定多久进行一次日志备份。 此值以分钟或小时为单位。  
   
-3.  **确定在星期几进行每周备份：** 如果是每周备份，请选择在星期几进行完整备份。  
+3.  **确定在星期几进行每周备份：** 如果是每周备份一次，请选择在星期几进行完整备份。  
   
-4.  确定备份的开始时间：使用 24 小时表示法，选择开始备份的时间。  
+4.  **确定备份开始时间：** 选择备份开始时间（使用 24 小时制）。  
   
-5.  **确定允许备份的时间长度：** 这将指定必须完成备份的时间。  
+5.  **确定允许的备份时长：** 这指定必须达到的备份时长。  
   
-6.  **设置自定义备份计划：** 以下存储过程为 `MyDB` 数据库定义了自定义计划。 完整备份将在每周 `Monday` 的 `17:30`进行。 每 `5` 分钟进行日志备份。 备份完成的时间为两个小时。  
+6.  **设置自定义备份计划：** 下面的存储过程定义 `MyDB` 数据库的自定义计划。 完整备份将在每周 `Monday` 的 `17:30`进行。 每 `5` 分钟进行日志备份。 备份完成的时间为两个小时。  
   
     ```  
     USE msdb;  

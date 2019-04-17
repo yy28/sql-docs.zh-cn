@@ -1,7 +1,7 @@
 ---
 title: 在 SQL Server 代理中运行 Windows PowerShell 步骤 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,37 +10,39 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea20fbf0eb09686075c4fceeee2f3091bc244c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241196"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server 代理中运行 Windows PowerShell 步骤
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 使用 SQL Server 代理可以在计划时间运行 SQL Server PowerShell 脚本。  
   
-**若要从 SQL Server 代理运行 PowerShell，请使用：**  [PowerShell 作业步骤](#PShellJob)， [命令提示作业步骤](#CmdExecJob)  
+**若要从 SQL Server 代理运行 PowerShell，请使用：**[PowerShell 作业步骤](#PShellJob)、[命令提示符作业步骤](#CmdExecJob)  
   
-> [!NOTE]
+> [!IMPORTANT]
 > SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新。 最新的 PowerShell 模块是 SqlServer 模块。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能。  
 > 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer 模块。
 > 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 
 共有多种类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤。 每种类型都与用来实现特定环境（如复制代理或命令提示环境）的子系统关联。 您可以对 Windows PowerShell 脚本进行编码，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理将这些脚本包括在按计划时间运行或者为了响应 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件而运行的作业中。 可以使用命令提示作业步骤或 PowerShell 作业步骤运行 Windows PowerShell 脚本。  
-  
-1.  使用 PowerShell 作业步骤以便让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理子系统运行 **模块的每个** 实用工具，该实用工具将启动 PowerShell 并导入 **模块的每个** 模块。  
-  
-2.  使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入 **sqlps** 模块的脚本。  
-  
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
-  
-> [!CAUTION]  
->  运行 PowerShell 并且导入 sqlps 模块的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤都将启动一个进程，该进程将占用大约 20 MB 的内存。 同时运行大量的 Windows PowerShell 作业步骤会对性能产生负面影响。  
-  
+
+- 使用 PowerShell 作业步骤以便让 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理子系统运行 **模块的每个** 实用工具，该实用工具将启动 PowerShell 并导入 **模块的每个** 模块。
+
+- 使用命令提示作业步骤以便运行 PowerShell.exe，并且指定导入 **sqlps** 模块的脚本。
+
+### <a name="LimitationsRestrictions"></a> 关于内存占用的警告
+
+通过 sqlps 模块运行 PowerShell 的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤都启动进程，大约占用 20MB 内存。 同时运行大量的 Windows PowerShell 作业步骤会对性能产生负面影响。  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="PShellJob"></a> 创建 PowerShell 作业步骤  
  **创建 PowerShell 作业步骤**  
   

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421194"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516523"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -302,7 +302,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
   
 -   引用外部数据源和外部文件格式的外部表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 SQL DW、SQL Server、APS 2016 和 SQL DB 中的数据库上的 CONTROL 权限。
 
 > [!IMPORTANT]  
@@ -325,6 +325,10 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  在相同 Hadoop 群集位置上定义的所有数据源都必须对 RESOURCE_MANAGER_LOCATION 或 JOB_TRACKER_LOCATION 使用相同设置。 如果存在不一致，则会发生运行时错误。  
   
  如果使用名称设置 Hadoop 群集，而外部数据源对群集位置使用 IP 地址，则 PolyBase 仍必须能够在使用数据源时解析群集名称。 若要解析名称，必须启用 DNS 转发器。  
+ 
+暂不支持类型为 `hadoop` 的 SAS 令牌，仅支持将它用于存储帐户访问密钥。 尝试创建类型为 `hadoop` 的外部数据源和使用 SAS 凭据可能会失败，并看到以下错误：
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>锁定  
  在 EXTERNAL DATA SOURCE 对象上采用共享锁。  

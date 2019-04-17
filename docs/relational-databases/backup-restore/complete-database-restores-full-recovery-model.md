@@ -1,7 +1,7 @@
 ---
 title: 完整数据库还原（完整恢复模式）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242196"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,18 @@ ms.locfileid: "54241978"
   
  还原数据库时，特别是在完整恢复模式或大容量日志恢复模式下，您应使用一个还原顺序。 *还原顺序* 由通过一个或多个还原阶段来移动数据的一个或多个还原操作组成。  
   
-> [!IMPORTANT]  
->  建议您不要附加或还原来自未知或不可信源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知源或不可信源的数据库前，请在非生产服务器上针对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，然后检查数据库中的代码，例如存储过程或其他用户定义代码。  
-  
- **本主题内容：**  
-  
--   [将数据库还原到故障点](#PointOfFailure)  
-  
--   [将数据库还原到日志备份中的某个时间点](#PointWithinBackup)  
-  
--   [相关任务](#RelatedTasks)  
-  
-> [!NOTE]  
->  有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。  
+### <a name="untrusted-sources"></a>不受信任的源
+
+不建议附加或还原来自未知或不受信任的源的数据库。 这些数据库可能包含执行非预期 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码的恶意代码，或通过修改架构或物理数据库结构导致错误。 使用来自未知或不受信任的源的数据库前，请在非生产服务器上对数据库运行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。 另外，还要检查数据库中用户编写的代码，如存储过程或其他用户定义代码。
+
+### <a name="backups-from-earlier-versions"></a>旧版本中的备份
+
+有关支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本进行备份的信息，请参阅 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)中的“兼容性支持”部分。
   
 ##  <a name="PointOfFailure"></a> 将数据库还原到故障点  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  通常，将数据库恢复到故障点分为下列基本步骤：  
   
 1.  备份活动事务日志（称为日志尾部）。 此操作将创建结尾日志备份。 如果活动事务日志不可用，则该日志部分的所有事务都将丢失。  
@@ -154,7 +151,7 @@ GO
 ##  <a name="RelatedTasks"></a> 相关任务  
  **还原完整数据库备份**  
   
--   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [使用 SSMS 还原数据库备份](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [将数据库还原到新位置 (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -174,12 +171,12 @@ GO
   
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [包含标记的事务的相关数据库的恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记事务的相关数据库恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

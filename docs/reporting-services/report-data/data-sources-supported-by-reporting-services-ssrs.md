@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0d1e59f0f049373b0858b756618454659898dc2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242275"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -73,7 +73,7 @@ ms.locfileid: "53211926"
  报表创作客户端和报表服务器对于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源有不同的平台要求。  
   
 ### <a name="on-the-report-authoring-client"></a>在报表创作客户端上  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 是 32 位应用程序。 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 在基于 Itanium 的平台上不受支持。 在 x64 平台上，若要在报表设计器中编辑和预览报表，必须在 (x86) 平台目录中安装了 32 位数据访问接口。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../是 32 位应用程序。 is not supported on an Itanium-based platform. On 在基于 Itanium 的平台上不受支持。n在 x64 平台上，若要在报表设计器中编辑和预览报表，必须在 (x86) 平台目录中安装了 32 位数据访问接口。  
   
 ### <a name="on-the-report-server"></a>在报表服务器上  
  将报表部署到 64 位报表服务器时，报表服务器必须安装有在本机编译的 64 位数据访问接口。 不支持将 32 位数据访问接口包装在 64 位接口中。 有关详细信息，请参阅数据访问接口文档。  
@@ -81,19 +81,19 @@ ms.locfileid: "53211926"
 ## <a name="supported-data-sources"></a>支持的数据源  
  下表列出了可用来为报表数据集和报表模型检索数据的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据处理扩展插件和数据访问接口。 有关扩展插件或数据访问接口的详细信息，请单击第二列中的链接。 表中各列的说明如下：  
   
--   报表数据源：要访问的数据的类型，例如，关系数据库、多维数据库、平面文件或 XML。 此列解答问题：“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可为报表使用哪些类型的数据？”  
+-   报表数据源：要访问的数据类型，例如，关系数据库、多维数据库、平面文件或 XML。 此列解答问题：“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可为报表使用哪种类型的数据？”  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型：在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定义数据源时下拉列表中显示的数据源类型之一。 此列表是根据所安装和注册的 DPE 与数据访问接口填充的。 此列解答问题：“在创建报表数据源时，应从下拉列表中选择哪种数据源类型？”  
   
 -   数据处理扩展插件/数据访问接口的名称：对应于所选 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件或其他数据访问接口。 此列解答问题：“我在选择了一种数据源类型时，将使用哪种对应的数据处理扩展插件或数据访问接口？”  
   
--   基础数据访问接口版本（可选）：某些数据源类型支持多种数据访问接口。 它们可能是同一访问接口的不同版本，或由第三方提供的某一数据访问接口类型的不同实现。 在您配置了数据源后，访问接口名称会频繁出现在连接字符串中。 此列解答问题：“选择了数据源类型后，我要在‘连接属性’对话框中选择哪种数据访问接口？”  
+-   基础数据访问接口版本（可选）：某些数据源类型支持多种数据访问接口。 它们可能是同一访问接口的不同版本，或由第三方提供的某一数据访问接口类型的不同实现。 在您配置了数据源后，访问接口名称会频繁出现在连接字符串中。 此列解答问题：“选择了数据源类型后，我要在 **“连接属性”** 对话框中选择哪种数据访问接口？”  
   
 -   数据源 \<platform>：得到数据处理扩展插件或数据访问接口支持的目标数据源的数据源平台。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从这类平台上的数据源中检索数据？”  
   
 -   数据源的版本：DPE 或数据访问接口支持的目标数据源的版本。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从此版本的数据源检索数据？”  
   
--   RS \<platform>：可在其中安装自定义 DPE 或数据访问接口的报表服务器平台和报表创作客户端平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题：“此数据处理扩展插件或数据访问接口能否安装在这类平台上？”  
+-   RS \<platform>：可在其中安装自定义 DPE 或数据提供程序的报表服务器平台和报表创作客户端平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题：“此数据处理扩展插件或数据访问接口能否安装在这类平台上？”  
   
 ###  <a name="DataSourcesTable"></a> 数据源的类型  
   
@@ -127,7 +127,7 @@ ms.locfileid: "53211926"
  [返回数据源表](#DataSourcesTable)  
   
 ## <a name="reporting-services-data-processing-extensions"></a>Reporting Services 数据处理扩展插件  
- 以下数据处理扩展插件随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]自动安装。 有关详细信息以及安装验证，请参阅 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md) 和 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
+ 以下数据处理扩展插件随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]自动安装。 有关详细信息以及安装验证，请参阅 [RSReportDesigner 配置文件](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)和 [RsReportServer.config 配置文件](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
 > [!NOTE]
 >  目前不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据处理扩展插件。  
@@ -150,7 +150,7 @@ ms.locfileid: "53211926"
   
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 中，与此数据扩展插件关联的图形查询设计器是关系查询设计器，而不是用于“Microsoft SQL Server”数据源类型的 Visual Database Tool 设计器。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft SQL Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自动区分 Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 与 Microsoft SQL Server 数据源类型，并打开与该数据源类型关联的图形查询设计器。  
   
  如果您在图形模式下使用该查询设计器，则会分析查询并可能将其重写。 基于文本的查询设计器也可用于编写查询。 如果希望控制用于查询的精确 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，请使用基于文本的查询设计器。   
   
@@ -229,7 +229,7 @@ ms.locfileid: "53211926"
  
 若要安装 Oracle 客户端工具，可执行以下操作。
  
-1.  转到 [Oracle 的下载站点](https://www.oracle.com/us/products/tools/index-090165.html)
+1.  转到 [Oracle 的下载站点](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
 2.  下载适用于 Windows（64 位服务器，32 位工具）的 ODAC 12c 第 4 版 (12.1.0.2.4)
 3.  安装 Data Provider for .NET 4
   
@@ -270,7 +270,7 @@ ms.locfileid: "53211926"
   
  有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
   
- 您还可以创建基于 Teradata 数据库的模型。 有关详细信息，请参阅 Teradata 站点上的以下白皮书：[Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
+ 您还可以创建基于 Teradata 数据库的模型。 有关更多信息，请参阅 Teradata 网站上的以下白皮书： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
   
  [返回数据源表](#DataSourcesTable)  
   
@@ -292,12 +292,12 @@ ms.locfileid: "53211926"
  您可以指定的凭据取决于客户端应用程序所使用的实现。 有关详细信息，请参阅 [SharePoint 列表连接类型 (SSRS)](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)。  
   
 ###  <a name="XML"></a> XML 数据处理扩展插件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个 XML 数据处理扩展插件，以便您可以在报表中使用 XML 数据。 使用此插件，可以从 XML 文档、Web 服务或者从可通过 URL 访问的基于 Web 的应用程序检索数据。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 有关关联查询设计器的详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的“基于文本的查询设计器”部分。 有关示例，请参阅 [Reporting Services：使用 XML 和 Web 服务数据源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个 XML 数据处理扩展插件，以便您可以在报表中使用 XML 数据。 使用此插件，可以从 XML 文档、Web 服务或者从可通过 URL 访问的基于 Web 的应用程序检索数据。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 有关关联查询设计器的详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的“基于文本的查询设计器”部分。 有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
  [返回数据源表](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> SAP BW 数据处理扩展插件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个数据处理扩展插件，通过此扩展插件，可以在报表中使用来自 SAP BW 数据源的数据。
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个数据处理扩展，通过此扩展，可以在报表中使用来自 SAP BW 数据源的数据。
   
  [返回数据源表](#DataSourcesTable)  
   

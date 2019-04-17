@@ -1,7 +1,7 @@
 ---
 title: 下载 SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58431612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59243501"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,28 @@ ms.locfileid: "58431612"
 
 SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
 
-对大多数用户而言，都可以在 Visual Studio 安装期间安装 SQL Server Data Tools (SSDT)。使用 Visual Studio 安装程序安装 SSDT 会添加基本的 SSDT 功能，因此仍需运行 [SSDT 独立安装程序](#ssdt-for-vs-2017-standalone-installer)，获取 AS、IS 和 RS 工具。
+
+## <a name="changes-in-ssdt-for-visual-studio-2019"></a>SSDT for Visual Studio 2019 中的变化 ##
+
+随着 Visual Studio 2019 发布，启用 Analysis Services、Integration Services 和 Reporting Services 项目所需的功能已移到相应 Visual Studio 扩展中。 创建数据库项目的核心 SSDT 功能依然是 Visual Studio 不可或缺的组成部分（需要在安装过程中选择数据存储和处理工作负荷）。  不再需要独立 SSDT 安装。 
+
+如果已有 Visual Studio 2019 许可证：
+- 对于 SQL 数据库项目，为 Visual Studio 安装数据存储和处理工作负荷
+- 对于 Analysis Services、Integration Services 或 Reporting Services 项目，从商城安装相应的一个或多个扩展
+
+如果尚无 Visual Studio 2019 许可证：
+- 安装 [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_campaign=tailored+install&utm_source=docs.microsoft.com&utm_medium=microsoft&utm_content=sqlssdt&rid=35007) 
+- 根据需要，安装 Analysis Services、Integration Services 或 Reporting Services
+
+## <a name="changes-in-ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017 中的变化 ##
+
+自 Visual Studio 2017 起，创建数据库项目的功能已集成到 Visual Studio 安装中。 无需安装 SSDT 独立安装程序，即可获得核心 SSDT 体验。 若要创建 Integration Services/Analysis Services/Reporting Services 项目，仍需要 SSDT 独立安装程序。 
+
+- 对于数据库项目，为 Visual Studio 安装数据存储和处理工作负荷
+- 对于 Analysis Services、Integration Services 或 Reporting Services 项目，下载并安装 [SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)
+
+
+
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>使用 Visual Studio 2017 安装 SSDT
 
@@ -45,7 +66,7 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![d下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - 安装 SSDT for Visual Studio 2017 (15.9.0) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例。
@@ -99,7 +120,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 1. 运行 `vs_setup.exe --NoWeb` 以安装 VS2017 Shell 和 SQL Server 数据项目。
 2. 从布局文件夹运行 `SSDT-Setup-ENU.exe /install` 并选择 SSIS/SSRS/SSAS。
 
-   - 或者若要执行无人参与的安装，请运行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - 或者，若要执行无人参与安装，请运行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 
 有关可用选项，请运行 `SSDT-Setup-ENU.exe /help`
 
@@ -127,7 +148,7 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4
 安装 SSDT 后，阅读这些教程，了解如何使用 SSDT 创建数据库、包、数据模型和报告：  
 
 - [面向项目的脱机数据库开发](project-oriented-offline-database-development.md)  
-- [SSIS 教程：创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [SSIS 教程：创建简单 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services 教程](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

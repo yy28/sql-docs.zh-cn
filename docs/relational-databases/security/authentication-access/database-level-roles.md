@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420092"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516493"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
 
@@ -58,7 +58,7 @@ ms.locfileid: "54420092"
   
  固定数据库角色是在数据库级别定义的，并且存在于每个数据库中。 **db_owner** 数据库角色的成员可以管理固定数据库角色成员身份。 msdb 数据库中还有一些特殊用途的数据库角色。  
   
- 可以向数据库级角色中添加任何数据库帐户和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 角色。 固定数据库角色的每个成员都可向同一个角色添加其他用户。  
+ 可以向数据库级角色中添加任何数据库帐户和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 角色。
   
 > [!TIP]  
 >  请不要将用户定义的数据库角色添加为固定角色的成员。 这会导致意外的权限升级。  
@@ -74,7 +74,7 @@ ms.locfileid: "54420092"
 |固定数据库角色名|描述|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定数据库角色的成员可以执行数据库的所有配置和维护活动，还可以删除 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]中的数据库。 （在 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]中，某些维护活动需要服务器级别权限，并且不能由 **db_owners**执行。）|  
-|**db_securityadmin**|**db_securityadmin** 固定数据库角色的成员可以修改角色成员身份和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
+|**db_securityadmin**|db_securityadmin 固定数据库角色的成员可以仅修改自定义角色的角色成员资格、创建无登录名的用户和管理权限。 向此角色中添加主体可能会导致意外的权限升级。|  
 |**db_accessadmin**|**db_accessadmin** 固定数据库角色的成员可以为 Windows 登录名、Windows 组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加或删除数据库访问权限。|  
 |**db_backupoperator**|**db_backupoperator** 固定数据库角色的成员可以备份数据库。|  
 |**db_ddladmin**|**db_ddladmin** 固定数据库角色的成员可以在数据库中运行任何数据定义语言 (DDL) 命令。|  
@@ -93,7 +93,7 @@ ms.locfileid: "54420092"
 
 |角色名称|描述|  
 |--------------------|-----------------|
-|**dbmanager** | 可以创建和删除数据库。 创建数据库的 dbmanager 角色的成员将成为该数据库的所有者，从而让该用户可作为 dbo 用户连接到该数据库。 Dbo 用户具有数据库中的所有数据库权限。 Dbmanager 角色的成员不一定具有访问非他们所有的数据库的权限。|
+|**dbmanager** | 可以创建和删除数据库。 创建数据库的 dbmanager 角色的成员成为相应数据库的所有者，这样可便于用户以 dbo 用户身份连接到相应数据库。 Dbo 用户具有数据库中的所有数据库权限。 Dbmanager 角色的成员不一定具有访问非他们所有的数据库的权限。|
 |**loginmanager** | 可以创建和删除虚拟 master 数据库中的登录名。|
 
 > [!NOTE]
@@ -143,9 +143,9 @@ ms.locfileid: "54420092"
 |[sp_droprole (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|从当前数据库中删除数据库角色。|  
 |[sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|  
 |[sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。 [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 除外的所有平台应改为使用 `ALTER ROLE` 。|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 向角色添加权限。
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 拒绝向角色授予权限。
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 撤消以前授予或拒绝的权限。
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 权限 | 向角色添加权限。
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 权限 | 拒绝向角色授予权限。
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 权限 | 撤消以前授予或拒绝的权限。
   
   
 ## <a name="public-database-role"></a>public 数据库角色  

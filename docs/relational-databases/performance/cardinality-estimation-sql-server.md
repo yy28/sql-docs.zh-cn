@@ -16,17 +16,18 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828017"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516453"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 这意味着它将选择执行具有最低估计处理开销的查询计划。 查询优化器基于以下两个主要因素来确定执行查询计划的开销：
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器是基于成本的查询优化器。 也就是说，它选择估计处理成本最低的查询计划。 查询优化器基于以下两个主要因素来确定执行查询计划的开销：
 
 - 查询计划每个级别上处理的总行数，称为该计划的基数。
 - 由查询中所使用的运算符规定的算法的开销模式。
@@ -35,7 +36,7 @@ ms.locfileid: "56828017"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的基数估计 (CE)主 要派生自创建索引或统计信息时所创建的直方图（以手动或自动方式）。 有时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还使用查询的约束信息和逻辑重写来确定基数。
 
-在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法精确计算基数。 这将使开销计算不准确，可能导致生成不理想的查询计划。 避免在查询中使用这些构造可以提高查询性能。 有时，使用查询表达式或其他措施也可以提高查询性能，如下所述：
+在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法精确计算基数。 这会导致成本计算不准确，进而可能导致查询计划欠佳。 避免在查询中使用这些构造可以提高查询性能。 有时，使用查询表达式或其他措施也可以提高查询性能，如下所述：
 
 - 带谓词的查询，这些查询在同一表的不同列之间使用比较运算符。
 - 带谓词的查询，这些查询使用运算符且下列任何一种情况为 True：
@@ -53,9 +54,10 @@ ms.locfileid: "56828017"
 - OLTP（联机事务处理）查询，由于该查询运行相当频繁，因此它的多个实例经常同时运行。  
 - 在 OLTP 工作期间运行的具有大量聚合函数的 SELECT 查询。  
   
-你可以使用技术来识别因新的 CE 而执行变慢的查询。 你也可以选择如何解决此性能问题。     
+你可以使用技术来识别因新的 CE 而执行变慢的查询。 你也可以选择如何解决此性能问题。
   
-## <a name="versions-of-the-ce"></a>CE 的版本  
+## <a name="versions-of-the-ce"></a>CE 的版本
+
 在 1998 年，CE 的重大更新是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 的一部分，其兼容级别为 70。 此版本的 CE 模型建立在四个基本假设之上：
 
 -  **独立性：** 假设不同列上的数据分布是独立于彼此的，除非可获取相关性信息且信息可用。
@@ -106,7 +108,7 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [使用 SQL Server 2014 基数估算器优化查询计划](https://msdn.microsoft.com/library/dn673537.aspx)  
  [查询提示](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT 查询提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [使用查询优化助手升级数据库](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)   

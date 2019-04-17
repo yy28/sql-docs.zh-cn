@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493775"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506544"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 指定辅助数据库的设置（所有辅助数据库必须具有相同的值）。
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。  
+
+指定查询计划句柄，以从计划缓存中清除单个查询计划。
+
+> [!NOTE]
+> 指定查询计划句柄适用于 Azure SQL 数据库和 SQL Server 2019 或更高版本。
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -151,7 +156,7 @@ PRIMARY
 
 IDENTITY_CACHE = { ON | OFF }
 
-**适用对象**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用于**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 在数据库级别启用或禁用标识缓存。 默认值为 ON。 标识缓存用于提高具有标识列的表的 INSERT 性能。 为了避免服务器意外重启或故障转移到辅助服务器时出现标识列值的差值，请禁用 IDENTITY_CACHE 选项。 该选项与现有[跟踪标志 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 类似，但前者可在数据库级别设置，而不只是可在服务器级别设置。
 
@@ -160,7 +165,7 @@ IDENTITY_CACHE = { ON | OFF }
 
 INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 起）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 允许用户在数据库或语句范围内启用或禁用交错执行，同时将数据库兼容性级别维持在 140 或更高。 交错执行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自适应查询处理的一个功能。 有关详细信息，请参阅[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)。
 
@@ -169,7 +174,7 @@ INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**适用于**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 允许用户在数据库范围内启用或禁用批处理模式内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 批处理模式内存授予反馈是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
 
@@ -178,7 +183,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**适用于**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 允许用户在数据库范围内启用或禁用批处理模式自适应联接，同时将数据库兼容性级别维持在 140 或更高。 批处理模式自适应联接是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中推出的[智能查询处理](../../relational-databases/performance/intelligent-query-processing.md)的一个功能。
 
@@ -230,13 +235,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 
-适用于：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**适用对象**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 第一次编译批处理时，启用或禁用要存储在缓存中的已编译计划存根。 默认为 OFF。 为数据库启用了数据库作用域内配置 OPTIMIZE_FOR_AD_HOC_WORKLOADS 后，已编译计划存根可在第一次编译批处理时存储在缓存中。 与完全编译的计划大小相比，计划存根的内存占用空间更小。 如果编译或再次执行批处理，则会删除已编译计划存根，并将其替换为完全编译的计划。
 
 XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
 
-适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**： [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块在模块级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 中。
 
@@ -244,7 +249,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
 
 XTP_QUERY_EXECUTION_STATISTICS = { ON |OFF  }
 
-适用于：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**适用对象**： [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 启用或禁用对当前数据库的本机编译的 T-SQL 模块语句级别的执行统计信息收集。 默认为 OFF。 执行统计信息反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中。
 
@@ -290,13 +295,13 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING = { ON |OFF}
 
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**适用于**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 允许启用或禁用[轻型查询分析基础结构](../../relational-databases/performance/query-profiling-infrastructure.md)。 轻型查询分析基础结构 (LWP) 比标准分析机制更有效地提供查询性能数据，并且默认启用。
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**适用对象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**适用于**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 允许启用或禁用新的 `String or binary data would be truncated` 错误消息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 针对此情况引入了更具体的新错误消息 (2628)：  
 
@@ -406,7 +411,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-本示例在异地复制方案中为主数据库将 PARAMETER_SNIFFING 设置为 OFF。
+此示例在异地复制方案中为辅助数据库将 PARAMETER_SNIFFING 设置为 OFF。
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -442,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. 设置 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-适用于：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**适用对象**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 本示例可在第一次编译批处理时启用要存储在缓存中的已编译计划存根。
 
@@ -468,12 +473,19 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. 从计划缓存中清除查询计划
+此示例从过程缓存中清除特定计划 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>其他资源
 
 ### <a name="maxdop-resources"></a>MAXDOP 资源
 
 - [并行度](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535)（适用于 SQL Server 中的“max degree of parallelism”配置选项的建议和指南）
+- [SQL Server 中“最大并行度”配置选项的建议和指南](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 资源
 
@@ -483,7 +495,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 资源
 
 - [参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)（“我发现一个参数！”）
+- [“我发现一个参数！”](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 资源
 

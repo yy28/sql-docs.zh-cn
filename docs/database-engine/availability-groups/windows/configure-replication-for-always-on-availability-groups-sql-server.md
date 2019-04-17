@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367235"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>使用 AlwaysOn 可用性组配置复制
 
@@ -32,7 +32,7 @@ ms.locfileid: "55044314"
   
 2.  [配置 AlwaysOn 可用性组。](#step2)  
   
-3.  [确保对所有辅助副本主机进行复制配置。](#step3)  
+3.  [确保对所有次要副本主机配置复制。](#step3)  
   
 4.  [将辅助副本主机配置为复制发布服务器。](#step4)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "55044314"
 ##  <a name="step1"></a> 1.配置数据库发布和订阅  
  **配置分发服务器**  
   
- 分发数据库不能置于可用性组中。  
+ 无法使用 SQL Server 2012 和 SQL Server 2014 将分发数据库置于可用性组中。 SQL 2016 及更高版本支持将分发数据库置于可用性组中。 有关详细信息，请参阅[配置可用性组中的分发数据库](../../../relational-databases/replication/configure-distribution-availability-group.md)。
   
 1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 **sp_adddistributor**。 使用 *@password* 参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
   
@@ -128,7 +128,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  有关详细信息，请参阅[创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)。  
 
   
-##  <a name="step3"></a> 3.确保对所有辅助副本主机进行复制配置  
+##  <a name="step3"></a> 3.确保对所有次要副本主机配置复制  
  在每个辅助副本主机上，确保已将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置为支持复制。 可在每个辅助副本主机上运行以下查询来确定是否安装了复制功能：  
   
 ```  
@@ -216,7 +216,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [复制管理常见问题解答](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [复制管理 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **创建和配置可用性组**  
   
@@ -234,7 +234,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [将辅助副本联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [手动为可用性组准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -243,7 +243,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ## <a name="see-also"></a>另请参阅  
  [针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性组：互操作性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性组：互操作性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 复制](../../../relational-databases/replication/sql-server-replication.md)  
   
   

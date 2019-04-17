@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241456"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -43,7 +43,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 在 Scale Out Master 证书的 CN 中包含 Scale Out Master 服务的 DNS 主机名
 
-此主机名将用于 Scale Out Master 终结点。 （确保提供 DNS 主机名而非服务器名称。）
+此主机名是 Scale Out Master 终结点，它是作为故障转移群集中的聚集通用服务进行创建（见第 7 步）。   （确保提供 DNS 主机名而非服务器名称。）
 
 ![HA 主节点配置](media/ha-master-config.PNG)
 

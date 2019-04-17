@@ -13,18 +13,18 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042226"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533355"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-智能查询处理 (QP) 功能系列包含有广泛影响的功能，以提升现有工作负载的性能，同时最大限度地减少实现工作量。 
+智能查询处理 (QP) 功能系列包含有广泛影响的功能，既能提升现有工作负荷的性能，还能最大限度地减少实现工作量。 
 
 ![智能查询处理](./media/3_iqpfeaturefamily.png)
 
@@ -36,14 +36,14 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 下表详细列出了所有智能查询处理功能，以及针对数据库兼容性级别必须具备的任何要求。
 
-| **IQP 功能** | **在 Azure SQL 数据库中受支持** | **在 SQL Server 中受支持** |**描述** |
+| **IQP 功能** | **在 Azure SQL 数据库中是否受支持** | **在 SQL Server 中是否受支持** |**Description** |
 | --- | --- | --- |--- |
 | [自适应联接（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|自适应联接在运行时期间根据实际输入行自动选择联接类型。|
 | [非重复近似计数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，公共预览版|由于高性能和低内存占用量，可针对大数据方案提供近似的 COUNT DISTINCT。 |
-| [行存储的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
+| [行存储上的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|可为 CPU 绑定关系的 DW 工作负载提供批处理模式，无需列存储索引。  | 
 | [交错执行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|请使用在首次编译时遇到的多语句表值函数的实际基数，而不是一个固定猜测值。|
-| [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询占用了 50% 的内存，则为以后的执行减少内存授予。|
-| [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询占用了 50% 的内存，则为以后的执行减少内存授予。|
+| [内存授予反馈（批处理模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，兼容性级别为 140| 是，自 SQL Server 2017 起，兼容性级别为 140|如果批处理模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
+| [内存授予反馈（行模式）](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|如果行模式查询有溢出到磁盘的操作，则需为以后的执行添加更多内存。 如果查询浪费分配给它的超过 50% 内存，请对连续的执行减少内存授予。|
 | [标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否 | 是，自 SQL Server 2019 CTP 2.1 起，兼容性级别为 150，公共预览版|标量 UDF 将转换为内联在调用查询中的等效关系表达式，这通常会使性能显著提升。|
 | [表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，兼容性级别为 150，公共预览版| 是，自 SQL Server 2019 CTP 2.0 起，兼容性级别为 150，公共预览版|请使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。|
 

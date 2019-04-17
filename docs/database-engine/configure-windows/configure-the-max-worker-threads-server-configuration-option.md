@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429333"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>配置 max worker threads 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "56230974"
   
      [建议](#Recommendations)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **配置 max worker threads 选项，使用：**  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230974"
     |\> 64 个处理器|256 + ((逻辑 CPU 位数 - 4) * 32)|512 + ((逻辑 CPU 位数 - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不再能够安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。   我们建议对于 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，最大工作线程数为 1024。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不再能够安装在 32 位操作系统上。 为了帮助运行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更低版本的客户，我们列出了 32 位计算机值。 建议对 32 位计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用最大工作线程数 1,024。  
   
     > [!NOTE]  
-    >  有关使用 64 个以上的 CPU 的建议，请参考 [在具有超过 64 个 CPU 的计算机上运行 SQL Server 的最佳做法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
+    > 有关使用 64 个以上的 CPU 的建议，请参考 [在具有超过 64 个 CPU 的计算机上运行 SQL Server 的最佳做法](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)。  
   
 -   如果所有工作线程因为长时间运行的查询而处于活动状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能停止响应，直到一个工作线程完成并变成可用。 虽然这不是缺点，但有时用户可能并不希望如此。 如果进程显示为停止响应并且不再处理新查询，则将使用专用管理员连接 (DAC) 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并关闭此进程。 为避免此种情况发生，请增大最大工作线程数。  
   
- **max worker threads** 服务器配置选项不考虑所有系统任务（例如可用性组、Service Broker、锁管理器等）所需的线程。 如果超过了配置的线程数目，下列查询将提供有关生成了附加线程的系统任务的信息。  
+ “最大工作线程数”服务器配置选项不会限制系统中可能生成的所有线程。 可用性组、Service Broker、锁管理器或其他任务所需的线程在此限制之外生成。 如果超过了配置的线程数，下列查询提供有关已生成附加线程的系统任务的信息。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -101,10 +101,10 @@ ms.locfileid: "56230974"
  WHERE s.is_user_process = 0;  
  ```  
   
-###  <a name="Security"></a> 安全性  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
- 默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要执行带两个参数的 **sp_configure** 以更改配置选项或运行 RECONFIGURE 语句，则用户必须具备 ALTER SETTINGS 服务器级别的权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
+####  <a name="Permissions"></a> 权限  
+ 默认情况下，所有用户都具备不带参数或仅带第一个参数的 **sp_configure** 的执行权限。 若要使用两个参数执行 sp_configure 来更改配置选项或运行 `RECONFIGURE` 语句，用户必须拥有 `ALTER SETTINGS` 服务器级别权限。 `ALTER SETTINGS` 权限由 sysadmin 和 serveradmin 固定服务器角色隐式拥有。  
   
 ##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56230974"
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>配置 max worker threads 选项  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -143,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在配置 max worker threads 选项之后  
+##  <a name="FollowUp"></a> 跟进：在配置“最大工作线程数”选项后  
  执行 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 后，此更改将立即生效，而无需重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  

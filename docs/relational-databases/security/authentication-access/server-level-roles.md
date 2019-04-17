@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429353"
 ---
 # <a name="server-level-roles"></a>服务器级别角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53213706"
 |------------------------------|-----------------|  
 |**sysadmin**|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |**serveradmin**|**serveradmin** 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
-|**securityadmin**|**securityadmin** 固定服务器角色的成员可以管理登录名及其属性。 他们可以 `GRANT`、`DENY` 和 `REVOKE` 服务器级权限。 他们还可以 `GRANT`、`DENY` 和 `REVOKE` 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **重要说明：** 能够授予[!INCLUDE[ssDE](../../../includes/ssde-md.md)]的访问权限和配置用户权限的能力使得安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
+|**securityadmin**|**securityadmin** 固定服务器角色的成员可以管理登录名及其属性。 他们可以 `GRANT`、`DENY` 和 `REVOKE` 服务器级权限。 他们还可以 `GRANT`、`DENY` 和 `REVOKE` 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> **重要说明：** 如果能够授予对 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的访问权限和配置用户权限，安全管理员可以分配大多数服务器权限。 **securityadmin** 角色应视为与 **sysadmin** 角色等效。|  
 |**processadmin**|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中运行的进程。|  
 |**setupadmin**|setupadmin 固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 时需要 sysadmin 成员资格。）|  
 |**bulkadmin**|bulkadmin 固定服务器角色的成员可以运行 `BULK INSERT` 语句。|  
@@ -64,7 +64,7 @@ ms.locfileid: "53213706"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 权限与 **sysadmin** 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， **CONTROL SERVER** 不表示 **sysadmin** 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 **DBCC** 命令和许多系统过程要求 **sysadmin** 固定服务器角色的成员身份。 对于需要 **sysadmin** 成员资格的 171 个系统存储过程的列表，请参阅 Andreas Wolter 的以下博客帖子： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)（CONTROL SERVER 与 sysadmin/sa：权限、系统过程、DBCC、自动创建架构和特权升级 - 注意事项）。  
+>  **CONTROL SERVER** 权限与 **sysadmin** 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， **CONTROL SERVER** 不表示 **sysadmin** 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 **DBCC** 命令和许多系统过程要求 **sysadmin** 固定服务器角色的成员身份。 对于需要 **sysadmin** 成员资格的 171 个系统存储过程的列表，请参阅 Andreas Wolter 的以下博客帖子： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)（CONTROL SERVER 与 sysadmin/sa：权限、系统过程、DBCC、自动创建架构和特权升级 - 注意事项）。  
   
 ## <a name="server-level-permissions"></a>服务器级权限  
  只能向用户定义的服务器角色中添加服务器级权限。 若要列出服务器级权限，请执行下面的语句。 服务器级权限如下：  

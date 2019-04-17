@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429363"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 选项是受支持的功能，但是，它可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户从上次已知成功备份还原，作为从 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
 >     
 > 仅能使用 REPAIR_ALLOW_DATA_LOSS 选项修复的某些错误可能涉及释放行、页或一些列页以清除错误。 用户不可再访问或恢复已释放的数据，且无法确定已释放数据的准确内容。 因此，释放任何行或页后参照完整性可能不准确，因为此修复操作不包括检查或维护外键约束。 使用 REPAIR_ALLOW_DATA_LOSS 选项后，用户必须检查其数据库的参考完整性（使用 DBCC CHECKCONSTRAINTS）。    
 >     
@@ -159,7 +159,7 @@ DATA_PURITY
 > [!WARNING]
 > 如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。
     
- 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
+ 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 若要了解如何手动更正这些错误，请参阅知识库文章 923247：[解决 SQL Server 2005 及更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
  **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
@@ -174,22 +174,22 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 
 如果用户定义类型标记为按字节排序，则该用户定义类型必须只有一个序列化。 在 DBCC CHECKDB 运行期间，如果按字节排序的用户定义类型没有一致的序列化，则会导致错误 2537。 有关详细信息，请参阅[用户定义类型的要求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。    
 
-由于只能以单用户模式修改[资源数据库](../../relational-databases/databases/resource-database.md)，因此不能直接对其运行 DBCC CHECKDB 命令。 但是，当对 [master 数据库](../../relational-databases/databases/master-database.md)执行 DBCC CHECKDB 时，也在内部对资源数据库运行另一个 CHECKDB。 这意味着 DBCC CHECKDB 可能会返回额外的结果。 如果未设置任何选项，或者设置了 PHYSICAL_ONLY 或 ESTIMATEONLY 选项，则命令返回额外的结果集。    
+由于只能以单用户模式修改[资源数据库](../../relational-databases/databases/resource-database.md)，因此不能直接对其运行 DBCC CHECKDB 命令。 但是，当对 [master 数据库](../../relational-databases/databases/master-database.md)执行 DBCC CHECKDB 时，也在内部对资源数据库运行另一个 CHECKDB。 这意味着 DBCC CHECKDB 可能会返回额外的结果。 如果未设置任何选项，或设置的是 `PHYSICAL_ONLY` 或 `ESTIMATEONLY` 选项，此命令返回额外结果集。    
 
 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 开始，执行 DBCC CHECKDB 不再清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 以前，执行 DBCC CHECKDB 会清除计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能会导致查询性能暂时性地突然降低。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>对索引执行逻辑一致性检查    
 对索引进行的逻辑一致性检查因数据库兼容级别而异，如下所示：
 -   如果兼容性级别为 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高：    
--   除非指定 NOINDEX，否则 DBCC CHECKDB 对单个表及其所有非聚集索引同时执行物理和逻辑一致性检查。 但是，在默认情况下，仅对 XML 索引、空间索引和索引视图执行物理一致性检查。
--   如果指定了 WITH EXTENDED_LOGICAL_CHECKS，则将对索引视图、XML 索引和空间索引（如果存在）执行逻辑检查。 默认情况下，先执行物理一致性检查，然后执行逻辑一致性检查。 如果还指定了 NOINDEX，则仅执行逻辑检查。
+-   除非指定 `NOINDEX`，否则 DBCC CHECKDB 对一个表及其所有非聚集索引同时执行物理和逻辑一致性检查。 但是，在默认情况下，仅对 XML 索引、空间索引和索引视图执行物理一致性检查。
+-   如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，便会对索引视图、XML 索引和空间索引（若有）执行逻辑检查。 默认情况下，先执行物理一致性检查，然后执行逻辑一致性检查。 如果还指定了 `NOINDEX`，则仅执行逻辑检查。
     
-这些逻辑一致性检查可对索引对象的内部索引表及其引用的用户表进行交叉检查。 为了查找外部行，将构造内部查询来对内部表和用户表的完整交集执行查询。 运行此查询可能会对性能产生很大影响，并且无法跟踪其进度。 因此，建议您仅在以下情况下才指定 WITH EXTENDED_LOGICAL_CHECKS：怀疑存在与物理损坏无关的索引问题，或者已关闭页级校验并且怀疑存在列级硬件损坏。
+这些逻辑一致性检查可对索引对象的内部索引表及其引用的用户表进行交叉检查。 为了查找外部行，将构造内部查询来对内部表和用户表的完整交集执行查询。 运行此查询可能会对性能产生很大影响，并且无法跟踪其进度。 因此，建议仅在以下情况下才指定 `WITH EXTENDED_LOGICAL_CHECKS`：怀疑存在与物理损坏无关的索引问题，或已禁用页级别校验和且怀疑存在列级别硬件损坏。
 -   如果索引为筛选索引，DBCC CHECKDB 将执行一致性检查以验证索引项是否满足筛选谓词的要求。
--   如果兼容级别为 90 或更低，则除非指定 NOINDEX，否则 DBCC CHECKDB 将对单个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。  
-- 从 SQL Server 2016 开始，不再默认对持久化计算列、UDT 列和筛选索引运行其他检查，以避免昂贵的表达式计算。 此更改显著减少了针对包含这些对象的数据库的 CHECKDB 持续时间。 但是，始终会完成这些对象的物理一致性检查。 仅当指定了 EXTENDED_LOGICAL_CHECKS 选项时，才会在 EXTENDED_LOGICAL_CHECKS 选项中已包含的逻辑检查（索引视图、XML 索引和空间索引）之外，执行表达式计算。   
+-   如果兼容性级别不高于 90，那么除非指定 `NOINDEX`，否则 DBCC CHECKDB 对一个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。  
+- 从 SQL Server 2016 开始，不再默认对持久化计算列、UDT 列和筛选索引运行其他检查，以避免昂贵的表达式计算。 此更改显著减少了针对包含这些对象的数据库的 CHECKDB 持续时间。 但是，始终会完成这些对象的物理一致性检查。 仅当指定了 `EXTENDED_LOGICAL_CHECKS` 选项时，才会在 `EXTENDED_LOGICAL_CHECKS` 选项中已包含的逻辑检查（索引视图、XML 索引和空间索引）之外，还执行表达式计算。   
     
-**了解数据库的兼容性级别**
+**了解数据库兼容性级别**
 -   [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部数据库快照    
@@ -203,7 +203,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 例如，如果表包含使用 FILESTREAM 属性的 varbinary(max) 列，则 DBCC CHECKDB 会检查文件系统目录和文件与表行、表列和列值之间是否存在一对一映射。 如果指定 REPAIR_ALLOW_DATA_LOSS 选项，DBCC CHECKDB 便可修复损坏。 为修复 FILESTREAM 损坏，DBCC 将删除缺少文件系统数据的任何表行。
     
 ## <a name="best-practices"></a>最佳实践    
-建议您使用 PHYSICAL_ONLY 选项，以便可以频繁检查生产系统。 使用 PHYSICAL_ONLY 可以极大地缩短对大型数据库运行 DBCC CHECKDB 的运行时间。 同时建议您定期运行没有选项的 DBCC CHECKDB。 应当以什么频率执行这些运行任务将取决于各个企业及其生产环境。
+建议对生产系统频繁使用 `PHYSICAL_ONLY` 选项。 使用 PHYSICAL_ONLY 可以极大地缩短对大型数据库运行 DBCC CHECKDB 的运行时间。 同时建议您定期运行没有选项的 DBCC CHECKDB。 应当以什么频率执行这些运行任务将取决于各个企业及其生产环境。
     
 ## <a name="checking-objects-in-parallel"></a>并行检查对象    
 默认情况下，DBCC CHECKDB 对对象执行并行检查。 并行度由查询处理器自动确定。 最大并行度的配置与配置并行查询相同。 若要限制 DBCC 检查可使用的处理器的最大数目，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 通过使用跟踪标志 2528 可以禁用并行检查。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
@@ -220,7 +220,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 |1|出现错误号 8967。 存在一个内部 DBCC 错误。|    
 |2|在紧急模式数据库修复过程中出错。|    
 |3|这表示元数据中存在的损坏终止了 DBCC 命令。|    
-|4|检测到断定或访问违规。|    
+|4|检测到断言或访问违规。|    
 |5|出现终止了 DBCC 命令的未知错误。|    
     
 ## <a name="error-reporting"></a>错误报告    
@@ -246,7 +246,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 -   如果由于事务日志损坏而导致数据库恢复失败，则将重新生成事务日志。 重新生成事务日志可能导致事务一致性丢失。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
+> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户从上次已知成功备份还原，作为从 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
 >     
 >  重新生成日志后，没有完全的 ACID 保证。    
 >     
@@ -267,7 +267,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 -   复制元数据表。 由 CHECKDB 进程为修复损坏的复制元数据表而执行的操作需要删除并重新配置复制。    
     
 如果必须对用户数据库或分发数据库运行具有 REPAIR_ALLOW_DATA_LOSS 选项的 DBCC CHECKDB 命令：
-1.  停止系统：停止数据库和复制拓扑中所有其他数据库的活动，然后尝试同步所有节点。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。    
+1.  静止系统：停止此数据库和复制拓扑中其他所有数据库上的活动，然后尝试同步所有节点。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。    
 1.  执行 DBCC CHECKDB。    
 1.  如果 DBCC CHECKDB 报表包括分发数据库中任何表或用户数据库中任何复制元数据表的修复，则请删除并重新配置复制。 有关详细信息，请参阅[禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)。    
 1.  如果 DBCC CHECKDB 报表包括任何已复制表的修复，则请执行数据验证以确定发布数据库和订阅数据库中的数据之间是否存在差异。    
@@ -365,7 +365,7 @@ DBCC CHECKDB 返回以下结果集。 这些值可能有所不同，除非指定
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>权限    
 要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。
     
 ## <a name="examples"></a>示例    
@@ -393,6 +393,6 @@ GO
 ## <a name="see-also"></a>另请参阅    
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[系统表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 
