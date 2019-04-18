@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240775"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671293"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程：Linux 上的 SQL Server 使用 Active Directory 身份验证
 
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 如果你的域控制器支持 LDAPS，则可以强制所有从 SQL Server 到域控制器无法通过 LDAPS 连接。 若要检查您的客户端可以通过 ldaps，运行以下 bash 命令，与域控制器`ldapsearch -H ldaps://contoso.com:3269`。 若要设置 SQL Server 仅使用 LDAPS，运行以下命令：
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-这将通过 SSSD 使用 LDAPS，如果在加入 AD 域主机已通过 SSSD 包和**disablesssd**未设置为 true。 如果**disablesssd**设置为 true 连同**forceldaps**设置为 true，则它将通过 SQL Server 发出的 openldap 库调用使用 LDAPS 协议。
+这将通过 SSSD 使用 LDAPS，如果在加入 AD 域主机已通过 SSSD 包和**disablesssd**未设置为 true。 如果**disablesssd**设置为 true 连同**forcesecureldap**设置为 true，则它将通过 SQL Server 发出的 openldap 库调用使用 LDAPS 协议。
 
 ### <a name="post-sql-server-2017-cu14"></a>发布 SQL Server 2017 CU14
 

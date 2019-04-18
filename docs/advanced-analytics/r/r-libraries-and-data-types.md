@@ -3,19 +3,19 @@ title: R 到 SQL 数据类型转换的 SQL Server 机器学习服务
 description: 查看隐式和显式数据类型的 converstions R 和 SQL Server 之间的数据科学和机器学习解决方案。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511534"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671113"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>数据类型映射 betweenR 和 SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R 和 SQL Server 之间的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 对于运行 SQL Server 机器学习服务中的 R 集成功能的 R 解决方案，查看不支持的数据类型和数据类型转换的 R 库和 SQL Server 之间传递数据时可能会隐式执行的列表。

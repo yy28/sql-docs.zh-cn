@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375359"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671363"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>为合并项目实现自定义冲突解决程序
   本主题说明如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或基于 COM 的自定义冲突解决程序](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) 在中为合并项目实现自定义冲突解决程序。  
@@ -118,7 +118,7 @@ ms.locfileid: "53375359"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>查看示例自定义冲突解决程序  
   
-1.  SQL Server 2000 示例文件中提供了示例。 从 **SQL Server 2000 Service Pack 3 更新示例**[下载 sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)。 这将下载 8 个文件，共 6.9 MB。  
+1.  SQL Server 2000 示例文件中提供了示例。 下载[ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip)。 这会将下载 3 个本质 6.9 mb 的文件。  
   
 2.  从下载的压缩 .cab 文件中提取文件。  
   

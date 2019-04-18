@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880560"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671423"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 事务锁定和行版本控制指南
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  
@@ -280,7 +280,7 @@ GO
   
 #### <a name="isolation-levels-in-the-database-engine"></a>数据库引擎中的隔离级别  
 
- 事务指定一个隔离级别，该隔离级别定义一个事务必须与其他事务所进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
+ 事务指定一个隔离级别，该隔离级别定义一个事务必须与由其他事务进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
   
  事务隔离级别控制：  
   
@@ -310,22 +310,22 @@ GO
 |未提交读|隔离事务的最低级别，只能保证不读取物理上损坏的数据。 在此级别上，允许脏读，因此一个事务可能看见其他事务所做的尚未提交的更改。|  
 |已提交读|允许事务读取另一个事务以前读取（未修改）的数据，而不必等待第一个事务完成。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留写锁（在所选数据上获取）直到事务结束，但是一执行 SELECT 操作就释放读锁。 这是[!INCLUDE[ssDE](../includes/ssde-md.md)]默认级别。|  
 |可重复读|[!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，直到事务结束。 但是，因为不管理范围锁，可能发生虚拟读取。|  
-|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> 注意：在请求可序列化隔离级别时，复制的表上的 DDL 操作和事务可能失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
+|可序列化|隔离事务的最高级别，事务之间完全隔离。 [!INCLUDE[ssDE](../includes/ssde-md.md)]保留在所选数据上获取的读锁和写锁，在事务结束时释放它们。 SELECT 操作使用分范围的 WHERE 子句时获取范围锁，主要为了避免虚拟读取。<br /><br /> 注意：请求可序列化隔离级别时，DDL 操作和事务复制的表上可能会失败。 这是因为复制查询使用的提示可能与可序列化隔离级别不兼容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还支持使用行版本控制的其他两个事务隔离级别。 一个是已提交读隔离的实现，另一个是事务隔离级别（快照）。  
   
 |行版本控制隔离级别|定义|  
 |------------------------------------|----------------|  
 |已提交读快照|当 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON 时，已提交读隔离使用行版本控制提供语句级读取一致性。 读取操作只需要 SCH-S 表级别的锁，不需要页锁或行锁。 即，数据库引擎使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。 用户定义的函数可以返回在包含 UDF 的语句开始后提交的数据。<br /><br /> 如果 READ_COMMITTED_SNAPSHOT 数据库选项设置为 OFF（这是默认设置），当当前事务在执行读操作时，已提交读隔离使用共享锁来防止其他事务修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 两个实现都满足已提交读隔离的 ISO 定义。|  
-|快照|快照隔离级别使用行版本控制来提供事务级别的读取一致性。 读取操作不获取页锁或行锁，只获取 SCH-S 表锁。 读取其他事务修改的行时，读取操作将检索启动事务时存在的行的版本。 当 ALLOW_SNAPSHOT_ISOLATION 数据库选项设置为 ON 时，只能对数据库使用快照隔离。 默认情况下，用户数据库的此选项设置为 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行的 DDL 操作存在限制。 在快照隔离下，以下 DDL 语句不允许出现在 BEGIN TRANSACTION 语句后:ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或任何常用语言运行时(CLR) DDL 语句。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务为单个语句，这使得它可以强制应用快照隔离的语义，即便使用 DDL 语句也是如此。 违反此原则会导致错误 3961:“数据库 '%.*ls' 中的快照隔离事务失败，因为自此事务启动后，语句所访问的对象已被其他并发事务中的 DDL 语句修改。 这是不允许的，因为未对元数据进行版本控制。 如果与快照隔离混合，对元数据的并发更新可能导致不一致。”|  
+|快照|快照隔离级别使用行版本控制来提供事务级别的读取一致性。 读取操作不获取页锁或行锁，只获取 SCH-S 表锁。 读取其他事务修改的行时，读取操作将检索启动事务时存在的行的版本。 当 ALLOW_SNAPSHOT_ISOLATION 数据库选项设置为 ON 时，只能对数据库使用快照隔离。 默认情况下，用户数据库的此选项设置为 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行的 DDL 操作存在限制。 以下 DDL 语句不允许 BEGIN TRANSACTION 语句之后的快照隔离下：ALTER TABLE、 CREATE INDEX、 CREATE XML INDEX、 ALTER INDEX、 DROP INDEX、 DBCC REINDEX、 ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或任何公共语言运行时 (CLR) DDL 语句。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务为单个语句，这使得它可以强制应用快照隔离的语义，即便使用 DDL 语句也是如此。 违反此原则会导致错误 3961:"快照隔离事务失败，在数据库 ' %.* ls' 因为该语句所访问的对象是否已被修改此事务开始以来的其他并发事务中的 DDL 语句。 这是不允许的，因为未对元数据进行版本控制。 如果与快照隔离混合，对元数据的并发更新可能导致不一致。”|  
   
  下表显示了不同隔离级别导致的并发副作用。  
   
 |隔离级别|脏读|不可重复读|虚拟读取|  
 |---------------------|----------------|------------------------|-------------|  
-|**未提交的读取**|用户帐户控制|是|用户帐户控制|  
-|**已提交的读取**|否|是|用户帐户控制|  
-|**可重复的读取**|否|否|用户帐户控制|  
+|**未提交的读取**|是|是|是|  
+|**已提交的读取**|否|是|是|  
+|**可重复的读取**|否|否|是|  
 |**快照**|否|否|否|  
 |**可序列化**|否|否|否|  
   
@@ -476,11 +476,11 @@ GO
 ||现有的授予模式||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**请求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意向共享 (IS)**|用户帐户控制|是|是|是|是|否|  
-|**共享 (S)**|用户帐户控制|是|是|否|否|否|  
-|**更新 (U)**|用户帐户控制|是|否|否|否|否|  
-|**意向排他 (IX)**|用户帐户控制|否|否|是|否|否|  
-|**意向排他共享 (SIX)**|用户帐户控制|否|否|否|否|否|  
+|**意向共享 (IS)**|是|是|是|是|是|否|  
+|**共享 (S)**|是|是|是|否|否|否|  
+|**更新 (U)**|是|是|否|否|否|否|  
+|**意向排他 (IX)**|是|否|否|是|否|否|  
+|**意向排他共享 (SIX)**|是|否|否|否|否|否|  
 |**排他 (X)**|否|否|否|否|否|否|  
   
 > [!NOTE]  
@@ -523,12 +523,12 @@ GO
 ||现有的授予模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**请求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共享 (S)**|用户帐户控制|是|否|是|是|是|否|  
-|**更新 (U)**|用户帐户控制|否|否|是|否|是|否|  
+|**共享 (S)**|是|是|否|是|是|是|否|  
+|**更新 (U)**|是|否|否|是|否|是|否|  
 |**排他 (X)**|否|否|否|否|否|是|否|  
-|**RangeS-S**|用户帐户控制|是|否|是|是|否|否|  
-|**RangeS-U**|用户帐户控制|否|否|是|否|否|否|  
-|**RangeI-N**|用户帐户控制|是|是|否|否|是|否|  
+|**RangeS-S**|是|是|否|是|是|否|否|  
+|**RangeS-U**|是|否|否|是|否|否|否|  
+|**RangeI-N**|是|是|是|否|否|是|否|  
 |**RangeX-X**|否|否|否|否|否|否|否|  
   
 #### <a name="conversion-locks"></a>转换锁  
@@ -561,7 +561,7 @@ GO
   
 -   事务隔离级别必须设置为 SERIALIZABLE。  
   
--   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以用以下谓词建立范围条件:ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
+-   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以建立范围条件用以下谓词：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
   
 #### <a name="examples"></a>示例  
 
@@ -649,7 +649,7 @@ INSERT mytable VALUES ('Dan');
   
 -   现在，事务 B 请求行 1 的排他锁，但在事务 A 完成并释放其对行 1 持有的共享锁之前被阻塞。  
   
- 事务 B 完成之后事务 A 才能完成，但是事务 B 由事务 A 阻塞。该条件也称为循环依赖关系：事务 A 依赖于事务 B，事务 B 通过对事务 A 的依赖关系关闭循环。  
+ 事务 A 才能完成事务 B 完成，但是事务 B 由事务 A 阻塞此条件也称为循环依赖关系：事务 A 依赖于事务 B，此外，事务 B 由事务 A.上具有依赖关系关闭循环  
   
  除非某个外部进程断开死锁，否则死锁中的两个事务都将无限期等待下去。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 死锁监视器定期检查陷入死锁的任务。 如果监视器检测到循环依赖关系，将选择其中一个任务作为牺牲品，然后终止其事务并提示错误。 这样，其他任务就可以完成其事务。 对于事务以错误终止的应用程序，它还可以重试该事务，但通常要等到与它一起陷入死锁的其他事务完成后执行。  
   
@@ -1230,7 +1230,7 @@ BEGIN TRANSACTION
   
  数据库从早期版本的 `ntext` 升级到 `text` 时，现有的 `image`、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 大型对象 (LOB) 数据并未更新来为行版本控制信息释放一些空间。 但第一次修改 LOB 数据时，该数据会动态升级以实现版本控制信息的存储。 即使未生成行版本也是如此。 LOB 数据升级后，每个片段最多可以存储的字节数从 8080 个减少到 8040 个。 升级过程相当于先删除 LOB 值再重新插入相同值。 即使只修改一个字节也会升级 LOB 数据。 对于每个 `ntext`、`text` 或 `image` 列，这是一次性操作，但每个操作可能生成大量页分配和 I/O 活动，具体情况取决于 LOB 数据的大小。 如果完整记录修改，还会生成大量日志记录活动。 如果数据库恢复模式未设置为 FULL，则按最小方式记录 WRITETEXT 操作和 UPDATETEXT 操作。  
   
- 在早期版本的 `nvarchar(max)` 中不使用 `varchar(max)`、`varbinary(max)` 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 因此，这些数据类型不存在升级问题。  
+ 在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不使用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)` 数据类型。 因此，这些数据类型不存在升级问题。  
   
  应该分配足够的磁盘空间来满足此要求。  
   
@@ -1924,7 +1924,7 @@ GO
   
  长时间运行的事务可能导致数据库的严重问题，如下所示：  
   
--   如果服务器实例已关闭的活动事务已执行很多未提交的修改后，后续重新启动的恢复阶段可能需要更长的时间比指定的时间**恢复间隔**服务器配置选项或 ALTER database...SET TARGET_RECOVERY_TIME 选项所指定的时间。 这些选项分别控制活动检查点和间接检查点的频率。 有关检查点类型的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
+-   如果服务器实例已关闭的活动事务已执行很多未提交的修改后，后续重新启动的恢复阶段可能需要更长的时间比指定的时间**恢复间隔**服务器配置选项或 ALTER database...SET TARGET_RECOVERY_TIME 选项。 这些选项分别控制活动检查点和间接检查点的频率。 有关检查点类型的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 -   更重要的是，尽管等待事务可能生成很小的日志，但是它无限期阻止日志截断，导致事务日志不断增加并可能填满。 如果事务日志填满，数据库将无法再执行任何更新。 有关详细信息，请参阅[解决事务日志已满&#40;SQL Server 错误 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)，和[的事务日志的&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)。  
   

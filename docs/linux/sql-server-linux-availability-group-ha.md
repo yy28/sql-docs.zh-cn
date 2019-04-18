@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On 可用性组的部署模式 |Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044930"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671173"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -62,7 +62,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 | |读取缩放|高可用性 （& a) </br> 数据保护 | 数据保护|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 |
+|主要副本中断 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 |
 |一个次要副本中断  | 主要是 R / w。 如果主没有自动故障转移会失败。 |主要是 R / w。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 |
 
 <sup>\*</sup> 默认值
@@ -71,7 +71,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 
 ## <a name="two-synchronous-replicas"></a>两个同步副本
 
-此配置使数据保护。 像其他可用性组配置，它可以实现读取缩放。 两个同步副本配置不提供自动高可用性。 
+此配置使数据保护。 像其他可用性组配置，它可以实现读取缩放。 两个同步副本配置不提供自动高可用性。 两个副本配置为仅适用于 SQL Server 2017 RTM 和更高版本不再支持使用 (CU1 及更高版本) 的 SQL Server 2017 版本...
 
 ![两个同步副本][1]
 
@@ -84,9 +84,6 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |一个次要副本中断  |主要是 R/W，运行可能导致数据丢失。 |主次要副本恢复之前不可用的用户事务。|
 
 <sup>\*</sup> 默认值
-
-> [!NOTE]
-> 前面的方案是在 SQL Server 2017 CU 1 之前的行为。 
 
 <a name = "configOnly"></a>
 

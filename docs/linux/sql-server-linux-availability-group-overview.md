@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206616"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671283"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性组
 
@@ -55,9 +55,9 @@ ms.locfileid: "53206616"
 
 组合`required_synchronized_secondaries_to_commit`新的序列号 (这存储在`sys.availability_groups`) 通知 Pacemaker 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，例如，可能发生自动故障转移。 在这种情况下，辅助副本将具有相同的序列号的主数据库，这意味着它最新的最新的所有配置信息。
 
-有三个值可以为设置`required_synchronized_secondaries_to_commit`:0、1 或 2。 它们控制在副本变得不可用时所发生的行为。 数字对应于必须与主数据库同步的辅助副本数目。 行为，如下所示是 Linux 下：
+有三个值可以为设置`required_synchronized_secondaries_to_commit`:0、 1 或 2。 它们控制在副本变得不可用时所发生的行为。 数字对应于必须与主数据库同步的辅助副本数目。 行为，如下所示是 Linux 下：
 
--   0-无自动故障转移为可能，因为没有任何辅助副本需要同步。 主数据库任何时候都可用。
+-   0-辅助副本不需要与主数据库同步状态。 如果不同步的辅助数据库，但是也会有任何自动故障转移。 
 -   1-一个辅助副本必须位于与主; 同步状态可以自动故障转移。 可用次要同步副本之前，主数据库不可用。
 -   2 的在三个或多个节点可用性组配置中两个辅助副本必须与主; 同步可以自动故障转移。
 
@@ -95,7 +95,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 中的其他新增[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]截至 CU1 是仅配置副本。 因为 Pacemaker 不同于 WSFC，尤其是当涉及到仲裁和需要 STONITH，拥有只需两个节点配置时将不工作涉及到 AG。 对于 FCI，提供的 Pacemaker 仲裁机制可能没有什么问题，因为在群集层进行所有 FCI 故障转移仲裁。 为 AG，发生在 Linux 下的约束性仲裁[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，所有元数据的存储位置。 这是仅配置副本派上用场。
 
-而无需任何其他内容，第三个节点和至少一个同步的副本将所需。 这不适用于[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]，因为它只能有两个副本参与可用性组。 仅配置副本的可用性组配置中的其他副本相同的 master 数据库中存储的可用性组配置。 仅配置副本不具有参与可用性组的用户数据库。 配置数据从主要以同步方式发送。 无论它们是自动还是手动在故障转移过程，然后使用此配置数据。
+而无需任何其他内容，第三个节点和至少一个同步的副本将所需。 仅配置副本的可用性组配置中的其他副本相同的 master 数据库中存储的可用性组配置。 仅配置副本不具有参与可用性组的用户数据库。 配置数据从主要以同步方式发送。 无论它们是自动还是手动在故障转移过程，然后使用此配置数据。
 
 为维持仲裁并启用自动故障转移的外部群集类型 AG，它是必须：
 

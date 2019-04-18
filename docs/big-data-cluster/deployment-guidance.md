@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582410"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671373"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 大数据群集在 Kubernetes 上
 
@@ -120,6 +120,29 @@ kubectl config view
 >1. 请确保你在双引号内包装密码，如果它包含任何特殊字符。 您可以设置 MSSQL_SA_PASSWORD 为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`，`&`或`'`字符。 请注意，双引号分隔符仅适用于 bash 命令。
 >1. 群集的名称必须仅小写字母数字字符，不留空格。 将在具有与群集相同的名称的命名空间中创建群集的所有 Kubernetes 项目 （容器、 pod、 有状态集、 服务） 指定的名称。
 >1. **SA**帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器，你指定的 MSSQL_SA_PASSWORD 环境变量是可发现通过运行后回显 $MSSQL_SA_PASSWORD 容器中。 出于安全考虑，更改 SA 密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
+
+以下部分详细 YARN 配置选项信息。 注意：这些是专家级别配置。 用户不需要指定这些值和默认值在此情况下才会生效。 Yarn 是 Spark 的资源管理器。 在存储 pod 中运行的 Spark 和，可通过 CLUSTER_STORAGE_POOL_REPLICAS 进行控制。
+
+| Yarn 环境变量 | Required | 默认值 | Description |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | 否 | 2048  | HDFS 名称和数据节点进程的堆大小 |
+| **YARN_HEAPSIZE**   | 否 | 2048  | Yarn RM 和 NM 进程的堆大小 |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | 否 | 18432  | 最大总内存每 K8 容器可以使用 Yarn  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | 否 | 6  | 最大虚拟内核数的节点上可以使用 Yarn  |
+| **YARN_SCHEDULER_MAX_MEMORY** | 否 | 18432  | 最大内存的节点上可以使用的 Yarn 容器  |
+| **YARN_SCHEDULER_MAX_VCORES** | 否 | 6  | Yarn 容器可以在节点上使用的最大内存  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | 否 | 0.3  | 可以使用应用程序主控的总内存的比率   |
+
+本部分的详细信息 Spark 配置选项。 注意：这些是专家级别配置。 用户不需要指定这些值和默认值在此情况下才会生效。 在运行时用户可以基于配置每个应用程序通过 %%配置 spark 笔记本中。
+
+| Spark 环境变量 | Required | 默认值 | Description |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | 否 | 2048  | 使用 Spark 驱动程序的内存  |
+| **SPARK_DRIVER_CORES** | 否 | 1  | Spark 驱动程序使用的内核数  |
+| **SPARK_EXECUTOR_INSTANCES** | 否 | 3  | 使用 Spark 驱动程序的内存  |
+| **SPARK_EXECUTOR_MEMORY** | 否 | 1536  | 使用 Spark 执行器内存 |
+| **SPARK_EXECUTOR_CORES** | 否 | 1  | 使用 Spark 执行器核心数  |
+
 
 根据使用的 Windows 或 Linux 客户端设置部署大数据群集所需的环境变量不同。  选择以下步骤使用具体取决于哪个操作系统。
 
