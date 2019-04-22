@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241880"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
@@ -43,7 +43,7 @@ ms.locfileid: "59241880"
   
 -   [Parameters](#parameter)  
   
--   [备注](#remark)  
+-   [注释](#remark)  
   
 -   [示例](#example)  
   
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 执行的阶段  
  该实用工具的执行过程经历四个阶段。 这些阶段如下所列：  
   
-1.  命令选项确定阶段：命令提示符读取选项列表和已指定的参数。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
+1.  命令选项确定阶段：命令提示符读取选项和已指定的参数的列表。 如果遇到 **/?** 或 **/HELP** 选项，则会跳过所有后续阶段。  
   
 2.  包加载阶段：指定的包`/SQL`， **/file**，或`/DTS`加载选项。  
   
-3.  配置阶段：按以下顺序处理各个选项：  
+3.  配置阶段：按此顺序处理各个选项：  
   
     -   设置包标志、变量和属性的选项。  
   
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，新安装中将默认禁用 **xp_cmdshell** 选项。 运行 **sp_configure** 系统存储过程可以启用此选项。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安装中将默认禁用 **xp_cmdshell** 选项。 运行 **sp_configure** 系统存储过程可以启用此选项。 有关详细信息，请参阅 [xp_cmdshell 服务器配置选项](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
 ##  <a name="syntax"></a> 语法  
   
@@ -307,31 +307,31 @@ dtexec /option [value] [/option [value]]...
   
     -   文本文件：  
   
-        -   ProgID：DTS.LogProviderTextFile.1  
+        -   ProgID:DTS.LogProviderTextFile.1  
   
         -   ClassID：{59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]解码的字符：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]设置用户帐户 ：  
   
-        -   ProgID：DTS.LogProviderSQLProfiler.1  
+        -   ProgID:DTS.LogProviderSQLProfiler.1  
   
         -   ClassID：{5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解码的字符：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置用户帐户 ：  
   
-        -   ProgID：DTS.LogProviderSQLServer.1  
+        -   ProgID:DTS.LogProviderSQLServer.1  
   
         -   ClassID：{6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Windows 事件日志：  
   
-        -   ProgID：DTS.LogProviderEventLog.1  
+        -   ProgID:DTS.LogProviderEventLog.1  
   
         -   ClassID：{97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   XML 文件：  
   
-        -   ProgID：DTS.LogProviderXMLFile.1  
+        -   ProgID:DTS.LogProviderXMLFile.1  
   
         -   ClassID：{AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> 示例  
  下面的示例演示如何使用`dtexec`命令提示实用工具来配置和执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包。  
   
- **运行包**  
+ **“正在运行的包”**  
   
  若要使用 Windows 身份验证执行保存到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，可使用以下代码：  
   

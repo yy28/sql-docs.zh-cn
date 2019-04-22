@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240395"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
@@ -48,24 +48,24 @@ ms.locfileid: "59240395"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [选择要修改的分区（基于使用情况的优化向导）](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [选择要修改的分区&#40;基于使用情况的优化向导&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [指定查询条件（基于使用情况的优化向导）](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [指定查询条件&#40;基于使用情况的优化向导&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [查看将要优化的查询（基于使用情况的优化向导）](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [查看将要优化的查询&#40;基于使用情况的优化向导&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [查看聚合使用情况（基于使用情况的优化向导）](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [查看聚合使用情况&#40;基于使用情况的优化向导&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [指定对象计数（基于使用情况的优化向导）](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [指定对象计数&#40;基于使用情况的优化向导&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [设置聚合选项（基于使用情况的优化向导）](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [设置聚合选项&#40;基于使用情况的优化向导&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [完成向导（基于使用情况的优化向导）](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [完成向导&#40;基于使用情况的优化向导&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>请参阅  
  [聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [聚合设计向导的 F1 帮助](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 向导（多维数据）](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

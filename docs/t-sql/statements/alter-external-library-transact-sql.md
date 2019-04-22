@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017963"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583170"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -31,7 +31,7 @@ ms.locfileid: "57017963"
 修改现有外部包库的内容。
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支持 Windows 平台上的 R、Python 和 Java。 计划在之后发布的版本中提供对 Linux 的支持。
+> 在 SQL Server 2017 中，支持 R 语言和 Windows 平台。 SQL Server 2019 CTP 2.4 中支持 Windows 和 Linux 平台上的 R、Python 和 Java。 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 语法
@@ -46,7 +46,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=
 {
     (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-    [, PLATFORM = WINDOWS )
+    [, PLATFORM = <platform> )
 }
 
 <client_library_specifier> :: =
@@ -60,6 +60,12 @@ WITH ( LANGUAGE = <language> )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
 }
 
 <language> :: = 
@@ -129,11 +135,17 @@ WITH ( LANGUAGE = 'R' )
 
 相反，可以将包内容作为变量以二进制格式进行传递。
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 Windows 是唯一支持的平台。
+为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 在 SQL Server 2017 中，Windows 是唯一受支持的平台。
 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+为库的内容指定平台。 在修改现有库以添加不同的平台时，此值是必需的。 在 SQL Server 2019 中，Windows 和 Linux 是受支持的平台。
+
 **language**
 
 指定包的语言。 值可以是 **R**、**Python** 或 **Java**。
@@ -141,15 +153,19 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="remarks"></a>Remarks
 
-对于 R 语言，准备包时，包的形式须为适用于 Windows 、扩展名为 .ZIP 的压缩存档文件。 目前仅支持 Windows 平台。  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+对于 R 语言，准备包时，包的形式须为适用于 Windows 、扩展名为 .ZIP 的压缩存档文件。 在 SQL Server 2017 中，仅支持 Windows 平台。  
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+对于 R 语言，使用文件时，必须使用 .ZIP 扩展名以压缩存档文件的形式准备包。 
+
 对于 Python 语言，必须以压缩存档文件的形式准备 .whl 或 .zip 文件中的包。 如果包已经是 .zip 文件，则必须将其包含在新的 .zip 文件中。 目前不支持将包作为 .whl 或 .zip 文件直接上传。
 ::: moniker-end
 
 `ALTER EXTERNAL LIBRARY` 语句只将库位上载到数据库。 当用户在调用库的 [sp_execute_external_script (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中运行代码时，安装已修改的库。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 默认情况下，dbo 用户或担任 db_owner 角色的任何成员都有权运行 ALTER EXTERNAL LIBRARY。 此外，创建了外部库的用户还可以更改相应外部库。
 

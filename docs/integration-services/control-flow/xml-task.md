@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59291547"
 ---
 # <a name="xml-task"></a>XML 任务
@@ -121,7 +121,7 @@ ms.locfileid: "59291547"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [使用 XML 任务验证 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [“表达式”页](../../integration-services/expressions/expressions-page.md)  
   

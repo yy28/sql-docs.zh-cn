@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242255"
 ---
 # <a name="excel-source"></a>Excel 源
@@ -90,7 +90,7 @@ ms.locfileid: "59242255"
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [Excel 自定义属性](excel-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59242255"
   
 ## <a name="related-tasks"></a>Related Tasks  
 
--   [使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel](../load-data-to-from-excel-with-ssis.md)
+-   [使用 SQL Server Integration Services (SSIS) 将数据导入 Excel 或从 Excel 导出数据](../load-data-to-from-excel-with-ssis.md)
 
 -   [将查询参数映射到数据流组件中的变量](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

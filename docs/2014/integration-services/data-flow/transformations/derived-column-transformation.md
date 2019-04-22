@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240992"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
@@ -64,7 +64,7 @@ ms.locfileid: "59240992"
   
 -   [通用属性](../../common-properties.md)  
   
--   [Transformation Custom Properties](transformation-custom-properties.md)  
+-   [转换自定义属性](transformation-custom-properties.md)  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   

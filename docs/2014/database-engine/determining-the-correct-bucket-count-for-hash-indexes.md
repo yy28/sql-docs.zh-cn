@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241955"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
@@ -137,11 +137,11 @@ GO
   
  考虑此表上的三个哈希索引：  
   
--   IX_Status：50% 的 Bucket 是空的，这很好。 但是，平均链长非常高 (65,536)。 这指示存在大量重复值。 因此，在此情况下使用非聚集哈希索引是不恰当的。 应改用非聚集索引。  
+-   IX_Status:50%的 bucket 是空的这很好。 但是，平均链长非常高 (65,536)。 这指示存在大量重复值。 因此，在此情况下使用非聚集哈希索引是不恰当的。 应改用非聚集索引。  
   
--   IX_OrderSequence：0% 的 Bucket 是空的，这太低了。 此外，平均链长度是 8。 因为此索引中的值是唯一的，所以，这意味着平均而言 8 个值映射到每个 Bucket。 应增加 Bucket 计数。 因为索引键具有 262,144 个唯一值，所以，Bucket 计数应至少为 262,144。 如果预期将来会出现增长，则该数目还应该更高。  
+-   IX_OrderSequence:0%的 bucket 是空的这是过低。 此外，平均链长度是 8。 因为此索引中的值是唯一的，所以，这意味着平均而言 8 个值映射到每个 Bucket。 应增加 Bucket 计数。 因为索引键具有 262,144 个唯一值，所以，Bucket 计数应至少为 262,144。 如果预期将来会出现增长，则该数目还应该更高。  
   
--   主键索引 (PK__SalesOrder...):36% 的 Bucket 是空的，这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
+-   主键索引 (PK__SalesOrder...):36%的 bucket 是空的这很好。 此外，平均链长度为 1，这也不错。 无需进行更改。  
   
  有关排除与内存优化哈希索引有关的问题的详细信息，请参阅 [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
   
@@ -186,6 +186,6 @@ GO
 -   在优化点查找的性能时，Bucket 计数最好是唯一索引值的两倍甚至三倍。 较高的 Bucket 计数意味着内存使用量的增加，并且也意味着全文检索扫描所需时间的增加。  
   
 ## <a name="see-also"></a>请参阅  
- [内存优化的表的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

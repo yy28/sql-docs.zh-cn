@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860478"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
@@ -31,10 +31,10 @@ ms.locfileid: "58860478"
 
 | Tool | Required | Description | 安装 |
 |---|---|---|---|
-| **mssqlctl** | 用户帐户控制 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-mssqlctl.md) |
-| **kubectl**<sup>1</sup> | 用户帐户控制 | 监视基础 Kuberentes 群集的命令行工具 ([的详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | 用户帐户控制 | 用于查询 SQL Server 的跨平台图形化工具 ([的详细信息](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安装](../azure-data-studio/download.md) |
-| **SQL Server 2019 扩展** | 用户帐户控制 | 适用于支持连接到大数据群集的 Azure Data Studio 的扩展。 此外提供了数据虚拟化向导。 | [安装](../azure-data-studio/sql-server-2019-extension.md) |
+| **mssqlctl** | 是 | 用于安装和管理大数据群集的命令行工具。 | [安装](deploy-install-mssqlctl.md) |
+| **kubectl**<sup>1</sup> | 是 | 监视基础 Kuberentes 群集的命令行工具 ([的详细信息](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | 是 | 用于查询 SQL Server 的跨平台图形化工具 ([的详细信息](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安装](../azure-data-studio/download.md) |
+| **SQL Server 2019 扩展** | 是 | 适用于支持连接到大数据群集的 Azure Data Studio 的扩展。 此外提供了数据虚拟化向导。 | [安装](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | 适用于 AKS | 用于管理 Azure 服务的新式命令行界面。 与 AKS 的大数据群集部署一起使用 ([的详细信息](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安装](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 可选 | 新式命令行接口，用于查询 SQL Server ([的详细信息](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 对于某些脚本 | 用于查询 SQL Server 的传统命令行工具 ([的详细信息](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -58,7 +58,7 @@ ms.locfileid: "58860478"
 上表提供了所有与大数据群集配合使用的常见工具。 所需的工具取决于你的方案。 但一般情况下，以下工具是最重要的管理、 连接和查询群集：
 
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 扩展**
 

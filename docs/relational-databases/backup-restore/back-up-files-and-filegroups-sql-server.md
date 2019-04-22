@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241925"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
@@ -138,9 +138,9 @@ ms.locfileid: "59241925"
   
      [ WITH with_options [ **,**...*o* ] ] ;  
   
-    |选项|描述|  
+    |选项|“说明”|  
     |------------|-----------------|  
-    |*“数据库”*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
+    |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
     |FILE _=_ logical_file_name|指定要包含在文件备份中的文件的逻辑名称。|  
     |FILEGROUP _=_ logical_filegroup_name|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
@@ -211,12 +211,12 @@ GO
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
--   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 提供程序](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [备份数据库（“常规”页）](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [备份数据库（“备份选项”页）](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c32afdaf39f924c8c734c12df2991dd29fad75d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664916"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774592"
 ---
 # <a name="tables"></a>表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "51664916"
 ## <a name="types-of-tables"></a>表的类型  
  除了基本用户定义表的标准角色以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还提供了下列类型的表，这些表在数据库中起着特殊的作用。  
   
- 已分区表  
+### <a name="partitioned-tables"></a>已分区表  
  已分区表是将数据水平划分为多个单元的表，这些单元可以分布到数据库中的多个文件组中。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 默认情况下， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持多达 15,000 个分区。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
- 临时表  
+### <a name="temporary-tables"></a>临时表  
  临时表存储在 **tempdb**中。 临时表有两种类型：本地表和全局表。 它们在名称、可见性以及可用性上有区别。 本地临时表的名称以单个数字符号 (#) 打头；它们仅对当前的用户连接是可见的；当用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时被删除。 全局临时表的名称以两个数字符号 (##) 打头，创建后对任何用户都是可见的，当所有引用该表的用户从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例断开连接时将被删除。  
   
- 系统表  
+### <a name="system-tables"></a>系统表  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将定义服务器配置及其所有表的数据存储在一组特殊的表中，这组表称为系统表。 用户不能直接查询或更新系统表。 可以通过系统视图查看系统表中的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
- 宽表  
+### <a name="wide-tables"></a>宽表  
  宽表使用 [稀疏列](../../relational-databases/tables/use-sparse-columns.md) ，从而将表可以包含的总列数增大为 30,000 列。 稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 宽表已定义了一个 [列集](../../relational-databases/tables/use-column-sets.md)，列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列合并为一种结构化的输出。 索引数和统计信息数也分别增大为 1,000 和 30,000。 宽表行的最大大小为 8,019 个字节。 因此，任何特定行中的大部分数据都应为 NULL。 宽表中非稀疏列和计算列的列数之和仍不得超过 1,024。  
   
  宽表具有下列性能影响。  

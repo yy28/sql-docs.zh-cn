@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242215"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "59242215"
   
 -   [将警报用于镜像数据库](#UseAlerts)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [相关任务](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> 性能指标和警告阈值  
  下表列出可为其配置警告的性能指标，说明相应的警告阈值并列出相应的数据库镜像监视器标签。  
@@ -45,7 +45,7 @@ ms.locfileid: "59242215"
 |性能指标|警告阈值|数据库镜像监视器标签|  
 |------------------------|-----------------------|--------------------------------------|  
 |未发送日志|指定未发送日志达到多少 KB 后，在主体服务器实例上生成一个警告。 此警告有助于根据 KB 度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果未发送日志超出了阈值，则发出警告**|  
-|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误所需的时间与故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
+|未还原日志|指定未还原日志达到多少 KB 后，会在镜像服务器实例上生成一个警告。 此警告可以帮助度量故障转移时间。 “故障转移时间 ”主要包括前一个镜像服务器前滚其重做队列中剩余的任意日志所需的时间，以及一小段额外时间。<br /><br /> 注意：对于自动故障转移，系统识别错误的时间所需的故障转移时间无关。<br /><br /> 有关详细信息，请参阅 [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)。|**如果未还原日志超出了阈值，则发出警告**|  
 |最早的未发送事务|指定在主体服务器实例上生成警告之前，发送队列中可以累积的事务的分钟数。 此警告有助于根据时间度量数据丢失的可能性，尤其与高性能模式相关。 但是，当镜像因伙伴断开连接而暂停或挂起时，该警告也适用于高安全模式。|**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|  
 |镜像提交开销|指定在主体服务器上生成警告之前，每个事务可允许的平均延迟的毫秒数。 此延迟是主体服务器实例等待镜像服务器实例将事务日志记录写入重做队列时，所发生的开销量。 该值只适用于高安全模式。|**如果镜像提交开销超过了阈值则发出警告**|  
   
@@ -137,7 +137,7 @@ ms.locfileid: "59242215"
   
 -   [sp_dbmmonitorresults (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
   
--   [sp_dbmmonitorupdate (Transact SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
+-   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>请参阅  
  [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)   

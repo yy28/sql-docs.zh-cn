@@ -12,14 +12,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 5a527e84535f62f9b0ef949a47001b85e71cbd2d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242235"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 连接类型 (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。s若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。U此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。d使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 是基于云的、构建在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技术之上的托管关系数据库。 若要在报表中包括来自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的数据，您必须有一个基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]并从中检索数据。  
   
  此数据扩展插件支持多值参数、服务器聚合以及与连接字符串分开管理的凭据。  
   
@@ -46,7 +46,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
  有关连接字符串示例的详细信息，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
 ##  <a name="Credentials"></a> 凭据  
- 不支持 Windows 身份验证（集成安全性）。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 时，用户都必须提供凭据（登录名和密码）。  
+ 不支持 Windows 身份验证（集成安全性）。 如果试图使用 Windows 身份验证连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则会发生错误。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 仅支持 SQL Server 身份验证（用户名和密码），并且在每次连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，用户都必须提供凭据（登录名和密码）。  
   
  凭据必须具有足够的权限访问数据库。 根据要执行的查询，您可能需要具有其他权限，例如运行存储过程和访问表和视图的足够权限。 外部数据源的所有者必须配置相应的凭据，使这些凭据足以提供对所需数据库对象的只读访问。  
   
@@ -158,7 +158,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> 操作指南主题  
  本节包含使用数据连接、数据源和数据集的分步说明。  
   
- [添加和验证数据连接或数据源（报表生成器和 SSRS）](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [添加和验证数据连接或数据源&#40;报表生成器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -169,7 +169,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> 相关章节  
  文档中的这些章节提供有关报表数据的深入概念性信息，以及有关如何定义、自定义和使用与数据相关的报表部件的步骤信息。  
   
- [向报表添加数据（报表生成器和 SSRS）](report-datasets-ssrs.md)  
+ [向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
  [报表生成器中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

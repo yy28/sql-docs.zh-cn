@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533335"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671323"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -232,7 +232,7 @@ ms.locfileid: "59533335"
   
   8.    单击“确定” 。
 
-    **D3.共享访问签名不存在**
+   **D3.共享访问签名不存在**
   5.    单击“新建容器”按钮，将会打开“连接到 Microsoft 订阅”对话框。  
   
   6.    完成“连接到 Microsoft 订阅”对话框，然后单击“确定”，返回到“选择备份目标”对话框。  有关其他信息，请参阅 [连接到 Microsoft Azure 订阅](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。

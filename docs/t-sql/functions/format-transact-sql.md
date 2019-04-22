@@ -18,17 +18,17 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 87750e264f87b8244cb74b9d68276c85d92e5761
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342944"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670926"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 返回 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中以指定的格式和可选的区域性格式化的值。 使用 FORMAT 函数将日期/时间和数字值格式化为识别区域设置的字符串。 对于一般的数据类型转换，请使用 CAST 或 CONVERT。  
   
@@ -36,11 +36,12 @@ ms.locfileid: "58342944"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql
 FORMAT ( value, format [, culture ] )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *value*  
  支持格式化的数据类型的表达式。 有关有效类型的列表，请参阅下面“备注”部分中的表。  
   
@@ -54,15 +55,17 @@ FORMAT ( value, format [, culture ] )
   
  如果未提供 culture 参数，则使用当前会话的语言。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性作为参数；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，FORMAT 将引发错误。  
   
-## <a name="return-types"></a>返回类型  
+## <a name="return-types"></a>返回类型
+
  nvarchar 或 Null  
   
  返回值的长度由 format 确定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  FORMAT 将返回 NULL 错误，而不是非 valid 的 culture。 例如，如果 format 中指定的值无效，则返回 NULL。  
- 
- FORMAT 函数具有不确定性。   
+
+ FORMAT 函数具有不确定性。
   
  FORMAT 依赖于 .NET Framework 公共语言运行时 (CLR) 的存在。  
   
@@ -93,7 +96,8 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a-simple-format-example"></a>A. 简单 FORMAT 示例  
+### <a name="a-simple-format-example"></a>A. 简单 FORMAT 示例
+
  下面的示例返回针对不同区域性格式化的简单日期。  
   
 ```sql  
@@ -101,7 +105,7 @@ DECLARE @d DATETIME = '10/01/2011';
 SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
       ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';   
+      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
   
 SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
@@ -111,7 +115,7 @@ SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
 ----------------  ----------------------------- ------------- -------------------------------------  
 10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
@@ -125,7 +129,8 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>B. 使用自定义格式字符串执行 FORMAT  
+### <a name="b-format-with-custom-formatting-strings"></a>B. 使用自定义格式字符串执行 FORMAT
+
  以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期为 2012 年 9 月 27 日。 有关这些格式和其他自定义格式的详细信息，请参阅[自定义数字格式字符串](https://msdn.microsoft.com/library/0c899ak8.aspx)。  
   
 ```sql  
@@ -136,7 +141,7 @@ SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 DateTime Result  Custom Number Result  
 --------------   --------------------  
 27/09/2012       123-45-6789  
@@ -144,7 +149,8 @@ DateTime Result  Custom Number Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT  
+### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT
+
  下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行。 EndOfDateRate 列在该表中作为 money 类型存储。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
@@ -182,7 +188,7 @@ FROM Sales.CurrencyRate
 ORDER BY CurrencyRateID;  
 ```  
   
-```  
+```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1,00            1,0002          1,00 €  
@@ -194,7 +200,8 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> D. 时间数据类型的 D. FORMAT  
+### <a name="ExampleD"></a> D. 时间数据类型的 D. FORMAT
+
  FORMAT 在这些情况下返回 NULL，因为 `.` 和 `:` 未进行转义。  
   
 ```sql  
@@ -209,9 +216,8 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR (Transact-SQL)](../../t-sql/functions/str-transact-sql.md)  
- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

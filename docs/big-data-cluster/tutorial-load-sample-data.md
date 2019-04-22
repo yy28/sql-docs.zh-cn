@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859988"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教程：将示例数据加载到 SQL Server 大数据群集
@@ -31,7 +31,7 @@ ms.locfileid: "58859988"
 - [已部署的大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **sqlcmd**
    - **curl**
 

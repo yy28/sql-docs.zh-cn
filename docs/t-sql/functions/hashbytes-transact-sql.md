@@ -21,10 +21,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429383"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
@@ -54,7 +54,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  输出符合算法标准：MD2、MD4 和 MD5 为 128 位（16 个字节）；SHA 和 SHA1 为 160 位（20 个字节）；SHA2_256 为 256 位（32 个字节），SHA2_512 为 512 位（64 个字节）。  
   
-**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 一直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更早版本，允许的输入值限制为 8000 个字节。  
   
@@ -98,7 +98,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
   
 ## <a name="see-also"></a>另请参阅  
 [选择加密算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
+[CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  (Transact-SQL)](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

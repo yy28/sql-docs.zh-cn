@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860428"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 大数据群集入门
@@ -29,7 +29,7 @@ ms.locfileid: "58860428"
 | Tool | Description |
 |---|---|
 | **mssqlctl** | 部署和管理大数据群集。 |
-| **Kubectl** | 创建和管理基础的 Kubernetes 群集。 |
+| **kubectl** | 创建和管理基础的 Kubernetes 群集。 |
 | **Azure Data Studio** | 使用大数据群集的图形界面。 |
 | **SQL Server 2019 扩展** | Azure Data Studio 扩展使大数据群集功能。 |
 

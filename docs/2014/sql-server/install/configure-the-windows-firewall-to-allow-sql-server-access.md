@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860708"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -44,7 +44,7 @@ ms.locfileid: "58860708"
   
 -   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+-   [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 
   
@@ -101,7 +101,7 @@ ms.locfileid: "58860708"
   
 -   **Microsoft 管理控制台 (MMC)**  
   
-     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  
+     使用高级安全 Windows 防火墙 MMC 管理单元可以配置更高级的防火墙设置。 此管理单元以一种易于使用的方式呈现大多数防火墙选项，并且会显示所有防火墙配置文件。 有关详细信息，请参阅本主题后面的[使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc)。  
   
 -   **netsh**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58860708"
   
     -   [如何使用 Netsh.exe 工具和命令行开关](https://support.microsoft.com/kb/242468)  
   
-    -   [如何使用"netsh advfirewall firewall"上下文而非"netsh firewall"上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
+    -   [如何使用“netsh advfirewall firewall”上下文而非“netsh firewall”上下文控制 Windows Server 2008 和 Windows Vista 中的 Windows 防火墙行为](https://support.microsoft.com/kb/947709)  
   
     -   [“netsh firewall”命令及“profile=all”参数不配置基于 Windows Vista 的计算机上的公共配置文件](https://support.microsoft.com/kb/947213)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "58860708"
 ####  <a name="BKMK_dynamic_ports"></a> 动态端口  
  默认情况下，命名实例（包括 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]）使用动态端口。 也就是说，每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，它都将确定一个可用端口并使用此端口号。 如果命名实例是安装的唯一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能使用 TCP 端口 1433。 如果还安装了其他 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则它可能会使用其他 TCP 端口。 由于所选端口可能会在每次启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时更改，因而很难配置防火墙以启用对正确端口号的访问。 因此，如果使用防火墙，则建议重新配置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 以每次都使用同一端口号。 这称为固定端口或静态端口。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- 另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **之类的** 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”页的“本地端口”列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
+ 另一种配置命名实例以侦听固定端口的方法是在防火墙中为诸如 **sqlservr.exe** 之类的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序创建例外（针对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]）。 这会非常方便，但当使用高级安全 Windows 防火墙 MMC 管理单元时，端口号将不会显示在“入站规则”页的“本地端口”列中。 这会使审核哪些端口处于打开状态变得更为困难。 另一个注意事项是，Service Pack 或累积更新可能会更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可执行文件的路径，这将使防火墙规则作废。  
   
 > [!NOTE]  
 >  下面的过程将使用“控制面板”中的 **“Windows 防火墙”** 项。 高级安全 Windows 防火墙 MMC 管理单元可以配置更复杂的规则。 其中包括配置服务例外，这对于提供深度防御会非常有用。 请参阅下面的 [使用高级安全 Windows 防火墙管理单元](#BKMK_WF_msc) 。  

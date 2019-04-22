@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242265"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 查询基础知识 (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "59242265"
 |主题|Description|  
 |-----------|-----------------|  
 |[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)|提供 MDX SELECT 语句的基本语法信息。|  
-|[用查询轴和切片器轴限定查询 (MDX)](mdx-query-and-slicer-axes-restricting-the-query.md)|说明什么是查询轴和切片器轴，以及如何指定它们。|  
+|[用查询轴和切片器轴限定查询&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|说明什么是查询轴和切片器轴，以及如何指定它们。|  
 |[在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)|介绍 MDX SELECT 语句中的 FROM 子句的用途。|  
 |[在 MDX 中生成命名集 (MDX)](mdx-named-sets-building-named-sets.md)|介绍 MDX 中的命名集的用途，以及在 MDX 查询中创建与使用命名集所需的技术。|  
 |[在 MDX 中生成计算成员 (MDX)](mdx-calculated-members-building-calculated-members.md)|提供有关 MDX 中计算成员的信息，包括在 MDX 表达式中创建和使用计算成员所需的技术。|  

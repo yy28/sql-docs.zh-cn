@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860628"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>配置 AlwaysOn 可用性组扩展事件
@@ -101,8 +101,8 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
 |availability_replica_id|guid|可用性副本的 ID。|  
-|previous_state|availability_replica_state|更改前副本的角色。<br /><br /> **可能的值有：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-|current_state|availability_replica_state|更改后副本的角色。<br /><br /> **可能的值有：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|previous_state|availability_replica_state|更改前副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|current_state|availability_replica_state|更改后副本的角色。<br /><br /> **可能的值包括：**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health 会话定义  
   

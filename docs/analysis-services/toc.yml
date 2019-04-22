@@ -238,7 +238,7 @@ items:
         href: ../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
       - name: 配置 Analysis Services 和 Kerberos 约束委派 (KCD)
         href: ../analysis-services/instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd.md
-      - name: 核对清单：使用 PowerShell 验证 Power Pivot for SharePoint
+      - name: 清单：使用 PowerShell 验证 Power Pivot for SharePoint
         href: ../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
       - name: 在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View
         href: ../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md
@@ -2487,8 +2487,8 @@ items:
   - name: MDX 和 DAX 中的 VBA 函数
     href: ../mdx/vba-functions-in-mdx-and-dax.md
 ms.openlocfilehash: a651b3240dcf27f61b4acfc9b6e68fc3a77d4c9c
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58788114"

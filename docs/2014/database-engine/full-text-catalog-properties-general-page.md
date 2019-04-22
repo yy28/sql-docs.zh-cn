@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241446"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
@@ -40,11 +40,11 @@ ms.locfileid: "59241446"
   
 -   **已暂停**  
   
--   **已中止**  
+-   **限制**  
   
--   **Recovering**  
+-   **恢复**  
   
--   **Shutdown**  
+-   **关闭**  
   
 -   **正在进行增量填充**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59241446"
   
 -   **磁盘已满暂停**  
   
--   **更改跟踪**  
+-   **Change tracking**  
   
  **项计数**  
  显示目录中的全文项数。  
@@ -60,13 +60,13 @@ ms.locfileid: "59241446"
  **目录大小**  
  显示全文目录的大小 (MB)。  
   
- **“属性”**  
+ **名称**  
  全文目录的名称。  
   
  **区分重音**  
  查看或修改目录是否区分标注字符，例如波形符 (**~**)、锐音符 (**´**) 或元音 (**¨**)。 有效值为  
   
--   **否**  
+-   **是**  
   
 -   **是**  
   
@@ -85,10 +85,10 @@ ms.locfileid: "59241446"
   
 |||  
 |-|-|  
-|**None**|不执行 **“优化目录”**、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
-|**“优化目录”**|优化目录的空间利用率，从而提高查询性能。 它还可提高搜索结果相关排名的准确性。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
-|**“重新生成目录”**|删除并重新生成全文目录。 如果更改了基本目录属性（如区分重音），则必须执行此操作。<br /><br /> 全文目录所在的文件组必须为联机或可读写状态，重新生成才可成功。 重新生成后，全文索引将重新填充。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
-|**“重新填充目录”**|使用数据的最新更改来更新目录。 使用此选项并不要求停用目录。|  
+|**无**|不执行 **“优化目录”**、 **“重新生成目录”** 或 **“重新填充目录”** 操作。|  
+|**优化目录**|优化目录的空间利用率，从而提高查询性能。 它还可提高搜索结果相关排名的准确性。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE。|  
+|**重新生成目录**|删除并重新生成全文目录。 如果更改了基本目录属性（如区分重音），则必须执行此操作。<br /><br /> 全文目录所在的文件组必须为联机或可读写状态，重新生成才可成功。 重新生成后，全文索引将重新填充。<br /><br /> 该操作执行 ALTER FULLTEXT CATALOG *catalog_name* REBUILD。|  
+|**重新填充目录**|使用数据的最新更改来更新目录。 使用此选项并不要求停用目录。|  
   
 ## <a name="see-also"></a>请参阅  
  [填充全文索引](../relational-databases/indexes/indexes.md)  

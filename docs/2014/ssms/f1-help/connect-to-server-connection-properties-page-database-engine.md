@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241545"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
@@ -46,7 +46,7 @@ ms.locfileid: "59241545"
  强制对连接进行加密。  
   
  **使用自定义颜色**  
- 选择此选项可以指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口中状态栏的背景颜色。 若要指定颜色，请单击“选择”。 在“颜色”对话框中，从“基本颜色”网格中选择一种预定义颜色，或者单击“定义自定义颜色”定义并使用自定义颜色。  
+ 选择此选项可以指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口中状态栏的背景颜色。 若要指定颜色，请单击“选择”。 在“颜色”对话框中，从“基本颜色”网格中选择一种预定义颜色，或者单击“定义自定义颜色”定义并使用自定义颜色。  
   
 -   如果在“对象资源管理器”窗格中指定了服务器条目的颜色，则在打开查询编辑器窗口时将使用此颜色。 若要打开查询编辑器窗口，可以右键单击服务器条目，然后选择“新建查询”，或者如果“对象资源管理器”窗格处于活动状态且其焦点位于此服务器上，则可以单击工具栏上的“新建查询”。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59241545"
  **全部重置**  
  将所有手动输入的连接属性值替换为默认值。  
   
- **连接**  
+ **“连接”**  
  使用列出的值尝试连接。  
   
  **选项**  

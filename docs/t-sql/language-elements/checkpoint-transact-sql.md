@@ -27,15 +27,15 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cd77a10ee161cd118b168ce2a9aaacf1bb0cc8d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 3fc30986de5a7629771b05b7fd6df8dc12ea158b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334634"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582980"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在您当前连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中生成一个手动检查点。  
   
@@ -60,9 +60,9 @@ CHECKPOINT [ checkpoint_duration ]
   
  使用 checkpoint_duration 时对性能所造成的影响取决于脏页数、系统中的活动以及指定的实际持续时间。 例如，如果正常情况下完成检查点操作需要 120 秒，则将 checkpoint_duration 指定为 45 秒时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于检查点的资源将比默认情况下分配的资源多。 反之，将 checkpoint_duration 指定为 180 秒时，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配的资源将比默认情况下分配的资源少。 总之，checkpoint_duration 较短时，会增加用于检查点的资源，而 checkpoint_duration 较长时，会减少用于检查点的资源。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 总是尽可能地完成检查点操作，并且操作完成后，CHECKPOINT 语句将立即返回。 因此，完成检查点的时间有时比指定的持续时间短，有时则比指定的持续时间长。  
   
-##  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  CHECKPOINT 权限默认授予 sysadmin 固定服务器角色以及 db_owner 和 db_backupoperator 固定数据库角色的成员，这些权限不可转让。  
   
 ## <a name="see-also"></a>另请参阅  

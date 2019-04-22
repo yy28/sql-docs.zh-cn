@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899703"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
@@ -52,9 +52,9 @@ sys.fn_PageResCracker ( page_resource )
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|db_id|**ssNoversion**|数据库 ID|  
-|file_id|**ssNoversion**|文件 ID|  
-|page_id|**ssNoversion**|页面 ID|  
+|db_id|**int**|数据库 ID|  
+|file_id|**int**|文件 ID|  
+|page_id|**int**|页面 ID|  
   
 ## <a name="remarks"></a>备注  
 `sys.fn_PageResCracker` 用于数据库页的 8 字节十六进制表示形式转换为行集包含的数据库 ID，文件 ID 和页的页 ID。   
@@ -77,7 +77,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
   
 ## <a name="see-also"></a>请参阅  
  [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys.sysprocesses (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

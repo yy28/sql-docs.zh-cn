@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241427"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用建立连接时更安全**扩展保护**。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
   
 > [!IMPORTANT]  
 >  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
@@ -62,7 +62,7 @@ ms.locfileid: "59241427"
   
 -   **强行加密**  
   
-     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于  配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
+     可能的值为 **“打开”** 和 **“关闭”**。 若要使用渠道绑定，“强行加密”  必须设置为“打开” ，所有客户端都将强制进行加密。 如果为 **“关闭”**，则只确保服务绑定。 **“强行加密”** 位于 **配置管理器中的“MSSQLSERVER 的协议属性”（“标志”选项卡）** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 -   **扩展保护**  
   

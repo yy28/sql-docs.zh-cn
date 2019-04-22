@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860178"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教程：SQL Server 大数据群集上运行的示例笔记本
@@ -29,7 +29,7 @@ ms.locfileid: "58860178"
 ## <a id="prereqs"></a> 先决条件
 
 - [大数据工具](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
 - [将示例数据加载到你的大数据群集](tutorial-load-sample-data.md)

@@ -16,12 +16,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47c4aed72c074ee1c591bd94afbcd53d6ba9fa01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215353"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583160"
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 发布服务器  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,12 @@ ms.locfileid: "53215353"
 -   将数据从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器。  
 
 -   将数据发布到 Oracle 以及从 Oracle 发布数据具有以下限制条件：  
-  | |2016 或更早版本 |2017 或更高版本 |
-  |-------|-------|--------|
+
+  |复制 |2016 或更早版本 |2017 或更高版本 |
+  |:-----------|:---------------|:-------------|
   |从 Oracle 复制 |仅支持 Oracle 10g 或更早版本 |仅支持 Oracle 10g 或更早版本 |
   |复制到 Oracle |最高为 Oracle 12c |不支持 |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  不推荐异类复制到非 SQL Server 订阅服务器。 不推荐使用 Oracle 发布。 若要移动数据，请创建使用变更数据捕获和 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]的解决方案。  

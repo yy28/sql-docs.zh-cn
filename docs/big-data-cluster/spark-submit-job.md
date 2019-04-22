@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860448"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>提交 Azure Data Studio 中的 SQL Server 大数据群集上的 Spark 作业
@@ -27,7 +27,7 @@ ms.locfileid: "58860448"
 - [SQL Server 2019 大数据工具](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 扩展**
-   - **Kubectl**
+   - **kubectl**
 
 - [连接到你的大数据群集的 HDFS/Spark 网关的 Azure Data Studio](connect-to-big-data-cluster.md)。
 

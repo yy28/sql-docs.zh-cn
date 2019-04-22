@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240726"
 ---
 # <a name="log-properties"></a>日志属性
@@ -103,14 +103,14 @@ ms.locfileid: "59240726"
   
 -   `StopProcessing` 指示服务器在达到错误限制时停止处理。  
   
--   `StopLogging` 指示服务器在错误限制达到时，但允许继续处理时停止记录错误。  
+-   `StopLogging` 指示服务器在达到错误限制时停止记录错误，但允许继续处理。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  指定发生 `KeyNotFound` 错误时服务器执行的操作。 对此错误的有效响应包括：  
   
 -   `IgnoreError` 指示服务器继续处理而不记录错误或一直计数至键错误限制。 通过忽略该错误，您可以继续处理而不会增加错误计数或将错误记录至屏幕或日志文件。 有关记录具有数据完整性问题，无法添加到数据库。 该记录或者将被弃用，或者聚合到未知成员，具有情况由 `KeyErrorAction` 属性确定。  
   
--   `ReportAndContinue` 指示服务器记录错误计数至键错误限制并继续处理。 触发错误的记录被弃用或转换为未知成员。  
+-   `ReportAndContinue` 指示服务器记录错误、一直将错误计数至键错误限制并继续处理。 触发错误的记录被弃用或转换为未知成员。  
   
 -   `ReportAndStop` 指示服务器记录错误并立即停止处理，而不管键错误限制如何。 触发错误的记录被弃用或转换为未知成员。  
   

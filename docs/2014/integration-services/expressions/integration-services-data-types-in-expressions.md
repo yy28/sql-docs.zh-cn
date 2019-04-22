@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241027"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
@@ -53,9 +53,9 @@ ms.locfileid: "59241027"
   
  有关详细信息，请参阅下列主题：  
   
--   [==（等于）（SSIS 表达式）](equal-ssis-expression.md)  
+-   [== &#40;等于&#41; &#40;SSIS 表达式&#41;](equal-ssis-expression.md)  
   
--   [!=（不等于）（SSIS 表达式）](unequal-ssis-expression.md)  
+-   [!= &#40;不等于&#41; &#40;SSIS 表达式&#41;](unequal-ssis-expression.md)  
   
 -   [>（大于）（SSIS 表达式）](greater-than-ssis-expression.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59241027"
   
 -   [>=（大于或等于）（SSIS 表达式）](greater-than-or-equal-to-ssis-expression.md)  
   
--   [<=（小于或等于）（SSIS 表达式）](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;小于或等于&#41; &#40;SSIS 表达式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  使用单个参数的函数将返回与参数具有相同数据类型的结果，但下列情况除外：  
   

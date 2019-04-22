@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506514"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "59506514"
     -   [发生故障转移时的报表服务器行为](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .Net Framework 4.0，并支持将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性用于数据源。  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 Power BI 报表服务器使用 .Net framework 4.0 并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性与数据源一起使用。  
   
  若要结合使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本，你需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59506514"
  有关其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 要求的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 **RSreportserver.config** ），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件（如 RSreportserver.config），它们不包括在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能中。 如果手动更改某一报表服务器上的配置文件，将需要手动更新副本。  
   
 ##  <a name="bkmk_reportdatasources"></a> 报表数据源和可用性组  
  基于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 数据源行为会根据管理员配置 AG 环境的方式不同而变化。  
@@ -196,7 +196,7 @@ ms.locfileid: "59506514"
  [AlwaysOn 可用性组入门 (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
  [将连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [关于可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
 

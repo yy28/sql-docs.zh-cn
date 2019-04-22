@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243581"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入到 Active Directory 域 Linux 主机上的 SQL Server
@@ -127,8 +127,8 @@ ping contoso.com
 
 基本配置并与域控制器的连接进行验证后，有两个用于加入 SQL Server Linux 主机计算机与 Active Directory 域控制器选项：
 
-- [方法 1：使用 SSSD 包](#option1)
-- [方法 2：使用第三方 openldap 提供程序实用程序](#option2)
+- [选项 1:使用 SSSD 包](#option1)
+- [选项 2:使用第三方 openldap 提供程序实用程序](#option2)
 
 ### <a id="option1"></a> 选项 1:SSSD 包用于加入 AD 域
 
@@ -153,7 +153,7 @@ ping contoso.com
    sudo zypper install realmd krb5-client
    ```
 
-   **Ubuntu:**
+   **Ubuntu：**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit

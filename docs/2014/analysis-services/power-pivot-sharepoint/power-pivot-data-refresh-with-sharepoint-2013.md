@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241935"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
@@ -72,7 +72,7 @@ ms.locfileid: "59241935"
   
 -   交互式数据刷新仅刷新当前用户会话中的数据。 这些数据并不自动保存回 SharePoint 内容数据库中的工作簿项。  
   
--   **凭据：** 交互式数据刷新可将当前登录用户的标识作为凭据或存储过程来连接到数据源。 所使用的凭据取决于为与外部数据源的工作簿连接而定义的 Excel Services 身份验证设置。  
+-   **凭据：** 交互式数据刷新可用于当前登录的用户的标识作为凭据或存储的凭据连接到数据源。 所使用的凭据取决于为与外部数据源的工作簿连接而定义的 Excel Services 身份验证设置。  
   
 -   **支持的工作簿：** 在 Excel 2013 中创建的工作簿。  
   
@@ -86,14 +86,14 @@ ms.locfileid: "59241935"
   
 3.  Excel Services 将加载 PowerPivot 数据库，对该数据库进行处理，然后查询该数据库以便刷新 Excel 工作簿缓存。  
   
-4.  **注意：** 已更新的工作簿并不自动保存回文档库。  
+4.  **注意：** 更新的工作簿不自动保存回文档库。  
   
  ![interactive data refresh](../media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> 带有工作簿数据连接和交互式数据刷新的 Windows 身份验证  
  Excel Services 向 Analysis Services 服务器发送一个处理命令，该命令指示该服务器模拟某一用户帐户。 为了获取足以执行用户模拟-委托进程的系统权限，该 Analysis Services 服务帐户要求对本地服务器具有“以操作系统方式执行”特权。 该 Analysis Services 服务器还需要能够将用户的凭据委托给数据源。 查询结果被发送到 Excel Services。  
   
- 典型用户体验：当客户在包含 PowerPivot 模型的 Excel 2013 工作簿中选择"刷新所有连接"时，他们将看到类似以下的错误消息：  
+ 典型的用户体验：当客户在包含 PowerPivot 模型的 Excel 2013 工作簿中选择"刷新所有连接"时，他们将看到类似以下的错误消息：  
   
 -   **外部数据刷新失败：** 处理工作簿中的数据模型时出错。 请重试。 无法刷新此工作簿中的一个或多个数据连接。  
   
@@ -101,15 +101,15 @@ ms.locfileid: "59241935"
   
  **对于 SQL Native Client：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“20102481-39c8-4d21-bf63-68f583ad22bb”的不当对象“DataSource”，但尚未使用。  OLE DB 或 ODBC 错误：与 SQL Server 建立连接时发生了与网络相关的或特定于实例的错误。 找不到或无法访问服务器。 请检查实例名称是否正确以及 SQL Server 是否配置为允许远程连接。 有关详细信息，请参阅 SQL Server 联机丛书。08001；SSL 提供程序：请求的安全包不存在；08001；客户端无法建立连接；08001；客户端不支持加密；08001。  ，ConnectionName：ThisWorkbookDataModel，工作簿：book1.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：对象 DataSource，以引用号的不当 8 4 d 21-bf63-68f583ad22bb，已指定但尚未使用。  OLE DB 或 ODBC 错误：建立与 SQL Server 的连接时发生与网络相关或特定于实例的错误。 找不到或无法访问服务器。 请检查实例名称是否正确以及 SQL Server 是否配置为允许远程连接。 有关详细信息请参阅 SQL Server 联机丛书。;08001;SSL 提供程序：请求的安全包不存在;08001;客户端无法建立连接;08001;在客户端上不支持加密。;08001。  ConnectionName:ThisWorkbookDataModel，工作簿： book1.xlsx。  
   
  **对于 Microsoft OLE DB Provider for SQL Server：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“6e711bfa-b62f-4879-a177-c5dd61d9c242”的不当对象“DataSource”，但尚未使用。 OLE DB 或 ODBC 错误。 ，ConnectionName：ThisWorkbookDataModel，工作簿：OLEDB Provider.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：对象 DataSource，指向 6e711bfa-b62f-4879-a177-C5DD61D9C242，已指定但尚未使用。 OLE DB 或 ODBC 错误。 ConnectionName:ThisWorkbookDataModel，工作簿：OLEDB Provider.xlsx。  
   
  **对于 .NET Framework Data Provider for SQL Server：**  
   
--   无法创建外部连接或执行查询。 提供程序消息：已指定了引用 ID“f5fb916c-3eac-4d07-a542-531524c0d44a”的不当对象“DataSource”，但尚未使用。  高级关系引擎中存在错误。 在使用托管 IDbConnection 接口时，出现以下异常：无法加载文件或程序集“System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”或其依赖项之一。 未提供所需的模拟级别，或提供的模拟级别无效。 （HRESULT 异常：0x80070542）。  ，ConnectionName：ThisWorkbookDataModel，工作簿：NETProvider.xlsx。  
+-   无法创建外部连接或执行查询。 提供程序消息：对象 DataSource，"f5fb916c-3eac-4 d 07-a542-531524c0d44a"，已指定但尚未使用。  高级关系引擎中存在错误。 使用托管的 IDbConnection 接口时，出现以下异常：无法加载文件或程序集 System.Transactions，Version = 4.0.0.0，区域性 = 中性，PublicKeyToken = b77a5c561934e089 或其某个依赖项。 未提供所需的模拟级别，或提供的模拟级别无效。 (异常来自 HRESULT:0x80070542)。  ConnectionName:ThisWorkbookDataModel，工作簿：NETProvider.xlsx。  
   
  **配置步骤摘要** ：若要对本地服务器配置 **“以操作系统方式执行”** 特权，请执行以下操作：  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59241935"
   
 -   **凭据：** 使用存储的凭据。 不要使用当前用户的标识。  
   
--   **支持的工作簿：** 使用 Excel 2010 的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 外接程序或使用 Excel 2013 创建的工作簿。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支持的工作簿：** 创建使用的工作簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 外接程序 Excel 2010 或使用 Excel 2013。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  要显示 **“管理数据刷新”** 页，请执行以下操作：  
   
@@ -189,7 +189,7 @@ ms.locfileid: "59241935"
 >  因为 PowerPivot 系统服务不再加载或保存 PowerPivot 模型，所以，用于在应用程序服务器上缓存模型的大多数设置不适用于 SharePoint 2013 场。  
   
 ## <a name="data-refresh-log-data"></a>数据刷新日志数据  
- **使用情况数据：** 您可以在 PowerPivot 管理面板中查看数据刷新使用情况数据。 要查看使用情况数据，请执行以下操作：  
+ **使用情况数据：** PowerPivot 管理面板中，可以查看数据刷新使用情况数据。 要查看使用情况数据，请执行以下操作：  
   
 1.  在 SharePoint 管理中心中，在 **“常规应用程序设置”** 组中单击 **“PowerPivot 管理面板”** 。  
   
@@ -210,9 +210,9 @@ ms.locfileid: "59241935"
 ##  <a name="datarefresh_additional_authentication"></a> 其他身份验证注意事项  
  在 Excel 2013 中， **“Excel Services 身份验证设置”** 对话框中的设置确定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用于数据刷新的 Windows 标识。  
   
--   **使用已经过身份验证的用户帐户**:Excel Services 基于当前登录的用户的标识执行数据刷新。  
+-   **使用已经过身份验证的用户帐户**:Excel Services 执行数据刷新在当前登录的用户的标识。  
   
--   **使用存储的帐户**:假定为 SharePoint 安全存储区服务应用程序 ID，Excel Services 使用该 ID 检索用户名和密码，以便对数据刷新进行身份验证。  
+-   **使用存储的帐户**:假定一个 SharePoint Secure Store Service 应用程序 ID，Excel Services 使用要检索的用户名和密码进行身份验证数据刷新身份验证。  
   
 -   **无**：Excel Services**无人参与服务帐户**使用。 该服务帐户与某一安全存储区代理相关联。 在 **“Excel Services 应用程序设置”** 页上配置 **“外部数据”** 部分中的设置。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "59241935"
  [SharePoint 2013 中的 excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)。 
   
 ## <a name="see-also"></a>请参阅  
- [升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [PowerPivot for SharePoint 2013 安装](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

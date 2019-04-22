@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872257"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
@@ -34,7 +34,7 @@ ms.locfileid: "58872257"
 > [!NOTE]  
 >  你也可以考虑升级 Azure SQL 数据库或虚拟化 SQL Server 环境作为你升级计划的一部分。 这些文章已超出本文的范围，但这里有一些链接：
 >   - [Azure 虚拟机上 SQL Server 的概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/) 
 >   - [选择 Azure 中的 SQL Server 选项](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   
 ## <a name="upgrade-in-place"></a>就地升级  
@@ -109,5 +109,5 @@ ms.locfileid: "58872257"
 -   SQL Server Reporting Services 横向扩展部署：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

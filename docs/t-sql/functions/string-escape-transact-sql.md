@@ -18,16 +18,17 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 932d1a8be595bedf9ccdbddae854a17c4578e64a
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342933"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670833"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   对文本中的特殊字符进行转义并返回有转义字符的文本。 STRING_ESCAPE 是一个确定性的函数。  
   
@@ -35,18 +36,20 @@ ms.locfileid: "58342933"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```sql
 STRING_ESCAPE( text , type )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>参数
+
  *text*  
  表示应转义对象的 nvarchar [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *类型*  
  对将要应用的规则进行转义。 目前支持的值是 `'json'`。  
   
-## <a name="return-types"></a>返回类型  
+## <a name="return-types"></a>返回类型
+
  带有已转义的特殊和控制字符的 nvarchar(max) 文本。 当前，STRING_ESCAPE 仅能对下表中的 JSON 特殊字符进行转义。  
   
 |特殊字符|编码的序列|  
@@ -71,31 +74,34 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>示例  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  根据 JSON 格式设置对文本进行转义  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  根据 JSON 格式设置对文本进行转义
+
  以下查询使用 JSON 规则对特殊字符进行转义，并返回已转义的文本。  
   
-```  
+```sql
 SELECT STRING_ESCAPE('\   /  
 \\    "     ', 'json') AS escapedText;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 escapedText  
 -------------------------------------------------------------  
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. 设置 JSON 对象格式  
+### <a name="b-format-json-object"></a>B. 设置 JSON 对象格式
+
  下面的查询从数字和字符串变量创建 JSON 文本，并对变量中的任意特殊 JSON 字符进行转义。  
   
-```  
-SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
+```
+SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>另请参阅
+
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -105,6 +111,4 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
- [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

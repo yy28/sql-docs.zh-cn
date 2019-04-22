@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533355"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774572"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533355"
 
 智能查询处理 (QP) 功能系列包含有广泛影响的功能，既能提升现有工作负荷的性能，还能最大限度地减少实现工作量。 
 
-![智能查询处理](./media/3_iqpfeaturefamily.png)
+![智能查询处理](./media/iqp-feature-family.png)
 
 可以通过对数据库启用适当的数据库兼容性级别使工作负荷自动符合只能查询处理条件。 可使用 Transact-SQL 进行此设置。 例如：  
 

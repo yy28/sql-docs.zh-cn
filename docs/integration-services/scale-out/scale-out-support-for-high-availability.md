@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241456"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持

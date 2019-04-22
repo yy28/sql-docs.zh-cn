@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034539"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774582"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Active Geo-Replication - sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   此过程的范围限定为主数据库与辅助数据库之间的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 关系。 调用**sp_wait_for_database_copy_sync**导致应用程序等待，直到所有提交的事务复制并确认由活动辅助数据库。 运行**sp_wait_for_database_copy_sync**仅在主数据库上。  
   

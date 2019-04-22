@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241555"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services 中的角色和任务与 SharePoint 组和权限的比较
@@ -42,7 +42,7 @@ ms.locfileid: "59241555"
 -   [比较本机模式任务和 SharePoint 权限](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 比较权限工具和术语  
- **本机模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 本机模式权限对象（角色和任务）在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中创建并在报表管理器中为各用户配置。  
+ **本机模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中创建本机模式权限对象 （角色和任务）[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]并为单个用户在报表管理器配置。  
   
  **SharePoint 模式：**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式使用 SharePoint 权限功能。 SharePoint 组和权限从以下“站点设置”  页进行管理。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59241555"
 ##  <a name="bkmk_compare_roles_groups"></a> 比较本机模式角色与 SharePoint 组  
  下表将在本机模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的预定义角色定义与标准 SharePoint 组进行比较。 如果 SharePoint 组与您需要的特定角色不匹配，可以在 SharePoint 中创建自定义组并分配权限级别。  
   
- **注意**：可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
+ **请注意**:可用的默认 SharePoint 组取决于用于创建 SharePoint 站点的站点模板。  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 角色|SharePoint 组|  
 |--------------------------------------|-----------------------|  

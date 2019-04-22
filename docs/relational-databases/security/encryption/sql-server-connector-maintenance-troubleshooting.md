@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241375"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
@@ -102,7 +102,7 @@ ms.locfileid: "59241375"
  
 1. 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下载中心 [安装最新版本的](https://www.microsoft.com/download/details.aspx?id=45344)连接器。 在安装程序向导中，将新 DLL 文件保存在与原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器 DLL 文件路径不同的文件路径下。 例如，新文件路径可以是： `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例中，运行以下 Transact-SQL 命令，以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例指向新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器：
+2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例中，运行以下 Transact-SQL 命令，以将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例指向新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器：
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -139,7 +139,7 @@ ms.locfileid: "59241375"
 8.  在验证更新是否有效之后，可以删除旧 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器文件夹（如果在步骤 3 中你选择将其重命名而不是卸载。）  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>滚动更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务主体  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。  服务主体具有客户端 ID 和身份验证密钥。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。  **身份验证密钥** 在特定的期限内有效（1 年或 2 年）。   在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。  然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中更改凭据。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中创建的服务主体作为凭据来访问密钥保管库。  服务主体具有客户端 ID 和身份验证密钥。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据是使用 **VaultName**、 **客户端 ID**和 **身份验证密钥**设置的。  **身份验证密钥** 在特定的期限内有效（1 年或 2 年）。   在该期限已过之前，必须在 Azure AD 中为服务主体生成新密钥。  然后，必须在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中更改凭据。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 为当前会话中的凭据保留缓存，因此，如果凭据发生更改，应重新启动 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
   
 ### <a name="key-backup-and-recovery"></a>密钥备份和恢复  
 应定期备份密钥保管库。 如果保管库中的非对称密钥丢失，可以从备份还原它。 必须使用和以前相同的名称还原密钥，还原 PowerShell 命令将执行此操作（如下面步骤所示）。  
@@ -166,11 +166,11 @@ ms.locfileid: "59241375"
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>有关配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 连接器需要拥有对什么终结点的访问权限？** 该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
+SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两个终结点通信，这两个终结点需要列入允许列表。 与这些其他服务进行出站通信所需的唯一端口是 443（用于 Https）：
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
-**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中每个配置步骤所需的最低权限级别是什么？**  
+**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每个配置步骤所需的最低权限级别是什么？**  
  尽管你可以使用 sysadmin 固定服务器角色成员的身份执行所有配置步骤，但 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议你尽量使用最少的权限。 以下列表定义了每个操作的最小权限级别。  
   
 -   若要创建加密提供程序，需要具备 `CONTROL SERVER` 权限或 **sysadmin** 固定服务器角色的成员身份。  
@@ -294,8 +294,8 @@ SQL Server 版本  |可再发行组件安装链接
 -   PowerShell [Azure 密钥保管库 Cmdlet](/powershell/module/azurerm.keyvault/) 参考  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Azure 密钥保管库的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [使用 Azure 密钥保管库的可扩展密钥管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features（使用具有 SQL 加密功能的 SQL Server 连接器）](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled 服务器配置选项](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [使用 Azure 密钥保管库的可扩展密钥管理的设置步骤](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault（使用 Azure 密钥保管库的可扩展密钥管理的设置步骤）](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
   

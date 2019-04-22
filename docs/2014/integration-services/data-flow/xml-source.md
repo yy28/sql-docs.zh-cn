@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240375"
 ---
 # <a name="xml-source"></a>XML 源
@@ -69,7 +69,7 @@ ms.locfileid: "59240375"
   
  XML 源支持多个常规输出和多个错误输出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring 包含用于配置 XML 源的 **“XML 源编辑器”** 对话框。s此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含“XML 源编辑器”对话框，可用于配置 XML 源。 此对话框在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中可用。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "59240375"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [XML 源自定义属性](xml-source-custom-properties.md)  
   

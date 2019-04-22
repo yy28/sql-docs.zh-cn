@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241507"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
   `sqlps` 实用工具会启动一个 Windows PowerShell 2.0 会话，并加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 使用`sqlps`PowerShell 模块相反。 有关详细信息`sqlps`模块，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]请改用 `sqlps` PowerShell 模块。 有关详细信息`sqlps`模块，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241507"
  在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中，此 `sqlps` 实用工具版本已作为 Windows PowerShell 1.0 微型 shell 实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 `sqlps` 模块。  
   
 ## <a name="examples"></a>示例  
- **A. 以默认的交互模式运行 sqlps 实用工具，不显示版权标志**  
+ **A.以默认的交互模式运行 sqlps 实用工具，不显示版权标志**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. 从命令提示符下运行 SQL Server PowerShell 脚本**  
+ **B.从命令提示符下运行 SQL Server PowerShell 脚本**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. 从命令提示符下运行 SQL Server PowerShell 脚本，并在脚本完成后继续运行**  
+ **C.从命令提示符下运行 SQL Server PowerShell 脚本，并在脚本完成后继续运行**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

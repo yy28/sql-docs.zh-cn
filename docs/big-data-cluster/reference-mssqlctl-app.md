@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860648"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl 应用
@@ -26,14 +26,14 @@ ms.locfileid: "58860648"
 
 |||
 |---|---|
-| [创建](#create) | 创建应用程序。 |
-| [删除](#delete) | 删除应用程序。 |
-| [描述](#describe) | 介绍应用程序。 |
-| [Init](#init) | 启动新应用程序框架。 |
-| [“选择设备” 列表](#list) | 列出应用程序。 |
+| [create](#create) | 创建应用程序。 |
+| [delete](#delete) | 删除应用程序。 |
+| [describe](#describe) | 介绍应用程序。 |
+| [init](#init) | 启动新应用程序框架。 |
+| [list](#list) | 列出应用程序。 |
 | [run](#run) | 运行应用程序。 |
 | [update](#update) | 更新应用程序。 |
-| [模板](reference-mssqlctl-app-template.md) | 模板命令。 |
+| [template](reference-mssqlctl-app-template.md) | 模板命令。 |
 
 ## <a id="create"></a> mssqlctl 应用创建
 

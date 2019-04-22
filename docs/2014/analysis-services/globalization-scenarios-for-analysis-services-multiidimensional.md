@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241885"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services Multidimensional 的全球化方案
@@ -45,7 +45,7 @@ ms.locfileid: "59241885"
   
 -   假定你已经在运行 Analysis Services 的 Windows 服务器上安装了语言包，日志文件将包含英语消息和本地化消息的混合消息。  
   
--   文档和工具（如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]）被翻译为这些语言：简体中文、 繁体中文、 法语、 德语、 意大利语、 日语、 朝鲜语、 葡萄牙语 （巴西）、 俄语和西班牙语。 若要使用特定语言版本的工具，请安装特定语言版本的 SQL Server（例如，安装德语版本的 SQL Server 以获得德语的 Management Studio）或在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的目标语言中运行独立安装。  
+-   文档和工具，如[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]和[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]，翻译成这些语言：简体中文、 繁体中文、 法语、 德语、 意大利语、 日语、 朝鲜语、 葡萄牙语 （巴西）、 俄语和西班牙语。 若要使用特定语言版本的工具，请安装特定语言版本的 SQL Server（例如，安装德语版本的 SQL Server 以获得德语的 Management Studio）或在 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的目标语言中运行独立安装。  
   
  Analysis Services 能让你在整个对象层次结构中单独设置语言、排序规则和翻译。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "59241885"
 -   开发和生产环境在地理上位于不同国家。 在一个国家/地区开发一个解决方案然后将其部署到另一个国家/地区的情况越来越常见。 如果你的任务是准备将以一种语言开发的解决方案部署到使用另一种语言包的服务器上，了解如何设置语言和排序规则属性是十分必要的。 设置这些属性让你能够覆盖从原始主机系统继承的默认设置。 有关详细信息，请参阅下方的 [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md) 。  
   
 ##  <a name="bkmk_features"></a> 用于生成全球化多维解决方案的功能  
- [!INCLUDE[applies](../includes/applies-md.md)] 多维数据模型  
+ 仅 [!INCLUDE[applies](../includes/applies-md.md)] 多维数据模型  
   
  在客户端级别，使用和操作 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据的全球化应用程序可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的多语言和多文化功能：  
   

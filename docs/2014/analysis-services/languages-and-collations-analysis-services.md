@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241825"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和`Collation`属性在安装期间，首次在实例级别设置，但可以以后在不同级别的对象层次结构更改。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
   
  在多维模型中 （仅限），可以在数据库或多维数据集上设置这些属性-还可以为多维数据集内的对象创建的翻译上设置它们。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241825"
   
  此外，可以设置`Language`，其本身而言，在**翻译**对象。  
   
- 当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language` 是翻译定义的一部分。 `Collation`但是，设置多维数据集或更高版本，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
+ 当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language` 是翻译定义的一部分。 而另一方面，`Collation` 则设置在多维数据集或更高级别上，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
 ##  <a name="bkmk_lang"></a> Analysis Services 中的语言支持  
  `Language` 属性设置在处理过程中使用的对象的区域设置、查询并使用 `Captions` 和 `Translations` 以支持多语情景。 区域设置基于语言标识符（如英语）和区域（如美国或澳大利亚），其进一步优化了数据和时间表示方法。  
@@ -185,7 +185,7 @@ ms.locfileid: "59241825"
  GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 在 Analysis Services 中，处理来自外部源的数据时没有数据转换。 数据仅存储为 Unicode。 在查询时，当查询结果中返回文本数据时，通过 Analysis Services 客户端库（具体指 MSOLAP.dll OLE DB 提供程序）根据客户端 OS 设置执行 GB18030 转换。 数据库引擎还支持 GB18030。 有关详细信息，请参阅 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services Multidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [全球化提示和最佳实践 (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

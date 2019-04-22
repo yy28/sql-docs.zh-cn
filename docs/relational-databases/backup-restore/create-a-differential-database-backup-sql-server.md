@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241407"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>创建差异数据库备份 (SQL Server)
@@ -33,11 +33,11 @@ ms.locfileid: "59241407"
   
      [限制和局限](#Restrictions)  
   
-     [必备条件](#Prerequisites)  
+     [先决条件](#Prerequisites)  
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要创建差异数据库备份，请使用：**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59241407"
 ####  <a name="Permissions"></a> 首先检查你的权限！  
  BACKUP DATABASE 和 BACKUP LOG 权限默认为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色。  
   
- 备份设备的物理文件的所有权和权限问题将会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) **不**检查文件访问权限。 在你因尝试备份或还原而访问物理资源之前，备份设备物理文件中的权限问题并不明显。  
+ 备份设备的物理文件的所有权和权限问题将会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) **不** 检查文件访问权限。 在你因尝试备份或还原而访问物理资源之前，备份设备物理文件中的权限问题并不明显。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   

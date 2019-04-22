@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240415"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用表达式设置的数据流属性
@@ -71,8 +71,8 @@ ms.locfileid: "59240415"
 |----------------------|--------------|  
 |ADO NET 目标|TableOrViewName 属性<br /><br /> BatchSize 属性<br /><br /> CommandTimeout 属性|  
 |平面文件目标|Header 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 目标|TableName 属性|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact 目标|TableName 属性|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目标|BulkInsertTableName 属性<br /><br /> BulkInsertFirstRow 属性<br /><br /> BulkInsertLastRow 属性<br /><br /> BulkInsertOrder 属性<br /><br /> Timeout 属性|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59240415"
 ## <a name="see-also"></a>请参阅  
  [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)   
  [通用属性](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
+ [转换自定义属性](data-flow/transformations/transformation-custom-properties.md)   
  [路径属性](../../2014/integration-services/path-properties.md)  
   
   

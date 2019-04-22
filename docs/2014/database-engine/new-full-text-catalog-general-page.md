@@ -13,21 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240630"
 ---
 # <a name="new-full-text-catalog-general-page"></a>新建全文目录（“常规”页）
   使用此对话框可以创建新的全文目录。  
   
- **使用 SQL Server Management Studio 创建全文目录**  
+ **若要使用 SQL Server Management Studio 创建全文目录**  
   
 -   [创建和管理全文索引目录](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>UIElement 列表  
- **全文目录名称**  
+ **全文本目录名称**  
  全文目录的名称。  
   
  **“所有者”**  

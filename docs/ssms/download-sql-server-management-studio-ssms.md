@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042024"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
@@ -44,9 +44,9 @@ SSMS 是免费的！
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 1 是当前 SSMS 的正式发布 (GA) 版本
 
-[![d下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![d下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.9.1 升级包（将 17.x 升级到 17.9.1）](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 17.9.1 升级包（将 17.x 升级到 17.9.1）](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **版本信息**
 
@@ -78,7 +78,7 @@ SSMS 是免费的！
 
 **SSMS 18.0 候选发布 1 (RC1) 现已推出，它是为 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 提供支持的最新一代 SQL Server Management Studio！**
 
-**[![dow下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![下载](../ssdt/media/download.png) 下载 SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 RC1 是 SSMS 18.0 的最新公共预览版。 如果安装了以前的 SSMS 18.0 预览版，请在安装 SSMS 18.0 RC1 之前将其卸载。
 
@@ -140,7 +140,7 @@ N/A
 
 ## <a name="previous-releases"></a>以前的版本
 
-[以前的 SQL Server Management Studio 版本](../ssms/release-notes-ssms.md#previous-ssms-releases)
+[旧版 SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>反馈
 
@@ -152,7 +152,7 @@ N/A
 
 - [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio 文档](sql-server-management-studio-ssms.md)
-- [其他更新和 Service Pack](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [其他更新程序和 Service Pack](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

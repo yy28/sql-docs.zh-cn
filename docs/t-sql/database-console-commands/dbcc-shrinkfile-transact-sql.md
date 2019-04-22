@@ -31,10 +31,10 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872267"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -59,13 +59,13 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>参数  
-*file_name*  
+file_name  
 要收缩的文件的逻辑名称。
   
-*file_id*  
+file_id  
 要收缩的文件的标识 (ID) 号。 若要获取文件 ID，请使用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) 系统函数，或查询当前数据库中的 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图。
   
-*target_size*  
+target_size  
 整数，文件的新大小（以 MB 为单位）。 如果未指定，DBCC SHRINKFILE 缩小到文件创建大小。
   
 > [!NOTE]  
@@ -242,7 +242,7 @@ GO
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID (Transact-SQL)](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [收缩文件](../../relational-databases/databases/shrink-a-file.md)
   

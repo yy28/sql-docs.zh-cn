@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241206"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>连接到服务器（“登录”页）数据库引擎
@@ -27,7 +27,7 @@ ms.locfileid: "59241206"
   
 ## <a name="options"></a>选项  
  **服务器类型**  
- 从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器：[!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
+ 从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器： [!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
   
  在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59241206"
  选择要连接到的服务器实例。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
- 在连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例时，可以使用两种身份验证模式。  
+ 在连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例时，可以使用两种身份验证模式。  
   
  在通过 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”对话框的“连接属性”选项卡上指定一个数据库。请确保选中“加密连接”复选框。  
   
@@ -52,19 +52,19 @@ ms.locfileid: "59241206"
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  
   
- **“用户名”**  
+ **用户名**  
  输入连接所使用的用户名。 只有在已选择使用 Windows 身份验证进行连接的情况下，此选项才可用。  
   
  **登录**  
  输入连接所用的登录名。 只有选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，此选项才可用。  
   
- **Password**  
+ **密码**  
  输入登录名的密码。 只有在已选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接的情况下，此选项才可用。  
   
  **记住密码**  
  单击此项可使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储您所输入的密码。 只有在已选择使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接时，才会显示此选项。  
   
- **连接**  
+ **Connect**  
  单击此项可连接到在上面选择的服务器。  
   
  **选项**  

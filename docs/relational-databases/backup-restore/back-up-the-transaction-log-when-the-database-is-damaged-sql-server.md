@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242175"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>在数据库损坏时备份事务日志 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "59242175"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要在数据库损坏时备份事务日志，可使用：**  
   

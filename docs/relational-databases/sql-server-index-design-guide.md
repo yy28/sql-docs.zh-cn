@@ -24,10 +24,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872327"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引体系结构和设计指南
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  在某些情况下，筛选索引涵盖查询，但没有将筛选索引表达式中的列作为键或包含列包括在筛选索引定义中。 以下准则说明了筛选索引表达式中的列何时应为筛选索引定义中的键或包含列。 这些示例引用了此前创建的筛选索引 `FIBillOfMaterialsWithEndDate` 。  
   
- 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如，`FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate`。 `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
+ 如果筛选索引表达式等效于查询谓词并且查询并未在查询结果中返回筛选索引表达式中的列，则筛选索引表达式中的列不需要作为筛选索引定义中的键或包含列。 例如， `FIBillOfMaterialsWithEndDate` 涵盖下面的查询，因为查询谓词等效于筛选表达式，并且查询结果中未返回 `EndDate` 。 `FIBillOfMaterialsWithEndDate` 不需要将 `EndDate` 作为筛选索引定义中的键或包含列。  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -892,7 +892,7 @@ Bw 树中的索引页可按需增大，从存储单一行的大小开始，最�
 [CREATE SPATIAL INDEX (Transact-SQL)](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [重新组织和重新生成索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [使用 SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[已分区表和已分区索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [创建主键](../relational-databases/tables/create-primary-keys.md)    
 [内存优化表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [列存储索引概述](../relational-databases/indexes/columnstore-indexes-overview.md)  

@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242197"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
@@ -30,17 +30,17 @@ ms.locfileid: "59242197"
   
 -   [使用 EKM](#Uses)  
   
--   [第 1 步：安装用于 SQL Server 的 Key Vault](#Step1)  
+-   [步骤 1:设置密钥保管库用于 SQL Server](#Step1)  
   
--   [第 2 步：安装 SQL Server Connector](#Step2)  
+-   [步骤 2：安装 SQL Server Connector](#Step2)  
   
--   [步骤 3：配置 SQL Server，将 EKM 提供程序用于 Key Vault](#Step3)  
+-   [步骤 3：SQL Server 配置为使用 EKM 提供程序用于 Key Vault](#Step3)  
   
--   [示例 A：通过使用 Key Vault 的非对称密钥实现透明数据加密](#ExampleA)  
+-   [示例 a:通过使用密钥保管库中的非对称密钥的透明数据加密](#ExampleA)  
   
--   [示例 B：通过使用 Key Vault 的非对称密钥加密备份文件](#ExampleB)  
+-   [示例 b:通过使用密钥保管库的非对称密钥加密备份](#ExampleB)  
   
--   [示例 C：通过使用 Key Vault 的非对称密钥实现列级加密](#ExampleC)  
+-   [示例 c:通过使用密钥保管库中的非对称密钥实现列级加密](#ExampleC)  
   
 ##  <a name="Uses"></a> 使用 EKM  
  组织可使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密来保护敏感数据。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包括[透明数据加密&#40;TDE&#41;](transparent-data-encryption.md)，[列级加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)(CLE) 和[备份加密](../../backup-restore/backup-encryption.md)。 在这几种情况下，均使用对称数据加密密钥对数据进行加密。 通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的密钥层次结构对对称数据加密密钥进行加密而使其获得进一步的保护。 或者，借助 EKM 提供程序体系结构， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可通过使用存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的一个外部加密提供程序中的非对称密钥来保护数据加密密钥。 使用 EKM 提供程序体系结构会额外提供一层安全保护，使组织可分开管理密钥和数据。  
@@ -51,7 +51,7 @@ ms.locfileid: "59242197"
   
  ![使用 Azure Key Vault 的 SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "使用 Azure Key Vault 的 SQL Server EKM")  
   
-##  <a name="Step1"></a> 步骤 1：安装用于 SQL Server 的 Key Vault  
+##  <a name="Step1"></a> 步骤 1：设置密钥保管库用于 SQL Server  
  使用以下步骤设置 Key Vault，使其可与 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 一起使用来实现对加密密钥的保护。 组织可能已使用了某个保管库。 如果不存在保管库，则组织中指定管理加密密钥的 Azure 管理员可以创建一个保管库，在保管库中生成一个非对称密钥，然后授权 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该密钥。 请查看 [Azure Key Vault 入门](https://go.microsoft.com/fwlink/?LinkId=521402)和 PowerShell [Azure Key Vault Cmdlet](/powershell/module/azurerm.keyvault/) 参考，详细了解 Key Vault 服务的相关内容。  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ ms.locfileid: "59242197"
   
      有关如何导入密钥保管库或 （不建议用于生产环境） 在 key vault 中创建密钥的详细信息，请参阅**将密钥或机密添加到密钥保管库**主题中[开始使用 Azure密钥保管库](https://go.microsoft.com/fwlink/?LinkId=521402)。  
   
-3.  **获取 Azure Active Directory 服务主体用于 SQL Server:** 当组织注册 Microsoft 云服务时，即获取 Azure Active Directory。 在 Azure Active Directory 中创建 **服务主体** 以供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在访问 Key Vault 时使用（向 Azure Active Directory 验证自己的身份）。  
+3.  **获取 Azure Active Directory 服务主体用于 SQL Server:** 当组织注册 Microsoft 云服务时，它将获取 Azure Active Directory。 在 Azure Active Directory 中创建 **服务主体** 以供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在访问 Key Vault 时使用（向 Azure Active Directory 验证自己的身份）。  
   
     -   若要在配置  以使用加密时访问保管库， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员将需要一个服务主体 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
@@ -100,20 +100,20 @@ ms.locfileid: "59242197"
   
     -   PowerShell [Azure 密钥保管库 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=521403) 参考  
   
-##  <a name="Step2"></a> 步骤 2：安装 SQL Server Connector  
+##  <a name="Step2"></a> 步骤 2：安装 SQL Server 连接器  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机的管理员下载和安装的。 可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下载中心 [下载](https://go.microsoft.com/fwlink/p/?LinkId=521700)连接器。  搜索 **适用于 Microsoft Azure Key Vault 的 SQL Server Connector**，查看详细内容、系统要求和安装说明，然后选择下载连接器并使用“运行” 开始进行安装。 查看许可证，接受许可证，然后继续。  
   
  默认情况下，连接器安装在 **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**处。 可在设置过程中更改此位置。 （若已更改，请调整以下脚本。）  
   
  安装完成时，以下内容将安装到计算机：  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**:这是加密 EKM 提供程序 DLL，需要通过使用 CREATE CRYPTOGRAPHIC PROVIDER 语句与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起注册。  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**:这是加密 EKM 提供程序 DLL，需要使用注册[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过使用 CREATE CRYPTOGRAPHIC PROVIDER 语句。  
   
--   **Azure 密钥保管库的 SQL Server 连接器**:这是一个 Windows 服务，使加密 EKM 提供程序可以与 Key Vault 进行通信。  
+-   **Azure 密钥保管库的 SQL Server 连接器**:这是一种 Windows 服务，使加密 EKM 提供程序与密钥保管库进行通信。  
   
  借助 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器安装，你还可以选择性地下载用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的示例脚本。  
   
-##  <a name="Step3"></a> 步骤 3：配置 SQL Server，将 EKM 提供程序用于 Key Vault  
+##  <a name="Step3"></a> 步骤 3：SQL Server 配置为使用 EKM 提供程序用于 Key Vault  
   
 ###  <a name="Permissions"></a> Permissions  
  若要完成整个流程，需要具备 CONTROL SERVER 权限或 **sysadmin** 固定服务器角色的成员身份。 特定操作要求具有以下权限：  

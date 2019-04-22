@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241795"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
@@ -80,13 +80,13 @@ ms.locfileid: "59241795"
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [第 1 步：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步骤 1:创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [第 2 步：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步骤 2：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [步骤 3：添加和配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步骤 4：在包中添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步骤 4：向包添加数据流任务](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [步骤 5：添加并配置平面文件源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "59241795"
   
 -   [步骤 8：使 Lesson 1 包更易理解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [步骤 9：测试 Lesson 1 教程包](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [步骤 9：测试第 1 课教程包](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [第 1 步：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [步骤 1:创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

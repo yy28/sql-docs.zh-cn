@@ -26,22 +26,22 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241625"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
   
- **安装：** 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装的信息，请参阅以下内容：  
+ **安装：** 有关信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安装，请参阅以下：  
   
 -   [安装 Reporting Services 本机模式报表服务器](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [使用 SharePoint 安装 SQL Server BI 功能&#40;PowerPivot 和 Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**:有关结合使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 Windows Azure 虚拟机的信息，请参阅以下内容：  
+ **Windows Azure**:有关使用信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]使用 Windows Azure 虚拟机中，请参阅以下：  
   
 -   [Windows Azure 虚拟机中的 SQL Server 商业智能](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)。  
   
@@ -51,21 +51,21 @@ ms.locfileid: "59241625"
   
 -   [报表服务器模式概述](#bkmk_overview)  
   
--   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
+-   [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport)  
   
--   [本机模式](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
 -   [带有 SharePoint Web 部件的本机模式](#bkmk_nativewithwebparts)  
   
 -   [SharePoint 模式](#bkmk_sharepointmode)  
   
--   [报表处理以及计划和传递处理](#bkmk_reportprocessor)  
+-   [报表处理以及计划和交付过程](#bkmk_reportprocessor)  
   
 -   [报表服务器数据库](#bkmk_reportdatabase)  
   
--   [身份验证、呈现、数据和传递扩展插件](#bkmk_authentication)  
+-   [身份验证、 呈现、 数据和传递扩展插件](#bkmk_authentication)  
   
--   [Related Tasks](#bkmk_relatedtasks)  
+-   [相关任务](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> 报表服务器模式概述  
  处理引擎（处理器）是报表服务器的核心。 处理器确保报告系统的完整性，但无法修改或扩展。 扩展插件也是处理器，但执行的是非常具体的功能。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 对于支持的每种类型的扩展插件都包含一个或多个默认扩展插件。 您可以向报表服务器中添加自定义扩展插件。 这样做使您可以扩展报表服务器以支持当前不支持的功能；自定义功能的示例包括对单一登录技术的支持、默认呈现扩展插件不能处理的应用程序格式的报表输出，以及到打印机或应用程序的报表传递。  

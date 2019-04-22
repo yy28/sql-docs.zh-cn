@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860538"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服务的大数据群集上部署的应用
@@ -105,7 +105,7 @@ mssqlctl app describe --name addpy --version v1
 > [!NOTE]
 > 如果你想，您可以打开的 URL`swagger`在运行时返回`mssqlctl app describe --name [appname] --version [version]`在浏览器中，这应类似于`https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`。 必须能够使用所用的同一凭据进行登录`mssqlctl login`。 内容`swagger.json`您可以将其粘贴到[Swagger 编辑器](https://editor.swagger.io)。 你将看到该 web 服务公开了`run`方法。 另请注意在顶部显示的基 URL。
 
-可以使用你喜欢的工具来调用`run`方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，并传入 POST 请求以 json 形式的正文中的参数。 在此示例中我们将使用[Postman](https://www.getpostman.com/)。 在调用前，你将需要设置`Authorization`到`Bearer Token`并粘贴在前面检索到的令牌。 这会将设置你的请求标头。 请参见以下屏幕截图。
+可以使用你喜欢的工具来调用`run`方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，并传入 POST 请求以 json 形式的正文中的参数。 在此示例中我们将使用[Postman](https://www.getpostman.com/)。 在调用前，你将需要设置`Authorization`到`Bearer Token`并粘贴在前面检索到的令牌。 这会将设置你的请求标头。 请参阅下面的屏幕截图。
 
 ![Postman 运行标头](media/big-data-cluster-consume-apps/postman_run_1.png)
 

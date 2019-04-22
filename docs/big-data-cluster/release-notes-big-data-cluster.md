@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860520"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>对于 SQL Server 上的大数据群集的发行说明
@@ -33,9 +33,9 @@ ms.locfileid: "58860520"
 
 | 新功能或更新 | 详细信息 |
 |:---|:---|
-| 用于运行深度学习与 Spark 中的 TensorFlow 支持 GPU 的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md)。 |
+| 关于 GPU 支持在 Spark 中使用 TensorFlow 运行深度学习的指南。 | [部署具有 GPU 支持的大数据群集和运行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | **SqlDataPool**并**SqlStoragePool**默认情况下不能再创建数据源。 | 根据需要手动创建这些文件。 请参阅[已知问题](#externaltablesctp24)。 |
-| `INSERT INTO SELECT` 数据池的支持。 | 有关示例，请参阅[教程：将数据引入到 SQL Server 数据池使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
+| 数据池的 `INSERT INTO SELECT` 支持。 | 有关示例，请参阅[教程：将数据引入到 SQL Server 数据池使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
 | `FORCE SCALEOUTEXECUTION` 和`DISABLE SCALEOUTEXECUTION`选项。 | 强制或禁用查询外部表的计算池的使用。 例如，`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`。 |
 | 已更新的 AKS 部署建议。 | 当评估在 AKS 上的大数据群集，我们现在建议使用单个节点的大小**Standard_L8s**。 |
 | Spark 运行时升级到 Spark 2.4。 | |
@@ -176,7 +176,7 @@ make: *** [deploy-clean] Error 2
 | VS Code 扩展部署到的大数据群集的应用程序。 | [如何使用 VS Code 来部署应用程序到 SQL Server 大数据群集](app-deployment-extension.md) |
 | 将更改为**mssqlctl**工具命令的用法。 | 有关更多详细信息，请参阅[mssqlctl 的已知问题](#mssqlctlctp23)。 |
 | 在大数据群集中使用 Sparklyr | [在 SQL Server 2019 大数据群集中使用 Sparklyr](sparklyr-from-RStudio.md) |
-| 外部 HDFS 兼容存储装载到大数据群集**HDFS 分层**。 | 请参阅[HDFS 分层](hdfs-tiering.md)。 |
+| 通过 **HDFS 分层**将兼容 HDFS 的外部存储装入大数据群集。 | 请参阅[HDFS 分层](hdfs-tiering.md)。 |
 | SQL Server 主实例和 HDFS/Spark 网关的新统一的连接体验。 | 请参阅[SQL Server 主实例和 HDFS/Spark 网关](connect-to-big-data-cluster.md)。 |
 | 删除与群集**mssqlctl 群集删除**现在删除仅在命名空间中的对象的大数据群集的一部分。 | 命名空间不会删除。 但是，在早期版本的此命令未删除整个命名空间。 |
 | _安全_终结点名称已更改并且合并。 | **服务安全 lb**并**服务安全 nodeport**已合并到**终结点安全**终结点。 |

@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657801"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774542"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
   
 > [!IMPORTANT]  
->  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](https://support.microsoft.com/kb/968389)。  
+> 默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)。
   
 ## <a name="description-of-extended-protection"></a>扩展保护的描述  
  **扩展保护** 使用服务绑定和渠道绑定来帮助防止身份验证中继攻击。 在身份验证中继攻击中，可以执行 NTLM 身份验证的客户端（例如，Windows Explorer、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 应用程序等）连接到攻击者（例如，恶意的 CIFS 文件服务器）。 攻击者使用客户端的凭据来伪装成此客户端并经受服务（例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的实例）对其进行身份验证。  

@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860468"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl 群集
@@ -26,8 +26,8 @@ ms.locfileid: "58860468"
 
 |||
 |---|---|
-| [创建](#create) | 创建群集。 |
-| [删除](#delete) | 删除群集。 |
+| [create](#create) | 创建群集。 |
+| [delete](#delete) | 删除群集。 |
 | [config](reference-mssqlctl-cluster-config.md) | 群集配置命令。 |
 | [debug](reference-mssqlctl-cluster-debug.md) | 调试命令。 |
 

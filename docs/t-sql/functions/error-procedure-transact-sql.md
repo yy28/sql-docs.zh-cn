@@ -26,10 +26,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899723"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
@@ -51,14 +51,14 @@ ERROR_PROCEDURE ( )
 ## <a name="return-value"></a>返回值  
 在 CATCH 块中调用时，`ERROR_PROCEDURE` 返回导致错误的存储过程或触发器的名称。
   
-`ERROR_PROCEDURE` 如果存储过程或触发器中未出现该错误，则返回 NULL。  
+如果存储过程或触发器中未出现该错误，`ERROR_PROCEDURE` 返回 NULL。  
   
-`ERROR_PROCEDURE` 在 CATCH 块作用域外调用时返回 NULL。  
+在 CATCH 块作用域外调用时，`ERROR_PROCEDURE` 返回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` 支持在 CATCH 块作用域内的任意位置调用。  
   
-`ERROR_PROCEDURE` 将返回出现错误的存储过程或触发器的名称，不考虑其运行次数或在 `CATCH` 块作用域内的运行位置。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
+无论 `ERROR_PROCEDURE` 运行多少次或在 `CATCH` 块作用域内的任意位置运行，它都将返回出现错误的存储过程或触发器的名称。 这与 @@ERROR 之类的函数不同，后者只在导致错误的语句的后一个语句中返回错误号。  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
@@ -150,9 +150,9 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER (Transact-SQL)](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE (Transact-SQL)](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
   
   
 

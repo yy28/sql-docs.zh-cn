@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042426"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>将日志传送升级到 SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042426"
 > [!IMPORTANT]  
 >  必须先对所有辅助服务器实例进行升级，然后再升级主服务器。  
   
- **借助故障转移进行升级，然后切换回原始主服务器**  
+ **若要升级使用故障转移，然后切换回原始主服务器**  
   
 1.  升级全部辅助服务器实例（服务器 B 和服务器 C）。  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042426"
 ## <a name="see-also"></a>请参阅  
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)  

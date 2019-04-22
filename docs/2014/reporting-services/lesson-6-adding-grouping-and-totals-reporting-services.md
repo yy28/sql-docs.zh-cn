@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241735"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 课：添加分组和总计 (Reporting Services)
@@ -25,15 +25,15 @@ ms.locfileid: "59241735"
   
  **本主题内容：**  
   
--   [在报表中对数据进行分组](#bkmk_groupdata)  
+-   [对在报表中数据进行分组](#bkmk_groupdata)  
   
--   [向报表中添加总计](#bkmk_addtotals)  
+-   [若要向报表添加总计](#bkmk_addtotals)  
   
--   [向报表添加每日总计](#bkmk_adddailytotal)  
+-   [若要向报表添加每日总计](#bkmk_adddailytotal)  
   
--   [向报表添加总计](#bkmk_addgrandtotal)  
+-   [若要向报表添加总计](#bkmk_addgrandtotal)  
   
--   [将报表发布到报表服务器（可选）](#bkmk_publishreport)  
+-   [若要将报表发布到报表服务器 （可选）](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 对在报表中数据进行分组  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241735"
   
      如果您在输出窗口中看到如下消息，则指示成功部署。  
   
-    > ------ Build started:项目：教程，配置：Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started:项目：教程，配置：调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成：1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy:1 succeeded, 0 failed, 0 skipped ==========  
+    > ---生成已开始：项目：教程，配置：调试---跳过销售 Orders.rdl。 项是最新。生成完成--0 个错误，0 警告---部署开始：项目：教程，配置：调试---部署到 http://\<服务器名称 > / reportserverDeploying 报告 / 教程/销售订单。部署完成--0 个错误，0 个警告 === 生成：1 成功或最新，0 失败，0 已跳过 === 部署：1 个成功，0 失败，0 已跳过 ===  
   
      如果您看到如下错误消息，则确认您对报表服务器的权限并且已使用管理员权限启动了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   

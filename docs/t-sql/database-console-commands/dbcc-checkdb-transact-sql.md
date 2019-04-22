@@ -36,10 +36,10 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429363"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 选项是受支持的功能，但是，它可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户从上次已知成功备份还原，作为从 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
 >     
 > 仅能使用 REPAIR_ALLOW_DATA_LOSS 选项修复的某些错误可能涉及释放行、页或一些列页以清除错误。 用户不可再访问或恢复已释放的数据，且无法确定已释放数据的准确内容。 因此，释放任何行或页后参照完整性可能不准确，因为此修复操作不包括检查或维护外键约束。 使用 REPAIR_ALLOW_DATA_LOSS 选项后，用户必须检查其数据库的参考完整性（使用 DBCC CHECKCONSTRAINTS）。    
 >     
@@ -189,7 +189,7 @@ DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，
 -   如果兼容性级别不高于 90，那么除非指定 `NOINDEX`，否则 DBCC CHECKDB 对一个表或索引视图及其所有非聚集索引和 XML 索引同时执行物理和逻辑一致性检查。 不支持空间索引。  
 - 从 SQL Server 2016 开始，不再默认对持久化计算列、UDT 列和筛选索引运行其他检查，以避免昂贵的表达式计算。 此更改显著减少了针对包含这些对象的数据库的 CHECKDB 持续时间。 但是，始终会完成这些对象的物理一致性检查。 仅当指定了 `EXTENDED_LOGICAL_CHECKS` 选项时，才会在 `EXTENDED_LOGICAL_CHECKS` 选项中已包含的逻辑检查（索引视图、XML 索引和空间索引）之外，还执行表达式计算。   
     
-**了解数据库兼容性级别**
+**了解数据库的兼容性级别**
 -   [查看或更改数据库的兼容级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部数据库快照    
@@ -246,7 +246,7 @@ DBCC CHECKDB 命令结束之后，便会将一个消息写入 [!INCLUDE[ssNoVers
 -   如果由于事务日志损坏而导致数据库恢复失败，则将重新生成事务日志。 重新生成事务日志可能导致事务一致性丢失。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户从上次已知成功备份还原，作为从 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
+> REPAIR_ALLOW_DATA_LOSS 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的功能。 但是，其可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户将从上次已知成功备份还原作为从由 DBCC CHECKDB 报告的错误恢复的主要方法。 REPAIR_ALLOW_DATA_LOSS 选项不是从已知成功备份还原的替代方法。 这是一个紧急选项，仅当不可从备份恢复时建议作为“最后手段”使用。    
 >     
 >  重新生成日志后，没有完全的 ACID 保证。    
 >     
@@ -393,6 +393,6 @@ GO
 ## <a name="see-also"></a>另请参阅    
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [查看数据库快照的稀疏文件大小 (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[系统表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[sp_helpdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

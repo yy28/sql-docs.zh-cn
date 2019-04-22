@@ -17,10 +17,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480323"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
@@ -131,7 +131,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Security|SETUSER|EXECUTE AS|SETUSER|165|  
 |Security|RC4 和 DESX 加密算法|请使用其他算法，如 AES。|DESX 算法|238|  
 |SET 选项|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)、[sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)、[sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 和 [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)。|SET FMTONLY|250|  
-|服务器配置选项|c2 审核选项<br /><br /> default trace enabled 选项|[common criteria compliance enabled 服务器配置选项](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [扩展事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
+|服务器配置选项|c2 审核选项<br /><br /> default trace enabled 选项|[启用了通用准则合规性的服务器配置选项](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [扩展事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 类|**Microsoft.SQLServer.Management.Smo.Information** 类<br /><br /> **Microsoft.SQLServer.Management.Smo.Settings** 类<br /><br /> **Microsoft.SQLServer.Management.Smo.DatabaseOptions** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication** 属性|**Microsoft.SqlServer.Management.Smo.Server** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.Server** 类<br /><br /> **Microsoft.SqlServer.Management.Smo.Database** 类<br /><br /> None|None|None|  
 |SQL Server 代理|**net send** 通知<br /><br /> 寻呼通知|电子邮件通知<br /><br /> 电子邮件通知 |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|解决方案资源管理器集成到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  

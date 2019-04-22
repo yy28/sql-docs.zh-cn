@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476653"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
@@ -37,7 +37,7 @@ ms.locfileid: "59476653"
   
 -   用户定义代码不应能通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程中运行而获得对系统资源的未经授权访问。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现已集成的基于用户的安全模型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR 的代码访问基于安全模型。 本节将讨论此组合安全方法的某些优势。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在集成了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于用户的安全模式和 CLR 基于代码访问的安全模式。 本节将讨论此组合安全方法的某些优势。  
   
  下表列出了本节的主题。  
   

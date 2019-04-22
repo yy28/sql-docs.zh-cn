@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042446"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -280,7 +280,7 @@ RETURNS return_data_type
  *schema_name*  
  用户定义函数所属的架构的名称。  
   
- *function_name*  
+ function_name  
  用户定义函数的名称。 函数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，并且在数据库中以及对其架构来说是唯一的。  
   
 > [!NOTE]  
@@ -316,10 +316,10 @@ RETURNS return_data_type
  READONLY  
  指示不能在函数定义中更新或修改参数。 如果参数类型为用户定义的表类型，则应指定 READONLY。  
   
- *return_data_type*  
+ return_data_type  
  标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）。 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 **cursor** 和 **table** 指定为返回数据类型。  
   
- *function_body*  
+ function_body  
  指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数 (MSTVF)。  
   
  在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
@@ -347,15 +347,15 @@ RETURNS return_data_type
  指定创建的函数名称应引用的程序集和方法。  
   
 -   *assembly_name*：必须与 `name` 列中的值匹配   
-    `SELECT * FROM sys.assemblies;`。  
+    `SELECT * FROM sys.assemblies;` 列中的一个值匹配。  
     这是曾在 `CREATE ASSEMBLY` 语句中使用的名称。  
   
 -   *class_name*：必须与 `assembly_name` 列中的值匹配  
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;` 列中的一个值匹配。  
     此值通常包含嵌入的句点或圆点。 在这种情况下，Transact-SQL 语法要求将该值置于一对方括号 [] 或一对双引号 "" 内。  
   
 -   *method_name*：必须与 `method_name` 列中的值匹配   
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;` 列中的一个值匹配。  
     该方法必须是静态方法。  
   
 在典型示例中，对于 MyFood.DLL（其中所有类型都位于 MyFood 命名空间中），`EXTERNAL NAME` 值可以是：   
@@ -389,7 +389,7 @@ RETURNS return_data_type
  EXECUTE AS  
  对于本机编译的标量用户定义函数，EXECUTE AS 是必需的。  
   
- **\<function_option>::= 和 \<clr_function_option>::=** 
+ **\<function_option>::= and \<clr_function_option>::=** 
   
  指定函数将具有以下一个或多个选项：  
   
@@ -430,7 +430,7 @@ EXECUTE AS 子句
 指定用于执行用户定义函数的安全上下文。 所以，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用哪一个用户帐户来验证针对该函数引用的任何数据库对象的权限。  
   
 > [!NOTE]  
-> `EXECUTE AS` 不能为内联表值函数指定。
+> 不能为内联表值函数指定 `EXECUTE AS`。
   
 有关详细信息，请参阅 [EXECUTE AS 子句 (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
 
@@ -441,10 +441,10 @@ INLINE = { ON | OFF }
   
  定义表数据类型。 表声明包含列定义和约束。 对于 CLR 函数，只能指定 column_name 和 data_type。  
   
- *column_name*  
+ column_name  
  表中列的名称。 列名称必须遵循标识符的规则，且在表中必须唯一。 column_name 可以包含 1 到 128 个字符。  
   
- *data_type*  
+ data_type  
  指定列数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型。  
   
  DEFAULT constant_expression  
@@ -456,7 +456,7 @@ INLINE = { ON | OFF }
  COLLATE 子句只能用来更改数据类型为 char、varchar、nchar 和 nvarchar 的列的排序规则。  
   
  > [!NOTE]
- > `COLLATE` 不能为 CLR 表值函数指定。  
+ > 不能为 CLR 表值函数指定 `COLLATE`。  
   
  ROWGUIDCOL  
  指示新列是行的全局唯一标识符列。 对于每个表，只能将其中的一个 uniqueidentifier 列指定为 ROWGUIDCOL 列。 ROWGUIDCOL 属性只能分配给 uniqueidentifier 列。  
@@ -468,13 +468,13 @@ INLINE = { ON | OFF }
   
  不能为 CLR 表值函数指定 IDENTITY。  
   
- *seed*  
+ seed  
  要分配给表中第一行的整数值。  
   
- *increment*  
+ increment  
  要加到表中后续行的 seed 值上的整数值。  
   
- **\< column_constraint >::= 和 \< table_constraint>::=** 
+ \< column_constraint >::= and \< table_constraint>::= 
   
  为指定列或表定义约束。 对于 CLR 函数，允许的唯一约束类型为 NULL。 不允许命名约束。  
   
@@ -497,17 +497,17 @@ INLINE = { ON | OFF }
  CHECK  
  一个约束，该约束通过限制可输入一列或多列中的可能值来强制实现域完整性。 不能为 CLR 表值函数指定 CHECK 约束。  
   
- *logical_expression*  
+ logical_expression  
  返回 TRUE 或 FALSE 的逻辑表达式。  
   
  **\<computed_column_definition>::=**  
   
  指定计算列。 有关计算列的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。  
   
- *column_name*  
+ column_name  
  计算列的名称。  
   
- *computed_column_expression*  
+ computed_column_expression  
  定义计算列的值的表达式。  
   
  **\<index_option>::=**  
@@ -567,15 +567,15 @@ INLINE = { ON | OFF }
 
 -   `TRY...CATCH` 语句以外的控制流语句。  
 
--   `DECLARE` 语句，用于定义局部数据变量和局部游标。  
+-   定义局部数据变量和局部游标的 `DECLARE` 语句。  
 
 -   `SELECT` 语句，其中的选择列表包含为局部变量分配值的表达式。  
 
 -   游标操作，该操作引用在函数中声明、打开、关闭和释放的局部游标。 只允许使用以 `INTO` 子句向局部变量赋值的 `FETCH` 语句；不允许使用将数据返回到客户端的 `FETCH` 语句。  
 
--   `INSERT`、`UPDATE` 和 `DELETE` 语句，用于修改本地表变量。  
+-   修改本地表变量的 `INSERT`、`UPDATE` 和 `DELETE` 语句。  
 
--   `EXECUTE` 语句，用于调用扩展存储过程。  
+-   调用扩展存储过程的 `EXECUTE` 语句。  
 
 有关详细信息，请参阅[创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
@@ -645,7 +645,7 @@ INLINE = { ON | OFF }
   
     -   “插入”查询，其中 `ORDER` 子句与索引兼容。  
   
-    -   `ORDER BY` 子句，与 `ORDER` 子句兼容。  
+    -   与 `ORDER` 子句兼容的 `ORDER BY` 子句。  
   
     -   聚合，其中 `GROUP BY` 与 `ORDER` 子句兼容。  
   
@@ -825,7 +825,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
- [ALTER FUNCTION (Transact-SQL)](../../t-sql/statements/alter-function-transact-sql.md)    
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

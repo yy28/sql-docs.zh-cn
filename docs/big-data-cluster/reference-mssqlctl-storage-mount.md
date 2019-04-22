@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860288"
 ---
 # <a name="mssqlctl-storage-mount"></a>mssqlctl 存储装载
@@ -26,8 +26,8 @@ ms.locfileid: "58860288"
 
 |||
 |---|---|
-| [创建](#create) | 在 HDFS 中创建的远程存储的装载。 |
-| [删除](#delete) | 删除远程存储在 HDFS 中的装载。 |
+| [create](#create) | 在 HDFS 中创建的远程存储的装载。 |
+| [delete](#delete) | 删除远程存储在 HDFS 中的装载。 |
 | [status](#status) | Mount(s) 的状态。 |
 
 ## <a id="create"></a> mssqlctl storage mount create

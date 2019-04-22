@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860249"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>什么是 SQL Server 大数据群集？
@@ -78,8 +78,8 @@ Kubernetes 是开放源代码容器业务流程协调程序，可以缩放容器
 
 |||
 |:--|:--|
-| **分类** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
-| **节点** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
+| **Cluster** | Kubernetes 群集是一组计算机，称为节点。 一个节点控制群集，并指定主节点;剩余的节点是辅助角色节点。 Kubernetes 主机是负责分发在辅助角色之间的工作，并监视群集的运行状况。 |
+| **Node** | 节点运行容器化应用程序。 它可以是物理机或虚拟机。 Kubernetes 群集可以包含的物理机和虚拟机节点的组合。 |
 | **Pod** | Pod 是 Kubernetes 的原子部署单位。 Pod 是一个或多个容器的逻辑组-和关联的资源需要运行应用程序。 每个 pod 的节点; 上运行节点可以运行一个或多个 pod。 Kubernetes 主机会自动分配到群集中节点的 pod。 |
 | &nbsp; ||
 

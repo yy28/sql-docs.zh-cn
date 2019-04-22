@@ -26,10 +26,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042266"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
@@ -103,7 +103,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING AUTO  
   
-    **示例 - 更改全文检索以使用自动更改跟踪**  
+    **示例 - 更改全文索引以使用自动更改跟踪**  
     以下示例更改 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表的全文索引以使用自动填充的更改跟踪。  
   
     ```sql  
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING MANUAL  
   
-    **示例 - 使用手动更改跟踪创建全文检索**  
+    **示例 - 使用手动更改跟踪创建全文索引**  
     以下示例对 `HumanResources.JobCandidate` 示例数据库的 `AdventureWorks` 表创建全文索引，该全文索引将使用具有手动填充的更改跟踪。  
   
     ```sql

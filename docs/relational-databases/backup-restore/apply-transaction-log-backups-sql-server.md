@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240587"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
@@ -73,7 +73,7 @@ ms.locfileid: "59240587"
   
 2.  不要还原上午 8:00 的 所需的时间长。 相反，应还原下午 6:00 的 这一时间更近的完整数据库备份，然后应用晚上 8:00 的 日志备份和结尾日志备份。  
   
- **替换选项 2：使用之前的完整数据库备份还原数据库**  
+ **替换选项 2：使用较早的完整数据库备份还原数据库**  
   
 > 如果出现问题，使您无法使用下午 6:00 的完整数据库备份， 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59240587"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
--   [包含标记事务的相关数据库恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记的事务的相关数据库的恢复](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   

@@ -15,10 +15,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243501"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
@@ -66,7 +66,7 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![d下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - 安装 SSDT for Visual Studio 2017 (15.9.0) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（如已安装），并关闭所有 VS 实例。
@@ -120,7 +120,7 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 1. 运行 `vs_setup.exe --NoWeb` 以安装 VS2017 Shell 和 SQL Server 数据项目。
 2. 从布局文件夹运行 `SSDT-Setup-ENU.exe /install` 并选择 SSIS/SSRS/SSAS。
 
-   - 或者，若要执行无人参与安装，请运行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - 或者若要执行无人参与的安装，请运行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 
 有关可用选项，请运行 `SSDT-Setup-ENU.exe /help`
 
@@ -148,7 +148,7 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都使用 DacFx 17.4
 安装 SSDT 后，阅读这些教程，了解如何使用 SSDT 创建数据库、包、数据模型和报告：  
 
 - [面向项目的脱机数据库开发](project-oriented-offline-database-development.md)  
-- [SSIS 教程：创建简单 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [SSIS 教程：创建简单的 ETL 包](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services 教程](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

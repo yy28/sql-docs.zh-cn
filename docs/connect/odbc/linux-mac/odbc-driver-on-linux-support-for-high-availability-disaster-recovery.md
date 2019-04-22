@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042376"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驱动程序对高可用性和灾难恢复的支持
@@ -29,7 +29,7 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
   
 -   [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [活动辅助副本：可读辅助副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一在 Linux 或 macOS 上的 ODBC 应用程序连接到进行故障转移的可用性组中的某个数据库，原始连接则将被断开，并且应用程序必须打开一个新的连接才能在故障转移后继续工作。
 

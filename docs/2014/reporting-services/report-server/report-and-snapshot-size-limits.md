@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240645"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
@@ -53,7 +53,7 @@ ms.locfileid: "59240645"
  仅在呈现到 Excel 格式时，才对报表大小有严格限制。 工作表不能超过 65536 行或 256 列。 其他呈现格式没有这些限制，因此大小仅受服务器上资源量的限制。 有关 Excel 文件限制的详细信息，请参阅[将报表导出为其他文件类型&#40;报表生成器和 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布内容:[使用 Reporting Services 规划可伸缩性和性能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)并[使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+>  报表处理和呈现都在内存中进行。 如果您具有大型报表或大量用户，则务必进行某种容量规划，确保您执行的报表服务器部署令用户满意。 有关工具和指南的详细信息，请参阅 MSDN 上的以下发布：[使用 Reporting Services 规划可伸缩性和性能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)并[使用 Visual Studio 2005 在 SQL Server 2005 Reporting Services 报表服务器上执行负载测试](https://go.microsoft.com/fwlink/?LinkID=77519)。  
   
 ## <a name="measuring-snapshot-storage"></a>度量快照存储  
  任何给定快照的大小都与报表中的数据量成正比。 快照通常比报表服务器上存储的其他项大得多。 快照大小通常在几 MB 到几十 MB 之间。 如果报表非常大，则可能会看到更大的快照。 根据使用快照的频率以及配置报表历史记录的方式，报表服务器数据库所需的磁盘空间量可能会在短期内迅速增加。  
