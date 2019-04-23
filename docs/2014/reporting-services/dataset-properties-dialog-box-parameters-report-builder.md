@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298005"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968225"
 ---
-# <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&gt;“参数”（报表生成器）
+# <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&amp;gt;“参数”（报表生成器）
   选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  
   
  对于嵌入数据集，选项应用于报表定义中的数据集。  
@@ -80,7 +80,7 @@ ms.locfileid: "56298005"
  [用于对话框、窗格和向导的报表生成器帮助](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [数据集属性对话框中，查询&#40;报表生成器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [表达式（报表生成器和 SSRS）](report-design/expressions-report-builder-and-ssrs.md)   
- [教程：向报表添加参数&#40;报表生成器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教程：向报表添加参数（报表生成器）](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [报表参数（报表生成器和报表设计器）](report-design/report-parameters-report-builder-and-report-designer.md)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [查询设计器（报表生成器）](../../2014/reporting-services/query-designers-report-builder.md)   

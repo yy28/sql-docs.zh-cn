@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029098"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947084"
 ---
 # <a name="new-data-source-page-report-manager"></a>“新建数据源”页（报表管理器）
   使用“新建数据源”页，可以创建共享数据源项。 共享数据源定义与外部数据源的连接。 使用共享数据源，可以从使用该数据源的报表、模型和数据驱动订阅分别创建和维护数据源连接设置。  

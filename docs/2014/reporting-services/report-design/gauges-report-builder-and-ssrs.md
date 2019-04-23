@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297385"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954253"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   仪表数据区域是显示数据集中的单个值的一维数据区域。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 可以使用仪表面板在单个仪表面板内创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  
@@ -181,7 +181,7 @@ ms.locfileid: "56297385"
   
  ![仪表元素示意图](../media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
- 有关将仪表用作 Kpi 的详细信息，请参阅[教程：向报表添加 KPI&#40;报表生成器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 若要详细了解如何将仪表用作 KPI，请参阅[教程：向报表添加 KPI（报表生成器）](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以将仪表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297385"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 径向仪表选项：径向，径向，最小仪表、 两个刻度、 东北方向 90 度、 西北方向 90 度，西南方向 90 度、 东南方向 90 度、 北方 180 度、 南方 180 度、 东方 180 度 West180 度和计量。  
+ 径向仪表选项：“径向”、“最小径向仪表”、“两个确定位数”、“东北方向 90 度”、“西北方向 90 度”、“西南方向 90 度”、“东南方向 90 度”、“北方 180 度”、“南方 180 度”、“西方 180 度”、“东方 180 度”和“仪表”。  
   
  **线性仪表**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 线性仪表选项：水平、 垂直、 多个条形指针、 两个刻度、 三个颜色范围，对数、 温度计、 温度计华氏温度/Celcius 和圆点图。  
+ 线性仪表选项：“水平”、“垂直”、“多个条形指针”、“两个确定位数”、“三个颜色范围”、“对数”、“温度计”、“华氏/摄氏温度计”和“子弹图”。  
   
   
 ##  <a name="AddingData"></a> 向仪表添加数据  

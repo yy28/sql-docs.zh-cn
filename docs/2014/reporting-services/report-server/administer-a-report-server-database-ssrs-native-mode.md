@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041248"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961133"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  
@@ -59,7 +59,7 @@ ms.locfileid: "56041248"
  由于 ReportServerTempdb 名称是在内部存储的，并且由存储过程用来执行内部操作，所以会发生此错误。 重命名临时数据库将使存储过程无法正常工作。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>针对报表服务器数据库启用快照隔离  
- 您不能针对报表服务器数据库启用快照隔离。 如果启用了快照隔离，则将遇到以下错误：“所选报表尚不可查看。 报表仍处于呈现状态，或报表快照不可用。”  
+ 您不能针对报表服务器数据库启用快照隔离。 如果启用了快照隔离，将遇到以下错误："所选的报表未准备好进行查看。 报表仍处于呈现状态，或报表快照不可用。”  
   
  如果快照隔离不是有意启用的，则说明属性可能已经由另一个应用程序设置，或者已经针对 **“模型”** 数据库启用了快照隔离，从而导致所有的新数据库都继承该设置。  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041916"
 ---
 # <a name="installing-the-driver-manager"></a>安装驱动程序管理器
@@ -44,7 +44,7 @@ ms.locfileid: "59041916"
   
 1.  请确保具有根权限。  
   
-2.  转到 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver 下载放置 `msodbcsql-11.0.2270.0.tar.gz` 文件的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：**tar xvzf msodbcsql-11.0.2270.0.tar.gz**。  
+2.  转到 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 驱动程序下载放置名为 `msodbcsql-11.0.2270.0.tar.gz` 的文件的目录。 确保所拥有的 \*.tar.gz 文件与你的 Linux 版本匹配。 若要提取文件，请执行以下命令：**tar xvzf msodbcsql-11.0.2270.0.tar.gz**。  
 
 3.  转到 `msodbcsql-11.0.2270.0` 目录，你应在此处看到一个名为 `build_dm.sh` 的文件。 你可以运行`build_dm.sh`来安装 unixODBC 驱动程序管理器。
 
@@ -85,7 +85,7 @@ ms.locfileid: "59041916"
 现在可以随时安装该驱动程序。 有关详细信息，请参阅[安装 Microsoft ODBC Driver for SQL Server Linux 和 macOS 上](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅
-[安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 

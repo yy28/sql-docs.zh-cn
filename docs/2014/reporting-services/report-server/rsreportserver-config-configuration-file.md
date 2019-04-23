@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015598"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958433"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RSReportServer.config** 文件存储报表管理器、报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -176,7 +176,7 @@ ms.locfileid: "56015598"
 |`RSWindowsKerberos`|服务器接受 Kerberos 安全令牌。<br /><br /> 如果在约束委派身份验证方案中使用 Kerberos 身份验证，则将使用此设置或 RSWindowsNegotiate。|N|  
 |`RSWindowsBasic`|如果建立连接时没有使用凭据，则服务器会接受基本凭据，并发出质询/响应。<br /><br /> 基本身份验证以明文形式在 HTTP 请求中传递凭据。 如果使用基本身份验证，则使用 SSL 对进出报表服务器的网络通信进行加密。 若要查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本身份验证的示例配置语法，请参阅 [针对报表服务器的身份验证](../security/authentication-with-the-report-server.md)。|N|  
 |`Custom`|如果在报表服务器计算机上部署了自定义的安全扩展插件，请指定此值。 有关详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。|N|  
-|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 不支持值 0（针对交互登录）和 1（针对批处理登录)。|N|  
+|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。<br /><br /> 注意：中不支持值 0 （针对交互登录） 和 1 （针对批处理登录） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|N|  
 |**Realm**|此值用于`RSWindowsBasic`。 它指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|N|  
 |**DefaultDomain**|此值用于`RSWindowsBasic`。 它用于确定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|N|  
 |**RSWindowsExtendedProtectionLevel**|默认值为 **off**。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)|N|  
@@ -293,7 +293,7 @@ ms.locfileid: "56015598"
 |**EmbeddedRenderFormats，RenderingExtension**|指定在电子邮件正文中嵌入报表时所使用的呈现格式。 报表中的图像将随后嵌入报表中。 有效值为 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定当通过“管理所有订阅”任务启用订阅时，用户可以从中为报表订阅选择的呈现格式。 如果未设置此值，则可以使用所有未特意排除的呈现格式。|  
 |**ExcludedRenderFormats，RenderingExtension**|特意排除无法与给定的传递扩展插件协同工作的格式。 但不能排除同一个呈现扩展插件的多个实例。 如果排除多个实例，则在报表服务器读取配置文件时将出现错误。 默认情况下，排除将下列扩展插件用于电子邮件传递：<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  
-|**SendEmailToUserAlias**|此值与 **DefaultHostName**一起使用。<br /><br /> 当**SendEmailToUserAlias**设置为`True`，定义各个订阅的用户自动指定为报表的收件人。 并隐藏 **“收件人”** 字段。 如果此值为`False`，则**到**字段是否可见。 若要最大限度地控制报表分发，请将此值设置为 `True`。 有效值包括：<br /><br /> `True`=使用创建订阅的用户的电子邮件地址。 这是默认值。<br /><br /> `False`=可以指定任何电子邮件地址。|  
+|**SendEmailToUserAlias**|此值与 **DefaultHostName**一起使用。<br /><br /> 当**SendEmailToUserAlias**设置为`True`，定义各个订阅的用户自动指定为报表的收件人。 并隐藏 **“收件人”** 字段。 如果此值为`False`，则**到**字段是否可见。 若要最大限度地控制报表分发，请将此值设置为 `True`。 包括以下有效值：<br /><br /> `True`=使用创建订阅的用户的电子邮件地址。 这是默认值。<br /><br /> `False`=可以指定任何电子邮件地址。|  
 |**DefaultHostName**|此值与 **SendEmailToUserAlias**一起使用。<br /><br /> 指定一个字符串值，表示当 **SendEmailToUserAlias** 设置为 True 时追加到用户别名中的主机名。 此值可以为域名系统 (DNS) 名称或 IP 地址。|  
 |**PermittedHosts**|通过显式指定哪些主机能够接收电子邮件传递来限制报表分发。 在 **PermittedHosts**中，每个主机均指定为一个 **HostName** 元素，其中值为 IP 地址或 DNS 名称。<br /><br /> 只有为这些主机定义的电子邮件帐户才是有效的收件人。 如果指定 **DefaultHostName**，请确保在 **PermittedHosts** 的 **HostName**元素中包括该主机。 此值必须是一个或多个 DNS 名称或 IP 地址。 默认情况下，不设置此值。 如果未设置该值，则对于可接收通过电子邮件发送的报表的用户没有任何限制。|  
   

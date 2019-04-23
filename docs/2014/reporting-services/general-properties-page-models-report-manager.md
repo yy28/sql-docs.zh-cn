@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018239"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947543"
 ---
 # <a name="general-properties-page-models-report-manager"></a>模型的“常规”属性页（报表管理器）
   使用报表模型的“常规”属性页可以重命名、删除、移动或替换模型定义 (.smdl) 文件。 页面顶部显示了有关创建或修改模型的用户以及发生更改的时间等详细信息。  
@@ -46,7 +46,7 @@ ms.locfileid: "56018239"
  **在列表视图中隐藏**  
  在将文件夹设置为列表视图时，选中此复选框可以隐藏项。 列表视图是报表管理器支持的一种查看文件夹内容的模式。 可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中设置此选项，以定义在报表管理器中查看此项的方式。 有关视图模式在报表管理器的详细信息，请参阅[内容页&#40;报表管理器&#41;](../../2014/reporting-services/contents-page-report-manager.md)。  
   
- **应用**  
+ **Apply**  
  单击此选项可保存所做的更改。  
   
  **删除**  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040638"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950733"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
   你可以创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以便从与 SharePoint 模式报表服务器集成的 SharePoint Web 应用程序传递报表。 订阅可以将报表传递到文档库、文件夹或作为电子邮件传递。 本主题概述了创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的要求和步骤。  
@@ -31,11 +31,11 @@ ms.locfileid: "56040638"
   
  创建订阅时，有三种方法可用于指定其传递：  
   
--   **文档库**:可以创建将基于原始报表的文档传递到与原始报表位于同一 SharePoint 站点内的库的订阅。 不能将该文档传递到位于相同网站集内的其他服务器或其他站点。 若要传递此文档，您必须对该报表所传递到的库拥有“添加项”权限。  
+-   **文档库**:可以创建基于原始报表到与原始报表位于同一 SharePoint 站点内的库的文档传递的订阅。 不能将该文档传递到位于相同网站集内的其他服务器或其他站点。 若要传递此文档，您必须对该报表所传递到的库拥有“添加项”权限。  
   
--   **日志文件文件夹：** 可以将基于原始报表的文档传递到文件系统上的共享文件夹中。 必须选择可通过网络连接进行访问的现有文件夹。  
+-   **日志文件文件夹：** 你可以提供基于原始报表的共享文件夹到文件系统上的文档。 必须选择可通过网络连接进行访问的现有文件夹。  
   
--   **电子邮件：** 如果将报表服务器配置为使用报表服务器电子邮件传递扩展插件，则可以创建一个订阅，将报表或导出的报表文件（以输出格式保存）发送到收件箱。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
+-   **电子邮件：** 如果报表服务器配置为使用报表服务器电子邮件传递扩展插件，可以创建将报表或导出的报表文件 （以输出格式保存） 发送到箱的订阅。 若要只接收不包含报表或报表 URL 的通知，请清除 **“包含指向报表的链接”** 和 **“在邮件中显示报表”** 复选框。  
   
  **本主题内容：**  
   

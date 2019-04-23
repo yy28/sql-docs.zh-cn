@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026418"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964793"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 课：修改报表数据源属性
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  
@@ -114,11 +114,11 @@ ms.locfileid: "56026418"
   
          ![报表查看器中的使用参数区域可见](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "参数区可见的报表查看器")  
   
-8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+8.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ##  <a name="bkmk_redeploy"></a> 若要重新部署报表  
   
-1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+1.  重新部署报表，以便下一课程中的订阅配置可利用您在本课程中进行的更改。 在表教程中使用的项目属性的详细信息，请参阅将报表发布到报表服务器 （可选） 一节的[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 2.  在工具栏上，单击 **“生成”** ，然后单击 **“部署教程”**。  
   

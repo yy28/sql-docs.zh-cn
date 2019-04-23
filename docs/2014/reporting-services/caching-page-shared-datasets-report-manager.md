@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017879"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968743"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共享数据集的“缓存”页（报表管理器）
   使用“缓存”属性页可以设置共享数据集的缓存选项。  
@@ -53,7 +53,7 @@ ms.locfileid: "56017879"
  **共享的计划**  
  指定在报表、订阅和其他共享数据集之间共享的计划。  
   
- **应用**  
+ **Apply**  
  保存更改。  
   
 ## <a name="see-also"></a>请参阅  

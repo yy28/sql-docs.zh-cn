@@ -14,15 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043298"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947173"
 ---
 # <a name="authentication-with-the-report-server"></a>针对报表服务器的身份验证
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 提供若干可配置的选项以便根据报表服务器对用户和客户端应用程序进行身份验证。 默认情况下，报表服务器使用 Windows 集成身份验证并且假定信任关系，其中，客户端和网络资源处于同一域中或处于信任域中。 根据你的网络拓扑和组织需要，你可以自定义用于 Windows 集成身份验证的身份验证协议，使用基本身份验证，或者使用你提供的基于窗体的自定义身份验证扩展插件。 每种身份验证类型都可以单独打开或关闭。 如果您希望报表服务器接受多种类型的请求，则可启用多种身份验证类型。  
@@ -37,8 +37,8 @@ ms.locfileid: "56043298"
   
 |AuthenticationType 名称|HTTP 身份验证层值|默认情况下是否使用|Description|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
-|RSWindowsNegotiate|Negotiate|用户帐户控制|尝试首先将 Kerberos 用于 Windows 集成的身份验证，但是如果 Active Directory 无法将客户端请求的票证授予报表服务器，则回退到 NTLM。 仅当票证不可用时，Negotiate 才会回退到 NTLM。 如果第一次尝试导致出错而不是缺少票证，则报表服务器不会进行再次尝试。|  
-|RSWindowsNTLM|NTLM|用户帐户控制|将 NTLM 用于 Windows 集成的身份验证。<br /><br /> 将不会在其他请求中对凭据进行委托或模拟。 后续请求将遵循新的质询响应顺序。 根据网络安全设置的不同，系统可能提醒用户输入凭据，或者会以透明方式处理身份验证请求。|  
+|RSWindowsNegotiate|Negotiate|是|尝试首先将 Kerberos 用于 Windows 集成的身份验证，但是如果 Active Directory 无法将客户端请求的票证授予报表服务器，则回退到 NTLM。 仅当票证不可用时，Negotiate 才会回退到 NTLM。 如果第一次尝试导致出错而不是缺少票证，则报表服务器不会进行再次尝试。|  
+|RSWindowsNTLM|NTLM|是|将 NTLM 用于 Windows 集成的身份验证。<br /><br /> 将不会在其他请求中对凭据进行委托或模拟。 后续请求将遵循新的质询响应顺序。 根据网络安全设置的不同，系统可能提醒用户输入凭据，或者会以透明方式处理身份验证请求。|  
 |RSWindowsKerberos|Kerberos|否|将 Kerberos 用于 Windows 集成的身份验证。 您必须通过为您的服务帐户设置服务主体名称 (SPN) 来配置 Kerberos，这要求域管理员权限。 如果使用 Kerberos 来设置标识委托，则还可在为报表提供数据的外部数据源的其他连接中使用请求报表的用户的令牌。<br /><br /> 在指定 RSWindowsKerberos 之前，请确保您所使用的浏览器类型确实支持该值。 如果您使用的是 Internet Explorer，则 Kerberos 身份验证只能通过 Negotiate 进行支持。 Internet Explorer 将不表述直接指定 Kerberos 的身份验证请求。|  
 |RSWindowsBasic|基本|否|基本身份验证是在 HTTP 协议中定义的，并只能用于对向报表服务器发出的 HTTP 请求进行身份验证。<br /><br /> 凭据以 base64 编码形式在 HTTP 请求中传递。 如果您使用基本身份验证，则在通过网络发送用户帐户信息之前，请使用安全套接字层 (SSL) 对其进行加密。 SSL 提供一个加密通道，可借助此通道通过 HTTP TCP/IP 连接将连接请求从客户端发送到报表服务器。 有关详细信息，请参阅 [TechNet 网站中的](https://go.microsoft.com/fwlink/?LinkId=71123) Using SSL to Encrypt Confidential Data [!INCLUDE[msCoName](../../includes/msconame-md.md)] （使用 SSL 加密机密数据）。|  
 |自定义|(Anonymous)|否|匿名身份验证将指示报表服务器忽略 HTTP 请求中的身份验证标头。 报表服务器接受所有请求，但不接受您所提供用来对用户进行身份验证的自定义 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 窗体身份验证的调用请求。<br /><br /> 仅当要在报表服务器上部署处理所有身份验证请求的自定义身份验证模块时，才指定 `Custom`。 不能将 Custom 身份验证类型与默认的 Windows 身份验证扩展插件一起使用。|  

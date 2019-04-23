@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ab231da8d69c88521174813d1986b7f91e40139
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025368"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944095"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
   可以在同一台计算机上安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  
@@ -50,7 +50,7 @@ ms.locfileid: "56025368"
 |http://+:80|对于映射到 **“所有已分配的”** 的任何应用程序端点，接收尚未由其他应用程序接收的请求。|  
 |http://*:80|对于映射到 **“所有未分配的”** 的应用程序端点，接收尚未由其他应用程序接收的请求。|  
   
- 端口发生冲突的一个迹象是，将看到以下错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 （HRESULT 异常：0x80070020)。  
+ 端口发生冲突的一个迹象是，将看到以下错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 (异常来自 HRESULT:0x80070020)。  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>用于带 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 IIS 6.0、7.0、8.0、8.5 的 URL 预留  
  使用上一节中概述的优先规则，即可以开始了解为 Reporting Services 和 IIS 定义的 URL 预留是如何提高互操作性的。 Reporting Services 接收为其应用程序明确指定了虚拟目录名的请求；IIS 接收所有的剩余请求，这些请求随后可定向到运行于 IIS 进程模型中的应用程序。  
@@ -74,7 +74,7 @@ ms.locfileid: "56025368"
   
  为了确保所有的应用程序都能收到请求，请遵循下面的准则：  
   
--   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 你的配置存在冲突的一个迹象是您将看到错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 （HRESULT 异常：0x80070020)。  
+-   对于 Reporting Services 安装，请使用 Reporting Services 所在端口上的 IIS 网站尚未使用的虚拟目录名。 如果存在冲突，请在“仅文件”模式（使用“安装”，但是不在安装向导中配置服务器选项）下安装 Reporting Services，以便可以在安装完成后配置虚拟目录。 你的配置存在冲突的一个迹象是您将看到错误消息：System.IO.FileLoadException:进程无法访问该文件，因为它正由另一个进程。 (异常来自 HRESULT:0x80070020)。  
   
 -   对于手动配置的安装，请在所配置的 URL 中使用默认的命名约定。 如果以命名实例形式安装 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ，请在创建虚拟目录时包括实例名称。  
   

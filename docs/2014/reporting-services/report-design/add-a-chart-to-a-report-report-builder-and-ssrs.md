@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0724a68097b2730cf00fc80098f03d4bc5675061
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298565"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961153"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
   如果要以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
   
  将图表数据区域添加到报表中的最简单方式是运行新建图表向导。 该向导提供柱形图、折线图、饼图、条形图和面积图。 对于这些图表类型和其他图表类型，还可以手动添加图表。  
   
- 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表以显示图表数据窗格并且它具有三个区域：序列组、 类别组和值。  
+ 将图表数据区域添加到设计图面后，可以将数值数据和非数值数据的报表数据集字段拖到图表的“图表数据”窗格中。 单击图表以显示“图表数据”窗格及其三个区域：“序列组”、“类别组”和“值”。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "56298565"
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教程：将条形图添加到您的报表 （报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：将条形图添加到报表 （报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [教程：将饼图添加到您的报表 （报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [教程：将饼图添加到报表 （报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [教程：向报表添加条形图（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程：向报表添加条形图（报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教程：向报表添加饼图（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教程：向报表添加饼图（报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010650"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964953"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了多个 Web 部件，可用于特定版本的报表服务器，特别是部署模式。  
   
--   **本机模式：** 如果希望从本机模式报表服务器访问 SharePoint 站点上的报表服务器内容，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 附带的 SharePoint 2.0 Web 部件报表资源管理器和报表查看器。 本主题提供了有关安装和使用 2.0 Web 部件的说明。  
+-   **本机模式：** 如果你想要从本机模式报表服务器访问 SharePoint 站点上的报表服务器内容，使用 SharePoint 2.0 Web 部件报表资源管理器和报表查看器所含[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 本主题提供了有关安装和使用 2.0 Web 部件的说明。  
   
--   **SharePoint 模式：** 如果希望访问在 SharePoint 模式下运行的报表服务器，请使用用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件。 有关外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **SharePoint 模式：** 如果你想要访问报表服务器在 SharePoint 模式下运行，使用情况下安装的 web 部件[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于 SharePoint 产品外接程序。 有关外接程序的详细信息，请参阅 [在何处查找用于 SharePoint 产品的 Reporting Services 外接程序](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 -   > [!NOTE]  
     >  用于本机模式的报表查看器 Web 部件 (SPViewer.dwp) 是一种与用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序安装的 Web 部件 (ReportViewer.dwp) 不同的 Web 部件。 这两种 Web 部件具有不同的架构和实现方式，但它们可以一起安装在同一个 SharePoint 场中。 可以通过以下特征直观地区分这两种 Web 部件：通过加载项安装的报表查看器 Web 部件在工具栏上有一个“操作”菜单。  

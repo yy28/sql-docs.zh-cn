@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030268"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940285"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>报表的“常规”属性页（报表管理器）
   使用报表的“常规”属性页可以重命名、删除、移动或替换报表定义。 也可以使用此页创建链接报表。 页面顶部显示了有关创建或修改报表的用户以及发生更改的时间等详细信息。  
@@ -44,7 +44,7 @@ ms.locfileid: "56030268"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏报表。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **应用**  
+ **Apply**  
  单击此选项可保存所做的更改。  
   
  **删除**  

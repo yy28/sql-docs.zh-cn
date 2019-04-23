@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a2f664e4d8611cb50eda3ffdbb911d72eea6b39
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040648"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939713"
 ---
 # <a name="security-page-site-settings-report-manager"></a>“安全性”页（站点设置， 报表管理器）
   使用“安全性”页可以查看用来控制报表服务器站点访问权限的系统角色分配。 系统角色分配存在于报表服务器命名空间或文件夹层次结构范围之外。 系统角色分配是全局性的，不能随具体项的变化而变化。 通过系统角色分配支持的操作包括创建和使用共享计划、使用报表生成器以及为某些服务器功能设置默认值。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031368"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961103"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -59,18 +59,18 @@ ms.locfileid: "56031368"
   
 |字段|Description|，则“默认”|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|用户帐户控制|  
+|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
 |HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
 |date|活动发生的日期。|否|  
 |Time|活动发生的时间。|否|  
-|ClientIp|访问报表服务器的客户端的 IP 地址。|用户帐户控制|  
+|ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
 |UserName|访问报表服务器的用户的名称。|否|  
 |ServerPort|连接使用的端口号。|否|  
 |主机|主机标头的内容。|否|  
-|方法|从客户端调用的操作或 SOAP 方法。|用户帐户控制|  
-|UriStem|访问的资源。|用户帐户控制|  
+|方法|从客户端调用的操作或 SOAP 方法。|是|  
+|UriStem|访问的资源。|是|  
 |UriQuery|用于访问资源的查询。|否|  
-|ProtocolStatus|HTTP 状态代码。|用户帐户控制|  
+|ProtocolStatus|HTTP 状态代码。|是|  
 |BytesReceived|服务器接收的字节数。|否|  
 |TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|否|  
 |ProtocolVersion|客户端使用的协议版本。|否|  

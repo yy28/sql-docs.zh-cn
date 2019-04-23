@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ec398e41dd1851bc425749f1e71997706356e5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec74b3d16830eff3c78a3b74e07bc017287defb5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032498"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947523"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>从命令提示符处安装 Reporting Services SharePoint 模式和本机模式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持从 SQL Server 安装程序进行命令行安装。 本主题包含特定于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的若干命令行安装示例。 有关可用于所有 SQL Server 组件的命令行选项的完整说明，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。 本主题不介绍用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序的命令行选项。 有关该外接程序的命令行安装的信息，请参阅[使用安装文件 rsSharePoint.msi 安装外接程序](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)。  
