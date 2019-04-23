@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364289"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153896"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>能够识别增补字符的字符串操作示例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 五个函数是 lens （）、`lefts(), rights(), subs()`并`replace_s()`，分别等同于内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数。  

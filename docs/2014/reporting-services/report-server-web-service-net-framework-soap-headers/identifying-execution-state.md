@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - session states [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1e5cc37546e72384b0c264e80f5f7501c7e19402
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016358"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155774"
 ---
 # <a name="identifying-execution-state"></a>标识执行状态
   超文本传输协议 (HTTP) 是一个无连接且无状态协议，这意味着它不自动指示不同请求是否来自同一个客户端，甚至也不指示单个浏览器实例是否仍在查看页面或站点。 会话创建逻辑连接，以通过 HTTP 在服务器与客户端之间维护状态。 与特定会话相关的用户特定的信息称为会话状态。  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372659"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154243"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
 可以使用数据分析表达式语言 (DAX) 在 Analysis Services 表格模型中，创建度量值和使用其他自定义公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 工作簿中的数据模型和 Power BI Desktop 数据模型。 在大多数方面，在这些环境中创建的模型是相同的并可以使用相同的度量值、 关系和 Kpi，等等。但是，如果创建 Analysis Services 表格模型并将其部署在 DirectQuery 模式下，有一些限制，可以使用的公式。 本主题概述了这些差异，列出了在兼容级别 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式下，不支持的函数并列出了支持的函数但可能返回不同的结果。  
@@ -133,7 +131,7 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 `EXAMPLE: LOG(blank())`  
   
-同样的限制适用于其他对数函数：LOG10 和 LN。  
+相同的限制适用于其他对数函数：LOG10 和 ln。  
   
 有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -165,9 +163,9 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 通常，因为接受的日期范围对于 Excel 和 SQL Server 是不同的，所以，仅当日期在共同的日期范围内（包括以下日期）时，才能保证结果匹配。  
   
--   最早日期：1990 年 3 月 1 日  
+-   最早日期：1990 年 3 月 1日日  
   
--   最晚日期：9999 年 12 月 31 日  
+-   最晚日期：到 9999 年 12 月 31 日  
   
 如果公式中使用的任何日期超出此范围，则公式将导致错误，或结果不匹配。  
   
@@ -397,7 +395,7 @@ POWER
 ## <a name="bkmk_NotSupportedFunc"></a>在 DirectQuery 模式下不支持的函数  
 对于在 DirectQuery 模式下部署的模型，不支持某些 DAX 函数。 不支持特定函数的原因可能包括以下任一原因或这些原因的组合：  
   
--   基础关系引擎无法执行与由 xVelocity 引擎执行的等效的计算。   
+-   基础关系引擎无法执行与 xVelocity 引擎执行的计算等效的计算。  
   
 -   公式不能转换为等效的 SQL 表达式。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -19,12 +17,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352491"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158653"
 ---
 # <a name="write-enabled-partitions"></a>可写入的分区
   多维数据集中的数据通常为只读数据。 但在某些情况下，可能需要为分区启用写入。 使用可写入的分区，业务用户可以通过更改单元值并分析更改对多维数据集数据所产生的影响来研究方案。 向分区中写入时，客户端应用程序可以记录对分区中的数据所做的更改。 这些更改（称为写回数据）存储在单独的表中，并且不会覆盖度量值组中的任何现有数据。 但是，它们被作为多维数据集数据的一部分合并到了查询结果中。  

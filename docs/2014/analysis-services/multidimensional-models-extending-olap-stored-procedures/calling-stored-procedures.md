@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -17,12 +15,12 @@ ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af1b06ce11cc23781838d0faf3866fa11ba666d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168147"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157884"
 ---
 # <a name="calling-stored-procedures"></a>调用存储过程
   可以在服务器上或从客户端应用程序中调用存储过程。 在任何一种情况下，存储过程都始终运行于服务器上，或者使用服务器的上下文，或者使用数据库的上下文。 执行存储过程时，不需要具备特殊的权限。 存储过程由程序集添加到服务器或数据库上下文后，只要用户的角色允许执行存储过程所执行的操作，则任何用户均可执行该存储过程。  

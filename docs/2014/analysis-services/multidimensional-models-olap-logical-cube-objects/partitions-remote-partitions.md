@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,12 +20,12 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09231b03e784c142ab8b99ed31c2c4c88f6e72d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051908"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154713"
 ---
 # <a name="remote-partitions"></a>远程分区
   远程分区的数据存储在 Microsoft 的其他实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]比包含分区和其父多维数据集的定义 （元数据） 的实例。 远程分区在对其以及其父多维数据集进行定义的同一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中进行管理。  
@@ -45,7 +43,7 @@ ms.locfileid: "48051908"
   
 |||  
 |-|-|  
-|存储类型|data|  
+|存储类型|数据|  
 |MOLAP|分区的聚合和分区源数据的副本|  
 |HOLAP|分区聚合|  
 |ROLAP|无分区数据|  
@@ -59,7 +57,7 @@ ms.locfileid: "48051908"
  存档或还原存储远程分区的数据库时，远程分区中的数据也随之一起存档或还原。 如果还原了数据库而没有还原远程分区，则必须先处理此远程分区，然后才能使用该分区中的数据。 有关存档和还原数据库的详细信息，请参阅[备份和还原的 Analysis Services 数据库](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建和管理远程分区&#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [创建和管理远程分区 (Analysis Services)](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [处理 Analysis Services 对象](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

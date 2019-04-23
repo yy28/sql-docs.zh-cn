@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, methods
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], arguments
 - XML Web service [Reporting Services], methods
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 82e389f0c09ddc75fb7bbfa09e24cb18cf154f3e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3ef5188934628589751fe92d1839da0efb265766
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033838"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154393"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服务方法参数
   报表服务器 Web 服务方法通过 HTTP 上的 SOAP 向位于指定 URL 处的服务发送请求。 此服务接收请求，对其进行处理，然后返回响应。 这些请求和响应采用 XML 文档形式。  

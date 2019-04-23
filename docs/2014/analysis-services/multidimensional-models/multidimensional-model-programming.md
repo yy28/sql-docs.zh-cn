@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ffb254ded921b4300e0f948c4e6b645bdd18ff3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147762"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155503"
 ---
 # <a name="multidimensional-model-programming"></a>多维模型编程
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多个 API，您可以使用这些 API 对 Analysis Services 实例及其提供的多维数据进行编程。 本节介绍想要创建使用 Analysis Services 多维解决方案的自定义应用程序的开发人员可以使用的方法。 您可以使用这些信息来选择最能满足特定项目要求的编程接口。 Analysis Services 开发项目可基于在 Windows 平台或支持 HTTP 访问的其他平台上运行的托管或非托管代码。  
@@ -37,7 +35,7 @@ ms.locfileid: "50147762"
   
  [Analysis Services OLE DB 提供程序（Analysis Services - 多维数据）](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表格模型编程](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [数据挖掘编程](../dev-guide/data-mining-programming.md)  
   

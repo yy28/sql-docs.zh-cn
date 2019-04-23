@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b15dcac49b4af0df2769080f51e0bf48289c2f60
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc52419f382ea44fc718a47e99bbd0981275d240
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011419"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153744"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>在 RDL 文件中引用程序集
   为了支持在报表定义文件中使用自定义代码程序集，RDL 规范中包含两个报表定义语言 (RDL) 元素：CodeModules 元素和 Classes 元素。  

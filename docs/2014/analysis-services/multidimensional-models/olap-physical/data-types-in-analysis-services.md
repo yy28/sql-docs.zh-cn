@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146352"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155603"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的数据类型
   为所有<xref:Microsoft.AnalysisServices.DataItem>对象，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持的以下子集`System.Data.OleDb.OleDbType`。 若要设置或读取的数据类型，请使用[DataItem 数据类型&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
@@ -49,7 +47,7 @@ ms.locfileid: "50146352"
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|所有（Binary 除外）|  
 ||NameColumn|仅 WChar|  
-||SkippedLevelsColumn|仅 integer 类型：BigInt、Integer、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+||SkippedLevelsColumn|仅 integer 类型：BigInt、 Integer、 SmallInt、 TinyInt、 UnsignedBigInt、 UnsignedInt、 UnsignedSmallInt、 UnsignedTinyInt|  
 ||CustomRollupColumn|仅 WChar|  
 ||CustomRollupPropertiesColumn|仅 WChar|  
 ||UnaryOperatorColumn|仅 WChar|  
@@ -59,6 +57,6 @@ ms.locfileid: "50146352"
 ||NameColumn|仅 WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|所有（Binary 除外）|  
 |MeasureGroupAttribute|KeyColumns|所有（Binary 除外）|  
-|非重复计数度量值|数据源|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|非重复计数度量值|Source|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   

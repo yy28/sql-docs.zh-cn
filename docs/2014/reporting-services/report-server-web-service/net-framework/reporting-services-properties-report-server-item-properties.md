@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020498"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158013"
 ---
 # <a name="report-server-item-properties"></a>报表服务器项属性
   项属性是特定于报表服务器数据库中的项的属性。 此类属性包括报表、链接报表、文件夹、资源、模型和数据源。  
@@ -60,7 +58,7 @@ ms.locfileid: "56020498"
 |属性|Description|  
 |--------------|-----------------|  
 |**语言**|在报表中使用的语言。 该值是在 Internet 工程任务组 (IETF) RFC1766 规范中定义的语言代码。 第一部分由两个字符构成，指定基本语言。 第二部分由连字符分隔，指定语言的变化形式或变体。 如果未在与报表定义中的 `Style` 元素相关联的 `Body` 元素中指定某一值，则默认值是该报表服务器的语言。|  
-|`ReportProcessingTimeout`|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间报表不会超时。 如果值为 `null`，则系统属性 `ReportProcessingTimeout` 的值用于报表处理超时。默认值为 `null`。 有关详细信息，请参阅[报表服务器系统属性](reporting-services-properties-report-server-system-properties.md)。|  
+|`ReportProcessingTimeout`|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间报表不会超时。 如果值为`null`，系统属性的值`ReportProcessingTimeout`用于报表处理超时时间。默认值是 `null`。 有关详细信息，请参阅[报表服务器系统属性](reporting-services-properties-report-server-system-properties.md)。|  
 |ExecutionDate|为报表最后创建报表快照的日期和时间。|  
 |CanRunUnattended|一个值，指示报表是否可按照时间表以无人参与的方式运行。 如果该属性设置为 `true`，则定义报表参数的默认值，并且数据源凭据将与报表一起存储，或者凭据检索选项设置为 `None`。 如果该属性设置为 `false`，则未满足以无人参与的方式运行报表的先决条件。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
 |HasParameterDefaultValues|一个值，指示报表是否为所有报表参数都设置了有效的默认值。 如果某一报表没有报表参数，该值也是 `true`。 如果该属性设置为 `false`，则一个或多个报表参数没有有效的默认值。|  

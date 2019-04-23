@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -29,12 +27,12 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212507"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157993"
 ---
 # <a name="dimension-types"></a>维度类型
   `Type` 属性设置为服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，`Type` 设置只为客户端应用程序提供指导信息，并且为可选项。 在其他情况下，例如 `Accounts` 维度或 `Time` 维度，维度及其特性的 `Type` 属性设置可以确定基于服务器的特定行为，并且实现多维数据集中的某些行为也可能需要该属性设置。 例如，维度的 `Type` 属性可以设置为 `Accounts`，从而向客户端应用程序指示标准维度包含帐户特性。 有关时间、 帐户和货币维度的详细信息，请参阅[创建日期类型维度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[创建父子类型维度的财务帐户](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[创建一种货币键入维度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
@@ -64,6 +62,6 @@ ms.locfileid: "48212507"
   
 ## <a name="see-also"></a>请参阅  
  [使用现有表创建维度](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [维度&#40;Analysis Services-多维数据&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](dimensions-analysis-services-multidimensional-data.md)  
   
   

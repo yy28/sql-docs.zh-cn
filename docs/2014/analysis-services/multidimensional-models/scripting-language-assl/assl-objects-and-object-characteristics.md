@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,12 +19,12 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082847"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157743"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 对象和对象特征
   Analysis Services 脚本语言 (ASSL) 中的对象遵循关于对象组、继承、命名、扩展和处理的特定准则。  
@@ -75,7 +73,7 @@ ms.locfileid: "48082847"
   
 -   层次结构和级别  
   
--   属性  
+-   特性  
   
 -   度量值组  
   

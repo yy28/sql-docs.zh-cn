@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 595a792e515e862297389faccc324fff8727b8da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147982"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158563"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>定义和标识对象 (XMLA)
   在 XML for Analysis (XMLA) 命令中，将使用对象标识符和对象引用标识对象，并使用 Analysis Services 脚本语言 (ASSL) 元素 XMLA 命令定义对象。  
@@ -39,7 +37,7 @@ ms.locfileid: "50147982"
 ## <a name="object-definitions"></a>对象定义  
  [创建](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)并[Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) XMLA 中的命令创建或更改，分别对象上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 这些对象的定义由[ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla)包含 ASSL 中的元素的元素。 对象标识符可以显式指定的所有主要对象和诸多次要对象通过[ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla)元素。 如果不使用 `ID` 元素，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例将提供一个唯一标识符，其命名约定取决于要标识的对象。 有关如何使用详细信息`Create`并`Alter`命令来定义对象，请参阅[创建和更改对象&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [ParentObject 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   
  [Source 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)   

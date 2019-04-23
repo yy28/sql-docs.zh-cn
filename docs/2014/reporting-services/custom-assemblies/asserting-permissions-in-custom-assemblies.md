@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - secure calls [Reporting Services]
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f2ac7bfb08aa5812b8db90d3c1a6049665ce1b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025991"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157783"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>在自定义程序集中断言权限
   默认情况下，自定义程序集代码以受限的 Execution 权限集运行。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  

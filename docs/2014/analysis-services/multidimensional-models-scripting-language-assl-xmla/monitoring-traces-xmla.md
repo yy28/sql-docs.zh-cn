@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146462"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156405"
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
   可以使用[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)命令，在 XML for Analysis (XMLA) 监视的实例中定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令将跟踪的结果作为行集返回。  
@@ -56,7 +54,7 @@ ms.locfileid: "50146462"
 |ObjectReference|String|ObjectName 中所指定对象的对象引用的 XML 表示形式。|  
 |NestLevel|Integer|发生事件的事务的级别。|  
 |NumSegments|Long integer|发生事件的命令所影响或访问的数据段数量。|  
-|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> 值： 0 = Success<br /><br /> 值： 1 = 信息<br /><br /> 值： 2 = 警告<br /><br /> 值： 3 = 错误|  
+|Severity|Integer|事件异常的严重级别。 此列可包含下列值之一：<br /><br /> 值：0 = 成功<br /><br /> 值：1 = 信息<br /><br /> 值：2 = 警告<br /><br /> 值：3 = 错误|  
 |成功|Boolean|指示命令成功还是失败。|  
 |错误|Long integer|事件的错误号（如果适用）。|  
 |ConnectionID|String|发生事件的连接的标识符。|  
@@ -73,7 +71,7 @@ ms.locfileid: "50146462"
 |RequestParameters|String|发生事件的参数化查询或 XMLA 命令的参数。|  
 |RequestProperties|String|发生事件的 XMLA 方法的属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156083"
 ---
 # <a name="custom-report-item-class-libraries"></a>自定义报表项类库
   自定义报表项使用 `Microsoft.ReportDesigner` 命名空间中的类。 用于实现自定义报表项的类可分为两个主要类别：旨在支持自定义报表项基础结构的唯一类和用于封装相关报表定义语言 (RDL) 元素功能的托管包装类。 有关如何使用这些类的代码示例，请参阅 [SQL Server Reporting Services Product Samples（SQL Server Reporting Services 产品示例）](https://go.microsoft.com/fwlink/?LinkId=177889)。  
@@ -65,7 +63,7 @@ ms.locfileid: "56012538"
 |`OnPaint`|当响应 `Paint` 事件时调用。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- 这是用于标识自定义报表项的类型的属性。 此名称必须与报表设计器配置文件中 `ReportItem` 元素的 <`Name`> 属性的值相匹配。  
+ 这是用于标识自定义报表项的类型的属性。 名称必须匹配的值的 <`Name`> 的属性`ReportItem`报表设计器配置文件中的元素。  
   
 #### <a name="public-methods"></a>公共方法  
   

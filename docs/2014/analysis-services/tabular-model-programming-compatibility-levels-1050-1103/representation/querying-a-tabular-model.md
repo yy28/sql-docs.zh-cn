@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217377"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156260"
 ---
 # <a name="querying-a-tabular-model"></a>查询表格模型
   作为开发人员，查询表格模型意味着从表格数据库检索数据；为完成此目标，您具有两个选项：在 DAX 中使用表查询，或者使用 MDX 并且在数据从多维数据集传入时检索数据。 不过，根据您的表格模型的基础模式，您可能会被限制为仅使用 DAX 表查询；DirectQuery 模式要求使用 DAX 表查询。  
@@ -62,7 +60,7 @@ FROM [Model]
   
  对于示例模型“Adventure Works DW Tabular Denali CTP3”，您应该收到以下值来作为最终生成的表：  
   
-|Calendar Year|Product Category Name|Internet Total Sales|Reseller Total Sales|Total Sales|  
+|Calendar Year|Product Category Name|Internet Total Sales|Reseller Total Sales|总销售额|  
 |-------------------|---------------------------|--------------------------|--------------------------|-----------------|  
 |||$     29,358,677.22|$     80,450,596.98|$   109,809,274.20|  
 ||Accessories|$           700,759.96|$           571,297.93|$        1,272,057.89|  

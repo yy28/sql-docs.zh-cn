@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b3f2f6fc33a5722fdae20e3b3b351ab23c61f45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034128"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155688"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自定义程序集对象
   在某些情况下，您可能需要在实例化自定义程序集类中的属性值和字段值时初始化它们。 您最可能需要使用从报表的全局对象集合中提供给您的值来初始化自定义类。 为此，需要覆盖报表的 Code 对象的 OnInit 方法。 若要访问 OnInit，请使用报表定义的 Code 元素。 有两种技术正在初始化的属性或字段值的中你打算在报表中使用的自定义程序集的类：您可以声明并创建你的类使用的新实例**OnInit**，也可以调用公共使用的方法使用**OnInit**。  

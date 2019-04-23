@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], attributes
 - delivery extensions [Reporting Services], class creation
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd878e1b2a3f7e368985fa9b5b40cbdff7833a0f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a0f9ab0767a09016d4f4bc1158988965bfc13b27
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017838"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156333"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>为传递扩展插件实现 IDeliveryExtension 接口
   传递扩展插件类用于根据报表通知的内容将通知传递给用户。 传递扩展插件类还提供了基础结构，用于验证传递到传递扩展插件的用户设置。 此外，传递扩展插件类应包含特定的属性，客户端可以使用这些属性获得有关扩展插件的名称、扩展插件支持的设置以及可用于传递扩展插件的呈现格式的信息。  

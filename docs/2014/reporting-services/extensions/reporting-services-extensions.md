@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Reporting Services, extending
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, extending
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 231ba80e2abe304ba98f6ab64eaeba30ea783918
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030768"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158453"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模块化体系结构旨在实现可扩展性。 提供了一个托管代码 API，以便您能够轻松地开发、安装和管理由许多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件使用的扩展插件。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建专用或共享的程序集，并添加新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以满足不断发展的业务需要。  

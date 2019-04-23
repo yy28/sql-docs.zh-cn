@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ADOMD.NET]
@@ -18,12 +16,12 @@ ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73025c900ca023c67a3183d0dbdab4b70ba91ca9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060537"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156043"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>用户定义函数和存储过程
   使用 ADOMD.NET 服务器对象，您可以创建用户定义函数 (UDF) 或存储的过程，以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，与元数据和来自服务器的数据进行交互。 这些进程内方法是通过多维表达式 (MDX) 或数据挖掘扩展插件 (DMX) 语句调用的，可以提供附加功能而不会有网络通信的延迟。  

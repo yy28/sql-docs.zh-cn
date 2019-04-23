@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
@@ -18,12 +16,12 @@ ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 807e02a03ada37b17a8c351ed9e535835755e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117237"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154323"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>维度简介（Analysis Services - 多维数据）
   所有 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度是一组基于来自数据源视图中表或视图列的属性。 独立于多维数据集存在的维度既可以在多个多维数据集中使用，也可以在一个多维数据集中多次使用，还可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之间链接。 独立于多维数据集存在的维度称为数据库维度，多维数据集中的数据库维度实例称为多维数据集维度。  

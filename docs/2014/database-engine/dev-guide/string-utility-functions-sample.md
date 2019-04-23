@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531309"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158263"
 ---
 # <a name="string-utility-functions-sample"></a>字符串实用工具函数示例
   字符串实用工具示例包含用 Visual C# 和 Visual Basic 编写的流式表值函数，该函数可以将逗号分隔的字符串拆分为具有一列的表。 它也包含一个将字符串列转换为逗号分隔的字符串的聚合函数。  同时实现的还有一个标量函数和一个表值函数，这些函数提供正则表达式替换和正则表达式搜索功能。  

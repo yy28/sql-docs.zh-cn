@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ed3c66f3b0ee97a25172c912f0337e6f2d71cd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035818"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154133"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、 Excel、 Word、 CSV 或文本、 XML、 图像和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  

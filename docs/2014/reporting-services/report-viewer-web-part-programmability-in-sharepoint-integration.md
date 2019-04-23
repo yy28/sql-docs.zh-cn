@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 35d0d2835b9d733a5f22b1abf1c81dbedd00f318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023698"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157873"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 集成中的报表查看器 Web 部件可编程性
   报表查看器 Web 部件是一个 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` 服务器控件，其中包含一组公共应用程序编程接口 (API)，使开发人员能够创建自定义 SharePoint 应用程序。 您可以创建自定义 Web 部件，以使用 Web 部件连接向报表查看器 Web 部件提供报表路径和参数。 还可以在自定义 SharePoint Web 部件页中嵌入 Web 部件，并使用该公共 API 对其进行自定义。  

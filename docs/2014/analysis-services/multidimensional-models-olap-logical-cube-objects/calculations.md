@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce999e5a301fc6c6a9fd50f241e6863e0ad2cca9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241775"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158304"
 ---
 # <a name="calculations"></a>“新建命名集”
   计算是多维表达式 (MDX) 表达式或脚本，用于定义中的多维数据集中的计算的成员、 命名的集或指定了作用域的分配[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用计算，您可以添加不是由多维数据集的数据而是由特定表达式（这些表达式可以引用多维数据集的其他部分、其他多维数据集，或者甚至引用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库以外的信息）所定义的对象。 使用计算，您还可以扩展多维数据集的功能，提高商业智能应用程序的灵活性和能力。 有关编写计算脚本的详细信息，请参阅[Microsoft SQL Server 2005 中的 MDX 脚本简介](https://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  

@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], deploying
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037458"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156223"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
   传递扩展插件以 XML 配置文件的形式提供其配置信息。 该 XML 文件符合为传递扩展插件定义的 XML 架构。 传递扩展插件提供用于设置和修改配置文件的基础结构。  
@@ -35,7 +33,7 @@ ms.locfileid: "56037458"
   
  下表介绍传递扩展插件的 `Extension` 元素的属性。  
   
-|Attribute|Description|  
+|特性|Description|  
 |---------------|-----------------|  
 |`Name`|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |`Type`|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  

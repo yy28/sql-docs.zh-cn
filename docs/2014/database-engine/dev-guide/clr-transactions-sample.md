@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361369"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154683"
 ---
 # <a name="clr-transactions-sample"></a>CLR 事务示例
   此示例说明如何使用 `System.Transactions` 命名空间中的托管 API 来控制事务。 特别需要指出的是，`System.Transactions.TransactionScope` 类用于建立事务边界，以确保只有在库存足以满足需求的情况下才调整库存数据，而且如果存在足够的库存，库存将以原子方式从一个位置传输到另一个位置。 通过将库存中的更改记录到存储在独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的审核数据库来说明如何在分步式事务中进行自动注册。  

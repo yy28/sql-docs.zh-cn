@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - ready-only cube view
@@ -20,12 +18,12 @@ ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81e6fa2e6331c254d2748fd919878e6f1b98eb0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131677"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154895"
 ---
 # <a name="perspectives"></a>透视
   透视是一种定义，允许用户以一种更简单的方式查看多维数据集。 透视是多维数据集功能的子集。 管理员使用透视可以创建多维数据集的视图，从而帮助用户将注意力集中在与他们关系最为密切的数据上。 透视包含多维数据集所有对象的子集。 但它不能包含父多维数据集中未定义的元素。  
@@ -40,7 +38,7 @@ ms.locfileid: "48131677"
   
 -   维度  
   
--   属性  
+-   特性  
   
 -   层次结构  
   

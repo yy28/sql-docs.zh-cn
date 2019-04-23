@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011489"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154193"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>如何：调试自定义程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析自定义程序集代码和查找其中错误的调试工具。 要使用的最佳工具取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]。  

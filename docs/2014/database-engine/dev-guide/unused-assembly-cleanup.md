@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351037"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155881"
 ---
 # <a name="unused-assembly-cleanup"></a>清除未使用的程序集
   `AssemblyCleanup` 示例包含一个 .NET 存储过程，该存储过程通过查询元数据目录来清除当前数据库中未使用的程序集。 其唯一的参数 `visible_assemblies` 用于指定是否应删除未使用的可见程序集。 值为“false”时表示默认情况下将只删除未使用的不可见程序集，否则，将删除所有未使用的程序集。 未使用的程序集的集合所包含的程序集未定义任何入口点（例程/类型和聚合），并且没有已使用的程序集直接或间接地引用它们。  

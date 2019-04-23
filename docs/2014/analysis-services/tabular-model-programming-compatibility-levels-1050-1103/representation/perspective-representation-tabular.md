@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7fa7c3607dd652b2a56324b3fa3c7140f252685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224468"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155624"
 ---
 # <a name="perspective-representation-tabular"></a>透视表示形式（表格）
   透视是一种机制，用于针对客户端应用程序简化模型或将模型的侧重点置于其某个较小部分。  
@@ -132,6 +130,6 @@ private void updatePerspective_Click(
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 示例  
- 不过，若要了解如何使用 AMO 创建和操作透视表示形式，请参阅“AMO 到表格”示例中的源代码。 可在 Codeplex 上找到该示例。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
+ 不过，若要了解如何使用 AMO 创建和操作透视表示形式，请参阅“AMO 到表格”示例中的源代码。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   

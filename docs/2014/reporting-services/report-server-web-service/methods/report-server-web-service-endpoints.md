@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - management endpoints [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009701"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153846"
 ---
 # <a name="report-server-web-service-endpoints"></a>报表服务器 Web 服务端点
   报表服务器 Web 服务提供了几个端点，用于管理报表服务器以及执行和导航报表。  
@@ -67,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |代理端点|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中不推荐使用此端点。|  
+|<xref:ReportService2006>|为管理配置为 SharePoint 集成模式的报表服务器提供 API。 **注意：** 此终结点中已弃用[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
 |<xref:ReportService2010>|为管理配置为本机模式或 SharePoint 集成模式的报表服务器提供 API。|  
 |<xref:ReportExecution2005>|提供用于运行和导航报表的 API。|  
 |<xref:ReportServiceAuthentication>|提供 API，以便在将 SharePoint Web 应用程序配置为窗体身份验证时，针对报表服务器对用户进行身份验证。|  

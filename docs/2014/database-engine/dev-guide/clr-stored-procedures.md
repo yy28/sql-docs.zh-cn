@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -23,12 +21,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511501"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157903"
 ---
 # <a name="clr-stored-procedures"></a>CLR 存储过程
   存储过程是不能用于标量表达式的例程。 与标量函数不同，存储过程可以向客户端返回表格结果和消息、调用数据定义语言 (DDL) 和数据操作语言 (DML) 语句并返回输出参数。 有关优点的 CLR 集成和托管代码之间进行选择并[!INCLUDE[tsql](../../includes/tsql-md.md)]，请参阅[CLR 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, transactions
@@ -22,12 +20,12 @@ ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c9bb93b30b7c2b080c3770e71552d5882ae61d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148342"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154754"
 ---
 # <a name="managing-transactions-xmla"></a>管理事务 (XMLA)
   每个 XML for Analysis (XMLA) 命令发送到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上当前的隐式或显式会话的事务的上下文中运行。 若要管理每个这些事务，您可以使用[BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla)， [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)，并[RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla)命令。 通过使用这些命令，可创建隐式或显式事务，更改事务引用计数以及启动、提交或回滚事务。  
@@ -59,7 +57,7 @@ ms.locfileid: "50148342"
 ## <a name="rolling-back-a-transaction"></a>回滚事务  
  `RollbackTransaction` 命令可回滚对当前会话运行 `BeginTransaction` 命令后运行的命令的结果。 无论当前事务引用计数如何，`RollbackTransaction` 命令都将回滚活动事务，并将事务引用计数设置为零。 如果不存在活动事务（换言之，当前会话的事务引用计数已设置为零），则 `RollbackTransaction` 命令将导致出错。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

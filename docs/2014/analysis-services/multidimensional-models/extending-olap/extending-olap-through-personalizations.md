@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, extensibility
@@ -14,12 +12,12 @@ ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67e1af257dcdb9700fcdfa6643a50000f9dc845f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092187"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156606"
 ---
 # <a name="extending-olap-through-personalizations"></a>通过个性化设置扩展 OLAP
   Microsoft  [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 提供了诸多可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数。 这些函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且可靠的产品都需要不断地扩展其功能，本产品也不例外。  

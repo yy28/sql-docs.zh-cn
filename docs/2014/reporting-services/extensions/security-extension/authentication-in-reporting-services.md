@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ce82cc9bfb8b3f88934499db4e9295903b67702
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043198"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154123"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services 中的身份验证
   身份验证是确立用户对某一身份的权限的过程。 您可以使用多种方法来验证某一用户的身份。 最常见的方法是使用密码。 例如，在实现窗体身份验证时，您希望某一实现查询用户的凭据（通常通过请求提供登录名和密码的某些界面），然后根据数据存储区（例如数据库表或配置文件）验证用户。 如果无法验证凭据，该身份验证过程将失败，并且用户将假定匿名身份。  

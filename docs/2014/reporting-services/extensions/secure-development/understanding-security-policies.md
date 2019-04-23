@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 49a7568135604fc09d42c47d4226050b9a294096
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021468"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155846"
 ---
 # <a name="understanding-security-policies"></a>了解安全策略
   由报表服务器执行的任何代码必须是特定的代码访问安全策略的一部分。 这些安全策略包含多个将证据映射到一组命名权限集的代码组。 通常，代码组与在该组中为代码指定可允许权限的命名权限集关联。 运行时使用受信任主机或加载程序所提供的证据来确定代码所属的代码组，从而确定要授予代码的权限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 遵循由 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 定义的安全策略体系结构。 下面几节介绍了 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各种代码类型以及与它们相关联的策略规则。  

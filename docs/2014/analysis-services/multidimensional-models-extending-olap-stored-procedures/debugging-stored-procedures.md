@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
@@ -15,12 +13,12 @@ ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f02cd9ec48a961336bcddc96024106702525899f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179777"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155535"
 ---
 # <a name="debugging-stored-procedures"></a>调试存储过程
   实际上，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 存储过程是使用 C#（或任何其他 CLR 或 COM 语言）编写的 CLR 或 COM 库（通常为 DLL）。 因此，调试存储过程类似于在 Visual Studio 调试环境中调试任何其他应用程序。 您可以使用集成调试功能在 Visual Studio 开发环境中调试存储过程。 您可以使用这些功能执行下列操作：在过程位置停止、检查内存和注册值、更改变量、观察消息流量以及密切监视代码的运行状况。  
