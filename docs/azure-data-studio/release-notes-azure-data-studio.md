@@ -3,7 +3,7 @@ title: 发行说明
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 发行说明
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381585"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963779"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的发行说明
 
 **[下载并安装最新版本 ！](download.md)**
+
+## <a name="april-2019"></a>2019 年 4 月
+
+2019 年 4 月 18 日&nbsp;  /  &nbsp;版本：1.6.0 
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 重命名**服务器**tab 键切换至**连接** | |
+| 在连接下，Azure viewlet 均作为移动 Azure 资源浏览器 | 用户可在连接视图中查看 Azure viewlet 均通过其 Azure SQL 实例，并展开可查看每个服务器或数据库下的对象。|
+| SQL Notebook 改进 | &bull; &nbsp; 在工具栏上，若要清除的所有单元格的输出添加的按钮 <br/>&bull; &nbsp; 若要运行所有单元格的工具栏上添加的按钮 <br/>&bull; &nbsp; 固定的连接名称，而不是服务器名称 (如果设置) 附加到下拉列表中 <br/>&bull; &nbsp; 修复了在使用相对映像路径时未呈现 markdown 中的映像 <br/>&bull; &nbsp; 改进的功能，通过添加 notebook 网格中双击自动调整列大小和改进的鼠标滚轮支持 <br/>&bull; &nbsp; 改进错误处理和 python 安装通过笔记本的 python 时安装复原能力 <br/>&bull; &nbsp; "选择全部"功能选择 notebook 单元格时的改进 <br/>&bull; &nbsp; 笔记本连接以防止关闭笔记本和影响的对象资源管理器连接到的改进 <br/>&bull; &nbsp; 改进的笔记本体验，以便向用户显示一条消息时 notebook 断开连接，并需要一个连接才能运行的单元格<br/>&bull; &nbsp; 改进了对未保存笔记本时重新启动广告的广告中解除冻结支持 |
+| 已解决的 bug 和问题。 | 请参阅[Bug 和问题，在 GitHub 上的](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>2019 年 3 月 （修补程序）
 

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a636559f5d90bd4e0fec5cf9df140e88f17796a6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286545"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956563"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
   首次将图表插入报表中时，将显示 **“选择图表类型”** 对话框。 如果取消此对话框，则默认情况下会添加柱形图图表类型。  

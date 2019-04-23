@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5ecbbebd3ed29f5fc3fc8b8a47717f09ba51e43
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039238"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971683"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 课：创建示例订阅服务器数据库
   定义数据驱动的订阅前，必须具有可提供订阅数据的数据源。 在此步骤中，您将创建一个小型数据库，以存储本教程中使用的订阅数据。 稍后在处理订阅时，报表服务器将检索此数据并使用它来自定义报表输出、传递选项和报表表示格式。  
@@ -56,7 +56,7 @@ ms.locfileid: "56039238"
     GO  
     ```  
   
-6.  单击 **“!在工具栏上执行** 。  
+6.  单击 **！在工具栏上执行** 。  
   
 7.  使用 SELECT 语句查看您是否有三行数据。 例如： `select * from OrderInfo`  
   

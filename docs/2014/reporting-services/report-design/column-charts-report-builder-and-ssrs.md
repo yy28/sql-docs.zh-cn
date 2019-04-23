@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c706bceb09d8637874bc82a5c23a1afa8380034
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292961"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964153"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>柱形图（报表生成器和 SSRS）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图对于显示一段时间的数据变化或说明各项之间的比较来说十分有用。 平面柱形图与条形图关系密切，条形图将序列显示为多组水平图条，而范围柱形图将序列显示为多组具有不同起点和终点的垂直图条。 有关详细信息，请参阅 [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md) 和 [范围图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "56292961"
  [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)   
  [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [范围图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)   
- [教程：向报表添加条形图&#40;报表生成器&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [教程：向报表添加条形图（报表生成器）](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [图表中的空白和 Null 数据点（报表生成器和 SSRS）](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

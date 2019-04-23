@@ -1,7 +1,7 @@
 ---
 title: 规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100932"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953953"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，可以使用 Web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  
@@ -51,7 +51,7 @@ ms.locfileid: "54100932"
   
 - 有关 SharePoint 2010 浏览器支持的详细信息，请参阅[计划浏览器支持 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -73,7 +73,7 @@ ms.locfileid: "54100932"
   
 -   有关 SharePoint 2013 浏览器支持的详细信息，请参阅[计划在 SharePoint 2013 中的浏览器支持](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|  
@@ -100,7 +100,7 @@ ms.locfileid: "54100932"
 
  以下是报表查看器支持的浏览器和功能的当前列表。 报表查看器支持从 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器和 SharePoint 库查看报表。  
   
-|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**适用于 iPad 的 iOS 6-7**|  
+|**浏览者**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 for iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
 |**Internet Explorer 10 （适用于台式机）**|32 位、64 位|32 位、64 位|32 位、64 位|不支持|不支持|不支持|不支持|  
@@ -135,7 +135,7 @@ ms.locfileid: "54100932"
   
 |**浏览器类型**|**支持**|**浏览器默认值**|**服务器默认值**|  
 |----------------------|------------------|-------------------------|------------------------|  
-|**Internet 资源管理器**|协商、Kerberos、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Internet Explorer。|  
+|**Internet Explorer**|协商、Kerberos、NTLM、基本|Negotiate|是。 默认身份验证设置使用 Internet Explorer。|  
 |**Firefox**|NTLM、基本|NTLM|是。 默认身份验证设置使用 Firefox。|  
 |**Safari**|基本|基本|是。 默认身份验证设置使用 Safari。|  
 |**Chrome**|协商、NTLM、基本|协商|是。 默认身份验证设置使用 Chrome。|  
@@ -146,7 +146,7 @@ ms.locfileid: "54100932"
   
  如果未启用脚本功能，则打开报表时将显示如下错误消息：  
   
-- **您的浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。  
+- **在浏览器不支持脚本或已配置为不允许脚本运行。单击此处查看不含脚本的报表**。  
   
  如果选择查看不支持脚本的报表，则报表将会以 HTML 格式呈现，同时不具有报表工具栏和文档结构图等报表查看器功能。  
   
@@ -169,15 +169,15 @@ ms.locfileid: "54100932"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**浏览者**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**说明**|  
-|**（适用于台式机的 Internet Explorer 11**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 10 （适用于台式机）**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 9**|不支持|用户帐户控制|不支持|用户帐户控制|是|用户帐户控制|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 8.0**|不支持|用户帐户控制|不支持|用户帐户控制|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
-|**Internet Explorer 7.0**|不支持|用户帐户控制|不支持|用户帐户控制|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
-|**Firefox (最新公开发布的版本)**|用户帐户控制|是|是|是|用户帐户控制|不支持|不支持打印和缩放。|  
-|**Safari (最新公开发布的版本)**|不支持|不支持|不支持|不支持|不支持|用户帐户控制|不支持打印和缩放。<br /><br /> 在此浏览器中禁用了用于在参数化报表上选择日期的日历控件。 用户必须在参数提示区域中手动键入要使用的日期。|  
-|**Chrome (最新公开发布的版本)**|用户帐户控制|是|是|是|用户帐户控制|不支持|不支持打印和缩放。|  
+|**浏览者**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**说明**|  
+|**（适用于台式机的 Internet Explorer 11**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 10 （适用于台式机）**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 9**|不支持|是|不支持|是|是|是|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 8.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
+|**Firefox (最新公开发布的版本)**|是|是|是|是|是|不支持|不支持打印和缩放。|  
+|**Safari (最新公开发布的版本)**|不支持|不支持|不支持|不支持|不支持|是|不支持打印和缩放。<br /><br /> 在此浏览器中禁用了用于在参数化报表上选择日期的日历控件。 用户必须在参数提示区域中手动键入要使用的日期。|  
+|**Chrome (最新公开发布的版本)**|是|是|是|是|是|不支持|不支持打印和缩放。|  
   
  <sup>1</sup>在标准模式下，Internet Explorer 7.0 和 8.0 不显示在报表中的斜线。 如果在报表中使用斜线，请将 ASP.NET 页设置为在 Internet Explorer 怪异模式下运行。 若要执行此操作，找到\<！DOCTYPE > 在 ASP.NET 页中的标记。 如果，如果使用母板页，可以在 .master 文件中查找它。 此标记类似于以下内容：  
   

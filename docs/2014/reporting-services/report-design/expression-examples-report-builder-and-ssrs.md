@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286616"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943083"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
   表达式通常在报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](add-an-expression-report-builder-and-ssrs.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "56286616"
   
  有关简单表达式和复杂表达式、使用表达式的位置、以及表达式中可以包含的引用类型的详细信息，请参阅 [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。 有关为计算聚合而计算表达式时所处上下文的详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 若要了解如何编写使用许多函数和运算符在本主题中，但在编写的报表的上下文中的表达式示例所用的表达式，请参阅[教程：表达式简介](../tutorial-introducing-expressions.md)。  
+ 若要了解如何编写表达式，以使用本主题中的表达式示例所用的许多函数和运算符，请参阅[教程：表达式简介](../tutorial-introducing-expressions.md)。  
   
  表达式编辑器包含内置函数的层次结构视图。 选择函数时，“值”窗格中会显示代码示例。 有关详细信息，请参阅[表达式对话框](../expression-dialog-box.md)或[表达式对话框&#40;报表生成器&#41;](../expression-dialog-box-report-builder.md)。  
   

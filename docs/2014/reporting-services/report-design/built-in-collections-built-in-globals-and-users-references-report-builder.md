@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e41b76481748175a68b4a0a0a4877c7c17147788
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288565"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942283"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>内置的全局和用户引用（报表生成器和 SSRS）
   内置字段集合包含 `Globals` 和 `User` 集合，表示处理报表时由 Reporting Services 提供的全局值。 `Globals` 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 `User` 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  

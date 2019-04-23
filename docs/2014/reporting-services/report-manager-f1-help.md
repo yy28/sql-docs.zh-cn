@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019318"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967953"
 ---
 # <a name="report-manager-f1-help"></a>报表管理器的 F1 帮助
   下列主题提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器的页级帮助。 该应用程序中的每一页都有一个对应的主题。 并非所有页面都可用。 安全设置确定了您可以访问的页面。 若要从报表管理器中访问这些主题，请在主工具栏上单击 **“帮助”** 。  

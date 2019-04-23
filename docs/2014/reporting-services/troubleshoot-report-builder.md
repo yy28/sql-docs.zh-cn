@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297165"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958483"
 ---
 # <a name="troubleshoot-report-builder"></a>报表生成器故障排除
   报表生成器是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的一个报表创作工具，可以用于从多种不同类型的数据源生成报表，并可将报表发布到报表服务器或 SharePoint 站点。 在 Web 浏览器或作为的一部分，可以在报表生成器中，查看您创建报告[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 应用程序或 SharePoint 站点。  
@@ -26,7 +26,7 @@ ms.locfileid: "56297165"
  以下主题可以帮助您解决有关报表的问题，具体取决于您是报表作者还是报表服务器管理员。  
   
 ## <a name="report-authors"></a>报表作者  
- [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [报表部件故障排除&#40;报表生成器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

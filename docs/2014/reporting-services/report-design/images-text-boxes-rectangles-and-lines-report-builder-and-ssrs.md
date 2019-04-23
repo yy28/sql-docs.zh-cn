@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a52ab0ae1f602af8a5a517bd7946a39a1bf954a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294036"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957163"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>图像、文本框、矩形和线条（报表生成器和 SSRS）
   除了像表、矩阵和图表这样的数据区域外，报表还可以使用图像、文本框和矩形等其他报表项增添视觉吸引力、突出显示关键信息或提供相关信息。 您可以更改报表项的格式设置。 例如，可以添加边框或填充、更改初始可见性或方向，或指定报表项的准确大小和位置。  

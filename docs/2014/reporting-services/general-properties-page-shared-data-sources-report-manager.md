@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040399"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964874"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>共享数据源的“常规”属性页（报表管理器）
   使用“常规”属性页可以查看或修改共享数据源项的属性。 单击 **“应用”** 后，对属性所做的任何更改对于引用该项的所有报表都将生效。  
@@ -87,7 +87,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  若要使用此选项，则以前必须为报表服务器部署配置过无人参与的执行帐户。 当其他凭据源不可用时，可以使用无人参与的执行帐户连接到外部数据源。 如果您指定此选项，但是未配置无人参与的执行帐户，则到报表数据源的连接将失败，而且将不会进行报表处理。 有关此帐户的详细信息，请参阅[配置无人参与的执行帐户&#40;SSRS 配置管理器&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- **应用**  
+ **Apply**  
  单击此选项可保存所做的更改。  
   
  **删除**  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a18e523c8d839cc6ec9e0c64c94ad648b1c1d0c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042348"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954343"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  
@@ -58,7 +58,7 @@ ms.locfileid: "56042348"
   
  报表历史记录存储在报表服务器数据库中。 如果要保留大型报表或许多报表的历史记录，请考虑限制报表历史记录的量，以帮助管理报表服务器数据库的磁盘空间要求。  
   
- **应用**  
+ **Apply**  
  单击此选项可保存所做的更改。  
   
 ## <a name="see-also"></a>请参阅  

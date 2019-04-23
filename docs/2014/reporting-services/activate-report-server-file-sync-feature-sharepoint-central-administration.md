@@ -1,40 +1,39 @@
 ---
 title: 激活报表服务器文件同步功能在 SharePoint 管理中心 |Microsoft Docs
+ms.prod: reporting-services-2014
+ms.technology: reporting-services-native
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-ms.assetid: 32d1988d-07e7-41c2-b636-e65ecfae4677
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 69d059807b7d48fe71cffb120c73fa9aa004a8bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b56960b23370de3803f475c02aaee3b98ae491e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017999"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963944"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>在 SharePoint 管理中心中激活报表服务器文件同步功能
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器文件同步功能利用 SharePoint 事件处理程序将报表服务器目录与文档库中的项进行同步。 当用户经常直接将已发布的报表项上载到 SharePoint 文档库时，此功能很有用。 如果文件同步功能未激活，则内容仍将（但不会频繁地）保持同步。  
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器文件同步功能利用 SharePoint 事件处理程序将报表服务器目录与文档库中的项进行同步。 当用户经常直接将已发布的报表项上载到 SharePoint 文档库时，此功能很有用。 如果文件同步功能未激活，内容仍将同步，但不是会频繁地。  
   
- 在安装了用于 SharePoint 产品的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 外接程序之后，可以在 SharePoint 站点管理中激活该文件同步功能。  
+在安装了用于 SharePoint 产品的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 外接程序之后，可以在 SharePoint 站点管理中激活该文件同步功能。  
   
- 可对于每个站点（但不在网站集级别）手动激活和停用此功能。  
+可对于每个站点（但不在网站集级别）手动激活和停用此功能。  
   
 ## <a name="prerequisites"></a>先决条件  
- 必须安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序。 如果未安装该外接程序，则文件同步功能在站点功能列表上将不可见。  
+ 必须安装用于 SharePoint 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序。 如果未安装外接程序，文件同步功能不会显示在站点功能列表中。  
   
  若要验证是否已安装，请在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows **“控制面板”** 中查看已安装应用程序的列表。 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序已安装，请按照本主题中的说明激活报表服务器文件同步功能。  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>在站点上激活或停用 Reporting Services 文件同步功能  
   
-1.  从您站点的主页中，单击 **“站点操作”** 菜单，然后单击 **“站点设置”**。  
+1.  从你的站点的主页，单击**站点操作**菜单，然后单击**站点设置**。  
   
-2.  在 **“站点操作”** 中，单击 **“管理站点功能”**。  
+2.  在中**站点操作**，单击**管理站点功能**。  
   
 3.  在列表中找到 **“报表服务器文件同步”** 。  
   

@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356130"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953823"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>将 SQL Server 配置为使用软件 NUMA (SQL Server)
 当今的处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。 与处理器包含每个插槽的 10 个或多个内核，请使用软件 NUMA (SOFT-NUMA) 来拆分硬件 NUMA 节点通常会增加可伸缩性和性能。   
@@ -27,7 +27,6 @@ ms.locfileid: "53356130"
 > 软件 NUMA 不支持热添加处理器。
   
 ## <a name="automatic-soft-numa"></a>自动软件 NUMA
-
 从 SQL Server 2014 Service Pack 2，只要数据库引擎服务器检测到 8 个以上的物理处理器，在启动时，软件 NUMA 节点将自动创建如果作为引导参数启用跟踪标志 8079。 当计算物理处理器时，未对说明超线程处理器内核。 如果检测到的物理处理器数，超过 8 个套接字 / 数据库引擎服务会创建软件 NUMA 节点，在理想情况下包含 8 个内核，但会下降到每个节点的 5 个或最多 9 个逻辑处理器。 可以通过 CPU 关联掩码限制硬件节点的大小。 NUMA 节点数永远不会超过支持的 NUMA 节点的最大数目。
 
 如果没有跟踪标志，默认情况下禁用软件 NUMA。 可以让软件 NUMA 使用跟踪标志 8079。 更改此设置的值后，需要重新启动数据库引擎才会生效。
@@ -36,9 +35,12 @@ ms.locfileid: "53356130"
 
 ![ssNoVersion](./media/soft-numa-sql-server/soft-numa.PNG)
 
+> [!NOTE]
+> 从 SQL Server 2016 的引擎和跟踪标志 8079 控制此行为没有任何影响。
+
 ## <a name="manual-soft-numa"></a>手动软件 NUMA
   
-若要配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要手动使用软件 NUMA，必须编辑注册表才能添加节点配置关联掩码。 软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置头 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值。 （在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值。）要配置软件 NUMA，必须重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+若要配置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要手动使用软件 NUMA，必须编辑注册表才能添加节点配置关联掩码。 软件 NUMA 掩码可以表示为二进制、DWORD（十六进制或十进制）或 QWORD（十六进制或十进制）注册表项。 若要配置头 32 个 CPU 以后的 CPU，请使用 QWORD 或 BINARY 注册表值。 （在低于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的版本中，不能使用 QWORD 值。）必须重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]若要配置软件 NUMA。  
   
 > [!TIP]  
 >  CPU 从 0 开始编号。  
@@ -55,7 +57,7 @@ ms.locfileid: "53356130"
   
  大量使用 I/O 的实例 A 现在有两个 I/O 线程和一个惰性编写器线程，执行大量占用处理器操作的实例 B 仅有一个 I/O 线程和一个惰性编写器线程。 可以向实例分配不同的内存量，但是与硬件 NUMA 不同，它们都从同一个操作系统内存块中接收内存，并且不具有从内存到处理器的关联。  
   
- 惰性编写器线程与物理 NUMA 内存节点的 SQL 操作系统视图有关。 因此，不管存在什么硬件，物理 NUMA 节点将等于创建的惰性编写器线程数。 有关详细信息，请参阅[工作方式：软件 NUMA、 I/O 完成线程、 惰性编写器工作线程和内存节点](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
+ 惰性编写器线程与物理 NUMA 内存节点的 SQL 操作系统视图有关。 因此，不管存在什么硬件，物理 NUMA 节点将等于创建的惰性编写器线程数。 有关详细信息，请参阅[工作原理：软件 NUMA、 I/O 完成线程、 惰性编写器工作线程和内存节点](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
   
 > [!NOTE]  
 >  升级 **的实例时，不复制** Soft-NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册表项。  

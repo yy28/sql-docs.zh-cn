@@ -1,5 +1,5 @@
 ---
-title: 教程：设置文本格式 （报表生成器） |Microsoft Docs
+title: 教程：设置文本格式（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297280"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961333"
 ---
-# <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式 （报表生成器）
+# <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
   在本教程中，您可以练习以不同方式设置文本格式。 在设置了具有数据源和数据集的空白报表后，您可以选择要完成的步骤。  
   
  下图显示与您将创建的报表类似的报表。  
@@ -49,7 +49,7 @@ ms.locfileid: "56297280"
   
  [保存报表](#Save)  
   
- 本教程的预计学时：20 分钟。  
+ 估计的时间才能完成本教程中：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "56297280"
   
 2.  确保数据源为 **TextDataSource**。  
   
-3.  在“名称”框中键入：**TextDataset。**  
+3.  在“名称”框中键入：“TextDataset”。  
   
 4.  确保已选择 **“文本”** 查询类型，然后单击 **“查询设计器”**。  
   

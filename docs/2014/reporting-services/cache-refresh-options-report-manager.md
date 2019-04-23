@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011499"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964193"
 ---
 # <a name="cache-refresh-options-report-manager"></a>缓存刷新选项（报表管理器）
   使用“缓存刷新选项”页可以创建使用报表或共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 对于共享数据集，不能覆盖标记为只读的参数值。 在刷新选项页中，可以创建和使用多个刷新计划。  

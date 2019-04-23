@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948893"
 ---
 # <a name="subscriptions-page-report-manager"></a>“订阅”页（报表管理器）
   使用“订阅”页可以列出当前报表或共享数据源的所有订阅。 如果有足够的权限（指“管理所有订阅”任务），则可以查看所有用户的订阅。 否则，此页仅显示您所拥有的订阅。  

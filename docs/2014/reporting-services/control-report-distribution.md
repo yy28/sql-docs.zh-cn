@@ -16,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], security
 - mail [Reporting Services]
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018039"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946443"
 ---
 # <a name="control-report-distribution"></a>控制报表分发
   您可以配置报表服务器，以降低电子邮件和文件共享分发引起的安全风险。  

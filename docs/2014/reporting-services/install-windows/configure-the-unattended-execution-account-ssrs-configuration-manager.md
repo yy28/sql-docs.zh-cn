@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012068"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946923"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -36,7 +36,7 @@ ms.locfileid: "56012068"
  无人参与的报表处理是指任何由事件（计划驱动事件或数据刷新事件）而不是用户请求触发的报表执行过程。 报表服务器使用无人参与的报表处理帐户来登录承载外部数据源的计算机。 由于报表服务器服务帐户从不用于连接到其他计算机，因此该帐户是必需的。  
   
 > [!IMPORTANT]  
->  配置该帐户的过程为可选操作。 但是，如果不配置该帐户，用于连接到某些数据源的选项会受到限制，并且可能无法从远程计算机检索图像文件。 如果配置了该帐户，则必须对其进行不断更新。 具体而言，如果允许密码过期或在 Active Directory 中更改了帐户信息，则在下次处理报表时将遇到以下错误：“登录失败 (rsLogonFailed) 登录失败：未知的用户名或密码错误。” 即使您从不检索外部图像也不向外部计算机发送连接请求，正确维护无人参与的报表处理帐户也是必要的。 如果配置了该帐户但后来发现不需要使用它，则可以将其删除以避免日常的帐户维护任务。  
+>  配置该帐户的过程为可选操作。 但是，如果不配置该帐户，用于连接到某些数据源的选项会受到限制，并且可能无法从远程计算机检索图像文件。 如果配置了该帐户，则必须对其进行不断更新。 具体而言，如果允许密码过期或在 Active Directory 中更改帐户信息，您将遇到以下错误的下次处理报表："登录失败 (rsLogonFailed) 登录失败： 用户名未知或密码不正确。" 即使您从不检索外部图像也不向外部计算机发送连接请求，正确维护无人参与的报表处理帐户也是必要的。 如果配置了该帐户但后来发现不需要使用它，则可以将其删除以避免日常的帐户维护任务。  
   
 ## <a name="how-to-configure-the-account"></a>如何配置帐户  
  必须使用域用户帐户。 若要发挥该帐户应有的作用，它应不同于用于运行报表服务器服务的帐户。 请确保使用具有如下特征的帐户：对为报表服务器提供数据源和资源的那些计算机只拥有最小权限（具有网络连接权限的只读访问权限就已足够）和有限访问权限。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  

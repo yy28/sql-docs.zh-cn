@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029468"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960893"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   从 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 开始，可通过编程方式将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 订阅的所有权从一个用户转移给另一个用户。 本主题提供多个 Windows PowerShell 脚本，这些脚本可用于更改订阅所有权，或只是列出订阅所有权。 每个示例都包含本机模式和 SharePoint 模式的语法示例。 更改订阅的所有者后，订阅将在新所有者的安全上下文中执行，并且报表中的 User!UserID 字段将显示新所有者的值。 有关 PowerShell 示例调用的对象模型的详细信息，请参阅 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -64,7 +64,7 @@ ms.locfileid: "56029468"
   
 -   列出子级：项的 ReadProperties  
   
--   引发事件：GenerateEvents（系统）  
+-   触发事件：GenerateEvents （系统）  
   
  **SharePoint 模式：**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56029468"
   
 -   列出子级：ViewListItems  
   
--   引发事件：ManageWeb  
+-   触发事件：ManageWeb  
   
  有关详细信息，请参阅 [Reporting Services 中的角色和任务与 SharePoint 组和权限的比较](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。  
   
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  要在 SharePoint 模式下验证站点 URL，请使用 SharePoint cmdlet **Get-SPSite**。 有关详细信息，请参阅 [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx)。  
   
-##  <a name="bkmk_list_all_one_user"></a> 脚本：列出特定用户拥有的全部订阅  
+##  <a name="bkmk_list_all_one_user"></a> 脚本：列出特定用户拥有的所有订阅  
  此脚本列出特定用户拥有的全部订阅。 可以使用此脚本测试连接或验证在其他脚本中使用的报表路径和订阅 ID。 当有人离开您的组织，而您想要验证他们拥有哪些订阅，以便更改所有者或删除订阅时，此脚本非常有用。  
   
  **本机模式语法：**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> 脚本：更改特定用户拥有的全部订阅的所有权  
+##  <a name="bkmk_change_all"></a> 脚本：更改特定用户拥有的所有订阅的所有权  
  此脚本将特定用户拥有的全部订阅的所有权更改为新所有者参数。  
   
  **本机模式语法：**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> 脚本：列出与特定报表关联的全部订阅  
+##  <a name="bkmk_list_for_1_report"></a> 脚本：列出与特定报表相关联的所有订阅  
  此脚本列出与特定报表关联的全部订阅。 报表路径语法是需要完整 URL 的不同 SharePoint 模式。 语法示例中使用的报表名称是“title only”，包含一个空格，因此报表名称两边需要带单引号。  
   
  **本机模式语法：**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> 脚本：运行（引发）单个订阅  
+##  <a name="bkmk_run_1_subscription"></a> 脚本：运行 （触发） 单个订阅  
  此脚本将使用 FireEvent 方法运行特定订阅。 无论为订阅配置的计划如何，该脚本都将立即运行订阅。 EventType 与在报表服务器配置文件 **rsreportserver.config** 中定义的一组已知事件匹配。该脚本为标准订阅使用以下事件类型：  
   
  `<Event>`  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee2218124f3bbae716c42d013ba9d7339c0b011b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294455"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943153"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供大量现成的工具和服务，帮助您创建、 部署和管理你的组织的报表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中包括了很多可用于扩展和自定义报告功能的编程特性。  

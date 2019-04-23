@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 53db8761c70d594ca75f69aa8ded8a375c695923
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6992356bc7a61287854d11fb5ed62067c5a14805
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025608"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967863"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>针对 MDX 的 Analysis Services 连接类型 (SSRS)
   若要在报表中包括来自 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集的数据，您必须具有一个基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据扩展插件。 可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集中检索有关维度、层次结构、级别、关键绩效指标 (KPI)、度量值和属性的元数据，以用作报表数据。  
@@ -72,7 +72,7 @@ data source=<server name>;initial catalog=<database name>
   
  在设计时，运行查询以查看结果集。 会自动将查询结果作为平展行集进行检索。 查询的结果集中的列填充数据集的字段集合。 生成查询后，在“报表数据”窗格中查看从元数据生成的数据集字段集合。 报告运行时，将从外部数据源返回实际数据。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 可以通过内置 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集合，在报表中使用 `Fields` 数据处理扩展插件支持的扩展字段属性。 对于在数据源中具有值的属性，可以访问预定义的属性值，如 `FormattedValue`、`Color` 或 `UniqueName`。 有关详细信息，请参阅 msdn.microsoft.com 上 [Analysis Services 数据库的扩展字段属性 (SSRS)](extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展数据集字段属性。 这些值可从外部数据源获得，但在“报表数据”窗格中不显示。 可以通过内置 `Fields` 集合，在报表中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持的扩展字段属性。 对于在数据源中具有值的属性，可以访问预定义的属性值，如 `FormattedValue`、`Color` 或 `UniqueName`。 有关详细信息，请参阅 msdn.microsoft.com 上 [Analysis Services 数据库的扩展字段属性 (SSRS)](extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
   

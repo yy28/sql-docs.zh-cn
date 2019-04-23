@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290455"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949343"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>打印报表（报表生成器和 SSRS）
   在将报表保存到报表服务器之后，可以通过浏览器、报表管理器或用于查看导出报表的任意应用程序查看和打印报表。 在保存报表之前，可以在预览报表时打印它。  
@@ -47,7 +47,7 @@ ms.locfileid: "56290455"
  介绍如何打印已导出到其他应用程序的报表。  
   
  [打印报表（报表生成器和 SSRS）](print-a-report-report-builder-and-ssrs.md)  
- 有关如何打印报表，请提供分步说明如何控制页边距在页上，以及如何指定将通过硬分页呈现器呈现的报表的纸张大小：PDF、 图像或打印。  
+ 分步介绍了如何打印报表、如何控制页边距，以及如何为硬分页呈现器呈现的报表指定纸张大小：PDF、Image 或 Print。  
   
 ## <a name="see-also"></a>请参阅  
  [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

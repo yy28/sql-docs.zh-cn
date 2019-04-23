@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292255"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956584"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>基于报表生成数据馈送（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 呈现扩展插件可生成 Atom 服务文档，该文档列出报表中可用的数据馈送以及来自报表中的数据区域的数据馈送。 使用此扩展插件生成与 Atom 兼容的数据馈送，这些馈送是可读的，并可以与使用从报表生成的数据馈送的应用程序进行交换。 例如，可以使用 Atom 呈现扩展插件生成随后可用在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端中的数据馈送。  
@@ -80,13 +80,13 @@ ms.locfileid: "56292255"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>数据部分  
- 数据馈送的数据部分为 Atom 呈现扩展插件生成的平展行集中的每一行都包含一个<`entry`> 元素。  
+ 数据馈送的数据部分包含一个 <`entry`> 元素中的 Atom 呈现扩展插件生成的平展行集的每一行。  
   
  下图显示了使用组和总计的报表。  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下面的 XML 在数据馈送中显示了来自该报表的 <`entry`> 元素。 请注意，<`entry`> 元素包含该组的销售和订单的总计以及所有组的销售和订单的总计。 <`entry`> 元素包含报表中的所有值。  
+ 下面的 XML 演示 <`entry`> 来自该报表数据源中的元素。 请注意，<`entry`> 元素包含销售和订单的组的总计的销售订单和订单的所有组的总计。 <`entry`> 元素包含报表上的所有值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   

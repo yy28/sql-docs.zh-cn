@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6b6c414804a6e95f4d310a86e2573ba17bb8f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946719"
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
   下表列出了以 HTML 格式呈现时的设备信息设置。  
@@ -29,7 +29,7 @@ ms.locfileid: "56019578"
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|`AccessibleTablix`|指示是否呈现用于屏幕阅读器的其他辅助元数据。 此参数仅适用于包含简单表或具有简单分组的矩阵结构的报表。 默认值是 `false`。 其他辅助元数据可导致所呈现的报表符合电子和信息技术辅助标准（第 508 节）文档的“基于 Web 的 Intranet 和 Internet 信息和应用程序”部分 (1194.22) 中的下列技术标准：<br /><br /> (g) 行标题和列标题应为数据表的标识。<br /><br /> (h) 标记应用来与数据表（该数据表具有行标题或列标题的两个或更多逻辑级别）的数据单元格和标题单元格关联。<br /><br /> (i) 框架应具有便于进行框架标识和导航的文本标题。<br /><br /> 在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支持此参数，但在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]中则不支持。|  
+|`AccessibleTablix`|指示是否呈现用于屏幕阅读器的其他辅助元数据。 此参数仅适用于包含简单表或具有简单分组的矩阵结构的报表。 默认值为 `false`。 其他辅助元数据可导致所呈现的报表符合电子和信息技术辅助标准（第 508 节）文档的“基于 Web 的 Intranet 和 Internet 信息和应用程序”部分 (1194.22) 中的下列技术标准：<br /><br /> (g) 行标题和列标题应为数据表的标识。<br /><br /> (h) 标记应用来与数据表（该数据表具有行标题或列标题的两个或更多逻辑级别）的数据单元格和标题单元格关联。<br /><br /> (i) 框架应具有便于进行框架标识和导航的文本标题。<br /><br /> 在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)]中支持此参数，但在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)]中则不支持。|  
 |**ActionScript(\*)**|指定要在操作事件（如钻取或书签点击）发生时使用的 JavaScript 函数的名称。 如果指定了此参数，则操作事件将触发指定的 JavaScript 函数而不是回发到服务器。|  
 |**BookmarkID**|报表中要跳转到的书签 ID。|  
 |**DocMap**|指示是显示还是隐藏报表文档结构图。 此参数的默认值是`true`。|  
@@ -46,7 +46,7 @@ ms.locfileid: "56019578"
 |`PrefixId`|在与 `HTMLFragment` 一起使用时，请为已创建的 HTML 碎片中的所有 `ID` 属性添加指定的前缀。|  
 |**ReplacementRoot(\*)**|在 ReportViewer 控件之外呈现时预置在报表中的所有钻取、切换和书签链接之前的字符串。 例如，可使用此设置将用户的单击操作重定向到某个自定义页。|  
 |**ResourceStreamRoot(\*)**|此字符串预置在所有图像资源的 URL 之前，如用于切换或排序的图像。|  
-|**部分**|要呈现的报表的页码。 值为 `0` 指示将呈现报表的所有部分。 默认值是 `1`。|  
+|**部分**|要呈现的报表的页码。 值为 `0` 指示将呈现报表的所有部分。 默认值为 `1`。|  
 |**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如， http://\<servername>/resources/companyimages）。|  
 |**StyleStream**|指示是否将样式和脚本创建为单独的流，而不是在文档中创建它们。 默认值是 `false`。|  
 |`Toolbar`|指示是显示还是隐藏工具栏。 此参数的默认值为 `true`。 如果此参数的值为 `false`，将忽略所有剩余的选项（文档结构图除外）。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。<br /><br /> 当您使用 URL 访问以呈现报表时，将呈现报表查看器工具栏。 此工具栏不通过 SOAP API 呈现。 然而，`Toolbar` 设备信息设置影响使用 SOAP `Render` 方法时显示报表的方式。 如果当使用 SOAP 呈现到 HTML 时，此参数的值为 `true`，则只呈现报表的第一部分。 如果值为 `false`，则整个 HTML 报表将呈现为单个 HTML 页。|  

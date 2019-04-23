@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9469f3b28c6821f5829e84d96dab2617f85670c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040868"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946853"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>使用 rs.exe 实用工具和 Web 服务编写脚本
   开发人员和报表服务器管理员可以使用 **rs** 实用工具 (RS.exe) 在报表服务器上执行操作。 利用此实用工具，可以通过用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写的脚本以编程方式管理报表服务器。  

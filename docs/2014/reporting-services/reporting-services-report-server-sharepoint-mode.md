@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582203"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939483"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 报表服务器（SharePoint 模式）
 
@@ -81,7 +81,7 @@ ms.locfileid: "59582203"
   
 -   *本地模式下*:本地模式允许在本地从 SharePoint 文档库呈现报表，而无需与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器集成。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序是必需的，但 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器不是。 外接程序可以以多种不同的方式进行安装，包括 SharePoint 2010 产品准备工具。 有关本地模式的详细信息，请参阅[报表查看器中的本地模式和连接模式下的报表在报表查看器中&#40;SharePoint 模式下的 Reporting Services&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)并[在哪里可以找到 Reporting Services 外接程序用于 SharePoint 产品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   *连接模式*:通过使用 SharePoint 管理中心将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器集成到 SharePoint 场中，支持连接模式。 这一与报表服务器的集成可以实现完全的端到端报告，并且提供 SharePoint 2010 的协作功能以及基于服务器的报表服务器功能，包括：订阅、快照和基于服务器的处理。  
+-   *连接模式*:通过集成支持连接的模式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]到 SharePoint 场中使用 SharePoint 管理中心的报表服务器。 与报表服务器的集成可以实现完整的端到端报告，提供 SharePoint 2010 的协作功能以及基于服务器功能，报表服务器包括：订阅、 快照和基于服务器处理。  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> 不支持的 SharePoint 功能
 

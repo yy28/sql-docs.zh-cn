@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285535"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971583"
 ---
 # <a name="report-wizard-help"></a>报表向导帮助
   本部分介绍报表向导的 F1 帮助。 报表向导可自动完成创建表格报表和矩阵报表的过程。 下表对本部分的主题进行了说明：  

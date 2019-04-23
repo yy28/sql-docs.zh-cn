@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80a20d6458732150404ac5b6927a12e1fe159054
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298305"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935493"
 ---
 # <a name="report-sections-dialog-box"></a>“报表区域”对话框
   当您打开报表时，报表设计器验证报表包含一个报表定义语言 (RDL) **\<部分 >** 元素。 不支持打开具有多个 \<Section> 元素的报表。  

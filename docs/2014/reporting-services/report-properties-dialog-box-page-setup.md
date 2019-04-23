@@ -11,15 +11,15 @@ f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe4abae7db246a9d18388b1d479b6cc9d8048e5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6c1716049d16da49a95e2894c4458fe04b0a0f04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296865"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949293"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>“报表属性”对话框 ->“页面设置”
   选择**页面设置**上**报表属性**，对话框可以设置整个报表页选项。  

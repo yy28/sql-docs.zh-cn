@@ -11,15 +11,15 @@ f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 588927f94d2c50d5d34485cae030e9cea6a6b5ec
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cbfdf8f29db3fd96132d3e5058fb6d0f1f597f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292385"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954133"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>“数据集属性”对话框 -&gt;“查询”
   选择**查询**上**数据集属性**对话框可以选择数据源并创建一个查询。  

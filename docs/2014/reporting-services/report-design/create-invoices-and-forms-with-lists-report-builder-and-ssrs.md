@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290385"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950455"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>列表（报表生成器和 SSRS）
   列表数据区域重复报表数据集中的每一个组或行。 可以使用列表创建自由格式的报表或表单（如发票），或与其他数据区域结合使用。 可以定义包含任意数量的报表项的列表。 列表可以嵌套在其他列表中，以提供多组数据。  
@@ -24,7 +24,7 @@ ms.locfileid: "56290385"
 > [!NOTE]  
 >  您可以将列表作为报表部件与报表分开发布。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速开始使用列表，请参阅[教程：创建自由格式的报表&#40;报表生成器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速开始使用列表，请参阅[教程：生成自由格式报表（报表生成器）](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括使用列表的报表。 您可以通过在报表生成器或报表设计器中浏览示例报表的报表定义，或者通过在报表生成器或报表设计器中预览呈现的报表，了解列表的有关情况。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290385"
 ##  <a name="DisplayingLayout"></a> 以自由格式布局显示数据  
  若要以自由格式布局而非网格形式组织报表数据，可以向设计图面添加一个列表。 从“报表数据”窗格向单元拖动字段。 默认情况下，单元包含一个用作容器的矩形。 移动此容器内的各个字段，直到产生所需的设计效果为止。 使用在此矩形容器内拖动文本框时显示的对齐线来帮助垂直和水平对齐边缘。 通过调整单元的大小，删除不需要的空白区域。 有关详细信息，请参阅[更改行高或列宽（报表生成器和 SSRS）](change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
- 下图显示了一个列表，其中显示有关订单，其中包括这些字段的信息：日期，顺序、 Qty、 Product、 LineTotal 和一个图像。  
+ 下图展示了显示订单相关信息的列表，其中包括这些字段：“Date”、“Order”、“Qty”、“Product”、“LineTotal”和一张图像。  
   
  ![设计视图中的列表，有 4 个字段和一个图像](../media/rs-basiclistformdesign.gif "设计视图中的列表，有 4 个字段和一个图像")  
   

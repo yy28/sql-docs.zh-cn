@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021573"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967933"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
   设计和测试报表或一组报表，可以使用中的内置部署功能后[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将报表发布到报表服务器。 您可以发布单个报表或报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语*部署*，而不是术语*发布*。 这两个术语可以互换。  

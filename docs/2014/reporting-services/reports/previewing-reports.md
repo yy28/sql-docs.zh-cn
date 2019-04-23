@@ -1,7 +1,7 @@
 ---
 title: 预览报表
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553229"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946943"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中预览报表
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>预览 SQL Server Reporting Services (SSRS) 中的报表
 
   在设计报表时，在将报表发布到生产环境中之前可能需要查看该报表。 可使用多种方法查看该报表：在报表设计器中切换到预览模式、使用报表设计器中的预览窗口以及在测试环境中将报表发布到报表服务器。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53553229"
   
  可通过切换到打印预览模式，查看报表的打印效果。 单击预览工具栏上的 **“打印预览”** 按钮。 所显示的报表就如同打印在纸张上一样。 此视图与图像呈现扩展插件和 PDF 呈现扩展插件所生成的输出类似。 虽然打印预览并非图像或 PDF 文件，但报表的布局和分页与这些格式的输出类似。  
   
-## <a name="publish-to-a-test-server"></a>将发布到测试服务器
+## <a name="publish-to-a-test-server"></a>发布到测试服务器
 
  也可以通过将报表发布到测试服务器来对其进行测试。 将报表发布到测试服务器与发布到生产服务器是相同的。 有关发布报表的信息，请参阅 [将报表发布到报表服务器](publishing-reports-to-a-report-server.md)。  
   

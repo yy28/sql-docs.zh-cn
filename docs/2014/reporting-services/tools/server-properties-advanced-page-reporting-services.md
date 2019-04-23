@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960773"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
   使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。  
@@ -33,7 +33,7 @@ ms.locfileid: "56041578"
  对用户的“我的报表”文件夹创建安全策略时所用角色的名称。 默认值是 `My Reports Role`。  
   
  **EnableClientPrinting**  
- 确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效的值是`true`和`false`。 默认值是 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 确定是否可从报表服务器下载 RSClientPrint ActiveX 控件。 有效的值是`true`和`false`。 默认值为 `true`。 有关此控件所需的其他设置的详细信息，请参阅 [启用和禁用 Reporting Services 的客户端打印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
  **EnableExecutionLogging**  
  指示报表执行日志记录是否处于启用状态。 默认值是 `true`。 有关报表服务器执行日志的详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "56041578"
  指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。  
   
  **ExternalImagesTimeout**  
- 确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值为 `600` 秒。  
+ 确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值是`600`秒。  
   
  **SnapshotCompression**  
  定义如何压缩快照。 默认值是 `SQL`。 有效值如下：  
@@ -72,7 +72,7 @@ ms.locfileid: "56041578"
  **All =** 针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。  
   
  **SystemReportTimeout**  
- 在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值是 `1800`。  
+ 在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值为 `1800`。  
   
  **SystemSnapshotLimit**  
  为报表存储的快照的最大数目。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则无快照限制。  
@@ -92,7 +92,7 @@ ms.locfileid: "56041578"
  如果关闭此选项，则会缓解恶意用户通过用 LoadReportDefinition 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
  **EnableRemoteErrors**  
- 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值是 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)。  
+ 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值为 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)。  
   
  **EnableReportDesignClientDownload**  
  指定是否可以从报表服务器下载报表生成器安装包。 如果清除此设置，则指向报表生成器的 URL 将不起作用。 有关详细信息，请参阅 [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)。  

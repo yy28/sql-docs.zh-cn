@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013178"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956983"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>启用和禁用 RDL 沙盒
   通过 RDL（报表定义语言）沙盒处理功能，您可以在多个用户使用报表服务器的单个 Web 场的情况下检测到和限制单个用户使用的特定类型的资源。 相关的示例是宿主服务方案，在此方案中，您可能维护多个用户（并且可能是不同的公司）使用的报表服务器的单个 Web 场。 作为报表服务器管理员，您可以启用此功能以帮助实现以下目标：  
@@ -35,10 +35,10 @@ ms.locfileid: "56013178"
   
 -   表达式中的命名参数。  
   
- 本主题介绍 RSReportServer.Config 文件中 <`RDLSandboxing`> 元素内的各元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)。  
+ 本主题介绍了在每个元素 <`RDLSandboxing`> RSReportServer.Config 文件中的元素。 有关如何修改此文件的详细信息，请参阅[修改 Reporting Services 配置文件 (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 服务器跟踪日志记录与 RDL 沙盒处理功能相关的活动。 有关跟踪日志的详细信息，请参阅 [报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>配置示例  
- 下面的示例显示了 RSReportServer.Config 文件中 <`RDLSandboxing`> 元素的设置和示例值。  
+ 下面的示例显示了设置和示例值 <`RDLSandboxing`> RSReportServer.Config 文件中的元素。  
   
 ```  
 <RDLSandboxing>  

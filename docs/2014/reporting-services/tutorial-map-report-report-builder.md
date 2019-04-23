@@ -1,5 +1,5 @@
 ---
-title: 教程：地图报表 （报表生成器） |Microsoft Docs
+title: 教程：地图报表（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5522f24dbb7b930b69b2656f7c2c5b53954f16ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290915"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946933"
 ---
-# <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
+# <a name="tutorial-map-report-report-builder"></a>教程：地图报表 （报表生成器）
   本教程旨在帮助您了解地图功能，您可以使用该功能针对地理背景显示报表数据。  
   
  地图以空间数据为基础，这些数据通常包含点、线条和多边形。 例如，多边形可以表示国家/地区轮廓，线条可以表示道路，而点则可以表示市县所在位置。 各种类型的空间数据作为一组地图元素显示在单独的地图层上。  
@@ -63,9 +63,9 @@ ms.locfileid: "56290915"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器的分步说明，选择数据源、 创建数据集，并运行该向导，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：30 分钟。  
+ 估计的时间才能完成本教程中：30 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  

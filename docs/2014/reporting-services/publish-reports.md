@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032398"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942673"
 ---
 # <a name="publish-reports"></a>发布报表
   从[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，你可以通过部署报表服务器项目将项目中的所有报表和共享数据源发布到报表服务器，也可以发布单个报表。 在可以发布报表之前，必须指定目标报表服务器的 URL。 有关详细信息，请参阅[设置部署属性 (Reporting Services)](tools/set-deployment-properties-reporting-services.md)。  

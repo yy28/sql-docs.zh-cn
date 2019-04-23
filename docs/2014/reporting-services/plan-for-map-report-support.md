@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293916"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946893"
 ---
 # <a name="plan-for-map-report-support"></a>计划地图报表支持
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支持使用空间数据源的地图报表。 空间数据可来自 SQL Server 数据库或 ESRI 形状文件，或者来自随 Reporting Services 或报表生成器一起安装的地图库。 地图还可以显示 Bing 地图图块的背景。 报表作者可以创建空间数据或 Bing 地图图块指定为动态和在运行时检索到或为静态的嵌入报表定义中的报表。  
@@ -51,6 +51,6 @@ ms.locfileid: "56293916"
  有关详细信息[映射&#40;报表生成器和 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [报表故障排除：地图报表（报表生成器和 SSRS）](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968117"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services 的向后兼容性
   本节介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的不同版本之间在行为方面的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本节还介绍了对产品所做的根本性更改，已知这些更改会使包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自定义应用程序不能正常工作。  

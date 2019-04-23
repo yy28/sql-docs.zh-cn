@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f22084ae3eeea3f27630ccab5a930171ae64a80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e003ab3ce273febbdb36b046654da96cf85ecc47
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040188"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957473"
 ---
 # <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>SenderEmailAddress 属性 (WMI MSReportServer_ConfigurationSetting)
   从报表服务器获取用于发送电子邮件的地址。 只读。  

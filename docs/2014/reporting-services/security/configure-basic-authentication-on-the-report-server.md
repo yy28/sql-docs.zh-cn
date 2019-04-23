@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019328"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942733"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -66,7 +66,7 @@ ms.locfileid: "56019328"
           </AuthenticationTypes>  
     ```  
   
-4.  将其粘贴在 <`Authentication`> 的现有条目上。  
+4.  将它粘贴到的现有条目 <`Authentication`>。  
   
      如果使用的是多个身份验证类型，则只能添加 `RSWindowsBasic` 元素，而不能删除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的条目。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56019328"
   
      请注意，不能将 `Custom` 与其他身份验证类型一起使用。  
   
-5.  使用对您环境有效的值替换 <`Realm`> 或 <`DefaultDomain`> 的空值。  
+5.  空值替换为 <`Realm`> 或 <`DefaultDomain`> 对您环境有效的值。  
   
 6.  保存该文件。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "56019328"
   
 |元素|Required|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|用户帐户控制<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 不支持值 0（针对交互登录）和 1（针对批处理登录)。|  
+|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，在此情况下，登录凭据保留在随各 HTTP 请求一起发送的身份验证包中，这样，该服务器在连接到网络中的其他服务器时可以模拟该用户。 （默认值）<br /><br /> 注意：中不支持值 0 （针对交互登录） 和 1 （针对批处理登录） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
 |默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   

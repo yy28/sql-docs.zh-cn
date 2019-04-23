@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030418"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949634"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>“Reporting Services 登录”对话框（报表生成器）
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。 若要获取有关这些凭据的帮助，请与报表服务器管理员联系。  

@@ -1,5 +1,5 @@
 ---
-title: 第 5 课：格式设置报表 (Reporting Services) |Microsoft Docs
+title: 第 5 课：设置报表格式 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292565"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958103"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：格式设置报表 (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 课：设置报表格式 (Reporting Services)
   既然您已经向 Sales Orders 报表添加了一个数据区域和一些字段，那么您就可以设置日期和货币字段以及列标题的格式。  
   
  本主题内容：  
@@ -93,7 +93,7 @@ ms.locfileid: "56292565"
 5.  在 **“文件”** 菜单上单击 **“全部保存”** 可保存报表。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+ 您已成功地设置了列标题以及日期和货币值的格式。 接下来，您将向报表中添加分组和总计。 请参阅[第 6 课：添加分组和总计 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [设置数字和日期格式（报表生成器和 SSRS）](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
