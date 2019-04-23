@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042366"
 ---
 # <a name="programming-guidelines"></a>编程指南
@@ -132,7 +132,7 @@ Windows 与 Linux 和 macOS 上的几个版本的 iconv 库之间存在一些编
 2.  当所有语句属性均通过 SQLSetConnectAttr 传递时，UnixODBC 驱动程序管理器会为其返回“属性/选项标识符无效”。 在 Windows 上，当 SQLSetConnectAttr 接收某个语句属性值时，它会使驱动程序在属于连接句柄子级的所有活动语句上设置该值。  
 
 ## <a name="see-also"></a>另请参阅  
-[常见问题](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[常见问题解答](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [此版本驱动程序中的已知问题](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 

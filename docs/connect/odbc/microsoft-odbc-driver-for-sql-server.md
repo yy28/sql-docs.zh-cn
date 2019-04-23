@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041876"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -50,12 +50,12 @@ ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md) 和 [bcp](../../
 
 ### <a name="linux-and-macos"></a>Linux 和 macOS
 
-- [安装 ODBC Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [安装驱动程序](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [连接到 SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [使用 bcp 进行连接](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [使用 bcp 连接](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [使用 sqlcmd 进行连接](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [数据访问跟踪](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [常见问题](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+- [常见问题解答](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [安装驱动程序管理器](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [已知问题](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [编程指南](../../connect/odbc/linux-mac/programming-guidelines.md)
@@ -68,7 +68,7 @@ ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md) 和 [bcp](../../
 - [异步执行（通知方法）示例](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
 - [Windows ODBC 驱动程序中的连接弹性](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [识别驱动程序的连接池](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
-- [功能及行为变更](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
+- [功能和行为变更](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 - [适用于 Windows 上 SQL Server 的 ODBC 的发行说明](windows/release-notes-odbc-sql-server-windows.md)
 - [系统要求、安装和驱动程序文件](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
@@ -76,4 +76,4 @@ ODBC 驱动程序附带 [sqlcmd](../../tools/sqlcmd-utility.md) 和 [bcp](../../
 
 ## <a name="community"></a>社区  
 - [Microsoft SQL Server ODBC 驱动程序团队博客](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum（英文）](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [SQL Server 数据访问论坛](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
