@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296875"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940703"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
   数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "56296875"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在图表上定位数据点标签  
  对于所有图表类型，右键单击图表并选择 **“显示数据标签”** 后可以显示数据点标签。 数据点标签的位置是根据图表类型指定的：  
   
--   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：外部、 左侧、 中间和右侧。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
+-   在条形图中，可以使用 **BarLabelStyle** 自定义属性重新定位数据点标签。 有四个可能位置：Outside、Left、Center 和 Right。 当条形标签样式设置为“外部”时，只要图表区放得下，标签就将定位到图条的外部。 如果标签在图表区内图条以外的区域放不下，则标签将定位到图条内。  
   
 -   在饼图中，可以使用 **PieLabelStyle** 自定义属性重新定位数据点标签。 围绕饼图定位数据点标签时应考虑诸多注意事项，包括饼图的大小、饼图及其相应图例之间的可用空间和标签大小。 有关详细信息，请参阅 [在饼图外显示数据点标签（报表生成器和 SSRS）](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296875"
  [设置图表上轴标签的格式（报表生成器和 SSRS）](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)   
  [将轴标签的格式设置为日期或货币（报表生成器和 SSRS）](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [教程：向报表添加饼图&#40;报表生成器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教程：向报表添加饼图（报表生成器）](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)   
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)  
   

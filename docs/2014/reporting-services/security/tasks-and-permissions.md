@@ -16,15 +16,15 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5ec2030e94abbc568e2ea030c781e904a4ce459d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010878"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956053"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  
@@ -39,7 +39,7 @@ ms.locfileid: "56010878"
 ## <a name="system-and-item-level-tasks"></a>系统级任务和项级任务  
  任务分为两类：系统级任务和项级任务。 一个角色只能包含单个类别中的任务。 下表对每一类别的任务进行了说明。  
   
-|类别|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |[项级任务](tasks-and-permissions-item-level-tasks.md)|对报表服务器管理的项（例如文件夹、报表、报表模型和资源）执行的操作。<br /><br /> 项级任务的作用域为报表服务器文件夹命名空间。 通过报表服务器上的文件夹或通过 URL 访问的项都受到包含项级任务的角色分配的保护。|  
 |[系统级任务](tasks-and-permissions-system-level-tasks.md)|在系统级执行的操作，例如，管理可用于多个项的作业或共享计划。 系统级任务的作用域扩展到报表服务器文件夹命名空间之外。|  

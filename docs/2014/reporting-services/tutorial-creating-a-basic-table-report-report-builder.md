@@ -1,5 +1,5 @@
 ---
-title: 教程：创建基本表报表 （报表生成器） |Microsoft Docs
+title: 教程：生成基本表报表（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295365"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959543"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：创建基本表报表 （报表生成器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教程：生成基本表报表（报表生成器）
   本教程教您如何基于示例销售数据创建基本表格报表。 下图显示了将创建的报表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,12 +50,12 @@ ms.locfileid: "56295365"
   
 7.  [导出报表](#Export)  
   
- 本教程的预计学时：20 分钟。  
+ 估计的时间才能完成本教程中：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateTable"></a> 1.从“入门”创建新的报表  
+##  <a name="CreateTable"></a> 1.从入门中创建新的报表  
  创建表报表从**Getting Started**对话框。 有两类模式：报表设计模式和共享数据集设计模式。 在报表设计模式中，您可以在“报表数据”窗格中指定数据，在设计图面上指定报表布局。 在共享数据集设计模式中，可以创建与他人共享的数据集查询。 在本教程中，您将使用报表设计模式。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
@@ -229,7 +229,7 @@ ms.locfileid: "56295365"
   
 3.  单击 **“完成”**。  
   
- 表将添加到设计图面中。 该表有 5 列、5 行。 行组窗格显示了三个行组：SalesDate、 Subcategory、 和的详细信息。 详细信息数据是由数据集查询检索的所有数据。  
+ 表将添加到设计图面中。 该表有 5 列、5 行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。  
   
 ##  <a name="FormatCurrency"></a> 2.将数据格式设置为货币  
  默认情况下，Sales 字段的汇总数据将显示总数。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  

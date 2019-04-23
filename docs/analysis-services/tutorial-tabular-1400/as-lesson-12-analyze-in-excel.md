@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476713"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945373"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -25,7 +25,7 @@ ms.locfileid: "59476713"
   
 若要完成本课程中，必须在与 Visual Studio 在同一台计算机上安装 Excel。
   
-学完本课的预计时间：**5 分钟**  
+估计的时间才能完成本课程中：**5 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 

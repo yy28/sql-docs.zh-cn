@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038258"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941193"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 实用工具 (SSRS)
   提取、还原、创建以及删除对称密钥，该密钥用于保护敏感报表服务器数据免受未经授权的访问。 此实用工具还用于将报表服务器实例加入扩展部署。 报表服务器扩展部署是指共享单个报表服务器数据库的多个报表服务器实例。  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  报表服务器扩展部署是指多个报表服务器实例共享同一报表服务器数据库的部署模型。 任何报表服务器实例，只要将其对称密钥存储在一个报表服务器数据库中，就可以使用该数据库。 例如，如果报表服务器数据库包含三个报表服务器实例的密钥信息，则所有这三个实例均被视为同一扩展部署的成员。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
- 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 `-u` 和 `-v` 参数。 仅当联接远程计算机中的实例时才需使用 `-u` 和 `-v` 参数。 如果指定这些参数，你将收到以下错误：“用户凭据无法用于本地连接。”  
+ 可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 `-u` 和 `-v` 参数。 仅当联接远程计算机中的实例时才需使用 `-u` 和 `-v` 参数。 如果指定的参数，将收到以下错误："用户凭据不能使用的本地连接。"  
   
- 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，<`initializedinstance`> 是已初始化为使用报表服务器数据库的实例名称，而 <`newinstance`> 是要添加到部署的实例名称：  
+ 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，<`initializedinstance`> 是实例已初始化为使用报表服务器数据库的名称和 <`newinstance`> 是你想要添加到部署的实例的名称：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

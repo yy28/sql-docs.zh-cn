@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ab736ee801afcb14332b8719a7168c38757ee35
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287785"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934413"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  
@@ -69,12 +69,12 @@ ms.locfileid: "56287785"
 |||  
 |-|-|  
 |聚合函数|`AVG`, `COUNT`, `COUNTDISTINCT`, `MAX`, `MIN`, `STDEV`, `STDEVP`, `SUM`, `VAR`, `VARP`|  
-|条件函数|`IF`、`IN`、`SWITCH`|  
+|条件函数|`IF`, `IN`, `SWITCH`|  
 |转换函数|`INT`, `DECIMAL`, `FLOAT`, `TEXT`|  
 |日期和时间函数|`DATE`, `DATEADD`, `DATEDIFF`, `DATETIME`, `DATEONLY`, `DAY`, `DAYOFWEEK`, `DAYOFYEAR`, `HOUR`, `MINUTE`, `MONTH`, `NOW`, `QUARTER`, `SECOND`, `TIMEONLY`, `TODAY`, `WEEK`, `YEAR`|  
-|信息函数|`GETUSERCULTURE`、`GETUSERID`|  
-|逻辑函数|`AND`、`NOT`、`OR`|  
-|数学函数|`MOD`、`ROUND`、`TRUNC`|  
+|信息函数|`GETUSERCULTURE`， `GETUSERID`|  
+|逻辑函数|`AND`, `NOT`, `OR`|  
+|数学函数|`MOD`, `ROUND`, `TRUNC`|  
 |运算符|加 (+), 除 (/), 等于 (=), 乘方 (^), 大于 (>), 大于或等于 (>=), 小于 (<), 小于或等于 (<=), 乘 (*), 取反 (-), 不等于 (<>), 减 (-)|  
 |文本函数|`CONCAT`, `FIND`, `LEFT`, `LENGTH`, `LOWER`, `LTRIM`, `REPLACE`, `RIGHT`, `RTRIM`, `SUBSTRING`, `UPPER`|  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5db9c929c736029c3731443af56d15f3615e45f1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039008"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941433"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
   下表列出了用于以 IMAGE 格式呈现的设备信息设置。  
@@ -38,8 +38,8 @@ ms.locfileid: "56039008"
 |**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式之一：`BMP`、`EMF`、`GIF`、`JPEG`、`PNG` 或 `TIFF`。|  
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`11in`）。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 您必须包含一个整数或小数值，后跟“in”（例如，`8.5in`）。 此值将覆盖报表的原始设置。|  
-|**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
-|**PrintDpiY**|输出图像的垂直分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
+|**PrintDpiX**|输出图像的水平分辨率。 默认值为 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
+|**PrintDpiY**|输出图像的垂直分辨率。 默认值为 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
 |`StartPage`|要呈现的报表的第一页。 值为 `0` 指示将呈现所有页。 默认值是 `1`。|  
   
 ## <a name="see-also"></a>请参阅  

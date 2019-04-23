@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0eb6f4a62eb9b6228f8aeb3715ea35dec2eec026
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031588"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938583"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>文件夹的“常规”属性页（报表管理器）
   使用文件夹的“常规”属性页可以查看和设置所创建文件夹的属性。 有关创建或修改文件夹的用户以及修改文件夹的时间的信息显示在“常规属性”页面顶部。  
@@ -44,7 +44,7 @@ ms.locfileid: "56031588"
  **在列表视图中隐藏**  
  选择此选项可对正在报表管理器中使用列表视图模式的用户隐藏文件夹。 列表视图模式是浏览报表服务器文件夹层次结构时的默认视图格式。 在列表视图中，项的名称和说明可跨越页面。 备用格式为详细信息视图。 详细信息视图省略了说明，但包含项的其他信息。 虽然可以在列表视图中隐藏项，但不能在详细信息视图中隐藏项。 如果希望限制访问项，必须创建角色分配。  
   
- **应用**  
+ **Apply**  
  单击此选项可保存所做的更改。  
   
  **删除**  

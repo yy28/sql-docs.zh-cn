@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290435"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948263"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的报表生成器
   Report Builder 是一种报表创作环境，适用于喜欢在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 环境下工作的业务用户。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 您可以在报表生成器中预览报表，也可以将报表发布到报表服务器或处于 SharePoint 集成模式下的报表服务器，让其他人可以运行它。  
@@ -38,7 +38,7 @@ ms.locfileid: "56290435"
   
 -   **使用表、矩阵或图表向导创建报表**。 选择数据源连接，拖放字段以创建数据集查询，选择布局和样式并自定义报表。  
   
--   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是来自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的空间数据。 还可以添加 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地图图块背景。  
+-   **使用地图向导** 创建显示针对地理或几何背景的聚合数据的报表。 地图数据可以是空间数据来自[!INCLUDE[tsql](../../includes/tsql-md.md)]查询或 Environmental 的 Systems Research Institute，Inc.(ESRI) 形状文件。 还可以添加 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地图图块背景。  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290435"
  [SQL Server 2014 的报表生成器中的新增功能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  介绍此版本的报表生成器的新增功能，包括地图。  
   
- [教程：创建快速图表报表脱机](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教程：脱机生成快速图表报表](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介绍报表生成器以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
   
  [规划报表（报表生成器）](../report-design/planning-a-report-report-builder.md)  

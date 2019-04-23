@@ -14,15 +14,15 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295448"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933615"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -79,7 +79,7 @@ ms.locfileid: "56295448"
   
  以下是与订阅相关的跟踪日志文件错误消息示例：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:指定在服务器系统 properties.emailextension 初始化为 'True' EnableExecutionLogging ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:41:: e 错误：**发送电子邮件时出错**。 异常：System.Net.Mail.SmtpException：SMTP 服务器需要一个安全连接或客户端未经过身份验证。 服务器响应是：5.7.1 客户端未经过身份验证   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 字符串响应)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR:**发送电子邮件时出错了**。 异常：System.Net.Mail.SmtpException:SMTP 服务器要求安全连接或客户端未经过身份验证。 服务器响应为：5.7.1 客户端未经身份验证 at System.Net.Mail.MailCommand.CheckResponse （SmtpStatusCode statusCode，字符串响应）  
   
  日志文件不包括有关是否打开报表或传递是否真正成功的信息。 成功传递意味着计划和传递处理器未生成任何错误，并且报表服务器已连接到邮件服务器。 如果电子邮件在用户邮箱中产生无法传递的消息错误，该信息不会包括在日志文件中。 有关日志文件的详细信息，请参阅 [Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -99,8 +99,8 @@ ms.locfileid: "56295448"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|处理|区域|类别|级别|Correlation|消息|  
-|5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** 异常：System.Net.Mail.SmtpException：邮箱不可用。 服务器响应是：5.7.1 客户端不具有作为此发送者的发送权限  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|date|处理|区域|Category|级别|Correlation|消息|  
+|5/21/2014 14:34:06:15|应用池：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|报表服务器电子邮件扩展插件|意外|（空）|**发送邮件时出错。** 异常：System.Net.Mail.SmtpException:邮箱不可用。 服务器响应为：5.7.1 客户端没有为 at System.Net.Mail.DataStopCommand.CheckResponse （SmtpStatusCode statusCode，String serverResponse） 此发件人发送权限 at System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) 在System.Net.Mail.SmtpClient.Send (MailMessage message) at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 监视订阅  
  如需查看可用于检查本机模式或 SharePoint 模式订阅的状态的 PowerShell 脚本的示例，请参见 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  

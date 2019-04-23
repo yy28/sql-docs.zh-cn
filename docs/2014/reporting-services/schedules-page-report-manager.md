@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028248"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948793"
 ---
 # <a name="schedules-page-report-manager"></a>“计划”页（报表管理器）
   使用“计划”页可以创建、修改、删除、暂停或恢复共享计划。 共享计划是一个指定计划。您可以独立于报表、订阅以及其他需要计划信息的进程来创建和管理共享计划。 用户可以选择您提供的共享计划。  

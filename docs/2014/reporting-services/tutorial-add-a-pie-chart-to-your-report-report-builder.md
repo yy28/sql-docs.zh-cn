@@ -1,5 +1,5 @@
 ---
-title: 教程：将饼图添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加饼图（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290445"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959503"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：将饼图添加到您的报表 （报表生成器）
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。  
   
  如果饼图上有太多数据点，这些数据点就可能挤在一起，这会降低图表的可读性。 在此情况下，应考虑使用折线图。 仅在已经将数据聚合到少量数据点之后，才能考虑使用饼图。  
@@ -45,9 +45,9 @@ ms.locfileid: "56290445"
 7.  [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为两个过程。 有关如何浏览到报表服务器的分步说明，添加数据源，并添加数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为两个过程。 有关如何转到报表服务器、添加数据源和添加数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：10 分钟。  
+ 估计的时间才能完成本教程中：10 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：指定连接信息 (Reporting Services) |Microsoft Docs
+title: 第 2 课：指定连接信息 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290175"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955573"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 课：指定连接信息 (Reporting Services)
   向“教程”项目添加报表之后，需要定义数据源，它是报表从关系数据库、多维数据库或其他资源访问数据所使用的连接信息。  
@@ -56,7 +56,7 @@ ms.locfileid: "56290175"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 数据源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]添加到**报表数据**窗格。  
   
 ## <a name="next-task"></a>下一个任务  
- 已成功定义了到 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：为表报表定义数据集&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
+ 已成功定义了到 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 示例数据库的连接。 下一步，将创建报表。 请参阅[第 3 课：定义表报表的数据集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [报表生成器中的数据连接、数据源和连接字符串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

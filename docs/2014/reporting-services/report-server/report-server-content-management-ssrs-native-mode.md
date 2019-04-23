@@ -13,15 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11cf069257a0f851794341820994fbb453cb0052
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25ee10bbda10329a3f28171eb0027df9769e9fde
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026098"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951655"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  
@@ -95,7 +95,7 @@ ms.locfileid: "56026098"
   
  下表对支撑文件夹层次结构并为多种功能提供框架的预定义文件夹进行了说明：  
   
-|文件夹|目标|  
+|文件夹|用途|  
 |------------|-------------|  
 |主页|文件夹层次结构的根节点。|  
 |用户|在您启用了“我的报表”功能时，将显示此文件夹。 它包含使用“我的报表”功能的所有用户的子文件夹，只有报表服务器管理员才可以访问该文件夹。 每个子文件夹的名称都与相应用户的名称匹配。|  

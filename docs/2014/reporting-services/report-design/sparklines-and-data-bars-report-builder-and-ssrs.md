@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658041"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941643"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。 迷你图和数据条通常用于表和矩阵中。 其影响来自于将它们一起进行查看并且能够快速对它们进行相互比较，而不是单独查看它们。 这样可以便于看到离群值，即不像其他项那样执行的行。 尽管较小，但每个迷你图通常表示一段时间中的多个数据点。 数据条可表示多个数据点，但通常只说明一个。 每个迷你图通常展示单个序列。 不能将迷你图添加到表的详细信息组中。 因为迷你图显示聚合数据，所以它们必须处于与某一组相关联的单元中。 迷你图和数据条具有相同的基本图表元素类别、序列和值，但没有图例、轴线、标签或刻度线。  
@@ -37,15 +37,15 @@ ms.locfileid: "58658041"
 ##  <a name="KindsofSparklines"></a> 迷你图的类型  
  您几乎可以像常规图表一样创建任意类型的迷你图。 一般情况下，不能生成三维迷你图。 您可以生成以下完整图表的迷你图版本：  
   
--   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本柱形图、堆积柱形图和百分比堆积柱形图。  
+-   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本图、 堆积柱形图和百分比堆积柱形图。  
   
--   [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)：除三维折线图之外的所有图。  
+-   [折线图（报表生成器和 SSRS）](line-charts-report-builder-and-ssrs.md)：除三维折线图之外所有图表。  
   
--   [分区图（报表生成器和 SSRS）](area-charts-report-builder-and-ssrs.md)：除三维面积图之外的所有图  
+-   [分区图（报表生成器和 SSRS）](area-charts-report-builder-and-ssrs.md)：除三维面积图  
   
--   [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)：圆环图（平面和三维均可），但不包括漏斗图和棱锥图之类的其他形状。  
+-   [饼图（报表生成器和 SSRS）](pie-charts-report-builder-and-ssrs.md)：和圆环图，平面和三维，但不是的其他形状包括漏斗图和棱锥图之类。  
   
--   [全距图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)：股价图、K 线图、误差线和盒须图。  
+-   [全距图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)：库存、 k 线图、 误差条形图和盒须图。  
   
 ##  <a name="DataBars"></a> 数据条  
  数据条通常表示单个数据点，尽管它们也可以像常规条形图一样表示多个数据点。 它们通常包含无类别的若干序列，或者具有序列分组。  
@@ -56,9 +56,9 @@ ms.locfileid: "58658041"
   
  您可以生成以下完整图表的数据条版本：  
   
--   [条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)：基本条形图、堆积条形图和百分比堆积条形图。  
+-   [条形图（报表生成器和 SSRS）](bar-charts-report-builder-and-ssrs.md)：基本图、 堆积柱形图和百分比堆积条形图。  
   
--   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本柱形图、堆积柱形图和百分比堆积柱形图。 柱形图可以是迷你图或数据条。  
+-   [柱形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)：基本图、 堆积柱形图和百分比堆积柱形图。 柱形图可以是迷你图或数据条。  
 
 ##  <a name="AlignDatainTableMatrix"></a> 在表或矩阵中对齐迷你图数据  
  在您将一个迷你图插入到表或矩阵中时，将每个迷你图中的数据点与该列中其他迷你图的数据点对齐通常十分重要。 否则，很难比较不同行中的数据。 例如，为您的公司中的不同销售人员按月比较销售数据时，您需要对齐月份。 如果某个员工在四月外出，则该员工在该月可能会没有销售数据。 您想要看到该月的差距，并且看到后续月份的数据与其他员工的数据对齐。 为此，您可以对齐水平轴。 有关详细信息，请参阅[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](expression-scope-for-totals-aggregates-and-built-in-collections.md)中关于迷你图的部分，另请参阅[在表或矩阵中的图表中对齐数据（报表生成器和 SSRS）](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  

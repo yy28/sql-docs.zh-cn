@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - uploading reports [Reporting Services]
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017148"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960283"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上载到 SharePoint 库（SharePoint 模式下的 Reporting Services）
   您可以将报表定义和报表模型上载到 SharePoint 库。 上载报表服务器项时，您必须选择一个库或库中的一个文件夹。 不能将报表服务器项上载到某个列表或页。  

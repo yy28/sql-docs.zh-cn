@@ -1,5 +1,5 @@
 ---
-title: 教程：将条形图添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加条形图（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295985"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938153"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：将条形图添加到您的报表 （报表生成器）
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教程：向报表添加条形图（报表生成器）
   条形图以水平方式显示类别数据。 这有助于：  
   
 -   提高长类别名称的可读性。  
@@ -55,9 +55,9 @@ ms.locfileid: "56295985"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，创建数据集，并选择数据源，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、创建数据集和选择数据源的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：15 分钟。  
+ 估计的时间才能完成本教程中：15 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -122,7 +122,7 @@ ms.locfileid: "56295985"
   
 2.  单击“条形图”，然后单击“下一步”。  
   
-     上**排列图表字段**页上，有四个字段中的**可用字段**窗格：FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
+     “排列图表字段”页上的“可用字段”窗格中有 4 个字段：FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
   
 3.  将 LastName 拖动到“类别”窗格。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "56295985"
   
  报表将显示每个销售人员在 2008 和 2009 年度销售情况的条形图。 条形图的长度对应于总销售额。  
   
-##  <a name="AllValues"></a> 3.修改垂直轴上的显示名称  
+##  <a name="AllValues"></a> 3.修改垂直轴上的名称的显示  
  默认情况下，垂直轴上只显示某些值。 您可以更改图表以显示所有类别。  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>沿条形图的类别轴显示所有销售人员  
@@ -194,7 +194,7 @@ ms.locfileid: "56295985"
 > [!NOTE]  
 >  如果无法阅读垂直轴上的销售人员姓名，则可以增加图表的高度，或更改轴标签的格式选项。  
   
-##  <a name="Sort"></a> 4.更改垂直轴上的姓名的排序顺序  
+##  <a name="Sort"></a> 4.更改垂直轴上的名称的排序顺序  
  当您对图表中的数据进行排序时，您是在更改类别轴上的值的顺序。  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>按字母顺序对条形图中的姓名进行排序  
@@ -213,7 +213,7 @@ ms.locfileid: "56295985"
   
 7.  单击“确定” 。  
   
-8.  重新**类别组属性**页上，在**顺序**下拉列表中，选择**Z 到 A**。此时将选择反向字母顺序，以便按从上到下的顺序显示姓名。  
+8.  重新**类别组属性**页上，在**顺序**下拉列表中，选择**Z 到 A**。这将选择反向字母顺序，以便按顺序从上到下显示姓名。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

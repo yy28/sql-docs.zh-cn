@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0b2a24a0db089262512094b5cb33c2eda695094
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4587f4e496e5542e53df40741c1dcdf6e9abc6ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042799"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941843"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
   如果要将报表服务器扩展配置为在网络负载平衡 (NLB) 群集上运行，必须执行以下操作：  
@@ -59,13 +59,13 @@ ms.locfileid: "56042799"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  打开报表管理器的 Web.config 文件，并在 <`system.web`> 部分粘贴所生成的 <`machineKey`> 元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
+2.  打开 Web.config 文件，为报表管理器中，并在 <`system.web`> 部分粘贴 <`machineKey`> 你生成的元素。 默认情况下，报表管理器的 Web.config 文件位于 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config 中。  
   
 3.  保存该文件。  
   
 4.  对扩展部署中的每个报表服务器重复上述步骤。  
   
-5.  确保 \Reporting Services\Report Manager 文件夹中所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`machineKey`> 元素。  
+5.  验证 services\report Manager 文件夹中的所有 Web.Config 文件都包含相同 <`machineKey`> 中的元素 <`system.web`> 部分。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何配置 Hostname 和 UrlRoot  
  若要在 NLB 群集上配置报表服务器扩展部署，必须定义单个虚拟服务器名称，以提供服务器群集的单访问点。 然后向您的环境中的域名服务器 (DNS) 注册此虚拟服务器名称。  
@@ -108,9 +108,9 @@ ms.locfileid: "56042799"
   
 1.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-2.  查找 <`Hostname`>、<`ReportServerUrl`> 和 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
+2.  找到 <`Hostname`>，<`ReportServerUrl`>，并 <`UrlRoot`>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
   
- 如果在做出以下更改后启动 Reporting Services 配置工具，则该工具可能会将 <`ReportServerUrl`> 设置更改为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
+ 如果在进行这些更改后启动 Reporting Services 配置工具，该工具可能会更改 <`ReportServerUrl`> 设置为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services Configuration Manager（本机模式）](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

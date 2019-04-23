@@ -11,23 +11,23 @@ helpviewer_keywords:
 - device information settings [Reporting Services], Excel rendering
 - Excel [Reporting Services], rendering
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5d1ec9b650592be41c8ae2f7043649c91ea78442
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025748"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948323"
 ---
 # <a name="excel-device-information-settings"></a>Excel 设备信息设置
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式呈现时的设备信息设置。  
   
 |设置|ReplTest1|  
 |-------------|-----------|  
-|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值是 `false`。|  
-|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值是 `false`。|  
+|**OmitDocumentMap**|指示是否对于支持文档结构图的报表忽略文档结构图。 默认值为 `false`。|  
+|**OmitFormulas**|指示是否对所呈现报表忽略公式。 默认值为 `false`。|  
 |`SimplePageHeade`rs|指示是否将报表的页眉呈现到 Excel 页眉。 值为 `false` 指示将页眉呈现到工作表的第一行。 默认值是 `false`。|  
   
 ## <a name="see-also"></a>请参阅  

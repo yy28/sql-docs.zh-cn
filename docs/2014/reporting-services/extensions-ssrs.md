@@ -1,7 +1,7 @@
 ---
 title: Extensions
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553099"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938413"
 ---
-# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>扩展 SQL Server Reporting services (SSRS)
+# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>用于 SQL Server Reporting Services 的扩展 (SSRS)
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的报表服务器使用扩展插件来模块化其为身份验证、数据处理、报表呈现和报表传递接受的输入或输出的类型。 这便于现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装利用行业中的新的软件标准，例如新的身份验证架构或自定义数据源类型。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 报表服务器至少分别需要一个身份验证扩展插件、数据处理扩展插件和呈现扩展插件。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53553099"
   
 ## <a name="rendering-extensions"></a>呈现扩展插件
 
- 呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、CSV、XML、图像、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
+ 呈现扩展插件将来自报表处理器的数据和布局信息转换为设备特定的格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、 Excel、 CSV、 XML、 图像、 PDF、 和[!INCLUDE[msCoName](../includes/msconame-md.md)]Word。  
   
 - **HTML 呈现扩展插件** 通过 Web 浏览器向报表服务器请求报表时，报表服务器将使用 HTML 呈现扩展插件来呈现报表。 HTML 呈现扩展插件使用 UTF-8 编码生成所有的 HTML。 有关详细信息，请参阅[以 html 格式呈现&#40;报表生成器和 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)并[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53553099"
   
 - **XML 呈现扩展插件** XML 呈现扩展插件以 XML 文件形式呈现报表。 随后可通过其他程序存储或读取这些 XML 文件。 您还可以使用 XSLT 转换将报表转换为另一种 XML 架构，供其他应用程序使用。 XML 呈现扩展插件生成的 XML 文件是 UTF-8 编码文件。 有关详细信息，请参阅 [导出到 XML（报表生成器和 SSRS）](report-builder/exporting-to-xml-report-builder-and-ssrs.md)中处理数据。  
   
--   **图像呈现扩展插件** 图像呈现扩展插件会将报表呈现为位图或图元文件。 扩展插件可以下格式呈现报告：BMP、EMF、GIF、JPEG、PNG、TIFF 和 WMF。 默认情况下，将使用 TIFF 格式呈现图像，这种格式的图像可以通过您的操作系统的默认图像查看器（例如，Windows 图片和传真查看器）进行显示。 您可以从查看器中将图像发送到打印机。 使用图像呈现扩展插件呈现报表可确保报表在每个客户端上的显示都相同。 （用户查看 HTML 格式的报表时，该报表的外观会因用户浏览器的版本、用户浏览器设置以及可用字体而异。）图像呈现扩展插件在服务器上呈现报表，因此所有用户看到的都是相同的图像。 由于是在服务器上呈现报表，因此服务器上必须安装了报表中使用的所有字体。 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。  
+-   **图像呈现扩展插件** 图像呈现扩展插件会将报表呈现为位图或图元文件。 扩展插件可以呈现报表中的以下格式：BMP、 EMF、 GIF、 JPEG、 PNG、 TIFF 和 WMF。 默认情况下，将使用 TIFF 格式呈现图像，这种格式的图像可以通过您的操作系统的默认图像查看器（例如，Windows 图片和传真查看器）进行显示。 您可以从查看器中将图像发送到打印机。 使用图像呈现扩展插件呈现报表可确保报表在每个客户端上的显示都相同。 （当用户查看 html 格式的报表时，该报表的外观而异的用户的浏览器、 用户的浏览器设置和可用的字体的版本。）图像呈现扩展插件在服务器上呈现报表，因此所有用户看到的都是相同的图像。 由于是在服务器上呈现报表，因此服务器上必须安装了报表中使用的所有字体。 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。  
   
 - **PDF 呈现扩展插件** PDF 呈现扩展插件以 PDF 文件形式呈现报表，可以使用 Adobe Acrobat 6.0 或更高版本打开和查看这些文件。 有关详细信息，请参阅 [导出到 PDF 文件（报表生成器和 SSRS）](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中处理数据。  
   

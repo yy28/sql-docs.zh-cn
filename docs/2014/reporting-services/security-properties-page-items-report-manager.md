@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024468"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934763"
 ---
 # <a name="security-properties-page-items-report-manager"></a>项的“安全性”属性页（报表管理器）
   使用“安全属性”页可以查看或修改安全设置，以确定对文件夹、报表、模型、资源和共享数据源的访问。 此页可用于您有权保护的项。  

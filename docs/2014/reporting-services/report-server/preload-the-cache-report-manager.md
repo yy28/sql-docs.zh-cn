@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035078"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949103"
 ---
 # <a name="preload-the-cache-report-manager"></a>预加载缓存（报表管理器）
   您可以通过为共享数据集创建缓存刷新计划，为共享数据集预加载缓存。  
@@ -114,7 +114,7 @@ ms.locfileid: "56035078"
   
 17. 选择如下两个缓存选项之一并配置过期时间：  
   
-    -   若要使缓存的副本在特定的时间段后过期，请单击 **“缓存报表的临时副本。在数分钟之后使报表副本过期。”** 键入报表过期所需的分钟数。  
+    -   若要使缓存的副本在特定时间段后过期，请单击**缓存报表的临时副本。在数分钟之后使报表副本过期。”** 键入报表过期所需的分钟数。  
   
     -   若要按计划使缓存的副本过期，请单击“缓存报表的临时副本。按下列计划使报表副本过期。” 单击“配置”，或选择一个共享计划以设置报表过期计划。  
   

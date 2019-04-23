@@ -11,15 +11,15 @@ f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287075"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938883"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“大小”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“大小”** 可以设置字段或设计区域中显示的图像的大小，或者更改单元或文本框边缘与该单元或文本框内包含的图片或值之间的多余空间。  

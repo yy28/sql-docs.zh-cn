@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287966"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938013"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Parameters 集合引用（报表生成器和 SSRS）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](expression-examples-report-builder-and-ssrs.md)。  
   
- 在运行时比较参数值和数据集字段值时，所比较的两个项的数据类型必须相同。 报表参数可以是以下类型之一：一个布尔值、 DateTime、 Integer、 Float、 或表示基础数据类型字符串的文本。 如有必要，您可能必须转换参数值的数据类型以与数据集值相匹配。 有关详细信息，请参阅 [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
+ 在运行时比较参数值和数据集字段值时，所比较的两个项的数据类型必须相同。 报表参数可以是下列类型之一：Boolean、DateTime、Integer、Float 或 Text（即基础数据类型 String）。 如有必要，您可能必须转换参数值的数据类型以与数据集值相匹配。 有关详细信息，请参阅 [表达式中的数据类型（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)。  
   
  为了在表达式中包含参数引用，必须了解如何指定正确的参数引用语法，该语法会因参数是单值参数还是多值参数而有所不同。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "56287966"
  [表达式（报表生成器和 SSRS）](expressions-report-builder-and-ssrs.md)   
  [常用筛选器（报表生成器和 SSRS）](commonly-used-filters-report-builder-and-ssrs.md)   
  [添加、更改或删除报表参数（报表生成器和 SSRS）](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [教程：向报表添加参数&#40;报表生成器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教程：向报表添加参数（报表生成器）](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教程&#40;报表生成器&#41;](../report-builder-tutorials.md)   
  [表达式中的内置集合（报表生成器和 SSRS）](built-in-collections-in-expressions-report-builder.md)  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 005c9fe0ff5ba3f998e80a93ea19d85c87331403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953253"
 ---
 # <a name="configure-report-manager-native-mode"></a>配置报表管理器（本机模式）
   报表管理器是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择 **“以默认的本机模式配置安装”** 选项，则可以将报表管理器与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并有选择地进行配置。 还可以在安装完成后配置报表管理器。 本主题提供有关以下报表管理器配置方案的信息：  
