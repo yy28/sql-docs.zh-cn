@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032318"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937473"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
   使用“选择数据源”页，可以选择用于报表或报表模型的现有共享数据源项， 还可以选择其他数据源。 若要查看数据源类型或连接字符串，必须导航到共享数据源并打开属性页。  

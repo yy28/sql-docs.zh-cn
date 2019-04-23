@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server 的功能依赖项 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/07/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,39 +11,39 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 820cc9f7faf3144852b761ac8b9ea3819935215f
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 1c96a896e6d42172400b4a326abdc99824c6ac52
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566406"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670915"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能依赖项
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本文列出了 Microsoft JDBC Driver for SQL Server 依赖于的库。 项目具有以下依赖项。
+本文列出了 Microsoft JDBC Driver for SQL Server 所依赖的库。 项目具有以下依赖项。
 
 ## <a name="compile-time"></a>编译时间
 
- - `com.microsoft.azure:azure-keyvault` ： Always Encrypted Azure 密钥保管库功能 （可选） azure 密钥保管库提供程序
- - `com.microsoft.azure:azure-keyvault-webkey` ： Always Encrypted Azure 密钥保管库功能 （可选） azure 密钥保管库提供程序
- - `com.microsoft.azure:adal4j` ： 用于 Java 的 Azure Active Directory 身份验证功能和 Azure 密钥保管库功能 （可选） azure Active Directory 库
- - `com.microsoft.rest:client-runtime` ： 用于 Java 的 Azure Active Directory 身份验证功能和 Azure 密钥保管库功能 （可选） azure Active Directory 库
-- `org.osgi:org.osgi.core`： OSGi Framework 支持的 OSGi 核心库。
-- `org.osgi:org.osgi.compendium`: OSGi 提要 OSGi Framework 支持的库。
+ - `com.microsoft.azure:azure-keyvault`：具有 Always Encrypted Azure Key Vault 功能的 Azure Key Vault 提供程序（可选）
+ - `com.microsoft.azure:azure-keyvault-webkey`：具有 Always Encrypted Azure Key Vault 功能的 Azure Key Vault 提供程序（可选）
+ - `com.microsoft.azure:adal4j`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
+ - `com.microsoft.rest:client-runtime`：具有 Azure Active Directory 身份验证功能和 Azure Key Vault 功能的用于 Java 的 Azure Active Directory 库（可选）
+- `org.osgi:org.osgi.core`：具有 OSGi Framework 支持的 OSGi Core 库。
+- `org.osgi:org.osgi.compendium`：具有 OSGi Framework 支持的 OSGi Compendium 库。
 
 ## <a name="test-time"></a>测试时间
 
-需要其中的上述功能的特定项目需要显式声明其 POM 文件中的相应依赖项。
+需要任何上述功能的特定项目需要显式声明其 POM 文件中的相应依赖项。
 
-例如：时要使用 Azure Active Directory 身份验证功能，需要重新声明`adal4j`项目的 POM 文件中的依赖关系。 请参阅以下代码片段：
+例如：时要使用 Azure Active Directory 身份验证功能，需要重新声明`adal4j`项目的 POM 文件中的依赖关系。 请查看以下代码片段：
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -60,13 +60,13 @@ ms.locfileid: "58566406"
 </dependency>
 ```
 
-例如：时要使用 Azure 密钥保管库功能，需要重新声明`azure-keyvault`依赖关系和`adal4j`项目的 POM 文件中的依赖关系。 请参阅以下代码片段：
+例如：时要使用 Azure 密钥保管库功能，需要重新声明`azure-keyvault`依赖关系和`adal4j`项目的 POM 文件中的依赖关系。 请查看以下代码片段：
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -97,32 +97,32 @@ ms.locfileid: "58566406"
 
 ## <a name="dependency-requirements-for-the-jdbc-driver"></a>JDBC Driver 的依赖项要求
 
-### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure 密钥保管库提供程序：
+### <a name="working-with-the-azure-key-vault-provider"></a>使用 Azure Key Vault 提供程序：
 
-- JDBC 驱动程序版本 7.2.1-依赖项版本： Azure 密钥保管库 （版本 1.2.0）、 Azure 密钥保管库 Webkey （版本 1.2.0）、 Adal4j （版本 1.6.3），客户端的运行时-为-AutoRest (1.6.5)，以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驱动程序版本 7.0.0-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.6.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC 驱动程序版本 6.4.0-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.4.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 驱动程序版本 6.2.2-依赖项版本： Azure 密钥保管库 （版本 1.0.0）、 Adal4j （版本 1.4.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 驱动程序版本 6.0.0-依赖项版本： Azure key Vault （0.9.7 版）、 Adal4j （版本 1.3.0），以及其依赖项 ([示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC 驱动程序版本 7.2.2 - 依赖项版本：Azure-Keyvault（版本 1.2.0）、Azure-Keyvault-Webkey（版本 1.2.0）、Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 7.0.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.6.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)）
+- JDBC 驱动程序版本 6.4.0 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)）
+- JDBC 驱动程序版本 6.2.2 - 依赖项版本：Azure-Keyvault（版本 1.0.0）、Adal4j（版本 1.4.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)）
+- JDBC 驱动程序版本 6.0.0 - 依赖项版本：Azure-Keyvault（版本 0.9.7）、Adal4j（版本 1.3.0）及其依赖项（[示例应用程序](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)）
 
 > [!NOTE]
-> 6.2.2 和 6.4.0 驱动程序版本中，azure 密钥保管库 java 依赖项具有已更新到版本 1.0.0。 但是，新版本不是与以前的版本 (0.9.7) 兼容，并且在驱动程序将中断现有的实现。 驱动程序中的新实现所需 API 更改，这反过来会中断客户端程序的使用 Azure 密钥保管库提供程序。
+> 使用 6.2.2 和 6.4.0 驱动程序版本，azure-keyvault-java 依赖项已更新为版本 1.0.0。 但是，新版本与上一版本 (0.9.7) 不兼容，并且会中断驱动程序中的现有实现。 驱动程序中的新实现需要 API 更改，因而会中断使用 Azure Key Vault 提供程序的客户端程序。
 >
-> 此问题得到解决与最新驱动程序版本 (7.0.0)。 已删除构造函数使用的身份验证回调机制添加回 Azure 密钥保管库提供程序的向后兼容性。
+> 最新驱动程序版本 (7.0.0) 可解决此问题。 使用了身份验证回调机制的已删除构造函数将重新添加到 Azure Key Vault 提供程序以进行向后兼容。
 
 ### <a name="working-with-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证：
 
-- JDBC 驱动程序版本 7.2.1-依赖项版本： Adal4j （版本 1.6.3），客户端的运行时-为-AutoRest (1.6.5)，以及其依赖项
-- JDBC 驱动程序版本 7.0.0-依赖项版本： Adal4j （版本 1.6.0） 及其依赖项
-- JDBC 驱动程序版本 6.4.0-依赖项版本： Adal4j （版本 1.4.0） 及其依赖项
-- JDBC 驱动程序版本 6.2.2-依赖项版本： Adal4j （版本 1.4.0） 及其依赖项
-- JDBC 驱动程序版本 6.0.0-依赖项版本： Adal4j （版本 1.3.0） 及其依赖项。 在此版本的驱动程序，您可以使用连接_ActiveDirectoryIntegrated_身份验证模式仅在 Windows 操作系统上，通过使用针对 SQL Server （sqljdbc_auth.dll 和 Active Directory 身份验证库ADALSQL。DLL)。
+- JDBC 驱动程序版本 7.2.2 - 依赖项版本：Adal4j（版本 1.6.3）、Client-Runtime-for-AutoRest (1.6.5) 及其依赖项
+- JDBC 驱动程序版本 7.0.0 - 依赖项版本：Adal4j（版本 1.6.0）及其依赖项
+- JDBC 驱动程序版本 6.4.0 - 依赖项版本：Adal4j（版本 1.4.0）及其依赖项
+- JDBC 驱动程序版本 6.2.2 - 依赖项版本：Adal4j（版本 1.4.0）及其依赖项
+- JDBC 驱动程序版本 6.0.0 - 依赖项版本：Adal4j（版本 1.3.0）及其依赖项。 在此版本的驱动程序中，可以仅在 Windows 操作系统上使用 ActiveDirectoryIntegrated 身份验证模式并使用 sqljdbc_auth.dll 和适用于 SQL Server 的 Active Directory 身份验证库 (ADALSQL.DLL) 进行连接。
 
-从驱动程序版本 6.4.0 以后，应用程序不一定需要使用 ADALSQL。在 Windows 操作系统上的 DLL。 有关*非 Windows 操作系统*，驱动程序需要使用 ActiveDirectoryIntegrated 身份验证的 Kerberos 票证。 有关如何通过使用 Kerberos 连接到 Active Directory 的详细信息，请参阅[Windows、 Linux 和 Mac 上的设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。
+从驱动程序版本 6.4.0 开始，应用程序不一定需要在 Windows 操作系统上使用 ADALSQL.DLL。 对于非 Windows 操作系统，驱动程序需要使用 Kerberos 票证才能进行 ActiveDirectoryIntegrated 身份验证。 有关如何使用 Kerberos 连接到 Active Directory 的详细信息，请参阅[在 Windows、Linux 和 Mac 上设置 Kerberos 票证](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)。
 
-有关*Windows 操作系统*，驱动程序默认情况下查找 sqljdbc_auth.dll 并不需要 Kerberos 票证设置或 Azure 库依赖项。 如果 sqljdbc_auth.dll 不可用，驱动程序查找进行其他操作系统上的 Active Directory 作为身份验证的 Kerberos 票证。
+对于 Windows 操作系统，驱动程序默认查找 sqljdbc_auth.dll，并且不需要 Kerberos 票证设置或 Azure 库依赖项。 如果 sqljdbc_auth.dll 不可用，驱动程序会查找用于在其他操作系统上对 Active Directory 进行身份验证的 Kerberos 票证。
 
-可以获取[示例应用程序](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)，它使用此功能。
+可以获取使用此功能的[示例应用程序](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)。
 
 ## <a name="see-also"></a>另请参阅
 

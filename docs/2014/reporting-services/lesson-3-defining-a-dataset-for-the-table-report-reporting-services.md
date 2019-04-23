@@ -1,5 +1,5 @@
 ---
-title: 第 3 课：定义数据集为表报表 (Reporting Services) |Microsoft Docs
+title: 第 3 课：定义表报表的数据集 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294335"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932483"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：定义数据集为表报表 (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 课：定义表报表的数据集 (Reporting Services)
   定义数据源后，您需要定义数据集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，在报表中使用的数据包含在“数据集”中。 数据集包括一个指向数据源的指针、将由报表使用的查询以及计算字段和变量。  
   
  可以在报表设计器中使用查询设计器来设计查询。 对于本教程，您将创建用于检索从销售订单信息的查询[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008年**数据库。  
@@ -69,7 +69,7 @@ ms.locfileid: "56294335"
      此时将在“报表数据”窗格中显示 **AdventureWorksDataset** 数据集和字段。  
   
 ## <a name="next-task"></a>下一个任务  
- 您已成功指定了一个用于检索报表数据的查询。 接下来将创建报表布局。 请参阅[第 4 课：向报表添加表&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
+ 您已成功指定了一个用于检索报表数据的查询。 接下来将创建报表布局。 请参阅[第 4 课：向报表添加表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [查询设计工具在报表设计器的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

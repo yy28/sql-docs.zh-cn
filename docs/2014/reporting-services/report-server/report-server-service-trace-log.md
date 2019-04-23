@@ -13,15 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010668"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948133"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是一个含有报表服务器服务操作详细信息的 ASCII 文本文件，其中包括由报表服务器 Web 服务、报表管理器和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
@@ -89,7 +89,7 @@ ms.locfileid: "56010668"
 |`Components`|按以下格式指定为其生成跟踪日志信息的组件以及跟踪级别：<br /><br /> \<component category>:\<tracelevel><br /><br /> 组件类别可以设置为：<br />`All` 用于跟踪未划分为特定类别的所有进程的常规报表服务器活动。<br />`RunningJobs` 用于跟踪正在进行中的报表或订阅操作。<br />`SemanticQueryEngine` 用于跟踪用户在基于模型的报表中执行即席数据浏览时处理的语义查询。<br />`SemanticModelGenerator` 用于跟踪模型生成。<br />`http` 用于启用报表服务器 HTTP 日志文件。 有关详细信息，请参阅 [Report Server HTTP Log](report-server-http-log.md)。<br /><br /> <br /><br /> 有效的跟踪级别值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式<br /><br /> 报表服务器的默认级别为“all:3”。<br /><br /> 可以指定所有或部分组件（`all`、`RunningJobs`、`SemanticQueryEngine`、`SemanticModelGenerator`）。 如果您不想生成特定组件的信息，则可以禁用其跟踪（例如“SemanticModelGenerator:0”）。 请不要禁用 `all` 的跟踪。<br /><br /> 如果您不对组件追加跟踪级别，将使用为 `DefaultTraceSwitch` 指定的值。 例如，如果指定“all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator”，所有组件将使用默认跟踪级别。<br /><br /> 如果要查看为每个语义查询生成的 Transact-SQL 语句，则可以设置“SemanticQueryEngine:4”。 Transact-SQL 语句记录到跟踪日志中。 下例说明将 Transact-SQL 语句添加到日志的配置设置：<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> 添加自定义配置设置以指定转储文件位置  
- 可以添加自定义设置来设置 Dr. Watson for Windows 工具用于存储转储文件的位置。 自定义设置为 `Directory`。 下例提供了如何在 `RStrace` 部分中指定此配置设置的说明：  
+ 可以添加自定义设置来设置 Dr. Watson 的 Windows 工具用于存储转储文件。 自定义设置为 `Directory`。 下例提供了如何在 `RStrace` 部分中指定此配置设置的说明：  
   
 ```  
 <add name="Directory" value="U:\logs\" />  

@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289516"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932853"
 ---
-# <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
+# <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&amp;gt;“设置”（报表生成器）
   单击**报表生成器**按钮，然后单击**选项**为显示最近使用的文件和连接设置选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
   
 ## <a name="uielement-list"></a>UIElement 列表  

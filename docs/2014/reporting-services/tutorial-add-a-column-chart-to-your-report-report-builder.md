@@ -1,5 +1,5 @@
 ---
-title: 教程：将柱形图添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加柱形图（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287085"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936853"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：将柱形图添加到您的报表 （报表生成器）
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教程：向报表添加柱形图（报表生成器）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图可能在以下方面十分有用：  
   
 -   显示一段时间内数据的更改。  
@@ -53,9 +53,9 @@ ms.locfileid: "56287085"
 9. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：15 分钟。  
+ 估计的时间才能完成本教程中：15 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  

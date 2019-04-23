@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a92fb78664e472ef65a5c9af9fca87e5b50fa1e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027908"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948083"
 ---
 # <a name="view-page-resources-report-manager"></a>资源的“视图”页（报表管理器）
   使用资源的“视图”页可以查看资源。 资源是在报表服务器上进行存储和管理、但不在报表服务器上进行处理（报表服务器处理报表和模型）的项。 当您要存储不由服务器处理的任意文档、图像或其他文件时，可以使用资源。 可以在报表管理器的“视图”页中查看大多数图像文件（例如 JPG、GIF 和 PNG 文件）。 其他资源在另一个应用程序窗口中打开。  

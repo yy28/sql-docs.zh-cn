@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029228"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944923"
 ---
 # <a name="error-page-report-manager"></a>“错误”页（报表管理器）
   使用“错误”页可以查看关于错误情况的详细信息。 在此页上会显示基于服务器的或基于会话的错误。 与特定页面控件有关的验证错误将排成一行显示在该控件旁边。  
@@ -27,7 +27,7 @@ ms.locfileid: "56029228"
   
 -   如果您看到类似于以下的错误消息，请参阅 [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)。  
   
-     无法找到计算机。 “RPC 服务器不可用。 （HRESULT 异常：0x800706BA)"。  
+     无法找到计算机。 “RPC 服务器不可用。 (异常来自 HRESULT:0x800706BA)"。  
   
 -   可以将 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果一条错误消息中包含文本"有关此错误的详细信息，导航到本地服务器上的报表服务器或启用远程错误"，请参阅[启用远程错误&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)。  
   

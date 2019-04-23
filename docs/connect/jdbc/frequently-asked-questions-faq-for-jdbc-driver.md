@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 常见问题解答 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6212f5088a94788c366bb8d1fc61938610ea0f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c60b0c86d1356dd4d15d2854184d0116316b823c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154854"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671253"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -27,68 +27,68 @@ ms.locfileid: "56154854"
 ## <a name="frequently-asked-questions"></a>常见问题
 
 **如何帮助改进 JDBC 驱动程序？**  
-JDBC 驱动程序开放源代码并且可以在上找到的源代码[GitHub](https://github.com/microsoft/mssql-jdbc)。 可以帮助改进提出问题并致力于代码库中的驱动程序。
+JDBC 驱动程序属于开放源代码，可以在 [GitHub](https://github.com/microsoft/mssql-jdbc) 上找到源代码。 可以通过归档问题和参与基本代码来帮助改进驱动程序。
 
 **驱动程序支持哪些版本的 SQL Server 和 Java？**  
 有关详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)页。
 
-**可在 Microsoft 下载中心上的 JDBC 驱动程序包和 GitHub 上提供的 JDBC 驱动程序之间的区别是什么？**  
-JDBC 驱动程序可用的文件上的 GitHub 存储库的 Microsoft JDBC 驱动程序的 JDBC 驱动程序的核心，在存储库中列出的开源许可。 Microsoft 下载中心上的驱动程序包包括用于 Windows 集成身份验证和启用 XA 事务用于 JDBC 驱动程序的其他库。 这些其他库是可下载的包中包含的许可证。
+**Microsoft 下载中心提供的 JDBC 驱动程序包和 GitHub 提供的 JDBC 驱动程序之间有什么区别？**  
+Microsoft JDBC Driver 的 GitHub 存储库提供的 JDBC 驱动程序文件是 JDBC 驱动程序的核心，并获得存储库中列出的开放源代码许可证的许可。 Microsoft 下载中心中的驱动程序包包括用于进行 Windows 集成身份验证和通过 JDBC 驱动程序启用 XA 事务的其他库。 这些其他库获得可下载包随附的许可证的许可。
 
 **升级驱动程序时，我应该知道什么？**
-Microsoft JDBC 驱动程序 7.2 支持 JDBC 4.2 和 4.3 （部分） 规范，并按如下所示安装包中包括两个 JAR 类库：
+Microsoft JDBC Driver 7.2 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下两个 JAR 类库：
 
 | JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 （部分） 和 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3（部分）和 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
- Microsoft JDBC 驱动程序 7.0 支持 JDBC 4.2 和 4.3 （部分） 规范，并按如下所示安装包中包括两个 JAR 类库：
+ Microsoft JDBC Driver 7.0 支持 JDBC 4.2 和 4.3（部分）规范，并且其安装包中包含以下两个 JAR 类库：
 
 | JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 （部分） 和 4.2 | JDK 10.0    |
+| mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3（部分）和 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
-Microsoft JDBC Driver 6.4 支持 JDBC 4.1、 4.2，和 4.3 （部分） 规范，并按如下所示的安装包中包含三个 JAR 类库：
+Microsoft JDBC Driver 6.4 支持 JDBC 4.1、4.2 和 4.3（部分）规范，并且其安装包中包含以下三个 JAR 类库：
 
 | JAR                       | JDBC 规范                 | 添加版本 |
 | ------------------------- | ---------------------------------- | ----------- |
-| mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 （部分）、 4.2 和 4.1 | JDK 9.0     |
+| mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3（部分）、4.2 和 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 和 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
 
-Microsoft JDBC Driver 6.2 支持 JDBC 4.0、 4.1 和 4.2 规范，并按如下所示安装包中包含两个 JAR 类库：
+Microsoft JDBC Driver 6.2 支持 JDBC 4.0、4.1 和 4.2 规范，并且其安装包中包含以下两个 JAR 类库：
 
 | JAR                       | JDBC 规范     | 添加版本 |
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.2、4.1 和 4.0 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 和 4.0       | JDK 7.0     |
 
-Microsoft JDBC Drivers 6.0 和 4.2 for SQL Server 支持 JDBC 4.0、 4.1 和 4.2 规范，并按如下所示安装包中包括两个 JAR 类库：
+Microsoft JDBC Driver 6.0 for SQL Server 和 Microsoft JDBC Driver 4.2 for SQL Server 支持 JDBC 4.0、4.1 和 4.2 规范，并且其安装包中包含以下两个 JAR 类库：
 
 | JAR           | JDBC 规范     | 添加版本 |
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.2、4.1 和 4.0 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 和 4.0       | JDK 7.0     |
 
-Microsoft JDBC Driver 4.1 for SQL Server 支持 JDBC 4.0 规范，并按如下所示安装包中包含一个 JAR 类库：
+Microsoft JDBC Driver 4.1 for SQL Server 支持 JDBC 4.0 规范，并且其安装包中包含以下一个 JAR 类库：
 
 | JAR           | JDBC 规范 | 添加版本     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 和 6.0 |
 
 **是否必须在应用程序中更改任何代码，才能结合使用最新驱动程序和我的现有版本 SQL Server？**  
-一般而言，驱动程序都具有向后兼容性，因此升级驱动程序时，无需更改现有应用程序。 在的新的驱动程序版本引入了一项重大更改， [JDBC 驱动程序的发行说明](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)部分提供有关更改以及对现有应用程序的影响的详细信息。 此外，还可以查看该驱动程序附带的发行说明，了解该版本中已修复的 bug 列表和已知问题。
+一般而言，驱动程序都具有向后兼容性，因此升级驱动程序时，无需更改现有应用程序。 如果新的驱动程序版本引入了重大更改，请参阅 [JDBC 驱动程序的发行说明](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)部分，了解有关更改的详细信息以及对现有应用程序的影响。 此外，还可以查看该驱动程序附带的发行说明，了解该版本中已修复的 bug 列表和已知问题。
 
 **驱动程序的费用是多少？**  
 Microsoft SQL Server JDBC 驱动程序是免费提供的，不需要额外付费。
 
 **我能否再分发驱动程序？**
-JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0 是可再发行组件。 查看许可协议中的"可分发代码"子句。
+JDBC 驱动程序 4.1、4.2、6.0、6.2、6.4 和 7.0 是可再发行的。 查看许可协议中的“可分发代码”子句。
 
 **我能否使用驱动程序从 Linux 计算机访问 Microsoft SQL Server？**
-可以！ 可以使用该驱动程序从 Linux、Unix 及其他非 Windows 平台访问 SQL Server。 有关详细信息，请参阅[Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
+可以！ 可以使用该驱动程序从 Linux、Unix 及其他非 Windows 平台访问 SQL Server。 有关详细信息，请参阅 [Microsoft JDBC Driver for SQL Server 支持矩阵](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
 
 **驱动程序是否支持安全套接字层 (SSL) 加密？**
 从 1.2 版起，该驱动程序就支持安全套接字层 (SSL) 加密。 有关详细信息，请参阅[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。
@@ -112,13 +112,13 @@ JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0 是可再发行组�
 是。 驱动程序支持使用 IPv6 地址。 使用连接属性集合和 serverName 连接字符串属性。 有关详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什么是自适应缓冲？**  
-开始 Microsoft SQL Server 2005 JDBC Driver 1.2 版中引入自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)和[什么是自适应响应缓冲以及我为何应使用它？](https://go.microsoft.com/fwlink/?LinkId=111575)博客文章。
+自 Microsoft SQL Server 2005 JDBC Driver 1.2 版起，引入了自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓冲](../../connect/jdbc/using-adaptive-buffering.md)和[什么是自适应响应缓冲以及我为何应使用它？](https://go.microsoft.com/fwlink/?LinkId=111575)博客文章。
 
 **驱动程序是否支持连接池？**  
 该驱动程序支持 Java 平台 Enterprise Edition 5 (Java EE 5) 连接池。 该驱动程序实现了 JDBC 3.0 所需的接口，从而参与到任何中间件应用程序供应商提供的任何连接池实现中。 该驱动程序将参与这些环境中的已池化连接。 有关详细信息，请参阅 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)。 该驱动程序不提供自己的池实现，而是依赖第三方的 Java 应用程序服务器。
 
 **能否获取驱动程序支持？**  
-该驱动程序提供几种支持选项。 可以发布问题或发给我们[GitHub 存储库](https://github.com/microsoft/mssql-jdbc)这由 Microsoft 进行监视。 [论坛](https://go.microsoft.com/fwlink/?LinkID=246673)由 Microsoft、 Mvp 和社区监控。 还可以联系 Microsoft 客户支持服务部门。 开发团队可能会要求你在任何第三方应用程序服务器外重现问题。 如果无法在托管 Java 容器环境外重现问题，你需要联系相关第三方，这样团队才能继续为你提供帮助。 团队可能会要求你重现问题如 Windows 操作系统上的，因此可以最好地支持问题。
+该驱动程序提供几种支持选项。 可以将疑问或问题发布到由 Microsoft 监视的 [GitHub 存储库](https://github.com/microsoft/mssql-jdbc)。 [论坛](https://go.microsoft.com/fwlink/?LinkID=246673)由 Microsoft、MVP 和社区监视。 还可以联系 Microsoft 客户支持服务部门。 开发团队可能会要求你在任何第三方应用程序服务器外重现问题。 如果无法在托管 Java 容器环境外重现问题，你需要联系相关第三方，这样团队才能继续为你提供帮助。 团队可能还会要求你在 Windows 等操作系统上重现问题，以便该问题获得最佳支持。
 
 **驱动程序是否已经过认证，可用于任何第三方应用程序服务器？**
 已针对各种应用程序服务器（包括 IBM WebSphere 和 SAP NetWeaver）对该驱动程序进行了测试。

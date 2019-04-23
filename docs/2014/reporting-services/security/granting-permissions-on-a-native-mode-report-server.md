@@ -20,15 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 892349a6a4ce2bbdd51670a92231c626129ae53b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1188f0d5cb68a86b6e3f3305ec9b5a40e51a8d3a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014558"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932809"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>授予对本机模式报表服务器的权限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的授权和身份验证子系统来确定哪些用户可以在报表服务器上执行操作和访问项。 基于角色的授权将角色分为用户或组可以执行的操作组。 身份验证基于内置的 Windows 身份验证或您提供的自定义身份验证模块。 您对这两种身份验证类型都可以使用预定义或自定义角色。  
@@ -66,7 +66,7 @@ ms.locfileid: "56014558"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>管理权限的任务和工具  
  使用以下工具可以管理角色定义和分配。  
   
-|工具|“任务”|  
+|Tool|“任务”|  
 |----------|-----------|  
 |Management Studio - 用于查看、修改、创建和删除角色定义。|[创建、删除或修改角色 (Management Studio)](role-definitions-create-delete-or-modify.md)|  
 |报表管理器 - 用于为用户和组分配角色。|[授予用户对报表服务器的访问权限（报表管理器）](grant-user-access-to-a-report-server.md)<br /><br /> [修改或删除角色分配（报表管理器）](role-assignments-modify-or-delete.md)|  

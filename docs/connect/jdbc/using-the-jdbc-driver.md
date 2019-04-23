@@ -1,7 +1,7 @@
 ---
-title: 使用 JDBC 驱动程序 |Microsoft Docs
+title: 使用 JDBC 驱动程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ec234f4a9d35b20b01f7752842dd6d59d1dc2ac
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 971b1aa8e8b3f2d75aa2178e109b4c8fb556c45d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154822"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671243"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
@@ -26,61 +26,61 @@ ms.locfileid: "56154822"
   
 ## <a name="choosing-the-right-jar-file"></a>选择正确的 JAR 文件
 
-Microsoft JDBC Driver 提供了不同 Jar 下使用与您的首选 Java Runtime Environment (JRE) 设置的对应关系中：
+Microsoft JDBC Driver 提供不同的 Jar，可对应用于首选的 Java Runtime Environment (JRE) 设置，如下所示：
 
-提供了 SQL Server 的 Microsoft JDBC 驱动程序 7.2 **mssql jdbc 7.2.1.jre8.jar**，并**mssql jdbc 7.2.1.jre11.jar**类库文件。
+Microsoft JDBC Driver 7.2 for SQL Server 提供 mssql-jdbc-7.2.2.jre8.jar 和 mssql-jdbc-7.2.2.jre11.jar 类库文件。
 
-SQL Server 的 Microsoft JDBC 驱动程序 7.0 提供了**mssql jdbc 7.0.0.jre8.jar**，并**mssql jdbc 7.0.0.jre10.jar**类库文件。
+Microsoft JDBC Driver 7.0 for SQL Server 提供 mssql-jdbc-7.0.0.jre8.jar 和 mssql-jdbc-7.0.0.jre10.jar 类库文件。
 
-Microsoft JDBC Driver 6.4 for SQL Server 提供了**mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**，并**mssql jdbc 6.4.0.jre9.jar**类库文件。
+Microsoft JDBC Driver 6.4 for SQL Server 提供 mssql-jdbc-6.4.0.jre7.jar、mssql-jdbc-6.4.0.jre8.jar 和 mssql-jdbc-6.4.0.jre9.jar 类库文件。
 
-Microsoft JDBC Driver 6.2 for SQL Server 提供了**mssql-6.2.2.jre7.jar**，并**mssql jdbc 6.2.2.jre8.jar**类库文件。
+Microsoft JDBC Driver 6.2 for SQL Server 提供 mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar 类库文件。
   
-Microsoft JDBC Drivers 6.0 和 4.2 for SQL Server 提供了**sqljdbc41.jar**，并**sqljdbc42.jar**类库文件。
+Microsoft JDBC Driver 6.0 for SQL Server 和 Microsoft JDBC Driver 4.2 for SQL Server 提供 sqljdbc41.jar 和 sqljdbc42.jar 类库文件。
   
-Microsoft JDBC Driver 4.1 for SQL Server 提供了**sqljdbc41.jar**类库文件。
+Microsoft JDBC Driver 4.1 for SQL Server 提供 sqljdbc41.jar 类库文件。
 
-你的选择还将确定可用功能。 若要选择哪个 JAR 文件的详细信息，请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+你的选择还将确定可用功能。 有关选择哪个 JAR 文件的详细信息，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="setting-the-classpath"></a>设置 Classpath
 
-Microsoft JDBC 驱动程序 jar 文件不是 Java SDK 的一部分，并且必须包含在用户应用程序的 Classpath 中。
+Microsoft JDBC Driver jar 不是 Java SDK 的一部分，必须包含在用户应用程序的 Classpath 中。
 
-如果使用 JDBC Driver 4.1 或 4.2 中，将 classpath 设置为包括**sqljdbc41.jar**或**sqljdbc42.jar**从相应的驱动程序下载的文件。
+如果使用 JDBC Driver 4.1 或 4.2，请设置 classpath 以包括来自相应驱动程序下载的 sqljdbc41.jar 或 sqljdbc42.jar 文件。
 
-如果使用 JDBC Driver 6.2 classpath 设置为包含**mssql-6.2.2.jre7.jar**或**mssql jdbc 6.2.2.jre8.jar**。
+如果使用 JDBC Driver 6.2，请设置 classpath 以包括 mssql-jdbc-6.2.2.jre7.jar 或 mssql-jdbc-6.2.2.jre8.jar。
 
-如果使用 JDBC Driver 6.4 classpath 设置为包含**mssql jdbc 6.4.0.jre7.jar**，* * mssql jdbc 6.4.0.jre8.jar 或**mssql jdbc 6.4.0.jre9.jar**。
+如果使用 JDBC Driver 6.4，请设置 classpath 以包括 mssql-jdbc-6.4.0.jre7.jar、、**mssql-jdbc-6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar。
 
-如果使用 JDBC 驱动程序 7.0 classpath 设置为包含**mssql jdbc 7.0.0.jre8.jar**或**mssql jdbc 7.0.0.jre10.jar**。
+如果使用 JDBC Driver 7.0，请设置 classpath 以包括 mssql-jdbc-7.0.0.jre8.jar 或 mssql-jdbc-7.0.0.jre10.jar。
 
-如果使用 JDBC 驱动程序 7.2 classpath 设置为包含**mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**。
+如果使用 JDBC Driver 7.2，请设置 classpath 以包括 mssql-jdbc-7.2.2.jre8.jar 或 mssql-jdbc-7.2.2.jre11.jar。
 
-如果 classpath 缺少正确的 Jar 文件的条目，则应用程序将引发常见`Class not found`异常。  
+如果 classpath 缺少正确 Jar 文件的条目，应用程序将引发常见的 `Class not found` 异常。  
 
-### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC 驱动程序 7.2
+### <a name="for-microsoft-jdbc-driver-72"></a>对于 Microsoft JDBC Driver 7.2
 
-**Mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**文件安装在以下位置：
+mssql-jdbc-7.2.2.jre8.jar 或 mssql-jdbc-7.2.2.jre11.jar 文件安装在以下位置：
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre11.jar
 ```
 
 以下代码片段是用于 Windows 应用程序的 CLASSPATH 语句示例：
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.2.jre11.jar`
 
 以下代码片段是用于 Unix/Linux 应用程序的 CLASSPATH 语句示例：
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
 
-请确保 CLASSPATH 语句包含一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如任一**mssql jdbc 7.2.1.jre8.jar**或**mssql jdbc 7.2.1.jre11.jar**。
+确保 CLASSPATH 语句仅包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-7.2.2.jre8.jar 或 mssql-jdbc-7.2.2.jre11.jar。
   
-### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC 驱动程序 7.0
+### <a name="for-microsoft-jdbc-driver-70"></a>对于 Microsoft JDBC Driver 7.0
 
-**Mssql jdbc 7.0.0.jre8.jar**或**mssql jdbc 7.0.0.jre10.jar**文件安装在以下位置：
+mssql-jdbc-7.0.0.jre8.jar 或 mssql-jdbc-7.0.0.jre10.jar 文件安装在以下位置：
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
@@ -96,11 +96,11 @@ Microsoft JDBC 驱动程序 jar 文件不是 Java SDK 的一部分，并且必�
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
-请确保 CLASSPATH 语句包含一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如任一**mssql jdbc 7.0.0.jre8.jar**或**mssql jdbc 7.0.0.jre10.jar**。
+确保 CLASSPATH 语句仅包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-7.0.0.jre8.jar 或 mssql-jdbc-7.0.0.jre10.jar。
 
-### <a name="for-microsoft-jdbc-driver-64"></a>有关 Microsoft JDBC Driver 6.4
+### <a name="for-microsoft-jdbc-driver-64"></a>对于 Microsoft JDBC Driver 6.4
 
-**Mssql jdbc 6.4.0.jre7.jar**，* * mssql jdbc 6.4.0.jre8.jar 或**mssql jdbc 6.4.0.jre9.jar**文件安装在以下位置：  
+mssql-jdbc-6.4.0.jre7.jar、**mssql-jdbc-6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar 文件安装在以下位置：  
 
 ```bash  
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
@@ -118,11 +118,11 @@ Microsoft JDBC 驱动程序 jar 文件不是 Java SDK 的一部分，并且必�
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
-请确保 CLASSPATH 语句包含一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，如任一**mssql jdbc 6.4.0.jre7.jar**，* * mssql jdbc 6.4.0.jre8.jar 或**mssql jdbc 6.4.0.jre9.jar**。
+确保 CLASSPATH 语句仅包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-6.4.0.jre7.jar、**mssql-jdbc-6.4.0.jre8.jar 或 mssql-jdbc-6.4.0.jre9.jar。
 
-### <a name="for-microsoft-jdbc-driver-62"></a>有关 Microsoft JDBC Driver 6.2
+### <a name="for-microsoft-jdbc-driver-62"></a>对于 Microsoft JDBC Driver 6.2
 
-**Mssql-6.2.2.jre7.jar**或**mssql jdbc 6.2.2.jre8.jar**文件安装在以下位置：
+mssql-jdbc-6.2.2.jre7.jar 或 mssql-jdbc-6.2.2.jre8.jar 文件安装在以下位置：
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
@@ -138,9 +138,9 @@ Microsoft JDBC 驱动程序 jar 文件不是 Java SDK 的一部分，并且必�
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-请确保 CLASSPATH 语句包含只有一个[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-6.2.2.jre7.jar 或 mssql jdbc 6.2.2.jre8.jar。  
+确保 CLASSPATH 语句仅包含一个 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如 mssql-jdbc-6.2.2.jre7.jar 或 mssql-jdbc-6.2.2.jre8.jar。  
 
-### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC 驱动程序 4.1、 4.2 和 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>对于 Microsoft JDBC Driver 4.1、4.2 和 6.0
 
 Sqljdbc.jar 文件、sqljdbc4.jar 文件、sqljdbc41.jar 或 sqljdbc42.jar 文件安装在以下位置：  
 
@@ -189,7 +189,7 @@ Enterprise Java Bean (EJB) 在 EJB 容器中运行。 EJB 容器来自多家供�
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
-加载驱动程序，可以通过使用连接 URL 和驱动程序管理器类的 getConnection 方法来建立连接：
+加载驱动程序后，可通过使用连接 URL 和 DriverManager 类的 getConnection 方法来建立连接：
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
@@ -199,12 +199,12 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 从 JDBC API 4.0 开始，`DriverManager.getConnection()` 方法得到了增强，可自动加载 JDBC 驱动程序。 因此，使用驱动程序 jar 库时，应用程序无需调用 `Class.forName` 方法来注册或加载驱动程序。  
   
-当调用驱动程序管理器类的 getConnection 方法时，相应的驱动程序会从已注册的 JDBC 驱动程序集中找到。 sqljdbc4.jar、 sqljdbc41.jar 或 sqljdbc42.jar 文件包括"META-INF/services/java.sql.Driver"文件，其中包含**com.microsoft.sqlserver.jdbc.SQLServerDriver**作为已注册的驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
+调用 DriverManager 类的 getConnection 方法时，会从已注册的 JDBC 驱动程序集中找到相应的驱动程序。 sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 文件包括“META-INF/services/java.sql.Driver”文件，其中包含 com.microsoft.sqlserver.jdbc.SQLServerDriver 作为注册驱动程序。 当前通过使用 Class.forName 方法加载驱动程序的现有应用程序将继续工作，无需进行修改。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 请参阅[JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)支持的 JRE 版本的列表[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+> sqljdbc4.jar、sqljdbc41.jar 或 sqljdbc42.jar 类库无法用于较早版本的 Java Runtime Environment (JRE)。 有关 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]支持的 JRE 版本的列表，请参阅 [JDBC 驱动程序的系统要求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
 
-有关如何连接数据源和使用连接 URL 的详细信息，请参阅[创建连接 URL](../../connect/jdbc/building-the-connection-url.md)并[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+有关如何与数据源连接和使用连接 URL 的详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md) 和[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 

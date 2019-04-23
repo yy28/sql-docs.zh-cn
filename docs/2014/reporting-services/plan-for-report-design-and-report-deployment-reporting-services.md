@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032008"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936823"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>报表设计和报表部署的规划 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了创作和部署报表的多个方法。 使用本主题帮助计划协同工作的报表创作环境和报表服务器。 本主题概述了 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 组件对报表定义的支持。 报表定义是用报表定义语言 (RDL) 或客户端报表定义语言 (RDLC) 编写的 XML 文件。 每个报表定义都符合位于该文件开头的特定架构版本的要求。  
@@ -56,13 +56,13 @@ ms.locfileid: "56032008"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 报表服务器和 RDL 架构支持  
  可以使用以下方法将报表定义文件部署到 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 报表服务器：  
   
--   **报表设计器：** 通过 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的报表设计器部署报表。  
+-   **报表设计器：** 报表设计器中的部署报表[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]。  
   
 -   **报表生成器：** 通过报表生成器将报表保存到报表服务器。  
   
--   **报表管理器：** 通过报表管理器将报表上载到本机模式报表服务器。  
+-   **报表管理器：** 将报表上载到本机模式报表服务器从报表管理器。  
   
--   **SharePoint:** 将报表上载到使用 SharePoint 模式报表服务器配置的 SharePoint 站点。  
+-   **SharePoint:** 将报表上载到 SharePoint 模式报表服务器使用配置的 SharePoint 站点。  
   
 -   **以编程方式：** 使用报表服务器的 SOAP API 接口以编程方式发布报表。 有关详细信息，请参阅 [Report Server Web Service](report-server-web-service/report-server-web-service.md)。  
   

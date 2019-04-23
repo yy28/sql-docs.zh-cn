@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012668"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933574"
 ---
 # <a name="application-domains-for-report-server-applications"></a>报表服务器应用程序的应用程序域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表服务器作为一个包含报表服务器 Web 服务、报表管理器和后台处理应用程序的服务来实现。 每个应用程序都在单个报表服务器进程中其各自的应用程序域中运行。 在大多数情况下，应用程序域是在内部创建、配置和管理的。 但是，如果要研究性能或内存问题并排除服务中断故障，则了解如何针对报表服务器应用程序域执行回收操作会非常有帮助。  
@@ -39,7 +39,7 @@ ms.locfileid: "56012668"
   
  下表总结了为响应这些事件而发生的应用程序域回收行为：  
   
-|事件|事件说明|适用对象|可配置|回收操作说明|  
+|Event|事件说明|适用对象|可配置|回收操作说明|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |以预定义的时间间隔执行的计划回收操作|默认情况下，应用程序域每 12 个小时回收一次。<br /><br /> 对于提升了总体进程运行状况的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序来说，计划的回收操作是通常的做法。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|是。 RSReportServer.config 文件中的 `RecycleTime` 配置设置可以确定回收时间间隔。<br /><br /> `MaxAppDomainUnloadTime` 设置了能够在其间完成后台处理的等待时间。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 管理 Web 服务和报表管理器的回收操作。<br /><br /> 对于后台处理应用程序，报表服务器为那些从计划中启动的新作业创建一个新的应用程序域。 已在进行中的作业将能够在当前的应用程序域中完成，直到等待时间过期。|  
 |报表服务器上的配置更改|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将为了响应 RSReportServer.config 文件中的更改而回收应用程序域。|报表服务器 Web 服务<br /><br /> 报表管理器<br /><br /> 后台处理应用程序|否。|您不能禁止执行回收操作。 但是，为了响应配置更改而执行的回收操作将按照与计划的回收操作相同的方式进行处理。 将为新请求创建新的应用程序域，而当前的请求和作业将在当前的应用程序域中完成。|  

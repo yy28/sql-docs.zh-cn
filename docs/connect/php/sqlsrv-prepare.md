@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676145"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582890"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,15 +66,15 @@ $params [可选]：对应于参数化查询中参数的值的阵列。 该阵列
     |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型。|  
     |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型。|  
   
-$options [可选]：关联阵列，用于设置查询属性。 下表列出了受支持的键和相应值：  
-  
+*$options* [可选]：关联阵列，用于设置<a name="properties">查询属性</a>。 下表列出了受支持的键和相应值：
+
 |Key|支持的值|描述|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|正整数|配置保留客户端游标的结果集的缓冲区大小。<br /><br />默认值为 10240 KB。 有关详细信息，请阅读[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
-|DecimalPlaces|介于 0 和 4 （含） 之间的整数|指定小数位数设置格式时提取金额值。<br /><br />将忽略任何负整数或值大于 4。<br /><br />此选项才可用 FormatDecimals 时才 **，则返回 true**。|
-|FormatDecimals|**true** 或 **false**<br /><br />默认值是 **false**秒。|指定是否要添加前导为在适当的时候十进制字符串置零，并使`DecimalPlaces`money 类型设置格式的选项。<br /><br />有关详细信息，请参阅[格式设置十进制字符串和 Money 值 （SQLSRV 驱动程序）](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
+|ClientBufferMaxKBSize|正整数|配置保留客户端游标的结果集的缓冲区大小。<br /><br />默认值为 10240 KB。 有关详细信息，请参阅[指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|
+|DecimalPlaces|介于 0 和 4 之间（含 0 和 4）的整数|指定设置提取的 Money 值格式时的小数位数。<br /><br />将忽略任何负整数或大于 4 的值。<br /><br />仅当 FormatDecimals 为 true 时，此选项才可用。|
+|FormatDecimals|**true** 或 **false**<br /><br />默认值是 **false**秒。|指定是否在合适时向十进制字符串添加前导零，并启用用于设置 Money 类型格式的 `DecimalPlaces` 选项。<br /><br />有关详细信息，请参阅[设置十进制字符串和 Money 值格式（SQLSRV 驱动程序）](../../connect/php/formatting-decimals-sqlsrv-driver.md)。|
 |QueryTimeout|正整数|设置查询超时（以秒为单位）。 默认情况下，驱动程序无限期等待结果。|  
-|ReturnDatesAsStrings|**true** 或 **false**<br /><br />默认值是 **false**秒。|将配置语句以字符串形式检索日期和时间类型 (**，则返回 true**)。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
+|ReturnDatesAsStrings|**true** 或 **false**<br /><br />默认值是 **false**秒。|将语句配置为以字符串的形式检索日期和时间类型 (true)。 有关详细信息，请参阅[如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。
 |可滚动|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|有关这些值的详细信息，请参阅 [指定游标类型和选择行](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
 |SendStreamParamsAtExec|**true** 或 **false**<br /><br />默认值为 **true**。|将驱动程序配置为在执行时发送所有流数据 (true)，或配置为在区块中发送流数据 (false)。 默认情况下，该值设置为 **true**。 有关详细信息，请参阅 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
   
@@ -223,10 +223,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建议使用字符串作为输入，绑定到的值时[decimal 或 numeric 的列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要确保的精确度和准确度，如 PHP 具有有限的精度[浮点数](https://php.net/manual/en/language.types.float.php)。 这同样适用于到 bigint 列，尤其是有效值的范围之外[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
-此代码示例演示如何将绑定十进制值作为输入参数。  
+此代码示例演示如何将十进制值作为输入参数进行绑定。  
 
 ```
 <?php

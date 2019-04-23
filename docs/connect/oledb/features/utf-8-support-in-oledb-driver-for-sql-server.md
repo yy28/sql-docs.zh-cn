@@ -2,7 +2,7 @@
 title: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持 | Microsoft Docs
 description: 适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,42 +10,42 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4a30b233190817faee581106db5c8a18695a00d1
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492599"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583010"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序中的 UTF-8 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Microsoft OLE DB 驱动程序的 SQL Server （版本 18.2.1） 添加了对 UTF-8 server 编码支持。 有关 SQL Server utf-8 支持的信息，请参阅：
+Microsoft OLE DB Driver for SQL Server（版本 18.2.1）添加了对 UTF-8 服务器编码的支持。 有关 SQL Server UTF-8 支持的信息，请参阅：
 - [排序规则和 Unicode 支持](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 支持](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
-## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>数据插入到 utf-8 编码的 CHAR 或 VARCHAR 列
-在创建时插入的输入的参数缓冲区，使用一个数组描述缓冲区[DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)。 每个 DBBINDING 结构将使用者的缓冲区的单个参数相关联，并包含信息，例如长度和数据值的类型。 对于输入的参数的类型为 CHAR，缓冲区*wType*的 DBBINDING 结构应设置为 DBTYPE_STR。 对于输入的参数缓冲区的类型 WCHAR *wType*的 DBBINDING 结构应设置为 DBTYPE_WSTR。
+## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>将数据插入到 UTF-8 编码的 CHAR 或 VARCHAR 列中
+创建输入参数缓冲区以便进行插入时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构将单个参数与使用者的缓冲区关联，并包含数据值的长度和类型等信息。 对于类型 CHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_STR。 对于类型 WCHAR 的输入参数缓冲区，DBBINDING 结构的 wType 应设置为 DBTYPE_WSTR。
 
-当执行带有参数的命令，该驱动程序构造参数数据类型信息。 如果输入的缓冲区类型和参数数据类型匹配，驱动程序中不进行任何转换。 否则，该驱动程序将转换为参数数据类型的输入的参数缓冲区。 参数数据类型可显式设置由用户通过调用[icommandwithparameters:: Setparameterinfo](https://go.microsoft.com/fwlink/?linkid=2071577)。 如果未提供的信息，该驱动程序 （a） 列的元数据从服务器中检索时准备的语句，或 （b） 尝试从输入的参数数据类型的默认转换派生参数数据类型信息。
+执行包含参数的命令时，驱动程序将构造参数数据类型信息。 如果输入缓冲区类型与参数数据类型匹配，则不会在驱动程序中进行任何转换。 否则，驱动程序会将输入参数缓冲区转换为参数数据类型。 用户可以通过调用 [ICommandWithParameters::SetParameterInfo](https://go.microsoft.com/fwlink/?linkid=2071577) 来显式设置参数数据类型。 如果未提供信息，则驱动程序会通过以下方式派生参数数据类型信息：(a) 当语句准备好后，从服务器中检索列元数据，或 (b) 尝试从输入参数数据类型进行默认转换。
 
-输入的参数缓冲区可能会转换为服务器列排序规则，该驱动程序或服务器，具体取决于输入的缓冲区的数据类型和参数数据类型。 在转换期间可能发生数据丢失，如果客户端代码页或数据库排序规则代码页不能表示在输入缓冲区中的所有字符。 下表介绍转换过程时将数据插入到 utf-8 启用列：
+输入参数缓冲区可以由驱动程序或服务器转换为服务器列排序规则，具体取决于输入缓冲区数据类型和参数数据类型。 在转换期间，如果客户端代码页或数据库排序规则代码页不能代表输入缓冲区中的所有字符，则可能会发生数据丢失。 下表介绍了将数据插入到启用了 UTF-8 的列中时的转换过程：
 
-|缓冲区的数据类型|参数数据类型|转换|用户预防措施|
+|缓冲区数据类型|参数数据类型|转换|用户预防措施|
 |---             |---                |---       |---            |
-|DBTYPE_STR|DBTYPE_STR|服务器从客户端代码页转换到数据库的排序规则代码页;服务器转换为数据库排序规则代码页为列排序规则代码页。|确保客户端代码页和数据库排序规则代码页可以表示的输入数据中的所有字符。 例如，若要插入波兰语字符，客户端代码页无法设置为 1250 （ANSI 中欧语），且数据库排序规则可以作为排序规则指示符 (例如，Polish_100_CI_AS_SC) 使用波兰语，或者是 utf-8 启用。|
-|DBTYPE_STR|DBTYPE_WSTR|驱动程序从客户端代码页转换到 utf-16 编码;服务器从 UTF 16 编码为列排序规则代码页转换。|请确保客户端代码页可以表示的输入数据中的所有字符。 例如，若要插入波兰语字符，客户端代码页可以设置为 1250 （ANSI 中欧语）。|
-|DBTYPE_WSTR|DBTYPE_STR|从 utf-16 编码为数据库排序规则代码页; 驱动程序转换服务器转换为数据库排序规则代码页为列排序规则代码页。|请确保数据库排序规则代码页可以表示的输入数据中的所有字符。 例如，若要插入波兰语字符，数据库排序规则代码页无法波兰语用作排序规则指示符 (例如，Polish_100_CI_AS_SC) 或采用 utf-8 启用。|
-|DBTYPE_WSTR|DBTYPE_WSTR|服务器转换为 utf-16 为列排序规则代码页。|无。|
+|DBTYPE_STR|DBTYPE_STR|服务器从客户端代码页转换为数据库排序规则代码页；服务器从数据库排序规则代码页转换为列排序规则代码页。|确保客户端代码页和数据库排序规则代码页可以代表输入数据中的所有字符。 例如，若要插入波兰语字符，可以将客户端代码页设置为 1250（ANSI 中欧字符），并且数据库排序规则可以将波兰语用作排序规则指示符（例如，Polish_100_CI_AS_SC），或启用 UTF-8。|
+|DBTYPE_STR|DBTYPE_WSTR|驱动程序从客户端代码页转换为 UTF-16 编码；服务器从 UTF-16 编码转换为列排序规则代码页。|确保客户端代码页可以代表输入数据中的所有字符。 例如，若要插入波兰语字符，可以将客户端代码页设置为 1250（ANSI 中欧字符）。|
+|DBTYPE_WSTR|DBTYPE_STR|驱动程序从 UTF-16 编码转换为数据库排序规则代码页；服务器从数据库排序规则代码页转换为列排序规则代码页。|确保数据库排序规则代码页可以代表输入数据中的所有字符。 例如，若要插入波兰语字符，数据库排序规则代码页可以将波兰语用作排序规则指示符（例如，Polish_100_CI_AS_SC），或启用 UTF-8。|
+|DBTYPE_WSTR|DBTYPE_WSTR|服务器从 UTF-16 转换为列排序规则代码页。|无。|
 
-## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>数据检索从 utf-8 编码的 CHAR 或 VARCHAR 列
-在创建时检索到的数据的缓冲区，使用一个数组描述缓冲区[DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)。 每个 DBBINDING 结构将检索到的行中的单个列相关联。 若要检索为 CHAR 的列数据，请设置*wType*到 DBTYPE_STR 的 DBBINDING 结构。 若要检索的列数据作为 WCHAR，设置*wType*为 DBTYPE_WSTR 的 DBBINDING 结构。
+## <a name="data-retrieval-from-a-utf-8-encoded-char-or-varchar-column"></a>从 UTF-8 编码的 CHAR 或 VARCHAR 列进行数据检索
+为检索到的数据创建缓冲区时，使用 [DBBINDING 结构](https://go.microsoft.com/fwlink/?linkid=2071182)的数组描述缓冲区。 每个 DBBINDING 结构都会关联检索到的行中的单个列。 若要将列数据检索为 CHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_STR。 若要将列数据检索为 WCHAR，请将 DBBINDING 结构的 wType 设置为 DBTYPE_WSTR。
 
-结果缓冲区类型指示符 DBTYPE_STR，驱动程序将 utf-8 编码数据转换为编码的客户端。 用户应确保客户端编码来表示这些数据从 utf-8 列，否则为可能会发生数据丢失。
+对于结果缓冲区类型指示符 DBTYPE_STR，驱动程序将 UTF-8 编码的数据转换为客户端编码。 用户应确保客户端编码可以代表 UTF-8 列中的数据，否则可能会发生数据丢失。
 
-结果缓冲区类型指示符 DBTYPE_WSTR，驱动程序将 utf-8 编码数据转换为 utf-16 编码。
+对于结果缓冲区类型指示符 DBTYPE_WSTR，驱动程序将 UTF-8 编码的数据转换为 UTF-16 编码。
   
 ## <a name="see-also"></a>另请参阅  
 [适用于 SQL Server 的 OLE DB 驱动程序功能](../../oledb/features/oledb-driver-for-sql-server-features.md) 
