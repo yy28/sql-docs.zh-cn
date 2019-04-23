@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1d8d52b8b725666b69cf596848ec6626f22814a1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290935"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970123"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  
@@ -71,8 +71,8 @@ ms.locfileid: "56290935"
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`， `DateTimeOffset`|  
-|`Integer`|`Int16`、`Int32`、`UInt16`、`Byte`、`SByte`|  
-|`Float`|`Single`、`Double`、`Decimal`|  
+|`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
+|`Float`|`Single`, `Double`, `Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
   
  必须指定数据类型时，你可以在表达式的 Value 部分指定你自己的转换。  

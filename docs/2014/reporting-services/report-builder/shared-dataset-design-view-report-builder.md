@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292579"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940403"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   共享数据集设计窗口有助于您创建可与他人共享的数据集查询。 通过该窗口，您可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -26,7 +26,7 @@ ms.locfileid: "56292579"
  有关使用报表中的数据的详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
   
 ##  <a name="Ribbon"></a> 功能区  
- 功能区可帮助您快速查找完成任务所需的命令。 命令分为以下逻辑组：连接、数据集和查询设计器。  
+ 功能区可帮助您快速查找完成任务所需的命令。 命令分为以下逻辑组：连接、 数据集和查询设计器。  
   
 ### <a name="connection"></a>连接  
  在“连接”组中使用 **“选择”** 按钮可以选择报表中的共享数据源，或浏览到报表服务器上的共享数据源。  

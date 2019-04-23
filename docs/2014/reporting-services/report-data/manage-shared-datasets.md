@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6132a860bcac091939f10d81d9049888e8c077b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0d32084abfb744c2c5f9fdf6f585c7713e3057d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027688"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962893"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -87,7 +87,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>如何在报表服务器上处理共享数据集属性  
  您可以使用各种工具来处理共享数据集。 下表汇总了这些方法和工具，并提供指向其他说明的链接。  
   
-|任务|工具|链接|  
+|任务|Tool|链接|  
 |----------|----------|----------|  
 |添加共享数据集或更改共享数据集定义属性。|在报表生成器中保存。<br /><br /> 在报表设计器中部署。<br /><br /> 在报表管理器中上载 .rsd 文件|msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [“上传文件”页（报表管理器）](../upload-file-page-report-manager.md)<br /><br /> 如果您首先上载一个共享数据集，然后发布该共享数据集所依赖的共享数据源，则必须手动将该共享数据集绑定到该共享数据源。 有关详细信息，请参阅 msdn.microsoft.com 上 [共享数据集的“常规”属性页（报表管理器）](../general-properties-page-shared-datasets-report-manager.md)。|  
 |更改共享数据集的项属性。|报表管理器|[共享数据集的“常规”属性页（报表管理器）](../general-properties-page-shared-datasets-report-manager.md)|  

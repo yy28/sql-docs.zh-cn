@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3e317659f4c0efb964b996de7afd46663538eed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017268"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958704"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向您通知令您感兴趣或对您重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。  
@@ -128,7 +128,7 @@ ms.locfileid: "56017268"
   
  下表列出了用于数据警报的配置元素、其默认值、说明和位置。  
   
-|设置|默认值|Description|位置|  
+|设置|默认值|Description|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|清理周期开始之间的分钟数。|报表服务器配置文件|  
 |AlertingExecutionLogCleanupMinutes|10080|要保留执行日志条目的分钟数。|报表服务器配置文件|  

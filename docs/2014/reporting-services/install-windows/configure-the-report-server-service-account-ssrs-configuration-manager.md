@@ -1,7 +1,7 @@
 ---
 title: 配置报表服务器服务帐户（SSRS 配置管理器）| Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 19eca52c1686f218b2c59449b139d684700822b5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328957"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970143"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
 
@@ -66,7 +66,7 @@ ms.locfileid: "53328957"
   
 - SQL Server 联机丛书中的[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
-- [服务和服务帐户安全规划指南](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
+- [服务和服务帐户安全计划指南](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>更新过期密码
 

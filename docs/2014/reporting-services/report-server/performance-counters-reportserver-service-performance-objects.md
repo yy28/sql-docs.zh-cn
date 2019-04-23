@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037608"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944543"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 性能对象的性能计数器
   本主题介绍以下 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 性能对象的性能计数器：  
@@ -68,7 +68,7 @@ ms.locfileid: "56037608"
 |`Logon Attempts/sec`|登录尝试的频率。|  
 |`Logon Successes Total`|RSWindows 身份验证类型的成功登录次数。 RSWindows 身份验证类型包括 RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos 和 RSWindowsB asic。 值为零 (0) 表示自定义身份验证。|  
 |`Logon Successes/sec`|登录成功率。|  
-|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1：无压力<br /><br /> 2：低压力<br /><br /> 3：中等压力<br /><br /> 4：高压力<br /><br /> 5：过度压力|  
+|`Memory Pressure State`|以下从 1-5 的数字，指示服务器的当前内存状态：<br /><br /> 1:没有压力<br /><br /> 2:低压力<br /><br /> 3:中等压力<br /><br /> 4:高压力<br /><br /> 5:过度的压力|  
 |`Memory Shrink Amount`|服务器请求缩小使用中内存的字节数。|  
 |`Memory Shrink Notifications/sec`|服务器上一秒内发出的缩小使用中内存的通知数。 该值表示服务器经历内存压力的频率。|  
 |`Requests Disconnected`|由于通信故障而断开连接的请求数。|  

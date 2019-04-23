@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025788"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955543"
 ---
 # <a name="model-item-security-page-report-manager"></a>“模型项安全性”页（报表管理器）
   使用此页，可以通过针对特定项授予或撤消只读权限来保护模型的各个部分。 模型项安全性不但会影响运行时的即席数据浏览，而且还会影响在报表生成器中创建报表时对已发布模型各部分的使用。 若要使用此功能，必须具有“内容管理员”权限。  

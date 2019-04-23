@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288885"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962173"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>“选择多维数据集”对话框（报表生成器）
   使用 **“选择多维数据集”** 对话框可以选择其他多维数据集作为报表的数据源。 选择其他多维数据集后，查询可能不再有效。  

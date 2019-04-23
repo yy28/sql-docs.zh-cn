@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025138"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954964"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
   从 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]开始，SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务器可以将 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件写入 SharePoint 统一日志记录服务 (ULS) 跟踪日志。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的类别在 SharePoint 管理中心的“监视”页上提供。  
@@ -40,7 +40,7 @@ ms.locfileid: "56025138"
 ##  <a name="bkmk_general"></a> 一般 ULS 日志建议  
  下表列出了监视 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境的推荐事件类别和级别。 记录事件时，每一项都包括记录事件的时间、进程名和线程 ID。  
   
-|类别|级别|Description|  
+|Category|级别|Description|  
 |--------------|-----------|-----------------|  
 |“数据库”|“详细”|记录涉及数据库访问的事件。|  
 |常规|“详细”|记录涉及访问以下各项的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 网页<br /><br /> 报表查看器 HTTP 处理程序<br /><br /> 报表访问（.rdl 文件）<br /><br /> 数据源（.rsds 文件）<br /><br /> SharePoint 网站上的 URL（.smdl 文件）|  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |报表服务器提供程序||  
 |报表服务器呈现||  
 |报表服务器报表预览||  
-|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services starting SKU:Evaluation<br /><br /> MediumEvaluation copy：剩余 180 天|  
+|报表服务器资源实用工具|示例条目：<br /><br /> MediumReporting Services 从开始 SKU:Evaluation<br /><br /> MediumEvaluation copy:剩余 180 天|  
 |报表服务器运行作业||  
 |报表服务器运行请求||  
 |报表服务器计划||  

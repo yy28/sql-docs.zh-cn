@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e26e26bbf923a960f8da878ec46662860d157a00
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041668"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954993"
 ---
 # <a name="define-query-parameters-dialog-box"></a>“定义查询参数”对话框
   当您在设计阶段在查询设计器中运行查询以查看示例数据时，可以使用 **“定义查询参数”** 对话框指定参数值。 查询参数对数据源的数据进行筛选，并帮助限制报表处理的数据量。 这些值不会保存到报表定义中。  

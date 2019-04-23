@@ -1,5 +1,5 @@
 ---
-title: 教程：将迷你图添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加迷你图（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294725"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951233"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：将迷你图添加到您的报表 （报表生成器）
   在本教程中，您将基于示例销售数据创建一个基本的表报表，然后向该表的单元中添加迷你图。  
   
  您在本教程中创建的报表的增强版本可用作示例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 报表生成器报表。 有关下载此示例报表和其他内容的详细信息，请参阅[报表生成器示例报表](https://go.microsoft.com/fwlink/?LinkId=184851)。 下图显示与您将创建的报表类似的示例报表。  
@@ -49,7 +49,7 @@ ms.locfileid: "56294725"
   
  9. [保存报表](#Save)  
   
- 本教程的预计学时：30 分钟。  
+ 估计的时间才能完成本教程中：30 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -183,7 +183,7 @@ ms.locfileid: "56294725"
   
 14. 表将添加到设计图面中。 此表有三列和三行。  
   
-     在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 “行组”窗格显示一个行组：**产品**。 “列组”窗格显示一个列组：**SalesDate**。 详细信息数据是由数据集查询检索的所有数据。  
+     在“分组”窗格中查找。 如果未显示“分组”窗格，请在“视图”菜单上，单击“分组”。 行组窗格显示一个行组：“Product”。 列组窗格显示一个列组：“SalesDate”。 详细信息数据是由数据集查询检索的所有数据。  
   
 15. 单击 **“运行”** 以预览报表。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56294725"
   
  请注意，所有条形现在与其他行中的条形对齐。  
   
-##  <a name="FormatCurrency"></a> 5.（可选）将数据格式设置为货币格式  
+##  <a name="FormatCurrency"></a> 5.（可选）数据格式设置为货币  
  默认情况下，“Sales”字段的汇总数据显示为常规数字。 请设置其格式，以使其显示货币形式的数字。 切换“占位符样式”，将格式化的文本框和占位符文本显示为示例值。  
   
 #### <a name="to-format-a-currency-field"></a>设置货币字段格式  

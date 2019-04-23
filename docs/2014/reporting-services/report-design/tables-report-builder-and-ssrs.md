@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a6b1802f45183f862a5ab6a9cf5c892383e3cbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286645"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970133"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>表（报表生成器和 SSRS）
   使用表可显示详细信息数据或分组数据或同时显示这两种数据。 可以按单个字段、多个字段或通过编写自己的表达式来对数据进行分组。 可以创建嵌套组或独立的相邻组。 若要显示分组数据的聚合值，可向这些组添加总计。 可设置行和列的格式以突出显示要强调的数据。 可以在开始时隐藏详细信息数据或分组数据，并包括明细切换以使用户能够交互选择要显示的数据量。  
@@ -24,7 +24,7 @@ ms.locfileid: "56286645"
 > [!NOTE]  
 >  您可以将表作为报表部件与报表分开发布。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速开始使用表，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或[创建基本表报表&#40;SSRS 教程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速开始使用表，请参阅[教程：生成基本表报表（报表生成器）](../tutorial-creating-a-basic-table-report-report-builder.md)或[生成基本表报表（SSRS 教程）](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 示例报表包括若干使用表的报表。 您可以通过以下方式了解有关表的信息：通过在报表生成器或报表设计器中浏览示例报表的报表定义，或通过在报表生成器或报表设计器中预览所呈现的报表。 有关下载示例报表的详细信息，请参阅 [(SSRS) Reporting Services 示例](https://go.microsoft.com/fwlink/?LinkID=198283)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56286645"
   
  ![设计图面上的表模板，选中](../media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
   
- 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行句柄](../media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图显示了表数据区域具有以下字段：日期、 订单、 产品、 Qty 和行总计。  
+ 数据行的行句柄显示详细信息符号（![包含 3 条用于详细信息行的平行线的行句柄](../media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")）。 若要显示这些行中的数据，可将字段从“报表数据”窗格拖到表头行或详细信息行中的表单元格。 两行会同时填充。 若要添加其他列，请将字段拖到表中，直到看到插入点。 在将数据集字段添加到表之后，可以更改日期和货币的默认格式以控制它们在报表中的显示方式。 下图展示了包含下面这些字段的表数据区域：“Date”、“Order”、“Product”、“Qty”和“Line Total”。  
   
  ![设计，具有用粗体显示的列标题的表](../media/rs-basictabledetailsformatteddesign.gif "Design, Table with column headers in Bold")  
   

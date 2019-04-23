@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4aaea45ff2059564bf2215aa4728dee80e4539b3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 46e3db8807e8e730ce0476f27d2dad0e3a64eaf4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298395"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969083"
 ---
 # <a name="design-the-query"></a>设计查询
   使用报表向导的此页来创建查询，可以手动键入查询，使用查询生成器来交互生成查询，或从另一个表中导入查询。  

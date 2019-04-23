@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70b4e9e4dcaf70a34287ae6b216b9faf1749b55b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b461114bdab4ae982356f550bb1cf146b3a3d762
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016198"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958883"
 ---
 # <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>SecureConnectionLevel 属性 (WMI MSReportServer_ConfigurationSetting)
   返回 RSReportServer.config 文件中指定的安全连接级别。 只读。  

@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1e2309050495316946693adc84a97315f0b597a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43252bcc1600a0d257ac2448a716a1fbab596bfa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034788"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959143"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>SMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
   从报表服务器配置文件中获取 SMTP 服务器属性。 只读。  

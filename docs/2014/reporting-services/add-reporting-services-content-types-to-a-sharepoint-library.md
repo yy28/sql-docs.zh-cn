@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 74fdfc58d2988ec9d07343e2ebe1651479514e6f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030848"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966553"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>将报表服务器内容类型添加到库中（SharePoint 集成模式下的 Reporting Services）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供预定义的 SharePoint 内容类型，用于管理共享数据源 (.rsds) 文件、报表模型 (.smdl) 和报表生成器报表定义 (.rdl) 文件。 将 **“报表生成器报表”**、 **“报表模型”** 和 **“报表数据源”** 内容类型添加到库中将启用 **“新建”** 命令，以便创建对应类型的新文档。  
@@ -117,7 +117,7 @@ ms.locfileid: "56030848"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 为单个文档库启用内容类型管理 (SharePoint 2010)  
   
-1.  打开要为其启用多个内容类型的库。 在库的菜单栏上，应能看到以下菜单：**新**，**上传**，**操作**，并且**设置**。 如果未看到 **“设置”**，则说明您没有添加内容类型的权限。  
+1.  打开要为其启用多个内容类型的库。 在库的菜单栏，你会看到以下菜单：**新**，**上传**，**操作**，并且**设置**。 如果未看到 **“设置”**，则说明您没有添加内容类型的权限。  
   
 2.  在 **“库工具”** 功能区上单击 **“库”**。  
   

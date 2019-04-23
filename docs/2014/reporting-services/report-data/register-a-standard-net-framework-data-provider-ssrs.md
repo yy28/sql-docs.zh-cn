@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f433d2896aab3e6faaffe14e6e0be497d1710fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 345b508f230fa6d566ae05919af2d4f43105dc8b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024858"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969995"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>注册标准 .NET Framework 数据访问接口 (SSRS)
   若要使用第三方 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序检索 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表数据集的数据，需要在以下两个位置部署和注册 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集：报表创作客户端和报表服务器。 在报表创作客户端上，必须将数据访问接口注册为数据源类型并将其与查询设计器相关联。 然后，可以在创建报表数据集时选择此数据访问接口作为数据源类型。 关联的查询设计器会打开，帮助您为此数据源类型创建查询。 在报表服务器上，必须将该数据访问接口注册为数据源类型。 然后，可以处理使用此数据访问接口从数据源检索数据的已发布报表。  
@@ -59,7 +59,7 @@ ms.locfileid: "56024858"
   
 4.  添加 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的条目。  
   
-    |Attribute|Description|  
+    |特性|Description|  
     |---------------|-----------------|  
     |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 创建新数据源时，此处包含的值显示在数据源类型下拉列表中。|  
     |`Type`|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  
@@ -132,7 +132,7 @@ ms.locfileid: "56024858"
   
 4.  添加该数据访问接口的条目。  
   
-    |Attribute|Description|  
+    |特性|Description|  
     |---------------|-----------------|  
     |`Name`|提供数据访问接口的唯一名称，例如 **MyNETDataProvider**。 `Name` 属性的最大长度是 255 个字符。 该名称在配置文件的 `Extension` 元素内的所有条目中必须唯一。 创建新数据源时，在此处包含的值显示在数据源类型下拉列表中。|  
     |`Type`|输入包括实现 <xref:System.Data.IDbConnection> 接口的类的完全限定命名空间在内的逗号分隔的列表，后跟 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序程序集的名称（不包含 .dll 文件扩展名）。|  

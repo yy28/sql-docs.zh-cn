@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b820e36ba4c7fd90398ba5984a2d43bbd29b3746
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b2bd5c489bf799e39b51bf61f0f9e8922a993f65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039598"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947553"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>向场中添加另一个 Reporting Services Web 前端
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包括应用程序服务器和 Web 前端 (WFE) 服务器所需的组件。 本主题主要介绍如何为 WFE 服务器安装所需的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能（例如订阅、数据警报和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）使用的应用程序页。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装是安装用于 SharePoint 2010 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  
@@ -58,7 +58,7 @@ ms.locfileid: "56039598"
 |安装 SharePoint 2010 产品。|1） 选择**服务器场**安装类型。<br /><br /> 2） 选择**完成**服务器类型。<br /><br /> 3) 安装完成后，如果你的现有 SharePoint 场已安装 SharePoint 2010 SP1，则不要运行 SharePoint 产品配置向导。 您应该在运行 SharePoint 产品配置向导之前安装 SharePoint SP1。|  
 |安装 SharePoint Server 2010 SP1。|如果您的现有 SharePoint 场具有 SharePoint 2010 SP1 安装下载并安装从 SharePoint 2010 SP1:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)。<br /><br /> 有关 SharePoint 2010 SP1 的详细信息，请参阅 [安装 Office 2010 SP1 和 SharePoint 2010 SP1 时的已知问题](https://support.microsoft.com/kb/2532126)：|  
 |运行 SharePoint 产品配置向导以便向场中添加服务器。|1） 在**Microsoft SharePoint 2010 产品**程序组中，单击**Microsoft SharePoint 2010 产品配置向导**。<br /><br /> 2） 在**连接到服务器场**页上，选择**连接到现有场**然后单击**下一步**。<br /><br /> 3） 在**指定配置数据库设置**页上，键入用于现有场和配置数据库的名称的数据库服务器的名称。 单击“下一步” 。<br />**&#42;&#42;重要&#42; &#42;** 如果你看到类似以下的错误消息并且确认你拥有的权限，然后验证中的 SQL Server 网络配置启用了哪些协议**Sql Server配置管理器**。 "无法连接到数据库服务器。 请确保数据库存在，是 Sql Server，并且您具有适当的权限来访问服务器。"<br />**&#42;&#42;重要&#42; &#42;** 如果你看到页面**服务器场产品和修补程序状态**，将需要查看页上的信息并使用所需文件更新服务器，可以继续将联接向该场服务器。<br /><br /> 4） 在**指定场安全设置**页上键入场的通行短语，然后单击**下一步**。 在确认页上单击 **“下一步”** 以便运行向导。<br /><br /> 5） 单击**下一步**运行**在场配置向导中**。|  
-|验证服务器已添加到 SharePoint 场。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 确认新的服务器已添加并且状态正确。<br /><br /> 3） 若要从 WFE 角色删除此服务器，请单击**管理服务器上的服务**和停止服务**Microsoft SharePoint Foundation Web 应用程序**。|  
+|验证服务器已添加到 SharePoint 场。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 确认新的服务器是否已添加且状态是否正确。<br /><br /> 3） 若要从 WFE 角色删除此服务器，请单击**管理服务器上的服务**和停止服务**Microsoft SharePoint Foundation Web 应用程序**。|  
 |安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品外接程序。|有几种方法可安装外接程序。 以下步骤使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 有关安装外接程序的详细信息，请参阅[安装或卸载 Reporting Services 外接 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装：<br /><br /> 1) 在“设置角色”页上，选择“SQL Server 功能安装”<br /><br /> 2） 在**功能选择**页上，选择**Reporting Services 外接程序用于 SharePoint 产品**<br /><br /> 3） 单击**下一步**下一步的多个页面以完成安装选项上。<br /><br /> 有关安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的详细信息，请参阅 [安装适用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。|  
 |验证新服务器是否正常运行。|1) 在 SharePoint 管理中心的“系统设置”组中，单击“管理此场中的服务器”。<br /><br /> 2) 验证列表中是否包含新的服务器。|  
 |更新您的 NLB 解决方案。|如果需要，更新您的硬件或软件的 NLB 环境，以便包括新的服务器。|  

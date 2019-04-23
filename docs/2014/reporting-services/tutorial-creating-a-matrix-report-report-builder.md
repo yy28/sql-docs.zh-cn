@@ -1,5 +1,5 @@
 ---
-title: 教程：创建矩阵报表 （报表生成器） |Microsoft Docs
+title: 教程：生成矩阵报表（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288407"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965693"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：创建矩阵报表 （报表生成器）
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教程：生成矩阵报表（报表生成器）
   本教程教您如何基于示例销售数据创建基本矩阵报表。 该矩阵具有嵌套行组和列组，以及相邻列组。 您将学习如何设置列的格式以及旋转文本。 下图显示与您将创建的报表类似的报表。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -48,7 +48,7 @@ ms.locfileid: "56288407"
   
 1.  [旋转文本框 270 度](#RotateTextBox)  
   
- 本教程的预计学时：20 分钟。  
+ 估计的时间才能完成本教程中：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "56288407"
   
 5.  单击“下一步” 。  
   
-6.  上**选择数据源的连接**页上，选择现有数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  上**选择数据源的连接**页上，选择现有数据源或浏览到报表服务器，然后选择数据源。 如果没有可用数据源，或您无权访问报表服务器，您可以改用嵌入数据源。 有关创建嵌入的数据源的详细信息，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56288407"
   
 10. 单击“下一步” 。  
   
-##  <a name="Groups"></a> 2.使用新的表或矩阵向导组织数据并选择布局和样式  
+##  <a name="Groups"></a> 2.组织数据并选择布局和样式的新表或矩阵向导  
  使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成矩阵设计之前展现对数据进行分组的结果。  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>将数据组织到组中并选择布局和样式  
@@ -160,7 +160,7 @@ ms.locfileid: "56288407"
   
 13. 单击 **“完成”**。  
   
-     矩阵将添加到设计图面中。 行组窗格显示了两个行组：Territory 和 SalesDate。 列组窗格显示两个列组：子类别和产品。 详细信息数据是由数据集查询检索的所有数据。  
+     矩阵将添加到设计图面中。 “行组”窗格显示两个行组：“Territory”和“SalesDate”。 “列组”窗格显示两个列组：“Subcategory”和“Product”。 详细信息数据是由数据集查询检索的所有数据。  
   
 14. 单击 **“运行”** 以预览报表。  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031728"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955883"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)。  
@@ -58,14 +58,14 @@ ms.locfileid: "56031728"
 ||`GetDataSourceContents` 以 XML 形式显示给定共享的数据源的属性。 如果您的浏览器支持 XML，且如果您对于该数据源是具有 `Read Contents` 权限的经过身份验证的用户，则将显示数据源定义。<br /><br /> `Native` 模式示例：<br /><br /> `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`<br /><br /> `SharePoint` 模式示例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`|  
 ||`GetResourceContents` 呈现资源并将其显示在 HTML 页中，如果该资源与浏览器兼容。 否则，系统会提示您打开文件或资源或将其保存到磁盘。<br /><br /> `Native` 模式示例：<br /><br /> `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`<br /><br /> `SharePoint` 模式示例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`|  
 ||`GetComponentDefinition` 显示与已发布的报表项关联的 XML 定义。 您必须具有`Read Contents`上发布的报表项的权限，才能使用此值。|  
-|*格式*|指定报表呈现的格式。 常用值包括 `ATOM`、`HTML4.0`、`MHTML`、`IMAGE`、`EXCEL`、`WORD`、`CSV`、`PDF`、`XML`。 默认值是 `HTML4.0`。 有关详细信息，请参阅 [Export a Report Using URL Access](export-a-report-using-url-access.md)。<br /><br /> 例如，若要直接从 `Native` 模式报表服务器获取报表的 PDF 副本。<br /><br /> `http://myrshost/ReportServer?/myreport&rs:Format=PDF`<br /><br /> 例如在`SharePoint`模式。<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF`|  
+|*格式*|指定报表呈现的格式。 常用值包括 `ATOM`、`HTML4.0`、`MHTML`、`IMAGE`、`EXCEL`、`WORD`、`CSV`、`PDF`、`XML`。 默认值为 `HTML4.0`。 有关详细信息，请参阅 [Export a Report Using URL Access](export-a-report-using-url-access.md)。<br /><br /> 例如，若要直接从 `Native` 模式报表服务器获取报表的 PDF 副本。<br /><br /> `http://myrshost/ReportServer?/myreport&rs:Format=PDF`<br /><br /> 例如在`SharePoint`模式。<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF`|  
 |*ParameterLanguage*|提供在与浏览器语言无关的 URL 中传递的参数的语言。 默认值为浏览器语言。 该值可以为区域性值，如 `en-us` 或 `de-de.`。<br /><br /> 例如在 `Native` 模式中，将覆盖浏览器语言并指定区域性值 de-DE。<br /><br /> `http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE`|  
 |*快照*|基于报表历史记录快照呈现报表。 有关详细信息，请参阅 [使用 URL 访问呈现报表历史记录快照](render-a-report-history-snapshot-using-url-access.md)。<br /><br /> 例如在 `Native` 模式中，请检索日期为 2003-04-07 且时间戳为 13:40:02 的报表历史记录快照。<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
-|*PersistStreams*|呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值是 `false`。|  
+|*PersistStreams*|呈现单个持久流中的报表。 图像呈现器使用此参数，通过一次传输一块的方式传输呈现的报表。 在 URL 访问字符串中使用此参数后，将相同的 URL 访问字符串用于 *GetNextStream* 参数而非 *PersistStreams* 参数可以获取持久流中的下一个块。 此 URL 命令最终将返回 0 字节流，以指明持久流结束。 默认值为 `false`。|  
 |*GetNextStream*|在使用 PersistStreams 参数访问的持久流中获取下一个数据块。 有关详细信息，请参阅 *PersistStreams*的说明。 默认值是 `false`。|  
 |*SessionID*|指定客户端应用程序和报表服务器之间已建立的活动报表会话。 此参数的值设置为会话标识符。<br /><br /> 您可以将会话 ID 指定为 cookie 或 URL 的一部分。 在报表服务器已配置为不使用会话 cookie 时，没有指定会话 ID 的第一个请求将导致具有某一会话 ID 的重定向。 有关报表服务器会话的详细信息，请参阅 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)。|  
-|*ClearSession*|`true` 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同报表参数值运行多次的同一报表。）默认值是 `false`。|  
-|*ResetSession*|`true` 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值是 `false`。|  
+|*ClearSession*|`true` 值指示报表服务器从报表会话中删除报表。 与经过身份验证的用户相关联的所有报表实例都将从报表会话中删除。 （报表实例定义为使用不同的报表参数值多次运行在同一报表中）。默认值为 `false`。|  
+|*ResetSession*|`true` 值指示报表服务器通过删除报表会话与所有报表快照的关联来重置报表会话。 默认值为 `false`。|  
 |*ShowHideToggle*|切换报表部分的显示和隐藏状态。 指定用于表示要切换的部分的正整数。|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>报表查看器 Web 部件命令 (rv:)  

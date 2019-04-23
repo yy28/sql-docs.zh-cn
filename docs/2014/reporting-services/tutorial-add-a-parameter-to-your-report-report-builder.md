@@ -1,5 +1,5 @@
 ---
-title: 教程：将参数添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加参数（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966513"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：将参数添加到您的报表 （报表生成器）
   通过向报表添加参数，用户可以筛选来自数据源的报表数据或报表中的报表数据。 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298655"
 10. [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为一个过程。 有关如何浏览到报表服务器的分步说明，选择数据源，并创建数据集，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为一个过程。 有关如何转到报表服务器、选择数据源和创建数据集的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：25 分钟。  
+ 估计的时间才能完成本教程中：25 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="Setup"></a> 1.使用表或矩阵向导创建矩阵报表和数据集  
+##  <a name="Setup"></a> 1.从表或矩阵向导创建矩阵报表和数据集  
  创建矩阵报表、数据源和数据集。  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298655"
   
 12. 单击“下一步” 。  
   
-##  <a name="CompleteWizard"></a> 2.使用表或矩阵向导组织数据并选择布局和样式  
+##  <a name="CompleteWizard"></a> 2.组织数据，并选择布局和样式表或矩阵向导  
  使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
 #### <a name="to-organize-data-into-groups"></a>将数据组织到组中  
@@ -327,7 +327,7 @@ ms.locfileid: "56298655"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Store 列标题包含复杂表达式的显示文本：**<\<Expr >>**。  
+     店铺列标题包含复杂表达式的显示文本：**<\<Expr >>**。  
   
 8.  预览报表。  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298655"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 在刚创建的表达式的前面的文本框中单击，然后键入以下内容：“所选的参数值:”。  
+15. 在刚创建的表达式的前面的文本框中单击，然后键入以下内容：所选的参数值:。  
   
 16. 预览报表。  
   

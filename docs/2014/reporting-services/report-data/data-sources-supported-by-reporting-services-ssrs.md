@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032698"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955533"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -88,23 +88,23 @@ ms.locfileid: "56032698"
 ## <a name="supported-data-sources"></a>支持的数据源  
  下表列出了可用来为报表数据集和报表模型检索数据的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据处理扩展插件和数据访问接口。 有关扩展插件或数据访问接口的详细信息，请单击第二列中的链接。 表中各列的说明如下：  
   
--   报表数据源：要访问的数据的类型，例如，关系数据库、多维数据库、平面文件或 XML。 此列解答问题：“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可为报表使用哪些类型的数据？”  
+-   报表数据源：要访问; 的数据类型例如，关系数据库、 多维数据库、 平面文件或 XML。 此列解答问题："类型的数据可以[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用于报表？"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型：在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定义数据源时下拉列表中显示的数据源类型之一。 此列表是根据所安装和注册的 DPE 与数据访问接口填充的。 此列解答问题：“在创建报表数据源时，应从下拉列表中选择哪种数据源类型？”  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型：在定义中的数据源时下拉列表中看到的数据源类型之一[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 此列表是根据所安装和注册的 DPE 与数据访问接口填充的。 此列解答问题："哪种数据源类型下拉列表中时选择创建报表数据源？"  
   
--   数据处理扩展插件/数据访问接口的名称：对应于所选 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据源类型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件或其他数据访问接口。 此列解答问题：“我在选择了一种数据源类型时，将使用哪种对应的数据处理扩展插件或数据访问接口？”  
+-   数据处理扩展插件/数据访问接口的名称：[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件或其他数据访问接口对应于[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据源选择的类型。 此列解答问题："当我选择数据源类型，使用的相应的数据处理扩展插件或数据访问接口？"  
   
--   基础数据访问接口版本（可选）：某些数据源类型支持多种数据访问接口。 它们可能是同一访问接口的不同版本，或由第三方提供的某一数据访问接口类型的不同实现。 在您配置了数据源后，访问接口名称会频繁出现在连接字符串中。 此列解答问题：“选择了数据源类型后，我要在‘连接属性’对话框中选择哪种数据访问接口？”  
+-   基础数据访问接口版本 （可选）：某些数据源类型支持多个数据访问接口。 它们可能是同一访问接口的不同版本，或由第三方提供的某一数据访问接口类型的不同实现。 在您配置了数据源后，访问接口名称会频繁出现在连接字符串中。 此列解答问题：“选择了数据源类型后，我要在‘连接属性’对话框中选择哪种数据访问接口？”  
   
--   数据源 \<platform>：得到数据处理扩展插件或数据访问接口支持的目标数据源的数据源平台。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从这类平台上的数据源中检索数据？”  
+-   数据源 \<platform>：目标数据源的数据处理扩展插件或数据提供程序支持的数据源平台。 此列解答问题："此数据处理扩展插件或数据访问接口能否检索数据从这类平台上的数据源？"  
   
--   数据源的版本：DPE 或数据访问接口支持的目标数据源的版本。 此列解答问题：“此数据处理扩展插件或数据访问接口能否从此版本的数据源检索数据？”  
+-   数据源的版本：DPE 或数据访问接口支持的目标数据源的版本。 此列解答问题："此数据处理扩展插件或数据访问接口能否检索数据从数据源的此版本？"  
   
--   RS \<platform>：可在其中安装自定义 DPE 或数据访问接口的报表服务器平台和报表创作客户端平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题：“此数据处理扩展插件或数据访问接口能否安装在这类平台上？”  
+-   RS \<platform>：报表服务器和报表创作客户端可以在其中安装自定义 DPE 或数据提供程序的平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装都会包含内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据处理扩展插件。 自定义数据处理扩展插件或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口必须针对特定平台进行本机编译。 此列解答问题："此数据处理扩展插件或数据访问接口能否安装在此类平台上？"  
   
 ###  <a name="DataSourcesTable"></a> 数据源的类型  
   
-|报表<br /><br /> 数据源|Reporting Services 数据源类型|数据处理扩展插件/数据访问接口的名称|基础数据访问接口版本<br /><br /> （可选）|数据<br /><br /> 源<br /><br /> 平台 x86|数据<br /><br /> 源<br /><br /> 平台 x64|数据源的版本|RS &lt;platform<br /><br /> 平台 x86|RS<br /><br /> 平台 x64|  
+|报表<br /><br /> 数据源|Reporting Services 数据源类型|数据处理扩展插件/数据访问接口的名称|基础数据访问接口版本<br /><br /> （可选）|数据<br /><br /> Source<br /><br /> 平台 x86|数据<br /><br /> Source<br /><br /> 平台 x64|数据源的版本|RS &lt;platform<br /><br /> 平台 x86|RS<br /><br /> 平台 x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[Microsoft SQL Server](#MicrosoftSQLServer)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.SqlClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库|[OLEDB](#OLEDBSQL)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展 System.Data.OledbClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。|Y|Y|  
@@ -219,7 +219,7 @@ ms.locfileid: "56032698"
  [返回数据源表](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> OLE DB for Oracle  
- 数据处理扩展插件 OLE DB for Oracle 不支持以下 Oracle 数据类型：BLOB、CLOB、NCLOB、BFILE 和 UROWID。  
+ 数据处理扩展插件 OLE DB for Oracle 不支持以下 Oracle 数据类型：BLOB、 CLOB、 NCLOB、 BFILE、 UROWID。  
   
  此扩展插件支持与位置相关的未命名参数， 但不支持命名参数。 若要使用命名参数，请使用 [Oracle](#OracleClient) 数据处理扩展插件。  
   
@@ -290,7 +290,7 @@ ms.locfileid: "56032698"
   
  有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](teradata-connection-type-ssrs.md)。  
   
- 您还可以创建基于 Teradata 数据库的模型。 有关详细信息，请参阅 Teradata 站点上的以下白皮书：[Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
+ 您还可以创建基于 Teradata 数据库的模型。 有关详细信息，请参阅上的 Teradata 站点以下白皮书：[Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
   
  [返回数据源表](#DataSourcesTable)  
   

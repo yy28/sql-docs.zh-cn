@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291879"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961823"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
   运行报表后，可以将其导出为其他格式（如 Excel 或 PDF），也可以通过生成 Atom 服务文档，列出可从报表获得的与 Atom 兼容的数据馈送来导出报表。  
@@ -47,15 +47,15 @@ ms.locfileid: "56291879"
   
 -   **数据呈现扩展插件** 数据呈现扩展插件会去除报表中的所有格式设置和布局信息而仅显示数据。 可使用所产生的文件将原始报表数据导入为其他文件类型，如 Excel、其他数据库、XML 数据消息或自定义应用程序。 数据呈现器不支持分页。  
   
-     支持以下数据呈现器扩展插件：CSV、XML 和 Atom。  
+     支持以下数据呈现扩展插件：CSV、 XML 和 Atom。  
   
 -   **软分页呈现扩展插件** 软分页呈现扩展插件保留报表的布局和格式设置。 为了满足基于屏幕的查看和传递（例如在网页上或在 **ReportViewer** 控件中）需要，对所产生的文件进行优化。  
   
-     支持以下软分页呈现器扩展插件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 和 Web 存档 (MHTML)。  
+     支持以下软分页呈现扩展插件：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 和 Web 存档 (MHTML)。  
   
 -   **硬分页呈现扩展插件** 硬分页呈现扩展插件保留报表的布局和格式设置。 对所产生的文件进行了优化，以便提供一致的打印体验或以书本格式联机查看报表。  
   
-     支持以下硬分页呈现器扩展插件：TIFF 和 PDF。  
+     支持以下硬分页呈现扩展插件：TIFF 和 PDF。  
   
 ##  <a name="ExportFormats"></a> 导出格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了用于以不同格式呈现报表的呈现扩展插件。 如果您打算使用此功能，则应当针对您所选的文件格式优化报表设计。 有关每个呈现扩展插件的主题提供了有关如何以相应格式呈现报表的详细信息。  
@@ -65,11 +65,11 @@ ms.locfileid: "56291879"
 |格式|呈现扩展插件类型|Description|  
 |------------|------------------------------|-----------------|  
 |CSV|数据|逗号分隔值 (CSV) 呈现扩展插件以平展的表示形式呈现报表中的数据，格式为标准化的纯文本，这种数据表示形式容易读取且可与多个应用程序交换。<br /><br /> 有关详细信息，请参阅 [导出到 CSV 文件（报表生成器和 SSRS）](exporting-to-a-csv-file-report-builder-and-ssrs.md)中处理数据。|  
-|“导出”|软分页|如果安装了针对 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包，Excel 呈现扩展插件可将报表呈现为能够兼容 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010 及 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 的 Excel 文档。 将报表导出至 Excel 工作表时，将会去掉一些布局和原始设计元素。可以设置报表属性和报表内的组以便在将报表导出到 Excel 时启用工作表选项卡的命名。 此呈现器生成的文件的文件扩展名为 xlsx。<br /><br /> 有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。<br /><br /> 注意：在某些报表方案中，可以使用呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 本机格式的 Excel 2003 呈现扩展插件。|  
-|Word|软分页|如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现扩展插件可将报表呈现为能够兼容 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 的 Word 文档。 报表导出为 Word 文档后，可以更改报表内容并设计文档样式的报表，例如邮件标签、采购订单或套用信函。 此呈现器生成的文件的文件扩展名为 docx。<br /><br /> 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。<br /><br /> 注意：在某些报告方案中，可以使用呈现为 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 本机格式的 Word 2003 呈现扩展插件。|  
+|“导出”|软分页|如果安装了针对 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包，Excel 呈现扩展插件可将报表呈现为能够兼容 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010 及 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 的 Excel 文档。 将报表导出至 Excel 工作表时，将会去掉一些布局和原始设计元素。可以设置报表属性和报表内的组以便在将报表导出到 Excel 时启用工作表选项卡的命名。 此呈现器生成的文件的文件扩展名为 xlsx。<br /><br /> 有关详细信息，请参阅 [导出到 Microsoft Excel（报表生成器和 SSRS）](exporting-to-microsoft-excel-report-builder-and-ssrs.md)中处理数据。<br /><br /> 注意：Excel 2003 呈现扩展插件呈现的本机格式为[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]2003年是在某些报告方案中。|  
+|Word|软分页|如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现扩展插件可将报表呈现为能够兼容 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 的 Word 文档。 报表导出为 Word 文档后，可以更改报表内容并设计文档样式的报表，例如邮件标签、采购订单或套用信函。 此呈现器生成的文件的文件扩展名为 docx。<br /><br /> 有关详细信息，请参阅 [导出到 Microsoft Word（报表生成器和 SSRS）](exporting-to-microsoft-word-report-builder-and-ssrs.md)中处理数据。<br /><br /> 注意：Word 2003 呈现扩展插件呈现的本机格式为[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2003年是在某些报告方案中。|  
 |Web 存档|软分页|HTML 呈现扩展插件以 HTML 格式呈现报表。 该呈现扩展插件还可以生成完整的 HTML 页面，或生成 HTML 片段以嵌入其他 HTML 页面。 所有 HTML 都是使用 UTF-8 编码生成的。<br /><br /> 对于在报表生成器中预览并在浏览器中查看的报表（包括在报表管理器中运行时），HTML 呈现扩展插件都是默认的呈现扩展插件。<br /><br /> 有关详细信息，请参阅 [以 HTML 格式呈现（报表生成器和 SSRS）](rendering-to-html-report-builder-and-ssrs.md)中处理数据。|  
 |Acrobat (PDF) 文件|硬分页|PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。<br /><br /> 有关详细信息，请参阅 [导出到 PDF 文件（报表生成器和 SSRS）](exporting-to-a-pdf-file-report-builder-and-ssrs.md)中处理数据。|  
-|TIFF 文件|硬分页|图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。<br /><br /> 图像呈现扩展插件可以采用 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支持的任何格式生成文件：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。<br /><br /> 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。|  
+|TIFF 文件|硬分页|图像呈现扩展插件可以将报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。<br /><br /> 图像呈现扩展插件可以在任何支持的格式生成文件[!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]:BMP、 EMF、 EMFPlus、 GIF、 JPEG、 PNG 和 TIFF。<br /><br /> 有关详细信息，请参阅 [导出到图像文件（报表生成器和 SSRS）](exporting-to-an-image-file-report-builder-and-ssrs.md)中处理数据。|  
 |XML|数据|XML 呈现扩展插件可以按 XML 格式返回报表。 报表 XML 的架构专用于相应的报表，并且只包含数据。 布局信息呈现以及分页都不是由 XML 呈现扩展插件完成。 此扩展插件生成的 XML 可以导入到数据库中用作 XML 数据消息，或发送到自定义应用程序。<br /><br /> 有关详细信息，请参阅 [导出到 XML（报表生成器和 SSRS）](exporting-to-xml-report-builder-and-ssrs.md)中处理数据。|  
 |Atom|数据|Atom 呈现扩展插件将从报表生成与 Atom 兼容的数据馈送。 数据馈送是可读的，并可以与可使用与 Atom 兼容的数据馈送的应用程序（如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）进行交换。<br /><br /> 输出为一个 Atom 服务文档，该文档列出报表中可用的数据馈送。 为报表中的每个数据区域至少创建一个数据馈送。 根据数据区域的类型以及数据区域显示的数据，可以生成多个数据馈送。<br /><br /> 有关详细信息，请参阅 [基于报表生成数据馈送（报表生成器和 SSRS）](generating-data-feeds-from-reports-report-builder-and-ssrs.md)中处理数据。|  
   

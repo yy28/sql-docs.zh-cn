@@ -1,6 +1,6 @@
 ---
 title: MDX (Analysis Services) 中的重要概念 |Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527823"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962163"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 中的重要概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527823"
   
  ![调出的所有成员的 PivotTable](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "调出的所有成员的数据透视表")  
   
- 展开层次结构，最终会看到最低级别。 这称为 **叶成员**。 叶成员是层次结构中不包含子级的成员。 在此示例中，“澳大利亚”是叶成员。  
+ 展开层次结构，最终会看到最低级别。 这称为 **叶成员**。 叶成员是层次结构中不包含子级的成员。 在此示例中，西南是叶成员。  
   
  ![数据透视表的叶成员杨柳 dout](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "包含叶成员杨柳 dout 数据透视表")  
   
- 其上的任何成员称为 **父成员**。 “太平洋地区”是“澳大利亚”的父级。  
+ 其上的任何成员称为 **父成员**。 United States 是西南的父级。  
   
  **属性层次结构的组件**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527823"
 ## <a name="key-attributes"></a>键属性  
  模型是依赖键和索引进行关联的相关对象的集合。 Analysis Services 模型也是如此。 每个维度（等同于关系模型中的表）均存在一个键属性。 **键属性** 用于事实数据表（度量值组）的外键关系。 维度中的所有非键属性均（直接或间接）链接至键属性。  
   
- 键属性通常是（但并非总是） **粒度属性**。 粒度是指数据内详细信息的级别或精度的级别。 同样，常见示例为理解相关内容提供最快的途径。 考虑日期值：对于日常销售，需要按天指定的日期值；对于配额，只需季度即可，但如果分析数据包含体育事件的比赛结果，则粒度最好为毫秒。 粒度就是数据值的精度级别。  
+ 键属性通常是（但并非总是） **粒度属性**。 粒度是指数据内详细信息的级别或精度的级别。 同样，常见示例为理解相关内容提供最快的途径。 考虑日期值：对于日常销售，你需要指定的日期值天;对于配额，按季度可能就足够了，但如果分析数据包含体育事件的比赛结果，可能很好地需要粒度为毫秒。 粒度就是数据值的精度级别。  
   
  另一个示例是货币： 财务应用程序跟踪货币值时可能到多位小数位数，而本地学校基金筹集可能只需最接近美元的值。 因为想要避免存储不必要的数据，所以了解粒度非常重要。 删除时间戳中的毫秒或销售额中的分可在该详细信息级别与分析无关时节省存储和处理时间。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d815caf1e67b1dd5b4b40838e8a0ef2dd7eb6d05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036548"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947783"
 ---
 # <a name="report-designer-f1-help"></a>报表设计器的 F1 帮助
   本节提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表设计器向导、视图和对话框的 F1 帮助。 另外，您也可以在使用对话框时按 F1 或单击对话框中显示的“帮助”按钮来打开 F1 帮助。  

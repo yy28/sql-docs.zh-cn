@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036958"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967399"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 课：创建新网站
   在本课程中，你将学习如何使用 Visual C# 的 ASP.NET 网站模板创建新网站项目。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032748"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969615"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>共享数据集的“常规”属性页（报表管理器）
   使用“共享数据集”页可以查看和管理共享数据集项的属性。  
@@ -49,7 +49,7 @@ ms.locfileid: "56032748"
  **查询执行超时值**  
  键入查询在多长时间后超时（秒）。如果该值为 0，则查询将不会超时。  
   
- **应用**  
+ **Apply**  
  保存更改。  
   
  **删除**  

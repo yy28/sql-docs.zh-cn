@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a53b1340891d539ca9aef224c7bdbbdcba9bf45d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298137"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959835"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>钻取报表（报表生成器和 SSRS）
   钻取报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 例如，在此图中，销售额汇总报表列出了销售订单和总额。 当用户单击该汇总列表中的某个订单编号后，便会打开另一个包含此订单详细信息的报表。  
@@ -28,7 +28,7 @@ ms.locfileid: "56298137"
 > [!NOTE]  
 >  当您在报表生成器中工作时，必须连接到报表服务器，才能查看在单击主报表中钻取链接时打开的钻取报表。  
   
- 若要快速开始使用钻取报表，请参阅[教程：创建钻取和主报表&#40;报表生成器&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 钻取报表还配备两个商业智能解决方案， [BI 报告：报表和订阅方案](https://technet.microsoft.com/bi/ff769487.aspx)和[公司面板：销售解决方案](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 若要快速开始使用钻取报表，请参阅[教程：生成钻取报表和主报表（报表生成器）](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 钻取报表还配备两个商业智能解决方案， [BI 报告：报表和订阅方案](https://technet.microsoft.com/bi/ff769487.aspx)和[公司面板：销售解决方案](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

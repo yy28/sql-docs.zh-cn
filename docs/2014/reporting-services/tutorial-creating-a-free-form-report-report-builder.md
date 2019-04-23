@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286797"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951243"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表（报表生成器）
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教程：创建自由格式的报表 （报表生成器）
   本教程教你如何创建一个与书信格式类似的 SSRS 自由格式报表。 你可以排列报表项来创建一个具有文本框、图像和其他数据区域的窗体。  
   
  你在本教程中创建的报表是基于教程中包括的示例销售数据创建的。 该报表按地区对信息进行分组，并且显示该地区的销售经理的姓名以及详细和汇总销售信息。 您将使用列表数据区域作为自由格式的报表的基础，然后添加具有图像的装饰性面板、插入了数据的静态文本、用于显示详细信息的表以及可选的用于显示汇总信息的饼图和柱形图。  
@@ -46,7 +46,7 @@ ms.locfileid: "56286797"
   
 -   [添加汇总数据可视化](#Visualization)  
   
- 本教程的预计学时：20 分钟。  
+ 估计的时间才能完成本教程中：20 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -224,7 +224,7 @@ ms.locfileid: "56286797"
   
 2.  在功能区的 **“插入”** 选项卡上，单击 **“文本框”**，然后将一个文本框拖到该列表的左上角，但放在你以前添加的矩形内。 使该文本框大约 3 英寸高，5 英寸宽。  
   
-3.  将光标置于文本框的上部，然后键入：Newsletter for。  
+3.  请将光标置于文本框的上部，然后键入：Newsletter for。  
   
      ![添加新闻稿标题文本](../../2014/tutorials/media/tutorial-newsletterfor.png "添加新闻稿标题文本")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286797"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 将光标置于你在步骤 3 中键入的文本之下，然后键入：**Hello** 。  
+9. 将你在步骤 3 和类型中键入的文本之下，光标：**Hello** 。  
   
     > [!NOTE]  
     >  请确保在“Hello”一词之后包含一个多余的空格。 该空格用于将文本以及您将在下一步骤中添加的字段分隔开来。  
@@ -279,7 +279,7 @@ ms.locfileid: "56286797"
   
      ![添加新闻稿文本](../../2014/tutorials/media/tutorial-newslettertext.png "添加新闻稿文本")  
   
-20. 将光标置于你在步骤 15 中粘贴的文本之下，然后键入：**恭喜你销售总额的**。  
+20. 将在步骤 15 中粘贴的文本之下，光标，然后键入：**恭喜你销售总额的**。  
   
     > [!NOTE]  
     >  请确保在“of”一词之后包含一个多余的空格。 该空格用于将文本以及您将在下一步骤中添加的字段分隔开来。  

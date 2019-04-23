@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290755"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962983"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
   地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -53,7 +53,7 @@ ms.locfileid: "56290755"
   
  单击向导页标题以获得相应的帮助内容。 您看到的页面取决于您选择的地图类型、空间数据源和分析数据源。  
   
-1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可来自地图库、Environmental Systems Research Institute, Inc. (ESRI) 形状文件，或来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
+1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库、 Environmental 的 Systems Research Institute，Inc.或来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
   
     -   [什么是空间数据？](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290755"
   
  添加地图或地图层并预览报表之后，您可以更改在向导中设置的地图和地图层选项。 有关详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。 若要向报表添加地图的分步说明，请参阅[教程：地图报表&#40;报表生成器&#41;](../tutorial-map-report-report-builder.md)。  
+ 有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。 有关向报表添加地图的分步说明，请参阅[教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290755"
  地图库所包含的地图来自面向报表创作环境的地图库文件夹中的报表。 库中的地图提供支持向报表快速添加地图。 库中预先定义的地图是由地图提供商提供的。  
   
 > [!NOTE]  
->  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
+>  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以免费从美国人口调查局开发。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国的注册的商标。的注册商标。  
   
  若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290755"
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除：将报表映射&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中[Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[排除报表故障：将报表映射&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中[Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040168"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947653"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中的重大更改
   本主题介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 您在升级时，或在自定义脚本或报表中可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "56040168"
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置管理器、rskeymgmt.exe 和 rsconfig.exe。 代替使用这些实用工具配置 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，使用 SharePoint 管理中心和 PowerShell。  
   
--   SQL Server Management Studio：客户无法使用类似 <machine_name>/<instance_name> 的语法引用服务器。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本开始，建议的方法是使用 SharePoint 站点 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，SharePoint 站点 URL 是唯一支持的语法。  
+-   SQL Server Management Studio:客户不能引用服务器使用语法类似于 < m a c h > / < 实例名称 >。 从 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 版本开始，建议的方法是使用 SharePoint 站点 URL。 例如， **http://<sharepoint_server>/<sharePoint_site&gt**。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，SharePoint 站点 URL 是唯一支持的语法。  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>报表模型设计器在 SQL Server Data Tools 中不提供  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 不再支持报表模型项目。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中将不提供报表模型设计器。 无法在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中创建新的报表模型项目或打开现有项目，并且无法创建或更新报表模型。 若要更新报表模型，可以使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或更早的工具。 您可以继续使用报表模型作为在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 工具（例如报表生成器和报表设计器）中创作的报表中的数据源。 你用来创建查询以便从报表模型提取报表数据的查询设计器将继续在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中提供。  

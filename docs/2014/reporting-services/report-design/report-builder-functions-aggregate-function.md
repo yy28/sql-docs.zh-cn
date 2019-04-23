@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296315"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969423"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Aggregate 函数（报表生成器和 SSRS）
   按照数据访问接口的定义返回指定表达式的自定义聚合。  
