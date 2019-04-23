@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519885"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156503"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
   在表格模式下，数据库为表格模型中所有对象的容器。  
@@ -88,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 若要实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅“表格 AMO 2012”示例中的源代码；具体来讲，请查看以下源文件：Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 实际了解如何使用 AMO 创建和操作数据库表示形式，请参阅此表格 AMO 2012 示例; 中的源代码具体查看以下源文件：Database.cs。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

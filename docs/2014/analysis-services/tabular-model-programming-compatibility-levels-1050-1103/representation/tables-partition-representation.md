@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27cb9b5ea146514de38d776b72c7fac767716f2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139471"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154663"
 ---
 # <a name="partition-representation-tabular"></a>分区表示形式（表格）
   为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表；这些子集中的每个子集都是表的一个分区。  
@@ -94,6 +92,6 @@ private void AddPartition(
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 示例  
- 但是，为了理解如何使用 AMO 创建和操作分区表示形式，请参阅 AMO 到表格示例中的源代码。 该示例将在 Codeplex 上提供。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
+ 但是，为了理解如何使用 AMO 创建和操作分区表示形式，请参阅 AMO 到表格示例中的源代码。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   

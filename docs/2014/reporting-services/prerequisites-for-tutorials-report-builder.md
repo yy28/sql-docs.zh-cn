@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78976d3fa150fb64f3b0fe7c81a8e7591f34ad46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289006"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942175"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
   “报表生成器”教程是希望您能够在报表服务器上或与报表服务器集成的 SharePoint 站点上查看和保存报表。 对于数据，所有教程都使用必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]实例处理的文字查询。  
   
- 如果您无权访问报表服务器或站点或数据源，则可以通过生成脱机报表来了解报表生成器。 请参阅[教程：创建快速图表报表脱机&#40;报表生成器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 如果您无权访问报表服务器或站点或数据源，则可以通过生成脱机报表来了解报表生成器。 请参阅[教程：脱机生成快速图表报表（报表生成器）](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 ## <a name="requirements"></a>要求  
  若要完成“报表生成器”教程，您必须满足下列先决条件：  
