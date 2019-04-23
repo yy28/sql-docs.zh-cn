@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218019"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155213"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 接口
   IMDEmbedded 接口是用于管理嵌入的 PowerPivot 数据库或表格模型数据库的公共接口。 此接口继承自 `IPersistStream` 接口。 此接口允许以下操作：  
@@ -111,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|当前应用程序包含嵌入数据库|  
 |DBPROPVAL_EMBED_LINKED|0x02|嵌入数据库在远程应用程序（例如 SharePoint Server）中承载|  
   
-#### <a name="source"></a>数据源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -141,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  在设置容器 URL 时出错。  
   
-#### <a name="source"></a>数据源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -171,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  在设置标志时出错。  
   
-#### <a name="source"></a>数据源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -201,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  在设置路径时出错。  
   
-#### <a name="source"></a>数据源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -231,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  在取消嵌入的操作时出错。  
   
-#### <a name="source"></a>数据源  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040048"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158933"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，您需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  
@@ -30,7 +28,7 @@ ms.locfileid: "56040048"
   
  下表描述的特性`Extension`呈现扩展插件的元素：  
   
-|Attribute|Description|  
+|特性|Description|  
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extensions** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  

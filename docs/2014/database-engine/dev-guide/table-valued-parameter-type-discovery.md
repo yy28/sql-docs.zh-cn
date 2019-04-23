@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, type discovery
@@ -14,12 +12,12 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdf4acafd0a1bd2d986bbc75f5b1486d7dbb524b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154833"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>表值参数类型发现
   使用者-即，客户端应用程序使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序可以发现每个命令参数的类型，如果已将命令文本提供给 OLE DB 访问接口。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  

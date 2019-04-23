@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146082"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158803"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>备份、还原和同步数据库 (XMLA)
   在 XML for Analysis 中，有三个命令分别用于备份、还原和同步数据库：  
@@ -63,7 +61,7 @@ ms.locfileid: "50146082"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在备份文件中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在备份文件中包括安全定义。|  
   
@@ -93,7 +91,7 @@ ms.locfileid: "50146082"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在数据库中包括安全定义。|  
   
@@ -131,7 +129,7 @@ ms.locfileid: "50146082"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在目标数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在目标数据库中包括安全定义。|  
   
@@ -147,7 +145,7 @@ ms.locfileid: "50146082"
   
  可以使用 Synchronize 命令中的 `Location` 元素同步 ROLAP 对象。 每个`Location`元素用于重新定位数据源`DataSourceType`属性必须显式设置为*本地*。 . 还必须将 `ConnectionString` 元素的 `Location` 属性设置为新位置的连接字符串。 在同步过程中，`Synchronize` 命令将使用 `DataSourceID` 元素的 `Location` 属性的值替换由 `ConnectionString` 元素的 `Location` 属性标识的数据源的连接字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Backup 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Restore 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

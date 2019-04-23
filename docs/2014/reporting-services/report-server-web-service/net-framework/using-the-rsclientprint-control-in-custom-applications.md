@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036598"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157705"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -107,7 +105,7 @@ ms.locfileid: "56036598"
 |参数|I/O|类型|Description|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|指定报表服务器虚拟目录 (例如， https://adventure-works/reportserver)。|  
-|ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如：“/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234”。|  
+|ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如:"/ AdventureWorks Sample Reports/Employee Sales 摘要 & EmpID = 1234年"|  
 |ReportName|In|String|报表的简称（在上面的示例中，简称为 Employee Sales Summary）。 它显示在“打印”对话框和打印队列中。|  
   
 ### <a name="example"></a>示例  

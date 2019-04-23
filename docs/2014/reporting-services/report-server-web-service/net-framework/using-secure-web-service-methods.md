@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], secure connections
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bedd007e7dabe1f96ac9f5fc22f565952c99d728
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e88a164602f9bbe6ad42c3897285a484cac94466
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018858"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157563"
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全 Web 服务方法
   当您调用某些报表服务器 Web 服务方法时，它们可能要求安全连接。 要求安全连接的方法由 RSReportServer.config 文件中的 `SecureConnectionLevel` 设置确定。 该设置的值是整数值，大于等于 0 即可。 下表介绍了这些值。  

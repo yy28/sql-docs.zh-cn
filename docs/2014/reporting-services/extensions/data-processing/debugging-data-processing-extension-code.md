@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - debugging data processing extensions [Reporting Services]
 - troubleshooting [Reporting Services], data processing extensions
 - data processing extensions [Reporting Services], debugging
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8b7418b2118e42217150605521d121123b8582a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adecc79256f49aeca9532e50119675515b9939dc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034058"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158753"
 ---
 # <a name="debugging-data-processing-extension-code"></a>调试数据处理扩展插件代码
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一些可以帮助分析数据处理扩展插件代码和查找其中错误的调试工具。 哪个工具效果最佳取决于您试图完成的任务。 此示例使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  

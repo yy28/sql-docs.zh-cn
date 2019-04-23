@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7656ef997ae7cd05816a24813566e8c58510719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152847"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154930"
 ---
 # <a name="connection-representation-tabular"></a>连接表示形式（表格）
   连接对象定义填充表格模型的数据的源。  
@@ -70,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>“表格 AMO 2012”示例  
- 为了更好地理解如何使用 AMO 创建和操作连接表示形式，请参阅“表格 AMO 2012”示例中的源代码；请具体查看以下源文件：Database.cs。 可从 Codeplex 获取该示例。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
+ 为了更好地了解如何使用 AMO 创建和操作连接表示形式，请参阅表格 AMO 2012 示例; 中的源代码具体查看以下源文件：Database.cs。 该示例位于 Codeplex。 示例代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。  
   
   

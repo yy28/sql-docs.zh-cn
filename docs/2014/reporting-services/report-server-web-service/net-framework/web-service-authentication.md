@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], authentication
 - XML Web service [Reporting Services], authentication
 - Report Server Web service, authentication
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a670fe4019d1bc8eebfeb385a63b0c0e58ae61d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031439"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157413"
 ---
 # <a name="web-service-authentication"></a>Web 服务身份验证
   可以使用 Windows 身份验证或基本身份验证对针对报表服务器 Web 服务进行的调用进行身份验证。 对报表服务器发出 SOAP 请求的任何客户端都必须实现其中一种支持的身份验证协议的客户端部分。 如果你使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，则可以使用托管代码 HTTP 类来实现身份验证。 通过使用这些 API，可以轻松地随 SOAP 请求一起发送身份验证信息。  

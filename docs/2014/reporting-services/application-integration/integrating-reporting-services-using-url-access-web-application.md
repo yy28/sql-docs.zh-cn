@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - links [Reporting Services], URL access
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a8957c3dbc7fdf627edde70814227833d81f4c6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6a8625af05b13331d513608bc20eb8dd9678d01a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154823"
 ---
 # <a name="using-url-access-in-a-web-application"></a>在 Web 应用程序中使用 URL 访问
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 访问是为实现通过网络访问单独报表而专门设计的。 此类型的访问最适合于将报表查看和导航集成到自定义 Web 应用程序中。 为了在 Web 应用程序中使用 URL 访问，您可以：  

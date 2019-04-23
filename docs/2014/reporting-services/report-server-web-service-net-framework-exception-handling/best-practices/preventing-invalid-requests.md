@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - invalid requests [Reporting Services]
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 85556b6ec616d16962214b1737fcc445b54d0801
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019678"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158963"
 ---
 # <a name="preventing-invalid-requests"></a>防止无效请求
   您可以通过分析应用程序流程并确保要发送到报表服务器的请求有效，防止引发某些类型的异常。 例如，在使用户能够添加或更新报表名称、数据源或其他报表服务器项的应用程序中，您应该对用户可能输入的文本进行验证。 您应该始终在将请求发送到报表服务器之前检查是否使用了保留字符。 在代码中使用条件 if 语句或其他逻辑构造可以向用户发出警报，提醒用户尚未满足将请求发送到报表服务器所需的条件。  

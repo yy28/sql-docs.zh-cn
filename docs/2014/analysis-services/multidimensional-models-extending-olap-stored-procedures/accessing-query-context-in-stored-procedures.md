@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - execution context [Analysis Services]
@@ -17,17 +15,17 @@ ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f6c5a22a6bc3768e324ca45805ff510b1a86668c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142213"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156763"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>访问存储过程中的查询上下文
   存储过程的执行上下文可以作为 ADOMD.NET 服务器对象模型的 `Context` 对象出现在存储过程代码中。 这是只读上下文，存储过程不能修改它。 此对象的以下属性可用。  
   
-|“属性”|类型|Description|  
+|属性|类型|Description|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|多维数据集|当前查询上下文的多维数据集。|  
 |**CurrentDatabaseName**|String|当前数据库的标识符。|  

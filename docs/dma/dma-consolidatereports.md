@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618174"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159003"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -71,18 +71,22 @@ ms.locfileid: "58618174"
 - SQL Server 表
 
 ### <a name="if-using-a-csv-file"></a>如果使用的 CSV 文件
+
 > [!IMPORTANT]
->
 > 确保在清单文件保存为逗号分隔 (CSV) 文件。
 >
 > 对于默认实例为 MSSQLServer 设置实例名称。
->
+
 
 如果使用 csv 文件导入数据，请确保有只有两个列的数据-**实例名称**并**数据库名称**，和列不包含标头行。
  
  ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>如果使用的 SQL Server 表
+### <a name="if-using-a-sql-server-table"></a>如果使用的 SQL Server 表
+
+> [!IMPORTANT]
+> 对于默认实例为 MSSQLServer 设置实例名称。
+
 创建一个数据库，称为**EstateInventory**和名为表**DatabaseInventory**。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
 1. 在 Power BI Desktop 中打开 DMA 报表 Power BI 模板。
 2. 输入服务器详细信息指向你**DMAWarehouse**数据库，并选择**负载**。
-   
-      ![加载 DMA 报表 Power BI 模板](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![加载 DMA 报表 Power BI 模板](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    已刷新报表中的数据后**DMAWarehouse**数据库，您将看到类似于以下的报告。
 

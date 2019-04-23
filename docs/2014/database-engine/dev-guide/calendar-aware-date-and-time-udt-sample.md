@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96cac25e91c369b5069e4b91c72b99911f3e4d44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361319"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156955"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>识别日历的日期和时间 UDT 示例
   将日期作为字符串存储会导致混乱，因为在不识别所使用日历系统的情况下日期毫无意义。`CADatetime` 示例定义两个用户定义数据类型（`CADatetime` 和 `CADate`），通过它们可以按日历方式对日期和时间进行处理。  

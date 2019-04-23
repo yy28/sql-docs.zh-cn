@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], local
@@ -14,12 +12,12 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9b84fe6ed1b6b06eee783aef0f214017cca8bca
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145872"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158893"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
   若要创建、更新或删除本地多维数据集，必须编写并执行 ASSL 脚本或 AMO 程序。  
@@ -75,7 +73,7 @@ ms.locfileid: "50145872"
   
  使用诸如服务器多维数据集之类的角色无法确保本地多维数据集的安全。 拥有对本地多维数据集文件的文件级访问权限的任何用户均可在此文件中查询多维数据集。 可以使用本地多维数据集文件的 `Encryption Password` 连接属性为本地多维数据集文件设置密码。 如果为本地多维数据集文件设置密码，则与该本地多维数据集文件的所有连接都需要使用此密码才能查询该文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE GLOBAL CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
  [使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [刷新多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
@@ -27,12 +25,12 @@ ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9e5b2be2d3c6c83e91fd735f3e32c826e2f50c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152777"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155135"
 ---
 # <a name="user-hierarchies"></a>用户层次结构
   用户定义层次结构是用户定义层次结构中使用的属性的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度成员组织到层次结构，并提供在多维数据集的导航路径。 例如，下表定义了时间维度的维度表。 维度表支持三个属性，即年份、季度和月份。  
@@ -95,7 +93,7 @@ ms.locfileid: "48152777"
  在用户定义层次结构中，层次结构的级别数决定着最终用户所能看见的级别数，而与用户定义层次结构不同，父子层次结构是使用单个级别的属性层次结构定义的，并且此单个级别中的值将生成用户所能看见的多个级别。 存储成员键和父键的维度表列的内容将决定显示出的级别数目。 如果维度表中的数据发生更改，则级别数也会更改。 有关详细信息，请参阅[父-子层次结构](../multidimensional-models/parent-child-dimension.md)，并[父子层次结构中的属性](../multidimensional-models/parent-child-dimension-attributes.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建用户定义的层次结构](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义层次结构](../multidimensional-models/user-defined-hierarchies-create.md)   
  [用户层次结构属性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [维度特性属性参考](../multidimensional-models/dimension-attribute-properties-reference.md)  
   

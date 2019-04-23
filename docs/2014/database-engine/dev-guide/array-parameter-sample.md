@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375379"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158673"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  
@@ -113,7 +111,7 @@ ms.locfileid: "53375379"
 ## <a name="sample-code"></a>示例代码  
  下面是此示例的代码列表。  
   
- `ContactTypeNames.`此代码用于库   
+ 此代码用于库 `ContactTypeNames.`  
   
  C#  
   

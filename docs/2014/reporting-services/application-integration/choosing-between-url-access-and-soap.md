@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], vs. URL access
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], vs. SOAP
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011808"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158773"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>在 URL 访问与 SOAP 之间选择
   将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成到自定义应用程序的过程可能充满挑战。 然而，这样的挑战并不在于编程模型或 API 有多么复杂，而在于如何从众多可能的集成方法中选择一种合适的方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 最初的设计就是一个开发平台，因此在构建时考虑了编程的灵活性。 在满足灵活性要求后，接下来需要决定如何将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表导航和管理功能集成到现有业务应用程序中。  

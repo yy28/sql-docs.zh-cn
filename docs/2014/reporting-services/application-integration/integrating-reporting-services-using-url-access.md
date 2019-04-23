@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035994"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155398"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 访问集成 Reporting Services
   借助于 URL 访问，您可以通过报表服务器 URL 访问报表。 使用 URL 请求，您可以访问特定的报表服务器以及报表服务器数据库中的报表、资源和其他项。 还可以为用户自定义报表查看和导航体验。 URL 的查询字符串包含设备信息设置，以及针对报表和所选呈现输出的报表参数。 报表服务器处理 URL 请求的方法取决于您通过 URL 访问的项的参数、参数前缀和类型。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093667"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158873"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 开发的客户端体系结构要求
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持瘦客户端体系结构。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]计算引擎是完全基于服务器的因此所有查询将在服务器上都解析。 因此，每个查询只需在客户端和服务器之间进行一次来回行程，从而使得性能可以随着查询复杂性的增加而伸缩。  
@@ -53,7 +51,7 @@ ms.locfileid: "48093667"
  客户端应用程序和中间层应用程序都可以不通过访问接口而直接与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 进行通信。 客户端应用程序和中间层应用程序可以通过 TCP/IP、HTTP 或 HTTPS 使用 SOAP 数据包发送 XML for Analysis。 客户端可以使用任何支持 SOAP 的语言进行编码。 在这种情况下，尽管也可对使用 TCP/IP 与服务器建立的直接连接进行编码，但通信可由 Internet Information Services (IIS) 使用 HTTP 以最轻松的方式进行管理。 这是最不可能实现的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 客户端解决方案。  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>表格或 SharePoint 模式下的 Analysis Services  
- 在中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，可在 xVelocity 内存中分析引擎 (VertiPaq) 模式下的表格数据库和用于启动服务器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]已发布到 SharePoint 站点的工作簿。  
+ 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，对于已发布到 SharePoint 站点的表格数据库和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿，可在 xVelocity 内存中分析引擎 (VertiPaq) 模式下启动服务器。  
   
  [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是支持创建和查询分别使用 SharePoint 或表格模式的内存中数据库的唯一客户端环境。 通过使用 Excel 创建嵌入的 PowerPivot 数据库和[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工具包含在 Excel 工作簿中，作为 Excel.xlsx 文件的一部分保存。  
   
@@ -63,7 +61,7 @@ ms.locfileid: "48093667"
 >  当您使用某一多维数据集作为 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 工作簿的数据源时，您从该多维数据集获取的数据将定义为 MDX 查询；但是，该数据将作为平展的快照导入。 您不能以交互方式使用数据或刷新来自多维数据集的数据。  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 客户端的接口  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 通过使用针对 Analysis Services 的既定的接口和语言与工作簿内的 xVelocity 内存中分析引擎 (VertiPaq) 存储引擎交互： AMO 和 ADOMD.NET 以及 MDX 和 XMLA。 在该外接程序内，通过使用与 Excel、数据分析表达式 (DAX) 类似的公式语言定义度量值。 DAX 表达式嵌入在发送到进程内服务器的 XMLA 消息内。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 通过与交互 xVelocity 内存中分析引擎 (VertiPaq) 存储引擎在工作簿中的使用针对 Analysis Services 的既定的接口和语言：AMO 和 ADOMD.NET 以及 MDX 和 XMLA。 在该外接程序内，通过使用与 Excel、数据分析表达式 (DAX) 类似的公式语言定义度量值。 DAX 表达式嵌入在发送到进程内服务器的 XMLA 消息内。  
   
 ### <a name="providers"></a>访问接口  
  之间的通信[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]和 Excel 使用 MSOLAP OLEDB 访问接口 （11.0 版）。 在 MSOLAP 访问接口内，有四个可用于在客户端和服务器之间发送消息的不同的模块或传输。  

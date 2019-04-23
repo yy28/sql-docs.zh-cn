@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b679c93d8e946092518ca9bc020c3fbcfca834d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366759"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158973"
 ---
 # <a name="hello-world-sample"></a>Hello World 示例
   Hello World 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单存储过程所涉及的基本操作。 此示例还说明了如何通过记录返回由存储过程动态构建并返回到调用方的数据。  

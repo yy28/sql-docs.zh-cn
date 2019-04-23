@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - data mining [Analysis Services], developer's guide
@@ -14,12 +12,12 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d0148c1f8284610178cde16852494c297fb4c6e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147352"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157223"
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
   如果您觉得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的内置工具和查看器不符合您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的功能。 如果采用这种方法，您有两种选择：  
@@ -66,7 +64,7 @@ ms.locfileid: "50147352"
  [使用 Analysis Services 脚本语言 (ASSL) 开发](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介绍 XML for Analysis (XMLA) 及其扩展插件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开发人员指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
  [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   

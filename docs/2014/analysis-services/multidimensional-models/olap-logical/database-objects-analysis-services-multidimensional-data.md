@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], about objects
@@ -19,12 +17,12 @@ ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04f490e5b4305b665fc38793439626e3e5f651c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090757"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158953"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>数据库对象（Analysis Services - 多维数据）
   一个[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例包含数据库对象和用于联机分析处理 (OLAP) 和数据挖掘的程序集。  
@@ -63,14 +61,14 @@ ms.locfileid: "48090757"
 |[多维模型中的数据源](../data-sources-in-multidimensional-models.md)|介绍 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的数据源。|  
 |[多维模型中的数据源视图](../data-source-views-in-multidimensional-models.md)|介绍 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中基于一个或多个数据源的逻辑数据模型。|  
 |[多维模型中的多维数据集](../cubes-in-multidimensional-models.md)|介绍多维数据集和多维数据集对象，包括度量值、度量值组、维度用法关系、计算、关键绩效指标 (KPI)、操作、翻译、分区和透视。|  
-|[维度&#40;Analysis Services-多维数据&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|介绍维度和维度对象，包括属性、属性关系、层次结构、级别和成员。|  
-|[挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|介绍挖掘结构和挖掘对象，包括挖掘模型。|  
-|[安全角色&#40;Analysis Services-多维数据&#41;](security-roles-analysis-services-multidimensional-data.md)|介绍一个角色，它是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中用于对对象的访问进行控制的安全机制。|  
+|[维度（Analysis Services - 多维数据）](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|介绍维度和维度对象，包括属性、属性关系、层次结构、级别和成员。|  
+|[挖掘结构（Analysis Services - 数据挖掘）](../../data-mining/mining-structures-analysis-services-data-mining.md)|介绍挖掘结构和挖掘对象，包括挖掘模型。|  
+|[安全角色（Analysis Services - 多维数据）](security-roles-analysis-services-multidimensional-data.md)|介绍一个角色，它是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中用于对对象的访问进行控制的安全机制。|  
 |[多维模型程序集管理](../multidimensional-model-assemblies-management.md)|介绍一个程序集，它是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中用于扩展 MDX 和 DMX 语言的用户定义函数的集合。|  
   
 ## <a name="see-also"></a>请参阅  
  [支持的数据源&#40;SSAS 多维&#41;](../supported-data-sources-ssas-multidimensional.md)   
- [多维模型解决方案&#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
+ [多维模型解决方案 (SSAS)](../multidimensional-model-solutions-ssas.md)   
  [数据挖掘解决方案](../../data-mining/data-mining-solutions.md)  
   
   

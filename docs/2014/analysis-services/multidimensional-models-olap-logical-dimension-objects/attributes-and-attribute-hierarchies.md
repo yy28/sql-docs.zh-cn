@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -24,12 +22,12 @@ ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165867"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157263"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性和属性层次结构
   维度是属性的集合，这些属性绑定到数据源视图的表或视图中的一列或多列。  
@@ -49,7 +47,7 @@ ms.locfileid: "48165867"
  默认情况下，在星型架构中，所有属性都直接与键属性相关，这使得用户可根据维度中的任意属性层次结构浏览多维数据集中的事实数据。 在雪花型架构中，如果属性的基础表直接链接到事实数据表，则属性会直接链接到键属性；另外，属性还可以使用绑定到基础表（将雪花状表链接到直接链接的表）中键的属性间接地进行链接。  
   
 ## <a name="see-also"></a>请参阅  
- [创建用户定义的层次结构](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义层次结构](../multidimensional-models/user-defined-hierarchies-create.md)   
  [定义属性关系](../multidimensional-models/attribute-relationships-define.md)   
  [维度特性属性参考](../multidimensional-models/dimension-attribute-properties-reference.md)  
   

@@ -4,17 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +14,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519476"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157097"
 ---
 # <a name="glossary"></a>词汇表
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>术语  
   
 |术语|定义|  
@@ -469,7 +475,7 @@ ms.locfileid: "52519476"
 |标注 (diacritic)|放在字符上方、下方或中间的标记，用于指示与未标记状态相比语音值的变化。|  
 |标注字符 (diacritical mark)|放在字符上方、下方或中间的标记，用于指示与未标记状态相比语音值的变化。|  
 |方言 (dialect)|用于分析字符串或查询语句的语法和一般规则。|  
-|菱形关系 (diamond-shape relationship)|一种属性关系链，它可以拆分和重新联接，但是不包含冗余关系。 例如，日->月->年和日->季度->年具有相同的起点和终点，但是没有任何相同的关系。|  
+|菱形关系 (diamond-shape relationship)|一种属性关系链，它可以拆分和重新联接，但是不包含冗余关系。 例如，天-> 月-> 年和日-> 季度-> 年具有相同的起点和终点，但不是具有任何相同的关系。|  
 |差异器 (differencer)|与创建 DifferencingService 对象的工具之间的接口。|  
 |差异备份 (differential backup)|只包含自上次数据备份（差异备份所基于的备份）以来对数据库所做更改的备份。|  
 |差异基准 (differential base)|数据库或其文件或文件组子集中所有数据的最新一次完整备份。|  
@@ -543,7 +549,7 @@ ms.locfileid: "52519476"
 |dump|出于存档目的或为了确保文件的安全而对程序、磁盘或数据进行的复制。|  
 |转储设备 (dump device)|包含备份介质的磁带机或磁盘驱动器。|  
 |动态游标 (dynamic cursor)|一种打开时可以反映对基础数据所做的数据修改的游标。|  
-|动态筛选器 (dynamic filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如：SUSER_SNAME()）限制复制到订阅服务器的数据。|  
+|动态筛选器 (dynamic filter)|适用于合并复制，可用于限制复制到订阅服务器的数据的行筛选器基于系统函数或用户定义函数 (例如：SUSER_SNAME())。|  
 |动态锁定 (dynamic locking)|SQL Server 用来确定要在任一时刻使用的最具成本效益的锁的过程。|  
 |动态管理函数 (dynamic management function)|返回 SQL Server 中有关值、对象和设置的服务器状态信息的一组内置函数中的一种。|  
 |动态管理视图 (dynamic management view)|返回 SQL Server 中有关值、对象和设置的服务器状态信息的一组内置视图。|  
@@ -737,7 +743,7 @@ ms.locfileid: "52519476"
 |高须线 (high whisker)|盒须图上不属于离群值的最高值。|  
 |提示 (hint)|指定的强制选项或策略，由 SQL Server 查询处理器针对 SELECT、INSERT、UPDATE 或 DELETE 语句执行。 提示将覆盖查询优化器可能为查询选择的任何执行计划。|  
 |历史记录|某一程序内用户操作的列表，例如在操作系统 shell 中输入的命令、通过使用 Gopher 传递的菜单或者使用 Web 浏览器访问的链接。|  
-|可保持性 (holdability)|表示保持已处理并且通常在此后关闭的结果集打开（“暂挂”）的可能性。 例如：“SQL Server 仅在连接级别支持可保持性。”|  
+|可保持性 (holdability)|表示保持已处理并且通常在此后关闭的结果集打开（“暂挂”）的可能性。 例如："SQL Server 支持仅在连接级别的保持能力。"|  
 |维持|保留用于度量数据挖掘模型结构准确性的定型数据的百分比。|  
 |维持数据 (holdout data)|保留用于度量数据挖掘模型结构准确性的定型数据的百分比。|  
 |维持存储区 (holdout store)|用于缓存维持数据的数据挖掘结构。 它包含对维持数据的引用。|  
@@ -969,7 +975,7 @@ ms.locfileid: "52519476"
 |Microsoft SQL Server|Microsoft 关系数据库管理和分析系统的一个系列，用于实现电子商务、业务线和数据仓库解决方案。|  
 |Microsoft SQL Server 2008 Express|Microsoft SQL Server 2008 的轻型可嵌入版本。|  
 |Microsoft SQL Server 2008 Express with Advanced Services|Microsoft 关系数据库设计和管理系统，用于实现电子商务、业务线和数据仓库解决方案。|  
-|Microsoft SQL Server 2008 Express with Tools|SQL Server Express 数据平台的一个免费、易于使用的版本，包括图形管理工具SQL Server Management Studio (SMSS) Express。|  
+|Microsoft SQL Server 2008 Express with Tools|免费、 易于使用的包含图形管理工具的 SQL Server Express 数据平台的版本：SQL Server Management Studio (SMSS) Express。|  
 |Microsoft SQL Server 联机丛书 (Microsoft SQL Server Books Online)|电子文档的集合，包括 Microsoft SQL Server 随附的完整文档。|  
 |Microsoft SQL Server 商业智能 (Microsoft SQL Server Business Intelligence)|一种基于 Microsoft SQL Server 的数据基础结构和商业智能平台，由 Microsoft SQL Server Integration Services、关系引擎、Master Data Services、Reporting Services 和 Analysis Services 构成。|  
 |Microsoft SQL Server Compact|Microsoft 关系数据库管理和分析系统，用于实现电子商务、业务线和数据仓库解决方案。|  
@@ -1091,7 +1097,7 @@ ms.locfileid: "52519476"
 |并行处理 (parallel processing)|只能在包含两个或多个同时运行的处理器的计算机上运行的处理方法。 在将某一任务分发到可用处理器的方式上，并行处理不同于多处理。 在多处理中，一个进程可以划分为多个连续的块，一个处理器管理对数据库的访问，另一个处理器对数据进行分析，第三个处理器处理向屏幕上的图形输出。 使用执行并行处理的系统的程序员必须找到划分任务的方法，以便或多或少在可用处理器之间平均分配任务。|  
 |参数化查询 (parameterized query)|通过参数接受输入值的查询。|  
 |参数化报表 (parameterized report)|通过参数接受输入值的发布报表。|  
-|参数化行筛选器 (parameterized row filter)|可以在合并复制中使用的行筛选器，通过它可以基于系统函数或用户定义的函数（例如：SUSER_SNAME()）限制复制到订阅服务器的数据。|  
+|参数化行筛选器 (parameterized row filter)|适用于合并复制，可用于限制复制到订阅服务器的数据的行筛选器基于系统函数或用户定义函数 (例如：SUSER_SNAME())。|  
 |部分备份 (partial backup)|主文件组、每个读-写文件组和任意指定的可选文件中所有数据的备份。 只读数据库的部分备份仅包含主文件组。|  
 |数据库部分还原 (partial database restore)|只还原数据库的一部分，包括它的主文件组，可能还包括一个或多个辅助文件组。 其他文件组保持永久脱机，尽管可以在以后还原它们。|  
 |部分差异备份 (partial differential backup)|相对于上一次部分备份（基准备份）有差异的部分备份。 对于只读数据库，部分差异备份仅包含主文件组。|  
@@ -1536,7 +1542,7 @@ ms.locfileid: "52519476"
 |SQL Server Management Studio|Microsoft SQL Server 中随附的一套管理工具，用于配置和管理 Microsoft SQL Server 中的所有组件。|  
 |SQL Server Master Data Services|一个主数据管理应用程序，可一致地定义和管理组织的关键数据实体。|  
 |SQL Server PowerPivot for Excel|SQL Server 面向 Excel 的外接程序。|  
-|SQL Server 事件探查器|用于监视 SQL Server 数据库引擎实例或 Analysis Services 实例的图形用户界面。|  
+|SQL Server Profiler|用于监视 SQL Server 数据库引擎实例或 Analysis Services 实例的图形用户界面。|  
 |SQL Server Reporting Services|一种基于服务器的报表生成环境，它提供企业级的 Web 报表功能，从而使您可以创建从多个数据源提取数据的表，发布各种格式的表，以及集中管理安全性和订阅。|  
 |SQL Server Service Broker|一种帮助开发人员生成安全的可缩放数据库应用程序的技术。|  
 |SQL Server Store for Office Applications|一种 SQL Server 功能，支持将数据存储于 SQL Server 上的 Office 应用程序中。|  
@@ -1785,7 +1791,7 @@ ms.locfileid: "52519476"
 |x 轴 (x-axis)|网格、图表或图形上具有水平和垂直维度的水平参考线。|  
 |XML for Analysis|一种规范，描述支持对驻留在万维网上的数据源进行数据访问的开放标准。|  
 |XMLA|一种规范，描述支持对驻留在万维网上的数据源进行数据访问的开放标准。|  
-|XQuery|一种函数查询语言，广泛适用于各种从 Quilt、XPath 和 XQL 派生的 XML 数据类型。 Ipedo 和 Software AG 分别针对 XQuery 语言实现了自己的 W3C 建议规范版本。 也称作：XML 查询和 XQL。|  
+|XQuery|一种函数查询语言，广泛适用于各种从 Quilt、XPath 和 XQL 派生的 XML 数据类型。 Ipedo 和 Software AG 分别针对 XQuery 语言实现了自己的 W3C 建议规范版本。 也称为：XML 查询和 XQL。|  
 |XSL|一个 XML 词汇表，用来通过定义呈现规则的样式表将 XML 数据转换为其他形式（如 HTML）。|  
 |XSL 转换 (XSL Transformation)|一种基于 XML 的声明语言，用于显示或转换 XML 数据。|  
 |XSLT|一种基于 XML 的声明语言，用于显示或转换 XML 数据。|  
