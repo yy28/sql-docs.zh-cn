@@ -11,12 +11,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210706"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671203"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>单一数据库的基本 Always On 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210706"
 ## <a name="limitations"></a>限制  
  相比 SQL Server 2016 Enterprise Edition 上的高级可用性组，基本可用性组仅使用一部分功能。 基本可用性组包括以下限制：  
   
-- 两个副本（主要和次要）的限制。  
+- 两个副本（主要和次要）的限制。 Linux 上的 SQL Server 2017 的基本可用性组支持其他配置的唯一副本。
   
 - 对次要副本没有读取访问权限。  
   

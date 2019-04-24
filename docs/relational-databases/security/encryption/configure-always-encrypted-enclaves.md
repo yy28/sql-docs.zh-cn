@@ -12,10 +12,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872147"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
@@ -152,7 +152,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 
 - 已启用 enclave 的列主密钥必须存储在 Windows 证书存储或 Azure Key Vault 中。 当前不支持将已启用 enclave 的列主密钥存储在其他类型的密钥存储中（硬件安全模块或自定义密钥存储）。
 
-### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 预配已启用 enclave 的密钥**
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 预配已启用 enclave 的密钥
 
 以下步骤创建已启用 enclave 的密钥（需要 SSMS 18.0 或更高版本）：
 
@@ -177,7 +177,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
     3. 在“列主密匙”下拉列表中，选择在上一步骤创建的列主密钥。
     4. 单击“确定” 。
 
-### **<a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 预配已启用 enclave 的密钥**
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 预配已启用 enclave 的密钥
 
 以下各节提供示例 PowerShell 脚本来预配已启用 enclave 的密钥。 将突出显示特定于具有安全 enclave 的 Always Encrypted 的（新）步骤。 有关使用 PowerShell 预配密钥的详细信息（不特定于具有安全 enclave 的 Always Encrypted），请参阅[使用 PowerShell 配置 Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)。
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 在客户端/开发计算机上，打开 Windows PowerShell ISE，并运行以下脚本。
 
-**第 1 步：在 Azure Key Vault 中预配列主密钥**
+**步骤 1：在 Azure Key Vault 中预配列主密钥**
 
 还可以使用 Azure 门户执行此操作。 有关详细信息，请参阅[通过 Azure 门户管理密钥保管库](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)。
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**第 2 步：在数据库中创建列主密钥元数据、创建列加密密钥以及在数据库中创建列加密密钥元数据**
+**步骤 2：在数据库中创建列主密钥元数据、创建列加密密钥以及在数据库中创建列加密密钥元数据**
 
 
 ```powershell
@@ -503,7 +503,7 @@ GO
 
 下面是用于为现有列启用 enclave 的三种方法：
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>方法 1：轮换列主密钥，将其替换为已启用 enclave 的列主密钥。
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>选项 1：轮换列主密钥，将其替换为已启用 enclave 的列主密钥。
   
 - 优点：
   - 不涉及重新加密数据，因此它通常是最快的方法。 建议对包含大量数据的列采用此方法，对于所有列，需要启用丰富计算，由于已经使用确定性加密，因此不需要重新加密。
@@ -515,7 +515,7 @@ GO
   - 产生密钥管理开销 - 需要创建新的列主密钥并使其可用于查询受影响列的应用程序。  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>方法 2：此方法包括两个步骤：1 ) 轮换列主密钥（如选项 1 所示）和 2 ) 使用随机加密重新加密通过确定性加密的列子集，以便为这些列启用丰富计算。
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>选项 2：此方法包括两个步骤：1 ) 轮换列主密钥（如选项 1 所示）和 2 ) 使用随机加密重新加密通过确定性加密的列子集，以便为这些列启用丰富计算。
   
 - 优点：
   - 就地重新加密数据，因此对于包含大量数据的确定性加密列，它是启用丰富查询的建议方法。 请注意，步骤 1 为使用确定性加密的列解锁就地加密，因此步骤 2 可以就地执行。

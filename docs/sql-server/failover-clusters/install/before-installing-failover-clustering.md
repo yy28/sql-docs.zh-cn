@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913292"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
@@ -34,7 +34,7 @@ ms.locfileid: "58913292"
 |描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集概念并提供指向关联内容和任务的链接。|[AlwaysOn 故障转移群集实例 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移策略概念，并提供指向配置故障转移策略以满足您的组织要求的链接。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |描述如何维护您的现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。|[故障转移群集实例管理和维护](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|介绍如何在 Windows Server 故障转移群集 (WSFC) 上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|[如何安装群集 SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|介绍如何在 Windows Server 故障转移群集 (WSFC) 上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何安装群集 SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
@@ -48,9 +48,9 @@ ms.locfileid: "58913292"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重新启动计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
-    -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4.0。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
+    -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件。 您可以通过运行位于您的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装介质上的 SqlSupport.msi 来安装这些文件。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "58913292"
   
 ##  <a name="WSFC"></a> 配置 Windows Server 故障转移群集  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 群集服务 (WSFC)。 您还必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 与 WSFC 一起运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 支持最多 16 节点的故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支持两节点的故障转移群集。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 必须至少在服务器群集的一个节点上配置群集服务 (WSFC)。 您还必须将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 与 WSFC 一起运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise 支持最多 16 节点的故障转移群集。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard 支持两节点的故障转移群集。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务的资源 DLL 导出两个函数，WSFC 群集管理器使用它们来检查 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的可用性。 有关详细信息，请参阅 [故障转移群集实例的故障转移策略](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)。  
   

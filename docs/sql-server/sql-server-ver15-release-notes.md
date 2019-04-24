@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 发行说明 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860058"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582871"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 预览版发行说明
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "58860058"
 > [!NOTE]
 > 提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 预览版以便体验即将发布版本的功能。 不支持或不许可将其用于生产。 不显式支持以下方案：
 >
-> - 并行安装其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+> - 与其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 并行安装
 > - 从任意版本升级现有的 SQL Server 实例
 
-**试用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！**
+试用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下载 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以在 Windows 上安装](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 SQL Server 2019](../linux/quickstart-install-connect-docker.md)。

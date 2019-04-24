@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042496"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
@@ -44,7 +44,7 @@ GeneMi. 2019/04/02.
 
 ## <a name="180-rc1-march-2019"></a>18.0 (RC1)，2019 年 3 月
 
-下载:[下载 SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)<br/>
+下载：[下载 SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)<br/>
 生成号：15.0.18098.0<br/>
 发布日期：2019 年 3 月 28 日
 
@@ -57,7 +57,7 @@ GeneMi. 2019/04/02.
 
 ### <a name="whats-new-in-rc1"></a>RC1 中的新增功能
 
-| 新建项 | 详细信息 |
+| 新项 | 详细信息 |
 | :------- | :------ |
 | **SSMS：** 支持与 PowerBI 数据集的 XMLA 终结点连接。 | XML for Analysis (XMLA) 终结点提供对 Power BI 服务中 Analysis Services 引擎的访问。 这使 SSMS 和 SQL Profiler 等工具能够连接到 Power BI 数据集，用于监测、管理、调试等。<br/><br/> 有关扩展信息，请参阅 2019 年 3 月 28 日发布的博客文章 [XMLA 终结点连接](https://go.microsoft.com/fwlink/?linkid=2085204)。 |
 | **SMO：** 为“边缘约束”添加了级联删除支持。 | 在 SSMS 和 SQL Server 管理对象 (SMO) 中进行了添加。 |
@@ -202,7 +202,7 @@ GeneMi. 2019/04/02.
   - [预览版 7 中的新增功能] 删除了在配置 UI 中批量选择列的选项，以防止意外行为。
   - [预览版 7 中的新增功能] 改进了连接和命令失败的内部重试逻辑。
  
-- **AlwaysOn**
+- **Always On**
   - 在 SSMS Always On 仪表板中重新处理 RTO（估计恢复时间）和 RPO（估计的数据丢失）。 文档正在 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups 进行更新
 
 - **审核文件**
@@ -230,7 +230,7 @@ GeneMi. 2019/04/02.
 - **始终加密**
   - “连接到服务器”对话框中新“Always Encrypted”选项卡的“启用 Always Encrypted”复选框现在提供为数据库连接启用/禁用 Always Encrypted 的简便方法。 
 
-- [**具有安全 Enclave 的 Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
+- [具有安全 Enclave 的 Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
   - 已在 SQL Server 2019 预览版中进行多项增强来支持具有安全 Enclave 的 Always Encrypted
     - “连接到服务器”对话框（新的“Always Encrypted”选项卡）中指定 Enclave 证明 URL 的文本字段。
     - “新列主密钥”对话框中用于控制新列主密钥是否允许 Enclave 计算的新复选框。
@@ -300,7 +300,7 @@ GeneMi. 2019/04/02.
   - [预览版 6 中的新增功能] 修复了使用“ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)”时 IntelliSense 发出警告的问题
   - [RC1 中的新增功能] 解决了多个系统视图和表值函数未正确着色的问题。
 
-- **“对象资源管理器”**
+- **对象资源管理器**
   - 修复了 SSMS 在 OE 中尝试展开“管理”节点（错误配置 DataCollector）时引发“对象无法从 DBNull 转换为其他类型”异常的问题
   - 修复了在重命名节点时 DEL 键不工作的问题（有关详细信息，请参阅 https://feedback.azure.com/forums/908035/suggestions/32910247 及其他副本）
   - 修复了在调用“Edit Top N…”之前 OE 未转义引号会导致设计混淆的问题
@@ -368,7 +368,7 @@ GeneMi. 2019/04/02.
   - [预览版 7 中的新增功能] 修复了导入向导无法处理负十进制值的问题。
   - [预览版 7 中的新增功能] 修复了向导无法从单列 CSV 文件导入的问题。
 
-- **HADR / AG**
+- **HADR/AG**
   - [预览版 5 中的新增功能] 修复了“故障转移可用性组”向导中角色始终显示为“正在解析”的问题 
   - [预览版 5 中的新增功能] 修复了 SSMS 在“可用性组仪表板”中显示的警告遭截断的问题。
 
@@ -404,7 +404,7 @@ GeneMi. 2019/04/02.
   - [预览版 7 中的新增功能] 修复了对 SMO 中的 `ALTER DB ADD FILE` 语句编写脚本导致生成的 T-SQL 脚本为空的问题。
   - [RC1 中的新增功能] 改进了托管实例服务器特定属性（硬件生成、服务层、使用和保留的存储）的显示。
 
-- **Azure SQL Database**
+- **Azure SQL 数据库**
   - 修复了连接到 Azure SQL DB 中的用户数据库而不是主数据库时 Azure SQL Db 查询窗口中未正确填充数据库列表的问题。
   - 修复了无法向 SQL Azure DB 添加“临时表”的问题。
   - [预览版 6 中的新增功能] 在 Azure 的菜单统计信息下启用了“统计信息属性”子菜单选项，因为它已受到相当长一段时间的完全支持。
@@ -438,7 +438,7 @@ GeneMi. 2019/04/02.
   - [预览版 6 中的新增功能] SQL 2017 和 SQL 2019 上的传输数据库任务/复制数据库向导中断
   - [预览版 6 中的新增功能] 先创建生成脚本/传输/复制数据库向导脚本表，再创建关联的外部数据源
 
-- **事件探查器**
+- **探查器**
   - [预览版 6 中的新增功能] 将“聚合表重写查询”事件添加到了探查器事件。
   - [RC1 中的新增功能] 解决了阻止 SQL Profiler 在 Windows 7 SP1 上启动的问题。
 
@@ -592,7 +592,7 @@ Microsoft Azure 集成：
 通过单击以下部分中的标题链接，下载 SSMS 的早期版本：
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![下载](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
-*在 17.8 中发现了与配置 SQL 数据库相关的 bug，因此 SSMS 17.8.1 取代了 17.8。*
+在 17.8 中发现了与配置 SQL 数据库相关的错误，因此 SSMS 17.8.1 取代了 17.8。
 
 生成号：14.0.17277.0<br>
 发布日期：2018 年 6 月 26 日
@@ -1266,7 +1266,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - SQL Server 图形扩展 为图形节点和边缘表提供了新图标 图形节点和边缘表将在“图形表”文件夹下显示 提供了用于创建图形节点和边缘表的模板
 - 演示文稿模式 新增了 3 个可通过快速启动 (Ctr-Q) 执行的任务 PresentOn - 打开演示模式 PresentEdit - 编辑演示模式的演示字号。  对查询编辑器使用“文本编辑器字体”。  对其他组件使用“环境字体”。
 RestoreDefaultFonts - 还原默认设置。
-*注意：暂无 PresentOff 命令。  请使用 RestoreDefaultFonts 关闭演示模式*
+*注意：暂无 PresentOff 命令。请使用 RestoreDefaultFonts 关闭演示模式*
 
 ### <a name="bug-fixes"></a>Bug 修复
 

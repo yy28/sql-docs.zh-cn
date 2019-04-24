@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b1151235fb0c78925d1823ad0bfa5de1c3a155ff
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 9c440470361c1bb466ce41e3f78df17484d19a56
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243491"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59736873"
 ---
 
 > [!NOTE]
-> 如果在本文中发现过时或不正确的内容（如在步骤中或在代码示例中），请告诉我们。 可以单击此页底部的反馈按钮。 谢谢！
+> 如果在本文中发现过时或不正确的内容（如在步骤中或在代码示例中），请告诉我们。 可以单击此页底部的“反馈”部分中的“本页”按钮。 更棒的是，如果知道修复方法，则可以单击此页顶部的“编辑铅笔”图标，然后单击 GitHub 页上的铅笔图标。 谢谢！
 

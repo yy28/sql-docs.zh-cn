@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241879"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 发行说明
@@ -51,7 +51,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 
 发布时间：2019 年 1 月 28 日  
 生成号：14.0.16186.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -85,7 +85,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 11 月 5 日  
 生成号：14.0.16182.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 **SSIS：**
@@ -101,7 +101,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 9 月 27 日  
 生成号：14.0.16179.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -121,7 +121,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 9 月 5 日  
 生成号：14.0.16174.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -144,7 +144,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 7 月 2 日  
 生成号：14.0.16167.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -167,7 +167,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 6 月 4 日  
 生成号：14.0.16165.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -192,7 +192,7 @@ _SSDT for Visual Studio 2017。_
 
 发布时间：2018 年 4 月 10 日  
 生成号：14.0.16162.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -220,7 +220,7 @@ _SSDT for Visual Studio 2017。_
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2，SSDT for VS 2017
 
 生成号：14.0.16156.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -243,7 +243,7 @@ _SSDT for Visual Studio 2017。_
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1，SSDT for VS 2017
 
 生成号：14.0.16148.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -257,7 +257,7 @@ _SSDT for Visual Studio 2017。_
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0，SSDT for VS 2017
 
 生成号：14.0.16146.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -284,7 +284,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3，SSDT for VS 2015
 
 生成号：14.0.61712.050  
-_SSDT for Visual Studio 2015。_
+SSDT for Visual Studio 2015。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -333,7 +333,7 @@ _SSDT for Visual Studio 2015。_
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0（预览版），SSDT for VS 2017
 
 生成号：14.0.16134.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
   
 ### <a name="whats-new"></a>新增功能
 
@@ -366,7 +366,7 @@ _SSDT for Visual Studio 2017。_
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30，SSDT for VS 2015
 
 生成号：14.0.61709.290  
-_SSDT for Visual Studio 2015。_
+SSDT for Visual Studio 2015。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -391,13 +391,13 @@ _SSDT for Visual Studio 2015。_
 
 - 新的报表项目格式不会保留源代码管理绑定，并会引发与以下消息类似的错误：
 
-   *项目文件 C:\path 未绑定到源代码管理，但解决方案包含其中的源代码管理绑定信息。*
+   项目文件 C:\path 未绑定到源代码管理，但该解决方案包含其中的源代码管理绑定信息。
  
    若要解决此问题，每当打开解决方案时，请单击“使用解决方案绑定”。
 
 - 将项目升级到新的 MSBuild 格式后，保存可能会失败，消息类似于以下内容：
 
-   *“参数 "unevaluatedValue" 不得为 null。”*
+   “参数 "unevaluatedValue" 不得为 null。”
 
    若要解决此问题，请更新“项目配置”并填写“平台”属性。
 
@@ -459,7 +459,7 @@ _SSDT for Visual Studio 2015。_
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0（预览版），SSDT for VS 2017
 
 生成号：14.0.16121.0  
-_SSDT for Visual Studio 2017。_
+SSDT for Visual Studio 2017。
   
 ### <a name="whats-new"></a>新增功能
 
@@ -477,7 +477,7 @@ _SSDT for Visual Studio 2017。_
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，SSDT for VS 2015
 
 生成号：14.0.61707.300  
-_SSDT for Visual Studio 2015。_
+SSDT for Visual Studio 2015。
 
 ### <a name="whats-new"></a>新增功能
 
@@ -526,7 +526,7 @@ _SSDT for Visual Studio 2015。_
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，SSDT for VS 2015
 
 生成号：14.0.61705.170  
-_SSDT for Visual Studio 2015。_
+SSDT for Visual Studio 2015。
 
 ### <a name="whats-new"></a>新增功能
 **AS 项目：**
@@ -560,8 +560,8 @@ _SSDT for Visual Studio 2015。_
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0，SSDT for VS 2015
 
 生成号：14.0.61704.140  
-_SSDT for Visual Studio 2015。_  
-_最高支持 SQL Server 2017。_
+SSDT for Visual Studio 2015。  
+最高支持 SQL Server 2017。
 
 ### <a name="whats-new"></a>新增功能
 **数据库项目：**
@@ -665,8 +665,8 @@ _最高支持 SQL Server 2017。_
 
 发布时间：2016 年 10 月 20 日  
 生成号：14.0.61021.0  
-_SSDT for Visual Studio 2015。_  
-_最高支持 SQL Server 2016。_
+SSDT for Visual Studio 2015。  
+最高支持 SQL Server 2016。
 
 **新增功能**
 
@@ -730,7 +730,7 @@ Console.WriteLine(result.DeploymentReport);
 
 ### <a name="fixed--improved-this-month"></a>本月修复/改进的功能
 
-**数据库工具**
+**Database Tools**
 
 * [连接 bug 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - 无法从使用显式架构的 CROSS APPLY OPENJSON 中选择列
 * 已修复 - 自动生成的历史记录表索引问题：重新部署时 DacFx 会删除索引
@@ -758,13 +758,13 @@ Console.WriteLine(result.DeploymentReport);
 
 发布时间：2016 年 9 月 20 日  
 生成号：14.0.60918  
-_适用于 SQL Server 2016。_
+适用于 SQL Server 2016。
 
 **新增功能**
 
 现在，SqlPackage.exe 和数据层应用程序框架 (DacFx) API 支持架构比较。 有关详细信息，请参阅  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)（SqlPackage 和数据层应用程序框架中的架构比较）。
 
-**Analysis Services - 适用于 SSDT 表格的集成工作区模式 (SSAS)**
+**Analysis Services - 适用于 SSDT Tabular 的集成工作区模式 (SSAS)**
 
 SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式，SSDT Tabular 将在后台自动启动该实例，使你能够在模型设计器中添加和查看表、列与数据，而无需提供外部工作区服务器实例。 集成工作区模式不会更改 SSDT 表格与工作区服务器和数据库配合工作的方式。 更改的是 SSDT 表格托管工作区数据库的位置。 若要启用集成工作区模式，请在创建新表格项目时显示的“表格模型设计器”对话框中选择“集成工作区”选项。 对于当前使用显式工作区服务器的现有表格项目，可以通过在“属性”窗口（在解决方案资源管理器中选择 Model.bim 文件时会显示该窗口）中，将“集成工作区模式”参数设置为 True 切换到集成工作区模式。 有关详细信息，请参阅 [Analysis Services 博客文章](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)。
 
@@ -797,7 +797,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
 
 发布时间：2016 年 8 月 15 日  
 生成号：14.0.60812.0  
-_适用于 SQL Server 2016。_
+适用于 SQL Server 2016。
 
 **新增功能**
 
@@ -835,7 +835,7 @@ _适用于 SQL Server 2016。_
 
 发布时间：2016 年 6 月 30 日  
 生成号：14.0.60629.0  
-_适用于 SQL Server 2016。_
+适用于 SQL Server 2016。
 
 **新增功能**  
 - **Always Encrypted 支持：** 对于包含 Always Encrypted 列的数据库，此发行版通过我们的核心 API 和命令行工具 (SqlPackage.exe) 添加了对 Always Encrypted 的完全支持。 你可以生成并发布完全支持所有 Always Encrypted 功能的数据库项目。  
@@ -879,14 +879,14 @@ _适用于 SQL Server 2016。_
 
 发布时间：2016 年 6 月 1 日  
 生成号：14.0.60525.0  
-_适用于 SQL Server 2016。_
+适用于 SQL Server 2016。
 
 SSDT 正式版 (GA) 现已发布。 2016 年 6 月 SSDT GA 更新添加了对 SQL Server 2016 RTM 最新更新的支持，并修复了多个 bug。 有关详细信息，请参阅 [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)（SQL Server Data Tools GA 2016 年 6 月更新）。
 
 ## <a name="additional-resources"></a>其他资源
   
-[下载 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[旧版 SQL Server Data Tools（SSDT 和 SSDT-BI）](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
+[下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+[以前版本的 SQL Server Data Tools（SSDT 和 SSDT-BI）](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [数据库引擎中的新增功能](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Analysis Services 中的新增功能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services 中的新增功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  

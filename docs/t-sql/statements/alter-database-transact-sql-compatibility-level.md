@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 兼容级别 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828077"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583370"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 
@@ -176,6 +176,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 对于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，数据库兼容性级别 150 目前为公共预览版。 除了数据库兼容性级别 140 中引入的改进之外，此数据库兼容性级别还将与下一代查询处理改进相关联。
 
+|兼容性级别设置为 140 或更低|兼容性级别设置为 150|
+|--------------------------------------------------|-----------------------------------------|
+|关系数据仓库和分析工作负荷可能由于 OLTP 开销、缺少供应商支持或其他限制而无法利用列存储索引。  如果没有列存储索引，这些工作负荷将不能受益于批处理执行模式。|批处理执行模式现在适用于分析工作负荷，而无需列存储索引。 有关详细信息，请参阅[行存储上的批处理模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)。|
+|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致溢出到磁盘的不充足内存授予大小的行模式查询可能会提高连续执行的性能。 有关详细信息，请参阅[行模式内存授予反馈](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
+|请求会导致并发问题的过多内存授予大小的行模式查询可能会继续对连续执行产生问题。|请求会导致并发问题的过多内存授予大小的行模式查询可能会改进连续执行的并发性。 有关详细信息，请参阅[行模式内存授予反馈](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
+|引用 T-SQL 标量 UDF 的查询将使用迭代调用、缺乏成本计算并强制串行执行。 |T-SQL 标量 UDF 将转换为内联在调用查询中的等效关系表达式，这通常会使性能显著提升。 有关详细信息，请参阅 [T-SQL 标量 UDF 内联](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)。|
+|表变量使用固定猜测值来进行基数估计。  如果实际行数远高于猜测值，则下游操作的性能可能会受到影响。 |新计划将使用在首次编译时遇到的表变量的实际基数，而不是一个固定猜测值。 有关详细信息，请参阅[表变量延迟编译](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)。|
+
 有关数据库兼容性级别 150 中启用的查询处理功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)和 [SQL 数据库中的智能查询处理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>兼容级别 130 与兼容级别 140 之间的差异
@@ -291,7 +299,7 @@ SQL Server 2017 之前的早期 SQL Server 版本中处于跟踪标志 4199 下�
 
 有关详细信息，请参阅[保留关键字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 需要对数据库拥有 ALTER 权限。
 

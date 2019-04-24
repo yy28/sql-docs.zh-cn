@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974346"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671383"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 排序规则名称 (Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "57974346"
 ## <a name="syntax"></a>语法
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>参数
 
-CollationDesignator 指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
+*CollationDesignator*   
+指定 Windows 排序规则使用的基本排序规则。 基本排序规则包括以下内容：
 
 - 指定按字典排序时应用的排序和比较规则。 排序规则基于字母表或语言。
 - 用于存储 varchar数据 的代码页。
@@ -67,20 +67,20 @@ CI 指定不区分大小写，CS 指定区分大小写。
 AI 指定不区分重音，AS 指定区分重音。
 
 KanatypeSensitive  
-Omitted 指定不区分假名类型，KS 指定区分假名类型。
+省略此选项指定不区分假名类型，KS 指定区分假名类型。
 
 WidthSensitivity  
-Omitted 指定不区分全半角，WS 指定区分全半角。
+省略此选项指定不区分全半角，WS 指定区分全半角。
 
 VariationSelectorSensitivity  
-**适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
+- **适用对象**：自 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 起 
 
-“省略”指定区分不区分选择器，“VSS”指定区分区分选择器。
+- 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器。
 
 **UTF8**  
-**适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
+- **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起   
 
-指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+- 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **BIN**  
 指定使用向后兼容的二进制排序顺序。

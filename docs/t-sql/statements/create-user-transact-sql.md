@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042167"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "59042167"
 -   基于无登录名的 Windows 组的用户。 `CREATE USER [Contoso\Sales];`  
 -   基于 Azure Active Directory 用户的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中的用户。 `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   拥有密码的包含数据库用户。 （不可用于 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。） `CREATE USER Mary WITH PASSWORD = '********';`   
+-   拥有密码的包含数据库用户。 （不可用于 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。）`CREATE USER Mary WITH PASSWORD = '********';`   
   
 **基于通过 Windows 组登录名连接的 Windows 主体的用户**  
   
@@ -173,7 +173,7 @@ CREATE USER user_name
 ```  
   
 ## <a name="arguments"></a>参数  
- *user_name*  
+ user_name  
  指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname**。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
   
  LOGIN *login_name*  
@@ -279,7 +279,7 @@ GO
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> 语法摘要  
- **基于 master 中登录名的用户**  
+ **基于 master 数据库中登录名的用户**  
   
  下面的列表显示基于登录名的用户的可能语法。 未列出默认架构选项。  
   
@@ -337,7 +337,7 @@ GO
   
  在包含数据库中，创建用户有助于将数据库与[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例分离，以便可以轻松地将数据库移动到其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中。 有关详细信息，请参阅[包含的数据库](../../relational-databases/databases/contained-databases.md)和[包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。 若要将数据库用户从基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名的用户更改为拥有密码的包含数据库用户，请参阅 [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)。  
   
- 在包含的数据库中，用户不必在 **master** 数据库中具有登录名。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 管理员应该了解，可在数据库级别而非 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 级别授予对包含数据库的访问权限。 有关详细信息，请参阅 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
+ 在包含的数据库中，用户不必在 **master** 数据库中具有登录名。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]管理员应该了解，可在数据库级别而非[!INCLUDE[ssDE](../../includes/ssde-md.md)]级别授予对包含数据库的访问权限。 有关详细信息，请参阅 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)。  
   
  对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用包含的数据库用户时，使用数据库级别防火墙规则（而不服务器级别防火墙规则）配置访问权限。 有关详细信息，请参阅 [sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)。
  

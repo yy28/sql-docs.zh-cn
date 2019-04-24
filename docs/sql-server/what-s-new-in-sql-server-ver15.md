@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042416"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774602"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新增功能
 
@@ -24,13 +24,13 @@ ms.locfileid: "59042416"
 
 有关详细信息和已知问题，请参阅 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 发行说明](sql-server-ver15-release-notes.md)。
 
-**试用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]！**
+试用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]！
 
 - [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下载 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以在 Windows 上安装](https://go.microsoft.com/fwlink/?LinkID=862101)。
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../linux/quickstart-install-connect-docker.md)。
 
-**使用[最新工具](#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验。**
+使用[最新工具](#tools)获得 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最佳体验。
 
 ## <a name="ctp-24"></a>CTP 2.4
 
@@ -39,8 +39,8 @@ ms.locfileid: "59042416"
 - [大数据群集](#bigdatacluster)
   - 关于 GPU 支持在 Spark 中使用 TensorFlow 运行深度学习的指南。
   - Spark 运行时升级到 Spark 2.4。
-  - `INSERT INTO SELECT` 支持数据池。
-  - `FORCE SCALEOUTEXECUTION` 和适用于外部表查询的 `DISABLE SCALEOUTEXECUTION` 选项子句。
+  - 数据池的 `INSERT INTO SELECT` 支持。
+  - 适用于外部表查询的 `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项子句。
 
 - [数据库引擎](#databaseengine)
   - 截断错误消息默认包括表名和列名以及截断值。 请参阅[截断](#truncation)。
@@ -55,12 +55,12 @@ ms.locfileid: "59042416"
 
 ## <a id="bigdatacluster"></a>大数据群集
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [大数据群集](../big-data-cluster/big-data-cluster-overview.md)支持以下新方案：
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [大数据群集](../big-data-cluster/big-data-cluster-overview.md)支持新方案，包括以下内容：
 
 - [GPU 支持在 Spark 中使用 TensorFlow 运行深度学习](../big-data-cluster/spark-gpu-tensorflow.md)。 (CTP 2.4)
 - Spark 运行时升级到 Spark 2.4。 (CTP 2.4)
-- `INSERT INTO SELECT` 支持数据池。
-- `FORCE SCALEOUTEXECUTION` 和适用于外部表查询的 `DISABLE SCALEOUTEXECUTION` 选项子句。
+- 数据池的 `INSERT INTO SELECT` 支持。
+- 适用于外部表查询的 `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 选项子句。
 - [在 IntelliJ 中的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]大数据群集上提交 Spark 作业](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)。 (CTP 2.3)
 - 各种数据相关应用的[应用程序部署和管理体验](../big-data-cluster/big-data-cluster-create-apps.md)，包括使用 R 和 Python 操作化器学习模型、运行 SQL Server Integration Services (SSIS) 作业等。 (CTP 2.3)
 - [在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]大数据群集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md)。 (CTP 2.3)
@@ -77,7 +77,7 @@ ms.locfileid: "59042416"
 
 ## <a id="databaseengine"></a> 数据库引擎
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 引入或改进了以下新功能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 引入或强化了以下新功能。
 
 ### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 扩展事件 (CTP 2.4)
 
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> 在 Azure SQL DB 中利用该功能不需要此语法，该功能默认启用。
+> 在 Azure SQL DB 中利用该功能不需要此语法，该功能[在公共预览期间按请求启用](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period)。 启用后，该功能默认为打开状态。
 
 如果有易于受到大型事务影响的关键数据库，请在预览期间试用此功能。 向 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 团队](<https://aka.ms/sqlfeedback>)提供反馈。
 
@@ -171,7 +171,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>改进了间接检查点可伸缩性 (CTP 2.3)
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的之前版本中，如果存在生成大量脏页的数据库（例如 tempdb），用户可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 UPDATE/INSERT 工作负载的数据库中出现这些错误。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的之前版本中，如果存在生成大量脏页的数据库（例如 tempdb），用户可能会遇到计划程序无法完成错误。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 为间接检查点引入了改进的可伸缩性，这应该有助于避免具有大量 UPDATE/INSERT 工作负荷的数据库中出现这些错误。
 
 ### <a name="utf-8-support-ctp-23"></a>UTF-8 支持 (CTP 2.3)
 
@@ -377,7 +377,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
     - 在一些非 Microsoft 网站上，永久性内存有时会通俗地称为“pmem”。
 
 > [!NOTE]
-> 对于此预览版，永久性内存设备上的文件启用只在 Linux 上可用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 位于 Windows 上，支持自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 起开始提供的永久性内存设备。
+> 对于此预览版，永久性内存设备上的文件启用只在 Linux 上可用。 Windows 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 起开始提供的永久性内存设备。
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>支持 DBCC CLONEDATABASE 中的列存储统计信息 (CTP 2.0)
 
@@ -427,8 +427,8 @@ FROM sys.dm_exec_requests AS d
 
 - **新容器注册表 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像现均位于 Microsoft 容器注册表中。 Microsoft 容器注册表是用于分发 Microsoft 产品容器的官方容器注册表。 此外，现发布了已认证的基于 RHEL 映像。
 
-  - Microsoft 容器注册表： `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
-  - 经认证的基于 RHEL 的容器映像： `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
+  - Microsoft 容器注册表：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
+  - 经认证的基于 RHEL 的容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 - **复制支持 (CTP 2.0)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支持 Linux 上的 SQL Server 复制。 使用 SQL 代理的 Linux 虚拟机可以是发布服务器、分发服务器上或订阅服务器。 
 
