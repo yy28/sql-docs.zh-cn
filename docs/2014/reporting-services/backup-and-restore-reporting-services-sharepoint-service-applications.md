@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033828"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971893"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
   本主题说明如何使用 SharePoint 管理中心或 PowerShell 备份和还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序。 本主题包含：  
@@ -74,7 +74,7 @@ ms.locfileid: "56033828"
  [备份服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证  
- **执行帐户：** 验证你的服务应用程序是否正在使用执行帐户：  
+ **执行帐户：** 若要验证将服务应用程序使用执行帐户：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56033828"
   
 4.  如果配置了执行帐户，则当需要还原服务应用程序备份时，您需要知道凭据。 在知道正确的凭据之前，请不要继续执行备份和还原过程。  
   
- **数据库身份验证：** 验证你的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
+ **数据库身份验证：** 若要验证将服务应用程序使用 Windows 身份验证进行数据库身份验证：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033828"
  有关还原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密密钥的信息，请参阅[管理 Reporting Services SharePoint 服务应用程序](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的“加密密钥”部分。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证  
- **执行帐户：** 如果你的服务应用程序正在使用执行账户，请完成下列步骤对它进行配置：  
+ **执行帐户：** 如果将服务应用程序正在使用执行帐户，请完成以下步骤对其进行配置：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033828"
   
 5.  单击“确定” 。  
   
- **数据库身份验证：** 如果你的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
+ **数据库身份验证：** 如果将服务应用程序使用的 Windows 身份验证进行数据库身份验证完成以下步骤：  
   
 1.  在 SharePoint 管理中心的 **“应用程序管理”** 组中，单击 **“管理服务应用程序”** 。  
   

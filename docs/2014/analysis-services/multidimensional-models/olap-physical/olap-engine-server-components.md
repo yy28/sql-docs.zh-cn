@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -17,12 +15,12 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4121fb0ad30b7593fcca384235ac4990fc54979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164777"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156233"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 引擎服务器组件
   服务器组件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]是**msmdsrv.exe**作为 Windows 服务运行的应用程序。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
@@ -59,13 +57,13 @@ ms.locfileid: "48164777"
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
-|在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的命名实例。|  
+|在服务器启动时动态分配| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的命名实例。|  
   
  请参阅[配置 Windows 防火墙以允许 Analysis Services 访问](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)的更多详细信息。  
   
 ## <a name="see-also"></a>请参阅  
  [对象命名规则&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [物理体系结构&#40;Analysis Services-多维数据&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [物理体系结构（Analysis Services - 多维数据）](understanding-microsoft-olap-physical-architecture.md)   
  [逻辑体系结构&#40;Analysis Services-多维数据&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   
