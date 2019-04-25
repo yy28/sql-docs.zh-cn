@@ -1,5 +1,5 @@
 ---
-title: 授予处理数据库权限 |Microsoft 文档
+title: 授予处理数据库权限 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7777d2bb3a69a2f42c5ee25adbc77e0f07a0b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467748"
 ---
-# <a name="lesson-10---granting-process-database-permissions"></a>课程 10-授予处理数据库权限
+# <a name="lesson-10---granting-process-database-permissions"></a>第 10 课-授予处理数据库权限
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
+在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
   
 服务器管理员角色的成员可通过使用户成为该角色的成员，在服务器范围的基础上授予用户管理访问权限。 通过在数据库级别授予用户有限或完整的管理或访问权限，服务器管理员角色的成员还可以在更为有限的基础上授予用户访问权限。 有限的管理权限包括在数据库、多维数据集或维度级别处理或读取定义的权限。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34017084"
   
 3.  在“属性”窗口中，将此新角色的“名称”属性更改为 **Process Database Objects Role**。  
   
-    ![在角色设计器](../analysis-services/media/l10-security-1.png "角色设计器")  
+    ![角色设计器](../analysis-services/media/l10-security-1.png "角色设计器")  
   
 4.  切换到角色设计器的“成员身份”选项卡，然后单击“添加”。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "34017084"
     现在，您已经成功定义和部署了“Process Database Objects”安全角色。 将多维数据集部署到生产环境之后，所部署的多维数据集的管理员可以根据需要向此角色中添加用户，以便将处理责任委派给具体用户。  
   
 > [!NOTE]  
-> 通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)。  
+> 通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](../analysis-services/install-sample-data-and-projects.md)。  
   
-## <a name="see-also"></a>另请参阅  
-[角色和权限 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+[角色和权限 (Analysis Services)](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

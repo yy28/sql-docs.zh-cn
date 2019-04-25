@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640491"
 ---
 # <a name="pseudo-type-identifiers"></a>伪类型标识符
 应用程序方便地用于编程，ODBC 定义的伪类型标识符的数目。 这些标识符实际上不对应于实际数据类型，但相反，具体取决于这种情况，解决对现有数据类型。  

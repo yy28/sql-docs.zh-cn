@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 项目和在开发过程中的数据库 |Microsoft 文档
+title: 使用 Analysis Services 项目和开发中的数据库 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 018f937ed07c202aad17d5e7758f41a3082c4870
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743113"
 ---
-# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>使用 Analysis Services 项目和在开发过程中的数据库
+# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>使用 Analysis Services 项目和数据库开发中
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可以在项目模式或联机模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库。  
   

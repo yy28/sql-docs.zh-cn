@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757808"
 ---
 # <a name="database-representationtabular"></a>数据库表示形式（表格）
   在表格模式下，数据库为表格模型中所有对象的容器。  

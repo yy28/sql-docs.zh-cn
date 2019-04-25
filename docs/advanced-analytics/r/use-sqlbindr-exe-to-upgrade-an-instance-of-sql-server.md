@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642052"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -226,7 +226,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 可以还原到初始安装的 R 和 Python 组件建立 SQL Server 安装程序的绑定的实例。 有三个部分恢复到 SQL Server 服务。
 
-+ [第 1 步：从 Microsoft Machine Learning Server 取消绑定](#step-1-unbind)
++ [步骤 1：从 Microsoft Machine Learning Server 取消绑定](#step-1-unbind)
 + [步骤 2：将实例还原到原始状态](#step-2-restore)
 + [步骤 3：重新安装任何添加到安装的包](#step-3-reinstall-packages)
 

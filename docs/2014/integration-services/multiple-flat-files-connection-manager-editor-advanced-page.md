@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767279"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
   可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。  
@@ -44,7 +44,7 @@ ms.locfileid: "58391727"
 |**ColumnType**|表示列是由分隔符分隔、还是固定宽度，或是右边未对齐。 该属性为只读。 在右边未对齐的文件中，除最后一列之外的每一列的宽度都固定，而最后一列由行分隔符终止。|  
 |**OutputColumnWidth**|指定值以字节数进行存储；对于 Unicode 文件，该值将显示为字符数。 在数据流任务中，此值用于设置平面文件源的输出列宽。<br /><br /> 注意：在对象模型中，此属性的名称为 MaximumWidth。|  
 |**DataType**|从可用数据类型的列表中进行选择。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|指示是否使用文本限定符限定文本数据。 有效值为<br /><br /> **True**:平面文件中的文本数据是受限定的。<br /><br /> **False**:平面文件中的文本数据是不受限定的。|  
+|**TextQualified**|指示是否使用文本限定符限定文本数据。 有效值为<br /><br /> **True**：平面文件中的文本数据是受限定的。<br /><br /> **False**：平面文件中的文本数据是不受限定的。|  
 |**名称**|提供列名。 默认为带编号的列列表，不过，您也可以任选一个唯一的描述性名称。|  
 |**DataScale**|指定数字数据的小数位数。 小数位数是指小数点后的位数。 有关详细信息，请参阅 [Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
 |**ColumnDelimiter**|从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。 对于固定宽度的列，将忽略此值。<br /><br /> **{CR}{LF}** - 列由回车符和换行符的组合分隔<br /><br /> **{CR}** - 列由回车符分隔<br /><br /> **{LF}** - 列由换行符分隔<br /><br /> **分号 {;}** - 列由分号分隔<br /><br /> **冒号 {:}** - 列由冒号分隔<br /><br /> **逗号 {,}** - 列由逗号分隔<br /><br /> **制表符 {t}** - 列由制表符分隔<br /><br /> **竖线 {&#124;}** - 列由竖线分隔|  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757904"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel 表分析工具
   中的数据挖掘工具**分析**工具栏是开始使用数据挖掘的最简单方法。 每个工具都会对您的数据的分布和类型自动进行分析，并且设置参数以确保结果有效。 您就无需选择某一算法或配置复杂的参数。  

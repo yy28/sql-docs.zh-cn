@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642959"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 将一个指定的文本字符串写入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
@@ -35,7 +35,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *数据*  
+ *Data*  
  一个**字符串**值，该值包含要写入的字符中的文本。  
   
  *选项*  

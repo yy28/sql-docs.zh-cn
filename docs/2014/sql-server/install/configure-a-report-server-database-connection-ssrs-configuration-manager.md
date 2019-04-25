@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762020"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
   每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48202647"
   
 -   承载报表服务器数据库的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
   
--   报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅[创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)。  
+-   报表服务器数据库的名称。 首次创建连接时，可以创建新的报表服务器数据库，或选择现有数据库。 有关详细信息，请参阅 [创建报表服务器数据库（SSRS 配置管理器）](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)。  
   
 -   凭据类型。 可以使用服务帐户、Windows 域帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库登录名。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48202647"
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
- 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户建立连接），则 <`LogonUser`>、<`LogonDomain`> 和 <`LogonCred`> 将为空，如下所示：  
+ 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值 （即，使用服务帐户来建立连接），将连接配置 <`LogonUser`>，<`LogonDomain`>，和 <`LogonCred`> 将为空，按如下所示：  
   
 ```  
 <Dsn></Dsn>  
@@ -123,7 +123,7 @@ ms.locfileid: "48202647"
  可以将多个报表服务器配置为使用同一个报表服务器数据库。 此部署配置称为扩展部署。 如果要在服务器群集中运行多个报表服务器，则此配置为必备条件。 但是，如果要将服务应用程序分段，或者要测试新的报表服务器实例的安装和设置以将其与现有报表服务器安装进行比较，则也以可使用此配置。 有关详细信息，请参阅[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [创建报表服务器数据库（SSRS 配置管理器）](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

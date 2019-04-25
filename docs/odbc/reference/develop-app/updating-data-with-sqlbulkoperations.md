@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632440"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新数据
 应用程序可以执行时数据源通过调用基础表上的大容量更新、 删除、 提取时或插入操作**SQLBulkOperations**。 调用**SQLBulkOperations**是一个便捷替代方式构造和执行 SQL 语句。 它使 ODBC 驱动程序支持定位的更新，即使数据源不支持定位的 SQL 语句。 它是通过函数调用实现完整的数据库访问模式的一部分。  

@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632410"
 ---
 # <a name="parameter-data-types"></a>参数数据类型
 即使每个参数指定了**SQLBindParameter**是定义使用 SQL 数据类型，SQL 语句中的参数具有任何内部函数的数据类型。 因此，参数标记可以包含 SQL 语句中才可以从语句中的另一个操作数推断出其数据类型。 例如，在如算术表达式？ + 可以从 COLUMN1 所表示的命名列的数据类型推断出 COLUMN1，该参数的数据类型。 如果不确定的数据类型，应用程序不能使用参数标记。  

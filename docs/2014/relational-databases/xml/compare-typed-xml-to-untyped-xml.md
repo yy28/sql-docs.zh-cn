@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637615"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
   您可以创建 `xml` 类型的变量、参数和列。 您也可以将 XML 架构的集合与 `xml` 类型的变量、参数或列关联起来。 在这种情况下，`xml`数据类型实例称为*键入*。 否则，XML 实例称作“非类型化” 的实例。  
@@ -67,14 +67,14 @@ ms.locfileid: "58538431"
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例如：将架构集合与 xml 类型变量相关联  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例如：将架构集合与 xml 类型变量关联起来  
  下面的示例创建`xml`类型变量并将架构集合与之相关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例如：指定的 xml 类型列的架构  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例如：为 xml 类型列指定架构  
  下面的示例创建一个包含 `xml` 类型列的表，并为该列指定了一个架构：  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  在数据类型层次结构中，`xml` 数据类型显示在 `sql_variant` 和用户定义类型之下，但显示在所有内置类型之上。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例如：指定方面来约束类型化的 xml 列  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例如：指定用于约束类型化的 xml 列的方面  
  对于类型化的 `xml` 列，可以对这样的列实施约束，使之仅允许存储每个实例的单独的顶级元素。 可以在创建了表以后通过指定可选的 `DOCUMENT` 方面来进行此操作，如以下示例中所示：  
   
 ```  

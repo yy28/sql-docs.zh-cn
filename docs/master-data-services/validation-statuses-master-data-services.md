@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629878"
 ---
 # <a name="validation-statuses-master-data-services"></a>验证状态 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52769749"
 
   在 **“版本管理”** 功能区域中的 **“验证版本”** 页上，以下状态可能会出现。  
   
-|“登录属性”|描述|  
+|“登录属性”|Description|  
 |------------|-----------------|  
 |正在等待验证|正在等待验证的所有新创建的成员。|  
 |正在等待重新验证|正在等待验证的现有成员。|  
@@ -32,7 +32,7 @@ ms.locfileid: "52769749"
 |验证失败|未通过业务规则验证的成员。|  
 |正在等待关联成员重新验证|等待与子成员一起进行验证的已更新合并成员。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

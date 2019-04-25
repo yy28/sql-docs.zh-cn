@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9832d2a3772d63c1b0641f6ca08205e25a9867c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633778"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支持的 SET 命令（Visual FoxPro ODBC 驱动程序）
 应用程序可以发送以下 Visual FoxPro**设置**到数据源的命令：  
@@ -35,15 +35,15 @@ ms.locfileid: "47797995"
   
  [组排序](../../odbc/microsoft/set-collate-command.md)  
   
- [删除组](../../odbc/microsoft/set-deleted-command.md)  
+ [SET DELETED](../../odbc/microsoft/set-deleted-command.md)  
   
- [设置完全](../../odbc/microsoft/set-exact-command.md)  
+ [SET EXACT](../../odbc/microsoft/set-exact-command.md)  
   
- [设置排他](../../odbc/microsoft/set-exclusive-command.md)  
+ [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)  
   
- [设置 NULL](../../odbc/microsoft/set-null-command.md)  
+ [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
- [设置路径](../../odbc/microsoft/set-path-command.md)  
+ [SET PATH](../../odbc/microsoft/set-path-command.md)  
   
  [集重新处理](../../odbc/microsoft/set-reprocess-command.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748179"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行筛选器（角色设计器）（表模型）
   使用角色设计器的 **“行筛选器”** 页可以定义关联角色的行级别筛选器。 只能为具有“读取”和“读取和处理”权限的角色定义行筛选器。  
@@ -38,6 +38,6 @@ ms.locfileid: "48061217"
   
 ## <a name="see-also"></a>请参阅  
  [表格模型角色&#40;SSAS 表格&#41;](tabular-models/roles-ssas-tabular.md)   
- [使用 SSMS 管理角色&#40;SSAS 表格&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [使用 SSMS 管理角色（SSAS 表格）](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

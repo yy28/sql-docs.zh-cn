@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757374"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式（SSAS 表格）
   Analysis Services 能让你检索数据并从表格模型创建报表，通过直接从关系数据库系统检索数据和聚合使用*DirectQuery 模式下*。 本主题介绍仅驻留在内存中的标准表格模型和可查询关系数据源的表格模型之间的差异，并且说明如何创建和部署要在 DirectQuery 模式下使用的模型。  
@@ -73,11 +73,11 @@ ms.locfileid: "58657971"
   
 -   **数据源：** DirectQuery 模型只能使用来自单个 SQL Server 数据源的数据。 如果已经为某一模型启用了 DirectQuery 模式，您将无法在模型设计器中使用任何其他数据类型，包括复制-粘贴操作添加的表。 所有其他导入选项都将被禁用。 在查询中包含的任何表都必须是 SQL Server 数据源的一部分。 请参阅[DirectQuery 模型的数据源](directquery-mode-ssas-tabular.md#bkmk_DataSources)有关详细信息。  
   
--   **对计算列的支持：** DirectQuery 模型不支持计算列。 但是，您可以创建度量值和 KPI，它们都对数据集进行操作。 请参阅章节[验证](#bkmk_Validation)有关详细信息。  
+-   **对计算列的支持：** DirectQuery 模型不支持计算的列。 但是，您可以创建度量值和 KPI，它们都对数据集进行操作。 请参阅章节[验证](#bkmk_Validation)有关详细信息。  
   
 -   **DAX 函数的受限的使用：** 不能在 DirectQuery 模式下，使用某些 DAX 函数，因此你必须使用其他函数代替它们，或创建数据源中使用派生的列的值。 模型设计器为您在创建与 DirectQuery 模式不兼容的公式时引发的任何错误提供设计时验证。 请参阅以下各节，有关详细信息：[验证](#bkmk_Validation)。  
   
--   **公式兼容性：** 在某些已知情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型或混合模型下返回不同的结果。 这些差异是由 xVelocity 内存中分析 (VertiPaq) 引擎和 SQL Server 之间的语义差异造成的。 有关这些差异的详细信息，请参阅此部分：[公式兼容性](#bkmk_FormulaCompat)。  
+-   **公式兼容性：** 在某些已知情况下，与仅使用关系数据存储的 DirectQuery 模型相比，相同的公式可能在缓存模型或混合模型下返回不同的结果。 这些差异是由 xVelocity 内存中分析 (VertiPaq) 引擎和 SQL Server 之间的语义差异造成的。 有关这些差异的详细信息，请参阅本部分中：[公式兼容性](#bkmk_FormulaCompat)。  
   
 -   **安全性：** 可以使用不同的方法来保护模型根据部署方式。 通过使用 Analysis Services 实例的安全模型，确保缓存的表格模型数据的安全。 可使用角色确保 DirectQuery 模型的安全，但是，您也可以使用在关系数据存储区中定义的安全性。 可以配置模型，以便基于仅限 DirectQuery 模型打开报表的用户只能看到基于其在 SQL Server 中的权限允许该用户看到的数据。 请参阅此部分，了解详细信息：[安全](#bkmk_Security)。  
   

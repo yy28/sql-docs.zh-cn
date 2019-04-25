@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748039"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>示例数据（SQL Server 数据挖掘外接程序）
   ![数据挖掘功能区中的分区数据向导](media/dmc-partition.gif "数据挖掘功能区中的数据进行分区向导")  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637081"
 ---
 # <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
 
@@ -71,7 +71,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。  
@@ -104,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  向每个参数赋值  
   
-    5.  单击 **“保存”**。  
+    5.  单击“保存” 。  
   
 8.  执行以下操作以将用户定义脚本用作操作。  
   
@@ -112,9 +112,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。  
   
-    3.  单击 **“保存”**。  
+    3.  单击“保存” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [业务规则条件 (Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [业务规则操作 (Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  

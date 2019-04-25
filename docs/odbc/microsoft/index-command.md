@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471255"
 ---
 # <a name="index-command"></a>INDEX 命令
 创建一个索引文件，以显示和访问表记录按逻辑顺序。  
@@ -46,10 +46,10 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  就可以创建具有长度为零的索引键。 例如，将零长度索引创建密钥，当索引表达式为空的备注字段的子字符串。 零长度索引键生成一条错误消息。 当 Visual FoxPro 创建索引时，它会评估中的表中的第一个记录的字段。 如果字段为空，可能需要在第一条记录以防止长度 0 的索引键中的字段中输入一些临时数据。  
   
- 到*IDXFileName*  
+ TO *IDXFileName*  
  创建一个.idx 索引文件。 索引的文件都有默认扩展.idx。  
   
- 标记*TagName*[OF *CDXFileName*]  
+ TAG *TagName*[OF *CDXFileName*]  
  创建复合索引文件。 复合索引文件是包含任意数量的单独的标记 （索引条目） 的单个索引文件。 每个标记都由其唯一的标记名称标识。 标记名称必须以字母或下划线开头，并且可以包含最多 10 个字母、 数字或下划线的任意组合。 复合索引文件中的标记数仅受可用内存和磁盘空间。  
   
  多个条目复合索引文件始终是 compact。 它不需要包括 COMPACT 创建复合索引文件时。 复合索引文件的名称将被赋予.cdx 扩展。  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a29b9502fcadf77075f6ee1d49b021233f07ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636736"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  结合使用[SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md)以指定参数在语句执行时数据。  
   

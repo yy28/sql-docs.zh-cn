@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760137"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server-Azure SQL DB (AccessToSQL) 访问应用程序
 如果想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  
@@ -114,7 +114,7 @@ ms.locfileid: "51668526"
 -   某些查询需要用户输入，但传递的查询不支持用户输入。 通过 Visual Basic for Applications (VBA) 代码提示输入参数，或用作输入的控件的窗体，可以获取用户输入。 在这两种情况下，VBA 代码提交到服务器的用户输入查询。  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>对记录进行更新之前，不会更新自动递增列  
-**原因：** 调用后 RecordSet.AddNew Jet 中，自动递增列之前，可对记录进行更新。 不能同时在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 保存新记录后，只是可用的标识列的新值的新值。  
+**原因：** 在调用之后 RecordSet.AddNew Jet 中，自动递增列是可用之前更新该记录。 不能同时在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 保存新记录后，只是可用的标识列的新值的新值。  
   
 **解决方法：** 访问标识字段之前运行以下 Visual Basic for Applications (VBA) 代码：  
   
@@ -125,34 +125,34 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>新记录不可用  
-**原因：** 添加到一条记录时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过使用 VBA 中，如果表的唯一索引字段具有默认值，并且您没有将值赋给该字段中，新记录不会出现直到您重新打开的表中的 SQL Azure 表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 如果尝试从新的记录中获取一个值，你将收到以下错误消息：  
+**原因：** 添加一条记录时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过使用 VBA 中，如果表的唯一索引字段具有默认值，并且您没有将值赋给该字段中，新记录不会出现直到您重新打开的表中的 SQL Azure 表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 如果尝试从新的记录中获取一个值，你将收到以下错误消息：  
   
 `Run-time error '3167' Record is deleted.`  
   
-**解决方法：** 打开时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表使用 VBA 代码中，包括`dbSeeChanges`选项，如以下示例所示：  
+**解决方法：** 当打开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表使用 VBA 代码中，包括`dbSeeChanges`选项，如以下示例所示：  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>迁移后，某些查询将不允许用户将添加一条新记录  
-**原因：** 如果查询不包含在唯一索引中包含的所有列，则无法使用查询中添加新值。  
+**原因：** 如果查询不包含在唯一索引中包含的所有列，不能使用查询中添加新值。  
   
-**解决方法：** 确保至少一个唯一索引中包含的所有列都是查询的一部分。  
+**解决方法：** 确保至少一个唯一索引中包含的所有列的查询的一部分。  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>无法修改具有访问权限的链接的表架构  
-**原因：** 后迁移数据和链接表，用户无法修改中访问表的架构。  
+**原因：** 迁移数据和链接表后, 用户无法修改中访问表的架构。  
   
 **解决方法：** 通过使用来修改表架构[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，然后更新中访问的链接。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>迁移后将超链接的功能会丢失数据  
 **原因：** 在迁移后数据列中的超链接会丢失其功能和变得非常简单**nvarchar （max)** 列。  
   
-**解决方法：** None。  
+**解决方法：** 无。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>某些 SQL Server 数据类型不受访问  
-**原因：** 如果您以后更新你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表来包含访问权限，不支持的数据类型不能在 Access 中打开表。  
+**原因：** 如果更高版本更新你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表来包含访问权限，不支持的数据类型不能在 Access 中打开表。  
   
 **解决方法：** 可以定义只返回这些行与支持的数据类型的访问查询。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

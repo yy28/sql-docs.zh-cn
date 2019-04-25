@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：将项目转换为项目部署模型 |Microsoft Docs
+title: 第 2 步：将项目转换为项目部署模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767349"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步骤 2：将项目转换为项目部署模型
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>第 2 步：将项目转换为项目部署模型
   在本任务中，你将使用 Integration Services 项目转换向导将项目转换为项目部署模型。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>将项目转换为项目部署模型  

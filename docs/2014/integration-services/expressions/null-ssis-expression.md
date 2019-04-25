@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768823"
 ---
 # <a name="null-ssis-expression"></a>NULL（SSIS 表达式）
   返回请求的数据类型的 Null 值。  
@@ -52,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) 将值转换为使用 1252 代码页的 DT_TEXT 数据类型。|  
   
 ## <a name="expression-examples"></a>表达式示例  
- 以下示例将返回的数据类型的 null 值：DT_STR、 DT_DATE 和 DT_BOOL。  
+ 以下示例将返回下列数据类型的 NULL 值：DT_STR、DT_DATE 和 DT_BOOL。  
   
 ```  
 NULL(DT_STR,10,1252)  

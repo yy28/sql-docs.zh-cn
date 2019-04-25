@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509529"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合权限（主数据服务）
 
@@ -30,7 +30,7 @@ ms.locfileid: "52759269"
 > [!NOTE]  
 >  这些权限仅应用到用户界面的“资源管理器”功能区域。  
   
-|权限|描述|  
+|权限|Description|  
 |----------------|-----------------|  
 |**读取**|用户可以读取集合成员和成员属性。|  
 |**创建**|用户可以创建集合成员并分配属性值。|  
@@ -40,7 +40,7 @@ ms.locfileid: "52759269"
   
  读取、创建、更新和删除权限可以合并。 如果已分配创建、更新和删除权限，那么系统会自动分配读取权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  

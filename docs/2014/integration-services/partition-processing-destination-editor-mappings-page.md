@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766999"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到分区列。  

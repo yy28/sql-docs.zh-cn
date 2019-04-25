@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642926"
 ---
 # <a name="version-property-example-vb"></a>Version 属性示例 (VB)
 此示例使用[版本](../../../ado/reference/ado-api/version-property-ado.md)的属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象来显示当前的 ADO 版本。 它还使用多个动态属性来显示：  

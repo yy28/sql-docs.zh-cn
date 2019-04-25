@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72ac098f34438d35de4b0c1ac0ebef0ffc30a043
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469648"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>打开、解锁、重命名和删除数据质量项目
 

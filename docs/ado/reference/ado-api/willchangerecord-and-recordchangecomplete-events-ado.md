@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642891"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 和 RecordChangeComplete 事件 (ADO)
 **WillChangeRecord**事件之前，将调用一个或多个记录 （行）[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)更改。 **RecordChangeComplete**后调用事件或更多的记录更改。  
@@ -62,7 +62,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  一个**记录集**对象。 **记录集**有关发生此事件。  
   
 ## <a name="remarks"></a>备注  
- 一个**WillChangeRecord**或**RecordChangeComplete**事件可能是由于以下行中的第一个已更改字段**记录集**operations: [更新](../../../ado/reference/ado-api/update-method.md)，[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)。 值**记录集** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)确定哪些操作会导致要发生的事件。  
+ 一个**WillChangeRecord**或**RecordChangeComplete**事件可能是由于以下行中的第一个已更改字段**记录集**操作：[更新](../../../ado/reference/ado-api/update-method.md)，[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)， [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). 值**记录集** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)确定哪些操作会导致要发生的事件。  
   
  期间**WillChangeRecord**事件，**记录集**[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置为**adFilterAffectedRecords**。 处理该事件时，不能更改此属性。  
   

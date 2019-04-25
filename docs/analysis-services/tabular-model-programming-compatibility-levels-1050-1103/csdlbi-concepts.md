@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466884"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -131,21 +131,21 @@ ms.locfileid: "50146262"
   
  **透视：** 客户端可以请求 CSDL 以获得单独的透视。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
- **层次结构：** 支持和 CSDLBI 中表示为一组级别的层次结构。  
+ **层次结构：** 层次结构是受支持，并且在 CSDLBI 中表示为一组级别。  
   
- **成员：** 对已添加的默认成员和默认值会自动添加到 CSDLBI 输出的支持。  
+ **成员：** 添加了支持的默认成员和默认值会自动添加到 CSDLBI 输出。  
   
- **计算成员：** 多维模型支持计算的成员的子级**所有**具有单个真实成员。  
+ **计算的成员：** 多维模型支持计算的成员的子级**所有**具有单个真实成员。  
   
- **维度属性：** 在 CSDLBI 输出中，维度属性均受支持，自动将标记为不可聚合。  
+ **维度属性：** 在 CSDLBI 输出中，维度属性都支持和自动标记为不可聚合。  
   
- **Kpi:** CSDLBI 版本 1.1 中支持 Kpi，但表示形式已发生变化。 以前，KPI 是度量值的属性。 在版本 1.1 中，可以将 KPI 元素添加到度量值  
+ **Kpi:** 在 CSDLBI 版本 1.1 中支持 Kpi，但表示形式已发生变化。 以前，KPI 是度量值的属性。 在版本 1.1 中，可以将 KPI 元素添加到度量值  
   
- **新属性：** 添加了其他属性以支持 DirectQuery 模型。  
+ **新属性：** 添加了其他属性，以支持 DirectQuery 模型。  
   
  **限制：** 不支持单元安全性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

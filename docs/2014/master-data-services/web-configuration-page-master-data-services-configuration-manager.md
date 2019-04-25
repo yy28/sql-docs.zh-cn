@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765400"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>“Web 配置”页（Master Data Services 配置管理器）
   使用 **“Web 配置”** 页可以创建新的网站或 Web 应用程序。 在选择某一 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序后，您可以指定该应用程序的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库并启用 Data Quality Services。  

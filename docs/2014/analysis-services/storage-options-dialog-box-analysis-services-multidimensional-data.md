@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758471"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>“存储选项”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “存储选项” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为维度、多维数据集、度量值组和分区指定自定义的存储模式、主动缓存和通知选项。 通过单击 **“存储设置”** 对话框中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “选项” **，可以显示** 中的 **“存储选项”** 对话框。 有关“存储设置”对话框的详细信息，请参阅[“存储设置”对话框（Analysis Services - 多维数据）](storage-settings-dialog-box-analysis-services-multidimensional-data.md)。  

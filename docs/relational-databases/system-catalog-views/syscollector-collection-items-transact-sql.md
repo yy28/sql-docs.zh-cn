@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760220"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47714355"
 |**frequency**|**int**|收集项收集数据的频率。 不可为 null。|  
 |**参数**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 此收集项的 XML 架构验证与 XML 架构 (XSD) 存储在**parameter_schema**特定收集器类型。 可以为 Null。 有关详细信息，请参阅[syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**， **dc_proxy**。  
   
 ## <a name="see-also"></a>请参阅  

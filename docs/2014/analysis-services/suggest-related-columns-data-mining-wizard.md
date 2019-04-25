@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757821"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>提供相关列建议（数据挖掘向导）
   可以使用 **“提供相关列建议”** 页，查看在向导的上一页中选择的 **“建议”** 功能所提供的建议。 将根据与所选“可预测”列的关联预先选择输入列。 如果接受此对话框中的更改，则这些更改将反映在 **“指定定型数据”** 页中。  
   
- **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **列名**  

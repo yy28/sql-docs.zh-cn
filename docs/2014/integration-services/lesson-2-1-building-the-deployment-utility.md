@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：生成部署实用工具 |Microsoft Docs
+title: 第 1 步：生成部署实用工具 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767579"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>步骤 1：生成部署实用工具
+# <a name="step-1-building-the-deployment-utility"></a>第 1 步：生成部署实用工具
   在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
   
  必须先修改 Deployment Tutorial 项目的属性，才能生成部署实用工具。 使用“Deployment Tutorial 属性页”对话框配置这些属性。 在此对话框中，您必须允许在部署期间更新配置，并指定生成进程将生成部署实用工具。 在设置属性后，将生成项目。  
@@ -48,7 +48,7 @@ ms.locfileid: "58381195"
   
 4.  在“输出”窗口中，验证以下信息：  
   
-     生成已启动：SQL Integration Services 项目：增量...  
+     生成已开始：SQL Integration Services 项目：增量...  
   
      正在创建部署实用工具...  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58381195"
   
      生成完成 -- 0 个错误，0 个警告  
   
-     ========== 生成：成功的 0，0 失败，1 最新，0 已跳过 ===  
+     ========== 生成：0 已成功，0 已失败，1 最新，0 已跳过 ==========  
   
 5.  在 **“文件”** 菜单中，单击 **“退出”**。 如果提示保存对 Deployment Tutorial 的各项所做的更改，请单击“是”。  
   

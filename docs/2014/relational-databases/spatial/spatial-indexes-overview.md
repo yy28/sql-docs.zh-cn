@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524238"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 `geometry` 或 `geography`）的数据的表列。  
@@ -106,7 +106,7 @@ ms.locfileid: "54100882"
 #### <a name="deepest-cell-rule"></a>最深单元规则  
  最深单元规则利用每个较低级别单元属于其上级单元这一事实：第 4 级单元属于第 3 级单元，第 3 级单元属于第 2 级单元，第 2 级单元属于第 1 级单元。 例如，属于单元 1.1.1.1 的对象也属于单元 1.1.1、1.1 和 1。 这种单元层次结构关系的知识内置到查询处理器。 因此，只有最深级别的单元需要记录在索引中，从而最大限度地减少了索引需要存储的信息。  
   
- 在下图中，相对较小的菱形多边形被分割。 索引使用默认的每对象单元数限制 16，此对象较小，未达到该限制。 因此，分割一直下至第 4 级。 此多边形驻留在以下第 1 级到第 3 级单元中：4、4.4 以及 4.4.10 和 4.4.14。 然而，使用最深单元规则，分割将仅对十二个位于第 4 级的单元进行计数：4.4.10.13-15 以及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
+ 在下图中，相对较小的菱形多边形被分割。 索引使用默认的每对象单元数限制 16，此对象较小，未达到该限制。 因此，分割一直下至第 4 级。 此多边形驻留在以下级别的 1 到 3 级的单元：4、 4.4，以及 4.4.10 和 4.4.14。 但是，使用最深单元规则，分割计算仅十二个级别 4 单元格：4.4.10.13-15 以及 4.4.14.1-3、 4.4.14.5-7 和 4.4.14.9-11。  
   
  ![最深单元优化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深单元优化")  
   

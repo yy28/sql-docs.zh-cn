@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740510"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 对象（SQLXML 托管类）
   这是 SqlXmlCommand 对象的构造函数：  
@@ -53,7 +53,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>方法  
  TheSqlXmlCommand 对象支持多个方法，包括以下方法用来执行命令：  
   
- void executenonquery （)  
+ void ExecuteNonQuery()  
  执行该命令，但不返回任何内容。 如果您想要执行非查询命令（即，不返回任何内容的命令），则此方法将很有用。 例如，执行更新记录但不返回任何内容的 updategram 或 DiffGram。  
   
  Stream executestream （)  
@@ -67,13 +67,13 @@ public SqlXmlCommand(string cnString)
   
  TheSqlXmlCommand 对象还支持这些其他方法：  
   
- SqlXmlParameter createparameter （)  
+ SqlXmlParameter CreateParameter()  
  创建一个 SqlXmlParameter 对象。 可以设置的值*名称*并*值*此对象的参数。 如果您希望将参数传递到某一命令，则此方法很有用。 有关工作示例，请参阅[执行 SQL 查询&#40;SQLXML 托管类&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
- void clearparameters （)  
+ void ClearParameters()  
  清除为给定命令对象创建的参数。 如果您想要对同一命令对象执行多个查询，则此方法很有用。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  SqlXmlCommand 对象还支持以下属性：  
   
  ClientSideXml  

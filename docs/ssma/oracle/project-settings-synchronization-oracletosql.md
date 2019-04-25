@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628683"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>项目设置（同步）(OracleToSQL)
 同步页**项目设置**对话框中包含的自定义如何 SSMA 加载和刷新到数据库对象，如表和存储的过程设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

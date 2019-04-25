@@ -24,16 +24,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740925"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装 SQL Server 迁移助手进行访问 (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Access 使用的基于 Windows Installer 的向导进行安装。 本主题提供有关安装、 许可、 卸载和升级 SSMA 安装先决条件、 SSMA，最新版本的链接的信息和说明。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 安装 SSMA 之前，请确保你的系统满足以下要求：  
   
 -   Windows 7 或更高版本或 Windows Server 2008 或更高版本。  
@@ -88,7 +88,7 @@ SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Mig
   
 如果您打开 SSMA for Access 的早期版本中创建的项目，SSMA 询问您是否要将项目转换为较新版本。 单击**是**以使用较新版本的 SSMA 中的项目。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [链接到 SQL Server 访问应用程序](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

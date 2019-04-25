@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760201"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47842505"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|收集组的本地标识符。 不可为 null。|  
 |collection_set_uid|**uniqueidentifier**|收集组的全局唯一标识符。 不可为 null。|  
-|NAME|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
+|name|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
 |target|**nvarchar(max)**|标识收集组的目标。 可以为 Null。|  
 |is_system|**bit**|打开 (1) 或关闭 (0) 时可指示收集组是随数据收集器一起提供的还是由 dc_admin 在后来添加的。 这可以是内部开发的或由第三方开发的自定义收集组。 不可为 null。|  
 |is_running|**bit**|指示收集组是否正在运行。 不可为 null。|  
@@ -50,7 +50,7 @@ ms.locfileid: "47842505"
 |dump_on_any_error|**bit**|打开 (1) 还是 off (0) 以指示是否创建[!INCLUDE[ssIS](../../includes/ssis-md.md)]任何错误时转储文件。 不可为 null。|  
 |dump_on_codes|**nvarchar(max)**|包含用于触发转储文件的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 错误代码的列表。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求拥有 dc_operator 和 dc_proxy 的 SELECT 权限。  
   
 ## <a name="remarks"></a>备注  

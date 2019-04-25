@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470709"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "47674371"
 |**enabled**|**int**|作业计划的状态：<br /><br /> **0** = 未启用。<br /><br /> **1** = 启用。<br /><br /> 如果未启用计划，则不会运行该计划中的任何作业。|  
 |**freq_type**|**int**|此计划中作业运行的频率。<br /><br /> **1** = 仅一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于**freq_interval**<br /><br /> **64** = SQL Server 代理服务启动时运行<br /><br /> **128** = 在计算机处于空闲状态时运行|  
 |**freq_interval**|**int**|执行作业的间隔天数。 上的值取决于**freq_type**。 默认值是**0**，这指示**freq_interval**是未使用。 请参阅下表中的可能的值和其效果。|  
-|**freq_subday_type**|**int**|单位**freq_subday_interval**。 以下是可能的值和及其说明。<br /><br /> <br /><br /> **1** ： 在指定的时间<br /><br /> **2** ： 秒<br /><br /> **4** ： 分钟<br /><br /> **8** ： 小时数|  
+|**freq_subday_type**|**int**|单位**freq_subday_interval**。 以下是可能的值和及其说明。<br /><br /> <br /><br /> **1** :在指定的时间<br /><br /> **2** :Seconds<br /><br /> **4** :Minutes<br /><br /> **8** :Hours|  
 |**freq_subday_interval**|**int**|数**freq_subday_type**周期每次执行作业之间。|  
-|**freq_relative_interval**|**int**|当**freq_interval**如果在每个月内，会发生**freq_interval**是**32** （每月相对）。 可以是下列值之一：<br /><br /> **0** = **freq_relative_interval**是未使用<br /><br /> **1** = 第一次<br /><br /> **2** = 第二个<br /><br /> **4** = 第三次<br /><br /> **8** = 第四次<br /><br /> **16** = 最后一次|  
+|**freq_relative_interval**|**int**|当**freq_interval**如果在每个月内，会发生**freq_interval**是**32** （每月相对）。 可以是以下值之一：<br /><br /> **0** = **freq_relative_interval**是未使用<br /><br /> **1** = 第一次<br /><br /> **2** = 第二个<br /><br /> **4** = 第三次<br /><br /> **8** = 第四次<br /><br /> **16** = 最后一次|  
 |**freq_recurrence_**<br /><br /> **factor**|**int**|在计划的作业执行之间间隔的周数或月数。 **freq_recurrence_factor**时才使用**freq_type**是**8**， **16**，或**32**。 如果此列包含**0**， **freq_recurrence_factor**是未使用。|  
 |**active_start_date**|**int**|可以开始执行作业的日期。 日期的格式为 YYYYMMDD。 NULL 表示当天的日期。|  
 |**active_end_date**|**int**|可以停止执行作业的日期。 日期格式为 YYYYMMDD。|  
@@ -66,6 +66,6 @@ ms.locfileid: "47674371"
 |**128** （运行时计算机处于空闲状态）|**freq_interval**未使用 (**0**)|  
   
 ## <a name="see-also"></a>另请参阅  
- [dbo.sysjobschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

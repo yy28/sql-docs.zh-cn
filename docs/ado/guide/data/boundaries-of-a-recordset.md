@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472821"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
 **记录集**支持**BOF**并**EOF**属性来描述的开头和结尾，分别将数据集。 您可以看作**BOF**并**EOF**作为定位在开头和末尾的"虚拟"记录**记录集**。 计数**BOF**并**EOF**，我们的示例**记录集**现在如下所示：  
@@ -30,7 +30,7 @@ ms.locfileid: "47633445"
 |BOF|||  
 |7|柳贡干的梨|30.0000|  
 |14|豆腐|23.2500|  
-|28|Rssle 泡菜口味|45.6000|  
+|28|Rssle Sauerkraut|45.6000|  
 |51|猪肉干|53.0000|  
 |74|Longlife 豆腐|10.0000|  
 |EOF|||  

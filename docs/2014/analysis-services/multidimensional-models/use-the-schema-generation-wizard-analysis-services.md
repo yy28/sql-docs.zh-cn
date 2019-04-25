@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740737"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用架构生成向导 (Analysis Services)
   架构生成向导在生成阶段需要数量有限的信息。 架构生成向导在生成关系架构时所需的大多数信息都是从您已在项目中创建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度中提取的。 此外，您可以自定义主题区域数据库架构的生成方式以及架构中对象的命名方式。  
@@ -33,7 +33,7 @@ ms.locfileid: "48210167"
   
 -   通过单击向导的最后一页中的 **“立即生成架构”** 复选框，从维度向导内启动该向导。  
   
-## <a name="step-1-specify-targets"></a>步骤 1：指定目标  
+## <a name="step-1-specify-targets"></a>第 1 步：指定目标  
  必须指定架构生成向导要在其中生成主题区域数据库架构的数据源视图 (DSV)。 尽管您可以选择某个现有的 DSV，但通常您将基于数据源创建一个新的 DSV。 您可以根据现有或新的连接创建数据源，也可以根据其他对象创建数据源。 架构生成向导既可以在数据源引用的数据库中生成主题区域数据库架构，也可以在数据源视图中生成该架构。 架构生成向导不会创建主题区域数据库本身；相反，该向导在您指定的现有数据库中创建关系架构以支持多维数据集和维度。  
   
  当架构生成向导生成基础对象时，它便会使用数据源视图样式的绑定将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度和多维数据集绑定到生成的表和列上。  
@@ -41,7 +41,7 @@ ms.locfileid: "48210167"
 > [!NOTE]  
 >  若要从先前生成的对象取消绑定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度和多维数据集，请删除 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据集和维度绑定到的数据源视图，然后使用架构生成向导为多维数据集和维度定义新的数据源视图。  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>步骤 3：指定用于主题区域数据库的架构选项  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>步骤 3：指定用于主题区域数据库架构选项  
  架构生成向导提供大量选项，用于定义为主题区域数据库生成的架构。 您可以在该向导的 **“主题区域数据库架构选项”** 页中指定这些选项。  
   
 ### <a name="specifying-the-schema-owner"></a>指定架构所有者  

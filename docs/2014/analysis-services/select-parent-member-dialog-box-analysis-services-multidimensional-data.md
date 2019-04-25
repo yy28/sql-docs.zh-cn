@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747189"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>“选择父成员”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “选择父成员” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为计算成员选择父成员。 通过在多维数据集设计器的 **“计算”** 选项卡上单击 **“计算成员窗体编辑器”** 窗格中的 **“更改”** ，可以显示 **“选择父成员”** 对话框。  

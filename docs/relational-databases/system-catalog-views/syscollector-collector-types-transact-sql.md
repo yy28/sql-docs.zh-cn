@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760234"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47650575"
 |**upload_package_name**|**sysname**|上载包的名称。 不可为 null。|  
 |**is_system**|**bit**|打开 (1) 还是 off (0) 以指示如果收集器类型随数据收集器或更高版本通过添加**dc_admin**。 这可以是内部开发的或由第三方开发的自定义类型。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**， **dc_proxy**。  
   
 ## <a name="change-history"></a>更改历史记录  

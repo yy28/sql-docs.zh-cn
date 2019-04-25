@@ -9,13 +9,13 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642088"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>创建登录名为 SQLRUserGroup
+# <a name="create-a-login-for-sqlrusergroup"></a>为 SQLRUserGroup 创建登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 创建[SQL Server 中的登录名](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)有关[SQLRUserGroup](../concepts/security.md#sqlrusergroup)时[循环连接](../../advanced-analytics/concepts/security.md#implied-authentication)在脚本中指定*可信连接*，和用于执行对象的标识包含你的代码是 Windows 用户帐户。
@@ -27,7 +27,7 @@ ms.locfileid: "55147036"
 > [!Note]
 > 请确保**SQLRUserGroup**具有"允许本地登录"权限。 默认情况下，此权限已授予给所有新的本地用户，但一些组织更严格的组策略可能会禁用此权限。
 
-## <a name="create-a-login"></a>创建登录
+## <a name="create-a-login"></a>创建登录名
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性” ，右键单击“登录名” ，然后选择“新建登录名” 。
 

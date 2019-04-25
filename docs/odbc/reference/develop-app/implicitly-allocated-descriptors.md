@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa25e99c5bc0b0a5799cfac479e97bd9b89db338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447231"
 ---
 # <a name="implicitly-allocated-descriptors"></a>隐式分配的描述符
 分配语句句柄后，应用程序将隐式分配一组四个描述符。 应用程序可以获取这些隐式分配语句句柄的属性描述符句柄。 当应用程序释放语句句柄时，该驱动程序将释放该句柄上的所有隐式分配的描述符。

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757844"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>“表属性”对话框（SSAS - 表格）
   可以使用 **中的** “表属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框来查看表格模型数据库中的表的属性。 所有属性为只读属性。  
@@ -31,10 +31,10 @@ ms.locfileid: "48104487"
 |----------|----------------|  
 |**名称**|显示表的名称。|  
 |**ID**|显示表的标识符。|  
-|**Description**|显示表的说明。|  
+|**说明**|显示表的说明。|  
 |**创建时间戳**|显示表的创建日期和时间。|  
 |**上次架构更新时间**|显示表的元数据的上次更新日期和时间。|  
-|**State**|显示表的处理状态。 有关此属性的值的详细信息，请参阅<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
+|**状态**|显示表的处理状态。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
 |**上次处理**|显示表的上次处理日期和时间。|  
 |**当前存储模式**|显示表的当前存储模式。 存储模式在数据库级别设置并由所有表继承。 无法使用表级别的其他存储模式。 有效值为 InMemory（默认值）、InMemoryWithDirectQuery、DirectQuery 和 DirectQueryWithinMemory。|  
   

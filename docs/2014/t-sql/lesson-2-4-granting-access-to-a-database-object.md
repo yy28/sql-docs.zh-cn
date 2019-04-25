@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643453"
 ---
 # <a name="granting-access-to-a-database-object"></a>授予访问数据库对象的权限
   作为管理员，可以从 **Products** 表和 **vw_Names** 视图执行 Select，以及执行 **pr_Names** 过程；但是 Mary 不能。 若要授予 Mary 必要的权限，请使用 GRANT 语句。  
@@ -40,10 +40,10 @@ ms.locfileid: "48209507"
  必须具有 EXECUTE 权限才能执行存储过程。 必须具有 SELECT、INSERT、UPDATE 和 DELETE 权限才能访问和更改数据。 GRANT 语句还用于其他权限，如创建表的权限。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [摘要：配置数据库对象的权限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [摘要：配置对数据库对象的权限](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>请参阅  
  [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
- [撤消&#40;Transact SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)  
   
   

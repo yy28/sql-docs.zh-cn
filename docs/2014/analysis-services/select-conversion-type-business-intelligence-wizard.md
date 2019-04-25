@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748079"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>选择换算类型（商业智能向导）
   可以使用 **“选择换算类型”** 页，为使用多种货币存储的事务定义本地货币和报表货币之间的关系。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。 报表货币是转换 **“选择度量值”** 页中所选事务时使用的货币。  

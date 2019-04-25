@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638803"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是在决策支持和商业智能解决方案 (BI) 中使用的联机分析数据引擎，它为商业报表和客户端应用程序（如 Excel、Reporting Services 报表和其他第三方 BI 工具）提供分析数据。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的典型工作流包括生成 OLAP 或表格数据模型、将模型作为数据库部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例、对数据库进行处理以向其加载数据，以及分配权限以允许数据访问。 所有工作完成后，任何将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作为数据源进行支持的客户端应用程序均可访问此多用途数据模型。  

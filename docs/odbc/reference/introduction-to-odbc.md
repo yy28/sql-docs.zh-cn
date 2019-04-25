@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a91a26f46b8722c4114c485a9924a83d5669edd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628190"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 简介
 本部分提供简要的历史记录的结构化查询语言和 ODBC，并包括有关 ODBC 接口的概念信息。  

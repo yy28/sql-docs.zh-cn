@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761731"
 ---
 # <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
   **NewOrd**中创建表[使用现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务包含所有雇员的信息，并使用表示层次结构`hierarchyid`数据类型。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
@@ -72,7 +72,7 @@ ms.locfileid: "48146977"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     深度优先索引：雇员记录存储在与相应经理的记录相邻的位置。  
+     深度优先索引：雇员记录存储在相邻给他们的经理。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146977"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID** 优先索引：各行按照 **EmployeeID** 顺序存储。  
+     **EmployeeID**-优先索引：行存储在**EmployeeID**序列。  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

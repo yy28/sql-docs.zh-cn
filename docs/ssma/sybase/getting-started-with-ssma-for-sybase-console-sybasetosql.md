@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631947"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>开始使用 SSMA for Sybase 控制台 (SybaseToSQL)
 本部分介绍启动并开始使用 SSMA for Sybase 控制台应用程序的过程。 此处还列出了所使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -57,7 +57,7 @@ ms.locfileid: "47853787"
   
 下表中将显示控制台输出的颜色的解释：  
   
-|Color|Description|  
+|颜色|Description|  
 |---------|---------------|  
 |Red|执行期间出错|  
 |灰色|日期和时间戳，向用户显示消息|  

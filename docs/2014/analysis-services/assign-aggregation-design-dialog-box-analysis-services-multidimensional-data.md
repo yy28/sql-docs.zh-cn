@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643227"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>“分配聚合设计”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “分配聚合设计” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，为一个或多个目标分区分配聚合设计。 你可以通过在**对象资源管理器**中右键单击某个分区或聚合设计，然后选择“分配聚合设计”，来显示“分配聚合设计”对话框。  
@@ -28,7 +28,7 @@ ms.locfileid: "48160522"
 |术语|定义|  
 |----------|----------------|  
 |**聚合设计**|选择要分配到一个或多个目标分区的聚合设计。|  
-|**目标分区的分区**|选择要向其分配聚合设计的分区。 以下网格用于指定目标分区：<br /><br /> \<复选框 >： 选中或清除要包括或排除所有列出的分区作为目标分区的列标题中的复选框。 选中或清除分区旁的复选框，可以包括或排除该分区作为目标分区。<br /><br /> **分区**： 显示分区的名称。<br /><br /> **源**： 显示源表或分区的查询。<br /><br /> **聚合设计**： 显示分区的现有聚合设计的名称。|  
+|**目标分区的分区**|选择要向其分配聚合设计的分区。 以下网格用于指定目标分区：<br /><br /> \<复选框 >:选中或清除要包括或排除所有列出的分区作为目标分区的列标题中的复选框。 选中或清除分区旁的复选框，可以包括或排除该分区作为目标分区。<br /><br /> **分区**：显示分区的名称。<br /><br /> **源**：显示分区的源表或查询。<br /><br /> **聚合设计**：显示分区的现有聚合设计的名称。|  
 |**隐藏包含聚合设计的分区**|选择以仅显示未分配聚合设计的分区。|  
   
 ## <a name="see-also"></a>请参阅  

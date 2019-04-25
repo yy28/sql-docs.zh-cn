@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768953"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。  
@@ -119,7 +119,7 @@ ms.locfileid: "58375235"
   
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库包含至少**AddressID**并**城市**列。  
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库包含至少**AddressID**并**城市**列。  
   
 5.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 输入列。  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  向数据流设计器图面添加新的脚本组件并将其配置为目标。  
   
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库，并且应包含至少**AddressID**并**城市**列。  
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以将源直接连接到目标，而不经任何转换。）此输出应提供中的数据**Person.Address**表的`AdventureWorks`示例数据库，并且应包含至少**AddressID**并**城市**列。  
   
 4.  打开“脚本转换编辑器”。 在“输入列”页中，选择 **AddressID** 和 **City** 列。  
   

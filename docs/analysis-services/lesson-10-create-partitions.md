@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468638"
 ---
 # <a name="lesson-10-create-partitions"></a>第 10 课：创建分区
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课程中，将创建独立于其他分区来将 FactInternetSales 表划分为较小的逻辑部分，可以处理 （刷新） 分区。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 FactInternetSales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。 然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 9 课：创建层次结构](../analysis-services/lesson-9-create-hierarchies.md)。  
@@ -135,13 +135,13 @@ ms.locfileid: "52416391"
   
 4.  在“处理”列中选中所创建的全部五个分区的复选框，然后单击“确定”。  
 
-    ![作为-表格-lesson10-处理的分区](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![as-tabular-lesson10-process-partitions](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     如果系统提示输入模拟凭据，则输入 Windows 用户名和第 2 课中指定的密码。  
   
     “数据处理”对话框将出现，并显示每个分区的处理详细信息。 您将注意到对于每个分区转移了不同的行数。 这是因为，每个分区值包含您在 SQL 语句的 WHERE 子句中指定的年份的那些行。 完成处理后，继续操作并关闭“数据处理”对话框。  
   
-    ![作为表格-lesson10-过程-完成](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步是什么？
 请转到下一课：[第 11 课：创建角色](../analysis-services/lesson-11-create-roles.md)。 

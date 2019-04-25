@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768039"
 ---
 # <a name="import-an-integration-services-project"></a>导入 Integration Services 项目
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的“导入项目向导”可以根据现有的部署文件 (.ispac) 或部署到 Integration Services 目录的项目创建一个项目。 如果您没有项目的原始副本，但又想根据 .ispac 文件或 SSISDB 目录创建一个项目，此时该功能特别有用。  

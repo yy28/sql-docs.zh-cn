@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472951"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自动执行管理任务（SQL Server 代理）
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许您自动执行管理任务。 若要自动进行管理，您需要先定义可预测的管理任务，然后再指定每个任务发生的条件。 使用自动管理来处理日常事务和事件，使您有时间执行其他管理功能。  
