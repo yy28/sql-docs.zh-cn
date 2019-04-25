@@ -1,17 +1,17 @@
 ---
 title: srv_got_attention（扩展存储过程 API）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-apiname:
+api_name:
 - srv_got_attention
-apilocation:
+api_location:
 - opends60.dll
-apitype: DLLExport
+topic_type:
+- apiref
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,14 +21,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 02471fe1d955486e0ba17926dbf8bf042290b6b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671992"
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention（扩展存储过程 API）
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -39,9 +38,11 @@ ms.locfileid: "51663396"
   
 ```  
   
-BOOL srv_got_attention (SRV_PROC *   
+BOOL srv_got_attention  
+(SRV_PROC *  
 srvproc  
 );  
+  
 ```  
   
 #### <a name="parameters"></a>Parameters  
@@ -55,6 +56,6 @@ srvproc
  长时间运行的扩展存储过程应通过定期调用 srv_got_attention 来检查服务器的关注情况，这样使过程可以在连接终止或批处理中止时终止自身。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

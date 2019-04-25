@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6330f18f63caaf1e5c497dec8b87741030a0480
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287806"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961783"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>显示页码或其他报表属性（报表生成器和 SSRS）
   可以方便地向报表的页眉或页脚添加页码、报表标题、文件名和其他报表属性。 这些属性在“报表数据”窗格的“内置字段”文件夹中存储为字段：  
@@ -63,7 +63,7 @@ ms.locfileid: "56287806"
   
 1.  右键单击包含 [&PageNumber] 的文本框，然后单击“表达式”。  
   
-     **设置表达式：值**文本框包含表达式 = Globals ！PageNumber。  
+     “为以下项设置表达式: Value”**文本框包含表达式 =Globals!PageNumber。  
   
 2.  将光标放在 = 号后，然后键入 `"Page " &`。  
   

@@ -1,5 +1,5 @@
 ---
-title: 教程：创建钻取和主报表 （报表生成器） |Microsoft Docs
+title: 教程：生成钻取报表和主报表（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289865"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961233"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取和主报表 （报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289865"
   
 8.  [运行主报表和钻取报表](#MRunReports)  
   
- 本教程的预计学时：30 分钟。  
+ 估计的时间才能完成本教程中：30 分钟。  
   
 ## <a name="requirements"></a>要求  
  本教程需要访问 Contoso Sales 多维数据集。 此要求同样适用于钻取报表和主报表。 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -168,7 +168,7 @@ ms.locfileid: "56289865"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-     查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
+     查询现在包含一个筛选器以只包括这些渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289865"
   
 7.  单击“保存” 。  
   
-##  <a name="MMatrixAndDataset"></a> 1.使用表或矩阵向导创建新报表  
+##  <a name="MMatrixAndDataset"></a> 1.从表或矩阵向导创建新的报表  
  使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
@@ -462,7 +462,7 @@ ms.locfileid: "56289865"
   
 5.  在筛选表达式列表中，展开“所有渠道”，依次单击“在线”、“分销商”和“确定”。  
   
-     查询现在随附一个筛选器，该筛选器只包含以下两个渠道：在线和分销商。  
+     查询现在包含一个筛选器以只包括这些渠道：在线和分销商。  
   
 6.  展开“Sales Territory”维度，然后将“Sales Territory Group”拖到“层次结构”列（在“Channel Name”下面）。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289865"
   
 1.  在“选择布局”页的“选项”下，确认已选择“显示小计和总计”。  
   
-     向导的“预览”窗格将显示包含四行的矩阵。  当您运行报表时，每行将按以下方式显示：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），而第四行包含总计。  
+     向导的“预览”窗格将显示包含四行的矩阵。  当您运行报表时，每行将按以下方式显示：第一行是列组，第二行包含列标题，第三行包含产品类别数据 (`[Sum(Net_ QTY)]`和`[Sum(Net_Sales)]`，和第四个行包含总计。  
   
 2.  单击“下一步” 。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289865"
   
 1.  在设计图面上，单击“单击以添加标题”。  
   
-2.  类型**2009 Product Category Sales:Online and Reseller Category:**。  
+2.  键入“2009 年产品类别销售额:‘联机’和‘经销商’类别:”**。  
   
 3.  选择键入的文本。  
   

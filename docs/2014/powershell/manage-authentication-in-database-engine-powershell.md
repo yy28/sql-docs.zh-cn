@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762046"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>在数据库引擎 PowerShell 中管理身份验证
   默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件在连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]实例时使用 Windows 身份验证。 您可以通过定义 PowerShell 虚拟驱动器，或者通过为 `-Username` 指定 `-Password` 和 `Invoke-Sqlcmd` 参数，使用 SQL Server 身份验证。  

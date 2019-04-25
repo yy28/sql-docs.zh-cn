@@ -11,15 +11,15 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 3a345cd609c4cfd79f9e93a2b63e71bbddde36ee
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940163"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 访问报表服务器项
   本主题介绍如何使用 rs:Command=Value 访问报表服务器数据库或 SharePoint 站点中不同类型的目录项。  
@@ -33,7 +33,7 @@ ms.locfileid: "56018029"
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  非常重要的一点是，URL 包括用于通过 SharePoint 和 `_vti_bin` HTTP 代理路由请求的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 代理语法。 该代理会向 HTTP 请求中添加某一上下文，该上下文是确保为 SharePoint 模式报表服务器正确执行报表所需要的。  
@@ -43,14 +43,14 @@ ms.locfileid: "56018029"
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>访问数据源  
  若要访问数据源，请使用 *rs:Command*=*GetDataSourceContents* 参数。 如果您的浏览器支持 XML，则当您对于该数据源是具有 `Read Contents` 权限的经过身份验证的用户时，将显示数据源定义。 例如：  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  XML 结构可能类似于以下示例：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "56018029"
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  您所看到的用户界面类似于由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) 使用的目录浏览模式。 报表服务器的版本号（包括内部版本号）也将显示在文件夹列表之下。  
   

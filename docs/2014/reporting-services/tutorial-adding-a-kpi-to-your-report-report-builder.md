@@ -1,5 +1,5 @@
 ---
-title: 教程：将 KPI 添加到您的报表 （报表生成器） |Microsoft Docs
+title: 教程：向报表添加 KPI（报表生成器）| Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296445"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946014"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：将 KPI 添加到您的报表 （报表生成器）
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
   关键绩效指标 (KPI) 是对业务具有重大意义的可测量值。 本教程教您如何在报表中包含一个 KPI。 在本教程中，按产品子类别进行的销售汇总为 KPI。 可以使用颜色、仪表和指示器来显示 KPI 的当前状态。  
   
  下图显示了将创建的报表。  
@@ -45,9 +45,9 @@ ms.locfileid: "56296445"
 7.  [保存报表](#Save)  
   
 > [!NOTE]  
->  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何浏览到报表服务器的分步说明，选择数据源、 创建数据集，并运行该向导，请参阅本系列教程的第一个教程：[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教程中，将向导的多个步骤合并为两个过程：一个用于创建数据集，一个用于创建表。 有关如何转到报表服务器、选择数据源、创建数据集和运行向导的分步说明，请参阅本系列教程中的第一个教程：[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 本教程的预计学时：15 分钟。  
+ 估计的时间才能完成本教程中：15 分钟。  
   
 ## <a name="requirements"></a>要求  
  有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "56296445"
   
 5.  单击“下一步” 。  
   
-6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：创建基本表报表&#40;报表生成器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在“选择数据源的连接”页上，选择现有数据源或浏览到报表服务器并选择一个数据源。 如果没有可用数据源，或无权访问报表服务器，可以改用嵌入数据源。 有关详细信息，请参阅[教程：生成基本表报表（报表生成器）](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  单击“下一步” 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56296445"
   
 10. 单击“下一步” 。  
   
-##  <a name="CompleteWizard"></a> 2.使用表或矩阵向导组织数据并选择布局和样式  
+##  <a name="CompleteWizard"></a> 2.组织数据，并选择布局和样式表或矩阵向导  
  使用此向导可提供用于显示数据的起始设计。 此向导中的预览窗格可帮助您在完成表或矩阵设计之前将对数据进行分组的结果可视化。  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>若要将数据组织成组，请选择布局和样式  
@@ -159,7 +159,7 @@ ms.locfileid: "56296445"
   
 12. 单击 **“完成”**。  
   
-     表将添加到设计图面中。 此表有五个列和五个行。 行组窗格显示了三个行组：SalesDate、 Subcategory、 和的详细信息。 详细信息数据是由数据集查询检索的所有数据。  
+     表将添加到设计图面中。 此表有五个列和五个行。 “行组”窗格显示三个行组：“SalesDate”、“Subcategory”和“Details”。 详细信息数据是由数据集查询检索的所有数据。  
   
 13. 单击 **“运行”** 以预览报表。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296445"
   
 1.  在表中，右键单击两个单元格下从`[Sum(Sales)]`单元格 （小计行中显示子类别的销售额），并单击**文本框属性**。  
   
-2.  在中**填充**，单击**fx**按钮旁边**填充颜色**选项并输入以下表达式**设置表达式：BackgroundColor**字段：  
+2.  在中**填充**，单击**fx**按钮旁边**填充颜色**选项并输入以下表达式**设置表达式：字段中输入以下表达式：  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
