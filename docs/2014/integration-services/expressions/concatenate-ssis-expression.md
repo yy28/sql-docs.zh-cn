@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769365"
 ---
 # <a name="-concatenate-ssis-expression"></a>+（连接）（SSIS 表达式）
   将两个表达式连接为一个表达式。  
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  两个表达式必须具有相同的数据类型，或者其中一个表达式必须能够隐式转换为另一表达式的数据类型。 例如，如果字符串“Order date is”和 **OrderDate** 列进行连接， **OrderDate** 中的值将隐式转换为字符串数据类型。 若要连接两个数值，这两个数值都必须显式转换为某种字符串数据类型。  
   
- 一种连接可以使用只有一个 BLOB 数据类型：DT_TEXT、 DT_NTEXT 或 DT_IMAGE。  
+ 连接只能使用一种 BLOB 数据类型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如果任一元素为空，则结果为空。  
   

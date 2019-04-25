@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757335"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>从 SQL Server Data Tools 进行部署（SSAS 表格）
   使用本主题中的任务以通过在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中使用“部署”命令来部署表格模型解决方案。  
@@ -32,7 +32,7 @@ ms.locfileid: "48054137"
 -   [部署状态](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> 配置“部署选项”和“部署服务器”属性  
- 在您部署表格模型解决方案之前，必须首先指定“部署选项”属性和“部署服务器”属性。 有关部署属性和设置的详细信息，请参阅[表格模型解决方案部署&#40;SSAS 表格&#41;](tabular-model-solution-deployment-ssas-tabular.md)。  
+ 在您部署表格模型解决方案之前，必须首先指定“部署选项”属性和“部署服务器”属性。 有关部署属性和设置的详细信息，请参阅 [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)中使用“部署”命令来部署表格模型解决方案。  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>配置“部署选项”和“部署服务器”属性  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48054137"
 3.  在“部署服务器”中，指定“服务器”（名称）、“版本”、“数据库”（名称）和“多维数据集名称”属性设置（如果这些设置不同于默认设置），然后单击“确定”。  
   
 > [!NOTE]  
->  还可以指定“默认部署服务器”属性设置，以便您创建的任何新项目将自动部署到指定的服务器。 有关详细信息，请参阅[配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)。  
+>  还可以指定“默认部署服务器”属性设置，以便您创建的任何新项目将自动部署到指定的服务器。 有关详细信息，请参阅 [配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)中使用“部署”命令来部署表格模型解决方案。  
   
 ##  <a name="bkmk_deploy_proc"></a> 部署表格模型解决方案  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48054137"
  单击此选项可以暂停部署操作。 如果部署操作用时过长或出现太多错误，则此选项很有用。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型解决方案部署&#40;SSAS 表格&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [配置默认数据建模和部署属性&#40;SSAS 表格&#41;](properties-ssas-tabular.md)  
+ [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)   
+ [配置默认数据建模和部署属性（SSAS 表格）](properties-ssas-tabular.md)  
   
   

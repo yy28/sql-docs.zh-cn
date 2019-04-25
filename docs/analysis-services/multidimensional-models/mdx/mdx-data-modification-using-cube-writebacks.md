@@ -1,5 +1,5 @@
 ---
-title: 使用多维数据集写回 (MDX) |Microsoft 文档
+title: 使用多维数据集写回 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740117"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 数据修改的使用多维数据集写回
+# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 数据修改 - 使用多维数据集写回
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   可以使用 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 语句更新多维数据集。 通过此语句，您可以使用特定值更新元组。 若要有效地使用 UPDATE CUBE 语句更新多维数据集，必须了解该语句的语法、发生错误的条件以及更新可能对多维数据集产生的影响。  
   
@@ -110,7 +110,7 @@ USE_EQUAL_ALLOCATION
   
 -   更改写回中包含的维度的维度粒度。  
   
-## <a name="see-also"></a>另请参阅  
- [修改数据 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>请参阅  
+ [修改数据 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767109"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 连接管理器用户界面参考
   可以使用 **“配置 ODBC 连接管理器”** 对话框为 ODBC 数据源添加连接。  

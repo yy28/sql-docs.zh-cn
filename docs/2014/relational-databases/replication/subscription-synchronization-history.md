@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629705"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>订阅，同步历史记录（合并订阅，SQL Server 2005 和更高版本）
   **“同步历史记录”** 选项卡显示有关合并代理的详细信息，包括状态、项目统计信息、历史记录、信息性消息和所有错误信息。  
@@ -97,7 +97,7 @@ ms.locfileid: "54124417"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [复制代理概述](agents/replication-agents-overview.md)  
   

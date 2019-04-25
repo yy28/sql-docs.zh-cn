@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740920"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  

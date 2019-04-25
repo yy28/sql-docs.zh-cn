@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740797"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>在开发阶段使用 Analysis Services 项目和数据库
   可以在项目模式或联机模式下使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 开发 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库。  

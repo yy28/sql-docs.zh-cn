@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743163"
 ---
 # <a name="control-transaction-durability"></a>控制事务持续性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务提交可以是完全持久、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认设置或延迟的持久（也称作迟缓提交）。  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>表 1：原子块中的持续性  
+### <a name="table-1-durability-in-atomic-blocks"></a>表 1:原子块中的持续性  
   
 |原子块持续性选项|没有现有事务|事务正在进行（完全或延迟持久）|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  

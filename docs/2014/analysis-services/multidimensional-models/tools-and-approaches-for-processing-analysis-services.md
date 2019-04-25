@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741913"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
@@ -55,7 +55,7 @@ ms.locfileid: "50146302"
   
 2.  右键单击要处理的 Analysis Services 对象，然后单击“处理”。 可以在以下任何级别处理数据：  
   
-    -   “数据库”  
+    -   数据库  
   
     -   多维数据集  
   
@@ -157,7 +157,7 @@ ms.locfileid: "50146302"
   
 3.  编辑该任务，指定与数据库的连接、处理哪些对象以及处理选项。 有关如何执行此任务的详细信息，请参阅 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)  
   
   

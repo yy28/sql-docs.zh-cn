@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736068"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "52508545"
 |9|统计信息|指示表示回归量的统计信息的数值。|  
 |10|节点唯一名称|指示该值不应处理为数字或字符串，而是应处理为模型中另一内容节点的唯一标识符。<br /><br /> 例如，在神经网络模型中，ID 提供从输出层中节点至隐藏层中节点的指针，以及从隐藏层中节点至输入层中节点的指针。|  
 |11|截距|表示数值，代表回归公式中的截距。|  
-|12|周期|指示该值表示模型中的周期性结构。<br /><br /> 仅适用于包含 ARIMA 模型的时序模型。<br /><br /> 注意：Microsoft 时序算法会基于定型数据自动检测到周期性结构。 因而，最终模型中的周期包括的周期值可能不是您在创建模型时作为参数提供的。|  
+|12|周期|指示该值表示模型中的周期性结构。<br /><br /> 仅适用于包含 ARIMA 模型的时序模型。<br /><br /> 注意：Microsoft 时序算法自动检测到周期性结构根据定型数据。 因而，最终模型中的周期包括的周期值可能不是您在创建模型时作为参数提供的。|  
 |13|自动回归阶数|指示一个值，该值表示自动回归序列的数目。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |14|移动平均值阶数|表示一个值，该值表示一个序列中的移动平均值数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |15|差分阶数|指示一个值，用于表示差分时序的次数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  

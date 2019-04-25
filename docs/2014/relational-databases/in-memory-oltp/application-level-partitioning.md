@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468333"
 ---
 # <a name="application-level-partitioning"></a>应用程序级分区
   此示例演示应用程序级分区，其中的数据存储在内存优化的表或基于磁盘的表中（具体取决于订单是在特定日期之前还是之后）。 日期晚于或等于 *hotDate* 的所有订单都处于内存优化的表中， *hotDate* 之前的所有订单都处于基于磁盘的表中。 假定存在一个极端 OLTP 工作负荷，它包含很多并发事务。 必须实施此业务规则（内存优化的表中的最近订单），即使几个并发事务正在尝试更改 *hotDate*。  

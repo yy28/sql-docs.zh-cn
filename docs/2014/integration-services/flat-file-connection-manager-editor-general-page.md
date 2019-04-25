@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768313"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“常规”** 页选择文件和数据格式。 使用平面文件连接可以将包连接到文本文件。  

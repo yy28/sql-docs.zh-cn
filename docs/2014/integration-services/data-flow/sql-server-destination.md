@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770665"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目标
   SQL Server 目标连接到本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，并将数据大容量加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和视图中。 如果包访问远程服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则不能在包中使用 SQL Server 目标。 相反，包应使用 OLE DB 目标。 有关详细信息，请参阅 [OLE DB Destination](ole-db-destination.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "58374973"
  如果用户所执行的包中包括 SQL Server 目标，则用户需要“创建全局对象”权限。 通过使用从 **“管理工具”** 菜单打开的本地安全策略工具，可以将此权限授予用户。 如果在执行使用 SQL Server 目标的包时收到错误消息，请确保运行包的帐户拥有“创建全局对象”权限。  
   
 ## <a name="bulk-inserts"></a>大容量插入  
- 如果你尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，可能会看到类似以下的错误消息："已获得 OLE DB 记录。 源:"Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端"Hresult:0x80040E14 说明："无法进行大容量加载由于无法打开 SSIS 文件映射对象 'Global\DTSQLIMPORT'。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
+ 如果尝试使用 SQL Server 目标向远程 SQL Server 数据库中大容量加载数据，可能会看到如下错误消息：“已获得 OLE DB 记录。 源:“Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client”结果:0x80040E14 说明:“由于无法打开 SSIS 文件映射对象‘Global\DTSQLIMPORT’，无法进行大容量加载。 操作系统错误代码为 2 （系统找不到指定的文件。）。 请确保您是通过 Windows 安全性访问本地服务器的。”  
   
  此 SQL Server 目标将数据插入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的速度与使用“大容量插入”任务时一样快；但使用 SQL Server 目标可以在数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之前，对列数据应用转换。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "58374973"
   
  SQL Server 目标具有一个输入。 它不支持错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关在 **“SQL Server 目标编辑器”** 对话框中可以设置的属性的详细信息，请单击下列主题之一：  
   

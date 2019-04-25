@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747831"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>架构生成向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用架构生成向导，自动为基于现有多维数据集和维度的主题区域数据库生成相关架构。 此外，您可以为时间维度填充向导所生成的表，并为主题区域数据库管理命名约定和选项。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740077"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示在多维数据集，一个级别的成员的成员的级别或沿某个轴的单元集的位置的成员的子级。  
@@ -29,7 +29,7 @@ ms.locfileid: "47633545"
 ## <a name="remarks"></a>备注  
  属性**成员**使用它的上下文而异。 一个**成员**的[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)中[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)具有[子级](../../../ado/reference/ado-md-api/children-property-ado-md.md)返回的属性**成员**上从当前层次结构中的下一个较低级别**成员**。 有关**成员**的[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)，则**子级**集合始终为空。 此外，[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)属性仅适用于**成员**的**级别**。  
   
- 一个**成员**的**位置**具有两个属性显示时的有用[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)和[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 如果在访问这些属性将会出错**成员**的**级别**。  
+ 一个**成员**的**位置**具有两个属性显示时的有用[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md):[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)并[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 如果在访问这些属性将会出错**成员**的**级别**。  
   
  使用集合和属性的**成员**对象的**级别**，您可以执行以下操作：  
   

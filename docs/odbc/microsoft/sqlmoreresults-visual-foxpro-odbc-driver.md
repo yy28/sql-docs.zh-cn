@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b402c71a2501fa15f98ccaf1b0d89d2c3dac40ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636766"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 2  
+ ODBC API 一致性：级别 2  
   
  确定是否挂起多个结果上语句句柄*hstmt*包含 SELECT、 UPDATE、 INSERT 或 DELETE 语句，如果是这样，初始化这些结果的处理。  
   

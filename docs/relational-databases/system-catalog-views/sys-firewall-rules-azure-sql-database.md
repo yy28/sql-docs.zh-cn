@@ -20,11 +20,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631601"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "58494030"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|服务器级防火墙设置的标识符。|  
-|NAME|**NVARCHAR(128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
+|name|**NVARCHAR(128)**|您选择用来描述和区分服务器级防火墙设置的名称。|  
 |start_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
 |end_ip_address|**VARCHAR(45)**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：Windows Azure 连接尝试时才允许此这两个字段和**start_ip_address**字段等于`0.0.0.0`。|  
-|create_date|**DATETIME**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意：UTC 为通用协调时间的首字母缩略词。|  
+|create_date|**DATETIME**|创建服务器级防火墙设置时的 UTC 日期和时间。<br /><br /> 注意：UTC 为通用协调时间的首字母缩写。|  
 |modify_date|**DATETIME**|上次修改服务器级防火墙设置时的 UTC 日期和时间。|  
   
 ## <a name="remarks"></a>备注

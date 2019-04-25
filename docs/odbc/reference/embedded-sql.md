@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628460"
 ---
 # <a name="embedded-sql"></a>嵌入式 SQL
 嵌入的第一个方法用于将 SQL 语句发送到 DBMS SQL。 因为 SQL 不使用变量和控制流语句，它是通常用作可以添加到以传统的编程语言，例如 C 或 COBOL 编写的程序数据库子语言。 这是一个中央嵌入式 SQL 的概念： SQL 语句置于主机编程语言中编写的程序。 简单地说，以下方法用于在宿主语言中嵌入的 SQL 语句：  

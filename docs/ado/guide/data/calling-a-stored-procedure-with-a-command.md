@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35c1fce22e700ddd7ca2e738449a7b8b4ce4a63a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472736"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>使用命令调用存储过程
 命令可用于调用存储的过程。 在本主题末尾的代码示例引用名为 CustOrdersOrders，按如下所示定义 Northwind 示例数据库中的存储过程。  

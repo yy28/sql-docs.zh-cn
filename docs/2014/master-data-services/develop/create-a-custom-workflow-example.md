@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6a21843d147ca9faf2fa3329ca5ca81fa77171ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765583"
 ---
 # <a name="custom-workflow-example-master-data-services"></a>自定义工作流示例 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 中，当您创建一个自定义工作流类库时，将创建一个实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口的类。 该接口包含一种方法：<xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>，该方法是在工作流启动时由 SQL Server MDS Workflow Integration Service 调用的。 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法包含两个参数：workflowType 包含在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中“工作流类型”文本框中输入的文本；dataElement 包含触发工作流业务规则项的元数据和项数据。  

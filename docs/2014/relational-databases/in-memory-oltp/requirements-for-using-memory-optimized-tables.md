@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467885"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
   除了[的硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)，以下是使用内存中 OLTP 的要求：  
@@ -36,7 +36,7 @@ ms.locfileid: "53352424"
   
 -   要安装内存中 OLTP，请在安装 **时选择** “数据库引擎服务” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安装报表生成 ([确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (管理内存中 OLTP 通过[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对象资源管理器)，选择**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+     若要安装报表生成 ([确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](管理内存中 OLTP 通过[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对象资源管理器)，选择**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要说明  
   

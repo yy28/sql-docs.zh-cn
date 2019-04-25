@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77187802bb57a832263ec2070564754e87f21345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632920"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>线程支持（Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序是线程安全的。 访问环境句柄 (*hen*)，连接句柄 (*hdbc*)，和语句句柄 (*hstmt*) 封装在适当的信号量，以防止其他进程从访问，从而可能会改变，驱动程序的内部数据结构。  

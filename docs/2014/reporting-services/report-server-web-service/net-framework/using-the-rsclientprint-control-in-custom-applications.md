@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519117"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  

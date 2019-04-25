@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770851"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
@@ -53,7 +53,7 @@ ms.locfileid: "58385555"
   
  下表介绍 WriteOption 属性的可用选项。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |追加|将数据追加到现有文件中。 追加数据的元数据必须与文件格式匹配。|  
 |始终创建|始终创建新文件。|  
@@ -118,7 +118,7 @@ ms.locfileid: "58385555"
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
 ## <a name="configuration-of-the-raw-file-destination"></a>原始文件目标的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

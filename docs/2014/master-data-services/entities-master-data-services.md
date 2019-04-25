@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765516"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
   实体是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的对象。 每个实体都包含成员，它们是您管理的主数据的行。  
@@ -49,7 +49,7 @@ ms.locfileid: "52800909"
  可以授予用户对实体（包括相关模型对象）的权限。 有关详细信息，请参阅[实体权限 (Master Data Services)](../../2014/master-data-services/entity-permissions-master-data-services.md)。  
   
 ## <a name="entity-examples"></a>实体示例  
- 下面的示例显示了这些属性的实体：名称、 代码、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
+ 在下面的示例中，显示具有以下属性的实体：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
  ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   

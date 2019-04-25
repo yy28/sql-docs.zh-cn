@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472130"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "53072164"
   
 |表|DAX 表达式|  
 |-----------|--------------------|  
-|地区|= 区域 [Country] ="USA"|  
-|ProductCategory|= ProductCategory [名称] ="自行车"|  
+|地区|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |事务|=Transactions[Year]=2008|  
   
  这些权限对于 Transactions 表的净效果是，将允许成员查询客户位于 USA、产品类别是自行车并且年份是 2008 的数据行。 用户将无法查询 USA 之外的任何事务、不是自行车的任何事务或者不在 2008 年发生的任何事务，除非用户是授予了这些权限的其他角色。  

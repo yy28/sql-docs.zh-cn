@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524248"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函数
   使用 EVENTDATA 函数，可以捕获有关激发 DDL 触发器的事件的信息。 此函数返回 `xml` 值。 XML 架构包括下列信息：  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  若要返回事件数据，建议您使用 XQuery `value()` 方法来替代 `query()` 方法。 `query()` 方法可在输出中返回 XML 和以“and”符转义的回车符和换行符 (CRLF) 实例，而 `value()` 方法无法在输出中呈现 CRLF 实例。  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击**ddlDatabaseTriggerLog** ，然后选择**数据库触发器脚本为**。 默认情况下，DDL 触发器**ddlDatabaseTriggerLog**被禁用。  
+ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库还提供了类似的 DDL 触发器示例。 若要获得示例，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]找到 Database Triggers 文件夹。 此文件夹位于 **数据库的** Programmability [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 文件夹下。 右键单击“ddlDatabaseTriggerLog”并选择“将数据库触发器脚本编写为”。 默认情况下，DDL 触发器 ddlDatabaseTriggerLog 处于禁用状态。  
   
 ## <a name="see-also"></a>请参阅  
  [DDL 事件](../triggers/ddl-events.md)   

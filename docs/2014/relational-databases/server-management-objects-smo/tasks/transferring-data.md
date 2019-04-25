@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519172"
 ---
 # <a name="transferring-data"></a>传输数据
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 类是一个实用工具类，它提供用于传输对象和数据的工具。  

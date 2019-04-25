@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631324"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支持的 Access 报表功能 (SSRS)
   将报表导入报表设计器时，导入过程会将 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 报表转换为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持多项 Access 功能；但是，由于 Access 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之间存在差异，因此某些功能会略有修改或不受支持。 本主题介绍如何将 Access 报表功能转换为 RDL。  

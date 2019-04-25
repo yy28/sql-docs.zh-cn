@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768993"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   当升级的实例[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您的现有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]包不会自动升级到的当前版本的包格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用。 您必须选择一种升级方法并手动升级包。  
@@ -98,7 +98,7 @@ ms.locfileid: "53351464"
   
 |组件或功能|升级结果|  
 |--------------------------|---------------------|  
-|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 `ConnectionString` 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
+|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：不能使用上述过程更新连接字符串或表达式设置时的连接字符串存储在配置文件或数据源文件，`ConnectionString`属性。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
 |查找转换|有关[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]包，升级过程会自动升级查找转换为当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不过，此组件的当前版本有一些您可能想要利用的额外功能。<br /><br /> 有关详细信息，请参阅 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |脚本任务和脚本组件|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 包，升级过程会自动将脚本任务和脚本组件中的脚本从 VSA 迁移到 VSTA。<br /><br /> 有关在迁移之前可能需要进行的脚本更改以及脚本转换失败的详细信息，请参阅[将脚本迁移到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   

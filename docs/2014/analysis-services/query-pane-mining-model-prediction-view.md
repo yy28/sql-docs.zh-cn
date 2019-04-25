@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748369"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>“查询”窗格（“挖掘模型预测”视图）
   “查询”窗格显示预测查询生成器创建的数据挖掘表达式 (DMX) 语句。 您可以修改这些语句，再单击 **“切换到查询结果视图”** 按钮以返回结果。 如果切换回 **“设计”** 视图，则对语句所做的所有更改都将丢失。  
   
- **有关详细信息，请参阅**[数据挖掘扩展插件（数据操作语句）](/sql/dmx/dmx-statements-data-manipulation)、[在 SQL Server Management Studio 中创建一个 DMX 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **有关详细信息：**[数据挖掘扩展插件&#40;DMX&#41;数据操作语句](/sql/dmx/dmx-statements-data-manipulation)， [SQL Server Management Studio 中创建 DMX 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>选项  
  **切换到查询结果视图**  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636421"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>与已注册的服务器和对象资源管理器连接
   本教程演示如何使用已注册的服务器和对象资源管理器。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638079"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   返回 SSPARAMPROPS 属性集结构的数组，每个 UDT 或 XML 参数对应一个 SSPARAMPROPS 属性集。  
@@ -63,8 +63,8 @@ SSPARAMPROPS **prgParamProperties);
 |成员|Description|  
 |------------|-----------------|  
 |iOrdinal|所传递参数的序号。|  
-|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  

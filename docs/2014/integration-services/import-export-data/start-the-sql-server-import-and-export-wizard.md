@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768020"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  

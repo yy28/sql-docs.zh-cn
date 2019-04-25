@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635945"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "52393010"
   
      现在假设您重命名为"TAB2"的实例。 更改名称后将生成如下配置：  
   
-    1.  实例名称 =\<服务器 > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  服务名称 = MSOLAP$TAB2  
   

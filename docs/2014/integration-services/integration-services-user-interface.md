@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767669"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  
@@ -39,7 +39,7 @@ ms.locfileid: "58388985"
   
  此表列出可从 **SSIS** 菜单和 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的设计图面访问的对话框。  
   
-|对话框|目标|访问|  
+|对话框|用途|访问|  
 |----------------|-------------|------------|  
 |**入门**|访问示例、教程和视频内容。|右键单击“控制流”选项卡或“数据流”选项卡的设计图面，然后单击“入门”。<br /><br /> 要在创建新的 **项目时自动显示** “入门” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 窗口，请选择该窗口底部的 **“始终在新项目中显示”** 。|  
 |**配置 SSIS 日志**|添加日志和设置日志记录详细信息，从而配置包及其任务的日志记录。|在 **SSIS** 菜单上，单击 **“日志记录”**。<br /><br /> - 或 -<br /><br /> 右键单击“控制流”选项卡的设计图面上任意位置，再单击“日志记录”。|  
@@ -67,7 +67,7 @@ ms.locfileid: "58388985"
   
  此表列出可从 **SSIS** 和 **“视图”** 菜单以及 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的设计图面访问的窗口。  
   
-|窗口|目标|访问|  
+|窗口|用途|访问|  
 |------------|-------------|------------|  
 |**变量**|添加和管理自定义变量。|在 **SSIS** 菜单上单击 **“变量”**。<br /><br /> -或-<br /><br /> 右键单击“控制流”和“数据流”选项卡的设计图面上任意位置，再单击“变量”。<br /><br /> -或-<br /><br /> 在 **“视图”** 菜单上，指向 **“其他窗口”**，再单击 **“变量”**。|  
 |**日志事件**|在运行时查看日志项。|在 **SSIS** 菜单上单击 **“日志事件”**。<br /><br /> -或-<br /><br /> 右键单击“控制流”和“数据流”选项卡的设计图面上的任意位置，再单击“日志事件”。<br /><br /> -或-<br /><br /> 在 **“视图”** 菜单上指向 **“其他窗口”**，再单击 **“日志事件”**。|  

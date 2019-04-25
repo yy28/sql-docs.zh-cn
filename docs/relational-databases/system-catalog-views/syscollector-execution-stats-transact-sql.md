@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b89823af1295b329046395a8f3c345401ca61805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760183"
 ---
 # <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47779715"
 |**execution_time_ms**|**int**|完成任务所需的时间（单位为毫秒）。 可以为 Null。|  
 |**log_time**|**datetime**|记录此信息的时间。 不可为 null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 SELECT 权限的**dc_operator**。  
   
 ## <a name="see-also"></a>请参阅  

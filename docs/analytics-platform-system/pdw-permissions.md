@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639513"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>并行数据仓库中的管理权限
 本文介绍的要求和用于管理 SQL Server PDW 的数据库权限的选项。  

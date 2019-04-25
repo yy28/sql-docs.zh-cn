@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638719"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   取消异步执行的操作。  
@@ -63,7 +63,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **Issasynchstatus:: Abort**在其上的数据源对象上调用**idbinitialize:: Initialize**尚未调用，或未完成。  
   
- 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消。数据源对象仍未初始化。  
+ 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消。数据源对象是仍未初始化。  
   
  **Issasynchstatus:: Abort**在其上一个行集合上调用**itransaction:: Commit**或**itransaction:: Abort**以前被调用，并在行集中未提交或中止是处于僵停状态。  
   

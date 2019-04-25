@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524469"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
   地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体 （圆形地球） 数据。  

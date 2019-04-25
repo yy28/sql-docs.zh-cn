@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465451"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>浏览器（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集中的维度、度量值和 KPI。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集浏览器已与 MDX 查询设计器集成，并提供图形用户界面来帮助您创建 MDX 查询、筛选器和多维数据集切片，以及在层次结构中深化。  
   
- **“浏览器”** 选项卡有两种模式： **“设计模式”** 和 **“查询模式”**。 在每种模式下，您都可以使用 **“元数据”** 窗格中的对象来浏览该多维数据集，也可以将 **“元数据”** 窗格中的成员拖入查询区域，以生成可检索要使用的数据的 MDX 查询。  
+ **浏览器**选项卡有两种模式：**设计模式**并**查询模式下**。 在每种模式下，您都可以使用 **“元数据”** 窗格中的对象来浏览该多维数据集，也可以将 **“元数据”** 窗格中的成员拖入查询区域，以生成可检索要使用的数据的 MDX 查询。  
   
  **使用图形设计模式浏览和查询**  
   

@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744377"
 ---
 # <a name="determining-cursor-capabilities"></a>确定游标功能
 中的以下四个选项**SQLGetInfo**描述支持哪些类型的游标和其功能是：  
   
 -   SQL_CURSOR_SENSITIVITY。 指示是否为另一个游标所做更改敏感的游标。  
   
--   SQL_SCROLL_OPTIONS。 列出了支持的游标类型 （只进、 静态、 由键集驱动、 动态的或混合）。 所有数据源必须都支持只进游标。  
+-   SQL_SCROLL_OPTIONS. 列出了支持的游标类型 （只进、 静态、 由键集驱动、 动态的或混合）。 所有数据源必须都支持只进游标。  
   
 -   SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （具体取决于游标的类型）。 列出了支持可滚动游标的提取类型。 返回值中的位对应于中的提取类型**SQLFetchScroll**。  
   

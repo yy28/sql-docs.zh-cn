@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524090"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教程：使用证书为存储过程签名
   本教程说明了如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]生成的证书对存储过程进行签名。  

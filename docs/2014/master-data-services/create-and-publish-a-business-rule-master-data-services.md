@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65670b6958d2b0de36d1771d8c85bacfed1fa9a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765790"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  

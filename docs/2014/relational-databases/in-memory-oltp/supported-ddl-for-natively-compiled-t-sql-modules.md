@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467871"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>本机编译的存储过程支持的构造
   本主题列出了本机编译的存储过程中支持的构造。  
@@ -40,7 +40,7 @@ ms.locfileid: "48113207"
 ## <a name="security"></a>安全性  
  支持以下各项：  
   
--   用于过程：EXECUTE AS OWNER、SELF 和 USER。  
+-   有关过程：EXECUTE AS OWNER、 SELF 和 user。  
   
 -   表和过程的 GRANT 和 DENY 权限。  
   

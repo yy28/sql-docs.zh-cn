@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757433"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  
@@ -34,7 +34,7 @@ ms.locfileid: "53371309"
   
 |||||  
 |-|-|-|-|  
-|源|版本|文件类型|提供程序<sup>1</sup>|  
+|Source|版本|文件类型|提供程序<sup>1</sup>|  
 |Access 数据库|Microsoft Access 2003、2007、2010。|.accdb 或 .mdb|ACE 14 OLE DB 访问接口|  
 |SQL Server 关系数据库|Microsoft SQL Server2005，2008、 2008 R2;SQL Server 2012 中，Microsoft SQL Azure 数据库<sup>2</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 10.0 Client OLE DB 提供程序<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |SQL Server 并行数据仓库 (PDW) <sup>3</sup>|2008 R2|（不适用）|OLE DB provider for SQL Server PDW|  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af91e39bd3c338670906bb5dc50987bc0c413746
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765133"
 ---
 # <a name="hierarchies-master-data-services"></a>层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，层次结构是一种树结构，您可以使用它：  

@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634715"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>配置 NFS-Linux 上的 SQL Server 的故障转移群集实例-
 
@@ -36,7 +36,7 @@ NFS 或网络文件系统，是用于共享在 Linux 领域，但未一个 Windo
 
 请确保用于访问实施的安全标准。 当配置文件夹，请确保参与 FCI 服务器应该看到 NFS 文件夹。 在基于 Linux 的 NFS 解决方案修改 /etc/exports 的示例所示的文件夹是限制为 FCIN1 和 FCIN2。
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 

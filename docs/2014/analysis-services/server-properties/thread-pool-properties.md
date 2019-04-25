@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746939"
 ---
 # <a name="thread-pool-properties"></a>线程池属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程处理许多操作，通过并行运行多个作业提高总体服务器性能。 为了更高效地管理线程， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用线程池预分配线程并提高下一作业的线程可用性。  
@@ -251,17 +251,17 @@ ms.locfileid: "55087896"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- 请记住，用于设置 **MinThread** 和 **MaxThread** 的算法包括系统配置，具体说就是处理器数目。 以下博客文章提供有关如何计算这些值的见解：[Analysis Services 2012 配置设置 （Wordpress 博客）](https://go.microsoft.com/fwlink/?LinkId=330387)。 请注意，这些设置和行为会在后续版本中做出调整。  
+ 请记住，用于设置 **MinThread** 和 **MaxThread** 的算法包括系统配置，具体说就是处理器数目。 以下博客文章深入介绍了如何计算的值：[Analysis Services 2012 配置设置 （Wordpress 博客）](https://go.microsoft.com/fwlink/?LinkId=330387)。 请注意，这些设置和行为会在后续版本中做出调整。  
   
  以下列表显示在处理器的不同组合下其他关联掩码设置的示例：  
   
--   8 核系统上处理器 3-2-1-0 的关联会导致此位掩码：00001111，十六进制值为：0xF  
+-   8 核系统上的处理器 3-2-1-0 的关联会导致此位掩码：00001111 和十六进制值：0xF  
   
--   8 核系统上处理器 7-6-5-4 的关联会导致此位掩码：11110000，十六进制值为：0xF0  
+-   8 核系统上的处理器 6-5-7-4 的关联会导致此位掩码：11110000 和十六进制值：0xF0  
   
--   8 核系统上处理器 5-4-3-2 的关联会导致此位掩码：00111100，十六进制值为：0x3C  
+-   8 核系统上的处理器 5-4-3-2 的关联会导致此位掩码：00111100 和十六进制值：0x3C  
   
--   8 核系统上处理器 7-6-1-0 的关联会导致此位掩码：11000011，十六进制值为：0xC3  
+-   8 核系统上的处理器 7-6-1-0 的关联会导致此位掩码：11000011 和十六进制值：0xC3  
   
  回想一下，在具有多个处理器组的系统上，系统会以逗号分隔列表的形式为每个组生成单独的关联掩码。  
   

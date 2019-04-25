@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632475"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 和 INSERT 语句
 基于 SQL 的应用程序通过执行对表进行更改**更新**，**删除**，并**插入**语句。 这些语句是最小 SQL 语法的一致性级别的一部分，必须支持的所有驱动程序和数据源。  

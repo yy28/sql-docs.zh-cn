@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518617"
 ---
 # <a name="ado-programming-task-table"></a>ADO 编程任务表
 下表列出了中包含的编程任务*ADO 程序员指南*并为每个任务提供参考。 这些引用可以是文字说明或在其中可以找到有关 ADO 功能用于执行的任务的信息的代码示例。

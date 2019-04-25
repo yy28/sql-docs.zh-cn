@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762376"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
     
@@ -42,7 +42,7 @@ ms.locfileid: "48145298"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集 **SQL Server: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
+2.  开始收集性能监视器计数器**SQL Server:缓冲区管理器**， **SQL Server:内存管理器**。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   
@@ -73,9 +73,9 @@ ms.locfileid: "48145298"
  如果问题仍存在，则您将需要进一步调查，可能需要减小工作负荷。  
   
 ## <a name="see-also"></a>请参阅  
- [DBCC FREESYSTEMCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
- [DBCC FREESESSIONCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
- [DBCC FREEPROCCACHE &#40;Transact SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
+ [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
+ [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
+ [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SQL Server Buffer Manager 对象](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server - Memory Manager 对象](../performance-monitor/sql-server-memory-manager-object.md)  

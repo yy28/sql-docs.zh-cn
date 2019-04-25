@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748481"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>“刷新数据源视图”对话框
   可以使用 **中的** “刷新数据源视图” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，接受或取消刷新数据源视图导致的更改。 该对话框显示对数据源视图的更改，此更改是由更改基础数据源所引发。 您可以单击 **“确定”** 以接受更改并刷新数据源视图，或单击 **“取消”** 以忽略更改并保持数据源视图不变。 通过执行以下操作之一，即可显示 **“刷新数据源视图”** 对话框：  
@@ -38,6 +38,6 @@ ms.locfileid: "48119617"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图设计器&#40;Analysis Services-多维数据&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

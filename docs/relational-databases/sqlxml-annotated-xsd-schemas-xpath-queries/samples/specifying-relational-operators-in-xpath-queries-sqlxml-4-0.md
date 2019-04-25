@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737533"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "56030639"
 ```  
   
 > [!NOTE]  
->  在模板中指定该查询时，< 字符必须进行实体编码，因为 < 字符在 XML 文档中有特殊含义。 在模板中，请使用 `<` 指定 < 字符。  
+>  在模板中，指定此查询时 < 字符必须进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用`<`指定 < 字符。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

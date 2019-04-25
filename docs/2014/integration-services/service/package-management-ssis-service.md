@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766620"
 ---
 # <a name="package-management-ssis-service"></a>包管理（SSIS 服务）
   包的管理涉及的任务包括以下任务：  
@@ -56,7 +56,7 @@ ms.locfileid: "58375344"
   
  **“正在运行的包”** 文件夹不包含子文件夹，也不可扩展。  
   
- 默认情况下**存储的包**文件夹包含两个文件夹：**文件系统**并**MSDB**。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
+ 默认情况下，“已存储的包”文件夹包含两个文件夹：“文件系统”和 MSDB。 **“文件系统”** 文件夹列出保存到文件系统中的包。 这些文件的位置在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件中指定。 默认文件夹是 Packages 文件夹，它位于 %Program Files%\Microsoft SQL Server\100\DTS 下。 **MSDB** 文件夹列出已经保存到服务器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 数据库中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包。 sysssispackages 表包含保存到 msdb 中的包。  
   
  若要查看包存储区中的包列表，必须打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [在 SQL Server Management Studio 中查看 Integration Services 包（SSIS 服务）](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)的早期版本向后兼容。  
   

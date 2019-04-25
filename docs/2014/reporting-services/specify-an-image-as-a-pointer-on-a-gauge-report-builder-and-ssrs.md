@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511386"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>指定图像作为仪表的指针（报表生成器和 SSRS）
   仪表包含三个可用于自定义指针外观的内置样式。 对于径向仪表，内置的样式为：针、 标记和条。 对于线性仪表，内置样式为：标记、图条和温度计。 如果需要一个唯一指针，则用户可以创建一个图像并指定其作为全功能指针。  

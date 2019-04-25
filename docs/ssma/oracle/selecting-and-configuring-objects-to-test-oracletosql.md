@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626202"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>选择并配置要测试的对象 (OracleToSQL)
 在此步骤中，选择要测试和配置设置的比较过程的函数的输出参数，以及函数的返回值对象。  

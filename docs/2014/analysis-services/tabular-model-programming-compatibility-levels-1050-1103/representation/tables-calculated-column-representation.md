@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757714"
 ---
 # <a name="calculated-column-representation-tabular"></a>计算列表示形式（表格）
   计算列是在表中创建新列并且获取的值存储于该表中的 DAX 表达式。 每次处理表时，都会对计算列表达式进行计算。  

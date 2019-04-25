@@ -1,5 +1,5 @@
 ---
-title: '? 解码的字符：（条件）（SSIS 表达式） |Microsoft Docs'
+title: '? 解码的字符：（条件）（SSIS 表达式）| Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769394"
 ---
 # <a name="--conditional-ssis-expression"></a>? 解码的字符：（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  
@@ -57,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* 和 *expression2* 必须为数值数据类型。 数据类型的交集必须为数值数据类型，该类型在表达式计算器执行隐式数值转换的规则中指定。 两个数值数据类型的交集不能为空。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
--   **字符串**两者*expression1*并*expression2*必须是字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
+-   **字符串**：expression1 和 expression2 必须为字符串数据类型：DT_STR 或 DT_WSTR。 两个表达式的计算结果可以为不同的字符串数据类型。 结果为 DT_WSTR 数据类型，其长度为较长参数的长度。  
   
--   **日期、 时间或日期/时间**两者*expression1*并*expression2*计算结果必须为以下数据类型之一：将 DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **“日期”、“时间”或“日期/时间”**：expression1 和 expression2 的计算结果必须为下面的数据类型之一：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系统不支持对计算结果为时间数据类型的表达式和计算结果为日期或日期/时间数据类型的表达式进行比较。 否则系统会生成错误。  

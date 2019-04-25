@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 964549d535fec50c0ec6e8dc17dd0ef2a1dda221
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510918"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
   数据驱动订阅提供了一种使用动态订阅数据的方式，这些数据是在运行时从外部数据源中检索的。 数据驱动订阅还可以使用定义订阅时指定的静态文本和默认值。 可以使用数据驱动订阅来执行以下操作：  

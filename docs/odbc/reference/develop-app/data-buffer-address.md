@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471126"
 ---
 # <a name="data-buffer-address"></a>数据缓冲区地址
 应用程序将数据缓冲区的地址传递给在参数中，通常名为驱动程序*ValuePtr*或类似名称。 例如，在下面的示例调用到**SQLBindCol**，应用程序指定的地址*日期*变量：  

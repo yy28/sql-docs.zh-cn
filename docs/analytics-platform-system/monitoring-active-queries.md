@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640005"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>监视活动查询的并行数据仓库
 本文介绍如何使用管理控制台和 SQL Server PDW 系统视图来监视活动的查询。 请参阅[通过使用管理控制台监视设备](monitor-the-appliance-by-using-the-admin-console.md)并[系统视图](tsql-system-views.md)有关这些工具的信息。  

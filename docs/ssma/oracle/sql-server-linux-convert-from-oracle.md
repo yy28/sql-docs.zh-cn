@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629787"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>将 Oracle 架构迁移到 SQL Server 2017 Linux 上使用 SQL Server Migration Assistant
 
@@ -28,7 +28,7 @@ ms.locfileid: "51659651"
 > * 将示例 HR 架构转换
 > * 将数据迁移
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
 - 实例的 Oracle 12c (12.2.0.1.0) 与**HR**架构安装
 - Linux 上的 SQL Server 的工作实例
@@ -128,7 +128,7 @@ ms.locfileid: "51659651"
 
 对于更复杂的 Orcale 架构，转换过程将涉及更多的时间、 测试和客户端应用程序可能发生的更改。 本教程的目的是介绍如何在整个迁移过程的一部分，用于 Oracle 使用 SSMA。
 
-在本教程中，您学习了如何：
+在本教程中，你将了解：
 > [!div class="checklist"]
 > * 在 Windows 上安装 SSMA
 > * 创建新的 SSMA 项目

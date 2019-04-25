@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8daff4753eb5921ee80eef8f44de96487ea86a15
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524479"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
   平面空间数据类型 `geometry` 表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  

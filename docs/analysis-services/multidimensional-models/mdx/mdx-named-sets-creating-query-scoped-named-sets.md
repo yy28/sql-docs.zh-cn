@@ -1,5 +1,5 @@
 ---
-title: 创建查询作用域的命名集 (MDX) |Microsoft 文档
+title: 创建查询作用域的命名集 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739977"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX 命名集的创建查询作用域的命名集
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX 命名集-创建查询作用域的命名集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   如果某个命名集仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字来定义该命名集。 使用 WITH 关键字创建的命名集在执行完查询之后就不再存在。  
   
@@ -89,8 +89,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [SELECT 语句 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [创建会话作用域的命名集 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+## <a name="see-also"></a>请参阅  
+ [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [创建会话作用域的命名集 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

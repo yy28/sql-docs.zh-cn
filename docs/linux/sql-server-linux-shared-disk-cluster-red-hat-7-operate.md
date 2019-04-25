@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635583"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
@@ -144,7 +144,7 @@ sudo crm_mon
    > [!NOTE]
    > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
    >
-   > * TCP：端口 2224、 3121、 21064
+   > * TCP:端口 2224、 3121、 21064
    > * UDP:端口 5405
 
 1. 在新节点上安装 Pacemaker 包。
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     需要在所有节点上打开以下端口，才能使 Pacemaker 进行通信。
     
-    - * * TCP:2224、 3121、 21064
+    - * * TCP:2224, 3121, 21064
 
 - **Pacemaker 或 Corosync 服务运行**
 

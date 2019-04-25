@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517782"
 ---
 # <a name="discontinued-master-data-services-features"></a>废弃的 Master Data Services 功能
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759879"
   
  元数据模型不再可用。 在“资源管理器”功能区域中，也不再能查看元数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [弃用的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
   
   

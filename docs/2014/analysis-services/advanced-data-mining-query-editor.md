@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635629"
 ---
 # <a name="advanced-data-mining-query-editor"></a>高级数据挖掘查询编辑器
   **数据挖掘查询高级编辑器**是一种工具来帮助您构建自定义模型和查询。  
@@ -37,7 +37,7 @@ ms.locfileid: "48072797"
  使用此按钮，您可以直接调用编写 DMX 语句的文本编辑器之间切换编辑器并**查询生成器**，可帮助您生成 DMX 语句。  
   
 > [!NOTE]  
->  **警告：** 如果切换视图之前运行查询时，会显示一条消息，指出您可能会丢失某些更改。 如果 DMX 语句是有效的在许多情况下**查询生成器**可能会成功转换这些更改。 但是，如果您生成了特别复杂的 DMX 语句，则务必在切换视图之前保存您的工作。  
+>  警告：如果切换视图之前运行查询时，会显示一条消息，指出您可能会丢失某些更改。 如果 DMX 语句是有效的在许多情况下**查询生成器**可能会成功转换这些更改。 但是，如果您生成了特别复杂的 DMX 语句，则务必在切换视图之前保存您的工作。  
   
  **DMX 模板**  
  单击，然后从包含 DMX 示例的模板列表中进行选择。 模板仅提供有关您可能需要的每种模型或预测查询的信息（包括使用嵌套表的查询）和用于管理模型的 DMX 语句。 即使您有一定的 DMX 知识，模板也可以通过提供正确的语法来节省您的时间。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632603"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>疑难解答（Visual FoxPro ODBC 驱动程序）
 以下部分介绍如何提高性能并解决使用 Visual FoxPro ODBC 驱动程序时可能遇到的问题。  

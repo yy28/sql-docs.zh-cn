@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640408"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>参数  
- '*dbname*  
+ '*dbname*'  
  要备份的数据库的名称。 *dbname*的类型为 sysname。  
   
 ## <a name="returns"></a>返回  
@@ -81,6 +81,6 @@ GO
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [活动辅助副本： 次要副本备份&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Always On 可用性组目录视图&#40;Transact SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [活动次要副本：在辅助副本上备份&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Always On 可用性组目录视图&#40;Transact SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

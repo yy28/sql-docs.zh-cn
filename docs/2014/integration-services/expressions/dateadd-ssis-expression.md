@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769344"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
   将表示日期或时间间隔的数值与日期中指定的日期部分相加后，返回一个新的 DT_DBTIMESTAMP 值。 number 参数的值必须为整数，而 date 参数的取值必须为有效日期。  

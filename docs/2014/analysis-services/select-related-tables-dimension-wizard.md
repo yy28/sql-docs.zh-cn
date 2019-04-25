@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747219"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>选择相关表（维度向导）
   可以使用“选择相关表”页，将相关表（数据源视图中与主维度表相关的表）包含在维度中。  

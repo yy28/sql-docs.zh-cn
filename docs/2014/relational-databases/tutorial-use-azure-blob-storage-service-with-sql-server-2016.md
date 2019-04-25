@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523891"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>教程：Windows Azure 存储服务中的 SQL Server 数据文件
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>教程：在 Windows Azure 存储服务的 SQL Server 数据文件
   欢迎使用“Windows Azure 存储服务中的 SQL Server 数据文件”教程。 本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  
   
  Windows Azure Blob 存储服务的 SQL Server 集成支持是 SQL Server 2014 中的一项增强功能。 有关功能的概述和使用此功能的好处，请参阅[在 Windows Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)。  

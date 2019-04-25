@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f3eca2a2e7943d8911144a3657e4f826d9739c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506734"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @dbname=] '*database_name*  
+ [ @dbname= ] '*database_name*'  
  数据库的名称。 *dbname*是**sysname**默认值为 NULL。 如果*dbname*未指定，则使用当前数据库。  
   
- [ @increased_partitions=] '*increased_partitions*  
+ [ @increased_partitions= ] '*increased_partitions*'  
  对指定的数据库启用或禁用对 15000 个分区的支持。 *increased_partitions*是**varchar(6)** 默认值为 NULL。 要启用支持，则接受的值是“ON”或“TRUE”；要禁用支持，则接受的值为“OFF”和“FALSE”。 如果*increased_partitions*未指定，则该过程返回 1，表示为指定的数据库启用了支持或 0，表示支持禁用。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对指定的数据库拥有 ALTER DATABASE 权限。  
   
   

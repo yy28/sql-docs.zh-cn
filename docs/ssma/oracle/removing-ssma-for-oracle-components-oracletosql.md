@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da54f9fc21b74be790ac86c9690738b71fd3e1c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628542"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>删除 SSMA for Oracle 组件 (OracleToSQL)
 当您已完成从 oracle 迁移到将数据库迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能需要卸载 SSMA 组件。 您可以在任何时候卸载客户端组件。 但是，不应卸载扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非你已迁移的数据库不能再使用中的函数**ssma_oracle**的架构**sysdb**数据库。  
