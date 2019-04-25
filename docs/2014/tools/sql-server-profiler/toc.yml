@@ -1,4 +1,4 @@
-- name: SQL Server 事件探查器
+- name: SQL Server Profiler
   href: sql-server-profiler.md
 - name: SQL Server Profiler 模板和权限
   href: sql-server-profiler-templates-and-permissions.md

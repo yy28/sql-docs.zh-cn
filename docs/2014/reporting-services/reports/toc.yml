@@ -33,8 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: 创建链接报表
   href: create-a-linked-report.md
-- name: 点击链接型报表 (SSRS)
-  href: clickthrough-reports-ssrs.md
 - name: 使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
   href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: 报表的 F1 帮助

@@ -1,4 +1,3 @@
-items:
 - name: 表格建模
   href: tabular-models-ssas.md
 - name: 表格模型解决方案
@@ -12,187 +11,187 @@ items:
 - name: 表格模型项目
   href: tabular-model-projects-ssas-tabular.md
   items:
-  - name: 创建新的表格模型项目
-    href: create-a-new-tabular-model-project-analysis-services.md
-  - name: 从 Analysis Services 导入
-    href: import-from-analysis-services-ssas-tabular.md
-  - name: 从 PowerPivot 导入
-    href: import-from-power-pivot-ssas-tabular.md
+    - name: 创建新的表格模型项目
+      href: create-a-new-tabular-model-project-analysis-services.md
+    - name: 从 Analysis Services 导入
+      href: import-from-analysis-services-ssas-tabular.md
+    - name: 从 PowerPivot 导入
+      href: import-from-power-pivot-ssas-tabular.md
 - name: 属性
   href: properties-ssas-tabular.md
   items:
-  - name: Power View 报表属性
-    href: power-view-reporting-properties-ssas-tabular.md
-    items:
-    - name: 配置 Power View 报表的默认字段集
-      href: power-view-configure-default-field-set-for-reports.md
-    - name: 为 Power View 报表配置表行为属性
-      href: power-view-configure-table-behavior-properties-for-reports.md
-  - name: 项目属性
-    href: project-properties-ssas-tabular.md
-  - name: 模型属性
-    href: model-properties-ssas-tabular.md
-  - name: 表的属性
-    href: table-properties-ssas-tabular.md
-  - name: 列属性
-    href: column-properties-ssas-tabular.md
-  - name: 配置默认数据建模和部署属性
-    href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+    - name: Power View 报表属性
+      href: power-view-reporting-properties-ssas-tabular.md
+      items:
+        - name: 配置 Power View 报表的默认字段集
+          href: power-view-configure-default-field-set-for-reports.md
+        - name: 为 Power View 报表配置表行为属性
+          href: power-view-configure-table-behavior-properties-for-reports.md
+    - name: 项目属性
+      href: project-properties-ssas-tabular.md
+    - name: 模型属性
+      href: model-properties-ssas-tabular.md
+    - name: 表的属性
+      href: table-properties-ssas-tabular.md
+    - name: 列属性
+      href: column-properties-ssas-tabular.md
+    - name: 配置默认数据建模和部署属性
+      href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
 - name: “数据源”
   href: ../data-sources-ssas-tabular.md
   items:
-  - name: 支持的数据源
-    href: data-sources-supported-ssas-tabular.md
-  - name: 支持的数据类型
-    href: data-types-supported-ssas-tabular.md
-  - name: 模拟
-    href: impersonation-ssas-tabular.md
-  - name: 导入数据
-    href: ../import-data-ssas-tabular.md
-    items:
-    - name: 从关系数据源导入
-      href: ../import-from-a-relational-data-source-ssas-tabular.md
-    - name: 从多维数据源导入
-      href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
-    - name: 从数据馈送导入
-      href: ../import-from-a-data-feed-ssas-tabular.md
-    - name: 从文本文件导入
-      href: ../import-from-a-text-file-ssas-tabular.md
-    - name: 复制并粘贴数据
-      href: ../copy-and-paste-data-ssas-tabular.md
-  - name: 处理数据
-    href: ../process-data-ssas-tabular.md
-    items:
-    - name: 手动处理数据
-      href: ../manually-process-data-ssas-tabular.md
-    - name: 数据处理故障排除
-      href: ../troubleshoot-process-data-ssas-tabular.md
-  - name: 编辑现有数据源连接
-    href: ../edit-an-existing-data-source-connection-ssas-tabular.md
+    - name: 支持的数据源
+      href: data-sources-supported-ssas-tabular.md
+    - name: 支持的数据类型
+      href: data-types-supported-ssas-tabular.md
+    - name: 模拟
+      href: impersonation-ssas-tabular.md
+    - name: 导入数据
+      href: ../import-data-ssas-tabular.md
+      items:
+        - name: 从关系数据源导入
+          href: ../import-from-a-relational-data-source-ssas-tabular.md
+        - name: 从多维数据源导入
+          href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
+        - name: 从数据馈送导入
+          href: ../import-from-a-data-feed-ssas-tabular.md
+        - name: 从文本文件导入
+          href: ../import-from-a-text-file-ssas-tabular.md
+        - name: 复制并粘贴数据
+          href: ../copy-and-paste-data-ssas-tabular.md
+    - name: 处理数据
+      href: ../process-data-ssas-tabular.md
+      items:
+        - name: 手动处理数据
+          href: ../manually-process-data-ssas-tabular.md
+        - name: 数据处理故障排除
+          href: ../troubleshoot-process-data-ssas-tabular.md
+    - name: 编辑现有数据源连接
+      href: ../edit-an-existing-data-source-connection-ssas-tabular.md
 - name: DirectQuery 模式
   href: directquery-mode-ssas-tabular.md
   items:
-  - name: 分区和 DirectQuery 模式
-    href: define-partitions-in-directquery-models-ssas-tabular.md
-  - name: 启用 DirectQuery 设计模式
-    href: enable-directquery-mode-in-ssdt.md
-  - name: 更改 DirectQuery 分区
-    href: ../change-the-directquery-partition-ssas-tabular.md
-  - name: 设置或更改 DirectQuery 的首选连接方法
-    href: ../set-or-change-the-preferred-connection-method-for-directquery.md
-  - name: DirectQuery 部署方案
-    href: ../directquery-deployment-scenarios-ssas-tabular.md
-  - name: DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
-    href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
+    - name: 分区和 DirectQuery 模式
+      href: define-partitions-in-directquery-models-ssas-tabular.md
+    - name: 启用 DirectQuery 设计模式
+      href: enable-directquery-mode-in-ssdt.md
+    - name: 更改 DirectQuery 分区
+      href: ../change-the-directquery-partition-ssas-tabular.md
+    - name: 设置或更改 DirectQuery 的首选连接方法
+      href: ../set-or-change-the-preferred-connection-method-for-directquery.md
+    - name: DirectQuery 部署方案
+      href: ../directquery-deployment-scenarios-ssas-tabular.md
+    - name: DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
+      href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
 - name: 表和列
   href: tables-and-columns-ssas-tabular.md
   items:
-  - name: 将列添加到表
-    href: add-columns-to-a-table-ssas-tabular.md
-  - name: 删除列
-    href: delete-a-column-ssas-tabular.md
-  - name: 更改表、列或行筛选器映射
-    href: change-table-column-or-row-filter-mappings-ssas-tabular.md
-  - name: 指定“标记为日期表”以便用于时间智能（SSAS 表格）
-    href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
-  - name: 添加表
-    href: add-a-table-ssas-tabular.md
-  - name: 删除表
-    href: delete-a-table-ssas-tabular.md
-  - name: 重命名表或列
-    href: rename-a-table-or-column-ssas-tabular.md
-  - name: 设置列的数据类型
-    href: set-the-data-type-of-a-column-ssas-tabular.md
-  - name: 隐藏或冻结列
-    href: hide-or-freeze-columns-ssas-tabular.md
-  - name: 计算列
-    href: ssas-calculated-columns.md
-    items:
-    - name: 创建计算列
-      href: ssas-calculated-columns-create-a-calculated-column.md
-  - name: 对数据进行筛选和排序
-    href: ../filter-and-sort-data-ssas-tabular.md
-    items:
-    - name: 对表数据进行排序
-      href: sort-data-in-a-table-ssas-tabular.md
-    - name: 筛选表数据
-      href: filter-data-in-a-table-ssas-tabular.md
+    - name: 将列添加到表
+      href: add-columns-to-a-table-ssas-tabular.md
+    - name: 删除列
+      href: delete-a-column-ssas-tabular.md
+    - name: 更改表、列或行筛选器映射
+      href: change-table-column-or-row-filter-mappings-ssas-tabular.md
+    - name: 指定“标记为日期表”以便用于时间智能（SSAS 表格）
+      href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+    - name: 添加表
+      href: add-a-table-ssas-tabular.md
+    - name: 删除表
+      href: delete-a-table-ssas-tabular.md
+    - name: 重命名表或列
+      href: rename-a-table-or-column-ssas-tabular.md
+    - name: 设置列的数据类型
+      href: set-the-data-type-of-a-column-ssas-tabular.md
+    - name: 隐藏或冻结列
+      href: hide-or-freeze-columns-ssas-tabular.md
+    - name: 计算列
+      href: ssas-calculated-columns.md
+      items:
+        - name: 创建计算列
+          href: ssas-calculated-columns-create-a-calculated-column.md
+    - name: 对数据进行筛选和排序
+      href: ../filter-and-sort-data-ssas-tabular.md
+      items:
+        - name: 对表数据进行排序
+          href: sort-data-in-a-table-ssas-tabular.md
+        - name: 筛选表数据
+          href: filter-data-in-a-table-ssas-tabular.md
 - name: 关系
   href: relationships-ssas-tabular.md
   items:
-  - name: 创建两个表之间的关系
-    href: create-a-relationship-between-two-tables-ssas-tabular.md
-  - name: 删除关系
-    href: delete-relationships-ssas-tabular.md
+    - name: 创建两个表之间的关系
+      href: create-a-relationship-between-two-tables-ssas-tabular.md
+    - name: 删除关系
+      href: delete-relationships-ssas-tabular.md
 - name: “新建命名集”
   href: calculations-ssas-tabular.md
   items:
-  - name: 了解表格模型中的 DAX
-    href: understanding-dax-in-tabular-models-ssas-tabular.md
+    - name: 了解表格模型中的 DAX
+      href: understanding-dax-in-tabular-models-ssas-tabular.md
 - name: 度量值组
   href: measures-ssas-tabular.md
   items:
-  - name: 创建和管理度量值
-    href: create-and-manage-measures-ssas-tabular.md
+    - name: 创建和管理度量值
+      href: create-and-manage-measures-ssas-tabular.md
 - name: KPI
   href: kpis-ssas-tabular.md
   items:
-  - name: 创建和管理 KPI
-    href: create-and-manage-kpis-ssas-tabular.md
+    - name: 创建和管理 KPI
+      href: create-and-manage-kpis-ssas-tabular.md
 - name: 层次结构
   href: hierarchies-ssas-tabular.md
   items:
-  - name: 创建和管理层次结构
-    href: create-and-manage-hierarchies-ssas-tabular.md
+    - name: 创建和管理层次结构
+      href: create-and-manage-hierarchies-ssas-tabular.md
 - name: “度量值组”
   href: partitions-ssas-tabular.md
   items:
-  - name: 创建和管理工作区数据库中的分区
-    href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
-  - name: 在工作区数据库中处理分区
-    href: process-partitions-in-the-workspace-database-ssas-tabular.md
+    - name: 创建和管理工作区数据库中的分区
+      href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+    - name: 在工作区数据库中处理分区
+      href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: 透视
   href: perspectives-ssas-tabular.md
   items:
-  - name: 创建和管理透视
-    href: create-and-manage-perspectives-ssas-tabular.md
+    - name: 创建和管理透视
+      href: create-and-manage-perspectives-ssas-tabular.md
 - name: 角色
   href: roles-ssas-tabular.md
   items:
-  - name: 创建和管理角色
-    href: create-and-manage-roles-ssas-tabular.md
+    - name: 创建和管理角色
+      href: create-and-manage-roles-ssas-tabular.md
 - name: 在 Excel 中分析
   href: analyze-in-excel-ssas-tabular.md
   items:
-  - name: 在 Excel 中分析表格模型
-    href: analyze-a-tabular-model-in-excel-ssas-tabular.md
+    - name: 在 Excel 中分析表格模型
+      href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: 表格模型解决方案部署
   href: tabular-model-solution-deployment-ssas-tabular.md
   items:
-  - name: 从 SQL Server Data Tools 进行部署
-    href: deploy-from-sql-server-data-tools-ssas-tabular.md
-  - name: 使用部署向导部署模型解决方案
-    href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
-    items:
-    - name: 运行 Analysis Services 部署向导
-      href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
-    - name: 了解用于创建部署脚本的输入文件
-      href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
-  - name: 指定安装目标
-    href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
-  - name: 指定分区和角色部署选项
-    href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
-  - name: 为解决方案部署指定配置设置
-    href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
-  - name: 指定处理选项
-    href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
-    items:
-    - name: 了解 Analysis Services 部署脚本
-      href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
-  - name: 使用部署实用工具部署模型解决方案
-    href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
-  - name: 使用 XMLA 部署模型解决方案
-    href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
+    - name: 从 SQL Server Data Tools 进行部署
+      href: deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: 使用部署向导部署模型解决方案
+      href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+      items:
+        - name: 运行 Analysis Services 部署向导
+          href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
+        - name: 了解用于创建部署脚本的输入文件
+          href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+    - name: 指定安装目标
+      href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+    - name: 指定分区和角色部署选项
+      href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+    - name: 为解决方案部署指定配置设置
+      href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+    - name: 指定处理选项
+      href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
+      items:
+        - name: 了解 Analysis Services 部署脚本
+          href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
+    - name: 使用部署实用工具部署模型解决方案
+      href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+    - name: 使用 XMLA 部署模型解决方案
+      href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
 - name: 表格模型中的字符串存储和排序规则
   href: string-storage-and-collation-in-tabular-models.md
 - name: 处理数据库、表或分区
@@ -200,48 +199,42 @@ items:
 - name: 表格模型角色
   href: tabular-model-roles-ssas-tabular.md
   items:
-  - name: 使用 SSMS 管理角色
-    href: manage-roles-by-using-ssms-ssas-tabular.md
+    - name: 使用 SSMS 管理角色
+      href: manage-roles-by-using-ssms-ssas-tabular.md
 - name: 表格模型分区
   href: tabular-model-partitions-ssas-tabular.md
   items:
-  - name: 创建和管理表格模型分区
-    href: create-and-manage-tabular-model-partitions-ssas-tabular.md
-  - name: 处理表格模型分区
-    href: process-tabular-model-partitions-ssas-tabular.md
+    - name: 创建和管理表格模型分区
+      href: create-and-manage-tabular-model-partitions-ssas-tabular.md
+    - name: 处理表格模型分区
+      href: process-tabular-model-partitions-ssas-tabular.md
 - name: 表格模型数据库
   href: tabular-model-databases-ssas-tabular.md
   items:
-  - name: 为表格模型数据库配置内存中或 DirectQuery 访问
-    href: enable-directquery-mode-in-ssms.md
-  - name: 连接到表格模型数据库
-    href: connect-to-a-tabular-model-database-ssas.md
-  - name: 从 PowerPivot 还原
-    href: restore-from-power-pivot.md
-  - name: 移动 Analysis Services 数据库
-    href: ../multidimensional-models/move-an-analysis-services-database.md
-  - name: 同步 Analysis Services 数据库
-    href: ../multidimensional-models/synchronize-analysis-services-databases.md
-  - name: 切换 ReadOnly 和 ReadWrite 模式
-    href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
-  - name: 修改或删除 Analysis Services 数据库
-    href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
-  - name: 记录和编写 Analysis Services 数据库脚本
-    href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
-  - name: 备份和还原 Analysis Services 数据库
-    href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
-    items:
-    - name: 备份选项
-      href: ../multidimensional-models/backup-options.md
-    - name: 还原选项
-      href: ../multidimensional-models/restore-options.md
-  - name: 附加和分离 Analysis Services 数据库
-    href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
+    - name: 为表格模型数据库配置内存中或 DirectQuery 访问
+      href: enable-directquery-mode-in-ssms.md
+    - name: 连接到表格模型数据库
+      href: connect-to-a-tabular-model-database-ssas.md
+    - name: 从 PowerPivot 还原
+      href: restore-from-power-pivot.md
+    - name: 移动 Analysis Services 数据库
+      href: ../multidimensional-models/move-an-analysis-services-database.md
+    - name: 同步 Analysis Services 数据库
+      href: ../multidimensional-models/synchronize-analysis-services-databases.md
+    - name: 切换 ReadOnly 和 ReadWrite 模式
+      href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+    - name: 修改或删除 Analysis Services 数据库
+      href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
+    - name: 记录和编写 Analysis Services 数据库脚本
+      href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
+    - name: 备份和还原 Analysis Services 数据库
+      href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+      items:
+        - name: 备份选项
+          href: ../multidimensional-models/backup-options.md
+        - name: 还原选项
+          href: ../multidimensional-models/restore-options.md
+    - name: 附加和分离 Analysis Services 数据库
+      href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
 - name: 表格模型数据访问
   href: tabular-model-data-access.md
-ms.openlocfilehash: e0eeb0529829c7366e2973fdc480ea27b0f528bf
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405627"

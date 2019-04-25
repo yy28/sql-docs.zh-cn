@@ -13,5 +13,5 @@
       href: accessing-custom-assemblies-through-expressions.md
     - name: 初始化自定义程序集对象
       href: initializing-custom-assembly-objects.md
-    - name: 如何调试自定义程序集
+    - name: 如何：调试自定义程序集
       href: how-to-debug-custom-assemblies.md

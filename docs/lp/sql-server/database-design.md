@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5c70902f23c4f149e42a1ee04dd515aa32aa9d2e
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265528"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -116,7 +116,7 @@ ms.locfileid: "56319078"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>“数据库”</h3>
+                                                    <h3>数据库</h3>
                                                     <p>SQL Server 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。</p>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@ ms.locfileid: "56319078"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Filestream</h3>
+                                                    <h3>文件流</h3>
                                                     <p>借助 Filestream，基于 SQL Server 的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。  </p>
                                                 </div>
                                             </div>
@@ -153,7 +153,7 @@ ms.locfileid: "56319078"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Filetable</h3>
+                                                    <h3>FileTable</h3>
                                                     <p>借助 FileTable，应用程序可以集成其存储和数据管理组件，可对非结构化数据和元数据提供集成的 SQL Server 服务（包括全文搜索和语义搜索）。</p>
                                                 </div>
                                             </div>
@@ -191,7 +191,7 @@ ms.locfileid: "56319078"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>层次结构数据</h3>
+                                                    <h3>分层数据</h3>
                                                     <p>层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。</p>
                                                 </div>
                                             </div>

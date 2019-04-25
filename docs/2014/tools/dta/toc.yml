@@ -80,10 +80,10 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: 使用用户指定配置 (DTA) 的 XML 输入文件示例
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: 教程：数据库引擎优化顾问
+- name: 教程：Database Engine Tuning Advisor
   href: tutorial-database-engine-tuning-advisor.md
   items:
-    - name: 第 1 课：数据库引擎优化顾问中的基本导航
+    - name: 第 1 课：数据库引擎优化顾问基本导览
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
       items:
         - name: 启动数据库引擎优化顾问

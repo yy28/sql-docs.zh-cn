@@ -131,7 +131,7 @@
           href: ../report-data/sharepoint-list-query-designer-report-builder.md
         - name: SAP NetWeaver BI 查询设计器用户界面
           href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
-    - name: “报表生成器选项”对话框 -&gt;“设置”
+    - name: “报表生成器选项”对话框 -&amp;gt;“设置”
       href: set-default-options-for-report-builder.md
     - name: “报表数据”窗格
       href: ../report-data-pane-report-builder.md

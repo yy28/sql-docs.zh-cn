@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: 对具有稀疏列的表调用 SQLColumns
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 如何在 Geography 列中插入行 (ODBC)
+    - name: 如何：在 Geography 列中插入行 (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: 获取 Kerberos 相互身份验证
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md
