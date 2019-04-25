@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509899"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB 提供程序用于 Internet 发布概述
 Microsoft OLE DB 访问接口用于 Internet 发布允许 ADO 访问由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。

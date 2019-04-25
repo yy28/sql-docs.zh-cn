@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748299"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>“用其他表替换该表”对话框
   可以使用 **中的** “用其他表替换该表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，用尚未包含在数据源视图中的基础数据源中的表替换数据源视图中的现有表。 通过右键单击**数据源视图设计器**中的“关系图”或“表”窗格中的一个表名，再从“替换表”中选择“使用其他表”，即可显示“用其他表替换该表”对话框。  
@@ -40,6 +40,6 @@ ms.locfileid: "48173757"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图设计器&#40;Analysis Services-多维数据&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

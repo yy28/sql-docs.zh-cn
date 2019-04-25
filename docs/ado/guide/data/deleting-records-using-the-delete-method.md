@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472379"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法删除记录
 使用**删除**方法将当前记录或一组中的记录标记**记录集**对象以备删除。 如果**记录集**对象不允许记录删除，就会出错。 如果要立即更新模式中，删除数据库中立即执行。 如果不能 （由于数据库完整性的冲突，例如） 已成功删除了记录，该记录将保持在编辑模式下调用后面**更新。** 这意味着更新使用必须取消[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)之前移出当前记录 (例如，使用[关闭](../../../ado/reference/ado-api/close-method-ado.md)，[移动](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  

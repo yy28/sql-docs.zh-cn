@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_virtual_address_dump (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_os_virtual_address_dump (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b12c9e533d404b01f896dd66ee046c9a9cd110d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628222"
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,14 +43,14 @@ ms.locfileid: "47659675"
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|页区域的基址指针。 不可为 null。|  
 |**region_allocation_base_address**|**varbinary(8)**|由 VirtualAlloc Windows API 函数分配的页范围的基址指针。 由 BaseAddress 成员指向的页包含在该分配范围中。 不可为 null。|  
-|**region_allocation_protection**|**varbinary(8)**|首次分配区域时的保护属性。 值为以下值之一：<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> 不可为 null。|  
+|**region_allocation_protection**|**varbinary(8)**|首次分配区域时的保护属性。 值为以下值之一：<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-   PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> 不可为 null。|  
 |**region_size_in_bytes**|**bigint**|起始于基址的区域大小（字节），该区域中的所有页均具有相同的属性。 不可为 null。|  
 |**region_state**|**varbinary(8)**|区域的当前状态。 这是以下值之一：<br /><br /> -   MEM_COMMIT<br />-   MEM_RESERVE<br />-   MEM_FREE<br /><br /> 不可为 null。|  
-|**region_current_protection**|**varbinary(8)**|保护属性。 值为以下值之一：<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> 不可为 null。|  
-|**region_type**|**varbinary(8)**|标识区域中的页类型。 该值可以是下列值之一：<br /><br /> -MEM_PRIVATE<br />-MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> 不可为 null。|  
+|**region_current_protection**|**varbinary(8)**|保护属性。 值为以下值之一：<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-   PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> 不可为 null。|  
+|**region_type**|**varbinary(8)**|标识区域中的页类型。 该值可以是下列值之一：<br /><br /> -   MEM_PRIVATE<br />-   MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> 不可为 null。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

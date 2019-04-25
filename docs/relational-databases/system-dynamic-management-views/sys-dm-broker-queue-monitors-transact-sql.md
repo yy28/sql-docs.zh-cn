@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760125"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "47779855"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库的对象标识符，该数据库包含了监视器所观察的队列。 可以为 NULL。|  
 |**queue_id**|**int**|监视器所观察的队列的对象标识符。 可以为 NULL。|  
-|State|**nvarchar(32)**|此监视器的状态。 可以为 NULL。 这是以下值之一：<br /><br /> **非活动状态**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
+|State|**nvarchar(32)**|此监视器的状态。 可以为 NULL。 这是以下值之一：<br /><br /> **INACTIVE**<br /><br /> **收到通知**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|来自队列的 RECEIVE 上次返回空结果时的时间。 可以为 NULL。|  
 |**last_activated_time**|**datetime**|此队列监视器上次激活存储过程时的时间。 可以为 NULL。|  
-|**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 NULL。<br /><br /> 注意： 此数字包括任何执行接收语句，而不管队列监视器是否启动会话的会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  
+|**tasks_waiting**|**int**|当前正在 RECEIVE 语句中等待此队列的会话数。 可以为 NULL。<br /><br /> 注意：此数字包括任何执行接收语句，而不管队列监视器是否启动会话的会话。 它表示您是否与 RECEIVE 一起使用 WAITFOR。 基本上，这些任务都在等待到达队列的消息。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  

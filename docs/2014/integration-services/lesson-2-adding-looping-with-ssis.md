@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767549"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 课：添加循环
   在[第 1 课中：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)，创建一个包，从单个平面文件源提取数据、 转换使用 Lookup 转换的数据，最后将数据加载到**FactCurrency**事实数据表**AdventureWorksDW2012**示例数据库。  
@@ -52,7 +52,7 @@ ms.locfileid: "58385295"
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [第 1 步：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [步骤 1：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [步骤 2：添加和配置 Foreach 循环容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "58385295"
 -   [步骤 4：测试第 2 课教程包](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [第 1 步：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
+ [步骤 1：复制第 1 课包](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>请参阅  
  [For 循环容器](control-flow/for-loop-container.md)  

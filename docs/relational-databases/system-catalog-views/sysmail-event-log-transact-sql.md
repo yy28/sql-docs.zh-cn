@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759948"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （该上下文中的消息是指错误消息之类的消息，而不是电子邮件。）配置**日志记录级别**使用的参数**配置系统参数**对话框中的数据库邮件配置向导，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来确定返回的消息。  
+  数据库邮件系统返回的每个 Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息都在视图中占一行。 （在此上下文中的消息将引用一条消息，例如错误消息，不是电子邮件。）配置**日志记录级别**使用的参数**配置系统参数**对话框中的数据库邮件配置向导，或[sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)存储过程来确定返回的消息。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "47781095"
   
  如果单个帐户传递尝试失败，则在重试过程中数据库邮件将会包含错误消息，直到邮件项传递成功或者失败为止。 如果最终成功，所有累积错误被记录为单独的警告包括**account_id**。 这样，即使电子邮件已被发送，也会出现警告。 如果最终传递失败，先前的所有警告都记录为一个错误消息，而无需**account_id**，因为所有帐户都已都失败。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  您必须是属于**sysadmin**固定的服务器角色或**DatabaseMailUserRole**要访问此视图的数据库角色。 成员**DatabaseMailUserRole**不是成员的**sysadmin**角色，只能看到他们所提交的电子邮件的事件。  
   
 ## <a name="see-also"></a>请参阅  

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740591"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>创建新的 SQL Server 故障转移群集（安装程序）
   若要安装或升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，必须在故障转移群集的每个节点上运行安装程序。 若要向现有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点，则必须在要添加至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点上运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序。 不要在活动节点上运行安装程序以管理其他节点。  
@@ -234,7 +234,7 @@ ms.locfileid: "53359379"
   
 ##  <a name="prepare"></a> 准备  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>高级/企业故障转移群集安装步骤 1：准备  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>高级/企业故障转移群集安装步骤 1:准备  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请浏览到共享中的根文件夹，然后双击 Setup.exe。 有关如何安装必备组件的详细信息，请参阅 [Before Installing Failover Clustering](before-installing-failover-clustering.md)。 如果之前未安装必备组件，可能会要求您安装它们。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359379"
   
 ## <a name="complete"></a>“完成”  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高级/企业故障转移群集安装步骤 2：“完成”  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高级/企业故障转移群集安装步骤 2:“完成”  
   
 1.  按照 [准备步骤](#prepare)中的说明准备好所有节点后，在某个准备好的节点上运行安装程序，最好是在拥有共享磁盘的节点上运行。 在  安装中心的“高级” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 页上，单击 **“高级群集完成”**。  
   

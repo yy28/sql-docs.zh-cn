@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760829"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出 Access 清单 (AccessToSQL)
 如果有多个访问数据库，并且您不确定要迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以将导出的项目中的所有访问数据库的清单。 然后，您可以查看和查询清单的元数据来确定哪些数据库和要迁移这些数据库中的对象。 此清单，它允许您快速查找常见问题的答案的问题，如下所示：  
@@ -107,7 +107,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
     -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   
-    -   如果要连接到命名实例，则输入计算机名称、 一个反斜杠和实例名称。 例如： MyServer\MyInstance。  
+    -   如果要连接到命名实例，则输入计算机名称、 一个反斜杠和实例名称。 例如：MyServer\MyInstance。  
   
 3.  在中**数据库**框中，输入导出的元数据的目标数据库的名称。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743593"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>分区向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用分区向导为多维数据集中的度量值组定义分区。 默认情况下，会对多维数据集中每个度量值组定义单个分区。 不过，如果是大型分区，这样将会降低访问和处理性能。 通过创建多个分区，使每个分区都包含度量值组的一部分数据，这样可以提高该度量值组的访问和处理性能。  
@@ -49,6 +49,6 @@ ms.locfileid: "48198527"
 -   [查找远程文件夹对话框&#40;Analysis Services-多维数据&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

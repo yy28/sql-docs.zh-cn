@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745827"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定的列&#39;s 内容和数据类型 （数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页修改向导已设置的列和内容类型。 向导使用源列的数据类型和所选算法的功能来确定每个列的默认数据和内容类型。  
   
- **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **“列”**  

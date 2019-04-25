@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 03c098ab0d7d087d86415cb0d0967873704b9a1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518069"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
 
@@ -28,7 +28,7 @@ ms.locfileid: "52751749"
   
  可使用模型包编辑器选择通过 MDSModelDeploy 工具（用于创建包含对象和数据的包文件）或模型部署向导（用于创建仅包含模型结构的文件）创建的包文件中的模型的一部分。 在编辑包中的模型之后，可使用 MDSModelDeploy 工具部署对象和数据，或使用模型部署向导仅部署模型结构。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
@@ -47,11 +47,11 @@ ms.locfileid: "52751749"
   
 5.  验证要部署的所选内容的列表。 若要更改，请单击 **“返回”** 并重复步骤 4。  
   
-6.  单击“浏览”，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击 **“保存”**。  
+6.  单击“浏览”，移至要保存部分包的文件夹，然后输入部分包的文件名（使用 .pkg 扩展名）。 单击“保存” 。  
   
 7.  单击 **“完成”**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [使用向导部署模型部署包](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

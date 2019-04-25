@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757968"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>为 Power View 报表配置报表属性
   在这一补充课程中，您将为 Adventure Works Internet Sales Model 项目设置报表属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。  
@@ -25,7 +25,7 @@ ms.locfileid: "53363459"
   
  本课程不介绍如何创建和使用 Power View 报表。 本课程旨在向表格模型作者介绍一些属性和设置，它们影响模型数据在 Power View 中的出现方式。 若要了解有关创建 Power View 报表的详细信息，请参阅[教程：在 Power View 中创建示例报表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
   
- 学完本课的预计时间：**30 分钟**  
+ 估计的时间才能完成本课程中：**30 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，您应已完成所有之前的课程。  
@@ -161,7 +161,7 @@ ms.locfileid: "53363459"
      **Date**  
   
     > [!NOTE]  
-    >  因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择了日期表作为模型日期表，并且已选择日期表中的 Date 列作为要用作唯一标识符的列，所以 Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
+    >  作为模型日期表使用标记为日期表设置选择日期表，因为在第 7 课：标记为日期表和列作为日期表中的日期列用作唯一标识符，日期列的行标识符属性将自动设置为 True，并且不能更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
     |“列”|属性|ReplTest1|  
     |------------|--------------|-----------|  

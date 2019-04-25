@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 126cc0aa341c386672f14651d18117cc5a95da77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747249"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>选择度量值组表（多维数据集向导）
   可以使用 **“选择度量值组表”** 页指定数据源视图以及为多维数据集选择度量值组表。  

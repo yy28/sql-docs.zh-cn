@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745478"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 指定递归关系中的深度
   在关系数据库中，当表涉及与其自身的关系时，将它称为递归关系。 例如，在监督者和被监督者关系中，存储雇员记录的表涉及与其自身的关系。 在这种情况下，雇员表在关系的一端扮演监督者的角色，而在另一端则扮演被监督者的角色。  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  因为该关系是递归关系，所以需要以某种方式指定在架构中的递归深度。 否则，结果将是无穷递归的（雇员向雇员报告而该雇员又向雇员报告，以此类推）。 可以使用 `sql:max-depth` 批注指定递归的深度。 在该特定示例中，若要指定 `sql:max-depth` 的值，必须知道在该公司中其管理层次结构的深度。  
   
 > [!NOTE]  
->  该架构指定 `sql:limit-field` 批注，但不指定 `sql:limit-value` 批注。 这会使得所生成的层次结构的顶级节点仅为那些不向任何人报告的雇员。 （ReportsTo 为 NULL。）指定 `sql:limit-field` 且不指定 `sql:limit-value`（默认为 NULL）批注可以完成该操作。 如果要让所生成的 XML 包含每个可能的报告树（表中每个雇员的报告树），请从架构中删除 `sql:limit-field` 批注。  
+>  该架构指定 `sql:limit-field` 批注，但不指定 `sql:limit-value` 批注。 这会使得所生成的层次结构的顶级节点仅为那些不向任何人报告的雇员。 （ReportsTo 为 NULL。）指定`sql:limit-field`且不指定`sql:limit-value`（默认为 NULL） 批注来实现此目的。 如果要让所生成的 XML 包含每个可能的报告树（表中每个雇员的报告树），请从架构中删除 `sql:limit-field` 批注。  
   
 > [!NOTE]  
 >  以下过程使用 tempdb 数据库。  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  使用该架构中的 `sql:max-depth` 批注可以指定此架构中所描述的递归关系中的递归深度。 值`sql:max-depth`批注是一个正整数 （1 到 50 个），该值指示递归数：如果值为 1 使递归停止于该元素为其`sql:max-depth`批注指定; 值为 2 使递归停止于的元素的下一级`sql:max-depth`指定，则为，依此类推。  
   
 > [!NOTE]  
->  在基础实现中，根据映射架构指定的 XPath 查询将转换为 SELECT ...FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 为 `sql:max-depth` 指定的值越高，所生成的 FOR XML EXPLICIT 查询越大。 这可能会使检索时间变长。  
+>  在基础实现中，针对映射架构指定 XPath 查询转换为 SELECT...FOR XML EXPLICIT 查询。 该查询需要您指定一个有限的递归深度。 为 `sql:max-depth` 指定的值越高，所生成的 FOR XML EXPLICIT 查询越大。 这可能会使检索时间变长。  
   
 > [!NOTE]  
 >  Updategram 和 XML 大容量加载将忽略最大深度批注。 这意味着，不管为最大深度指定了什么值，都将发生递归更新或插入。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768049"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>转换类型时不进行转换检查（SQL Server 导入和导出向导）
   使用**转换类型时不进行转换检查**页可以查看该向导将执行当向导找不到一个或多个映射[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型转换和映射文件。 此页包含的信息可帮助您识别缺少的文件。  

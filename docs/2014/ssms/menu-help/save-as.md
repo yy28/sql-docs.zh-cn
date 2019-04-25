@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510316"
 ---
 # <a name="save-as"></a>另存为
   使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框中，单击**保存** *\<文件 >* **作为**上**文件**菜单 (其中 *\<文件 >* 是当前项的名称)，或按 ALT + F，一个在代码编辑器中。  

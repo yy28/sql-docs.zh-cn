@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638161"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
   下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  

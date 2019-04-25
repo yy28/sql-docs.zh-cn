@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632554"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
 使用新值更新表中的记录。  
@@ -36,12 +36,12 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>参数  
- 更新 [ *DatabaseName1 ！*]*TableName1*  
+ UPDATE [ *DatabaseName1!*] *TableName1*  
  指定使用新值更新记录的表。  
   
- *DatabaseName1 ！* 指定包含表的数据源与指定的数据库的数据库的名称。 必须包括包含表，如果数据库不是当前的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
+ *DatabaseName1!* 指定包含表的数据源与指定的数据库的数据库的名称。 必须包括包含表，如果数据库不是当前的数据库的名称。 包含感叹号 （！） 分隔符之后的数据库名称和表名称之前。  
   
- 设置*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
+ SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  指定更新的列及其新值。 如果省略 WHERE 子句，具有相同值更新列中的每个行。  
   
  其中*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b138dd1cf07ccfccefb9e1556c743f3c0a45abd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765236"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何确定权限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，配置安全性的最简单方式是向用户所属的组分配模型对象权限。  
@@ -35,7 +35,7 @@ ms.locfileid: "52747409"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>步骤 1：确定有效属性权限。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>第 1 步：确定有效属性权限。  
  下面的列表说明如何确定有效属性权限：  
   
 -   分配给模型对象的权限确定用户可以访问哪些属性。  
@@ -50,7 +50,7 @@ ms.locfileid: "52747409"
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步骤 2：如果分配了层次结构成员权限，确定的有效成员权限。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>第 2 步：如果分配了层次结构成员权限，则需要确定有效的成员权限。  
  下面的列表说明如何确定有效的层次结构成员权限：  
   
 -   分配给层次结构节点的权限确定用户可以访问哪些成员。  
@@ -65,7 +65,7 @@ ms.locfileid: "52747409"
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>步骤 3：确定属性和成员权限的交集。  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>步骤 3：确定属性权限与成员权限的交集。  
  如果有效属性权限不同于有效成员权限，必须为每个单独的属性值确定权限。 有关详细信息，请参阅[重叠的模型和成员权限 (Master Data Services)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)。  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>向多个组分配了权限  

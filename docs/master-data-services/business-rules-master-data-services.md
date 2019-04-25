@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2ccf168740618085f07d0a5f6ce96a86321e0ca6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637074"
 ---
 # <a name="business-rules-master-data-services"></a>业务规则 (Master Data Services)
 

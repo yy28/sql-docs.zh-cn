@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62504962"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53203446"
   
  从返回的信息**sys.dm_os_child_instances**可用来确定每个用户实例 (heart_beat) 的状态并获取可用于创建与用户的连接的管道名称 (instance_pipe_name)使用实例的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd。 只有在外部进程（例如客户端应用程序）启动了用户实例之后，您才能连接到该用户实例。 SQL 管理工具无法启动用户实例。  
   
-> **注意：** 用户实例是 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 的特有功能。  
+> **注意**：用户实例是一项功能[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]仅。  
 > 
 > **请注意**来调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用的名称**sys.dm_pdw_nodes_os_child_instances**。  
   

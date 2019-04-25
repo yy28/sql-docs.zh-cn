@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757631"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>兼容级别（SSAS 表格 SP1）
   您可以指定*兼容性级别*或导入 PowerPivot 工作簿时创建新表格模型项目时、 升级现有表格模型项目时、 升级已部署表格模型数据库。  
@@ -28,7 +28,7 @@ ms.locfileid: "48054059"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Analysis Services 实例支持以下兼容级别（数据库版本）：  
   
--   SQL Server 2012 (1100);  
+-   SQL Server 2012 (1100)  
   
 -   SQL Server 2012 SP1 (1103)  
   

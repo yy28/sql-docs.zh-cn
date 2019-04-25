@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746899"
 ---
 # <a name="feature-properties"></a>功能属性
   功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。  
@@ -34,7 +34,7 @@ ms.locfileid: "53368049"
   
  **适用范围：** 仅限多维服务器模式  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
   
 |属性|默认|Description|  
 |--------------|-------------|-----------------|  

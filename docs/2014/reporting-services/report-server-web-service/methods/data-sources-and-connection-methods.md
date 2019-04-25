@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518950"
 ---
 # <a name="data-sources-and-connection-methods"></a>数据源和连接方法
   可以使用以下方法设置和管理数据源连接和凭据。  

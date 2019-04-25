@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743575"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>“分区属性”对话框 (SSMS)
   在 SQL Server Management Studio 中，可以使用 **“分区属性”** 对话框设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集的分区属性。  
@@ -27,7 +27,7 @@ ms.locfileid: "48113197"
   
  **“分区属性”** 对话框包含以下页：  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
   
 |第|Description|  
 |----------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "48113197"
 |**错误配置**|使用 **“错误配置”** 页，可以显示和修改用于处理在 **“选择”** 页中所选择的分区的错误配置设置。 有关此页的详细信息，请参阅[多维数据集、分区和维度处理的错误配置（SSAS - 多维）](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [远程分区](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

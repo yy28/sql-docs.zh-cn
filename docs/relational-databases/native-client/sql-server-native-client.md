@@ -12,11 +12,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627976"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "51677796"
 
 SNAC 或 SQL Server Native Client 是一个术语，它已用于互换使用的 SQL Server，请参阅 ODBC 和 OLE DB 驱动程序。
 
-**注意：** 不建议新的开发使用此驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序适用于 SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 这将更新与今后的最新的服务器功能。
+**注意**：建议不要用于新的开发使用此驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序适用于 SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 这将更新与今后的最新的服务器功能。
 
 
 **有关详细信息并下载 SNAC 或 ODBC 驱动程序，请访问[所述的 SNAC 生命周期](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。**
@@ -61,6 +61,6 @@ SQL Server ODBC 驱动程序的更多信息，请参阅[Windows 上的 SQL Serve
 
 -   [处理字符转换时 ODBC 驱动程序行为的变化](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

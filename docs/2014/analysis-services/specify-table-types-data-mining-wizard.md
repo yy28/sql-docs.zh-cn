@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746339"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>指定表类型(数据挖掘向导)
   可以使用 **“指定表类型”** 页指定用于定义挖掘结构的表。 如果未选择某个表，则将不能使用该表来定义挖掘结构。  
@@ -26,7 +26,7 @@ ms.locfileid: "48202637"
 > [!NOTE]  
 >  可以在以后在**数据挖掘设计器**的“挖掘结构”选项卡上添加表。  
   
- **有关详细信息，请参阅**[嵌套表（Analysis Services – 数据挖掘）](data-mining/nested-tables-analysis-services-data-mining.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)和[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[嵌套表&#40;Analysis Services-数据挖掘&#41;](data-mining/nested-tables-analysis-services-data-mining.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **表**  

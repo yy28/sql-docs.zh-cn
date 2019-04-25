@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761778"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函数
 **符合性**  
@@ -95,7 +95,7 @@ SQLRETURN SQLAllocHandle(
 |HY009|使用空指针无效|（数据挖掘） *OutputHandlePtr*参数是空指针。|  
 |HY010|函数序列错误|（数据挖掘） *HandleType*参数为 SQL_HANDLE_DBC，并**SQLSetEnvAttr**尚未调用设置 SQL_ODBC_VERSION 环境属性。<br /><br /> (DM) 的调用以异步方式执行的函数**InputHandle**和仍在执行时**SQLAllocHandle**调用函数时使用**HandleType**设置为 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC。|  
 |HY013|内存管理错误|*HandleType*参数为 SQL_HANDLE_DBC、 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC;，因为基础内存对象无法访问，可能是由于内存不足，无法处理函数调用条件。|  
-|HY014 句|超出了句柄的数量限制|可分配的句柄的类型的句柄数的驱动程序定义限制为由*HandleType*已达到自变量。|  
+|HY014|超出了句柄的数量限制|可分配的句柄的类型的句柄数的驱动程序定义限制为由*HandleType*已达到自变量。|  
 |HY092|属性/选项标识符无效|（数据挖掘） *HandleType*参数不是：SQL_HANDLE_ENV、 SQL_HANDLE_DBC、 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未实现的可选功能|*HandleType*参数为 SQL_HANDLE_DESC 和司机的 ODBC 2。*x*驱动程序。|  

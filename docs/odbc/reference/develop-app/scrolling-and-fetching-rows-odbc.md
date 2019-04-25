@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445973"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>滚动和提取行 (ODBC)
 使用可滚动游标时，应用程序调用**SQLFetchScroll**来定位游标和提取行。 **SQLFetchScroll**支持相对滚动 (下一步，以前版本中，且相对*n*行)，绝对滚动 (first、 last、 和行*n*)，并按书签定位。 *FetchOrientation*并*FetchOffset*中的自变量**SQLFetchScroll**指定哪些行集提取，如以下关系图中所示。  
@@ -41,4 +41,4 @@ ms.locfileid: "47642745"
  检索行集后，应用程序可以调用**SQLSetPos**要定位到行集中的行集或刷新行中的特定行。 有关使用的详细信息**SQLSetPos**，请参阅[使用 SQLSetPos 更新数据](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
   
 > [!NOTE]  
->  在 ODBC 2 支持滚动。*x*驱动程序通过**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中向后兼容性的附录 g： 驱动程序指南。
+>  在 ODBC 2 支持滚动。*x*驱动程序通过**SQLExtendedFetch**。 有关详细信息，请参阅[块状游标、 可滚动游标和向后兼容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)中附录 g:为了向后兼容的驱动程序指南。

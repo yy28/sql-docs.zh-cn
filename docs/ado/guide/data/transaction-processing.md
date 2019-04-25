@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472186"
 ---
 # <a name="transaction-processing"></a>事务处理
 一个*事务*分隔的开头和结尾的一系列通过连接执行的数据访问操作。 视您的数据源，事务性功能而定**连接**对象还允许您创建和管理事务。 例如，使用 Microsoft OLE DB Provider for SQL Server 访问 Microsoft SQL Server 上的数据库，您可以创建多个嵌套的事务执行的命令。  
@@ -30,7 +30,7 @@ ms.locfileid: "47742225"
   
  如果取消该事务，或如果其中一个操作失败，结果将是因为如果未在事务中的操作发生。 事务开始前将一直保持数据源。  
   
- ADO 提供以下用于控制事务的方法： **BeginTrans**， **CommitTrans**，并**RollbackTrans**。 使用这些方法与**连接**时想要保存或取消对作为单个单元的源数据所做更改的一系列对象。 例如，若要帐户之间转移资金，您从一个的金额中减去并将相同的量添加到另。 如果任一更新失败，帐户将无法再平衡。 打开的事务中进行这些更改可确保所有或任何更改都。  
+ ADO 提供了以下用于控制事务的方法：**BeginTrans**， **CommitTrans**，和**RollbackTrans**。 使用这些方法与**连接**时想要保存或取消对作为单个单元的源数据所做更改的一系列对象。 例如，若要帐户之间转移资金，您从一个的金额中减去并将相同的量添加到另。 如果任一更新失败，帐户将无法再平衡。 打开的事务中进行这些更改可确保所有或任何更改都。  
   
 > [!NOTE]
 >  并非所有提供程序支持的事务。 验证提供程序定义的属性"**事务 DDL**"将出现在**连接**对象的[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合，表示提供程序支持事务。 如果提供程序不支持事务，调用这些方法之一，将返回错误。  

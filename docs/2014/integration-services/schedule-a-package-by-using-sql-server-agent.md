@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766859"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server 代理计划包
   下面的过程提供了通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤运行包来自动执行该包的步骤。  
@@ -56,7 +56,7 @@ ms.locfileid: "58388095"
     |--------------------|-----------------|  
     |**SSIS 目录**|存储在 SSISDB 数据库中的包。 部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中包含的包。|  
     |**SQL Server**|存储在 MSDB 数据库中的包。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。|  
-    |**SSIS 包存储区**|存储在您计算机上默认文件夹中的包。 默认文件夹为 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。<br /><br /> 注意：可以通过修改 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的配置文件，指定文件系统中的一个不同文件夹或其他多个文件夹由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务进行管理。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)的早期版本向后兼容。|  
+    |**SSIS 包存储区**|存储在您计算机上默认文件夹中的包。 默认文件夹为 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 可使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务来管理这些包。<br /><br /> 注意：可以指定不同的文件夹，也可以指定由文件系统中的其他文件夹[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务，通过修改的配置文件[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [配置 Integration Services 服务（SSIS 服务）](service/integration-services-service-ssis-service.md)的早期版本向后兼容。|  
     |**“文件系统”**|存储在您本地计算机上任意文件夹中的包。|  
   
      **以下各表说明可用于作业步骤的配置选项（具体选项取决于您所选的包源）。**  
@@ -77,7 +77,7 @@ ms.locfileid: "58388095"
     ||**出错时转储**:指定在包执行过程中发生任何错误时是否生成调试转储文件。<br /><br /> 这些文件包含有关包的执行信息，可帮助您解决出现的问题。<br /><br /> 若选择此选项，当在执行过程中出现错误时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会创建一个 .mdmp 文件（二进制文件）和一个 .tmp 文件（文本文件）。 默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。|  
     ||**32 位运行时**指示是否具有 64 位版本的 64 位计算机上使用 32 位版本的 dtexec 实用工具运行包[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装代理。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
   
-     **包源**：SQL Server、SSIS 包存储或文件系统  
+     **包源**：SQL Server、 SSIS 包存储区或文件系统  
   
      您可以为存储在 SQL Server、SSIS 包存储区或文件系统中的包设置的许多选项都对应于 `dtexec` 命令提示实用工具的命令行选项。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58388095"
     |**日志记录**|将日志提供程序与包执行操作相关联。<br /><br /> **用于文本文件的 SSIS 日志提供程序**<br /> 将日志条目写入 ASCII 文本文件<br /><br /> **用于 SQL Server 的 SSIS 日志提供程序**<br /> 将日志条目写入 MSDB 数据库的 sysssislog 表中。<br /><br /> **用于 SQL Server Profiler 的 SSIS 日志提供程序**<br /> 写入可用 SQL Server 事件探查器查看的跟踪。<br /><br /> **用于 Windows 事件日志的 SSIS 日志提供程序**<br /> 将日志条目写入 Windows 事件日志中的应用程序日志。<br /><br /> **用于 XML 文件的 SSIS 日志提供程序**<br /> 将日志文件写入 XML 文件。<br /><br /> 对于文本文件、XML 文件以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件探查器日志提供程序，您需要选择包内所含的文件连接管理器。 对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 日志提供程序，您需要选择包内所含的 OLE DB 连接管理器。<br /><br /> 此选项对应于 `/Logger` 的 `dtexec` 选项。|  
     |**设置值**|覆盖包属性设置。 在 **“属性”** 框中的 **“属性路径”** 和 **“值”** 列中输入值。 为一个属性输入值后， **“属性”** 框中会出现一个空行，支持您为另一个属性输入值。<br /><br /> 若要从“属性”框中删除某个属性，请单击该行，然后单击 **“删除”**。<br /><br /> 您可以通过执行以下操作之一查找属性路径。<br /><br /> 从 XML 配置文件中复制属性路径 (\*.dtsconfig) 文件。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例。<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> 运行**包配置向导**并从最后复制属性路径**完成向导**页。 随后可以取消该向导。|  
     |**验证**|**仅执行已签名的包**<br /> 指示是否已检查包签名。 如果包未签名或签名无效，则包将失败。 此选项对应于 `/VerifySigned` 的 `dtexec` 选项。<br /><br /> **验证包内部版本**<br /> 指示是否根据在此选项旁边的 **“内部版本”** 框中输入的内部版本号，验证包的内部版本号。 如果出现不匹配，则将不执行包。 此选项对应于 `/VerifyBuild` 的 `dtexec` 选项。<br /><br /> **验证包 ID**<br /> 指示是否通过将包的 GUID 与此选项旁边的 **“包 ID”** 框中输入的包 ID 进行比较，对该 GUID 进行验证。 此选项对应于 `/VerifyPackageID` 的 `dtexec` 选项。<br /><br /> **验证版本 ID**<br /> 指示是否通过将包的版本 GUID 与此选项旁边的 **“版本 ID”** 框中输入的版本 ID 进行比较，对该版本 GUID 进行验证。 此选项对应于 `/VerifyVersionID` 的 `dtexec` 选项。|  
-    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。<br /><br /> 提示：您可以将命令行复制到命令提示符窗口，添加 `dtexec`，然后从该命令行运行包。 这是一种生成命令行文本的简单方法。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击“确定”将更改保存至作业步骤之前，可以通过单击“还原原始选项”删除在“命令行”框中键入的所有附加选项。|  
+    |**命令行**|修改 dtexec 的命令行选项。 有关这些选项的详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。<br /><br /> 提示：你可以将命令行复制到命令提示符窗口，添加`dtexec`，然后从命令行运行包。 这是一种生成命令行文本的简单方法。<br /><br /> **还原原始选项**<br /> 使用在“作业集属性”对话框的“包”、“配置”、“命令文件”、“数据源”、“执行选项”、“日志记录”、“设置值”和“验证”选项卡上设置的命令行选项。<br /><br /> **手动编辑命令**<br /> 在“命令行”框中键入附加命令行选项。<br /><br /> 单击“确定”将更改保存至作业步骤之前，可以通过单击“还原原始选项”删除在“命令行”框中键入的所有附加选项。|  
   
 9. 单击 **“确定”** 保存设置，然后关闭 **“新建作业步骤”** 对话框。  
   

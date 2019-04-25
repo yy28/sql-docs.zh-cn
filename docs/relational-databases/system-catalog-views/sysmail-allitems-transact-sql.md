@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759865"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "47824845"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|发送消息所用配置文件的标识符。|  
-|**收件人**|**varchar(max)**|消息收件人的电子邮件地址。|  
+|**recipients**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
 |**subject**|**nvarchar(510)**|消息的主题行。|  
-|**正文**|**varchar(max)**|消息的正文。|  
+|**body**|**varchar(max)**|消息的正文。|  
 |**body_format**|**varchar(20)**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
-|**重要性**|**varchar(6)**|**重要性**消息参数。|  
-|**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
+|**importance**|**varchar(6)**|**重要性**消息参数。|  
+|**sensitivity**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
-|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
+|**query**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为 1，则查询结果包含列标题。 值为 0 时，查询结果并不包括列标题。|  
@@ -67,7 +67,7 @@ ms.locfileid: "47824845"
   
  此视图公开的系统表包含所有消息，并且可能导致**msdb**数据库增长。 应定期从视图中删除旧的消息，以减小表的大小。 有关详细信息，请参阅[创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  授予**sysadmin**固定的服务器角色和**DatabaseMailUserRole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有消息。 所有其他用户仅可查看他们已提交的消息。  
   
   

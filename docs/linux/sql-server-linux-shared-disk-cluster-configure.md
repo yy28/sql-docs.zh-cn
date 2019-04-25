@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635675"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>配置故障转移群集实例的 SQL Server 上 Linux (RHEL)
 
@@ -133,7 +133,7 @@ SQL Server 两个节点共享的磁盘故障转移群集实例提供服务器级
 
    > 如果正在使用不具有内置的高可用性配置的另一个防火墙，则需要为 Pacemaker 将无法与群集中的其他节点通信打开以下端口
    >
-   > * TCP：端口 2224、 3121、 21064
+   > * TCP:端口 2224、 3121、 21064
    > * UDP:端口 5405
 
 1. 在每个节点上安装 Pacemaker 包。

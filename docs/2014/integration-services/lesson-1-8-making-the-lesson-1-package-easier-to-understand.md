@@ -1,5 +1,5 @@
 ---
-title: 步骤 8：使 Lesson 1 包更易理解 |Microsoft Docs
+title: 步骤 8:使 Lesson 1 包更易理解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767589"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8：使 Lesson 1 包更易理解
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步骤 8:使 Lesson 1 包更易理解
   因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools 提供了可轻松、快速设置包布局格式的工具。 格式设置功能包括使形状大小统一，对齐各个形状，并控制形状之间的水平间距和垂直间距。  

@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768159"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导提供了最简单的方法来创建[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将数据从源复制到目标的包。  

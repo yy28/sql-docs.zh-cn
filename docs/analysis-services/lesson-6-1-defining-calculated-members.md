@@ -1,5 +1,5 @@
 ---
-title: 定义计算成员 |Microsoft 文档
+title: 定义计算成员 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523655"
 ---
-# <a name="lesson-6-1---defining-calculated-members"></a>课程 6-1-定义计算成员
+# <a name="lesson-6-1---defining-calculated-members"></a>Lesson 6 1-定义计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
@@ -33,7 +33,7 @@ ms.locfileid: "34018784"
   
     下图显示多维数据集设计器的“计算”选项卡。  
   
-    ![多维数据集设计器计算选项卡](../analysis-services/media/l6-calculatedmembers-1.gif "多维数据集设计器计算选项卡")  
+    ![计算多维数据集设计器选项卡](../analysis-services/media/l6-calculatedmembers-1.gif "计算多维数据集设计器选项卡")  
   
 2.  在“计算”选项卡的工具栏上，单击“新建计算成员”。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34018784"
     可以将元数据元素从“计算工具”窗格拖到“表达式”框中，然后添加运算符和其他元素，创建多维表达式 (MDX) 表达式。 或者，可以直接在“表达式”框中键入 MDX 表达式。  
   
     > [!NOTE]  
-    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
+    > 如果无法在“计算工具”窗格中查看任何元数据，请在工具栏上单击“重新连接”。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。  
   
 5.  将“Internet Sales-Sales Amount”从“计算工具”窗格中的“元数据”选项卡拖到“计算表达式”窗格中的“表达式”框中。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34018784"
   
     下图显示使用前面步骤中所指定的设置填充的“计算表达式”窗格。  
   
-    ![Populated 计算表达式窗格](../analysis-services/media/l6-calculatedmembers-03.gif "填充计算表达式窗格")  
+    ![计算表达式窗格中 Populated](../analysis-services/media/l6-calculatedmembers-03.gif "填充计算表达式窗格")  
   
 10. 在“计算”选项卡的工具栏上，单击“脚本视图”，然后在“计算表达式”窗格中检查计算脚本。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34018784"
   
     下图显示有三个新计算的“表达式”窗格。  
   
-    ![在计算表达式窗格中的新计算](../analysis-services/media/l6-calculatedmembers-05.gif "在计算表达式窗格中的新计算")  
+    ![在计算表达式窗格中的新计算](../analysis-services/media/l6-calculatedmembers-05.gif "计算表达式窗格中的新计算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>定义总计计算的百分比  
   
@@ -273,7 +273,7 @@ ms.locfileid: "34018784"
   
     请注意，分销商销售的毛利润率要比 Internet 销售低很多，如下图中所示。  
   
-    ![数据窗格中显示的分销商销售额](../analysis-services/media/l6-calculatedmembers-7b.gif "数据窗格中显示的分销商销售额")  
+    ![显示分销商销售的数据窗格](../analysis-services/media/l6-calculatedmembers-7b.gif "显示分销商销售的数据窗格")  
   
 9. 将“Total Sales Ratio to All Products”、“Internet Sales Ratio to All Products”和“Reseller Sales Ratio to All Products”度量值添加到“值”区域。  
   
@@ -290,7 +290,7 @@ ms.locfileid: "34018784"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义命名集](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [计算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [多维模型中的计算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [创建计算成员](../analysis-services/multidimensional-models/create-calculated-members.md)  

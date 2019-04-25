@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766969"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>原始文件目标编辑器（“列”页）
   使用原始文件目标编辑器配置原始文件目标以将原始数据写入文件。  

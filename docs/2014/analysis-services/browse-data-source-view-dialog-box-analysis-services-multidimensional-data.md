@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640164"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>“浏览数据源视图”对话框（Analysis Services - 多维数据）
   “浏览数据源视图”对话框显示所选数据源视图的简单图形关系图。 另外，数据源视图的名称还将显示为对话框的标题。  

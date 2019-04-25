@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746500"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>购物篮分析（Excel 表分析工具）
   ![购物篮工具](media/tat-shopbskt.gif "购物篮工具")  

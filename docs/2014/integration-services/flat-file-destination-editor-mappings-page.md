@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768273"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

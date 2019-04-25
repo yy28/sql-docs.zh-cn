@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构列 |Microsoft 文档
+title: 挖掘结构列 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509969"
 ---
 # <a name="mining-structure-columns"></a>挖掘结构列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "34015154"
   
  挖掘结构列的定义必须包含以下信息：  
   
--   **ID**：列的唯一名称，通常与名称相同。 在创建挖掘结构后将不能更改它，但是可以更改名称。  
+-   **ID**：列，通常与名称相同的唯一名称。 在创建挖掘结构后将不能更改它，但是可以更改名称。  
   
--   **名称**：列的名称或别名。  
+-   **名称**：名称或列别名。  
   
--   **内容**：一个说明数据是离散的还是连续的枚举。  
+-   **内容**:一个说明数据是离散的还是连续的枚举。  
   
 -   **类型**：一个指示一般数据类型的枚举。  
   
--   **分布**：一个说明值的预期分布的枚举。 如果该列为连续列，则包含分发。  
+-   **分发**:一个说明值的预期的分布的枚举。 如果该列为连续列，则包含分发。  
   
--   **建模标志**：一个指示如何处理缺失值等等的枚举。 还可以对挖掘模型定义建模标志，但是模型标志不同于对结构列使用的标志。  
+-   **建模标志**:一个指示如何处理缺失值等等的枚举。 还可以对挖掘模型定义建模标志，但是模型标志不同于对结构列使用的标志。  
   
--   **绑定**：指定源数据的属性。  
+-   **绑定**:指定源数据的属性。  
   
  第三方算法还可以包含可以为挖掘结构列定义的自定义属性。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "34015154"
 |说明已分类列，可以使用这种特殊列类型将一个挖掘结构列与另一个挖掘结构列关联。|[已分类列（数据挖掘）](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |了解如何添加和修改挖掘结构列。|[挖掘结构任务和操作指南](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

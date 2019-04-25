@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766320"
 ---
 # <a name="ssis-package-format"></a>SSIS 包格式
   在当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，我们对包格式（.dtsx 文件）进行了重大更改，以方便读取格式和比较包。 您还可以更可靠地合并不包含有冲突的更改或以二进制格式存储的更改的包。  

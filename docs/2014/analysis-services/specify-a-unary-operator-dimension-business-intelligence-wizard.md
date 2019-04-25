@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33302a69ab9e04930020e222699d6fd133ab63ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746389"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>指定一元运算符（维度）（商业智能向导）
   可以使用 **“指定一元运算符”** 页选择一个维度，该维度具有定义的父属性并且商业智能向导将为其应用一元运算符。 有关父属性的详细信息，请参阅 [属性和属性层次结构](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  

@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748169"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>查看将要优化的查询（基于使用情况的优化向导）
   可以使用“查看将要优化的查询”页显示和选择从查询日志中检索到的查询，基于使用情况的优化向导将使用这些查询为所选分区设计聚合。  
   
 ## <a name="options"></a>选项  
- **（选择）**  
+ **(Select)**  
  选中要为其设计聚合的查询的复选框。  
   
  **客户端请求**  

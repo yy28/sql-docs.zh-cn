@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760178"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47755865"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|标识收集组的每次执行。 用于将此视图与其他详细日志联接起来。 可以为 Null。|  
 |parent_log_id|**bigint**|标识父包或父收集组。 不可为 null。 各个 ID 以父子关系链接在一起，这样，您便可以确定哪个包是由哪个收集组启动的。 此视图将日志项按其父子链接进行分组并缩进包的名称，从而使调用链清晰可见。|  
-|NAME|**nvarchar(4000)**|此日志项所表示的收集组或包的名称。 可以为 Null。|  
+|name|**nvarchar(4000)**|此日志项所表示的收集组或包的名称。 可以为 Null。|  
 |status|**smallint**|指示收集组或包的当前状态。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 已完成<br /><br /> 2 = 失败|  
 |runtime_execution_mode|**smallint**|指示收集组活动是收集数据还是上载数据。 可以为 Null。|  
 |start_time|**datetime**|收集组或包开始的时间。 可以为 Null。|  
@@ -47,7 +47,7 @@ ms.locfileid: "47755865"
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
 |collection_set_id|**int**|提供指向 msdb 中数据收集配置表的链接。 可以为 Null。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要为选择**dc_operator**。  
   
 ## <a name="see-also"></a>请参阅  

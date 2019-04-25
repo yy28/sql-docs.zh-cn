@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ae38f4258c965a3b4aedf18ed6261134bd00ac6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626850"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
-  本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 在客户端应用程序中的 Spn 的详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证&#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 有关客户端应用程序中 SPN 的详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证&#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>访问接口初始化字符串关键字  
  以下访问接口初始化字符串关键字支持 OLE DB 应用程序中的 SPN。 在下表中，关键字列中的值用于 IDBInitialize::Initialize 的访问接口字符串。 使用 ADO 或 IDataInitialize::GetDataSource 建立连接时，在初始化字符串中使用说明列中的值。  
@@ -54,7 +54,7 @@ ms.locfileid: "48108677"
 |IDBInitialize::Initialize|如果通过在数据源初始化属性中设置 DBPROP_INIT_PROMPT 启用了提示功能，将显示 OLE DB“登录”对话框。 这允许为主体服务器及其故障转移伙伴输入 SPN。<br /><br /> 提供程序字符串在 DPPROP_INIT_PROVIDERSTRING 中，如果设置，则将识别新关键字`ServerSPN`和`FailoverPartnerSPN`和使用它们的值，如果存在，来初始化 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。<br /><br /> 可以调用 idbproperties:: Setproperties idbinitialize:: Initialize 调用之前设置属性 SSPROP_INIT_SERVER_SPN 和 SSPROP_INIT_FAILOVER_PARTNER_SPN。 这是使用访问接口字符串的替代方法。<br /><br /> 如果在多个位置设置了某属性，以编程方式设置的值优先于在访问接口字符串中设置的值。 在初始化字符串中设置的值优先于在登录对话框中设置的值。<br /><br /> 如果同一关键字多次出现在访问接口字符串中，首次出现的值的优先级最高。|  
 |IDBProperties::GetProperties|可以调用 IDBProperties::GetProperties 来获取新的数据源初始化属性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值，以及新的数据源属性 SSPROP_AUTHENTICATIONMETHOD 和 SSPROP_MUTUALLYAUTHENTICATED 的值。|  
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo 将包括新的数据源初始化属性 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN，或者新的数据源属性 SSPROP_AUTHENTICATION_METHOD 和 SSPROP_MUTUALLYAUTHENTICATED。|  
-|IDBProperties::SetProperties|可以调用 IDBProperties::SetProperties 来设置新的数据源初始化属性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 可以随时设置这些属性，不过如果数据源已经打开，将返回以下错误：DB_E_ERRORSOCCURRED，“多步 OLE DB 操作生成了错误。 检查每个 OLE DB 状态值（如果有）。 未执行任何操作。”|  
+|IDBProperties::SetProperties|可以调用 IDBProperties::SetProperties 来设置新的数据源初始化属性 SSPROP_INITSERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 的值。<br /><br /> 这些属性可以设置在任何时候，但如果数据源已打开，将返回以下错误：DB_E_ERRORSOCCURRED，"多步 OLE DB 操作生成错误。 检查每个 OLE DB 状态值（如果有）。 未执行任何操作。”|  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)  

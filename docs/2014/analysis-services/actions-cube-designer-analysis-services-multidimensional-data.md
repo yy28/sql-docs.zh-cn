@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512509"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>操作（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡，查看和编辑所选多维数据集的操作，包括钻取操作和报表操作。  
@@ -44,7 +44,7 @@ ms.locfileid: "48067569"
   
 ## <a name="see-also"></a>请参阅  
  [操作&#40;Analysis Services-多维数据&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 脚本编写基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [工具栏&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [操作组织程序&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [计算工具&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

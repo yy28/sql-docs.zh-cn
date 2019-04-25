@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f8c17463cd8882da5d51d54ae63b186510495ec0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517888"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>编辑和删除实体同步关系 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52769609"
 
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。 可以编辑和删除自己创建的同步关系。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  编辑实体同步关系的先决条件。  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "52769609"
   
 5.  请更改 “频率”。 选择“按需同步” ，或选择“自动同步”  并设置频率。  
   
-6.  单击 **“保存”**。  
+6.  单击“保存” 。  
   
  **删除实体同步关系**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52769609"
   
 5.  在确认对话框中，单击“确定” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建和执行实体同步关系 (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [实体同步关系 (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

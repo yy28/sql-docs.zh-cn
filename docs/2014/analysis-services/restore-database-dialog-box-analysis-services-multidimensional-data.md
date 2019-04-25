@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748409"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>“还原数据库”对话框（Analysis Services - 多维数据）
   可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“还原数据库”对话框，以 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式从备份文件中还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  
@@ -35,7 +35,7 @@ ms.locfileid: "48091027"
   
  **“还原数据库”** 对话框包含以下页。  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
  **常规**  
  使用此页可以选择要还原的数据库、从中还原数据库的备份文件以及还原数据库时使用的常规选项和密码。 有关该页的详细信息，请参阅[常规（“还原数据库”对话框）（Analysis Services - 多维数据）](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)。  
   

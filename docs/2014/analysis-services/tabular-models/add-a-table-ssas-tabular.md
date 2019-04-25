@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757649"
 ---
 # <a name="add-a-table-ssas-tabular"></a>添加表（SSAS 表格）
   本主题介绍如何从曾将其中数据导入模型的数据源中添加表。 若要添加来自同一数据源的表，您可以使用现有的数据源连接。 建议您在从单个数据源导入任意数量的表时始终使用单个连接。  
@@ -40,7 +40,7 @@ ms.locfileid: "48146507"
 >  从单个数据源同时导入多个表时，这些表在数据源中所具备的任何表间关系都将在模型中自动创建。 但如果稍后添加表，则可能需要在模型中手动创建新添加的表和以前导入的表之间的关系。  
   
 ## <a name="see-also"></a>请参阅  
- [导入数据&#40;SSAS 表格&#41;](../import-data-ssas-tabular.md)   
- [删除表&#40;SSAS 表格&#41;](delete-a-table-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)   
+ [删除表（SSAS 表格）](delete-a-table-ssas-tabular.md)  
   
   

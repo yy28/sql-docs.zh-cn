@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524047"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务
   欢迎使用“使用 Windows Azure Blob 存储服务进行 SQL Server 备份和还原入门”教程。 本教程将帮助您了解如何将备份写入 Windows Azure Blob 存储服务以及如何从中还原。  

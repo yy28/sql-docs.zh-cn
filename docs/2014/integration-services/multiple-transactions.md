@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6c66d64d7dc7117c5903f1eb3ac2e2ad97178af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767241"
 ---
 # <a name="multiple-transactions"></a>多个事务
   包可以在一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中包含不相关的事务。 无论任何时候，位于嵌套容器层次结构中间的容器都不支持事务，位于层次结构中其他位置的容器如果配置为支持事务，则它们将启动单独的事务。 事务按照从嵌套容器层次结构中最里面的任务到包这个顺序来提交或回滚。 但是，在内部事务提交后，如果外部事务中止，已提交的事务不会回滚。  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743283"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>第 9 课。 从 Windows Azure 存储还原数据库
   在本课中，您将学习如何将 Windows Azure 存储中的数据库备份文件还原到数据库，该数据库位于本地或 Windows Azure 的虚拟机中。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516796"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何确定权限 (Master Data Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "52747439"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>步骤 1：确定有效属性权限。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>第 1 步：确定有效属性权限。  
  下面的列表说明如何确定有效属性权限：  
   
 -   分配给模型对象的权限确定用户可以访问哪些属性。  
@@ -54,7 +54,7 @@ ms.locfileid: "52747439"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步骤 2：如果分配了层次结构成员权限，则需要确定有效的成员权限。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>第 2 步：如果分配了层次结构成员权限，则需要确定有效的成员权限。  
  下面的列表说明如何确定有效的层次结构成员权限：  
   
 -   分配给层次结构节点的权限确定用户可以访问哪些成员。  
@@ -79,7 +79,7 @@ ms.locfileid: "52747439"
   
  在这种情况下，对模型对象权限和层次结构成员权限进行比较之前，必须先解决重叠的用户和组权限。 有关详细信息，请参阅 [重叠的用户和组权限 (Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重叠的用户和组权限 (Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [重叠的模型和成员权限 (Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

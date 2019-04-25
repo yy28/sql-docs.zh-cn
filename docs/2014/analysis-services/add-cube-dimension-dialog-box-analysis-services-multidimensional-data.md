@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626064"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>“添加多维数据集维度”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “添加多维数据集维度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集中添加对数据库维度的引用。 通过执行下列操作之一，可以显示 **“添加多维数据集维度”** 对话框：  

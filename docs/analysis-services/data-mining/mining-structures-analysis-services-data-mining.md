@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 挖掘结构 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c5a71b864a1ec032112c2a73b965b82775e5b92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509881"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
   
- ![处理的数据： 源模型的结构到](../../analysis-services/data-mining/media/dmcon-modelarch.gif "处理的数据： 源到模型的结构")  
+ ![处理数据： 源到结构到模型](../../analysis-services/data-mining/media/dmcon-modelarch.gif "处理的数据： 源到结构到模型")  
   
  关系图中的挖掘结构基于包含多个表或视图的数据源，它们按 CustomerID 字段进行联接。 一个表包含有关客户的信息，例如地理区域、年龄、收入和性别，而相关嵌套表包含每个客户的多行其他相关信息，例如客户已购买的产品。 此关系图显示根据一个挖掘结构可以生成多个模型，并且这些模型可以使用该结构中的不同列。  
   
@@ -91,26 +91,26 @@ ms.locfileid: "34019514"
   
  如果您希望查看挖掘结构中的数据，则可以使用数据挖掘扩展插件 (DMX) 来创建查询。 例如， `SELECT * FROM <structure>.CASES` 语句返回挖掘结构中的所有数据。 若要检索此信息，必须处理挖掘结构，并且必须缓存处理结果。  
   
- `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM &#60;结构&#62;.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM &#60;模型&#62;.CASES &#40;DMX&#41;](../../dmx/select-from-model-cases-dmx.md)。  
+ `SELECT * FROM <model>.CASES` 语句返回相同的列，但是仅针对该特定模型中的事例返回。 有关详细信息，请参阅 [SELECT FROM <结构>.CASES](../../dmx/select-from-structure-cases.md) 和 [SELECT FROM <模型>.CASES (DMX)](../../dmx/select-from-model-cases-dmx.md)。  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)和[挖掘模型属性](../../analysis-services/data-mining/mining-model-properties.md)。  
   
  有关数据挖掘模型的体系结构的详细信息，请参阅 [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  使用提供的链接了解有关如何定义、管理和使用挖掘结构的详细信息。  
   
 |“任务”|链接|  
 |-----------|-----------|  
-|使用关系挖掘结构|[创建新的关系挖掘结构](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [向挖掘结构中添加嵌套的表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|使用关系挖掘结构|[创建新的关系挖掘结构](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [向挖掘结构中添加嵌套表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |使用基于 OLAP 多维数据集的挖掘结构|[创建新的 OLAP 挖掘结构](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|使用挖掘结构中的列|[将列添加到挖掘结构](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [从挖掘结构中删除列](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|使用挖掘结构中的列|[向挖掘结构中添加列](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [从挖掘结构中删除列](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |更改或查询挖掘结构属性和数据|[更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
 |使用基础数据源和更新源数据|[编辑用于挖掘结构的数据源视图](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [处理挖掘结构](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库对象（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [挖掘模型 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [挖掘模型（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

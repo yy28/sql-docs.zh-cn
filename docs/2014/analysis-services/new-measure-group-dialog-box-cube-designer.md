@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743699"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>“新建度量值组”对话框（多维数据集设计器）
   可以使用 **中的** “新建度量值组” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集设计器的多维数据集中添加新度量值组。 您可以通过执行以下操作之一显示 **“新建度量值组”** 对话框：  

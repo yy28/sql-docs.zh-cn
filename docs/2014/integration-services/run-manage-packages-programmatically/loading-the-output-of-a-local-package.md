@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766941"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>加载本地包的输出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 将输出保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或使用 System.IO 命名空间中的类将输出保存到平面文件目标时，客户端应用程序即可读取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的输出。 但是，客户端应用程序也可以直接从内存读取包的输出，而无需中间步骤来持久化这些数据。 此解决方案的关键在于`Microsoft.SqlServer.Dts.DtsClient`命名空间，其中包含专门的实现`IDbConnection`， `IDbCommand`，和**IDbDataParameter**接口从**System.Data**命名空间。 默认情况下，程序集 Microsoft.SqlServer.Dts.DtsClient.dll 安装在 %ProgramFiles%\Microsoft SQL Server\100\DTS\Binn 中。  
@@ -45,7 +45,7 @@ ms.locfileid: "58382045"
   
 4.  创建类型为 `DtsClient.DtsCommand` 的对象，该对象使用先前创建的 `DtsConnection`，并将该对象的 `CommandText` 属性设置为包中 DataReader 目标的名称。 然后，调用命令对象的 `ExecuteReader` 方法以将包结果加载到新的 DataReader 中。  
   
-5.  还可以通过对 `DtsDataParameter` 对象使用 `DtsCommand` 对象的集合来间接参数化包的输出，以将值传递给在包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 必须在包中定义这些变量**DtsClient**命名空间才能使用它们与`DtsDataParameter`从客户端应用程序的对象。 （可能需要单击“变量”窗口中的“选择变量列”工具栏按钮才会显示“命名空间”列。）在您的客户端代码中，向 `DtsDataParameter` 的 `Parameters` 集合添加 `DtsCommand` 时，可省略变量名称的 DtsClient 命名空间引用。 例如：  
+5.  还可以通过对 `DtsDataParameter` 对象使用 `DtsCommand` 对象的集合来间接参数化包的输出，以将值传递给在包中定义的变量。 在包中，您可以使用这些变量作为查询参数或在表达式中使用这些变量以影响返回给 DataReader 目标的结果。 必须在包中定义这些变量**DtsClient**命名空间才能使用它们与`DtsDataParameter`从客户端应用程序的对象。 （可能需要单击“变量”窗口中的“选择变量列”工具栏按钮才会显示“命名空间”列。）在客户端代码中，当您将添加`DtsDataParameter`到`Parameters`的集合`DtsCommand`，省略变量名称的 DtsClient 命名空间引用。 例如：  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

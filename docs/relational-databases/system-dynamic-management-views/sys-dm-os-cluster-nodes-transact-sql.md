@@ -20,23 +20,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f43d395238bb7b100fd4374e7e10a6382370fff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506896"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为故障转移群集实例配置中的每个节点返回一行。 如果当前实例是故障转移群集的实例，则会返回的节点在其定义此故障转移群集实例 （以前称为"虚拟服务器"） 的列表。 如果当前服务器实例不是故障转移群集实例，则返回空行集。  
   
-> **注意：** 来调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用的名称**sys.dm_pdw_nodes_os_cluster_nodes**。  
+> **注意**：若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_cluster_nodes**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置中的节点名称。|  
-|status|**int**|中的节点的状态[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例： 0、 1、 2、 3、-1。 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
+|status|**int**|中的节点的状态[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例：0, 1, 2, 3, -1. 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
 |status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集节点的状态的描述。<br /><br /> 0 = 正常运行<br /><br /> 1 = 停止<br /><br /> 2 = 已暂停<br /><br /> 3 = 正在联接<br /><br /> -1 = 未知|  
 |is_current_owner|bit|1 表示此节点是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集资源的当前所有者。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
@@ -44,9 +44,9 @@ ms.locfileid: "51677187"
 ## <a name="remarks"></a>备注  
  启用故障转移群集时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可在指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置一部分的故障转移群集的任何节点上运行。  
   
-> **注意：** 该视图替换 fn_virtualservernodes 函数，该函数将在未来版本中弃用。  
+> **注意**：此视图替换 fn_virtualservernodes 函数，该函数将在未来版本中弃用。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例具有 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -66,9 +66,9 @@ FROM sys.dm_os_cluster_nodes;
 |Node3|1|下|0|  
   
 ## <a name="see-also"></a>请参阅  
- [sys.dm_os_cluster_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
+ [sys.dm_os_cluster_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

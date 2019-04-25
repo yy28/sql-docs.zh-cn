@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746460"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>对源多维数据集进行切片（数据挖掘向导）
    可以使用“对源多维数据集进行切片”对话框限制用于为模型定型的数据。 通常一个多维数据集包含与很多不同维度和属性有关的数据，例如所有商店、所有区域和所有产品。 定型无限的属性组合的模型是不现实的，因此您使用此对话框选择要在定型模型中使用的特定集合。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740892"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
   在生成初始架构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]更改多维数据集定义和维度定义，然后返回架构生成向导。 向导会更新主题区域数据库和相关数据源视图中的架构以反映所做的更改，并且尽可能保留当前存在于要重新生成的表中的数据。 如果在初始生成之后更改表，则架构生成向导会使用下列规则在可能的情况下保留这些更改：  
@@ -85,7 +85,7 @@ ms.locfileid: "48049287"
  另一方面，如果您将数据源连接字符串更改为先前生成的其他数据库，则不会生成任何错误。 将会使用新的数据库，并且不会对先前数据库进行任何更改。  
   
 ## <a name="see-also"></a>请参阅  
- [管理对数据源视图和数据源的更改](manage-changes-to-data-source-views-and-data-sources.md)   
- [架构生成向导&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [管理对数据源视图和数据源所做的更改](manage-changes-to-data-source-views-and-data-sources.md)   
+ [架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)  
   
   

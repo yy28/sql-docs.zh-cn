@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769733"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
@@ -40,10 +40,10 @@ ms.locfileid: "58387165"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |表或视图|将数据加载到 Excel 数据源中的工作表或指定范围。|  
-|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**:[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息**：[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 命令|使用 SQL 查询将数据加载到 Excel 目标中。|  
   
  **Excel 表的名称**  

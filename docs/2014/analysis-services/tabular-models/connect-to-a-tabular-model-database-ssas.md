@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757620"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
@@ -102,7 +102,7 @@ ms.locfileid: "52538135"
   
  在导入数据时，如果您尝试使用该向导连接到远程 Analysis Services 服务器上的表格模型数据库，而您不具有足够的权限，则会发生此 Microsoft Excel 错误。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   
- **在尝试建立与外部数据源的连接的过程中出现错误。以下连接无法刷新：\<模型名称 > Sandbox**  
+ **在尝试建立与外部数据源的连接期间出错。以下连接无法刷新：\<模型名称 > Sandbox**  
   
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是您对远程 Analysis Services 服务器没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   

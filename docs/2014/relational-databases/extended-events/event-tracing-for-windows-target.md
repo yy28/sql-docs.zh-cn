@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519301"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
@@ -48,7 +48,7 @@ ms.locfileid: "53355989"
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
-|选项|允许的值|Description|  
+|Option|允许的值|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
 |default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 该值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  

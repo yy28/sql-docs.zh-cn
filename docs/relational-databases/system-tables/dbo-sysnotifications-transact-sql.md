@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470699"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47735755"
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警报的 ID。|  
 |**operator_id**|**int**|应向其发送此通知的操作员 ID。|  
-|**notification_method**|**tinyint**|通知方法：<br /><br /> **1** = 电子邮件<br /><br /> **2** = 寻呼程序<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
+|**notification_method**|**tinyint**|通知方法：<br /><br /> **1** = 电子邮件<br /><br /> **2** = Pager<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

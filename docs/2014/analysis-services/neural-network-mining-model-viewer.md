@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744243"
 ---
 # <a name="neural-network-mining-model-viewer"></a>神经网络（挖掘模型查看器）
   可以使用 **“神经网络”** 查看器浏览基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 逻辑回归算法的挖掘模型。  
   
- **有关详细信息：**[Microsoft 神经网络算法](data-mining/microsoft-neural-network-algorithm.md)、[Microsoft 逻辑回归算法](data-mining/microsoft-logistic-regression-algorithm.md)、[使用 Microsoft 神经网络查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **有关详细信息：**[Microsoft 神经网络算法](data-mining/microsoft-neural-network-algorithm.md)， [Microsoft 逻辑回归算法](data-mining/microsoft-logistic-regression-algorithm.md)，[使用 Microsoft 神经网络查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48169707"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 您可以使用自定义查看器或 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
   
  **输入**  
@@ -43,7 +43,7 @@ ms.locfileid: "48169707"
 |**Attribute**|从列表中选择输入属性。 如果保留为默认值，选择**\<所有 >**，图表将显示所有输入属性，按它们对可预测属性的影响进行排序的列表。|  
 |**ReplTest1**|为输入属性选择值。|  
   
- **输出**  
+ **Output**  
  使用这些控件可选择一个可预测属性和值，以在条形图中进行分析和比较。 如果您不更改选定内容，则条形图将比较最上面的两个结果状态。  
   
 |ReplTest1|Description|  
@@ -63,8 +63,8 @@ ms.locfileid: "48169707"
 |**倾向于\<值为 2 >**|显示一个条形，该条形指示此特定属性-值组合影响“值 2”中选择的目标结果的程度。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

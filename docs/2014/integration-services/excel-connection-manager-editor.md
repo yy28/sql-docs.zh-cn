@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22ea5f2f087949718e5dbfc8702756e008ee721e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769813"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
   使用 **“Excel 连接管理器编辑器”** 对话框可以将连接添加到现有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿文件。  
@@ -43,7 +43,7 @@ ms.locfileid: "58392915"
  **Excel 版本**  
  指定用于创建文件的 Microsoft Excel 的版本。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |Excel 97-2003|文件是使用 Excel 97 或更高版本创建的。|  
 |Excel 3.0|文件是使用 Excel 3.0 创建的。|  

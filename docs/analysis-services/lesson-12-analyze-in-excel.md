@@ -1,5 +1,5 @@
 ---
-title: 第 12 课： 在 Excel 中分析 |Microsoft Docs
+title: 第 12 课：在 Excel 中分析 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468421"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>第 12 课：在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "42795646"
   
 若要完成本课程中，必须在 SSDT 所在的同一台计算机上安装 Excel。 若要了解详细信息，请参阅 [“在 Excel 中分析”](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)安装在同一台计算机上。  
   
-学完本课的估计时间： **20 分钟**  
+估计的时间才能完成本课程中：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 11 课： 创建角色](../analysis-services/lesson-11-create-roles.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 11 课：创建角色](../analysis-services/lesson-11-create-roles.md)。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用默认透视和“Internet Sales”透视进行浏览  
 在这些首要任务，您将浏览您的模型，通过使用这两个默认透视，其中包括所有模型对象，以及通过使用 Internet 销售透视你之前。 “Internet Sales”透视将排除 Customer 表对象。  
@@ -49,11 +49,11 @@ ms.locfileid: "42795646"
   
 2.  在“在 Excel 中分析”对话框中，选中“当前 Windows 用户”，然后在“透视”下拉列表框中，选中 **Internet Sales**，然后单击“确定”。 
     
-    ![作为-表格-lesson12 的角度来看](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  在 Excel 中，在**数据透视表字段**，请注意，从字段列表中排除 DimCustomer 表。  
     
-    ![作为-表格-lesson12-字段](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  关闭 Excel 而不保存工作簿。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "42795646"
 3.  关闭 Excel 而不保存工作簿。  
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 13 课： 部署](../analysis-services/lesson-13-deploy.md)。
+请转到下一课：[第 13 课：部署](../analysis-services/lesson-13-deploy.md)。
 
   
   

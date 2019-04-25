@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc08bc82fa4a02b2e78479d3075357b8816874b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744318"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47691744"
   
  然后，可通过 QueryInterface 查询多个结果接口，从而获得 IDBAsynchStatus 和 ISSAsynchStatus 接口。  
   
- 命令执行完毕后，可照常使用 IMultipleResults，但同步时有一个例外，即可能返回 DB_S_ASYNCHRONOUS，此情况下可使用 IDBAsynchStatus 或 ISSAsynchStatus 确定操作的完成时间。  
+ 该命令完成后执行时， **IMultipleResults**可用作正常，并且从同步的情况下的一个例外：可能返回 DB_S_ASYNCHRONOUS，在这种情况下**IDBAsynchStatus**或**ISSAsynchStatus**可用于确定何时完成该操作。  
   
 ## <a name="examples"></a>示例  
  在以下示例中，应用程序调用非阻止方法，执行一些其他处理，然后返回以处理结果。 ISSAsynchStatus::WaitForAsynchCompletion 等待内部事件对象，直到异步执行操作完成，或超过了 dwMilisecTimeOut 指定的时间。  

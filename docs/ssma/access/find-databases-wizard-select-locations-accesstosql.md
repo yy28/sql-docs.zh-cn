@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759587"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 （选择位置） (AccessToSQL)
 在查找数据库向导的选择位置页上，查找访问数据库的输入的搜索参数。  

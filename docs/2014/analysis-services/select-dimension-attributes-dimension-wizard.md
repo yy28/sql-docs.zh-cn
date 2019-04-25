@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748089"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>选择维度属性（维度向导）
   可以使用 **“选择维度属性”** 页选择和修改要创建的维度的属性。  

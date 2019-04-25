@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637124"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>业务规则条件 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52823244"
   
 ## <a name="business-rule-conditions"></a>业务规则条件  
   
-|条件名称|描述|  
+|条件名称|Description|  
 |--------------------|-----------------|  
 |**等于**|所选属性 **“等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  
 |**不等于**|所选属性 **“不等于”** 特定属性、特定属性值或者为空。<br /><br /> 此条件对文本、数字、日期和链接值有效。|  
@@ -55,7 +55,7 @@ ms.locfileid: "52823244"
 > [!NOTE]  
 >  当业务规则包含比较两个值的条件且该规则应用到两个值均为 NULL 的成员时，该成员将会验证失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [业务规则操作 (Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)   
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

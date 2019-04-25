@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761683"
 ---
 # <a name="understanding-database-engine-errors"></a>了解数据库引擎错误
   由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 引起的错误具有下表所述的属性。  
   
-|Attribute|Description|  
+|特性|Description|  
 |---------------|-----------------|  
 |错误号|每个错误消息具有唯一的错误号。|  
 |错误消息字符串|错误消息包含关于错误原因的诊断信息。 许多错误消息都有替换变量，其中插入了一些信息，如生成错误的对象名称。|  

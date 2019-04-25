@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509959"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>“选择名称”对话框 (Visual Database Tools)
   当你选择时，会显示此对话框**保存\<TableName**>，**保存\<DiagramName >**，或者**保存\<ViewName >** 从**文件**菜单。  

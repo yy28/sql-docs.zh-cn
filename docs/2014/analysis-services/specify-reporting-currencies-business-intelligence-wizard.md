@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746539"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定报表货币（商业智能向导）
   使用“定义报表货币”页为货币换算功能定义报表货币，该功能涵盖“选择换算类型”页中指定的多对多或一对多换算类型。 （报表货币是换算“选择度量值”页中所选度量值时使用的货币。）从货币维度中选择的成员可以为商业智能向导所生成的货币换算定义报表货币维度_。  

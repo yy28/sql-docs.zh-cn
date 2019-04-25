@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760771"
 ---
 # <a name="descriptor-handles"></a>描述符句柄
 一个*描述符*显示的应用程序或驱动程序是一系列介绍了 SQL 语句的参数或结果集的列的元数据 (也称为*实现*)。 因此，一个描述符可以填充所有四个角色：  

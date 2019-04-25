@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510624"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暂停报表和订阅处理
   您不能直接暂停报表或订阅。 不过，在报表和订阅处理进程启动之前或者在建立数据源连接时，您可以中断报表和订阅处理。 您还可以通过使用户不能访问报表或订阅，来阻止对报表或订阅进行处理。  

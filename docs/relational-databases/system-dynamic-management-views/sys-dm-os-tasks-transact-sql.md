@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627907"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47785335"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|对象的内存地址。|  
-|**task_state**|**nvarchar(60)**|任务的状态。 可以是下列选项之一：<br /><br /> PENDING：正在等待工作线程。<br /><br /> RUNNABLE：可运行，但正在等待接收量程。<br /><br /> RUNNING：当前正在计划程序中运行。<br /><br /> SUSPENDED：具有工作线程，但正在等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：陷入自旋锁。|  
+|**task_state**|**nvarchar(60)**|任务的状态。 可以是下列选项之一：<br /><br /> 挂起：正在等待工作线程。<br /><br /> 可运行：可运行，但正在等待接收量程。<br /><br /> 运行：当前正在计划程序上运行。<br /><br /> 挂起：具有工作线程，但正在等待事件。<br /><br /> 完成操作：已完成。<br /><br /> SPINLOOP:陷入旋转锁。|  
 |**context_switches_count**|**int**|此任务完成的计划程序上下文切换数。|  
 |**pending_io_count**|**int**|此任务执行的物理 I/O 数。|  
 |**pending_io_byte_count**|**bigint**|此任务执行的总 I/O 字节数。|  
@@ -53,7 +53,7 @@ ms.locfileid: "47785335"
 |**parent_task_address**|**varbinary(8)**|作为该对象的父对象的任务的内存地址。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
