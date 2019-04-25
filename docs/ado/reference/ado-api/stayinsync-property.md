@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743123"
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，是否对基础的子记录的引用 (即*章*) 当父行位置更改时进行更改。  

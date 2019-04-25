@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636776"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”对话框。 **“分析服务器属性”** 对话框包含下列属性。  
@@ -84,7 +84,7 @@ ms.locfileid: "50145092"
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将字母的重音形式和非重音形式视为相同。  
   
--   “区分假名”用于根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分日语中的两种假名字符类型：平假名和片假名。  
+-   **区分假名**用于和将基于在提供为相关的语言或字母表，并区分两种类型的日语假名字符的字典规则对数据进行比较：平假名和片假名。  
   
      如果未选择此选项，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将平假名字符和片假名字符视为相同。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "50145092"
 ## <a name="security-properties"></a>安全属性  
  使用此页可为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例指定属于服务器管理员角色的 Windows 用户帐户和组帐户。 此角色中的成员身份传达执行服务器范围内任务（如创建或处理数据库、修改服务器属性、添加或删除此角色的其他成员或启动跟踪）的权限。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)有关详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [确定 Analysis Services 实例的服务器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](instances/authentication-methodologies-supported-by-analysis-services.md)   

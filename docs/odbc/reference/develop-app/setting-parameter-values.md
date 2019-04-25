@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445949"
 ---
 # <a name="setting-parameter-values"></a>设置参数值
 若要设置参数的值，该应用程序只需设置变量绑定到该参数的值。 它并不重要时设置此值，只要设置之前执行的语句。 应用程序可以设置的值之前或之后绑定变量，并且它可以更改许多次，它想要的值。 执行该语句，该驱动程序只需检索变量的当前值。 不止一次; 执行已准备的语句时，这一点特别有用应用程序的某些或全部变量每次执行该语句将设置新值。 此示例，请参阅[准备好执行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)前面在本部分中。  
@@ -27,21 +27,21 @@ ms.locfileid: "47729155"
   
 -   绑定的变量中的数据的字节长度。 仅当该变量是字符或二进制，驱动程序将检查此长度 (*ValueType*为 SQL_C_CHAR 或 SQL_C_BINARY)。  
   
--   SQL_NTS。 数据是一个以 null 结尾的字符串。  
+-   SQL_NTS. 数据是一个以 null 结尾的字符串。  
   
--   SQL_NULL_DATA。 数据值为 NULL，并驱动程序忽略绑定的变量的值。  
+-   SQL_NULL_DATA. 数据值为 NULL，并驱动程序忽略绑定的变量的值。  
   
 -   SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 宏的结果。 参数的值是使用发送**SQLPutData**。 有关详细信息，请参阅[发送长数据](../../../odbc/reference/develop-app/sending-long-data.md)，在本部分中更高版本。  
   
  下表显示了绑定的变量和应用程序设置的各种参数值的长度/指示器缓冲区的值。  
   
-|参数<br /><br /> 值|参数<br /><br /> (SQL)<br /><br /> 数据类型|Variable (C)<br /><br /> 数据类型|中的值<br /><br /> 绑定<br /><br /> 变量|中的值<br /><br /> 长度/指示器<br /><br /> 缓冲区 [d]|  
+|参数<br /><br /> value|参数<br /><br /> (SQL)<br /><br /> 数据类型|Variable (C)<br /><br /> 数据类型|中的值<br /><br /> 绑定<br /><br /> 变量|中的值<br /><br /> 长度/指示器<br /><br /> buffer[d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS 或 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS 或 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS 或 2|  
-|下午 1 点|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|下午 1 点|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a]、 [c]|SQL_NTS 或 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS 或 2|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS 或 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a]"\0"表示 null 终止字符。 仅当长度/指示器缓冲区中的值为 SQL_NTS null 终止字符需要。  

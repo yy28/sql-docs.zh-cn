@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472226"
 ---
 # <a name="the-fields-collection"></a>字段集合
 **字段**集合是一个 ADO 的内部集合。 集合是一组有序可以作为一个单元引用的项。 ADO 集合有关的详细信息，请参阅[ADO 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  

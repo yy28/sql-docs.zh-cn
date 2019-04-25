@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472831"
 ---
 # <a name="batch-mode"></a>批处理模式
 批处理模式，则当**LockType**属性设置为**adLockBatchOptimistic**和提供程序支持批更新。 某些锁类型设置不可用，具体取决于游标位置。 例如，保守式锁定类型时不可用**CursorLocation**设置为**adUseClient**。 相反，提供程序不能支持批处理乐观锁定时光标所在的位置是在服务器上。 你应使用批处理使用 keyset 或 static 游标仅更新。  

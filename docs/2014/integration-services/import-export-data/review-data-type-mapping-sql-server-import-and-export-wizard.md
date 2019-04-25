@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767939"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
   使用**查看数据类型映射**页后，可以查看有关该向导已执行，以使源数据与目标兼容的数据类型转换的详细的信息。 此信息包括可视提示，用于区分应成功的转换与可能导致错误或截断的转换。 对于每个转换，您都可以决定是否接受向导建议的转换，也可以指定如何处理发生的错误。  

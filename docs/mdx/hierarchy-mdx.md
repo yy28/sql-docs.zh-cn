@@ -1,5 +1,5 @@
 ---
-title: 层次结构 (MDX) |Microsoft 文档
+title: 层次结构 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0699ce1d66c420061091436ebf879c9b32b3ca7c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629106"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
 
@@ -40,7 +40,7 @@ Level_Expression.Hierarchy
  返回级别的有效多维表达式 (MDX)。  
   
 ### <a name="examples"></a>示例  
- 下面的示例返回 AdventureWorks 多维数据集中日期维度中的日历层次结构的名称。  
+ 下面的示例返回在 AdventureWorks 多维数据集的 Date 维度的 Calendar 层次结构的名称。  
   
  `WITH`  
   
@@ -55,6 +55,6 @@ Level_Expression.Hierarchy
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

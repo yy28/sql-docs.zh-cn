@@ -26,11 +26,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629649"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>备份和还原复制的数据库
   对于复制的数据库，需要特别注意与备份和还原数据有关的信息。 本主题介绍了适用于各种复制类型的备份和还原策略，并提供了其详细信息的链接。  

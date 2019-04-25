@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466159"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>浏览 Naive Bayes 模型
   当你打开朴素贝叶斯模型使用**浏览**，模型将显示在交互式查看器具有四个不同的窗格。 使用该查看器，可以探索相关性，获取有关模型和基础数据的信息。  

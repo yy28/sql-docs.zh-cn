@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743635"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器的 **“计算”** 选项卡上，可以使用 **“命名集窗体编辑器”** 窗格创建或修改命名集。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748009"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>“规则”选项卡（挖掘模型查看器）
   可以使用关联模型中的 **“规则”** 窗格来查看算法从数据中提取的规则。 规则不仅说明了各项之间相互关联的方式，并且可用于创建建议。  
@@ -28,7 +28,7 @@ ms.locfileid: "48059597"
 > [!WARNING]  
 >  默认情况下，查看器中仅显示大于 **“最小概率”** 中定义的概率阈值的规则。 无法使用查看器减小该值，因为规则输出的概率阈值是在创建模型时确定的。 有关详细信息，请参阅 [Microsoft 关联算法技术参考](data-mining/microsoft-association-algorithm-technical-reference.md)。  
   
- **有关详细信息：**[Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **有关详细信息：**[Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)，[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -37,7 +37,7 @@ ms.locfileid: "48059597"
  **挖掘模型**  
  选择一个包含在当前挖掘结构中的挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于查看所选挖掘模型的查看器。 可以对每个挖掘模型使用自定义查看器，也可以使用 **“Microsoft 一般内容树查看器”**。 还可以使用插件查看器（如果有）。  
   
  **最小概率**  
@@ -88,8 +88,8 @@ ms.locfileid: "48059597"
  可以单击列标题来按规则的文本进行排序。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

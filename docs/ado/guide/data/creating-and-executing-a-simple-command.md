@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472633"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>创建和执行简单的命令
 一个简单的命令是指未参数化并且需要不暂留。 有三种方法来创建和执行简单的命令。  

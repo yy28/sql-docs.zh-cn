@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632767"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>时间和日期函数（Visual FoxPro ODBC 驱动程序）
 下表列出了支持的 Visual FoxPro ODBC 驱动程序; ODBC 日期和时间函数在相同的功能的 Visual FoxPro 语法与 ODBC 语法不同，会列出等效 Visual FoxPro。  
@@ -33,25 +33,25 @@ ms.locfileid: "52538756"
 |CURDATE *（)*|日期 *（)*|  
 |CURTIME *（)*|时间 *（)*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|一天 *（)*|  
-|小时 *(time_exp)*||  
-|分钟 *(time_exp)*||  
-|月 *(time_exp)*||  
+|DAYOFMONTH(*date_exp)*|一天 *（)*|  
+|HOUR *(time_exp)*||  
+|MINUTE *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|现在 *（)*|DATETIME *（)*|  
-|第二个 *(time_exp)*|数秒 *(time_exp)*|  
-|一周 *(date_exp)*||  
-|年 *(date_exp)*||  
+|现在 *（)*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|WEEK *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  不支持以下日期和时间函数：  
   
  DAYOFYEAR *(date_exp)*  
   
- 每个季度 *(date_exp)*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *（时间间隔，integer_exp，timestamp_exp）*  
   
- TIMESTAMPDIFF *（时间间隔，timestamp_exp1，timestamp_exp2）*  
+ TIMESTAMPDIFF *(interval, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC 转义序列  
  该驱动程序还支持 ODBC 转义序列的日期和时间戳数据。 Escape 子句语法如下所示：  

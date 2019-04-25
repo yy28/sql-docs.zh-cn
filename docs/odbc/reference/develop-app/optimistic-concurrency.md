@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446209"
 ---
 # <a name="optimistic-concurrency"></a>乐观并发
 *乐观并发*的乐观假设从派生其名称，将很少发生事务之间的冲突; 冲突说明已发生时其他事务更新或删除读取它的时间之间的数据行由当前事务和时间它更新或删除。 它正好相反*保守式并发*或锁定，在该应用程序开发人员认为此类冲突是司空见惯。  

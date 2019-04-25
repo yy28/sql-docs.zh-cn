@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4683e1cb859617481f235bbebcc128e812c7cf5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517554"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>编辑和删除索引 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52752039"
 
   可以编辑和删除自己创建的有关属性的索引。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "52752039"
   
 8.  通过从列表中添加和删除属性来编辑分配的属性列表。  
   
-9. 单击 **“保存”**。  
+9. 单击“保存” 。  
   
  **删除索引**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52752039"
   
 5.  在确认消息框中，单击“确定” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建索引 (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   
  [自定义索引 (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

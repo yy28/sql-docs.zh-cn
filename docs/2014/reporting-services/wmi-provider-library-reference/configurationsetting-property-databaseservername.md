@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbeef4b02c787baa9d29b16fe862af146033584d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646303"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName 属性 (WMI MSReportServer_ConfigurationSetting)
   指定用来安装报表服务器数据库的服务器的名称。 读/写。  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748451"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>利润图（SQL Server 数据挖掘外接程序）
   ![数据挖掘功能区中的利润图按钮](media/dmc-profitchart.gif "数据挖掘功能区中的利润图按钮")  

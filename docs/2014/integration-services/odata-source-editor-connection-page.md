@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767139"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 源编辑器（“连接”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“连接”** 页，为 OData 源选择 OData 连接管理器。 通过此页还可以指定集合或资源路径和任何查询选项以指示需要从 OData 源检索的数据。 若要了解有关 OData 源的详细信息，请参阅 [OData Source](data-flow/odata-source.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "58390458"
  **使用集合或资源路径**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |集合|使用集合名称查询从 OData 源检索数据。|  
 |资源路径|使用资源路径查询从 OData 源检索数据。|  

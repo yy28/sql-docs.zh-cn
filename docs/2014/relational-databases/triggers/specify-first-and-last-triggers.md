@@ -17,18 +17,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524133"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
   可将与表关联的 AFTER 触发器之一指定为执行每个 INSERT、DELETE 和 UPDATE 触发操作时激发的第一个或最后一个 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  
   
  若要指定 AFTER 触发器的顺序，请使用 **sp_settriggerorder** 存储过程。 **sp_settriggerorder** 有下列选项。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**第一个**|指定 DML 触发器是执行触发操作时激发的第一个 AFTER 触发器。|  
 |**上一次**|指定 DML 触发器是执行触发操作时激发的最后一个 AFTER 触发器。|  

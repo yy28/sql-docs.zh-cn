@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765930"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中有两种类型的管理员：模型管理员和 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 系统管理员。  

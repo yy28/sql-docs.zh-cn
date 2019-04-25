@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28e28e6b2e7d65d5b66d95d626fbbbde2cbb94a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757453"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>创建两个表之间的关系（SSAS 表格）
-  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
+  如果数据源中的表没有现有关系，或如果添加新表，则可以使用模型设计器中的工具创建新关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>创建两个表之间的关系  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48087737"
 6.  单击 **“创建”**。  
   
 ## <a name="see-also"></a>请参阅  
- [删除关系&#40;SSAS 表格&#41;](delete-relationships-ssas-tabular.md)   
- [关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)  
+ [删除关系（SSAS 表格）](delete-relationships-ssas-tabular.md)   
+ [关系（SSAS 表格）](relationships-ssas-tabular.md)  
   
   

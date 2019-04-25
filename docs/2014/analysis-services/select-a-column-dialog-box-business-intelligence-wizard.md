@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7aa506c8faa0e86979da47dfafb7c8525cde6e7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747771"
 ---
 # <a name="select-a-column-dialog-box-business-intelligence-wizard"></a>“选择列”对话框（商业智能向导）
   可以使用 **“选择列”** 对话框从树视图显示的表列表中选择列。 通过商业智能向导可以打开此对话框。  

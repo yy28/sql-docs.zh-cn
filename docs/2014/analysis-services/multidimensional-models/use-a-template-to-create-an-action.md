@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740787"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用模板创建操作
   多维数据集设计器中的 **“操作”** 视图包含可用于创建常见操作的许多模板。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问多维数据集设计器。  
@@ -33,6 +33,6 @@ ms.locfileid: "48154473"
 -   填写基于模板完成生成操作所需的信息。  
   
 ## <a name="see-also"></a>请参阅  
- [操作&#40;Analysis Services-多维数据&#41;](actions-analysis-services-multidimensional-data.md)  
+ [操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)  
   
   

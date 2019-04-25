@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4433de08779a908686efb3082f3ce4651f76a402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517083"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>资源管理器功能区域（主数据管理器）
 
@@ -62,7 +62,7 @@ ms.locfileid: "52821891"
   
  [重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)  
   
   

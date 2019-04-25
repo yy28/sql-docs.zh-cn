@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502566"
 ---
-# <a name="operators---logical"></a>运算符-逻辑
+# <a name="operators---logical"></a>运算符 - 逻辑
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   评估值并返回一个布尔值中的，可以在数据挖掘扩展插件 (DMX) 表达式中使用逻辑运算符[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
@@ -25,12 +25,12 @@ ms.locfileid: "37989529"
   
 |运算符|Description|  
 |--------------|-----------------|  
-|[和&AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
-|[不&AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
-|[或者&AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
+|[AND &#40;DMX&#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
+|[NOT &#40;DMX&#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  
+|[OR &#40;DMX&#41;](../dmx/or-dmx.md)|对数值表达式执行逻辑或运算。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -38,7 +38,7 @@ ms.locfileid: "37989529"
  [数据挖掘扩展插件&#40;DMX&#41;语法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [表达式&#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [DMX 预测查询的结构和用法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [了解 DMX Select 语句](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468794"
 ---
 # <a name="scalar-function-calls"></a>标量函数调用
 标量函数返回每一行的值。 例如，该绝对值标量函数将数值列作为参数并返回列中的每个值的绝对值。 用于调用标量函数转义序列  
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  应用程序应使用的最大互操作性**转换**标量函数，以确保标量函数的输出所需的类型。 **转换**函数将数据从一个 SQL 数据类型转换为指定的 SQL 数据类型。 语法**转换**函数  
   
- **转换 (** _value_exp_ **，** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
  其中*value_exp*是一个列名称，另一个标量函数或文本值的结果并*data_type*是匹配的关键字 **#define**用的名称SQL 数据类型标识符，如中所定义[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，使用以下 SQL 语句**转换**请确保函数的输出**CURDATE**函数是日期，而不是时间戳列或字符数据：  
   

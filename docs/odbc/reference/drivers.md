@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e3996aafa0e4f5b389e4f46d5df3b22632daad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628762"
 ---
 # <a name="drivers"></a>驱动程序
 *驱动程序*ODBC API 中实现的函数的库。 每个都特定于特定的 DBMS;例如，用于 Oracle 的驱动程序不能直接访问 Informix DBMS 中的数据。 驱动程序公开的功能基础 Dbms;它们不需要实现不支持的 DBMS 的功能。 例如，如果基础 DBMS 不支持外部联接中，则不应驱动程序。 仅主要的例外是不具有独立的数据库引擎，如 Xbase，Dbms 的驱动程序必须实现至少支持最少量的 SQL 数据库引擎。  

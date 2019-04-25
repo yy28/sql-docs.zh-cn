@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767174"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 源编辑器（“连接管理器”页）
   可以使用 **“ODBC 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -43,10 +43,10 @@ ms.locfileid: "58378585"
 ### <a name="data-access-mode"></a>数据访问模式  
  选择从源选择数据的方法。 选项显示在下表中：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |表名|从 ODBC 数据源中的表或视图检索数据。 选择此选项后，请从列表中为以下选项选择一个值：|  
-||**表或视图的名称**:从列表中选择一个可用表或视图，或键入正则表达式以便标识表。|  
+||**表或视图的名称**：从列表中选择一个可用表或视图，或键入正则表达式以标识该表。|  
 ||该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。|  
 |SQL 命令|使用 SQL 查询从 ODBC 数据源中检索数据。 您应该采用正在使用的源数据库的语法编写查询。 选择此选项后，请采用以下方法之一输入查询：|  
 ||在 **“SQL 命令文本”** 字段中，输入 SQL 查询的文本。|  

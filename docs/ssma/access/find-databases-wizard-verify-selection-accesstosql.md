@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759656"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导 （验证所选内容） (AccessToSQL)
 查找数据库向导的验证所选内容页上列出的文件添加到 SSMA。 如果不正确的文件列表，请单击**回**修改的列表。 否则，请单击**完成**若要添加的文件。  

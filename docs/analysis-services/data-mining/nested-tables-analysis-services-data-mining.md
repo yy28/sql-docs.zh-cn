@@ -1,5 +1,5 @@
 ---
-title: 嵌套表 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 嵌套表 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 35444ae17ac4a11bd0321e70631f45d84273e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472401"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>嵌套表（Analysis Services – 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供一个唯一的方法，用于处理这些情况下，通过使用*嵌套表*。 下图将阐释嵌套表的概念。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据必须作为包含在事例表中的一系列事例提供给数据挖掘算法。 但并非所有的事例都可以用一行数据来说明。 例如，一个事例可能派生自两个表：其中一个表包含客户信息，而另一个表包含客户采购信息。 客户信息表中的一位客户可能在客户采购表中有多个采购项目，在这种情况下，很难使用单个行来说明该数据。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一种用来处理这些事例的独特方法，即使用 *嵌套表*。 下图将阐释嵌套表的概念。  
   
- ![通过使用嵌套的表的两个表组合](../../analysis-services/data-mining/media/nested-tables.gif "两个表组合使用嵌套的表")  
+ ![两个表组合在一起的嵌套的表](../../analysis-services/data-mining/media/nested-tables.gif "两个表组合在一起的嵌套的表")  
   
  在此关系图中，第一个表（父表）包含客户的信息，并且为每位客户关联了一个唯一标识符。 第二个表（子表）包含每位客户的采购信息。 子表中的采购信息又通过唯一标识符 **CustomerKey** 列与父表关联。 关系图中的第三个表显示了这两个表的结合。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34018114"
  您可以通过使用数据挖掘扩展插件 (DMX) 或分析管理对象 (AMO) 以编程方式创建嵌套表，也可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘向导或数据挖掘设计器创建嵌套表。  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>在挖掘模型中使用嵌套表列  
- 在事例表中，键通常是客户 ID、产品名称或日期序列，是唯一标识表中行的数据。 。 而在嵌套表中，键通常不是关系键（或外键），而是表示要对其进行建模的属性的列。  
+ 在事例表中，键通常是客户 ID、产品名称或日期序列，是唯一标识表中行的数据。 . 而在嵌套表中，键通常不是关系键（或外键），而是表示要对其进行建模的属性的列。  
   
  例如，如果事例表包含订单，嵌套表包含订单中的项目，则您会对以下工作感兴趣：为存储在嵌套表中的跨事例表中多个订单的项目之间的关系建模。 因此，虽然 **Items** 嵌套表通过关系键 **OrderID** 联接到 **Orders**事例表，但是不应将 **OrderID** 用作嵌套表键， 而应选择 **Items** 列作为嵌套表键，因为该列包含要建模的数据。 大多数情况下，由于事例表和嵌套表之间的关系已通过数据源视图定义建立起来，因此可以安全地在挖掘模型中忽略 **OrderID** 。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34018114"
  例如，如果嵌套表包含 **Product**、 **ProductQuantity**和 **ProductPrice**列，则可以选择 **Product** 作为嵌套表键，但可将 **ProductQuantity** 添加到挖掘结构中以用作输入内容。  
   
 ## <a name="filtering-nested-table-data"></a>筛选嵌套表数据  
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以对用于定型或测试数据挖掘模型的数据创建筛选器。 可以使用筛选器，以影响组合的模型，或者测试的事例子集的模型。 筛选器还可应用于嵌套表。 但对于可用于嵌套表的语法有一些限制。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以对用于定型或测试数据挖掘模型的数据创建筛选器。 可以使用筛选器，来影响模型的组合或测试用例的子集的模型。 筛选器还可应用于嵌套表。 但对于可用于嵌套表的语法有一些限制。  
   
  而上述情况通常发生在将筛选器应用于要测试是否存在某个属性的嵌套表时。 例如，可将限制模型中使用的事例的筛选器仅用于那些在嵌套表中具有指定值的事例。 或者，可将模型中使用的事例限制为未购买某个特定项目的客户。  
   
@@ -61,8 +61,8 @@ ms.locfileid: "34018114"
   
  有关如何创建和使用模型筛选器的详细信息，请参阅[挖掘模型的筛选器（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

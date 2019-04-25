@@ -1,5 +1,5 @@
 ---
-title: 插入 (DMX) |Microsoft Docs
+title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505170"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  模型标识符。  
   
- *结构*  
+ *structure*  
  结构标识符。  
   
  *映射的模型列*  
@@ -44,7 +44,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *源数据查询*  
  采用提供程序所定义格式的源查询。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果未指定**挖掘模型**或**挖掘结构**，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]搜索基于名称的对象类型，并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
   
  通过使用第二个语法形式，INSERT INTO*\<对象 >*。COLUMN_VALUES，您可以将数据直接插入模型列而无需定型模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
@@ -65,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
 ||挖掘结构包含其他挖掘模型。|进程失败。 必须重新处理结构和关联的挖掘模型。|  
 |插入到挖掘结构*\<结构 >*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
-|INSERT INTO 挖掘 MODEL*\<模型 >* ，其中包含源查询<br /><br /> 或多个<br /><br /> 插入到挖掘结构*\<结构 >* ，其中包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除对象[删除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO 挖掘 MODEL*\<模型 >* ，其中包含源查询<br /><br /> 或<br /><br /> 插入到挖掘结构*\<结构 >* ，其中包含源查询|结构或模型已包含内容。|进程失败。 通过执行此操作之前，必须清除对象[删除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>映射的模型列  
  通过使用\<映射模型列 > 元素中，可以将数据源中的列的列映射在挖掘模型中。 \<映射模型列 > 元素具有以下形式：  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46f9cc26759470630c51cd50521f7c3705791939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743709"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>在生产环境中使用 Analysis Services 项目和数据库
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中开发 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并将其部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之后，必须确定要如何对已部署数据库中的对象进行更改。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]进行与安全角色、分区和存储设置相关的特定更改。 其他更改则只能使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式或联机模式下进行（例如添加属性或用户定义层次结构）。  
@@ -27,10 +27,10 @@ ms.locfileid: "48131727"
   
  有多种方法使用 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工具来避免这种情况下存在的问题。  
   
--   方法 1：每当对生产版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行更改时，基于修改后版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 可以将这一新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目作为项目的主控副本签入到源代码管理系统。 无论是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在联机模式下对 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库进行更改，这种方法均行之有效。  
+-   方法 1:每当对生产版本进行更改[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库，请使用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]若要创建一个新[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]基于修改后的版本的项目[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。 可以将这一新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目作为项目的主控副本签入到源代码管理系统。 无论是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在联机模式下对 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库进行更改，这种方法均行之有效。  
   
--   方法 2：使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在项目模式下仅对生产版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库进行更改。 借助这种方法，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中可用的选项来保留由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所做的更改，例如安全角色和存储设置。 这样可确保将与设计相关的设置保留在项目文件中（可以忽略存储设置和安全角色），并将联机服务器用于存储设置和安全角色。  
+-   方法 2：对生产版本的唯一进行更改[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式下。 借助这种方法，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中可用的选项来保留由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]所做的更改，例如安全角色和存储设置。 这样可确保将与设计相关的设置保留在项目文件中（可以忽略存储设置和安全角色），并将联机服务器用于存储设置和安全角色。  
   
--   方法 3：使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在联机模式下仅对生产版本的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库进行更改。 由于这两种工具都仅使用相同的联机服务器，因此，不同版本也会保持同步。  
+-   方法 3:对生产版本的唯一进行更改[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在联机模式下。 由于这两种工具都仅使用相同的联机服务器，因此，不同版本也会保持同步。  
   
   

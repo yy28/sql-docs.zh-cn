@@ -1,5 +1,5 @@
 ---
-title: 自动对属性成员进行分组 |Microsoft 文档
+title: 自动将属性成员分组 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737717"
 ---
-# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-自动分组属性成员
+# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4 3-自动属性成员分组
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，如果由 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员分组，将会很有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。  
@@ -24,12 +24,12 @@ ms.locfileid: "34017714"
 **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，在各个组之间平均分布所有维度成员。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建分组范围，以便在各个组之间平均分布所有维度成员。  
   
 **Clusters**  
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 K-Means 聚类分析方法和高斯分布，对输入值执行单一维度聚类分析，以此创建分组。 此选项只对数值列有效。  
   
-指定了一种分组方法后，必须使用 **DiscretizationBucketCount** 属性指定分组的数量。 有关详细信息，请参阅[对属性成员进行分组（离散化）](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)。  
+指定了一种分组方法后，必须使用 **DiscretizationBucketCount** 属性指定分组的数量。 有关详细信息，请参阅 [对属性成员进行分组（离散化）](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
 在本主题的任务中，将对以下对象启用不同类型的分组： **客户** 维度中的年度收入值； **雇员** 维度中的雇员病假时数； **雇员** 维度中的雇员休假时数。 然后，处理并浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集，以此查看各成员组的情况。 最后，修改成员组的参数，查看组类型更改的效果。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34017714"
   
     下图显示了修改后的“年收入”属性。  
   
-    ![为 Yearly Income 修改属性](../analysis-services/media/l4-discretizationmethod-1.gif "为 Yearly Income 修改属性")  
+    ![修改属性 Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "修改 Yearly Income 属性")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>为“雇员”维度中的属性层次结构成员分组  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34017714"
   
     下图显示了按雇员病假时数确定维度的销售。  
   
-    ![通过员工因病进行维度化的销售保留小时](../analysis-services/media/l4-discretizationmethod-2.gif "销售员工因病的标注保留小时数")  
+    ![按雇员病假划分销售保留小时](../analysis-services/media/l4-discretizationmethod-2.gif "按雇员病假划分销售保留小时")  
   
 10. 从“数据”窗格的列区域删除“病假时间”属性层次结构。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34017714"
   
 2.  在“属性”窗口中，将 **DiscretizationBucketCount** 属性值更改为 **10**。  
   
-3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单中，单击“部署 Analysis Services 教程”。  
+3.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”。  
   
 4.  成功完成部署后，切换回 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集的多维数据集设计器。  
   
@@ -126,8 +126,8 @@ ms.locfileid: "34017714"
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [隐藏和禁用属性层次结构](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>另请参阅  
-[对属性成员分组 & #40; 离散化 & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>请参阅  
+[对属性成员进行分组（离散化）](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

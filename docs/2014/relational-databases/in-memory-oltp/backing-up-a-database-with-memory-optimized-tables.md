@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468323"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
   内存优化表在定期数据库备份过程中进行备份。 对于基于磁盘的表，数据和差异文件对的 CHECKSUM 在数据库备份过程中进行验证，以检测存储损坏。  
@@ -48,7 +48,7 @@ ms.locfileid: "52408623"
   
  第一个工作负荷方案适用于（主要）插入。 在此方案中，大多数数据文件处于“活动”状态、完全加载，删除的行非常少。 数据库备份的大小接近于内存中的数据大小。  
   
- 第二个工作负荷方案适用于频繁的插入、删除和更新操作：在最坏的情况下，考虑已删除的行后，每个检查点文件对都已加载 50%。 因此数据库备份的大小至少是内存中的数据大小的 2 倍。 此外，将添加到数据库备份大小的、处于状态“合并源”和“需要备份/高可用性”下的检查点文件对很少。  
+ 第二个的工作负荷方案适用于频繁的插入、 删除和更新操作：在最坏的情况下，考虑已删除的行后，每个检查点文件对都已加载 50%。 因此数据库备份的大小至少是内存中的数据大小的 2 倍。 此外，将添加到数据库备份大小的、处于状态“合并源”和“需要备份/高可用性”下的检查点文件对很少。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>具有内存优化表的数据库的差异备份  
  如 [内存优化表的持久性](memory-optimized-tables.md)中所述，针对内存优化表的存储由数据和差异文件构成。 具有内存优化表的数据库的差异备份包含下列数据：  

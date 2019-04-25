@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b16b70e4956caa7a2f5bffbdc484a725cfee937d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516988"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能区域权限 (Master Data Services)
 
@@ -49,7 +49,7 @@ ms.locfileid: "52773819"
   
  在 **“模型”** 选项卡上，用户或组必须至少具有对一个功能区域和一个模型的权限，才能访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分配功能区域权限 (Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   

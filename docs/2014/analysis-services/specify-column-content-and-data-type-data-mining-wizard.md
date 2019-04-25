@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746280"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定列内容和数据类型（数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页，为在向导的上一页中选择的每一列指定用法和数据类型。 如果希望忽略列，请单击 **“上一步”** 返回到 **“指定定型数据”** 页，并清除所有复选框。  
@@ -25,7 +25,7 @@ ms.locfileid: "48213467"
   
  数据类型指定列中所包含数据的类型的更多详细信息，以及在定型过程中将如何使用数据。 某些内容类型需要某种特定的数据类型，反过来也是这样。 根据创建挖掘模型时所使用的算法，可能还需要指定特定数据类型。 有关挖掘模型和结构中的内容类型和数据类型的信息，请参阅[内容类型（数据挖掘）](data-mining/content-types-data-mining.md)。  
   
- **有关详细信息：**[挖掘结构（Analysis Services - 数据挖掘）](data-mining/mining-structures-analysis-services-data-mining.md)、[挖掘模型列](data-mining/mining-model-columns.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[挖掘结构&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)，[挖掘模型列](data-mining/mining-model-columns.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)， [创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **挖掘模型结构**  
@@ -37,7 +37,7 @@ ms.locfileid: "48213467"
  **内容类型**  
  指定列的内容类型。 如果在向导的上一页上指定该列是键，则可用值如下：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |Key|指定该列包含事例序列的唯一标识符。|  
 |键序列|指定该列包含序列标识符。|  
@@ -45,7 +45,7 @@ ms.locfileid: "48213467"
   
  如果选择该列作为非键列，则可用值如下（具体取决于数据类型）：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |连续|指定该列包含连续数值。|  
 |离散化|指定该列包含已离散化数值或可被视为离散值的数值。|  

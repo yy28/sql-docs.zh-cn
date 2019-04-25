@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472321"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>创建或自定义数据馈送库 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52519099"
   
  对于要在其中创建或编辑数据馈送注册文档的每个库，都重复以下步骤。  
   
-#### <a name="step-1-enable-content-type-management"></a>步骤 1：启用内容类型管理  
+#### <a name="step-1-enable-content-type-management"></a>第 1 步：启用内容类型管理  
   
 1.  打开要为其启用多种内容类型的文档库。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52519099"
   
 7.  单击“确定” 。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>步骤 2：添加数据服务文档内容类型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>第 2 步：添加数据服务文档内容类型  
   
 1.  在“内容类型”部分中，单击 **“从现有网站内容类型添加”**。 如果您看不到此页，则返回网站，在“库工具”中单击 **“库”** ，然后单击 **“库设置”**。  
   

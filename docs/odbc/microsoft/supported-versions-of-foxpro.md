@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8935e36676e2016d5fbf72239130956d40a875e9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633182"
 ---
 # <a name="supported-versions-of-foxpro"></a>支持的 FoxPro 版本
 可以使用 Microsoft® Visual FoxPro® ODBC 驱动程序，访问 FoxPro 表中存储的数据。 支持以下版本的 FoxPro 数据：  

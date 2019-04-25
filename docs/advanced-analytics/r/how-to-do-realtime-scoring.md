@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503772"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何生成预测和使用 SQL Server 中机器学习模型的预测
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用现有的模型来预测或预测新数据输入的结果是机器学习中的核心任务。 这篇文章枚举用于在 SQL Server 中生成预测的方法。 内部处理方法对于高速预测，速度基于增量降低方法在运行时依赖项。 较少依赖项意味着更快的预测。
 
-使用内部处理基础结构 （实时或本机评分） 附带了库要求。 函数必须是从 Microsoft 库。 CLR 或 c + + 扩展中不支持调用的开源或第三方函数的 R 或 Python 代码。
+使用内部处理基础结构 （实时或本机评分） 附带了库要求。 函数必须是从 Microsoft 库。 在 CLR 中不支持调用的开源或第三方函数的 R 或 Python 代码或C++扩展。
 
 下表总结了用于预测和预测的评分框架。 
 
@@ -28,13 +28,13 @@ ms.locfileid: "58510084"
 |-----------------------|-------------------|----------------------|----------------------|
 | 可扩展性框架 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 无。 模型可以基于任何 R 或 Python 函数 | 数百毫秒。 <br/>加载运行时环境都有固定的成本，求平均值三到六个 100 毫秒之前的任何新数据进行评分。 |
 | [实时评分的 CLR 扩展](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化模型 | :RevoScaleR, MicrosoftML <br/>Python: revoscalepy microsoftml | 数十毫秒，平均。 |
-| [本机计分的 c + + 扩展](../sql-native-scoring.md) | [预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化模型 | :RevoScaleR <br/>Python: revoscalepy | 平均小于 20 毫秒。 | 
+| [本机计分C++扩展](../sql-native-scoring.md) | [预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化模型 | :RevoScaleR <br/>Python: revoscalepy | 平均小于 20 毫秒。 | 
 
 加快处理速度并不输出的实质是区别性功能。 假设使用的相同的功能和输入，经过评分的输出应不因你使用的方法。
 
 必须使用受支持的函数，创建的模型，然后将其序列化为原始字节流保存到磁盘，或存储在数据库中的二进制格式。 使用 T-SQL 或存储的过程，可以加载并使用二进制模型无需使用的 R 或 Python 语言运行时间，从而更快的速度完成生成预测得分的新输入时。
 
-CLR 和 c + + 扩展的重要性是到数据库引擎本身的邻近性。 数据库引擎的本地语言是 c + +，这意味着编写 c + + 运行较少依赖项中扩展插件。 与此相反，CLR 扩展依赖于.NET Core。 
+CLR 的重要性和C++扩展插件是到数据库引擎本身的邻近性。 数据库引擎的本地语言是C++，这意味着编写扩展插件C++运行较少依赖项。 与此相反，CLR 扩展依赖于.NET Core。 
 
 正如您所料，会在这些运行的时环境中受平台支持。 本机数据库引擎扩展任意关系数据库支持位置运行：Windows，Linux，Azure。 使用.NET Core 要求的 CLR 扩展目前仅 Windows。
 
@@ -58,11 +58,11 @@ _评分_是一个两步过程。 首先，指定要从表加载的已训练的�
 
 可扩展性框架支持可能会在 R 或 Python，到训练复杂机器学习模型的简单函数范围中执行任何操作。 但是，双进程体系结构需要调用外部 R 或 Python 进程为每个调用，而不考虑操作的复杂性。 工作负荷需要从表中加载预先训练的模型和数据已在 SQL Server 上对其评分，调用外部进程的开销会添加可在某些情况下不可接受的延迟。 例如，欺诈检测需要快速的评分相关。
 
-若要增加评分的速度，如欺诈检测方案进行，SQL Server 时，可添加内置计分库作为 c + + 和 CLR 的扩展，消除了 R 和 Python 启动进程的开销。
+若要增加评分的速度，如欺诈检测方案进行，SQL Server，添加了内置评分库作为C++和 CLR 扩展，消除了 R 和 Python 启动进程的开销。
 
 [**实时评分**](../real-time-scoring.md)是高性能评分的第一个解决方案。 在早期版本的 SQL Server 2017 和更高版本更新到 SQL Server 2016 中引入实时评分依赖于 R 和 Python 处理于 RevoScaleR、 MicrosoftML (R)、 revoscalepy，受 Microsoft 控制函数所代表的 CLR 库和microsoftml (Python)。 使用调用 CLR 库**sp_rxPredict**到存储的过程而不会调用 R 或 Python 运行时从任何支持的模型类型，生成分数。
 
-[**本机计分**](../sql-native-scoring.md)是 SQL Server 2017 功能，实现为本机 c + + 库，但仅限于的 RevoScaleR 和 revoscalepy 模型。 它是最快且更安全的方法，但支持一小部分相对于其他方法的函数。
+[**本机计分**](../sql-native-scoring.md)是 SQL Server 2017 功能，作为一个本机实现C++库，但仅针对 RevoScaleR 和 revoscalepy 模型。 它是最快且更安全的方法，但支持一小部分相对于其他方法的函数。
 
 ## <a name="choose-a-scoring-method"></a>选择评分方法
 

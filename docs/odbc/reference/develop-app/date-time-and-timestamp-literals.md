@@ -14,24 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641024"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、时间和时间戳文本
 日期、 时间和时间戳文本的转义序列是  
   
- **{**_-类型_ **'** _值_ **}**  
+ **{**  _-type_ **'** _value_ **'}**  
   
  其中*文本类型*下表中列出的值之一。  
   
-|*文本类型*|含义|设置格式的*值*|  
+|*literal-type*|含义|设置格式的*值*|  
 |---------------------|-------------|-----------------------|  
 |**d**|date|*yyyy*-*mm*-*dd*|  
 |**t**|时间 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*] [1]|  
+|**ts**|时间戳|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
   
  [1] 的数字文本，其中包含秒组成部分的时间戳间隔中小数点右侧位数是依赖于的秒精度，因为 SQL_DESC_PRECISION 描述符字段中包含。 (有关详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

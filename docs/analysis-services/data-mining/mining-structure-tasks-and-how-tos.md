@@ -1,5 +1,5 @@
 ---
-title: 挖掘结构任务和操作指南 |Microsoft 文档
+title: 挖掘结构任务和操作指南 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509853"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>挖掘结构任务和操作指南
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "34015784"
   
 -   [创建新的 OLAP 挖掘结构](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
--   [将列添加到挖掘结构](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
+-   [向挖掘结构中添加列](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
 -   [从挖掘结构中删除列](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [向挖掘结构中添加嵌套的表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [向挖掘结构中添加嵌套表](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
 -   [更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34015784"
 -   [处理挖掘结构](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设计和实现操作指南主题（Analysis Services - 数据挖掘）](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   

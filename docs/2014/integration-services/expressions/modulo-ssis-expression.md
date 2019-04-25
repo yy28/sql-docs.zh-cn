@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768873"
 ---
 # <a name="modulo-ssis-expression"></a>（取模）（SSIS 表达式）
   将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。  
@@ -36,7 +36,7 @@ dividend % divisor
  *被除数*  
  被除数的数值表达式。 *dividend* 可以是任意有效的数值表达式。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
- *除数*  
+ *divisor*  
  除数的数值表达式。 *divisor* 可以是除 0 之外的任意有效的数值表达式。  
   
 ## <a name="result-types"></a>结果类型  

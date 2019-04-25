@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467935"
 ---
 # <a name="create-roles"></a>创建角色
 
@@ -36,7 +36,7 @@ ms.locfileid: "57685454"
   
 因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 更高版本在第 12 课中测试每个角色的效果：在 Excel 中分析。  
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 
@@ -56,7 +56,7 @@ ms.locfileid: "57685454"
 
     ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
-5.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选：单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>创建 Sales Analyst US 用户角色  
   
@@ -75,7 +75,7 @@ ms.locfileid: "57685454"
     行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 通过此公式中，指定的国家/地区区域代码值为"US"行对用户可见。  
     ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
-6.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+6.  可选：单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要创建的管理员用户角色  
   
@@ -85,7 +85,7 @@ ms.locfileid: "57685454"
   
 3.  向此角色授予**管理员**权限。  
   
-4.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
+4.  可选：单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
   
   
 ## <a name="whats-next"></a>下一步是什么？

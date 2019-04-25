@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749017"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>查看数据刷新历史记录 (PowerPivot for SharePoint)
   数据刷新历史记录用于记录 Excel 工作簿中 PowerPivot 数据的所有数据刷新活动。 将根据您提供的计划，对 SharePoint 场中的 Analysis Services 服务器实例执行数据刷新操作。 默认情况下，数据刷新历史记录将保留一年时间。 但是，场管理员可以为使用情况和事件历史记录指定不同的保持策略，以确定将数据刷新记录保留多长时间。  
@@ -56,7 +56,7 @@ ms.locfileid: "48118967"
  将出现历史记录页，其中显示当前 Excel 工作簿中 PowerPivot 数据的所有刷新活动的完整记录。  
   
 ##  <a name="viewITOps"></a> 查看所有工作簿的数据刷新历史记录  
- 通过使用管理中心中的 PowerPivot 管理面板，场管理员和服务应用程序管理员可全面了解所有 PowerPivot 工作簿的数据刷新历史记录和状态。 有关详细信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
+ 通过使用管理中心中的 PowerPivot 管理面板，场管理员和服务应用程序管理员可全面了解所有 PowerPivot 工作簿的数据刷新历史记录和状态。 有关详细信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
 ##  <a name="pageelements"></a> 使用历史记录信息  
  数据刷新历史记录页提供有关每个刷新操作的详细信息。 可以使用此页上的信息来确认是否发生了刷新或确定失败原因。  

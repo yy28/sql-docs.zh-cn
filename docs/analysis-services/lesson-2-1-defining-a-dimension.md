@@ -1,5 +1,5 @@
 ---
-title: 定义维度 |Microsoft 文档
+title: 定义维度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467921"
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>课程 2-1-定义维度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/10/2018
   
     -   **Calendar Semester**  
   
-8.  将“完整日期备用键”属性的“属性类型”列的设置从“常规”更改为“日期”。 为此，请单击“属性类型”列中的“常规”。 然后单击箭头展开选项。 接下来，单击“日期” > “日历” > “日期”。 单击 **“确定”**。 重复这些步骤，更改属性的属性类型，具体如下所示：  
+8.  将“完整日期备用键”属性的“属性类型”列的设置从“常规”更改为“日期”。 为此，请单击“属性类型”列中的“常规”。 然后单击箭头展开选项。 接下来，单击“日期” > “日历” > “日期”。 单击“确定” 。 重复这些步骤，更改属性的属性类型，具体如下所示：  
   
     -   “英文月份名称”更改为“月份”  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义多维数据集](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [使用现有表创建维度](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [使用维度向导创建维度](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

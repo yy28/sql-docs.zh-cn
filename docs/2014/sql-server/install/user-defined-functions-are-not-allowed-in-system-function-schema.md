@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506212"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允许使用用户定义函数
   升级顾问检测到的未记录的用户所拥有的用户定义函数**system_function_schema**。 不能通过指定此用户创建用户定义的系统功能。 **System_function_schema**用户名不存在，并且这是与此名称关联的用户 ID (UID = 4) 保留供**sys**架构和被限制为仅供内部使用。  

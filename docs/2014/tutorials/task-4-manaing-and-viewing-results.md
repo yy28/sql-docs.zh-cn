@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745628"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>任务 4:管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  

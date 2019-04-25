@@ -42,11 +42,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770698"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -70,7 +70,7 @@ ms.locfileid: "58387645"
 |[派生列](#derived)|[透视](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>不包含自定义属性的转换  
- 以下转换包含在组件、 输入或输出数据量没有自定义属性：[合并转换](merge-transformation.md)，[多播的转换](multicast-transformation.md)，和[Union All 转换](union-all-transformation.md)。 这些转换仅使用对所有数据流组件均通用的属性。  
+ 以下转换不包含组件级、输入级或输出级自定义属性：[合并转换](merge-transformation.md)、[多播转换](multicast-transformation.md)和 [Union All 转换](union-all-transformation.md)。 这些转换仅使用对所有数据流组件均通用的属性。  
   
 ##  <a name="aggregate"></a> 聚合转换自定义属性  
  聚合转换既包含自定义属性，又包含对所有数据流组件通用的属性。  
@@ -183,7 +183,7 @@ ms.locfileid: "58387645"
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 `False`。 有关详细信息，请参阅 [Fast Parse](../../fast-parse.md) 和 [Standard Parse](../../standard-parse.md)。 .<br /><br /> 注意：此属性不是在可用**数据转换编辑器**，但可以通过使用设置**高级编辑器**。|  
+|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值为 `False`。 有关详细信息，请参阅 [Fast Parse](../../fast-parse.md) 和 [Standard Parse](../../standard-parse.md)。 .<br /><br /> 注意：此属性在数据转换编辑器中未提供，但可通过“高级编辑器”进行设置。|  
 |SourceInputColumnLineageId|Integer|作为输出列的源的输入列的 `LineageID`。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  
@@ -261,8 +261,8 @@ ms.locfileid: "58387645"
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|转换所使用的标记分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左括号 (()、右括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)、数字符号 (#)、星号 (*)、脱字号 (^) 和百分号 (%)。|  
-|Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 `True` 主要用于调试目的。 此属性的默认值为 `False`。<br /><br /> 注意：此属性不是在可用**模糊分组转换编辑器**，但可以通过使用设置**高级编辑器**。|  
-|MaxMemoryUsage|Integer|转换所使用的最大内存量。 此属性的默认值为 **0**，该值将启用动态内存使用。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性不是在可用**模糊分组转换编辑器**，但可以通过使用设置**高级编辑器**。|  
+|Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 `True` 主要用于调试目的。 此属性的默认值为 `False`。<br /><br /> 注意：此属性在模糊分组转换编辑器中未提供，但可通过“高级编辑器”进行设置。|  
+|MaxMemoryUsage|Integer|转换所使用的最大内存量。 此属性的默认值为 **0**，该值将启用动态内存使用。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性在模糊分组转换编辑器中未提供，但可通过“高级编辑器”进行设置。|  
 |MinSimilarity|双精度|转换用来标识重复值的相似性阈值，以 0 和 1 之间的值表示。  此属性的默认值为 0.8。|  
   
  下表介绍模糊分组转换的输入列的自定义属性。 所有属性均可读/写。  
@@ -296,11 +296,11 @@ ms.locfileid: "58387645"
 |CopyReferenceTable|Boolean|指定是否应为模糊查找索引结构和后续查找生成引用表副本。 此属性的默认值为 `True`。|  
 |Delimiters|String|转换用来标记列值的分隔符。 默认分隔符包括以下字符：空格 ( )、逗号 (,)、句点 (.)、分号 (;)、冒号 (:)、连字符 (-)、双直引号 (")、单直引号 (')、与号 (&)、斜杠 (/)、反斜杠 (\\)、at 符号 (@)、感叹号 (!)、问号 (?)、左小括号 (()、右小括号 ())、小于号 (\<)、大于号 (>)、左方括号 ([)、右方括号 (])、左大括号 ({)、右大括号 (})、竖线 (&#124;)。 数字符号 (#)、星号 (*)、插入符号 (^) 和百分号 (%)。|  
 |DropExistingMatchIndex|Boolean|一个值，用于指定当 MatchIndexOptions 未设置为 ReuseExistingIndex 时是否删除 MatchIndexName 中指定的匹配索引。 此属性的默认值为 `True`。|  
-|Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 `True` 主要用于调试目的。 此属性的默认值为 `False`。<br /><br /> 注意：此属性不是在可用**模糊查找转换编辑器**，但可以通过使用设置**高级编辑器**。|  
+|Exhaustive|Boolean|该值用于指定是否将每个输入记录与所有其他输入记录进行比较。 值 `True` 主要用于调试目的。 此属性的默认值为 `False`。<br /><br /> 注意：此属性在模糊查找转换编辑器中未提供，但可通过“高级编辑器”进行设置。|  
 |MatchIndexName|String|匹配索引的名称。 匹配索引是转换在其中创建和保存所使用的索引的表。 如果重复使用匹配索引，MatchIndexName 将指定要重复使用的索引。 MatchIndexName 必须是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符名称。 例如，如果名称包含空格，则必须用方括号将名称括起来。|  
 |MatchIndexOptions|Integer（枚举）|该值用于指定转换如何管理匹配索引。 此属性可以具有下列值之一：<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|查找表的最大缓存大小。 此属性的默认值为 **0**，表示缓存没有大小限制。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性不是在可用**模糊查找转换编辑器**，但可以通过使用设置**高级编辑器**。|  
-|MaxOutputMatchesPerInput|Integer|转换可以为每个输入行返回的最大匹配数。 此属性的默认值为 **1**。<br /><br /> 注意：大于 100 只能通过使用指定的值**高级编辑器**。|  
+|MaxMemoryUsage|Integer|查找表的最大缓存大小。 此属性的默认值为 **0**，表示缓存没有大小限制。<br /><br /> 此属性的值可以使用属性表达式来指定。<br /><br /> 注意：此属性在模糊查找转换编辑器中未提供，但可通过“高级编辑器”进行设置。|  
+|MaxOutputMatchesPerInput|Integer|转换可以为每个输入行返回的最大匹配数。 此属性的默认值为 **1**。<br /><br /> 注意：大于 100 的值只能使用“高级编辑器”来指定。|  
 |MinSimilarity|Integer|转换在组件级别使用的相似性阈值，指定为 0 和 1 之间的值。 只有大于阈值的行才能作为匹配值。|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|查找表的名称。 该名称必须是有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 标识符名称。 例如，如果名称包含空格，则必须用方括号将名称括起来。|  
@@ -523,7 +523,7 @@ ms.locfileid: "58387645"
   
 |属性|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer（枚举）|列的更新类型。 这些值有：**变化的属性**(2)**固定属性**(4)，**历史属性**(3)，**密钥**(1) 和**其他**(0)。|  
+|ColumnType|Integer（枚举）|列的更新类型。 这些值有：“变化的属性”(2)、“固定的属性”(4)、“历史属性”(3)、“键”(1) 和“其他”(0)。|  
   
  渐变维度转换的输入、输出和输出列不包含自定义属性。  
   
@@ -569,7 +569,7 @@ ms.locfileid: "58387645"
 |NeedRefenceData|Boolean|该值用于指定转换是否使用引用表中存储的排除字词列表。 此属性的默认值为 `False`。|  
 |OutTermColumn|String|包含排除字词的列的名称。|  
 |OutTermTable|String|包含具有排除字词的列的表的名称。|  
-|ScoreType|Integer|该值用于指定与字词关联的计分类型。 有效值为 0 和 1：0 表示频率，1 表示 TFIDF 分数。 TFIDF 分数是字词频率和文档频率，定义为产品：TFIDF a Term T = (frequency of T) \* log ((#rows 输入中的) / (#rows having T))。 此属性的默认值为 **0**。|  
+|ScoreType|Integer|该值用于指定与字词关联的计分类型。 有效值为 0 和 1：0 表示频率，1 表示 TFIDF 分数。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：字词 T 的 TFIDF = (T 的频率) \* log( (输入中的行数) / (具有 T 的行数) )。 此属性的默认值为 **0**。|  
 |WordOrPhrase|Integer|该值用于指定字词类型。 有效值包括 0、1 和 2：0 表示仅词；1 表示仅名词短语；2 表示词和名称短语。 此属性的默认值为 **0**。|  
   
  字词提取转换的输入、输入列、输出和输出列不包含自定义属性。  

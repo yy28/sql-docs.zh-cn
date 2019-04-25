@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628902"
 ---
 # <a name="reserved-keywords"></a>保留关键字
 保留了下列关键字以用于 ODBC 函数调用。 这些单词不限定最小 SQL 语法;但是，若要确保与支持核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**SQL_ODBC_KEYWORDS 值包含逗号分隔这些关键字的列表。  
@@ -89,7 +89,7 @@ ms.locfileid: "47626335"
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|删除|SECOND|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -122,7 +122,7 @@ ms.locfileid: "47626335"
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
-|GO|UNION|  
+|前往|UNION|  
 |GOTO|UNIQUE|  
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  

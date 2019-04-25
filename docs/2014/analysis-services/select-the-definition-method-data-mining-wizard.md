@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747140"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>选择定义方法（数据挖掘向导）
   可以使用 **“选择定义方法”** 页选择用于创建新挖掘模型的来源。 因为基于多维数据集的挖掘结构与基于关系数据源的挖掘结构所要求的构造步骤不同，所以根据您的选择情况，您使用该向导时所经过的步骤也会不同。  
   
- **有关详细信息，请参阅**[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **有关详细信息：**[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **从现有关系数据库或数据仓库**  

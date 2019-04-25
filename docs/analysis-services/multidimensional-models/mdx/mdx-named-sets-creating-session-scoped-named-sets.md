@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域的命名集 (MDX) |Microsoft 文档
+title: 创建会话作用域的命名集 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739987"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>MDX 命名集的创建会话作用域的命名集
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>MDX 命名集-创建会话作用域的命名集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  
   
@@ -49,7 +49,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [创建查询作用域的命名集 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>请参阅  
+ [创建查询作用域的命名集 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

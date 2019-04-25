@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746131"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>指定对象计数（基于使用情况的优化向导）
   可以使用 **“指定对象计数”** 页自动计算多维数据集中的对象计数，或者手动输入估计的计数。 基于使用情况的优化向导使用对象计数来估计存储要求。  

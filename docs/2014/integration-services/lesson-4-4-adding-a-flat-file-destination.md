@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767369"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
   Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  
@@ -46,7 +46,7 @@ ms.locfileid: "58384815"
   
 11. 在“选项”窗格中，单击“列”。  
   
-     请注意，除了源数据文件中的列之外，还存在三个新列：ErrorCode、ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
+     请注意，除了源数据文件中的列，三个新列是存在：ErrorCode、 ErrorColumn 和 ErrorDescription。 这三列由 Lookup Currency Key 转换的错误输出和获取错误说明转换中的脚本生成，可用于排查失败行的原因。  
   
 12. 单击“确定” 。  
   

@@ -17,94 +17,94 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636102"
 ---
 # <a name="writing-odbc-3x-drivers"></a>编写 ODBC 3.x 驱动程序
 下表显示了在 ODBC 3 函数支持。*x*驱动程序和 ODBC 应用程序，以及针对 ODBC 3 调用函数时执行由驱动程序管理器中的映射。*x*驱动程序。  
   
-|函数|是否支持<br /><br /> 通过<br /><br /> ODBC 3。*x*<br /><br /> 驱动程序？|是否支持<br /><br /> 通过<br /><br /> ODBC 3。*x*<br /><br /> 应用程序？|映射的/受支持<br /><br /> 通过 ODBC 3 中。*x*<br /><br /> 为驱动程序管理器<br /><br /> ODBC 3。*x*驱动程序？|  
+|函数|支持<br /><br /> 通过<br /><br /> ODBC 3.*x*<br /><br /> 驱动程序？|支持<br /><br /> 通过<br /><br /> ODBC 3.*x*<br /><br /> 应用程序？|映射的/受支持<br /><br /> 通过 ODBC 3 中。*x*<br /><br /> 为驱动程序管理器<br /><br /> ODBC 3。*x*驱动程序？|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|否|没有 [1]|用户帐户控制|  
-|**SQLAllocEnv**|否|没有 [1]|用户帐户控制|  
-|**SQLAllocHandle**|用户帐户控制|是|否|  
-|**SQLAllocStmt**|否|没有 [1]|用户帐户控制|  
-|**SQLBindCol**|用户帐户控制|是|否|  
-|**SQLBindParam**|否|是 [2]|用户帐户控制|  
-|**SQLBindParameter**|用户帐户控制|是|否|  
-|**SQLBrowseConnect**|用户帐户控制|是|否|  
-|**SQLBulkOperations**|用户帐户控制|是|否|  
-|**SQLCancel**|用户帐户控制|是|否|  
-|**SQLCloseCursor**|用户帐户控制|是|否|  
-|**SQLColAttribute**|用户帐户控制|是|否|  
-|**SQLColAttributes**|没有 [3]|否|用户帐户控制|  
-|**SQLColumnPrivileges**|用户帐户控制|是|否|  
-|**SQLColumns**|用户帐户控制|是|否|  
-|**SQLConnect**|用户帐户控制|是|否|  
-|**SQLCopyDesc**|用户帐户控制|用户帐户控制|是 [4]|  
-|**SQLDataSources**|否|是|用户帐户控制|  
-|**SQLDescribeCol**|用户帐户控制|是|否|  
-|**SQLDescribeParam**|用户帐户控制|是|否|  
-|**SQLDisconnect**|用户帐户控制|是|否|  
-|**SQLDriverConnect**|用户帐户控制|是|否|  
-|**SQLDrivers**|否|是|用户帐户控制|  
-|**SQLEndTran**|用户帐户控制|是|否|  
-|**SQLError**|否|没有 [1]|用户帐户控制|  
-|**SQLExecDirect**|用户帐户控制|是|否|  
-|**SQLExecute**|用户帐户控制|是|否|  
-|**SQLExtendedFetch**|用户帐户控制|否|否|  
-|**SQLFetch**|用户帐户控制|是|否|  
-|**SQLFetchScroll**|用户帐户控制|是|否|  
-|**SQLForeignKeys**|用户帐户控制|是|否|  
-|**SQLFreeConnect**|否|是 [1]|用户帐户控制|  
-|**SQLFreeEnv**|否|是 [1]|用户帐户控制|  
-|**SQLFreeHandle**|用户帐户控制|是|否|  
-|**SQLFreeStmt**|用户帐户控制|是|否|  
-|**SQLGetConnectAttr**|用户帐户控制|是|否|  
-|**SQLGetConnectOption**|没有 [5]|没有 [1]|用户帐户控制|  
-|**SQLGetCursorName**|用户帐户控制|是|否|  
-|**SQLGetData**|用户帐户控制|是|否|  
-|**SQLGetDescField**|用户帐户控制|是|否|  
-|**SQLGetDescRec**|用户帐户控制|是|否|  
-|**SQLGetDiagField**|用户帐户控制|是|否|  
-|**SQLGetDiagRec**|用户帐户控制|是|否|  
-|**SQLGetEnvAttr**|用户帐户控制|是|否|  
-|**SQLGetFunctions**|没有 [6]|用户帐户控制|用户帐户控制|  
-|**SQLGetInfo**|用户帐户控制|是|否|  
-|**SQLGetStmtAttr**|用户帐户控制|是|否|  
-|**SQLGetStmtOption**|没有 [5]|没有 [1]|用户帐户控制|  
-|**SQLGetTypeInfo**|用户帐户控制|是|否|  
-|**SQLMoreResults**|用户帐户控制|是|否|  
-|**SQLNativeSql**|用户帐户控制|是|否|  
-|**SQLNumParams**|用户帐户控制|是|否|  
-|**SQLNumResultCols**|用户帐户控制|是|否|  
-|**SQLParamData**|用户帐户控制|是|否|  
-|**SQLParamOptions**|否|否|用户帐户控制|  
-|**SQLPrepare**|用户帐户控制|是|否|  
-|**SQLPrimaryKeys**|用户帐户控制|是|否|  
-|**SQLProcedureColumns**|用户帐户控制|是|否|  
-|**SQLProcedures**|用户帐户控制|是|否|  
-|**SQLPutData**|用户帐户控制|是|否|  
-|**SQLRowCount**|用户帐户控制|是|否|  
-|**SQLSetConnectAttr**|用户帐户控制|是|否|  
-|**SQLSetConnectOption**|没有 [5]|没有 [1]|用户帐户控制|  
-|**SQLSetCursorName**|用户帐户控制|是|否|  
-|**SQLSetDescField**|用户帐户控制|是|否|  
-|**SQLSetDescRec**|用户帐户控制|是|否|  
-|**SQLSetEnvAttr**|用户帐户控制|是|否|  
-|**SQLSetPos**|用户帐户控制|是|否|  
-|**SQLSetParam**|否|否|用户帐户控制|  
-|**SQLSetScrollOption**|用户帐户控制|是|否|  
-|**SQLSetStmtAttr**|用户帐户控制|是|否|  
-|**SQLSetStmtOption**|没有 [5]|没有 [1]|用户帐户控制|  
-|**SQLSpecialColumns**|用户帐户控制|是|否|  
-|**SQLStatistics**|用户帐户控制|是|否|  
-|**SQLTablePrivileges**|用户帐户控制|是|否|  
-|**SQLTables**|用户帐户控制|是|否|  
-|**SQLTransact**|否|没有 [1]|用户帐户控制|  
+|**SQLAllocConnect**|否|No[1]|是|  
+|**SQLAllocEnv**|否|No[1]|是|  
+|**SQLAllocHandle**|是|是|否|  
+|**SQLAllocStmt**|否|No[1]|是|  
+|**SQLBindCol**|是|是|否|  
+|**SQLBindParam**|否|是 [2]|是|  
+|**SQLBindParameter**|是|是|否|  
+|**SQLBrowseConnect**|是|是|否|  
+|**SQLBulkOperations**|是|是|否|  
+|**SQLCancel**|是|是|否|  
+|**SQLCloseCursor**|是|是|否|  
+|**SQLColAttribute**|是|是|否|  
+|**SQLColAttributes**|No[3]|否|是|  
+|**SQLColumnPrivileges**|是|是|否|  
+|**SQLColumns**|是|是|否|  
+|**SQLConnect**|是|是|否|  
+|**SQLCopyDesc**|是|是|是 [4]|  
+|**SQLDataSources**|否|是|是|  
+|**SQLDescribeCol**|是|是|否|  
+|**SQLDescribeParam**|是|是|否|  
+|**SQLDisconnect**|是|是|否|  
+|**SQLDriverConnect**|是|是|否|  
+|**SQLDrivers**|否|是|是|  
+|**SQLEndTran**|是|是|否|  
+|**SQLError**|否|No[1]|是|  
+|**SQLExecDirect**|是|是|否|  
+|**SQLExecute**|是|是|否|  
+|**SQLExtendedFetch**|是|否|否|  
+|**SQLFetch**|是|是|否|  
+|**SQLFetchScroll**|是|是|否|  
+|**SQLForeignKeys**|是|是|否|  
+|**SQLFreeConnect**|否|是 [1]|是|  
+|**SQLFreeEnv**|否|是 [1]|是|  
+|**SQLFreeHandle**|是|是|否|  
+|**SQLFreeStmt**|是|是|否|  
+|**SQLGetConnectAttr**|是|是|否|  
+|**SQLGetConnectOption**|No[5]|No[1]|是|  
+|**SQLGetCursorName**|是|是|否|  
+|**SQLGetData**|是|是|否|  
+|**SQLGetDescField**|是|是|否|  
+|**SQLGetDescRec**|是|是|否|  
+|**SQLGetDiagField**|是|是|否|  
+|**SQLGetDiagRec**|是|是|否|  
+|**SQLGetEnvAttr**|是|是|否|  
+|**SQLGetFunctions**|No[6]|是|是|  
+|**SQLGetInfo**|是|是|否|  
+|**SQLGetStmtAttr**|是|是|否|  
+|**SQLGetStmtOption**|No[5]|No[1]|是|  
+|**SQLGetTypeInfo**|是|是|否|  
+|**SQLMoreResults**|是|是|否|  
+|**SQLNativeSql**|是|是|否|  
+|**SQLNumParams**|是|是|否|  
+|**SQLNumResultCols**|是|是|否|  
+|**SQLParamData**|是|是|否|  
+|**SQLParamOptions**|否|否|是|  
+|**SQLPrepare**|是|是|否|  
+|**SQLPrimaryKeys**|是|是|否|  
+|**SQLProcedureColumns**|是|是|否|  
+|**SQLProcedures**|是|是|否|  
+|**SQLPutData**|是|是|否|  
+|**SQLRowCount**|是|是|否|  
+|**SQLSetConnectAttr**|是|是|否|  
+|**SQLSetConnectOption**|No[5]|No[1]|是|  
+|**SQLSetCursorName**|是|是|否|  
+|**SQLSetDescField**|是|是|否|  
+|**SQLSetDescRec**|是|是|否|  
+|**SQLSetEnvAttr**|是|是|否|  
+|**SQLSetPos**|是|是|否|  
+|**SQLSetParam**|否|否|是|  
+|**SQLSetScrollOption**|是|是|否|  
+|**SQLSetStmtAttr**|是|是|否|  
+|**SQLSetStmtOption**|No[5]|No[1]|是|  
+|**SQLSpecialColumns**|是|是|否|  
+|**SQLStatistics**|是|是|否|  
+|**SQLTablePrivileges**|是|是|否|  
+|**SQLTables**|是|是|否|  
+|**SQLTransact**|否|No[1]|是|  
   
  [1] 此函数已弃用在 ODBC 3。*x*。 ODBC 3。*x*应用程序不应使用此函数。 但是，Open Group 或符合 ISO CLI 的应用程序可以调用此函数。  
   

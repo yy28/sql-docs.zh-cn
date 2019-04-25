@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740707"
 ---
 # <a name="ragged-hierarchies"></a>不规则层次结构
   不规则层次结构是一种具有不规则级别数目的用户定义层次结构。 常见示例包括高级别经理将部门经理人员和非经理人员作为直接下属的组织图或是由“国家-地区-城市”组成的地理层次结构（其中某些城市没有父级“州”或“省”，如“华盛顿特区”、“梵蒂冈城”或“新德里”）。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632932"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>将模型添加到结构（Excel 数据挖掘外接程序）
   ![将模型添加到结构按钮](media/dmc-addmodel.gif "将模型添加到结构按钮")  
@@ -35,7 +35,7 @@ ms.locfileid: "52521041"
   
 2.  在中**选择结构**对话框框中，选择包含你想要使用，然后单击的数据的结构**下一步**。  
   
-     **提示**:如果您不能确定哪个挖掘结构包含所需的数据使用**文档模型**向导来查看列的数据的基本统计信息。  
+     **提示**：如果您不能确定哪个挖掘结构包含所需的数据使用**文档模型**向导来查看列的数据的基本统计信息。  
   
      如果找不到挖掘结构，检查当前正在使用的连接。 可能需要打开另一个服务器的连接。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52521041"
   
 ### <a name="related-options"></a>相关的选项  
   
-|选项|注释|  
+|Option|注释|  
 |------------|--------------|  
 |**选择结构或模型**对话框|选择一种现有挖掘结构作为生成新模型的基础。  选取的结构必须位于当前连接上。 如果没有，请更改使用的连接[连接到源数据&#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)工具。|  
 |**选择挖掘算法**对话框|数据挖掘算法列表的内容取决于所连接的服务器。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在 Standard 和 Enterprise 版本中提供不同的算法。 管理员还可能添加了自定义算法。<br /><br /> 如果看不到任何算法，请验证连接到的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。|  

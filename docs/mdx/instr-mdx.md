@@ -1,5 +1,5 @@
 ---
-title: Instr (MDX) |Microsoft 文档
+title: Instr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629095"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -38,12 +38,12 @@ InStr([start, ]searched_string, search_string[, compare])
  要对其进行搜索的字符串表达式。  
   
  *比较*  
- （可选）一个整数值。 始终忽略此参数。 定义用于与其他兼容性**Instr**其他语言中的函数。  
+ （可选）一个整数值。 始终忽略此参数。 定义与其他的兼容性**Instr**其他语言中的函数。  
   
 ## <a name="return-value"></a>返回值  
- 使用的起始位置的整数值*String2*中*String1*。  
+ 起始位置的整数值*String2*中*String1*。  
   
- 此外， **InStr**函数返回下表根据条件中列出的值：  
+ 此外， **InStr**函数将返回根据条件下表中列出的值：  
   
 |条件|返回值|  
 |---------------|------------------|  
@@ -54,13 +54,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |找不到 String2|零 (0)|  
 |start 大于 Len(String2)|零 (0)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!WARNING]  
->  **Instr**始终执行不区分大小写比较。  
+>  **Instr**始终执行不区分大小写的比较。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示使用**Instr**函数并显示不同导致方案。  
+ 下面的示例演示的使用情况**Instr**函数，并演示了不同的结果情形。  
   
 ```  
 with   
@@ -103,7 +103,7 @@ from [Adventure Works]
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  
 |searched string is null|未定义|  
-|search string is empty|@shouldalert|  
+|search string is empty|1|  
 |search string is empty start 10|10|  
 |search string is null|未定义|  
 |found from start 10|16|  

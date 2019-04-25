@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26981ad1cc1cfbf9b3a69cca49f9529c0b590b61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760817"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>使用层次结构方法查询层次结构表
   由于 HumanResources.EmployeeOrg 表已完全填充，此任务将说明如何使用某些分层方法来查询层次结构。  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630710"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。 必须按照 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话完全安全模式手动配置对话安全模式。 完全安全模式可以为在远程服务器之间发送的消息启用加密和解密功能。 虽然事件通知单向发送，但其他消息（例如错误）也会从相反的方向返回。  
@@ -28,11 +28,11 @@ ms.locfileid: "53359519"
 > [!IMPORTANT]  
 >  所有证书的创建都必须使用有效的开始日期和过期日期。  
   
- **第 1 步：建立 TCP 端口号和目标服务名称。**  
+ **步骤 1：建立 TCP 端口号和目标服务名称。**  
   
  建立源服务器和目标服务器接收消息所用的 TCP 端口。 同时，必须确定目标服务的名称。  
   
- **步骤 2:配置加密和证书共享数据库级身份验证。**  
+ **步骤 2：配置加密和证书共享数据库级身份验证。**  
   
  同时在源服务器和目标服务器中完成下列操作。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53359519"
 |在目标服务器可以访问的文件中[备份证书](/sql/t-sql/statements/backup-certificate-transact-sql) 。|将证书备份到可以由源服务器访问的文件。|  
 |[创建用户](/sql/t-sql/statements/create-user-transact-sql)，指定目标数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的目标数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的目标数据库证书。|创建用户，指定源数据库的用户和 WITHOUT LOGIN。 此用户将拥有要通过备份文件创建的源数据库证书。 用户不必映射到登录名，因为此用户的唯一目的是拥有在下面的步骤 3 中创建的源数据库证书。|  
   
- **步骤 3:共享证书并授予数据库级身份验证的权限。**  
+ **步骤 3：共享证书并授予数据库级身份验证的权限。**  
   
  同时在源服务器和目标服务器中完成下列操作。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "53359519"
 ||向源数据库用户[授予 SEND 权限](/sql/t-sql/statements/grant-transact-sql) ，此权限将针对目标服务。|  
 |向目标服务器提供源数据库的 Service Broker 标识符。 此标识符可以通过查询 **sys.databases** 目录视图的 [service_broker_guid](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列而获得。 对于服务器级事件通知，请使用 **msdb**的 Service Broker 标识符。|向源服务器提供目标数据库的 Service Broker 标识符。|  
   
- **步骤 4:创建路由并设置服务器级身份验证。**  
+ **步骤 4：创建路由并设置服务器级身份验证。**  
   
  同时在源服务器和目标服务器中完成下列操作。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53359519"
 |向目标验证器登录名[授予 CONNECT 权限](/sql/t-sql/statements/grant-transact-sql) ，此权限针对端点。|向源验证器登录名授予对端点的 CONNECT 权限。|  
 |[创建用户](/sql/t-sql/statements/create-user-transact-sql)，并指定目标验证器登录名。|创建用户，并指定源验证器登录名。|  
   
- **步骤 5:共享服务器级身份验证证书并创建事件通知。**  
+ **步骤 5：共享服务器级身份验证证书并创建事件通知。**  
   
  同时在源服务器和目标服务器中完成下列操作。  
   

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467277"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 块
   `BEGIN ATOMIC` 属于 ANSI SQL 标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在本机编译存储过程的顶级支持原子块。  
@@ -123,7 +123,7 @@ ORDER BY c1
 GO  
 ```  
   
- 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，将导致中止事务：10772、41301、41302、41305、41325、41332 和 41333。  
+ 以下特定于内存优化表的错误消息是注定事务终止的。 如果它们在原子块的作用域中发生，则它们将导致中止事务：10772、 41301、 41302、 41305、 41325、 41332 和 41333。  
   
 ## <a name="session-settings"></a>会话设置  
  在编译存储过程时原子块中的会话设置是固定的。 某些设置可使用 `BEGIN ATOMIC` 指定，而其他设置则始终固定为相同值。  

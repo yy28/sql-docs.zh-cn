@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740903"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>数据源受支持 (SSAS 多维)
   本主题介绍可以在多维模型中使用的数据源的类型。  
@@ -35,7 +35,7 @@ ms.locfileid: "53349744"
   
 |||||  
 |-|-|-|-|  
-|源|版本|文件类型|提供程序<sup>1</sup>|  
+|Source|版本|文件类型|提供程序<sup>1</sup>|  
 |Access 数据库|Microsoft Access 2007、2010、2013。|.accdb 或 .mdb|Microsoft Jet 4.0 OLE DB 访问接口|  
 |SQL Server 关系数据库<sup>5</sup>|Microsoft SQL Server 2005、 2008、 2008 R2、 2012、 2014年[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>，SQL Server 并行数据仓库 (PDW) <sup>3</sup>|（不适用）|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 访问接口<br /><br /> SQL Server Native 11.0 Client OLE DB 访问接口<br /><br /> 用于 SQL 客户端的 .NET Framework 数据访问接口|  
 |Oracle 关系数据库|Oracle 9i、10g、11g。|（不适用）|Oracle OLE DB 访问接口<br /><br /> 用于 Oracle 客户端的 .NET Framework 数据访问接口<br /><br /> 用于 SQL Server 的 .NET Framework 数据访问接口<br /><br /> MSDAORA OLE DB 访问接口<sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

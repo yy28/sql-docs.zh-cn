@@ -17,18 +17,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6764b729ffb2a917a03332d8472053e590d5f352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740617"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter 对象（SQLXML 托管类）
   此对象提供用于促进与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中的数据集进行交互的方法。 有关工作示例，请参阅[在.NET 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
  SqlXmlAdapter 对象支持以下方法：  
   
- void Fill (DataSet ds)  
+ void Fill(DataSet ds)  
  用从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 检索的 XML 数据填充 .NET Framework 中的数据集。  
   
  void Update (DataSet ds)  

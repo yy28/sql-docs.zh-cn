@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5951ff4222ba87af1a405b739d823e7702dda4da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640781"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合并成员临时表 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52806919"
 ##  <a name="TableColumns"></a> 表列  
  下表说明 Consolidated 临时表中每个字段的用途。  
   
-|列名|描述|  
+|列名|Description|  
 |-----------------|-----------------|  
 |**ID**|自动分配的标识符。 不要在此字段中输入值。 如果尚未处理此批次，则此字段为空。|  
 |**ImportType**<br /><br /> Required|确定临时数据与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中已存在的数据匹配时执行何种操作。<br /><br /> **0**：创建新成员。 使用临时数据替换现有的 MDS 数据，但是仅限临时数据不为 NULL 时。 忽略 NULL 值。 若要将属性值更改为 NULL，请使用 **~NULL~**。<br /><br /> **1**：仅创建新成员。 对现有 MDS 数据的任何更新都将失败。<br /><br /> **2**：创建新成员。 使用临时数据替换现有的 MDS 数据。 如果导入了 NULL 值，它们将覆盖现有的 MDS 值。<br /><br /> **3**：基于 Code 值停用成员。 维护所有属性、层次结构和集合成员身份以及事务，但是在 UI 中已无法使用。 如果成员用作另一个成员的基于域的属性值，则无法停用。<br /><br /> **4**：基于 Code 值永久删除成员。 永久删除所有属性、层次结构和集合成员身份以及事务。 如果成员用作另一个成员的基于域的属性值，则无法删除。|  
@@ -44,7 +44,7 @@ ms.locfileid: "52806919"
 |**NewCode**|仅当要更改成员代码时才使用。|  
 |\<属性名称>|实体中的每个属性对应的列。 对于 **ImportType** 为 **0** 或 **2**时使用它。 对于自由格式属性，请为该属性指定新的文本或字符串值。 对于基于域的属性，请为将要成为属性的成员指定代码。 对于链接属性，URL 必须以“https://”开头。<br /><br /> <br /><br /> 注意：不能暂存文件属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [查看暂存过程中出现的错误 (Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  

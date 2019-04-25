@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768693"
 ---
 # <a name="year-ssis-expression"></a>YEAR（SSIS 表达式）
   返回一个表示日期中的“年份”日期部分的整数。  
@@ -43,7 +43,7 @@ YEAR(date)
  日期文字必须显式转换为日期数据类型之一。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  若要验证日期文本显式转换为这些日期数据类型之一时，表达式失败：将 DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  在日期文本显式转换为以下日期数据类型之一时，表达式验证失败：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 YEAR 函数更为简要，但其等价于使用 DATEPART("Year", date) 函数。  
   

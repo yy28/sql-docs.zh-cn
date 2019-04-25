@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757324"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>分区和 DirectQuery 模式（SSAS 表格）
-  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅[分区（SSAS 表格）](partitions-ssas-tabular.md)。  
+  本节介绍了如何在 DirectQuery 模型中使用分区。 有关表格模型中分区的更多常规信息，请参阅 [分区（SSAS 表格）](partitions-ssas-tabular.md)。  
   
  有关如何更改的分区的使用或查看有关分区的信息的说明，请参阅[更改 DirectQuery 分区&#40;SSAS 表格&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48054039"
 |InMemory 以及 DirectQuery|允许处理分区|如果模型使用混合模式，则您应将相同的分区用于针对内存中的查询和针对 DirectQuery 数据源的查询。|  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;SSAS 表格&#41;](partitions-ssas-tabular.md)  
+ [分区（SSAS 表格）](partitions-ssas-tabular.md)  
   
   

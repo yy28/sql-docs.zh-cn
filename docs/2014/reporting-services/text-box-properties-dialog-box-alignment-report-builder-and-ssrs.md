@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631281"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>“文本框属性”对话框 -&gt;“对齐”（报表生成器和 SSRS）
   在 **“文本框属性”** 对话框中选择 **“对齐”** 可以在选定的单元或数据区域内按一定方式放置值。  

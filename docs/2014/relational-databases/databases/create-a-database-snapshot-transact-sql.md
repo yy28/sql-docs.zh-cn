@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762345"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支持创建数据库快照。  
@@ -55,7 +55,7 @@ ms.locfileid: "52768329"
   
 -   [最佳做法：限制数据库快照的数量](#Limiting_Number)  
   
--   [最佳做法：客户端连接到数据库快照](#Client_Connections)  
+-   [最佳做法：将客户端连接到数据库快照](#Client_Connections)  
   
 ####  <a name="Naming"></a> 最佳做法：命名数据库快照  
  创建数据库快照之前，考虑如何命名它们是非常重要的。 每个数据库快照都需要一个唯一的数据库名称。 为了便于管理，数据库快照的名称可以包含标识数据库的信息，例如：  
@@ -88,7 +88,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  如果想要还原到某个数据库快照，则需要从该数据库中删除所有其他快照。  
   
-####  <a name="Client_Connections"></a> 最佳做法：将客户端连接到数据库快照  
+####  <a name="Client_Connections"></a> 最佳做法：客户端连接到数据库快照  
  若要使用数据库快照，客户端需要知道它的位置。 正在创建或删除另一个数据库快照时，用户可以从一个数据库快照读取。 但是，如果用新快照替代现有快照，您需要将客户端重新定向到新快照。 用户可以通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]手动连接到数据库快照。 但是，若要支持生产环境，您应该创建一个编程解决方案，该方案透明地将报表编写客户端定向到数据库的最新数据库快照。  
   
 ###  <a name="Security"></a> 安全性  

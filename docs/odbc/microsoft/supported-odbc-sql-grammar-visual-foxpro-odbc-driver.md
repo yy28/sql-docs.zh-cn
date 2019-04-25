@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633768"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>支持的 ODBC SQL 语法（Visual FoxPro ODBC 驱动程序）
 Microsoft Visual FoxPro ODBC 驱动程序支持以下功能：  
@@ -44,19 +44,19 @@ Microsoft Visual FoxPro ODBC 驱动程序支持以下功能：
   
  除了支持 ODBC SQL 语法，Visual FoxPro ODBC 驱动程序支持以下 Visual FoxPro 命令的完整的本机 Visual FoxPro 语言语法：  
   
- [更改表](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
  [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [删除标记](../../odbc/microsoft/delete-tag-command.md)  
+ [DELETE TAG](../../odbc/microsoft/delete-tag-command.md)  
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
  [INDEX](../../odbc/microsoft/index-command.md)  
   
- [Insert](../../odbc/microsoft/insert-sql-command.md)  
+ [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   
  [SELECT](../../odbc/microsoft/select-sql-command.md)  
   

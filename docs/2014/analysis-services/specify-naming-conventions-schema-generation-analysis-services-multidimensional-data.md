@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746270"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名约定（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“指定命名约定”** 页，定义在创建架构对象时架构生成向导使用的命名约定。  
@@ -27,9 +27,9 @@ ms.locfileid: "48226247"
  **选项**  
  指定向导所使用的命名约定。 下表对您可以指定的选项进行了说明：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
-|**分隔符**|指定用于分隔对象名称中的字词的字符。 在 **“值”** 列中，选择 **“下划线”**、 **“空格”** 或 **“无”**。 默认值为 **“下划线”**。|  
+|**Separator**|指定用于分隔对象名称中的字词的字符。 在 **“值”** 列中，选择 **“下划线”**、 **“空格”** 或 **“无”**。 默认值为 **“下划线”**。|  
 |**主键列前缀**|指定每个主键列名称的前缀字符串。 默认值为 **PK**。|  
 |**外键列前缀**|指定每个外键列名称的前缀字符串。 默认值为 **FK**。|  
 |**属性名称后缀**|指定追加到每个属性列名称的字符串。 默认值为 **Name**。|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762334"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -30,7 +30,7 @@ ms.locfileid: "48101697"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|消息正文|数据库错误: 文件 'FILE' 不是有效的 FileStream 文件。|  
+|消息正文|数据库错误:文件 FILE 不是有效的 Filestream 文件。|  
   
 ## <a name="explanation"></a>解释  
  除一些特殊文件（如“filestream.hdr”）外，不应该直接在 Filestream 数据空间下找到文件。  

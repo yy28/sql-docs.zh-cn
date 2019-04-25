@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14724a5cc863074344cfbb02615f0ccff228f04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447665"
 ---
 # <a name="setting-descriptor-fields"></a>设置描述符字段
 若要修改的描述符字段，应用程序可以调用**SQLSetDescField**。 某些字段是只读的不能设置。 (请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。)  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626054"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>测试迁移的数据库对象 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 测试人员 （SSMA 测试程序） 的迁移助手自动测试的数据库对象转换和数据迁移所做的 SSMA。 在完成所有的 SSMA 迁移步骤后，使用 SSMA 测试人员验证已转换的对象相同的方式工作，所有数据已正确都传输。  
@@ -45,7 +45,7 @@ SSMA 测试人员执行选定的测试上 Oracle 和中的其匹配对象[!INCLU
 > [!NOTE]  
 > 注意 ！ 永远不会在生产系统上使用 SSMA 测试人员。 在测试人员执行期间修改的源架构和数据。 同时，原始状态的完整还原可能对于某些类型的测试的代码不可能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
 如果你想要使用 SSMA 测试人员，安装 SSMA Oracle 扩展包**安装的测试人员数据库**选项已打开。  
   
 若要启用的生成的表数据比较，请设置**生成的行 ID 列**选项设为**是**架构转换开始之前。 SSMA 将执行期间向所有表中添加行 ID 列**转换架构**命令。  

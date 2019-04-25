@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637605"
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
   本主题说明了如何生成 XML 实例。  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 参数，或将其值设置为 0，则转换 xml DT 实例时不保留无关紧要的空格。 有关在将字符串数据转换为 xml DT 实例时如何使用 CONVERT 运算符及其 *style* 参数的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例如：将字符串值转换为类型化的 xml 并将其分配到的列  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例如：将字符串值转换为类型化的 xml 并将它分配给某列  
  下面的示例将包含 XML 片段的字符串变量转换`xml`数据类型，然后将其存储在`xml`类型列：  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例如：将字符串转换为类型化的 xml 并将其分配给一个变量  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例如：将字符串转换为类型化的 xml 并将其分配给某个变量  
  在以下示例中，字符串转换为`xml`类型并赋给的变量`xml`数据类型：  
   
 ```  

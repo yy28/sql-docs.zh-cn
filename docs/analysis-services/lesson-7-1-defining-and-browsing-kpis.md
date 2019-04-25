@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览 Kpi |Microsoft 文档
+title: 定义和浏览 Kpi |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469662"
 ---
-# <a name="lesson-7-1---defining-and-browsing-kpis"></a>课程 7-1-定义和浏览 Kpi
+# <a name="lesson-7-1---defining-and-browsing-kpis"></a>第 7-1 课-定义和浏览 Kpi
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：  
@@ -60,13 +60,13 @@ ms.locfileid: "34019274"
   
     下图显示了多维数据集设计器的“KPI”选项卡。  
   
-    ![Kpi 选项卡，多维数据集设计器](../analysis-services/media/l7-kpi-1.gif "Kpi 选项卡，多维数据集设计器")  
+    ![多维数据集设计器的 Kpi 选项卡](../analysis-services/media/l7-kpi-1.gif "Kpi 选项卡，多维数据集设计器")  
   
 2.  在“KPI”选项卡的工具栏上，单击“新建 KPI”按钮。  
   
     显示窗格中将出现空白 KPI 模板，如下图所示。  
   
-    ![在显示窗格中的空白 KPI 模板](../analysis-services/media/l7-kpi-2.gif "在显示窗格中的空白 KPI 模板")  
+    ![在显示窗格中的空白 KPI 模板](../analysis-services/media/l7-kpi-2.gif "显示窗格中的空白 KPI 模板")  
   
 3.  在“名称”框中键入 **Reseller Revenue**，然后选择“关联的度量值组”列表中的“分销商销售”。  
   
@@ -269,5 +269,5 @@ ms.locfileid: "34019274"
     将显示 2007 财年第 3 季度北美洲分销商自行车销售的毛利润率。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 8 课： 定义操作](../analysis-services/lesson-8-defining-actions.md)  
+[第 8 课：定义操作](../analysis-services/lesson-8-defining-actions.md)  
   

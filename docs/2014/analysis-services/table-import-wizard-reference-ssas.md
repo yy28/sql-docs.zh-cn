@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757792"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>表导入向导参考 (SSAS)
   本节提供有关 **“表导入向导”** 的帮助。 此向导可用于从各种数据源导入数据。 若要从模型设计器中访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
   
 -   [高级设置&#40;SSAS&#41;](advanced-settings-ssas.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48218174"
 -   [指定 SQL 或 MDX 查询&#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>请参阅  
- [导入数据&#40;SSAS 表格&#41;](import-data-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)  
   
   

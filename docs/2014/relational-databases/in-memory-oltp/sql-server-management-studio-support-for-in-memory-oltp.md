@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468186"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工具。 有关详细信息，请参阅 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
@@ -89,7 +89,7 @@ ms.locfileid: "48050047"
   
  对于数据库、表、存储过程、用户定义的表类型或索引对象，以下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 功能已得到更新或扩展，以便支持内存中 OLTP。  
   
--   对象资源管理器  
+-   “对象资源管理器”  
   
     -   上下文菜单  
   

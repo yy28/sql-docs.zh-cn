@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633129"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 语句限制
 Paradox 驱动程序更新的表，该表必须具有唯一索引 （Paradox 主键）。 当您使用 Paradox 驱动程序而无需实现 borland 公司数据库引擎时，不能更新 Paradox 表。  

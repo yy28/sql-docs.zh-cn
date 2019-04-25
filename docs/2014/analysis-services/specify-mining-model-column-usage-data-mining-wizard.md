@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746230"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>指定挖掘模型列用法（数据挖掘向导）
   可以使用 **“指定挖掘模型列用法”** 页，指定使用挖掘模型列的方式以及添加嵌套表。  
@@ -26,7 +26,7 @@ ms.locfileid: "48175627"
 > [!NOTE]  
 >  只有在向导的“选择定义方法”页上选择了“从现有多维数据集”之后，才会显示此页。  
   
- **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **表/列**  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465913"
 ---
 # <a name="sequence-of-status-records"></a>状态记录的序列
 如果返回了两个或多个状态记录，驱动程序管理器和驱动程序对其进行排序根据以下规则。 具有最高排名的记录是第一条记录。 记录 （驱动程序管理器、 驱动程序、 网关，等） 的源不被视为时排名记录。  

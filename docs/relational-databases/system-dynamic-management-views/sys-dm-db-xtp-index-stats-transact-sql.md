@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640415"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51674266"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|该索引所属对象的 ID。|  
-|xtp_object_id|**bigint**|该对象的当前版本相对应的内部 ID。<br /><br /> 请注意： 适用于[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|xtp_object_id|**bigint**|该对象的当前版本相对应的内部 ID。<br /><br /> 注意：适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
 |index_id|**bigint**|索引的 ID。 该 index_id 只在该对象中是唯一的。|  
 |scans_started|**bigint**|执行的内存中 OLTP 索引扫描的次数。 每次进行选择、插入、更新或删除时都需要进行索引扫描。|  
 |scans_retries|**bigint**|需要重试的索引扫描次数，|  
@@ -57,7 +57,7 @@ ms.locfileid: "51674266"
 |phantom_expired_rows_removed|**bigint**|仅限内部使用。|  
 |object_address|**varbinary(8)**|仅限内部使用。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对当前数据库拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

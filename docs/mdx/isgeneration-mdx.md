@@ -1,5 +1,5 @@
 ---
-title: IsGeneration (MDX) |Microsoft 文档
+title: IsGeneration (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a726470f89f2d3ea1677259e849735a09909a42d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629402"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 
@@ -35,8 +35,8 @@ IsGeneration(Member_Expression, Generation_Number)
  *Generation_Number*  
  指定对指定成员进行计算的代的数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- **IsGeneration**函数返回**true**如果指定的成员处于指定的生成编号。 否则，该函数返回**false**。 此外，如果指定的成员的计算结果为一个空的成员， **IsGeneration**函数返回**false**。  
+## <a name="remarks"></a>备注  
+ **IsGeneration**函数将返回**true**如果指定的成员在指定的生成编号。 否则，该函数返回**false**。 此外，如果指定的成员的计算结果为空成员，则**IsGeneration**函数将返回**false**。  
   
  为了创建代索引，叶成员的代索引为 0。 非叶成员的代索引的确定方式为：先从指定成员的所有子成员的并集中获取最高的代索引，然后向该索引添加 1。 由于非叶成员的代索引的确定方式，一个非叶成员可能会属于多个代。  
   
@@ -54,6 +54,6 @@ IsGeneration(Member_Expression, Generation_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

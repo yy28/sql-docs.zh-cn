@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472216"
 ---
 # <a name="determining-what-is-supported"></a>确定支持的功能
 **支持**方法用于确定是否指定**记录集**对象支持特定类型的功能。 它具有以下语法：  

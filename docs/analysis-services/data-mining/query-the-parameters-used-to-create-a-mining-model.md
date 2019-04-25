@@ -1,5 +1,5 @@
 ---
-title: 查询用于创建挖掘模型的参数 |Microsoft 文档
+title: 查询用于创建挖掘模型的参数 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469477"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查询用于创建挖掘模型的参数
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   挖掘模型的构成不仅受到定型事例的影响，还会受到在创建模型时设置的参数的影响。 因此，检索现有模型的参数设置以便更好地理解模型的行为可能会很有用。 在归档该模型的特定版本时检索参数可能也很有用。  
   
- 若要查找在创建模型时使用的参数，应针对某个挖掘模型架构行集创建查询。 作为一组可以轻松地查询通过使用 TRANSACT-SQL 语法的系统视图公开这些架构行集。 下面的过程介绍如何创建返回用于创建指定挖掘模型的参数的查询。  
+ 若要查找在创建模型时使用的参数，应针对某个挖掘模型架构行集创建查询。 这些架构行集将作为一组可通过使用 TRANSACT-SQL 语法轻松查询的系统视图公开。 下面的过程介绍如何创建返回用于创建指定挖掘模型的参数的查询。  
   
 ### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>打开架构行集查询的“查询”窗口  
   
@@ -63,7 +64,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘查询任务和操作指南](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

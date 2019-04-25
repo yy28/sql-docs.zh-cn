@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746309"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>指定属性顺序（商业智能向导）
   可以使用 **“指定属性顺序”** 页指定所选维度中的属性的排序依据属性和排序条件。  

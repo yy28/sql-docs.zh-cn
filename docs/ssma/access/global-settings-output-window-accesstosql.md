@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5ce9f08d0e06fbb9d65e6ff891ec1f6b58e1f061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759938"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>全局设置 （输出窗口） (AccessToSQL)
 使用**全局设置**对话框中指定的 SSMA 设置。  

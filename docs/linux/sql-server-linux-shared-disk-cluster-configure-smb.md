@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634149"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>配置 SMB-Linux 上的 SQL Server 的故障转移群集实例-
 
@@ -22,7 +22,7 @@ ms.locfileid: "52531997"
 
 本文介绍如何在 Linux 上配置故障转移群集实例 (FCI) 的 SMB 存储。 
  
-在非 Windows 世界中，SMB 通常称为作为通用 Internet 文件系统 (CIFS) 共享和通过 Samba 实现。 在 Windows 世界中，访问 SMB 共享进行这种方式：\\SERVERNAME\SHARENAME。 对于基于 Linux 的 SQL Server 安装，必须为文件夹装载 SMB 共享。
+在非 Windows 世界中，SMB 通常称为作为通用 Internet 文件系统 (CIFS) 共享和通过 Samba 实现。 在 Windows 世界中，访问 SMB 共享进行这种方式：\\SERVERNAME\SHARENAME. 对于基于 Linux 的 SQL Server 安装，必须为文件夹装载 SMB 共享。
 
 ## <a name="important-source-and-server-information"></a>源服务器和服务器的重要信息
 
@@ -31,7 +31,7 @@ ms.locfileid: "52531997"
 - SMB 共享应具备高可用性。
 - 必须将安全性设置在 SMB 共享上正常运行。 下面是共享的从 /etc/samba/smb.conf，示例 SQLData1 所在的名称。
 
-![05 smbsource][1]
+![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 

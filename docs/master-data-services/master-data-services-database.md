@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465522"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 数据库
 
@@ -47,7 +47,7 @@ ms.locfileid: "52794829"
   
 -   [临时过程错误 (Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [数据库对象安全性 (Master Data Services)](../master-data-services/database-object-security-master-data-services.md)   
  [数据库登录名、用户和角色 &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  

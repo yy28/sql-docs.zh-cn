@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473178"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他复制升级问题
   本主题涵盖了许多未由升级顾问报告的升级问题。  
@@ -50,7 +50,7 @@ ms.locfileid: "48200727"
   
 -   所有 ActiveX 控件都标记为对脚本编写和初始化不安全。  
   
--   已经删除了快照 ActiveX 控件。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或者使用复制存储过程以编程方式创建和管理快照。 有关详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 联机丛书中的“如何创建和应用初始快照 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”和“如何创建初始快照（复制 Transact-SQL 编程）”主题。  
+-   已经删除了快照 ActiveX 控件。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或者使用复制存储过程以编程方式创建和管理快照。 有关详细信息，请参阅主题"如何：创建并应用初始快照 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])"和"如何：创建初始快照 （复制 TRANSACT-SQL 编程）"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 -   分发 ActiveX 控件和合并 ActiveX 控件已废止。 对于使用复制管理对象 (RMO) 的托管代码应用程序提供了类似功能。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“同步订阅（RMO 编程）”。  
   

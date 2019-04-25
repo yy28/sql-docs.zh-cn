@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771023"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -29,16 +29,16 @@ ms.locfileid: "58379227"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 加载选项  
  ODBC 目标可以使用两个访问加载模块之一。 在 [ODBC 源编辑器（“连接管理器”页）](../odbc-source-editor-connection-manager-page.md)中设置模式。 这两种模式是：  
   
--   **批处理**:在此模式下 ODBC 目标将尝试使用最高效的插入方法基于发现的 ODBC 访问接口功能。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
+-   **批处理**：在此模式中，ODBC 目标将基于发现的 ODBC 访问接口功能尝试使用最高效的插入方法。 对于大多数现今的 ODBC 访问接口，这意味着准备具有参数的 INSERT 语句，然后使用按行数组参数绑定（其中，数组大小由 **BatchSize** 属性控制）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
   
--   **按行**:在此模式下，ODBC 目标准备具有参数，并使用的 INSERT 语句**SQL 执行**来一次插入行。  
+-   **逐行**：在此模式中，ODBC 目标准备具有参数的 INSERT 语句并使用“SQL 执行”来一次一行地插入行。  
   
 ## <a name="error-handling"></a>错误处理  
  ODBC 目标有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**:与当前错误相对应的编号。 有关错误的列表，请参阅源数据库的文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
+-   **错误代码**：与当前错误相对应的编号。 有关错误的列表，请参阅源数据库的文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
   
--   **错误列**:导致错误 （针对转换错误） 的源列。  
+-   **错误列**：导致错误（针对转换错误）的源列。  
   
 -   标准的输出数据列。  
   

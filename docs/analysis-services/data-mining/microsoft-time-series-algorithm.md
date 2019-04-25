@@ -1,5 +1,5 @@
 ---
-title: Microsoft 时序算法 |Microsoft 文档
+title: Microsoft 时序算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758060"
 ---
-# <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series Algorithm
+# <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法提供了一些针对连续值（例如一段时间内的产品销售额）预测进行了优化的多种算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34018534"
   
  源数据和预测数据的组合称为“序列 ”。  
   
- ![举例说明了时间序列](../../analysis-services/data-mining/media/time-series.gif "时序的示例")  
+ ![时间序列的示例](../../analysis-services/data-mining/media/time-series.gif "的时间序列示例")  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的一个重要功能就是可以执行交叉预测。 如果用两个单独但相关的序列为该算法定型，则可以使用生成的模型来根据一个序列的行为预测另一个序列的结果。 例如，一个产品的实际销售额可能会影响另一个产品的预测销售额。  在创建可应用于多个序列的通用模型时，交叉预测也很有用。 例如，由于序列缺少高质量的数据，造成对某一特定区域的预测不稳定。  您可以根据所有四个区域的平均情况来为通用模型定型，然后将该模型应用到各个序列，以便为每个区域产生更稳定的预测。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "34018534"
   
  在这两个示例中，您可以预测每个产品新的未来销售额和数量。 不能预测产品或时间的新值。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：具有表示为列值的序列的时序数据集  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：表示列的值作为序列与时序数据集  
  该示例使用下表中的输入事例：  
   
-|TimeID|Product|Sales|数据量|  
+|TimeID|产品|Sales|数据量|  
 |------------|-------------|-----------|------------|  
-|1/2001|指向|1000|600|  
-|2/2001|指向|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018534"
   
  Sales 列说明指定产品一天的毛利润，Volume 列说明仓库中存放的指定产品数量。 这两列包含用于为模型定型的数据。 Sales 和 Volume 都可以为 Product 列中的各个序列的可预测属性。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：各序列位于单独列中的时序数据集  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：在单独的列中每个序列与时序数据集  
  尽管该示例使用的输入数据与第一个示例基本相同，但输入数据的结构不同，如下表所示：  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018534"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这将创建一个包含以下四个可预测列的时序模型：A_Sales、A_Volume、B_Sales 和 B_Volume。  
+ 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这会创建将包含四个可预测列的时序模型：A_Sales、 A_Volume、 B_Sales 和 B_Volume。  
   
  此外，由于您已将产品分成不同的列，因此您不需要指定附加的序列键列。 该模型中的所有列都是事例序列列或可预测列。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34018534"
   
 -   服务器使用的 64 位操作系统不同，时序模型作出的预测也可能不同（有时差异会很大）。 出现这些差异的原因是基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的系统表示和处理浮点算术数字的方式与基于 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的系统处理这些计算的方式不同。 由于预测结果可能是特定于操作系统的，因此建议您在评估模型时使用与将用于生产的操作系统相同的操作系统。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
@@ -143,11 +143,11 @@ ms.locfileid: "34018534"
   
 -   支持钻取。  
   
-## <a name="see-also"></a>另请参阅  
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 时序查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [时间时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [时序模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型查询示例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

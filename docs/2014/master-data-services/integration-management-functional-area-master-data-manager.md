@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765100"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>集成管理功能区域（主数据管理器）
   在“集成管理”功能区域中，管理员可以从临时表导入数据，并且创建用于订阅系统的订阅视图。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  

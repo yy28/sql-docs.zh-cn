@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466221"
 ---
 # <a name="create-partitions"></a>创建分区
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685694"
 
 在本课程中，你创建分区来将 FactInternetSales 表划分为较小的逻辑部分，可以处理 （刷新） 独立于其他分区。 默认情况下，在模型中包括的每个表具有一个分区，其中包括所有表的列和行。 对于 FactInternetSales 表中，我们想要将数据划分按年份;为每个表的五年的一个分区。 然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区](../tabular-models/partitions-ssas-tabular.md)。 
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 

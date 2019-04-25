@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468493"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
   通过 `IRow` 接口可以直接访问结果集中某一行的列。 因而，`IRow` 是一种从具有一行的结果集中检索列的有效方法。  
@@ -48,7 +48,7 @@ ms.locfileid: "53372959"
   
 -   如何两次访问某列 - 第一次获取实际列宽，稍后访问实际数据。  
   
- 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns 以检索实际数据。 IA64 平台不支持此示例。  
+ 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，调用 IRow-> GetColumns 返回仅实际列长度。 在此情况下，-> IRow GetColumns 可以再次调用以检索实际数据对同一列。 IA64 平台不支持此示例。  
   
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   

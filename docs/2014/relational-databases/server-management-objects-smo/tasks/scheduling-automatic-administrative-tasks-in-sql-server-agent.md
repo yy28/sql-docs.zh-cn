@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519222"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>在 SQL Server 代理中计划自动管理任务
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理由下列对象表示：  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>在 Visual Basic 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 Visual Basic 关键字。  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>在 Visual C# 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>在 PowerShell 中创建警报  
  此代码示例将创建由性能条件触发的警报。 该条件必须以特定格式提供：  
   
- **ObjectName |CounterName |实例 |ComparisionOp |CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  对于警报通知，操作员是必需的。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 类型需要方括号，因为 `operator` 是一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 关键字。  
   

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740727"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
   使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 `Sum`。 度量值的值的总和将根据活动的层次结构的级别而异。  
   
  在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括`Sum`， `Min`， `Max`， `Count`，**非重复计数**，以及多个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)。  
   
- 对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是`Sum`，假设源列包含数字数据。 `Sum` 分配而不考虑源列的数据类型。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 `Sum` 的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
+ 对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是 `Sum`，假设源列包含数字数据。 在不考虑源列的数据类型的情况下分配 `Sum`。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 `Sum` 的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
   
  可在多维数据集定义之一中分配或更改聚合方法，方式为通过 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]，或通过 MDX。 有关详细说明，请参阅[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)或[聚合 (MDX)](/sql/mdx/aggregate-mdx)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48199538"
 |`Max`|半累加性|检索所有子成员的最高值。|  
 |`DistinctCount`|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) 。|  
 |`None`|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
-|`ByAccount`|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，视为`None`聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](database-dimensions-finance-account-of-parent-child-type.md)。|  
+|`ByAccount`|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，则视为 `None` 聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](database-dimensions-finance-account-of-parent-child-type.md)。|  
 |`AverageOfChildren`|半累加性|计算所有非空子成员的平均值。|  
 |`FirstChild`|半累加性|检索第一个子成员的值。|  
 |`LastChild`|半累加性|检索最后一个子成员的值。|  
@@ -69,7 +69,7 @@ ms.locfileid: "48199538"
   
 ## <a name="see-also"></a>请参阅  
  [度量值和度量值组](measures-and-measure-groups.md)   
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [定义半累加性行为](define-semiadditive-behavior.md)  
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)   
+ [Define Semiadditive Behavior](define-semiadditive-behavior.md)  
   
   

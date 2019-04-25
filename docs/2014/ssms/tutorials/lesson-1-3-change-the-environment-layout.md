@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634265"
 ---
 # <a name="change-the-environment-layout"></a>更改环境布局
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的组件会争夺屏幕空间。 为了腾出更多空间，可以关闭、隐藏或移动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 组件。 本页的做法是将组件移动到不同的位置。  

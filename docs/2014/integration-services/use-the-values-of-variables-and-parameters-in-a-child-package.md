@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766100"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子包中使用变量和参数的值
   此过程介绍如何创建使用父变量配置类型的包配置。 通过此配置类型，从父包运行的子包可以访问父包中的变量。  

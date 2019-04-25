@@ -49,11 +49,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635498"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>算法参数（SQL Server 数据挖掘外接程序）
   使用 Excel 表分析工具执行数据挖掘时，无需配置数据挖掘算法或参数；每一种工具都将对数据进行分析并自动选择最佳参数。 但是，如果您要修改模型，或要从头开始创建挖掘模型，可以使用 Excel 数据挖掘客户端提供的多种选项进行自定义。  
@@ -83,9 +83,9 @@ ms.locfileid: "52409174"
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|指定隐藏神经元相对于输入和输出神经元的比率。 以下公式可确定隐藏层中神经元的初始数目：<br /><br /> HIDDEN_NODE_RATIO * SQRT（总输入神经元 \* 总输出神经元）<br /><br /> 默认值为 4.0。|  
 |HISTORIC_MODEL_COUNT|Microsoft 时序算法|指定将要生成的历史模型的数量。<br /><br /> 默认值为 1。|  
 |HISTORICAL_MODEL_GAP|Microsoft 时序算法|指定两个连续的历史模型之间的时间间隔。 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 默认值为 10。|  
-|HOLDOUT_PERCENTAGE|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定定型数据中用于计算维持错误的事例的百分比，定型挖掘模型时的停止条件中将用到此百分比。<br /><br /> 默认值为 30。<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持百分比值。|  
-|HOLDOUT_SEED|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定一个数字，用作在算法随机确定维持数据时伪随机生成器的种子。 如果此参数设置为 0，算法将基于挖掘模型的名称生成种子，以保证重新处理期间模型内容的一致性。<br /><br /> 默认值为 0。<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持种子值。|  
-|INSTABILITY_SENSITIVITY|Microsoft 时序算法|控制预测方差超过特定阈值的点，以及取消预测的 ARTxp 算法。 默认值为 1。<br /><br /> 注意：此参数仅适用于混合模型或使用 ARTxp 算法的模型。|  
+|HOLDOUT_PERCENTAGE|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定定型数据中用于计算维持错误的事例的百分比，定型挖掘模型时的停止条件中将用到此百分比。<br /><br /> 默认值为 30。<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持百分比值。|  
+|HOLDOUT_SEED|Microsoft 逻辑回归算法<br /><br /> Microsoft Neural Network Algorithm|指定一个数字，用作在算法随机确定维持数据时伪随机生成器的种子。 如果此参数设置为 0，算法将基于挖掘模型的名称生成种子，以保证重新处理期间模型内容的一致性。<br /><br /> 默认值为 0。<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持种子值。|  
+|INSTABILITY_SENSITIVITY|Microsoft 时序算法|控制预测方差超过特定阈值的点，以及取消预测的 ARTxp 算法。 默认值为 1。<br /><br /> 注意：此参数仅适用于混合的模型或使用 ARTxp 算法的模型。|  
 |MAXIMUM_INPUT_ATTRIBUTES|Microsoft Clustering Algorithm<br /><br /> Microsoft 决策树算法<br /><br /> Microsoft 线性回归算法<br /><br /> Microsoft Naive Bayes 算法<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 逻辑回归算法|定义算法在调用功能选择之前可以处理的输入属性数。 如果将此值设置为 0，则表示关闭功能选择。<br /><br /> 默认值为 255。|  
 |MAXIMUM_ITEMSET_COUNT|Microsoft 关联算法|指定要生成的最大项集数。 如果未指定数目，则该算法将生成所有可能的项集。<br /><br /> 默认值为 200000。|  
 |MAXIMUM_ITEMSET_SIZE|Microsoft 关联算法|指定一个项集中允许的最大项数。 将该值设置为 0 将指定对项集的大小没有限制。<br /><br /> 默认值为 3。|  

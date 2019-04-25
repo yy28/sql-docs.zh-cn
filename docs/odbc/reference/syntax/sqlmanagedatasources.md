@@ -1,5 +1,5 @@
 ---
-title: SQLManageDataSources |Microsoft Docs
+title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465992"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **符合性**  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  系统 DSN 的系统信息中，而不是在 HKEY_CURRENT_USER 项中的 HKEY_LOCAL_MACHINE 项中注册。 它位于未与某位用户使用其自己特定的用户名和密码登录，但可以使用该计算机的任何用户或者自动系统级服务。 系统 DSN，但是，与一台计算机。 它不支持使用远程计算机之间的 Dsn 的功能。 系统 Dsn 的系统信息中注册，如下所示：  
   
- HKEY_LOCAL_MACHINE 软件 ODBC Odbc.ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>文件 Dsn  
  文件数据源没有数据源名称，如计算机数据源，不会和未注册到任何一个用户或计算机。 可以将复制到任何计算机.dsn 文件中包含该数据源的连接信息。 文件数据源可以是可共享，在这种情况下.dsn 文件驻留在网络上，并可由同时在网络上的多个用户，只要用户具有适当的驱动程序。 文件数据源还可以共享，在这种情况下可以使用仅在一台计算机上。  

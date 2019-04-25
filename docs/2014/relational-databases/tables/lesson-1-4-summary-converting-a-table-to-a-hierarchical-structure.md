@@ -1,5 +1,5 @@
 ---
-title: 摘要：将表转换为层次结构 | Microsoft Docs
+title: 摘要：将表转换为层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760881"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>摘要：将表转换为层次结构
   `hierarchyid` 数据类型可以采用精简格式存储层次结构关系。 正确的索引可以通过层次结构级别、层次结构子树或传统单独查找方式有效地返回数据。  

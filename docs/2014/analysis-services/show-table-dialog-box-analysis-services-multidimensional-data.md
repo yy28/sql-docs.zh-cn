@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746480"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>“显示表”对话框（Analysis Services - 多维数据）
   使用 **中的** “显示表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以包括与维度、多维数据集或挖掘结构相关联的数据源视图中的表。 通过执行以下操作可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框：  

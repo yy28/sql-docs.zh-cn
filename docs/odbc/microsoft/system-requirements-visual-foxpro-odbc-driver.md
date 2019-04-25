@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633745"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系统要求（Visual FoxPro ODBC 驱动程序）
 安装的系统要求提供最低操作系统版本和已成功安装该驱动程序所需的磁盘空间。 已安装的驱动程序后，可以选择想要用于访问 Visual FoxPro 数据的特定应用程序软件。  
@@ -37,13 +37,13 @@ ms.locfileid: "51664089"
   
 -   ODBC 客户端软件 （自动安装驱动程序）  
   
--   Microsoft Visual FoxPro ODBC 驱动程序  
+-   Microsoft Visual FoxPro ODBC Driver  
   
 -   任何以下类型的应用程序软件：  
   
     -   Microsoft Office 应用程序，如 Microsoft Excel 或 Microsoft Word  
   
-    -   ODBC 应用程序的 C 或 c + + 语言  
+    -   C 或C++语言 ODBC 应用程序  
   
     -   Microsoft Visual Basic ODBC 应用程序  
   

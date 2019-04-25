@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465917"
 ---
 # <a name="sending-long-data"></a>发送 Long 数据
 定义 Dbms*长整型数据*为任何字符或二进制数据而非特定大小，如 254 个字符。 可能无法用于存储在内存中，如时项所表示的长文本文档或位图的长数据的整个项目。 由于此类数据不能存储在一个缓冲区，数据源将其发送到使用部件中的驱动程序**SQLPutData**时执行的语句。 在执行时为其发送数据的参数称为*执行时数据参数*。  
@@ -43,6 +43,6 @@ ms.locfileid: "47616085"
   
 7.  调用**SQLParamData**再次以指示它已发送所有参数的数据。 如果尚未发送的数据的任何执行时数据参数，驱动程序将返回 SQL_NEED_DATA 和标识的下一个参数; 的值应用程序返回到步骤 6。 如果数据已发送的所有执行时数据参数，则执行该语句。 **SQLParamData**返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 和可以返回任何返回值或诊断， **SQLExecute**或**SQLExecDirect**可以返回。  
   
- 之后**SQLExecute**或**SQLExecDirect**返回 SQL_NEED_DATA 和最后一个执行时数据参数已完全将数据之前，该语句是处于需要的数据状态。 需要数据状态语句时，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数都返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消该语句的执行并将其返回到其以前的状态。 有关详细信息，请参阅[附录 b: ODBC 状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 之后**SQLExecute**或**SQLExecDirect**返回 SQL_NEED_DATA 和最后一个执行时数据参数已完全将数据之前，该语句是处于需要的数据状态。 需要数据状态语句时，应用程序可以调用仅**SQLPutData**， **SQLParamData**， **SQLCancel**， **SQLGetDiagField**，或**SQLGetDiagRec**; 所有其他函数都返回 SQLSTATE HY010 （函数序列错误）。 调用**SQLCancel**取消该语句的执行并将其返回到其以前的状态。 有关详细信息，请参阅[附录 b:状态转换表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  在执行时发送数据的示例，请参阅[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)函数说明。

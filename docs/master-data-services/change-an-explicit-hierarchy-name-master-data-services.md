@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20850dfb044fc39270644c0e52c8d35de0bdd4c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636896"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>更改显式层次结构名称 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52774149"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改显式层次结构的名称。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -47,9 +47,9 @@ ms.locfileid: "52774149"
   
 6.  在“名称”  框中，键入更新后的层次结构名称。  
   
-7.  单击 **“保存”**。  
+7.  单击“保存” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [删除显式层次结构 (Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

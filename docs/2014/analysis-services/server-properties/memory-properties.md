@@ -25,20 +25,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747459"
 ---
 # <a name="memory-properties"></a>内存属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  介于 1 和 100 之间的值表示 **“物理总内存”** 或 **“虚拟地址空间”** 的百分比（以二者中少者计）。 超过 100 的值表示内存限制（以字节为单位）。  
   
- **适用范围：** 多维和表格服务器模式（除非另有说明）。  
+ **适用范围：** 多维和表格服务器模式下，除非另有说明。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  `LowMemoryLimit`  
  一个有符号的 64 位双精度浮点数属性，可定义服务器内存不足所在的点，以总物理内存的百分比表示。 达到此限制时，实例将通过关闭过期会话以及卸载未使用的计算从缓存中缓慢清除内存。 服务器不会在未超过此限制的情况下释放内存。 默认值为 65；这指示最低内存限制为物理内存或虚拟地址空间的 65%（以二者中少者计）。  
   

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518629"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "52420658"
   
 3.  将“using Microsoft.MasterDataServices.Core.Workflow;”添加到 C# 代码文件。  
   
-4.  从类声明中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 继承。 该类声明应类似于：“public class WorkflowTester : IWorkflowTypeExtender”。  
+4.  从类声明中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 继承。 类声明应类似于: public class WorkflowTester:IWorkflowTypeExtender。  
   
 5.  实现 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 接口。 SQL Server MDS Workflow Integration Service 调用 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法来启动您的工作流。  
   
@@ -145,14 +145,14 @@ ms.locfileid: "52420658"
   
 1.  使用“服务”管理单元以停止服务。  
   
-2.  打开命令提示符，导航到此服务的位置，通过输入 Microsoft.MasterDataServices.Workflow.exe -console 在控制台中运行此服务。  
+2.  打开命令提示符，导航到服务的位置并在控制台模式下运行服务，通过输入：Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成员，并再次应用业务规则。 控制台窗口中将显示详细日志。  
   
 ### <a name="view-the-service-broker-queue"></a>查看 Service Broker 队列  
  包含作为工作流一部分传递的主数据的 Service Broker 队列为：mdm.microsoft/mdm/queue/externalaction。 队列位于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库的 Service Broker 节点下的 SQL Management Studio 的“对象资源管理器”中。 请注意，如果此服务已正确清除队列，则此队列将为空。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义工作流示例 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [自定义工作流 XML 说明 &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

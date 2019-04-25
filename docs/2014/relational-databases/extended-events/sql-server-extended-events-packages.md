@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638739"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
   包是用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件对象的容器。 扩展事件包有三种类型，它们是：  

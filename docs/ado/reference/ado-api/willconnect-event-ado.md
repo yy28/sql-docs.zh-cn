@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642518"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**连接开始之前，将调用事件。  
   
- **适用于：** [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **适用于：**[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  一个**字符串**，它包含挂起的连接的连接信息。  
   
- *用户 Id*  
+ *UserID*  
  一个**字符串**包含挂起的连接的用户名。  
   
  *密码*  

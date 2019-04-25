@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe778141f128a05c00d6a51a66394ed5c70fdb0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746681"
 ---
 # <a name="specify-a-connection-string-ssas"></a>指定连接字符串 (SSAS)
   **“表导入向导”** 的这一页可用于指定要连接到 OLE DB 或 ODBC 数据源的连接字符串。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

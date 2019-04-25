@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625841"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>查看测试用例报表 (SybaseToSQL)
 测试用例报表显示的测试验证结果和一般测试的信息。 如果测试失败，还会显示有关已验证的对象中的任何不匹配数据的信息。  

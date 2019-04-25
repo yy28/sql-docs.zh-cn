@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757826"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
   可以使用 **“分区源”** 对话框中的 **“表绑定”** 选项，指定为分区提供数据的事实数据表。 通过从 **“分区源”** 对话框中的 **“绑定类型”** 选项中选择 **“表绑定”** ，可以显示此窗格。  

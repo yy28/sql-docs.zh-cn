@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762384"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143047"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|消息正文|数据库错误：目录 'DIRECTORY' 不是有效的 FileStream 目录。|  
+|消息正文|数据库错误:目录 'DIRECTORY' 不是有效的 Filestream 目录。|  
   
 ## <a name="explanation"></a>解释  
  行集目录的名称是分区的分区 ID，但特殊的行集目录名称（如“ghost”）除外。 如果无法将行集目录名称转换为分区 ID，则该目录不是有效的行集目录。  

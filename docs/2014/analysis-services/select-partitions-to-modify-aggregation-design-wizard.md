@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f23574c99ba05cd5e53d18cde799b2e415daaf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747124"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>选择要修改的分区（聚合设计向导）
   可以使用 **“选择要修改的分区”** 页选择要设计聚合的分区。  
   
 ## <a name="options"></a>选项  
- **（选择）**  
+ **(Select)**  
  选中列标题中的复选框，可以为度量值组中的所有分区设计聚合。  
   
  选中某个分区的复选框，可以仅为所选分区设计聚合。  

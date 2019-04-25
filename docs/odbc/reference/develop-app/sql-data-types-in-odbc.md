@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35b4d12d48f48aa4bab3d80ab551708b7a2311d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445919"
 ---
 # <a name="sql-data-types-in-odbc"></a>ODBC 中的 SQL 数据类型
 SQL 数据类型是数据存储在数据源中的类型。  

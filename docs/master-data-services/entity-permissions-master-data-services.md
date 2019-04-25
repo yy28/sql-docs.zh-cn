@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4030351db122190636292ccc84c574af95df76fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517159"
 ---
 # <a name="entity-permissions-master-data-services"></a>实体权限 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52819009"
 > [!NOTE]  
 >  这些权限仅应用到用户界面的“资源管理器”功能区域。  
   
-|权限|描述|  
+|权限|Description|  
 |----------------|-----------------|  
 |**读取**|用户可以读取成员、属性、层次结构成员身份或集合成员身份。|  
 |**创建**|用户可以创建成员，并在创建过程中指定属性值。|  
@@ -48,7 +48,7 @@ ms.locfileid: "52819009"
   
  读取、创建、更新和删除权限可以彼此合并。 当分配创建、更新和删除权限时，将自动分配读取权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  

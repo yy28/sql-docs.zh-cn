@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4c6ab40a134cad55094c83c8e0ed0561b87a32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637060"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自动生成 Code 之外的属性值 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52760339"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当希望在每次应用业务规则时自动分配一个整数作为值时，自动为实体的属性值生成值。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -69,13 +69,13 @@ ms.locfileid: "52760339"
   
 17. 在确认对话框中，单击 **“确定”**。 规则的状态将更改为 **“活动”**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动创建代码 (Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)   
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [验证 (Master Data Services)](../master-data-services/validation-master-data-services.md)  

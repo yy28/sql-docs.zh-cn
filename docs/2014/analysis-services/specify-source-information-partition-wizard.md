@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746121"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定源信息（分区向导）
   可以使用 **“指定源信息”** 页，选择要在其中创建分区的度量值组以及该分区的数据源视图和筛选表。  
@@ -50,6 +50,6 @@ ms.locfileid: "48120554"
 >  如果选择了多个表，则无法显示 **“限制行”** 页，也无法对从这些所选表创建的分区限制行。 若要对每个分区限制行，请为要从中创建分区的每一个表运行一次分区向导。  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

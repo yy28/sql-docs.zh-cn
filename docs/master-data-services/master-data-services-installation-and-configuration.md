@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466363"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -282,7 +282,7 @@ ms.locfileid: "53205606"
   
  有关如何使用模型和实体为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的数据生成结构的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Master Data Services 数据库](../master-data-services/master-data-services-database.md)   
  [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)   
  [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

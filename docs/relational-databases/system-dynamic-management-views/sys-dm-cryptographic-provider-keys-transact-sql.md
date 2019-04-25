@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_keys (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742013"
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |**key_type**|**nchar(256)**|提供程序中密钥的类型。|  
 |**key_length**|**int**|提供程序中密钥的长度。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  查询此视图时，它会将用户上下文送至提供程序进行身份验证并枚举用户可见的所有密钥。  
   
  如果用户无法通过 EKM 提供程序的身份验证，则不会返回任何密钥信息。  

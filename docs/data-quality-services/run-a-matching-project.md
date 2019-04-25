@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469405"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
 
@@ -45,7 +45,7 @@ ms.locfileid: "56015428"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行匹配项目。  
   
-##  <a name="StartingaMatchingProject"></a>第 1 步：开始匹配项目  
+##  <a name="StartingaMatchingProject"></a>第 1 步：启动匹配项目  
  您在 DQS 客户端应用程序中创建的数据质量项目中执行匹配活动。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  

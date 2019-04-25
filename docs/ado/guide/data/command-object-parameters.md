@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472726"
 ---
 # <a name="command-object-parameters"></a>命令对象参数
 上一个主题中讨论[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 对于使用更微妙[命令](../../../ado/reference/ado-api/command-object-ado.md)对象显示在下一示例中，在其中已参数化 SQL 命令。 这种修改，使可能重复使用该命令，传入不同的值为参数每次。 因为[准备好属性](../../../ado/reference/ado-api/prepared-property-ado.md)上的属性**命令**对象设置为**true**，ADO 将要求要编译的命令中指定的提供程序[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前执行第一次。 它还将保留在内存中编译后的命令。 这会降低执行命令略有第一次执行由于准备它，但生成的性能提升每次之后调用该命令所需的开销。 因此，它们将使用一次，才应准备命令。  

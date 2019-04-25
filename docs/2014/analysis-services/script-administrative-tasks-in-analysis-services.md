@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747929"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>在 Analysis Services 中编写管理任务脚本
   您可以通过编写或生成可手动执行或通过 SQL Server 代理来计划的脚本自动执行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理任务。 下表总结了可供您使用的脚本编写选项，并提供指向更多信息的链接。  

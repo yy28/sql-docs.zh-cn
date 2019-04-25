@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471172"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL 命令
 包含指定的字段值的表的末尾追加一条记录。  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  如果打开指定的表，INSERT 将新记录追加到表。 如果表是在工作区中打开，而不是当前工作区，它不被选择后追加记录;当前工作区处于选定状态。  
   
- [( *fname1*[， *fname2*[，...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  新记录中指定的字段的名称值将插入到。  
   
- 值 ( *eExpression1*[， *eExpression2*[，...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  指定插入新记录的字段值。 如果省略的字段名称，必须由表结构定义的顺序来指定字段值。  
   
 ## <a name="remarks"></a>备注  

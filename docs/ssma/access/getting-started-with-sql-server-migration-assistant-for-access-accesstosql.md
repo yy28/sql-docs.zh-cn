@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759925"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>开始使用 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 进行访问，可快速将转换到访问数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 对象，将上传到生成的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，并将数据迁移从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 如果有必要，你还可以链接到访问表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 的表，以便可以继续使用现有访问前端应用程序与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -67,7 +67,7 @@ ms.locfileid: "47668665"
 ### <a name="metadata-explorers"></a>元数据资源管理器  
 SSMA 包含两个元数据资源管理器可用于浏览和执行操作的访问权限和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 数据库。  
   
-#### <a name="access-metadata-explorer"></a>访问元数据资源管理器  
+#### <a name="access-metadata-explorer"></a>Access Metadata Explorer  
 访问元数据资源管理器中显示已添加到项目的访问数据库的相关信息。 添加 Access 数据库，SSMA 检索有关该数据库，这是可访问元数据资源管理器中的元数据的元数据。  
   
 访问元数据资源管理器可用于执行以下任务：  
@@ -88,7 +88,7 @@ SSMA 包含两个元数据资源管理器可用于浏览和执行操作的访问
 有关详细信息，请参阅[加载到 SQL Server 转换数据库对象](loading-converted-database-objects-into-sql-server-accesstosql.md)。  
   
 ### <a name="metadata"></a>元数据  
-每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果访问元数据资源管理器中选择一个表，四个选项卡将显示：**表**，**类型映射**，**属性**，以及**数据**. 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，会显示三个选项卡：**表**， **SQL**，并且**数据**。  
+每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果访问元数据资源管理器中选择一个表，会显示四个选项卡：**表**，**类型映射**，**属性**，并且**数据**。 如果您选择的表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器中，会显示三个选项卡：**表**， **SQL**，和**数据**。  
   
 大多数元数据设置是只读的。 但是，可以更改以下元数据：  
   
@@ -120,7 +120,7 @@ SSMA 包含以下菜单：
 |--------|---------------|  
 |**File**|迁移向导，处理项目，添加和删除访问权限的数据库文件，以及连接到包含命令[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。|  
 |**编辑**|包含用于查找和使用中的详细信息页面，如将复制的文本命令[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL 的详细信息窗格中。 若要打开**管理书签**对话框中的，在编辑菜单上单击管理书签。 在对话框中，您将看到一个现有书签列表。 可以使用对话框右侧的按钮来管理书签。|  
-|**“视图”**|包含**同步元数据资源管理器**命令。 这会同步访问元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 元数据资源管理器。 此外包含用于显示和隐藏命令**输出**并**错误列表**窗格和一个选项**布局**使用布局进行管理。|  
+|**视图**|包含**同步元数据资源管理器**命令。 这会同步访问元数据资源管理器之间的对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 元数据资源管理器。 此外包含用于显示和隐藏命令**输出**并**错误列表**窗格和一个选项**布局**使用布局进行管理。|  
 |**工具**|包含命令以创建报表、 导出数据、 将对象和数据迁移，链接表，并提供的全局访问权限和项目设置对话框。|  
 |**帮助**|提供访问到 SSMA 帮助和**有关**对话框。|  
   

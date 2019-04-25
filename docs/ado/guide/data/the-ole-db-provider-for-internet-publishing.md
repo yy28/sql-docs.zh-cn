@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472206"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>用于 Internet 发布的 OLE DB 提供程序
 ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)并[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象可以在 Microsoft OLE DB 访问接口为 Internet 发布 （Internet 发布提供程序） 访问和处理资源，例如 Web 文件夹或文件由 Microsoft FrontPage 提供服务。 使用 ADO 中，您可以指定的源**记录**， **Stream**，或[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)是 url。 你可以然后上传、 下载、 移动、 复制和删除资源，或直接操作资源属性。  
@@ -55,4 +55,4 @@ ADO[记录](../../../ado/reference/ado-api/record-object-ado.md)并[Stream](../.
 > [!NOTE]
 >  如果提供程序，使用的值作为显式指定 Msdaipp.dso*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 如前面所示，只需指定的 URL。  
   
- 有关 Internet 发布提供程序的更多具体信息，请参阅[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或提供与其源应用程序的提供程序文档的 OLE DB 访问接口安装了 Internet 发布： Windows 2000、 Office 2000 或 Internet Explorer 5.0。
+ 有关 Internet 发布提供程序的更多具体信息，请参阅[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或提供与其源应用程序的提供程序文档的 OLE DB 访问接口已安装 Internet 发布：Windows 2000、 Office 2000 或 Internet Explorer 5.0。

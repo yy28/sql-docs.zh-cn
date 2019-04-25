@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9f49b71a6e6774c83f1573ff7b0d5d20e169a83d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466846"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 和 Data Quality Services 功能支持
 
@@ -25,7 +25,7 @@ ms.locfileid: "55044563"
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services
 
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
+|功能|Enterprise|标准|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库|是||||||是|  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序|是||||||是|  

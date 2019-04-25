@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743663"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>“新建度量值”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “新建度量值” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集设计器的度量值组中添加新度量值。 通过执行以下操作之一，可以显示 **“新建度量值”** 对话框：  

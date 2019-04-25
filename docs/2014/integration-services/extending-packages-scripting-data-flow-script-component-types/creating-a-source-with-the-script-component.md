@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768663"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的源组件用于从数据源加载数据以传递到下游转换和目标。 通常通过现有连接管理器连接数据源。  
@@ -134,7 +134,7 @@ ms.locfileid: "58381175"
   
 5.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
   
-6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
+6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列。 然后将源组件连接到目标。 （您可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -267,7 +267,7 @@ ms.locfileid: "58381175"
   
 6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本。 然后关闭脚本开发环境和“脚本转换编辑器”。  
   
-7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
+7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （您可以将源直接连接到目标，而不经任何转换。）在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库中运行以下 `AdventureWorks` 命令，以创建目标表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

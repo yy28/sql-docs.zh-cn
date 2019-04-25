@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769983"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  

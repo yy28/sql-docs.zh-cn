@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置 Foreach 循环容器 | Microsoft Docs
+title: 第 2 步：添加和配置 Foreach 循环容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767519"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>第 2 步：添加和配置 Foreach 循环容器
   在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
   
  所添加的 Foreach 循环容器必须能够连接到该文件夹中的每个平面文件。 由于该文件夹中的所有文件都具有相同的格式，因此，Foreach 循环容器可以使用同一平面文件连接管理器来连接其中的每个文件。 该容器所使用的平面文件连接管理器与您在第 1 课中创建的平面文件连接管理器相同。  

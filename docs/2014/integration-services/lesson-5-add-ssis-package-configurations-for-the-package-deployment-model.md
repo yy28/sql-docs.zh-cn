@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767412"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 课：添加包部署模型的包配置
   包配置允许您从开发环境的外部设置运行时属性和变量。 配置允许您开发灵活且易于部署和分发的包。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了以下配置类型：  
@@ -38,7 +38,7 @@ ms.locfileid: "58378825"
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [第 1 步：复制第 4 课包](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制第 4 课包](lesson-5-1-copying-the-lesson-4-package.md)  
   
 -   [步骤 2：启用和配置包配置](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
@@ -48,6 +48,6 @@ ms.locfileid: "58378825"
   
 ## <a name="start-the-lesson"></a>开始课程  
   
--   [第 1 步：复制第 4 课包](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步骤 1：复制第 4 课包](lesson-5-1-copying-the-lesson-4-package.md)  
   
   

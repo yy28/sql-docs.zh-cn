@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740777"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>在维度设计器中查看树、列表或网格中的属性
   此过程介绍如何更改属性在维度设计器中的显示方式。  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766200"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>传输 SQL Server 对象任务编辑器（“常规”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“常规”** 页，对传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748679"
 ---
 # <a name="prediction-query-builder-data-mining"></a>预测查询生成器（数据挖掘）
   可以使用 **“挖掘模型预测”** 视图基于挖掘结构包含的挖掘模型生成预测。  
@@ -25,7 +25,7 @@ ms.locfileid: "48095047"
   
 -   [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [创建和查询使用 DMX 数据挖掘模型： 教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [创建和查询使用 DMX 数据挖掘模型：教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [数据挖掘查询](data-mining/data-mining-queries.md)  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760834"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>使用现有层次结构数据填充表
   此任务将创建新表，然后使用 **EmployeeDemo** 表中的数据填充该表。 此任务包含以下步骤：  

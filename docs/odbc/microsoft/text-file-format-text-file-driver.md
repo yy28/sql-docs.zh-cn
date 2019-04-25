@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633012"
 ---
 # <a name="text-file-format-text-file-driver"></a>文本文件格式（文本文件驱动程序）
 ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件包含可选的标头行和零个或多个文本行。  
@@ -38,11 +38,11 @@ ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 �
   
  以下语法，为程序员编写定义 ODBC 文本驱动程序可以读取文本文件的格式：  
   
-|“格式”|表示|  
+|格式|表示|  
 |------------|--------------------|  
 |非斜体|根据所示，必须输入的字符|  
-|*斜体*|在语法中其他位置定义的参数|  
-|方括号 ([])|可选项|  
+|*italics*|在语法中其他位置定义的参数|  
+|brackets ([])|可选项|  
 |大括号 ({})|互相排斥的选项列表|  
 |垂直条 (&#124;)|单独互斥选项|  
 |省略号 （...）|可以重复的一个或多个时间的项|  

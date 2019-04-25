@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 521afe37ef58a8b2e325bb513c7bdee2a1ed66a2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765850"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>“创建数据库邮件配置文件和帐户”对话框（主数据服务配置管理器）
   使用 **“创建数据库邮件配置文件和帐户”** 对话框可为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库创建数据库邮件配置文件和数据库邮件帐户。 此配置文件将用于在业务规则验证失败时通过电子邮件通知用户和组。  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fe0ed92b5a48fb92f98a73be92e578314a0bdb5d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470064"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>更新 OPENXML XPath 表达式以删除不支持的函数
   升级顾问检测到使用了 XPath 功能。 升级后，对 OPENXML 功能的 XPath 功能所做的更改可能产生影响。  

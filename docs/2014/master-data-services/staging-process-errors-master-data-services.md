@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763268"
 ---
 # <a name="staging-process-errors-master-data-services"></a>临时过程错误 (Master Data Services)
   当临时过程完成后，临时表中的所有已处理记录在 ErrorCode 列中都对应一个值。 下表中列出了这些值。  
@@ -33,7 +33,7 @@ ms.locfileid: "52822351"
 |210041|“ROOT”不是有效的成员代码。|MemberCode 值包含单词“ROOT”。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210042|“MDMUNUSED”不是有效的成员代码。|MemberCode 值包含单词“MDMUNUSED”。|叶<br /><br /> 合并<br /><br /> 关系|  
 |210052|由于将 MemberCode 用作基于域的属性值，所以无法停用该代码。|**ImportType** = **3** 或 **4**时，如果将此成员用作其他成员的属性值，则暂存过程失败。 使用 **ImportType5** 或 **6** 将值设置为 NULL，或者在运行暂存过程之前更改值。|叶<br /><br /> 合并|  
-|300002|该成员代码无效。|关系：为父或子成员代码不存在。<br /><br /> 叶或合并：**ImportType** = **3**或**4** ，并且成员代码不存在。|叶<br /><br /> 合并<br /><br /> 关系|  
+|300002|该成员代码无效。|关系：不存在任何父或子成员代码。<br /><br /> 叶或合并：ImportType = 3 或 4 且成员代码不存在。|叶<br /><br /> 合并<br /><br /> 关系|  
 |300004|该成员代码已存在。|**ImportType** = **1** ，且使用了实体中已存在的成员代码。|叶<br /><br /> 合并|  
 |210011|**RelationshipType** 为 **1**时， **ParentCode** 不能为叶成员。|确保 **ParentCode** 值是合并成员代码。|关系|  
 |210015|对于层次结构和批次，该成员代码在临时表中多次出现。|对于显式层次结构，您在同一批次中多次指定了同一成员的位置。|关系|  

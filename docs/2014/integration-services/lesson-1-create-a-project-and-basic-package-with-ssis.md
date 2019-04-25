@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767499"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
   在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
@@ -74,13 +74,13 @@ ms.locfileid: "59241795"
 |----------------------|----------------|-----------------|---------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|日期|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [步骤 1:创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步骤 1：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [步骤 2：添加和配置平面文件连接管理器](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
@@ -99,6 +99,6 @@ ms.locfileid: "59241795"
 -   [步骤 9：测试第 1 课教程包](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [步骤 1:创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [步骤 1：创建新的 Integration Services 项目](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

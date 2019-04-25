@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f425112a324cbef3bc18ea6ddabf671d5bcd20c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747739"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>选择如何定义连接（数据源向导）(Analysis Services)
   可以使用 **“选择如何定义连接”** 页创建或选择数据源的数据连接。  

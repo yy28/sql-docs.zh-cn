@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642728"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services 的向后兼容性
   本节介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的不同版本之间在行为方面的更改。 它包括不再可用或计划在将来的版本中删除的功能。 本节还介绍了对产品所做的根本性更改，已知这些更改会使包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自定义应用程序不能正常工作。  

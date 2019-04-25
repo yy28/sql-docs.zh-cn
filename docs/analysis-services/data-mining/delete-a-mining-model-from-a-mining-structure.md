@@ -1,5 +1,5 @@
 ---
-title: 从挖掘结构中删除挖掘模型 |Microsoft 文档
+title: 从挖掘结构中删除挖掘模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b17489213e0f057d8f291095f01b65f97a977ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468839"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>从挖掘结构中删除挖掘模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34019314"
   
      将打开 **“删除对象”** 对话框。  
   
-3.  单击 **“确定”**。  
+3.  单击“确定” 。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除挖掘模型  
   
@@ -42,9 +42,9 @@ ms.locfileid: "34019314"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 删除挖掘模型  
   
--   [删除挖掘模型 & #40; DMX & #41;](../../dmx/drop-mining-model-dmx.md)  
+-   [删除挖掘模型 (DMX)](../../dmx/drop-mining-model-dmx.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型任务和操作指南](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

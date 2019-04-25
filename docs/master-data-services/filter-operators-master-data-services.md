@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 36e7784eb1725505a00225d237d5016945f5f7c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516874"
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52819075"
   
 ## <a name="filter-operators"></a>Filter 运算符  
   
-|控件名称|描述|  
+|控件名称|Description|  
 |------------------|-----------------|  
 |**等于**|返回与指定条件完全相同的属性值。 例如，如果要针对 **Mountain-100**进行筛选，则必须键入 **Mountain-100**。|  
 |**不等于**|返回与指定条件不完全相同的属性值。 筛选条件必须与您要在结果中忽略的属性值完全相同。 例如，如果要忽略与 **Mountain-100**匹配的结果，则必须键入 **Mountain-100**。<br /><br /> <br /><br /> 注意：对某个属性应用带有“Is not equal”子句的筛选条件时，如果 SET ANSI_NULLS 在数据库设置中设置为 ON，则属性为 NULL 的成员将传递该筛选条件并作为结果返回。 若要停止此行为，请在数据库设置中将 SET ANSI_NULLS 设置为 OFF。 如果 SET ANSI_NULLS 设置为 OFF，则在数据值为 NULL 时，所有数据与 Null 值的比较求得的值为 TRUE，最终结果是该成员不会传递“Is not equal”子句。 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md)。|  

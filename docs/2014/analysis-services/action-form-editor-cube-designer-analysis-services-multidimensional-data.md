@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626094"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的“操作窗体编辑器”窗格创建和修改标准操作。  
@@ -37,7 +37,7 @@ ms.locfileid: "48225547"
 |-----------|---------------------|  
 |属性成员|从 **“目标对象”** 中的属性所处的级别中选择成员。|  
 |单元|**“目标对象”** 中的命名集处于选中状态。 选择 **“所有单元”** 可以选择多维数据集中的所有单元。|  
-|多维数据集|**“目标对象”** 中的多维数据集处于选中状态。 选择 CURRENTCUBE 可以使用当前多维数据集。<br /><br /> 注意：在可能会重命名多维数据集或将该操作复制到其他多维数据集时，使用 CURRENTCUBE 更为方便。 建议您使用 CURRENTCUBE 表示当前多维数据集。|  
+|多维数据集|**“目标对象”** 中的多维数据集处于选中状态。 选择 CURRENTCUBE 可以使用当前多维数据集。<br /><br /> 注意：使用 currentcube 更为方便提供多维数据集可能会重命名或将该操作复制到其他多维数据集的其他可移植性。 建议您使用 CURRENTCUBE 表示当前多维数据集。|  
 |维度成员|**“目标对象”** 中维度的成员处于选中状态。|  
 |层次结构|**“目标对象”** 中的层次结构处于选中状态。|  
 |层次结构成员|**“目标对象”** 中层次结构的成员处于选中状态。|  
@@ -96,7 +96,7 @@ ms.locfileid: "48225547"
 > [!NOTE]  
 >  此选项只是向客户端应用程序提供使用哪一个客户端应用程序执行某项操作的建议，并不直接控制对该操作的访问。 客户端应用程序将隐藏与其他客户端应用程序关联的所有操作。  
   
- **Description**  
+ **说明**  
  键入操作说明（可选）。  
   
  **Caption**  

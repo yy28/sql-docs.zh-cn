@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639531"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>分析平台系统中的并行数据仓库防火墙配置
 **防火墙**页上的 SQL Server PDW 配置管理器，可启用或禁用防火墙规则，允许或阻止访问分析平台系统设备上的特定端口。  
@@ -43,7 +43,7 @@ ms.locfileid: "37909837"
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL 加密连接 （进行内部通信，以访问管理控制台）|443|所有节点|  
 |SQL Server PDW 负载控制流的 Windows 凭据|8002|CTL|  
-|Kerberos （_k)|88|AD01 和 AD02，|  
+|_Kerberos|88|AD01 和 AD02，|  
 |_ldap|389|AD01 和 AD02|  
   
 ## <a name="internal-ports"></a>内部端口  

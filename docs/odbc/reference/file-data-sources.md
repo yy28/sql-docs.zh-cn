@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628450"
 ---
 # <a name="file-data-sources"></a>文件数据源
 *文件数据源*存储在文件中并可用于单个用户重复使用或在多个用户之间共享的连接信息。 当使用文件数据源时，驱动程序管理器可以与使用.dsn 文件中的信息的数据源的连接。 可以像任何其他文件一样处理此文件。 文件数据源没有数据源名称，如计算机数据源，不会和未注册到任何一个用户或计算机。  

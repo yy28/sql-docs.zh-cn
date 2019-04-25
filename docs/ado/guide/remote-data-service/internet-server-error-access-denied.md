@@ -1,5 +1,5 @@
 ---
-title: Internet 服务器错误： 访问被拒绝 |Microsoft Docs
+title: Internet 服务器错误：访问被拒绝 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b7c562e57341dd027a4cd9bdc3a0fa4bbe51ae5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634378"
 ---
 # <a name="internet-server-error-access-denied"></a>Internet 服务器错误：拒绝访问
 如果收到此错误，这通常意味着 Microsoft Internet 信息服务 (IIS) 返回以下状态：  
   
  HTTP_STATUS_DENIED 401  
   
- 请确保通过 IIS 访问的目录拥有适当的权限。 RDS 可以与运行中的三种的密码身份验证模式的任何一个的 IIS Web 服务器进行通信： Anonymous、 Basic 或 NT 质询/响应 （在 Windows 2000 中称为集成 Windows 身份验证）。 此外，Web 服务器必须具有对数据源计算机的权限，如果它是 Windows NT/Windows 2000 的计算机。  
+ 请确保通过 IIS 访问的目录拥有适当的权限。 RDS 可以与运行中的三种的密码身份验证模式的任何一个的 IIS Web 服务器进行通信：Anonymous、 Basic 或 NT 质询/响应 （名为集成 Windows 身份验证在 Windows 2000 中）。 此外，Web 服务器必须具有对数据源计算机的权限，如果它是 Windows NT/Windows 2000 的计算机。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  

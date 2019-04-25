@@ -1,5 +1,5 @@
 ---
-title: Excel Services 不支持和可能不会显示或只能部分显示了以下功能： 注释、 形状或其他对象 |Microsoft Docs
+title: Excel Services 不支持以下功能并且可能无法显示或者只能部分显示以下功能：注释、 形状或其他对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743929"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Excel Services 不支持以下功能并且可能无法显示或者只能部分显示以下功能：注释、形状或其他对象
   在您将切片器从 PowerPivot 字段列表添加到 PowerPivot 工作簿时会发生此错误。  
@@ -25,7 +25,7 @@ ms.locfileid: "48188697"
   
 |||  
 |-|-|  
-|适用于|PowerPivot for SharePoint|  
+|适用对象|PowerPivot for SharePoint|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Web Access 无法呈现用于控制从 PowerPivot 字段列表添加到某一工作簿的切片器的位置和格式的形状对象。|  
 |消息正文|Excel Services 不支持以下功能并且可能无法显示或者只能部分显示以下功能：<br /><br /> 注释、形状或其他对象<br /><br /> 某些功能（例如外部数据查询）显示只能在 Microsoft Excel 中刷新的缓存数据。|  

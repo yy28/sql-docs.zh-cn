@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b19dce00f95559aec77c8d02c86631faadc466b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757569"
 ---
 # <a name="calculations-ssas-tabular"></a>计算（SSAS 表格）
   将数据导入模型之后，可以添加计算来聚合、筛选、扩展、组合和保护该数据。 表格模型采用数据分析表达式 (DAX)，这是一种用于创建自定义计算的公式语言。 在表格模型中，使用 DAX 公式创建的计算用在“计算列” 、“度量值” 和“行筛选器” 中。  
@@ -25,7 +25,7 @@ ms.locfileid: "48100477"
   
 |主题|Description|  
 |-----------|-----------------|  
-|[了解表格模型中的 DAX &#40;SSAS 表格&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|说明为表格模型中的计算列、度量值和行筛选器创建计算所用的数据分析表达式 (DAX) 公式语言。|  
+|[了解表格模型中的 DAX（SSAS 表格）](understanding-dax-in-tabular-models-ssas-tabular.md)|说明为表格模型中的计算列、度量值和行筛选器创建计算所用的数据分析表达式 (DAX) 公式语言。|  
 |[在 DirectQuery 模式下的公式兼容性](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|说明差异，列出在 DirectQuery 模式下不支持的函数，并列出受支持但可能返回不同结果的函数。|  
 |[数据分析表达式&#40;DAX&#41;引用](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|本节提供了 DAX 语法、运算符和函数的详细说明。|  
   

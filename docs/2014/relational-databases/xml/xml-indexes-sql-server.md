@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631360"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以对 `xml` 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
@@ -53,7 +53,7 @@ ms.locfileid: "58533969"
   
 -   辅助 XML 索引  
   
- `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引，支持以下类型的辅助索引：路径、 值和属性。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
+ `xml` 类型列的第一个索引必须是主 XML 索引。 使用主 XML 索引时，支持以下类型的辅助索引：PATH、VALUE 和 PROPERTY。 根据查询类型的不同，这些辅助索引可能有助于改善查询性能。  
   
 > [!NOTE]  
 >  除非为使用 `xml` 数据类型正确设置了数据库选项，否则无法创建或修改 XML 索引。 有关详细信息，请参阅 [结合使用具有全文搜索和 XML 列](use-full-text-search-with-xml-columns.md)。  

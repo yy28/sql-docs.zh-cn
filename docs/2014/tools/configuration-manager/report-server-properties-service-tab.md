@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506771"
 ---
 # <a name="report-server-properties-service-tab"></a>报表服务器属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报表服务器服务。 如果属性值呈浅灰色，则不能使用此应用程序更改。  
@@ -45,11 +45,11 @@ ms.locfileid: "52803419"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：计算机启动时，此服务将尝试启动。  
+-   自动：此服务将尝试启动此计算机启动时。  
   
--   禁用：此服务无法启动。  
+-   已禁用：无法启动此服务。  
   
  **状态**  
  指示此服务是正在运行、已停止还是已禁用。  

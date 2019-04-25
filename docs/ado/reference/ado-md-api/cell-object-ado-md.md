@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469482"
 ---
 # <a name="cell-object-ado-md"></a>单元对象 (ADO MD)
 表示单元集内包含的轴坐标相交处的数据。  

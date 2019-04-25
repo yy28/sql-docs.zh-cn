@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：创建损坏的文件 |Microsoft Docs
+title: 第 2 步：创建损坏的文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767379"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>步骤 2：创建损坏的文件
+# <a name="step-2-creating-a-corrupted-file"></a>第 2 步：创建损坏的文件
   为阐释如何配置和处理转换错误，必须创建一个在处理时导致组件失败的示例平面文件。  
   
  在本任务中，将创建现有示例平面文件的一个副本。 然后，用记事本打开该文件，编辑 **CurrencyID** 列，以确保该列在转换查找期间无法生成匹配项。 处理新文件时，查找失败将导致 Currency Key 查找转换失败，因此，包的剩余部分将失败。 创建了损坏的示例文件后，将运行包以查看包失败的情况。  

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467982"
 ---
 # <a name="create-a-tabular-model-project"></a>创建表格模型项目
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685214"
 
 在本课中，您使用 Visual Studio 使用 SQL Server Data Tools (SSDT) 或与 Microsoft Analysis Services 项目 VSIX 的 Visual Studio 2017 在 1400年兼容级别创建新的表格模型项目。 创建新项目后，可以开始添加数据和创作模型。 本课程还提供了创作环境，在 Visual Studio 中的表格模型的简要介绍。  
   
-学完本课的预计时间：**10 分钟**  
+估计的时间才能完成本课程中：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件
 

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765760"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中，数据存储在多个数据库表中并可以通过视图查看。 您在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中受保护的信息对于具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库访问权限的用户是可见的。  
@@ -46,11 +46,11 @@ ms.locfileid: "52822231"
   
 |操作|安全对象|权限|  
 |------------|----------------|-----------------|  
-|将叶成员及其属性加载到临时表中。|stg.name_Leaf|必填：Insert<br /><br /> 可选:选择和更新|  
+|将叶成员及其属性加载到临时表中。|stg.name_Leaf|必需：Insert<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从叶临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Leaf|在运行 CREATE 语句前执行|  
-|将合并成员及其属性加载到临时表中。|stg.name_Consolidated|必填：Insert<br /><br /> 可选:选择和更新|  
+|将合并成员及其属性加载到临时表中。|stg.name_Consolidated|必需：Insert<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从合并临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Consolidated|在运行 CREATE 语句前执行|  
-|加载到临时表的叶成员和合并的成员关系相互显式层次结构中。|stg.name_Relationship|必填：Insert<br /><br /> 可选:选择和更新|  
+|加载到临时表的叶成员和合并的成员关系相互显式层次结构中。|stg.name_Relationship|必需：Insert<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从关系临时表加载到相应的 MDS 表中。|stg.udp_name_Relationship|在运行 CREATE 语句前执行|  
 |查看在数据从临时表插入到 MDS 数据库表时发生的错误。|stg.udp_name_Relationship|SELECT|  
   

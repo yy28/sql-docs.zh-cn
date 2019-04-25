@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640459"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>分区 - 分区存储模式和处理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "52545646"
   
 -   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引键的总计大小不能超过 900 字节。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将断定此条件基于固定的长度键列，则在处理 CREATE INDEX 语句时。 但是，如果索引键中有可变长度列[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]断定此条件的基表的每个更新。 因为不同的聚合具有不同的视图定义，所以使用索引视图的 ROLAP 处理可能成功，也可能失败，具体取决于聚合设计。  
   
--   创建索引视图的会话必须将以下选项设置为 ON：ARITHABORT、CONCAT_NULL_YEILDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
+-   创建索引的视图的会话必须具有以下选项设置为 ON:ARITHABORT、 CONCAT_NULL_YEILDS_NULL、 QUOTED_IDENTIFIER、 ANSI_NULLS、 ANSI_PADDING 和 ANSI_WARNING。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
--   创建索引视图的会话必须将以下选项设置为 OFF：NUMERIC_ROUNDABORT。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
+-   创建索引的视图的会话必须具有以下选项设置为 OFF:NUMERIC_ROUNDABORT。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
 ## <a name="holap"></a>HOLAP  
  HOLAP 存储模式结合了 MOLAP 和 ROLAP 二者的特性。 同 MOLAP 一样，在 holap 下分区存储在多维结构中的聚合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 HOLAP 不会使源数据的副本存储起来。 就只访问分区聚合中的汇总数据的查询而言，HOLAP 与 MOLAP 相同。 访问源数据的查询-例如，如果你想要深化到原子多维数据集单元格它们没有任何聚合数据必须从关系数据库检索数据并不会将如果源数据存储在 MOLAP structur 尽可能快地e。 在 HOLAP 存储模式下，通常用户执行各查询所用的时间明显不同，具体取决于是根据缓存或聚合解析查询还是根据源数据本身解析查询。  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470752"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "47700785"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|作业步骤日志的 ID。|  
-|**日志**|**nvarchar(max)**|作业步骤日志内容。|  
+|**log**|**nvarchar(max)**|作业步骤日志内容。|  
 |**date_created**|**datetime**|创建作业步骤日志的日期和时间。|  
 |**date_modified**|**datetime**|上次修改作业步骤日志的日期和时间。|  
 |**log_size**|**int**|作业步骤日志的大小（以字节为单位）。|  
 |**step_uid**|**uniqueidentifier**|作业步骤的唯一标识符。|  
   
 ## <a name="see-also"></a>请参阅  
- [sp_help_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
+ [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
   
   

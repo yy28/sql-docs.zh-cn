@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745538"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>对结构数据使用钻取（数据挖掘基础教程）
   作为其广告活动，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]发送邮寄给潜在的客户在 34 至 40 时代人口统计。 市场部已决定还要向五年多以前从 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 购买自行车的客户发送电子邮件。 在本课中，您将标识拥有旧自行车的客户并检索其联系信息。 模型中不包括此信息，但结构中包括此信息。 若要检索联系信息，您需要首先确保已对结构启用了钻取，然后使用钻取来显示目标客户的姓名和地址。  

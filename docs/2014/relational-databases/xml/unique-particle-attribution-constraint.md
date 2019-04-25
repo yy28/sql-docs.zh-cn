@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467413"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
   在 XSD 中，复杂内容模型受唯一粒子归属 (UPA) 约束规则的约束。 此规则要求实例文档中的每个元素明确地完全对应于其父级的内容模型中的一个 `<xsd:element>` 或 `<xsd:any>` 粒子。 任何包含具有可能不明确的内容模型的类型的架构都将被拒绝。  
@@ -80,11 +80,11 @@ ms.locfileid: "58538514"
 ## <a name="finding-more-information"></a>查找详细信息  
  以下文档由 World Wide Web 联合会 (W3C) 发布，其中包含唯一粒子归属约束的技术说明：  
   
- "XML Schema Part 1:建立第二版 - W3C 已修正的提议推荐":  
+ "XML 架构第 1 部分：Structures Second Edition，W3C Proposed Edited 的 Recommendation":  
   
--   第 3.8.6 节:模型组架构组件的相关约束  
+-   第 3.8.6 节：模型组架构组件约束  
   
--   附录 H:唯一粒子归属约束（非标准）的分析  
+-   附录 h:唯一粒子归属约束 （非标准） 的分析  
   
  若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

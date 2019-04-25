@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640303"
 ---
 # <a name="browsing-a-forecasting-model"></a>浏览预测模型
   当你打开预测模型使用**浏览**，模型将显示在交互式查看器，类似于时序模型查看器中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 查看器有助于您探索趋势、比较序列、创建预测以及获取有关模型和基础数据的信息。  
@@ -87,7 +87,7 @@ ms.locfileid: "48223197"
   
  [浏览模型](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a> 模型  
+###  <a name="bkmk_Model"></a> Model  
  还可以将预测模型表示为决策树，或者，在序列基本呈线性时表示为回归模型。  
   
  例如，在此模型中，基于某一特定条件的回归公式中存在差异，因此树拆分为两个分支，每个分支有一个不同的回归公式。  

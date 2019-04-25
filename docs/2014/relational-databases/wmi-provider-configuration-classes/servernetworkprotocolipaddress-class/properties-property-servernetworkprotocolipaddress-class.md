@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 815158ddcdb93b1e779f9a12ef06f034741de590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643411"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 属性（ServerNetworkProtocolIPAddress 类）
   获取与 IP 地址关联的属性。  

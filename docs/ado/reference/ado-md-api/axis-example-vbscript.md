@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469984"
 ---
 # <a name="axis-example-vbscript"></a>轴示例 (VBScript)
 此 Active Server Page 显示 MDX 查询字符串中的 OLAP 数据并将生成的单元集写入到一个 HTML 表结构。  

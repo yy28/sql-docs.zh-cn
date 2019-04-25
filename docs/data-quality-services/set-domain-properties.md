@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469342"
 ---
 # <a name="set-domain-properties"></a>设置域属性
 
@@ -53,7 +53,7 @@ ms.locfileid: "56029978"
  一旦创建了一个域后，就可以更改该域名或说明。 对于知识库而言，域名必须唯一。 说明最多可以有 256 个字符。  
   
 ###  <a name="Type"></a> 数据类型  
- 当创建域时，请为域中的值选择以下数据类型之一：“String”（默认值）、“Date”、“Integer”或“Decimal”。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 对于 DQS 中四个域数据类型支持的数据类型的相关信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 创建域时，请在域中选择以下数据类型的值之一：“String”（默认值）、“Date”、“Integer”或“Decimal”。 在创建了域之后，可以查看数据类型，但不能更改数据类型。 为某个域选择的数据类型将定义可映射到该域的源数据的类型。 对于 DQS 中四个域数据类型支持的数据类型的相关信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前导值  
  选中此复选框可指定将输出一组同义词中的前导值，而非是其同义词的值。 取消选择 **“使用前导值”** 可指定每个同义词值以其正确或更正形式输出，并且不会被其组的前导值替换。  

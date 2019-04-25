@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642507"
 ---
 # <a name="value-property-example-vb"></a>Value 属性示例 (VB)
 此示例演示[值](../../../ado/reference/ado-api/value-property-ado.md)具有属性[字段](../../../ado/reference/ado-api/field-object.md)并[属性](../../../ado/reference/ado-api/property-object-ado.md)按显示字段和属性值的对象的***员工***表。  

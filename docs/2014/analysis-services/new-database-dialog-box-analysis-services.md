@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743713"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>“新建数据库”对话框 (Analysis Services)
   可以使用 **中的** “新建数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框创建新的空 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。 通过在对象资源管理器中右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹，并选择“新建数据库”，可以显示“新建数据库”对话框。  
@@ -29,15 +29,15 @@ ms.locfileid: "48165707"
 |----------|----------------|  
 |**数据库名称**|键入新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的名称。|  
 |**使用特定用户名和密码**|选择此选项可以使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用指定用户帐户的安全凭据。 指定凭据将用于执行处理、ROLAP 查询、外部绑定、本地多维数据集、挖掘模型、远程分区、链接对象以及从目标到源的同步。 但是，对于 DMX OPENQUERY 语句，将使用当前用户的凭据。|  
-|**用户名**|键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库将使用的用户帐户的域和名称。 使用以下格式：<br /><br /> *\<域名 >* **\\** *\<用户帐户名 >*<br /><br /> 注意：仅当已选择“使用特定用户名和密码”时，才会启用此选项。 |  
+|**用户名**|键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库将使用的用户帐户的域和名称。 使用以下格式：<br /><br /> *\<域名 >* **\\** *\<用户帐户名 >*<br /><br /> 注意：此选项才会启用**使用特定用户名和密码**处于选中状态。|  
 |**密码**|键入在 **“用户名”** 中指定的用户帐户的密码。|  
 |**使用服务帐户**|选择此选项可以使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用与管理数据库的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务关联的安全凭据。 服务帐户凭据将用于处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步。 对于 DMX OPENQUERY 语句、本地多维数据集和挖掘模型，将使用当前用户的凭据。 外部绑定不支持此选项。|  
 |**使用当前用户的凭据**|选择此选项将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY 语句、本地多维数据集和挖掘模型。 处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步不支持此选项。|  
-|**Default**|选择此选项可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的默认用户帐户的凭据。 此选项使用数据库的默认设置来处理对象、同步服务器以及执行 **Open Query** 数据挖掘语句。 有关在数据库级别指定默认设置的详细信息，请参阅[设置多维数据库属性 (Analysis Services)](multidimensional-models/set-multidimensional-database-properties-analysis-services.md)。<br /><br /> 默认情况下`DataSourceImpersonationInfo`数据库属性设置为**使用服务帐户**。 无论 `DataSourceImpersonationInfo` 属性值如何，均会将当前用户的凭据用于外部绑定、ROLAP 查询、本地多维数据集和数据挖掘模型。|  
-|**Description**|键入新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的说明。|  
+|**默认**|选择此选项可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的默认用户帐户的凭据。 此选项使用数据库的默认设置来处理对象、同步服务器以及执行 **Open Query** 数据挖掘语句。 有关在数据库级别指定默认设置的详细信息，请参阅[设置多维数据库属性 (Analysis Services)](multidimensional-models/set-multidimensional-database-properties-analysis-services.md)。<br /><br /> 默认情况下`DataSourceImpersonationInfo`数据库属性设置为**使用服务帐户**。 无论 `DataSourceImpersonationInfo` 属性值如何，均会将当前用户的凭据用于外部绑定、ROLAP 查询、本地多维数据集和数据挖掘模型。|  
+|**说明**|键入新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的说明。|  
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [多维模型数据库&#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多维模型数据库 (SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

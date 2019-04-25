@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640215"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能和任务
   Analysis Services 基础文档按建模和服务器模式来组织，方便您仅关注您所安装的模式中可用的工具、任务和功能。 可以在“服务器实例”中找到跨多个模式的服务器管理任务。  
@@ -24,7 +24,7 @@ ms.locfileid: "48172828"
 ## <a name="in-this-section"></a>本节内容  
  [比较表格和多维解决方案&#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [工具和 Analysis Services 中使用的应用程序](tools-and-applications-used-in-analysis-services.md)  
+ [在 Analysis Services 中使用的工具和应用程序](tools-and-applications-used-in-analysis-services.md)  
   
  [Analysis Services 实例管理](instances/analysis-services-instance-management.md)  
   

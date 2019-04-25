@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469124"
 ---
 # <a name="lesson-11-create-roles"></a>第 11 课：创建角色
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52512931"
   
 因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 您仍能够测试每个角色的影响，更高版本中第 12 课：在 Excel 中分析。  
   
-学完本课的预计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 10 课：创建分区](../analysis-services/lesson-10-create-partitions.md)。  
@@ -51,9 +51,9 @@ ms.locfileid: "52512931"
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。 
 
-    ![作为表格-lesson11-新的角色](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
-5.  可选:单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选：单击**成员**选项卡，然后依次**添加**。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>创建 Sales Analyst US 用户角色  
   
@@ -70,9 +70,9 @@ ms.locfileid: "52512931"
     ```
     
     行筛选器公式必须解析为布尔 (TRUE/FALSE) 值。 通过此公式中，指定的国家/地区区域代码值为"US"行，对用户可见。  
-    ![作为表格-lesson11-角色-筛选器](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
-6.  可选:单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+6.  可选：单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要创建的管理员用户角色  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52512931"
   
 3.  向此角色授予**管理员**权限。  
   
-4.  可选:单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
+4.  可选：单击“成员”选项卡，然后单击“添加”。 在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。 
   
   
 ## <a name="whats-next"></a>下一步是什么？

@@ -1,5 +1,5 @@
 ---
-title: 生成的命名集的 MDX (MDX) |Microsoft 文档
+title: 生成的命名集的 MDX (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740057"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>MDX 命名集的生成命名集
+# <a name="mdx-named-sets---building-named-sets"></a>MDX 命名集-生成命名集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   集表达式可能是较长且非常复杂的声明，因此很难理解。 或者，可能非常频繁地使用集表达式，以致于重复定义集成为一种负担。 为了使长而复杂的表达式或常用的表达式更易于使用，多维表达式 (MDX) 允许使用“命名集”表达式。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34021274"
   
      有关如何使用 CREATE SET 语句在会话中创建命名集的详细信息，请参阅[创建会话作用域的命名集 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [SELECT 语句 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [创建 SET 语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)   
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [CREATE SET 语句 (MDX)](../../../mdx/mdx-data-definition-create-set.md)   
+ [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759491"
 ---
 # <a name="generating-reports-accesstosql"></a>生成报告 (AccessToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -31,9 +31,9 @@ ms.locfileid: "52412764"
     |**Sl。不。**|**Command**|**报表标题**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|迁移数据|DataMigrationReport&lt;n&gt;。XML|  
-    |4|同步目标|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |5|从数据库刷新|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
+    |4|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 输出报告是不同的评估报告。 前者是对执行命令时的性能报表，后者是以编程方式使用的 XML 报表。  
@@ -45,8 +45,8 @@ ms.locfileid: "52412764"
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|详细 ="false"|生成活动的汇总的报告。|  
-    |2|详细 ="true"|生成的每个活动的摘要和详细状态报告。|  
+    |1|verbose="false"|生成活动的汇总的报告。|  
+    |2|verbose="true"|生成的每个活动的摘要和详细状态报告。|  
   
     > [!NOTE]  
     > 上面指定的报表详细级别设置是适用于生成评估报告、 convert 架构、 迁移数据命令。  
@@ -56,8 +56,8 @@ ms.locfileid: "52412764"
     ||||  
     |-|-|-|  
     |**Sl。不。**|**命令和参数**|**输出说明**|  
-    |1|报告错误 ="false"|没有错误的详细信息 / 警告 / 信息消息。|  
-    |2|报告错误 ="true"|详细的错误 / 警告 / 信息消息。|  
+    |1|report-errors="false"|没有错误的详细信息 / 警告 / 信息消息。|  
+    |2|report-errors="true"|详细的错误 / 警告 / 信息消息。|  
   
     > [!NOTE]  
     > 上面指定的错误报告设置是适用于生成评估报告、 convert 架构、 迁移数据命令。  
@@ -102,15 +102,15 @@ ms.locfileid: "52412764"
   
 />  
 ```  
-**对象名称：** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
+**object-name:** 指定同步 （如果还没有单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
--   作为警告报告总数  
+-   report-total-as-warning  
   
--   报表的每个-作为-警告  
+-   report-each-as-warning  
   
--   脚本失败  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>刷新从数据库：  
 该命令**从数据库刷新**已**报表-到错误**参数，它指定刷新操作的错误报告的位置。 然后，按名称的文件**SourceDBRefreshReport&lt;n&gt;。XML**创建在指定的位置，其中**&lt;n&gt;** 是唯一的文件数，以每次执行同一命令数字递增。  
@@ -132,15 +132,15 @@ ms.locfileid: "52412764"
   
 />  
 ```  
-**对象名称：** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
+**object-name:** 指定用于刷新 （它还可以包含单个对象名或组对象名称） 被视为对象。  
   
 **错误：** 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
--   作为警告报告总数  
+-   report-total-as-warning  
   
--   报表的每个-作为-警告  
+-   report-each-as-warning  
   
--   脚本失败  
+-   fail-script  
   
 ## <a name="see-also"></a>请参阅  
 [执行 SSMA 控制台 （访问）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

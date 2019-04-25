@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741242"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>查找数据库向导 （选择文件） (AccessToSQL)
 查找数据库向导的选择文件页列出了在搜索过程找到的文件。 若要选择要添加到 SSMA 的文件，选择包含文件名称的行。 完成选择文件后，单击**下一步**若要查看确认选择页。  

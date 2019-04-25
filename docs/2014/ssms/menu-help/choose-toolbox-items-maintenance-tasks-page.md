@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470044"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
   “自定义工具箱”对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  

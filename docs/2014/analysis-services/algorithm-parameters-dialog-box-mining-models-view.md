@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473489"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>“算法参数”对话框（“挖掘模型”视图）
   可以使用 **“算法参数”** 对话框调整专用于选定模型的算法参数。 当更改算法参数时，将通常更改挖掘模型的结果。 每个参数对结果的影响方式取决于您使用的算法和数据。 有关详细信息，请参阅[自定义挖掘模型和结构](data-mining/customize-mining-models-and-structure.md)。  
@@ -35,10 +35,10 @@ ms.locfileid: "48172997"
 |------------|-----------------|  
 |**参数**|列出参数的名称。|  
 |**ReplTest1**|仅当要更改参数的默认值时才能输入新值。|  
-|**Default**|如果没有在 **“值”** 列提供值，将列出算法使用的参数的默认值。|  
-|**范围**|列出可以在 **“值”** 列中输入的可能值的范围。 范围可以是以下值之一：<br /><br /> 离散列表，例如 1、 2、 3<br /><br /> 内含范围，例如 [0，100]<br /><br /> 排他范围，例如 (0，...)<br /><br /> 组合，例如 [0，...)|  
+|**默认**|如果没有在 **“值”** 列提供值，将列出算法使用的参数的默认值。|  
+|**Range**|列出可以在 **“值”** 列中输入的可能值的范围。 范围可以是以下值之一：<br /><br /> 离散列表，例如 1、 2、 3<br /><br /> 内含范围，例如 [0，100]<br /><br /> 排他范围，例如 (0，...)<br /><br /> 组合，例如 [0，...)|  
   
- **Description**  
+ **说明**  
  说明在“参数”列表中选定的参数。  
   
  **“添加”**  
@@ -50,7 +50,7 @@ ms.locfileid: "48172997"
  如果从列表删除标准 Analysis Services 算法参数之一，模型仍会使用此参数，但将使用此参数的默认值。 此参数并不会永久删除，并将在下一次打开对话框时显示。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [挖掘模型视图&#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   
  [移动数据挖掘对象](data-mining/moving-data-mining-objects.md)  
   

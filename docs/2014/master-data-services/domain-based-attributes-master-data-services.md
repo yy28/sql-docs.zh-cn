@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 28abd39a51a54747a1c93af2e0c36d4ff4100bd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765472"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>基于域的属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，基于域的属性是具有另一个实体成员填充的值的属性。 可以将基于域的属性视为受限制列表，基于域的属性防止用户输入无效的属性值。 若要选择某一属性值，用户必须从列表中进行选择。  
@@ -32,7 +32,7 @@ ms.locfileid: "52817309"
  ![实体中基于域的属性](../../2014/master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "Domain-Based Attributes in an Entity")  
   
 ## <a name="use-same-entity-for-multiple-domain-based-attributes"></a>将同一实体用于多个基于域的属性  
- 您可以将同一实体用作多个实体的基于域的属性。 例如，可以创建与成员名为 YesNoIndicator 实体：是、 No 和 Maybe。 您可以创建名为 InStock 的基于域的属性并且使用 YesNoIndicator 实体作为源。 还可以创建名为 Approved 的另一个基于域的属性并且使用 YesNoIndicator 实体作为源。 只要您希望用户从 YesNoIndicator 实体的成员列表中进行选择，就可以将该实体用作基于域的属性。  
+ 您可以将同一实体用作多个实体的基于域的属性。 例如，可以创建名为 YesNoIndicator 的一个实体，该实体具有以下成员：Yes、No 和 Maybe。 您可以创建名为 InStock 的基于域的属性并且使用 YesNoIndicator 实体作为源。 还可以创建名为 Approved 的另一个基于域的属性并且使用 YesNoIndicator 实体作为源。 只要您希望用户从 YesNoIndicator 实体的成员列表中进行选择，就可以将该实体用作基于域的属性。  
   
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>基于域的属性构成派生层次结构  
  基于域的属性关系是用于派生层次结构的基础。 有关详细信息，请参阅[派生层次结构 (Master Data Services)](derived-hierarchies-master-data-services.md)。  

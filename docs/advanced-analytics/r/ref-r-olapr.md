@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641854"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR （SQL Server 中的 R 库）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ library(olapR)
 
 在以下产品，以及 Azure 上的多个虚拟机映像提供了此包。 包位置会相应地有所不同。
 
-产品 | 位置 |
+产品 | Location |
 --------|----------|
 SQL Server 2017 机器学习服务 （使用 R 集成） | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library

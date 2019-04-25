@@ -1,5 +1,5 @@
 ---
-title: IsInNode (DMX) |Microsoft Docs
+title: IsInNode (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21c90bea43972f1c9088c228d6810b18308f93f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503624"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>返回类型  
  一种布尔值类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **IsInNode**只用于[SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)并[FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md)查询。  
   
 ## <a name="examples"></a>示例  

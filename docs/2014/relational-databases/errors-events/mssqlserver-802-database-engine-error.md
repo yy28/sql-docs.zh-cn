@@ -1,5 +1,5 @@
 ---
-title: MSSQLSERVER_802 |Microsoft Docs
+title: MSSQLSERVER_802 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762359"
 ---
 # <a name="mssqlserver802"></a>MSSQLSERVER_802
     
@@ -40,7 +40,7 @@ ms.locfileid: "48125287"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Memory Manager** 的性能监视器计数器。  
+2.  开始收集性能监视器计数器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:缓冲区管理器**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:内存管理器**。  
   
 3.  检查下面的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存配置参数：  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468764"
 ---
 # <a name="odbc-component-files"></a>ODBC 组件文件
 ODBC 驱动程序文件所需的 ODBC 桌面数据库驱动程序 4.0 的每个组件。  

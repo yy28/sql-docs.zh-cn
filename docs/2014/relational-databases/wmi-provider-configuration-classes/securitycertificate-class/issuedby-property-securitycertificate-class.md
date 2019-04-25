@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0f5bd1e1e6ce8b35d81ee5c17333543dfe5d8ab8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511278"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy 属性（SecurityCertificate 类）
   获取颁发安全证书的对象。  

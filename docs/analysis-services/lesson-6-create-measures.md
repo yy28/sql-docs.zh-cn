@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 创建度量值 |Microsoft Docs
+title: 第 6 课：创建度量值 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469798"
 ---
-# <a name="lesson-6-create-measures"></a>第 6 课： 创建度量值
+# <a name="lesson-6-create-measures"></a>第 6 课：创建度量值
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将创建要包括在您的模型中的度量值。 与上一课中创建的计算列类似，度量值是通过使用 DAX 公式创建的计算。 但是，与计算列不同，度量值是基于用户选择的 *筛选器*进行计算的；例如，添加到数据透视表中的“行标签”字段中的特定列或切片器。 然后，由所应用的度量值计算出筛选器中每个单元的值。 度量值是想要包括在几乎所有表格模型中以对数值数据执行动态计算的功能强大、 灵活的计算。 若要了解详细信息，请参阅[度量值](../analysis-services/tabular-models/measures-ssas-tabular.md)。  
@@ -27,10 +27,10 @@ ms.locfileid: "42795616"
   
 在本课中，您将通过在编辑栏中输入一个 DAX 公式并使用“自动求和”功能来创建度量值。  
   
-学完本课的估计时间：**30 分钟**  
+估计的时间才能完成本课程中：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 5 课： 创建计算列](../analysis-services/lesson-5-create-calculated-columns.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 5 课：创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>创建度量值  
   
@@ -48,7 +48,7 @@ ms.locfileid: "42795616"
   
     请注意，左上角单元格现在包含度量值名称， **DaysCurrentQuarterToDate**后, 跟结果**92**。
     
-      ![作为-表格-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     与计算列不同使用度量值公式可以键入度量值名称后, 跟一个逗号后, 跟公式表达式。
 
@@ -75,7 +75,7 @@ ms.locfileid: "42795616"
   
     “自动求和”功能使用 DistinctCount 标准聚合公式自动为所选列创建度量值。  
     
-       ![作为-表格-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  在度量值网格中，单击新建度量值，然后在**属性**窗口，请在**度量值名称**，重命名度量值到**InternetDistinctCountSalesOrder**。 
  
@@ -87,13 +87,13 @@ ms.locfileid: "42795616"
     |“度量值名称”|“列”|自动求和 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
   
 2.  通过单击某个空单元格在度量值网格中，并使用公式栏，创建并命名以下度量值按顺序：  
   
@@ -124,6 +124,6 @@ ms.locfileid: "42795616"
 对于 FactInternetSales 表创建的度量值可以用于分析关键财务数据，例如销售额、 成本和毛利润率的用户所选筛选器定义的项。  
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 7 课： 创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)。  
+请转到下一课：[第 7 课：创建关键绩效指标](../analysis-services/lesson-7-create-key-performance-indicators.md)。  
 
   

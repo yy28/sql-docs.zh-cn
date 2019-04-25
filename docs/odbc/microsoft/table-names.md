@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633157"
 ---
 # <a name="table-names"></a>表名称
 DBASE、 Microsoft Excel、 Paradox，或使用驱动程序的文本、 表名中发生的 FROM 子句的 SELECT 或 DELETE 之后在 INSERT INTO 子句, 和更新后，CREATE TABLE 和 DROP TABLE 可以包含有效的路径、 主名称和文件名称扩展时.  

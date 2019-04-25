@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638772"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。  
@@ -75,8 +75,8 @@ SSPARAMPROPS rgParamProperties[]);
 |成员|Description|  
 |------------|-----------------|  
 |iOrdinal|所传递参数的序号。|  
-|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  

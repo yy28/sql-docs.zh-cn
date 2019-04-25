@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467818"
 ---
 # <a name="leaf-permissions-master-data-services"></a>叶权限（主数据服务）
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817799"
   
 -   不强制向 **Name** 和 **Code** 属性分配权限。  
   
-|权限|描述|  
+|权限|Description|  
 |----------------|-----------------|  
 |**读取**|用户可以读取叶成员、属性。|  
 |**创建**|用户可以创建叶成员，并在创建过程中指定属性值。|  
@@ -51,7 +51,7 @@ ms.locfileid: "52817799"
 ## <a name="attribute-permissions"></a>属性权限  
  属性权限应用到该属性用于特定实体的值。 仅具有属性权限的用户不能添加或删除成员。  
   
-|权限|描述|  
+|权限|Description|  
 |----------------|-----------------|  
 |**读取**|用户可以读取属性。|  
 |**创建**|用户可以在创建成员时分配值。|  
@@ -72,7 +72,7 @@ ms.locfileid: "52817799"
 > [!NOTE]  
 >  在本示例中，Subcategory 是基于域的属性，基于 SubcategoryList 实体。 可以为 Mountain-100 选择不同子类别，但是不能向 SubcategoryList 实体添加成员或从中删除成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   

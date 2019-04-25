@@ -1,5 +1,5 @@
 ---
-title: 定义多维数据集 |Microsoft 文档
+title: 定义多维数据集 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467363"
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>课程 2-2-定义多维数据集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "34016894"
 15. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[将特性添加到维度](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
+[向维度添加属性](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [多维模型中的多维数据集](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [多维模型中的维度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

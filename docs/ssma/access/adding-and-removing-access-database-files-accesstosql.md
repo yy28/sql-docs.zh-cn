@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760618"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
 若要访问将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须将一个或多个 Access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果是从早期版本的访问权限的数据库，必须将数据库转换到较新版本。 通过打开和保存数据库 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  
@@ -102,7 +102,7 @@ ms.locfileid: "51655636"
   
 3.  展开**表**，然后选择一个表。  
   
-    请注意，显示四个选项卡：**表**，**类型映射**，**属性**，以及**数据**。  
+    请注意，会显示四个选项卡：**表**，**类型映射**，**属性**，并且**数据**。  
   
 4.  展开某个表中，展开**密钥**，然后选择一个密钥。  
   

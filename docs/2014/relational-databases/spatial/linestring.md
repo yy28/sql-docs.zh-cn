@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524145"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是一个一维对象，表示一系列点和连接这些点的线段。  

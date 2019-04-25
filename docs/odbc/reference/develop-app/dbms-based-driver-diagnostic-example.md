@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641036"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>基于 DBMS 的驱动程序诊断示例
 基于 DBMS 的驱动程序将请求发送到 DBMS，并返回到应用程序通过驱动程序管理器的信息。 由于驱动程序接口与驱动程序管理器的组件，其格式，并返回自变量**SQLGetDiagRec**。  

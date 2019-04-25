@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742243"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函数
 **符合性**  
@@ -48,7 +48,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [输入]语句句柄。  
   
- *cursorName*  
+ *CursorName*  
  [输入]游标名称。 针对高效处理游标名称不应在游标名称中包含任何前导或尾随空格，因此如果游标名称中包含分隔的标识符，分隔符应为游标名称中的第一个字符。  
   
  *NameLength*  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cb955fe2779681f33cb1c4a7fc365b5249b5f39
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766663"
 ---
 # <a name="schema-restrictions-dialog-box"></a>“架构限制”对话框
   可以使用 **“架构限制”** 对话框设置要应用于 Foreach ADO.NET 架构行集枚举器的架构限制。  
@@ -32,7 +32,7 @@ ms.locfileid: "58383266"
  **变量**  
  使用变量来定义限制。 从列表中选择变量，或单击“新建变量...”以创建新的变量。   
   
- **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
  **文本**  
  提供文本来定义限制。  

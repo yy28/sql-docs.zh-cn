@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468614"
 ---
 # <a name="schema-views"></a>架构视图
 应用程序可以在通过调用 ODBC 目录函数或通过使用 INFORMATION_SCHEMA 视图从 DBMS 检索元数据信息。 ANSI SQL-92 标准定义这些视图。  

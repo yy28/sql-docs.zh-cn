@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468586"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可滚动游标和事务隔离
 下表列出了用于管理更改的可见性的因素。  
@@ -40,27 +40,27 @@ ms.locfileid: "47662345"
   
 |游标 type\action|自己|拥有<br /><br /> Txn|其他<br /><br /> Txn<br /><br /> (RU[a])|其他<br /><br /> Txn<br /><br /> (RC[a])|其他<br /><br /> Txn<br /><br /> (RR[a])|其他<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|静态|||||||  
-|Insert|可以在 [b]|否|否|否|否|否|  
-|Update|可以在 [b]|否|否|否|否|否|  
-|DELETE|可以在 [b]|否|否|否|否|否|  
+|Static|||||||  
+|Insert|Maybe[b]|否|否|否|否|否|  
+|Update|Maybe[b]|否|否|否|否|否|  
+|DELETE|Maybe[b]|否|否|否|否|否|  
 |键集驱动|||||||  
-|Insert|可以在 [b]|否|否|否|否|否|  
-|Update|用户帐户控制|是|是|是|否|否|  
-|DELETE|可以在 [b]|用户帐户控制|是|是|否|否|  
-|Dynamic|||||||  
-|Insert|用户帐户控制|是|是|是|是|否|  
-|Update|用户帐户控制|是|是|是|否|否|  
-|DELETE|用户帐户控制|是|是|是|否|否|  
+|Insert|Maybe[b]|否|否|否|否|否|  
+|Update|是|是|是|是|否|否|  
+|DELETE|Maybe[b]|是|是|是|否|否|  
+|动态|||||||  
+|Insert|是|是|是|是|是|否|  
+|Update|是|是|是|是|否|否|  
+|DELETE|是|是|是|是|否|否|  
   
  [a] 中括号的字母指示包含游标的事务的隔离级别（在其中进行了更改） 的其他事务的隔离级别是不相关。  
   
- RU： 未提交的读  
+ RU:未提交读  
   
- RC： 已提交读  
+ RC:已提交读  
   
- RR： 可重复读  
+ RR:可重复读  
   
- S： 可序列化  
+ S:可序列化  
   
  [b] 依赖于如何实现游标。 光标是否可以检测此类更改通过中的 SQL_STATIC_SENSITIVITY 选项将报告**SQLGetInfo**。

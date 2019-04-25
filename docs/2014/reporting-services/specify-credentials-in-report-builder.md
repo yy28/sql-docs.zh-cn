@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513319"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在报表生成器中指定凭据
   凭据对试图从数据源中检索数据的用户进行身份验证。 数据源所有者确定必须使用的凭据类型。 例如，数据库管理员可能指定用户必须提供 Windows 用户名和密码。  

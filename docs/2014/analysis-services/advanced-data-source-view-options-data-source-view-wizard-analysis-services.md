@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635593"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>“高级数据源视图选项”对话框（数据源视图向导）(Analysis Services)
   可以使用 **“高级数据源视图选项”** 对话框，进一步控制数据源视图如何从数据源中请求架构和关系以生成视图。  

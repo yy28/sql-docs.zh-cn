@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759995"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47615756"
 |**login_state**|**smallint**|此连接的登录进程状态。 可能的值：<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = 联机<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|远程计算机的当前登录状态。 可能的值：<br /><br /> 连接握手正在初始化。<br /><br /> 连接握手正在等待“登录协商”消息。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。<br /><br /> 连接握手已收到并接受用于身份验证的安全上下文。<br /><br /> 连接握手已初始化并发送了用于身份验证的安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手已收到并发送了用于身份验证的已接受安全上下文。 提供可用于对对等方进行身份验证的可选机制。<br /><br /> 连接握手正在等待“初始化安全上下文确认”消息。<br /><br /> 连接握手正在等待“接受安全上下文确认”消息。<br /><br /> 连接握手正在等待失败的身份验证的 SSPI 拒绝消息。<br /><br /> 连接握手正在等待“预主密钥”消息。<br /><br /> 连接握手正在等待“验证”消息。<br /><br /> 连接握手正在等待“仲裁”消息。<br /><br /> 连接握手已完成，准备进行消息交换。<br /><br /> 连接错误。|  
 |**peer_certificate_id**|**int**|远程实例用来进行身份验证的证书的本地对象 ID。 该证书的所有者必须对 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点拥有 CONNECT 权限。 可以为 NULL。|  
-|**encryption_algorithm**|**smallint**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值&#124;说明&#124;的相应 DDL 选项**<br /><br /> 0 &#124; none&#124;已禁用<br /><br /> 1&AMP;#124;仅签名<br /><br /> 2 &#124; AES、 RC4&#124;需要&#124;所需的算法 RC4}<br /><br /> 3 &#124; AES&#124;所需的算法 AES<br /><br /> **注意：** RC4 算法仅支持向后兼容。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中，可以在任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **说明&#124;的相应 DDL 选项**<br /><br /> NONE&#124;已禁用<br /><br /> RC4 &#124; {所需&#124;所需算法 RC4}<br /><br /> AES&#124;所需算法 AES<br /><br /> 无、 RC4 &#124; {支持&#124;支持算法 RC4}<br /><br /> 无、 AES&#124;支持算法 RC4<br /><br /> RC4、 AES&#124;所需算法 RC4 AES<br /><br /> AES、 RC4&#124;所需算法 AES RC4<br /><br /> 无、 RC4 AES&#124;支持算法 RC4 AES<br /><br /> 无、 AES RC4&#124;支持算法 AES RC4|  
+|**encryption_algorithm**|**smallint**|用于此连接的加密算法。 可以为 NULL。 可能的值：<br /><br /> **值&#124;说明&#124;的相应 DDL 选项**<br /><br /> 0 &#124; none&#124;已禁用<br /><br /> 1 &#124; SIGNING ONLY<br /><br /> 2 &#124; AES、 RC4&#124;需要&#124;所需的算法 RC4}<br /><br /> 3 &#124; AES&#124;所需的算法 AES<br /><br /> **注意：** RC4 算法仅用于支持向后兼容性。 仅当数据库兼容级别为 90 或 100 时，才能使用 RC4 或 RC4_128 对新材料进行加密。 （建议不要使用。）而是使用一种较新的算法，如 AES 算法之一。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中，可以在任何兼容性级别对使用 RC4 或 RC4_128 加密的材料进行解密。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|加密算法的文本表示形式。 可以为 NULL。 可能的值：<br /><br /> **说明&#124;的相应 DDL 选项**<br /><br /> NONE &#124; Disabled<br /><br /> RC4 &#124; {所需&#124;所需算法 RC4}<br /><br /> AES&#124;所需算法 AES<br /><br /> 无、 RC4 &#124; {支持&#124;支持算法 RC4}<br /><br /> 无、 AES&#124;支持算法 RC4<br /><br /> RC4、 AES&#124;所需算法 RC4 AES<br /><br /> AES、 RC4&#124;所需算法 AES RC4<br /><br /> 无、 RC4 AES&#124;支持算法 RC4 AES<br /><br /> 无、 AES RC4&#124;支持算法 AES RC4|  
 |**receives_posted**|**smallint**|尚未针对此连接完成的异步网络接收数。 可以为 NULL。|  
 |**is_receive_flow_controlled**|**bit**|网络接收是否由于流控制（因为网络忙）而推迟。 可以为 NULL。<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|尚未针对此连接完成的异步网络发送数。 可以为 NULL。|  
@@ -61,7 +61,7 @@ ms.locfileid: "47615756"
 |**total_receives**|**bigint**|此连接发出的请求接收的网络的总数。 可以为 NULL。|  
 |**peer_arbitration_id**|**uniqueidentifier**|端点的内部标识符。 可以为 NULL。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="physical-joins"></a>物理联接  
@@ -69,7 +69,7 @@ ms.locfileid: "47615756"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|若要|关系|  
+|From|若要|关系|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   

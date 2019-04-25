@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ceeaf99509fdd6951ecc2f45e295e63c0f901d81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757274"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>为表格模型数据库配置内存中或 DirectQuery 访问
   本主题介绍如何更改已部署的表格模型的连接属性，以便能在直接查询模式下使用模型。  

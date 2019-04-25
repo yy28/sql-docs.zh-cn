@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633367"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支持的 Visual FoxPro 命令和函数（Visual FoxPro ODBC 驱动程序）
 下表列出了 FoxPro 命令和函数，不受 Visual FoxPro ODBC 驱动程序，但支持的 Microsoft® Visual FoxPro®。  
@@ -33,8 +33,8 @@ ms.locfileid: "47802695"
   
 ||||  
 |-|-|-|  
-|#DEFINE...#UNDEF|#IF...#ENDIF 预处理器指令|#IFDEF &AMP;#124; #IFNDEF|  
-|#INCLUDE 预处理器指令|:: 范围解析运算符|! 命令 (请参阅运行&#124;！ 命令中）|  
+|#DEFINE...#UNDEF|#IF...#ENDIF 预处理器指令|#IFDEF &#124; #IFNDEF|  
+|#INCLUDE 预处理器指令|::范围解析运算符|! 命令 (请参阅运行&#124;！ 命令中）|  
 |? &#124; ?? Command|??? Command|\ &#124; \\\ 命令|  
 |@ ...框命令|@ ...类命令|@ ...清除命令|  
 |@ ...编辑-编辑框命令|@ ...填充命令|@ ...GET|  
@@ -50,7 +50,7 @@ ms.locfileid: "47802695"
 |ActivateCell 方法|添加类命令|ADIR （） 函数|  
 |AFONT （） 函数|AINSTANCE （） 函数|可系统内存变量|  
 |AMEMBERS （） 函数|ANSITOOEM （） 函数|APRINTERS （） 函数|  
-|ASELOBJ （） 函数|帮助命令||  
+|ASELOBJ( ) Function|帮助命令||  
   
 ## <a name="b"></a>B  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47802695"
 |CHDIR 命令|CHRSAW （） 函数|关闭备注命令|  
 |CNTBAR （） 函数|CNTPAD （） 函数|列号 （） 函数|  
 |编译命令|编译数据库命令|编译窗体命令|  
-|COMPOBJ （） 函数|容器对象|控件对象|  
+|COMPOBJ( ) Function|容器对象|控件对象|  
 |复制文件命令|复制备注命令|创建类的命令|  
 |创建 CLASSLIB 命令|创建颜色 SET 命令|创建命令|  
 |创建连接的命令|创建数据库的命令|创建窗体的命令|  
@@ -84,7 +84,7 @@ ms.locfileid: "47802695"
   
 ||||  
 |-|-|-|  
-|_DBLCLICK 系统内存变量|_DIARYDATE 系统内存变量|DBSETPROP （） 函数|  
+|_DBLCLICK 系统内存变量|_DIARYDATE 系统内存变量|DBSETPROP( ) Function|  
 |DDE 函数|停用菜单命令|停用弹出项命令|  
 |停用窗口命令|声明的 DLL 命令|声明命令|  
 |定义命令栏|定义框命令|定义类命令|  
@@ -111,7 +111,7 @@ ms.locfileid: "47802695"
 |-|-|-|  
 |_FOXDOC 系统内存变量|_FOXGRAPH 系统内存变量|FEOF （） 函数|  
 |FCLOSE （） 函数|FCREATE （） 函数|FGETS （） 函数|  
-|FERROR （） 函数|FFLUSH （） 函数|FKLABEL （） 函数|  
+|FERROR( ) Function|FFLUSH （） 函数|FKLABEL （） 函数|  
 |文件管理器命令|查找命令|FOPEN （） 函数|  
 |FKMAX （） 函数|FONTMETRIC （） 函数|FSEEK （） 函数|  
 |FPUTS （） 函数|FREAD （） 函数||  
@@ -237,7 +237,7 @@ ms.locfileid: "47802695"
 |重命名连接命令|重命名表命令|从命令还原|  
 |报表命令|再次查询 （） 函数|还原窗口命令|  
 |还原宏命令|还原屏幕命令|RGBSCHEME （） 函数|  
-|RESUME 命令|RGB （） 函数|运行&AMP;#124;！ Command|  
+|RESUME 命令|RGB （） 函数|RUN &#124; ! Command|  
 |RMDIR 命令|ROW （） 函数||  
 |RUNSCRIPT 命令|RDLEVEL （） 函数||  
   

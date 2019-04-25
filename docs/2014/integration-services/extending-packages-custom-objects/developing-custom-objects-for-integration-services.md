@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768653"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：  
@@ -59,7 +59,7 @@ ms.locfileid: "58385575"
 ## <a name="base-classes-attributes-and-important-methods"></a>基类、属性和重要方法  
  对于您可开发的每种类型的自定义对象，本表提供了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象模型中最为重要的元素的简单引用。  
   
-|自定义对象|基类|Attribute|重要方法|  
+|自定义对象|基类|特性|重要方法|  
 |-------------------|----------------|---------------|-----------------------|  
 |任务|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |“ODBC 源编辑器”|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>， <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  

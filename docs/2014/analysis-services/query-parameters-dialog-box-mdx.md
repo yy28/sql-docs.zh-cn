@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748501"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>“查询参数”对话框 (MDX)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “查询参数” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框可以将参数添加到用于定义集、维度和子维度的 MDX 查询。 您可以通过在 **“MDX 查询生成器”** 对话框中单击 **“参数”** 图标，显示 **“查询参数”** 对话框。  
@@ -36,7 +36,7 @@ ms.locfileid: "48078737"
  **多个值**  
  Description  
   
- **Default**  
+ **默认**  
  指示参数的默认值（如果有）。 默认情况下，不分配任何值。  
   
  **其他**  

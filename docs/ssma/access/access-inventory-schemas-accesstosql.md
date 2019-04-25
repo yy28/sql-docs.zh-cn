@@ -38,16 +38,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759692"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 清单架构 (AccessToSQL)
 以下各节介绍的表导出到 Access 架构时创建的 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-## <a name="databases"></a>“数据库”  
+## <a name="databases"></a>数据库  
 数据库元数据导出到**SSMA_Access_InventoryDatabases**表。 此表包含以下列：  
   
 |列名|数据类型|Description|  
@@ -55,7 +55,7 @@ ms.locfileid: "47653699"
 |**DatabaseId**|**uniqueidentifier**|用于唯一标识每个数据库的 GUID。 此列也是表的主键。|  
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
 |**ExportTime**|**datetime**|此元数据创建的 SSMA 的日期和时间。|  
-|**文件路径**|**nvarchar(4000)**|Access 数据库完整路径和文件名称。|  
+|**FilePath**|**nvarchar(4000)**|Access 数据库完整路径和文件名称。|  
 |**FileSize**|**bigint**|以 kb 为单位的 Access 数据库的大小。|  
 |**FileOwner**|**nvarchar(4000)**|指定为所有者的 Access 数据库的 Windows 帐户。|  
 |**DateCreated**|**datetime**|日期和时间创建的 Access 数据库中。|  
@@ -168,7 +168,7 @@ ms.locfileid: "47653699"
 |列名|数据类型|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该报表的数据库。|  
-|**报表 Id**|**int**|一个用于标识报表的递增整数。 此列是表的主键。|  
+|**ReportId**|**int**|一个用于标识报表的递增整数。 此列是表的主键。|  
 |**ReportName**|**nvarchar(4000)**|报表的名称。|  
   
 ## <a name="modules"></a>模块  
@@ -178,7 +178,7 @@ ms.locfileid: "47653699"
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|标识包含该模块的数据库。|  
 |**ModuleId**|**int**|一个用于标识模块的递增整数。 此列是表的主键。|  
-|**模块名称**|**nvarchar(4000)**|模块的名称。|  
+|**ModuleName**|**nvarchar(4000)**|模块的名称。|  
   
 ## <a name="see-also"></a>请参阅  
 [导出 Access 清单](exporting-an-access-inventory-accesstosql.md)  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b807f92b40a772762bf09edd83a129aabd91cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638125"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>更改版本标志名称 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52781819"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改版本标志的名称。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -49,7 +49,7 @@ ms.locfileid: "52781819"
   
 6.  按 Enter。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [版本 (Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [向版本分配标志 (Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

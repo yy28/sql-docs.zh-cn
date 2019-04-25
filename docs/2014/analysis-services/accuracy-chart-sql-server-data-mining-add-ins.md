@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520245"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>准确性图表（SQL Server 数据挖掘外接程序）
   ![在功能区中数据挖掘准确性图表按钮](media/dmc-accchart.gif "在功能区中数据挖掘准确性图表按钮")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136788"
      向导将创建一个包括提升图和基础数据的报表。  
   
 ### <a name="requirements"></a>要求  
- 如果预测的是离散值，则必须选择要预测的目标值。 例如，如果数据是按照答复“Yes: Buy”(1) 和答复“No: Do Not Buy”(2) 进行分类的，则必须将 1 或 2 指定为预测值。 不过，如果要预测某一范围的值，则可以一次只比较两个值。 例如，如果要预测 5 以上的分数，则可能必须重新标记源数据，并创建一个将结果分为两组（一组大于 5、一组小于 5）的新模型。 然后，可以比较这两组的准确性。  
+ 如果预测的是离散值，则必须选择要预测的目标值。 例如，如果你的数据进行分类以响应"是的：购买"1 和响应"No:执行不购买"为 2，则必须作为预测值指定为 1 或 2。 不过，如果要预测某一范围的值，则可以一次只比较两个值。 例如，如果要预测 5 以上的分数，则可能必须重新标记源数据，并创建一个将结果分为两组（一组大于 5、一组小于 5）的新模型。 然后，可以比较这两组的准确性。  
   
 ## <a name="understanding-accuracy"></a>了解准确性  
  可以创建两种类型的图表，在一种图表中指定可预测列的状态，而在另一种中不指定该状态。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746510"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>指定一元运算符（商业智能向导）
   可以使用“指定一元运算符”页指定特定列的父子关系，该列包含一元运算符（用于常规聚合）或表示加权系数的值（用于加权聚合）。有关常规聚合和加权聚合的详细信息，请参阅[聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 使用聚合函数 |Microsoft 文档
+title: 使用聚合函数 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743083"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34026034"
 |**Min**|半累加性|检索所有子成员的最低值。|  
 |**Max**|半累加性|检索所有子成员的最高值。|  
 |**DistinctCount**|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) 。|  
-|**InclusionThresholdSetting**|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
+|**无**|非累加性|不执行任何聚合，直接从事实数据表中为包含度量值的度量值组提供维度中叶成员和非叶成员的所有值。 如果从事实数据表中无法为成员读取任何值，则该成员的值设置为空。|  
 |**ByAccount**|半累加性|根据为帐户维度中某一成员的帐户类型指定的聚合函数计算聚合。 如果度量值组中不存在任何帐户类型维度，则视为 **None** 聚合函数。<br /><br /> 有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
 |**AverageOfChildren**|半累加性|计算所有非空子成员的平均值。|  
 |**FirstChild**|半累加性|检索第一个子成员的值。|  
@@ -64,9 +64,9 @@ ms.locfileid: "34026034"
   
  对成员进行计数的非重复计数度量值基于事实数据表中的外键列。 （即，度量值的“源列”属性标识此列。）此列联接标识由非重复计数度量值进行计数的成员的维度表列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [度量值和度量值组](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 函数引用 & #40;MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [定义半累加性行为](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [MDX 函数引用 (MDX)](../../mdx/mdx-function-reference-mdx.md)   
+ [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

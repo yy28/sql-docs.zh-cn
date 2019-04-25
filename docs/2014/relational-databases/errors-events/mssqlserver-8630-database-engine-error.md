@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8942067b8a549ecc9d1da63a094645ea9609ab63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762447"
 ---
 # <a name="mssqlserver8630"></a>MSSQLSERVER_8630
     
@@ -30,7 +30,7 @@ ms.locfileid: "48060797"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|EXECUTION_ERR|  
-|消息正文|内部查询处理器错误: 查询处理器在执行过程中遇到意外错误。|  
+|消息正文|内部查询处理器错误:查询处理器在执行过程中遇到意外错误。|  
   
 ## <a name="explanation"></a>解释  
  内部查询处理错误。  

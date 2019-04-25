@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510009"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
   使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  

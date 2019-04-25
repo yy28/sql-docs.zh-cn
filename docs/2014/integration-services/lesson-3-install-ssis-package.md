@@ -12,30 +12,30 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767569"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 课：安装包
-  在[第 2 课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，生成部署实用工具，并创建部署捆绑包包含的项，必须在另一台计算机上安装包。 您还验证了部署捆绑中的文件列表，检查了在生成部署实用工具时创建的清单文件的内容。  
+  在 [第 2 课：创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，生成部署实用工具，并创建部署捆绑包包含的项，必须在另一台计算机上安装包。 您还验证了部署捆绑中的文件列表，检查了在生成部署实用工具时创建的清单文件的内容。  
   
  在本课中，将部署捆绑复制到目标计算机，然后在该计算机上运行包安装向导以安装包、包的依赖项和辅助文件。 包将安装在 **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中，其他项将安装在文件系统中。 完成包的安装后，将通过使用执行包实用工具从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 运行包来测试部署。  
   
- **估计的时间才能完成本课程中：** 30 分钟  
+ **完成本课程的预计时间：** 30 分钟  
   
 ## <a name="lesson-tasks"></a>课程任务  
  本课程包含以下任务：  
   
--   [第 1 步：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [步骤 1：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
 -   [步骤 2：运行包安装向导](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
 -   [步骤 3：测试已部署的包](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [第 1 步：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+ [步骤 1：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
 ![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   

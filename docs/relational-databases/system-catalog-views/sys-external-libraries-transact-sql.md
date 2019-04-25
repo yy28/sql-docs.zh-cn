@@ -20,11 +20,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637466"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "59583050"
 |列名 |数据类型 | Description|
 |------|------|------|
 |external_library_id |ssNoversion | 外部库对象的 ID。 |
-|NAME |sysname |外部库的名称。 数据库中是唯一的每位所有者。|
+|name |sysname |外部库的名称。 数据库中是唯一的每位所有者。|
 |principal_id |ssNoversion |拥有此外部库的主体的 ID。 |
 |language | sysname | 支持的外部库的运行时的语言的名称。 有效值为 R、 Python 和 Java。 可能在将来添加其他运行时。|
 |作用域 |ssNoversion |0 表示公共作用域;1 表示专用作用域 |  
