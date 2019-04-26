@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62644774"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *switch_string*   
+ **'** *switch_string* **'**  
  一个字符串，包含**sqlmaint**实用工具开关。 开关及其值之间必须以空格分隔。  
   
  **-？** 开关不能用于**xp_sqlmaint**。  
@@ -54,7 +54,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="remarks"></a>备注  
  如果在使用 SQL Server 身份验证，登录用户调用此过程 **-U"***login_id***"** 并 **-P"***密码***"** 开关追加到前面*switch_string*之前执行。 如果使用 Windows 身份验证登录用户*switch_string*原样传递到**sqlmaint**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  

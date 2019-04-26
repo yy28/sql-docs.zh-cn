@@ -1,5 +1,5 @@
 ---
-title: Analysis Services PowerShell |Microsoft Docs
+title: Analysis Services PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643544"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包括 Analysis Services PowerShell (SQLAS) 提供程序和 cmdlet，以便您可以使用 Windows PowerShell 导航、管理和查询 Analysis Services 对象。  
@@ -61,10 +61,10 @@ ms.locfileid: "53355909"
 |多维实例和数据库|支持本地和远程管理。<br /><br /> 合并分区需要具有本地连接。|  
 |表格实例和数据库|支持本地和远程管理。<br /><br /> 有关详细信息，请参阅 》 2011 年 8 月博客[管理表格模型使用 PowerShell](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 实例和数据库|有限支持。 您可以使用 HTTP 连接和 SQLAS 提供程序查看实例和数据库信息。<br /><br /> 但是，不支持使用 cmdlet。 切勿使用 Analysis Services PowerShell 备份和还原内存中 PowerPivot 数据库，也不应添加或删除角色、处理数据或运行任意 XMLA 脚本。<br /><br /> 出于配置目的，PowerPivot for SharePoint 具有单独提供的内置 PowerShell 支持。 有关详细信息，请参阅[powerpivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
-|与本地多维数据集的本机连接<br /><br /> "数据 Source=c:\backup\test.cub"|不提供支持。|  
-|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "数据源 =http://server/shared_docs/name.bism"|不提供支持。|  
-|与 PowerPivot 数据库的嵌入式连接<br /><br /> "数据源 = $Embedded$"|不提供支持。|  
-|Analysis Services 存储过程中的本地服务器环境<br /><br /> "数据源 = *"|不提供支持。|  
+|与本地多维数据集的本机连接<br /><br /> "Data Source=c:\backup\test.cub"|不提供支持。|  
+|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source=http://server/shared_docs/name.bism"|不提供支持。|  
+|与 PowerPivot 数据库的嵌入式连接<br /><br /> "Data Source=$Embedded$"|不提供支持。|  
+|Analysis Services 存储过程中的本地服务器环境<br /><br /> "Data Source=*"|不提供支持。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证要求和安全注意事项  
  在连接到 Analysis Services 时，您必须使用 Windows 用户标识建立连接。 多数情况下都使用 Windows 集成安全性建立连接，由当前用户的标识设置执行服务器操作的安全上下文。 但是，在配置对 Analysis Services 的 HTTP 访问时，还可以使用其他身份验证方法。 本节介绍连接类型如何确定您可以使用的身份验证选项。  
@@ -147,7 +147,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> 启用远程管理  
- 您必须首先启用远程管理和文件共享，然后才能将 Analysis Services PowerShell 用于远程 Analysis Services 实例。 下面的错误指示存在防火墙配置问题：“RPC 服务器不可用。 （HRESULT 异常：0x800706BA)"。  
+ 您必须首先启用远程管理和文件共享，然后才能将 Analysis Services PowerShell 用于远程 Analysis Services 实例。 下面的错误指示存在防火墙配置问题：“RPC 服务器不可用。 (异常来自 HRESULT:0x800706BA)"。  
   
 1.  确认本地计算机和远程计算机都具有客户端和服务器工具的 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 版本。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740277"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示在其中的一种方法的成员[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以聚合或"累加起来。" 维度可以针对一个或多个层次结构进行聚合。  

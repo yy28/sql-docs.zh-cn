@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643311"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析关键影响因素（Excel 表分析工具）
   ![功能区中的分析关键影响因素按钮](media/tat-aki.gif "功能区中的分析关键影响因素按钮")  
@@ -75,7 +75,7 @@ ms.locfileid: "52415554"
   
  色条长度指示该因素影响结果的概率；因此，阴影条越长，关联性越强。  
   
- **倾向于**  
+ **Favors**  
  第二个报表中，在两列中列出所比较的目标值，其中按置信度降序列出相关因素。  
   
 -   **蓝色**条显示促成结果，"No"的属性 (= 未购买)。  

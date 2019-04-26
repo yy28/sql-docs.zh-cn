@@ -1,5 +1,5 @@
 ---
-title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新： PowerPivot 数据 |Microsoft Docs
+title: 在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743385"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据
   如果您在未安装 PowerPivot for SharePoint 的服务器上查询 PowerPivot 数据，将发生此错误。 如果停止 SQL Server Analysis Services (PowerPivot) 服务，或是您试图查看以前版本的 PowerPivot 数据，此时也会发生此错误。  
@@ -25,7 +25,7 @@ ms.locfileid: "48198581"
   
 |||  
 |-|-|  
-|适用于|PowerPivot for SharePoint|  
+|适用对象|PowerPivot for SharePoint|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|数据连接失败。|  
 |消息正文|在尝试建立与外部数据源的连接的过程中出现错误。 以下连接无法刷新：PowerPivot 数据|  
@@ -43,6 +43,6 @@ ms.locfileid: "48198581"
  对于在 SQL Server 2008 R2 版本的 PowerPivot for Excel 中创建的 PowerPivot 工作簿，必须安装 SQL Server 2008 R2 版本的 Analysis Services OLE DB 访问接口。 如果您安装了该访问接口，但未注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件，则将出现此错误。 有关文件注册的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。以下连接无法刷新：PowerPivot 数据](the-data-connection-user-could-not-be-delegated.md)  
+ [数据连接使用 Windows 身份验证并且无法对用户凭据进行委托。以下连接无法刷新：PowerPivot Data](the-data-connection-user-could-not-be-delegated.md)  
   
   

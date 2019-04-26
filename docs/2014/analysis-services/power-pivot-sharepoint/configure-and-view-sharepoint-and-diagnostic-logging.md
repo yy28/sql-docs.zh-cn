@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743373"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作、事件和消息均记录在 SharePoint 日志文件中。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
@@ -117,7 +117,7 @@ ms.locfileid: "53354707"
 #### <a name="entries-for-powerpivot-services"></a>针对 PowerPivot Services 的条目  
  下表描述了 SharePoint 日志文件中最可能存在的针对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作的条目。  
   
-|处理|区域|类别|级别|消息|详细信息|  
+|处理|区域|Category|级别|消息|详细信息|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|“PowerPivot 服务”|“使用情况”|“详细”|不存在当前请求统计信息，无信息可供记录。|按照预定义的间隔，服务将查询响应统计信息作为使用情况事件向使用情况数据收集系统报告。 此消息指示没有查询统计信息可供报告。|  
 |w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|开始定位数据源的应用程序服务器 =\<*路径*>|收到连接请求时， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  

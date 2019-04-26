@@ -1,5 +1,5 @@
 ---
-title: 创建预测查询使用预测查询生成器 |Microsoft 文档
+title: 创建预测查询使用预测查询生成器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740197"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34014684"
  **显示**  
  确定在“源”列中选择的内容是否显示在结果中。  
   
- **组**  
+ **分组**  
  通过使用括号来与“和/或”列一起使用以便将表达式组合到一起。 例如，(expr1 or expr2) and expr3。  
   
  **和/或**  
@@ -87,7 +87,7 @@ ms.locfileid: "34014684"
   
 8.  单击 **“挖掘模型预测”** 选项卡的工具栏上的第一个按钮，以运行查询，再选择 **“结果”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在数据挖掘设计器中创建单独查询](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)  
   

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aed96c2288c7720f1f4995c9b0caf3d877ebe98e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645629"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual 属性 (WMI MSReportServer_ConfigurationSetting)
   用于运行报表服务器 Windows 服务的标识。 只读。  

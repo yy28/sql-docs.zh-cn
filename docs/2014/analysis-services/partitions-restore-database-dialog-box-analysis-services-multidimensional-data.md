@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743473"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>分区（“还原数据库”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “还原数据库” **对话框上的** “分区” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页，指定还原本地分区的位置、是否还原远程分区以及在还原远程分区时使用的远程备份文件。  
@@ -63,7 +63,7 @@ ms.locfileid: "51639864"
 |“列”|Description|  
 |------------|-----------------|  
 |**Cube**|显示包含本地分区的多维数据集的名称。|  
-|**度量值组**|显示包含本地分区的度量值组的名称。|  
+|**MeasureGroup**|显示包含本地分区的度量值组的名称。|  
 |**分区**|显示本地分区的名称。|  
 |**大小(MB)**|显示本地分区的大小 (MB)。|  
 |**原始文件夹**|显示存储本地分区的原始文件夹的名称。|  

@@ -26,18 +26,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00f0a142c623535d07592de8992ede24ff1caa6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746849"
 ---
 # <a name="filestore-properties"></a>FileStore 属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下列各表中列出的文件存储服务器属性。 这些属性都是高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改这些属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
  **适用范围：** 多维和表格服务器模式  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  `MemoryLimit`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 465b056b457279911cc9e728ff088325e658cf7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746839"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>设置维度智能选项（商业智能向导）
   可以使用 **“设置维度智能选项”** 页，选择商业智能向导要将维度智能应用于的维度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持几种标准业务类型的维度和属性，如产品维度或帐户维度。 客户端应用程序可使用这些业务类型为商业智能解决方案提供额外的分析支持。 有关可用的维度类型和属性类型的详细信息，请参阅 [维度类型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) 和 [属性和属性层次结构](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  

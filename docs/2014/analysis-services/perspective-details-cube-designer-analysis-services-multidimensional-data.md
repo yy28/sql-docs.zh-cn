@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743453"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>透视详细信息（“透视”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“透视”** 选项卡上的 **“透视详细信息”** 窗格，管理为查询所选透视的用户提供的元数据。  
@@ -42,7 +42,7 @@ ms.locfileid: "48209817"
 ## <a name="context-menu"></a>上下文菜单  
  右键单击“透视详细信息”窗格中显示的透视中的任一单元，可以从所显示的上下文菜单中访问以下选项：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**新的透视**|单击此项可在所选多维数据集中创建新透视。|  
 |**删除透视**|单击此项可显示 **“删除对象”** 对话框并删除所选透视|  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c51ae5de2755711fa6721e874b4d621b66dd3532
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646085"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled 属性 (WMI MSReportServer_ConfigurationSetting)
   指示是否已启用报表服务器 Windows 服务。 只读。  

@@ -1,5 +1,5 @@
 ---
-title: 用户定义的成员属性 (MDX) |Microsoft 文档
+title: 用户定义的成员属性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740220"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成员属性的用户定义的成员属性
+# <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成员属性-用户定义的成员属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   用户定义的成员属性可作为属性关系添加到维度的特定命名级别中。 用户定义的成员属性不能添加到层次结构的 **(All)** 级别，也不能添加到层次结构本身中。  
   
@@ -64,8 +64,8 @@ FROM [Adventure Works]
   
  有关生成计算成员的详细信息，请参阅[在 MDX 中生成计算成员 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [使用成员属性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [属性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)  
+## <a name="see-also"></a>请参阅  
+ [使用成员属性 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [属性 (MDX)](../../../mdx/properties-mdx.md)  
   
   
