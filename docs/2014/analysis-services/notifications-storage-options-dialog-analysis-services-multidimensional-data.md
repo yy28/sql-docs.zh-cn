@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a626f8f6fb28f280a12a3f7ab65c38d2b69cc8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743829"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>通知（“存储选项”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “存储选项” **对话框上的** “通知” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 选项卡，设置维度、多维数据集、度量值组或分区的通知方法和相关设置。  

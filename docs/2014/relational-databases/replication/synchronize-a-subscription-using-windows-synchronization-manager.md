@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745756"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows 同步管理器同步订阅（Windows 同步管理器）
   如果[!INCLUDE[msCoName](../../includes/msconame-md.md)] 与同步管理器在同一台计算机上运行，那么只能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 同步管理器同步对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布的订阅（也可用来同步脱机文件和网页）。 若要使用同步管理器：  
@@ -34,7 +34,7 @@ ms.locfileid: "59582360"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>启用使用 Windows 同步管理器对请求订阅进行同步的选项  
   
-1.  在“订阅属性 - \<Subscriber>:\<SubscriptionDatabase>”对话框的“常规”页面上，对于“使用 Windows 同步管理器”选项，选择值“启用”。  
+1.  在“订阅属性 - \<Subscriber>:**\<SubscriptionDatabase>”对话框的“常规”页面上，对于“使用 Windows 同步管理器”选项，选择值“启用”。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
