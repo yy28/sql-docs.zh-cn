@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650347"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>浏览数据源视图（数据挖掘向导）
   可以使用 **“浏览数据源视图”** 对话框查看在向导的 **“选择数据源视图”** 页中选择的数据源视图。  
@@ -26,7 +26,7 @@ ms.locfileid: "48187273"
 > [!NOTE]  
 >  只有在向导的“选择定义方法”页上选择了“从现有关系数据库或数据仓库”之后，才会显示此页。  
   
- **有关详细信息，请参阅**[多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据源视图中多维模型](multidimensional-models/data-source-views-in-multidimensional-models.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **缩放**  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647623"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>将文档上载到 SharePoint 库（SharePoint 模式下的 Reporting Services）
   您可以将报表定义和报表模型上载到 SharePoint 库。 上载报表服务器项时，您必须选择一个库或库中的一个文件夹。 不能将报表服务器项上载到某个列表或页。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e8ad172dae04aa8b1092d1ddde3bb523d40aa79
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647071"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
   列出报表服务器计算机的 IP 地址。  

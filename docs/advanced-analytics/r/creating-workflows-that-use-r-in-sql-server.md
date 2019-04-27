@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 5d480b7cd24200b051fa2626fc41fa757703eaf8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642631"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>使用 SQL Server 上的 R 创建的 SSIS 和 SSRS 的工作流
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

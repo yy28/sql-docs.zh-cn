@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650598"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性关系图（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“属性关系”** 选项卡上的工具栏紧下方的窗格查看属性关系图，以及创建、修改和删除属性关系。  

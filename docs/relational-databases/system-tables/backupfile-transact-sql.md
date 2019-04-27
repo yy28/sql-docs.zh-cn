@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645508"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47842975"
 |**logical_name**|**nvarchar(128)**|备份文件的逻辑名称。 可以为 NULL。|  
 |**physical_drive**|nvarchar(260)|物理驱动器或分区名称。 可以为 NULL。|  
 |**physical_name**|nvarchar(260)|物理（操作系统）文件名的剩余部分。 可以为 NULL。|  
-|State|**tinyint**|文件的状态，可以是下列值之一：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT <br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = 删除<br /><br /> 注意:，以便这些值对应于数据库状态的值，值 5 将跳过。|  
+|State|**tinyint**|文件的状态，可以是下列值之一：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT <br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 注意：跳过值 5，以便这些值对应于数据库状态的值。|  
 |**state_desc**|**nvarchar(64)**|文件状态的说明，可以是下列值之一：<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|创建文件时的日志序列号。|  
 |**drop_lsn**|**numeric(25,0)**|删除文件时的日志序列号。 可以为 NULL。<br /><br /> 如果文件尚未删除，该值为 NULL。|  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650658"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>“翻译属性数据”对话框（Analysis Services - 多维数据）
   可以使用 **“翻译属性数据”** 对话框设置包含翻译标题数据的列，以及与翻译数据一起使用的排序规则和排序顺序。 通过执行以下操作可以显示 **“翻译属性数据”** 对话框：  
@@ -64,7 +64,7 @@ ms.locfileid: "48117355"
  如果不选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为重音与相应的非重音字母是等价的。  
   
  **区分假名**  
- 选择此选项可以根据为相关语言或字母表提供的字典规则对数据进行排序和比较，并区分日语中的两种假名字符类型：平假名和片假名。  
+ 选择此选项根据为相关的语言或字母表提供的字典规则的数据进行排序和比较并区分两种类型的日语假名字符：平假名和片假名。  
   
  如果不选择此选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将认为平假名和片假名字符是等价的。  
   

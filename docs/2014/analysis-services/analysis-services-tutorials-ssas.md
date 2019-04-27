@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648870"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services 教程 (SSAS)
   本部分包含适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 的教程。  
@@ -37,7 +37,7 @@ ms.locfileid: "53359009"
  大多数 SQL Server 2008 R2 教程适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 服务器。 如果您不熟悉数据挖掘，请使用此链接查找 SQL Server 2008 R2 数据挖掘教程，这些教程也可与 Analysis Services 的 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 实例结合使用。  
   
 ## <a name="see-also"></a>请参阅  
- [TechNet WIKI:SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Picnic 数据集 （示例数据）](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

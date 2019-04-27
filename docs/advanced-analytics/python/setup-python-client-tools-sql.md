@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642781"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -282,7 +282,7 @@ display.Image(data=image)
 
 如果有[Visual Studio 中的 Python](https://code.visualstudio.com/docs/languages/python)，使用以下配置选项来创建包含 Microsoft Python 包的 Python 环境。
 
-| 配置设置 | 值 |
+| 配置设置 | value |
 |-----------------------|-------|
 | **前缀路径** | C:\Program Files\Microsoft\PyForMLS |
 | **解释器路径** | C:\Program Files\Microsoft\PyForMLS\python.exe |
