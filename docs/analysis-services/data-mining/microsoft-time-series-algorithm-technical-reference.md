@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd520413e425ad7ef43eb44511365c43c51022f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753527"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -114,18 +114,18 @@ ms.locfileid: "52535407"
   
 |参数|Description|  
 |---------------|-----------------|  
-|*AUTO_DETECT_PERIODICITY*|指定一个介于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的数值，用于检测周期。 默认值为 0.6。<br /><br /> 如果将此值设置为比较接近于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]的数，则只检测周期性强的数据的周期。<br /><br /> 如果将此值设置为比较接近于 1 的数，则往往会发现许多接近周期的模式并倾向于自动生成周期提示。<br /><br /> 注意：处理大量的周期提示可能会导致模型定型时间明显延长，不过模型会更精确。|  
+|*AUTO_DETECT_PERIODICITY*|指定一个介于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的数值，用于检测周期。 默认值为 0.6。<br /><br /> 如果将此值设置为比较接近于 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]的数，则只检测周期性强的数据的周期。<br /><br /> 如果将此值设置为比较接近于 1 的数，则往往会发现许多接近周期的模式并倾向于自动生成周期提示。<br /><br /> 注意：处理大量的周期提示可能会导致模型定型时间明显较长，但更准确的模型。|  
 |*COMPLEXITY_PENALTY*|控制决策树的增长。 默认值为 0.1。<br /><br /> 减少该值将增大拆分的几率。 增大该值将减小拆分的几率。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*FORECAST_METHOD*|指定要用于分析和预测的算法。 可能值为 ARTXP、ARIMA 或 MIXED。 默认值为 MIXED。|  
 |*HISTORIC_MODEL_COUNT*|指定将要生成的历史模型的数量。 默认值为 1。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*HISTORICAL_MODEL_GAP*|指定两个连续的历史模型之间的时间间隔。 默认值为 10。 该值表示时间单位数，其中单位由模型定义。<br /><br /> 例如，如果将此值设置为 g，则将以 g、2*g、3\*g（依此类推）的时间间隔为被时间段截断的数据生成历史模型。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
-|*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中进行修改。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|  
+|*INSTABILITY_SENSITIVITY*|控制预测方差超过特定阈值的点，在该点后 ARTXP 算法将禁止预测。 默认值为 1。<br /><br /> 注意：此参数不适用于仅使用 ARIMA 的模型。<br /><br /> 默认值 1 提供与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]相同的行为。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 监视每个预测的规范化标准偏差。 对于任何预测，只要该值超过阈值，时序算法就会返回 NULL 并停止预测过程。<br /><br /> 值 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 将停止不稳定的检测。 这意味着无论方差为多少，都可以创建无限个预测。<br /><br /> 注意：此参数只能在修改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅使用默认值 1。|  
 |*MAXIMUM_SERIES_VALUE*|指定用于预测的最大值。 此参数与 MINIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，您可以指定任何一天的预测销售数量决不应超过库存产品数量。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*MINIMUM_SERIES_VALUE*|指定可以预测的最小值。 此参数与 MAXIMUM_SERIES_VALUE 一起用于将预测约束到某一预期范围。 例如，可以指定预测的销售额决不应为负数。<br /><br /> 注意：此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用。|  
 |*MINIMUM_SUPPORT*|指定在每个时序树中生成一个拆分所需的最小时间段数。 默认值为 10。|  
-|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一**:重复前一时间段中的值。<br /><br /> **意味着**:使用定型时所用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
+|*MISSING_VALUE_SUBSTITUTION*|指定如何填补历史数据中的空白。 默认情况下，不允许数据中存在空白。 下表将列出此参数的可能值：<br /><br /> **上一**:重复前一时间段中的值。<br /><br /> **意味着**:使用的培训中使用的时间段的变动平均值。<br /><br /> 数值常量：使用指定的数字来替换所有缺失值。<br /><br /> **无**：默认值。 用沿定型模型曲线绘制的值来替换缺失值。<br /><br /> <br /><br /> 请注意，如果数据中包含多个序列，这些序列不能有参差不齐的边缘。 也就是说，所有序列都应具有相同的起点和终点。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对时序模型执行 **PREDICTION JOIN** 时，还使用此参数的值来填补新数据中的空白。|  
 |*PERIODICITY_HINT*|提供算法的有关数据周期的提示。 例如，如果销售额按年度变化，且序列中的度量单位是月，则周期为 12。 此参数采用 {n [, n]} 格式，其中 n 为任意正数。<br /><br /> 方括号 [] 中的 n 是可选项，并且可以按需多次重复。 例如，若要为按月提供的数据提供多个周期提示，则可以输入 {12, 3, 1} 来检测年度、季度和月的模式。 但是，周期对模型质量有重大影响。 如果给出的提示与实际周期不同，则会对结果造成不良影响。<br /><br /> 默认值为 {1}。<br /><br /> 请注意，需要使用大括号。 另外，此参数具有字符串数据类型。 因此，如果在数据挖掘扩展插件 (DMX) 语句中键入此参数，则必须用引号将数字和大括号括起来。|  
-|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1：指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5:默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
+|*PREDICTION_SMOOTHING*|指定应如何混合模型以优化预测。 可以键入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 和 1 之间的任何值，也可以使用以下值之一：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]设置用户帐户 ：<br />                          指定预测仅使用 ARTXP。 针对较少的预测来优化预测。<br /><br /> 1:指定预测仅使用 ARIMA。 针对多个预测来优化预测。<br /><br /> 0.5:默认值。 指定预测时两个算法都应使用并混合结果。<br /><br /> <br /><br /> 执行预测平滑处理时，使用 FORECAST_METHOD 参数来控制定型。   请注意，此参数仅在某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中可用。|  
   
 ### <a name="modeling-flags"></a>建模标志  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下列建模标志。 创建挖掘结构或挖掘模型时，定义建模标志以指定分析期间如何处理每列中的值。 有关详细信息，请参阅[建模标志（数据挖掘）](../../analysis-services/data-mining/modeling-flags-data-mining.md)。  
@@ -133,7 +133,7 @@ ms.locfileid: "52535407"
 |建模标志|Description|  
 |-------------------|-----------------|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
-|MODEL_EXISTENCE_ONLY|表示该列将被视为具有两个可能状态:Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
+|MODEL_EXISTENCE_ONLY|意味着，该列将被视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
   
 ## <a name="requirements"></a>要求  
  时序模型中必须包含一个含有唯一值的 Key Time 列、输入列以及至少一个可预测列。  

@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748918"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用情况数据收集
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。 有关如何启用和配置 PowerPivot 的使用情况数据收集详细信息请参阅事件[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
- 有关 PowerPivot 管理面板中的使用情况数据的信息，请参阅[PowerPivot 管理面板和使用情况数据](power-pivot-management-dashboard-and-usage-data.md)。  
+ 有关 PowerPivot 管理面板中使用情况数据的信息，请参阅 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **本主题内容：**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48187477"
   
  在使用情况数据收集系统中，事件信息进入应用程序服务器或 Web 前端上的使用情况收集系统。 使用情况数据在系统中移动以便响应计时器作业，这些计时器作业导致数据从物理服务器上的临时数据文件移到数据库服务器上的永久存储区中。 下图说明了通过数据收集和报告系统移动使用情况数据的组件和过程。  
   
- **注意：** 请验证启用了使用情况数据收集。 要进行验证，请在 SharePoint 管理中心中转到 **“监视”** 。 有关详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+ **注意：** 验证启用数据收集的使用情况。 要进行验证，请在 SharePoint 管理中心中转到 **“监视”** 。 有关详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
  ![组件和使用情况数据收集的进程。](../media/gmni-usagedata.gif "组件和使用情况数据收集过程。")  
   
@@ -53,14 +53,14 @@ ms.locfileid: "48187477"
 ##  <a name="sources"></a> 使用情况数据的来源  
  在启用使用情况数据收集后，将为以下服务器事件生成数据。  
   
-|事件|Description|是否可配置|  
+|Event|Description|是否可配置|  
 |-----------|-----------------|------------------|  
 |连接|代表在 Excel 工作簿中查询 PowerPivot 数据的用户进行的服务器连接。 连接事件标识打开了与 PowerPivot 工作簿的连接的用户。 在报告中，该信息用于标识最连接频繁的用户、相同用户访问的 PowerPivot 数据源以及连接随时间变化的趋势。|可以启用和禁用[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |查询响应时间|基于完成时间的长短对查询进行分类的查询响应统计信息。 查询响应统计信息显示服务器响应查询请求的时间长度中的模式。|可以启用和禁用[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |数据加载|[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]执行的数据加载操作。 数据加载事件标识最常用的数据源。|可以启用和禁用[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |数据卸载|由 PowerPivot 服务应用程序执行的数据卸载操作。 如果 PowerPivot 数据源未在使用，或者在服务器处于内存压力下或需要额外的内存来运行数据刷新作业时，则 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]将卸载非活动状态的 PowerPivot 数据源。|可以启用和禁用[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。|  
 |服务器运行状况|指示服务器运行状况的服务器操作，以 CPU 和内存使用率度量。 此数据是历史数据。 它不提供与服务器上的当前处理负载有关的实时信息。|否。 始终为此事件收集使用情况数据。|  
-|数据刷新|由 PowerPivot 服务为计划的数据更新启动的数据刷新操作。 在应用程序级别收集有关数据刷新的使用情况历史记录以便生成操作报告，并且此历史记录反映在各个工作簿的“管理数据刷新”页中。<br /><br /> **注意：** 对于 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 和 SharePoint 2013 部署，数据刷新由 Excel Services 而不是 Analysis Services 服务器管理。|否。 如果您为 PowerPivot 服务应用程序启用数据刷新，则始终收集数据刷新使用情况数据。|  
+|数据刷新|由 PowerPivot 服务为计划的数据更新启动的数据刷新操作。 在应用程序级别收集有关数据刷新的使用情况历史记录以便生成操作报告，并且此历史记录反映在各个工作簿的“管理数据刷新”页中。<br /><br /> **注意：** 有关[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]和 SharePoint 2013 部署，数据刷新由 Excel Services 而不是 Analysis Services 服务器。|否。 如果您为 PowerPivot 服务应用程序启用数据刷新，则始终收集数据刷新使用情况数据。|  
   
 ##  <a name="servicesjobs"></a> 服务和计时器作业  
  下表描述使用情况数据收集系统中的服务和数据集存储区。 有关如何覆盖计时器作业计划以强制执行数据刷新的 PowerPivot 管理面板报告中的服务器运行状况和使用情况数据的说明，请参阅[使用 SharePoint 2010 的 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)。 您可以查看 SharePoint 管理中心中的计时器作业。 转到 **“监视”**，然后单击 **“检查作业状态”**。 单击 **“检查作业定义”**。  

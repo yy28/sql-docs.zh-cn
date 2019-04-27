@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775387"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  

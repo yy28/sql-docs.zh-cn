@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779132"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安装 SQL Server 的注意事项
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 SysPrep，你可以在计算机上准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例，以后再完成配置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 提供一个两步过程来得到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已配置独立实例。 这些步骤包括以下内容：  

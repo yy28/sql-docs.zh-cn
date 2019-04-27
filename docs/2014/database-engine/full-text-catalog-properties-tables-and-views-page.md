@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779188"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文目录属性（“表和视图”页）
   使用此对话框可以查看或修改为全文目录分配的表和视图。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **此数据库中的所有合格的表/视图对象**  
- 列出对其定义了唯一索引、但并未包含在全文目录中的表和视图。 若要选择一个表或视图并将其分配给该目录，请在列表框中选择项目，再按 -> 按钮。  
+ 列出对其定义了唯一索引、但并未包含在全文目录中的表和视图。 若要选择表或视图，并将其分配到目录，在列表框中选择的项，然后按"->"按钮。  
   
  **分配给该目录的表/视图对象**  
  列出当前分配给全文目录的表和视图。  
@@ -53,7 +53,7 @@ ms.locfileid: "48202087"
 |||  
 |-|-|  
 |**自动**|在修改、添加或删除基础表中的数据时，将自动更新全文索引。|  
-|**手动**|当修改、 添加或删除索引的数据中的数据时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]跟踪所做的更改。 当 **“手动”** 更改跟踪处于有效状态时，不会使用这些更改自动更新索引。 相反，管理员可以手动应用更改使用[ALTER FULLTEXT INDEX...START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)语句。|  
+|**Manual**|在修改、添加或删除索引数据中的数据时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将跟踪所做的更改。 当 **“手动”** 更改跟踪处于有效状态时，不会使用这些更改自动更新索引。 相反，管理员可以手动应用更改使用[ALTER FULLTEXT INDEX...START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql)语句。|  
 |**不跟踪更改**|如果此选项处于有效状态，则不会记录对目录中索引数据所做的更改。 管理员必须将 ALTER FULLTEXT INDEX 与 FULL POPULATION 或 INCREMENTAL POPULATION 一起使用以生成索引。|  
   
 ## <a name="see-also"></a>请参阅  

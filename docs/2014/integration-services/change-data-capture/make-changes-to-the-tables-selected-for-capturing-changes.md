@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771134"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>对为捕获更改选择的表进行更改
   在此对话框中，您可以从要捕获变更的所选表中选择特定列。 您还可以编辑 **“安全角色”** 和 **“捕获实例”** 信息。  

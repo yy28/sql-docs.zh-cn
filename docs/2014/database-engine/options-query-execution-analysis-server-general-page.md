@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774760"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>选项 （查询执行分析服务器-常规页）
   使用此页可指定用于运行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询的选项。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”**。 在 **“查询执行”** 下，展开 **“分析服务器”** 文件夹，再单击 **“常规”**。  

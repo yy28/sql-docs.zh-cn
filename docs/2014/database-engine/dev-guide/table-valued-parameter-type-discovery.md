@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780316"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>表值参数类型发现
   使用者-即，客户端应用程序使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序可以发现每个命令参数的类型，如果已将命令文本提供给 OLE DB 访问接口。 了解表值参数的类型之后，使用者可以发现表值参数各列的元数据信息。  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755849"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理复合域中的数据
   本主题提供有关清理 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的复合域的信息。 一个复合域由两个或更多的单一域构成，并且映射到一个由多个相关字词构成的数据字段。 复合域中的单独的域必须具有一个共同的知识范畴。 有关复合域的详细信息，请参阅 [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "56012718"
 ##  <a name="CDCorrection"></a> 使用明确的跨域规则更正数据  
  通过复合域中的跨域规则，您可以创建指示一个复合域中各域之间的关系的规则。 在您对涉及复合域的源数据运行清理活动时将考虑跨域规则。 除了让您知道跨域规则的有效性之外，明确的 *Then* 跨域规则 **“值等于”** 还在数据清理活动过程中更正数据。  
   
- 请考虑下面的示例： 没有复合域中，产品，三个单独的域：ProductName、 CompanyName 和 ProductVersion。 创建以下明确的跨域规则：  
+ 请考虑下面的示例：有一个复合域 Product，该复合域有三个单独的域：ProductName、CompanyName 和 ProductVersion。 创建以下明确的跨域规则：  
   
  如果域名“CompanyName”值包含“Microsoft”，域名“ProductName”值等于“Office”，“ProductVersion”值等于“2010”，那么域名“ProductName”值等于“Microsoft Office 2010”。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56012718"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，此明确的跨域规则更改的数据与可信度为 100%，并**原因**列将显示以下消息：更正由规则*\<跨域规则名称 >*。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)。  
+ 在您测试明确的 *Then* 跨域规则 **“值等于”** 时， **“测试复合域规则”** 对话框将包含一个新列 **“更正为”**，该列将显示正确的数据。 在清理数据质量项目时，这个明确的跨域规则更改可信度为 100% 的数据，并且“原因”列显示以下消息：已根据规则“\<Cross-Domain Rule Name>”更正。 有关跨域规则的详细信息，请参阅 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)。  
   
 > [!NOTE]  
 >  明确的跨域规则将不适用于附加到引用数据服务的复合域。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756502"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器的 **KPI** 选项卡上的常规操作。  

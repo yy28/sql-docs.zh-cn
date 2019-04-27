@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780954"
 ---
 # <a name="send-dataset-sample"></a>发送数据集示例
   发送 `DataSet` 示例说明如何在服务器端基于公共语言运行时 (CLR) 的存储过程中将基于 ADO.NET 的 `DataSet` 作为结果集返回到客户端。 例如，当此类存储过程使用查询结果填充 `DataSet`，然后操作该 `DataSet` 中包含的数据时，此操作很有用。 另外，在存储过程从头创建并填充 `DataSet` 时，此操作也很有用。该示例由 `DataSetUtilities` 和 `TestSendDataSet` 这两个类构成。 针对 `SendDataSet` 类的方法 `DataSetUtilities` 实现了将 `DataSet` 实例的内容传输到客户端的通用方式。 对 `DoTest` 类定义的 `TestSendDataSet` 方法通过创建 `SendDataSet` 并用 `DataSet` Transact-SQL 存储过程中的数据进行填充来验证 `uspGetTwoBOMTestData` 方法是否起作用。 `uspGetTwoBOMTestData` 两次运行 Transact-SQL 存储过程 `uspGetBillOfMaterials`，以通过递归方式查询两种产品的物料清单，这两种产品已被指定为 `usp_GetTwoBOMTestData` 存储过程的参数。 通常在填充数据集后，在调用 `SendDataSet` 前会对数据进行修改，然后才将数据集中的数据作为结果集传输到客户端。 简单地说，此示例返回的数据未经修改。  

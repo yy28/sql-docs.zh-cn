@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754446"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>启动配置数据库镜像安全向导 (SQL Server Management Studio)
   配置数据库镜像安全向导可用于最初配置镜像所涉及的全部或部分服务器实例的安全设置。 此向导与 **“数据库属性”** 对话框的 **“镜像”** 页一起使用。  

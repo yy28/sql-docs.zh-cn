@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753779"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>识别日历的日期和时间 UDT 示例
   将日期作为字符串存储会导致混乱，因为在不识别所使用日历系统的情况下日期毫无意义。`CADatetime` 示例定义两个用户定义数据类型（`CADatetime` 和 `CADate`），通过它们可以按日历方式对日期和时间进行处理。  

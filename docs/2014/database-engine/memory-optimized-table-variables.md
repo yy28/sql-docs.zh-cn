@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774405"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
   除了内存优化表（用于高效的数据访问）和本机编译的存储过程（用于高效的查询处理和业务逻辑执行）之外，[!INCLUDE[hek_2](../includes/hek-2-md.md)] 还引入了第三种对象：内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
@@ -36,7 +36,7 @@ ms.locfileid: "58530739"
   
 -   表变量可以用于模拟本机编译的存储过程中的游标，从而可帮助您解决本机编译的存储过程中的外围应用限制。  
   
- 与内存优化表相似， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个内存优化表类型都生成一个 DLL。 （在创建内存优化表类型时调用编译，而不是在用于创建内存优化表变量时调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
+ 与内存优化表相似， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个内存优化表类型都生成一个 DLL。 （创建内存优化表类型时，以及用于创建内存优化表变量时不编译即被调用。）此 DLL 包括用于访问索引的函数以及用于从表变量检索数据的函数。 当基于表类型声明一个内存优化表变量时，将在用户会话中创建与该表类型相对应的表和索引结构的实例。 然后，可采用与使用基于磁盘的表变量相同的方式使用该表变量。 您可以在表变量中插入、更新和删除行，并且可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询中使用变量。 还可以像表值参数 (TVP) 一样，将变量传递到本机编译的存储过程和解释型存储过程中。  
   
  下面的示例显示了基于 AdventureWorks 的内存中 OLTP 示例中的内存优化表类型 ([SQL Server 2014 内存中 OLTP 示例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   

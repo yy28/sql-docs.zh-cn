@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774740"
 ---
 # <a name="password-expired"></a>密码已过期
   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证连接到带有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的服务器，并且所提供的密码正确但已过期时，会出现此对话框。 通过一个新帐户（使用“用户下次登录时须更改密码”选项创建）连接到服务器时，也会出现此对话框。 使用“密码已过期”对话框，可以更改此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录名的密码。  

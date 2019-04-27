@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748579"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>处理位置和存储位置（分区向导）
   可以使用 **“处理位置和存储位置”** 页，指定拥有分区的多维数据集的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例以及存储分区数据的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 通过指定远程 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或指定默认存储位置之外的其他存储位置，可以将分区定义为远程分区。 有关远程分区的详细信息，请参阅 [远程分区](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "48198617"
   
 ## <a name="see-also"></a>请参阅  
  [分区向导的 F1 帮助&#40;Analysis Services-多维数据&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [查找远程文件夹对话框&#40;Analysis Services-多维数据&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

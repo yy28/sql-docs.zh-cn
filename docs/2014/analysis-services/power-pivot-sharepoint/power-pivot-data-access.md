@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749358"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 数据访问
   本主题介绍从发布到 SharePoint 库的 PowerPivot 工作簿检索数据的方法。  

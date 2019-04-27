@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748511"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>“注册数据库程序集”对话框（Analysis Services - 多维数据）
   使用 **中的** “注册服务器程序集” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中程序集引用的属性。 右键单击“对象资源管理器”中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或数据库的程序集文件夹，并选择“新建程序集”，可以显示“注册服务器程序集”。  
@@ -30,7 +30,7 @@ ms.locfileid: "52416748"
 |**类型**|选择程序集引用的类型。 可用值如下：<br /><br /> **.NET 程序集**： <br />                      该程序集引用表示对 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 程序集的引用。<br /><br /> **COM DLL**： <br />                      该程序集引用表示对 COM 库的引用。<br /><br /> <br /><br /> **\*\* 安全说明\* \***  COM 程序集可能会带来安全风险。 由于此风险和其他注意事项， [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]中不推荐使用 COM 程序集。 未来版本可能不支持 COM 程序集。|  
 |**文件名**|输入 .NET 程序集或 COM 库的完整路径和文件名。|  
 |**...**|单击此项将显示 **“打开”** 对话框，选择 .NET 程序集或 COM 库的完整路径和文件名。|  
-|**程序集名称**|键入以设置程序集引用的名称。<br /><br /> 注意：更改此值不会更改程序集引用所引用的程序集的名称，但会更改 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或数据库在引用程序集引用时所使用的名称。|  
+|**程序集名称**|键入以设置程序集引用的名称。<br /><br /> 注意：更改此值不会更改程序集引用，所引用的程序集的名称，但会更改使用的名称由[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例或数据库时引用程序集引用。|  
 |**包含调试信息**|如果可用，请选择此选项，以包含 .NET 程序集或 COM 库的调试信息。|  
 |**创建时间戳**|显示程序集引用的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新程序集引用的元数据的日期和时间。|  

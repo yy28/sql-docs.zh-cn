@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756135"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
   基于使用情况的优化向导用于为分区设计聚合，它在输出方面与聚合设计向导相似。 但是，基于使用情况的优化向导设计聚合时所基于的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例查询日志中所记录的特定使用模式的查询。 聚合允许 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接从多维数据集存储区中检索预先计算好的汇总数据，而不必为每一个查询从基础数据源重新计算数据，从而提高了性能。  

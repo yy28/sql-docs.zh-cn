@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773731"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用聚集列存储索引
   用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用聚集列存储索引的任务。  
@@ -60,7 +60,7 @@ GO
  使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)语句删除聚集列存储索引。 此操作将删除该索引并将列存储表转换为行存储堆。  
   
 ##  <a name="load"></a> 将数据加载到聚集列存储索引  
- 您可以使用任何标准加载方法，将数据添加到现有聚集列存储索引。  例如，bcp 大容量加载工具、 Integration Services 和 INSERT...SELECT 可以将所有将数据都加载到聚集列存储索引中。  
+ 您可以使用任何标准加载方法，将数据添加到现有聚集列存储索引。  例如，bcp 大容量加载工具、 Integration Services 和 INSERT...SELECT 可以将所有数据加载到聚集列存储索引。  
   
  聚集列存储索引利用增量存储以便防止在列存储的列段中出现碎片。  
   

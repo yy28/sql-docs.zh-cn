@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757192"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>从 Analysis Services 导入（SSAS 表格）
   本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“从服务器导入”项目模板从现有的表格模型导入元数据，创建新的表格模型项目。  
@@ -37,6 +37,6 @@ ms.locfileid: "48130491"
 5.  在 **“数据库名称”** 中，选择包含您要导入的模型元数据的表格模型数据库，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [项目属性&#40;SSAS 表格&#41;](properties-ssas-tabular.md)  
+ [项目属性（SSAS 表格）](properties-ssas-tabular.md)  
   
   

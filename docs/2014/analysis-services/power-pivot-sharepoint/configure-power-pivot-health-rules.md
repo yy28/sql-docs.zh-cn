@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749837"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 运行状况规则 - 配置
   PowerPivot for SharePoint 包含一些 SharePoint 运行状况规则，它们可帮助您监视和解决服务器可用性和配置问题。 应用于 PowerPivot for SharePoint 的运行状况规则显示在“查看规则定义”页。  

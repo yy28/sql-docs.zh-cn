@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781931"
 ---
 # <a name="smo-how-to-topics"></a>SMO 操作指南主题
   SMO 操作指南主题介绍如何设置 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 编程环境以在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 或 C# 中创建程序。  

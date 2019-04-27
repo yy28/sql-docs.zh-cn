@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755355"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  重试时间使用以下公式进行计算：  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0.08 **&#42;** _LoginTimeout_**)**  
+ RetryTime = PreviousRetryTime +( 0.08 &#42; LoginTimeout)  
   
  其中， *PreviousRetryTime* 初始值为 0。  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |舍入|*RetryTime* 计算|每次尝试的重试时间|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0.08 **&#42;** 15 **)**|1.2 秒|  
-|2|1.2 **+ (** 0.08 **&#42;** 15 **)**|2.4 秒|  
-|3|2.4 **+ (** 0.08 **&#42;** 15 **)**|3.6 秒|  
-|4|3.6 **+ (** 0.08 **&#42;** 15 **)**|4.8 秒|   
+|1|0 +(0.08 &#42; 15)|1.2 秒|  
+|2|1.2 +(0.08 &#42; 15)|2.4 秒|  
+|3|2.4 +(0.08 &#42; 15)|3.6 秒|  
+|4|3.6 +(0.08 &#42; 15)|4.8 秒|   
   
  下图说明了这些后续连接尝试的重试时间，每个重试时间均超时。  
   

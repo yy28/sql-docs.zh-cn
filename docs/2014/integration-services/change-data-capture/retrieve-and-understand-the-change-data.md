@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771219"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>检索和了解变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中，第一个任务是运行查询以检索变更数据。 在数据流任务中在源组件内执行此查询。 然后，使用下游转换和目标将变更数据应用到目标。  
@@ -57,6 +57,6 @@ ms.locfileid: "58388655"
 ## <a name="next-step"></a>下一步  
  在配置了用于检索变更数据的 OLE DB 源之后，下一步就是开始设计包中的数据流。  
   
- **下一主题：**[处理插入、更新和删除](process-inserts-updates-and-deletes.md)  
+ **下一个主题：**[处理插入、更新和删除](process-inserts-updates-and-deletes.md)  
   
   

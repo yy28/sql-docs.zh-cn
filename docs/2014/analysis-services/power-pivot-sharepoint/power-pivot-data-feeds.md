@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749239"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 数据馈送
   数据馈送从联机数据源按需向客户端应用程序提供数据流。 在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，可以使用数据馈送将来自支持 Atom 的 Web 服务或应用程序到 Excel 工作簿中的 PowerPivot 数据源添加数据。  

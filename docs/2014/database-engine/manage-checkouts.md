@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774531"
 ---
 # <a name="manage-checkouts"></a>管理签出
   在将文件添加到源代码管理后，您必须签出该文件才能对其进行修改。 将文件签出源代码管理时，源代码管理提供程序会在本地磁盘中创建最新版本的副本并删除该文件的只读属性。 在某些情况下，您可能需要在不签出文件的情况下编辑该文件。 有关编辑文件，而无需签出文件的详细信息，请参阅[编辑 Checked-In 文件](../../2014/database-engine/edit-checked-in-files.md)。  

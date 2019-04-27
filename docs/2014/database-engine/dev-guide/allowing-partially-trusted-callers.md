@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754195"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允许部分可信任的调用方
   对于公共语言运行时 (CLR) 集成而言，共享代码库是一种常见方案。其中包含用户定义类型、存储过程、用户定义函数、用户定义聚合、触发器或实用工具类的程序集通常可由另一个程序集或应用程序进行访问。 要由多个应用程序共享的代码库必须使用强名称进行签名。  

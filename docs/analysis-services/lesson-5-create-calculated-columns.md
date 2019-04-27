@@ -1,5 +1,5 @@
 ---
-title: 第 5 课： 创建计算的列 |Microsoft Docs
+title: 第 5 课：创建计算的列 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752487"
 ---
-# <a name="lesson-5-create-calculated-columns"></a>第 5 课： 创建计算的列
+# <a name="lesson-5-create-calculated-columns"></a>第 5 课：创建计算列
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将通过添加计算列在模型中创建新数据。 计算列基于模型中的现有数据。 若要了解详细信息，请参阅[计算列](../analysis-services/tabular-models/ssas-calculated-columns.md)。  
   
 您将在三个不同的表中创建五个新的计算列。 步骤对于每个任务略有不同。 此处介绍创建新列、重命名这些列以及将它们放入表中不同位置的多种方法。  
   
-学完本课的估计时间：**15 分钟**  
+估计的时间才能完成本课程中：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 4 课： 创建关系](../analysis-services/lesson-4-create-relationships.md)。 
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 4 课：创建关系](../analysis-services/lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>创建计算列  
   
@@ -52,7 +52,7 @@ ms.locfileid: "42792178"
   
 5.  为此列重命名**MonthCalendar**。 
 
-    ![作为-表格-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 MonthCalendar 计算列提供可排序的月份名称。  
   
@@ -122,12 +122,12 @@ ProductCategoryName 计算的列用于在 DimProduct 表，其中包括 DimProdu
   
 5.  将列之间拖动**SalesAmount**列和**TaxAmt**列。 
  
-      ![作为-表格-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     Margin 计算的列用于分析的每个销售的毛利润率。  
   
 ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 6 课： 创建度量值](../analysis-services/lesson-6-create-measures.md)。
+请转到下一课：[第 6 课：创建度量值](../analysis-services/lesson-6-create-measures.md)。
   
   
   

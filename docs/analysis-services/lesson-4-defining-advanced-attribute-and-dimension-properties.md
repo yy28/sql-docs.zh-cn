@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752757"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级的属性和维度属性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756479"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器中的 **“计算”** 选项卡上的常规操作。  
   
 ## <a name="options"></a>选项  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
 |**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
@@ -37,7 +37,7 @@ ms.locfileid: "48090857"
 |**窗体视图**|选择此选项可在窗体视图中使用 **“计算”** 选项卡。|  
 |**脚本视图**|选择此选项可在脚本视图中使用 **“计算”** 选项卡。|  
 |**检查语法**|单击此项可在多维数据集脚本中检查语法。|  
-|**字体**|单击此项可显示“字体”对话框，并在多维数据集脚本中的选择点位置插入一组有效的字体相关单元属性值。 只有在脚本视图中才会启用此选项。|  
+|**Font**|单击此项可显示“字体”对话框，并在多维数据集脚本中的选择点位置插入一组有效的字体相关单元属性值。 只有在脚本视图中才会启用此选项。|  
 |**Color**|单击此项可显示“颜色”对话框，并在多维数据集脚本中的选择点位置插入有效的 RGB（红-绿-蓝）值。 只有在脚本视图中才会启用此选项。|  
 |**计算属性**|单击此项可显示 **“计算属性”** 对话框，并编辑多维数据集脚本中计算的计算属性值。|  
 |**更改用户**|单击此项可显示 **“安全上下文”** 对话框，并更改 **“计算”** 选项卡中使用的用户和角色。|  

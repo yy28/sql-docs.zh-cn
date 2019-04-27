@@ -1,8 +1,9 @@
 ---
 title: precompute rank 服务器配置选项 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/02/2017
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -14,13 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d58db4361acd5a97a58c01d17b1f9a78b20916e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781479"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank 服务器配置选项
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中未实现此选项。 这是一项重大更改。 请尽快修改当前使用此功能的应用程序。  
   
   

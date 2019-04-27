@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748781"
 ---
 # <a name="process-data-ssas-tabular"></a>处理数据（SSAS 表格）
   在您在缓存模式下将数据导入表格模型时，您在捕获导入时这些数据的快照。 在某些情况下，这些数据可能永远不会更改并且无需在模型中更新。 但可能性更大的情况是，您所导入的数据定期更改，并且为使您的模型反映数据源中的最新数据，需要处理（刷新）数据并且重新计算已计算的数据。 为了更新模型中的数据，您对所有表、单独表、按分区或者按数据源连接执行处理操作。  
@@ -27,7 +27,7 @@ ms.locfileid: "48048427"
   
 |主题|Description|  
 |-----------|-----------------|  
-|[手动处理数据&#40;SSAS 表格&#41;](manually-process-data-ssas-tabular.md)|介绍如何手动处理模型工作区数据。|  
-|[数据处理故障排除&#40;SSAS 表格&#41;](troubleshoot-process-data-ssas-tabular.md)|介绍如何解决处理操作中发生的问题。|  
+|[手动处理数据（SSAS 表格）](manually-process-data-ssas-tabular.md)|介绍如何手动处理模型工作区数据。|  
+|[数据处理故障排除（SSAS 表格）](troubleshoot-process-data-ssas-tabular.md)|介绍如何解决处理操作中发生的问题。|  
   
   

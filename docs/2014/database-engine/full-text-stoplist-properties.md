@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779404"
 ---
 # <a name="full-text-stoplist-properties"></a>全文非索引字表属性
   使用该对话框可以添加或删除单个非索引字、删除特定语言的所有非索引字或者清除当前的非索引字表。 非索引字是指包括在非索引字表中的常用字。 非索引字表中的非索引字将从使用非索引字表的表的全文索引中省略。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "48072517"
  **清除非索引字表**  
  通过删除所有语言的全部非索引字来清除非索引字表。  
   
- **非索引字**  
+ **Stopword**  
  如果您选择的是 **“添加非索引字”** 或 **“删除非索引字”**，请在 **“非索引字”** 字段中输入所需的非索引字。 新的非索引字必须是唯一的，也就是说，在针对所选语言的此非索引字表中还不存在该非索引字。  
   
  **全文语言**  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771108"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   若要从 Oracle CDC 设计器控制台运行 Oracle 补充日志记录脚本，程序将提示您输入正运行该脚本的 Oracle 用户的凭据。 若要运行该脚本，Oracle 用户必须对要捕获的所有表具有 ALTER TABLE 权限，并且对 DBA_LOG_GROUPS 视图具有 SELECT 权限。  
@@ -29,7 +29,7 @@ ms.locfileid: "58388807"
   
 -   **Windows 身份验证**：选择此选项可使用当前的 Windows 域凭据。 只有当 Oracle 数据库配置为使用 Windows 身份验证时，才可以使用此选项。  
   
--   **Oracle 身份验证**：如果选择此选项，则必须键入**用户名**并**密码**要连接到源 Oracle 数据库中的用户。  
+-   **Oracle 身份验证**：如果选择此选项，则必须在连接到的源 Oracle 数据库中为用户键入“用户名”和“密码”。  
   
 ## <a name="see-also"></a>请参阅  
  [如何管理 CDC 实例](manage-a-cdc-instance.md)   

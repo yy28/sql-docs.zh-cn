@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779729"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
   本主题详细介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安装上配置 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 。 
@@ -44,7 +44,7 @@ ms.locfileid: "58528509"
   
 -   [管理服务器核心安装](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
-##  <a name="install-updates"></a>安装 更新  
+##  <a name="install-updates"></a>安装更新  
  本节提供有关在 Windows Server Core 计算机上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的信息。 我们建议客户及时评估和安装最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便确保系统是最新的并且具有最近的安全更新。 有关安装的详细信息[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Windows Server Core 计算机上，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
  以下是安装产品更新的两个方案：  
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>使用故障排除工具  
  可以使用 [SQLdiag 实用工具](../../tools/sqldiag-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 SQLdiag 用于加快和简化为 Microsoft 客户支持服务部门收集诊断信息的过程。  
   
- 你可以在 Server Core 上使用以下主题中指定的语法在管理员命令提示符下启动该实用工具:[SQLdiag 实用工具](../../tools/sqldiag-utility.md)。  
+ 您可以启动管理员命令提示符下使用以下主题中指定的语法在 Server Core 上实用工具：[SQLdiag 实用工具](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)   

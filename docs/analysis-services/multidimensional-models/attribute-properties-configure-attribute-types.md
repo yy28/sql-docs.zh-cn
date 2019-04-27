@@ -1,5 +1,5 @@
 ---
-title: 配置属性类型 |Microsoft 文档
+title: 配置属性类型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745658"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>特性属性-配置属性类型
+# <a name="attribute-properties---configure-attribute-types"></a>特性属性 - 配置特性类型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可用于按业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "34025564"
 |**GeoCentroidY**|表示地理区域的 Y 轴中点。|  
 |**GeoCentroidZ**|表示地理区域的 Z 轴中点。|  
 |**ID**|表示标识符 (ID) 或密钥。|  
-|**图像**|表示未定义图形格式的图像。|  
+|**Image**|表示未定义图形格式的图像。|  
 |**ImageBmp**|表示位图图形格式的图像。|  
 |**ImageGif**|表示图形交换格式 (GIF) 图形格式的图像。|  
 |**ImageJpg**|表示联合图像专家组 (JPEG) 图形格式的图像。|  
@@ -139,7 +139,7 @@ ms.locfileid: "34025564"
 |**ShortCaption**|表示短标题。|  
 |**StateOrProvince**|表示省市自治区。|  
 |**实用工具**|表示效用。|  
-|**版本**|表示版本。|  
+|**版本(Version)**|表示版本。|  
 |**WebHtml**|表示 HTML 内容。|  
 |**WebMailAlias**|表示电子邮件别名。|  
 |**WebUrl**|表示 URL 地址。|  
@@ -176,7 +176,7 @@ ms.locfileid: "34025564"
   
 |特性类型值|Description|  
 |--------------------------|-----------------|  
-|**日期**|表示日期。 此特性类型通常应用于时间维度或服务器时间维度的键特性。|  
+|**Date**|表示日期。 此特性类型通常应用于时间维度或服务器时间维度的键特性。|  
 |**DayOfHalfYear**|表示每半年的第几天。|  
 |**DayOfMonth**|表示每月的第几天。|  
 |**DayOfQuarter**|表示每个季度的第几天。|  
@@ -298,7 +298,7 @@ ms.locfileid: "34025564"
 |**WinterSummerSeason**|指示日期是否属于冬季/夏季。|  
 |**Years**|表示年数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [维度特性属性参考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

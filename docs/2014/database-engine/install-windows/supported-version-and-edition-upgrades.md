@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775214"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支持的版本和版本升级
-  您可以从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 进行升级。 本主题列出了支持的从这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本进行升级的途径以及支持的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]版本升级。  
+  您可以从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]进行升级。 本主题列出了支持的从这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本进行升级的途径以及支持的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]版本升级。  
   
 ## <a name="pre-upgrade-checklist"></a>升级前的清单  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018582"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位版本只能升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位服务器。  
   
 > [!NOTE]  
->  在从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版仅在许可模式和支持的内核的最大数目方面存在差异。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  当你升级到[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]从以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，Enterprise Edition 之间进行选择：基于内核的许可和企业版。 这些 Enterprise 版仅在许可模式和支持的内核的最大数目方面存在差异。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持从以下版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级：  
   
@@ -102,8 +102,8 @@ ms.locfileid: "51018582"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express、<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools 和<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio 和<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
-### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- 此节讨论针对 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 支持。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中，您能够执行以下操作：  
+### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支持  
+ 此节讨论针对 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]支持。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中，您能够执行以下操作：  
   
 -   通过使用安装向导或从命令提示符运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 安装程序，将数据库引擎的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018582"
   
 -   使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 连接到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
   
- 当 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 时，该数据库兼容级别将从 90 更改为 100。 （在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，数据库兼容级别的有效值为 100、110 和 120。）[ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 讨论兼容级别更改可能会影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的方式。  
+ 当 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 时，该数据库兼容级别将从 90 更改为 100。 (在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，数据库兼容性级别的有效值为 100、 110 和 120。)[ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 讨论兼容级别更改可能会影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序的方式。  
   
  不支持以上列表中未指定的任何方案，包括但不限于以下情况：  
   

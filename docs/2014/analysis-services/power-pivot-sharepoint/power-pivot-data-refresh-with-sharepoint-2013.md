@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749717"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
   SharePoint 2013 中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据模型刷新设计通过利用 Excel Services 作为主组件，加载和刷新在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
@@ -57,8 +57,8 @@ ms.locfileid: "59241935"
 |工作簿的创建位置|计划的数据刷新|交互式刷新|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 PowerPivot for Excel|不提供支持。 升级工作簿 **(\*)**|不提供支持。 升级工作簿 **(\*)**|  
-|2012 PowerPivot for Excel|是否支持|不提供支持。 升级工作簿 **(\*)**|  
-|Excel 2013|是否支持|是否支持|  
+|2012 PowerPivot for Excel|支持|不提供支持。 升级工作簿 **(\*)**|  
+|Excel 2013|支持|支持|  
   
  **(\*)** 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   

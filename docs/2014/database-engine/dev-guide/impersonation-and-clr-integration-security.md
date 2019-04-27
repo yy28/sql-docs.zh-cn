@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781125"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>模拟和 CLR 集成安全性
   托管代码访问外部资源时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会自动模拟执行例程所处的当前执行上下文。 `EXTERNAL_ACCESS` 和 `UNSAFE` 程序集中的代码可以显式模拟当前执行上下文。  

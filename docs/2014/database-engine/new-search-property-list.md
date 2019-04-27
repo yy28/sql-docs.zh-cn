@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774493"
 ---
 # <a name="new-search-property-list"></a>新建搜索属性列表
   使用此对话框可以创建搜索属性列表。  
@@ -44,11 +44,11 @@ ms.locfileid: "48195227"
  **源搜索属性列表**  
  从属于所选数据库的搜索属性列表中选择一个现有搜索属性列表的名称。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  请参阅[创建搜索属性列表&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>使用 SQL Server Management Studio 管理搜索属性列表  
- 有关如何创建、 查看、 更改或删除搜索属性列表，以及有关如何配置为属性搜索的全文索引的信息，请参阅[使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 有关如何创建、查看、更改或删除搜索属性列表以及如何为属性搜索配置全文索引的信息，请参阅 [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/create-search-property-list-transact-sql)   

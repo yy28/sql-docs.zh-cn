@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773493"
 ---
 # <a name="view-project-history"></a>查看项目历史
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 项目的历史记录包括对每个项目文件执行的所有操作（包括文件创建、添加、删除和恢复）的列表。  

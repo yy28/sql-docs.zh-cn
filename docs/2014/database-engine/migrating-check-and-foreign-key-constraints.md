@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774927"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>迁移检查约束和外键约束
   检查和外键约束中不支持[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这些构造通常用来强制实施架构中的逻辑数据完整性，可能必须维护相关的功能的应用程序的正确性。  

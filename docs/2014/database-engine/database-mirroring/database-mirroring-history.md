@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754831"
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
   使用该对话框可以查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。  
@@ -56,7 +56,7 @@ ms.locfileid: "48086187"
   
 -   所有记录  
   
- **“刷新”**  
+ **刷新**  
  单击它可刷新历史记录列表。  
   
 > [!NOTE]  

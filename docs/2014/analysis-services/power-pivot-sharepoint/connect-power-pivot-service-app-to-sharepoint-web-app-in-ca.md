@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d2f83b1b003e6be2fc5c47b8a0e12b440f537c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749418"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序
   PowerPivot 服务应用程序可由场中任意数目的 SharePoint Web 应用程序使用。 若要使 PowerPivot 服务应用程序可用，请将其添加到服务关联列表中。  

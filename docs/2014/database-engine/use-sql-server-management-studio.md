@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773868"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用于访问、 配置、 管理、 管理和开发的所有组件的集成的环境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，使各种技术水平的开发人员和管理员都能访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  

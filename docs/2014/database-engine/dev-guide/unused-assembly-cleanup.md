@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780174"
 ---
 # <a name="unused-assembly-cleanup"></a>清除未使用的程序集
   `AssemblyCleanup` 示例包含一个 .NET 存储过程，该存储过程通过查询元数据目录来清除当前数据库中未使用的程序集。 其唯一的参数 `visible_assemblies` 用于指定是否应删除未使用的可见程序集。 值为“false”时表示默认情况下将只删除未使用的不可见程序集，否则，将删除所有未使用的程序集。 未使用的程序集的集合所包含的程序集未定义任何入口点（例程/类型和聚合），并且没有已使用的程序集直接或间接地引用它们。  

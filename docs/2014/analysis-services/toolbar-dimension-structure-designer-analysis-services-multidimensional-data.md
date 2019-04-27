@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756400"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用工具栏执行 **维度设计器** 的 **“维度结构”** 页中的常规操作。  
@@ -39,7 +39,7 @@ ms.locfileid: "48146429"
   
      显示当前维度的属性的树视图，给定属性的成员属性将显示为此属性的从属注释。  
   
--   网格  
+-   Grid  
   
      显示当前维度的详细属性列表（包括“名称”、“用法”和“类型”属性）、当前维度键列的数据类型（如果适用）以及当前维度名称列是否匹配键列。  
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775323"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和[!INCLUDE[ssDE](../../includes/ssde-md.md)]用户数据库时可以选择 Server Message Block (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
@@ -113,8 +113,8 @@ ms.locfileid: "54136047"
 -   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 该问题在[此知识库文章](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) 中定义。 若要解决此问题，请参阅该知识库文章中的 **详细信息** 部分。  
   
 -   有些第三方（如 NetApp）设备并不支持所有 SQL Server API 调用。 有了这些可能会看到：   
-    2015-06-04 13:14:19.97 spid9s 错误：17053，严重性：16，状态：1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult():遇到操作系统错误 1 （不正确函数。）。  
+    2015-06-04 13:14:19.97 spid9s 错误：17053，严重性:16，状态：1.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() :遇到操作系统错误 1 （不正确函数。）。  
   
      对于 NTFS，该错误不会产生任何影响。  但对于 ReFS，该错误则可能会导致性能明显下降。  
   

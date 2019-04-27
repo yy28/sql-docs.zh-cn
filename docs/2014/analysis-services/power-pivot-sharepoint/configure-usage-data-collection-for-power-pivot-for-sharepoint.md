@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749472"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>配置使用情况数据收集 (PowerPivot for SharePoint)
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。  
@@ -129,7 +129,7 @@ ms.locfileid: "52411274"
  有关如何收集和存储使用情况数据的详细信息，请参阅[PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)。  
   
 ##  <a name="qrh"></a> 出于报告目的定义快速、中等和较慢的查询响应类别  
- 查询处理性能根据预定义的类别进行测量，这些预定义的类别按完成所用的时间长度定义请求-响应周期。 预定义的类别包括：一般、快速、预期、长时间运行和超出。 对 PowerPivot 服务器的每个请求都将基于完成时间属于上述类别之一。  
+ 查询处理性能根据预定义的类别进行测量，这些预定义的类别按完成所用的时间长度定义请求-响应周期。 预定义的类别包括：简单、 快速、 预期、 长时间运行和超出了阈值。 对 PowerPivot 服务器的每个请求都将基于完成时间属于上述类别之一。  
   
  查询响应信息用于活动报告中。 在这些报告内，为了更好地揭示 PowerPivot 系统的性能趋势，每种类别的用法各不相同。 例如，一般请求将被完全排除，因为这样做可以消除数据中的干扰并且使用其余类别显示更有意义的趋势。 相反，长时间运行或超出的请求统计信息是报告中的重点，以便管理员或工作簿所有者可以立即采取纠正措施。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "52411274"
   
 |设置|默认值|类型|有效范围|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<启用 >|Boolean|这些值可以启用或禁用。|  
+|**Analysis Services 使用事件** （连接、加载、卸载、请求）|\<enabled>|Boolean|这些值可以启用或禁用。|  
 |**查询报告间隔**|300（以秒为单位）|Integer|1 到任意正整数。 默认为 5 分钟。|  
 |**Usage data history**|365（以天为单位）|Integer|0 指定无限制，但您也可以设置使历史数据过期并将自动删除它的上限。 有限保留期的有效值为 1 到 5000（单位为天）。|  
 |一般响应上限|500（以毫秒为单位）|Integer|设置定义一般请求-响应交换的上限。 在 0 到 500 毫秒之间完成的任何请求都是一般请求，并且出于报告目的将被忽略。|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752954"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 编程模型的详细信息
 RDS 编程模型的关键元素如下：  
@@ -29,7 +29,7 @@ RDS 编程模型的关键元素如下：
   
 -   RDS.DataControl  
   
--   事件  
+-   Event  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -75,7 +75,7 @@ RDS 编程模型的关键元素如下：
  [RDS 编程模型和对象](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 使用情况和安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

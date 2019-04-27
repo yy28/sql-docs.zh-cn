@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773433"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server Profiler - 性能计数器限制
   使用“性能计数器限制”对话框可以在将系统监视器性能日志文件与 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪关联时限制该文件中的信息。 对于相应的关联，您可以使用此对话框选择应该显示和使用的计数器。  

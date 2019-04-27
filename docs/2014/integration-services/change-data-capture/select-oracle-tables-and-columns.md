@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771053"
 ---
 # <a name="select-oracle-tables-and-columns"></a>选择 Oracle 表和列
   使用“选择 Oracle 表和列”页可以从捕获了更改的 Oracle 源数据库选择表。 该页具有以下元素：  
@@ -26,15 +26,15 @@ ms.locfileid: "58384755"
  **表列表**  
  此表列表具有三列：  
   
--   **Oracle 表名称**:包括表架构的表的名称。  
+-   **Oracle 表名称**：表的名称，包括表架构。  
   
--   **捕获实例**:用于映射到名称特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。  
+-   **捕获实例**：用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。  
   
      如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>`。 捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。  
   
      可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
--   **安全角色**:访问控制角色，用于控制对更改数据的访问的数据库的名称。  
+-   **安全角色**：用于控制对更改数据的访问的数据库访问控制角色的名称。  
   
      可单击此列的任意单元格对 **security_role**进行手动编辑。  
   

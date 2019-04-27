@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779027"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>全文索引属性（“计划”页）
-  使用此页可以查看和创建运行 SQL Server 代理作业的计划，该作业用于启动对全文索引基表的更新的增量填充。 如果基表或视图不包含的列`timestamp`数据类型，则执行完全填充。  
+  使用此页可以查看和创建运行 SQL Server 代理作业的计划，该作业用于启动对全文索引基表的更新的增量填充。 如果基表或视图不包含 `timestamp` 数据类型的列，则执行完全填充。  
   
  **若要查看或更改全文索引的属性**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48059817"
  **已启用**  
  指示当前是启用还是禁用计划填充。  
   
- **Description**  
+ **说明**  
  显示创建计划时指定的说明。  
   
  **新建**  

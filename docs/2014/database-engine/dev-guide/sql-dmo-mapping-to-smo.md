@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780677"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO 到 SMO 的映射
   SQL 分布式管理对象 (SQL-DMO) 不再包含在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，应转换 SQL-DMO 应用程序以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO)。 SMO 对象模型类似于 SQL-DMO，所以多数 SQL-DMO 对象映射到 SMO 中同名的对象。 但是，在转换到 SMO 的过程中，更改或删除了一些 SQL-DMO 对象。 下表列出建议对未直接转换为 SMO 的 SQL-DMO 对象采取的操作。  

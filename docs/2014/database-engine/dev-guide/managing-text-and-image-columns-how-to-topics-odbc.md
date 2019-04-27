@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780982"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>管理 text 和 image 列操作指南主题 (ODBC)
   Microsoft® SQL Server™ ODBC 驱动程序支持在结果集中使用 text 和 image 参数，以及从 text、ntext 和 image 列中检索数据。  

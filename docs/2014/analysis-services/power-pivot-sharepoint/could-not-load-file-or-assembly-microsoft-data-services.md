@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8328c060d7096cb43edcbc31206a8b55e82e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749529"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>无法加载文件或程序集&#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   在具有 PowerPivot for SharePoint 的 SharePoint 2010 环境中，如果用于 PowerPivot 的应用程序级别的解决方案未正确部署，将发生此错误。  
@@ -25,7 +25,7 @@ ms.locfileid: "48049207"
   
 |||  
 |-|-|  
-|适用于|PowerPivot for SharePoint|  
+|适用对象|PowerPivot for SharePoint|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Powerpivotwebapp 解决方案未部署或者未正确部署。|  
 |消息正文|无法加载文件或程序集“Microsoft.AnalysisServices.SharePoint.Integration”|  

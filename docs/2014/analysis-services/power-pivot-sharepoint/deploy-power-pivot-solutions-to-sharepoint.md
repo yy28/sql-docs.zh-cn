@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749255"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>将 PowerPivot 解决方案部署到 SharePoint
   使用以下说明可手动部署两个解决方案包，这两个解决方案包将 PowerPivot 功能添加到 SharePoint Server 2010 环境。 部署解决方案是在 SharePoint 2010 服务器上配置 PowerPivot for SharePoint 所必需的步骤。 若要查看所需步骤的完整列表，请参阅[PowerPivot 服务器管理和配置在管理中心内](power-pivot-server-administration-and-configuration-in-central-administration.md)。  
@@ -29,17 +29,17 @@ ms.locfileid: "52515972"
   
  [先决条件：确认 Web 应用程序使用经典模式身份验证](#bkmk_classic)  
   
- [第 1 步：部署场解决方案](#bkmk_farm)  
+ [步骤 1：部署场解决方案](#bkmk_farm)  
   
- [步骤 2:将 PowerPivot Web 应用程序解决方案部署到管理中心](#deployCA)  
+ [步骤 2：将 PowerPivot Web 应用程序解决方案部署到管理中心](#deployCA)  
   
- [步骤 3:将 PowerPivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
+ [步骤 3：将 PowerPivot Web 应用程序解决方案部署到其他 Web 应用程序](#deployUI)  
   
  [重新部署或收回解决方案](#retract)  
   
  [关于 PowerPivot 解决方案](#intro)  
   
-##  <a name="bkmk_classic"></a> 先决条件：确认 Web 应用程序使用经典模式身份验证  
+##  <a name="bkmk_classic"></a>先决条件：确认 Web 应用程序使用经典模式身份验证  
  只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式，请运行以下 PowerShell cmdlet 从**SharePoint 2010 Management Shell**，并替换`http://<top-level site name>`与您的 SharePoint 站点的名称：  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  返回值应为 **false**。 如果它是 **，则返回 true**，不能访问此 web 应用程序与 PowerPivot 数据。  
   
-##  <a name="bkmk_farm"></a> 步骤 1:部署场解决方案  
+##  <a name="bkmk_farm"></a> 步骤 1：部署场解决方案  
  本节向您演示如何使用 PowerShell 部署解决方案，但您也可以使用 PowerPivot 配置工具完成此任务。 有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
   
  在您 PowerPivot for SharePoint 安装后，此任务只需要执行一次。  
@@ -69,7 +69,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 步骤 2:将 PowerPivot Web 应用程序解决方案部署到管理中心  
+##  <a name="deployCA"></a> 步骤 2：将 PowerPivot Web 应用程序解决方案部署到管理中心  
  在您部署了场解决方案后，必须将 Web 应用程序解决方案部署到管理中心。 此步骤将 PowerPivot 管理面板添加到管理中心。  
   
 1.  使用 **“以管理员身份运行”** 选项打开 SharePoint 2010 Management Shell。  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  现在，Web 应用程序解决方案已部署到管理中心，您可以使用管理中心完成所有其余配置步骤。  
   
-##  <a name="deployUI"></a> 步骤 3:将 PowerPivot Web 应用程序解决方案部署到其他 Web 应用程序  
+##  <a name="deployUI"></a> 步骤 3：将 PowerPivot Web 应用程序解决方案部署到其他 Web 应用程序  
  在上一个任务中，您将 Powerpivotwebapp.wsp 部署到了管理中心。 在本节中，您可以在支持 PowerPivot 数据访问的每个现有 Web 应用程序上都部署 powerpivotwebapp.wsp。 如果您在以后添加更多的 Web 应用程序，请确保对于这些附加的 Web 应用程序都重复执行此步骤。  
   
 1.  在管理中心的“系统设置”中，单击 **“管理场解决方案”**。  

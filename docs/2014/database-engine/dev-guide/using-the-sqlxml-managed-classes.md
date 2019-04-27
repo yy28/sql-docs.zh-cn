@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780326"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>使用 SQLXML 托管类
   本部分提供了演示如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 托管类的示例应用程序。  

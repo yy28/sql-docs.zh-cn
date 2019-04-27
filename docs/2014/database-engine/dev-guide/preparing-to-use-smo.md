@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780828"
 ---
 # <a name="preparing-to-use-smo"></a>准备使用 SMO
   本节包含有关开始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 的信息。 以下列表有助于查找有关文档中的语法样式、在 SMO 中编程的系统要求、文件和版本号、SMO 中新增功能的说明以及安装指南的信息。  

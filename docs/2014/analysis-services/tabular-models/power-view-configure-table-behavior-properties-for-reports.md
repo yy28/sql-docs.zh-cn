@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757155"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>为 Power View 报表配置表行为属性（SSAS 表格）
   如果您将表格模型用作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的数据模型，则可以设置以更高粒度级别显示详细信息行的表行为属性。 设置表行为属性会更改详细信息行的分组行为，并为图块、卡片和图表布局中的标识信息（如名称、照片 ID 或徽标图像）生成更好的默认位置。  

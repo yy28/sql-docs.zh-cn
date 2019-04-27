@@ -1,5 +1,5 @@
 ---
-title: 创建挖掘模型 (DMX) |Microsoft Docs
+title: CREATE MINING MODEL (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853477"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *列定义列表*  
  列定义的逗号分隔列表。  
   
- *算法*  
+ *algorithm*  
  当前提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
   
  *XML 字符串*  
- （仅适用于高级用户。）XML 编码的模型 (PMML)。 字符串必须以单引号 (') 引起。  
+ （高级仅供使用。）XML 编码的一个模型 (PMML)。 字符串必须以单引号 (') 引起。  
   
  **会话**子句允许您创建在连接关闭或会话超时时时自动删除从服务器的挖掘模型。**会话**挖掘模型非常有用，因为它们不需要用户以数据库管理员，并且它们仅使用的磁盘空间，只要连接处于打开状态。  
   

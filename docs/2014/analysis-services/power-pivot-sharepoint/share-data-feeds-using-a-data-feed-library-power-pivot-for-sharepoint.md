@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749211"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)
   数据馈送是从以 Atom 线路格式显示数据的服务或应用程序中生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 PowerPivot for SharePoint 部署中，数据馈送用于填充[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用识别 Atom 的应用程序或服务中的数据的数据源。  

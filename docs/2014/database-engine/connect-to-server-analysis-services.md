@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755600"
 ---
 # <a name="connect-to-server-analysis-services"></a>连接到服务器 (Analysis Services)
-  连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 时，可使用此对话框查看或指定选项。  
+  连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]时，可使用此对话框查看或指定选项。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -30,7 +30,7 @@ ms.locfileid: "48140149"
  选择要连接到的服务器实例。 默认情况下，显示上次连接到的服务器实例。  
   
  **身份验证**  
- 在连接到 Analysis Services 的实例时，支持下列身份验证模式： [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。  
+ 连接到的 Analysis Services 实例时，支持以下身份验证模式：[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。  
   
  **Windows 身份验证模式（Windows 身份验证）**  
  **Windows 身份验证** 模式允许用户通过 Windows 用户帐户进行连接。  

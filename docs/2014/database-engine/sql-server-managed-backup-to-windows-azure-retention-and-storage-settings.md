@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773534"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server 托管备份到 Windows Azure - 保持和存储设置
   本主题介绍为数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 以及为实例配置默认设置的基本步骤。 本主题还介绍为实例暂停和恢复 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服务所需的步骤。  
@@ -55,7 +55,7 @@ ms.locfileid: "52534483"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>在数据库级别启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  如果数据库对于备份和保持期（可恢复性 SLA）的具体要求与实例上其他的数据库不同，则为该数据库在数据库级别配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 数据库级别设置将取代实例级别配置设置。 但是，可对同一实例一起使用这两个选项。 下面列出了在数据库级别启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的优点和注意事项。  
   
--   详情如下：每个数据库的单独配置设置。 个别数据库可支持不同的保持期。  
+-   更精细：每个数据库的单独的配置设置。 个别数据库可支持不同的保持期。  
   
 -   取代数据库的实例级别设置。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52534483"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>使用默认设置在实例级别启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  如果实例中的大多数数据库对备份和保持策略具有相同的要求，或者如果您希望在创建时自动备份新数据库实例，则使用此设置。 仍可单独配置对于策略是例外的几个数据库。 下面是在实例级别启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的好处和注意事项的列表。  
   
--   实例级别的自动化：共同设置自动应用到此后添加的新数据库。  
+-   在实例级别的自动化：常见设置自动应用到此后添加的新数据库。  
   
 -   在实例上创建新数据库后很快就自动备份这些数据库  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52534483"
   
      如果要启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]第一次所需的参数是： *@database_name*， *@credential_name*， *@encryption_algorithm*， *@enable_backup**@storage_url*参数是可选的。 如果未提供的值@storage_url参数，则这使用 SQL 凭据中的存储帐户信息派生。 如果提供存储 URL，则只应为存储帐户的根提供该 URL，并且该 URL 必须与您指定的 SQL 凭据中的信息相符。  
   
-    1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+    1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
     2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534483"
     ```  
   
 ##  <a name="InstanceConfigure"></a> 启用和配置默认[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]实例设置  
- 你可通过两种方式在实例级启用和配置默认的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 设置：通过使用系统存储过程`smart_backup.set_instance_backup`或**SQL Server Management Studio**。 下面说明了这两种方法：  
+ 可以启用和配置默认[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]两种方法在实例级别上的设置：通过使用系统存储过程`smart_backup.set_instance_backup`或**SQL Server Management Studio**。 下面说明了这两种方法：  
   
  **smart_backup.set_instance_backup:**。 通过指定的值**1**有关*@enable_backup*参数，可启用备份并设置默认配置。 在实例级别应用后，将这些默认设置应用于添加到此实例的任何新数据库。  首次启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 时，除了对实例启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，还必须提供以下信息：  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52534483"
   
 #### <a name="using-transact-sql"></a>使用 Transact-SQL  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -206,7 +206,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>为特定数据库禁用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -227,7 +227,7 @@ GO
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmdfor-all-the-databases"></a>为所有数据库禁用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]：  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -295,7 +295,7 @@ GO
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>禁用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 默认配置设置：  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -326,7 +326,7 @@ GO
   
 #### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>使用 Transact-SQL 暂停 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服务：  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -353,7 +353,7 @@ Go
   
 #### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>使用 Transact-SQL 恢复 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

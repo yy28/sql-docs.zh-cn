@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781312"
 ---
 # <a name="interfaces-ole-db"></a>接口 (OLE DB)
   除了核心 OLE DB 接口提供由 Microsoft 数据访问组件 (MDAC)， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序实现以下其他 OLE DB 接口：  

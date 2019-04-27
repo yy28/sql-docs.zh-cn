@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756331"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“翻译”** 选项卡上的 **“翻译详细信息”** 窗格，定义和管理当前所选维度的翻译。  
@@ -38,31 +38,31 @@ ms.locfileid: "48179017"
   
 -   维度  
   
-     `Caption` 和`AttributeAllMember`属性  
+     `Caption` 和 `AttributeAllMember` 属性  
   
--   Attribute  
+-   特性  
   
-     `Caption``AttributeHierarchyDisplayFolder`，和`NamingTemplate`属性  
+     `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 属性  
   
     > [!NOTE]  
     >  只有父属性才具有 `NamingTemplate` 属性。  
   
 -   层次结构  
   
-     `Caption` 和`AllMemberName`属性  
+     `Caption` 和 `AllMemberName` 属性  
   
 -   级别  
   
      `Caption` 属性  
   
- **\<语言 >**  
+ **\<Language>**  
  在所选语言中键入或选择维度对象的属性值。 单击省略号按钮 (**...**) 可打开其他对话框，具体取决于所编辑的属性：  
   
 -   `NamingTemplate` 属性  
   
      显示[“级别命名模板”对话框（Analysis Services - 多维数据）](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)。  
   
--   `Caption` 属性 （针对特性）  
+-   `Caption` 属性（针对特性）  
   
      显示[“翻译属性数据”对话框（Analysis Services - 多维数据）](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da44ae47d7e6eaea78a1d14736367ed5cc41d311
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757261"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>启用 DirectQuery 设计模式（SSAS 表格）
   若要在 DirectQuery 模式下创建模型，您必须首先更改设计时环境，以便该环境支持 DirectQuery 模式的用户。 当您这样做时，该设计器还将执行以下操作：  
@@ -33,7 +33,7 @@ ms.locfileid: "48172577"
   
 ### <a name="to-enable-use-of-directquery-in-a-model"></a>在模型中启用 DirectQuery  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，打开解决方案文件。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开解决方案文件。  
   
 2.  在对象资源管理器中，双击 Model.bim 文件。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "48172577"
 4.  如果存在错误，在 Visual Studio 中，打开**错误列表**并且解决将阻止模型切换到 DirectQuery 模式下的任何问题。  
   
 ## <a name="see-also"></a>请参阅  
- [DirectQuery 模式下&#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)  
   
   

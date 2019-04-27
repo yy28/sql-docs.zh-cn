@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781532"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 处理大型对象
   SQL Server 的 `HandlingLOBUsingCLR` 示例说明了如何通过使用公共语言运行时 (CLR) 存储过程在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与服务器可访问的文件系统之间传输大型对象 (LOB)。 本示例说明了如何在服务器端代码中访问文件，以及如何从基于 CLR 的存储过程中调用动态查询和存储过程。 此示例还说明了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 注册和注销 CLR 方法和程序集。  

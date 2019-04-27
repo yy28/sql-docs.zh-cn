@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749568"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>创建与 PowerPivot 工作簿的 BI 语义模型连接
   使用本主题中的信息可设置一个 BI 语义模型连接，该连接重定向到同一个场中的 PowerPivot 工作簿。  
@@ -99,7 +99,7 @@ ms.locfileid: "48095780"
   
 ## <a name="see-also"></a>请参阅  
  [PowerPivot BI 语义模型连接&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [使用 Excel 或 Reporting Services 中的 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [在 Excel 或 Reporting Services 中使用 BI 语义模型连接](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [创建与表格模型数据库的 BI 语义模型连接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

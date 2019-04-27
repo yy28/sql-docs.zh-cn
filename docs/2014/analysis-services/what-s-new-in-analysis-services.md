@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755966"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>什么&#39;中 Analysis Services 和 Business Intelligence
   除添加了针对多维模型支持 Power View 报表的功能之外，[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 与以前版本相比未发生更改。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756270"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>数据处理故障排除（SSAS 表格）
   本主题提供有关在使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]创建模型时处理（刷新）模型数据的信息。 它不提供有关处理已部署到 Analysis Services 服务器实例的模型中的数据的信息。 有关处理已部署的模型中的数据的详细信息，请参阅 [在 Analysis Services 中编写管理任务脚本](script-administrative-tasks-in-analysis-services.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48174697"
   
  因此，在更改数据源或处理从数据源中获取的数据之前，您应该始终注意潜在影响，还要考虑以下潜在后果：  
   
--   模型数据的某些部分可能由于数据源中的更改而被破坏。 如果并非所有列都可从数据源中进行检索（例如，如果这些列已被删除或更改），那么处理将失败，您必须更新源数据与模型数据之间的映射。 有关详细信息，请参阅[编辑现有数据源连接&#40;SSAS 表格&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)。  
+-   模型数据的某些部分可能由于数据源中的更改而被破坏。 如果并非所有列都可从数据源中进行检索（例如，如果这些列已被删除或更改），那么处理将失败，您必须更新源数据与模型数据之间的映射。 有关详细信息，请参阅 [编辑现有数据源连接（SSAS 表格）](edit-an-existing-data-source-connection-ssas-tabular.md)创建模型时处理（刷新）模型数据的信息。  
   
 -   在处理后，某些列可能被标记为包含错误。 发生此情况的原因是：列中的 DAX 公式使用的数据在您进行处理时变得不可用、列的数据类型发生更改或向外部数据中添加了无效值。 若要解决此问题，您可以编辑该公式或删除该列（如果它基于不再可用的数据）。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48174697"
 -   不能在不同表中多选列和更改列属性。 您一次只能使用一个表或视图。  
   
 ## <a name="see-also"></a>请参阅  
- [手动处理数据&#40;SSAS 表格&#41;](manually-process-data-ssas-tabular.md)   
- [编辑现有数据源连接&#40;SSAS 表格&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [手动处理数据（SSAS 表格）](manually-process-data-ssas-tabular.md)   
+ [编辑现有数据源连接（SSAS 表格）](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771333"
 ---
 # <a name="edit-tables"></a>编辑表
   使用 **“表”** 选项卡可对您从 Oracle 源数据库中选择的表和列进行更改。 该选项卡具有以下元素：  
@@ -25,11 +25,11 @@ ms.locfileid: "58385974"
  **表列表**  
  此表列表具有三列：  
   
--   **Oracle 表名称**:包括表架构的表的名称。  
+-   **Oracle 表名称**：表的名称，包括表架构。  
   
--   **捕获实例**:用于映射到名称特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。 如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>.` 。捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。 可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
+-   **捕获实例**：用于命名特定于实例的变更数据捕获对象的捕获实例的名称。 捕获实例不能为 NULL。 如果未指定，则该名称将从源架构名称加上源表名称中派生而来，格式为 `<schema-name>_<table-name>.` 。捕获实例名称不能超过 100 个字符，并且在数据库中必须是唯一的。 可单击此列的任意单元格对 **capture_instance**进行手动编辑。  
   
--   **安全角色**:用来访问更改数据的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
+-   **安全角色**：用于访问变更数据的数据库角色的名称。 可单击此列的任意单元格对 **security_role**进行手动编辑。  
   
  **添加表**  
  单击“添加表”可打开“表选择”对话框，从中可以[将表添加到 CDC 实例](add-tables-to-a-cdc-instance.md)。 首次访问 Oracle 数据库时，您必须 [Connect to Oracle](connect-to-oracle.md)。  

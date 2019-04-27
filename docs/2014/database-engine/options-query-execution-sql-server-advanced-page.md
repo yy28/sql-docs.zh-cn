@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774379"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>选项（“查询执行”:“SQL Server”:“高级”页）
   有几个使用 SET 命令的选项。 使用此页可以指定在 SQL Server 查询编辑器中运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询时的 **set** 选项。 这些选项对其他代码编辑器不起任何作用。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击 **“查询”** 菜单或 **查询窗口中快捷菜单上的** “查询选项” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 在 **“执行”** 下，单击 **“高级”**。 有关每个选项的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  

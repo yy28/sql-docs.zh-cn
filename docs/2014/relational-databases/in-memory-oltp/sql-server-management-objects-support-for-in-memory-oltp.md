@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066435"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server 管理对象支持
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 中针对内存中 OLTP 的更改。  

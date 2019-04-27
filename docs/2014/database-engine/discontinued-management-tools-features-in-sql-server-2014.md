@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780346"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 中不再使用的管理工具功能
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不再提供的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理工具功能。  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>在删除的功能 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中删除的功能  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>在删除的功能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中删除的功能  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  SQL Server Compact Edition 代码编辑器已从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中删除。 已从对象资源管理器、解决方案资源管理器和模板资源管理器中删除对 SQL Server Compact Editor 的支持。 在 Microsoft Visual Studio 2010 Service Pack 1 或 Webmatrix 中使用 Transact-SQL 编辑器。  
@@ -45,6 +45,6 @@ ms.locfileid: "48068387"
  DACfx 3.0 API 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具的确支持读取使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具和 DACfx 版本创建的 DACPAC 和 BACPAC 文件：将数据库提取到这些版本的 DACPAC 文件，然后通过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Data Tools 将数据库部署到支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。  
   
 ## <a name="see-also"></a>请参阅  
- [后向兼容性](../../2014/getting-started/backward-compatibility.md)  
+ [向后兼容性](../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788796"
 ---
 # <a name="backup-checksum-default"></a>备份校验和默认值
   使用备份校验和默认设置，启用或禁用备份和还原期间的备份校验和。  
@@ -25,7 +25,7 @@ ms.locfileid: "48126729"
 |-|-|  
 |**ReplTest1**|**含义**|  
 |0|已禁用。 这是默认设置。|  
-|1|已启用|  
+|1|Enabled|  
   
  此设置将立即生效。  
   

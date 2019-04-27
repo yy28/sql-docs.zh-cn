@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782140"
 ---
 # <a name="result-set-sample"></a>结果集示例
   有时，在通读查询结果时能够执行命令（而不需要打开新的连接并将所有结果读入内存）很有用。 ADO.NET 2.0 中的多个活动的结果集 (MARS) 功能就是一种能够帮助您实现以上操作的技术。 目前，用于服务器端编程的进程内的提供程序不能实现 MARS。 若要消除此限制，可以使用服务器端游标。 此示例说明如何使用服务器端游标解决对服务器端编程缺少 MARS 支持的问题。  

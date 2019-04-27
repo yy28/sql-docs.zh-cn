@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778819"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文目录属性（“填充计划”页）
   使用此对话框可以添加或修改确定何时填充或重新填充全文目录的计划。  
@@ -34,7 +34,7 @@ ms.locfileid: "48131867"
  **已启用**  
  选中或清除此复选框可以启用或禁用计划操作。  
   
- **Description**  
+ **说明**  
  计划操作的说明。  
   
  **新建**  

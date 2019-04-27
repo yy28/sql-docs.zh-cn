@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753154"
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
   本主题介绍如何开始使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象 (SMO)。 SMO 一节面向开发人员。 下面的列表将帮助您找到以下相关信息：SMO 对象层次结构、如何使用 SMO 准备编写程序、如何使用不同的编程语言开始编写 SMO 程序，以及常规和特定的编程任务。  

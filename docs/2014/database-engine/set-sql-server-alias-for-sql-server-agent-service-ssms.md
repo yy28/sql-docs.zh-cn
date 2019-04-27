@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774386"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   本主题说明了如何通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 别名以供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理用来连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务将通过命名管道，使用无需额外客户端配置的动态服务器名称连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果当前使用的不是默认网络传输或连接的是侦听备用命名管道的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，则需要配置服务器连接别名。  

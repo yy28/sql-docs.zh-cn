@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775747"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server 2014（安装程序）
   本主题提供了使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 可以安装的各种组件的详细信息，请参阅[安装 SQL Server 2014](installation-for-sql-server.md)。  有关如何安装详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，请参阅[安装 SQL Server 2014](install-sql-server.md)。  

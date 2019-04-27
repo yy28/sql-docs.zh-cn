@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772217"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>在包中添加事件处理程序
   在运行时，容器和任务引发事件。 您可以创建自定义事件处理程序，这些程序在事件被引发时运行工作流，以对事件做出响应。 例如，您可创建一个事件处理程序，在任务失败时发送电子邮件。  

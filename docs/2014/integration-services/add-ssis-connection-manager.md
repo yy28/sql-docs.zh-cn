@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771963"
 ---
 # <a name="add-ssis-connection-manager"></a>添加 SSIS 连接管理器
   使用 **“添加 SSIS 连接管理器”** 对话框可以选择要为包添加的连接类型。  

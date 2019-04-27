@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772155"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 源编辑器（“错误输出”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“错误输出”** 页，选择错误处理选项以及设置错误输出列的属性。  

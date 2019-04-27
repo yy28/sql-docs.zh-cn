@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773374"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解内存优化表的事务
   事务使用一种乐观多版本并发控制形式来访问内存优化表。 这意味着存在不同版本的数据。 每个事务都对自己的事务一致数据库版本进行操作（独立于其他并发运行的事务）。 此外，事务还在与其他并发事务不冲突的乐观假设下运行。 这样就无需使用锁，但需要系统检测冲突并终止冲突事务中的一个事务。 仅对于写/写事务和读/写事务会发生冲突。 如果存在写/写冲突，则终止一个写入事务。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748849"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>“处理”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “处理” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象。 在 **中，可以执行以下操作以显示** “处理” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框：  

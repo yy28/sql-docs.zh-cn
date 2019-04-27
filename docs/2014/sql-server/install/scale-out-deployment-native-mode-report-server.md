@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753299"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
-  使用**横向扩展部署**页中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
+  使用 **配置管理器中的** “扩展部署” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页可以查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署”  是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "48099937"
   
  若要配置扩展部署，则首先应有两个或多个与同一报表服务器数据库连接的报表服务器实例。 安装所有实例后，连接到第一个报表服务器，然后使用“扩展部署”页联接每个附加实例。 只有已初始化为使用数据库的报表服务器才能初始化其他节点。  
   
- 若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择**横向扩展部署**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择 **“扩展部署”** 。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>选项  
  **SQL Server 名称**  
- 指定的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]承载报表服务器数据库的实例。  
+ 指定承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的名称。  
   
  **Database Name**  
  指定报表服务器实例当前连接到的数据库的名称。  

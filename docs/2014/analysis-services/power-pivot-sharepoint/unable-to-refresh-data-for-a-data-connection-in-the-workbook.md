@@ -1,5 +1,5 @@
 ---
-title: 无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据 |Microsoft Docs
+title: 无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot Data | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749123"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 提交对某一 PowerPivot 服务器的连接请求并且该请求失败，则会返回此错误。  
@@ -33,7 +33,7 @@ ms.locfileid: "53370999"
 ## <a name="explanation-and-resolution"></a>说明和解决方法  
  Excel Services 无法连接到或加载 PowerPivot 数据。 在下列情况下会出现此错误：  
   
- **方案 1:服务未启动**  
+ **方案 1：服务未启动**  
   
  SQL Server Analysis Services (PowerPivot) 实例未启动。 到期的密码将导致服务停止运行。 有关更改密码的详细信息，请参阅[配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)并[启动或停止 PowerPivot for SharePoint 服务器](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53370999"
   
  您正尝试打开的工作簿可能是在 SQL Server 2008 R2 版本的 PowerPivot for Excel 中创建的。 数据连接字符串中指定的 Analysis Services 数据访问接口很可能在要处理请求的计算机上不存在。  
   
- 如果出现这种情况，你将在 ULS 日志中看到此消息："刷新工作簿中的 'PowerPivot 数据' 失败 '\<指向工作簿 URL >'"后, 跟"无法获取连接"。  
+ 如果是这样，你将在 ULS 日志中看到此消息："刷新工作簿中的 'PowerPivot 数据' 失败 '\<指向工作簿 URL >'"后, 跟"无法获取连接"。  
   
  若要确定工作簿的版本，请在 Excel 中打开它，然后查看连接字符串中指定的数据访问接口。 SQL Server 2008 R2 工作簿将 MSOLAP.4 用作其数据访问接口。  
   

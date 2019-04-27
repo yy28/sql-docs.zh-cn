@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779601"
 ---
 # <a name="edit-checked-in-files"></a>编辑签入文件
-  通常，必须先将源代码管理的文件签出，才能对其进行编辑。 但是，可以配置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，以便修改尚未签出的文件。执行此操作时，更改将暂存在内存中，直到保存文件为止。 然后会提示您从源代码管理中签出文件。  
+  通常，必须先将源代码管理的文件签出，才能对其进行编辑。 但是，你可以配置[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，以便您可以修改未签出的文件。这样做时，所做的更改都保留在内存中，直到保存文件。 然后会提示您从源代码管理中签出文件。  
   
  如果您在小组中工作，除非您的源代码管理提供程序同时支持本地版本和服务器版本签出，否则不推荐您使用允许编辑签入文件的功能。 大多数提供程序都不支持本地版本签出。 如果您的提供程序不支持本地版本签出并且您需要编辑签入文件，则必须手动合并内存中版本和服务器版本，才能签入文件。 在此情况下，不支持自动合并和由提供程序辅助的合并。  
   

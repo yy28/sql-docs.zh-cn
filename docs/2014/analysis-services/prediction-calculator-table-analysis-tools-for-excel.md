@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748869"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>预测计算器（Excel 表分析工具）
   ![预测计算器工具](media/tat-predcal.gif "预测计算器工具")  
@@ -98,12 +98,12 @@ ms.locfileid: "48060017"
   
  中的值**相对影响**列为概率，以百分比表示。 该单元格带有阴影，以便直观地表示此值对结果的影响。  
   
-|Attribute|ReplTest1|相对影响|  
+|特性|ReplTest1|相对影响|  
 |---------------|-----------|---------------------|  
 |婚姻状况|已婚|0|  
 |婚姻状况|Single|71|  
 |性别|Female|13|  
-|性别|Male|0|  
+|性别|男|0|  
   
  可以将这些因素解释为：  
   
@@ -128,19 +128,19 @@ ms.locfileid: "48060017"
   
  例如，如果报表包含以下值，则可将“汽车”的值减少到 1，再减少到 0，以查看对客户购买行为的影响。 当你更改的值**汽车**为 0，在底部预测更改为 TRUE。  
   
-|Attribute|ReplTest1|相对影响|  
+|特性|ReplTest1|相对影响|  
 |---------------|-----------|---------------------|  
 |婚姻状况|已婚|0|  
-|性别|Male|0|  
-|收入|39050-71062|117|  
+|性别|男|0|  
+|收入|39050 - 71062|117|  
 |子女|0|157|  
 |教育|学士|22|  
 |职业|技术工人|33|  
-|业主|用户帐户控制|8|  
+|业主|是|8|  
 |汽车|2|50|  
 |上下班路程|0-1 英里|99|  
 |地区|North America|0|  
-|年龄|37-46|5|  
+|年龄|37 - 46|5|  
 |总计||491|  
 |对“是”的预计||FALSE|  
   

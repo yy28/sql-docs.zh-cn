@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749047"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>计划数据刷新和不支持 Windows 身份验证的数据源 (PowerPivot for SharePoint)
   本主题介绍当数据源**不**支持 Windows 身份验证时，让 PowerPivot for SharePoint 计划数据刷新能够使用该数据源的工作流。 例如 Oracle 或 IDM DB2 数据源。 本主题中的图示和步骤引用 Oracle 数据源，但此工作流也适用于其他数据源。  
@@ -55,9 +55,9 @@ ms.locfileid: "53374859"
   
 4.  在 **“创建新的安全存储区目标应用程序”** 页上，配置下列值：  
   
-    -   **目标应用程序 ID:** PowerPivotDataRefresh。  
+    -   **目标应用程序 ID:** PowerPivotDataRefresh.  
   
-    -   **显示名称：** PowerPivotDataRefresh。  
+    -   **显示名称：** PowerPivotDataRefresh.  
   
     -   **联系人电子邮件：** ？  
   

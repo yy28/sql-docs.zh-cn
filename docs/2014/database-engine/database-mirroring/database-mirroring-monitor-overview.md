@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755031"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
   如果有适当的权限，您可以使用数据库镜像监视器来监视服务器实例上的镜像数据库的任何子集。 通过监视可以验证数据库镜像会话中是否有数据流动以及数据流动的方式。 数据库镜像监视还有助于排查数据流减少的原因。  

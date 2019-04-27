@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780487"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>能够识别增补字符的字符串操作示例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的这一示例说明能够识别增补字符的字符串处理。 此示例说明五个 Transact-SQL 字符串函数的实现。这些函数提供的字符串操作功能与内置函数的功能相同，但增加了增补字符识别功能，因此既能处理 Unicode 字符串，又能处理增补字符串。 五个函数是 lens （）、`lefts(), rights(), subs()`并`replace_s()`，分别等同于内置函数`LEN(), LEFT(), RIGHT(), SUBSTRING()`和`REPLACE()`字符串函数。  

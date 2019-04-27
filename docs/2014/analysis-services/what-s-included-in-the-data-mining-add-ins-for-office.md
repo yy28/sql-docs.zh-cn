@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755916"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什么&#39;包含在 Office 数据挖掘外接程序
   安装 Office 2013 数据挖掘外接程序时，如果选择所有安装选项，将添加以下工具栏和模板：  
@@ -47,7 +47,7 @@ ms.locfileid: "52519090"
   
      知道要使用哪些数据以及如何准备它们对于数据分析至关重要。 本主题提供有关如何准备数据以生成最佳模型的提示。  
   
-     如果您是初次接触数据挖掘，只想学习如何使用工具，我们建议您使用随外接程序安装的示例数据的工作簿。通过查看此数据，您还可以查看如何为时序模型或关联模型准备数据的示例。  
+     如果您是初次接触数据挖掘，并且只是想要学习如何使用工具，我们建议你使用的随外接程序一起安装的示例数据工作簿。通过查看此数据还可以查看有关如何为时序模型或关联模型准备数据的示例。  
   
      **示例数据**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52519090"
   
     -   \<驱动器 >: \Program Files\Microsoft SQL Server 2014 DM 外接程序  
   
-    -   \<驱动器 >: \Program 文件 (x86) \Microsoft SQL Server 2014 DM 外接程序  
+    -   \<drive>:\Program Files(x86)\Microsoft SQL Server 2014 DM add-ins  
   
 ## <a name="see-also"></a>请参阅  
  [开始使用数据挖掘&#40;Excel 数据挖掘外接程序&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

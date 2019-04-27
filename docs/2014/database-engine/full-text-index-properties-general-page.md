@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778938"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文索引属性（“常规”页）
   **若要查看或更改全文索引的可修改属性**  
@@ -65,7 +65,7 @@ ms.locfileid: "48072457"
  全文索引所属的文件组。  
   
  **全文索引非索引字表**  
- 当前与全文索引关联的非索引字表。 非索引字表是一系列[非索引字](../relational-databases/search/full-text-search.md)。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，也可以选择不同非索引字表;**\<系统 >** 指示系统非索引字表。  
+ 当前与全文索引关联的非索引字表。 非索引字表是 [非索引字](../relational-databases/search/full-text-search.md)的列表。 与全文索引关联的非索引字表（如果有）适用于该索引的全文查询。 可以通过选择从索引中删除非索引字表 **\<OFF >** 从列表中，也可以选择不同非索引字表;**\<系统 >** 指示系统非索引字表。  
   
  **若要创建非索引字表**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48072457"
  **表全文项计数**  
  指示成功执行了全文索引的行数。  
   
- 此属性对应于`TableFulltextItemCount`属性返回由 OBJECTPROPERTYEX[!INCLUDE[tsql](../includes/tsql-md.md)]函数。  
+ 此属性对应于由 OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] 函数返回的 `TableFulltextItemCount` 属性。  
   
  **处理的表全文文档**  
  显示自从全文索引开始以来已处理的行数。 在为进行全文搜索而正在编制索引的表中，将一个行的所有列视为要编制索引的文档的一部分。 已删除的行不被计数。  
@@ -94,7 +94,7 @@ ms.locfileid: "48072457"
 |||  
 |-|-|  
 |0|指示全文索引已完成，并且没有活动填充。|  
-|> 0|对于活动填充，指示自从执行任何以下操作以来由插入或更新操作所处理的文档数：填充、启用具有后台更新索引填充功能的更改跟踪（比如自动更改跟踪）、更改全文索引架构、重建全文目录、重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例等等。|  
+|> 0|对于活动填充，指示自从执行任何以下操作以来由插入或更新操作所处理的文档数：填充、启用具有后台更新索引填充功能的更改跟踪（比如自动更改跟踪）、更改全文索引架构、重建全文目录、重新启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例等等。|  
   
  **表全文挂起的更改**  
  要处理的挂起更改跟踪项的数目。  
@@ -119,7 +119,7 @@ ms.locfileid: "48072457"
   
 |||  
 |-|-|  
-|**True**|已启用|  
+|**True**|Enabled|  
 |**False**|禁用|  
   
  **更改跟踪**  
@@ -129,8 +129,8 @@ ms.locfileid: "48072457"
   
 |||  
 |-|-|  
-|**关闭**|不以基础数据的更改来更新全文索引。|  
-|**手动**|基础数据发生更改时，不自动更新全文索引。 但是，会维护基础数据的更改，并且可以使用 SQL Server 代理定期或手动将它们传播到 全文索引。|  
+|**Off**|不以基础数据的更改来更新全文索引。|  
+|**Manual**|基础数据发生更改时，不自动更新全文索引。 但是，会维护基础数据的更改，并且可以使用 SQL Server 代理定期或手动将它们传播到 全文索引。|  
 |**自动**|当基表中的基础数据发生更改时，则自动更新全文索引。|  
   
  **重新填充索引**  
@@ -139,7 +139,7 @@ ms.locfileid: "48072457"
 |||  
 |-|-|  
 |**Full**|在表的完整填充期间，为所有行生成索引条目。|  
-|**增量**|增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 执行增量填充需要基表包含的列`timestamp`数据类型。|  
+|**增量**|增量填充在全文索引中更新上次填充的当时或之后添加、删除或修改的行。 执行增量填充需要基表包含一个 `timestamp` 数据类型的列。|  
 |**Update**|一旦修改基表中的数据，将更新全文索引。|  
   
 ## <a name="see-also"></a>请参阅  

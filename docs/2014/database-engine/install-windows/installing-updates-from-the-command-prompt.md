@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774977"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>从命令提示符安装更新
   请根据您所在单位的需要测试并修改安装脚本。  
   
 ## <a name="sample-syntax-for-installation"></a>安装的示例语法  
- 更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，将 <包名称> 替换为更新包的名称：  
+ 更新包的名称可能会有变化，可能包含语言、版本和处理器组件。 在命令提示符下应用更新，从而将 <package_name> 替换为更新包的名称：  
   
--   更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的单一实例和所有共享组件（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和管理工具）：可以使用 InstanceName 参数或 InstanceID 参数指定实例。 要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 或 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<实例 ID>。  
+-   更新的单个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和所有共享组件，如[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和管理工具：您可以通过使用 InstanceName 参数或 InstanceID 参数指定实例。 要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，必须指定 InstanceID 参数 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 或 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<实例 ID>。  
   
 -   安装程序可以将最新的产品更新与主安装相集成，以便可以同时安装主产品及其适用的更新。 可以准备安装数据库引擎实例，使其包括产品更新：setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<下载更新的路径> /INSTANCEID=\<实例 ID> /FEATURES=SQLEngine。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51018762"
 |开关|Description|  
 |------------|-----------------|  
 |**/?**|显示无人参与安装命令提示符帮助|  
-|**/action=Patch 或 /action=RemovePatch**|指定安装操作：Patch 或 RemovePatch。|  
+|**/action=Patch 或 /action=RemovePatch**|指定的安装操作：Patch 或 RemovePatch。|  
 |**/allinstances**|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。|  
-|**/instancename = InstanceName** <sup>1</sup>|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于名为 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。|  
+|**/instancename=InstanceName** <sup>1</sup>|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于名为 InstanceName 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以及所有不识别实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件。|  
 |**/InstanceID=Inst1**|将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 实例，以及所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享组件和不识别实例的组件。|  
 |**/quiet**|在无人参与模式下运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序。|  
 |**/qs**|仅显示进度 UI 对话。|  

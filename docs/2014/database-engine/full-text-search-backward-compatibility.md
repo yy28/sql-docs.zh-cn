@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779257"
 ---
 # <a name="full-text-search-backward-compatibility"></a>全文搜索向后兼容性
   向后兼容性部分中的主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的早期版本中的全文搜索在行为上的更改。  

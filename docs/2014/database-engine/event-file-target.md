@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779450"
 ---
 # <a name="event-file-target"></a>Event File Target
   事件文件目标是可将完整的缓冲区写入磁盘的目标。  
   
  下表描述了配置事件文件目标时可用的选项。  
   
-|选项|允许的值|Description|  
+|Option|允许的值|Description|  
 |------------|--------------------|-----------------|  
 |filename|任何不超过 260 个字符的字符串。 此值是必需的。|文件位置和文件名。<br /><br /> 可以使用任何文件扩展名。|  
 |max_file_size|任何 64 位的整数。 该值是可选的。|文件的最大大小 (MB)。 如果未指定 max_file_size，则文件将一直增长到磁盘变满为止。 默认文件大小为 1GB。<br /><br /> max_file_size 必须大于会话缓冲区的当前大小。 否则，文件目标将无法初始化，并报告 max_file_size 无效。 若要查看缓冲区的当前大小，请查询 [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) 动态管理视图中的 buffer_size 列。<br /><br /> 如果默认文件大小小于会话缓冲区大小，建议将 max_file_size 设置为 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 目录视图中的 max_memory 列中指定的值。<br /><br /> 将 max_file_size 的大小设置为大于会话缓冲区大小时，它可能会向下舍入到最近的会话缓冲区大小的倍数。 这样所产生的目标文件的大小可能小于指定值 max_file_size。 例如，如果缓冲区大小为 100MB 并且 max_file_size 设置为 150MB，则因为在剩余的 50MB 空间中无法放下第二个缓冲区，生成的文件的大小会向下舍入到 100MB。<br /><br /> 如果默认文件大小小于会话缓冲区大小，建议将 max_file_size 设置为 [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) 目录视图中的 max_memory 列中的值。|  
@@ -60,7 +60,7 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 扩展事件目标](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.fn_xe_file_target_read_file &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
+ [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/alter-event-session-transact-sql)  
   

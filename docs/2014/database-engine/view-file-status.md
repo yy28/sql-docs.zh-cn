@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773363"
 ---
 # <a name="view-file-status"></a>查看文件状态
   源代码管理可以维护每个源代码管理项的详细状态信息。 可以使用此信息标识文件的当前状态，并可用于创建有关项的状态报告。  

@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754517"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
   在数据库镜像会话上下文中，通常可以使用一个称为“角色切换” 的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴  ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
@@ -67,9 +67,9 @@ ms.locfileid: "48181208"
   
 ||高性能|没有见证服务器的高安全性模式|具有见证服务器的高安全性模式|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自动故障转移 (automatic failover)|否|否|用户帐户控制|  
-|手动故障转移 (manual failover)|否|是|用户帐户控制|  
-|强制服务|用户帐户控制|是|否|  
+|自动故障转移 (automatic failover)|否|否|是|  
+|手动故障转移 (manual failover)|否|是|是|  
+|强制服务|是|是|否|  
   
  在角色切换之后，某些元数据必须存在于伙伴双方上，以确保所有的数据库用户均可访问新的主体数据库。 此外，必须对新的主体服务器创建备份作业，以确保数据库继续进行定期备份。 有关详细信息，请参阅[角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "48181208"
   
 ## <a name="see-also"></a>请参阅  
  [估计在角色切换期间服务的中断（数据库镜像）](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
  [将客户端连接到数据库镜像会话 (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [数据库镜像见证服务器](database-mirroring-witness.md)   
  [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

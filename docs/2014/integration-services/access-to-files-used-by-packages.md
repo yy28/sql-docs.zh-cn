@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772253"
 ---
 # <a name="access-to-files-used-by-packages"></a>对包使用的文件的访问
   包保护级别不保护存储在包以外的文件。 这些文件包括下面的文件：  

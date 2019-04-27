@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756565"
 ---
 # <a name="restore-from-powerpivot"></a>从 PowerPivot 还原
   您可以使用 SQL Server Management Studio 中的“从 PowerPivot 还原”功能针对 Analysis Services 实例（在表格模式下运行）创建新的表格模型数据库，或从 PowerPivot 工作簿 (.xlsx) 还原到现有数据库。  
@@ -49,7 +49,7 @@ ms.locfileid: "48146647"
 5.  在 **“选项”** 中，选中 **“包括安全信息”** 。 在从 PowerPivot 工作簿还原时，此设置不适用。  
   
 ## <a name="see-also"></a>请参阅  
- [表格模型数据库&#40;SSAS 表格&#41;](tabular-model-databases-ssas-tabular.md)   
+ [表格模型数据库（SSAS 表格）](tabular-model-databases-ssas-tabular.md)   
  [从 PowerPivot 导入&#40;SSAS 表格&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

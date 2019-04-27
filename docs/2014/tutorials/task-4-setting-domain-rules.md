@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753176"
 ---
 # <a name="task-4-setting-domain-rules"></a>任务 4:设置域规则
   在此任务中，创建的规则**联系人电子邮件**域，以确认电子邮件地址是否以结尾**@adventure-works.com**。 请参阅[创建域规则](https://msdn.microsoft.com/library/hh510397.aspx)更多详细信息页上的主题。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756578"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
   在表格模型中，通过计算列可以将新数据添加到您的模型。 而不是粘贴或导入到列的值，您可以创建用于定义列的行级值的 DAX 公式。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  

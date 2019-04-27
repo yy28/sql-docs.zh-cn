@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773655"
 ---
 # <a name="query-options-results-text-page"></a>“查询选项”中的“结果”（“文本”页）
   使用此页可以指定以文本格式显示查询结果集的选项。 在选择 **“将结果保存到文件”** 时也会应用此页上的设置。  

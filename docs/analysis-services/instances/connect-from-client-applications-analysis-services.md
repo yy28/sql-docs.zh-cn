@@ -1,5 +1,5 @@
 ---
-title: 从客户端应用程序 (Analysis Services) 连接 |Microsoft 文档
+title: 连接客户端应用程序 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748639"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "34019584"
   
  成功的连接依赖于有效的端口配置和适当的用户权限。 要了解有关各项要求的详细信息，请单击以下链接。  
   
--   [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [配置 Windows 防火墙以允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授权访问对象和操作 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 进行连接  
  在 SSMS 中连接到 Analysis Services 时，能够以交互方式管理服务器实例和数据库。 还可以运行 XMLA 或 MDX 查询以便执行管理任务或检索数据。 与只在发出查询时才加载数据库的其他工具和应用程序相比，SSMS 会在您连接服务器时加载所有数据库，前提是您拥有查看数据库的权限。 这意味着，如果您在服务器上保存有大量的表格数据库，所有这些数据库都会在您使用 SSMS 连接时加载至系统内存。  
@@ -127,10 +127,10 @@ ms.locfileid: "34019584"
   
  [解决 SQL Server 2005 Analysis Services 连接方案中的常见连接问题](http://technet.microsoft.com/library/cc917670.aspx)。 本文档是几年前撰写的，但文中提及的信息和方法现在仍然适用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模拟](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [创建数据源 & #40;SSAS 多维 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [创建数据源（SSAS 多维）](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

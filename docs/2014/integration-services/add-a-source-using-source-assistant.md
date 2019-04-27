@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc051fc23e9efb25ae84b49697398a0b8cc1171a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772173"
 ---
 # <a name="add-a-source-using-source-assistant"></a>使用源助手添加源
   本主题介绍了使用源助手添加新源的步骤，并且列出了在“添加新源”对话框中提供的选项，将源助手向下拉到 SSIS 设计器时可看到此对话框。  

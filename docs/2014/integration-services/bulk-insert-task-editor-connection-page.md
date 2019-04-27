@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771628"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  

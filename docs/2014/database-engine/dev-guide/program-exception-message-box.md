@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780689"
 ---
 # <a name="program-exception-message-box"></a>对异常消息框编程
   可以使用应用程序中的异常消息框，它与 <xref:System.Windows.Forms.MessageBox> 类相比，可以大大提高对消息传送的控制。 有关详细信息，请参阅[异常消息框编程](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 有关如何获取和部署异常消息框 .dll 的信息，请参阅 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)。  

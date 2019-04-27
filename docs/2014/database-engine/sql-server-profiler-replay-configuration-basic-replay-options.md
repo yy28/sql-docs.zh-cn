@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773819"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - 重播配置（基本重播选项）
   在 **“重播配置”** 对话框中，使用 **“基本重播配置”** 页可以指定如何重播跟踪文件或表。  
@@ -35,7 +35,7 @@ ms.locfileid: "48088297"
  启动“连接到服务器”对话框以连接到另一台服务器。  
   
  **保存到文件**  
- 将重播结果保存到文件。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 显示标准文件对话框中，您可以在其中指定要保存该文件的位置。  
+ 将重播结果保存到文件。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 将显示标准文件对话框，您可以在该对话框中指定文件的保存位置。  
   
  **保存到表**  
  将重播结果保存到表。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 将显示表选择对话框，您可以在该对话框中指定表的保存位置。  
@@ -53,7 +53,7 @@ ms.locfileid: "48088297"
  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]中显示重播结果。  
   
 ## <a name="see-also"></a>请参阅  
- [重播跟踪表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [重播跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重播跟踪](../tools/sql-server-profiler/replay-traces.md)  
   

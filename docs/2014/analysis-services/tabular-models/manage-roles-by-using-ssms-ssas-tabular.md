@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756982"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色（SSAS 表格）
   对于部署的表格模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建、编辑和管理角色。  
@@ -83,6 +83,6 @@ ms.locfileid: "48218927"
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要删除的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“删除”**。  
   
 ## <a name="see-also"></a>请参阅  
- [角色&#40;SSAS 表格&#41;](roles-ssas-tabular.md)  
+ [角色（SSAS 表格）](roles-ssas-tabular.md)  
   
   

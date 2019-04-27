@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748899"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
   PowerPivot 管理面板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助您管理 SQL Server PowerPivot for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
@@ -82,7 +82,7 @@ ms.locfileid: "55087708"
   
 -   [配置使用情况数据收集&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将会不完整或出错。  
+ 为了捕获有关 PowerPivot 服务器系统的数据，请验证为每个 PowerPivot 服务应用程序启用了事件消息传递、数据刷新历史记录和其他使用情况历史记录。 在服务器正常操作过程中收集的服务器和使用情况数据是最终完成此内部数据模型的源数据。 **注意：** 如果您关闭事件或使用情况历史记录，则组合报表将不完整或出错。  
   
 ##  <a name="edit"></a> 编辑 PowerPivot 面板  
  如果您具有面板开发或自定义方面的专业知识，则可以编辑此面板以加入新的 Web 部件。 还可以编辑包含在面板中的 Web 部件属性。  
@@ -93,7 +93,7 @@ ms.locfileid: "55087708"
  为帮助开始进行自定义报表制作，PowerPivot 管理面板提供了一个 Office 数据连接 (.odc) 文件连接到源工作簿。 例如，您可以在 Excel 中使用 .odc 文件来创建其他报表。  
   
 > [!NOTE]  
->  编辑文件，以避免当尝试在 Excel 中使用 .odc 文件时出现以下错误：“数据源初始化失败”。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
+>  编辑文件以尝试使用在 Excel 中的.odc 文件时出现以下错误："数据源初始化失败"。 自动生成的 .odc 文件包含 MSOLAP OLE DB 访问接口不支持的一个参数。 以下说明介绍了用于删除这些参数的办法。  
   
  您必须是场或服务管理员，才能生成基于管理中心内的 PowerPivot 工作簿的报表。  
   

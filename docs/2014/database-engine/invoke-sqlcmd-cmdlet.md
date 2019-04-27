@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774591"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** 是一个运行脚本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，其所运行的脚本中包含 [!INCLUDE[tsql](../includes/tsql-md.md)]sqlcmd **实用工具**所支持的语言（和XQuery）和命令中的语句。  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |禁用交互式命令、启动脚本和环境变量|-X|-DisableCommands|  
 |禁用变量替换|-X|-DisableVariables|  
 |要报告的最小严重级别|-v|-SeverityLevel|  
-|要报告的最小错误级别|-m|-ErrorLevel|  
+|要报告的最小错误级别|-M|-ErrorLevel|  
 |登录超时间隔|-l|-ConnectionTimeout|  
 |主机名|-H|-HostName|  
 |更改密码并退出|-Z|-NewPassword|  
@@ -132,7 +132,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |运行指定的查询并保持运行状态|-S|无参数|  
 |要用于输出数据的代码页|-f|无参数|  
 |更改密码并保持运行状态|-Z|无参数|  
-|数据包大小|-a|无参数|  
+|数据包大小|-A|无参数|  
 |列分隔符|sqlcmd|无参数|  
 |控制输出标头|-H|无参数|  
 |指定控制字符|-k|无参数|  
@@ -142,7 +142,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |允许使用带引号的标识符|-o|无参数|  
 |删除尾随空格|-w|无参数|  
 |列出实例|-l|无参数|  
-|将输出格式化为 Unicode|-U|无参数|  
+|将输出格式化为 Unicode|-u|无参数|  
 |打印统计信息|-p|无参数|  
 |结束命令|-c|无参数|  
 |使用 Windows 身份验证进行连接|-E|无参数|  

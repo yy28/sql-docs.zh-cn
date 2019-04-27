@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772238"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
   可以使用 **“添加现有包的副本”** 对话框，将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或 SSIS 包存储区中存储的包副本添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。  

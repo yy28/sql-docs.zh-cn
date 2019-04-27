@@ -1,5 +1,5 @@
 ---
-title: 任务 5：添加数据流任务 |Microsoft Docs
+title: 任务 5:添加数据流任务 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752996"
 ---
-# <a name="task-5-adding-data-flow-task"></a>任务 5：添加数据流任务
+# <a name="task-5-adding-data-flow-task"></a>任务 5:添加数据流任务
   在本任务中，您将向 SSIS 包的控制流添加一个数据流任务。  
   
 1.  拖放到**Data Flow Task**从**SSIS 工具箱**到**控制流**SSIS 设计器中的选项卡。 如果没有看到**SSIS 工具箱**，在任意位置单击**控制流**选项卡上，单击**SSIS**菜单栏中，然后单击**SSIS 工具箱**。  

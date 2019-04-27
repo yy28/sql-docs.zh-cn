@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773423"
 ---
 # <a name="view-a-list-of-modified-files"></a>查看已修改的文件列表
   可以使用**挂起的签入**窗口随时显示时间在当前解决方案中，签出文件的列表和签入这些文件一次按钮单击。  
@@ -32,7 +32,7 @@ ms.locfileid: "48225038"
   
 2.  若要检查所选文件中，单击**签入**。 或者，可以停靠**挂起的签入**窗口的右侧[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境，以便您可以签入文件时已完成工作。  
   
-     **登记**  
+     **Check In**  
      签入解决方案。  
   
      **注释**  

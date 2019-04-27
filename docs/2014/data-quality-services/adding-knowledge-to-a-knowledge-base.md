@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ff423ce9c274e8244b931e3e5816c6acefd1ba5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755876"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>将知识添加到知识库
   本主题介绍可在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将知识添加到知识库的方法。 您必须具备有关数据的知识才可以执行数据质量操作。 您可以通过生成和维护数据质量知识库，并向知识库添加与特定类型的数据源相关的知识，以获得知识。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  

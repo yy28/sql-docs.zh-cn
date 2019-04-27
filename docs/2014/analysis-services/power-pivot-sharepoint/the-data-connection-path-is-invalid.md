@@ -1,5 +1,5 @@
 ---
-title: 工作簿中的数据连接路径指向本地驱动器上的文件或者是无效的 URI。 以下连接无法刷新： PowerPivot 数据 |Microsoft Docs
+title: 工作簿中的数据连接路径指向本地驱动器上的文件或者是无效的 URI。 以下连接无法刷新：PowerPivot Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6242e258c8516b4ebd6e46e9290dabe31cbaf168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749089"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>工作簿中的数据连接路径指向本地驱动器上的文件或者是无效的 URI。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 无法连接到嵌入数据源，则会返回此错误。  
@@ -25,7 +25,7 @@ ms.locfileid: "48164117"
   
 |||  
 |-|-|  
-|适用于|PowerPivot for SharePoint|  
+|适用对象|PowerPivot for SharePoint|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Excel Services 配置为只允许从处于受信任数据连接库中的 .odc 文件的数据连接。|  
 |消息正文|工作簿中的数据连接路径指向本地驱动器上的文件或者是无效的 URI。 以下连接无法刷新：PowerPivot 数据|  

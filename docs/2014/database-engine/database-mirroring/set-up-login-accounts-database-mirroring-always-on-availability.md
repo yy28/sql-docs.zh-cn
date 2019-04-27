@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754314"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)
   为了使两个服务器实例能够连接到彼此的[数据库镜像端点](the-database-mirroring-endpoint-sql-server.md)，每个实例的登录帐户都要具有访问另一实例的权限。 每个登录帐户还要具有可以连接到另一实例的数据库镜像端点的权限。  

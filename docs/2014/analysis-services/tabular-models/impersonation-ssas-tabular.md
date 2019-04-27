@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757245"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
@@ -66,7 +66,7 @@ ms.locfileid: "52391860"
 ##  <a name="bkmk_imp_info_options"></a> 选项  
  配置模拟时，或者在 Analysis Services 中为现有数据源连接编辑属性时，您可以指定以下选项之一：  
   
-|选项|ImpersonationMode<sup>1</sup>|Description|  
+|Option|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
 |**特定 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户的名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  

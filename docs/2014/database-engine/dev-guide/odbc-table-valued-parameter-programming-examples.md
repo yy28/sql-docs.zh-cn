@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780848"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>ODBC 表值参数编程示例
   本节说明如何使用 ODBC 和表值参数执行常见任务。 有关演示表值参数的另一个示例，请参阅[使用表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774492"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
   本主题介绍与日志传送配置关联的所有表和存储过程。 所有日志传送表都存储在每个服务器的 **msdb** 中。 下表介绍在日志传送配置中，哪些服务器上使用的是哪些表和存储过程。  

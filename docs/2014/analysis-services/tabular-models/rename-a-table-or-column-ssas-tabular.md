@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756635"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
   在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  
@@ -57,8 +57,8 @@ ms.locfileid: "48085577"
  此外，使用重命名表的所有计算或者使用来自重命名表的列的所有计算也都必须更新，并且从这些计算派生的数据也必须刷新和重新计算。 根据受到影响的表和计算的数目，上述刷新和重新计算可能需要一些时间才能完成。 因此，重命名表的最佳时机是在导入过程中，或者是在开始生成复杂的关系和计算之前。  
   
 ## <a name="see-also"></a>请参阅  
- [表和列&#40;SSAS 表格&#41;](tables-and-columns-ssas-tabular.md)   
+ [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)   
  [从 PowerPivot 导入&#40;SSAS 表格&#41;](import-from-power-pivot-ssas-tabular.md)   
- [从 Analysis Services 导入&#40;SSAS 表格&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [从 Analysis Services 导入（SSAS 表格）](import-from-analysis-services-ssas-tabular.md)  
   
   

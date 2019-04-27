@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774750"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>选项（“文本编辑器”-“纯文本”-“常规”页）
   使用此对话框可以更改文本编辑器的常规编辑行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，依次展开 **“文本编辑器”** 和 **“纯文本”** ，然后单击 **“常规”**。  
@@ -34,7 +34,7 @@ ms.locfileid: "51030064"
  **参数信息**  
  纯文本编辑器不支持此功能。  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  **启用虚空格**  
  在每行文本的结尾处插入空格。 如果选中此复选框，则注释在文本旁的位置将保持不变。  
   

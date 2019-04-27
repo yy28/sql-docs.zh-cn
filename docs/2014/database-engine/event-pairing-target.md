@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780408"
 ---
 # <a name="event-pairing-target"></a>事件配对目标
   事件配对目标使用两个事件中存在的一列或多列数据来对这两个事件进行匹配。 许多事件是成对的，例如，锁获取和锁释放。 对某个事件序列配对完毕，便会放弃这两个事件。 放弃匹配完毕的事件便于检测哪些获取的锁尚未释放。  
@@ -31,7 +31,7 @@ ms.locfileid: "48127937"
   
  下表描述了配置事件配对时可用的选项。  
   
-|选项|允许的值|Description|  
+|Option|允许的值|Description|  
 |------------|--------------------|-----------------|  
 |begin_event|当前会话中存在的任何一个事件的名称。|用于指定成对序列中开始事件的事件名称。|  
 |end_event|当前会话中存在的任何一个事件的名称。|用于指定成对序列中结束事件的事件名称。|  
