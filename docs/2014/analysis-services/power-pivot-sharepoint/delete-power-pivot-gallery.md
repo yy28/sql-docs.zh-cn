@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749466"
 ---
 # <a name="delete-powerpivot-gallery"></a>删除 PowerPivot 库
   删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库还会删除它的所有项，包括为计划的数据刷新配置的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的数据刷新历史记录。  
@@ -51,6 +51,6 @@ ms.locfileid: "48114157"
 5.  在“权限和管理”下单击 **“删除此库”**。  
   
 ## <a name="see-also"></a>请参阅  
- [PowerPivot 库](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
   
   

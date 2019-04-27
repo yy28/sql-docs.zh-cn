@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773749"
 ---
 # <a name="utility-administration-sql-server-utility"></a>实用工具管理（SQL Server 实用工具）
   使用“实用工具管理”选项卡可以管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的策略、安全性和数据仓库设置。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具概念的详细信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
@@ -89,11 +89,11 @@ ms.locfileid: "48128837"
  实用工具数据仓库配置信息  
  以下配置设置在此版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不可配置：  
   
--   UMDW 名称：Sysutility_mdw_\<GUID>_DATA。  
+-   UMDW 名称：Sysutility_mdw_\<GUID > 数据 （_d)。  
   
 -   收集组上载频率：每隔 15 分钟。  
   
- UMDW 目录是可配置的：\<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中，\<System drive> 通常为 C:\ 驱动器。 日志文件 UMDW_\<GUID>_LOG 位于同一目录中。  
+ UMDW 目录是可配置：\<系统驱动器 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< UCP_Name > \MSSQL\Data\\，其中\<系统驱动器 > 通常是 C:\驱动器。 日志文件 UMDW_\<GUID>_LOG 位于同一目录中。  
   
 > [!NOTE]  
 >  可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  

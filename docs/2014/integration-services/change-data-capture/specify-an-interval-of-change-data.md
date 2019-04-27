@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771198"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 `datetime` 值，将存储在包变量中以供以后在包中使用。  
@@ -105,7 +105,7 @@ ms.locfileid: "58381145"
 ## <a name="next-step"></a>下一步  
  计算变更范围的起始点和结束点之后，下一步就是确定变更数据是否已准备就绪。  
   
- **下一主题：**[确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)  
+ **下一个主题：**[确定变更数据是否已准备就绪](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>请参阅  
  [在包中使用变量](../use-variables-in-packages.md)   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779109"
 ---
 # <a name="migrate-query-plans"></a>迁移查询计划
   大多数情况下，将数据库升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提高查询性能。 但是，如果您具有已针对性能进行过认真优化的任务关键查询，在升级前最好为每个查询创建一个计划指南，以保留这些查询的查询计划。 如果在升级后，查询优化器为一个或多个查询选择了效率较低的计划，则可以启用这些计划指南并强制查询优化器使用升级前的计划。  
@@ -41,7 +41,7 @@ ms.locfileid: "53352509"
 ## <a name="example"></a>示例  
  下面的示例显示如何通过创建计划指南来为查询记录升级前的计划。  
   
-### <a name="step-1-collect-the-plan"></a>步骤 1：收集计划  
+### <a name="step-1-collect-the-plan"></a>第 1 步：收集计划  
  计划指南中记录的查询计划必须采用 XML 格式。 可通过以下方式生成 XML 格式的查询计划：  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>步骤 2：创建计划指南以强制实施计划  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>第 2 步：创建计划指南以强制实施计划  
  在计划指南中使用 XML 格式的查询计划（通过上述任一方法获取），将该查询计划作为字符串文字复制并粘贴在 sp_create_plan_guide 的 OPTION 子句中指定的 USE PLAN 查询提示中。  
   
  在 XML 计划本身中，先将计划中出现的引号 (') 通过第二个引号进行转义，然后再创建计划指南。 例如，对于包含 `WHERE A.varchar = 'This is a string'` 的计划，必须通过将该代码修改为 `WHERE A.varchar = ''This is a string''` 来进行转义。  

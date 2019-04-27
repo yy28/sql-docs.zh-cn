@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749394"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心中创建和配置 PowerPivot 服务应用程序
   PowerPivot 服务应用程序是 PowerPivot 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  

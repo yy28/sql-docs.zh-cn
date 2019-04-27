@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29dce22921ec7922f97f7daa8c3a9d8f9e362a82
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749482"
 ---
 # <a name="powerpivot-data-refresh"></a>PowerPivot 数据刷新
   在您创建包含 PowerPivot 数据的某一工作簿后，最好通过重新运行查询或命令以便从您最初用于创建该工作簿的数据源获取更新的信息，定期刷新数据。 此过程称作 `data refresh`，并且您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  

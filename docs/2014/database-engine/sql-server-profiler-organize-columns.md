@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773429"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 组织列
   使用 **“组织列”** 对话框可为跟踪中所显示的分组或聚合事件选择数据列，以便查看和分析较大的跟踪文件或跟踪表。  
@@ -50,8 +50,8 @@ ms.locfileid: "48217997"
   
 ## <a name="see-also"></a>请参阅  
  [组织跟踪中显示的列&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [创建跟踪&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [创建跟踪模板&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [创建跟踪 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [创建跟踪模板 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [打开跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

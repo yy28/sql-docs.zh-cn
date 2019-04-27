@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a44e246bbf6af319c21fca93e57177688c8fa4a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781250"
 ---
 # <a name="hello-world-sample"></a>Hello World 示例
   Hello World 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单存储过程所涉及的基本操作。 此示例还说明了如何通过记录返回由存储过程动态构建并返回到调用方的数据。  

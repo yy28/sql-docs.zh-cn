@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 188e2b824a033365ec366d3b5f7474b261b1bbf2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771853"
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：  

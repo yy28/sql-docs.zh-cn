@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755771"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
   本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 您可以使用来自 Microsoft Azure 市场或来自直接联机第三方引用数据提供程序的引用数据。  
@@ -76,7 +76,7 @@ ms.locfileid: "56037238"
   
  您现在可以在 DQS 中使用新配置的直接联机第三方引用数据服务提供程序提供的引用数据服务。  
   
-##  <a name="FollowUp"></a> 跟进：DQS 配置为使用引用数据后  
+##  <a name="FollowUp"></a> 跟进：将 DQS 配置为使用引用数据后  
  现在您必须将所需的知识库域映射到您刚配置的数据提供程序所提供的引用数据。 若要执行此操作，请参阅[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
   
