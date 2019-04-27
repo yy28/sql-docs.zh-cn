@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779897"
 ---
 # <a name="exclude-files-from-source-control"></a>从源代码管理中排除文件
   如果您使用的解决方案包含不需要源代码管理服务的文件，则可以使用**从源代码管理中排除**命令以从源代码管理中排除该文件。 如果执行上述操作，这些被排除的文件仍会保留在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库中，但不再随项目签入或签出。  

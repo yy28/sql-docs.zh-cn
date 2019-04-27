@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772273"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供有关 SQL Server 2014 的反馈
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 非常感谢您花费宝贵时间帮助我们改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 产品和文档。 您可以提供有关产品功能和用户界面的建议和错误报告，提交文档反馈，以及选择向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 自动发送错误报告和使用情况数据以供分析。 此处分别介绍了以上三个反馈选项。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd46048e1c1361a8594503b9fa780d774ee4790f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646165"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 属性 (WMI MSReportServer_ConfigurationSetting)
   返回报表管理器应用程序的虚拟目录。 只读。  

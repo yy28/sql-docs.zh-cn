@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5eb95137efe56912502bae685eaf098fbe5044b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755841"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>配置清理和匹配活动的阈值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中配置在计算机辅助清理和匹配活动中使用的阈值。  
@@ -43,9 +43,9 @@ ms.locfileid: "56016858"
   
 4.  若要为清理活动指定阈值，请在 **“交互式清理”** 区域下的以下各框中指定适当的值：  
   
-    -   **用于建议的最低分数**:最低分数或置信度级别将由 DQS 在计算机辅助的清理过程建议替换值。 以相应百分比值的小数表示形式输入一个值。 例如，对于 75% 键入 0.75。 该值应小于或等于在 **“用于自动更正的最低分数”** 框中指定的值。 默认值为 0.7。  
+    -   **用于建议的最低分数**：在计算机辅助清除过程中 DQS 用于建议替换值的最低分数或置信度。 以相应百分比值的小数表示形式输入一个值。 例如，对于 75% 键入 0.75。 该值应小于或等于在 **“用于自动更正的最低分数”** 框中指定的值。 默认值为 0.7。  
   
-    -   **用于自动更正的最低分数**:最低分数或置信度级别将由 DQS 自动更正值在计算机辅助的清理过程。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。 默认值为 0.8。  
+    -   **用于自动更正的最低分数**：在计算机辅助清理过程中 DQS 用于自动更正值的最低分数或置信度。 以相应百分比值的小数表示形式输入一个值。 例如，对于 90% 输入 0.9。 默认值为 0.8。  
   
 5.  若要为匹配活动指定阈值，请在 **“匹配”** 区域下的 **“最低记录分数”** 框中指定一个值。 此值表示一条记录要被视为另一条记录的匹配项的最低分数。 默认值为 80%。  
   

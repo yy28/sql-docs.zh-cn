@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773393"
 ---
 # <a name="undo-checkouts"></a>撤消签出
   可以使用**撤消签出**命令取消现有的签出。 如果您修改并保存了文件，但事后需要回滚所做的更改，此命令尤其有用。  

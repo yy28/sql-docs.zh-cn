@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753084"
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 课：创建关系
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
-学完本课的预计时间：**10 分钟**  
+估计的时间才能完成本课程中：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：标记为日期表](../analysis-services/lesson-3-mark-as-date-table.md)。 
@@ -35,7 +35,7 @@ ms.locfileid: "52411294"
 
     模型设计器现在出现在“关系图视图”中，这是一种图形格式，可显示您导入的所有表以及表之间的线条。 表之间的线条指示当您导入数据时自动创建的关系。
     
-    ![作为-表格-lesson4-关系图](../analysis-services/media/as-tabular-lesson4-diagram.png)
+    ![as-tabular-lesson4-diagram](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
     使用模型设计器右下角的 minimap 控件可调整此视图，以包括尽可能多的表。 您还可以单击，并将表拖到不同的位置，使表更靠近在一起，或按特定顺序排列。 移动表不会影响表之间已存在的关系。 若要查看特定表中的所有列，单击，并拖动表边缘以展开或使其变小。  
   
@@ -50,22 +50,22 @@ ms.locfileid: "52411294"
   
     |在职|表|相关查找表|  
     |----------|---------|------------------------|  
-    |用户帐户控制|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |用户帐户控制|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |用户帐户控制|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |是|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     如果缺少任何上表中的关系，则验证您的模型包括以下各表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
 
 ### <a name="take-a-closer-look"></a>更详细地介绍
 在关系图视图中，您将看到一个箭头、 一个星号，以及显示表之间的关系的线条上的数字。
 
-![作为表格-lesson4-行](../analysis-services/media/as-tabular-lesson4-line.png)
+![as-tabular-lesson4-line](../analysis-services/media/as-tabular-lesson4-line.png)
 
 箭头显示筛选器方向，星号显示此表是关系基数中的多个端和 1 显示此表是关系的一方。 如果您需要编辑关系;例如，更改关系的筛选器方向或基数，双击要打开编辑关系对话框中的关系图视图中的关系线。
 
-![作为表格-lesson4-编辑](../analysis-services/media/as-tabular-lesson4-edit.png)
+![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
 很可能永远不需要编辑关系。 这些功能适用于高级数据建模，并不在本教程的范围。 若要了解详细信息，请参阅[双向交叉筛选器中 SQL Server 2016 Analysis Services 表格模型的](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)。
 
@@ -77,7 +77,7 @@ ms.locfileid: "52411294"
 
     显示一条实线，说明已创建活动之间的关系**OrderDate**中的列**Internet Sales**表和**日期**中列**日期**表。 
   
-      ![作为表格-lesson4-新建](../analysis-services/media/as-tabular-lesson4-new.png) 
+      ![as-tabular-lesson4-new](../analysis-services/media/as-tabular-lesson4-new.png) 
   
     > [!NOTE]  
     > 创建关系时，会自动选择主表与相关的查找表之间的基数和筛选器方向。  
@@ -88,7 +88,7 @@ ms.locfileid: "52411294"
   
 3.  最后，创建一个关系;在中**FactInternetSales**表，单击并按住**ShipDate**列，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
     
-     ![作为-表格-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
+     ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>下一步是什么？
 请转到下一课：[第 5 课：创建计算的列](../analysis-services/lesson-5-create-calculated-columns.md)。

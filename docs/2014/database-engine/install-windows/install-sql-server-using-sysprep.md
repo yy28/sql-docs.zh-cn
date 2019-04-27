@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775300"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相关的安装操作可以通过安装中心来访问。 “安装中心”的“高级”页具有两个选项 -“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”和“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备独立实例的映像完成”。 [准备](#prepare) 和 [完成](#complete) 部分将详细说明安装过程。 有关详细信息，请参阅 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)。  
@@ -171,7 +171,7 @@ ms.locfileid: "58658332"
   
 7.  在 **“选择已准备实例”** 页上，从下拉框中选择您要完成的已准备实例。 从“实例 ID”列表中选择未配置的实例。  
   
-     **已安装的实例：** 该网格显示所有实例，包括此计算机上的任何已准备实例。  
+     **已安装的实例：** 此网格将显示所有实例，包括在此计算机上的任何已准备的实例。  
   
 8.  在 **“查看功能”** 页上，您将看到在安装的准备步骤中包括的所选功能和组件。 如果您要向未在已准备实例中包括的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例添加更多功能，则必须首先完成此步骤以完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，然后从 **“安装中心”** 的 **“添加功能”** 上添加功能。  
   

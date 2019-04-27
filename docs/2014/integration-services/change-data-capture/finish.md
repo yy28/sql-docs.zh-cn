@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771313"
 ---
 # <a name="finish"></a>“完成”
   **“完成”** 页总结了向导过程。 单击 **“完成”** 可关闭向导并且生成您在“创建 CDC 实例”向导中定义的所有表。  

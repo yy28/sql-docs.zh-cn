@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753679"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 升级问题（升级顾问）
   下面的主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可能会影响您升级到的问题[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 主题介绍可用于缓解对您的环境的这些更改影响的操作。  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f2ff171562929a035cb80fed556c954508c5557
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753769"
 ---
 # <a name="application-domains-and-clr-integration-security"></a>应用程序域和 CLR 集成安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将加载在相同应用程序域中属于相同所有者的程序集。 由于一组程序集运行于相同应用程序域中，因此程序集能够使用 the.NET Framework 反射应用程序编程接口或其他手段在执行时彼此发现对方，并且可以用后期绑定的方式调用它们。 由于这样的调用是针对属于相同所有者的程序集发生的，因此不会检查这些调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限。 之所以设计程序集在应用程序域中的放置方案，主要是为了实现可伸缩性、安全性和隔离性目标，并且有可能在未来的版本中进行更改。 因此，不应当依赖于通过后期绑定机制在相同应用程序域中查找程序集。  

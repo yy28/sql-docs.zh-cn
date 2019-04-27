@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779221"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
   索引用于高效访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表中的数据。 指定正确索引可以显著提高查询性能。 例如，请考虑以下查询：  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  如果 c1 列上没有索引，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要扫描整个表 t，然后筛选满足条件 c1=1 的行。 但是，如果 t 在 c1 列上具有索引，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以直接查找值 1 并对行进行检索。  
   
- 针对表中一列或多列搜索具有特定值或值范围的记录时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用这些列上的索引来快速找到对应记录。 基于磁盘的表和内存优化表都会受益于索引。 但是，在使用内存优化的表时，需要考虑索引结构之间的一些区别。 （内存优化的表上的索引称为内存优化的索引。）其中一些主要的区别包括：  
+ 针对表中一列或多列搜索具有特定值或值范围的记录时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用这些列上的索引来快速找到对应记录。 基于磁盘的表和内存优化表都会受益于索引。 但是，在使用内存优化的表时，需要考虑索引结构之间的一些区别。 （内存优化表的索引称为内存优化的索引。）一些主要区别如下：  
   
 -   必须使用创建内存优化的索引[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。 基于磁盘上的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 创建。  
   
@@ -69,11 +69,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |操作|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|索引扫描，检索所有表行。|用户帐户控制|是|用户帐户控制|  
-|采用相等谓词 (=) 的索引查找。|用户帐户控制<br /><br /> （需要完整的键。）|是 <sup>1</sup>|用户帐户控制|  
-|不等谓词的索引查找 (>，<， \<=、 > =、 BETWEEN)。|否（索引扫描中的结果）|是 <sup>1</sup>|用户帐户控制|  
-|按与索引定义匹配的排序顺序检索行。|否|是|用户帐户控制|  
-|按与索引定义相反的排序顺序检索行。|否|否|用户帐户控制|  
+|索引扫描，检索所有表行。|是|是|是|  
+|采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是 <sup>1</sup>|是|  
+|不等谓词的索引查找 (>，<， \<=、 > =、 BETWEEN)。|否（索引扫描中的结果）|是 <sup>1</sup>|是|  
+|按与索引定义匹配的排序顺序检索行。|否|是|是|  
+|按与索引定义相反的排序顺序检索行。|否|否|是|  
   
  在表格中，“是”意味着索引能充分地服务需求，而“否”则意味着索引不能用来成功地满足需求。  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778908"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在本机编译存储过程中实现 OR 运算符
   本机编译存储过程内的查询谓词中不支持 OR 运算符。 本机编译存储过程中的查询谓词也不支持 NOT 运算符，因而无法通过单独使用等同的逻辑运算符来模拟 OR 运算符的效果。 但是，借助内存优化表变量，也许能够模拟 OR 运算符的效果。  

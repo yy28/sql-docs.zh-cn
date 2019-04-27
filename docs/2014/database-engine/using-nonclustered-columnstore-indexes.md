@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773781"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>使用非聚集列存储索引
   描述用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表上使用非聚集列存储索引的主要任务。  
   
- 有关列存储索引的概述，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 有关列存储索引的概述，请参阅 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
- 有关聚集列存储索引的信息，请参阅[使用聚集列存储索引](../relational-databases/indexes/indexes.md)。  
+ 有关聚集列存储索引的信息，请参阅 [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
   
 ## <a name="contents"></a>目录  
   

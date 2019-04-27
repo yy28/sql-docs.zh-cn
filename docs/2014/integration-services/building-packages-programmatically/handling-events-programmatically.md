@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771797"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 运行时提供了一个事件集合，该集合中的事件在包的验证和执行过程之前、期间和之后发生。 这些事件可用两种方法捕获。 第一种方法是在类中实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口，并将该类作为参数提供给包的 `Execute` 和 `Validate` 方法。 第二种方法是创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象，该对象可以包含当 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 中的事件发生时所执行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象，例如任务和循环。 本节介绍这两种方法并提供代码示例来说明它们的用法。  

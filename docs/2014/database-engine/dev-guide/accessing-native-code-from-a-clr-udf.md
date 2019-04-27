@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753889"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>从 CLR UDF 访问本机代码
   本示例显示如何从用户定义函数（该函数位于您的数据库的程序集中）调用本机（非托管） C++ 代码中的函数。  

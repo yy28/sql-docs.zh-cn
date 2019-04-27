@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753236"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 类型和转换函数
   此示例使用 C# 定义 Currency 用户定义数据类型。 此用户定义数据类型封装了金额和区域，区域有助于确定一种正确的方式，以便将金额以该区域的货币值呈现。 此示例还提供了返回 Currency 用户定义数据类型实例的货币转换函数。 如果 AdventureWorks 数据库包含从美元 (USD) 到与指定区域关联的货币的换算比率，那么转换函数返回的 Currency 用户定义数据类型中包含换算的比率以及与请求的区域相匹配的区域。 否则，返回的 Currency 用户定义数据类型包含原始金额（应是 USD）及 `en-us` 区域。 该示例还说明如何使用 Transact-SQL 注册和注销公共语言运行时 (CLR) 方法和程序集。  

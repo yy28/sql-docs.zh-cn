@@ -15,25 +15,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773864"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>借助 Azure SQL 数据库实现透明数据加密
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明数据加密 （预览版） 可帮助保护用户免受恶意活动的威胁执行实时加密和解密的数据库、 关联的备份和事务日志文件，而无需更改应用程序。  
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明数据加密（预览）通过执行数据库的实时加密和解密、关联的备份和处于休眠状态的事务日志文件来帮助保护用户免受恶意活动的威胁，而无需更改应用程序。  
   
  TDE 使用称为数据库加密密钥的对称密钥加密整个数据库的存储。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中，数据库加密密钥通过内置的服务器证书进行保护。 内置服务器证书对每个 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 服务器而言是唯一的。 如果数据库是 GeoDR 关系，则将它受每个服务器上不同的密钥保护。 如果 2 个数据库连接到同一台服务器，则它们共享相同的内置证书。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 至少每隔 90 天自动轮换这些证书。 有关 TDE 的一般说明，请参阅 [透明数据加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 不支持 Azure 密钥保管库与 TDE 的集成。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用密钥保管库的非对称密钥。 有关详细信息，请参阅[示例 a： 透明数据加密，通过使用 Key vault 的非对称密钥](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)。  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 不支持 Azure 密钥保管库与 TDE 的集成。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用密钥保管库的非对称密钥。 有关详细信息，请参阅[示例 a:通过使用密钥保管库中的非对称密钥的透明数据加密](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)。  
   
 ||  
 |-|  
-|**适用于**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([在某些区域预览](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**适用对象**：[!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([在某些区域预览](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
->  目前这是预览功能。 我确认并同意的实现[!INCLUDE[ssSDS](../includes/sssds-md.md)]的预览条款是我的许可协议 （例如企业协议、 Microsoft Azure 协议或 Microsoft 在线订阅中的我的数据库中的透明数据加密协议），以及任何适用[Supplemental Terms of Use for Microsoft Azure 预览版](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
+>  目前这是预览功能。 我确认并同意我的数据库中的 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 透明数据加密的实现遵从我的许可证协议（例如企业协议、Microsoft Azure 协议或 Microsoft 在线订阅协议）的预览版条款，以及任何适用的 [Microsoft Azure 预览版的补充使用条款](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
   
  即使在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 的版本系列 V12 现在宣布为处于公开发布状态的部分地理区域中，TDE 的状态预览也适用。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 宣布将 TDE 从预览提升为 GA 之前， [!INCLUDE[msCoName](../includes/msconame-md.md)] 的 TDE 不适用于生产数据库。 有关 [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 的详细信息，请参阅 [Azure SQL Database 中的新增功能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48049777"
   
 -   必须已经注册 TDE 预览。  
   
--   若要创建数据库加密密钥必须是[!INCLUDE[ssSDS](../includes/sssds-md.md)]管理员或您必须属于**dbmanager** master 数据库中的角色数据库并具有**控件**针对数据库的权限。  
+-   要创建数据库加密密钥，则必须是 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 管理员或主数据库中 **dbmanager** 角色的成员，并且具有数据库的 **CONTROL** 权限。  
   
 -   使用 SET 选项执行 ALTER DATABASE 语句仅需要 **dbmanager** 角色的成员身份。  
   

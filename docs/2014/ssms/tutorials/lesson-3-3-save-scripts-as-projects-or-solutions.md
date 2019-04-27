@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753035"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>将脚本另存为项目或解决方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的开发人员会喜欢使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的解决方案资源管理器。 您可以将支持您业务的脚本分组为多个脚本项目，然后将各个脚本项目作为一个解决方案进行集中管理。 将脚本置于脚本项目和解决方案中后，便可将其视为一个组同时打开，或者同时保存到 Visual SourceSafe 之类的源代码管理产品中。 脚本项目包括可使脚本正确执行的连接信息，还包括非脚本文件，例如支持文本文件。  

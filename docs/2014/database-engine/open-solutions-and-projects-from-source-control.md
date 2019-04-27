@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774772"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>从源代码管理打开解决方案和项目
   可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]直接从源代码管理打开解决方案或项目。 从源代码管理中打开解决方案时，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境将自动检索该解决方案的最新版本并将其复制到指定的位置。  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771063"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  
@@ -34,9 +34,9 @@ ms.locfileid: "58383110"
   
 6.  选择数据访问方法。  
   
-    -   **表名-批处理**:选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
+    -   **表名 - 批处理**：选择此选项可将 ODBC 目标配置为在批处理模式下工作。 当您选择此选项时，可以设置 **“批处理大小”**。  
   
-    -   **表名-逐行**:选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
+    -   **表名 - 逐行**：选择此选项可以将 ODBC 目标配置为一次一行将各行插入目标表中。 选择此选项时，数据将一次一行加载到表中。  
   
 7.  在 **“表或视图的名称”** 字段中，从列表的数据库中选择某一可用表或视图，或者键入正则表达式以便标识表。该列表仅包含前 1000 个表。 如果您的数据库包含超过 1000 个表，则可以键入表名的开头，或者使用 (*) 通配符输入名称的任何部分以便显示要使用的表。  
   

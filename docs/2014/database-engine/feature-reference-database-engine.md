@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779739"
 ---
 # <a name="feature-reference-database-engine"></a>功能参考（数据库引擎）
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括可用于创建、管理和查看数据库对象和数据的若干工具和应用程序。 此外，还有一些工具可用于监视服务器和数据库的性能及排除故障，并可用于启用及禁用功能、服务和网络协议。 本节包含介绍这些工具和应用程序的对话框的一些特定主题。  

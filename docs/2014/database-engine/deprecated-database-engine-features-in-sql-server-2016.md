@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754159"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -29,7 +29,7 @@ ms.locfileid: "53369109"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中不支持的功能  
  下一版 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。 **功能名称** 值在跟踪事件中作为 ObjectName，而在性能计数器和 sys.dm_os_performance_counters 中作为实例名称。 **功能 ID** 值在跟踪事件中作为 ObjectId。  
   
-|类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
+|Category|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|无。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |兼容级别|从版本 90 ([!INCLUDE[ssDEversion2005](../includes/ssdeversion2005-md.md)]) 升级。|只有最后两个版本的兼容级别可用。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。<br /><br /> 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，您可以升级 SQL Server 2005 数据库，但在升级操作过程中兼容级别将从 90 更新为 100。|数据库兼容级别 90|107|  
@@ -45,16 +45,16 @@ ms.locfileid: "53369109"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中不支持的功能  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本现在还未确定。  
   
-|类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
+|Category|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |兼容级别|sp_dbcmptlevel|ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。|sp_dbcmptlevel|80|  
 |兼容级别|数据库兼容性级别 100|计划为未来版本升级数据库和应用程序。|数据库兼容性级别 100|108|  
 |XML|内联 XDR 架构生成|不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。|XMLDATA|181|  
 |备份和还原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 或 LOG TO TAPE|235|  
-|备份和还原|sp_addumpdevice'`tape`|sp_addumpdevice'`disk`|ADDING TAPE DEVICE|236|  
+|备份和还原|sp_addumpdevice'`tape`'|sp_addumpdevice'`disk`'|ADDING TAPE DEVICE|236|  
 |备份和还原|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |排序规则|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|无。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中存在这些排序规则，但 fn_helpcollations 并不将它们显示出来。|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
-|排序规则|Hindi<br /><br /> Macedonian|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 及更高版本中存在这些排序规则，但 fn_helpcollations 并不将它们显示出来。 请改用 Macedonian_FYROM_90 和 Indic_General_90。|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  
+|排序规则|印地语<br /><br /> Macedonian|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 及更高版本中存在这些排序规则，但 fn_helpcollations 并不将它们显示出来。 请改用 Macedonian_FYROM_90 和 Indic_General_90。|印地语<br /><br /> Macedonian|190<br /><br /> 193|  
 |排序规则|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
 |配置|SET ANSI_NULLS OFF 和 ANSI_NULLS OFF 数据库选项<br /><br /> SET ANSI_PADDING OFF 和 ANSI_PADDING OFF 数据库选项<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF 和 CONCAT_NULL_YIELDS_NULL OFF 数据库选项<br /><br /> SET OFFSETS|无。<br /><br /> ANSI_NULLS、ANSI_PADDING 和 CONCAT_NULLS_YIELDS_NULL 这三个选项在任何情况下始终设置为 ON。 SET OFFSETS 将不可用。|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |数据类型|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
@@ -146,8 +146,8 @@ ms.locfileid: "53369109"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|表提示通过视图间接应用于多语句表值函数 (TVF) 的调用。|无。|间接 TVF 提示|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 语法:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |其他|DB-Library<br /><br /> 用于 C 语言的嵌入式 SQL|尽管 [!INCLUDE[ssDE](../includes/ssde-md.md)] 仍然支持来自使用 DB-Library 和嵌入式 SQL API 的现有应用程序的连接，但它不包括在使用这些 API 的应用程序上进行编程工作所需的文件或文档。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的未来版本将不再支持来自 DB-Library 或嵌入式 SQL 应用程序的连接。 请不要使用 DB-Library 或嵌入式 SQL 来开发新的应用程序。 修改现有应用程序时，请删除 DB-Library 或嵌入式 SQL 的任何依赖项。 请使用 SQLClient 命名空间或诸如 ODBC 的 API，而不使用这些 API。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不包含运行这些应用程序所需的 DB-Library DLL。 若要运行 DB-Library 或嵌入式 SQL 应用程序，必须有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 版或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]提供的 DB-Library DLL。|None|None|  
-|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。<br /><br /> 注意：继续将 SQL Server Profiler for Trace Capture 用于 Analysis Services 工作负荷。|SQL Server 事件探查器|None|  
-|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意：继续将 SQL Server Profiler for Trace Replay 用于 Analysis Services 工作负荷。|SQL Server 事件探查器|None|  
+|工具|SQL Server Profiler for Trace Capture|使用 SQL Server Management Studio 中嵌入的扩展事件探查器。<br /><br /> 注意：继续使用 SQL Server Profiler for Trace Capture 用于 Analysis Services 工作负荷。|SQL Server Profiler|None|  
+|工具|SQL Server Profiler for Trace Replay|[SQL Server 分布式重播](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意：继续 SQL Server Profiler for Trace Replay 用于 Analysis Services 工作负荷。|SQL Server Profiler|None|  
 |跟踪管理对象|Microsoft.SqlServer.Management.Trace 命名空间（包含用于 SQL Server 跟踪和重播对象的 API）|跟踪配置： <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 跟踪读取： <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 跟踪重播：None|||  
 |SQL 跟踪存储过程、函数和目录视图|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[扩展事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

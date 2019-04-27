@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773665"
 ---
 # <a name="search-property-list-editor"></a>搜索属性列表编辑器
   使用此对话框可以在搜索属性列表中添加或删除搜索属性。  
@@ -29,7 +29,7 @@ ms.locfileid: "48148937"
  **属性名称**  
  指定要用来标识全文查询中的属性的名称。 属性名称可以包含内部空格。 **“属性名称”** 的最大长度为 256 个字符。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 `System.Author` 或 `System.Contact.HomeAddress`。 **“属性名称”** 必须唯一标识属性集中的属性。  
   
- 开发人员使用属性名称来标识中的属性[CONTAINS](/sql/t-sql/queries/contains-transact-sql)谓词。 因此，当添加属性时，务必指定一个在含义上表示该属性的值。  
+ 开发人员使用属性名称来标识 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词中的属性。 因此，当添加属性时，务必指定一个在含义上表示该属性的值。  
   
  **属性集 GUID**  
  指定属性所属的属性集的标识符。 这是全局唯一标识符 (GUID)。 属性集是一组在逻辑上相关的属性。 有关获取此值的信息，请参阅本主题后面的“备注”。  
@@ -52,7 +52,7 @@ ms.locfileid: "48148937"
   
 -   [使用搜索属性列表搜索文档属性](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  请参阅[ALTER SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)。  
   
 ## <a name="see-also"></a>请参阅  

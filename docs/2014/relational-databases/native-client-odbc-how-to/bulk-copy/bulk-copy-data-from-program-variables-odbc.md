@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753639"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
   此示例演示如何通过 `bcp_bind` 和 `bcp_sendrow` 使用大容量复制函数将数据从程序变量大容量复制到 SQL Server。 （为简化此示例，已删除错误检查代码。）  

@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755220"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>连接到服务器（“连接属性”页）(Analysis Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssAS](../includes/ssas-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssAS](../includes/ssas-md.md)] 时，此对话框中仅显示“测试”和“保存”。  

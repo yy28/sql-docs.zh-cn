@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756543"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>技术参考（Excel 数据挖掘外接程序）
   Office 数据挖掘外接程序包含对程序员和高级数据挖掘者有用的功能。  

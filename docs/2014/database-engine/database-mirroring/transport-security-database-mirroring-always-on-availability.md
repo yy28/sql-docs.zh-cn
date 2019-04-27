@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754289"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>针对数据库镜像和 AlwaysOn 可用性组的传输安全性 (SQL Server)
   传输安全性涉及身份验证，或者还涉及数据库间交换的消息的加密。 对于数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，身份验证和加密在数据库镜像端点配置。 有关数据库镜像端点的简介，请参阅 [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48075857"
 ##  <a name="Authentication"></a> 身份验证  
  身份验证是验证用户是否具有其所声明的身份的过程。 数据库镜像端点之间的连接需要进行身份验证。 伙伴或见证服务器的连接请求（如果有）必须进行身份验证。  
   
- 用于数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的服务器实例使用的身份验证类型是数据库镜像端点的一种属性。 数据库镜像端点可以使用两种类型的传输安全性：Windows 身份验证（安全性支持提供程序接口 (SSPI)）和基于证书的身份验证。  
+ 用于数据库镜像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的服务器实例使用的身份验证类型是数据库镜像端点的一种属性。 数据库镜像端点可以使用两种类型的传输安全性功能：Windows 身份验证（安全支持提供程序接口 (SSPI)）和基于证书的身份验证。  
   
 ### <a name="windows-authentication"></a>Windows 身份验证  
  在 Windows 身份验证下，每个服务器实例使用运行进程的 Windows 用户帐户的 Windows 凭据登录到另一端。 Windows 身份验证可能要求对登录帐户进行一些手动配置，如下所示：  
@@ -46,7 +46,7 @@ ms.locfileid: "48075857"
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在其他每个服务器上的 master 中创建各主机帐户 (DomainName\\ComputerName$)** 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
->  有关使用 Windows 身份验证设置数据库镜像会话的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
+>  有关使用 Windows 身份验证设置数据库镜像会话的示例，请参阅[示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
   
 ### <a name="certificates"></a>证书  
  在某些情况下，例如服务器实例不在受信任域中或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为本地服务运行时，Windows 身份验证不可用。 在这种情况下，对连接请求进行身份验证需要使用证书，而不是用户凭据。 每个服务器实例的镜像端点必须使用其自己的本地创建的证书进行配置。  
@@ -65,7 +65,7 @@ ms.locfileid: "48075857"
   
 |ALGORITHM 值|Description|  
 |---------------------|-----------------|  
-|RC4|指定端点必须使用 RC4 算法。 这是默认设置。<br /><br /> 注意： 不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
+|RC4|指定端点必须使用 RC4 算法。 这是默认设置。<br /><br /> 注意：不推荐使用 RC4 算法。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我们建议使用 AES。|  
 |AES|指定端点必须使用 AES 算法。|  
 |AES RC4|指定两个端点将与优先使用 AES 算法的此端点协商加密算法。|  
 |RC4 AES|指定两个端点将与优先使用 RC4 算法的此端点协商加密算法。|  

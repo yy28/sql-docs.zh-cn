@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6db2481777a79697e109400786399a5db9daf448
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755753"
 ---
 # <a name="create-a-domain"></a>创建域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域。 域中的值是字段中数据的语义表示形式。 有关域的详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "56024448"
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
-##  <a name="FollowUp"></a> 跟进：在创建域后  
+##  <a name="FollowUp"></a> 跟进：创建域后  
  在创建域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
   

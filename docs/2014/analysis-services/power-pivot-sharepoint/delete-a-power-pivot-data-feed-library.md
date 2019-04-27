@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749403"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>删除 PowerPivot 数据馈送库
   您必须是站点所有者才能删除数据馈送库。 如果库中包含项，则它们将随同库一起被删除。  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773675"
 ---
 # <a name="ring-buffer-target"></a>环形缓冲区目标
   环形缓冲区目标用于在内存中暂时容纳事件数据。 此目标可通过以下两种模式中的一种来管理事件。  
@@ -30,7 +30,7 @@ ms.locfileid: "55905652"
   
  下表描述了配置环形缓冲区目标时可用的选项。  
   
-|选项|允许的值|Description|  
+|Option|允许的值|Description|  
 |------------|--------------------|-----------------|  
 |max_memory|任何 32 位的整数。 该值是可选的。|要使用的最大内存量 (KB)。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 最大值为 4194303 KB。 环形缓冲区大小设置为 GB 范围中的限制，因为它可能会影响其他 SQL Server 中的内存使用者前应仔细考虑|  
 |max_event_limit|任何 32 位的整数。 该值是可选的。|保留在 ring_buffer 中的事件的最大数量。 将基于首先到达的限制删除现有事件：max_event_limit 或 max_memory。 默认值 = 1000。|  

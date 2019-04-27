@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757212"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>筛选表中的数据（SSAS 表格）
   您可以在导入数据时应用筛选器，以便控制加载到表中的行。 在导入数据后，不能删除单独的行。 不过，您可以应用自定义筛选器，以便控制显示行的方式。 不符合筛选条件的行会被隐藏。 您可以基于一列或多列进行筛选。 筛选器是累加式的，这意味着每个附加的筛选器都基于当前筛选器，从而进一步减少数据子集。  
@@ -53,8 +53,8 @@ ms.locfileid: "48079697"
 2.  单击 **“列”** 菜单，然后单击 **“清除所有筛选器”**。  
   
 ## <a name="see-also"></a>请参阅  
- [筛选和排序数据&#40;SSAS 表格&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [透视&#40;SSAS 表格&#41;](perspectives-ssas-tabular.md)   
- [角色&#40;SSAS 表格&#41;](roles-ssas-tabular.md)  
+ [对数据进行筛选和排序（SSAS 表格）](../filter-and-sort-data-ssas-tabular.md)   
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)   
+ [角色（SSAS 表格）](roles-ssas-tabular.md)  
   
   

@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754423"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性 （数据库镜像）
   每当为数据库镜像会话设置见证服务器时，都需要“仲裁  ”。 仲裁是数据库镜像会话中两个或多个服务器实例彼此连接时存在的一种关系。 仲裁通常包括三个互连的服务器实例。 设置见证服务器时，必须具有仲裁才能使用数据库。 仲裁旨在用于具有自动故障转移功能的高安全性模式，可确保一个数据库一次只属于一个伙伴。  

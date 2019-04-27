@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771206"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服务
   本过程介绍如何使用 CDC 服务配置控制台准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，以便使用 Oracle CDC 服务和创建新的 CDC 服务。  

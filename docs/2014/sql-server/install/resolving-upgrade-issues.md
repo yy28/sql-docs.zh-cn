@@ -32,11 +32,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753319"
 ---
 # <a name="resolving-upgrade-issues"></a>解决升级问题
   本节主题介绍可以检测到的升级问题以及虽然检测不到但可能会对升级和升级后的使用造成影响的问题。 这些问题按 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件编排。  

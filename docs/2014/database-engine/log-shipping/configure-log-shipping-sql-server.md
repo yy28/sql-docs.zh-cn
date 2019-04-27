@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774581"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置日志传送。  
@@ -32,7 +32,7 @@ ms.locfileid: "48049237"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要配置日志传送，请使用：**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48049237"
   
 8.  请注意 **“备份作业”** 下的 **“计划”** 框中列出的备份计划。 如果想要为安装自定义计划，则单击 **“计划”** 并根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，可以通过选择以下选项之一来控制日志备份的备份压缩行为： **“使用默认服务器设置”**、 **“压缩备份”** 或 **“不压缩备份”**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 [备份压缩](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 创建日志传送配置时，您可以通过选择以下选项之一来控制日志备份的备份压缩行为：**使用默认服务器设置**，**压缩备份**，或**不压缩备份**。 有关详细信息，请参阅 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)。  
   
 10. 单击 **“确定”** 中配置日志传送。  
   

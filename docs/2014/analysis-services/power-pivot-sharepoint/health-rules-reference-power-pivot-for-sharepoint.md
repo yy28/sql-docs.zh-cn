@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749443"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>运行状况规则参考 (PowerPivot for SharePoint)
   本参考主题说明由 PowerPivot for SharePoint 安装添加的 SharePoint 运行状况规则。 这些规则用于报告有关 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序或其关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器运行状况、可用性或配置问题。  

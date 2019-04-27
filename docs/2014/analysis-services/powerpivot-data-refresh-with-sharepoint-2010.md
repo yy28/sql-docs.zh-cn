@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749307"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>使用 SharePoint 2010 进行 PowerPivot 数据刷新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据刷新是在服务器端计划的操作，它对外部数据源进行查询以便更新在内容库中存储的 Excel 2010 工作簿中嵌入的 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据。  
@@ -34,21 +34,21 @@ ms.locfileid: "53365549"
   
  **本主题内容：**  
   
- [第 1 步：启用 Secure Store Service 并生成主密钥](#bkmk_services)  
+ [步骤 1：启用 Secure Store Service 并生成主密钥](#bkmk_services)  
   
- [步骤 2:关闭你不想要支持的凭据选项](#bkmk_creds)  
+ [步骤 2：关闭你不想要支持的凭据选项](#bkmk_creds)  
   
- [步骤 3:创建目标应用程序来存储数据刷新中使用的凭据](#bkmk_stored)  
+ [步骤 3：创建目标应用程序来存储数据刷新中使用的凭据](#bkmk_stored)  
   
- [步骤 4:为可缩放的数据刷新配置服务器](#bkmk_scale)  
+ [步骤 4：为可缩放的数据刷新配置服务器](#bkmk_scale)  
   
- [步骤 5:安装用于导入 PowerPivot 数据的数据访问接口](#bkmk_installdp)  
+ [步骤 5：安装用于导入 PowerPivot 数据的数据访问接口](#bkmk_installdp)  
   
- [步骤 6:授予创建计划和访问外部数据源的权限](#bkmk_accounts)  
+ [步骤 6：授予创建计划和访问外部数据源的权限](#bkmk_accounts)  
   
- [步骤 7:启用数据刷新的工作簿升级](#bkmk_upgradewrkbk)  
+ [步骤 7：启用数据刷新的工作簿升级](#bkmk_upgradewrkbk)  
   
- [步骤 8:验证数据刷新配置](#bkmk_verify)  
+ [步骤 8：验证数据刷新配置](#bkmk_verify)  
   
  [为数据刷新修改配置设置](#bkmk_config)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53365549"
   
  在您确保已配置了服务器环境和权限后，数据刷新可供使用。 若要使用数据刷新，SharePoint 用户需要针对 PowerPivot 工作簿创建一个计划，以便指定执行数据刷新的频率。 通常由将文件发布到 SharePoint 的工作簿所有者或作者来创建该计划。 该用户为其拥有的工作簿创建并管理数据刷新计划。 有关详细信息，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
   
-##  <a name="bkmk_services"></a> 步骤 1:启用安全存储区服务并生成主密钥  
+##  <a name="bkmk_services"></a> 步骤 1：启用 Secure Store Service 并生成主密钥  
  要运行数据刷新作业以及连接到使用存储凭据的外部数据源，PowerPivot 数据刷新依赖 Secure Store Service 来提供所需的凭据。  
   
  如果您是使用“新服务器”选项安装 PowerPivot for SharePoint 的，则已为您配置 Secure Store Service。 对于所有其他安装方案，您必须创建和配置服务应用程序并为 Secure Store Service 生成主密钥。  
@@ -86,7 +86,7 @@ ms.locfileid: "53365549"
   
 10. 接受其他默认值，并单击**确定。** 服务应用程序将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
-11. 单击列表中的 Secure Store Service 应用程序。  
+11. 单击列表中的 Secure Store Service 务应用程序。  
   
 12. 在服务应用程序功能区中，单击**管理**。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53365549"
   
  必须先启用存储区服务操作的日志记录审核功能（有助于故障排除），然后才能使用该功能。 有关如何启用日志记录的详细信息，请参阅[配置安全的存储区服务 (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)。  
   
-##  <a name="bkmk_creds"></a> 步骤 2:关闭不希望支持的凭据选项  
+##  <a name="bkmk_creds"></a> 步骤 2：关闭你不想要支持的凭据选项  
  PowerPivot 数据刷新在数据刷新计划中提供三个凭据选项。 工作簿所有者在计划数据刷新时会选择其中一个选项，由此决定用来运行数据刷新作业的帐户。 作为管理员，您可以决定可供计划所有者使用的凭据选项。  
   
  要运行数据刷新，必须至少提供一个选项。  
@@ -139,14 +139,14 @@ ms.locfileid: "53365549"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 步骤 3:创建用于存储数据刷新中所使用的凭据的目标应用程序  
+##  <a name="bkmk_stored"></a> 步骤 3：创建目标应用程序来存储数据刷新中使用的凭据  
  一旦配置了 Secure Store Service，SharePoint 管理员就可以创建目标应用程序以使存储的凭据可用于数据刷新，包括无人参与的 PowerPivot 数据刷新帐户或者用于运行数据刷新作业或连接到外部数据源的任何其他帐户。  
   
  回想上一部分中所述的内容，您需要创建目标应用程序才能使特定凭据选项可用。 具体而言，您必须为 PowerPivot 无人参与的数据刷新帐户以及要在数据刷新操作中使用的其他任何存储凭据创建目标应用程序。  
   
  有关如何创建包含存储的凭据的目标应用程序的详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)并[为 PowerPivot 数据刷新配置存储的凭据&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_scale"></a> 步骤 4:配置服务器用于可扩展的数据刷新  
+##  <a name="bkmk_scale"></a> 步骤 4:为可缩放的数据刷新配置服务器  
  默认情况下，每个 PowerPivot for SharePoint 安装都支持按需查询和计划的数据刷新。  
   
  对于每个安装，您都可以指定 Analysis Services 服务器实例是同时支持查询和计划的数据刷新，还是专用于特定类型的操作。 如果场中安装有多个 PowerPivot for SharePoint，在您发现作业出现延迟或失败的情况下，可以考虑将某台服务器专用于数据刷新操作。  
@@ -162,7 +162,7 @@ ms.locfileid: "53365549"
   
  请记住，SharePoint 服务器是 64 位应用程序。 请务必安装您准备用于支持数据刷新操作的数据访问接口的 64 位版本。  
   
-##  <a name="bkmk_accounts"></a> 步骤 6:授予创建计划和访问外部数据源所需的权限  
+##  <a name="bkmk_accounts"></a> 步骤 6:授予创建计划和访问外部数据源的权限  
  工作簿所有者或作者必须具有 **“参与讨论”** 权限才能计划针对工作簿的数据刷新。 给定此权限级别，他或她可以打开和编辑工作簿的数据刷新配置页来指定的凭据和计划用于刷新数据的信息。  
   
  除 SharePoint 权限之外，还必须检查针对外部数据源的数据库权限，以确保数据刷新过程中使用的帐户对该数据具有足够的访问权限。 确定权限要求时需要您仔细评估，因为您需要授予的权限将根据工作簿中的连接字符串和运行数据刷新作业所用的用户身份而有所不同。  
@@ -225,7 +225,7 @@ ms.locfileid: "53365549"
   
  在了解哪些帐户需要数据访问权限后，您可以开始检查在 PowerPivot 工作簿中最常用的数据源的权限。 从频繁使用的任何数据仓库或报告数据库开始，但同时也要询问您最活跃的 PowerPivot 用户，了解他们所用的数据源。 掌握数据源列表后，则可以开始检查各个数据源，确保权限设置正确。  
   
-##  <a name="bkmk_upgradewrkbk"></a> 步骤 7:为数据刷新启用工作簿升级  
+##  <a name="bkmk_upgradewrkbk"></a> 步骤 7:启用数据刷新的工作簿升级  
  默认情况下，在 PowerPivot for SharePoint 的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本上，无法将使用 PowerPivot for Excel 的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本创建的工作簿配置用于计划数据刷新。 如果在 SharePoint 环境中同时托管 PowerPivot 工作簿的较新版本和较旧版本，则必须先升级所有 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 工作簿，然后才能安排在服务器上对这些工作簿执行自动数据刷新。  
   
 ##  <a name="bkmk_verify"></a> 步骤 8:验证数据刷新配置  

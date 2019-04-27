@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771433"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>创建函数以检索变更数据
   在完成用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流之后，接下来的任务是创建用于检索变更数据的表值函数。 只需在第一次增量加载之前创建一次此函数。  
@@ -132,7 +132,7 @@ deallocate #hfunctions
   
 -   请求的所有变更数据列。  
   
--   名为 __CDC_OPERATION 的列，该列使用单字符或双字符字段来标识与该行关联的操作。 此字段的有效值如下所示：I 表示插入的表示删除，UO 表示更新旧值和取消表示更新新值。  
+-   名为 __CDC_OPERATION 的列，该列使用单字符或双字符字段来标识与该行关联的操作。 此字段的有效值如下：“I”表示插入，“D”表示删除，“UO”表示更新旧值，“UN”表示更新新值。  
   
 -   更新标志，当你请求这些标志时，它们作为位列显示在操作代码后，并以在 *@update_flag_list* 参数中指定的顺序显示。 这些列的命名方式是在关联的列名后追加“_uflag”。  
   
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>下一步  
  在创建了用于查询变更数据的表值函数之后，下一步就是开始设计包中的数据流。  
   
- **下一主题：**[检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
+ **下一个主题：**[检索和了解变更数据](retrieve-and-understand-the-change-data.md)  
   
   

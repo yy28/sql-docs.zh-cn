@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773293"
 ---
 # <a name="view-file-history"></a>查看文件历史记录
   可以使用**历史记录**命令查看源代码管理的文件的版本历史记录。 此历史记录包括在源代码管理中添加文件或签入文件的日期和时间。  

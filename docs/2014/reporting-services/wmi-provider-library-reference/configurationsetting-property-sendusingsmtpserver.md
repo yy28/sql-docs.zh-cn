@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646145"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 属性 (WMI MSReportServer_ConfigurationSetting)
   指定报表服务器的电子邮件配置中的 `SendUsing` 元素是否设置为 `true`。  

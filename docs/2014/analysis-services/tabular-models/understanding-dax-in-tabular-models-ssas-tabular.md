@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756775"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  

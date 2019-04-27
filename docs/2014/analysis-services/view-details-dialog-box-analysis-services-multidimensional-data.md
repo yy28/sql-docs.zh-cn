@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756115"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>“查看详细信息”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “查看详细信息” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，查看有关 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的消息或操作的其他详细信息。 您可以通过执行以下操作之一显示 **“查看详细信息”** 对话框：  

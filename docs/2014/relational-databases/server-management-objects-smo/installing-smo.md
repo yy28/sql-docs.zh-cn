@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753629"
 ---
 # <a name="installing-smo"></a>安装 SMO
   如果希望开发使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 的应用程序，应在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时选择客户端工具 SDK。 若安装客户端工具 SDK 而不安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能包安装共享管理对象。 若要确保将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象安装到将运行您的应用程序的计算机上，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的共享管理对象 .msi。  

@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773560"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
   本主题介绍如何在 [!INCLUDE[tsql](../includes/tsql-md.md)] 和更高版本中通过使用 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] ，将某一 AlwaysOn 可用性组从 ONLINE 状态转换为 OFFLINE 状态。 对于同步提交数据库没有数据丢失，因为如果任何同步提交副本未同步，OFFLINE 操作将引发错误并且保持可用性组处于 ONLINE 状态。 保持可用性组处于联机状态将保护未同步的同步提交数据库，以防可能的数据丢失。 可用性组脱机后，其数据库将不可用于客户端，并且您无法使可用性组重新联机。 因此，使某一可用性组处于脱机状态只会将该可用性组的资源从一个 WSFC 群集迁移到另一个 WSFC 群集。  
@@ -63,7 +63,7 @@ ms.locfileid: "53371369"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在可用性组处于脱机状态后  
+##  <a name="FollowUp"></a> 跟进：可用性组处于脱机状态后  
   
 -   **OFFLINE 操作的日志记录：** 已启动了 OFFLINE 操作的 WSFC 节点的标识存储在 WSFC 群集日志和 SQL ERRORLOG 中。  
   

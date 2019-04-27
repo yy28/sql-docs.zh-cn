@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781102"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 集成自定义属性的概览
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的公共语言运行时 (CLR) 允许使用称为属性的描述性关键字。 这些属性为许多元素（如方法和类）提供附加信息。 这些属性与对象的元数据一同保存在程序集中，并且可用于向其他开发工具描述您的代码，或者可用于影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的运行时行为。  

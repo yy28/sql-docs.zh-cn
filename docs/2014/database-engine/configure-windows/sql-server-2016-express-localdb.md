@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 Express LocalDB |Microsoft Docs
+title: SQL Server 2014 Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756986"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 是的执行模式[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]面向程序开发人员。 `LocalDB` 安装将复制启动所需的文件的最小集[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 一次`LocalDB`是安装了，开发人员通过使用特殊的连接字符串中启动的连接。 连接时，将自动创建并启动所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构，从而使应用程序无需执行复杂或耗时的配置任务即可使用数据库。 开发人员工具可以向开发人员提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，使其不必管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的完整服务器实例即可撰写和测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代码。 实例[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`由使用`SqlLocalDB.exe`实用程序。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 应使用来代替[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]用户实例功能已弃用。  

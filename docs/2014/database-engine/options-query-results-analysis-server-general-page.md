@@ -14,11 +14,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774770"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>选项 （查询结果 Analysis Server-常规页）
   使用此页可确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询的查询结果窗口的默认行为。 若要显示这些设置，请选择“工具”菜单中的“选项”。 在“查询结果”文件夹内，展开“分析服务器”子文件夹，再选择“常规”。  

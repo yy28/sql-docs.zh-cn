@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773473"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>将版本指定为最新版本
   将文件签入源代码管理中时，您签入的版本会成为最新版本；签出或检索最新版本的用户将接收到最近签入项的本地副本。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748839"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>主动缓存（“分区属性”对话框）(SSMS)
   对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”对话框的“主动缓存”页，为其度量值组中的分区设置存储和主动缓存属性。  

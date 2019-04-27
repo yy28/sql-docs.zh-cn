@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774134"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>选项 （文本编辑器-Transact SQL 常规页）
   使用 **“常规”** 选项对话框可以更改用于编辑 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本的 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询编辑器的常规编辑行为。 若要显示这些设置，请在“工具”菜单上单击“选项”，展开 **Transact-SQL** 子文件夹，再单击“常规”。  
@@ -38,7 +38,7 @@ ms.locfileid: "48155197"
  **参数信息**  
  在该复选框处于选中状态时，将显示紧挨在插入点（光标）左侧的存储过程或函数的参数信息。 这些信息包括可用参数及其名称和数据类型的列表。  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  **启用虚空格**  
  选中此复选框后，您可以单击代码行结束处后面的任意位置，然后键入。 如果选中此复选框，可将注释始终定位在代码旁的同一位置。 选中此复选框将禁用 **“自动换行”** 复选框。  
   

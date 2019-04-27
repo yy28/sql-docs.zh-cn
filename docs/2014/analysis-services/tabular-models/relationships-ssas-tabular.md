@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756771"
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
   在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
@@ -47,7 +47,7 @@ ms.locfileid: "48191737"
 ##  <a name="what"></a> 优势  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
-|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
+|CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|产品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -71,13 +71,13 @@ ms.locfileid: "48191737"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantity|  
+|[CustomerID]|OrderID|OrderDate|产品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源导入表，您可以手动创建关系，如中所述[创建表之间的关系两个&#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源导入表，则可以手动创建关系，如 [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)所述。  
   
 ### <a name="columns-and-keys"></a>列和键  
  关系基于每个表中包含相同数据的列。 例如，Customers 和 Orders 表可以彼此相关，因为它们都包含存储客户 ID 的列。 在本示例中，列名称相同，但这不是必需的。 只要 Orders 表的所有行都包含也存储在 Customers 表中的 ID，一列可以是 CustomerID，另一列可以是 CustomerNumber。  
@@ -111,9 +111,9 @@ ms.locfileid: "48191737"
  创建关系时，模型设计器必须遵守几项要求：  
   
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
- 多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，该列与表 FactInternetSales 中的以下三个不同列相关：OrderDate、DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
+ 多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，与表 FactInternetSales 中的三个不同列相关:OrderDate、 DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
   
- \* 关系： 表 [列 1]-> 表 [列 2]-状态： 错误-原因： 无法在表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
+ \* 关系： 表 [列 1]-> 表 [列 2]-状态： 错误-原因：无法在表之间创建关系\<表 1 > 和\<表 2 >。 在两个表之间只能存在一个直接或间接关系。  
   
  如果您有两个表并且这两个表之间存在多个关系，则需要导入包含查找列的表的多个副本，并在每对表之间创建一个关系。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48191737"
   
  如果您的模型中包含来自多个数据源的数据，则可能需要手动关系。 例如，您可以从关系数据源导入 Customers、CustomerDiscounts 和 Orders 表。 在源中的这些表之间存在的关系将在模型中自动创建。 然后，您可以添加来自不同源的其他表，例如，从 Microsoft Excel 工作簿中的 Geography 表导入区域数据。 然后，您可以手动在 Customers 表中的某一列和 Geography 表中的某一列之间创建关系。  
   
- 若要手动在表格模型中创建关系，您可以使用关系图视图中的模型设计器或使用“管理关系”对话框。 关系图视图以图形格式显示表以及表之间的关系。 您可以单击一个表中的某一列，将该列拖放到其他表中以便轻松地在两个表之间以正确顺序创建关系。 “管理关系”对话框会以简单的表格式显示表之间的关系。 若要了解如何手动创建关系，请参阅[创建表之间的关系两个&#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 若要手动在表格模型中创建关系，您可以使用关系图视图中的模型设计器或使用“管理关系”对话框。 关系图视图以图形格式显示表以及表之间的关系。 您可以单击一个表中的某一列，将该列拖放到其他表中以便轻松地在两个表之间以正确顺序创建关系。 “管理关系”对话框会以简单的表格式显示表之间的关系。 了解如何手动创建关系，请参阅 [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)所述。  
   
 ##  <a name="bkmk_dupl_errors"></a> 重复的值和其他错误  
  如果选择了在关系中不能使用的列，该列旁边将出现一个红色的 X。 您可以将光标暂停在错误图标之上，以查看提供有关该问题的详细信息的消息。 导致无法在所选列之间创建关系的问题包括：  
@@ -187,11 +187,11 @@ ms.locfileid: "48191737"
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建两个表之间的关系&#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|介绍如何手动创建两个表之间的关系。|  
-|[删除关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)|描述如何删除关系和删除关系带来的后果。|  
+|[创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)|介绍如何手动创建两个表之间的关系。|  
+|[删除关系（SSAS 表格）](relationships-ssas-tabular.md)|描述如何删除关系和删除关系带来的后果。|  
   
 ## <a name="see-also"></a>请参阅  
- [表和列&#40;SSAS 表格&#41;](tables-and-columns-ssas-tabular.md)   
- [导入数据&#40;SSAS 表格&#41;](../import-data-ssas-tabular.md)  
+ [表和列（SSAS 表格）](tables-and-columns-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](../import-data-ssas-tabular.md)  
   
   

@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743965"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  如果重新激活该表，但不重新填充索引，则仍可使用旧索引对剩余的启用了全文索引的非新列进行查询。 在指定了完全全文列搜索的查询中，将匹配已删除的列中的数据。  
   
- 定义了进行全文索引的表后，如果切换全文唯一键列的数据类型（通过更改该列的数据类型或更改全文唯一键列）时不完全重填，则可能导致后续查询失败，并返回以下错误消息："转换为类型*data_type*失败，全文搜索键值*key_value*。" 若要防止此情况，请删除此表使用的全文索引定义**drop**的操作**sp_fulltext_table**重新定义它使用**sp_fulltext_table**和**sp_fulltext_column**。  
+ 后一个表已定义为全文索引编制索引，切换全文唯一键列的一种数据类型到另一个，通过更改该列的数据类型或某一列中的全文唯一键更改为另一个，而无需完全重填可能会导致故障发生在后续查询并返回错误消息："转换为类型*data_type*失败，全文搜索键值*key_value*。" 若要防止此情况，请删除此表使用的全文索引定义**drop**的操作**sp_fulltext_table**重新定义它使用**sp_fulltext_table**和**sp_fulltext_column**。  
   
  必须将全文键列定义为 900 字节或更少。 考虑到性能原因，建议尽量使用较小的键列。  
   

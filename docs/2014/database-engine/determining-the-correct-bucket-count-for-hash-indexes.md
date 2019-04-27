@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754239"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>决定哈希索引的正确存储桶数
   在您创建内存优化表时，必须为 `BUCKET_COUNT` 参数指定值。 本主题将提出一些建议，帮助您为 `BUCKET_COUNT` 参数确定适当的值。 如果您无法确定实际 Bucket 计数，则改用非聚集索引。  不正确的 `BUCKET_COUNT` 值（特别是过低的值）可能会显著影响工作负荷性能以及数据库的恢复时间。 最好将 Bucket 计数估计得高一些。  

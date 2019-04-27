@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774881"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>监视日志传送 (Transact-SQL)
   配置日志传送后，就可以监视有关所有日志传送服务器状态的信息。 日志传送操作的历史记录和状态始终由日志传送作业保存在本地。 备份操作的历史记录和状态存储在主服务器上，复制和还原操作的历史记录和状态存储在辅助服务器上。 如果使用了远程监视服务器，此信息还将存储在监视服务器上。  

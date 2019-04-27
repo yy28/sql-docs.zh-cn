@@ -1,5 +1,5 @@
 ---
-title: 摘要：解决方案和脚本项目 | Microsoft Docs
+title: 摘要：解决方案和脚本项目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753024"
 ---
 # <a name="summary-solutions-and-script-projects"></a>摘要：解决方案和脚本项目
   利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的各种开发人员功能，[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可提供开发人员进行企业级代码管理所需的功能。 您可以创建自定义模板来支持重复执行的任务，保存和管理协作集中环境中的复杂脚本项目。  

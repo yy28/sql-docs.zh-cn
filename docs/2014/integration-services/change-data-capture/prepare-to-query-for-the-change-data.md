@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771263"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>准备查询变更数据
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第三个任务（即最后一个任务）是准备查询变更数据和添加数据流任务。  
@@ -198,6 +198,6 @@ ms.locfileid: "58387435"
 ## <a name="next-step"></a>下一步  
  在准备查询字符串和配置数据流任务之后，下一步就是创建用于从数据库检索变更数据的表值函数。  
   
- **下一主题：**[创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)  
+ **下一个主题：**[创建函数以检索变更数据](create-the-function-to-retrieve-the-change-data.md)  
   
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754135"
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
   使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
@@ -30,7 +30,7 @@ ms.locfileid: "48195468"
   
 ## <a name="options"></a>选项  
  *服务器实例及其连接状态*  
- 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME**。 对于默认服务器实例，只显示系统名。  
+ 伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME。 ** 对于默认服务器实例，只显示系统名。  
   
  该字段还指示当前监视器是否连接至该服务器实例。 可能的连接状态为：  
   

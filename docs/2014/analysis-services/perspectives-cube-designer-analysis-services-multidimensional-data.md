@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a280b02b8c8a4a918083c7d664d70db4ee533ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743443"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>透视（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“透视”** 选项卡，创建和修改所选多维数据集的透视。  

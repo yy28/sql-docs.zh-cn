@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c737c59081646347a0a878d33dae65b3420a64b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755699"
 ---
 # <a name="data-matching"></a>数据匹配
   借助 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据匹配过程，您可以减少数据源中的数据重复并改善数据准确性。 匹配可分析单个数据源的所有记录中的重复程度，同时返回所比较的每组记录之间的加权概率。 然后，您可以决定哪些记录匹配，并对源数据采取适当的措施。  

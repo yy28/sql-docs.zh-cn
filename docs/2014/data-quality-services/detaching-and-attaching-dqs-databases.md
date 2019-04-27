@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6db97cfdbf1b7ea37289c943c8acaaee312c4bf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755529"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>分离数据库和附加 DQS 数据库
   本主题介绍如何分离和附加 DQS 数据库。  
@@ -42,7 +42,7 @@ ms.locfileid: "56032808"
 -   您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能终止 DQS 中任何正在运行的活动或停止任何正在运行的过程。  
   
 ##  <a name="Detach"></a> 分离 DQS 数据库  
- 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库文件有通常位于 Data Quality Services 计算机上的以下位置：C:\Program Files\Microsoft SQL Server\MSSQL12.*<Instance_Name>* \MSSQL\DATA.  
+ 在您使用 SQL Server Management Studio 分离 DQS 数据库时，分离后的文件将保留在您的计算机上，并且可以重新附加到同一个 SQL Server 实例上，也可以移到其他服务器上并附加其上。 DQS 数据库文件通常位于 Data Quality Services 计算机上的以下位置：C:\Program Files\Microsoft SQL Server\MSSQL12.*<Instance_Name>* \MSSQL\DATA.  
   
 1.  启动 Microsoft SQL Server Management Studio 并连接到适当的 SQL Server 实例。  
   
