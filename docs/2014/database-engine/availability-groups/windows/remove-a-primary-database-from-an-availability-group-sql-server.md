@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813961"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>从可用性组中删除主数据库 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell，从 AlwaysOn 可用性组中删除主数据库和对应的辅助数据库。  
@@ -31,7 +31,7 @@ ms.locfileid: "48098007"
   
      [先决条件和限制](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除可用性数据库，请使用：**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48098007"
     ```  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844293"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>选项 （查询结果-SQL Server 的结果到网格页）
   使用此页可以指定以网格格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。 在 **“查询选项”** 对话框的左窗格中，在 **“结果”** 下，单击 **“网格”**。  

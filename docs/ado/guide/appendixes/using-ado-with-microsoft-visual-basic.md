@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864513"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>使用 ADO 与 Microsoft Visual Basic 和 Visual Basic for Applications
 设置 ADO 项目并编写的 ADO 代码非常类似是否为应用程序使用 Visual Basic 或 Visual Basic。 本主题介绍使用 Visual Basic 和 Visual Basic 中为应用程序使用 ADO，并且说明任何差异。
@@ -64,7 +64,7 @@ ms.locfileid: "47694175"
 4.  单击“确定” 。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic 中创建 ADO 对象
- 若要创建一个自动化变量，并为该变量的对象的实例，可以使用两种方法： **Dim**或**CreateObject**。
+ 若要创建一个自动化变量，并为该变量的对象的实例，可以使用两个方法：**Dim**或**CreateObject**。
 
 ### <a name="dim"></a>Dim
  可以使用**新建**关键字**Dim**声明并在一个步骤中创建的 ADO 对象的实例：
@@ -116,4 +116,4 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  使用 ADO 文档中包含很多 Visual Basic 示例。 有关详细信息，请参阅[Microsoft Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)。
 
 ## <a name="see-also"></a>请参阅
- [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [配合使用 ADO 与 Microsoft Visual c + +](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [配合使用 ADO 与脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+ [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [配合使用 ADO 与 Microsoft Visual C++ ](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [配合使用 ADO 与脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

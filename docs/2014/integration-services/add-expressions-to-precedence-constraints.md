@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837239"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
   优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 `Success`、`Failure` 或 `Completion`。 `Success` 要求优先可执行文件成功；`Failure` 要求优先可执行文件失败；而 `Completion` 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [优先约束](control-flow/precedence-constraints.md)。  

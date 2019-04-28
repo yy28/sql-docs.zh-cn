@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874025"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>模拟和连接凭据
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成中，使用 Windows 身份验证虽然比较复杂，但是比使用 SQL Server 身份验证更为安全。 使用 Windows 身份验证时，请谨记下列注意事项：  

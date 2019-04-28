@@ -1,5 +1,5 @@
 ---
-title: bcp_exec |Microsoft Docs
+title: bcp_exec | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689036"
 ---
 # <a name="bcpexec"></a>bcp_exec
   执行数据库表和用户文件之间数据的完整大容量复制。  

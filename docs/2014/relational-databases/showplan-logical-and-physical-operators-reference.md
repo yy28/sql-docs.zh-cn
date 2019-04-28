@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627087"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
   运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
@@ -155,11 +155,11 @@ ms.locfileid: "53361479"
   
  物理运算符初始化、收集数据，然后关闭。 具体来讲，物理运算符可以响应下列三种方法调用：  
   
--   **Init （)**:**Init （)** 方法使物理运算符初始化自身并设置所有所需的数据结构。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
+-   **Init()**：Init() 方法使物理运算符初始化自身并设置所有需要的数据结构。 尽管一个物理运算符通常只接收一次 **Init()** 调用，但也可以接收许多次调用。  
   
--   **Getnext （)**:**Getnext （)** 方法使物理运算符获得数据的第一个，或后续行。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
+-   **GetNext()**：GetNext() 方法使物理运算符获得数据的第一行或后续行。 物理运算符可以不接收 **GetNext()** 调用，也可以接收许多次调用。  
   
--   **Close （)**:**Close （)** 方法使物理运算符用于执行一些清理操作并自行关闭。 一个物理运算符只接收一个 **Close()** 调用。  
+-   **Close()**：Close() 方法使物理运算符执行某些清除操作，然后关闭。 一个物理运算符只接收一个 **Close()** 调用。  
   
  **GetNext()** 方法返回一个数据行，它的调用次数作为 **ActualRows** 显示在使用 SET STATISTICS PROFILE ON 或 SET STATISTICS XML ON 生成的显示计划输出中。 有关这些 SET 选项的详细信息，请参阅 [SET STATISTICS PROFILE (Transact-SQL)](/sql/t-sql/statements/set-statistics-profile-transact-sql) 和 [SET STATISTICS XML (Transact-SQL)](/sql/t-sql/statements/set-statistics-xml-transact-sql)。  
   

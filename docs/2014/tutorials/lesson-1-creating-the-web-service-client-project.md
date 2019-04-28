@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676047"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 课：创建 Web 服务客户端项目
   针对本演练，您将创建访问报表服务器 Web 服务的简单控制台应用程序。 本演练假定您是在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 环境中进行开发的。  

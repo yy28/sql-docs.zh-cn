@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822057"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 课：扩展时序模型
   在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 中，可以向时序模型中添加新数据，并自动将新数据合并到模型中。 您可以通过下列两种方式之一向时序挖掘模型添加新数据：  

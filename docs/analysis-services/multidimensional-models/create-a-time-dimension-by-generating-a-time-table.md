@@ -1,5 +1,5 @@
 ---
-title: 通过生成时间表来创建时间维度 |Microsoft 文档
+title: 通过生成时间表来创建时间维度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867045"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34022044"
 ## <a name="completing-the-dimension-wizard"></a>完成维度向导  
  在 **“完成向导”** 页中，查看由向导创建的属性和层次结构，然后命名时间维度。 单击 **“完成”** 完成向导并创建维度。 创建维度完成后，可以使用维度设计器来更改维度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [创建日期类型维度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [数据库维度属性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   

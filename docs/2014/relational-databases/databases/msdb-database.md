@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871700"
 ---
 # <a name="msdb-database"></a>msdb 数据库
   **代理使用** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库来计划警报和作业， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和数据库邮件等其他功能也使用该数据库。  
@@ -48,33 +48,33 @@ ms.locfileid: "52811889"
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|否|  
-|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
-|ANSI_NULLS|OFF|用户帐户控制|  
-|ANSI_PADDING|OFF|用户帐户控制|  
-|ANSI_WARNINGS|OFF|用户帐户控制|  
-|ARITHABORT|OFF|用户帐户控制|  
-|AUTO_CLOSE|OFF|用户帐户控制|  
-|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_SHRINK|OFF|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|ANSI_NULL_DEFAULT|OFF|是|  
+|ANSI_NULLS|OFF|是|  
+|ANSI_PADDING|OFF|是|  
+|ANSI_WARNINGS|OFF|是|  
+|ARITHABORT|OFF|是|  
+|AUTO_CLOSE|OFF|是|  
+|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_SHRINK|OFF|是|  
+|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
-|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
-|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 用户帐户控制|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
-|DB_CHAINING|ON|用户帐户控制|  
+|CONCAT_NULL_YIELDS_NULL|OFF|是|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
+|CURSOR_DEFAULT|GLOBAL|是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 是|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
+|DB_CHAINING|ON|是|  
 |ENCRYPTION|OFF|否|  
-|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
-|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
-|PARAMETERIZATION|SIMPLE|用户帐户控制|  
-|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|NUMERIC_ROUNDABORT|OFF|是|  
+|PAGE_VERIFY|CHECKSUM|是|  
+|PARAMETERIZATION|SIMPLE|是|  
+|QUOTED_IDENTIFIER|OFF|是|  
 |READ_COMMITTED_SNAPSHOT|OFF|否|  
-|RECOVERY|SIMPLE|用户帐户控制|  
-|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
-|Service Broker 选项|ENABLE_BROKER|用户帐户控制|  
-|TRUSTWORTHY|ON|用户帐户控制|  
+|RECOVERY|SIMPLE|是|  
+|RECURSIVE_TRIGGERS|OFF|是|  
+|Service Broker 选项|ENABLE_BROKER|是|  
+|TRUSTWORTHY|ON|是|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833835"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
   Excel 连接管理器使包可以连接到现有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 Excel 源和 Excel 目标的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包括使用 Excel 连接管理器。  
@@ -45,7 +45,7 @@ ms.locfileid: "58377215"
   
  Excel 连接管理器使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for Jet 4.0 及其支持的 Excel ISAM （索引顺序存取方法） 驱动程序来连接和读取并写入到 Excel 数据源的数据。 此提供程序和驱动程序在用于 Excel 源和 Excel 目标时的行为的详细信息，请参阅[Excel 源](../data-flow/excel-source.md)并[Excel 目标](../data-flow/excel-destination.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [Excel 连接管理器编辑器](../excel-connection-manager-editor.md)。  
   

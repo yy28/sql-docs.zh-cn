@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809051"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>在单用户模式下启动 SQL Server
   在某些情况下，可能必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup option -m **在单用户模式下启动**实例。 例如，您可能要更改服务器配置选项或恢复已破坏的 master 数据库或其他系统数据库。 这两个操作都需要在单用户模式下启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
@@ -55,7 +55,7 @@ ms.locfileid: "52640888"
   
 4.  从群集管理器或故障转移群集管理控制台验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源仍处于脱机状态。  
   
-5.  连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在使用以下命令并执行必需的操作：SQLCMD-E-S\<服务器名 >。  
+5.  连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]现在使用以下命令并执行必需的操作：SQLCMD -E -S\<servername>.  
   
 6.  一旦完成该操作后，关闭命令提示符并且通过群集管理器使 SQL 和其他资源返回联机状态。  
   

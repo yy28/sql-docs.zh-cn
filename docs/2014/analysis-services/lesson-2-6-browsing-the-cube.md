@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729323"
 ---
 # <a name="browsing-the-cube"></a>浏览多维数据集
   在部署多维数据集后，可以在多维数据集设计器的“浏览器”选项卡中查看多维数据集数据，以及在维度设计器的“浏览器”选项卡中查看维度数据。 浏览多维数据集和维度数据是以增量方式检查您的工作的方式。 您可以在处理对象后，验证对属性、关系和其他对象的细微更改是否具有期望的效果。 在使用“浏览器”选项卡来查看多维数据集和维度数据时，该选项卡将基于您正在浏览的对象提供不同的功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "48077507"
      该设计器的左窗格会显示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象。 在“浏览器”选项卡的右侧有两个窗格：上部窗格是“筛选器”窗格，下部是“数据”窗格。 在接下来的课程中，您将使用多维数据集浏览器进行分析。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 3 课：修改度量值、属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第 3 课：修改度量值、 属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>请参阅  
  [MDX 查询编辑器（Analysis Services - 多维数据）](mdx-query-editor-analysis-services-multidimensional-data.md)  

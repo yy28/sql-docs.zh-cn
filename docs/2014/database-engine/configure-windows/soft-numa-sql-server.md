@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809025"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>将 SQL Server 配置为使用软件 NUMA (SQL Server)
 当今的处理器在每个插槽上都有多个内核。 通常每个插槽表示为单个 NUMA 节点。 SQL Server 数据库引擎在每个 NUMA 节点上划分多个不同内部结构和分区服务线程。 与处理器包含每个插槽的 10 个或多个内核，请使用软件 NUMA (SOFT-NUMA) 来拆分硬件 NUMA 节点通常会增加可伸缩性和性能。   

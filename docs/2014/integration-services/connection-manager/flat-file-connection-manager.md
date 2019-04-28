@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833806"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  
@@ -67,7 +67,7 @@ ms.locfileid: "58386265"
   
  使用平面文件连接管理器和平面文件目标，您可以在运行时使用表达式创建文件名。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

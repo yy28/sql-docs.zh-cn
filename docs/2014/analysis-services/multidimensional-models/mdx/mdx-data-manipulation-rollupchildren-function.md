@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699765"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函数 (MDX)
   多维表达式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [用于搜索和替换脚本] 函数汇总到每个子级应用不同的一元运算符的成员的子级，并返回一个数字作为此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
@@ -74,6 +74,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  MDX 语句检查子成员的一元运算符。 如果一元运算符用于减法（正如在考虑国内盈利和国外盈利成员的情况下），`IIf` 函数将替代一元运算符 ~。 否则，`IIf` 函数将使用子成员的一元运算符。 最后，将所返回的汇总总数乘以 1.1，得出国内和国外总销售额的预测值。  
   
 ## <a name="see-also"></a>请参阅  
- [操作数据&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [操作数据 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870876"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>查看数据库快照的稀疏文件大小 (Transact-SQL)
   本主题说明如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库文件是稀疏文件以及查看其实际大小和最大大小。 稀疏文件是 NTFS 文件系统的功能，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照使用。  

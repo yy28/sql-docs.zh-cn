@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731726"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>记录挖掘模型（Excel 数据挖掘外接程序）
   ![文档模型按钮、 数据挖掘功能区](media/dmc-docmodel.gif "文档模型按钮、 数据挖掘功能区")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118059"
   
 3.  在中**选择模型**对话框中，选择报表，在其上的模型，然后单击**下一步**。 您必须运行**文档模型**向导单独为每个想要记录的模型。  
   
-4.  在中**选择文档详细信息**对话框框中，选择两个选项之一：**填写信息**或**摘要信息**。  
+4.  在中**选择文档详细信息**对话框框中，选择两个选项之一：**完成信息**或**摘要信息**。  
   
 5.  单击 **“完成”**。  
   

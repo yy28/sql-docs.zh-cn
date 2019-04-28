@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815400"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>更改服务器实例的 HADR 群集上下文 (SQL Server)
   本主题介绍如何通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，切换 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 实例的 HADR 群集上下文。 *HADR 群集上下文* 用于确定哪一 Windows Server 故障转移群集 (WSFC) 群集管理服务器实例所承载的可用性副本的元数据。  
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> 跟进：在切换可用性副本的群集上下文后  
+##  <a name="FollowUp"></a>跟进：在切换可用性副本的群集上下文后  
  新的 HADR 群集上下文将立即生效，而不重新启动服务器实例。 HADR 群集上下文设置是持久的实例级别设置，在服务器实例重新启动时也保持不变。  
   
  通过查询 [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) 动态管理视图确认新的 HADR 群集上下文，如下所示：  

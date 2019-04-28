@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 847b833d793d3b572b44bcb77903c534300109b7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720997"
 ---
-# <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 课：使订阅与合并发布同步
+# <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 课：同步对合并发布的订阅
   在本课中，您将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动合并代理以初始化订阅。 您还将使用此过程与发布服务器同步。 本课程要求已完成上一课，[第 2 课：创建对合并发布的订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ### <a name="to-start-synchronization-and-initialize-the-subscription"></a>启动同步并初始化订阅  

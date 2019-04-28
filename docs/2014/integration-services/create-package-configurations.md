@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831974"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  

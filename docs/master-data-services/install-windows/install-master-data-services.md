@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695546"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安装任务
 
@@ -24,18 +24,18 @@ ms.locfileid: "51703885"
 
   本文概述了安装任务，随附说明链接。 有关安装和配置 Master Data Services 的演练，请参阅 [Master Data Services 的安装和配置](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
--   [安装前任务](#preinstall)：在安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]前验证系统要求。  
+-   [预安装任务](#preinstall)：在安装前验证系统要求[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
--   [安装操作](#install)：通过使用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装程序或命令提示符安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   [安装操作](#install):安装[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]通过使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序或命令提示符。  
   
--   [安装后任务](#postinstall)：打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 以便完成安装后操作。 创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务并部署示例模型。  
+-   [安装后任务](#postinstall)：打开[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]以完成安装后操作。 创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务并部署示例模型。  
   
 ##  <a name="preinstall"></a> 安装前任务  
   
 |操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
 |验证安装要求|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机必须满足以下方面的最低要求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库（如果数据库所在的计算机与 Web 应用程序所在的计算机相同）。<br /><br /> <br /><br /> 通过只在 Web 服务器计算机上运行安装程序并在运行支持的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 版本的远程计算机上创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，可以单独安装 Web 服务器计算机和数据库服务器计算机。|[SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)<br /><br /> [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 应用程序要求 (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)<br /><br /> [数据库要求 (Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)|  
-|配置所需的角色、角色服务和功能|运行安装程序前，请使用所需的 Windows 角色、角色服务和功能配置计算机。<br /><br /> 注意：尽管你可以在工作流的后面部分执行此步骤，但是在运行安装程序前进行配置很有用，因为这样你可以执行紧挨安装后面的 Web 配置任务。|[Web 应用程序要求 (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
+|配置所需的角色、角色服务和功能|运行安装程序前，请使用所需的 Windows 角色、角色服务和功能配置计算机。<br /><br /> 注意：尽管工作流的更高版本中，可以执行此步骤中，最好运行安装程序，因此，你可以执行紧挨安装后面的 web 配置任务前将此配置。|[Web 应用程序要求 (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
 |查看语言支持注意事项|确定要安装和运行 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 所用的语言。|[多语言和全球部署 (Master Data Services)](../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> 安装操作  
@@ -52,7 +52,7 @@ ms.locfileid: "51703885"
 |创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您的主数据创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。|[创建 Master Data Services 数据库](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |创建 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 创建和配置 Web 应用程序以承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|[创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库与 Web 应用程序关联|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 将 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序与您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。|[将 Master Data Services 数据库与 Web 应用程序关联](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|配置 Internet Explorer 增强安全性|在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点编写脚本。 否则，浏览到服务器计算机上的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点将失败。|[Internet Explorer：增强安全性配置](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|配置 Internet Explorer 增强安全性|在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点编写脚本。 否则，浏览到服务器计算机上的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点将失败。|[Internet Explorer:增强的安全配置](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
 |安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|将使用主数据的用户可以安装 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |启用 Data Quality Services (DQS) 集成|对于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]的用户，启用与 DQS 功能的集成，可用于匹配相似数据。|[实现 Data Quality Services 与 Master Data Services 的集成](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |部署示例模型|示例模型包与 Master Data Services 一起安装，可以使用 MDSModelDeploy.exe 进行部署。|[在 SQL Server 中部署 MDS 示例](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
@@ -61,7 +61,7 @@ ms.locfileid: "51703885"
   
  如果不再需要计算机上的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，可以卸载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 并确定是否删除不受卸载过程影响的项。 有关详细信息，请参阅 [卸载和删除 Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

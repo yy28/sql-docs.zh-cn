@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855869"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>创建相关的顺序分析和聚类分析模型（数据挖掘中级教程）
   通过浏览顺序分析和聚类分析模型，您了解到如 Region 或 Income 等其他属性对模型有巨大影响；因此为了更好地了解序列，您将创建一个相关的顺序分析和聚类分析模型，并删除与客户人口统计信息有关的属性。  

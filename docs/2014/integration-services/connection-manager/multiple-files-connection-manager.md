@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833610"
 ---
 # <a name="multiple-files-connection-manager"></a>多文件连接管理器
   多文件连接管理器使包可以在运行时引用现有的文件和文件夹，或者创建文件和文件夹。  
@@ -61,7 +61,7 @@ ms.locfileid: "58392245"
   
  也可以用通配符指定多个文件或文件夹。 例如，为驱动器 C 上的所有文本文件的值的引用`ConnectionString`属性可以设置为 c:\\*.txt。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [“添加文件连接管理器”对话框 UI 参考](add-file-connection-manager-dialog-box-ui-reference.md)。  
   

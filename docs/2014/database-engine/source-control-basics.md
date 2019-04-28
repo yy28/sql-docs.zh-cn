@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842940"
 ---
 # <a name="source-control-basics"></a>源代码管理基础
   源代码管理是指以下系统：在该系统中，使用中心服务器软件存储和跟踪文件版本，并控制对文件的访问。 典型的源代码管理系统包括源代码管理提供程序以及两个或多个源代码管理客户端。  

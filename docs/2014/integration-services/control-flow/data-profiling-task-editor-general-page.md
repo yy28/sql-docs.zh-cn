@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832210"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -52,8 +52,8 @@ ms.locfileid: "58385346"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：指定要在中使用哪个文件连接管理器**目标**选项。|  
-|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：指定要在中使用的包变量**目标**选项。|  
+|**文件连接**|将配置文件输出保存到文件，位置为文件连接管理器中指定的位置。<br /><br /> 注意：请在“目标”选项中指定要使用的文件连接管理器。|  
+|**变量**|将配置文件输出保存到包变量。<br /><br /> 注意：请在“目标”选项中指定要使用的包变量。|  
   
  **目标**  
  指定哪个文件连接管理器或包变量包含数据配置文件输出：  

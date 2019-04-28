@@ -30,11 +30,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678063"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "56039918"
 |number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
-|日期|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  日期和时间转换旨在用于使用在数据库中存储的值是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型或**字符串**。 请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型不使用**时区**并且具有比 XML 更低的精度**时间**数据类型。 若要包括**时区**数据类型或附加的精度，存储中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**字符串**类型。  

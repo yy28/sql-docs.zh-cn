@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c24c5f07d18bc8d63ff0d113c762f776dccf9a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657937"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 服务器上安装 Analysis Services OLE DB 访问接口
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) 是客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据进行交互的接口。 在包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的 SharePoint 环境中，此访问接口用于处理对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求。  
@@ -126,7 +126,7 @@ ms.locfileid: "53376639"
 ##  <a name="bkmk_kj"></a> 安装 SQL Server 2008 R2 OLE DB 访问接口以承载早期版本的工作簿  
  使用以下说明来安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 MSOLAP.4 访问接口并注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件。 ChannelTransport 是 Analysis Services OLE DB 访问接口的子组件。 在使用 ChannelTransport 进行连接时， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的访问接口读取注册表。 注册此文件是安装后步骤，仅对于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 服务器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 访问接口处理的连接是必需的。  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>步骤 1：下载并安装客户端库  
+#### <a name="step-1-download-and-install-the-client-library"></a>第 1 步：下载并安装客户端库  
   
 1.  在 [SQL Server 2008 R2 功能包页](https://go.microsoft.com/fwlink/?LinkId=159570)上，查找 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53376639"
   
 4.  如果您在场中有仅运行 Excel Services 的其他服务器（而没有在同一服务器上的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ），请重复以前的步骤以在 Excel Services 计算机上安装 2008 R2 版本的访问接口。  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步骤 2：注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>第 2 步：注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件  
   
 1.  使用 regasm.exe 实用工具注册该文件。 如果尚未运行 regasm.exe，将添加其父文件夹 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\，到系统 path 变量。  
   

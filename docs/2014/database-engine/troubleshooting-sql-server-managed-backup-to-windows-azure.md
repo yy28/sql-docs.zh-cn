@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842574"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>排除针对 Microsoft Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
@@ -56,7 +56,7 @@ ms.locfileid: "52522535"
   
 1.  **启用或配置时出错[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Error:"无法访问存储 URL...提供有效的 SQL 凭据...":您可能会看到此错误和 SQL 凭据的其他类似错误。  在这种情况下，查看的名称以及 SQL 凭据提供，也存储在 SQL 凭据的存储帐户名称和存储访问密钥的信息并确保它们是最新且有效。  
+     错误："无法访问存储 URL...提供有效的 SQL 凭据...":您可能会看到此错误和 SQL 凭据的其他类似错误。  在这种情况下，查看的名称以及 SQL 凭据提供，也存储在 SQL 凭据的存储帐户名称和存储访问密钥的信息并确保它们是最新且有效。  
   
      错误:"...无法配置数据库...因为它是系统数据库":你将看到此错误，如果尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52522535"
   
 2.  **电子邮件通知错误：**  
   
-     Error:"数据库邮件未启用..."-如果启用电子邮件通知，但不是在实例上配置数据库邮件，则会看到此错误。 您必须在实例上配置数据库邮件，才能接收关于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]运行状态的通知。 有关如何启用数据库邮件的信息，请参阅[配置数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。 要使用数据库邮件接收通知，您还必须启用 SQL Server 代理。 有关详细信息，请参阅[开始之前](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)。  
+     错误："数据库邮件未启用..."-如果启用电子邮件通知，但不是在实例上配置数据库邮件，则会看到此错误。 您必须在实例上配置数据库邮件，才能接收关于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]运行状态的通知。 有关如何启用数据库邮件的信息，请参阅[配置数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。 要使用数据库邮件接收通知，您还必须启用 SQL Server 代理。 有关详细信息，请参阅[开始之前](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)。  
   
      以下是可能看到的与电子邮件通知关联的错误编号的列表：  
   
@@ -86,9 +86,9 @@ ms.locfileid: "52522535"
   
          *"可能正在遇到 SQL Server 的连接问题。正在跳过当前迭代中的数据库。"*  
   
-         *"查询日志使用情况信息失败。该故障可能是暂时性的。正在跳过当前迭代中的数据库。"*  
+         *"查询日志使用情况信息失败。失败可能是暂时性的。正在跳过当前迭代中的数据库。"*  
   
-         *"加载 SSMBackup2WA 代理元数据时遇到了 SQL 异常。该故障可能是暂时性的。将重试操作。"*  
+         *"加载 SSMBackup2WA 代理元数据时遇到了 SQL 异常。失败可能是暂时性的。将重试操作。"*  
   
          *"SSMBackup2WA 遇到了 SQL 异常时..."*  
   

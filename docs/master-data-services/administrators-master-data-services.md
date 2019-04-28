@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817941"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "52783189"
   
 ## <a name="comparing-administrator-types"></a>比较管理员类型  
   
-|管理员类型|描述|  
+|管理员类型|Description|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 超级用户|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中分配的权限对于管理员的访问权限没有影响。<br /><br /> 可以是基于显式分配的功能区域权限或从组继承的权限的超级用户。<br /><br /> 会自动拥有对所有模型的所有权限。<br /><br /> 自动对所有功能区域具有访问权限。|  
 |模型管理员|可以是基于显式分配的管理员权限或者从组继承的权限的模型管理员。<br /><br /> 仅对向其分配访问权限的功能区域具有访问权限。<br /><br /> 自动对特定模型中的所有对象和成员具有所有权限。|  
@@ -74,7 +74,7 @@ ms.locfileid: "52783189"
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [创建 Master Data Services 数据库](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (Master Data Services)](../master-data-services/notifications-master-data-services.md)  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657444"
 ---
 # <a name="query-designers-report-builder"></a>查询设计器（报表生成器）
   报表生成器提供了有助于生成报表查询的图形查询设计器和基于文本的查询设计器。 每种类型的数据源都有关联的查询设计器。 某些数据源支持以交互方式生成查询的图形设计器。 其他数据源使用基于文本的查询设计器。 SQL Server 数据源同时支持图形查询设计器和基于文本的查询设计器。  

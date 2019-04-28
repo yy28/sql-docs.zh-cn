@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871511"
 ---
 # <a name="modified-features-contained-database"></a>经过修改的功能（包含数据库）
   为了获得部分包含的数据库的支持，已对以下功能进行了修改。 经常会对功能进行修改，以便它们不会超出数据库范围。  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651486"
 ---
 # <a name="create-nonclustered-indexes"></a>创建非聚集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建非聚集索引。 非聚集索引是一种与存储在表中的数据相分离的索引结构，可对一个或多个选定列重新排序。 非聚集索引通常可帮助您通过比搜索基础表更快的速度查找数据；有时可以完全由非聚集索引中的数据回答查询，或非聚集索引可将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基础表中的行。 一般来说，创建非聚集索引是为了提高聚集索引不涵盖的频繁使用的查询的性能，或在没有聚集索引的表（称为堆）中查找行。 可以对表或索引视图创建多个非聚集索引。  

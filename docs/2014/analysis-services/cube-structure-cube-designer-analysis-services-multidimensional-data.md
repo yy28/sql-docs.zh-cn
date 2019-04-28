@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679682"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>多维数据集结构（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **中的** 多维数据集设计器 **的** “多维数据集结构” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 选项卡，创建和修改度量值组和度量值，添加多维数据集维度，以及通过关联数据源视图显示多维数据集中包含的对象。  
@@ -35,7 +35,7 @@ ms.locfileid: "48160847"
 |**数据源视图**|使用 **“数据源视图”** 窗格，可以查看和编辑与所选多维数据集相关联的数据源视图。 有关此窗格的详细信息，请参阅[数据源视图（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）](data-source-view-cube-designer-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [逻辑体系结构&#40;Analysis Services-多维数据&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [逻辑体系结构（Analysis Services - 多维数据）](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)   
  [配置度量值属性](multidimensional-models/configure-measure-properties.md)   
  [维度&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   

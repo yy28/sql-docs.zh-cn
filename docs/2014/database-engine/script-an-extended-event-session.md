@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8b790bfcc57341e9ad13d29df9e982a524526aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843579"
 ---
 # <a name="script-an-extended-event-session"></a>编写扩展事件会话的脚本
   本主题介绍如何编写事件会话的脚本。 您可以导出、更改或删除事件会话，或者将事件会话删除并创建到以下位置：  
@@ -25,7 +25,7 @@ ms.locfileid: "48150047"
   
 -   **File**  
   
--   **剪贴板**  
+-   **Clipboard**  
   
 -   **代理作业**  
   

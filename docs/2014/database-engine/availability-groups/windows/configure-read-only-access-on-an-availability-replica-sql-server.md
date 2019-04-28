@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aaed1030d35fffb1b539339dc882cfb2d6676229
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815370"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
   默认情况下，允许对主副本进行读写和读意向访问，不允许连接到 AlwaysOn 可用性组的辅助副本。 本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来配置 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的连接访问。  
   
- 有关允许只读访问权限，对辅助副本以及有关对连接访问的介绍的含义的信息，请参阅[有关客户端连接对可用性副本访问&#40;SQL Server&#41; ](about-client-connection-access-to-availability-replicas-sql-server.md)和[活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 有关对次要副本允许只读访问的含义的信息以及有关对连接访问的介绍，请参阅[关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md) 和[活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
   
   
@@ -162,7 +162,7 @@ GO
          主副本中的数据库允许所有连接。 这是默认设置。  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
@@ -214,30 +214,30 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn:可读辅助副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn:可读次要副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn:为什么有两个选项来启用的辅助副本的读取工作负荷？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn:为什么存在两个选项用于为读取工作负荷启用辅助副本？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn:设置可读辅助副本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn:设置可读次要副本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn:我只需启用可读辅助副本，但我的查询却受阻？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn:我启用了可读次要副本，但我的查询却受阻？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn:可读辅助副本、 只读数据库和数据库快照上提供最新统计信息](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn:在可读次要副本、只读数据库和数据库快照上提供最新统计信息](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn:与统计信息在只读数据库、 数据库快照和辅助副本的挑战](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn:使用只读数据库、数据库快照和次要副本上的统计信息的挑战](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn:在辅助副本上运行的报表工作负荷时对主工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn:在次要副本上运行报表工作负荷时对主工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn:可读辅助副本上的报表工作负荷映射到快照隔离的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn:将可读次要副本上的报表工作负荷映射到快照隔离的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn:当辅助副本上运行的报表工作负荷阻止重做线程的最大程度减少](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn:最大程度减少在次要副本上运行工作负荷时对 REDO 线程的阻止](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn:可读辅助数据库和数据延迟](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn:可读次要副本和数据延迟](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ [活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   

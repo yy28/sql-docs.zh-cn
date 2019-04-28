@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856333"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>创建神经网络结构和模型（数据挖掘中级教程）
   若要创建数据挖掘模型，必须先使用数据挖掘向导基于新数据源视图创建一个新的挖掘结构。 在本任务中，您将使用该向导创建一个挖掘结构，同时创建一个基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法的关联挖掘模型。  

@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename |Microsoft Docs
+title: bcp_gettypename | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689030"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   返回指定 BCP 类型标记的 SQL 类型名称。  
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>参数  
- *令牌*  
+ *token*  
  指示 BCP 类型标记的值。  
   
  field  
@@ -67,7 +67,7 @@ fIsMaxType
 |`SQLMONEY`|之前或之后|**money**|  
 |`SQLFLT8`|之前或之后|**float**|  
 |`SQLDATETIME`|之前或之后|**datetime**|  
-|`SQLBITN`|之前或之后|**位 null**|  
+|`SQLBITN`|之前或之后|**bit-null**|  
 |`SQLBIT`|之前或之后|**bit**|  
 |`SQLBIGCHAR`|否|**char**|  
 |`SQLCHARACTER`|否|**char**|  
@@ -78,10 +78,10 @@ fIsMaxType
 |`SQLBINARY`|否|**二进制**|  
 |`SQLBIGVARBINARY`|否|**varbinary**|  
 |`SQLVARBINARY`|否|**varbinary**|  
-|`SQLIMAGE`|之前或之后|**图像**|  
+|`SQLIMAGE`|之前或之后|**Image**|  
 |`SQLINTN`|之前或之后|**int-null**|  
-|`SQLDATETIMN`|之前或之后|**日期时间为 null**|  
-|`SQLMONEYN`|之前或之后|**资金 null**|  
+|`SQLDATETIMN`|之前或之后|**datetime-null**|  
+|`SQLMONEYN`|之前或之后|**money-null**|  
 |`SQLFLTN`|之前或之后|**float-null**|  
 |`SQLAOPSUM`|之前或之后|**Sum**|  
 |`SQLAOPAVG`|之前或之后|**Avg**|  
@@ -89,26 +89,26 @@ fIsMaxType
 |`SQLAOPMIN`|之前或之后|**Min**|  
 |`SQLAOPMAX`|之前或之后|**Max**|  
 |`SQLDATETIM4`|之前或之后|**smalldatetime**|  
-|`SQLMONEY4`|之前或之后|**smallmoney**|  
-|`SQLFLT4`|之前或之后|**真正**|  
+|`SQLMONEY4`|之前或之后|**Smallmoney**|  
+|`SQLFLT4`|之前或之后|**Real**|  
 |`SQLUNIQUEID`|之前或之后|**uniqueidentifier**|  
 |`SQLNCHAR`|否|**Nchar**|  
 |`SQLNVARCHAR`|否|**Nvarchar**|  
-|`SQLNTEXT`|之前或之后|**ntext**|  
+|`SQLNTEXT`|之前或之后|**Ntext**|  
 |`SQLVARIANT`|之前或之后|**sql_variant**|  
 |`SQLINT8`|之前或之后|**Bigint**|  
-|`SQLCHARACTER`|用户帐户控制|**varchar(max)**|  
-|`SQLBIGCHAR`|用户帐户控制|**varchar(max)**|  
-|`SQLBIGVARCHAR`|用户帐户控制|**varchar(max)**|  
-|`SQLVARCHAR`|用户帐户控制|**varchar(max)**|  
-|`SQLBINARY`|用户帐户控制|**varbinary(max)**|  
-|`SQLBIGBINARY`|用户帐户控制|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|用户帐户控制|**varbinary(max)**|  
-|`SQLVARBINARY`|用户帐户控制|**varbinary(max)**|  
-|`SQLNCHAR`|用户帐户控制|**nvarchar(max)**|  
-|`SQLNVARCHAR`|用户帐户控制|**nvarchar(max)**|  
-|`SQLXML`|用户帐户控制|**Xml**|  
-|`SQLUDT`|之前或之后|**udt**|  
+|`SQLCHARACTER`|是|**varchar(max)**|  
+|`SQLBIGCHAR`|是|**varchar(max)**|  
+|`SQLBIGVARCHAR`|是|**varchar(max)**|  
+|`SQLVARCHAR`|是|**varchar(max)**|  
+|`SQLBINARY`|是|**varbinary(max)**|  
+|`SQLBIGBINARY`|是|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|是|**varbinary(max)**|  
+|`SQLVARBINARY`|是|**varbinary(max)**|  
+|`SQLNCHAR`|是|**nvarchar(max)**|  
+|`SQLNVARCHAR`|是|**nvarchar(max)**|  
+|`SQLXML`|是|**Xml**|  
+|`SQLUDT`|之前或之后|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 对日期和时间增强功能的支持  
  日期/时间类型的标记参数值在表中的"sqlncli.h 中的类型"列中所述[大容量复制更改的增强的日期和时间类型&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 返回值位于“文件存储类型”列的对应行中。  

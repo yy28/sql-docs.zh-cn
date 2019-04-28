@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828053"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -143,7 +143,7 @@ ms.locfileid: "58392775"
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关的讨论和此方法的示例，请参阅部分、"唯一维度方案"白皮书中的[Project REAL:Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL：Business Intelligence ETL 设计实践](https://go.microsoft.com/fwlink/?LinkId=96602)中的“唯一维度方案”一节。  
   
 ### <a name="destinations"></a>目标  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
@@ -166,9 +166,9 @@ ms.locfileid: "58392775"
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   技术文章[SQL Server 2005 Integration Services:性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)，technet.microsoft.com 上  
+-   technet.microsoft.com 上的技术文章：[SQL Server 2005 Integration Services:性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   技术文章[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)，technet.microsoft.com 上  
+-   technet.microsoft.com 上的技术文章：[Integration Services:性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   

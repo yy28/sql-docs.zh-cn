@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866489"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8:在 Excel 中为 State 实体添加新值
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8:为在 Excel 中的 State 实体添加新值
   在本任务中，您将在 Excel 中为 State 实体添加值，并且将更改发布到 MDS 服务器。  
   
 1.  添加**工作表**Excel 通过单击底部的新选项卡中。  
@@ -26,11 +26,11 @@ ms.locfileid: "56032028"
   
 2.  在中**Excel**，单击**主数据**菜单上，选项卡，然后单击**显示资源管理器**功能区上。  
   
-3.  在中**主数据资源管理器**，选择**供应商**有关**模型**。 您应该在实体列表中看到两个实体：**供应商**并**状态**实体列表中。  
+3.  在中**主数据资源管理器**，选择**供应商**有关**模型**。 应会看到两个实体：**供应商**并**状态**实体列表中。  
   
 4.  双击**状态**列表中。 所有成员**状态**从 MDS 实体应显示在工作表中。  
   
-5.  现在，在末尾添加具有以下值的一行：**北卡罗来纳州**有关**名称**并**NC**有关**代码**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
+5.  现在，使用以下值末尾添加一行：**北卡罗来纳州**有关**名称**并**NC**有关**代码**。 颜色编码可以将任何新的/更新的记录与其他记录区分开来。  
   
      ![Excel-将北卡罗来纳州添加到状态](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-将北卡罗来纳州添加到状态")  
   

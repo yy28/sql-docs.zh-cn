@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856166"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>创建目标邮件挖掘模型结构（数据挖掘基础教程）
   要创建目标邮件方案，第一步是使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的数据挖掘向导创建新的挖掘结构和决策树挖掘模型。  

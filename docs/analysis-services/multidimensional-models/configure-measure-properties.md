@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8662339e7f3b0d77b48ad480317bc7558d0801e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825639"
 ---
 # <a name="configure-measure-properties"></a>配置度量值属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,11 +25,11 @@ ms.locfileid: "50147492"
 ## <a name="measure-properties"></a>度量值属性  
  度量值从其所属的度量值组中继承某些属性，除非这些属性在度量值级别被覆盖。 度量值属性确定度量值的聚合方式、它的数据类型、对用户的显示名称、度量值将在其中出现的显示文件夹、它的格式字符串、任何度量值表达式、基础源列和它对用户的可见性。  
   
-|“属性”|定义|  
+|属性|定义|  
 |--------------|----------------|  
 |**AggregateFunction**|必需的。 确定度量值的聚合方式。 **Sum** 是默认聚合。 有关详细信息，请参阅针对每个函数说明的 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 。|  
 |**DataType**|必需的。 指定与度量值绑定的基础事实数据表中的列的数据类型。 默认情况下，此值从源列继承。|  
-|**Description**|提供度量值的说明，可以在客户端应用程序中显示该说明。|  
+|**说明**|提供度量值的说明，可以在客户端应用程序中显示该说明。|  
 |**DisplayFolder**|指定当用户连接到多维数据集时度量值将在其中显示的文件夹。 多维数据集有很多度量值时，可以使用显示文件夹来对度量值进行分类，从而改善用户的浏览体验。|  
 |**FormatString**|通过使用度量值的 **FormatString** 属性，可以选择用于向用户显示度量值的格式。<br /><br /> 虽然 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中提供了显示格式的列表，但你仍可以指定多个该列表中没有的其他格式。 您可以指定在 Microsoft Visual Basic 中有效的任何命名格式或用户定义格式。|  
 |**ID**|必需的。 显示度量值的唯一标识符 (ID)。 该属性为只读。|  
@@ -38,7 +38,7 @@ ms.locfileid: "50147492"
 |**数据源**|必需的。 指定与度量值绑定的数据源视图中的列。 请参阅[数据源和绑定（SSAS 多维）](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。|  
 |**Visible**|确定客户端应用程序中度量值的可见性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置度量值组属性](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [修改度量值](../../analysis-services/lesson-3-1-modifying-measures.md)  
   

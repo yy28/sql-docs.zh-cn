@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874870"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
   说明如何创建新的 FileTable 或者更改或删除现有的 FileTable。  

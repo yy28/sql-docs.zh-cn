@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679735"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>创建和使用属性值 (MDX)
   多维表达式 (MDX) 支持维度、级别、成员和单元的内部属性以及用户定义属性。 内部属性为各个单元提供唯一的名称、标题甚至格式和字体大小。 而用户定义属性可以为成员提供几乎所有类型的其他特性。  
@@ -39,6 +39,6 @@ ms.locfileid: "48195997"
  有关单元属性及其用法的详细信息，请参阅[使用单元属性 (MDX)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 查询基础知识&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

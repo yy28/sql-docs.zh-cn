@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653780"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 课：访问 Web 服务
   将报表服务器 Web 服务的引用添加到项目中后，下一步是创建 Web 服务代理类的实例。 然后，您可以通过调用代理类中的方法来访问 Web 服务的方法。 当应用程序调用这些方法时， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 生成的代理类代码将处理应用程序与 Web 服务之间的通信。  

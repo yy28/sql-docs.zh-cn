@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866272"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>任务 7:创建复合域
   在此任务中，创建复合域**地址验证**，其包含**Address Line**，**城市**，**状态**，和**Zip**域。 通过复合域，您可以定义在一个规则中涉及多个域的跨域规则。 复合域还有其他一些好处，例如能够将一个字段值分析到多个域中。  例如，可以将“全名”字段的值分析到单独的“名字”、“中间名”和“姓氏”域中。 在本教程中，您将只定义一个跨域规则。 请参阅[管理复合域](https://msdn.microsoft.com/library/hh510399.aspx)的更多详细信息。  

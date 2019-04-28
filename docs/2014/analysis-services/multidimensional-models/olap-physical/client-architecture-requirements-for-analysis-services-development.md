@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699462"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 开发的客户端体系结构要求
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持瘦客户端体系结构。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]计算引擎是完全基于服务器的因此所有查询将在服务器上都解析。 因此，每个查询只需在客户端和服务器之间进行一次来回行程，从而使得性能可以随着查询复杂性的增加而伸缩。  

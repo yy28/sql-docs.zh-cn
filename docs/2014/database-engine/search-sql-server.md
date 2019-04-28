@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843713"
 ---
 # <a name="search-sql-server"></a>搜索 (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了用于文本和文档的功能之外的搜索功能[!INCLUDE[tsql](../includes/tsql-md.md)]`LIKE`关键字。  

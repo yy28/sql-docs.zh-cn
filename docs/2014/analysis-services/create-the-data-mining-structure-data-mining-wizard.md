@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679672"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>创建数据挖掘结构（数据挖掘向导）
   可以使用 **“创建数据挖掘结构”** 页创建数据挖掘结构，并且可以选择创建关联的挖掘模型。  
   
  如果选择创建挖掘模型，则还必须指定要使用的数据挖掘算法。 如果目前仅创建结构，以后可以向该结构中添加挖掘模型。  
   
- **有关详细信息：**[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining/data-mining-algorithms-analysis-services-data-mining.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)，[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **创建具有挖掘模型的挖掘结构**  
@@ -40,7 +40,7 @@ ms.locfileid: "48184057"
  **使用模型创建挖掘结构**  
  选择此选项将仅创建一个挖掘结构。  
   
- **Description**  
+ **说明**  
  显示所选算法的说明。  
   
 ## <a name="see-also"></a>请参阅  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a74bac81874eaeeecd9b9abcdcbfee27e07909c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696568"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>“数据集属性”对话框 -&gt;“查询”（报表生成器）
   选择 **“数据集属性”** 对话框中的 **“查询”** 可以从报表服务器选择共享数据集或创建嵌入数据集。 对于嵌入数据集，必须选择一个数据源并生成查询。  

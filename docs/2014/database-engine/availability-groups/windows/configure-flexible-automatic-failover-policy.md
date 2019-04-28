@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815224"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>配置灵活的故障转移策略以控制自动故障转移的条件（Always On 可用性组）
   本主题介绍如何在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 为 AlwaysOn 可用性组配置灵活故障转移策略。 灵活的故障转移策略提供了对导致可用性组自动执行故障转移的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
@@ -125,7 +125,7 @@ ms.locfileid: "52515401"
         ```  
   
 > [!NOTE]  
->  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

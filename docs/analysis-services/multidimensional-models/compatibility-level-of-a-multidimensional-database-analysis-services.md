@@ -1,5 +1,5 @@
 ---
-title: 多维数据库 (Analysis Services) 的兼容性级别 |Microsoft 文档
+title: 兼容性级别的多维数据库 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825878"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多维数据库的兼容级别 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34024224"
 > [!WARNING]  
 >  将数据库兼容级别设置为更高级别是不可逆的。 在你将兼容级别增加到 **1100**后，必须继续在更高版本的服务器上运行该数据库。 你无法回滚到 **1050**。 你不能在早于 **或** 的服务器版本上附加或还原 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
   
  数据库不能为本地多维数据集。 本地多维数据集不支持 **CompatibilityLevel** 属性。  
@@ -91,7 +91,7 @@ ms.locfileid: "34024224"
 ## <a name="next-steps"></a>后续步骤  
  在增加了数据库兼容级别之后，可以在 **中设置** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]属性。 这样将增大度量值和维度的字符串存储空间。 有关此功能的详细信息，请参阅 [配置维度和分区的字符串存储](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667717"
 ---
 # <a name="running-test-cases-sybasetosql"></a>运行测试用例 (SybaseToSQL)
 SSMA 测试人员运行时测试用例，它执行所选测试对象，并创建有关验证结果的报告。 如果结果为在这两个平台上完全相同，测试成功。 Sybase 之间的对象的对应关系和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根据当前的 SSMA 项目的架构映射设置确定。  
@@ -35,7 +35,7 @@ SSMA 测试人员运行时测试用例，它执行所选测试对象，并创建
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
 SSMA 测试人员会检查测试的测试执行开始前是否满足所有先决条件。 如果不满足某些条件时，会显示一条错误消息。  
   
 ### <a name="initialization"></a>初始化  
@@ -47,19 +47,19 @@ SSMA 测试人员会检查测试的测试执行开始前是否满足所有先决
   
 |“属性”|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ /{trg|触发器|审核已验证的表中的更改的触发器。|  
-|USER_TABLE$ 澳大利亚元|表|保存已删除和覆盖的行的表。|  
-|USER_TABLE$ AudID|表|保存新的和已更改行的表。|  
+|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$Aud|表|保存已删除和覆盖的行的表。|  
+|USER_TABLE$AudID|表|保存新的和已更改行的表。|  
 |USER_TABLE|“查看”|表修改简化表示形式。|  
-|USER_TABLE $ 新|“查看”|简化表示形式插入和覆盖的行。|  
-|USER_TABLE$ new_id|“查看”|插入和已更改的行的标识。|  
-|USER_TABLE $ 旧|“查看”|已删除和覆盖的行的简化表示形式。|  
+|USER_TABLE$new|“查看”|简化表示形式插入和覆盖的行。|  
+|USER_TABLE$new_id|“查看”|插入和已更改的行的标识。|  
+|USER_TABLE$old|“查看”|已删除和覆盖的行的简化表示形式。|  
   
 已验证表在 Sybase 数据库中创建以下对象和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 |“属性”|类型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ /{trg|触发器|审核已验证的表中的更改的触发器。|  
+|USER_TABLE$Trg|触发器|审核已验证的表中的更改的触发器。|  
   
 ### <a name="test-object-calls"></a>测试对象调用  
 在此步骤中，SSMA 测试人员调用所选测试每个对象、 比较结果，并显示的报表。  

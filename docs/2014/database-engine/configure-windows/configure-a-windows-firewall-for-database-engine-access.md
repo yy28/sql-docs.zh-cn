@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812289"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  

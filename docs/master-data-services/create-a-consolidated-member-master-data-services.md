@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 33eea7308e4f2729a14ca1f3a0361b83ac566006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678725"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52780529"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 如果你要批量添加数据，请改用临时表。 有关详细信息，请参阅[导入表中数据 (Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md)  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -    您必须有权访问“资源管理器”功能区域。  
@@ -57,7 +57,7 @@ ms.locfileid: "52780529"
   
 10. 单击“确定” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [创建叶成员 (Master Data Services)](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [成员 (Master Data Services)](../master-data-services/members-master-data-services.md)   

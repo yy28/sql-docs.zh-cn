@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816596"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>文本文件的 SQLGetInfo 返回值
 下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅[ODBC 程序员参考](../../odbc/reference/odbc-programmer-s-reference.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "47676695"
 > [!NOTE]  
 >  其中**SQLGetInfo**返回一个 32 位掩码，垂直条 (&#124;) 表示按位 OR。  
   
-|信息类型|返回值|  
+|InfoType|返回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -87,7 +87,7 @@ ms.locfileid: "47676695"
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM： 文本<br /><br /> 版本： 1.0<br /><br /> 版本号的格式： 01.00.0000|  
+|SQL_DBMS_VER|ISAM:Text<br /><br /> 版本：1.0<br /><br /> 版本号的格式：01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -142,7 +142,7 @@ ms.locfileid: "47676695"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多个值|  
-|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|从驱动程序管理器|  
 |SQL_OJ_CAPABILITIES|多个值|  

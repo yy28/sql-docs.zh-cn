@@ -1,5 +1,5 @@
 ---
-title: 选项 (文本编辑器： 编辑器选项卡和状态栏页) |Microsoft Docs
+title: 选项 (文本编辑器：编辑器选项卡和状态栏页） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844267"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器: 编辑器选项卡和状态栏”页）
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项 (文本编辑器：编辑器选项卡和状态栏页）
   在 **“编辑器选项卡和状态栏”** 页上，您可以自定义 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查询编辑器显示的信息。 您可以指定在“查询编辑器”窗口的选项卡和状态栏中显示的信息级别，以及状态栏是显示在编辑器窗口的顶部还是底部。  
   
 ## <a name="option-settings-by-editor"></a>通过编辑器进行的选项设置  
@@ -38,7 +38,7 @@ ms.locfileid: "48055447"
  **无**  
  状态栏不显示任何时间信息。  
   
- **结束**  
+ **End**  
  当脚本正在运行时，状态栏显示当天的当前时间。 当脚本执行完毕时，屏幕将显示该脚本完成时这一天的时间。  
   
  **已用**  
@@ -93,7 +93,7 @@ ms.locfileid: "48055447"
  包括服务器名称。 对于本地连接，这是实例名称。 对于远程连接，这是远程计算机名称和实例名。  
   
 ## <a name="see-also"></a>请参阅  
- [选项&#40;环境： 字体和颜色页面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [选项&#40;环境：字体和颜色页面&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [查询编辑器中的颜色编码](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

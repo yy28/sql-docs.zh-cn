@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807647"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  

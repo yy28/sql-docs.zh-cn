@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873058"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>查看收集组报表 (SQL Server Management Studio)
   配置了管理数据仓库后，可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看收集组报表。 针对安装过程中安装的系统数据收集组提供了报表。 这些报表包括：  

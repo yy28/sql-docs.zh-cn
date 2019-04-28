@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809565"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系统存储过程通过配置选项来管理和优化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 资源。 大多数常用的服务器配置选项可以通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来使用；而所有配置选项都可通过 sp_configure 来访问。 在设置这些选项之前应该认真考虑这些选项对系统的影响。 有关详细信息，请参阅[查看或更改服务器属性 (SQL Server)](view-or-change-server-properties-sql-server.md)。  

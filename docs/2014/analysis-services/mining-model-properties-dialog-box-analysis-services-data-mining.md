@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703270"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>“挖掘模型属性”对话框（Analysis Services - 数据挖掘）
   可以使用 **中的** “挖掘模型属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘模型的属性。 通过右键单击**对象资源管理器**中的挖掘模型，再选择“属性”，即可显示“挖掘模型属性”对话框。  
@@ -31,10 +31,10 @@ ms.locfileid: "48179918"
 |----------|----------------|  
 |**名称**|显示挖掘模型的名称。|  
 |**ID**|显示挖掘模型的标识符。|  
-|**Description**|显示挖掘模型的说明。|  
+|**说明**|显示挖掘模型的说明。|  
 |**创建时间戳**|显示挖掘模型的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新挖掘模型的元数据的日期和时间。|  
-|**State**|显示挖掘模型的处理状态。 有关此属性的值的详细信息，请参阅<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
+|**状态**|显示挖掘模型的处理状态。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
 |**上次处理**|显示上次处理挖掘模型的日期和时间。|  
   
 ## <a name="see-also"></a>请参阅  

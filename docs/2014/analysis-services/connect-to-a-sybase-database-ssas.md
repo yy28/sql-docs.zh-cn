@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01b011ba7b321252f90f74289cfe13a2257f2ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680072"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>连接到 Sybase 数据库 (SSAS)
   **“表导入向导”** 的这一页可用于指定用于连接到 Sybase 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

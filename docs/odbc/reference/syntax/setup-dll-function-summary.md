@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 146d1cdbb62c54acd9669b803b9d85dddf259601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652846"
 ---
 # <a name="setup-dll-function-summary"></a>设置 DLL 函数摘要
 下表描述了安装程序 DLL 函数。 有关语法和语义为每个函数的详细信息，请参阅[安装程序 DLL API 参考](../../../odbc/reference/syntax/setup-dll-api-reference.md)。  

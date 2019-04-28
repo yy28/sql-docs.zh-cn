@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814136"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM 和 FileTable 与 AlwaysOn 可用性组 (SQL Server)
   本主题包含将 FILESTREAM 和 FileTable 功能与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]一起使用有关的信息。  

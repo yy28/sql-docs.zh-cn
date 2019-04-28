@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693914"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47796575"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|数据库 ID。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中是唯一的。|  
-|**mirroring_guid**|**uniqueidentifier**|镜像合作关系的 ID。<br /><br /> NULL = 数据库不可访问或未镜像。<br /><br /> 注意： 如果数据库不参与镜像，则所有带有"mirroring_"前缀的列将为 NULL。|  
+|**mirroring_guid**|**uniqueidentifier**|镜像合作关系的 ID。<br /><br /> NULL = 数据库不可访问或未镜像。<br /><br /> 注意：如果数据库不参与镜像，则所有带有"mirroring_"前缀的列将为 NULL。|  
 |**mirroring_state**|**tinyint**|镜像数据库的状态和数据库镜像会话的状态。<br /><br /> 0 = 已挂起<br /><br /> 1 = 与其他伙伴断开<br /><br /> 2 = 正在同步<br /><br /> 3 = 挂起故障转移<br /><br /> 4 = 已同步<br /><br /> 5 = 伙伴未同步。 现在无法进行故障转移。<br /><br /> 6 = 伙伴已同步。 可以进行故障转移。 了解有关故障转移，请参阅要求[Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。<br /><br /> NULL = 数据库不可访问或未镜像。|  
 |**mirroring_state_desc**|**nvarchar(60)**|镜像数据库状态和数据库镜像会话状态的说明，可以是下列值之一：<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> 有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。|  
 |**mirroring_role**|**tinyint**|本地数据库当前在数据库镜像会话中扮演的角色。<br /><br /> 1 = 主体<br /><br /> 2 = 镜像<br /><br /> NULL = 数据库不可访问或未镜像。|  
@@ -61,7 +61,7 @@ ms.locfileid: "47796575"
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|已刷新到磁盘本地日志末尾。 这相当于强制写入的 LSN 从镜像服务器 (请参阅**mirroring_failover_lsn**列)。|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|可以发送复制的最大 LSN。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

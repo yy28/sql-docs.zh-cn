@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817697"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "52759171"
 >   
 >  由业务规则所做的更改不需要进行审批。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域  
@@ -50,7 +50,7 @@ ms.locfileid: "52759171"
   
 4.  单击“编辑” ，选择“需要审批” ，然后单击“保存” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
   
   

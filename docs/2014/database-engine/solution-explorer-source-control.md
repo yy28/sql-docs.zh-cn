@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843096"
 ---
 # <a name="solution-explorer-source-control"></a>解决方案资源管理器源代码管理
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 解决方案资源管理器可以集成到一个单独的源代码控制系统。 将解决方案或项目集成到源代码管理系统中后，即可控制针对项目中的脚本和查询的文件访问和版本控制。  

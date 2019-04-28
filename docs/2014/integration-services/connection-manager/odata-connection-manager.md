@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833105"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
   OData 连接管理器允许包连接到 OData 源。 OData 源组件使用 OData 连接管理器连接到 OData 源并使用来自服务的数据。 请参阅[OData 源](../data-flow/odata-source.md)部分，了解详细信息，包括这些组件的安装说明。  

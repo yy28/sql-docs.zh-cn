@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815699"
 ---
 # <a name="add-solutions-to-source-control"></a>在源代码管理中添加解决方案
   将解决方案添加到源代码管理中时，通常需要添加整个解决方案及其包含的所有项目。 可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将解决方案添加到源代码管理中。  

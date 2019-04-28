@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833772"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  

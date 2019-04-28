@@ -1,5 +1,5 @@
 ---
-title: 定义多对多关系和多对多关系属性 |Microsoft 文档
+title: 定义多对多关系和多对多关系属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825668"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34026894"
   
  多对多维度关系没有在多维数据集关系图中直观地指示。 而是使用“维度用法”选项卡快速标识某个模型中的任何多对多关系。 多对多关系用以下图标指示。  
   
- ![在维度用法中的多对多图标](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
+ ![维度用法中的多对多图标](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
   
  单击该按钮可打开“定义关系”对话框，以便验证关系类型是多对多，并且可以查看在关系中使用了哪一中间度量值组。  
   
- ![在维度用法中的定义关系按钮](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
+ ![维度用法中的定义关系按钮](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
   
  在后面的部分中，您将学习如何设置多对多维度和测试模型行为。 如果要先查看其他信息或试学一下教程，请参阅本文结尾的 **了解详细信息** 。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34026894"
   
  为了阐明在创建多对多关系中使用的步骤，此过程在 Adventure Works 示例多维数据集中重新创建了其中一个多对多关系。 如果您具有在某一关系数据库引擎实例上安装的源数据（即，Adventure Works 示例数据仓库），则可以按照以下步骤执行。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>步骤 1：验证 DSV 关系  
+#### <a name="step-1-verify-dsv-relationships"></a>第 1 步：验证 DSV 关系  
   
 1.  在 SQL Server Data Tools 中，在一个多维项目中创建指向 Adventure Works DW 2012 关系数据仓库的数据源，该数据源在 SQL Server 数据库引擎实例上承载。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "34026894"
   
      下面的示例确认使用主键链接在该过程中使用的表。  
   
-     ![显示相关的表的 DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "DSV 显示相关的表")  
+     ![显示相关的表的 DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "显示相关的表的 DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>步骤 2：创建维度和度量值组  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>第 2 步：创建维度和度量值组  
   
 1.  在 SQL Server Data Tools 中，在一个多维项目中右键单击“维度”并选择“新建维度”。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026894"
   
      对于属性，选择“全部”。  
   
-     ![新维度中的属性列表](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "新维度中的属性列表")  
+     ![新的维度中属性列表](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "中新的维度属性列表")  
   
 3.  基于现有表 Fact Internet Sales 创建第二个维度。 尽管这是一个事实表，但它包含销售订单信息。 我们将使用它来生成一个销售订单维度。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "34026894"
   
 5.  在该向导的下一页上，选择属性。 在此示例中，你可以只选择 **SalesOrderNumber**。  
   
-     ![销售订单维度显示特性列表](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "销售订单维度显示特性列表")  
+     ![销售订单维度显示属性列表](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "销售订单维度显示属性列表")  
   
 6.  将该维度重命名为 **Dim Sales Orders**，以便保持一致的维度命名约定。  
   
-     ![显示维度重命名的向导页](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "显示维度重命名的向导页")  
+     ![向导页上显示维度重命名](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "显示维度重命名的向导页")  
   
 7.  右键单击“多维数据集”，然后选择“新建多维数据集”。  
   
@@ -123,13 +123,13 @@ ms.locfileid: "34026894"
   
 1.  在多维数据集设计器中，单击“维度用法”选项卡。请注意， **Dim Sales Reason** 和 **Fact Internet Sales**之间已存在多对多关系。 请记住，以下图标指示多对多关系。  
   
-     ![在维度用法中的多对多图标](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
+     ![维度用法中的多对多图标](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多对多维度用法中的图标")  
   
 2.  单击 **Dim Sales Reason** 和 **Fact Internet Sales**的交集单元格，然后单击按钮打开“定义关系”对话框。  
   
      您可以看到，将使用此对话框指定多对多关系。 如果您过去添加了具有常规关系的维度，则应使用该对话框将其更改为多对多关系。  
   
-     ![在维度用法中的定义关系按钮](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
+     ![维度用法中的定义关系按钮](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "维度用法中的定义关系按钮")  
   
 3.  将该项目部署到 Analysis Services 多维实例。 在下一步中，您将在 Excel 中浏览该多维数据集以便验证其行为。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34026894"
   
      继续向下，你可以找到订单号 **SO5382**的销售额和销售原因。 此特定订单的销售额总计是 **539.99**，销售原因包括“促销”、“其他”和“价格”。  
   
-     ![Excel 工作表中显示多对多聚合](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "显示多对多聚合的 Excel 工作表")  
+     ![显示多对多聚合的 Excel 工作表](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "显示多对多聚合的 Excel 工作表")  
   
      请注意，系统对此订单的销售额的计算是正确的；整个订单的销售额是 **539.99** 。 尽管系统会对每个原因都显示 **539.99** ，但不会对这三个原因所显示的值进行求和，因为这样做会导致销售额总计虚高。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34026894"
   
 5.  滚动到工作表的底部。 现在，很容易就可以看出，相对于其他原因以及总计而言，价格是影响客户购买的最重要原因。  
   
-     ![Excel 工作簿中多对多显示总计](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "显示总计中多对多的 Excel 工作簿")  
+     ![多对多中显示数据的总计的 Excel 工作簿](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "多对多中显示数据的总计的 Excel 工作簿")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>用于处理意外查询结果的技巧  
   
@@ -179,12 +179,12 @@ ms.locfileid: "34026894"
   
  [多对多变革 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教程：针对 SQL Server Analysis Services 的多对多维度示例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教程：SQL Server Analysis Services 的多对多维度示例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [维度关系](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [安装适用于 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)   
- [部署 Analysis Services 项目 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [安装 Analysis Services 多维建模教程的示例数据和项目](../../analysis-services/install-sample-data-and-projects.md)   
+ [部署 Analysis Services 项目 (SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多维模型中的透视](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

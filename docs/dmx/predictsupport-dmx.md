@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658840"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>返回类型  
  指定的类型的标量值 *\<* 标量列引用*>*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包括缺少状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。  
   
  若要返回缺少状态的支持，请设置\<预测状态 > 为 NULL。  

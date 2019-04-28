@@ -1,5 +1,5 @@
 ---
-title: SELECT (DMX) |Microsoft Docs
+title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658754"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,9 +92,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>预测  
  创建预测时可以使用以下两种类型的语法：  
   
--   [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  使用第一种预测类型可以实时或按批创建复杂预测。  
   
@@ -111,21 +111,21 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>子句语法  
  由于下进行浏览的复杂性**选择**按子句说明语句、 详细的语法元素和参数。 有关各个子句的详细信息，请单击下面列表中的主题：  
   
- [SELECT DISTINCT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;。内容&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;。用例&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;model&#62;.CASES &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM&#60;结构&#62;。用例](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM &#60;structure&#62;.CASES](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   

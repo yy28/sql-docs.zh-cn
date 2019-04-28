@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657601"
 ---
 # <a name="query-builder-report-wizard"></a>查询生成器（报表向导）
   使用查询生成器可以指定用于检索要在报表中使用的结果集的查询。 您可以在两种查询生成器中进行选择：  

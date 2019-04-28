@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b7a01a2b49900653fb3acba85517315aa32579b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836752"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 执行 DDL 任务编辑器（“常规”页）
   可以使用“Analysis Services 执行 DDL 任务编辑器”对话框的“常规”页命名和描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 执行 DDL 任务。  

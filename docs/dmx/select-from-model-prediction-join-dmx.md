@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;PREDICTION JOIN (DMX) |Microsoft Docs
+title: SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658945"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *model*  
  模型标识符。  
   
- *子选择*  
+ *sub select*  
  嵌入的 Select 语句。  
   
  *源数据查询*  
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 中的列\<*联接映射列表*> 相关使用等号 （=），如下面的示例中所示：  
   
 ```  
@@ -154,7 +154,7 @@ WHERE [BIKE Buyer]
 ORDER BY [LastName] ASC  
 ```  
   
-## <a name="example-3-predicting-associations"></a>示例 3：预测关联  
+## <a name="example-3-predicting-associations"></a>示例 3:预测关联  
  下例说明如何使用由 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法生成的模型创建预测。 关联模型生成的预测可用于推荐相关产品。 例如，下面的查询返回三种产品，购买这三种产品的同时最有可能还会一起购买以下产品：  
   
 -   Mountain Bottle Cage  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  由于包含可预测属性 `[v Assoc Seq Line Items]` 的列是一个表列，因此查询将返回一个包含嵌套表的列。 默认情况下，嵌套表列名为 `Expression`。 如果您的提供程序不支持分层行集，则可以使用**FLATTENED**关键字，若要使结果更轻松地查看在此示例中所示。  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

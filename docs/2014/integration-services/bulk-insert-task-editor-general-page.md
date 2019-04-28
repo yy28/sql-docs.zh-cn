@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836601"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  

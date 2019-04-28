@@ -1,5 +1,5 @@
 ---
-title: 计算上下文 |Microsoft 文档
+title: 计算上下文 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 340d03ba8d0c5a66d89937627ab9389fc49abcae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807691"
 ---
 # <a name="calculation-context"></a>计算上下文
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34021764"
   
 5.  每个轴上的多维数据集或子多维数据集，消除了轴上的空元组并应用 HAVING 子句。  
   
-6.  有关详细信息，请参阅 [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
+6.  有关详细信息，请参阅 [在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)。  
   
  在以下查询中，由 WHERE 子句中指定的 Country 属性成员和 Calendar Year 属性成员限制行轴的计算上下文。  
   
@@ -69,9 +69,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  若要提高查询性能，应在解析过程中尽早地消除成员和元组。 通过这种方式，针对最终成员集的复杂查询时间计算涉及的单元最少。  
   
-## <a name="see-also"></a>另请参阅  
- [在查询 & #40; 中建立多维数据集上下文MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [在查询中建立多维数据集上下文 (MDX)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

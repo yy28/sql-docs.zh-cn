@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719765"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
 下表列出了[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象错误代码。 低两个字节的正十进制转换，显示了完整的错误代码和十六进制值的负十进制转换。
@@ -29,7 +29,7 @@ ms.locfileid: "52514377"
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|异步操作挂起时，无法执行操作。|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|内嵌图表错误。|
 |**IDS_CantConnect**|4099 -2146824189 0x800A1003|无法连接到服务器。|
-|**IDS_CantCreateObject**|4100-2146824188 0x800A1004|无法创建业务对象。|
+|**IDS_CantCreateObject**|4100 -2146824188 0x800A1004|无法创建业务对象。|
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|数据空间属性不是有效的。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|不能在业务对象上调用方法。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|此页访问另一个域上的数据。 若要允许此操作吗？ 若要避免出现此消息在 Internet Explorer 中的，您可以安全网站到受信任的站点区域上添加**安全**选项卡**Internet 选项**对话框。|

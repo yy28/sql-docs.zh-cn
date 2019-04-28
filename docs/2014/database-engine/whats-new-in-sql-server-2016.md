@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843437"
 ---
 # <a name="what39s-new-database-engine"></a>什么&#39;s 新 （数据库引擎）
   这一最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]引入了一些新功能和增强功能，这些功能可以提高设计、开发和维护数据存储系统的架构师、开发人员和管理员的能力和工作效率。 以下是[!INCLUDE[ssDE](../includes/ssde-md.md)]已增强的方面。  
@@ -94,13 +94,13 @@ ms.locfileid: "53371549"
   
      使用聚集列存储索引可提高主要执行大容量加载和只读查询的数据仓库工作负荷的数据压缩和查询性能。 由于聚集列存储索引是可更新的，因此工作负荷可执行许多插入、更新和删除操作。 有关详细信息，请参阅[列存储索引介绍](../relational-databases/indexes/columnstore-indexes-described.md)并[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
   
--   **显示计划**  
+-   **SHOWPLAN**  
   
      SHOWPLAN 显示有关列存储索引的信息。 **EstimatedExecutionMode**并**ActualExecutionMode**属性具有两个可能值：**批处理**或**行**。  **存储**属性具有两个可能值：**行存储**并**列存储**。  
   
 -   **存档的数据压缩**  
   
-     ALTER INDEX ...REBUILD 提供新的 COLUMNSTORE_ARCHIVE 数据压缩选项，可进一步压缩列存储索引的指定分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
+     ALTER INDEX ...重新生成具有一个新的 COLUMNSTORE_ARCHIVE 数据压缩选项选项，可进一步压缩列存储索引的指定的分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
 ###  <a name="Buffer"></a> 缓冲池扩展  
@@ -108,7 +108,7 @@ ms.locfileid: "53371549"
    
   
 ###  <a name="Stats"></a> 增量统计信息  
- CREATE STATISTICS 和相关统计信息语句现在允许通过使用 INCREMENTAL 选项创建按分区的统计信息。 相关语句允许或报告增量统计信息。 受影响的语法包括 UPDATE STATISTICS、sp_createstats、CREATE INDEX、ALTER INDEX、ALTER DATABASE SET 选项、DATABASEPROPERTYEX、sys.databases 和 sys.stats。有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
+ CREATE STATISTICS 和相关统计信息语句现在允许通过使用 INCREMENTAL 选项创建按分区的统计信息。 相关语句允许或报告增量统计信息。 受影响的语法包括 UPDATE STATISTICS、 sp_createstats、 CREATE INDEX、 ALTER INDEX、 ALTER DATABASE SET 选项、 DATABASEPROPERTYEX、 sys.databases 和 sys.stats。有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
   
 ###  <a name="RG"></a> 物理 IO 控制的资源调控器增强功能  
@@ -118,7 +118,7 @@ ms.locfileid: "53371549"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation 事件类  
- 针对联机索引操作事件类的进度报告现在具有两个新数据列：**PartitionId**并**PartitionNumber**。 有关详细信息，请参阅[进度报表：Online Index Operation 事件类](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
+ 针对联机索引操作事件类的进度报告现在具有两个新的数据列：**PartitionId**并**PartitionNumber**。 有关详细信息，请参阅[进度报表：Online Index Operation 事件类](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
   
   
 ###  <a name="Compat"></a> 数据库兼容性级别  

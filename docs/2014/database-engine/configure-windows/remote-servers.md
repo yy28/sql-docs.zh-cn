@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809755"
 ---
 # <a name="remote-servers"></a>远程服务器
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  

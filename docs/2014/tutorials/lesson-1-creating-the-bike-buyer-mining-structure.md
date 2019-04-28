@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678499"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 课：创建自行车购买者挖掘结构
   在本课中，将创建一个挖掘结构，可以使用该结构预测 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的潜在客户是否会购买自行车。 如果您不熟悉挖掘结构和数据挖掘中的其角色，请参阅[挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  

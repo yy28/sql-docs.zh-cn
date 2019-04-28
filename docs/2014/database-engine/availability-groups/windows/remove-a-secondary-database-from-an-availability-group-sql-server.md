@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814132"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>从可用性组中删除辅助数据库 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 从 AlwaysOn 可用性组中删除辅助数据库。  
@@ -30,7 +30,7 @@ ms.locfileid: "48089237"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除辅助数据库，请使用：**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48089237"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：**  [从可用性组中删除辅助数据库之后](#FollowUp)  
+-   **跟进：**[从可用性组中删除辅助数据库之后](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48089237"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **从可用性组中删除辅助数据库**  
   
-1.  将目录更改 (`cd`) 到承载辅助副本的服务器实例。  
+1.  切换目录 (`cd`) 到承载辅助副本的服务器实例。  
   
 2.  使用 **Remove-SqlAvailabilityDatabase** cmdlet，指定要从可用性组中删除的可用性数据库的名称。 当您连接到承载辅助副本的服务器实例时，只能从可用性组中删除本地辅助数据库。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "48089237"
     ```  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 跟进：从可用性组中删除辅助数据库之后  
+##  <a name="FollowUp"></a>跟进：从可用性组中删除辅助数据库之后  
  删除辅助数据库之后，它不再加入到可用性组中，有关删除的辅助数据库的所有信息都会被可用性组丢弃。 删除的辅助数据库处于 RESTORING 状态。  
   
 > [!TIP]  

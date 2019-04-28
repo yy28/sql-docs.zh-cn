@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808688"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 服务器配置选项
   使用`transform noise words`服务器配置选项来禁止显示错误消息如果干扰词，即[非索引字](../../relational-databases/search/full-text-search.md)，导致全文查询返回零行的布尔操作。 此选项对于使用其布尔操作或 NEAR 操作包括干扰词的 CONTAINS 谓词的全文查询非常有用。 下表中列出了该选项的可能值。  

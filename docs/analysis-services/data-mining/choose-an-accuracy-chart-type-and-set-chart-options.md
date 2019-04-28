@@ -1,5 +1,5 @@
 ---
-title: 选择准确性图表类型和设置图表选项 |Microsoft 文档
+title: 选择准确性图表类型和设置图表选项 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a2ab960740e15091868103113bcdaed0ef8833c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724911"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>选择准确性图表类型和设置图表选项
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供了多种方法用于确定您的挖掘模型的有效性。 您可以为每个模型或结构创建的准确性图表的类型取决于以下因素：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多种用于确定挖掘模型的有效性的方法。 您可以为每个模型或结构创建的准确性图表的类型取决于以下因素：  
   
 -   用于创建模型的算法的类型  
   

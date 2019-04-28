@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833671"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换
   可以将查找转换配置为使用完全缓存模式和 OLE DB 连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678453"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 课：创建时序挖掘模型和挖掘结构
   在本课中，将创建一个挖掘模型，可以使用该模型根据历史数据预测一段时间内的值。 创建该模型时，基础结构会自动生成，且可以用作其他挖掘模型的基础。  

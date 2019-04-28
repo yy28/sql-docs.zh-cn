@@ -1,5 +1,5 @@
 ---
-title: 在查询 (MDX) 中建立多维数据集上下文 |Microsoft 文档
+title: 在查询 (MDX) 中建立多维数据集上下文 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2efdfc74bf45f4e8e6b913e651b0be5fa4511034
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807602"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>在查询中建立多维数据集上下文 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ FROM [Adventure Works]
   
  您可以使用 MDX [LookupCube](../../../mdx/lookupcube-mdx.md) 函数从多维数据集上下文以外的多维数据集中检索数据。 另外，可以使用诸如 [Filter](../../../mdx/filter-mdx.md) 之类的函数在对查询求值时对上下文进行临时限制。  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

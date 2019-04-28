@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832879"
 ---
 # <a name="cdc-control-task"></a>CDC 控制任务
   CDC 控制任务用于控制变更数据捕获 (CDC) 包的生命周期。 它处理 CDC 包与初始加载包的同步以及在运行 CDC 包时处理的日志序列号 (LSN) 范围的管理。 此外，CDC 控制任务还处理错误情况和恢复。  
@@ -40,16 +40,16 @@ ms.locfileid: "58392805"
 |操作|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|在调用使用 CDC 源数据流的数据流之前使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。<br /><br /> 有关存储的状态的详细信息，请参阅 [定义状态变量](../data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|解码的字符：在每个 CDC 运行 （在 CDC 数据流成功完成后） 来记录在 CDC 运行中完全处理的最后一个 LSN 之后执行此操作。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
+|MarkProcessedRange|解码的字符：此操作在每次 CDC 运行后（在 CDC 数据流成功完成后）执行，以便记录在 CDC 运行中完全处理的上一个 LSN。 下一次执行 GetProcessingRange 时，此位置将是处理范围的起始位置。|  
   
 ## <a name="handling-cdc-state-persistency"></a>处理 CDC 状态持久性  
  此 CDC 控制任务维护激活之间的持久性状态。 在 CDC 状态中存储的信息用于确定和维护 CDC 包的处理范围以及用于检测到错误条件。 该持久性状态以字符串的形式存储。 有关详细信息，请参阅 [定义状态变量](../data-flow/define-a-state-variable.md)。  
   
  CDC 控制任务支持两种类型的状态持久性  
   
--   手动状态持久性：在这种情况下，CDC 控制任务管理包变量中存储的状态，但包开发人员必须读取该变量在持久性存储在调用 CDC 控制之前，然后将其写回该持久性存储区到最后一个 CDC 控制后调用并在 CDC 运行完成。  
+-   手动状态持久性：在此情况中，该 CDC 控制任务管理在某个包变量中存储的状态，但包开发人员必须在调用 CDC 控制前从持久性状态中读取该变量，然后在最后调用 CDC 控制并且 CDC 运行完成后将该变量写回到该持久性存储区中。  
   
--   自动状态持久性：CDC 状态存储在数据库中的表。 该状态根据在 **“要用于存储状态的表”** 属性中命名的表中的 **StateName** 属性提供的名称存储，该表位于用于存储状态的所选连接管理器中。 默认管理器是源连接管理器，但通常的做法是使其成为目标连接管理器。 该 CDC 控制任务更新状态表中的状态值，并且该值作为环境事务的一部分提交。  
+-   自动状态持久性：CDC 状态存储在数据库中的表中。 该状态根据在 **“要用于存储状态的表”** 属性中命名的表中的 **StateName** 属性提供的名称存储，该表位于用于存储状态的所选连接管理器中。 默认管理器是源连接管理器，但通常的做法是使其成为目标连接管理器。 该 CDC 控制任务更新状态表中的状态值，并且该值作为环境事务的一部分提交。  
   
 ## <a name="error-handling"></a>错误处理  
  该 CDC 控制任务可在以下情况下报告错误：  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678483"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>第 1 课：创建中级数据挖掘解决方案 （数据挖掘中级教程）
   在数据挖掘基础教程中，您创建了一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目，其中包含基于新的 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的简单数据挖掘解决方案。  

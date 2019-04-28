@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 040bcc41137bce095d4db3ec2cbf8d8a22610f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727121"
 ---
 # <a name="configure-attribute-types"></a>配置属性类型
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可用于按业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  

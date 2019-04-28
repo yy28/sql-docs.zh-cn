@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807442"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
   如果数据库镜像端点使用 Windows 身份验证，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 添加或替换见证服务器。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中添加见证服务器还会将运行模式更改为具有自动故障转移功能的高安全性模式。  

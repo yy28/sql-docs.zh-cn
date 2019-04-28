@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854343"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>参数  
- *结构*  
+ *structure*  
  结构的唯一名称。  
   
  *列定义列表*  
  列定义的逗号分隔列表。  
   
- *维持 maxpercent*  
+ *holdout-maxpercent*  
  一个介于 1 和 100 之间的整数，指示要留作测试的数据所占的百分比。  
   
- *维持 maxcases*  
+ *holdout-maxcases*  
  一个整数，指示要用于测试的最大事例数。  
   
  如果指定的最大事例值大于输入事例数，则所有输入事例都将用于测试并且会引发警告。  
@@ -60,9 +60,9 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  如果需要确保分区能够重新生成，则应指定种子。  
   
- 默认值：REPEATABLE(0)  
+ 默认值：REPEATABLE （0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
  可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性，AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)。  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  有关可用于定义结构列的数据类型、内容类型、列分布和建模标志的列表，请参阅下列主题：  
   
--   [数据类型&#40;数据挖掘&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型（数据挖掘）](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型&#40;数据挖掘&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型（数据挖掘）](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列分布（数据挖掘）](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志&#40;数据挖掘&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志（数据挖掘）](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>示例 3：指定维持百分比和最大事件数  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>示例 3:指定维持百分比和最大事例数  
  下面的子句将创建一个测试集，其中包含全部输入事例的 25% 或 2000 个事例（以二者中少者计）。 因为 0 被指定为种子，所以使用挖掘结构的名称来创建种子以开始输入事例抽样。  
   
 ```  

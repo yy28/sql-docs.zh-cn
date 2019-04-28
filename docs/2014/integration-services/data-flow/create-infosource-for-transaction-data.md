@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827941"
 ---
 # <a name="create-infosource-for-transaction-data"></a>创建事务数据的 InfoSource
   使用 **“创建事务数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的事务数据创建一个新的 InfoSource。  

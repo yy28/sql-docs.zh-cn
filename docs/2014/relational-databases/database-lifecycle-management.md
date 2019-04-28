@@ -31,11 +31,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872167"
 ---
 # <a name="database-lifecycle-management"></a>数据库生命周期管理
   数据库生命周期管理 (DLM) 是一种基于策略的方法，用于管理数据库和数据资产。 DLM 不是一种产品而是管理数据库应用程序的数据库架构、 数据和元数据的一套全面的方法。 拥有周密、积极主动的 DLM 方法，组织可以根据相应的性能、保护、可用性和成本的级别来管理数据资源。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676309"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
   可以使用“生成表”查询将行复制到一个新表中，“生成表”查询对创建要使用的数据子集或在数据库之间复制表的内容非常有用。 “生成表”查询与“插入结果”查询类似，但它会创建要向其中复制行的新表。  

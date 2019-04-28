@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f93b179da229793c65db452e4f38bb1f08fbfad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855879"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>删除根据保留的 GEOMETRY 和 GEOGRAPHY 数据类型命名的 UDT
   升级顾问检测到根据为 `geometry` 或 `geography` 数据类型保留的术语命名的用户定义类型 (UDT)。 `geometry` 和 `geography` 数据类型是空间数据功能的一部分。  

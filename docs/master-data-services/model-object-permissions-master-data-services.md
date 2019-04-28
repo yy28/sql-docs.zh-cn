@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e672b7227ba24a37ec4b1a385c1d8fd58589f04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691606"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型对象权限 (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52813109"
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [模型权限 (Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
  [功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

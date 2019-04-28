@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813675"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity I/O mask 服务器配置选项
   为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 Windows Server 2003 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，此活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要，可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691709"
 ---
 # <a name="results-detailed-view-dialog-box"></a>“结果详细视图”对话框
   使用 **“评估策略”** 对话框运行策略并单击 **“评估”** 后，此对话框显示策略评估结果。 此对话框是只读的，可帮助您了解属性表达式的哪个部分可能失败。  

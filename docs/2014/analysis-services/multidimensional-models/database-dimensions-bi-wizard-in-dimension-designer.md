@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71c4e3f36548ddd594b301a73f4032303e4ddea5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700883"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>在维度设计器中启动商业智能向导
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，可以使用商业智能向导或维度设计器创建自定义汇总运算符和自定义成员公式以及配置用于写回的维度。 您可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的解决方案资源管理器或多维数据集设计器启动商业智能向导。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  

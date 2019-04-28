@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659226"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>从报表生成数据馈送（报表生成器和 SSRS）
   您可以从报表生成与 Atom 兼容的数据馈送，然后在可利用数据馈送的应用程序（例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 客户端）中使用数据馈送。  

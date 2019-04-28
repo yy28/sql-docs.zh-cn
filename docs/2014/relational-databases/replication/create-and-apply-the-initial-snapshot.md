@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721679"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>创建并应用初始快照
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建和应用初始快照。 使用参数化筛选器的合并发布需要由两部分组成的快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -232,7 +232,7 @@ ms.locfileid: "53358189"
   
 ## <a name="see-also"></a>请参阅  
  [Create a Publication](publish/create-a-publication.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [创建并应用快照](create-and-apply-the-snapshot.md)   

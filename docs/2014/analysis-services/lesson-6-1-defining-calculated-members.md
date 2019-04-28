@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728916"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  

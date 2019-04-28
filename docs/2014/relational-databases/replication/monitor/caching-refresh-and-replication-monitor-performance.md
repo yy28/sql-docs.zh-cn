@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667365"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>缓存、刷新和复制监视器性能
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器旨在有效地监视生产系统中的大量计算机。 系统定期对复制监视器用来执行计算和收集数据的查询进行缓存和刷新。 缓存可减少在复制监视器中查看不同页时所需的查询和计算次数，并可很好地满足多个用户的监视需要。  
   
  缓存刷新由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业“用于分发的复制监视刷新器” 进行处理。 作业是连续运行的，但缓存刷新计划取决于上次刷新后等待的特定时间：  
   
--   如果上次创建缓存后，代理历史记录有更改，则等待时间是以下时间中的最小值：4 秒;或创建上一个缓存所需的时间量。  
+-   如果上次创建缓存后，有个代理历史记录更改，则等待时间没有的最小值：4 秒或创建上一个缓存所用的时间。  
   
--   如果上次创建缓存后，代理历史记录没有更改（可能有其他更改），则等待时间是以下时间中的最大值：30 秒或创建上一个缓存所用的时间。  
+-   如果没有代理的历史记录更改缓存后最后一个创建 （有可能已进行其他更改），则等待时间没有最大值：30 秒;或创建上一个缓存所需的时间量。  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>刷新复制监视器用户界面  
  可以通过下列方式刷新复制监视器用户界面：  

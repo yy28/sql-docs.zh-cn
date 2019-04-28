@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691685"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用报表设计器设计报表 (SSRS)
   使用报表设计器可以创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679818"
 ---
 # <a name="selective-xml-indexes-sxi"></a>选择性 XML 索引 (SXI)
   选择性 XML 索引是除了普通 XML 索引之外可供您使用的另外一种 XML 索引类型。 选择性 XML 索引功能的目标如下：  
@@ -123,7 +123,7 @@ FOR
   
 -   对具有二进制 XS 类型的节点建立索引：例如 base64Binary 和 hexBinary。  
   
--   指定要使用包含通配符字符的 XPath 表达式编制索引的节点`*`末尾：例如， `/a/b/c/*`， `/a//b/*`，或`/a/b/*:c`。  
+-   使用在末尾包含通配符 `*` 的 XPath 表达式指定要建立索引的节点：例如，`/a/b/c/*`、`/a//b/*` 或 `/a/b/*:c`。  
   
 -   对子级、属性或后代以外的任何轴建立索引。 `//<step>` 的情况允许作为特例。  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 944385d23b39938a6cb4a28afa16c3d2d67dca23
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658136"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的重大更改
   本主题介绍 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]中的重大更改。 这些更改可能导致基于 SQL Server 早期版本的应用程序、脚本或功能无法继续使用。  

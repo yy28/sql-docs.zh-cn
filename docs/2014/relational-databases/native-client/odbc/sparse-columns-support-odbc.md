@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691959"
 ---
 # <a name="sparse-columns-support-odbc"></a>稀疏列支持 (ODBC)
   本主题描述对稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 支持。 演示对稀疏列 ODBC 支持的示例，请参阅[对具有稀疏列的表调用 SQLColumns](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../features/sparse-columns-support-in-sql-server-native-client.md)。  

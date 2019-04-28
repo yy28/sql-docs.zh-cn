@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676852"
 ---
 # <a name="view-facets-dialog-box"></a>“查看方面”对话框
   此对话框用于查看基于策略的管理方面的属性。 方面属性是在创建方面时定义的，不能使用此对话框来更改这些属性。  

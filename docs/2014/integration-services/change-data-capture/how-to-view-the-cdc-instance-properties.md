@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835563"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>如何查看 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台查看与您创建的实例有关的信息，以便帮助管理实例操作。  

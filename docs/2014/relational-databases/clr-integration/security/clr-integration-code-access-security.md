@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873742"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
   公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
   
  决定授予程序集的权限的安全策略定义在三个不同的位置：  
   
--   计算机策略：这是对安装了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机中运行的所有托管代码都有效的策略。  
+-   计算机策略：这是策略生效的计算机中在其上运行的所有托管代码[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装。  
   
--   用户策略：这是对进程承载的托管代码有效的策略。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务是否正在运行。  
+-   用户策略：这是对由进程承载的托管代码有效的策略。 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务是否正在运行。  
   
--   主机策略：这是由 CLR（在本例中为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）的主机设置的策略，对该主机中运行的托管代码有效。  
+-   主机策略：这是由 CLR 主机设置的策略 (在这种情况下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])，实际上是该主机中运行的托管代码。  
   
  CLR 支持的代码访问安全机制基于如下假设：运行时既可承载完全可信任的代码，也可承载部分可信任的代码。 由 CLR 代码访问安全性保护的资源通常由包装托管应用程序编程接口该 requirethe 相应的权限才允许访问资源的权限。 仅当所有调用方 （在程序集级别） 的调用堆栈中具有相应的资源权限，则满足 demandfor 权限。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48075997"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主机策略级别权限集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机策略级别授予程序集的代码访问安全性权限集由创建该程序集时指定的权限集决定。 有三个权限集： `SAFE`，`EXTERNAL_ACCESS`并`UNSAFE`(使用指定**PERMISSION_SET**选项[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fixedpolicy 系统程序集和用户指定策略的用户程序集。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48075997"
 |权限|值/说明|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` 用于执行托管代码的权限。|  
-|`SqlClientPermission`|`Context connection = true`、`context connection = yes`：只能使用上下文连接并且连接字符串只能指定值“context connection=true”或“context connection=yes”。<br /><br /> **AllowBlankPassword = false:** 不允许使用空白密码。|  
+|`SqlClientPermission`|`Context connection = true`、`context connection = yes`：仅可使用上下文连接和连接字符串可以仅指定的值为"上下文连接 = true"或"上下文连接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允许空白密码。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 程序集具有相同的权限`SAFE`程序集，以及访问外部系统资源，如文件、 网络、 环境变量和注册表的附加功能。  
@@ -107,10 +107,10 @@ ms.locfileid: "48075997"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
-|`Programming model restrictions`|用户帐户控制|用户帐户控制|无限制|  
-|`Verifiability requirement`|用户帐户控制|是|否|  
+|`Programming model restrictions`|是|是|无限制|  
+|`Verifiability requirement`|是|是|否|  
 |`Local data access`|是|是|是|  
-|`Ability to call native code`|否|否|用户帐户控制|  
+|`Ability to call native code`|否|否|是|  
   
 ## <a name="see-also"></a>请参阅  
  [CLR 集成安全性](clr-integration-security.md)   

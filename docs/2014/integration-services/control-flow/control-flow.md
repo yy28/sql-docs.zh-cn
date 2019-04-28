@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60aa1e7f4e671540d8ece08a24696a3a46998c82
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832625"
 ---
 # <a name="control-flow"></a>控制流
   包由一个控制流以及一个或多个数据流（可选）组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供了三种不同类型的控制流元素：提供包中结构的容器、提供功能的任务以及将可执行文件、容器和任务连接为已排序控制流的优先约束。  

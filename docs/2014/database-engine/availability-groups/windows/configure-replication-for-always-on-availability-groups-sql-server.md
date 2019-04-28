@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814706"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
@@ -180,7 +180,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  消息 21899，级别 11，状态 1，过程 `sp_hadr_verify_subscribers_at_publisher`，第 109 行  
 >   
->  重定向发布服务器 MyReplicaHostName 用于确定是否有原始发布服务器的订阅服务器的 sysserver 条目处的查询，查询 MyOriginalPublisher 失败，出现错误"976"，错误消息错误 976，级别 14，状态 1，消息：目标数据库 'MyPublishedDB' 参与可用性组和当前不可访问的查询。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的 `ALTER AVAILABILITY GROUP` 语句。”。  
+>  重定向的发布服务器“MyReplicaHostName”处的查询失败，该查询用于确定是否有原始发布服务器“MyOriginalPublisher”的订阅服务器的 sysserver 条目，出现错误“976”，错误消息“错误 976，级别 14，状态 1，消息：目标数据库‘MyPublishedDB’正参与某个可用性组，查询当前无法访问该数据库。 数据移动被挂起，或者未启用可用性副本以便用于读访问。 若要允许对该可用性组中的这一数据库和其他数据库进行只读访问，请对组中一个或多个辅助可用性副本启用只读访问权限。  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的 `ALTER AVAILABILITY GROUP` 语句。”。  
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   

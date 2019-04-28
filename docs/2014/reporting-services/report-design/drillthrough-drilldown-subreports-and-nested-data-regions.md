@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825020"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>钻取、深化、子报表和嵌套数据区域（报表生成器和 SSRS）
   可以通过多种方法组织数据，以显示一般信息与详细信息之间的关系。  您可以将所有数据都放在报表中，但将这些数据设置为在用户单击以显示详细信息之前处于隐藏状态，这就是“深化”  操作。 可以在“嵌套”  在其他数据区域（例如表或矩阵）内的一个数据区域（例如表或图表）内显示数据。 还可以在完全包含在主报表内的“子报表”  中显示数据。 或者，可以将详细信息数据放在“钻取”  报表中，钻取报表是在用户单击链接时显示的单独报表。  

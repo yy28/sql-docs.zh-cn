@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680503"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>配置维度属性（商业智能向导）
   可以使用 **“配置维度属性”** 页，将维度属性映射到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用于标识帐户维度属性的属性类型。  
@@ -33,7 +33,7 @@ ms.locfileid: "48133683"
  **维度属性**  
  显示可以映射到维度中现有维度属性的有效属性类型。  
   
- **包括**  
+ **Include**  
  选中复选框，将维度中相应的属性类型包括在内。  
   
  **属性类型**  

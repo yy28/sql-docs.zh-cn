@@ -1,5 +1,5 @@
 ---
-title: 物理体系结构 (Analysis Services-数据挖掘) |Microsoft 文档
+title: 物理体系结构 (Analysis Services-数据挖掘) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668497"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>物理体系结构（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用服务器和客户端组件提供商业智能应用程序的数据挖掘功能：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用服务器组件和客户端组件为商业智能应用程序提供数据挖掘功能：  
   
 -   服务器组件作为 Microsoft Windows 服务来实现。 可以在同一台计算机上具有多个实例，每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例均作为单独的 Windows 服务实例实现。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "34015744"
   
  ![Analysis Services 系统体系结构关系图](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "Analysis Services 系统体系结构关系图")  
   
-## <a name="server-configuration"></a>服务器配置  
+## <a name="server-configuration"></a>“服务器配置”  
  一个服务器实例可支持多个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，每个数据库都具有其自己的用来响应客户端请求和处理对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务实例。  
   
  如果要使用表格模型、数据挖掘和/或多维模型，必须安装单独的实例。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持并行安装在表格模式（使用 xVelocity 内存中分析引擎 (VertiPaq) 存储引擎）下运行的实例和在常规 OLAP、MOLAP 或 ROLAP 配置中的一种配置中运行的实例。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  客户端与 Analysis Services 服务器之间的所有通信都使用与平台和语言无关的 XMLA 协议。 从客户端那里收到请求后，Analysis Services 确定该请求是与 OLAP 相关还是与数据挖掘相关，并相应地路由请求。 有关详细信息，请参阅 [OLAP 引擎服务器组件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [逻辑体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [逻辑体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

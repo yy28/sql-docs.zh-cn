@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666860"
 ---
 # <a name="monitoring-replication"></a>监视（复制）
   监视复制拓扑是部署复制的一个重要方面。 因为复制活动是分布式的，所以跟踪复制过程中涉及的所有计算机的活动和状态非常有必要。 以下工具可用于监视复制：  
@@ -34,7 +34,7 @@ ms.locfileid: "54134297"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供对复制监视器的访问。 它还允许您查看当前状态和由以下代理记录的最后一条消息，并允许你启动和停止每个代理：日志读取器代理、 快照代理、 合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供对复制监视器的访问。 它还允许你查看当前状态以及由下列代理记录的最后一条消息，还允许你启动和停止每个代理：日志读取器代理、快照代理、合并代理和分发代理。 有关详细信息，请参阅 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 和复制管理对象 (RMO)  
   

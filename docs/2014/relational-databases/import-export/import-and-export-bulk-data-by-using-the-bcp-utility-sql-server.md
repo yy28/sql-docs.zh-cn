@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: dd68505153eb43d826f3854bd4f525ed06ea072a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827430"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 实用工具导入和导出大容量数据 (SQL Server)
   本主题概述了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中可使用 SELECT 语句的任意位置（包括分区视图）导出数据。  
@@ -48,7 +48,7 @@ ms.locfileid: "48103347"
 ## <a name="examples"></a>示例  
  有关 **bcp** 示例，请参阅：  
   
--   [bcp 实用工具](../../tools/bcp-utility.md)  
+-   [bcp Utility](../../tools/bcp-utility.md)  
   
 -   [创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48103347"
 ## <a name="see-also"></a>请参阅  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [SELECT 子句 (Transact-SQL)](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp 实用工具](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [准备批量导入数据 (SQL Server)](prepare-to-bulk-import-data-sql-server.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [批量导入和导出数据 (SQL Server)](bulk-import-and-export-of-data-sql-server.md)   

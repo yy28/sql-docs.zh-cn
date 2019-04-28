@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807555"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允许数据库镜像端点将证书用于入站连接 (Transact-SQL)
   本主题说明配置服务器实例以使用证书对数据库镜像的入站连接进行身份验证的步骤。 在可以建立入站连接之前，必须在每个服务器实例上配置出站连接。 有关详细信息，请参阅[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)。  

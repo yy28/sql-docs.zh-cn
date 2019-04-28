@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual c + + 扩展 |Microsoft Docs
+title: 使用视觉对象C++扩展插件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,27 +17,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864422"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 扩展
+# <a name="visual-c-extensions"></a>VisualC++扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
- ADO 关联或绑定，字段的 Microsoft Visual c + + 扩展[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到 C/c + + 变量的对象。 只要绑定的当前行**记录集**发生更改中的所有绑定的字段**记录集**复制到 C/c + + 变量。 如有必要，复制的数据转换为 C/c + + 变量声明的数据类型。
+ Microsoft VisualC++扩展的 ADO 关联或绑定，字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象与 C /C++变量。 只要绑定的当前行**记录集**发生更改中的所有绑定的字段**记录集**复制到 C /C++变量。 如果有必要，请复制的数据转换为 C 的声明的数据类型 /C++变量。
 
- **BindToRecordset**方法**IADORecordBinding**接口将字段绑定到 C/c + + 变量。 **AddNew**方法将新行添加到绑定**记录集**。 **更新**方法填充新的行中的字段**记录集**，或使用 C/c + + 变量的值更新现有行中的字段。
+ **BindToRecordset**方法**IADORecordBinding**接口将字段绑定到 C /C++变量。 **AddNew**方法将新行添加到绑定**记录集**。 **更新**方法填充新的行中的字段**记录集**，或更新现有行中的字段的值为 C /C++变量。
 
  **IADORecordBinding**接口由实现**记录集**对象。 你不自己编码实现。
 
 ## <a name="binding-entries"></a>绑定条目
- ADO 的 Visual c + + 扩展的字段映射[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到 C/c + + 变量的对象。 调用字段和变量之间的映射的定义*绑定条目*。 宏提供数值、 固定长度和可变长度数据绑定项。 在 Visual c + + 扩展类，派生类中声明绑定项和 C/c + + 变量**CADORecordBinding**。 **CADORecordBinding**类在内部由绑定项宏。
+ 视觉对象C++的 ADO 扩展映射的字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象与 C /C++变量。 调用字段和变量之间的映射的定义*绑定条目*。 宏提供数值、 固定长度和可变长度数据绑定项。 绑定项和 C /C++从 Visual 派生的类中声明变量C++扩展类**CADORecordBinding**。 **CADORecordBinding**类在内部由绑定项宏。
 
  ADO 在内部将这些宏中的参数映射到 OLE DB **DBBINDING**结构，并创建 OLE DB**访问器**对象来管理移动和数据字段和变量之间的转换。 OLE DB 数据定义为包含三个部分：一个*缓冲区*数据存储;*状态*，该值指示是否字段已成功存储在缓冲区中还是变量应如何还原到的字段; 和*长度*的数据。 (请参阅[获取文件和设置数据 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)中的 OLE DB 程序员参考，有关详细信息。)
 
 ## <a name="header-file"></a>标头文件
- 若要使用 ADO 的 Visual c + + 扩展应用程序中包括以下文件：
+ 在应用程序，以使用视觉对象中包含以下文件C++的 ADO 扩展：
 
 ```cpp
 #include <icrsint.h>
@@ -45,23 +45,23 @@ ms.locfileid: "52544177"
 
 ## <a name="binding-recordset-fields"></a>绑定的记录集字段
 
-#### <a name="to-bind-recordset-fields-to-cc-variables"></a>若要将记录集字段绑定到 C/c + + 变量
+#### <a name="to-bind-recordset-fields-to-cc-variables"></a>若要将记录集字段绑定到 C /C++变量
 
 1.  创建派生自的类**CADORecordBinding**类。
 
-2.  在派生类中指定绑定项和相应的 C/c + + 变量。 括号之间的绑定条目**BEGIN_ADO_BINDING**并**END_ADO_BINDING**宏。 不要终止之间用逗号或分号的宏。 每个宏自动指定适当的分隔符。
+2.  指定绑定条目和相应的 C /C++派生类中的变量。 括号之间的绑定条目**BEGIN_ADO_BINDING**并**END_ADO_BINDING**宏。 不要终止之间用逗号或分号的宏。 每个宏自动指定适当的分隔符。
 
-     指定要映射到 C/c + + 变量的每个字段的一个绑定项。 使用从适当的成员**ADO_FIXED_LENGTH_ENTRY**， **ADO_NUMERIC_ENTRY**，或**ADO_VARIABLE_LENGTH_ENTRY**系列的宏。
+     指定一个绑定条目的每个字段映射到 C /C++变量。 使用从适当的成员**ADO_FIXED_LENGTH_ENTRY**， **ADO_NUMERIC_ENTRY**，或**ADO_VARIABLE_LENGTH_ENTRY**系列的宏。
 
-3.  在应用程序中，创建派生自的类的实例**CADORecordBinding**。 获取**IADORecordBinding**从接口**记录集**。 然后调用**BindToRecordset**方法绑定**记录集**到 C/c + + 变量字段。
+3.  在应用程序中，创建派生自的类的实例**CADORecordBinding**。 获取**IADORecordBinding**从接口**记录集**。 然后调用**BindToRecordset**方法绑定**记录集**字段对 C /C++变量。
 
- 有关详细信息，请参阅[Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)。
+ 有关详细信息，请参阅[可视化C++扩展插件示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)。
 
 ## <a name="interface-methods"></a>接口方法
  **IADORecordBinding**接口有三个方法：**BindToRecordset**， **AddNew**，和**更新**。 每个方法的唯一参数是指向派生自的类的实例的指针**CADORecordBinding**。 因此， **AddNew**并**更新**方法不能指定任何其 ADO 方法 namesakes 的参数。
 
 ## <a name="syntax"></a>语法
- **BindToRecordset**方法相关联**记录集**与 C/c + + 变量字段。
+ **BindToRecordset**方法相关联**记录集**字段与 C /C++变量。
 
 ```cpp
 BindToRecordset(CADORecordBinding *binding)
@@ -87,12 +87,12 @@ Update(CADORecordBinding *binding)
  有关详细信息，请参阅[附录 a:数据类型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程序员参考。
 
 ### <a name="begin-binding-entries"></a>开始绑定项
- **BEGIN_ADO_BINDING**(*类*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定长度的数据
  **ADO_FIXED_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 状态修改*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*序号、 数据类型，缓冲区中，修改*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>数值数据
  **ADO_NUMERIC_ENTRY**(*序号、 数据类型、 缓冲区、 精度、 小数位数、 状态修改*)
@@ -102,21 +102,21 @@ Update(CADORecordBinding *binding)
 ### <a name="variable-length-data"></a>长度可变的数据
  **ADO_VARIABLE_LENGTH_ENTRY**(*序号、 数据类型、 缓冲区、 大小、 状态、 长度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*序号、 数据类型、 缓冲区、 大小、 状态修改*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
  **ADO_VARIABLE_LENGTH_ENTRY3**(*序号、 数据类型、 缓冲区、 大小、 长度、 修改*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*序号、 数据类型、 缓冲区、 大小、 修改*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>结束绑定项
  **END_ADO_BINDING**()
 
 |参数|Description|
 |---------------|-----------------|
-|*类*|在其中定义的绑定项和 C/c + + 变量的类。|
-|*Ordinal*|一个中，对计数的序号**记录集**字段对应于 C/c + + 变量。|
-|*DataType*|C/c + + 变量等效 ADO 数据类型 (请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)有关有效的数据类型的列表)。 值**记录集**字段将转换为此数据类型，如有必要。|
-|*Buffer*|C/c + + 变量的名称，**记录集**将存储字段。|
+|*类*|在其中的类绑定项和 C /C++定义了变量。|
+|*Ordinal*|一个中，对计数的序号**记录集**字段对应于在 C /C++变量。|
+|*DataType*|等效 ADO 数据类型的 C /C++变量 (请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)有关有效的数据类型的列表)。 值**记录集**字段将转换为此数据类型，如有必要。|
+|*Buffer*|C 的名称 /C++变量，**记录集**将存储字段。|
 |*大小*|以字节为单位的最大大小*缓冲区*。 如果*缓冲区*将包含可变长度字符串，留出了为终止字符的零。|
 |*“状态”*|将指示变量的名称是否的内容*缓冲区*有效，以及是否对字段的转换*数据类型*是否成功。<br /><br /> 此变量的两个最重要的值是**adFldOK**，这意味着转换成功，则和**adFldNull**，这意味着字段的值将为类型 VT_NULL 的变体，而不仅仅是为空。<br /><br /> 可能的值*状态*列出在下一步的表中，"状态值"。|
 |*修改*|布尔型标志。如果为 TRUE，指示允许 ADO 更新相应**记录集**字段中包含的值*缓冲区*。<br /><br /> 设置一个布尔值*修改*参数为 TRUE，为了使 ADO 能够更新字段绑定，且如果你想要检查该字段，但不能更改它，则为 FALSE。|
@@ -147,4 +147,4 @@ Update(CADORecordBinding *binding)
 |**adFldDefault**|13|在更新时，使用默认值。|
 
 ## <a name="see-also"></a>请参阅
- [Visual c + + 扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [VisualC++扩展示例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [VisualC++扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

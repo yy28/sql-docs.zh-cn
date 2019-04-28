@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842512"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展的事件目标是事件使用者。 目标可以写入文件、在内存缓冲区中存储事件数据或聚合事件数据。 目标可以同步或异步处理数据。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展事件目标是事件使用者。 目标可以写入文件、在内存缓冲区中存储事件数据或聚合事件数据。 目标可以同步或异步处理数据。  
   
  扩展事件的设计确保了对于每个会话都保证目标收到并仅收到一次事件。  
   

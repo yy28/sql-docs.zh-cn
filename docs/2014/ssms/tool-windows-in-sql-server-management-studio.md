@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661849"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为所有开发和管理阶段提供了很多功能强大的工具窗口。 某些工具可用于任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件，而其他一些工具则只能用于某些组件。 下表标识了可以用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件的工具。  

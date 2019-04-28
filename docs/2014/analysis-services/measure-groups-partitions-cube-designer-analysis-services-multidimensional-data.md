@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727983"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值组（“分区”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“分区”** 选项卡上的 **“度量值组”** 窗格，管理与多维数据集中的各个度量值组关联的分区。  
@@ -43,7 +43,7 @@ ms.locfileid: "48084797"
  **聚合**  
  显示分区的聚合模式和存储模式。 首先显示存储模式：关系联机分析处理 (ROLAP)、多维联机分析处理 (MOLAP) 或混合联机分析处理 (HOLAP)。 聚合模式显示为：所请求的优化百分比、所请求或使用空间的度量值或所创建聚合的数目。 单击 **...** 按钮可以显示 **聚合设计向导** 并定义指定分区的聚合设计。  
   
- **Description**  
+ **说明**  
  键入分区的可选说明。  
   
  **新建分区...**  
@@ -61,7 +61,7 @@ ms.locfileid: "48084797"
 ## <a name="context-menu"></a>上下文菜单  
  右键单击所选度量值组的“分区”网格中的行之后，所显示的上下文菜单中提供有以下选项：  
   
-|选项|定义|  
+|Option|定义|  
 |------------|----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。 有关“商业智能向导”的详细信息，请参阅[商业智能向导的 F1 帮助](business-intelligence-wizard-f1-help.md)。|  
 |**新的分区**|单击此项可显示 **“分区向导”** ，并在所选度量值组中创建新的分区。|  

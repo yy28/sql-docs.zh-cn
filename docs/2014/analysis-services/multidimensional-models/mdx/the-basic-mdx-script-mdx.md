@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725361"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 脚本 (MDX)
   多维表达式 (MDX) 脚本定义 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的多维数据集的计算过程。 有两种类型的 MDX 脚本：  
@@ -53,18 +53,18 @@ ms.locfileid: "48164371"
  所有 MDX 脚本语句  
  在 MDX 脚本中，MDX 脚本语句控制计算的上下文和作用域，并管理 MDX 脚本中其他语句的行为。 此类别包括下列语句：  
   
--   [计算](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [冻结](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [作用域](/sql/mdx/mdx-scripting-scope)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
  有关 MDX 脚本编写语句的详细信息，请参阅 [MDX 脚本编写语句](/sql/mdx/mdx-scripting-statements-mdx)。  
   
- [创建成员](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER 语句可以创建计算成员。 有关如何创建计算成员的详细信息，请参阅[在 MDX 中生成计算成员 (MDX)](mdx-calculated-members-building-calculated-members.md)。  
   
- [创建组](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET 语句可以创建命名集。 有关如何创建命名集的详细信息，请参阅[在 MDX 中生成命名集 (MDX)](mdx-named-sets-building-named-sets.md)。  
   
  条件语句  
@@ -91,7 +91,7 @@ ms.locfileid: "48164371"
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 语言参考&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
   

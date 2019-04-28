@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701211"
 ---
 # <a name="batch-processing-analysis-services"></a>批处理 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用批处理命令在单个请求中向服务器发送多个处理命令。 通过批处理，您可以控制以什么顺序来处理哪些对象。 此外，批可以作为一系列独立作业运行，也可以作为一个事务运行，如果事务中的某个进程失败，则会导致整批回滚。  

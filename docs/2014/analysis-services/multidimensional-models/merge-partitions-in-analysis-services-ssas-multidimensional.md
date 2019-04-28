@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699087"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
   您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
@@ -70,7 +70,7 @@ ms.locfileid: "48063337"
 ##  <a name="bkmk_Where"></a> 在合并分区后更新分区源  
  分区通过查询（如用于处理数据的 SQL 查询 WHERE 子句）或通过表或为分区提供数据的命名查询进行分段。 分区的 `Source` 属性指示分区是绑定到查询还是表。  
   
- 当您合并分区时，会被合并分区的内容，但`Source`属性未更新以反映分区的其他范围。 这意味着，如果您以后重新处理分区将保留其原始`Source`，将从该分区获得不正确的数据。 该分区将错误地在父项级别聚合数据。 下面的示例对这种行为进行了演示。  
+ 当您合并分区时，将整合分区的内容，但是不会更新 `Source` 属性以反映分区的范围变大。 这就意味着，如果您以后重新处理一个保留初始 `Source` 的分区，则您将从该分区获得不正确的数据。 该分区将错误地在父项级别聚合数据。 下面的示例对这种行为进行了演示。  
   
  **问题**  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48063337"
   
  **解决方案**  
   
- 解决方法是更新`Source`属性，调整 WHERE 子句或命名的查询，或手动合并来自底层事实数据表，以确保以后的处理是准确考虑分区的范围扩大的数据。  
+ 解决方案是通过调整 WHERE 子句或命名查询，或手动合并来自底层事实数据表的数据来更新 `Source` 属性，以确保以后的处理能考虑到分区的范围扩大而正确进行。  
   
  在此示例中，将第 3 分区合并到第 2 分区后，可以在所得的第 2 分区中提供一个筛选（例如 ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet')），用以指定：只从事实数据表中提取有关 [ColaDecaf] 和 [ColaDiet] 的数据，并排除有关 [ColaFull] 的数据。 作为替代方法，也可以在创建第 2 分区和第 3 分区时为它们指定筛选，而在合并进程中这些筛选将组合。 不论哪种情况，处理完分区之后，多维数据集都将不包含重复数据。  
   
  **结论**  
   
- 合并分区后，请始终检查`Source`以验证筛选器适合于合并的数据。 如果您从一个包含第一、二、三季度的历史数据的分区开始，现在要合并第四季度的数据，则必须调整筛选器，以包含第四季度数据。 否则，以后处理该分区时将导致错误的结果。 这对第四季度将是不正确的。  
+ 合并分区后，请始终检查 `Source` 以验证筛选器适合于合并后的数据。 如果您从一个包含第一、二、三季度的历史数据的分区开始，现在要合并第四季度的数据，则必须调整筛选器，以包含第四季度数据。 否则，以后处理该分区时将导致错误的结果。 这对第四季度将是不正确的。  
   
 ##  <a name="bkmk_fact"></a> 按事实数据表或命名查询分段的分区的特殊注意事项  
- 除了查询之外，分区也可以按表或命名查询分段。 如果源分区和目标分区使用同一数据源或数据源视图中的同一事实数据表，则在合并分区后 `Source` 属性有效。 它指定适合于所得分区的事实数据表数据。 因为所得分区所需的事实数据都存在于这一事实表，无需修改到`Source`属性是必需的。  
+ 除了查询之外，分区也可以按表或命名查询分段。 如果源分区和目标分区使用同一数据源或数据源视图中的同一事实数据表，则在合并分区后 `Source` 属性有效。 它指定适合于所得分区的事实数据表数据。 因为所得分区所需的事实数据就在事实数据表中，所以无需对 `Source` 属性进行任何修改。  
   
  对于使用来自多个事实数据表或命名查询的数据的分区，需要执行其他工作。 您必须手动将来自源分区的事实数据表的事实数据合并到目标分区的事实数据表中。  
   
@@ -134,11 +134,11 @@ ms.locfileid: "48063337"
   
 ## <a name="see-also"></a>请参阅  
  [处理 Analysis Services 对象](processing-analysis-services-objects.md)   
- [分区&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [创建和管理本地分区&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [创建和管理远程分区&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [分区（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)   
+ [创建和管理远程分区 (Analysis Services)](create-and-manage-a-remote-partition-analysis-services.md)   
  [设置分区写回](set-partition-writeback.md)   
- [启用写操作的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [可写入的分区](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [配置维度和分区的字符串存储](configure-string-storage-for-dimensions-and-partitions.md)  
   
   

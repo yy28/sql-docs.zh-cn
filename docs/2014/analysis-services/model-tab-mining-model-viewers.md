@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727833"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
   Microsoft 时序查看器中的 **“模型”** 选项卡会将时序的表示形式显示为图形中的节点，这与决策树模型中采用的方式类似。  
   
  使用此时序模型视图可提取有关时序分析的有用信息，包括图形的公式、ARIMA 术语和系数。  
   
- **有关详细信息，请参阅** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)和 [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
+ **有关详细信息：**[Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)，[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)， [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -34,7 +34,7 @@ ms.locfileid: "48164167"
  **挖掘模型**  
  选择要查看的挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 可以对此模型类型使用自定义查看器，也可以使用 **“Microsoft 一般内容树查看器”** 。 还可以使用插件查看器（如果有）。  
   
  **放大**  
@@ -71,8 +71,8 @@ ms.locfileid: "48164167"
  更改树中显示的级别数。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

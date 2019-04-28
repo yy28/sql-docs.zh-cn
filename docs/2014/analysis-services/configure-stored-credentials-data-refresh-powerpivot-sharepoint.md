@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680443"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中创建一个目标应用程序来存储要使用的凭据，PowerPivot 数据刷新作业就可以在任何 Windows 用户帐户下运行。 同样，如果您想要提供的数据库登录名不同于最初用于导入 PowerPivot for Excel 中的数据的数据库登录名，则可以将这些凭据映射到 Secure Store Service 目标应用程序，然后在数据刷新计划中指定该目标应用程序。  
@@ -55,7 +55,7 @@ ms.locfileid: "53365077"
   
 -   确认当您在数据刷新计划中指定此目标应用程序时数据刷新将生效。  
   
-### <a name="step-1-create-a-target-application"></a>步骤 1：创建目标应用程序  
+### <a name="step-1-create-a-target-application"></a>第 1 步：创建目标应用程序  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "53365077"
   
 17. 单击“确定” 。  
   
-###  <a name="bkmk_grant"></a> 步骤 2:授予对帐户的参与讨论权限  
+###  <a name="bkmk_grant"></a> 步骤 2：授予对帐户的参与讨论权限  
  在您可以使用存储的凭据之前，对于使用该帐户的任何 PowerPivot 工作簿，必须授予“参与讨论”权限。 此权限级别是从库中打开工作簿、然后在刷新数据后将其保存回库中所必需的。  
   
  分配权限这个步骤将由网站集管理员来执行。 SharePoint 权限可以在根网站集或其下的任何级别分配，包括单独的文档和项。 设置权限的方式将因您所需的粒度而异。 下面的步骤说明可用于授予权限的一个方法。  
@@ -117,7 +117,7 @@ ms.locfileid: "53365077"
   
 5.  选择**参与讨论**，然后单击**确定**。  
   
-###  <a name="bkmk_dbread"></a> 步骤 3:授予读取权限，才能访问数据刷新中使用的外部数据源  
+###  <a name="bkmk_dbread"></a> 步骤 3：授予读取权限，才能访问数据刷新中使用的外部数据源  
  在将数据导入到某一 PowerPivot 工作簿时，与外部数据的连接常常基于可信连接或者使用当前用户标识来连接到数据源的模拟连接。 只有在当前用户有权读取其导入的数据时，这些连接类型才有效。  
   
  在数据刷新方案中，现在将重复使用过去用于导入数据的相同连接字符串来刷新数据。 如果该连接字符串假定当前用户（例如，包含 Integrated_Security=SSPI 的字符串），则 PowerPivot 系统服务会将在目标应用程序中指定的用户标识作为当前用户传递。 只有在帐户对外部数据源具有读取权限时，此连接才会成功。  

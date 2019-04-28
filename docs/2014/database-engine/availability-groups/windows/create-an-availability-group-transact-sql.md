@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815360"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
   本主题介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在启用了 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上创建和配置可用性组。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  
@@ -58,7 +58,7 @@ ms.locfileid: "53365179"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 创建和配置可用性组  
   
 > [!NOTE]  
->  有关包含的每个这些代码示例的示例配置过程[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，请参阅[示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
+>  对于包含每个这些 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句代码示例的示例配置过程，请参阅[示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
   
 1.  连接到要承载主副本的服务器实例。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53365179"
   
 3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅[示例：可用性组使用 Windows 身份验证设置 (Transact SQL)](create-an-availability-group-transact-sql.md)，从开始还原数据库备份的步骤。  
+4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅[示例：使用 Windows 身份验证设置可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)，从还原数据库备份的步骤开始。  
   
 5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
@@ -510,7 +510,7 @@ GO
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -518,7 +518,7 @@ GO
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
      [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

@@ -1,5 +1,5 @@
 ---
-title: '&gt; （大于）(MDX) |Microsoft 文档'
+title: '&gt; （大于）(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b7eb0cdcfbe6a22a18236362b4a2277eb42eb42
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653487"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; （大于）(MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression > MDX_Expression
 ## <a name="return-value"></a>返回值  
  布尔值，具体情形如下：  
   
--   **true**如果两个参数均不为 null，并且第一个参数具有大于第二个参数的值的值。  
+-   **true**如果两个参数都非空，并且第一个参数的值是否大于第二个参数的值。  
   
--   **false**如果两个参数均不为 null，并且第一个参数具有等于或低于第二个参数的值的值。  
+-   **false**如果两个参数都非空，并且第一个参数的值，则等于或小于第二个参数的值。  
   
 -   如果两个参数或其中任何一个参数计算出来的值为空值，则为 Null。  
   

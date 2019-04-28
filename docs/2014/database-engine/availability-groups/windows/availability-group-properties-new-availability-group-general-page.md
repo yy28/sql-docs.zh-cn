@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815650"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性组属性和新建可用性组（“常规”页）
   本主题同时适用于 **“新建可用性组”** 对话框和 **“可用性组属性”** 对话框的 **“常规”** 选项卡。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832588"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>列 Null 比率配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列 Null 比率请求”** 设置选项。 列 Null 比率配置文件报告选定列中 null 值的百分比。 此配置文件可以帮助您识别数据中的问题，例如，列中 null 值的比率以外偏高。 例如，列 Null 比率配置文件对邮政编码列进行事件探查时发现，该列中缺少邮政编码的行所占的比例超出允许的范围。  

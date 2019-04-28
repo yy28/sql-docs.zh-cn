@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61218144589dbbedb815de59f56e57854242ef5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653889"
 ---
 # <a name="complete---upgrade"></a>完成 - 升级
   使用“完成(升级)”页可以验证升级是否已完成。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653696"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>第 3 课：添加和处理模型
   您在上一课中创建的挖掘结构包含一个基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法的挖掘模型。 可以使用此模型来标识目标邮递活动的客户。 但是，为了确保您的分析是全面的，更常见的做法是使用不同算法创建相关模型并比较其结果。 通过这种方式，您也可以获得不同的理解。 因此，您将创建两个其他模型，然后处理并部署这两个模型。  

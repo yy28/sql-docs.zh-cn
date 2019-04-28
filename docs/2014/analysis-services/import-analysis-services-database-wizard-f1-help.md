@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9916d7e99275ca30d43e03782d84d29550aab479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730842"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>导入 Analysis Services 数据库向导的 F1 帮助
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的导入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 数据库向导，通过现有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库生成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目。  

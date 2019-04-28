@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90db2f04d31ce477644cae99c4313de592797a51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680016"
 ---
 # <a name="connect-to-database-dialog-box"></a>“连接到数据库”对话框
   可以使用 **“连接到数据库”** 对话框连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。  

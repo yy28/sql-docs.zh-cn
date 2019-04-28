@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806738"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>“收缩数据库”任务（维护计划）
   使用 **“‘收缩数据库’任务”** 对话框可以创建一个任务，尝试减小所选数据库的大小。 使用下面的选项可以确定数据库收缩后在数据库中保留的未使用空间量（该百分比越大，数据库可收缩的量越小）。 该数值取决于数据库中实际数据的百分比。 例如，某个 100 MB 数据库包含 60 MB 的数据和 40 MB 的可用空间，当可用空间百分比为 50% 时，则将保留 60 MB 的数据和 30 MB 的可用空间（因为 60 MB 的 50% 是 30 MB）。 只会去除数据库中的多余空间。 有效值为 0 到 100。  

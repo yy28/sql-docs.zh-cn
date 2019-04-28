@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812581"
 ---
 # <a name="check-in-files"></a>签入文件
   若要将已修改的源代码管理文件用于其他用户，必须将这些文件签入到源代码管理中。 签入文件时，所签入的版本将写入源代码管理提供程序，并成为文件的最新版本。  
@@ -32,7 +32,7 @@ ms.locfileid: "48096767"
   
 2.  如果**签入**出现对话框，请选择相应的选项，，然后单击**确定**。  
   
-     **登记**  
+     **Check In**  
      签入所有选定项。  
   
      **“列”**  

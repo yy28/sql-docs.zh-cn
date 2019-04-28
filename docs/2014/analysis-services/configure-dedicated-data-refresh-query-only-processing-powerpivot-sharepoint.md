@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680431"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>配置专用数据刷新或仅限查询的处理 (PowerPivot for SharePoint)
   在 SharePoint 集成模式下，可以将 Analysis Services 服务器实例配置为支持特定类型的处理请求，如数据刷新或仅限查询的处理。 默认情况下，支持这两种类型的负载请求。 您可以关闭任一类型，以创建专用查询引擎或数据刷新服务器。  
@@ -62,7 +62,7 @@ ms.locfileid: "48168178"
   
 |设置|有效值|Description|  
 |-------------|------------------|-----------------|  
-|默认值|基于 RAM 进行计算。|默认值基于可用内存量除以 4 GB 后的结果。 默认值由公式计算得出，以便可以根据系统的容量调整设置。<br /><br /> 注意： 根据大型实际 PowerPivot 数据源的示例的 RAM 使用情况选择 4 千兆字节除数。 而不依据 PowerPivot 物理或逻辑体系结构。|  
+|默认值|基于 RAM 进行计算。|默认值基于可用内存量除以 4 GB 后的结果。 默认值由公式计算得出，以便可以根据系统的容量调整设置。<br /><br /> 注意：基于 RAM 使用情况大型实际 PowerPivot 数据源的示例选择了 4 千兆字节除数。 而不依据 PowerPivot 物理或逻辑体系结构。|  
 |最大值|基于 CPU 数量进行计算。|您可以指定的最大并发作业数目基于计算机上的处理器数量。 例如，在 4 插槽四核计算机上，您可以并行运行的最大作业数目为 16。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>提高默认值  

@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681184"
 ---
 # <a name="choosing-data-for-data-mining"></a>为数据挖掘选择数据
   当你开始数据挖掘，您可能会问"多少我需要数据？" 或者"有在清理或设置数据格式时，应了解的任何特殊要求？"  
@@ -73,7 +73,7 @@ ms.locfileid: "53355816"
   
  如果数据集大小合理，应更注重数据质量而不是添加越来越多的数据。 达到一定数据量后，会发现统计上有效的所有模式，添加更多数据不会提高其有效性。 相反，添加更多数据，有时可能引入意外关联。  
   
-### <a name="discrete-vs-continuous-numbers"></a>离散数值与连续数值  
+### <a name="discrete-vs-continuous-numbers"></a>离散数值与连续数  
  一个*离散*列包含有限数量的值。 例如，文本通常被视为离散值。  
   
  离散值有一些重要属性。 例如，如果将数字视为离散值，则它们之间不隐含任何顺序，您无法对数字计算平均值或总和。 电话区号就是离散数值数据，不会用来执行数学运算。  

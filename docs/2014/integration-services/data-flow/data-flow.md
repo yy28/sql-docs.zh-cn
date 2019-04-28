@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828010"
 ---
 # <a name="data-flow"></a>数据流
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供 3 种不同类型的数据流组件：源、转换和目标。 源从数据存储区（如关系数据库中的表和视图、文件以及 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库）中提取数据。 转换修改、汇总和清除数据。 目标将数据加载到数据存储区，或创建内存中的数据集。  

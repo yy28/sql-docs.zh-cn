@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871676"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
   使用 **“将 SQL Server 数据库部署到 Windows Azure VM”** 向导，可将数据库从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例部署到 Windows Azure 虚拟机 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
@@ -89,9 +89,9 @@ ms.locfileid: "53357893"
   
  在运行 Windows Server 操作系统的计算机上，您必须使用以下配置设置来运行此向导：  
   
--   关闭增强安全性配置：使用服务器管理器 > 本地服务器将 Internet Explorer 增强安全配置 (ESC) 设置为**OFF**。  
+-   关闭增强的安全配置：使用服务器管理器 > 本地服务器将 Internet Explorer 增强安全配置 (ESC) 设置为**OFF**。  
   
--   启用 JavaScript：“Internet Explorer”>“Internet 选项”>“安全性”>“客户级别”>“脚本”>“活动脚本”：**启用**。  
+-   启用 JavaScript:Internet Explorer > Internet 选项 > 安全性 > 客户级别 > 脚本 > 活动脚本：**启用**。  
   
 ###  <a name="limitations"></a> 限制和局限  
  针对此操作的数据库大小限制为 1 TB。  

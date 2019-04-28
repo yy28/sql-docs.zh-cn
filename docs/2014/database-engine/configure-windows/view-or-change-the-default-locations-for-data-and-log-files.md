@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808705"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>查看或更改数据文件和日志文件的默认位置 (SQL Server Management Studio)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看和更改新的数据文件和日志文件的默认位置。 默认路径从注册表中获得。 在更改位置后，如果未指定其他位置，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中创建的所有新数据库将使用该位置。  

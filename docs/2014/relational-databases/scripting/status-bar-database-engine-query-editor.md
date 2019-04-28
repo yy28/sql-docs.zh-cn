@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667583"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676867"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>查看基于策略的管理方面的属性
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看基于策略的管理方面的属性。  
@@ -51,7 +51,7 @@ ms.locfileid: "54100292"
   
 4.  单击加号以便展开 **“方面”** 文件夹。  
   
-5.  右键单击要查看其属性的方面，然后选择“属性”。 有关详细信息中的可用选项**Facet 属性-**_facet_name_对话框中，请参阅[方面属性对话框，常规页](../../integration-services/general-page-of-integration-services-designers-options.md)， [方面属性对话框，依赖策略页](facet-properties-dialog-box-dependent-policies-page.md)，并[方面属性对话框依赖条件页](facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  右键单击要查看其属性的方面，然后选择“属性”。 有关“Facet 属性 -facet_name”对话框中可用选项的详细信息，请参阅[“Facet 属性”对话框、“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)[“Facet 属性”对话框、“依赖策略”页](facet-properties-dialog-box-dependent-policies-page.md)和[“Facet 属性”对话框、“依赖条件”页](facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成后，单击“关闭”。  
   

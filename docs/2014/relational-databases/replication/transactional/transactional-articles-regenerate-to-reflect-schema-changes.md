@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655502"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>重新生成自定义事务过程以反映架构更改
   默认情况下，事务复制通过发布中的每个表项目的内部过程生成的存储过程，在订阅服务器上进行所有数据更改。 三个过程（分别对应插入、更新和删除）将复制到订阅服务器并在插入、更新或删除复制到订阅服务器后执行。 对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器上的表进行架构更改后，复制会通过调用同一组内部脚本过程自动重新生成这些过程，以便新过程与新架构相匹配（Oracle 发布服务器不支持复制架构更改）。  

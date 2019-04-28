@@ -1,5 +1,5 @@
 ---
-title: 手动编辑预测查询 |Microsoft 文档
+title: 手动编辑预测查询 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aba181ab73ab730869eaa7930591cf21a947d20c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679408"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +38,9 @@ ms.lasthandoff: 05/10/2018
     > [!NOTE]  
     >  如果您创建的查询无效，则“结果”窗口将不会显示错误，也不会显示任何结果。 单击 **“设计”** 按钮，或者从 **“挖掘模型”** 菜单中选择 **“设计”** 或 **“查询”** 以解决问题并再次运行查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)   
- [预测查询生成器 & #40; 数据挖掘 & #41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
- [第 6 课： 创建和使用预测 & #40;数据挖掘基础教程 & #41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
+ [预测查询生成器（数据挖掘）](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [第 6 课：创建和使用预测&#40;数据挖掘基础教程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

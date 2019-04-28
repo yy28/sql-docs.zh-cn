@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa1dd7ba570a02eae75d93aa540090983717f130
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664293"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>“计算成员生成器”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “计算成员生成器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框生成计算成员。  

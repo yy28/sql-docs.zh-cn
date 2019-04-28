@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843478"
 ---
 # <a name="set-and-retrieve-version-information"></a>设置和检索版本信息
   版本信息包括源代码管理的文件的历史记录和当前状态。 对于每个源代码管理的文件，[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 都将会维护其全面的历史记录，这样，您就可以跟踪一个或多个文件随时间变化的情况。 还可以使用该信息检索任何文件版本的本地副本，或比较任何两个文件版本。  

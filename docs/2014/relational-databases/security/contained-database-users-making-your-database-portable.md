@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655451"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
   使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
@@ -51,7 +51,7 @@ ms.locfileid: "53351557"
   
 -   [Azure SQL Database 防火墙](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [如何：配置防火墙设置 （Azure SQL 数据库）](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [如何：配置防火墙设置 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule（Azure SQL 数据库）](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

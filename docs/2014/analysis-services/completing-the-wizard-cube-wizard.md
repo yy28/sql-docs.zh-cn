@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 717e6ee640099b99e9ff4ec2484fdcc2a947ba1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680570"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>完成向导（多维数据集向导）
   可以使用 **“完成向导”** 页命名和预览将在完成向导后创建的多维数据集。  

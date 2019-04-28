@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699234"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多维模型数据库 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库是数据源、数据源视图、多维数据集、维度以及角色的集合。 此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库可以选择包含数据挖掘的结构以及一些自定义程序集，通过这些程序集，您可以将用户定义函数添加到数据库。  
@@ -50,19 +50,19 @@ ms.locfileid: "48082797"
   
  [移动 Analysis Services 数据库](move-an-analysis-services-database.md)  
   
- [重命名多维数据库&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [重命名多维数据库 (Analysis Services)](rename-a-multidimensional-database-analysis-services.md)  
   
  [设置的兼容级别多维数据库的&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [设置多维数据库属性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [设置多维数据库属性 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)  
   
  [同步 Analysis Services 数据库](synchronize-analysis-services-databases.md)  
   
- [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>请参阅  
- [以联机模式连接到 Analysis Services 数据库](connect-in-online-mode-to-an-analysis-services-database.md)   
- [创建 Analysis Services 项目&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [在联机模式下连接到 Analysis Services 数据库](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [创建 Analysis Services 项目 (SSDT)](create-an-analysis-services-project-ssdt.md)   
  [使用 MDX 查询多维数据](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

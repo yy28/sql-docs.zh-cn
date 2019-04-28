@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867154"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查询和文本编辑器 (SQL Server Management Studio)
   您可以使用任一 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 编辑器以交互方式编辑并测试 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 脚本，或者编辑 XML 或纯文本文件。 每种编辑器都有特定于语言的服务提供的支持，该服务可以标出关键字颜色，并能检查语法和用法错误。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器包括一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器，您可使用该调试器帮助修复 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中的问题。  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711708"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
   对于完整恢复模式下的数据库，大容量导入执行的所有行插入操作都会完整地记录在事务日志中。 如果使用完整恢复模式，大型数据导入会导致填充事务日志的速度很快。 相反，对于简单恢复模式或大容量日志恢复模式，大容量导入操作的最小日志记录减少了大容量导入操作填满日志空间的可能性。 另外，最小日志记录的效率也比按完整方式记录日志高。  

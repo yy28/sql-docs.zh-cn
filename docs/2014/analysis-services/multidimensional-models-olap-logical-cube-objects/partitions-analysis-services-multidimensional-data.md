@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702620"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>分区（Analysis Services - 多维数据）
   分区是一部分度量值组数据的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  

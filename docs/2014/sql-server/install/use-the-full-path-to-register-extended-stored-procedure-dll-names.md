@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ecdf37d4c7c97e8c474f5e7f08e3e6fef040723
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689783"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>使用完整路径注册扩展存储过程 DLL 名称
   先前未用 DLL 名称的完整路径注册的扩展存储过程在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中可能无法运行。  

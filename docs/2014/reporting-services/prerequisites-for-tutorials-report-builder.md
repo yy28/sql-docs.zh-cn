@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657721"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
   “报表生成器”教程是希望您能够在报表服务器上或与报表服务器集成的 SharePoint 站点上查看和保存报表。 对于数据，所有教程都使用必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]实例处理的文字查询。  

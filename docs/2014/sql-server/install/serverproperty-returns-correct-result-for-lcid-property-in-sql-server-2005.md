@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b85b15ec20579cb748cf3e09c0cded8b9e43fd9
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659815"
 ---
 # <a name="serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005"></a>在 SQL Server 2005 中，SERVERPROPERTY 返回 LCID 属性的正确结果
   当在使用二进制排序规则的服务器上运行 SERVERPROPERTY('LCID') 时，该函数返回与服务器的排序规则相对应的 Windows 区域设置标识符 (LCID)。  

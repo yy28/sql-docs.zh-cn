@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650198"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>代理帐户属性和新建代理帐户（“常规”页）
   使用此页可以查看或更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户的属性。  

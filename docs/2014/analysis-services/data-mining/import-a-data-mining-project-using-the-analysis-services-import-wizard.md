@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722349"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
   本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模板“从服务器导入（多维和数据挖掘）项目”从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  

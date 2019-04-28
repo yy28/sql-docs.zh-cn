@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db146c450afdae024942d543ff5c9fa5d7c169e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694220"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications（系统视图）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52773984"
 |**immediate_sync_ready**|**bit**|指示快照代理是否已生成快照且该快照是否准备好用于新的订阅。 仅对于立即更新发布才有意义。 **1**指示快照已准备好。|  
 |**allow_sync_tran**|**bit**|指定是否对该发布允许立即更新订阅。 **1**意味着允许立即更新订阅。|  
 |**autogen_sync_procs**|**bit**|指定是否在发布服务器中为立即更新订阅生成同步存储过程。 **1**表示生成在发布服务器。|  
-|**保留期**|**int**|对发布的更改在分发数据库中保留的时间（小时）。|  
+|**retention**|**int**|对发布的更改在分发数据库中保留的时间（小时）。|  
 |**allow_queued_tran**|**bit**|指定是否启用在订阅服务器上对更改进行排队，直到更改可以在发布服务器上应用为止。 如果**1**，则订阅服务器上的更改进行排队。|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否在默认文件夹中存储快照文件。 如果**0**，快照文件存储在由指定的备用位置*alternate_snapshot_folder*。 如果为 1，则可以在默认文件夹中找到快照文件。|  
 |**alt_snapshot_folder**|**nvarchar(510)**|指定快照的备用文件夹的位置。|  
@@ -65,8 +65,8 @@ ms.locfileid: "52773984"
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 均存储的冲突记录的发布服务器和订阅服务器导致冲突。<br /><br /> **1** = 的冲突记录存储在发布服务器。|  
 |**conflict_retention**|**int**|指定冲突记录的保持期（天）。|  
 |**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** =.msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **2** =.sql，它使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意：已不推荐也不再支持使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列。|  
-|**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符 (GUID) 指定在 Active Directory 中发布该发布，并且 GUID 是相应的 Active Directory 发布对象 objectGUID。 如果为 NULL，则将不在 Active Directory 中发布该发布。<br /><br /> 注意：不再支持 Active Directory 发布。|  
+|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** =.msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列来存储事务。<br /><br /> **2** =.sql，它使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已被弃用，不再受支持。|  
+|**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符 (GUID) 指定在 Active Directory 中发布该发布，并且 GUID 是相应的 Active Directory 发布对象 objectGUID。 如果为 NULL，则将不在 Active Directory 中发布该发布。<br /><br /> 注意：不再支持发布到 Active Directory。|  
 |**backward_comp_level**|**int**|数据库兼容性级别，可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|指示订阅服务器是否可以从备份而不是初始快照对此发布初始化的订阅。 **1**意味着可以从备份初始化订阅并**0**表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -77,7 +77,7 @@ ms.locfileid: "52773984"
 ## <a name="see-also"></a>请参阅  
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   

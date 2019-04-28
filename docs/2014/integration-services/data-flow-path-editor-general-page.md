@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828368"
 ---
 # <a name="data-flow-path-editor-general-page"></a>数据流路径编辑器（“常规”页）
   可以使用 **“数据流路径编辑器”** 对话框设置路径属性，查看列元数据以及管理附加到路径的数据查看器。  

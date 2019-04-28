@@ -12,20 +12,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729313"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
   在本课程中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“表导入向导”连接到 AdventureWorksDW SQL 数据库，选择数据，预览并筛选数据，然后将数据导入到模型工作区中。  
   
- 通过使用表导入向导，你可以从各种关系源导入数据：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 等。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外，还可以使用存储过程选择数据。  
+ 通过使用表导入向导，您可以从多种关系数据源导入数据：访问、 SQL、 Oracle、 Sybase、 Informix、 DB2、 Teradata 和的详细信息。 从上述关系数据源中的每个关系数据源导入数据的步骤与下面描述的步骤非常类似。 此外，还可以使用存储过程选择数据。  
   
  若要了解有关导入数据以及可从中导入的不同数据源类型的详细信息，请参阅[数据源（SSAS 表格）](data-sources-ssas-tabular.md)。  
   
- 学完本课的预计时间：**20 分钟**  
+ 估计的时间才能完成本课程中：**20 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  

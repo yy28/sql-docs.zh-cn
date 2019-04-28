@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676044"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>第 1 课：创建 DQS Suppliers 知识库
   在本课程中，创建名为 DQS 知识库**供应商**与供应商数据相关的知识 （元数据）。 您使用该知识库执行针对输入供应商数据的清理和匹配活动。 该清理活动标识不正确/无效数据、更正不正确数据、处理更正/建议、对数据执行标准化以及用更多的信息使数据更丰富。 该匹配活动对数据进行比较并且标识数据中的类似记录（但稍有不同），以便帮助您删除数据中的重复项。  

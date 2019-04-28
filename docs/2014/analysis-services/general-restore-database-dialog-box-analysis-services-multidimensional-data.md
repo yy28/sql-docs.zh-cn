@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730406"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>常规（“还原数据库”对话框）（Analysis Services - 多维数据）
   在 **中，可以使用** “还原数据库” **对话框的** “常规” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页指定在还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库时使用的备份文件和常规设置。  
@@ -66,7 +66,7 @@ ms.locfileid: "48099307"
   
  如果选择此选项，则可以从通过选择此选项启用的下拉列表中选择安全信息。 可用选项包括：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**全部复制**|还原备份文件中包含的数据库角色以及与这些角色关联的用户帐户。|  
 |**跳过成员身份**|还原备份文件中包含的数据库角色，但不还原与这些角色关联的用户帐户。|  
@@ -75,7 +75,7 @@ ms.locfileid: "48099307"
  如果对备份文件进行了加密，请键入用于加密备份文件的密码。  
   
 ## <a name="see-also"></a>请参阅  
- [还原数据库对话框&#40;Analysis Services-多维数据&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [“还原数据库”对话框（Analysis Services - 多维数据）](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [分区&#40;还原数据库对话框&#41; &#40;Analysis Services-多维数据&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [备份和还原 Analysis Services 数据库](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

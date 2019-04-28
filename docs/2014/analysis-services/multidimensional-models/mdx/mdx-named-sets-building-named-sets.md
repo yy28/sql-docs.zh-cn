@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699601"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>在 MDX 中生成命名集 (MDX)
   集表达式可能是较长且非常复杂的声明，因此很难理解。 或者，可能非常频繁地使用集表达式，以致于重复定义集成为一种负担。 为了使长而复杂的表达式或常用的表达式更易于使用，多维表达式 (MDX) 允许使用“命名集”表达式。  
@@ -41,8 +41,8 @@ ms.locfileid: "48083056"
      有关如何使用 CREATE SET 语句在会话中创建命名集的详细信息，请参阅[创建会话作用域的命名集 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [CREATE SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)   
+ [CREATE SET 语句 (MDX)](/sql/mdx/mdx-data-definition-create-set)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

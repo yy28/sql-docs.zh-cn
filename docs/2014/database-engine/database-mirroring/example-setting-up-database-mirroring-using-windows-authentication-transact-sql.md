@@ -1,5 +1,5 @@
 ---
-title: 示例： 设置数据库镜像使用 Windows 身份验证 (Transact SQL) |Microsoft Docs
+title: 例如：设置数据库镜像使用 Windows 身份验证 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806822"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>示例：使用 Windows 身份验证设置数据库镜像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例如：设置数据库镜像使用 Windows 身份验证 (Transact SQL)
   此示例说明使用 Windows 身份验证来创建带有见证服务器的数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 注意，可以不使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，而使用配置数据库镜像安全向导来设置数据库镜像。 有关详细信息，请参阅本主题后面的 [使用 Windows 身份验证建立数据库镜像会话 (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)。  
   
 ## <a name="prerequisite"></a>先决条件  
@@ -38,7 +38,7 @@ GO
   
  有关更改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中恢复模式的信息，请参阅[查看或更改数据库的恢复模式 (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  需要对数据库的 ALTER 权限和 CREATE ENDPOINT 权限，或者需要 **sysadmin** 固定服务器角色的成员资格。  
   
 ## <a name="example"></a>示例  
@@ -155,7 +155,7 @@ GO
   
 -   [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [示例：使用证书设置数据库镜像 (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [示例：设置数据库镜像使用证书&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   

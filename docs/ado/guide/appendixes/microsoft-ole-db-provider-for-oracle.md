@@ -1,5 +1,5 @@
 ---
-title: 用于 Oracle 的 Microsoft OLE DB 提供程序 |Microsoft Docs
+title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853412"
 ---
-# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概述
+# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]
 >  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用 Oracle 的 OLE DB 访问接口。
 
@@ -68,7 +68,7 @@ MSDAORA
 |**窗口句柄**|指示要用于提示输入其他信息的窗口句柄。|
 |**区域设置标识符**|指示唯一的 32 位数字 （例如 1033年），指定与用户的语言首选项。 这些首选项指示如何格式化日期和时间，项的按字母顺序排序，字符串进行了比较，依此类推。|
 |**OLE DB 服务**|指示指定 OLE DB 服务启用或禁用的位掩码。|
-|**提示**|指示是否提示用户，而所建立的连接。|
+|**Prompt**|指示是否提示用户，而所建立的连接。|
 |**扩展的属性**|一个包含特定于访问接口字符串扩展的连接信息。 此属性仅用于不能通过属性机制所述的特定于提供程序的连接信息。|
 
 ## <a name="see-also"></a>请参阅

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678587"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>分析平台系统中预配证书
 **PDW 证书预配**页的分析平台系统**Configuration Manager**导入或删除 PDW 所使用的证书。 

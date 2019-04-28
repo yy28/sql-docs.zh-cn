@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810048"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
   使用“min server memory”和“max server memory”这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  

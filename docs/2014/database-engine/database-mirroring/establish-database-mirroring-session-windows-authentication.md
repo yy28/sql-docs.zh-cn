@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806898"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>建立使用 Windows 身份验证的数据库镜像会话 (SQL Server Management Studio)
     
@@ -57,11 +57,11 @@ ms.locfileid: "52520328"
   
 6.  根据需要，可以选择更改运行模式。 某些运行模式的可用性取决于是否为见证服务器指定了 TCP 地址。 选项如下所示：  
   
-    |选项|是否需要见证服务器？|解释|  
+    |Option|是否需要见证服务器？|解释|  
     |------------|--------------|-----------------|  
     |**高性能(异步)**|空(如果存在，尚未使用但会话需要仲裁)|为获得最佳性能，镜像数据库始终在某种程度上滞后于主体数据库，永远无法完全同步。 但是，数据库之间的异步间隔通常很小。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止；但是，如果会话没有见证服务器（按建议）或见证服务器连接到镜像服务器，则镜像服务器可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> <br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
     |**不带自动故障转移功能的高安全(同步)**|否|保证将所有提交的事务都写入镜像服务器的磁盘上。<br /><br /> 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。 丢失伙伴会产生以下影响：<br /><br /> 如果镜像服务器实例变为不可用，则主体服务器继续可用。<br /><br /> 如果主体服务器实例变为不可用，则镜像服务器实例会停止但仍可以作为备用；数据库所有者可以强制让镜像服务器实例来提供服务（可能造成数据丢失）。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。|  
-    |**带自动故障转移功能的高安全(同步)**|是（必需）|保证将所有提交的事务都写入镜像服务器的磁盘上。 通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择 **“带自动故障转移功能的高安全(同步)”** 选项。 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。<br /><br /> 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> -如果主体服务器实例变为不可用，会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> -如果镜像服务器实例变为不可用，则主体服务器继续。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。<br /><br /> **\*\* 重要提示 \*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。|  
+    |**带自动故障转移功能的高安全(同步)**|是（必需）|保证将所有提交的事务都写入镜像服务器的磁盘上。 通过包含见证服务器实例以支持自动故障转移，来实现最高可用性。 注意，只有首先指定了见证服务器地址，才可以选择 **“带自动故障转移功能的高安全(同步)”** 选项。 只要伙伴相互连接并且数据库已同步，便可进行手动故障转移。<br /><br /> 如果存在见证服务器，丢失伙伴连接会有以下影响：<br /><br /> -如果主体服务器实例变为不可用，会发生自动故障转移。 镜像服务器实例将充当主体服务器，并且将其数据库用作主体数据库。<br /><br /> -如果镜像服务器实例变为不可用，则主体服务器继续。<br /><br /> 有关详细信息，请参阅 [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)的各版本中均未提供见证服务器实例。<br /><br /> **\*\* 重要提示 \*\*** 如果见证服务器断开连接，则伙伴必须彼此连接，数据库才可用。 有关详细信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。|  
   
 7.  满足下列所有条件后，单击 **“开始镜像”** 以开始镜像：  
   

@@ -1,24 +1,25 @@
 ---
 title: MSSQLSERVER_1793 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869450"
 ---
 # <a name="mssqlserver1793"></a>MSSQLSERVER_1793
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -31,37 +32,36 @@ ms.locfileid: "58530039"
 |消息正文|由于没有为 FILESTREAM 数据指定分区方案，因此无法删除索引“%.*ls”。|  
   
 ## <a name="explanation"></a>解释  
- 当你尝试在包含 FILESTREAM 数据的表上删除聚集索引，并且为基础数据指定了 **MOVE TO** 子句，但没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句时，将出现此消息。  
+当你尝试在包含 FILESTREAM 数据的表上删除聚集索引，并且为基础数据指定了 **MOVE TO** 子句，但没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句时，将出现此消息。  
   
 ## <a name="user-action"></a>用户操作  
- 在删除包含 FILESTREAM 数据的表上的聚集索引时，使用下列选项之一：  
+在删除包含 FILESTREAM 数据的表上的聚集索引时，使用下列选项之一：  
   
 -   为基础数据指定 **MOVE TO** 子句并且为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句。  
   
 -   不为基础数据指定 **MOVE TO** 子句，也不为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句。  
   
- 下面的示例失败，因为为基础数据指定了分区方案，但没有为 FILESTREAM 数据指定。  
+下面的示例失败，因为为基础数据指定了分区方案，但没有为 FILESTREAM 数据指定。  
   
-```sql  
+```Transact-SQL  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY] )  
 GO  
 ```  
   
- 下面的示例成功，因为既为基础数据指定了 **MOVE TO** 子句，又为 FILESTREAM 数据指定了 **FILESTREAM_ON** 子句。  
+下面的示例成功，因为既为基础数据指定了 **MOVE TO** 子句，又为 FILESTREAM 数据指定了 **FILESTREAM_ON** 子句。  
   
-```sql  
+```Transact-SQL  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY], filestream_on 'default' )  
 GO  
 ```  
   
- 下面的示例也成功，因为既没有为基础数据指定 **MOVE TO** 子句，也没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句。  
+下面的示例也成功，因为既没有为基础数据指定 **MOVE TO** 子句，也没有为 FILESTREAM 数据指定 **FILESTREAM_ON** 子句。  
   
-```sql  
+```Transact-SQL  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF )  
 GO  
 ```  
-  
   

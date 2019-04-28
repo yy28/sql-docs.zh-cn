@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 85e5f78e6096c2a860e376c72947f149b1cf8ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668406"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "47708845"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**\<继承列 >**||**Sys.computed_columns**视图返回中的所有列**sys.columns**视图。 它还返回如下所述的其他列。 有关列的说明的**sys.computed_columns**视图继承**sys.columns**，请参阅[sys.columns &#40;-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。 值**is_computed**列始终设置为 1 **sys.computed_columns**视图。|  
-|**定义**|**nvarchar(max)**|定义该计算列的 SQL 文本。|  
+|**definition**|**nvarchar(max)**|定义该计算列的 SQL 文本。|  
 |**uses_database_collation**|**bit**|1 = 列定义依赖数据库的默认排序规则进行正确计算；否则为 0。 此依赖关系可防止更改数据库默认排序规则。|  
 |**is_persisted**|**bit**|计算列是持久化的。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

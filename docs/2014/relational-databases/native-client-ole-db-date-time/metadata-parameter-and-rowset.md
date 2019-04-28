@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655623"
 ---
 # <a name="parameter-and-rowset-metadata"></a>参数和行集元数据
   本主题提供了与 OLE DB 日期和时间增强功能相关的以下类型和类型成员的相关信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "52818075"
   
 |参数类型|wType|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -54,7 +54,7 @@ ms.locfileid: "52818075"
 |*pwszDataSourceType*<br /><br /> （特定于访问接口）|*pwszDataSourceType*<br /><br /> （一般 OLE DB）|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|忽略|  
-|日期|DBTYPE_DBDATE|6|忽略|  
+|date|DBTYPE_DBDATE|6|忽略|  
 ||DBTYPE_DBTIME|10|忽略|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|忽略|  
@@ -71,7 +71,7 @@ ms.locfileid: "52818075"
 |绑定类型|*pwszDataSourceType*<br /><br /> （特定于访问接口）|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|日期|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,7 +82,7 @@ ms.locfileid: "52818075"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -116,7 +116,7 @@ ms.locfileid: "52818075"
   
 |参数类型|wType|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|日期|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|将|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -142,6 +142,6 @@ ms.locfileid: "52818075"
  dwFlags 中提供了新的 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 标志，以使应用程序可以确定列的服务器类型，其中 wType 为 DBTYPE_DBTIMESTAMP。 还必须使用 bScale 来标识服务器类型。  
   
 ## <a name="see-also"></a>请参阅  
- [元数据&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

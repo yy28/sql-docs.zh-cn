@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835403"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>执行多个表的增量加载
   在主题 [通过变更数据捕获改善增量加载](change-data-capture-ssis.md)中，关系图演示的是仅对一个表执行增量加载的基本包。 但是，加载一个表并不像执行多个表的增量加载那样常见。  

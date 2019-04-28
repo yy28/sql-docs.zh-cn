@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811541"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845931"
 ---
 # <a name="modify-the-trace-results-view"></a>修改跟踪结果视图
   本主题介绍如何通过执行以下任务修改 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中扩展事件会话的跟踪结果视图。  
@@ -149,7 +149,7 @@ ms.locfileid: "49120375"
 ##  <a name="AggregateResults"></a> 聚合结果  
  扩展事件支持五个聚合函数：  
   
--   SUM  
+-   Sum  
   
 -   Min  
   

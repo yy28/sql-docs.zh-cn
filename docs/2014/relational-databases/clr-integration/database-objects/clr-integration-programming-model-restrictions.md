@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873816"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
   在生成托管存储的过程或其他托管的数据库对象，在某些执行代码检查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管的代码程序集执行检查时首次将其注册在数据库中，使用`CREATE ASSEMBLY`语句中，另外在运行时。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管的代码必须满足的要求取决于是否作为注册的程序集`SAFE`， `EXTERNAL_ACCESS`，或`UNSAFE`，`SAFE`是最严格的并在下方列出。  

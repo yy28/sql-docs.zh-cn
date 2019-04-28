@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817123"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52802609"
 |**status**|**tinyint**|项目选项和状态的位掩码，可以是对以下一个或多个值执行逻辑位或运算的结果：<br /><br /> **0** = 没有附加属性。<br /><br /> **1** = 活动。<br /><br /> **8** = 包括 INSERT 语句中的列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为 17。 如果值为 0，则表示项目处于非活动状态，而且未定义其他属性。|  
 |**类型**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。|  
 |**upd_cmd**|**nvarchar(255)**|复制对表项目的更新操作时所使用的复制命令类型。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
-|**schema_option**|**binary(8)**|给定项目的架构生成选项的位图，它可以是下面的一个或多个值的位逻辑或结果：<br /><br /> **0x00** = 禁用快照代理编写脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建 （CREATE TABLE、 CREATE PROCEDURE 等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 包括声明引用完整性在主键上。<br /><br /> **0x1000** = 复制列级排序规则。 注意：默认情况下，将为 Oracle 发布服务器设置该选项，以启用区分大小写的比较。<br /><br /> **0x4000** = 复制唯一键，如果对表项目定义。<br /><br /> **0x8000** = 的复制 primary key 和上一个表的唯一键作为约束使用 ALTER TABLE 语句的文章。|  
+|**schema_option**|**binary(8)**|给定项目的架构生成选项的位图，它可以是下面的一个或多个值的位逻辑或结果：<br /><br /> **0x00** = 禁用快照代理编写脚本，并使用提供的 CreationScript。<br /><br /> **0x01** = 生成对象创建 （CREATE TABLE、 CREATE PROCEDURE 等）。<br /><br /> **0x10** = 生成相应的聚集索引。<br /><br /> **0x40** = 生成相应的非聚集索引。<br /><br /> **0x80** = 包括声明引用完整性在主键上。<br /><br /> **0x1000** = 复制列级排序规则。 注意：默认情况下，对于 Oracle 发布服务器以启用区分大小写的比较设置此选项。<br /><br /> **0x4000** = 复制唯一键，如果对表项目定义。<br /><br /> **0x8000** = 的复制 primary key 和上一个表的唯一键作为约束使用 ALTER TABLE 语句的文章。|  
 |**dest_owner**|**sysname**|目标数据库中表的所有者。|  
 |**dest_table**|**sysname**|目标表的名称。|  
 |**tablespace_name**|**nvarchar(255)**|标识项目的日志记录表使用的表空间。|  
@@ -70,7 +70,7 @@ ms.locfileid: "52802609"
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [复制表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [复制视图&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

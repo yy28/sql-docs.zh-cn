@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 17e9fa90b66c2bdaad9f029614119f9b9faada37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836518"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>将读取者角色和写入者角色分配给包
   可以将读取者角色和写入者角色分配给每个包。  

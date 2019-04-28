@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835642"
 ---
 # <a name="error-handling"></a>错误处理
   Oracle CDC 实例从单个 Oracle 源数据库（一个 Oracle RAC 群集被视为单个数据库）挖掘更改并且将提交的更改写入目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 CDC 数据库的更改表中。  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807616"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   若要支持自动故障转移，必须在高安全性模式下配置数据库镜像会话，并且还要具有第三个服务器实例（也称为“见证服务器”）。 见证服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可选实例，它能使高安全性模式会话中的镜像服务器识别出是否要启动自动故障转移。 与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
@@ -62,7 +62,7 @@ ms.locfileid: "48183827"
   
 -   如果镜像服务器与见证服务器和主体服务器都断开连接，则不论主体服务器状态如何都无法进行自动故障转移。  
   
- 至少要连接到两个服务器实例的要求称为“仲裁 ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作原理以及它对会话的影响的详细信息，请参阅 [仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 至少要连接到两个服务器实例的要求称为“仲裁 ”。 仲裁可以确保数据库一次仅可由一个伙伴提供服务。 有关仲裁的工作原理以及其影响的会话上的信息，请参阅[仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ##  <a name="AddRemoveWitness"></a> 添加或删除见证服务器  
  **添加见证服务器**  
@@ -78,7 +78,7 @@ ms.locfileid: "48183827"
 ## <a name="see-also"></a>请参阅  
  [数据库镜像会话期间的角色切换 (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [数据库镜像运行模式](database-mirroring-operating-modes.md)   
- [仲裁：见证服务器如何影响数据库可用性（数据库镜像）](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [仲裁：见证服务器如何影响数据库可用性&#40;数据库镜像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md)   
  [镜像状态 (SQL Server)](mirroring-states-sql-server.md)  
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833869"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>“添加文件连接管理器”对话框 UI 参考
   可以使用 **“添加文件连接管理器”** 对话框定义与一组文件或文件夹的连接。  

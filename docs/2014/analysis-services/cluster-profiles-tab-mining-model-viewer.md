@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680860"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>“分类剖面图”选项卡（挖掘模型查看器）
   可以使用 **“分类剖面图”** 选项卡，提供算法在分类模型中发现的分类的总体视图。 该选项卡可显示每个属性及其在每个分类中的分布情况。  
   
- **有关详细信息，请参阅** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息：**[Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48196067"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于查看所选挖掘模型的查看器。 可以对挖掘模型使用自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **显示图例**  
@@ -51,8 +51,8 @@ ms.locfileid: "48196067"
  本节对于模型中的每个分类都包含一个列。 对于每个属性，直方图显示该属性的值相对于相应分类的分布情况。 此图表还包含一个 **“总体”** 列，该列也会使用直方图来显示每个属性的值的分布情况（但针对的是模型中的事例）。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

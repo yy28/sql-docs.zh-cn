@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690246"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "47709165"
 |**status**|**int**|系统状态信息。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|指向第一页或根页的指针。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**indid**|**smallint**|索引 ID：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引|  
-|**根**|**binary(6)**|有关**indid** > = 1，**根**是指向根页的指针。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
+|**root**|**binary(6)**|有关**indid** > = 1，**根**是指向根页的指针。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**minlen**|**smallint**|行的最小大小。|  
 |**keycnt**|**smallint**|键数。|  
 |**groupid**|**smallint**|在其上创建对象的文件组 ID。<br /><br /> NULL = 索引进行分区时**indid** > 1。<br /><br /> NULL = 表进行分区时**indid**为 0 或 1。|  
 |**dpages**|**int**|有关**indid** = 0 或**indid** = 1， **dpages**是用数据页的计数。<br /><br /> 有关**indid** > 1， **dpages**是用索引页的计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
-|**保留**|**int**|有关**indid** = 0 或**indid** = 1，**保留**是分配的所有索引和表数据的页数的计数。<br /><br /> 有关**indid** > 1，**保留**是分配给索引的页计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
+|**reserved**|**int**|有关**indid** = 0 或**indid** = 1，**保留**是分配的所有索引和表数据的页数的计数。<br /><br /> 有关**indid** > 1，**保留**是分配给索引的页计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
 |**used**|**int**|有关**indid** = 0 或**indid** = 1，**使用**是用于所有索引和表数据的总页数的计数。<br /><br /> 有关**indid** > 1，**使用**是用索引页的计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 如果发生行溢出，则不会得出准确的结果。|  
 |**rowcnt**|**bigint**|在基于数据级行计数**indid** = 0 和**indid** = 1。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。|  
 |**rowmodctr**|**int**|对自上次更新表的统计信息后插入、删除或更新行的总数进行计数。<br /><br /> 0 = 索引进行分区时**indid** > 1。<br /><br /> 0 = 表进行分区时**indid**为 0 或 1。<br /><br /> 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本， **rowmodctr**不是与早期版本完全兼容。 有关详细信息，请参阅“备注”。|  
@@ -62,11 +62,11 @@ ms.locfileid: "47709165"
 |**impid**|**smallint**|索引实现标志。<br /><br /> 返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|用于约束经过考虑的索引锁粒度。 例如，对于本质上是只读的查找表，可以将其设置为仅进行表级锁定以最大限度地降低锁定成本。|  
 |**pgmodctr**|**int**|返回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**密钥**|**varbinary(816)**|组成索引键的列 ID 列表。<br /><br /> 返回 NULL。<br /><br /> 若要显示索引键列，请使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**keys**|**varbinary(816)**|组成索引键的列 ID 列表。<br /><br /> 返回 NULL。<br /><br /> 若要显示索引键列，请使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**名称**|**sysname**|索引或统计信息的名称。 时，返回 NULL **indid** = 0。 修改应用程序以查找 NULL 堆名。|  
 |**statblob**|**image**|统计信息二进制大型对象 (BLOB)。<br /><br /> 返回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**行**|**int**|在基于数据级行计数**indid** = 0 和**indid** = 1，和的值重复**indid** > 1。|  
+|**rows**|**int**|在基于数据级行计数**indid** = 0 和**indid** = 1，和的值重复**indid** > 1。|  
   
 ## <a name="remarks"></a>备注  
  不得使用定义为保留的列。  

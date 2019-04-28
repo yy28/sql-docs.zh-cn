@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650751"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>“属性对比”选项卡（挖掘模型查看器）
   可以使用 **“属性对比”** 选项卡，比较输入属性的状态并查看这些状态与结果属性相关的方式。 两个所选的可预测属性状态之间差别最大的属性值会首先列出。  
@@ -32,7 +32,7 @@ ms.locfileid: "52535067"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 该挖掘模型将自动在正确的自定义查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 对于每个模型，您可以选择自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **Attribute**  

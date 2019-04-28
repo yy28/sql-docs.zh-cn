@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833468"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
   Azure HDInsight 连接管理器使一个 SSIS 包来使用你指定的值的属性连接到 Azure 订阅：Azure 订阅 ID 和管理证书。  

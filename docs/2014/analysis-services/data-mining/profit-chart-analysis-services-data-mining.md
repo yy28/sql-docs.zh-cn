@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732917"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
   利润图显示与使用挖掘模型相关联的估计利润。 例如，假设您的模型预测哪些客户公司应在业务方案中联系。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  

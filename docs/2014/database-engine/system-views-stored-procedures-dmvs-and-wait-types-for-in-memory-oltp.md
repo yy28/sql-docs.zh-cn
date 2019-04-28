@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842396"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>系统视图、存储过程、内存中 OLTP 的 DMV 和等待类型
   本主题提供针对许多支持内存中 OLTP 的数据库对象的简短描述，以及指向它们的链接。  
@@ -27,9 +27,9 @@ ms.locfileid: "52406154"
 |[sys.data_spaces (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|检查文件组是否包含内存优化的数据。|以下各列显示其他的值：**类型**并**type_desc**。|  
 |[sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|检查内存优化表中是否存在索引。|以下各列显示其他的值：**类型**并**type_desc**。|  
 |[sys.parameters (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|检查参数是否非 Null（这样可更高效地执行本机编译存储过程）。|**is_nullable**列。|  
-|[sys.all_sql_modules &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
+|[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
 |[sys.sql_modules (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|检查存储过程是否是本机编译存储过程。|**uses_native_compilation**列。|  
-|[sys.table_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|检查表是否经过内存优化。|**is_memory_optimized**列。|  
+|[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|检查表是否经过内存优化。|**is_memory_optimized**列。|  
 |[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|如果表是内存优化表和检查表的持续性设置，检查。|**持续性**， **durability_desc**，和**is_memory_optimized**列。|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|显示内存优化表的哈希索引。|特定的内存中 OLTP。|  
   
@@ -44,12 +44,12 @@ ms.locfileid: "52406154"
   
 |存储过程|Description|  
 |----------------------|-----------------|  
-|[sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|将内存中 OLTP 数据库绑定至资源池。|  
-|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|启动内存中 OLTP 数据库的垃圾回收。|  
-|[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|允许对本机编译的存储过程收集统计信息。|  
-|[sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|允许根据查询对本机编译的存储过程收集统计信息。|  
-|[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|合并数据和差异文件。|  
-|[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|删除数据库和资源池之间的绑定。|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|将内存中 OLTP 数据库绑定至资源池。|  
+|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|启动内存中 OLTP 数据库的垃圾回收。|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|允许对本机编译的存储过程收集统计信息。|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|允许根据查询对本机编译的存储过程收集统计信息。|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|合并数据和差异文件。|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|删除数据库和资源池之间的绑定。|  
   
 ## <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV)  
  存在几个适用于内存优化表的 DMV。  

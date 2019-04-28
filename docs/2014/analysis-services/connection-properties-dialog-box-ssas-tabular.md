@@ -14,24 +14,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679944"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>“连接属性”对话框（SSAS - 表格）
   使用此页可在 SQL Server Management Studio 中查看或修改表格模型数据库使用的数据源的连接属性。  
   
  此对话框提供了时间戳和其他说明性信息，以及确定连接特性的可自定义属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  
 |**名称**|指定数据源的名称。|  
 |**ID**|显示数据源对象的标识符。|  
-|**Description**|显示数据源对象的说明。|  
+|**说明**|显示数据源对象的说明。|  
 |**创建时间戳**|显示数据库的创建日期和时间。|  
 |**上次架构更新时间**|显示上次更新数据库元数据的日期和时间。|  
 |**连接字符串**|显示用于连接到向模型提供数据的数据源的连接字符串。|  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733337"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>挖掘结构（Analysis Services – 数据挖掘）
   挖掘结构定义生成挖掘模型时依据的数据：它指定源数据视图、列数量和类型以及分为定型集和测试集的可选分区。 单个挖掘结构可以支持多个共享同一个域的挖掘模型。 下图说明了数据挖掘结构与数据源以及构成数据挖掘模型之间的关系。  
@@ -94,7 +94,7 @@ ms.locfileid: "48172517"
 ### <a name="processing-mining-structures"></a>处理挖掘结构  
  挖掘结构在处理之前只是一个元数据容器。 当您处理挖掘结构时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会创建一个缓存，用于存储有关数据的统计信息、如何离散化任何连续属性的信息以及挖掘模型以后要使用的其他信息。 挖掘模型本身不存储此摘要信息，而是在处理挖掘结构时引用缓存的信息。 因此，您不必在每次向现有结构中添加新模型时重新处理结构；可以只处理模型。  
   
- 如果缓存很大或您要删除详细数据，可以选择在处理后丢弃此缓存。 如果您不希望缓存数据，则可以将挖掘结构的 `CacheMode` 属性更改为 `ClearAfterProcessing`。 这将导致在处理所有模型之后销毁缓存。 设置`CacheMode`属性设置为`ClearAfterProcessing`将禁止从挖掘模型的钻取。  
+ 如果缓存很大或您要删除详细数据，可以选择在处理后丢弃此缓存。 如果您不希望缓存数据，则可以将挖掘结构的 `CacheMode` 属性更改为 `ClearAfterProcessing`。 这将导致在处理所有模型之后销毁缓存。 将 `CacheMode` 属性设置为 `ClearAfterProcessing` 将禁止从挖掘模型钻取。  
   
  但是，在破坏缓存后，将无法向挖掘结构添加新模型。 如果向该结构中添加新的挖掘模型或更改现有模型的属性，将需要首先重新处理挖掘结构。 有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48172517"
 ## <a name="using-data-mining-models-with-mining-structures"></a>在挖掘结构中使用数据挖掘模型  
  数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 挖掘模型是属于特定挖掘结构的对象，并且模型继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。 可以向挖掘结构中添加某个结构列的多个副本。 还可以向挖掘模型中添加某个结构列的多个副本，然后向该模型中的每个结构列赋予不同的名称或别名 。 有关为结构列创建别名的详细信息，请参阅[为模型列创建别名](create-an-alias-for-a-model-column.md)和[挖掘模型属性](mining-model-properties.md)。  
   
- 数据挖掘模型的体系结构的详细信息，请参阅[挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)。  
+ 有关数据挖掘模型的体系结构的详细信息，请参阅 [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  使用提供的链接了解有关如何定义、管理和使用挖掘结构的详细信息。  
@@ -122,7 +122,7 @@ ms.locfileid: "48172517"
 |使用基础数据源和更新源数据|[编辑用于挖掘结构的数据源视图](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [处理挖掘结构](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [数据库对象&#40;Analysis Services-多维数据&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+ [数据库对象（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
   

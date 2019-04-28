@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 598d0512593c737f1138577f36dfd5f8232d1c91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864473"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
 
@@ -52,7 +52,7 @@ ms.locfileid: "56010987"
  您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能配置日志严重性设置。  
   
 ##  <a name="ConfigureActivity"></a> 在活动级别配置严重级别  
- 您可以在 DQS 中为以下活动配置日志严重性设置：域管理、知识发现、匹配策略、数据清理、数据匹配和引用数据服务。 为此：  
+ 您可以在 DQS 中为以下活动配置日志严重性设置：域管理、知识发现、匹配策略、数据清理、数据匹配和引用数据服务。 为此，请执行以下操作：  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56010987"
   
 5.  单击 **“关闭”**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为 DQS 日志文件配置高级设置](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

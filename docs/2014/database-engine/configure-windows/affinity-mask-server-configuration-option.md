@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814030"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
     

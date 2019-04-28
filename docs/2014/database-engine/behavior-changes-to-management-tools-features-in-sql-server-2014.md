@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787943"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 中管理工具功能的行为更改
   本主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理工具功能的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  

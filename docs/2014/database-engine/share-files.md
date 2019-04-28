@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843553"
 ---
 # <a name="share-files"></a>共享文件
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 在各个源代码管理项目间共享一些项。 如果共享了某个项，则对该项的任何更改都会反映在共享该项的每个项目中。  

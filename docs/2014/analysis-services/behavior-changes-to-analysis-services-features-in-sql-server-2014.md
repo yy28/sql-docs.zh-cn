@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655823"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
   本主题针对多维、表格、数据挖掘和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 部署介绍 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 中的行为更改。 与早期版本的 SQL Server 相比，当前版本中的功能的工作或交互方式会受到行为更改的影响。  
@@ -40,7 +40,7 @@ ms.locfileid: "52391780"
   
 |问题|Description|  
 |-----------|-----------------|  
-|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "工作簿包含不受支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **如何升级工作簿：** 在将工作簿升级到 2012 工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
+|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会在不进行提示的情况下升级和刷新模型。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。|2008 R2 工作簿将在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中打开，但计划的刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：<br /> "工作簿包含不受支持的 PowerPivot 模型。 该工作簿中的 PowerPivot 模型采用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支持的 PowerPivot 模型如下： <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **如何升级工作簿：** 工作簿升级到 2012年工作簿之前，计划的刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：<br /><br /> 下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> 下载该工作簿并在 Microsoft Excel 2013 中打开它。 然后保存该工作簿并将其重新发布到 SharePoint 服务器。<br /><br /> <br /><br /> 工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。|  
 |DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)中的行为更改。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您在“标记为日期表”中指定 [Date] 列以在时间智能中使用，且将 [Date] 列作为参数传递到 ALL 函数或作为筛选器传递给 CALCULATE 函数，则无论日期列中的切片器如何，都忽略表中所有列的所有筛选器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前，对于 DateTable 的所有列忽略所有筛选器，无论作为参数传递给 ALL 的 [Date] 列是什么。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行为将仅对作为参数传递给 ALL 的指定列忽略筛选器。<br /><br /> 要解决新行为问题，忽略作为整个表的筛选器的所有列，您可以从参数中排除 [Date] 列，例如：<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 这将产生与 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]以前的行为相同的结果。|  
   
 ##  <a name="bkmk_sql2012"></a> 中的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
@@ -61,7 +61,7 @@ ms.locfileid: "52391780"
   
  在此版本中，对于呈现来自外部文件的 PowerPivot 数据的 Excel 工作簿，其权限要求已更改。 在这一版本中，您必须具有 **“读取”** 权限（或更明确地说，必须具有 **“打开项”** 权限），才能从客户端应用程序连接到外部 PowerPivot 工作簿。 其他权限指定用户具有下载权限，才能查看工作簿中嵌入的源数据。 其他权限反映这一事实，即模型数据完全可用于链接到它的客户端应用程序或工作簿，从而导致在权限要求与实际数据连接行为之间的更好地进行协调。  
   
- 若要继续将 PowerPivot 工作簿用作外部数据源，您必须为连接到外部 PowerPivot 数据的用户提高 SharePoint 权限。 在更改权限之前，如果用户尝试通过数据源连接访问 PowerPivot 工作簿，将获得以下错误："PowerPivot Web 服务返回了错误 （拒绝访问。 您请求的文档不存在或您没有权限打开该文件。）"  
+ 若要继续将 PowerPivot 工作簿用作外部数据源，您必须为连接到外部 PowerPivot 数据的用户提高 SharePoint 权限。 更改的权限，直到用户将收到以下错误，如果用户尝试访问数据源连接中的 PowerPivot 工作簿："PowerPivot Web 服务返回了错误 （拒绝访问。 您请求的文档不存在或您没有权限打开该文件。）"  
   
 > [!WARNING]  
 >  以下步骤将指导您断开库级别的权限继承，将用户针对此库中特定文档的权限从 **“仅查看”** 提高到 **“读取”** 。 在继续之前，请仔细查看现有的权限和文档，并确认这些步骤适用于您的网站。  

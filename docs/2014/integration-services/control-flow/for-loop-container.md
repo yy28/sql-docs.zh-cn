@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831598"
 ---
 # <a name="for-loop-container"></a>For 循环容器
   For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 循环每次重复时，For 循环容器都计算一个表达式并重复运行其工作流，直到表达式计算结果为 `False`。  
@@ -47,7 +47,7 @@ ms.locfileid: "58384715"
  可以为 For 循环容器设置一个事务属性，为包控制流的子集定义一个事务。 采用这种方法，可以更详细地管理事务。 例如，如果 For 循环容器多次重复一个更新表中数据的控制流，则可以配置 For 循环及其控制流，让它们使用一个事务来确保数据只有在全部数据都成功更新后才更新。 有关详细信息，请参阅 [Integration Services 事务](../integration-services-transactions.md)。  
   
 ## <a name="configuration-of-the-for-loop-container"></a>For 循环容器的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

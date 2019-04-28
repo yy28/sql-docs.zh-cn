@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835216"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>用于实例创建的 SQL Server 连接
   创建 Oracle CDC 实例时首先要执行的步骤之一是在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上创建 CDC 数据库。 将为 SQL Server CDC 启用该 CDC 数据库，并且此启用将要求作为 `sysadmin` 固定服务器角色的成员的登录名。  
@@ -33,18 +33,18 @@ ms.locfileid: "58375615"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**:如果选择此选项，则必须键入**登录名**并**密码**中的用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要连接到。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
   
  该登录名必须具有允许访问 MSXCDCDB 数据库的数据库角色。 建议该登录名还具有访问要使用的任何其他数据库的权限，否则，该用户将无法查看这些数据库中的数据。  
   
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
--   **连接超时**:键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
+-   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  
   
--   **执行超时值**:键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
+-   **执行超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC Windows 服务将等待命令执行，超过该时间后即超时。默认值为 **30**。  
   
--   **对连接进行加密**:选择**加密连接**Oracle CDC 服务和目标之间的通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用的加密的连接。  
+-   **加密连接**：选择“加密连接”将使用加密连接进行 Oracle CDC 服务和目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间的通信。  
   
 -   **高级**：单击“高级”并根据需要在“高级连接属性”对话框中键入任何附加的连接属性。  
   

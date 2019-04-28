@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField |Microsoft Docs
+title: SQLGetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657775"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序公开实现行描述符 (IRD) 仅特定于驱动程序的描述符字段。 在 IRD 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表，请参阅[SQLColAttribute](sqlcolattribute.md)。  

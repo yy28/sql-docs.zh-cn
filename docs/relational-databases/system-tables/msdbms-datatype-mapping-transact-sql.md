@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817025"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52750091"
 |**dest_scale**|**int**|定义目标数据类型，其中的值为 NULL 表示不使用小数位数，小数位数的值**为-1**表明使用源数据类型的小数位数。|  
 |**dest_length**|**bigint**|定义目标数据类型，其中的值为 NULL 表示不使用长度，长度的值**为-1**表明使用源数据类型的长度。|  
 |**dest_nullable**|**bit**|指示映射中的目标列是否允许 NULL 值，其中 NULL 值意味着此定义不是必需的。|  
-|**dest_createparams**|**int**|位图，用于说明适用于每种数据类型的长度、精度和小数位数组合，其中包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = 规模。<br /><br /> **0x4** = 长度。|  
+|**dest_createparams**|**int**|位图，用于说明适用于每种数据类型的长度、精度和小数位数组合，其中包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = 长度。|  
   
 ## <a name="see-also"></a>请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

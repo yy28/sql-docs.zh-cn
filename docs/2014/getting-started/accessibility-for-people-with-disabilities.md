@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842748"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>为残障人士提供的辅助功能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力于使所有用户更轻松地使用其产品和服务。 本主题提供了一些有关可使 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 系列产品更便于残障人士使用的功能、产品和服务的信息。  

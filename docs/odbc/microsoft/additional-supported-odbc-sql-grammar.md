@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658250"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>支持的其他 ODBC SQL 语法
 ODBC 驱动程序完全支持中核心应用程序和扩展 ODBC 2.5 语法最小值 ODBC 2.5 语法和以下子句。 可以通过跳转到显示其他信息[ALTER TABLE 语句](../../odbc/microsoft/alter-table-statement.md)，[相关名称](../../odbc/microsoft/correlation-names.md)，并[过程调用](../../odbc/microsoft/procedure-invocation.md)主题。  
@@ -40,7 +40,7 @@ ODBC 驱动程序完全支持中核心应用程序和扩展 ODBC 2.5 语法最�
   
 -   [日期算术](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet：日期、时间和时间戳文本](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet:日期、 时间和时间戳文本](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX 语句](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +56,7 @@ ODBC 驱动程序完全支持中核心应用程序和扩展 ODBC 2.5 语法最�
   
 -   IN (*值列表*) （核心）  
   
--   [Jet： 外部联接](../../odbc/microsoft/jet-outer-joins.md)（扩展）  
+-   [Jet:外部联接](../../odbc/microsoft/jet-outer-joins.md)（扩展）  
   
 -   SELECT 语句 （扩展） （包括 GROUP BY、 HAVING 和 UNION 子句）  
   

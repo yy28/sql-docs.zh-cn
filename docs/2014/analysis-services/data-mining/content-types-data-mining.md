@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723129"
 ---
 # <a name="content-types-data-mining"></a>内容类型（数据挖掘）
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，在模型中使用挖掘结构中的列时，可以定义该列的物理数据类型和逻辑内容类型。  
@@ -50,14 +50,14 @@ ms.locfileid: "48190083"
   
  离散属性列中的值不能意味着排序，即使这些值为数值也是如此。 此外，即使用于离散列的值为数值，也无法计算小数值。 电话区号即为数值离散数据的典型示例。  
   
- `Discrete`的所有数据挖掘数据类型支持内容类型。  
+ 所有的数据挖掘数据类型均支持 `Discrete` 内容类型。  
   
 ## <a name="continuous"></a>连续  
  “ ”意味着列包含的值表示某一允许中间值的范围中的数值数据。 与表示有限、可数数据的离散列不同，连续列表示可缩放度量，且数据可能包含无限数目的小数值。 温度列即为连续属性列的示例。  
   
  当一列中包含连续数值数据并且您知道这些数据应如何分布时，则有可能通过指定期望的值分布来提高分析的精确性。 您将在挖掘结构级别指定列分布。 因此，该设置将应用到基于该结构的所有模型。有关详细信息，请参阅[列分布（数据挖掘）](column-distributions-data-mining.md)。  
   
- `Continuous`以下数据类型支持内容类型： `Date`， `Double`，和`Long`。  
+ 以下数据类型支持 `Continuous` 内容类型：`Date`、`Double` 和 `Long`。  
   
 ## <a name="discretized"></a>离散化  
  “离散化” 是将一组连续数据的值放入存储桶以便得到有限数量的可能值的过程。 只能离散数值数据。  
@@ -69,21 +69,21 @@ ms.locfileid: "48190083"
  以下数据类型支持 `Discretized` 内容类型：`Date`、`Double`、`Long` 和 `Text`。  
   
 ## <a name="key"></a>Key  
- “key  ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 内容类型设置为`key`以指示列不应使用以进行分析，仅应用于跟踪记录。  
+ “key  ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 将内容类型设置为 `key` 可指示该列不应该用于分析，而仅应用于跟踪记录。  
   
- 嵌套表也有键，但嵌套表键的用法稍有不同。 内容类型设置为`key`如果列是你想要分析的属性的嵌套表中。 嵌套表键的值对于每个事例来说都必须唯一，但在整个事例集中可以重复。  
+ 嵌套表也有键，但嵌套表键的用法稍有不同。 如果某列是您需要分析的属性，则在嵌套表中将内容类型设置为 `key`。 嵌套表键的值对于每个事例来说都必须唯一，但在整个事例集中可以重复。  
   
  例如，如果分析的是客户购买的产品，则可以对于事例表中 **CustomerID** 列将内容类型设置为键，然后对于嵌套表中 **PurchasedProducts** 列再次将内容类型设置为键。  
   
 > [!NOTE]  
 >  只有在使用已被定义为 Analysis Services 数据源视图的外部数据源中的数据时，嵌套表才可用。  
   
- 以下数据类型支持此内容类型： `Date`， `Double`， `Long`，和`Text`。  
+ 以下数据类型支持此内容类型：`Date`、`Double`、`Long` 和 `Text`。  
   
 ## <a name="key-sequence"></a>键序列  
  “key sequence  ”内容类型只能在顺序分析和聚类分析模型中使用。 将内容类型设置为 `key sequence` 时，它指示列包含表示一个事件序列的值。 这些值是有序值，但不必按等差排列。  
   
- 以下数据类型支持此内容类型： `Double`， `Long`， `Text`，和`Date`。  
+ 以下数据类型支持此内容类型：`Double`、`Long`、`Text` 和 `Date`。  
   
 ## <a name="key-time"></a>键时间  
  “key time  ”内容类型只能在时序模型中使用。 将内容类型设置为 `key time` 时，它指示值是有序值并表示时间刻度。  
@@ -113,9 +113,9 @@ ms.locfileid: "48190083"
  除了前面列出的可通用于所有模型的内容类型以外，对于某些数据类型，还可以使用已分类列定义内容类型。 有关已分类列的详细信息，请参阅[已分类列（数据挖掘）](classified-columns-data-mining.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [内容类型&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [数据类型&#40;数据挖掘&#41;](data-types-data-mining.md)   
- [数据类型&#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+ [内容类型 (DMX)](/sql/dmx/content-types-dmx)   
+ [数据类型（数据挖掘）](data-types-data-mining.md)   
+ [数据类型 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [更改挖掘结构的属性](change-the-properties-of-a-mining-structure.md)   
  [挖掘结构列](mining-structure-columns.md)  
   

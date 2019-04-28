@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659169"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>返回类型  
  表。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  直方图可以生成统计信息列。 返回的直方图的列结构取决于与一起使用的列引用的类型**PredictHistogram**函数。  
   
 ## <a name="scalar-columns"></a>标量列  
@@ -92,7 +92,7 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [通用预测函数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

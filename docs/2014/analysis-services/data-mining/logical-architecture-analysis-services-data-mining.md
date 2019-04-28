@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722189"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
   数据挖掘过程涉及多个组件的交互。  
@@ -102,7 +102,7 @@ ms.locfileid: "50144862"
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   

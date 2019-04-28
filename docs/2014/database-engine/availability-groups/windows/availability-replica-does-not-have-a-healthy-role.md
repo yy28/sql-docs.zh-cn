@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815594"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>可用性副本不具有运行状况良好的角色
     
@@ -41,7 +41,7 @@ ms.locfileid: "53359359"
 ## <a name="possible-causes"></a>可能的原因  
  此可用性副本的角色是不正常。 副本既没有主副本角色，也没有辅助副本角色。  
   
-## <a name="possible-solution-informationstilltocome"></a>可能的解决方案：Information_still_to_come  
+## <a name="possible-solution-informationstilltocome"></a>可能的解决方法：Information_still_to_come  
   
 ## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

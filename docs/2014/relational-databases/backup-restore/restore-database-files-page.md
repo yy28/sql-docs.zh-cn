@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875000"
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
   使用 **“还原数据库”** 对话框的 **“文件”** 页可以管理数据库中您选择要还原的特定文件。  
@@ -31,7 +31,7 @@ ms.locfileid: "48093606"
  **将所有文件重新定位到文件夹**  
  重新定位还原的文件。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**数据文件的文件夹**|输入或搜索应将还原的数据文件重新定位到的数据文件的文件夹名称。|  
 |**日志文件的文件夹**|输入或搜索应将还原的日志文件文件重新定位到的日志文件的文件夹。|  

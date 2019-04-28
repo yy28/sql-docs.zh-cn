@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652895"
 ---
 # <a name="setup-dll-api-reference"></a>Setup DLL API 函数
 本部分介绍驱动程序安装程序 DLL API，包括两个函数的语法 (**ConfigDriver**并**ConfigDSN**)。 **ConfigDriver**并**ConfigDSN**可以是驱动程序 DLL 中或在单独的安装程序 DLL。  

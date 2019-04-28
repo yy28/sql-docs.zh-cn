@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828779"
 ---
 # <a name="custom-messages-for-logging"></a>日志记录的自定义消息
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组丰富的自定义事件，可以用来写入包和很多任务的日志项。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  
@@ -116,7 +116,7 @@ ms.locfileid: "58389495"
 |日志项|Description|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|指示任务开始运行 DTS 2000 包。|  
-|`ExecuteDTS80PackageTaskEnd`|指示任务已完成。<br /><br /> 注意：任务结束之后，DTS 2000 包可能继续运行。|  
+|`ExecuteDTS80PackageTaskEnd`|指示任务已完成。<br /><br /> 注意：DTS 2000 包可能继续将在任务结束后运行。|  
 |`ExecuteDTS80PackageTaskTaskInfo`|提供有关任务的说明性信息。|  
 |`ExecuteDTS80PackageTaskTaskResult`|报告该任务所运行的 DTS 2000 包的执行结果。|  
   

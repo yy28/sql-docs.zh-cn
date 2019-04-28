@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843563"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>为可用性组设置 SQL Server 托管备份到 Windows Azure
   本主题是有关为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的教程。  
@@ -23,11 +23,11 @@ ms.locfileid: "52416828"
 ## <a name="availability-group-configurations"></a>可用性组配置  
  对于可用性组数据库，无论副本是全部本地配置的、在 Windows Azure 上整个配置的还是在本地配置和一个或多个 Windows Azure 虚拟机之间混合实现的，都支持 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 不过，对于一个或多个实现，可能需要考虑以下方面：  
   
--   日志备份频率：日志备份的频率既是时间也是日志增长。 例如，日志每两小时备份一次，除非两小时内使用的日志空间为 5 MB 或更多。 这适用于所有实现，包括本地、云或混合实现。  
+-   日志备份频率：日志备份的频率是时间和日志增长。 例如，日志每两小时备份一次，除非两小时内使用的日志空间为 5 MB 或更多。 这适用于所有实现，包括本地、云或混合实现。  
   
--   网络带宽：这适用于副本位于不同物理位置的实现（例如混合云）或仅有云的配置中跨不同 Windows Azure 区域的实现。 如果副本设置为同步复制，网络带宽会影响副本的滞后时间，这又可能导致主副本的日志增长。 如果副本设置为同步复制，由于网络滞后时间，副本可能无法保持同步，这在故障转移到辅助副本时可能导致数据丢失。  
+-   网络带宽：这适用于副本位于何处在不同的物理位置，如在混合云中，或仅有云的配置中的不同 Windows Azure 区域之间的实现。 如果副本设置为同步复制，网络带宽会影响副本的滞后时间，这又可能导致主副本的日志增长。 如果副本设置为同步复制，由于网络滞后时间，副本可能无法保持同步，这在故障转移到辅助副本时可能导致数据丢失。  
   
-### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]为可用性数据库配置   
+### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>为可用性数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  **权限：**  
   
 -   要求的成员身份**db_backupoperator**数据库角色的**ALTER ANY CREDENTIAL**权限，并且`EXECUTE`权限**sp_delete_backuphistory**存储过程。  
@@ -68,13 +68,13 @@ ms.locfileid: "52416828"
 #### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]为可用性数据库启用和配置   
  本教程首先介绍为计算机 Node1 和 Node2 上的数据库 (AGTestDB) 启用和配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的步骤，然后介绍允许监视 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 运行状况的步骤。  
   
-1.  **创建 Windows Azure 存储帐户：** 备份存储在 Windows Azure Blob 存储服务中。 如果您没有 Windows Azure 存储帐户，必须首先创建一个。 有关详细信息，请参阅[创建 Windows Azure 存储帐户](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 记录下存储帐户的名称、访问密钥和存储帐户的 URL。 存储帐户名称和访问密钥用于创建 SQL 凭据。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在备份操作期间使用 SQL 凭据对存储帐户进行身份验证。  
+1.  **创建 Windows Azure 存储帐户：** 备份存储在 Windows Azure Blob 存储服务。 如果您没有 Windows Azure 存储帐户，必须首先创建一个。 有关详细信息，请参阅[创建 Windows Azure 存储帐户](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 记录下存储帐户的名称、访问密钥和存储帐户的 URL。 存储帐户名称和访问密钥用于创建 SQL 凭据。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在备份操作期间使用 SQL 凭据对存储帐户进行身份验证。  
   
-2.  **创建 SQL 凭据：** 使用存储帐户的名称作为标识并使用存储访问密码作为密码创建 SQL 凭据。  
+2.  **创建 SQL 凭据：** 创建 SQL 凭据使用的存储帐户的名称作为标识和存储访问密钥作为密码。  
   
-3.  **确保 SQL Server 代理服务已启动且正在运行：** 如果当前未运行，请启动 SQL Server 代理。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL 代理设置为自动运行以确保可正常进行备份操作。  
+3.  **确保 SQL Server 代理服务已启动且正在运行：** 如果 SQL Server 代理当前未运行，请启动它。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL 代理设置为自动运行以确保可正常进行备份操作。  
   
-4.  **确定保持期：** 确定所需的备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。 保持期决定了可恢复数据库的时段。  
+4.  **确定保持期：** 确定要用于备份文件保留期。 以天为单位指定保持期，范围可为 1 到 30。 保持期决定了可恢复数据库的时段。  
   
 5.  **创建证书或非对称密钥供备份期间加密最多使用：** 节点 1，第一个节点上创建证书，然后将其导出到一个文件[BACKUP CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... 在 Node 2 上，使用从 Node 1 导出的文件创建证书。 从文件创建证书的详细信息，请参阅中的示例[CREATE CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52416828"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。 备份将在首选备份副本上进行。  
   
-8.  **检查扩展的事件默认配置：** 通过在副本上运行以下 TRANSACT-SQL 语句，检查扩展事件配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用于安排从其进行备份。 这通常是数据库所属可用性组的首选备份副本设置。  
+8.  **查看扩展事件默认配置：** 通过在副本上运行以下 TRANSACT-SQL 语句，检查扩展事件配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用于安排从其进行备份。 这通常是数据库所属可用性组的首选备份副本设置。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -130,7 +130,7 @@ ms.locfileid: "52416828"
   
     2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 TRANSACT-SQL 语句：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +143,7 @@ ms.locfileid: "52416828"
   
 10. **查看 Windows Azure 存储帐户中的备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的数据库。 您也会在为数据库启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的 15 分钟内，看到数据库和日志备份。  
   
-11. **监视运行状况状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+11. **监视运行状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  

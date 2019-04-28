@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817127"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52785749"
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
-|**发布**|**sysname**|发布的名称。|  
+|**publication**|**sysname**|发布的名称。|  
 |**subscriber_id**|**smallint**|订阅服务器的 ID，仅限已知代理使用。 对于匿名代理程序，此列是保留的。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
@@ -50,7 +50,7 @@ ms.locfileid: "52785749"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|创建分发或合并代理时的日期时间。|  
-|**queue_id**|**sysname**|用于查找已排队的更新订阅操作所在队列的标识符。 对非排队订阅，该值为 NULL。 对于基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列的发布，该值为 GUID，它唯一标识用于订阅的队列。 对于基于 SQL Server 的队列发布，该列包含值**SQL**。<br /><br /> 注意：已不推荐也不再支持使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列。|  
+|**queue_id**|**sysname**|用于查找已排队的更新订阅操作所在队列的标识符。 对非排队订阅，该值为 NULL。 对于基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列的发布，该值为 GUID，它唯一标识用于订阅的队列。 对于基于 SQL Server 的队列发布，该列包含值**SQL**。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已被弃用，不再受支持。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|指示是否可以远程激活代理。<br /><br /> **0**指定不能远程激活代理。<br /><br /> **1**指定远程以及在指定的远程计算机上，将激活代理*offload_server*属性。|  
 |**offload_server**|**sysname**|用于远程代理激活的服务器网络名称。|  
@@ -64,7 +64,7 @@ ms.locfileid: "52785749"
 |**subscriber_password**|**nvarchar(524)**|当连接到订阅服务器时使用的密码的加密值。|  
 |**reset_partial_snapshot_progress**|**bit**|表示是否将放弃部分已下载的快照，以便可以再次启动整个快照进程。|  
 |**job_step_uid**|**uniqueidentifier**|启动此代理中步骤的 SQL Server 代理作业的唯一 ID。|  
-|**订阅流**|**tinyint**|设置每个分发代理允许的连接数，以将更改批并行应用于订阅服务器。 支持使用 1 到 64 之间的值。|  
+|**subscriptionstreams**|**tinyint**|设置每个分发代理允许的连接数，以将更改批并行应用于订阅服务器。 支持使用 1 到 64 之间的值。|  
 |**memory_optimized**|**bit**|1 指示订阅服务器可用于内存优化表。|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  

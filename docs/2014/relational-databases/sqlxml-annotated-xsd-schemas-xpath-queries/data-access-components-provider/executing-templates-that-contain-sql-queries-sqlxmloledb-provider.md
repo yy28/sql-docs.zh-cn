@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9405bbb1eb8737b38c1e9214713b5447f1917d7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856525"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>执行包含 SQL 查询的模板（SQLXMLOLEDB 访问接口）
   此示例演示如何使用特定于 SQLXMLOLEDB 提供程序的属性 ClientSideXML。 在此客户端 ADO 示例应用程序中，在服务器上执行包含一个 SQL 查询的 XML 模板。  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832869"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
   大容量插入任务为将大量的数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图提供了有效的方法。 例如，假定贵公司在大型主机系统上存储了数百万行的产品列表，但公司的电子商务系统却使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来填充网页。 您必须每晚都用大型机的主产品列表更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品表。 若要更新表，请以制表符分隔格式保存产品列表，并使用大容量插入任务将数据直接复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -85,7 +85,7 @@ ms.locfileid: "58391406"
   
  如果大容量插入任务使用平面文件连接管理器访问源文件，则该任务不使用在平面文件连接管理器中指定的格式。 相反，大容量插入任务将使用在格式化文件中指定的格式，或者使用该任务的 RowDelimite 和 ColumnDelimiter 属性的值。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

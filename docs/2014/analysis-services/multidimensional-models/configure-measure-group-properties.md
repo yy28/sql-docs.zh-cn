@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1a87d594eb2837671a7fdc45bc48827a075440e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700527"
 ---
 # <a name="configure-measure-group-properties"></a>配置度量值组属性
   通过使用度量值组属性，您可以定义度量值组的工作方式。  
@@ -26,7 +26,7 @@ ms.locfileid: "48058587"
 ## <a name="measure-group-properties"></a>度量值组属性  
  度量值组属性确定整个度量值组的行为，并设置度量值组内度量值的某些属性的默认行为。  
   
-|“属性”|定义|  
+|属性|定义|  
 |--------------|----------------|  
 |`AggregationPrefix`|适用于 ROLAP 存储。 将公共前缀分配给 SQL Server 中的索引视图，用于为与此度量值组关联的分区存储聚合。|  
 |`DataAggregation`|此属性是保留供将来使用，当前不起任何作用。 因此，建议你不要修改此设置。|  

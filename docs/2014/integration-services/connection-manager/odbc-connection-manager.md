@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833739"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
   ODBC 连接管理器使得包能够使用开放式数据库连接规范 (ODBC) 连接到多种数据库管理系统。  
@@ -38,7 +38,7 @@ ms.locfileid: "58388057"
 -   指示在运行时是否保留连接。  
   
 ## <a name="configuration-of-the-odbc-connection-manager"></a>配置 ODBC 连接管理器  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题之一：  
   

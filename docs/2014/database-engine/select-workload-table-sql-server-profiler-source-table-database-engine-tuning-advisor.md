@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2e277313ac2da5c8a92d69985344d3cc646dbf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843573"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-源表数据库引擎优化顾问-选择工作负荷表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]和 [!INCLUDE[ssDE](../includes/ssde-md.md)]优化顾问使用此对话框来选择表。  
@@ -44,8 +44,8 @@ ms.locfileid: "48161676"
  指定将从中读取跟踪的跟踪表的名称。  
   
 ## <a name="see-also"></a>请参阅  
- [将跟踪结果保存到表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [将跟踪结果保存到表 (SQL Server Profiler)](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [数据库引擎优化顾问](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

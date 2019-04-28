@@ -1,5 +1,5 @@
 ---
-title: 交叉验证报表中的度量值 |Microsoft 文档
+title: 交叉验证报表中的度量值 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 00a8d7d0e05d4fa4a714011e18ec1162eb7b68e7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678882"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉验证报表中的度量值
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  在交叉验证过程中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
+  在交叉验证过程中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将挖掘结构中的数据划分为多个交叉部分，然后对该结构和任何关联的挖掘模型反复进行测试。 基于此分析，它将为该结构和每个模型输出一组标准的准确性度量值。  
   
  该报表包含有关数据中折叠数以及每个折叠中的数据量的一些基本信息，还包含描述数据分布的一组一般性的指标。 通过比较各交叉部分的一般性的指标，您可以评估该结构或模型的可靠性。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34016725"
 ||**意味着**:<br />                      特定度量值的分区值的平均值。|  
 ||**标准偏差**:<br />                      一个模型的所有分区中相对于特定度量值平均值的偏差的平均值。<br /><br /> 对于交叉验证，此分数值越高，则意味着折叠之间的差异越大。|  
   
-## <a name="see-also"></a>另请参阅  
- [测试和验证 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [测试和验证（数据挖掘）](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658889"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  例如，如果您使用决策树查看器浏览模型，并单击包含按收入分组的客户的节点，则在工具提示中将显示以下节点属性：  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Age > = 69 和每年的收入 < 39221.41  
   
 > [!NOTE]  
 >  最小存储桶的最小值和最大存储桶的最大值为所观察到的最高值和最低值。 任何超出此观察范围的值都假定为属于最小存储桶和最大存储桶。  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   

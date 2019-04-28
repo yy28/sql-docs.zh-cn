@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35e464fb246134178a731d0ef92508cf09bf7dd9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711412"
 ---
 # <a name="format-a-reporting-services-script-file"></a>设置 Reporting Services 脚本文件的格式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本是用来定义 Reporting Services SOAP API 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 代码文件，该文件是针对基于 Web 服务描述语言 (WSDL) 构建的代理编写的。 脚本文件以 Unicode 或 UTF-8 文本文件形式存储，扩展名为 .rss。  

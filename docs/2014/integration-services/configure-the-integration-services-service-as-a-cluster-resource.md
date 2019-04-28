@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834621"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>将 Integration Services 服务配置为群集资源
   对于那些认为将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源所带来的优点大于缺点的客户，本节包含必要的配置说明。 但是， [!INCLUDE[msCoName](../includes/msconame-md.md)] 不建议将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务配置为群集资源。  

@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700083"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
   可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
@@ -67,7 +67,7 @@ ms.locfileid: "52510538"
 |Integer|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
 |Single|单精度浮点数，范围在 -3.40E +38 到 3.40E +38 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Single 数据类型和 OLE DB 中的 DBTYPE_R4 数据类型。|  
 |SmallInt|16 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int16 数据类型和 OLE DB 中的 DBTYPE_I2 数据类型。|  
-|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含的字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则在数据源视图中这些字段将转换为整数。|  
+|TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则会将其转换为数据源视图中的整数。|  
 |UnsignedBigInt|一个 64 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt64 数据类型和 OLE DB 中的 DBTYPE_UI8 数据类型。|  
 |UnsignedInt|32 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt32 数据类型和 OLE DB 中的 DBTYPE_UI4 数据类型。|  
 |UnsignedSmallInt|16 位无符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 UInt16 数据类型和 OLE DB 中的 DBTYPE_UI2 数据类型。|  

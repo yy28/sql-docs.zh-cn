@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831856"
 ---
 # <a name="execute-process-task"></a>执行进程任务
   执行进程任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包工作流中运行应用程序或批处理文件。 虽然可以使用执行进程任务打开任意标准应用程序（例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]），但通常还是使用它来运行针对数据源执行的业务应用程序或批处理文件。 例如，可以使用执行进程任务来展开一个压缩的文本文件。 然后，包可将该文本文件用作包中数据流的数据源。 再举一个例子，您可以使用执行进程任务运行生成日销售额报表的自定义 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 应用程序。 然后，可以将该报表附加到发送邮件任务，并将其转发给通讯组列表。  
@@ -35,7 +35,7 @@ ms.locfileid: "58392675"
 |`ExecuteProcessVariableRouting`|提供有关哪些变量被路由到可执行文件的输入和输出的信息。 将为 stdin（输入）、stdout（输出）和 stderr（错误输出）写入日志条目。|  
   
 ## <a name="configuration-of-the-execute-process-task"></a>执行进程任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

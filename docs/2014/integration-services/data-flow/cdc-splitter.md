@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828233"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
@@ -40,11 +40,11 @@ ms.locfileid: "58387738"
   
  组件的错误输出包括以下输出列：  
   
--   **错误代码**:设置为 1。  
+-   **错误代码**：设置为 1。  
   
--   **错误列**:导致错误 （针对转换错误） 的源列。  
+-   **错误列**：导致错误（针对转换错误）的源列。  
   
--   **错误行列**:导致了错误的行的输入的列。  
+-   **错误行列**：导致了该错误的行的输入列。  
   
 ## <a name="configuring-the-cdc-splitter"></a>配置 CDC 拆分器  
  没有用于 CDC 拆分器的可配置属性。  

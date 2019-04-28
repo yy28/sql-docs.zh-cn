@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655672"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定如何传播事务项目的更改
   通过使用事务复制，可以指定如何将数据更改从发布服务器传播到订阅服务器。 对于每个已发布表，可以指定下列四种方法之一，将每项操作（INSERT、UPDATE 或 DELETE）传播到订阅服务器：  

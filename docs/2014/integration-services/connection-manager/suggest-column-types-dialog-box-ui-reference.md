@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833062"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>“提供列类型建议”对话框 UI 参考
   可以使用 **“提供列类型建议”** 对话框，根据文件内容抽样指定平面文件连接管理器中的列的数据类型和长度。  

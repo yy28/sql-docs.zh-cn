@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812591"
 ---
 # <a name="compare-files"></a>比较文件
   可以对文件进行比较，确定文件是如何进展到其现有状态的。 例如，如果在签入特定的源文件版本后，在代码项目的内部版本中检测到一个缺陷，则可以将当前文件版本与以前的版本进行比较。 这有助于精确定位导致缺陷的代码。  

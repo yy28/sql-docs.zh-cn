@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827220"
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -77,7 +77,7 @@ ms.locfileid: "58387465"
   
  Excel 目标具有一个常规输入和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“Excel 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   

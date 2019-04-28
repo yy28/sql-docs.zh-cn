@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860821"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称。 否则，为 NULL。|  
 |**is_singleton**|**bit**|0 = SINGLETON 提示不存在。<br /><br /> 1 = 应用 SINGLETON 优化提示。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

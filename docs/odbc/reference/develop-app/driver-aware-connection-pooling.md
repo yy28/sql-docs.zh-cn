@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658251"
 ---
 # <a name="driver-aware-connection-pooling"></a>识别驱动程序的连接池
 驱动程序识别连接池是一项新功能的驱动程序管理器在 Windows 8 中。 驱动程序识别连接池允许驱动程序编写人员自定义连接池中其 ODBC 驱动程序的行为。  

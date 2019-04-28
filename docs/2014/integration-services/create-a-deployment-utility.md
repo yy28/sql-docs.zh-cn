@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831913"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  

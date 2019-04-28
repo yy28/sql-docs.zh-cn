@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659575"
 ---
 # <a name="recommendation-element-dta"></a>建议元素 (DTA)
   包含有关属于用户指定配置的假设索引的信息。  

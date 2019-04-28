@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721281"
 ---
 # <a name="generate-filters"></a>生成筛选器
   使用 **“生成筛选器”** 对话框，可以对合并发布中某一个表定义行筛选器；然后，复制会自动将筛选器扩展到通过外键关系相关的其他表。 例如，如果对 Customer 表定义筛选器，使其仅包含与法国客户有关的数据，则复制将扩展该筛选器，以便相关的 Orders 表和 Order Details 表仅包含与法国客户相关的信息。  

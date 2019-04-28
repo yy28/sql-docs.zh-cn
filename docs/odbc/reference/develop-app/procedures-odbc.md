@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37cf1cb1a6fe2193ec30ad3163950834351c3364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861537"
 ---
 # <a name="procedures-odbc"></a>过程 ODBC
 一个*过程*是数据源上存储的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。  

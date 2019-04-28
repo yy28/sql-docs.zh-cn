@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835449"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 实例数据类型
   Oracle CDC 实例支持大多数 Oracle 数据类型。 下面的部分介绍支持的数据类型和不支持的数据类型。  

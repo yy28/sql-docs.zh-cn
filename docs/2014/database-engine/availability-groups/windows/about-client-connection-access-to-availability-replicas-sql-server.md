@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789839"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
   在 AlwaysOn 可用性组中，您可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为辅助副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  

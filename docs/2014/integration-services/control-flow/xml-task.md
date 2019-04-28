@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829362"
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -67,7 +67,7 @@ ms.locfileid: "58374898"
   
  Diff 运算中包含一组用于自定义 XML 比较的选项。 下表对这些选项进行说明：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|该值用于指定是否比较注释节点。|  
 |**IgnoreNamespaces**|该值用于指定是否将元素的命名空间统一资源标识符 (URI) 与其属性名称相比较。 如果将此选项设置为 `true`，则名称部分相同但命名空间不同的两个元素将被视为相同元素。|  
@@ -115,7 +115,7 @@ ms.locfileid: "58374898"
 |`XMLOperation`|提供任务所执行的操作的相关信息|  
   
 ## <a name="configuration-of-the-xml-task"></a>XML 任务的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

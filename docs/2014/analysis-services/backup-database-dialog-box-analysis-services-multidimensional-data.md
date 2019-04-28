@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650455"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>“备份数据库”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“备份数据库”对话框，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库备份到备份文件中。  

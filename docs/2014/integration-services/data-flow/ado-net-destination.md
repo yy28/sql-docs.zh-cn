@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52dde5231a3b08bd92cf3b1d88ebfd56ce4d9c6f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832486"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -43,7 +43,7 @@ ms.locfileid: "58378115"
   
  ADO NET 目标具有一个常规输入和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 **“ADO NET 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   

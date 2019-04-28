@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822145"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1:创建知识库和域
   在本任务中，您将创建**供应商**知识库，并创建用于清理数据和匹配数据以便删除重复项的域。  
@@ -46,7 +46,7 @@ ms.locfileid: "56011098"
   
      ![创建域对话框](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "创建域对话框")  
   
-9. 重复执行前一步以便创建具有所有默认设置的以下域。 若要简化本教程，请设置**数据类型**的所有域作为**字符串**。 其他允许的数据类型是：Integer、Decimal 和 Date。 当**使用前导值**选项是所选 （默认值），所有同义词将都替换为输出中同义词组的前导值。 设置**规范化字符串**选项 （默认值） 在域值中删除任何特殊字符。 **输出格式设置为**选项允许您选择的域中的数据值输出时采用的格式设置。 选择**启用拼写检查器**（默认值） 可填充域时对所有的字符串值运行拼写检查器。 **语言**设置指定的语言版本**拼写检查器**你想要应用。 选择**禁用语法错误算法**可填充域而不检查是否存在语法错误的字符串值。 请参阅[创建一个域](https://msdn.microsoft.com/library/hh510401.aspx)更多详细信息的 MSDN library 中的主题。  
+9. 重复执行前一步以便创建具有所有默认设置的以下域。 若要简化本教程，请设置**数据类型**的所有域作为**字符串**。 其他允许的数据类型包括：Integer、 Decimal 和 Date。 当**使用前导值**选项是所选 （默认值），所有同义词将都替换为输出中同义词组的前导值。 设置**规范化字符串**选项 （默认值） 在域值中删除任何特殊字符。 **输出格式设置为**选项允许您选择的域中的数据值输出时采用的格式设置。 选择**启用拼写检查器**（默认值） 可填充域时对所有的字符串值运行拼写检查器。 **语言**设置指定的语言版本**拼写检查器**你想要应用。 选择**禁用语法错误算法**可填充域而不检查是否存在语法错误的字符串值。 请参阅[创建一个域](https://msdn.microsoft.com/library/hh510401.aspx)更多详细信息的 MSDN library 中的主题。  
   
     -   Supplier Name  
   

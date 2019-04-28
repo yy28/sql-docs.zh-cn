@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873304"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  

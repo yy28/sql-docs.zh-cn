@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832356"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](data-profiling-task.md)。  

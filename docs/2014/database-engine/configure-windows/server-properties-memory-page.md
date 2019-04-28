@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809401"
 ---
 # <a name="server-properties-memory-page"></a>服务器属性（“内存”页）
   使用此页可以查看或修改服务器内存选项。 当 **“最小服务器内存”** 设置为 0 而 **“最大服务器内存”** 设置为 2147483647 MB 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在任何给定的时间使用最合理的内存量，具体取决于操作系统以及其他应用程序当前使用的内存量。 当计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的负载更改时，分配的内存也会更改。 可以进一步将此动态内存分配限制为下面指定的最小值和最大值。  

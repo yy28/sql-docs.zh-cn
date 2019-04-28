@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9eb585f756c03388bfe5b280a75b85f57d35394d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722412"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
@@ -58,7 +58,7 @@ ms.locfileid: "50146682"
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](data-mining-queries.md)|  
 |获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予数据挖掘结构和模型的权限 (Analysis Services)](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对挖掘模型的钻取功能](drillthrough-on-mining-models.md)  
   
   

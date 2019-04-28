@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844168"
 ---
 # <a name="query-options-execution-advanced-page"></a>“查询选项”中的“执行”（“高级”页）
   可以通过 **SET** 语句使用各种选项。 使用此页，可以指定 **set** 选项以运行 Microsoft SQL Server 查询。 有关其中每个选项的详细信息，请参阅 SQL Server 联机丛书。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870945"
 ---
 # <a name="database-engine-error-severities"></a>数据库引擎错误严重性
   当错误是由 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]引起时，此错误的严重性可说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所遇到问题的类型。  

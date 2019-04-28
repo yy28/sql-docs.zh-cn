@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832585"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  
@@ -47,7 +47,7 @@ ms.locfileid: "58389415"
 ## <a name="configuration-of-the-data-mining-query-task"></a>配置数据挖掘查询任务  
  数据挖掘查询任务需要两个连接。 第一个连接是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器，连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或包含挖掘结构和挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 第二个连接是 OLE DB 连接管理器，连接到包含任务要向其写入的表的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) 和 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

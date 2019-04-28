@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812730"
 ---
 # <a name="change-source-control"></a>更改源代码管理
   创建和管理特定的连接和绑定（用于将本地保存的解决方案或项目链接到源代码管理数据库文件夹）。  
@@ -31,7 +31,7 @@ ms.locfileid: "48092537"
 >  也可以右键单击解决方案资源管理器中的项来访问此对话框。  
   
 ## <a name="options"></a>选项  
- **将绑定**  
+ **Bind**  
  使所选项与指定的源代码管理服务器位置相关联。 例如，您可以使用此按钮绑定到上一次已知的源代码管理服务器文件夹和数据库。 如果找不到最近使用的服务器文件夹或数据库，则将提示您指定另一个。  
   
  **“浏览”**  
@@ -55,7 +55,7 @@ ms.locfileid: "48092537"
  **提供程序**  
  显示您的源代码管理插件的名称。  
   
- **“刷新”**  
+ **刷新**  
  刷新在此对话框中列出的所有项目的连接信息。  
   
  **服务器绑定**  
@@ -73,7 +73,7 @@ ms.locfileid: "48092537"
  **“状态”**  
  标识项的绑定和连接状态。 可能的选项包括：  
   
-|**选项**|**Description**|  
+|**选项**|**说明**|  
 |----------------|---------------------|  
 |有效|项已正确绑定并连接到它所属的服务器文件夹。|  
 |“无效”|项没有正确绑定到它所属的文件夹或者与该文件夹断开了连接。 使用**添加到源代码管理**命令而不是**绑定**此项。|  

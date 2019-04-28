@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad05272b38a2f3dec72c4be160f48981e4fd43a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700310"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用维度向导创建维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度向导创建新维度。  

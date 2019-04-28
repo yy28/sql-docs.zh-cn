@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions |Microsoft Docs
+title: SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657826"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序接口遵从与三个定义的符合性级别用于 ODBC （ISO、 Open Group 和 ODBC 级别 2）。 **SQLGetFunctions**为支持所有 ODBC 函数的报表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679156"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 属性（“启动参数”选项卡）
   使用此对话框可以添加或删除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的启动参数。 启动参数可能会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生很大影响。 在添加或更改启动参数前，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的主题“使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动选项”。  
@@ -77,6 +77,6 @@ ms.locfileid: "52780111"
 -   如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为在域帐户下运行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用该域帐户。  
   
 ## <a name="books-online-references"></a>联机丛书参考  
- 有关其他信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动参数，请参阅"如何：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何：配置服务器启动选项（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器）”。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动参数的其他信息，请参阅配置服务器启动选项 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置管理器)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699841"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
   在以前的版本中，在嵌套 select 或子多维数据集中不允许使用计算成员。 但从 SQL Server 2008 开始，在连接属性中允许使用和启用计算成员。 此外，在 SQL Server 2008 R2 的嵌套 select 和子多维数据集中，还引入了针对计算成员的一个新行为。  
@@ -81,7 +81,7 @@ Where [Measures].[Reseller Sales Amount]
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
-|所有地域|(null)|(null)|(null)|(null)|(null)|  
+|All Geographies|(null)|(null)|(null)|(null)|(null)|  
 |United States|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
@@ -122,7 +122,7 @@ Where [Measures].[Reseller Sales Amount]
 ### <a name="remarks"></a>备注  
  在嵌套 select 或子多维数据集表达式中只允许全局或会话计算成员。 在对嵌套 select 或子多维数据集表达式执行计算时，如果在 MDX 表达式中具有查询计算成员，将引发错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [查询中的嵌套 select 语句](subselects-in-queries.md)   
  [支持的 XMLA 属性 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  

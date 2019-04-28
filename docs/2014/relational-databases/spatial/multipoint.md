@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 36c0268ef87eb4cd9996744f9ff0015bf499a9a2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659970"
 ---
 # <a name="multipoint"></a>MultiPoint
   `MultiPoint` 是零个点或更多个点的集合。 `MultiPoint` 实例的边界为空。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873333"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)
   可以使用与数据收集器一起提供的存储过程创建包含使用一般 T-SQL 查询收集器类型的收集项的自定义收集组。 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的查询编辑器来执行以下过程：  

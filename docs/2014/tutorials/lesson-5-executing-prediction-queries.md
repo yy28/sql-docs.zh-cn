@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822296"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 课：执行预测查询
   在本课程中，您将使用[SELECT FROM\<模型 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 语句以创建两个不同类型的预测基于决策树模型中创建[第 2 课：向关联挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 这些预测类型定义如下。  

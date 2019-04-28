@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655793"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>第 3 课：处理自行车购买者挖掘结构
   在本课程中，您将使用 INSERT INTO 语句和 vTargetMail 视图，从[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]示例数据库来处理挖掘结构和挖掘模型中创建[第 1 课：创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)和[第 2 课：向自行车购买者挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  

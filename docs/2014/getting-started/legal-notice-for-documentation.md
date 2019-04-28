@@ -17,11 +17,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837517"
 ---
 # <a name="legal-notice-for-documentation"></a>文档法律声明
   本文档按“原样”提供。 本文档中的信息和表达的观点（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 您应承担使用本文档所带来的风险。  

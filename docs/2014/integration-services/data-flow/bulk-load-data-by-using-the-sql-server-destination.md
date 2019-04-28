@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828139"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目标大容量加载数据
   若要添加并配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，则包必须已包含至少一个数据流任务和一个数据源。  
@@ -54,7 +54,7 @@ ms.locfileid: "58387405"
     > [!NOTE]  
     >  目标自动映射名称相同的列。  
   
-9. 单击**高级**并设置大容量加载选项：**保留标识**，**保留 null**，**表锁**， **Check 约束**，并且**激发触发器**。  
+9. 单击“高级”，并设置大容量加载选项：“保留标识”、“保留 NULL”、“表锁”、“检查约束”和“激发触发器”。  
   
      也可以指定要插入的第一个和最后一个输入行、在插入操作停止前可以出现的最大错误数以及插入据以排序的列。  
   

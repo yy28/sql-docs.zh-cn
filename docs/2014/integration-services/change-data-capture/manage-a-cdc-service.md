@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835739"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  

@@ -1,33 +1,23 @@
 ---
 title: 关键绩效指标 (Kpi) 多维模型中的 |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725723"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  

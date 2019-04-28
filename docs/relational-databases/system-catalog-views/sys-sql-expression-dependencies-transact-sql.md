@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856107"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,24 +70,24 @@ ms.locfileid: "47826178"
   
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
-|表|是*|用户帐户控制|  
-|“查看”|用户帐户控制|用户帐户控制|  
+|表|是*|是|  
+|“查看”|是|是|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|用户帐户控制|用户帐户控制|  
-|CLR 存储过程|否|用户帐户控制|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|用户帐户控制|用户帐户控制|  
-|CLR 用户定义函数|否|用户帐户控制|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
+|CLR 存储过程|否|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
+|CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|用户帐户控制|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|用户帐户控制|否|  
-|扩展存储过程|否|用户帐户控制|  
-|队列|否|用户帐户控制|  
-|同义词|否|用户帐户控制|  
-|类型（别名和 CLR 用户定义类型）|否|用户帐户控制|  
-|XML 架构集合|否|用户帐户控制|  
-|分区函数|否|用户帐户控制|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|扩展存储过程|否|是|  
+|队列|否|是|  
+|同义词|否|是|  
+|类型（别名和 CLR 用户定义类型）|否|是|  
+|XML 架构集合|否|是|  
+|分区函数|否|是|  
   
  \* 仅当它引用时，跟踪表作为引用实体[!INCLUDE[tsql](../../includes/tsql-md.md)]模块、 用户定义类型或 XML 架构集合定义中的计算的列、 CHECK 约束或 DEFAULT 约束。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47826178"
   
  *** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求对数据库具有 VIEW DEFINITION 权限，并对数据库的 sys.sql_expression_dependencies 具有 SELECT 权限。 默认情况下，SELECT 权限仅授予 db_owner 固定数据库角色的成员。 将 SELECT 和 VIEW DEFINITION 权限授予其他用户时，被授权者可以查看数据库中的所有依赖关系。  
   
 ## <a name="examples"></a>示例  

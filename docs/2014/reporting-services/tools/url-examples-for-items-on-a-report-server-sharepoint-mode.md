@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657434"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  

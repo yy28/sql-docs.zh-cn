@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842904"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>到 Windows Azure 的 SQL Server 托管的备份：互操作性和共存
   本主题介绍[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中若干功能的互操作性和共存情况。 这些功能包括：AlwaysOn 可用性组、 数据库镜像、 备份维护计划、 日志传送、 即席备份、 分离数据库和 Drop Database。  

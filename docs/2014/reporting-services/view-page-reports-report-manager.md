@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647663"
 ---
 # <a name="view-page-reports-report-manager"></a>报表的“视图”页（报表管理器）
   使用报表的“视图”页可以查看报表。 在报表管理器中最初打开报表时，报表采用 HTML 格式。 HTML 报表包括一个显示在报表顶部的报表工具栏，通过它可以导航报表页、在报表中搜索或将报表导出到不同格式。 下图显示了报表工具栏。  

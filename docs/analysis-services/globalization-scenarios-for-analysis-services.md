@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659692"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化方案
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658321"
   
 -   假定你已经在运行 Analysis Services 的 Windows 服务器上安装了语言包，日志文件将包含英语消息和本地化消息的混合消息。  
   
--   文档和工具（如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]）被翻译为这些语言：简体中文、 繁体中文、 法语、 德语、 意大利语、 日语、 朝鲜语、 葡萄牙语 （巴西）、 俄语和西班牙语。 区域性是在安装期间指定的。  
+-   文档和工具，如[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]和[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，翻译成这些语言：简体中文、 繁体中文、 法语、 德语、 意大利语、 日语、 朝鲜语、 葡萄牙语 （巴西）、 俄语和西班牙语。 区域性是在安装期间指定的。  
   
  对于多维模型，Analysis Services 能让你在整个对象层次结构中单独设置语言、排序规则和翻译。  对于表格模型，只能添加翻译：语言和排序规则由主机操作系统继承。  
   

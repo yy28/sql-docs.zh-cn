@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806748"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例如：使用证书 (Transact-SQL) 设置数据库镜像
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例如：设置数据库镜像使用证书 (Transact SQL)
   此示例演示了使用基于证书的身份验证创建数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
   
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  

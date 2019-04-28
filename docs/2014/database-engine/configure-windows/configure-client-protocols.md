@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 331e062c86a65ce2be8fca4d07620156bab0a5e5
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813629"
 ---
 # <a name="configure-client-protocols"></a>配置客户端协议
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置客户端应用程序使用的客户端协议。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持使用 TCP/IP 网络协议和 Named Pipes 协议的客户端通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。  

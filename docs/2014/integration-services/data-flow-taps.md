@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828652"
 ---
 # <a name="data-flow-taps"></a>数据分流
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 引入了一个新功能，可用来在运行时在包数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>列出所有数据分流点  
- 您也可以使用 catalog.execution_data_taps 视图列出所有数据分流点。 下面的示例提取了规范执行实例的数据分流点 (ID:54).  
+ 您也可以使用 catalog.execution_data_taps 视图列出所有数据分流点。 下面的示例提取一个规范执行实例（ID：54）的数据分流点。  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

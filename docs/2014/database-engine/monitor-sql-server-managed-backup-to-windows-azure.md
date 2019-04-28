@@ -11,24 +11,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844533"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>监视 SQL Server 托管备份到 Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]内置多种措施，可在备份过程中找出问题和错误，如有可能，再通过纠正措施纠正这些问题。  但是，有一些需要用户干预的情况。 本主题介绍可用于确定备份的整体运行状况和标识需解决的任何错误的工具。  
   
 ## <a name="overview-of-includesssmartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的内置调试概述  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还会考虑 Windows Azure 限制策略，并且具有管理多个数据库备份的机制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包含计划备份、备份的成功完成等。调试最详细，并且[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在内部用来确定问题和纠正措施（如果需要）。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还会考虑 Windows Azure 限制策略，并且具有管理多个数据库备份的机制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包含计划的备份，成功完成备份等。调试最详细，并在内部使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]来确定问题和根据需要更正它们。  
   
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>为[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置监视参数  
  **Smart_admin.sp_set_parameter**系统存储过程，可指定监视设置。 以下部分演练启用扩展事件以及针对错误和警告启用电子邮件通知的过程。  
   
  **Smart_admin.fn_get_parameter**函数可用于获取特定参数或所有已配置的参数的当前设置。 如果从未配置参数，则此函数不返回任何值。  
   
-1.  连接到[!INCLUDE[ssDE](../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

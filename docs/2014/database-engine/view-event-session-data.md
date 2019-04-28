@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842881"
 ---
 # <a name="view-event-session-data"></a>查看事件会话数据
   本主题介绍如何使用显示用户界面查看和分析扩展的事件数据：  
@@ -45,7 +45,7 @@ ms.locfileid: "49120294"
   
 -   对于 event_file 目标，请使用以下方法之一查看文件目标数据（.XEL 文件）：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用“文件”->“打开”。  
+    -   使用文件-> 中的打开[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
     -   将文件拖放到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中。  
   

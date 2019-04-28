@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830113"
 ---
 # <a name="sequence-container"></a>序列容器
   序列容器可定义作为包控制流子集的控制流。 序列容器将包分组到多个单独的控制流中，每个控制流包含一个或多个在整体包控制流中运行的任务和容器。  

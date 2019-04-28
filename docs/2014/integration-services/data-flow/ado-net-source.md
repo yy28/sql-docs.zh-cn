@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bc6c150f8c8f4f4e6f68b275a901ab8f1f5e8e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832478"
 ---
 # <a name="ado-net-source"></a>ADO NET 源
   ADO NET 源使用来自 .NET 提供程序的数据，并使这些数据对数据流可用。  
@@ -75,7 +75,7 @@ ms.locfileid: "58380235"
   
  ADO NET 源有一个常规输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

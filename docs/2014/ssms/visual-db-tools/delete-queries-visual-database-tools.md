@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670470"
 ---
 # <a name="delete-queries-visual-database-tools"></a>删除查询 (Visual Database Tools)
   可以通过将查询从项目中移除并从文件系统中永久删除来删除查询。 使用以下过程删除的查询不会发送到“回收站”，因此不能恢复。  

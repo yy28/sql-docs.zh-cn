@@ -11,11 +11,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678456"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
   使用  配置管理器的 **“SQL Server 属性”** 对话框中的“AlwaysOn 高可用性” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 选项卡，可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启用或禁用“AlwaysOn 可用性组”功能。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  

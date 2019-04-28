@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791757"
 ---
 # <a name="add-projects-to-source-control"></a>将项目添加到源代码管理
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 解决方案可以承载多个脚本项目。 向源代码管理中添加项目的方式取决于项目所属的解决方案是否接受源代码管理。 如果解决方案处于源代码管理下，则签入解决方案时会自动向源代码管理中添加项目。 有关签入解决方案的详细信息，请参阅[在文件中检查](../../2014/database-engine/check-in-files.md)。  

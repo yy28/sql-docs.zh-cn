@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 954159ba298b47c1a10a5e7baef1cff523dcc4b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706037"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>向挖掘结构中添加列
   在数据挖掘向导中定义了挖掘结构后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器在挖掘结构中添加列。 您可以添加用于定义挖掘结构的数据源视图中存在的任何列。  

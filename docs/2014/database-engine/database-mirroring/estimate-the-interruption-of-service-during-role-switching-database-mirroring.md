@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806839"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>估计在角色切换期间服务的中断（数据库镜像）
   在角色切换过程中，数据库镜像功能中断服务的时间取决于角色切换的类型和原因。  

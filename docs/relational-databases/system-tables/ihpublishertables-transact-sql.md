@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704148"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52802579"
 |**table_id**|**int**|标识已发布的表。|  
 |**publisher_id**|**smallint**|标识非 SQL Server 发布服务器在发布表。|  
 |**名称**|**sysname**|已发布的表的名称。|  
-|**所有者**|**sysname**|表的所由者。|  
+|**owner**|**sysname**|表的所由者。|  
   
 ## <a name="see-also"></a>请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648675"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：将迷你图添加到您的报表 （报表生成器）
   在本教程中，您将基于示例销售数据创建一个基本的表报表，然后向该表的单元中添加迷你图。  

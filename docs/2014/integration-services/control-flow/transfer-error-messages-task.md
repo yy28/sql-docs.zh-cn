@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830119"
 ---
 # <a name="transfer-error-messages-task"></a>传输错误消息任务
   传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义错误消息。 用户定义的消息是标识符等于或大于 50000 的消息。 标识符小于 50000 的消息是系统错误消息，无法使用传输错误消息任务来传输它。  
@@ -61,7 +61,7 @@ ms.locfileid: "58388365"
  若要新建错误消息，运行该包的用户必须是目标服务器上 sysadmin 的成员或 serveradmin 服务器角色。  
   
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>配置传输错误消息任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

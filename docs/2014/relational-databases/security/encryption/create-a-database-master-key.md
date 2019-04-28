@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: be6b5614258d5fc2941d3355c680138f59d873f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655309"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建数据库主密钥。  
@@ -26,7 +26,7 @@ ms.locfileid: "48170417"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   [使用 Transact-SQL 创建数据库主密钥](#TsqlProcedure)  
   

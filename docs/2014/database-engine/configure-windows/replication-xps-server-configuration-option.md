@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e9850652965b44e68d7996ce28386aef2803f546
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809660"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Replication XPs 服务器配置选项
   此选项仅供内部使用。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730450"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
   此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
@@ -108,12 +108,12 @@ ms.locfileid: "53363719"
 > [!NOTE]  
 >  请记住，为了允许与远程 Analysis Services 服务器的客户端连接，需取消阻止 Windows 防火墙中的端口。 有关详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 步骤 1:将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
+##  <a name="bkmk_copy"></a> 步骤 1：将 MSMDPUMP 文件复制到 Web 服务器上的文件夹  
  所创建的每个 HTTP 端点均必须有其自身的一组 MSMDPUMP 文件。 在此步骤中，从 Analysis Services 程序文件夹中将 MSMDPUMP 可执行文件、配置文件和资源文件复制到新的虚拟目录文件夹，你将在运行 IIS 的计算机的文件系统上创建此虚拟目录文件夹。  
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
   
-1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi:MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。  
+1.  复制以下文件，请参阅\<驱动器 >: SQL Server \Program Files\Microsoft\\< 实例\>\OLAP\bin\isapi:MSMDPUMP。DLL，MSMDPUMP。INI 和 Resources 文件夹。  
   
      ![文件资源管理器显示文件要复制](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "文件资源管理器显示文件复制")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53363719"
   
 3.  将先前复制的文件粘贴到这个新文件夹。  
   
-4.  确认 Web 服务器上的 \inetpub\wwwroot\OLAP 文件夹含有以下各项：MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。 文件夹结构应类似于此：  
+4.  验证在 web 服务器上的 \inetpub\wwwroot\OLAP 文件夹包含以下：MSMDPUMP。DLL，MSMDPUMP。INI 和 Resources 文件夹。 文件夹结构应类似于此：  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -129,7 +129,7 @@ ms.locfileid: "53363719"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 步骤 2:在 IIS 中创建应用程序池和虚拟目录  
+##  <a name="bkmk_appPool"></a> 步骤 2：在 IIS 中创建应用程序池和虚拟目录  
  接下来，创建应用程序池和抽取端点。  
   
 #### <a name="create-an-application-pool"></a>创建应用程序池  
@@ -165,7 +165,7 @@ ms.locfileid: "53363719"
 > [!NOTE]  
 >  这些说明的先前版本包括用于创建虚拟目录的步骤。 这些步骤已不需要。  
   
-##  <a name="bkmk_auth"></a> 步骤 3:配置 IIS 身份验证和添加扩展插件  
+##  <a name="bkmk_auth"></a> 步骤 3：配置 IIS 身份验证和添加扩展插件  
  在这一步中，进一步配置刚刚创建的 SSAS 虚拟目录。 您将指定一个身份验证方法，然后添加脚本映射。 Analysis Services 在 HTTP 上支持的身份验证方法包括：  
   
 -   Windows 身份验证（Kerberos 或 NTLM）  
@@ -182,7 +182,7 @@ ms.locfileid: "53363719"
   
  初始测试期间经常使用**匿名身份验证** ，因为其易于配置，有助于快速验证与 Analysis Services 的 HTTP 连接。 只需几步，即可分配唯一用户帐户作为标识，向该帐户授予 Analysis Services 中的权限，使用该帐户验证客户端应用程序中的数据访问，然后在测试完毕后禁用匿名身份验证。  
   
- 如果用户没有 Windows 用户帐户，也可在生产环境中使用匿名身份验证，但要遵守在主机系统上锁定权限的最佳做法，如本文中所注：[启用匿名身份验证 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
+ 如果你的用户不具有 Windows 用户帐户，但要遵守的主机系统上锁定权限的最佳做法，这篇文章中所述，您还可以在生产环境中使用匿名身份验证：[启用匿名身份验证 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
   
  启用匿名后，将允许任何连接到该 HTTP 端点的用户以匿名用户的身份进行连接。 你将无法审核单个用户连接，也不使用用户标识来从模型中选择数据。 如您所见，使用匿名会影响从模型设计到数据刷新和访问权限的所有情况。 但是，如果用户没有 Windows 用户登录名可用，则也许只能使用匿名帐户。  
   

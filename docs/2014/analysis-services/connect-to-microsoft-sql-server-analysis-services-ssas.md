@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 350251b6813027455f8e1e9b83dcf2508371df70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680082"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>连接到 Microsoft SQL Server Analysis Services (SSAS)
   此页**表导入向导**使您能够指定用于从 Microsoft SQL Server Analysis Services 多维数据集或者 SharePoint 承载的 PowerPivot 工作簿导入数据的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

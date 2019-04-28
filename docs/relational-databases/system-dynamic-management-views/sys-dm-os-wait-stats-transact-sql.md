@@ -22,11 +22,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690787"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -224,7 +224,7 @@ GO
 |EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **适用于**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]当前。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |EXTERNAL_SCRIPT_SHUTDOWN |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|EXTERNAL_WAIT_ON_LAUNCHER， |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|EXTERNAL_WAIT_ON_LAUNCHER, |TBD <br /> **适用范围**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_HADR_TRANSPORT_CONNECTION |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_LIST |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_STATE_AND_CONFIG |TBD <br /> **适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -1024,7 +1024,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
     
  [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812704"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>配置托管备份 (SQL Server Management Studio)
   **托管备份**对话框可以配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]实例的默认值。 本主题介绍如何使用此对话框来配置实例的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 默认设置以及执行此操作时必须考虑的选项。 为实例配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 时，该设置将应用于任何此后创建的新数据库。  

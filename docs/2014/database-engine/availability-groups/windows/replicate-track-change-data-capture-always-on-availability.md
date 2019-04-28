@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814053"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
@@ -191,9 +191,9 @@ ms.locfileid: "57579317"
   
 -   在使用合并复制并且发布数据库位于某一可用性组中时：  
   
-    -   推送订阅：发布服务器和分发服务器必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+    -   推送订阅：发布服务器和分发服务器必须至少运行[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
-    -   请求订阅：发布服务器、分发服务器和订阅服务器的数据库必须至少位于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
+    -   请求订阅：发布服务器、 分发服务器和订阅服务器数据库必须至少位于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 这是因为订阅服务器上的合并代理必须知道可用性组如何将故障转移到其辅助代理。  
   
 -   不支持将分发数据库放置在可用性组上。  
   
@@ -207,8 +207,8 @@ ms.locfileid: "57579317"
 ||**发布服务器**|**分发服务器** <sup>3</sup>|**订阅服务器**|  
 |**事务性**|是<sup>1</sup>|否|是<sup>2</sup>|  
 |**P2P**|否|否|否|  
-|**合并**|用户帐户控制|否|是<sup>2</sup>|  
-|**快照**|用户帐户控制|否|是<sup>2</sup>|  
+|**合并**|是|否|是<sup>2</sup>|  
+|**快照**|是|否|是<sup>2</sup>|  
   
  <sup>1</sup>不包括对双向和相互事务复制的支持。  
   

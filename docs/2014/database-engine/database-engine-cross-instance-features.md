@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807521"
 ---
 # <a name="database-engine-cross-instance-features"></a>数据库引擎跨实例功能
   本节介绍了与管理和监视服务器以及数据库实例相关的工具和任务。  

@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871570"
 ---
 # <a name="file-states"></a>文件状态
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，数据库文件的状态独立于数据库的状态。 文件始终处于一个特定状态，例如 ONLINE 或 OFFLINE。 若要查看文件的当前状态，请使用 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 或 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 目录视图。 如果数据库处于离线状态，则可以从 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 目录视图中查看文件的状态。  

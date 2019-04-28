@@ -16,19 +16,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856506"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>查看存储过程的定义
     
 ##  <a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用“对象资源管理器”菜单选项或在查询编辑器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]来查看存储过程的定义。 本主题介绍如何在对象资源管理器中查看过程的定义，以及如何在查询编辑器中使用系统存储过程、系统函数和对象目录视图来查看过程的定义。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **若要查看过程的定义使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -36,10 +36,10 @@ ms.locfileid: "48063847"
   
 ####  <a name="Permissions"></a> Permissions  
  系统存储过程：`sp_helptext`  
- 要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
+ 要求 **公共** 角色具有成员身份。 系统对象定义对所有用户可见。 用户对象的定义是对象所有者或具有以下权限之一的被授权者可见：ALTER、 控件、 TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
  系统函数：`OBJECT_DEFINITION`  
- 系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
+ 系统对象定义对所有用户可见。 用户对象的定义是对象所有者或具有以下权限之一的被授权者可见：ALTER、 控件、 TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
   
  对象目录视图：`sys.sql_modules`  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
@@ -56,9 +56,9 @@ ms.locfileid: "48063847"
   
 1.  在对象资源管理器中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，然后展开该实例。  
   
-2.  依次展开“数据库” 、过程所属的数据库以及“可编程性” 。  
+2.  展开 **“数据库”**、过程所属的数据库以及 **“可编程性”**。  
   
-3.  展开 **“存储过程”**，右键单击该过程，再单击 **“编写存储过程脚本为”**，然后单击下列选项之一： **“CREATE 到”**、 **“ALTER 到”** 或 **“DROP 和 CREATE 到”**。  
+3.  展开**存储过程**，右键单击该过程，然后单击**存储过程脚本为**，然后单击以下项之一：**创建到**，**更改为**，或**删除并创建到**。  
   
 4.  选择 **“新建查询编辑器窗口”**。 这将显示过程定义。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063847"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入以下使用的语句`sp_helptext`系统存储过程。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
+3.  在查询窗口中，输入以下使用 `sp_helptext` 系统存储过程的语句。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063847"
   
 2.  在工具栏上，单击 **“新建查询”**。  
   
-3.  在查询窗口中，输入下面的语句，使用`sys.sql_modules`目录视图。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
+3.  在查询窗口中，输入以下使用 `sys.sql_modules` 目录视图的语句。 更改数据库名称和存储过程名称以引用所需的数据库和存储过程。  
   
     ```  
     USE AdventureWorks2012;  

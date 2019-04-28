@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678665"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>有关 SQL Server 概述 Microsoft OLE DB 提供程序
 Microsoft OLE DB 提供程序的 SQL Server，SQLOLEDB，允许 ADO 访问 Microsoft SQL Server。
 
-**注意：** 不建议新的开发使用此驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序适用于 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 这将更新与今后的最新的服务器功能。
+**注意**：建议不要用于新的开发使用此驱动程序。 新的 OLE DB 访问接口称为[Microsoft OLE DB 驱动程序适用于 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 这将更新与今后的最新的服务器功能。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
  若要连接到此提供程序，将*提供商*参数[连接字符串](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
@@ -121,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   多个数据类型强制转换将导致类型不匹配。 例如，将强制转换**sql_variant**使用的子类型**GUID**到**DBTYPE_VARIANT**会导致的子类型**safearray**（字节）. 将此类型转换回**sql_variant**将导致新的子类型**数组**（字节）。
 
--   **记录集**包含的字段**sql_variant**数据可远程处理 （封送处理） 或持久化的才**sql_variant**包含特定的子类型。 尝试远程或将数据保存以下不受支持的子类型将导致运行时错误 （不受支持的转换） 从 Microsoft 持久性提供程序 (MSPersist): **VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**， **VT_UNKNOWN**， **VT_BSTR**，和**VT_DISPATCH。**
+-   **记录集**包含的字段**sql_variant**数据可远程处理 （封送处理） 或持久化的才**sql_variant**包含特定的子类型。 尝试远程或将数据保存以下不受支持的子类型将导致运行时错误 （不受支持的转换） 从 Microsoft 持久性提供程序 (MSPersist):**VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**， **VT_UNKNOWN**， **VT_BSTR**，和**VT_DISPATCH。**
 
 -   MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 中的 SQL Server 的 OLE DB 访问接口的一个名为的动态属性**允许本机变体**，其名称所示，允许开发人员访问**sql_variant**中相对于其本机窗体**DBTYPE_VARIANT**。 如果将此属性设置，以及**记录集**时打开客户端游标引擎 (**adUseClient**)、 **Recordset.Open**调用将失败。 如果设置此属性，然后**记录集**使用服务器游标打开 (**adUseServer**)，则**Recordset.Open**调用将成功，但访问类型的列**sql_variant**将产生错误。
 
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>动态属性
  Microsoft OLE DB 提供程序的 SQL Server 将插入到多个动态属性**属性**集合未打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)，[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。
 
- 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考引用 ADO 属性名称术语"说明"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称或请参阅[附录 c: OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 ADO 和 OLE DB 名称的每个动态属性的交叉索引。 OLE DB 程序员参考引用 ADO 属性名称术语"说明"。 在 OLE DB 程序员参考中，可以找到有关这些属性的详细信息。 搜索索引中的 OLE DB 属性名称，或参阅[附录 c:OLE DB 属性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>连接的动态属性
  下列属性被添加到**属性**集合的**连接**对象。
@@ -230,7 +230,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IrowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
 |IRowsetInfo|DBPROP_IRowsetInfo|
-|IrowsetLocate|DBPROP_IRowsestLocate|
+|IRowsetLocate|DBPROP_IRowsestLocate|
 |IRowsetResynch||
 |IRowsetScroll|DBPROP_IRowsetScroll|
 |IRowsetUpdate|DBPROP_IRowsetUpdate|
@@ -305,7 +305,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IrowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
 |IRowsetInfo|DBPROP_IRowsetInfo|
-|IrowsetLocate|DBPROP_IRowsetLocate|
+|IRowsetLocate|DBPROP_IRowsetLocate|
 |IRowsetResynch|DBPROP_IRowsetResynch|
 |IRowsetScroll|DBPROP_IRowsetScroll|
 |IRowsetUpdate|DBPROP_IRowsetUpdate|

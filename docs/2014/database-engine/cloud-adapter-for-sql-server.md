@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812631"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
   创建云适配器服务是 Windows Azure 虚拟机上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设置的一部分。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一个 Windows 防火墙规则以允许默认端口 11435 上的传入 TCP 连接。  
@@ -48,23 +48,23 @@ ms.locfileid: "52518261"
   
 -   **配置文件参数** -  
   
-    -   \<配置 >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<添加键 ="WebServicePort"value =""/ >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<添加键 ="WebServiceCertificate"value ="GUID"/ >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<添加键 ="ExposeExceptionDetails"value ="true"/ >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</configuration >  
+    -   \</configuration>  
   
 -   **证书详细信息**-证书具有以下值：  
   
-    -   使用者的"CN = CloudAdapter\<VMName >，DC = SQL Server，DC = Microsoft"  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   证书应仅启用服务器身份验证 EKU。  
   

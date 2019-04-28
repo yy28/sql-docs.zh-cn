@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686237"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47774665"
 |**plan_id**|**uniqueidentifier**|数据库维护计划 ID。|  
 |**plan_name**|**sysname**|数据库维护计划名称。|  
 |**date_created**|**datetime**|创建数据库维护计划的日期。|  
-|**所有者**|**sysname**|数据库维护计划的所有者。|  
+|**owner**|**sysname**|数据库维护计划的所有者。|  
 |**max_history_rows**|**int**|在系统表中，为记录数据库维护计划的历史所分配的最大行数。|  
 |**remote_history_server**|**sysname**|远程服务器的名称，可以将历史报表写入该远程服务器中。|  
 |**max_remote_history_rows**|**int**|远程服务器上的系统表中所分配的最大行数，可以将历史报表写入该远程服务器中。|  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832701"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 任务
 使用 **“Azure HDInsight Pig 任务”** 在 Azure HDInsight 群集上运行 Pig 脚本。
@@ -37,8 +37,8 @@ ms.locfileid: "58375885"
   
 5.  有两种方法可指定要执行的 Pig 脚本：
   
-    1.  **嵌入式脚本**:指定**脚本**字段键入内联脚本中执行**输入脚本**对话框。
+    1.  **内联脚本**：通过在“输入脚本”对话框中键入要执行的内联脚本来指定“脚本”字段。
   
-    2.  **脚本文件**:将脚本文件上传到 Azure Blob 存储，并指定**BlobName**字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
+    2.  **脚本文件**：将脚本文件上传到 Azure Blob 存储，并指定“BlobName”字段。 如果该 blob 不在默认存储帐户或与 HDInsight 群集关联的容器中，则必须指定 ExternalStorageAccountName 和 ExternalBlobContainer 字段。 对于外部 blob，请确保它已配置为可公开访问。  
   
      如果同时指定两者，则使用脚本文件并忽略内联脚本。

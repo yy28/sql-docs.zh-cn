@@ -1,5 +1,5 @@
 ---
-title: 使用维度向导创建维度 |Microsoft 文档
+title: 使用维度向导创建维度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866872"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用维度向导创建维度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "34023264"
     > [!NOTE]  
     >  完成维度向导后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
   
-## <a name="see-also"></a>另请参阅  
- [通过使用现有表创建维度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+## <a name="see-also"></a>请参阅  
+ [使用现有表创建维度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

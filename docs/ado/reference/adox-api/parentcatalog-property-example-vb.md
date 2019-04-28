@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a98d750a42692c10a083a1a953e81f274fca7dd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710395"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 属性示例 (VB)
 下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问特定于提供程序的属性，然后将一个表追加到一个目录。 该属性是**AutoIncrement**，Microsoft Jet 数据库中创建一个自动递增字段。  

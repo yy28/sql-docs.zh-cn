@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834019"
 ---
 # <a name="connect-components-with-paths"></a>使用路径连接组件
   在 **设计器中** “数据流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡的设计图面上构造包中的数据流。 如果数据流包含两个数据流组件，则可以将源或转换的输出连接到转换或目标的输入，以连接这两个组件。 两个数据流组件之间的连接器称为路径。  

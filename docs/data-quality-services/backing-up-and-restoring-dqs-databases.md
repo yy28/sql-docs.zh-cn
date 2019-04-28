@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 528da86b8276b805c6e9f52803a78bfeb7a2a5de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862289"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
 
@@ -76,7 +76,7 @@ ms.locfileid: "56020301"
   
 12. 按 F5 执行这些语句。 检查 **“结果”** 窗格以验证是否已成功执行这些语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理 DQS 数据库](../data-quality-services/manage-dqs-databases.md)  
   
   

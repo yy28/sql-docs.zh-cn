@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872086"
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
   初始化数据和日志文件以覆盖之前删除的文件遗留在磁盘上的任何现有数据。 执行以下其中一项操作时，应首先通过用零填充数据和日志文件来初始化这些文件：  

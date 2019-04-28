@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722509"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
   如果挖掘模型已配置为允许钻取到模型事例，在浏览此模型时，可以检索与用于创建此模型的事例的详细信息。 此外，如果基础挖掘结构已配置为允许钻取到结构事例，并且您具备相应的权限，则可返回挖掘结构的信息。 其中可以包括挖掘模型中未包含的列。  
@@ -58,6 +58,6 @@ ms.locfileid: "48062617"
 6.  若要将数据复制到剪贴板，请右键单击表中的任何行，并选择“全部复制”。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取查询&#40;数据挖掘&#41;](drillthrough-queries-data-mining.md)  
+ [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)  
   
   

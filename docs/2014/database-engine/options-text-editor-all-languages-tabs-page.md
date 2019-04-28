@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844188"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>选项（“文本编辑器”-“所有语言”-“选项卡”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有五个编辑器的跳格行为。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择“文本编辑器”文件夹，展开“所有语言”文件夹，再单击“制表符”。  
@@ -33,10 +33,10 @@ ms.locfileid: "51030134"
  **无**  
  选择此选项后，则按 Enter 键时所创建的新行不会缩进。 光标置于新行的第一列。  
   
- **块**  
+ **Block**  
  如果选择此选项，则按 Enter 时所创建新行的自动缩进距离与上一行的缩进距离相同。  
   
- **智能**  
+ **Smart**  
  选择此选项后，则按 Enter 键时所创建的新行会根据上下文调整位置。  
   
 ## <a name="tabs"></a>制表符  

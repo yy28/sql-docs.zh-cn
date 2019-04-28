@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814663"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>为 AlwaysOn 可用性组创建数据库镜像端点 (SQL Server PowerShell)
   本主题介绍如何使用 PowerShell 创建供 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 使用的数据库镜像端点。  
   
  **本主题内容**  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要创建数据库镜像端点，请使用：**[PowerShell](#PowerShellProcedure)  
+-   若要创建数据库镜像端点，请使用：[PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>开始之前  
   

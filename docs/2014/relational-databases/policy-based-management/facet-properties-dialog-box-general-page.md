@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704856"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>“方面属性”对话框，“常规”页
   此对话框用于查看基于策略的管理方面的属性。 每个方面可应用于一个或多个目标类型，例如，服务器、数据库或表。 可以使用此页来查看与此方面有关的目标类型。 方面属性是在创建方面时定义的，无法使用此页来更改这些属性。  

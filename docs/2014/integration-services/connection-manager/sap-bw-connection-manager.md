@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b3ee629cd7701d8b06351e8932daac57637b195e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833668"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 连接管理器
   SAP BW 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的连接管理器组件。 因此，SAP BW 连接管理器提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的源组件和目标组件所需的与 SAP Netweaver BW 版本 7 系统连接的能力。 （SAP BW 源组件和目标组件作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 包的一部分，是唯一采用 SAP BW 连接管理器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件。）  

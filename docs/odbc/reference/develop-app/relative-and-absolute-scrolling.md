@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861507"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相对和绝对滚动
 中的滚动选项的大多数**SQLFetchScroll**将光标置于相对于当前的位置或绝对位置。 **SQLFetchScroll**支持提取下一步，以前版本中，第一个和最后一个行集，作为也为相对提取 (提取行集*n*中当前行集的开始的行) 和绝对提取 （提取的行集起始在行*n*)。 如果*n*是负绝对提取中，行计数从结果集的末尾。 因此，绝对提取行-1 表示提取开头中的结果集的最后一行的行集。  
