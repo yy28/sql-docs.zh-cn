@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748379"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>报表操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“报表操作窗体编辑器”** 窗格，修改在 **“操作组织程序”** 窗格中选择的报表操作。  
@@ -35,9 +35,9 @@ ms.locfileid: "48196587"
   
 |ReplTest1|所选对象|  
 |-----------|---------------------|  
-|属性成员|从 **“目标对象”** 中的属性所处的级别中选择成员。<br /><br /> 注意：使用所选属性的其他用户层次结构将继承报表操作。|  
-|单元|**“目标对象”** 中的命名集处于选中状态。 选择 **“所有单元”** 可以选择多维数据集中的所有单元。|  
-|多维数据集|**“目标对象”** 中的多维数据集处于选中状态。 选择 CURRENTCUBE 可以使用当前多维数据集。<br /><br /> 注意：在可能会重命名多维数据集或将该操作复制到其他多维数据集时，使用 CURRENTCUBE 更为方便。 建议您使用 CURRENTCUBE 表示当前多维数据集。|  
+|属性成员|从 **“目标对象”** 中的属性所处的级别中选择成员。<br /><br /> 注意：使用所选的属性的其他用户层次结构将继承报表操作。|  
+|单元格|**“目标对象”** 中的命名集处于选中状态。 选择 **“所有单元”** 可以选择多维数据集中的所有单元。|  
+|多维数据集|**“目标对象”** 中的多维数据集处于选中状态。 选择 CURRENTCUBE 可以使用当前多维数据集。<br /><br /> 注意：使用 currentcube 更为方便提供多维数据集可能会重命名或将该操作复制到其他多维数据集的其他可移植性。 建议您使用 CURRENTCUBE 表示当前多维数据集。|  
 |维度成员|**“目标对象”** 中维度的成员处于选中状态。|  
 |层次结构|**“目标对象”** 中的层次结构处于选中状态。|  
 |层次结构成员|**“目标对象”** 中层次结构的成员处于选中状态。|  
@@ -45,7 +45,7 @@ ms.locfileid: "48196587"
 |级别成员|**“目标对象”** 中级别的成员处于选中状态。|  
   
  **目标对象**  
- 选择要与该操作关联的对象。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例只将应用于所选对象的那些操作返回到客户端。 可用对象列表受所选 **“目标类型”** 的约束。  
+ 选择要与该操作关联的对象。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例只将应用于所选对象的那些操作返回到客户端。 可用对象列表受所选 **“目标类型”** 的约束。  
   
  **条件(可选)**  
  输入描述可选条件（与“目标对象”一起使用）的多维表达式 (MDX) 表达式，以进一步限制该操作可用的时间。 表达式必须返回一个布尔值，如果为 True，指示该操作可用。  
@@ -104,7 +104,7 @@ ms.locfileid: "48196587"
 > [!NOTE]  
 >  此选项只是向客户端应用程序提供使用哪一个客户端应用程序执行某项操作的建议，并不直接控制对该操作的访问。 客户端应用程序将隐藏与其他客户端应用程序关联的所有操作。  
   
- **Description**  
+ **说明**  
  键入操作说明（可选）。  
   
  **Caption**  

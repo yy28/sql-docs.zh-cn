@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779856"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中废止的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
@@ -46,17 +46,17 @@ ms.locfileid: "54132609"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出了 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
-|类别|已不再使用的功能|替代功能|  
+|Category|已不再使用的功能|替代功能|  
 |--------------|--------------------------|-----------------|  
 |兼容级别|90 兼容性级别|必须将数据库的兼容性级别至少设置为 100。 当兼容性级别低于 100 的数据库升级到 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]时，在升级操作过程中数据库的兼容性级别将设置为 100。|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出了 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
-|类别|已不再使用的功能|替代功能|  
+|Category|已不再使用的功能|替代功能|  
 |--------------|--------------------------|-----------------|  
 |备份和还原|**备份 {数据库&#124;LOG} WITH PASSWORD**并**备份 {数据库&#124;LOG} WITH MEDIAPASSWORD**已不再使用。 **还原 {数据库&#124;日志} 与 [MEDIA] PASSWORD**继续不推荐使用。|None|  
-|备份和还原|**还原 {数据库&AMP;#124;日志}...WITH DBO_ONLY**|**还原 {数据库&AMP;#124;日志}......使用 RESTRICTED_USER**|  
+|备份和还原|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...使用 RESTRICTED_USER**|  
 |兼容级别|80 兼容级别|必须将数据库的兼容级别至少设置为 90。|  
 |配置选项|`sp_configure 'user instance timeout'` 和 `'user instances enabled'`|使用本地数据库功能。 有关详细信息，请参阅[SqlLocalDB 实用工具](../tools/sqllocaldb-utility.md)|  
 |连接协议|不再支持 VIA 协议。|请改用 TCP。|  

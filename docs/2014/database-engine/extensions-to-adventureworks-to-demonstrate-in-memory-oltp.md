@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779944"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 解决测试运行缓慢的问题  
  测试结果通常因硬件而异，也因测试运行中使用的并发级别而异。 结果与预期不符时要了解的几个方面有：  
   
--   并发事务数：对单个线程运行工作负荷时，通过 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
+-   并发事务数：当对单个线程运行工作负荷，性能提升与[!INCLUDE[hek_2](../includes/hek-2-md.md)]可能会小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
   
--   可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的核心数较少：这意味着系统中的并发级别较低，因为并发执行事务的数量不能超过可供 SQL 使用的核心数。  
+-   到可用的核心数较少[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:这意味着在系统中，将有的并发级别较低只能有任意多个并发执行事务有可用于 SQL 的核心。  
   
     -   症状：如果对基于磁盘的表运行工作负荷时 CPU 利用率较高，则意味着不存在很多争用，说明缺乏并发性。  
   
--   日志驱动器的速度：如果日志驱动器无法跟上系统中的事务吞吐量级别，则工作负荷会在日志 IO 方面遇到瓶颈。 虽然日志记录对于 [!INCLUDE[hek_2](../includes/hek-2-md.md)]更加高效，但是如果日志 IO 是瓶颈，则性能提升的可能性有限。  
+-   日志驱动器的速度：如果日志驱动器无法跟的事务吞吐量级别在系统中，工作负荷会在日志 IO 方面遇到瓶颈。 虽然日志记录对于 [!INCLUDE[hek_2](../includes/hek-2-md.md)]更加高效，但是如果日志 IO 是瓶颈，则性能提升的可能性有限。  
   
     -   症状：如果对内存优化表运行工作负荷时 CPU 利用率不接近于 100% 或是非常尖峰，则可能存在日志 IO 瓶颈。 这可以通过打开资源监视器查看日志驱动器的队列长度来进行确认。  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- 可以看到，这些表相当小：SalesOrderHeader_inmem 的大小大约为 7 MB，SalesOrderDetail_inmem 的大小大约为 15 MB。  
+ 正如您所看到的表是相当小：SalesOrderHeader_inmem 大约为 7 MB，和 SalesOrderDetail_inmem 大约为 15 MB 的大小。  
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   

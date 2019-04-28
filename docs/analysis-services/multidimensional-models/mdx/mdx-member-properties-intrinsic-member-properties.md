@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740244"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性-内部成员属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "53206876"
 ### <a name="example"></a>示例  
  以下示例显示返回内部属性的 MDX 查询。  
   
- **示例 1:在查询中使用上下文相关的内部属性**  
+ **示例 1：在查询中使用上下文相关的内部属性**  
   
  以下示例返回每个产品类别的父 ID、键和名称。 请注意属性如何公开为度量值。 这允许您在运行查询时在单元集中查看属性，而非在 SSMS 的“成员属性”对话框中查看。 您可能运行类似的查询以从部署的多维数据集检索成员元数据。  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **示例 2:非上下文相关的内部属性**  
+ **示例 2：非上下文相关的内部属性**  
   
  以下示例是非上下文相关的内部属性的完整列表。 在 SSMS 中运行查询后，单击各个成员可以在“成员属性”对话框中查看属性。  
   
