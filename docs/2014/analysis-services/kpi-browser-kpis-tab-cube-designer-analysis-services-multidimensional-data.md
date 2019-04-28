@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730619"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 浏览器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 浏览器”窗格查看和测试关键绩效指标 (KPI) 的结果。 在浏览之前，必须先将 KPI 部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
@@ -41,7 +41,7 @@ ms.locfileid: "48174597"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**等于**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
+|**Equal**|结果限制为在 **“筛选表达式”** 中定义的集合。|  
 |**不等于**|结果限制为排除在 **“筛选表达式”** 中所定义集合之外的成员。|  
 |**In**|结果限制为在 **“筛选表达式”** 中选择的命名集。|  
 |**不在**|结果限制为排除在 **“筛选表达式”** 中所选命名集之外的成员。|  

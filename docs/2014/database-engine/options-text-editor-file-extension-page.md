@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844158"
 ---
 # <a name="options-text-editor---file-extension-page"></a>选项（“文本编辑器”-“文件扩展名”页）
   使用“选项”对话框可以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何处理具有某些文件扩展名的所有文件。 对于所输入的每一个扩展名，可以选择一个编辑器。 因此，可以选择将在其中打开某种类型文档的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器。 若要打开文件扩展名选项，请在“工具”菜单上单击“选项”，展开“文本编辑器”，再单击“文件扩展名”。  

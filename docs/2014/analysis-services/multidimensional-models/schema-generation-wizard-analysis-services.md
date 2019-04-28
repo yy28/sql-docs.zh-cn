@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0ca7153fc8f36792c61f5c2720117dfd9996893
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736551"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>架构生成向导 (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 项目或数据库中定义 OLAP 对象时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持两种使用关系架构的方法。 通常，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中，将基于在数据源视图中构造的逻辑数据模型来定义 OLAP 对象。 此数据源视图将基于一个或多个关系数据源中的架构元素定义，如在数据源视图中自定义那样。  
@@ -40,7 +40,7 @@ ms.locfileid: "48219517"
   
 |主题|Description|  
 |-----------|-----------------|  
-|[使用架构生成向导&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|介绍如何为主题区域数据库和临时区域数据库生成架构。|  
+|[使用架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)|介绍如何为主题区域数据库和临时区域数据库生成架构。|  
 |[了解数据库架构](understanding-the-database-schemas.md)|介绍为主题区域数据库和临时区域数据库生成的架构。|  
 |[了解增量生成](understanding-incremental-generation.md)|介绍架构生成向导的增量式生成功能。|  
   

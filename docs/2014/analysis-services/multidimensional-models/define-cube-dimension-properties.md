@@ -15,27 +15,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd00dda1628cd3934d3658ff5b29d9beb5bdb0d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702078"
 ---
 # <a name="define-cube-dimension-properties"></a>定义多维数据集维度属性
   多维数据集维度是多维数据集中的数据库维度实例。 一个数据库维度可用于多个多维数据集，多个多维数据集维度可基于单个数据库维度。 下表说明了多维数据集维度的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`|控制 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的聚合设计器如何设计聚合。 此属性可以有下列值：<br /><br /> **完全**：多维数据集的每个聚合都必须包括所有成员。<br /><br /> **无**：多维数据集的任何聚合都不能包括所有成员。 这是默认值。<br /><br /> **无限制**：对聚合设计器不作限制。<br /><br /> **默认值**：与“无限制”功能相同。|  
+|`AllMemberAggregationUsage`|控制 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的聚合设计器如何设计聚合。 此属性可以有下列值：<br /><br /> **Full**：在多维数据集中的每个聚合都必须包括所有成员。<br /><br /> **无**：多维数据集的任何聚合都能不包括所有成员。 这是默认值。<br /><br /> **Unrestricted**：聚合设计器不作任何限制。<br /><br /> **Default**：与不受限制的相同的功能。|  
 |`Description`|为该级别提供一个说明性名称。|  
 |`DimensionID`|包含数据库维度的唯一标识符 (ID)。|  
-|`HierarchyUniqueNameStyle`|确定如何为包含在多维数据集维度中的层次结构生成唯一名称。 此属性可以有下列值：<br /><br /> `IncludeDimensionName`: 维度的名称是名称的作为层次结构的一部分。 这是默认值。<br /><br /> `ExcludeDimensionName`: 维度的名称不作为层次结构的名称的一部分。|  
+|`HierarchyUniqueNameStyle`|确定如何为包含在多维数据集维度中的层次结构生成唯一名称。 此属性可以有下列值：<br /><br /> `IncludeDimensionName`设置用户帐户 ：包括维度的名称，将其作为层次结构名称的一部分。 这是默认值。<br /><br /> `ExcludeDimensionName`设置用户帐户 ：维度的名称不作为层次结构名称的一部分。|  
 |`ID`|包含多维数据集维度的唯一标识符。|  
-|`MemberUniqueNameStyle`|确定如何为包含在多维数据集维度中的层次结构的成员生成唯一的名称。 此属性可以有下列值：<br /><br /> `Native`:[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]自动确定成员的唯一名称。 这是默认值。<br /><br /> `NamePath`:[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]生成每个级别的名称和成员标题组成的复合名称。|  
+|`MemberUniqueNameStyle`|确定如何为包含在多维数据集维度中的层次结构的成员生成唯一的名称。 此属性可以有下列值：<br /><br /> `Native`：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动确定成员的唯一名称。 这是默认值。<br /><br /> `NamePath`：[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将生成由每个级别的名称和成员的标题组成的复合名称。|  
 |`Name`|包含多维数据集维度的友好名称。 默认情况下，多维数据集维度与数据库维度同名，除非已经定义了另一个同名的多维数据集维度。|  
 |`Visible`|确定多维数据集维度是否是可见的。 默认值是 `True`。|  
   
 ## <a name="see-also"></a>请参阅  
- [维度&#40;Analysis Services-多维数据&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [维度（Analysis Services - 多维数据）](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

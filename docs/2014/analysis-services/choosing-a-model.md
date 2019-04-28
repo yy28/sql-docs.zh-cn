@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681094"
 ---
 # <a name="choosing-a-model"></a>选择模型
   **挖掘算法：** 数据挖掘*算法*是从数据创建模式的机制。 此算法可定义如何对数据进行计数、如何推断出关系以及如何存储模式。 算法的选择部分取决于要分析的数据的类型。 例如，一些算法仅适用于连续数字，而其他算法则适用于有限数目的非重复值。  

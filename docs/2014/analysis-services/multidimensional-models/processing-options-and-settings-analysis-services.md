@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736956"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>处理选项和设置 (Analysis Services)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中处理对象时，您可以选择处理选项以控制每个对象的处理类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果启用了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  
@@ -40,13 +40,13 @@ ms.locfileid: "48049497"
 ## <a name="processing-options"></a>处理选项  
  下表介绍了可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用的处理方法，并标识了支持每种方法的对象。  
   
-|“模式”|适用于|Description|  
+|模式|适用对象|Description|  
 |----------|----------------|-----------------|  
 |**处理默认值**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|检测数据库对象的处理状态，进行必要的处理，将未处理对象或部分处理的对象转变成为已完全处理的对象。 如果更改数据绑定，“处理默认值”将对受影响的对象执行“处理全部”。|  
 |**处理全部**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象及其包含的所有对象。 对已被处理的对象执行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 如果对对象进行了结构更改（例如，添加、删除或重命名属性层次结构），则需要此类处理。|  
 |**处理清除**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|删除指定对象和任何低级构成对象中的数据。 该数据被删除后将不会被重新加载。|  
 |**处理数据**|维度、多维数据集、度量值组和分区。|只处理数据，而不生成聚合或索引。 如果分区中有数据，则先删除数据，然后使用源数据重新填充分区。|  
-|**处理添加**|维度、度量值组和分区<br /><br /> 注意： 处理添加不是可用于维度中的处理[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，但你可以编写 XMLA 脚本执行此操作。|对于维度，添加新成员并更新维度属性标题和说明。<br /><br /> 对于度量值组和分区，添加新的可用事实数据并只处理相关分区。|  
+|**处理添加**|维度、度量值组和分区<br /><br /> 注意：处理添加中的维度处理不可[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，但你可以编写 XMLA 脚本执行此操作。|对于维度，添加新成员并更新维度属性标题和说明。<br /><br /> 对于度量值组和分区，添加新的可用事实数据并只处理相关分区。|  
 |**处理更新**|维度|强制重新读取数据并更新维度属性。 将删除对相关分区的灵活聚合和索引。|  
 |**处理索引**|多维数据集、维度、度量值组和分区|为所有已处理的分区创建或重新生成索引和聚合。 对于未处理的对象，此选项会生成错误。<br /><br /> 如果关闭“迟缓处理”，则需要使用此选项进行处理。|  
 |**处理结构**|多维数据集和挖掘结构|如果未处理多维数据集，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在必要时处理该多维数据集的所有维度。 然后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将只创建多维数据集定义。 如果将此选项应用于挖掘结构，则它将使用源数据填充挖掘结构。 此选项与“处理完全”选项之间的区别在于此选项不在挖掘模型自身中向下迭代处理。|  

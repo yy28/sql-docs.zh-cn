@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793220"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>“假设”应用场景（Excel 表分析工具）
   ![表分析工具中的哪些应用场景按钮](media/tat-whatif.gif "表分析工具中的什么如果应用场景按钮")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140357"
   
  **是否购买自行车 = 是**  
   
- **置信度： 公平**  
+ **置信度：公平**  
   
  由于此结果基于数据表中的现有行，因此这意味着，对于特定的客户，保持所有其他条件不变，而将该客户的年龄增加到 25 岁，那么该客户将有可能购买自行车。  
   

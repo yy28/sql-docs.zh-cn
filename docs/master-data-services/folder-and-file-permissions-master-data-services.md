@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696370"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "52760156"
   
 ###### <a name="program-files-default-permissions"></a>程序文件默认权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊权限|  
 |SYSTEM|特殊权限|  
@@ -49,7 +49,7 @@ ms.locfileid: "52760156"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、读取和执行、列出文件夹内容、读取、写入|  
 |管理员|修改、读取和执行、列出文件夹内容、读取、写入|  
@@ -57,7 +57,7 @@ ms.locfileid: "52760156"
   
 ###### <a name="webconfig-permissions"></a>Web.config 权限  
   
-|组或帐户名称|Permissions|  
+|组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、读取和执行、读取、写入|  
 |管理员|完全控制、修改、读取和执行、读取、写入|  
@@ -65,7 +65,7 @@ ms.locfileid: "52760156"
   
  有关 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 文件内容的详细信息，请参阅 [Web 配置参考 (Master Data Services)](../master-data-services/web-configuration-reference-master-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

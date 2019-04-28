@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735043"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>以二进制格式传输数据
 应用程序可以安全地使用相同的 DBMS 和硬件平台的两个数据源之间传输数据 （在使用通过指定 DBMS 的内部形式）。 为特定的数据，SQL 数据类型必须是源和目标数据源中相同。 C 数据类型为 SQL_C_BINARY。  

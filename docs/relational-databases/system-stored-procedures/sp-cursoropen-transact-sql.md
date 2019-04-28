@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724021"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  如同*scrollopt*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以重写请求*ccopt*值。  
   
- *行计数*  
+ *rowcount*  
  要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 *行计数*以不同的方式指定为输入值与返回值时的行为。  
   
 |作为输入值|作为返回值|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  快进游标已自动关闭。  
   
 > [!NOTE]  
->  如果成功执行了 sp_cursoropen 过程，则将发送 RPC 返回参数和具有 TDS 列格式信息（0xa0 和0xa1 消息）的结果集。 如果不成功，则发送一条或多条 TDS 错误消息。 在任一情况下，将不返回任何行数据并*完成*消息计数将为零。 如果您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本低于 7.0，将返回 0xa0、0xa1（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将返回 0x81（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。  
+>  如果成功执行了 sp_cursoropen 过程，RPC 返回参数和结果集具有 TDS 列格式信息 (0xa0 和 0xa1 消息) 发送。 如果不成功，则发送一条或多条 TDS 错误消息。 在任一情况下，将不返回任何行数据并*完成*消息计数将为零。 如果您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本低于 7.0，将返回 0xa0、0xa1（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将返回 0x81（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。  
   
 ## <a name="remarks"></a>备注  
   
@@ -207,12 +207,12 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param 参数  
  第五个参数之后的任何参数都将作为输入参数传递到语句计划。 第一个此类参数必须为以下格式的字符串：  
   
- *{局部变量名称数据类型}[，...n]。*  
+ *{ local variable name data type } [,...n]*  
   
  后续参数用于传递的值的替换*局部变量名*语句中。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_cursorfetch &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

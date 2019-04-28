@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793657"
 ---
 # <a name="user-interface-reference-analysis-services"></a>用户界面参考 (Analysis Services)
   本节包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的帮助主题。 也通过按 F1 键或在向导页、设计器和对话框中单击 **“帮助”** ，从用户界面中访问这些主题。  
   
 ## <a name="topic-list"></a>主题列表  
   
-|章节|包含|  
+|部分|包含|  
 |-------------|--------------|  
 |[Analysis Services 向导&#40;多维数据&#41;](analysis-services-wizards-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 向导的帮助主题（多维）。|  
 |[数据挖掘设计器和对话框](data-mining-designers-and-dialog-boxes.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 向导的帮助主题（数据挖掘）|  

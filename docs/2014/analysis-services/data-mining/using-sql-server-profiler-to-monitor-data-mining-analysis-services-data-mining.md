@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732565"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
   如果您具有必要的权限，可以使用 SQL Server Profiler 监视作为请求发送到 SQL Server Analysis Services 实例的数据挖掘活动。 数据挖掘活动可以包括处理模型或结构、预测查询或内容查询或者创建新模型或结构。  
   
- 使用 SQL Server Profiler`trace`来监视从多个客户端，包括发送请求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服务或数据挖掘外接对于 Excel，前提是这些活动均使用同一个 SQL Server 实例Analysis Services 中。 必须为要监视的每个 SQL Server Analysis Services 实例创建一个单独的跟踪。 有关跟踪的常规信息和如何使用 SQL Server Profiler，请参阅[使用 SQL Server Profiler 监视 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
+ SQL Server Profiler 使用 `trace` 监视多个客户端发来的请求，其中包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web 服务或 Excel 数据挖掘外接程序，但前提是这些活动均使用同一 SQL Server Analysis Services 实例。 必须为要监视的每个 SQL Server Analysis Services 实例创建一个单独的跟踪。 有关跟踪的常规信息和如何使用 SQL Server Profiler，请参阅[使用 SQL Server Profiler 监视 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
  有关要捕获的事件类型的具体指南，请参阅[为重播创建探查器跟踪 (Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48139899"
  通过查看跟踪日志中的命令语句，还可以看到由客户端发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的复杂语句（包括对系统存储过程的调用）的语法。 您可以借助该信息进行调试，或者也可以将有效语句用作创建新预测查询或模型的模板。 有关可以通过跟踪捕获的存储过程调用的一些示例，请参阅 [群集模型查询示例](clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [监视 Analysis Services 实例](../instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
  [使用 SQL Server 扩展事件&#40;XEvents&#41;若要监视 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

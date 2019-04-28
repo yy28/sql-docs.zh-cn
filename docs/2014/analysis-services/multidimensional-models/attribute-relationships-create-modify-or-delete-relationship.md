@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701285"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>创建、修改或删除属性关系
   可以使用 **中的维度设计器的** “属性关系” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡，创建、修改或删除一个维度中的属性之间的属性关系。  
@@ -61,6 +61,6 @@ ms.locfileid: "48202787"
 3.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
 ## <a name="see-also"></a>请参阅  
- [属性关系](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [中的维度设计器的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

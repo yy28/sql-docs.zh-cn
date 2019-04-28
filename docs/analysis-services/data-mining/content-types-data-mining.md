@@ -1,5 +1,5 @@
 ---
-title: 内容类型 （数据挖掘） |Microsoft 文档
+title: 内容类型 （数据挖掘） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725181"
 ---
 # <a name="content-types-data-mining"></a>内容类型（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34015734"
   
  当一列中包含连续数值数据并且您知道这些数据应如何分布时，则有可能通过指定期望的值分布来提高分析的精确性。 您将在挖掘结构级别指定列分布。 因此，该设置将应用到基于该结构的所有模型。有关详细信息，请参阅[列分布（数据挖掘）](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
- 以下数据类型支持 **Continuous** 内容类型： **Date**、 **Double**和 **Long**。  
+ **连续**以下数据类型支持内容类型：**日期**，**双**，和**长**。  
   
 ## <a name="discretized"></a>离散化  
  “离散化” 是将一组连续数据的值放入存储桶以便得到有限数量的可能值的过程。 只能离散数值数据。  
@@ -49,7 +49,7 @@ ms.locfileid: "34015734"
   
  您可以手动离散数据，以确保获取所需的存储桶，也可以使用 SQL Server Analysis Services 中提供的离散化方法。 某些算法自动执行离散化。 有关详细信息，请参阅 [更改挖掘模型中列的离散化](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- 以下数据类型支持 **Discretized** 内容类型： **Date**、 **Double**、 **Long**和 **Text**。  
+ **离散化**以下数据类型支持内容类型：**日期**，**双**，**长**，并且**文本**。  
   
 ## <a name="key"></a>Key  
  “key  ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 将内容类型设置为 **key** 可指示该列不应该用于分析，而仅应用于跟踪记录。  
@@ -61,17 +61,17 @@ ms.locfileid: "34015734"
 > [!NOTE]  
 >  只有在使用已被定义为 Analysis Services 数据源视图的外部数据源中的数据时，嵌套表才可用。  
   
- 以下数据类型支持此内容类型： **Date**、 **Double**、 **Long**和 **Text**。  
+ 以下数据类型支持此内容类型：**日期**，**双**，**长**，并且**文本**。  
   
 ## <a name="key-sequence"></a>键序列  
  “key sequence  ”内容类型只能在顺序分析和聚类分析模型中使用。 将内容类型设置为 **key sequence**时，它指示列包含表示一个事件序列的值。 这些值是有序值，但不必按等差排列。  
   
- 以下数据类型支持此内容类型： **Double**、 **Long**、 **Text**和 **Date**。  
+ 以下数据类型支持此内容类型：**双精度**，**长**，**文本**，并且**日期**。  
   
 ## <a name="key-time"></a>键时间  
  “key time  ”内容类型只能在时序模型中使用。 将内容类型设置为 **key time**时，它指示值是有序值并表示时间刻度。  
   
- 以下数据类型支持此内容类型： **Double**、 **Long**和 **Date**。  
+ 以下数据类型支持此内容类型：**双精度**，**长**，和**日期**。  
   
 ## <a name="table"></a>表  
  “table  ”内容类型指示列包含其中有一列或多列以及一行或多行的另一个数据表。 对于事例表中的任意特定行，此列可以包含多个值，所有的值均与父事例记录相关。 例如，如果主事例表包含一个客户列表，则可能有多个包含嵌套表的列，例如 **ProductsPurchased** 列和 **Hobbies** 列，嵌套表在 ProductsPurchased 列中列出了此客户过去购买的产品，而 Hobbies 列则列出了该客户的兴趣。  
@@ -95,10 +95,10 @@ ms.locfileid: "34015734"
 ## <a name="classified"></a>Classified  
  除了前面列出的可通用于所有模型的内容类型以外，对于某些数据类型，还可以使用已分类列定义内容类型。 有关已分类列的详细信息，请参阅[已分类列（数据挖掘）](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [内容类型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [数据类型 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [数据类型 & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+## <a name="see-also"></a>请参阅  
+ [内容类型 (DMX)](../../dmx/content-types-dmx.md)   
+ [数据类型（数据挖掘）](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [数据类型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [更改挖掘结构的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)  
   

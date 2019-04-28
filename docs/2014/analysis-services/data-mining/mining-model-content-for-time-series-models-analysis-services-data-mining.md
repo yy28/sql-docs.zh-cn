@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733581"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>时序模型的挖掘模型内容（Analysis Services - 数据挖掘）
   所有挖掘模型均使用相同的结构存储其内容。 该结构是根据数据挖掘内容架构行集而定义的。 但在该标准结构中，包含信息的节点以不同方式排列以表示各种类型的树。 本主题介绍在基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法的挖掘模型中这些节点的组织方式以及每个节点的含义。  
@@ -312,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> 了解 ARIMA 树  
  ARIMA 模型中的每个结构都对应一个“  周期”或“ 周期性结构”。 周期性结构指数据在整个数据序列中重复的模式。 该模式在统计限度内允许发生微小变动。 周期根据定型数据中使用的默认时间单位进行测量。 例如，如果定型数据提供日销售数据，则默认时间单位为一天，且所有周期性结构均定义为指定的天数。  
   
- 该算法检测到的每个周期均获取其各自的结构节点。 例如，如果正在分析日销售数据，则模型可能会检测到表示周的周期性结构。 在本例中，该算法将在完成的模型中创建两个周期性结构：一个用于默认的日周期，用 {1} 表示，另一个用于周，用 {7} 表示。  
+ 该算法检测到的每个周期均获取其各自的结构节点。 例如，如果正在分析日销售数据，则模型可能会检测到表示周的周期性结构。 在这种情况下，该算法将完成的模型中创建两个周期性结构： 一个用于默认的日周期，表示为{1}，另一个用于周，用{7}。  
   
  例如，以下查询将从挖掘模型返回所有 ARIMA 结构。  
   
@@ -336,7 +336,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Forecasting|T1'000 太平洋： Quantity |TA0000000b | 27 |ARIMA (1,0,3)|  
   
  也可使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)浏览以上结果。根据这些结果，可以一眼判断出哪些序列是完全线性的，哪些序列具有多个周期性结构，以及所发现的周期是多少。  
   
@@ -412,7 +412,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** 在嵌套表中，您可以对其进行查询以获取特定的项显示的公式。 节点分布表遵从与 XML 规则相同的层次结构。 亦即 ARIMA 序列的根节点 (NODE_TYPE = 27) 包含整个公式的截距值和周期，公式中可能包含多个周期，而该序列的子节点仅包含某个周期性结构或该周期性结构的子节点特有的信息。  
   
-|节点类型|Attribute|值类型|  
+|节点类型|特性|值类型|  
 |---------------|---------------|----------------|  
 |27（ARIMA 根）|截距<br /><br /> 周期|11|  
 |28（ARIMA 周期性结构）|周期<br /><br /> 自动回归阶数<br /><br /> 差分阶数<br /><br /> 移动平均值阶数|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

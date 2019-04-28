@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0319006e3ca6d69416746d802c20164da309b188
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714774"
 ---
 # <a name="filestore-properties"></a>FileStore 属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "53071974"
   
  **适用范围：** 多维和表格服务器模式  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  **MemoryLimit**  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   

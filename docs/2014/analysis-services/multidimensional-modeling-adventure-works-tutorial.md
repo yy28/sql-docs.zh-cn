@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703131"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
   欢迎使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程。 本教程通过在所有示例中使用虚构公司 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，说明如何使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 开发和部署 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 项目。  
@@ -51,13 +51,13 @@ ms.locfileid: "48049418"
   
 |课程|学完本课的估计时间|  
 |------------|--------------------------------|  
-|[第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分钟|  
+|[第 1 课：定义数据源视图中 Analysis Services 项目](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分钟|  
 |[第 2 课：定义和部署多维数据集](lesson-2-defining-and-deploying-a-cube.md)|30 分钟|  
-|[第 3 课：修改度量值、属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分钟|  
-|[第 4 课：定义高级属性和维度属性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分钟|  
+|[第 3 课：修改度量值、 属性和层次结构](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分钟|  
+|[第 4 课：定义高级的属性和维度属性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分钟|  
 |[第 5 课：定义维度和度量值组之间的关系](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分钟|  
 |[第 6 课：定义计算](lesson-6-defining-calculations.md)|45 分钟|  
-|[第 7 课： 定义关键绩效指标&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
+|[第 7 课：定义关键绩效指标&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分钟|  
 |[第 8 课：定义操作](lesson-8-defining-actions.md)|30 分钟|  
 |[第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)|30 分钟|  
 |[第 10 课：定义管理角色](lesson-10-defining-administrative-roles.md)|15 分钟|  
@@ -66,6 +66,6 @@ ms.locfileid: "48049418"
 >  您将在本教程中创建的多维数据集数据库是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型项目的简化版本，此项目是可在 codeplex 站点上下载的 Adventure Works 示例数据库的一部分。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
   
 ## <a name="next-step"></a>下一步  
- 要开始学习本教程，请转到第一课： [第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+ 若要开始本教程，请继续第一课：[第 1 课：定义数据源视图中 Analysis Services 项目](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

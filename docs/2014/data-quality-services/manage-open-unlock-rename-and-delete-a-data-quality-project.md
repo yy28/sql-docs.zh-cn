@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792348"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理（打开、解锁、重命名和删除）数据质量项目
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理数据质量项目，如打开、解锁、重命名和删除数据质量项目。  
@@ -59,9 +59,9 @@ ms.locfileid: "56020319"
   
 4.  数据质量项目打开时的状态就是上次在其中关闭该项目的活动的状态。 数据质量项目具有以下状态：  
   
-    -   有关**清理**活动，数据质量项目可具有以下状态：**清除-映射**，**清理-清理**，**清除-管理和查看结果**，并且**清除-导出**。  
+    -   对于“清理”活动，数据质量项目可具有以下状态：“清除 - 映射”、“清除 - 清理”、“清除 - 管理和查看结果”以及“清除 - 导出”。  
   
-    -   有关**匹配**活动，数据质量项目可具有以下状态：**匹配-映射**，**匹配-匹配**，**匹配-存活**，并且**匹配-导出**。  
+    -   对于“匹配”活动，数据质量项目可具有以下状态：“匹配 - 映射”、“匹配 - 匹配”、“匹配 - 存活”以及“匹配 - 导出”。  
   
 ##  <a name="Unlock"></a> 解锁数据质量项目  
  数据质量项目在创建时处于锁定状态，以防其他用户使用或修改。 在完成操作后，如果您希望其他用户使用您的数据质量项目，则必须对该数据质量项目解锁。 锁定的项目将显示一个锁符号。  

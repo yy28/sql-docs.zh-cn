@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (TRANSACT-SQL) |Microsoft Docs
+title: sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724492"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name =] N'*plan_guide_name*  
+ [ @name = ] N'*plan_guide_name*'  
  是计划指南的名称。 计划指南名称的作用域限于当前数据库。 *plan_guide_name*必须符合的规则[标识符](../../relational-databases/databases/database-identifiers.md)和不能以数字符号开头 （#）。 最大长度*plan_guide_name*为 124 个字符。  
   
- [ @plan_handle =] *plan_handle*  
+ [ @plan_handle = ] *plan_handle*  
  标识计划缓存中的批处理。 *plan_handle*是**varbinary(64)**。 *plan_handle*可从此[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)动态管理视图。  
   
- [ @statement_start_offset =] { *statement_start_offset* |NULL}]  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  标识指定的批处理内语句的起始位置*plan_handle*。 *statement_start_offset*是**int**，默认值为 NULL。  
   
  语句偏移量对应于中的 statement_start_offset 列[sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)动态管理视图。  
@@ -64,7 +64,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>为查询计划中的多个语句创建计划指南  
  与 sp_create_plan_guide 一样，sp_create_plan_guide_from_handle 也会从计划缓存中删除目标批处理或模块的查询计划。 这样做是为了确保所有用户都开始使用新的计划指南。 当为单个查询计划中的多个语句创建计划指南时，可以通过在显式事务中创建所有计划指南来推迟从缓存中删除该计划。 使用此方法可在完成事务以及为每个指定语句创建计划指南之前将计划保留在缓存中。 请参阅示例 B。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。 此外，对于使用 sp_create_plan_guide_from_handle 创建的每个计划指南，需要拥有单个权限。 若要创建类型为 OBJECT 的计划指南，需要对被引用对象拥有 ALTER 权限。 若要创建类型为 SQL 或 TEMPLATE 的计划指南，需要对当前数据库拥有 ALTER 权限。 若要确定将要创建的计划指南的类型，请运行以下查询：  
   
 ```  
@@ -127,7 +127,7 @@ GO
  [计划指南](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

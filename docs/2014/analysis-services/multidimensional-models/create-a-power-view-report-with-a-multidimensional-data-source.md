@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac916f4ae4c62eff9207ec0891e3f45d5e46bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726908"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>使用多维数据源创建 Power View 报表
   基于多维模型创建 Power View 报表与基于 PowerPivot 工作簿或 Analysis Services 表格模型创建报表没有什么不同。 从 SharePoint 库中的报表数据源连接文件 (.rsds) 创建 Power View 报表。 有关如何创建 .rsds 的详细信息，请参阅 [Create a Report Data Source](create-a-report-data-source.md)。  

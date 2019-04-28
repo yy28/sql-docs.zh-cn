@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722649"
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
   本节介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中托管的数据挖掘解决方案的体系结构。 本节中的主题介绍支持数据挖掘的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的逻辑和物理体系结构，并提供可用于与数据挖掘服务器通信以及通过本地或远程方式处理数据挖掘对象的客户端、访问接口和协议的相关信息。  
@@ -29,20 +29,20 @@ ms.locfileid: "48121047"
   
  [数据库存储位置](../multidimensional-models/database-storage-location.md)  
   
- [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  有关如何在您的商业智能解决方案中实施数据挖掘的详细信息，请参阅 MSDN Library 中的“解决方案指南”一节。  
   
 ## <a name="in-this-section"></a>本节内容  
- [逻辑体系结构&#40;Analysis Services-数据挖掘&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)  
   
- [物理体系结构&#40;Analysis Services-数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)  
   
  [数据挖掘服务和数据源](data-mining-services-and-data-sources.md)  
   
  [管理数据挖掘解决方案和对象](management-of-data-mining-solutions-and-objects.md)  
   
- [安全概述&#40;数据挖掘&#41;](security-overview-data-mining.md)  
+ [安全性概述（数据挖掘）](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型编程](../multidimensional-models/multidimensional-model-programming.md)   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788483"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>选择数据库页 （新建可用性组向导 / 添加数据库向导）
   本帮助主题说明 **“指定数据库”** 页的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -37,7 +37,7 @@ ms.locfileid: "48149577"
   
  在对数据库采取操作以满足先决条件的过程中，您可以在 **“选择数据库”** 页上离开该向导。 当您返回 **“选择数据库”** 页时，请单击 **“刷新”** 更新该网格。  
   
- **“刷新”**  
+ **刷新**  
  单击以刷新该网格。 对数据库采取操作以满足先决条件后，这样做非常有用。  
   
 ##  <a name="RelatedTasks"></a> 相关任务  

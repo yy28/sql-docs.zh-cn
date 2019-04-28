@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712774"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)
   本主题介绍数据格式属性、 特定于字段的提示和存储的非 xml 格式化文件中逐个字段数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`bcp`命令。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
@@ -44,7 +44,7 @@ ms.locfileid: "48214765"
   
 -   文件存储类型  
   
-     “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以导出到数据文件作为其数据库表类型 （本机格式）、 字符表示形式 （字符格式），或为其中支持隐式转换; 任何数据类型例如，复制`smallint`作为`int`。 用户定义的数据类型将按其基类型导出。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)。  
+     “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 `smallint` 形式复制 `int`。 用户定义的数据类型将按其基类型导出。 有关详细信息，请参阅 [使用 bcp 指定文件存储类型 (SQL Server)](specify-file-storage-type-by-using-bcp-sql-server.md)。  
   
 -   前缀长度  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48214765"
      对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”）以及每行的结尾（使用“行终止符”）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="FieldSpecificPrompts"></a> 字段特定的提示概述  
- 如果某个交互式`bcp`命令包含**中**或**出**选项，但不包含格式化文件开关 (**-f**) 或数据格式开关 （**-n**， **-c**， **-w**，或者 **-N**)，源或目标表中的每个列，该命令提示输入上述每个在打开的特性。 在每个提示`bcp`命令提供默认值基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表格列的数据类型。 接受所有提示的默认值生成的结果与在命令行指定本机格式 (**-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
+ 如果某个交互式`bcp`命令包含**中**或**出**选项，但不包含格式化文件开关 (**-f**) 或数据格式开关 （**-n**， **-c**， **-w**，或者 **-N**)，源或目标表中的每个列，该命令提示输入上述每个在打开的特性。 在每个提示中，`bcp` 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 (**-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
   
 ### <a name="example"></a>示例  
- 下面的示例使用`bcp`命令大容量导出数据`HumanResources.myTeam`表以交互方式为`myTeam.txt`文件。 在运行该示例之前，必须创建此表。 有关该表和如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](humanresources-myteam-sample-table-sql-server.md)。  
+ 以下示例使用 `bcp` 命令以交互方式将 `HumanResources.myTeam` 表中的数据大容量导出到 `myTeam.txt` 文件中。 在运行该示例之前，必须创建此表。 有关该表和如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](humanresources-myteam-sample-table-sql-server.md)。  
   
- 该命令指定既不使用格式化文件，也不是数据类型，从而导致`bcp`将提示输入数据格式信息。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  
+ 由于命令中既未指定格式化文件，也未指定数据类型，因此 `bcp` 将提示输入数据格式信息。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  依次针对每个表列显示以上提示（根据需要）。  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> 将逐个字段数据存储在非 XML 格式化文件中  
- 指定所有后的表的列，`bcp`命令将提示你选择生成非 XML 格式化文件的存储逐个字段信息只是提供 （请参阅前面的示例中）。 如果选择生成格式化文件，则可以随时从表中导出数据，也可以将结构类似的数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 指定所有的表列后，`bcp` 命令将提示选择生成非 XML 格式化文件，以存储刚刚得到的逐个字段信息（请参阅上述示例）。 如果选择生成格式化文件，则可以随时从表中导出数据，也可以将结构类似的数据导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
 >  可以使用格式化文件将数据文件中的数据大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中，也可以使用格式化文件从表中大容量导出数据，而无需重新指定格式。 有关详细信息，请参阅 [用来导入或导出数据的格式化文件 (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md)。  

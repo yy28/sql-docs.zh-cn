@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806689"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>使用内存优化表的数据库的段落还原
   使用内存优化表的数据库支持段落还原，但有一个限制（参见下文）。 有关段落备份和还原的详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) 和[段落还原 (SQL Server)](../backup-restore/piecemeal-restores-sql-server.md)。  

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732678"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>“决策树”选项卡（挖掘模型查看器）
   “决策树”窗格直观地显示在决策树模型中创建的决策规则。 决策规则描述通向某个特定结果的路径。  
   
- **有关详细信息：**[Microsoft 决策树算法](data-mining/microsoft-decision-trees-algorithm.md)、[使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **有关详细信息：**[Microsoft 决策树算法](data-mining/microsoft-decision-trees-algorithm.md)，[使用 Microsoft 树查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48194487"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 可以使用自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **放大**  
@@ -66,8 +66,8 @@ ms.locfileid: "48194487"
  向右或向左移动滑动条可调整树图形中显示的级别数。 若要查看模型中的所有节点，请将滑动条一直向右移动。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

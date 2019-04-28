@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715134"
 ---
 # <a name="create-a-cross-validation-report"></a>创建交叉验证报表
   本主题演练如何在数据挖掘设计器中使用“准确性图表”选项卡创建交叉验证报表。 有关交叉验证报表外观的常规信息，以及该报表包含的统计度量值，请参阅[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)。  

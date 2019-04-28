@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736745"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
   更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库名称的方式取决于如何连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 若要更改现有数据库的名称，则必须在联机模式下进行连接。 若要更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中要进行实例化的对象所在数据库的名称，必须以项目模式进行连接。  
@@ -53,8 +53,8 @@ ms.locfileid: "48168217"
   
 ## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)   
- [设置多维数据库属性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
- [配置 Analysis Services 项目属性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [部署 Analysis Services 项目&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [设置多维数据库属性 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)   
+ [配置 Analysis Services 项目属性 (SSDT)](configure-analysis-services-project-properties-ssdt.md)   
+ [部署 Analysis Services 项目 (SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

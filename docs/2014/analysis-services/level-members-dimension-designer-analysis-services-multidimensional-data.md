@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728154"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>级别和成员（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格浏览当前选择的层次结构和语言的成员。 若要选择要浏览的层次结构或语言，请使用 **“工具栏”** 窗格上的 **“层次结构”** 和 **“语言”** 选项。 有关工具栏窗格的详细信息，请参阅[工具栏&#40;浏览器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="writeback-mode"></a>写回模式  
- 如果启用了写回模式，此窗格的功能将会更改。 所选的维度必须启用写操作的 (即，`WriteEnabled`维度的属性必须设置为 true) 和维度必须部署到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，以便启用写回模式。  
+ 如果启用了写回模式，此窗格的功能将会更改。 所选的维度必须启用写操作（即维度的 `WriteEnabled` 属性必须设置为 True），并且维度必须部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以便启用写回模式。  
   
  若要启用写回模式，可以从“工具栏”窗格中选择“写回”，或者右键单击“级别和成员”窗格，从上下文菜单中选择“写回”。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48209698"
 > [!NOTE]  
 >  只有启用了写回模式，才会显示此选项。  
   
- **剪切**  
+ **Cut**  
  将所选成员复制到剪贴板，并且从层次结构中删除所选成员。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "48209698"
  **折叠成员**  
  折叠“树”中所选的成员。  
   
- **写回**  
+ **Writeback**  
  选择此项将启用写回模式。  
   
 ## <a name="see-also"></a>请参阅  

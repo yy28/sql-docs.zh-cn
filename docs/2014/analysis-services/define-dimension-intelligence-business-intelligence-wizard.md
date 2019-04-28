@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732113"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>定义维度智能（商业智能向导）
   可以使用 **“定义维度智能”** 页，将现有维度属性映射到特定维度类型的属性类型。  
@@ -30,7 +30,7 @@ ms.locfileid: "48194238"
  **维度属性**  
  显示指定维度类型的可用属性类型，并允许指定要对其应用属性类型的维度属性。  
   
- **包括**  
+ **Include**  
  选中此选项将包括维度中的相应属性类型。  
   
  **属性类型**  

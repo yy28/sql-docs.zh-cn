@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726990"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
   非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
@@ -59,16 +59,16 @@ ms.locfileid: "48197107"
   
  接下来，创建了表格或多维解决方案后，将其作为数据库部署至服务器。 服务器管理员可以通过定义具有对所讨论数据库的完全控制权限的角色来委托数据库管理任务。 此角色的成员可以处理或查询该数据库中的对象，以及创建其他角色以访问数据库自身内的多维数据集、维度和其他对象。 有关详细信息，请参阅[授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)。  
   
- **步骤 3：启用多维数据集或模型访问以查询和处理工作负载**  
+ **步骤 3：启用多维数据集或模型访问以查询和处理工作负荷**  
   
- 默认情况下，仅服务器和数据库管理员拥有对多维数据集或表格模型的访问权限。 将这些数据结构提供给你的组织中的其他人员需要映射 Windows 用户和组帐户添加到多维数据集或模型，以及使用指定的权限的其他角色分配`Read`特权。 有关详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
+ 默认情况下，仅服务器和数据库管理员拥有对多维数据集或表格模型的访问权限。 将这些数据结构提供给组织中的其他人员需要能够将 Windows 用户和组帐户映射到多维数据集或模型的其他角色分配以及可以指定 `Read` 特权的权限。 有关详细信息，请参阅[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
   
  处理任务可与其他管理功能隔离，允许服务器和数据库管理员将此任务委派给其他人员，或通过指定运行计划软件的服务帐户配置无人参与的处理。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
   
 > [!NOTE]  
 >  用户不需要对基础关系数据库（ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 从该数据库加载其数据）中的关系表的任何权限，也不需要对运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的计算机的任何文件级别权限。  
   
- **步骤 4（可选）：允许或拒绝访问内部多维数据集对象**  
+ **步骤 4 （可选）：允许或拒绝访问内部多维数据集对象**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为设置单个对象的权限提供了安全设置，其中包括数据模型中的维度成员和单元。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元格数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48197107"
   
 ## <a name="see-also"></a>请参阅  
  [授予服务器管理员权限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [角色和权限&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [角色和权限 (Analysis Services)](roles-and-permissions-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

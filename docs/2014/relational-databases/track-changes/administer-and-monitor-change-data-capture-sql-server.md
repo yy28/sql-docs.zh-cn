@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672138"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
   本主题介绍如何管理和监视变更数据捕获。  
@@ -75,7 +75,7 @@ ms.locfileid: "52788899"
  执行清除时，所有捕获实例的低水印会在单个事务中初次更新。 然后，它会尝试从更改表和 cdc.lsn_time_mapping 表中删除过时项。 可配置的阈值用于限制使用任何单个语句中所删除的项数。 对任何单个表执行删除操作失败并不会阻止对其他表尝试执行该操作。  
   
 ### <a name="cleanup-job-customization"></a>清除作业自定义  
- 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于`lsn`而不是时间，任何数量的策略可用于确定的最小`lsn`要保存更改表中。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同`lsn`来清除所有数据库的更改表，基础清除过程，还可以进行调用以清理在捕获实例级别。  
+ 对于清除作业，是否可以进行自定义取决于在确定要放弃哪些更改表项时所采用的策略。 传递的清除作业中唯一支持的策略是基于时间的策略。 在这种情况下，新低水印是通过从处理的最后一个事务的提交时间减去允许的保持期而计算得到的。 因为基础清除过程基于 `lsn` 而不是时间，所以可使用任何数量的策略来确定要保存在更改表中的最小 `lsn`。 只有某些过程是严格基于时间的。 例如，如果需要访问更改表的下游进程无法运行，则可以使用有关客户端的知识来提供故障保护。 此外，尽管默认策略应用相同的 `lsn` 来清除所有数据库的更改表，但还可以调用基础清除过程，以在捕获实例级别上进行清除。  
   
 ##  <a name="Monitor"></a> 监视变更数据捕获进程  
  通过监视变更数据捕获进程，可以确定更改是否正以合理的滞后时间正确写入更改表中。 监视还可以帮助您标识可能发生的任何错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括两个动态管理视图，用于帮助你监视变更数据捕获： [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 和 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)。  

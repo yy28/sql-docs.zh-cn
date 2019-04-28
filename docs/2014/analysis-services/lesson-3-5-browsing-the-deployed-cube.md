@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729335"
 ---
 # <a name="browsing-the-deployed-cube"></a>浏览已部署的多维数据集
   在下面的任务中，将浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
@@ -46,6 +46,6 @@ ms.locfileid: "48077788"
      ![按区域和产品系列的 Internet sales](../../2014/tutorials/media/l3-cube-browser-finish.gif "按区域和产品系列的 Internet 销售额")  
   
 ## <a name="next-lesson"></a>下一课  
- [第 4 课：定义高级属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [第 4 课：定义高级的属性和维度属性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

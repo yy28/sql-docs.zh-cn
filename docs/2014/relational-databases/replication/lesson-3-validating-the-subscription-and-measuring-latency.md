@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721048"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>第 3 课：验证订阅和测量滞后时间
   在本课中，将使用跟踪令牌验证将更改复制到订阅服务器并确定滞后时间，即，发布服务器上所做的更改出现在订阅服务器中所需的时间。 本课程要求已完成上一课，[第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "54123968"
   
 4.  单击 **“插入跟踪器”**。  
   
-5.  在以下各列中查看跟踪令牌的占用时间：**发布服务器到分发服务器**，**分发服务器到订阅服务器**，**总滞后时间**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+5.  以下各列中的跟踪令牌的视图所用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
 ## <a name="next-steps"></a>后续步骤  
  在本课中，您成功地使用跟踪令牌验证了正在将数据更改从发布服务器复制到订阅服务器。 您还可以在发布服务器的 **Product** 表中插入、更新或删除数据，并且可以在完成复制后，查询订阅服务器中的 **Product** 表以查看这些更改。  

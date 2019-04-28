@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722389"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
   *功能选择*是一个术语，通常用于在数据挖掘中描述的工具和技术可用于输入减少到可控大小以便处理和分析。 功能选择意味着不仅*降低基数*，这意味着施加任意或预定义的截断，在生成模型，但还属性，这意味着的选择时可以考虑的属性的数目分析人员或建模工具主动选择或放弃属性基于对分析的可用性。  

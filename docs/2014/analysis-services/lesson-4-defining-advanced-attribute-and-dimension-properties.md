@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 定义高级属性和维度属性 |Microsoft Docs
+title: 第 4 课：定义高级属性和维度属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728736"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级的属性和维度属性
   在本课中，将了解如何使用特性、特性层次结构和维度属性的某些高级属性。  
   
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "48184067"
   
  本课程包含以下任务：  
   
- [使用 Analysis Services 教程项目的修改版本](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [使用 Analysis Services Tutorial 项目的修改版本](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  在该任务中，您将打开、检查和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程项目的修改版本，该项目包含多个度量值组和其他维度。  
   
  [定义父子层次结构中的父特性属性](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "48184067"
  在该任务中，将了解如何基于辅助属性对维度成员排序，以获得所需的排序顺序。  
   
  [指定用户定义层次结构中属性之间的属性关系](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- 在该任务中，将了解如何定义属性的成员属性和指定它们之间的聚合关系。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[用户层次结构属性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
+ 在该任务中，将了解如何定义属性的成员属性和指定它们之间的聚合关系。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [用户层次结构属性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
  [定义未知成员和 Null 处理属性](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  在此任务中，将配置 UnknownMember 和 UnknownMemberName 属性，以处理由 null 维度成员所导致的错误情况。  

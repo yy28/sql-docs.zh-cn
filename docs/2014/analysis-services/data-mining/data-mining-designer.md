@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 010b9b18be2264add14bc5242ced6a57ed8fdcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722857"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
   数据挖掘设计器是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用挖掘模型的主要环境。 您可以通过选择一个现有挖掘结构或使用数据挖掘向导创建一个新的挖掘结构和挖掘模型来访问该设计器。 可以使用数据挖掘设计器执行以下任务：  
@@ -40,7 +40,7 @@ ms.locfileid: "48117383"
 ## <a name="mining-structure-tab"></a>“挖掘结构”选项卡  
  使用 **“挖掘结构”** 选项卡添加列和修改现有挖掘结构的属性。 下列任务和主题提供有关使用挖掘结构的详细信息：  
   
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)  
   
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48117383"
   
  有关使用挖掘模型的详细信息，请参阅下列主题：  
   
- [挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)  
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)  
   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48117383"
   
  有关测试和验证挖掘模型的详细信息，请参阅下列主题：  
   
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
- [测试和验证任务和操作指南&#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>“挖掘模型预测”选项卡  
  “挖掘模型预测”选项卡包含预测查询生成器，可以使用此生成器创建数据挖掘扩展插件 (DMX) 预测查询。 该选项卡包含用于指定挖掘模型和输入表、将挖掘模型中的列映射到输入表中的列、向查询中添加函数以及为各个列指定条件的工具。  

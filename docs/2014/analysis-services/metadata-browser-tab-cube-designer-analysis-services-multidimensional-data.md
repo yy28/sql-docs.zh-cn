@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727943"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器中，可以使用 **“浏览器”** 选项卡上的 **“元数据”** 窗格浏览多维数据集的结构，以查看相关度量值，以及查看和创建维度。 您可以深化到层次结构中，查看可用度量值和 KPI 的列表，并复制对象的完全限定名称。  
@@ -39,16 +39,16 @@ ms.locfileid: "48171147"
   
  当使用表格模型时，函数列表将包含 MDX 函数和 DAX 函数。 否则，该列表仅包含 MDX。 多维模型无法直接使用 DAX 函数，尽管可以在对象定义中包括 DAX 表达式。  
   
- 提示：包含 DAX 函数的文件夹以全大写字母列出。 所有其他文件夹包含的都是 MDX 函数。 例如，有两个用于统计函数的文件夹： **STATISTICAL** 包含相关的 DAX 函数。  
+ 提示：所有字母都大写中列出了包含 DAX 函数的文件夹。 所有其他文件夹包含的都是 MDX 函数。 例如，有两个用于统计函数文件夹：**统计**包含相关的 DAX 函数。  
   
 ## <a name="context-menu"></a>上下文菜单  
  右键单击“元数据”窗格中显示的元素，可以从所显示的上下文菜单中访问以下选项：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**将添加到查询**|单击此选项可以将选定的对象添加到查询生成区域的下部窗格中。|  
-|**添加到筛选器**|单击此选项可以将所选的维度、属性、层次结构或级别添加至 **“浏览器”** 的筛选区域。<br /><br /> 注意：只有在选择了维度、属性、层次结构或级别时，才会启用此选项。|  
-|**复制**|单击此选项可以将所选项添加到剪贴板。<br /><br /> 注意：此选项复制对象的完全限定名称。|  
+|**添加到筛选器**|单击此选项可以将所选的维度、属性、层次结构或级别添加至 **“浏览器”** 的筛选区域。<br /><br /> 注意：仅当维度、 属性、 层次结构中，启用此选项，或选择级别。|  
+|**复制**|单击此选项可以将所选项添加到剪贴板。<br /><br /> 注意：此选项复制对象的完全限定的名称。|  
   
 ## <a name="see-also"></a>请参阅  
  [工具栏&#40;浏览器选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa4a536a142ae63dd2b028d983f083609ea2e717
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732923"
 ---
 # <a name="processing-data-mining-objects"></a>处理数据挖掘对象
   数据挖掘对象在处理之前只是一个空容器。 “处理 ”数据挖掘模型也称为“定型 ”。  
   
- **处理挖掘结构：** 挖掘结构从列绑定和使用情况元数据定义的外部数据源获取数据，并读取此数据。 挖掘结构将完全读取此数据，然后对这些数据进行分析以提取各种统计信息。 Analysis Services 在本地缓存中存储数据的简洁表示形式，此形式适合于由数据挖掘算法进行分析。 处理模型之后，您可以保留或删除此缓存。 默认情况下，将存储此缓存。 有关详细信息，请参阅 [Process a Mining Structure](process-a-mining-structure.md)。  
+ **处理挖掘结构：** 挖掘结构定义的列绑定和使用情况元数据从外部数据源获取数据和读取数据。 挖掘结构将完全读取此数据，然后对这些数据进行分析以提取各种统计信息。 Analysis Services 在本地缓存中存储数据的简洁表示形式，此形式适合于由数据挖掘算法进行分析。 处理模型之后，您可以保留或删除此缓存。 默认情况下，将存储此缓存。 有关详细信息，请参阅 [Process a Mining Structure](process-a-mining-structure.md)。  
   
- **处理挖掘模型：** 挖掘模型在处理之前为空，仅包含定义。 若要处理挖掘模型，必须已经处理了该模型所基于的挖掘结构。 挖掘模型从挖掘结构缓存获取数据，应用该模型上已创建的任何筛选器，然后传递通过算法设置的数据以检测模式。 处理模型之后，该模型仅存储处理的结果，而不会存储数据自身。 有关详细信息，请参阅 [处理挖掘模型](process-a-mining-model.md)。  
+ **处理挖掘模型：** 挖掘模型为空，仅包含定义在处理之前。 若要处理挖掘模型，必须已经处理了该模型所基于的挖掘结构。 挖掘模型从挖掘结构缓存获取数据，应用该模型上已创建的任何筛选器，然后传递通过算法设置的数据以检测模式。 处理模型之后，该模型仅存储处理的结果，而不会存储数据自身。 有关详细信息，请参阅 [处理挖掘模型](process-a-mining-model.md)。  
   
  下图说明了处理挖掘结构和挖掘模型时的数据流。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "48060327"
  有关详细信息，请参阅[处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取查询&#40;数据挖掘&#41;](drillthrough-queries-data-mining.md)   
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
- [挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
- [逻辑体系结构&#40;Analysis Services-数据挖掘&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
+ [逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)  
   
   

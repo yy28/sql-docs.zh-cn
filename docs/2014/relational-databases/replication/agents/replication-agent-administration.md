@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721800"
 ---
 # <a name="replication-agent-administration"></a>复制代理管理
   复制代理执行许多与复制有关的任务，其中包括创建架构和数据副本、检测发布服务器或订阅服务器上的更新以及在服务器之间传播更改。 默认情况下，复制代理在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业步骤下运行。 由于这些代理完全是可执行文件，因此可以从命令行和批处理脚本直接调用它们。 每个复制代理支持一组运行时参数，用于控制代理的运行方式；这些参数在代理配置文件或命令行中指定。  
@@ -69,7 +69,7 @@ ms.locfileid: "54130447"
   
     -   队列读取器代理  
   
-     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     通过 **“代理”** 选项卡访问与这些代理有关的信息和任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   以下代理与复制监视器中的订阅相关联：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "54130447"
   
     -   合并代理  
   
-     通过以下选项卡访问与这些代理相关联的信息和任务：**订阅监视列表**（适用于每个发布服务器） 或**的所有订阅**（适用于每个发布） 选项卡。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     访问信息和与这些代理通过以下选项卡关联的任务：“订阅监视列表”（所有发布服务器都提供）或“所有订阅”选项卡（所有发布都提供）。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>独立代理和共享代理  
  独立代理是为一个订阅提供服务的代理。 共享代理为多个订阅提供服务；如果使用同一共享代理的多个订阅需要同步，则在默认情况下，它们会排队等候，共享代理一次为一个订阅提供服务。 使用独立代理会减少滞后时间，因为只要订阅需要同步，独立代理就可以为其提供服务。 合并复制始终使用独立代理，而事务复制在默认情况下为在新建发布向导中创建的发布使用独立代理（在早期的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本中，事务复制在默认情况下使用共享代理）。  
@@ -87,8 +87,8 @@ ms.locfileid: "54130447"
   
 |清除作业|Description|默认计划|  
 |------------------|-----------------|----------------------|  
-|代理历史记录清除：Distribution|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
-|分发清除：Distribution|从分发数据库中删除复制的事务。 停用在最大分发保持期内尚未同步的订阅。|每十分钟运行一次|  
+|清除代理历史记录：Distribution|从分发数据库中删除复制代理历史记录。|每十分钟运行一次|  
+|清除分发：Distribution|从分发数据库中删除复制的事务。 停用在最大分发保持期内尚未同步的订阅。|每十分钟运行一次|  
 |过期订阅清除|从发布数据库检测和删除过期的订阅。|每天凌晨 1:00 运行|  
 |重新初始化数据验证失败的订阅|检测所有未通过数据验证的订阅并标记它们以进行重新初始化。 下次合并代理或分发代理运行时，订阅服务器上将应用新快照。|无默认调度（默认情况下未启用）。|  
 |复制代理检查|检测未积极记录历史信息的复制代理。 如果作业步骤失败，它将写入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件日志。|每十分钟运行一次。|  

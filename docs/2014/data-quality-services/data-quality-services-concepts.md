@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 649d687b93a2eeff940c92c79b7b966511a1d79d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792942"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
@@ -48,9 +48,9 @@ ms.locfileid: "56015638"
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
--   **计算机辅助的清理**:DQS 对清理项目在所选知识库中使用的知识来提出更正/建议为数据源中的值。  
+-   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，从而对数据源中的值提出更正/建议。  
   
--   **交互式清理**:数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
+-   **交互式清理**：数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
   
  完成数据清理后，数据专员可以将已处理的数据导出到 SQL Server 数据库、.csv 文件或 Excel 文件。 有关详细信息，请参阅 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)。  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724212"
 ---
 # <a name="hard-coded-sql-statements"></a>硬编码 SQL 语句
 通常执行固定的任务的应用程序包含硬编码的 SQL 语句。 例如，订单输入系统可能会使用对列表打开销售订单的以下调用：  
@@ -29,7 +29,7 @@ ms.locfileid: "47746235"
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 有个硬编码的 SQL 语句的几个优点： 可以测试时编写的应用程序;它们是在运行时; 构造的语句比易于实现和它们简化了应用程序。  
+ 有几个优点硬编码的 SQL 语句：可以测试时编写的应用程序;它们是在运行时; 构造的语句比易于实现和它们简化了应用程序。  
   
  使用语句参数和准备语句提供更好的方式来使用硬编码的 SQL 语句。 例如，假设在部件表包含 PartID、 描述和价格列。 此表中插入新行的一种方法是构造并执行**插入**语句：  
   

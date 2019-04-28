@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724362"
 ---
 # <a name="header-files"></a>头文件
 Sql.h 标头文件包含的函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含的函数和级别 1 和级别 2 API 一致性级别中的功能的原型。 Sqltypes.h 头文件包含类型定义和 SQL 数据类型的指示符。  

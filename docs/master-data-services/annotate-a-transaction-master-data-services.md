@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678662"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52754589"
 > [!NOTE]  
 >  您无法删除批注。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   若要为创建的事务添加批注，您必须有权访问 **“资源管理器”** 功能区域，并且必须至少对要添加批注的模型对象具有 **“更新”** 权限。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52754589"
   
 5.  单击“确定” 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)   
  [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   

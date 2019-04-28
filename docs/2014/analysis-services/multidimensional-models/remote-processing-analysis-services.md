@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736755"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
   
 -   如果在每台计算机上运行的 SQL Server 版本不同，则客户端库必须与处理模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例版本一致。 例如，如果在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 实例上进行处理，则发起请求的计算机必须具有与 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]对应的客户端库。 请参阅 [用于 Analysis Services 连接的数据访问接口](../instances/data-providers-used-for-analysis-services-connections.md)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "50146062"
   
 2.  最后一步，修改该作业，使其按您定义的计划运行，并添加管理作业所需的任何警报或通知。 可能还要细化处理脚本，或在作业中创建多个步骤以独立处理各个对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [使用 SQL Server 代理来计划 SSAS 管理任务](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [批处理 (Analysis Services)](batch-processing-analysis-services.md)   

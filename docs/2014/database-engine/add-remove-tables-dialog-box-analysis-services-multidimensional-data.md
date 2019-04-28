@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792125"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>添加 / 删除表对话框 (Analysis Services-多维数据)
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“添加/删除表”对话框，在数据源视图中添加或删除数据源中的表。 可以通过执行以下操作之一显示“添加/删除表”对话框：  
@@ -54,6 +54,6 @@ ms.locfileid: "48200417"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图设计器&#40;Analysis Services-多维数据&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

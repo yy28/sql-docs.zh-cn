@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681214"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>数据挖掘准备清单
   虽然数据挖掘外接程序让创建和试验模型变得简单有趣，但在需要可重复、可操作的结果时，必须有足够的时间制定基本业务需求以及获取和准备数据。 本节提供了一个清单，可帮助对您的调查进行计划，并且描述常见问题。  
@@ -71,7 +71,7 @@ ms.locfileid: "52519930"
   
 -   如果合并了多个数据集，是否检查了是否存在表示相同数据的多个列？  
   
- **我知道源数据的存储位置、来源以及处理方式。如果需要可以轻松地重复过程。**  
+ **我知道源数据的存储位置，它来自哪里，以及如何处理它。如果需要可以轻松地重复过程。**  
  一次性数据集适于进行试验，但如果要将该模型转移到生产环境，你需要提前考虑如何清除过程可以应用于操作数据。 此外，如果必须操作数据，您需要知道如何它可能已被更改之前答对了-你将需要知道它是如何进行舍入，或汇总。  
   
 -   是否想要能够重复进行试验？  

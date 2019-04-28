@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679534"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>“数据浏览选项”对话框（Analysis Services - 数据挖掘）
   可以使用 **中的** “数据浏览选项” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为 **“浏览数据”** 对话框设置抽样和图表选项。 通过单击 **“浏览数据”** 对话框中的 **“抽样选项”** ，可以显示 **“数据浏览选项”** 对话框。  

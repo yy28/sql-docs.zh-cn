@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730767"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>从数据馈送导入（SSAS 表格）
   数据馈送是从联机数据源生成的流向目标文档或应用程序的一个或多个 XML 数据流。 可以通过使用“表导入向导”将数据从数据馈送导入模型中。  
@@ -45,7 +45,7 @@ ms.locfileid: "48099837"
  **Atom 馈送**  
  馈送必须是 Atom 馈送。 不支持 RSS 馈送。 该馈送必须可供公开使用，或您必须有权基于您当前登录所用的 Windows 帐户连接到该馈送。  
   
- 在导入过程中只可一次将数据馈送中的数据添加到模型中。 若要从馈送获取更新的数据，您可以从模型设计器刷新数据，或在将数据部署到 Analysis Services 生产实例后为模型配置数据刷新计划。 有关详细信息，请参阅[处理数据（SSAS 表格）](process-data-ssas-tabular.md)。  
+ 在导入过程中只可一次将数据馈送中的数据添加到模型中。 若要从馈送获取更新的数据，您可以从模型设计器刷新数据，或在将数据部署到 Analysis Services 生产实例后为模型配置数据刷新计划。 有关详细信息，请参阅 [处理数据（SSAS 表格）](process-data-ssas-tabular.md)。  
   
 ##  <a name="azure"></a> 从 Azure DataMarket 数据集导入数据  
  在模型中，可以将 Azure DataMarket 中的数据以表的形式导入。  
@@ -85,7 +85,7 @@ ms.locfileid: "48099837"
   
 3.  在 **“连接到数据馈送”** 页中，为您要访问的馈送键入描述性名称。 如果您正在导入多个馈送或数据源，则将描述性名称用于连接可帮助您记住连接的使用方式。  
   
-4.  在 **“数据馈送 URL”** 中，键入数据馈送的地址。 有效值包括：  
+4.  在 **“数据馈送 URL”** 中，键入数据馈送的地址。 包括以下有效值：  
   
     1.  包含 Atom 数据的 XML 文档。 例如，下面的 URL 指向 Open Government Data Initiative 网站上的公共馈送：  
   
@@ -191,10 +191,10 @@ ms.locfileid: "48099837"
 12. 在 **“选择表和视图”** 页上，单击 **“完成”**。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的数据源&#40;SSAS 表格&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [支持的数据类型&#40;SSAS 表格&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [模拟&#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [处理数据&#40;SSAS 表格&#41;](process-data-ssas-tabular.md)   
- [导入数据&#40;SSAS 表格&#41;](import-data-ssas-tabular.md)  
+ [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [支持的数据类型（SSAS 表格）](tabular-models/data-types-supported-ssas-tabular.md)   
+ [模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)   
+ [处理数据（SSAS 表格）](process-data-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)  
   
   

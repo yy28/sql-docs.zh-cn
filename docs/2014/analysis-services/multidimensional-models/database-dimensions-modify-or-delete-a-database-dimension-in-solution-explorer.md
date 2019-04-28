@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a994b87e8be4b8ca527cb3b0863af4a1a4a1e1a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726501"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>在解决方案资源管理器中修改或删除数据库维度
   可通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度设计器来修改或删除维度。 修改维度时，只有对维度进行处理后，所做的更改才对用户可用。 有关详细信息，请参阅[多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)。  

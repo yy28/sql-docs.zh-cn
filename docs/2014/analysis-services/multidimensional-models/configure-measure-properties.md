@@ -43,11 +43,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726921"
 ---
 # <a name="configure-measure-properties"></a>配置度量值属性
   通过使用度量值的属性，您可以定义度量值的工作方式并控制如何向用户显示度量值。  
@@ -57,7 +57,7 @@ ms.locfileid: "50148382"
 ## <a name="measure-properties"></a>度量值属性  
  度量值从其所属的度量值组中继承某些属性，除非这些属性在度量值级别被覆盖。 度量值属性确定度量值的聚合方式、它的数据类型、对用户的显示名称、度量值将在其中出现的显示文件夹、它的格式字符串、任何度量值表达式、基础源列和它对用户的可见性。  
   
-|“属性”|定义|  
+|属性|定义|  
 |--------------|----------------|  
 |`AggregateFunction`|必需的。 确定度量值的聚合方式。 `Sum` 是默认聚合。 有关详细信息，请参阅针对每个函数说明的 [Use Aggregate Functions](use-aggregate-functions.md) 。|  
 |`DataType`|必需的。 指定与度量值绑定的基础事实数据表中的列的数据类型。 默认情况下，此值从源列继承。|  
@@ -70,7 +70,7 @@ ms.locfileid: "50148382"
 |`Source`|必需的。 指定与度量值绑定的数据源视图中的列。 请参阅[数据源和绑定（SSAS 多维）](data-sources-and-bindings-ssas-multidimensional.md)。|  
 |`Visible`|确定客户端应用程序中度量值的可见性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置度量值组属性](configure-measure-group-properties.md)   
  [修改度量值](../lesson-3-1-modifying-measures.md)  
   

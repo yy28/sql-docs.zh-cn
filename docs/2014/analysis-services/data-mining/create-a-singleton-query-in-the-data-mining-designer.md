@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715054"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
   如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
@@ -81,6 +81,6 @@ AS [t]
      此时将出现一个新屏幕，显示查询的结果。 若要查看刚创建的 DMX 语句，请单击 **SQL**。  
   
 ## <a name="see-also"></a>请参阅  
- [预测查询&#40;数据挖掘&#41;](prediction-queries-data-mining.md)  
+ [预测查询（数据挖掘）](prediction-queries-data-mining.md)  
   
   

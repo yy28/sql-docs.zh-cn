@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689598"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>数据挖掘教程 (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 轻松地创建复杂的数据挖掘解决方案。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具帮助您设计、创建和管理使用关系数据或多维数据集数据的数据挖掘模型。 您可以管理对数据挖掘模型的客户端访问并从多个客户端创建预测查询。  

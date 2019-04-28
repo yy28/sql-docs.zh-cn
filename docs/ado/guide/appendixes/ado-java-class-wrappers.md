@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719972"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java 类包装器
 此代码声明了 ADO 的实例[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装器，并初始化它，所有内容位于相同的代码行。 此外，为每个中的参数声明的变量[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)并[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （由于 Java 不支持枚举类型）。 它打开和关闭**记录集**对象。 只设置为 NULL 的 Rs1 计划 Java 执行系统和间歇性发布的未使用的对象时释放该变量。  

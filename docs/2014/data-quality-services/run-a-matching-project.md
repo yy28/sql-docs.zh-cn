@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792335"
 ---
 # <a name="run-a-matching-project"></a>运行匹配项目
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中执行数据匹配。 该匹配过程基于匹配策略中的匹配规则标识匹配记录的群集，基于存活规则将每个群集中的一个记录指定为存活，并且导出结果。 DQS 还在计算机辅助过程中执行匹配过程（也称作消除重复），但您以交互方式创建匹配规则，并且从若干选择中选择存活规则，以便控制匹配过程。  
@@ -41,7 +41,7 @@ ms.locfileid: "56019688"
 ####  <a name="Permissions"></a> Permissions  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能运行匹配项目。  
   
-##  <a name="StartingaMatchingProject"></a> 第一步：开始匹配项目  
+##  <a name="StartingaMatchingProject"></a>第 1 步：启动匹配项目  
  您在 DQS 客户端应用程序中创建的数据质量项目中执行匹配活动。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -107,7 +107,7 @@ ms.locfileid: "56019688"
   
  存活是可选的。 您可以不运行存活便导出结果，在此情况下，DQS 将使用在匹配分析中指定的透视记录。 如果群集中两个或更多的记录符合存活规则，则存活过程将选择冲突记录中最低的记录 ID 作为存活记录。 您可以使用不同的存活规则将存活记录导出到不同的文件或表。  
   
-1.  上**导出**页上，选择你想要将匹配数据导出到在目标**目标类型**:**SQL Server**， **CSV 文件**，或**Excel 文件**。  
+1.  在“导出”页面上的“目标类型”中选择要将匹配数据导出到的目标：“SQL Server”、“CSV 文件”或“Excel 文件”。  
   
     > [!IMPORTANT]  
     >  如果您使用的是 64 位版本的 Excel，则无法将匹配数据导出到 Excel 文件；只能导出到 SQL Server 数据库或 .csv 文件。  
@@ -164,7 +164,7 @@ ms.locfileid: "56019688"
     > [!NOTE]  
     >  如果您已完成了某个匹配项目，然后再次使用该项目，则它将使用在发布时具有的知识库。 它将不会使用自您完成了该项目后对知识库进行的任何更改。 若要使用这些更改，或使用新的知识库，将必须创建一个新的匹配项目。 另一方面，如果您已创建、但未完成某一匹配项目，则当您在该项目中运行匹配时，将使用已发布到匹配策略的任何更改。  
   
-##  <a name="FollowUp"></a> 跟进：在运行匹配项目之后  
+##  <a name="FollowUp"></a> 跟进：运行匹配项目后  
  在运行某一匹配项目后，您可以在知识库中更改匹配策略，并且基于更新的匹配策略创建和运行另一个匹配项目。 有关详细信息，请参阅 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Profiler"></a> “事件探查器”和“结果”选项卡  
@@ -175,27 +175,27 @@ ms.locfileid: "56019688"
   
  源数据库统计信息包括：  
   
--   **记录**:数据库中的记录总数  
+-   **记录**：数据库中的记录总数  
   
--   **值总计**:字段中值的总数  
+-   **总计值**：字段中值的总数  
   
--   **新值**:自上次运行和及其占总体的百分比后新的值的总数  
+-   **新值**：自上次运行后的新值总数及其占总体的百分比  
   
--   **唯一值**:中的字段和及其占总体的唯一值的总数  
+-   **唯一值**：字段中唯一值的总数及其占总体的百分比  
   
--   **新的唯一值**:在字段和及其占总体的百分比中新的唯一值的总数  
+-   **新的唯一值**：字段中新的唯一值的总数及其占总体的百分比  
   
  字段统计信息包括：  
   
--   **字段**:在映射中包含的字段名称。  
+-   **字段**：映射中包含的字段的名称。  
   
--   **域**:映射到字段的域的名称。  
+-   **域**：已映射到字段的域的名称。  
   
--   **新**:找到的新匹配项的数目和及其占总数的百分比  
+-   **新**：新找到的匹配项的数量及其占总数的百分比  
   
--   **唯一**:中的字段和及其占总数的百分比的唯一记录的数目  
+-   **唯一**：字段中唯一记录的数目及其占总数的百分比  
   
--   **完整性**:规则运行完毕所占百分比。  
+-   **完整性**：规则运行完成的百分比。  
   
 ### <a name="matching-policy-notifications"></a>匹配策略通知  
  对于匹配策略活动，以下条件会导致发送通知：  

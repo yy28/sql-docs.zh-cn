@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721869"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; 代理位置
   合并代理（对于合并订阅）和分发代理（对于事务订阅和快照订阅）运行在分发服务器或订阅服务器上。 如果代理运行在分发服务器上，则订阅称为推送订阅；如果代理运行在订阅服务器上，则订阅称为请求订阅。 有关推送订阅和请求订阅的详细信息，请参阅[订阅发布](subscribe-to-publications.md)。 通过执行向导创建的所有订阅，其类型均为在向导中所选择的类型。 若要创建两种类型的订阅，必须运行两次向导。  
@@ -26,7 +26,7 @@ ms.locfileid: "52813789"
 >  创建订阅之后，不能更改订阅类型。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [复制代理概述](agents/replication-agents-overview.md)  
   

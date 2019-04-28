@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732215"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>检测类别（Excel 表分析工具）
   ![在功能区中的检测类别按钮](media/tat-detectcat.gif "功能区中的检测类别按钮")  

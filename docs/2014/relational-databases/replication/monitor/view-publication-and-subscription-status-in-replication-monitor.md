@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666922"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器显示发布和订阅的状态信息：  
@@ -53,7 +53,7 @@ ms.locfileid: "54123927"
   
  **查看发布和订阅状态**  
   
--   复制监视器：[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。
+-   复制监视器：[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。
   
   
 ## <a name="publication-status-values"></a>发布状态值  

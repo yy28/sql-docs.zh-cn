@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3869a18e8b19062a0bc6eabfcf45b53d4220dab0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726303"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>删除数据源视图 (Analysis Services)
   如果不再在 OLAP 项目中使用数据源视图 (DSV)，则可以从 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的项目中删除它。  
@@ -35,6 +35,6 @@ ms.locfileid: "48197581"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [更改数据源视图中的属性&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

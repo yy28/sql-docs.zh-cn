@@ -1,5 +1,5 @@
 ---
-title: 选择和映射为预测查询的输入的数据 |Microsoft 文档
+title: 选择和映射输入的数据为预测查询 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724854"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34015054"
   
 3.  在“表/视图名称”下，选择包含希望用于测试模型的数据的表。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
      挖掘结构中的列将自动映射到输入表中相同名称的列。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34015054"
   
 4.  从外部数据源可用列的列表中选择一个新列。 选择列表中的空白项以删除列映射。  
   
-5.  单击 **“确定”**。  
+5.  单击“确定” 。  
   
      设计器中将显示新的列映射。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34015054"
   
 3.  单击 **“删除关系”**。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
      这样便可删除事例表和嵌套表之间的关系。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34015054"
   
      如果已经存在关系，则挖掘模型中的列将自动映射到输入表中具有相同名称的列。 通过单击 **“修改联接”** 以打开 **“创建关系”** 对话框，可以修改嵌套表与事例表之间的关系。  
   
-## <a name="see-also"></a>另请参阅  
- [预测查询 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>请参阅  
+ [预测查询（数据挖掘）](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

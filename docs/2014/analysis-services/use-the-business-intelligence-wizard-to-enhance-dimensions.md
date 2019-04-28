@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793356"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>使用商业智能向导增强维度
   除了直接修改维度属性和维度对象属性之外，还可以使用商业智能向导配置和增强维度。  
@@ -38,7 +38,7 @@ ms.locfileid: "48173777"
 ## <a name="see-also"></a>请参阅  
  [定义数据库维度](multidimensional-models/define-database-dimensions.md)   
  [维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)   
- [创建用户定义的层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
+ [创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)   
  [定义属性关系](multidimensional-models/attribute-relationships-define.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

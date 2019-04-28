@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729678"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>“键列”对话框（Analysis Services - 多维数据）
   可以使用 **“键列”** 对话框更改特性的 **KeyColumns** 属性。 有关详细信息，请参阅 [修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "48049047"
  **可用列**  
  选择要用作键列的列。 可以从指定的 **“源表”** 的列列表中选择尚未选为键列的列。  
   
- 若要添加到所选的列**键列**列表中，单击**>** 按钮。  
+ 若要将所选列添加到“键列”列表，请单击 **“键列”** 按钮 **>** 。  
   
  **键列**  
  定义所选键列的顺序。 键列的顺序对于定义正确的组合键非常重要。 若要排序或重新排序键列列表，请选择列，然后单击 **“向上”** 或 **“向下”** 按钮。  

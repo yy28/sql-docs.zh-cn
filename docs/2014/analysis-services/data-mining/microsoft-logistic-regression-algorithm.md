@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733745"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
   逻辑回归是一种众所周知的统计方法，用于对二进制结果建模。  
@@ -80,7 +80,7 @@ ms.locfileid: "48179387"
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   
 ## <a name="see-also"></a>请参阅  
- [逻辑回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)  
   

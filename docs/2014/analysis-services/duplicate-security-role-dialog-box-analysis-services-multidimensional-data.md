@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731556"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>“Analysis Services 重复的安全角色”对话框（Analysis Services - 多维数据）
   使用**Analysis Services 重复安全角色-\<数据库名称 >-\<从角色名称复制 >** 中的对话框[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]复制中的现有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 右键单击对象资源管理器中的角色并选择“复制”，可以显示“复制角色”对话框。  
@@ -31,6 +31,6 @@ ms.locfileid: "48194547"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [安全角色&#40;Analysis Services-多维数据&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [安全角色（Analysis Services - 多维数据）](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

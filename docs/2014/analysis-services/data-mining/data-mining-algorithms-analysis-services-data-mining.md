@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722817"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
   一个*数据挖掘算法*是一组试探法和计算的数据创建数据挖掘模型。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析的结果来定义用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
@@ -85,19 +85,19 @@ ms.locfileid: "48218567"
 |**技术参考**|提供与算法实施有关的技术细节，并且根据需要提供学术方面的参考。 列出了可在模型中设置以便控制算法行为并自定义结果的参数。 描述数据要求并根据需要提供性能提示。|  
 ||[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 顺序分析和聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
 |**模型内容**|说明在每种类型的数据挖掘模型内信息是如何组织的，并且说明如何解释在各节点中存储的信息。|  
-||[关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [决策树模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [逻辑回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**数据挖掘查询**|提供可用于各模型类型的多个查询。 示例包括可让您了解与模型中的模式有关的详细信息的内容查询以及可帮助您基于这些模式生成预测的预测查询。|  
 ||[关联模型查询示例](association-model-query-examples.md)<br /><br /> [聚类分析模型查询示例](clustering-model-query-examples.md)<br /><br /> [决策树模型查询示例](decision-trees-model-query-examples.md)<br /><br /> [线性回归模型查询示例](linear-regression-model-query-examples.md)<br /><br /> [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)<br /><br /> [神经网络模型查询示例](neural-network-model-query-examples.md)<br /><br /> [顺序分析和聚类分析模型查询示例](sequence-clustering-model-query-examples.md)<br /><br /> [时序模型查询示例](time-series-model-query-examples.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|**主题**|**Description**|  
+|**主题**|**说明**|  
 |---------------|---------------------|  
 |确定数据挖掘模型使用的算法|[查询用于创建挖掘模型的参数](query-the-parameters-used-to-create-a-mining-model.md)|  
-|创建自定义插件算法|[Plugin 算法](plugin-algorithms.md)|  
+|创建自定义插件算法|[插件算法](plugin-algorithms.md)|  
 |使用特定于算法的查看器浏览模型|[数据挖掘模型查看器](data-mining-model-viewers.md)|  
 |使用一般的表格式查看模型的内容|[使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|了解如何设置您的数据，并使用算法来创建模型|[挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)|  
+|了解如何设置您的数据，并使用算法来创建模型|[挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)<br /><br /> [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘工具](data-mining-tools.md)  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccd8ad508cf0f1bc56997a4d88927bff85065023
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732848"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>“数据示例查看器”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “数据示例查看器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，查看用于为新多维数据集提供度量值的事实数据表的前 1000 条记录。  

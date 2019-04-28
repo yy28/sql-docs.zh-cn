@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666824"
 ---
 # <a name="run-jobs"></a>运行作业
   若要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象。  
@@ -35,6 +35,6 @@ ms.locfileid: "52818839"
 |介绍如何禁用或启用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|[启用或禁用作业](disable-or-enable-a-job.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.sysdownloadlist &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704742"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
 
@@ -80,7 +80,7 @@ ms.locfileid: "52752105"
 ##  <a name="members"></a> 成员  
  对于成员，不能对 **Code**属性值使用 **MDMMemberStatus**、 **MDMUnused** 或 **ROOT** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

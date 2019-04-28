@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699796"
 ---
 # <a name="building-measures-in-mdx"></a>在 MDX 中生成度量值
   在多维表达式 (MDX) 中，度量值是名为 DAX 的表达式，通过计算该表达式来解析它以返回表格模型中的值。 这种泛泛的定义所包括的范围十分惊人。 由于能在 MDX 查询中构造和使用度量值，使得人们能够更有力地驾驭表格数据。  
@@ -44,8 +44,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>请参阅  
- [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)   
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
   
   

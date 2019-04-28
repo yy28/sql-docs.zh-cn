@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5274b2bb8bfb1b51207c3b0c85e0a516045670e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719857"
 ---
 # <a name="translation-dll-api-reference"></a>转换 DLL API 参考
-本部分介绍转换 DLL API，包括两个函数的语法： **SQLDriverToDataSource**并**SQLDataSourceToDriver**。 这些函数必须包括在驱动程序执行转换的 DLL 中。  
+本部分介绍转换 DLL API，包括两个函数的语法：**SQLDriverToDataSource**并**SQLDataSourceToDriver**。 这些函数必须包括在驱动程序执行转换的 DLL 中。  
   
  本部分包含以下主题。  
   

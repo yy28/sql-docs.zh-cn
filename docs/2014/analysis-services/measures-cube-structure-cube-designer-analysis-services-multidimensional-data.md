@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727973"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“度量值”** 窗格，操作多维数据集设计器中的 **“多维数据集结构”** 选项卡上的度量值组和成员。  
@@ -32,7 +32,7 @@ ms.locfileid: "48090300"
   
  展开度量值组可以查看度量值。 单击所选度量值组或度量值可以分别重命名度量值组或度量值。  
   
- 网格  
+ Grid  
  显示度量值网格以及最常访问的度量值属性。 单击 **“添加新度量值”** 可显示 **“新建度量值”** 对话框，向网格中添加新的度量值。  
   
  该网格包含以下列：  
@@ -61,7 +61,7 @@ ms.locfileid: "48090300"
  **度量值显示方式**  
  选择此选项可循环显示以下选项，或选择其中任一个选项以更改“度量值”窗格的视图：  
   
-|选项|定义|  
+|Option|定义|  
 |------------|----------------|  
 |**树**|在树视图中显示度量值组和度量值。|  
 |**网格**|在网格中显示度量值组和度量值。|  

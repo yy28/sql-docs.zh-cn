@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702145"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
@@ -59,7 +59,7 @@ ms.locfileid: "48226617"
 > [!NOTE]  
 >  如果创建维度时没有设置维度类型和标准属性类型，则在创建维度后可使用商业智能向导设置这些值。 有关详细信息，请参阅 [向维度中添加维度智能](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或（对账户类型维度而言） [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
- 向导会基于指定的属性类型自动设置维度类型。 在向导设置中指定的属性类型`Type`属性的属性。 维度及其特性的 `Type` 属性设置可向服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，这些`Type`属性设置只为客户端应用程序提供指导，并且是可选的。 在其他情况下，例如帐户、 时间或货币维度，这些`Type`属性设置确定基于服务器的特定行为，并且可能需要实现某些多维数据集行为。  
+ 向导会基于指定的属性类型自动设置维度类型。 向导中指定的属性类型将设置特性的 `Type` 属性。 维度及其特性的 `Type` 属性设置可向服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，这些 `Type` 属性设置只为客户端应用程序提供指导信息，并且是可选的。 在其他情况下，例如“帐户”维度、“时间”维度或“货币”维度，这些 `Type` 属性设置确定基于服务器的特定行为，并且可能是实现某些多维数据集行为所必需的。  
   
  有关维度和属性类型的详细信息，请参阅 [维度类型](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)、 [配置属性类型](attribute-properties-configure-attribute-types.md)。  
   

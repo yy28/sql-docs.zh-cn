@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (dBASE 驱动程序) |Microsoft Docs
+title: SQLConfigDataSource (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665349"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource（dBASE 驱动程序）
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47631645"
   
 |关键字|Description|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|字段的排序顺序的序列。<br /><br /> 序列可以是： ASCII （默认值） 或国际。<br /><br /> 这将设置为相同的选项**排序规则序列**中设置的对话框。|  
+|COLLATINGSEQUENCE|字段的排序顺序的序列。<br /><br /> 序列可以是：ASCII （默认值） 或国际。<br /><br /> 这将设置为相同的选项**排序规则序列**中设置的对话框。|  
 |DEFAULTDIR|所指定的路径的目录。|  
 |DELETED|对于 dBASE 驱动程序，指定可以检索或位于已标记为已删除的行。 如果未显示设置为 1，已删除的行;如果设置为 0，已删除的行是相同视为非删除行。<br /><br /> 这将设置为相同的选项**显示删除的行**中设置的对话框。|  
 |DESCRIPTION|数据源中的数据说明。<br /><br /> 这将设置为相同的选项**说明**中设置的对话框。|  

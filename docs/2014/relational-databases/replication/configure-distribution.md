@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721711"
 ---
 # <a name="configure-distribution"></a>配置分发
   分发服务器是指包含分发数据库的服务器，其中存储所有类型复制的元数据和历史记录数据以及事务复制的事务。 若要建立复制，必须配置分发服务器。 只能为每台发布服务器分配一个分发服务器实例，但是多台发布服务器可共享一台分发服务器。 分发服务器在其所在服务器上使用以下附加资源：  

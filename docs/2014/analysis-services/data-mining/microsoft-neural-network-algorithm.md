@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734887"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法组合输入属性的每个可能状态的可预测属性，每个可能状态，并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
@@ -52,11 +52,11 @@ ms.locfileid: "48203477"
 -   分析多个输入和相对较少的输出之间的复杂关系的任何预测模型。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法创建的最多三层神经元组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层神经元组成的网络。 这些层分别是输入层、可选隐藏层和输出层。  
   
- **输入的层：** 输入神经元定义数据挖掘模型和及其概率的所有输入的属性值。  
+ **输入的层：** 输入的神经元定义数据挖掘模型和及其概率的所有输入的属性值。  
   
- **隐藏层：** 隐藏神经元接收来自输入神经元的输入，并向输出神经元提供输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏神经元的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
+ **隐藏的层：** 隐藏神经元接收来自输入神经元的输入，并向输出神经元提供输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏神经元的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
   
  **输出层：** 输出神经元代表数据挖掘模型的可预测属性值。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48203477"
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)   
- [神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](neural-network-model-query-examples.md)   
  [Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)  
   

@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721953"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法是由提供的分段算法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该算法使用迭代技术将数据集中的事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的分段算法。 该算法使用迭代技术将数据集中的事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
   
  聚类分析模型标识数据集中可能无法通过随意观察在逻辑上得出的关系。 例如，在逻辑上可以得知，骑自行车上下班的人的居住地点通常离其工作地点不远。 但该算法可以找出有关骑自行车上下班人员的其他并不明显的特征。 在下面的关系图中，分类 A 表示有关通常开车上班人员的数据，而分类 B 表示通常骑自行车上班人员的数据。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195097"
   
 -   **输入列** 每个模型都必须至少包含一个输入列，该输入列包含用于生成此分类的值。 可以根据需要拥有任意多的输入列，但是具体取决于每个列中值的数量，添加额外列会增加定型模型所需的时间。  
   
--   **可选可预测列** 该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果你想要通过对人口统计信息，如地区和年龄预测客户的收入，您将收入指定为`PredictOnly`并将其他所有列，如地区和年龄，都添加作为输入。  
+-   **可选可预测列** 该算法不需要可预测列来生成模型，但是可以添加几乎任意数据类型的可预测列。 可以将可预测列的值视为对聚类分析模型的输入，或者将其指定仅用于预测。 例如，如果需要通过对人口统计信息（如地区或年龄）进行分类来预测客户的收入，则可将收入指定为 `PredictOnly`，然后将所有其他列（如地区和年龄）添加为输入。  
   
  有关聚类分析模型支持的内容类型和数据类型的更多详细信息，请参阅 [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)的“要求”部分。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195097"
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)   
- [聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [聚类分析模型查询示例](clustering-model-query-examples.md)  
   
   

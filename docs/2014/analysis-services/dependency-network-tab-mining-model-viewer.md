@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732193"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>“依赖关系网络”选项卡（挖掘模型查看器）
   **“依赖关系网络”** 选项卡提供挖掘模型所包含的所有属性的图形视图，并显示这些属性之间的关系。  
@@ -38,7 +38,7 @@ ms.locfileid: "48226167"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型以进行查看。 挖掘模型将在自定义查看器中打开。 用于每个模型的自定义查看器的类型由您用来创建该模型的算法决定。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 对于每个挖掘模型，可以使用为其提供的自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。 Microsoft 内容树查看器可用于所有模型，并表示 HTML 表中的模型内容。  
   
  **放大**  
@@ -53,7 +53,7 @@ ms.locfileid: "48226167"
  **复制整个图形**  
  将完整的关系图复制到剪贴板。  
   
- **链接**  
+ **Links**  
  通过调整属性右侧的滑块，可以调整查看器显示的链接（边缘）数和节点数。 向下拖动滑动条将增大阈值，以便只显示最强链接。 对于每种模型类型，均使用一个略为不同的值来表示图形中的链接：  
   
 -   在 **决策树** 模型中，边缘表示连接的预测强度（部分地由拆分分数决定）。  
@@ -65,8 +65,8 @@ ms.locfileid: "48226167"
  所有模型类型的一般规则是：链接越强，两个属性之间的预测关系就越强。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

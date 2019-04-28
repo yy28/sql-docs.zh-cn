@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30f720874a29d04e129733e771f3ee680c7ef93f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792981"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
   本主题介绍了 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库。 为了清理数据，您必须具有有关数据的知识。 为了准备数据质量项目的知识，您生成并维护一个 DQS 可用于标识不正确或无效数据的知识库 (KB)。 通过 DQS，您可以使用计算机辅助过程和交互式过程来创建、生成和更新知识库。 知识库中的知识在域中维护，每个域都是某个数据字段特有的。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  

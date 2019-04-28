@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730194"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
   本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新功能的详细信息，请参阅[What's New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917)。  
@@ -53,14 +53,14 @@ ms.locfileid: "53373937"
 |创建于|\<|支持和行为|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**2012 PowerPivot for SharePoint 2010**|**2012 SP1 PowerPivot for SharePoint 2013**|  
-|**2008 R2 PowerPivot for Excel 2010**|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 如果为 SharePoint 场中的 PowerPivot 系统服务启用了“自动升级”，则工作簿将在文档库中自动升级。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|**体验：** 用户可与工作簿交互，并且将其用作其他解决方案的数据源。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不提供支持。 工作簿需要升级。|  
-|**2012 PowerPivot for Excel**|不支持|所有功能|**体验：** 用户可在浏览器中与工作簿交互，并且将其用作其他解决方案的数据源。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
+|**2008 R2 PowerPivot for Excel 2010**|所有功能|**体验：** 用户可以与在浏览器中工作簿交互，并将其用作数据源的其他解决方案。<br /><br /> **升级：** 如果 PowerPivot 系统服务在 SharePoint 场中，启用了自动升级工作簿将自动在文档库中的升级<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|**体验：** 用户可以与工作簿交互，并将其用作数据源的其他解决方案。<br /><br /> **升级：** 自动升级不可用。 用户必须将其 2008 R2 工作簿手动升级到 2012 版本或 Office 2013 版本。<br /><br /> **计划数据刷新：** 不支持。 工作簿需要升级。|  
+|**2012 PowerPivot for Excel**|不支持|所有功能|**体验：** 用户可以与在浏览器中工作簿交互，并将其用作数据源的其他解决方案。 计划数据刷新可用。<br /><br /> **升级：** 不支持自动升级。 用户可以将其工作簿手动升级到 Office 2013 版本。<br /><br /> **计划数据刷新：** 支持。|  
 |**Excel 2013**|不支持|不支持|所有功能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> 从 2008 R2 工作簿升级到 SQL Server 2012 Service Pack 1 (SP1) 工作簿  
  本节介绍如何从 SQL Server 2008 R2 PowerPivot for Excel 2010 工作簿升级到 SQL Server 2012 SP1 PowerPivot for Excel 2013 工作簿。  
   
- **行为更改：** 在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会自动升级。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。  
+ **行为更改：** 在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用它们时 SQL Server 2008 R2 PowerPivot 工作簿将不会自动升级。 因此，计划的数据刷新将不适用于 SQL Server 2008 R2 PowerPivot 工作簿。  
   
  2008 R2 工作簿将在 PowerPivot for SharePoint 2013 中打开，但计划的数据刷新将不起作用。 如果查看刷新历史记录，您将会看到如下错误消息：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373937"
   
 -   SQL Server 2012 PowerPivot for Excel 2013。  
   
- **如何升级工作簿：** 在将工作簿升级到 2012 工作簿之前，计划的数据刷新将不起作用。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：  
+ **如何升级工作簿：** 该工作簿升级到 2012年工作簿之前，计划的数据刷新将无法工作。 若要升级工作簿以及工作簿中所包含的模型，请完成以下操作之一：  
   
 -   下载工作簿并在安装有 SQL Server 2012 PowerPivot for Excel 外接程序的 Microsoft Excel 2010 中打开该工作簿。  
   

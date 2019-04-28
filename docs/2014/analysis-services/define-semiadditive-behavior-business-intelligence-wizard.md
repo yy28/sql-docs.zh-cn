@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732153"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
   可以使用“定义半累加性行为”页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
@@ -31,7 +31,7 @@ ms.locfileid: "48168007"
  在多维数据集所包含的所有度量值中禁用半累加性行为。  
   
  **向导检测到\<维度名称 > 包含半累加性成员的帐户维度。服务器将聚合此维度根据为每个帐户类型指定的半累加性行为的成员。**  
- 对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项设置的所有度量值的聚合函数引用为该帐户维度的度量值组中`ByAccount`。  
+ 对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项将把引用该帐户维度的度量值组中所有度量值的聚合函数设置为 `ByAccount`。  
   
  有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。  
   

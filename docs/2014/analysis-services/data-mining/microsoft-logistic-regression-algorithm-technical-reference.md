@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733915"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体，其中， *HIDDEN_NODE_RATIO* 参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。  
@@ -61,7 +61,7 @@ ms.locfileid: "52518046"
   
  Μ = p-（一种状态的先验概率）  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  值存在时：   (1-μ)/σ / / (1 减去 mu) 除以 sigma)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  对于每个输出值，此查询返回系数以及指回相关输入节点的 ID。 此外，还会返回包含输出和截距的行。 X 每个输入都有自己的系数 (Ci)，但是，嵌套的表还包含"free"系数 (Co)，根据以下公式计算：  
   
- F （x) = X1 * C1 + X2\*C2 +...+ Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  激活：exp(F(X)) / (1 + exp(F(X)) )  
   

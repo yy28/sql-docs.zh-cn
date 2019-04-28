@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653329"
 ---
 # <a name="odbc-function-summary"></a>ODBC 函数摘要
 下表列出了按类型的任务中，分组的 ODBC 函数，并包括指定的一致性和每个函数的用途的简要说明。 有关符合性标志的详细信息，请参阅[ODBC 和标准 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 有关语法和语义为每个函数的详细信息，请参阅[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  

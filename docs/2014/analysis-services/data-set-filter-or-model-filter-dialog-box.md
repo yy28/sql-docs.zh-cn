@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732589"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>“数据集筛选器或模型筛选器”对话框
   此对话框帮助您生成可应用于数据集的筛选器。  数据集可以是用于测试的外部数据集，也可以是挖掘模型的事例数据。 根据筛选器是用于外部数据集还是用于挖掘模型，对话框的名称会发生更改。  

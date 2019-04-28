@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699582"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>创建会话作用域的命名集 (MDX)
   若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [创建查询作用域的命名集&#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [创建查询作用域的命名集 (MDX)](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

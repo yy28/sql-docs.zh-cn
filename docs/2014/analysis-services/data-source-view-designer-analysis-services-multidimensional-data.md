@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732645"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>数据源视图设计器（Analysis Services - 多维数据）
   数据源视图 (DSV) 是用于在多维模型中创建多维数据集和维度的外部关系数据源的逻辑视图。  
@@ -46,14 +46,14 @@ ms.locfileid: "48075307"
   
 |||  
 |-|-|  
-|重命名列或表，或者创建新的计算列。 例如，可将名字和姓氏连接到新的全名列。|[数据源视图中定义命名的计算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
-|手动添加表关系|[数据源视图中定义逻辑关系&#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
-|创建命名查询以定义基于 T-SQL 查询的新对象。|[数据源视图中定义命名的查询&#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|研究基础数据以查看模型对象表示的实际数据值。<br /><br /> 通过数据浏览，您可以直观地检查和复制从基础维度表或查询返回的数据。 默认情况下，数据浏览使用靠前计数抽样方法，具有 5000 个抽样计数，但您可以修正这些设置。|[在数据源视图中浏览数据&#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|为 DSV 中的所有或部分表和关系绘制关系图|[使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|重命名列或表，或者创建新的计算列。 例如，可将名字和姓氏连接到新的全名列。|[在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
+|手动添加表关系|[在数据源视图中定义逻辑关系 (Analysis Services)](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
+|创建命名查询以定义基于 T-SQL 查询的新对象。|[在数据源视图中定义命名查询 (Analysis Services)](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
+|研究基础数据以查看模型对象表示的实际数据值。<br /><br /> 通过数据浏览，您可以直观地检查和复制从基础维度表或查询返回的数据。 默认情况下，数据浏览使用靠前计数抽样方法，具有 5000 个抽样计数，但您可以修正这些设置。|[在数据源视图中浏览数据 (Analysis Services)](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|为 DSV 中的所有或部分表和关系绘制关系图|[使用数据源视图设计器中的关系图 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [添加或删除表或视图中数据源视图&#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中添加或删除表或视图 (Analysis Services)](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699748"
 ---
 # <a name="using-cube-writebacks-mdx"></a>使用多维数据集写回 (MDX)
   可以使用 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 语句更新多维数据集。 通过此语句，您可以使用特定值更新元组。 若要有效地使用 UPDATE CUBE 语句更新多维数据集，必须了解该语句的语法、发生错误的条件以及更新可能对多维数据集产生的影响。  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   更改写回中包含的维度的维度粒度。  
   
 ## <a name="see-also"></a>请参阅  
- [修改数据&#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [修改数据 (MDX)](mdx-data-modification-modifying-data.md)  
   
   

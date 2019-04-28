@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0987dc64ae4e2fe750073c67cb38b73924708643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731369"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>对数据进行筛选和排序（SSAS 表格）
   当您对表格模型中的表进行操作时，可以使用模型设计器中的控件对数据进行筛选或排序。 您还可以在计算内创建筛选器，以控制从数据列或数据表中使用的数据。 每种筛选器都仅在各自的窗口中起作用。  

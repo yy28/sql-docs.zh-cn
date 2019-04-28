@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721301"
 ---
 # <a name="distributor"></a>分发服务器
   **“分发服务器”** 页出现在配置分发向导和新建发布向导中。 分发服务器是包含分发数据库并为所有类型的复制存储元数据和历史记录数据的服务器。 分发服务器还为事务复制存储事务。 分发服务器与发布服务器可以是同一服务器（本地分发服务器），也可以是不同的服务器（远程分发服务器）。 分发服务器的角色根据所实现的复制类型的不同而不同。 通常，对于事务复制，分发服务器角色要远比合并复制和快照复制重要。 合并和快照复制通常使用本地分发服务器，而对于繁忙的系统来说，为事务复制使用远程分发服务器可以提高性能。  

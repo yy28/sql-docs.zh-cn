@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0af5c392045316b692164a1dce16a5e90c960901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690163"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption（桌面数据库驱动程序）
 返回的书签*fOption* SQL_GETBOOKMARK 的并且仅时才有效查询处于打开状态并且无效时重新发出查询。 不支持永久书签。

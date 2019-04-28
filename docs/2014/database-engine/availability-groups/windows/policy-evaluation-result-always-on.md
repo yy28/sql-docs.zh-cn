@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789077"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>策略评估结果 (AlwaysOn)
   使用 AlwaysOn 面板的 **“策略评估结果”** 页查看当前的所有策略问题。  
@@ -34,7 +34,7 @@ ms.locfileid: "48094215"
 |![UI 图标：错误](../../../relational-databases/replication/media/repl-icon-error.gif "UI 图标：错误")|严重|  
 |![UI 图标：警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI 图标：警告")|警告|  
   
- **Description**  
+ **说明**  
  此网格将显示所选问题的简短说明。  
   
  **详细信息**  

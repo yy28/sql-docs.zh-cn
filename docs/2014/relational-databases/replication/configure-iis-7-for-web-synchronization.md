@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721531"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
   本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
@@ -28,7 +28,7 @@ ms.locfileid: "52819329"
  有关整个配置过程的概述，请参阅[配置 Web 同步](configure-web-synchronization.md)。  
   
 > [!IMPORTANT]  
->  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 早期版本的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]可能导致错误，如：“Web 同步期间的消息格式无效。 请确保在 Web 服务器上正确配置了复制组件。”。  
+>  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 早期版本的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]可能导致错误，如："Web 同步期间消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件。”。  
   
  若要使用 Web 同步，必须通过完成以下步骤来配置 IIS 7。 本主题对每个步骤都进行了详细说明。  
   

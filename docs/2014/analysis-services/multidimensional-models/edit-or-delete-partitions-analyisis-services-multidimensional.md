@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726086"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>编辑或删除分区（Analysis Services - 多维）
   多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。  
@@ -48,8 +48,8 @@ ms.locfileid: "48104899"
  可以为多维数据集中每个度量值组的每一个分区分别配置存储。 也可以为多维数据集或度量值组配置默认存储设置。 存储是在多维数据集向导中的 **“分区”** 选项卡中进行配置的。  
   
 ## <a name="see-also"></a>请参阅  
- [创建和管理本地分区&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [设计聚合&#40;Analysis Services-多维&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services 中合并分区&#40;SSAS-多维&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)   
+ [设计聚合（Analysis Services - 多维）](designing-aggregations-analysis-services-multidimensional.md)   
+ [在 Analysis Services 中合并分区（SSAS - 多维）](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

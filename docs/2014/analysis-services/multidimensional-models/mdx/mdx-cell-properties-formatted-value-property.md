@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725431"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
   FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
@@ -34,7 +34,7 @@ ms.locfileid: "48052348"
  要与 FORMAT_STRING 一起应用以生成本地化版本的 FORMATTED_VALUE 的区域设置规范。  
   
 ## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE 的构造  
- FORMATTED_VALUE 属性是通过使用 VALUE 属性中的值并对该值应用 FORMAT_STRING 属性中指定的格式模板构造而成。 此外，每当格式值是`named formatting literal`语言属性规范便会修改 FORMAT_STRING 的输出以遵守命名格式的语言用法。 所有命名格式文字都定义为可本地化。 例如， `"General Date"` 为可以本地化的规范，而下面的模板 `"YYYY-MM-DD hh:nn:ss",` 则相反，该模板指定所显示的日期由模板定义，与语言规范无关。  
+ FORMATTED_VALUE 属性是通过使用 VALUE 属性中的值并对该值应用 FORMAT_STRING 属性中指定的格式模板构造而成。 另外，每当格式值为 `named formatting literal` 时，LANGUAGE 属性规范便会修改 FORMAT_STRING 的输出结果以遵守命名格式的语言用法。 所有命名格式文字都定义为可本地化。 例如， `"General Date"` 为可以本地化的规范，而下面的模板 `"YYYY-MM-DD hh:nn:ss",` 则相反，该模板指定所显示的日期由模板定义，与语言规范无关。  
   
  如果 FORMAT_STRING 模板和 LANGUAGE 规范之间有冲突，则 FORMAT_STRING 模板将优先于 LANGUAGE 规范。 例如，如果指定 FORMAT_STRING="$ #0" 且 LANGUAGE=1034（西班牙），VALUE=123.456，则 FORMATTED_VALUE="$ 123" 而不是 FORMATTED_VALUE="€ 123"（期望的格式为欧元），因为格式模板的值优先于指定的语言。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "48052348"
 |L|06:30|FORMAT_STRING 显式设置为 `Short Time` ，并且 LANGUAGE 显式设置为 `1041` （日语）。|  
   
 ## <a name="see-also"></a>请参阅  
- [FORMAT_STRING 内容&#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [使用单元属性&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [创建和使用属性值&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING 内容 (MDX)](mdx-cell-properties-format-string-contents.md)   
+ [使用单元属性 (MDX)](mdx-cell-properties-using-cell-properties.md)   
+ [创建和使用属性值 (MDX)](../../creating-and-using-property-values-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

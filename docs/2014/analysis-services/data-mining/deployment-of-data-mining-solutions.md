@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722683"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
   数据挖掘过程的最后一步是将模型部署到生产环境中。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  
@@ -78,13 +78,13 @@ ms.locfileid: "48087637"
   
  当模型将多维数据集用作数据源时，请参考本主题以了解有关如何移动模型及其支持的多维数据集数据的详细信息。  
   
- [部署 Analysis Services 项目&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [部署 Analysis Services 项目 (SSDT)](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  提供有关部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的常规信息，并介绍可作为项目配置的一部分设置的属性。  
   
 ## <a name="see-also"></a>请参阅  
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [数据挖掘查询接口](data-mining-query-tools.md)   
- [处理要求和注意事项&#40;数据挖掘&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)  
   
   

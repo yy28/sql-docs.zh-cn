@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733375"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>挖掘模型任务和操作指南
   可以使用 **中的数据挖掘设计器的** “挖掘模型” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，管理和处理挖掘结构中的挖掘模型。  
@@ -36,7 +36,7 @@ ms.locfileid: "48196057"
   
 -   [更改挖掘模型中列的离散化](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [查看或更改建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+-   [查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
 -   [在模型中指定用作回归量的列](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48196057"
   
 ## <a name="see-also"></a>请参阅  
  [挖掘结构任务和操作指南](mining-structure-tasks-and-how-tos.md)   
- [挖掘模型&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)   
+ [挖掘模型（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)   
  [数据挖掘概念](data-mining-concepts.md)  
   
   

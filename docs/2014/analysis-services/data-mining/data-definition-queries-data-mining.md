@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723119"
 ---
 # <a name="data-definition-queries-data-mining"></a>数据定义查询（数据挖掘）
   对于数据挖掘，“数据定义查询”  类别是指执行以下操作的 DMX 语句或 XMLA 命令：  
@@ -89,7 +89,7 @@ ms.locfileid: "50147513"
 |了解如何管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的模型。|[导出和导入数据挖掘对象](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (DMX)](/sql/dmx/export-dmx)<br /><br /> [IMPORT (DMX)](/sql/dmx/import-dmx)|  
 |了解有关 OPENROWSET 和用于查询外部数据的其他方法的详细信息。|[<源数据查询>](/sql/dmx/source-data-query)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘向导（Analysis Services - 数据挖掘）](data-mining-wizard-analysis-services-data-mining.md)  
   
   

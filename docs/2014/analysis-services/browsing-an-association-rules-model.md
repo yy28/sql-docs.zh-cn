@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664389"
 ---
 # <a name="browsing-an-association-rules-model"></a>浏览关联规则模型
   当你打开关联模型使用**浏览**，模型将显示在交互式查看器，类似于关联规则查看器中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  此查看器让您能对彼此关联的项一目了然，并显示可用于预测或提出建议的规则。  
@@ -149,9 +149,9 @@ ms.locfileid: "52537178"
   
  如果你想要设置高级的参数或更改最小概率和支持，请使用[关联向导&#40;Excel 数据挖掘客户端&#41;](associate-wizard-data-mining-client-for-excel.md)向导，或生成你自己的模型使用[将模型添加到结构&#40;数据挖掘的 Excel 外接程序&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)建模选项。  
   
--   **项集：** 创建模型时，还可通过为 MINIMUM_PROBABILITY 参数赋值来控制生成的项集数。 在算法参数对话框中提供了此参数。  
+-   **项集：** 当你创建的模型时，还可以控制通过为 MINIMUM_PROBABILITY 参数赋值来生成的项集的数目。 在算法参数对话框中提供了此参数。  
   
--   **规则：**[!INCLUDE[msCoName](../includes/msconame-md.md)] 关联规则算法使用概率值来限制所生成的规则数。 可以通过设置 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 参数来控制规则数。  
+-   **规则：**[!INCLUDE[msCoName](../includes/msconame-md.md)]关联规则算法使用概率值来限制所生成的规则数。 可以通过设置 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 参数来控制规则数。  
   
  有关配置高级的参数的详细信息，请参阅[数据挖掘算法&#40;SQL Server 数据挖掘外接程序&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)。  
   

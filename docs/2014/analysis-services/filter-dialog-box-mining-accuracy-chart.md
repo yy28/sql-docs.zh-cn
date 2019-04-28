@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731332"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>“筛选器”对话框（挖掘准确性图表）
   **“筛选器”** 对话框有助于生成可应用于数据集的条件。 数据集可以是用于测试的外部数据集，也可以是定型挖掘模型所使用的事例数据。 此对话框有助于生成可在 **“数据集筛选器”** 对话框或 **“模型筛选器”** 对话框中作为较复杂筛选条件的一部分进行保存的条件。  
@@ -33,7 +33,7 @@ ms.locfileid: "48060160"
   
  如果将筛选器应用于新数据集，则现有数据挖掘模型将仅用于评估数据集中满足条件的事例。 但如果将筛选器应用于挖掘模型本身，则仅针对挖掘模型中满足这些条件的事例评估模型的准确性。  
   
- **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+ **详细信息：**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **条件**  

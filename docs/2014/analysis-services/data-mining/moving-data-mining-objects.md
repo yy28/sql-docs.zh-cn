@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733405"
 ---
 # <a name="moving-data-mining-objects"></a>移动数据挖掘对象
   移动数据挖掘对象的最常见情形是将模型从测试或分析环境部署到生产环境，或者与其他用户共享模型。  
@@ -50,9 +50,9 @@ ms.locfileid: "48071843"
 ### <a name="scripting"></a>脚本编写  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了几种语言，可用于撰写对象的脚本。  
   
--   **XMLA**：可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中右键单击对象，使用 XMLA 编写对象的脚本。 若要执行该脚本，请在目标服务器上的 **“XMLA 查询”** 窗口中打开该脚本。  
+-   **XMLA**:您可以通过右键单击对象中的使用 XMLA 对象编写脚本[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 若要执行该脚本，请在目标服务器上的 **“XMLA 查询”** 窗口中打开该脚本。  
   
--   **DMX**：您可以通过使用模板或在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中提供的查询生成器之一创建脚本。  
+-   **DMX**:可以通过使用模板创建脚本或查询生成器之一中提供[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  但请注意，在您可以使用各脚本撰写语言执行的任务之间存在差异：  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48071843"
 ### <a name="exporting-and-importing"></a>导出和导入  
  导出后再导入挖掘模型和结构（使用 DMX 语句）是最简单的移动或备份各关系数据挖掘对象的方法。 有关这些操作的 DMX 语法的详细信息，请参阅以下主题：  
   
--   [导出&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
+-   [EXPORT (DMX)](/sql/dmx/export-dmx)  
   
--   [导入&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [IMPORT (DMX)](/sql/dmx/import-dmx)  
   
  如果指定 INCLUDE DEPENDENCIES 选项， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还将导出所有所需数据源视图的定义，并且将在导入模型或结构时在目标服务器上重新创建数据源视图。 完成了模型导入后，请确保对对象设置必需的挖掘权限。  
   

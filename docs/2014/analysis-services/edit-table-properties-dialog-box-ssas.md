@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731489"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
   **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
@@ -100,6 +100,6 @@ ms.locfileid: "48229277"
  单击以应用您所做的所有更改，包括替换列。  
   
 ## <a name="see-also"></a>请参阅  
- [表和列&#40;SSAS 表格&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [表和列（SSAS 表格）](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

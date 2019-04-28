@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815722"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用“将数据库添加到可用性组向导”(SQL Server Management Studio)
   使用“将数据库添加到可用性组向导”可帮助您将一个或多个数据库添加到现有的 AlwaysOn 可用性组。  
@@ -34,9 +34,9 @@ ms.locfileid: "48055629"
   
      [先决条件和限制](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要添加数据库，请使用：**[将数据库添加到可用性组向导 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **若要添加数据库，使用：**[将数据库添加到可用性组向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果您从未向可用性组添加数据库，请参阅中的"可用性数据库"部分[的先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  

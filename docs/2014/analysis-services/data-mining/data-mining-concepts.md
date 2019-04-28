@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722973"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。  
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   
--   **预测**：估计销售量、预测服务器负载或服务器停机时间  
+-   **预测**:估计销售量、 预测服务器负载或服务器停机时间  
   
--   **风险和概率**：选择目标邮递的最佳客户、确定风险方案的可能保本点、将概率分配给诊断或其他结果  
+-   **风险和概率**:选择目标邮递确定风险方案的可能保本点、 将概率分配给诊断或其他结果的最佳客户  
   
--   **建议**：确定哪些产品有可能一起销售并生成建议  
+-   **建议**:确定哪些产品有可能一起销售并生成建议  
   
--   **查找序列**：分析购物车中的客户选择，并预测接下来可能发生的事件  
+-   **查找序列**:分析购物车，预测下一步可能发生的事件中的客户选择  
   
--   **分组**：将客户或事件划分到相关的项目分类，分析和预测相关性  
+-   **分组**:将客户或事件划分到相关的项目分类，分析和预测相关性  
   
  生成挖掘模型是大型过程的一部分，此过程包括从提出相关数据问题并创建模型以解答这些问题到将模型部署到工作环境的所有事情。 此过程可以使用下列六个基本步骤进行定义：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48067677"
   
  Microsoft SQL Server 数据挖掘提供用于创建和使用数据挖掘模型的集成环境。 此环境包含 SQL Server Development Studio 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，前者提供用于轻松生成各种项目的综合性解决方案的数据挖掘算法和查询工具，后者包含用于浏览模型和管理数据挖掘对象的工具。 有关详细信息，请参阅[使用 SQL Server Data Tools 创建多维模型 (SSDT)](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)。  
   
- 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具应用于业务方案的示例，请参阅[数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)。  
+ 有关如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具应用于业务方案的示例，请参阅 [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)。  
   
 ##  <a name="DefiningTheProblem"></a> 定义问题  
  与以下关系图的突出显示相同，数据挖掘过程的第一步就是明确定义问题，并考虑可以何种方式利用数据来解答该问题。  
@@ -148,9 +148,9 @@ ms.locfileid: "48067677"
   
  在将模型部署到生产环境之前，您需要测试模型的性能。 此外，在生成模型时，您通常需要使用不同配置创建多个模型，并对所有这些模型进行测试，以便查看哪个模型为您的问题和数据生成最佳结果。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，生成挖掘模型时可自动执行该分区操作。 有关详细信息，请参阅[测试和验证（数据挖掘）](testing-and-validation-data-mining.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可帮助您将数据分成定型数据集和测试数据集，使您可以更准确地评估基于相同数据的所有模型的性能。 您使用定型数据集生成模型，并通过创建预测查询来使用测试数据集测试模型的准确性。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，生成挖掘模型时可自动执行该分区操作。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。  
   
- 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅[测试和验证（数据挖掘）](testing-and-validation-data-mining.md)。  
+ 可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中数据挖掘设计器内的查看器来浏览算法发现的趋势和模式。 有关详细信息，请参阅 [数据挖掘模型查看器](data-mining-model-viewers.md)。 还可以使用该设计器中的工具（如，提升图和分类矩阵）来测试模型创建预测的性能。 若要验证模型是否特定于你的数据，或者是否可用于推断总体，可以使用称为交叉验证的统计方法来自动创建数据子集，并参照每个子集测试模型。 有关详细信息，请参阅 [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)生成数据挖掘项目。  
   
  如果您在 [生成模型](#BuildingModels) 步骤中创建的所有模型都无法正常工作，则必须返回到此过程的上一个步骤，并重新定义问题或重新调查原始数据集中的数据。  
   

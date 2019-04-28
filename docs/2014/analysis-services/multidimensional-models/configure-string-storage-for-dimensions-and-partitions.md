@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700929"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>配置维度和分区的字符串存储
   可以重新配置字符串存储，以在维度属性或分区中容纳超过 4 GB 文件大小的字符串存储限制的极大字符串。 如果你的维度或分区包含此大小的字符串存储，则对于本地和链接（本地或远程）对象，你可以通过在维度或分区级别更改“StringStoresCompatibilityLevel”属性来解决文件大小限制。  
@@ -39,7 +39,7 @@ ms.locfileid: "48060387"
   
 -   [先决条件](#bkmk_prereq)  
   
--   [步骤 1：在 SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性](#bkmk_step1)  
+-   [步骤 1：SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性](#bkmk_step1)  
   
 -   [步骤 2：处理对象](#bkmk_step2)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48060387"
   
  数据库的兼容级别必须设置为 1100。 如果你使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建了或部署了某一数据库，则该数据库的兼容级别已设置为 1100。 如果你将在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 早期版本中创建的数据库移动到 ssSQL11 或更高版本，则必须更新兼容级别。 对于要移动而不是重新部署的数据库，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来设置兼容级别。 有关详细信息，请参阅[设置多维数据库的兼容性级别&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
-##  <a name="bkmk_step1"></a> 步骤 1：在 SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性  
+##  <a name="bkmk_step1"></a> 步骤 1：SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性  
   
 1.  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，打开包含要修改的维度或分区的项目。  
   
@@ -88,8 +88,8 @@ ms.locfileid: "48060387"
  您必须对使用新字符串存储体系结构的每个对象都使用“处理全部”选项。 在处理前，请确保对维度运行影响分析，以便检查依赖对象是否也要求重新处理。  
   
 ## <a name="see-also"></a>请参阅  
- [用于处理工具和方法&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [处理选项和设置&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [用于处理的工具和方法 (Analysis Services)](tools-and-approaches-for-processing-analysis-services.md)   
+ [处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md)   
  [分区存储模式和处理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [维度存储](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

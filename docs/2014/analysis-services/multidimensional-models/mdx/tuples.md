@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725161"
 ---
 # <a name="tuples"></a>元组
   一个元组唯一标识多维数据集中数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  
@@ -64,9 +64,9 @@ FROM [Adventure Works]
 >  属性成员可以按成员名称或成员键引用。 在前面的示例中，您可以将对 [CY 2004] 的引用替换为对 &[2004] 的引用。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [多维数据集空间](cube-space.md)   
  [Autoexists](autoexists.md)   
- [使用成员、 元组和集&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [使用成员、元组和集 (MDX)](working-with-members-tuples-and-sets-mdx.md)  
   
   

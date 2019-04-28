@@ -21,16 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96e7e0cd5377e180630f10bdae6c32e33fcd119b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726781"
 ---
 # <a name="configure-the-all-level-for-attribute-hierarchies"></a>配置属性层次结构的“(全部)”级别
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，“(全部)”级别是一个系统生成的可选级别。 该级别只包含一个成员，该成员的值是直接从属级别中所有成员值的聚合。 该成员称为“全部”成员。 该成员是系统生成的成员，在维度表中不包含该成员。 由于“(全部)”级别中的成员位于层次结构的顶层，因此成员的值是层次结构中所有成员值合并计算的聚合。 “全部”成员通常作为层次结构的默认成员。  
   
- （全部） 级别属性层次结构中是否存在取决`IsAggregatable`属性设置的属性和用户定义层次结构中 （全部） 级别是否存在取决于`IsAggregatable`最顶层级别的特性属性用户定义层次结构。 如果将 `IsAggregatable` 属性设置为 `True`，则会存在“(全部)”级别。 如果将 `IsAggregatable` 属性设置为 `False`，则层次结构中没有“(全部)”级别。  
+ 属性层次结构中是否存在“(全部)”级别取决于特性的 `IsAggregatable` 属性设置，用户定义层次结构中是否存在“(全部)”级别取决于用户定义层次结构最顶层级别的特性的 `IsAggregatable` 属性。 如果将 `IsAggregatable` 属性设置为 `True`，则会存在“(全部)”级别。 如果将 `IsAggregatable` 属性设置为 `False`，则层次结构中没有“(全部)”级别。  
   
 ## <a name="establishing-the-topmost-level"></a>建立最顶层级别  
  如果在层次结构中将某级别的源特性的 `IsAggregatable` 属性设置为 `False`，则该级别上面的层次结构中不会出现可聚合级别。 不可聚合的级别必须是任意层次结构的最顶层级别，或者该级别上面的所有级别的源特性的 `IsAggregatable` 属性必须也设置为 `False`。  

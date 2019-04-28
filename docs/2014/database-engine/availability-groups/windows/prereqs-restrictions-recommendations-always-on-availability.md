@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789861"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
   本主题介绍在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC) 群集、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -39,12 +39,12 @@ ms.locfileid: "59242225"
   
 ||依赖功能|修补程序|链接|  
 |------|-----------------------|------------|----------|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347:[用于.Net 3.5 SP1，以添加对 AlwaysOn 功能的支持的修补程序](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347：[用于.Net 3.5 SP1，以添加对 AlwaysOn 功能的支持的修补程序](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Windows 系统要求和建议  
   
   
-###  <a name="SystemRequirements"></a>清单：要求 （Windows 系统）  
+###  <a name="SystemRequirements"></a>清单：要求（Windows 系统）  
  为了支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，请确保要参与一个或多个可用性组的每台计算机都满足以下基本要求：  
   
 ||要求|链接|  
@@ -76,7 +76,7 @@ ms.locfileid: "59242225"
   
 -   **的系统：** 对于给定的可用性组，所有可用性副本都应在可处理同样的工作负荷的相当的系统上运行。  
   
--   **专用网络适配器：** 为了获得最佳性能，使用专用的网络适配器 （网络接口卡） 进行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+-   **专用网络适配器：** 为获得最佳性能，请将专用的网络适配器（网络接口卡）用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
   
 -   **足够的磁盘空间：** 服务器实例在其上承载可用性副本的每个计算机都必须为该可用性组中的所有数据库拥有足够的磁盘空间。 请记住，在主数据库增长时，其相应的辅助数据库也增长相同量。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59242225"
   
  
   
-###  <a name="PrerequisitesSI"></a>清单：先决条件 （服务器实例）  
+###  <a name="PrerequisitesSI"></a>清单：先决条件（服务器实例）  
   
 ||先决条件|链接|  
 |-|------------------|-----------|  
@@ -216,7 +216,7 @@ ms.locfileid: "59242225"
   
 -   **更改 FCI 网络名称：** 如果你需要更改托管可用性副本的 FCI 的网络名称，则需要从副本的可用性组中删除它，然后将它添加回可用性组中。 您不能删除主副本，因此，如果您在重命名承载主副本的 FCI，则应故障转移到某一辅助副本，然后删除之前的主副本并将其添加回去。 请注意，重命名 FCI 可能会更改其数据库镜像端点的 URL。 当您添加副本时，请确保指定当前端点的 URL。  
   
-###  <a name="PrerequisitesFCI"></a>清单：先决条件 (Fci)  
+###  <a name="PrerequisitesFCI"></a>清单：先决条件 (FCI)  
   
 ||先决条件|链接|  
 |-|------------------|----------|  
@@ -251,7 +251,7 @@ ms.locfileid: "59242225"
   
 -   **可用性副本：** 每个可用性组都支持一个主副本和最多八个辅助副本。 所有副本都可在异步提交模式下运行，或最多三个副本可在同步提交模式下运行（具有两个同步辅助副本的一个主副本）。  
   
--   每台计算机的可用性组和可用性数据库的最大数目：数据库和可用性组可以在计算机 （VM 或物理机器） 放置的实际数目取决于硬件和工作负荷，但没有强制的限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、AlwaysOn 系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
+-   每台计算机的可用性组和可用性数据库的最大数目：可以在计算机（VM 或物理机）上放置的数据库和可用性组的实际数目取决于硬件和工作负荷，但是没有强制限制。 Microsoft 对每个物理计算机承载 10 个可用性组和 100 个数据库进行了广泛测试。 系统过载的信号可能包括但不限于工作线程用尽、AlwaysOn 系统视图和 DMV 响应时间很长和/或调度程序系统转储停滞。 请务必用接近生产的工作负荷彻底测试您的环境，确保它可以应对您的应用程序 SLA 内的工作负荷蜂值。 考虑 SLA 时，确保考虑故障条件下的负荷以及期望的响应时间。  
   
 -   **不要使用故障转移群集管理器来操作可用性组：**  
   
@@ -306,7 +306,7 @@ ms.locfileid: "59242225"
   
  
   
-###  <a name="RequirementsDb"></a>清单：要求 （可用性数据库）  
+###  <a name="RequirementsDb"></a>清单：要求（可用性数据库）  
  为了符合添加到可用性组的条件，数据库必须：  
   
 ||要求|链接|  
@@ -317,7 +317,7 @@ ms.locfileid: "59242225"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|是多用户数据库。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**user_access** = 0)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|未使用 AUTO_CLOSE。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**is_auto_close_on** = 0)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|使用完整恢复模式。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**recovery_model** = 1)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|拥有至少一个完整的数据库备份。<br /><br /> 注意：将数据库设置为完整恢复模式下后, 需要完整备份来启动完整恢复日志链。|[创建完整数据库备份 (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|拥有至少一个完整的数据库备份。<br /><br /> 注意：将数据库设置为完整恢复模式之后，将需要一个完整的备份来启动完整恢复日志链。|[创建完整数据库备份 (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不属于任何现有可用性组。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|不是为数据库镜像配置的。|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) （如果数据库未参与镜像，则所有带有“mirroring_”前缀的列将为 NULL。）|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|在将使用 FILESTREAM 的数据库添加到某一可用性组之前，请确保在承载或将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  

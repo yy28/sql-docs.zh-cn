@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722629"
 ---
 # <a name="cross-validation-formulas"></a>交叉验证公式
   生成交叉验证报表后，它将包含每个模型的准确性度量值，具体取决于挖掘模型的类型（即，用于创建模型的算法）、可预测属性的数据类型和可预测属性值（如果有）。  
@@ -28,7 +28,7 @@ ms.locfileid: "48223177"
 ## <a name="formulas-used-for-cross-validation-measures"></a>用于交叉验证度量值的公式  
   
 > [!NOTE]  
->  **重要：** 这些准确性度量值是针对每个目标属性计算的。 对于每个属性，您可指定或省略目标值。 如果数据集中的事例不具有任何目标属性值，则会将该事例视为包含名为“缺失值” 的特殊值。 在针对特定目标属性计算准确性度量值时，具有缺失值的行不计算在内。 注意，由于分数是针对每个属性分别计算的；如果目标属性存在值，但其他属性缺失值，则不会影响目标属性的分数。  
+>  **重要提示：** 对于每个目标属性来计算这些准确性度量值。 对于每个属性，您可指定或省略目标值。 如果数据集中的事例不具有任何目标属性值，则会将该事例视为包含名为“缺失值” 的特殊值。 在针对特定目标属性计算准确性度量值时，具有缺失值的行不计算在内。 注意，由于分数是针对每个属性分别计算的；如果目标属性存在值，但其他属性缺失值，则不会影响目标属性的分数。  
   
 |度量值|适用范围|实现|  
 |-------------|----------------|--------------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "48223177"
 |**均方根误差**|离散属性，无指定的目标。|概率得分补数的平方的平方根除以分区中的事例数，不包括缺少目标属性值的事例。|  
   
 ## <a name="see-also"></a>请参阅  
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)   
- [交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)   
+ [交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)  
   
   

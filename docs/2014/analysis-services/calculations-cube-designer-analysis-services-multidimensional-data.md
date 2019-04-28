@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681084"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>计算（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“计算”选项卡查看和编辑计算，包括所选多维数据集的计算成员、命名集和多维表达式 (MDX) 脚本命令。  
@@ -56,7 +56,7 @@ ms.locfileid: "48103907"
 ## <a name="see-also"></a>请参阅  
  [多维数据集对象&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 脚本编写基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [多维数据集设计器&#40;Analysis Services-多维数据&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [创建命名集](multidimensional-models/create-named-sets.md)  
   

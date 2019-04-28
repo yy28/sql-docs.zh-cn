@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704945"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>保留关联掩码默认值
   此规则检查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的关联掩码设置是否已设置为 0（默认值）。 affinity mask 选项动态控制 CPU 关联。  

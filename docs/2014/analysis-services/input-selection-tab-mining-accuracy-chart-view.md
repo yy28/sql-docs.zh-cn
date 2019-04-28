@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729892"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>“输入选择”选项卡（“挖掘准确性图表”视图）
   可以使用 **“挖掘准确性图表”** 设计器的 **“输入选择”** 选项卡，指定用于测试模型和生成准确性图表的数据源。  
   
- **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
+ **详细信息：**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>选项  
  **同步预测**  **列和值**  
@@ -36,7 +36,7 @@ ms.locfileid: "48120867"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**显示**|选中要在图表中显示的挖掘模型中每个可预测列名称旁边的框。<br /><br /> 如果图表因过于复杂而不便查看，请清除一列或多列旁边的框以简化该图表。<br /><br /> 注意：至少应选择一列，否则无法创建准确性图表。|  
+|**显示**|选中要在图表中显示的挖掘模型中每个可预测列名称旁边的框。<br /><br /> 如果图表因过于复杂而不便查看，请清除一列或多列旁边的框以简化该图表。<br /><br /> 注意：选择至少一个列，否则无法创建准确性图表。|  
 |**挖掘模型**|列出挖掘结构中包含的挖掘模型。|  
 |**可预测列名称**|选择用于创建提升图的挖掘模型中包含的可预测列。|  
 |**预测值**|为可预测列选择值。 如果保留此项为空白，则提升图将预测模型对于可预测列的所有状态的执行性能。|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120867"
  [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [对挖掘模型应用筛选器](data-mining/apply-a-filter-to-a-mining-model.md)   
- [挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [挖掘模型的筛选器（Analysis Services - 数据挖掘）](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

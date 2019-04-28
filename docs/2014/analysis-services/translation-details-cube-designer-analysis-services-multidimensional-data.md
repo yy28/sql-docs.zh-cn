@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794278"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“事务”** 选项卡上的 **“事务详细信息”** ，定义和管理当前选择的多维数据集的翻译。  
@@ -36,7 +36,7 @@ ms.locfileid: "48118744"
   
 -   度量值  
   
-     `Caption` 和`DisplayFolder`属性  
+     `Caption` 和 `DisplayFolder` 属性  
   
 -   维度  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48118744"
   
 -   关键绩效指标 (KPI)  
   
-     `Caption``Description`，和`DisplayFolder`属性  
+     `Caption`、`Description` 和 `DisplayFolder` 属性  
   
 -   操作  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48118744"
   
      `Caption` 属性  
   
- **\<语言 >**  
+ **\<Language>**  
  以所选语言键入多维数据集对象的属性值。  
   
 ## <a name="context-menu"></a>上下文菜单  

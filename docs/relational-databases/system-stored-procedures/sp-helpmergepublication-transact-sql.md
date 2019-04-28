@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660798"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication **=** ] **'**_发布_  
+ [ @publication**=** ] **'**_publication_**'**  
  发布的名称。 *发布*是**sysname**，默认值为**%**，它返回当前数据库中所有合并发布的相关信息。  
   
  [ @found **=** ] **'***找到***'** 输出  
  用于指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
- [ @publication_id **=**] **'***publication_id***'** 输出  
+ [ @publication_id**=**] **'***publication_id***'** OUTPUT  
  发布的标识号。 *publication_id*是**uniqueidentifier**而且是 OUTPUT 参数，默认值为 NULL。  
   
  [ @reserved **=**] **'***保留***’**  
@@ -66,7 +66,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|发布在结果集列表中的连续顺序。|  
-|NAME|**sysname**|发布的名称。|  
+|name|**sysname**|发布的名称。|  
 |description|**nvarchar(255)**|对发布的说明。|  
 |status|**tinyint**|指示发布数据何时可用。|  
 |retention|**int**|用于保存对发布中项目所做更改的元数据的时间量。 此时间段单位可以为天、星期、月或年。 有关单位的信息，请参阅 retention_period_unit 列。|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|指定当使用 FTP 传递快照时，快照文件供合并代理拾取的位置。|  
 |ftp_login|**sysname**|用于连接到 FTP 服务用户名。|  
 |conflict_retention|**int**|指定保留冲突的保持期（天）。 指定的天数过后，冲突行将从冲突表中清除掉。|  
-|keep_partition_changes|**int**|指定是否对此发布的同步进行优化。 **keep_partition_changes**的默认值为**0**。 值为**0**意味着不优化同步，并且一个分区中的数据更改时验证发送到所有订阅服务器的分区。<br /><br /> **1**表示优化同步，订阅者，已更改的分区内具有行受影响。<br /><br /> 注意：默认情况下，合并发布使用预计算分区，与该选项相比，它提供更大程度的优化。 有关详细信息，请参阅[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)并[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
+|keep_partition_changes|**int**|指定是否对此发布的同步进行优化。 **keep_partition_changes**的默认值为**0**。 值为**0**意味着不优化同步，并且一个分区中的数据更改时验证发送到所有订阅服务器的分区。<br /><br /> **1**表示优化同步，订阅者，已更改的分区内具有行受影响。<br /><br /> 注意：默认情况下，合并发布使用预计算的分区，提供了更大的优化程度比此选项。 有关详细信息，请参阅[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)并[使用预计算分区优化参数化筛选器性能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |allow_subscription_copy|**int**|指定是否已启用复制订阅该发布的订阅数据库的功能。 值为**0**表示不允许复制。|  
 |allow_synctoalternate|**int**|指定是否允许备用同步伙伴与该发布服务器同步。 值为**0**意味着不允许使用同步伙伴。|  
 |validate_subscriber_info|**nvarchar(500)**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。 有助于验证信息分区是否与每个合并一致。|  
-|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定是否将发布信息发布到 Active Directory。 值为**0**意味着发布信息不可用于从 Active Directory。<br /><br /> 已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 您不再能够向 Active Directory 中添加发布信息。|  
 |max_concurrent_merge|**int**|并发合并进程数。 如果**0**，到在任何给定时间运行的并发合并进程数没有限制。|  
 |max_concurrent_dynamic_snapshots|**int**|针对合并发布可以运行的最大并发已筛选数据快照会话数。 如果**0**，可以针对任何给定时间上的发布同时运行的并发筛选的数据快照会话的最大数目没有限制。|  
@@ -129,9 +129,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>请参阅  
  [查看和修改发布属性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

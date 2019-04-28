@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 70640df678dcd6ee48145912504e542d62e2ae75
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717259"
 ---
 # <a name="supplemental-lessons"></a>补充课程
   本节提供了有关如何使用高级表格模型功能的其他信息和课程。  

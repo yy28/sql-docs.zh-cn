@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 242c40b4ded7196d80ad0716666854551865153b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791820"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Analysis Services 查询结果（“常规”页）
   使用此页可指定用于运行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查询的选项。  

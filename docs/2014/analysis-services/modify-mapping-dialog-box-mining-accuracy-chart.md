@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703188"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>“修改映射”对话框（挖掘准确性图表）
   使用 **“修改映射”** 对话框更改输入列如何联接到挖掘模型中的列。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将自动基于列名称和数据类型的列映射，但可以使用此对话框更改列映射。 如果进行更改，则必须确保外部数据源中列的数据类型和内容类型与要测试的挖掘模型中的列相匹配。  
@@ -33,6 +33,6 @@ ms.locfileid: "48106477"
 ## <a name="see-also"></a>请参阅  
  [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [测试和验证任务和操作指南&#40;数据挖掘&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
   

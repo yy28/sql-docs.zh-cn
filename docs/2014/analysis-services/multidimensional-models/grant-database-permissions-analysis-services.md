@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726047"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
   如果你在介绍关系数据库中具有后台的 Analysis Services 数据库管理，则需要理解的首要事项为在数据访问方面，数据库不是 Analysis Services 中的主要安全对象。  
   
- Analysis Services 中的主要查询结构为多维数据集（或表格模型），且这些特定对象设置了用户权限。 与相关的数据库引擎（数据库从此登录并且在此对数据库自身设置用户权限（通常是 `db_datareader`））比较，Analysis Services 数据库主要用作数据模型中的主要查询对象的容器。 如果你的近期目标是为多维数据集或表格模型启用数据访问，那么你现在可以不使用数据库权限，请直接进入此主题：[授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)。  
+ Analysis Services 中的主要查询结构为多维数据集（或表格模型），且这些特定对象设置了用户权限。 与相关的数据库引擎（数据库从此登录并且在此对数据库自身设置用户权限（通常是 `db_datareader`））比较，Analysis Services 数据库主要用作数据模型中的主要查询对象的容器。 如果你的近期目标是为多维数据集或表格模型启用数据访问，可以现在不使用数据库权限，请直接进入此主题：[授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
  Analysis Services 中的数据库权限启用了管理功能；如果你在委派处理操作，“完全控制”数据库权限的情况会同样如此或者风格会更为精细。 如以下插图和描述所示，在“创建角色”  对话框的“常规”  窗格上可指定 Analysis Services 数据库权限级别。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149007"
 > [!NOTE]  
 >  服务器管理员（服务器管理员角色成员）对服务器上的每个数据库也具有隐式完全控制。  
   
- `Process Database` ─ 该权限用于在数据库级别委派处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅[授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)。  
+ `Process Database` ─ 该权限用于在数据库级别委派处理。 作为管理员，你可通过创建一个角色来卸载此任务，该角色允许其他人员或服务对数据库中的任何对象调用处理操作。 或者，你也可以创建在特定对象上启用处理的角色。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md) 。  
   
- `Read Definition` ─ 该权限授予读取对象元数据的能力去除查看关联的数据的功能。 一般地，该权限被用于为专用处理而创建的角色中，添加使用工具（例如： [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ）的功能来交互地处理数据库。 如果没有 `Read Definition`，则 `Process Database` 权限就仅在编写了脚本的方案中有效。 如果计划自动执行处理，或许通过 SSIS 或其他计划程序，你可能想要创建具有的角色`Process Database`而无需`Read Definition`。 否则，请考虑将这两个属性组合在同一角色中，以通过在用户界面中能形象化数据模型的 SQL Server 工具支持无人参与的以及交互式的处理。  
+ `Read Definition` ─ 该权限授予读取对象元数据的能力去除查看关联的数据的功能。 一般地，该权限被用于为专用处理而创建的角色中，添加使用工具（例如： [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ）的功能来交互地处理数据库。 如果没有 `Read Definition`，则 `Process Database` 权限就仅在编写了脚本的方案中有效。 如果你计划或许通过 SSIS 或其他计划程序使处理自动化，你可能想在没有 `Process Database` 的情况下，创建带有 `Read Definition` 的角色。 否则，请考虑将这两个属性组合在同一角色中，以通过在用户界面中能形象化数据模型的 SQL Server 工具支持无人参与的以及交互式的处理。  
   
 ## <a name="full-control-administrator-permissions"></a>完全控制（管理员）权限  
  在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，数据库管理员是被分配到包括完全控制（管理员）权限的角色的任何 Windows 用户标识。 数据库管理员可以在数据库中执行任何任务，其中包括：  
@@ -66,7 +66,7 @@ ms.locfileid: "48149007"
   
 2.  在“常规”  窗格中，输入名称（例如：DBAdmin）。  
   
-3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意，`Process Database` 和 `Read Definition` 被自动选择。 这两个这些权限始终包含在包含的角色`Full Control`。  
+3.  为多维数据集选择“完全控制(管理员)”复选框。 请注意，`Process Database` 和 `Read Definition` 被自动选择。 这些权限始终包含在包括了 `Full Control` 的角色中。  
   
 4.  在“成员身份”  窗格中，输入使用此角色连接到 Analysis Services 的 Windows 用户和组帐户。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "48149007"
   
 ## <a name="see-also"></a>请参阅  
  [授予服务器管理员权限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [授予处理权限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
   
   

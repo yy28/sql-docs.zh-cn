@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721157"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
   在本课中，将创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：  
   
-|代理|位置|帐户名|  
+|代理|Location|帐户名|  
 |-----------|--------------|------------------|  
 |快照代理|发布服务器|\<*machine_name*>\repl_snapshot|  
 |日志读取器代理|发布服务器|\<*machine_name*>\repl_logreader|  

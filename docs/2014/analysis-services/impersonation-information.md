@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05236d05e1b543ea7acb36f0856083e1c1db77a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730672"
 ---
 # <a name="impersonation-information"></a>模拟信息
   使用 **“模拟信息”** 页可以指定 Analysis Services 将用于连接到数据源的凭据。  
@@ -43,7 +43,7 @@ ms.locfileid: "48209717"
  **使用当前用户的凭据**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY、本地多维数据集和挖掘模型。 处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步不支持此选项。  
   
- **继承**  
+ **Inherit**  
  选择此选项可以使用服务器管理员通过 `DataSourceImpersonation` 数据库属性设置的、在数据库级别定义的模拟行为。  
   
 ## <a name="see-also"></a>请参阅  

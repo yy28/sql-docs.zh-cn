@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6b72e4872de2f1e744ac55a60c5abb34aea0f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793428"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>“用户选择”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“用户选择”对话框，为基于使用情况的优化向导选择筛选查询日志中存储的查询时针对的用户。  

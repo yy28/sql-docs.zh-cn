@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a353d633287ad4b535a88b9ba76fa403a20c9e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731069"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>常规（数据库设计器）（Analysis Services - 多维数据）
   可以使用 **“常规”** 选项卡更改 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的属性。  
@@ -40,7 +40,7 @@ ms.locfileid: "48195807"
 > [!NOTE]  
 >  若要重命名该数据库，请在“解决方案资源管理器”中，右键单击相应的项目，然后单击“属性”。 在数据库的 **“属性页”** 对话框的 **“部署”** 页上，将 **“数据库”** 属性的值更改为新的数据库名称。  
   
- **Description**  
+ **说明**  
  输入对数据库的说明。  
   
 ## <a name="translations-options"></a>翻译选项  

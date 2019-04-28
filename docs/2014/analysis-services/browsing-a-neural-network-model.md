@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660174"
 ---
 # <a name="browsing-a-neural-network-model"></a>浏览神经网络模型
   使用“浏览”打开神经网络或逻辑回归模型时，该模型显示在交互式查看器（类似于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的神经网络模型查看器）中。 该查看器有助于您探索相关性并获取有关该模型和基础数据中各种模式的信息。  
@@ -79,7 +79,7 @@ ms.locfileid: "48218577"
   
     -   “提升”可显示此特定属性/值对对于提升某个结果的贡献度。  
   
-     注意：无论将鼠标指针悬停在哪一列上，工具提示都包含相同的信息。  
+     注意：工具提示包含无论是否将鼠标指针通过一列或另一个相同的信息。  
   
  [返回页首](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218577"
  [返回页首](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>有关神经网络模型的详细信息  
- 查看器中的信息是使用特定于此模型类型的存储过程从服务器检索的：System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores。  
+ 使用特定于此模型类型的存储的过程从服务器检索是在查看器中的信息：System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  如果要使用外接程序创建含有多个可预测属性的模型，请使用“高级”建模选项。  
   

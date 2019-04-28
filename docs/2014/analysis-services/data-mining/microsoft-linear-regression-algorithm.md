@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734125"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。  
@@ -58,7 +58,7 @@ ms.locfileid: "48180407"
   
  如果想了解有关该方程式的更多详细信息，还可以使用 [“Microsoft 一般内容树查看器”](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)查看系数和其他详细信息。  
   
- 对于线性回归模型，模型内容包括元数据、回归公式和有关输入值分布的统计信息。 有关详细信息，请参阅[线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 对于线性回归模型，模型内容包括元数据、回归公式和有关输入值分布的统计信息。 有关详细信息，请参阅 [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  模型处理完毕后，结果将以一组统计信息和线性回归公式的形式存储，您可以利用这些结果来计算未来趋势。 有关用于线性回归模型的查询的示例，请参阅 [线性回归模型查询示例](linear-regression-model-query-examples.md)。  
@@ -78,9 +78,9 @@ ms.locfileid: "48180407"
 -   支持使用 OLAP 挖掘模型。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)   
  [线性回归模型查询示例](linear-regression-model-query-examples.md)   
- [线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

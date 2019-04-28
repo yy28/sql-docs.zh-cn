@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728333"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手动处理数据（SSAS 表格）
   本主题说明如何手动处理 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的工作区数据。  
@@ -74,7 +74,7 @@ ms.locfileid: "48189759"
  单击此选项可以暂停处理操作。 如果操作用时过长或出现太多错误，则此选项很有用。  
   
 ## <a name="see-also"></a>请参阅  
- [处理数据&#40;SSAS 表格&#41;](process-data-ssas-tabular.md)   
- [数据处理故障排除&#40;SSAS 表格&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [处理数据（SSAS 表格）](process-data-ssas-tabular.md)   
+ [数据处理故障排除（SSAS 表格）](troubleshoot-process-data-ssas-tabular.md)  
   
   

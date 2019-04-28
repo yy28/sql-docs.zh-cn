@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731339"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>筛选挖掘结构的源多维数据集
   创建基于多维模型 （OLAP 多维数据） 中的数据的挖掘结构时，你可以*切片*挖掘结构所基于的多维数据集。 通过切片操作可创建数据子集，作为用于给挖掘模型定型的数据的一种筛选器。  

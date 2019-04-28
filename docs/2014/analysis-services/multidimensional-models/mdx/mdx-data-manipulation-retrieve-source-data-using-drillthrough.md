@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93a9f80d25619aafe6a8a46f7baa7b7106b93351
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699866"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>使用 DRILLTHROUGH 检索源数据 (MDX)
   多维表达式 (MDX) 使用 [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)语句从多维数据集单元的源数据中检索行集。  
@@ -29,7 +29,7 @@ ms.locfileid: "48076209"
  为了对多维数据集运行 `DRILLTHROUGH` 语句，必须为该多维数据集定义钻取操作。 若要定义钻取操作，请在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的多维数据集设计器中，在 **“操作”** 窗格的工具栏上单击 **“新建钻取操作”**。 在新的钻取操作中，指定 `DRILLTHROUGH` 语句返回的操作名称、目标、条件以及列。  
   
 ## <a name="drillthrough-statement-syntax"></a>DRILLTHROUGH 语句的语法  
- `DRILLTHROUGH`语句使用以下语法：  
+ `DRILLTHROUGH` 语句使用以下语法：  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -38,7 +38,7 @@ ms.locfileid: "48076209"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- `SELECT`子句标识包含要检索的源数据的多维数据集单元。 此 `SELECT` 子句与普通 MDX `SELECT` 语句基本相同，不同之处在于在 `SELECT` 子句中，只能在每个轴上指定一个成员。 如果在一个轴上指定了多个成员，则会发生错误。  
+ `SELECT` 子句标识包含要检索的源数据的多维数据集单元。 此 `SELECT` 子句与普通 MDX `SELECT` 语句基本相同，不同之处在于在 `SELECT` 子句中，只能在每个轴上指定一个成员。 如果在一个轴上指定了多个成员，则会发生错误。  
   
  `<Max_Rows>` 语法指定返回的每个行集中的最大行数。 如果用于连接数据源的 OLE DB 访问接口不支持 `DBPROP_MAXROWS`，`<Max_Rows>` 设置将被忽略。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48076209"
  `<Return_Columns>` 语法标识要返回的基础数据库列。  
   
 ## <a name="drillthrough-statement-example"></a>DRILLTHROUGH 语句的示例  
- 下面的示例演示如何将`DRILLTHROUGH`语句。 在此示例中，DRILLTHROUGH 语句沿着 Stores 维度（切片器轴）查询 Store 维度、Product 维度和 Time 维度的叶，然后返回部门度量值组、部门 ID 和员工的名字。  
+ 下面的示例说明了 `DRILLTHROUGH` 语句的使用。 在此示例中，DRILLTHROUGH 语句沿着 Stores 维度（切片器轴）查询 Store 维度、Product 维度和 Time 维度的叶，然后返回部门度量值组、部门 ID 和员工的名字。  
   
 ```  
 DRILLTHROUGH  
@@ -57,6 +57,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [操作数据&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [操作数据 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   
   

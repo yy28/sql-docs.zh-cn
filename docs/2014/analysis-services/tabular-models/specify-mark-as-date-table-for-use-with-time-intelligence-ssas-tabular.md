@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af799e8e806696022635a04d808213ffb5c0e779
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794295"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>指定“标记为日期表”以便用于时间智能（SSAS 表格）
   要在 DAX 公式中使用时间智能函数，必须指定一个日期表和一个数据类型为 Date 的唯一标识符 (datetime) 列。 将日期表中的某列指定为唯一标识符后，您可以在日期表中各列与任何事实数据表之间创建关系。  
@@ -52,7 +52,7 @@ ms.locfileid: "48148567"
 4.  根据需要在事实数据表和日期表之间创建任何关系。  
   
 ## <a name="see-also"></a>请参阅  
- [计算&#40;SSAS 表格&#41;](calculations-ssas-tabular.md)   
+ [计算（SSAS 表格）](calculations-ssas-tabular.md)   
  [时间智能函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

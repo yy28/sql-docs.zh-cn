@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728583"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 课：创建关系
   在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，Product 表和 Product Subcategory 表基于每个产品属于某个子类别的事实具有某种关系。 有关详细信息，请参阅[关系（SSAS 表格）](tabular-models/relationships-ssas-tabular.md)  
   
- 学完本课的预计时间：**10 分钟**  
+ 估计的时间才能完成本课程中：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：重命名列](rename-columns.md)。  
@@ -48,11 +48,11 @@ ms.locfileid: "52409054"
   
     |在职|表|相关查找表|  
     |------------|-----------|--------------------------|  
-    |用户帐户控制|**客户 [Geography Id]**|**Geography [Geography Id]**|  
-    |用户帐户控制|**产品 [产品子类别 Id]**|**产品子类别 [产品子类别 Id]**|  
-    |用户帐户控制|**产品子类别 [产品类别 Id]**|**产品类别 [产品类别 Id]**|  
-    |用户帐户控制|**Internet Sales [Customer Id]**|**客户 [Customer Id]**|  
-    |用户帐户控制|**Internet Sales [产品 Id]**|**产品 [产品 Id]**|  
+    |是|**客户 [Geography Id]**|**Geography [Geography Id]**|  
+    |是|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
+    |是|**产品子类别 [产品类别 Id]**|**Product Category [Product Category Id]**|  
+    |是|**Internet Sales [Customer Id]**|**客户 [Customer Id]**|  
+    |是|**Internet Sales [Product Id]**|**Product [Product Id]**|  
   
  如果缺少任何上表中的关系，则验证您的模型包括以下各表：客户、 日期、 地理位置、 产品、 产品类别、 产品子类别和 Internet 销售。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99b53c2559bf13f612a82c29ed7d41a5d58ac7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702995"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>“挖掘模型”视图（数据挖掘模型设计器）
   可以使用 **“挖掘模型”** 视图创建或修挖掘结构包含的挖掘模型。  
@@ -29,7 +29,7 @@ ms.locfileid: "48160427"
   
 ## <a name="see-also"></a>请参阅  
  [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [预测查询生成器&#40;数据挖掘&#41;](prediction-query-builder-data-mining.md)  
   

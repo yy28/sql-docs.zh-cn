@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793198"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>为 DQS 日志文件配置严重级别
   本主题介绍如何通过使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 为 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) 中的不同活动和模块配置严重级别。 严重级别定义 DQS 中发生的事件的强度。 DQS 事件具有以下严重级别，这些级别按严重程度递减列出：  

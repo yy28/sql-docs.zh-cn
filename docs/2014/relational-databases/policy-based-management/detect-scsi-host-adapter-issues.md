@@ -1,25 +1,27 @@
 ---
 title: 检测 SCSI 主机适配器问题 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4762b2aec13821402c8b38bd5da207855fd1ea76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705107"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>检测 SCSI 主机适配器问题
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此规则检查系统事件日志中是否存在 EventId 1066。 此错误是由 SCSI 主机适配器配置问题或设备故障引起的。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建议  

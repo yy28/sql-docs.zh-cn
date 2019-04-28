@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659482"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53202626"
   
      在中国和新加坡，Microsoft 技术支持部门通常见到的是简体中文，简体中文以拼音作为首选的排序方式。 建议使用的排序规则是 Chinese_PRC（用于 SQL Server 2000）、Chinese_PRC_90（用于 SQL Server 2005）或 Chinese_Simplified_Pinyin_100（用于 SQL Server 2008 和更高版本）。  
   
-     在中国台湾地区，更常见的是繁体中文，建议使用的是基于笔画数的排序方式。Chinese_Taiwan_Stroke（用于 SQL Server 2000）、Chinese_Taiwan_Stroke_90（用于 SQL Server 2005）或 Chinese_Traditional_Stroke_Count_100（用于 SQL Server 2008 和更高版本）。  
+     在中国台湾地区，它是更常见繁体中文使用建议的排序顺序基于笔画数：Chinese_Taiwan_Stroke （用于 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （用于 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （用于 SQL Server 2008 和更高版本）。  
   
      其他区域（如中国香港和中国澳门）也使用繁体中文。 在中国香港，就排序规则而言，Chinese_Hong_Kong_Stroke_90（在 SQL Server 2005 上）的使用较为常见。 在中国澳门，较常使用的是 Chinese_Traditional_Stroke_Count_100（在 SQL Server 2008 和更高版本上）。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53202626"
   
 |语言脚本|区分大小写|  
 |---------------------|----------------------|  
-|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 ID 被认为是相同的：54321**abcdef**、 54321**ABCDEF**、 54321**AbCdEf**。 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
+|**基本拉丁字母表**|以拉丁语脚本表示的对象标识符（任意 26 个英语大写或小写字母）将视为区分大小写，无论排序规则如何。 例如，以下对象 Id 将被视为相同：54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. 在内部，Analysis Services 将字符串中的字符都视作是大写，然后执行与语言无关的简单字节比较。<br /><br /> 请注意，只有这 26 个字符会受到影响。 如果语言是西欧语言，但使用斯堪的纳维亚语言字符，则其他字符将不为大写。|  
 |**西里尔语，希腊语，科普特语，亚美尼亚语**|非拉丁语双脚本中的对象标识符（如西里尔语）总是区分大小写。 例如，Измерение 和 измерение 被视为两个不同值，尽管唯一的区别是首字母的大小写。|  
   
  **对象标识符区分大小写的意义**  
@@ -122,7 +122,7 @@ ms.locfileid: "53202626"
   
 3.  **使用 ISO 日期格式表示通用日期和时间信息**  
   
-     一个[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)了这一建议：“我一直对传递到 SQL 或 MDX 中的查询的任何日期字符串使用 ISO 日期格式 yyyy-mm-dd，因为它很明确而且无论客户端或服务器的区域设置如何都将正常工作。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
+     一个[Analysis Services 专家](http://geekswithblogs.net/darrengosbell/Default.aspx)了这一建议："我一直使用 ISO 日期格式年-月-日的任何日期字符串传递到 SQL 或 MDX 中的查询因为它很明确而且无论客户端或服务器的区域设置将起作用。 我同意在分析不明确的日期格式时服务器应遵从其区域设置，但是我也认为如果你已有不对解释开放的选项，总之最好选择那个选项。”  
   
 4.  **使用 Format 函数强制使用特定格式，而不考虑区域语言设置**  
   

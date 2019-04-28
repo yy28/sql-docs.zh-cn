@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731578"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>从示例填充（Excel 表分析工具）
   ![从示例填充表分析工具中的按钮](media/tat-fillex.gif "从示例填充表分析工具中的按钮")  
@@ -62,7 +62,7 @@ ms.locfileid: "48160897"
   
 |“列”|ReplTest1|倾向于|相对影响|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 kilometers|80%|  
+|StateProvinceCode|AB|> 500 公里|80%|  
   
  这意味着，中的值 AB **StateProvinceCode**列强预测发货距离 > 500 公里为单位。  
   

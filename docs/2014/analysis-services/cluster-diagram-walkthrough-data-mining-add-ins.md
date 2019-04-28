@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680913"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>分类关系图演练（数据挖掘外接程序）
   创建聚类分析模型后，可以将其导入使用 Visio**群集**形状，然后再继续进行自定义和增强布局。 **Visio 数据挖掘形状**包括以下适用于数据挖掘关系图的自定义控件：  

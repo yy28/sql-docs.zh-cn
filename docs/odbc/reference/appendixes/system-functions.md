@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735053"
 ---
 # <a name="system-functions"></a>系统函数
 下表列出了 ODBC 标量函数集中包含的系统函数。 通过调用**SQLGetInfo**与*信息类型*的 SQL_SYSTEM_FUNCTIONS，应用程序可以确定由驱动程序支持的系统函数。  
@@ -32,6 +32,6 @@ ms.locfileid: "53591511"
   
 |函数|Description|  
 |--------------|-----------------|  
-|**数据库 （)** (ODBC 1.0)|返回与连接句柄相对应的数据库的名称。 (数据库的名称中也有通过调用**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 连接选项。)|  
-|**IFNULL (** _exp_，_值_**)** (ODBC 1.0)|如果*exp*为 null，*值*返回。 如果*exp*不为 null， *exp*返回。 可能的数据类型或类型的*值*必须是兼容的数据类型*exp*。|  
-|**用户 （)** (ODBC 1.0)|返回在 DBMS 中的用户名称。 (用户名称也是可**SQLGetInfo**通过指定的信息类型：SQL_USER_NAME。)这可以是不同于登录名。|
+|**DATABASE( )**  (ODBC 1.0)|返回与连接句柄相对应的数据库的名称。 (数据库的名称中也有通过调用**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 连接选项。)|  
+|**IFNULL(** _exp_,_value_**)**  (ODBC 1.0)|如果*exp*为 null，*值*返回。 如果*exp*不为 null， *exp*返回。 可能的数据类型或类型的*值*必须是兼容的数据类型*exp*。|  
+|**USER( )**  (ODBC 1.0)|返回在 DBMS 中的用户名称。 (用户名称也是可**SQLGetInfo**通过指定的信息类型：SQL_USER_NAME。)这可以是不同于登录名。|

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793208"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -79,11 +79,11 @@ ms.locfileid: "56034088"
   
 4.  请为 **“分析方法”** 选择下列选项之一：  
   
-    -   **引用数据**:分析根据如何通过引用数据服务 (RDS) 格式化数据字段的值。 Data Quality Services 将复合域中的值发送到 RDS，RDS 根据复合域中的域返回更正和分析后的数据。  
+    -   **引用数据**：根据引用数据服务 (RDS) 格式化数据的方式分析字段的值。 Data Quality Services 将复合域中的值发送到 RDS，RDS 根据复合域中的域返回更正和分析后的数据。  
   
-    -   **按顺序**:分析根据复合域中域的顺序的字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
+    -   **按顺序**：根据复合域中域的顺序分析字段的值。 第一个值将加入第一个域中，第二个值加入第二个域中，依此类推。  
   
-    -   **分隔符**:分析字段的值根据选择的单选按钮中的分隔符时显示选择的分隔符。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
+    -   **分隔符**：根据在勾选“分隔符”后显示的单选按钮中选择的分隔符分析该字段的值。 可以是 **“制表符”**、 **“分号”**、 **“逗号”**、 **“空格”** 或 **“其他”**。 如果选择 **“其他”**，则输入将作为分隔符的值。  
   
 5.  如果您为分析方法选择了 **“分隔符”** ，还可以选择 **“基于知识的分析”**。 有关详细信息，请参阅 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   

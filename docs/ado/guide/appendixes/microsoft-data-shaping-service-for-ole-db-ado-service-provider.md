@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719751"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据整理服务的 OLE DB 概述
 > [!IMPORTANT]
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  有关数据调整的详细信息，请参阅[数据整理](../../../ado/guide/data/data-shaping-overview.md)。
 
 ## <a name="see-also"></a>请参阅
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

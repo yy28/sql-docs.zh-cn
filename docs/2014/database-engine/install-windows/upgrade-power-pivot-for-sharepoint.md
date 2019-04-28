@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775641"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
   本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
@@ -160,7 +160,7 @@ ms.locfileid: "58434498"
   
     3.  单击 **“升级功能、服务、应用程序和解决方案”**，然后单击 **“确定”** 继续操作。  
   
-    4.  将出现以下警告："PowerPivot 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
+    4.  出现以下警告："PowerPivot 管理面板中的工作簿将要升级到最新版本。 您对现有工作簿进行的所有定制都将丢失。 是否继续?”  
   
          此警告指的是报告数据刷新活动的 PowerPivot 管理面板中的工作簿。 如果您已经自定义了这些工作簿，当使用新版本替换现有文件时，对这些工作簿的所有修改都将丢失。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "58434498"
   
     10. 升级场中的解决方案和功能可能要花几分钟才能完成。 在此期间，针对 PowerPivot 数据的连接请求将失败并显示"无法刷新数据"或者"出现错误。 已尝试执行请求的操作。 请重试。” 升级完成后，服务器将变为可用，这些错误将不会再出现。  
   
-8.  **重复该过程**为场中每个 SQL Server Analysis Services (PowerPivot) 服务：1) 运行 SQL Server 安装程序 2) 运行 PowerPivot 配置工具。  
+8.  **重复该过程**为场中每个 SQL Server Analysis Services (PowerPivot) 服务：1） 运行 SQL Server 安装程序 2） 运行 PowerPivot 配置工具。  
   
 9. 请通过执行升级后步骤以及通过检查场中 PowerPivot 服务器的版本，确认升级成功。 有关详细信息，请参阅本主题中的 [升级后的验证任务](#verify) 以及下面的部分。  
   

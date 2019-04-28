@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665339"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource（Paradox 驱动程序）
 > [!NOTE]  
@@ -34,8 +34,8 @@ ms.locfileid: "47694586"
 |DEFAULTDIR|所指定的路径的目录。|  
 |DESCRIPTION|数据源中的数据说明。<br /><br /> 这将设置为相同的选项**说明**中设置的对话框。|  
 |DRIVER|路径规范，以驱动程序 DLL。|  
-|DRIVERID|驱动程序的一个整数 ID。<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
-|排他|确定数据库是否将排他模式 （一次只能由一个用户访问） 中打开或共享模式 （一次通过多个用户访问）。 可以是 true （排他模式） 或 false （共享模式）。<br /><br /> 这将设置为相同的选项**独占**中设置的对话框。|  
+|DRIVERID|驱动程序的一个整数 ID。<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
+|EXCLUSIVE|确定数据库是否将排他模式 （一次只能由一个用户访问） 中打开或共享模式 （一次通过多个用户访问）。 可以是 true （排他模式） 或 false （共享模式）。<br /><br /> 这将设置为相同的选项**独占**中设置的对话框。|  
 |FIL|文件类型 Paradox 3.x，Paradox 4.x 或 Paradox 5.x|  
 |文件类型|文本驱动程序 （文本） 的文件类型。|  
 |PAGETIMEOUT|指定时间，的段中 （如果不使用） 会保留一页在缓冲区中被删除前一秒的十分之几。 默认值为 600 秒 （60 秒） 的十分之几秒。 请注意，此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 这将设置为相同的选项**页超时**中设置的对话框。|  

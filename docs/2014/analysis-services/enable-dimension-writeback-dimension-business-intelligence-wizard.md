@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a942bb85a2af9b933c8091004fa9bb15529e86d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731519"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>启用维度写回（维度）（商业智能向导）
   可以使用 **“启用维度写回”** 页，选择商业智能向导将为其启用写回功能的维度。  

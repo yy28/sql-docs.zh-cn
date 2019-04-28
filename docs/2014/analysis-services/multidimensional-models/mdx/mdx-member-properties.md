@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e650ee07183123f5c90e24129282820825cee652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725451"
 ---
 # <a name="using-member-properties-mdx"></a>使用成员属性 (MDX)
   成员属性提供有关各个元组中的每个成员的基本信息。 此基本信息包括成员名、父级别、子成员数目等等。 成员属性适用于给定级别的所有成员。 就组织结构而言，成员属性可视为存储在单个维度上按维度组织的数据。  
@@ -44,7 +44,7 @@ ms.locfileid: "48075539"
  这两个内部函数和用户定义成员属性可以检索使用`PROPERTIES`关键字或[属性](/sql/mdx/properties-mdx)函数。  
   
 ## <a name="using-the-properties-keyword"></a>使用 PROPERTIES 关键字  
- `PROPERTIES`关键字指定要用于给定的轴维度的成员属性。 `PROPERTIES`关键字隐藏内`<axis specification>`子句的 MDX[选择](/sql/mdx/mdx-data-manipulation-select)语句：  
+ `PROPERTIES` 关键字指定要用于给定轴维度的成员属性。 `PROPERTIES`关键字隐藏内`<axis specification>`子句的 MDX[选择](/sql/mdx/mdx-data-manipulation-select)语句：  
   
 ```  
 SELECT [<axis_specification>  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  有关 `<set>` 和 `<axis_name>` 值的详细信息，请参阅[指定查询轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)。  
   
- `<dim_props>`子句允许您查询维度、 级别和成员属性使用`PROPERTIES`关键字。 下列语法显示了 `<dim_props>` 子句的格式：  
+ `<dim_props>` 子句允许您使用 `PROPERTIES` 关键字查询维度、级别和成员属性。 下列语法显示了 `<dim_props>` 子句的格式：  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  
@@ -75,6 +75,6 @@ SELECT [<axis_specification>
 -   用户定义成员属性前应是其所在级别的名称。 有关如何使用详细信息`PROPERTIES`关键字与用户定义的成员属性，请参阅[用户定义成员属性&#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建和使用属性值&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
+ [创建和使用属性值 (MDX)](../../creating-and-using-property-values-mdx.md)  
   
   

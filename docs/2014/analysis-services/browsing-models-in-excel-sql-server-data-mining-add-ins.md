@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58acd7eab11302e1963f5b456cefd81a57e2f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664275"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>在 Excel 中浏览模型（SQL Server 数据挖掘外接程序）
   ![浏览数据挖掘功能区中的模型按钮](media/dmc-browse.gif "数据挖掘功能区中的浏览模型按钮")  
