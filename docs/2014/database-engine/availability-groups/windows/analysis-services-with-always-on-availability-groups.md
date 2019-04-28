@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791873"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
   AlwaysOn 可用性组是预定义的 SQL Server 关系数据库集合；当有条件触发任一个数据库进行故障转移时，这些数据库将执行集体故障转移，使请求重定向到同一可用性组中其他实例上的镜像数据库。 如果将可用性组用作高可用性解决方案，您可以将该组中的数据库用作 Analysis Services 表格或多维解决方案中的数据源。 使用可用性数据库时，以下所有 Analysis Services 操作都能按预期工作：处理或导入数据、直接查询关系数据（使用 ROLAP 存储或 DirectQuery 模式）以及写回。  
@@ -30,7 +30,7 @@ ms.locfileid: "52414084"
   
  **（仅限只读工作负荷）**。 必须为只读连接配置辅助副本角色，可用性组必须具备路由列表，并且 Analysis Services 数据源中的连接必须指定可用性组侦听器。 本主题中提供了相关说明。  
   
-##  <a name="bkmk_UseSecondary"></a> 清单：使用辅助副本执行只读操作  
+##  <a name="bkmk_UseSecondary"></a> 清单：使用次要副本执行只读操作  
  除非您的 Analysis Services 解决方案包括写回功能，否则您可以配置数据源连接使用可读的辅助副本。 如果您的网络连接速度很快，那么辅助副本的数据滞后时间很短，可提供与主副本几乎相同的数据。 通过将辅助副本用于 Analysis Services 操作，您可以减少主副本上的读写争用，并且更充分地利用可用性组中的辅助副本。  
   
  默认情况下，允许对主副本进行读写和读意向访问，同时不允许连接辅助副本。 需要进行额外配置，才能建立与辅助副本的只读客户端连接。 配置要求对辅助副本设置属性，并运行定义只读路由列表的 T-SQL 脚本。 请使用以下过程来确保已执行以上两个步骤。  
@@ -38,7 +38,7 @@ ms.locfileid: "52414084"
 > [!NOTE]  
 >  以下步骤假定已存在 AlwaysOn 可用性组和数据库。 如果要配置新组，请使用“新建可用性组向导”创建该组并联接数据库。 该向导检查先决条件，为每一步提供指导，并执行初始同步。 有关详细信息，请参阅[使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>步骤 1：配置对可用性副本的访问权限  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>第 1 步：配置对可用性副本的访问  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例，然后展开服务器树。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52414084"
   
          计划的故障转移也需要该属性。 如果出于测试目的要执行计划的手动故障转移，请将主副本和辅助副本的 **“可用性模式”** 同时设置为 **“同步提交”** 。  
   
-#### <a name="step-2-configure-read-only-routing"></a>步骤 2：配置只读路由  
+#### <a name="step-2-configure-read-only-routing"></a>第 2 步：配置只读路由  
   
 1.  连接到主副本。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "52414084"
 ##  <a name="bkmk_test"></a> 测试配置  
  在 Analysis Services 中配置了辅助副本并创建了数据源连接后，您可以确认处理和查询命令是否重定向到辅助副本。 还可以执行计划的手动故障转移，以验证适用于此应用场景的恢复计划。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步骤 1：确认数据源连接重定向到辅助副本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>第 1 步：确认数据源连接重定向到次要副本  
   
 1.  启动 SQL Server Profiler 并连接到承载辅助副本的 SQL Server 实例。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52414084"
   
      在跟踪窗口中，您应能看到来自应用程序 **Microsoft SQL Server Analysis Services**的事件。 应能看到从承载辅助副本的服务器实例上的数据库中检索数据的 `SELECT` 语句，证明是通过该侦听器连接到辅助副本。  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>步骤 2：执行计划的故障转移以测试配置  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>第 2 步：执行计划的故障转移以测试配置  
   
 1.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，检查主副本和辅助副本，确保两个副本均配置为同步提交模式并且当前保持同步。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52414084"
 ##  <a name="bkmk_whathappens"></a> 故障转移之后的情形  
  在故障转移期间，辅助副本转换为主角色，以前的主副本转换为辅助角色。 所有客户端连接都已终止，可用性组侦听器的所有权随主副本角色移至新的 SQL Server 实例，并且该侦听器终结点绑定到新实例的虚拟 IP 地址和 TCP 端口。 有关详细信息，请参阅本主题后面的 [关于对可用性副本的客户端连接访问 (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)之类的系统数据库。  
   
- 如果在处理期间发生故障转移，Analysis Services 中的日志文件或输出窗口中将出现以下错误："OLE DB 错误：OLE DB 或 ODBC 错误：通讯链接失败;08S01 的形式;访问接口：现有连接被远程主机强行关闭。 ; 08S01。”  
+ 如果在处理过程中发生故障转移，则日志文件或输出窗口的 Analysis Services 中会出现以下错误：“OLE DB 错误：OLE DB 或 ODBC 错误：通讯链接失败；08S01；TPC 提供程序：远程主机强行关闭现有连接。 ; 08S01。”  
   
  稍等片刻然后重试，该错误应自行解决。 如果为可读辅助副本正确配置了可用性组，那么在您重试处理后，处理将在新的辅助副本上继续执行。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52414084"
 ##  <a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性数据库时执行写回  
  写回是 Analysis Services 中用来支持 Excel 中的假设分析的一项功能。 该功能还常用于自定义应用程序中的预算和预测任务。  
   
- 要支持写回功能，需要 READWRITE 客户端连接。 在 Excel 中，如果您尝试写回只读连接时，将发生以下错误：“无法从外部数据源检索数据。” “无法从外部数据源检索数据。”  
+ 要支持写回功能，需要 READWRITE 客户端连接。 在 Excel 中，如果在只读连接上尝试写回，将出现以下错误：“无法从外部数据源检索数据。” “无法从外部数据源检索数据。”  
   
  如果配置某个连接始终访问只读辅助副本，您现在必须配置一个使用 READWRITE 连接访问主副本的新连接。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52414084"
   
 ## <a name="see-also"></a>请参阅  
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [创建数据源（SSAS 多维）](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [启用维度写回](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

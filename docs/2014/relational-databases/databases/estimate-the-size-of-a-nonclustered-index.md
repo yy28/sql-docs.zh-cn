@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871406"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
   按照下列步骤估计存储非聚集索引所需的空间大小：  
@@ -118,7 +118,7 @@ ms.locfileid: "48146737"
     >  您可以通过包含索引键列和非键列扩展非聚集索引。 这些额外的列只存储在叶级非聚集索引。 有关详细信息，请参阅 [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
+    >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。 这也适用于具有包含列的非聚集索引叶行。  
   
      如果非聚集索引没有任何包含列，则使用步骤 1 中的值（包括在步骤 1.3 中进行的任何修改）：  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146737"
   
 -   大型对象 (LOB) 值  
   
-     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
+     精确确定存储 LOB 数据类型 `varchar(max)`、`varbinary(max)`、`nvarchar(max)`、`text`、`ntext`、`xml` 和 `image` 值所用的空间量的算法非常复杂。 只需加上期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后将所得结果加到非群集索引的总大小。  
   
 -   压缩  
   

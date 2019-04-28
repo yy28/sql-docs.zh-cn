@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689997"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 数据挖掘形状
   Visio 数据挖掘形状提供为显示数据挖掘模型而自定义的各种模板。 通过使用这些模板，您可以连接到已创建的模型和创建交互式演示文稿来说明数据挖掘的结果。  

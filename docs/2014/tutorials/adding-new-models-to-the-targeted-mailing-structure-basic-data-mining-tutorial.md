@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822626"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>向 Targeted Mailing 结构中添加新模型（数据挖掘基础教程）
   在此任务中，您将定义两个附加模型，通过使用**挖掘模型**数据挖掘设计器选项卡。 您将使用 Microsoft 聚类分析算法和 Microsoft Naive Bayes 算法创建模型。 之所以选择这两种算法，是因为它们能够预测离散值（例如，自行车购买行为）。 有关这些算法的详细信息，请参阅[Microsoft 聚类分析算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)和[Microsoft Naive Bayes 算法](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

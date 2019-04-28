@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795404"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>创建新的表格模型项目（SSAS 表格）
   本主题介绍如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的空白表格模型项目。 在创建新模型项目后，您可以通过从数据源导入数据来开始创作模型项目。  
@@ -29,10 +29,10 @@ ms.locfileid: "48171537"
   
 3.  在 **“名称”** 中，键入项目的名称，然后指定位置和解决方案名称，再单击 **“确定”**。  
   
- 创建新项目后，请务必设置项目和模型属性。 有关详细信息，请参阅[项目属性&#40;SSAS 表格&#41;](properties-ssas-tabular.md)并[模型属性&#40;SSAS 表格&#41;](model-properties-ssas-tabular.md)。  
+ 创建新项目后，请务必设置项目和模型属性。 有关详细信息，请参阅 [项目属性（SSAS 表格）](properties-ssas-tabular.md) 和 [模型属性（SSAS 表格）](model-properties-ssas-tabular.md)中创建新的空白表格模型项目。  
   
 ## <a name="see-also"></a>请参阅  
- [项目属性&#40;SSAS 表格&#41;](properties-ssas-tabular.md)   
- [模型属性&#40;SSAS 表格&#41;](model-properties-ssas-tabular.md)  
+ [项目属性（SSAS 表格）](properties-ssas-tabular.md)   
+ [模型属性（SSAS 表格）](model-properties-ssas-tabular.md)  
   
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775761"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安装 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主题提供用于在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的特定于安装的详细信息。  
@@ -35,16 +35,16 @@ ms.locfileid: "53364029"
 ##  <a name="BK_SupportedFeatures"></a>支持的功能  
  使用下表可以查找 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上的 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]所支持的功能。  
   
-|功能|是否支持|  
+|功能|支持|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制|  
-|全文搜索|用户帐户控制|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是|  
+|全文搜索|是|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否|  
-|客户端工具连接|用户帐户控制|  
-|Integration Services 服务器<sup>[1]</sup>|用户帐户控制|  
+|客户端工具连接|是|  
+|Integration Services Server<sup>[1]</sup>|是|  
 |客户端工具向后兼容性|否|  
 |客户端工具 SDK|否|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|否|  
@@ -52,7 +52,7 @@ ms.locfileid: "53364029"
 |管理工具 - 完整|仅适用于远程<sup>[2]</sup>|  
 |Distributed Replay 控制器|否|  
 |Distributed Replay 客户端|仅适用于远程<sup>[2]</sup>|  
-|SQL 客户端连接 SDK|用户帐户控制|  
+|SQL 客户端连接 SDK|是|  
 |Microsoft Sync Framework|是<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否|  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否|  

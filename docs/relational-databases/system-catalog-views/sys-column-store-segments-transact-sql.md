@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799881"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47799475"
 |**row_count**|**int**|行组中的行数。|  
 |**has_nulls**|**int**|1 如果列段具有 Null 值。|  
 |**base_id**|**bigint**|如果使用编码类型 1 的基值 id。  如果未正在使用的编码类型 1，base_id 设置为-1。|  
-|**量值**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为-1。|  
+|**magnitude**|**float**|如果使用的编码类型 1 的量值。  如果编码类型 1 未使用，则将量值设置为-1。|  
 |**primary_dictionary_id**|**int**|值为 0 表示全局字典。 值为-1 指示没有为该列创建没有全局字典。|  
 |**secondary_dictionary_id**|**int**|一个非零值将指向此列将在当前段 （即行组） 的本地字典。 值为-1 指示存在此段没有本地字典。|  
 |**min_data_id**|**bigint**|列段中的最小数据 ID。|  
@@ -67,7 +67,7 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  所有列都要求至少**VIEW DEFINITION**表的权限。 以下各列返回 null，除非用户也具有**选择**权限： has_nulls、 base_id、 magnitude、 min_data_id、 max_data_id 和 null_value。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -77,8 +77,8 @@ GO
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

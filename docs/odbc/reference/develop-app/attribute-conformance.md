@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672532"
 ---
 # <a name="attribute-conformance"></a>属性一致性
 下表指示这是定义完善的一致性级别的每个 ODBC 环境属性。  
@@ -40,7 +40,7 @@ ms.locfileid: "47818835"
 |函数|一致性级别|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|核心|  
-|SQL_ATTR_ASYNC_ENABLE 设置|级别 1/级别 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|级别 1/级别 2 [1]|  
 |SQL_ATTR_AUTO_IPD|级别 2|  
 |SQL_ATTR_AUTOCOMMIT|级别 1|  
 |SQL_ATTR_CONNECTION_DEAD|级别 1|  
@@ -66,11 +66,11 @@ ms.locfileid: "47818835"
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|核心|  
 |SQL_ATTR_APP_ROW_DESC|核心|  
-|SQL_ATTR_ASYNC_ENABLE 设置|级别 1/级别 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|级别 1/级别 2 [1]|  
 |SQL_ATTR_CONCURRENCY|级别 1/级别 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|级别 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|级别 2|  
-|SQL_ATTR_CURSOR_TYPE|核心/级别 2 [3]|  
+|SQL_ATTR_CURSOR_TYPE|Core/Level 2[3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|级别 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|级别 2|  
 |SQL_ATTR_IMP_PARAM_DESC|核心|  

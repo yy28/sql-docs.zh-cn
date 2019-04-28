@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653394"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
 在本部分中的主题介绍每个 ODBC 函数按字母顺序。 每个函数被定义为 C 编程语言的函数。 说明如下：  
   
--   目标  
+-   用途  
   
 -   ODBC 版本  
   

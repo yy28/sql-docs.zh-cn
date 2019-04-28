@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871693"
 ---
 # <a name="database-states"></a>数据库状态
   数据库总是处于一个特定的状态中， 例如，这些状态包括 ONLINE、OFFLINE 或 SUSPECT。 若要确认数据库的当前状态，请选择 **sys.databases** 目录视图中的 [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列或 **DATABASEPROPERTYEX** 函数中的 [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) 属性。  

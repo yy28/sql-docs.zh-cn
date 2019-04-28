@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731202"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>“查找表”对话框（Analysis Services - 多维数据）
   使用 **中的** “查找表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以在与维度、多维数据集或挖掘结构关联的数据源视图中查找表。 通过执行以下操作可以在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中显示此对话框：  

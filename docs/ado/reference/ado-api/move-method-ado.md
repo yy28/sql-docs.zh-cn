@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863484"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移动中的当前记录的位置[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  有符号**长**表达式，指定当前记录位置移动的记录数。  
   
- *启动*  
+ *开始*  
  可选。 一个**字符串**值或**变体**的计算结果为书签。 此外可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
 ## <a name="remarks"></a>备注  

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bce9a9d48dce2e795fee049bd9414a987314775
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875550"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>重新启动中断的还原操作 (Transact-SQL)
   本主题说明如何重新启动中断的还原操作。  

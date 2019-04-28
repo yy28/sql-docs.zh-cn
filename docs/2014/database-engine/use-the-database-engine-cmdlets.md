@@ -24,11 +24,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843201"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用数据库引擎 cmdlet
   Windows PowerShell cmdlet 是单函数命令，通常采用“动词-名词”形式的命名约定，如 **Get-Help** 或 **Set-MachineName**。 用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序提供特定于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 cmdlet。  
@@ -56,11 +56,11 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |----------------------|-----------|  
 |介绍使用 **Invoke-Sqlcmd** 运行包含 **或 XQuery 语句的** sqlcmd [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本或命令。 它可以接受 **sqlcmd** 输入作为字符串输入参数或要打开的脚本文件的文件名。|[Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |介绍使用 **Invoke-PolicyEvaluation** 报告 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的目标集是否符合基于策略的管理策略中定义的条件。 可以选择使用 cmdlet 对不符合策略条件的目标对象中的任何可设置选项进行重新配置。|[Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
-|介绍了如何使用`Encode-Sqlname`和`Decode-Sqlname`处理包含 Windows PowerShell 路径中不支持的字符的 SQL Server 标识符。|[对 SQL Server 标识符进行编码和解码](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|介绍了如何使用`Convert-UrnToPath`将 SQL Server 可管理性对象统一资源名称 (URN) 转换为等效的 SQL Server 提供程序路径。|[将 URN 转换为 SQL Server 提供程序路径](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|介绍使用 `Encode-Sqlname` 和 `Decode-Sqlname` 处理包含 Windows PowerShell 路径中不支持的字符的 SQL Server 标识符。|[对 SQL Server 标识符进行编码和解码](../powershell/encode-and-decode-sql-server-identifiers.md)|  
+|介绍使用 `Convert-UrnToPath` 将 SQL Server 可管理性对象统一资源名称 (URN) 转换为等价的 SQL Server 提供程序路径。|[将 URN 转换为 SQL Server 提供程序路径](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 提供程序](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [用于 AlwaysOn 可用性组的 PowerShell Cmdlet 概述&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736914"
 ---
 # <a name="multidimensional-model-object-processing"></a>多维模型对象处理
   处理是 Analysis Services 将数据从关系数据源加载到多维模型的一个步骤或一系列步骤。 对于使用 MOLAP 存储的对象，数据将保存到磁盘的数据库文件所在文件夹中。 对于 ROLAP 存储，按需执行处理，以响应对象的 MDX 查询。 对于使用 ROLAP 存储的对象，处理是指在返回查询结果之前更新缓存。  
@@ -80,7 +80,7 @@ ms.locfileid: "48173317"
  处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的对象时，可以选择处理选项，也可以由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 确定处理的适当类型。 可用的处理方法随对象的类型不同而有差异。 此外，可用的方法取决于对象在上一次处理后又发生了什么变化。 如果允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。 有关详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [逻辑体系结构&#40;Analysis Services-多维数据&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [数据库对象&#40;Analysis Services-多维数据&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [逻辑体系结构（Analysis Services - 多维数据）](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [数据库对象（Analysis Services - 多维数据）](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

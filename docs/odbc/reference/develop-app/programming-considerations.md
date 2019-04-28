@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861655"
 ---
 # <a name="programming-considerations"></a>编程时的注意事项
 本部分探讨了多个与编写 ODBC 应用程序和驱动程序相关的主题。  

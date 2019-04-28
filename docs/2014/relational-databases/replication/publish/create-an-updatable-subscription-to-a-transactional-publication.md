@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691597"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>创建事务发布的可更新订阅 (Management Studio)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54131607"
 
 可以在“新建订阅向导”的“可更新订阅”页上配置可更新订阅。 只有为可更新订阅启用了事务发布，此页才可用。 有关启用可更新订阅的详细信息，请参阅[为事务发布启用更新订阅](enable-updating-subscriptions-for-transactional-publications.md)。   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>配置从发布服务器的可更新订阅  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>从发布服务器配置可更新订阅  
 
 1. 在 Microsoft SQL Server Management Studio 中连接到发布服务器，然后展开服务器节点。
 2. 展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。
@@ -52,7 +52,7 @@ ms.locfileid: "54131607"
 
 8. 完成向导。
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>配置从订阅服务器的可更新订阅
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>从订阅服务器配置可更新订阅
 
 
 1. 在 SQL Server Management Studio 中连接到订阅服务器，然后展开服务器节点。
@@ -200,7 +200,7 @@ ms.locfileid: "54131607"
 1. 在发布服务器上，通过执行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)验证发布是否支持排队更新订阅。 
 
     * 如果结果集中 allow_queued_tran 的值为 1，说明发布支持排队更新订阅。
-    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅如何：启用更新订阅的事务发布 （复制 TRANSACT-SQL 编程）。
+    * 如果结果集中 allow_queued_tran 的值为 0，说明必须重新创建该发布以使其支持排队更新订阅。 有关详细信息，请参阅如何：为事务发布启用更新订阅（复制 Transact-SQL 编程）。
 
 2. 在发布服务器上，通过执行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)以验证发布是否支持推送订阅。 
 

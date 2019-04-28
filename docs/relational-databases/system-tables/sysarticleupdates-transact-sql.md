@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714160"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52796379"
 |**sync_ins_proc**|**int**|处理插入同步事务的存储过程 ID。|  
 |**sync_upd_proc**|**int**|处理更新同步事务的存储过程 ID。|  
 |**sync_del_proc**|**int**|处理删除同步事务的存储过程 ID。|  
-|**自动生成**|**bit**|指示自动生成存储过程：<br /><br /> **0** = false，不自动。<br /><br /> **1** = true，自动。|  
+|**autogen**|**bit**|指示自动生成存储过程：<br /><br /> **0** = false，不自动。<br /><br /> **1** = true，自动。|  
 |**sync_upd_trig**|**int**|项目表上自动版本控制触发器的 ID。|  
 |**conflict_tableid**|**int**|冲突表的 ID。|  
 |**ins_conflict_proc**|**int**|用于写入到冲突的过程的 ID **conflict_table**。|  

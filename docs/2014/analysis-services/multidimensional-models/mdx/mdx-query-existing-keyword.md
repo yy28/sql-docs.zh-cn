@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725351"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 关键字 (MDX)
   强制在当前上下文中计算所指定的集。  

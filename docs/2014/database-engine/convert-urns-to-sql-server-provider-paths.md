@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e75581756f0464197e05b78083b7e90d7d3dfb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808212"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>将 URN 转换为 SQL Server 提供程序路径
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型 (SMO) 为其对象生成统一资源名称 (URN)。 每个 URN 都唯一标识一个 SMO 对象，并且可以通过使用转换为 SQL Server PowerShell 提供程序路径`Convert-UrnToPath`cmdlet。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型 (SMO) 为其对象生成统一资源名称 (URN)。 每个 URN 都唯一标识一个 SMO 对象，并且可通过使用 `Convert-UrnToPath` cmdlet 转换为 SQL Server PowerShell 提供程序路径。  
   
 ## <a name="converting-urns-to-paths"></a>将 URN 转换为路径  
  每个对象的 URN 都有与其路径相同的信息，但是它们的格式有所不同。 例如，下面是一个表的路径：  

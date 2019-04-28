@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871264"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
   必须重新生成系统数据库才能修复 [master](master-database.md)、 [mode](model-database.md)l、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
@@ -106,7 +106,7 @@ ms.locfileid: "52749399"
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 `sysadmin` 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 `NT AUTHORITY\SYSTEM`。|  
     |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> **\*\* 安全说明\* \***  `sa`帐户是一个广为人知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帐户，并且经常成为恶意用户的攻击目标。 因此，为 `sa` 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数可选。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要\* \*** 更改服务器级排序规则不会更改现有用户数据库的排序规则。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../collations/set-or-change-the-server-collation.md)。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数可选。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> **\*\* 重要事项 \*\*** 更改服务器级排序规则不会更改现有用户数据库的排序。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../collations/set-or-change-the-server-collation.md)。|  
   
 3.  在安装程序完成系统数据库重新生成后，它将返回到命令提示符，而且不显示任何消息。 请检查 Summary.txt 日志文件以验证重新生成过程是否成功完成。 此文件位于 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs。  
   

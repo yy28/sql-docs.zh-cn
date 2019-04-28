@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831995"
 ---
 # <a name="create-connection-managers"></a>创建连接管理器
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含多种连接管理器以满足连接不同类型的服务器和数据源的任务的需要。 在不同类型的数据存储中提取和加载数据的数据流组件，以及将日志写入服务器、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或文件的日志提供程序，都使用连接管理器。 例如，具有发送邮件任务的包使用 SMTP 类型的连接管理器来连接到简单邮件传输协议 (SMTP) 服务器。 具有执行 SQL 任务的包可以使用 OLE DB 连接管理器来连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](connection-manager/integration-services-ssis-connections.md)。  

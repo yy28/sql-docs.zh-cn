@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727863"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>“挖掘结构属性”对话框（Analysis Services - 数据挖掘）
   可以使用 **SQL Server Management Studio** 中的 **“挖掘结构属性”** 对话框，设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘结构的属性。 通过右键单击“对象资源管理器”中的挖掘结构，再从上下文菜单中选择“属性”，可以显示“挖掘结构属性”对话框。  
   
  **“挖掘结构属性”** 对话框包含以下页：  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
   
 |第|Description|  
 |----------|-----------------|  
@@ -35,6 +35,6 @@ ms.locfileid: "48177537"
 |**错误配置**|使用 **“错误配置”** 页可以显示和修改挖掘结构的错误配置设置。 有关此页的详细信息，请参阅[错误配置（“挖掘结构”对话框）（Analysis Services - 多维数据）](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [挖掘结构（Analysis Services - 数据挖掘）](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

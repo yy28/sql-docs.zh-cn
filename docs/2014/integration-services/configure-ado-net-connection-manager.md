@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834484"
 ---
 # <a name="configure-adonet-connection-manager"></a>配置 ADO.NET 连接管理器
   可以使用 **“配置 ADO.NET 连接管理器”** 对话框，添加与可使用 .NET Framework 数据访问接口（例如，SqlClient 访问接口）访问的数据源之间的连接。 连接管理器可使用现有连接，或者您也可以创建一个新的连接。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680827"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>“分类对比”选项卡（挖掘模型查看器）
   可以使用 **“分类对比”** 选项卡，对聚类分析模型中的两个现有分类进行比较。 可以查看属性和值的各种组合在分类中的显示方式。  
@@ -32,7 +32,7 @@ ms.locfileid: "52400370"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 可以对分类模型使用自定义查看器，也可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **分类 1**  

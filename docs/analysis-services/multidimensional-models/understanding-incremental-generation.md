@@ -1,5 +1,5 @@
 ---
-title: 了解增量生成 |Microsoft 文档
+title: 了解增量生成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802702"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "34024344"
   
  另一方面，如果您将数据源连接字符串更改为先前生成的其他数据库，则不会生成任何错误。 将会使用新的数据库，并且不会对先前数据库进行任何更改。  
   
-## <a name="see-also"></a>另请参阅  
- [管理对数据源视图和数据源更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [架构生成向导 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>请参阅  
+ [管理对数据源视图和数据源所做的更改](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [架构生成向导 (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

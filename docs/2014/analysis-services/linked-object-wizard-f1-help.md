@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6d1cb71991f8fd45d4cad0de48e7dbd266a6032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728365"
 ---
 # <a name="linked-object-wizard-f1-help"></a>链接对象向导的 F1 帮助
   可以使用链接对象向导，从其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库（属于相同的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或其他实例）中的对象链接或导入到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的当前 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 链接的对象可继续反映其源 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的更改，而导入的对象则不能反映对其源数据库所做的更改。 可以链接维度和度量值组（包括其关联的度量值）。 可以导入操作、关键绩效指标 (KPI) 和计算。  

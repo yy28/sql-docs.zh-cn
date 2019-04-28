@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d34125b7b750daa1da25c9e8788172b5d9ca2c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710599"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>第 4 课：生成顺序聚类分析方案 （数据挖掘中级教程）
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部需要了解客户浏览 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 网站的方式。 公司认为存在一个顺序模式，客户以这种模式将产品放入其购物篮中。 它们希望分析购买序列的顺序，以了解客户如何向其购物篮中添加相关产品。 然后可使用上述信息简化网站的流程，这样便可引导客户购买更多的产品。  

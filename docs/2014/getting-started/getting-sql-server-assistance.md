@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838000"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  

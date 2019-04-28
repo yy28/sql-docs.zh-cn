@@ -1,5 +1,5 @@
 ---
-title: 第 6 课： 创建计算的列 |Microsoft Docs
+title: 第 6 课：创建计算的列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728635"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 课：创建计算列
   在本课中，您将通过添加计算列在模型中创建新数据。 计算列基于模型中的现有数据。 了解详细信息，请参阅[计算列（SSAS 表格）](tabular-models/ssas-calculated-columns.md)。  
   
  您将在三个不同的表中创建五个新的计算列。 步骤对于每个任务略有不同。 此处介绍创建新列、重命名这些列以及将它们放入表中不同位置的多种方法。  
   
- 学完本课的估计时间：**15 分钟**  
+ 估计的时间才能完成本课程中：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，须已完成上一课：[第 5 课：创建关系](lesson-4-create-relationships.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 5 课：创建关系](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>创建计算列  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134037"
      然后，将为计算列中的所有行填充值。 如果在表中向下滚动，将看到行对于此列可以具有不同的值（基于每行中的数据）。  
   
     > [!NOTE]  
-    >  如果收到错误提示，请验证确保公式中的列名与在[第 3 课：重命名列](rename-columns.md)中更改的列名是否匹配。  
+    >  如果收到错误，请验证公式中的列名称中更改的列名称匹配[第 3 课：重命名列](rename-columns.md)。  
   
 5.  为此列重命名`Month Calendar`。  
   

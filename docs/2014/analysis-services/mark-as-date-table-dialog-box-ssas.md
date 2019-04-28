@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cb946a717399ee58b06ed4bf0af783170f6e4bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728013"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>“标记为日期表”对话框 (SSAS)
   在您依次单击 **“表”** 菜单、 **“日期”** 和 **“标记为日期表”** 后， **“标记为日期表”** 对话框将出现。 日期表用于时间智能函数。 为了创建与某一数据表的关系，您必须将具有唯一值的列指定用作该表的唯一标识符。  

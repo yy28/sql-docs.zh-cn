@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729830"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
@@ -166,7 +166,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Analysis Services 模板参考  
  提供以下模板以便使用 Analysis Services 数据库以及数据库中的对象，包括挖掘结构和挖掘模型、多维数据集和表格模型：  
   
-|类别|项模板|Description|  
+|Category|项模板|Description|  
 |--------------|-------------------|-----------------|  
 |DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<模型 >*。内容语句，检索指定的挖掘模型的挖掘模型架构行集内容。|  
 ||连续列值|演示如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 语句与 DMX`RangeMin`和`RangeMax`函数来从中的连续列检索指定范围内的值的一组指定的挖掘模型。|  

@@ -1,5 +1,5 @@
 ---
-title: 第 8 课： 创建关键绩效指标 |Microsoft Docs
+title: 第 8 课：创建关键绩效指标 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728133"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 课：创建关键绩效指标
   在本课中，您将创建关键绩效指标 (KPI)。 KPI 用于根据“目标”值度量由“基础”度量值定义的值（也可以是由度量值或绝对值定义的值）的性能。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅 [KPI（SSAS 表格）](tabular-models/kpis-ssas-tabular.md)。  
   
- 学完本课的估计时间： **15 分钟**  
+ 估计的时间才能完成本课程中：**15 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，须已完成上一课：[第 7 课：创建度量值](lesson-6-create-measures.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 7 课：创建度量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>创建关键绩效指标  
   

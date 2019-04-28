@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717464"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大容量加载对象模型包含 SQLXMLBulkLoad 对象。 该对象支持以下方法和属性。  
@@ -45,7 +45,7 @@ ms.locfileid: "52750469"
  Execute  
  通过使用作为参数提供的架构文件和数据文件（或流），大容量加载数据。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  BulkLoad  
  指定是否应执行大容量加载。 此属性很有用，如果你想要只生成的架构 （请参阅按照 SchemaGen、 SGDropTables 和 SGUseID 属性），并且执行大容量加载。 此属性是一个布尔属性。 当此属性设置为 TRUE 时，XML 大容量加载将执行。 当此属性设置为 FALSE 时，XML 大容量加载将不执行。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "52750469"
  默认值是 FALSE。  
   
  TempFilePath  
- 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （只有在 Transaction 属性设置为 TRUE 时，此属性才有用。）您必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
+ 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （此属性可仅当事务属性设置为 TRUE 时。）您必须确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
   
  事务  
  指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅当事务设置为 TRUE 时，TempFilePath 属性是很有用。  

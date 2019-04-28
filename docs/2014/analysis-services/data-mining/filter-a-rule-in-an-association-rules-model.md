@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722479"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>筛选关联规则模型中的规则
   您可以将筛选与关联模型一起使用来限制结果，使其仅包含您感兴趣的关联。 例如，您可以筛选规则，以便仅显示包含特定产品的规则。  
@@ -44,7 +44,7 @@ ms.locfileid: "48118627"
   
 5.  对于 **“最低重要性”**，增大重要性的值以查看较少的规则，减小该值以查看较多的规则。  
   
-6.  对于 **“显示”**，选择以下选项之一： **“显示属性名称和值”**、 **“仅显示属性名称”** 或 **“仅显示属性值”**。  
+6.  有关**显示**，选择以下选项之一：**显示属性名称和值**，**仅显示属性名称**，或**仅显示属性值**。  
   
 7.  对于 **“最大行数”**，增大该值以增加符合指定条件的规则的总数，减小该值以限制返回的规则数。 规则按概率排序，所以您可以消除符合指定的概率或重要性条件的其他规则。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48118627"
 ## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 关联规则查看器浏览模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

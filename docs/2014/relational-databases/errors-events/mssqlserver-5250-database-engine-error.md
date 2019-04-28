@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867931"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143217"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|消息正文|数据库错误：数据库 'NAME'（数据库 ID DB_ID）的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
+|消息正文|数据库错误:数据库 'NAME' （数据库 ID DB_ID） 的 PAGE_TYPE 页 P_ID 无效。 无法修复此错误。 您必须通过备份还原。|  
   
 ## <a name="explanation"></a>解释  
  指定数据库中的文件头页或引导页已损坏。  

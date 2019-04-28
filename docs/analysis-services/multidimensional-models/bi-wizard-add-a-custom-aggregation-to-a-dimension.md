@@ -1,5 +1,5 @@
 ---
-title: 向维度中添加自定义聚合 |Microsoft 文档
+title: 向维度中添加自定义聚合 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717374"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 向导-向维度中添加自定义聚合
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 向导 - 向维度中添加自定义聚合
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在多维数据集或维度中添加自定义聚合增强功能，以使用其他一元运算符替换与维度成员关联的默认聚合。 这种增强功能指定维度表中定义父子层次结构中的成员汇总的一元运算符列。 一元运算符对父子层次结构中的父属性进行操作。  
   

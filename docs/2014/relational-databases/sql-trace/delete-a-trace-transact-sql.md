@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57d80824ab0dde301a0b96239636cf0f79ca032c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714735"
 ---
 # <a name="delete-a-trace-transact-sql"></a>删除跟踪 (Transact-SQL)
   本主题说明如何使用存储过程删除跟踪。  

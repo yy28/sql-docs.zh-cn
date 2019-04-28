@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680356"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升级 SQL Server 故障转移群集实例（安装程序）
   可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装向导或者命令提示符将 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 故障转移群集升级为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集。  
@@ -78,9 +78,9 @@ ms.locfileid: "53363709"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 多子网故障转移群集  
  有两个可能的升级方案：  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前在单个子网配置：你必须首先将现有群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]，方法是启动安装程序，然后按照升级过程进行操作。 完成现有故障转移群集的升级后，使用 AddNode 功能添加位于不同子网的节点。 确认在群集网络配置页将 IP 地址资源依赖关系更改为 OR。 您现在有了一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前在单个子网配置：您必须首先将现有群集升级到[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]通过启动安装程序并遵循升级过程。 完成现有故障转移群集的升级后，使用 AddNode 功能添加位于不同子网的节点。 确认在群集网络配置页将 IP 地址资源依赖关系更改为 OR。 您现在有了一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前使用拉伸 V-LAN 技术在多个子网上配置：你必须首先将现有群集升级到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由于拉伸 V-LAN 技术配置单个子网，因此必须将网络配置更改为多个子网，使用 Windows 故障转移群集管理工具更改 IP 地址资源依赖关系，将 IP 依赖关系更改为 OR。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集当前在多个子网使用拉伸 V-LAN 技术配置：您必须首先将现有群集升级到[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由于拉伸 V-LAN 技术配置单个子网，因此必须将网络配置更改为多个子网，使用 Windows 故障转移群集管理工具更改 IP 地址资源依赖关系，将 IP 依赖关系更改为 OR。  
   
 ###  <a name="BestPractices"></a> 升级前的最佳做法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]故障转移群集  
  若要避免出现由于重新启动而产生的意外停机时间，在群集节点上运行升级之前，请在所有故障转移群集节点上预安装 .NET Framework 4.0 的不重新引导包。 建议使用以下步骤预安装必备组件：  
@@ -179,7 +179,7 @@ ms.locfileid: "53363709"
   
      建议您在升级之后对所有数据库更新统计信息，以便优化查询性能。 使用 **sp_updatestats** 存储过程可以更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置新安装的   
+-   配置新安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
      为了减少系统的可攻击外围应用， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有选择地安装和启用了一些关键服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
   

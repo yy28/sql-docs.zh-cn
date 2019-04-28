@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1cf11c572860815f46e6d20a0cf1a4b82399a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731449"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>错误配置（“挖掘结构”对话框）（Analysis Services - 多维数据）
   可以使用 **SQL Server Management Studio** 中的 **“挖掘结构属性”** 对话框的 **“错误配置”** 页，设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘结构的错误配置属性。  

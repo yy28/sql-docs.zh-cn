@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789243"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>选项（SQL Server AlwaysOn、“仪表板”页）
   使用**SQL Server AlwaysOn 仪表板**页[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**选项**对话框来配置 AlwaysOn 仪表板。  

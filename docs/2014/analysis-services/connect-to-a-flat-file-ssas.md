@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680304"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>连接到平面文件 (SSAS)
   “表导入向导”的这一页可用于连接到平面文件 (.txt)、制表符分隔的文件 (.tab) 或逗号分隔的文件 (.csv)。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -38,7 +38,7 @@ ms.locfileid: "48148947"
  **“浏览”**  
  导航至文件可用的位置。  
   
- **列分隔符**  
+ **Column Separator**  
  从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。  
   
 |ReplTest1|Description|  
@@ -62,7 +62,7 @@ ms.locfileid: "48148947"
 > [!NOTE]  
 >  只有文件中的前 50 行显示在此预览。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**列标题中的复选框**|选中该复选框可在数据导入中包括列。 取消选中该复选框则从数据导入中删除列。|  
 |**列标题中的向下箭头按钮**|对列中的数据进行排序和筛选。|  

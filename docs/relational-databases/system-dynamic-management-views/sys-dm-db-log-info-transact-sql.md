@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719506"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.dm_db_log_info ( database_id )
 ## <a name="remarks"></a>备注
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    
  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 需要`VIEW DATABASE STATE`数据库中的权限。  
   
 ## <a name="examples"></a>示例  

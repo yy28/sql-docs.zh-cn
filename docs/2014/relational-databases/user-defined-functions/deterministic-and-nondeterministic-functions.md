@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714724"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>确定性函数和不确定性函数
   只要使用特定的输入值集并且数据库具有相同的状态，那么不管何时调用，确定性函数始终都会返回相同的结果。 即使访问的数据库的状态不变，每次使用特定的输入值集调用非确定性函数都可能会返回不同的结果。 例如，函数 AVG 对上述给定的限定条件始终返回相同的值，但返回当前 datetime 值的 GETDATE 函数始终会返回不同的结果。  
@@ -57,7 +57,7 @@ ms.locfileid: "48214707"
 |--------------|--------------|  
 |所有聚合函数|除非用 OVER 和 ORDER BY 子句指定聚合函数，否则所有聚合函数都具有确定性。 有关这些函数的列表，请参阅[聚合函数 (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)。|  
 |CAST|除非与 `datetime`、`smalldatetime` 或 `sql_variant` 一起使用，否则为确定性函数。|  
-|CONVERT|除非存在下列条件，否则为确定性函数：<br /><br /> 源类型是 `sql_variant`。<br /><br /> 目标类型是`sql_variant`和其源类型具有不确定性。<br /><br /> 源类型或目标类型是 `datetime` 或 `smalldatetime`，其他源类型或目标类型是字符串，并且指定了不确定的样式。 若要为确定样式，则样式参数必须是常量。 此外，除了样式 20 和 21，小于或等于 100 的样式都具有不确定性。 大于 100 的样式具有确定性，但样式 106、107、109 和 113 除外。|  
+|CONVERT|除非存在下列条件，否则为确定性函数：<br /><br /> 源类型是 `sql_variant`。<br /><br /> 目标类型是 `sql_variant`，其源类型具有不确定性。<br /><br /> 源类型或目标类型是 `datetime` 或 `smalldatetime`，其他源类型或目标类型是字符串，并且指定了不确定的样式。 若要为确定样式，则样式参数必须是常量。 此外，除了样式 20 和 21，小于或等于 100 的样式都具有不确定性。 大于 100 的样式具有确定性，但样式 106、107、109 和 113 除外。|  
 |CHECKSUM|确定性函数，CHECKSUM(*) 除外。|  
 |ISDATE|只有与 CONVERT 函数一起使用、指定 CONVERT 样式参数并且样式不等于 0、100、9 或 109 时，才是确定性函数。|  
 |RAND|仅当指定 *seed* 参数时，RAND 才是确定性函数。|  

@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872213"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
   本主题说明如何使用数据库邮件配置向导启用和配置数据库邮件，以及使用模板创建数据库邮件配置脚本。  
@@ -90,7 +90,7 @@ ms.locfileid: "54131487"
  使用 **“选择配置任务”** 页可以指示每次使用此向导时要完成的任务。 如果您在完成向导前改变了主意，请使用 **“上一步”** 按钮返回此页并选择其他任务。  
   
 > [!NOTE]  
->  如果尚未启用数据库邮件，您将收到消息：**数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
+>  如果数据库邮件尚未启用，将收到以下消息：**数据库邮件功能不可用。是否要启用此功能？** 回答“是”相当于使用 **sp_configure** 系统存储过程的 [Mail XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)启用数据库邮件。  
   
  **通过执行以下任务来设置数据库邮件**  
  执行第一次设置数据库邮件所需的所有任务。 此选项包含所有其他三个选项。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659929"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 课：创建和管理层次结构表中的数据
   在第 1 课中，您修改了一个现有表以使用 `hierarchyid` 数据类型，并采用现有数据的表示形式填充 `hierarchyid` 列。 在本课程中，您将由新表开始，使用分层方法插入数据。 然后，您将使用分层方法查询和操作数据。  

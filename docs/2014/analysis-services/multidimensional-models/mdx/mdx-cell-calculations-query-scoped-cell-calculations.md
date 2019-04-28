@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699822"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>创建查询作用域的单元计算 (MDX)
-  在多维表达式 (MDX) 中，可以使用 `WITH` 关键字描述查询上下文中的计算单元。 `WITH`关键字的语法如下：  
+  在多维表达式 (MDX) 中，可以使用 `WITH` 关键字描述查询上下文中的计算单元。 `WITH` 关键字的语法如下：  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` 值是计算单元的名称。 `String_Expression` 值包含一个一维正交 MDX 集表达式列表。 这些集表达式中的每个表达式都必须解析为下表中列出的一个类别。  
   
-|类别|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  另一方面，只要对多维数据集发出的 MDX 查询涉及计算单元定义中包含的单元，MDX 将就会处理计算公式。 此处理的发生不受创建作用域的限制。  
   
 ## <a name="see-also"></a>请参阅  
- [CREATE CELL CALCULATION 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 语句 (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

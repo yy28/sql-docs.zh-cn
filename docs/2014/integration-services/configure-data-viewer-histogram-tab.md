@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834435"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>配置数据查看器（“直方图”选项卡）
   可以使用 **“配置数据查看器”** 对话框的 **“直方图”** 选项卡指定要显示的列。 直方图可以按值的分布显示数值列中的数据值。 该图表只反应一个缓冲区的内容。  

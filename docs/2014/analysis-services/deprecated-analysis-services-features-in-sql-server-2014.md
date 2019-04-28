@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732204"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 Analysis Services 功能
   本主题介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -29,7 +29,7 @@ ms.locfileid: "48067707"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server 的下一版本中不支持的功能  
  下一版 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将不再支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 请不要在新的开发工作中使用这些功能，并尽快修改当前还在使用这些功能的应用程序。  
   
-|类别|不推荐使用的功能|替代功能|  
+|Category|不推荐使用的功能|替代功能|  
 |--------------|------------------------|-----------------|  
 |MDX 函数|CalculationPassValue 函数|无。 OLAP 引擎管理计算传递。 不再需要此函数。|  
 |MDX 函数|CalculationCurrentPass 函数|无。 OLAP 引擎管理计算传递。 不再需要此函数。|  
@@ -40,10 +40,10 @@ ms.locfileid: "48067707"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 未来版本中不支持的功能  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的下一版本仍支持以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但以后的版本将删除这些功能。 具体是哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本现在还未确定。  
   
-|类别|不推荐使用的功能|替代功能|  
+|Category|不推荐使用的功能|替代功能|  
 |--------------|------------------------|-----------------|  
 |多维模型|远程分区|无。 改用本地分区。 请参阅[创建和管理本地分区&#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)有关详细信息。|  
-|多维模型|远程链接的度量值组|远程链接的度量值组是使用远程服务器上的数据源的链接度量值组。 将远程数据源用于链接的度量值组计划未来不再使用。<br /><br /> 此功能没有替代功能。 我们建议改用本地链接的度量值组。 请参阅[链接度量值组](multidimensional-models/linked-measure-groups.md)有关详细信息。|  
+|多维模型|远程链接的度量值组|远程链接的度量值组是使用远程服务器上的数据源的链接度量值组。 将远程数据源用于链接的度量值组计划未来不再使用。<br /><br /> 此功能没有替代功能。 我们建议改用本地链接的度量值组。 有关详细信息，请参阅 [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) 。|  
 |多维模型|维度写回|无。 如果您需要写回功能，请使用分区写回。 请参阅[设置分区写回](multidimensional-models/set-partition-writeback.md)有关详细信息。|  
 |多维模型|链接的维度|无。 请考虑将维度复制到其他模型而非链接到另一模型中的某个维度。|  
 |MDX|Non_Empty_Behavior 属性|无。 创建计算成员时，错误设置此属性会增加返回无效结果的可能性。 OLAP 引擎的近期优化改善了对稀疏数据集的操作，使得此属性的相关性更小。|  

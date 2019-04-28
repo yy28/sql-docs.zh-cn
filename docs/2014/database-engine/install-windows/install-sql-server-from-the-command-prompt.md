@@ -85,11 +85,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780977"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
   在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序之前，请查阅[计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)。  
@@ -247,7 +247,7 @@ ms.locfileid: "58658471"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **可选**|指定 [服务的](#Accounts) 启动 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 模式。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/NPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 Named Pipes 协议的状态。 支持的值：<br /><br /> 0＝禁用 Named Pipes 协议<br /><br /> 1＝启用 Named Pipes 协议|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置|/TCPENABLED<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的 TCP 协议的状态。 支持的值：<br /><br /> 0＝禁用 TCP 协议<br /><br /> 1＝启用 TCP 协议|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。 支持的值：<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 注意：如果安装包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，默认的 RSINSTALLMODE 为 DefaultNativeMode。<br /><br /> 如果安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，默认的 RSINSTALLMODE 为 FilesOnlyMode。<br /><br /> 如果你选择 DefaultNativeMode，但安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，则安装会自动将 RSINSTALLMODE 更改为 FilesOnlyMode。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **可选**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的安装模式。 支持的值：<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 注意：如果安装包括[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]，则默认 RSINSTALLMODE 为 DefaultNativeMode。<br /><br /> 如果安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，默认的 RSINSTALLMODE 为 FilesOnlyMode。<br /><br /> 如果你选择 DefaultNativeMode，但安装不包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]，则安装会自动将 RSINSTALLMODE 更改为 FilesOnlyMode。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
@@ -308,7 +308,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INDICATEPROGRESS<br /><br /> **可选**|指定应将详细的安装日志文件传送到控制台。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCEID<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2（2013 年 1 月）之前 **必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2 开始 **可选**|使用在准备映像步骤中指定的实例 ID。 支持的值：<br /><br /> 已准备实例的 InstanceID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/INSTANCENAME<br /><br /> 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2（2013 年 1 月）之前 **必需**<br /><br /> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 累积更新 2 开始 **可选**|为正在完成的实例指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。<br /><br /> 有关详细信息，请参阅 [Instance Configuration](../../sql-server/install/instance-configuration.md)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的产品密钥。 如果未指定此参数，则使用 Evaluation。<br /><br /> 注意：如果您安装的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Tools 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Advanced Services，则预定义了 PID。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/PID<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的产品密钥。 如果未指定此参数，则使用 Evaluation。<br /><br /> 注意：如果在安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with tools 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Express with Advanced Services，预定义 PID。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/Q<br /><br /> **可选**|指定在没有任何用户界面的情况下以静默模式运行安装程序。 这适用于无人参与的安装。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/QS<br /><br /> **可选**|指定安装程序通过 UI 运行并显示进度，但是不接受任何输入或显示任何错误消息。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/SQMREPORTING<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能使用情况报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](https://go.microsoft.com/fwlink/?LinkID=72173)（Microsoft 错误报告服务的隐私声明）。 支持的值：<br /><br /> 1=启用<br /><br /> 0=禁用|  

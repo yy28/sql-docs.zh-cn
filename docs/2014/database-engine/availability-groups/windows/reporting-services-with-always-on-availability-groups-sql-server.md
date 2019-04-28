@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789217"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
   本主题包含有关配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以便用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](AG) 的信息。 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的三种方案为用于报表数据源的数据库、报表服务器数据库和报表设计。 这三种方案支持的功能和所需的配置各不相同。  
@@ -32,7 +32,7 @@ ms.locfileid: "53370220"
 ##  <a name="bkmk_requirements"></a> 使用 Reporting Services 和 AlwaysOn 可用性组的要求  
  要将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]结合使用，您需要下载并安装 .Net 3.5 SP1 的修补程序。 该修补程序添加对 SQL Client for AG 功能的支持以及对连接字符串属性 **ApplicationIntent** 和 **MultiSubnetFailover**的支持。 如果未在承载报表服务器的每台计算机上安装该修补程序，尝试预览报表的用户将看到类似以下内容的错误消息并将错误消息写入报表服务器跟踪日志：  
   
-> **出现错误消息：**"关键字不受支持 ' applicationintent'"  
+> **错误消息：**“关键字不受支持的 "applicationintent"”  
   
  当在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串中包含一个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 属性但是服务器无法识别该属性时，显示此消息。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 用户界面中单击“测试连接”按钮以及预览报表（如果在报表服务器上启用远程错误）时，将显示所述的错误消息。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53370220"
   
  创建和发布报表的方式将决定您在何处编辑连接字符串：  
   
--   **本机模式：** 对于共享数据源和已发布到本机模式报表服务器的报表，使用报表管理器。  
+-   **本机模式：** 对于共享的数据源和已发布到本机模式报表服务器的报表使用报表管理器。  
   
 -   **SharePoint 模式：** 对于已发布到 SharePoint 服务器的报表，使用文档库内的 SharePoint 配置页。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53370220"
   
 -   有关可用性组侦听程序的详细信息，请参阅[创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **注意事项：** 在从主要副本接收数据更改时，辅助副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
+ **注意事项：** 在从主要副本接收数据更改时，次要副本一般会有延迟。 以下因素可能影响主副本和辅助副本之间的更新滞后时间：  
   
 -   辅助副本数目。 向配置中每增加一个辅助副本，延迟时间将增加。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53370220"
   
 -   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] 中使用预览后，你看到与以下内容相似的错误，指出你正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   
-> **出现错误消息：**"关键字不受支持 ' applicationintent'"  
+> **错误消息：**“关键字不受支持的 "applicationintent"”  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 报表服务器数据库和可用性组  
  Reporting Services 为将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和报表服务器数据库结合使用提供了有限的支持。 可以在 AG 中将报表服务器数据库配置为副本的一部分；但是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 在发生故障转移时不会自动将另一副本用于报表服务器数据库。  
@@ -136,11 +136,11 @@ ms.locfileid: "53370220"
   
 -   创建可用性组并配置“侦听器 DNS 名称” 。  
   
--   **主副本：** 将报表服务器数据库配置为单个可用性组的一部分并创建包含所有报表服务器数据库的主副本。  
+-   **主要副本：** 将报表服务器数据库配置为单个可用性组的一部分，并创建包含所有报表服务器数据库的主要副本。  
   
--   **辅助副本：** 创建一个或多个辅助副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
+-   **次要副本：** 创建一个或多个次要副本。 将数据库从主副本复制到辅助副本的常用方法为使用“RESTORE WITH NORECOVERY”将数据库恢复到每个辅助副本。 有关创建次要副本和验证数据同步是否正常工作的详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
--   **报表服务器凭据：** 你需要在针对主要副本创建的辅助副本上，创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **报表服务器凭据：** 需要在针对主要副本创建的次要副本上，创建相应的报表服务器凭据。 具体的步骤取决于您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 环境中使用什么类型的身份验证以及 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务帐户、Windows 用户帐户或 SQL Server 身份验证。 有关详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
 -   更新数据库连接以使用侦听器 DNS 名称。 对于本机模式的报表服务器，在 **配置管理器中更改** “报表服务器数据库名称” [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。 对于 SharePoint 模式，为 **服务应用程序更改** 数据库服务器名称 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 。  
   

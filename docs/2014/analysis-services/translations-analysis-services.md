@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794478"
 ---
 # <a name="translations-analysis-services"></a>翻译 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -54,7 +54,7 @@ ms.locfileid: "50145952"
   
  日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 `FormatString` 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
- Analysis Services 教程中的[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 将引导你完成创建和测试翻译的所有步骤。  
+ [第 9 课：定义透视和翻译](lesson-9-defining-perspectives-and-translations.md)Analysis Services 教程中将引导你完成创建和测试翻译的步骤。  
   
 ## <a name="defining-translations"></a>定义翻译  
  定义翻译将创建一个 `Translation` 对象，作为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库、维度或多维数据集对象的子对象。 使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 打开解决方案和定义翻译。  
@@ -117,7 +117,7 @@ ms.locfileid: "50145952"
 ## <a name="resolving-translations"></a>解析翻译  
  如果客户端应用程序要求区域设置标识符， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例会尝试将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据和元数据解析为最匹配的 LCID。 如果客户端应用程序未指定默认语言，或指定了非特定区域设置标识符 (0) 或进程默认语言标识符 (1024)，那么， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将使用实例的默认语言来返回 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据和元数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services Multiidimensional 的全球化方案](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md)   
  [设置或更改列排序规则](../relational-databases/collations/set-or-change-the-column-collation.md)   

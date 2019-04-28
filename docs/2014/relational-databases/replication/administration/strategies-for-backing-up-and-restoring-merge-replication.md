@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688901"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
   对于合并复制，请定期备份下列数据库：  
@@ -51,7 +51,7 @@ ms.locfileid: "54131907"
   
 -   如果发布未经筛选，则应能通过与最新订阅服务器同步来更新发布数据库。  
   
--   如果发布经过筛选，则可能无法更新发布数据库。 请考虑一个表，该表的分区使每个订阅只接收一个区域的客户数据：北、东、南和西。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
+-   如果发布经过筛选，则可能无法更新发布数据库。 请考虑分区使每个订阅接收仅对在单个区域的客户数据的表：北、 东、 南和西部。 如果每个数据分区至少有一个订阅服务器，那么使每个分区与订阅服务器同步会更新发布数据库。 但是，以西分区为例，如果其中的数据未复制到任何订阅服务器，那么发布服务器上的此数据就无法更新。  
   
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  

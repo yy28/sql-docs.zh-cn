@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652475"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "47648945"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|审核规范的 ID。|  
 |**audit_action_id**|**int**|审核操作的 ID。|  
-|**audit_action_name**|**sysname**|审核操作或审核操作组的名称|  
+|**audit_action_name**|**Sysname**|审核操作或审核操作组的名称|  
 |**类**|**int**|标识要审核的对象的类型。|  
-|**class_ desc**|**nvarchar(60)**|正审核的对象的类的说明：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|正审核的对象的类的说明：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|正审核的对象的主 ID，如表审核操作的表 ID。|  
 |**minor_id**|**Int**|正审核的对象的辅助 ID（如表审核操作的列 ID），根据类进行解释。|  
 |**audited_principal_id**|**int**|正审核的主体。|  
-|**audited_result**|**nvarchar(60)**|审核操作的结果：<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|审核操作的结果：<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|显示该对象是否为组：<br /><br /> 0 - 不是组<br /><br /> 1 - 组|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  具有主体**ALTER ANY DATABASE AUDIT**或**VIEW DEFINITION**权限**dbo**角色和成员**db_owners**固定的数据库角色有权访问此目录视图。 此外，不得被拒绝主体**VIEW DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

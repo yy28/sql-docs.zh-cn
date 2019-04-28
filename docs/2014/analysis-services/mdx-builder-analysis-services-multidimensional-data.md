@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728023"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 生成器（Analysis Services -多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“MDX 生成器”对话框生成多维表达式 (MDX) 表达式。 可以显示**MDX 生成器**通过单击对话框中**编辑 MDX**省略号按钮 (**...**) 用于**允许读取多维数据集内容**选项，**允许根据单元安全性读取单元内容**选项，或**允许读取和编写多维数据集内容**选项卡上**单元格数据**页**角色设计器**。  

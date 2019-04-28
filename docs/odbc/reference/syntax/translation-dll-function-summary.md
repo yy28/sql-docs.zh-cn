@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720308"
 ---
 # <a name="translation-dll-function-summary"></a>转换 DLL 函数摘要
 下表介绍转换 DLL 函数。 有关语法和语义为每个函数的详细信息，请参阅[转换 DLL 函数引用](../../../odbc/reference/syntax/translation-dll-api-reference.md)。  

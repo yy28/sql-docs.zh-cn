@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fad4cf000bda343970c0c2b6c18adb8f5e7fb548
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711217"
 ---
 # <a name="design-view"></a>“设计”视图
   使用“设计”视图可以排列报表中的报表项。 设计视图有时称为设计图面或布局视图。  

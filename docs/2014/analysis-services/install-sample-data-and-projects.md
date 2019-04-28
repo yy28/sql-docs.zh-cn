@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730360"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
   可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
   
-## <a name="step-1-install-sql-server-software"></a>步骤 1：安装 SQL Server 软件  
+## <a name="step-1-install-sql-server-software"></a>第 1 步：安装 SQL Server 软件  
  本教程中的课程假定您已安装以下软件。 所有以下软件都使用 SQL Server 安装介质进行安装。 为了简化部署，您可以在一台计算机上安装所有功能。 若要安装这些功能，请运行 SQL Server 安装程序并从“功能选择”页中选择它们。 有关详细信息，请参阅[从安装向导安装 SQL Server 2014&#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 -   数据库引擎  
@@ -40,7 +40,7 @@ ms.locfileid: "53355077"
   
  或者，您可以使用在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中内置的内置 MDX 查询设计器来浏览数据。 查询设计器将返回相同的数据，除非数据以平面行集的形式表示。  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步骤 2：下载 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>第 2 步：下载 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
  在此版本中，SQL Server Data Tools 和其他 SQL Server 功能将分开下载与安装。 用于创建 BI 模型和报表的设计器与项目模板现在作为免费 Web 下载提供。  
   
 -   [下载 SQL Server Data Tools 的 Business Intelligence 版本](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 文件将保存到 Downloads 文件夹。 运行安装程序以安装此工具。  

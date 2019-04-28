@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794358"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>设置列的数据类型（SSAS 表格）
   导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
@@ -66,9 +66,9 @@ ms.locfileid: "48083207"
   
  如果支持该数据类型，但是模型设计器在新数据类型中发现不支持的值，将遇到另一个错误，在继续操作前您需要更正数据值。  
   
- 有关使用商业智能语义模型中的数据类型的详细信息，它们是隐式转换后，以及如何将不同数据类型的方式是在公式中使用，请参阅[支持的数据类型&#40;SSAS 表格&#41;](data-types-supported-ssas-tabular.md).  
+ 有关商业智能语义模型中使用的数据类型、如何隐式转换这些数据类型以及如何在公式中使用不同数据类型的详细信息，请参阅 [支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [支持的数据类型&#40;SSAS 表格&#41;](data-types-supported-ssas-tabular.md)  
+ [支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)  
   
   

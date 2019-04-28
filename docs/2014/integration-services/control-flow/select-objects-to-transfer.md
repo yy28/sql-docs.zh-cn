@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830401"
 ---
 # <a name="select-objects-to-transfer"></a>选择要传输的对象
   可以使用此对话框选择对象，以便使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 传输任务将这些对象从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的一个实例传输到另一个实例。  

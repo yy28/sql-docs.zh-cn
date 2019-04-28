@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724122"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,17 +114,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失败|  
-|1FF6|无法返回元数据。<br /><br /> 注意：原因是语句未生成结果集；例如，它是一个 INSERT 或 DDL 语句。|  
+|1FF6|无法返回元数据。<br /><br /> 注意：这样做的原因是该语句不会生成一个结果集;例如，它是 INSERT 或 DDL 语句。|  
   
 ## <a name="examples"></a>示例  
  当*stmt*已参数化并*scrollopt* PARAMETERIZED_STMT 值为 ON，字符串的格式如下所示：  
   
- { *\<本地变量的名称 > * *\<数据类型 >* } [，...*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
 ## <a name="see-also"></a>请参阅  
- [sp_cursorexecute &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

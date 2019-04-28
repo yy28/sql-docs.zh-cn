@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688371"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name=] '*table_name*  
+ [ @table_name= ] '*table_name*'  
  用来返回目录信息的表。 *table_name*是**nvarchar (** 384 **)**，无默认值。 支持通配符模式匹配。  
   
- [ @table_owner=] '*table_owner*  
+ [ @table_owner= ] '*table_owner*'  
  是用来返回目录信息的表所有者。 *table_owner*是**nvarchar (** 384 **)**，默认值为 NULL。 支持通配符模式匹配。 如果未指定所有者，则遵循基础 DBMS 的默认表可见性规则。  
   
  如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*table_name*归数据库所有者。 如果存在，则返回该表的列。  
   
- [ @table_qualifier=] '*table_qualifier*  
+ [ @table_qualifier= ] '*table_qualifier*'  
  表限定符的名称。 *table_qualifier*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*qualifier.owner.name*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [ @fUsePattern=] '*fUsePattern*  
+ [ @fUsePattern= ] '*fUsePattern*'  
  确定下划线 (_)、百分号 (%) 和方括号（[ 或 ]）是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -75,7 +75,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>备注  
  sp_table_privileges 存储过程与 ODBC 中的 SQLTablePrivileges 等同。 返回结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 PRIVILEGE 顺序排列。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

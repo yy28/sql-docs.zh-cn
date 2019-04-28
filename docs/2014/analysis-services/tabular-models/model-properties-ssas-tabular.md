@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d87af32662b9b971d3ba983d38f3df39b5a3202c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795334"
 ---
 # <a name="model-properties-ssas-tabular"></a>模型属性（SSAS 表格）
   本主题介绍表格模型属性。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的每个表格模型项目都具有模型属性，这些属性影响生成您正创作的模型的方式、备份模型的方式以及存储工作区数据库的方式。 此处所描述的模型属性并不适用于已部署的模型。  
@@ -57,7 +57,7 @@ ms.locfileid: "52502575"
 |**语言**|英语|模型的默认语言。 该默认语言由 Visual Studio 语言确定。 不能在“属性”窗口中设置此属性。|  
 |**工作区数据库**|项目名称，后跟一个下划线，再后跟一个 GUID。|用于存储和编辑所选 model.bim 文件的内存中模型的工作区数据库的名称。 此数据库将出现在“工作区服务器”属性中指定的 Analysis Services 实例中。 不能在“属性”窗口中设置此属性。 有关详细信息，请参阅[工作区数据库（SSAS 表格）](workspace-database-ssas-tabular.md)。|  
 |**工作区保持期**|从内存中卸载|指定在关闭某一模型后将如何保留工作区数据库。 工作区数据库将包括模型元数据、导入到模型中的数据以及模拟凭据（已加密）。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，工作区数据库将从内存中卸载。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型的频繁程度。 请注意，可以在工具 \ 选项对话框中的 Analysis Server 设置的数据建模页上更改此属性的默认设置。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开某一模型时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开某一模型时，将会占用附加的资源，并且与工作区保留在内存中相比，模型的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中打开某一模型时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型的加载速度将更慢。 只有在偶尔处理模型时，才使用此选项。|  
-|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作模型时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 Analysis Services 的所有可用实例都将包括在列表框中。<br /><br /> 注意：建议您始终将一个本地 Analysis Services 服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 PowerPivot 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。|  
+|**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创作模型时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 Analysis Services 的所有可用实例都将包括在列表框中。<br /><br /> 注意：建议您始终指定为工作区服务器本地的 Analysis Services 服务器。 对于远程服务器上的工作区数据库，不支持从 PowerPivot 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 可以在“数据建模”页（位于“工具\选项”对话框的“Analysis Server”设置中）更改此属性的默认设置。|  
   
 ##  <a name="bkmk_conf_model_prop"></a>   
 ###  <a name="bkmk_conf"></a> 若要配置模型属性设置  

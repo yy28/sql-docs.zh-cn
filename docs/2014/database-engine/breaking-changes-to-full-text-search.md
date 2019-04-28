@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787755"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>对全文搜索的重大更改
   本主题介绍全文搜索的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "49460692"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|通过使用 sp_fulltext_database 启用或禁用全文搜索。|全文查询不返回任何结果。 如果对数据库禁用全文功能，则将不允许全文操作。|为全文查询返回结果，并且允许全文操作，即使对数据库禁用全文功能也是如此。|  
 |特定于区域设置的非索引字|查询特定于 inlocale 的变体的父语言，如比利时法语和加拿大法语。|查询特定于 inlocale 的变体由其父语言的组件 （断字符、 词干分析器和非索引字） 处理。 例如，“法语（法国）”组件用于分析“法语（比利时）”。|必须为每个区域设置标识符 (LCID) 显式添加非索引字。 例如，您需要为比利时、加拿大和法国指定一个 LCID。|  
 |同义词库词干分析进程|使用同义词库和变形（词干分析）。|同义词库单词在其扩展之后自动进行词干分析。|如果要得到扩展形式中的词干，则需要显式添加词干。|  
-|全文目录路径和文件组|使用全文目录。|每个全文目录都有一个物理路径，并且都属于一个文件组。 系统将其视为数据库文件。|全文目录是虚拟对象，不属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。<br /><br /> 注意： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)]指定全文目录的 DDL 语句正常工作。|  
+|全文目录路径和文件组|使用全文目录。|每个全文目录都有一个物理路径，并且都属于一个文件组。 系统将其视为数据库文件。|全文目录是虚拟对象，不属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。<br /><br /> 注意：[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] 指定全文目录的 DDL 语句正常工作。|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|使用此目录视图的 path、data_space_id 和 file_id。|这些列都返回一个特定值。|由于全文目录已不再位于文件系统中，因而这些列均返回 NULL。|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|使用此不推荐使用的系统表的 path 列。|返回全文目录的文件系统路径。|由于全文目录已不再位于文件系统中，因而返回 NULL。|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|使用这些不推荐使用的存储过程的 PATH 列。|返回全文目录的文件系统路径。|由于全文目录已不再位于文件系统中，因而返回 NULL。|  

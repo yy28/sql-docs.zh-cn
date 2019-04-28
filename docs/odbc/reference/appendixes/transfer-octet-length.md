@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735063"
 ---
 # <a name="transfer-octet-length"></a>传输八位字节长度
 传输八位字节长度的列是最大数据传输到其默认 C 数据类型时返回到应用程序的字节数。 对于字符数据，传输八位字节长度不包括 null 终止字符的空间。 传输八位字节长度的列的可能不同于数据源上存储数据所需的字节数。  
@@ -35,7 +35,7 @@ ms.locfileid: "47601325"
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|如果字符设置为 ANSI，保存此数据的字符表示形式所需的字节数和两次此数值的字符集是 UNICODE，因为默认情况下，此数据类型将返回为字符串。 该字符表示形式包含 20 个字符： 数字和符号，如果已签名，或 20 位数字，如果无符号的 19。 因此，长度为 20。|  
+|SQL_BIGINT|如果字符设置为 ANSI，保存此数据的字符表示形式所需的字节数和两次此数值的字符集是 UNICODE，因为默认情况下，此数据类型将返回为字符串。 该字符表示形式包含 20 个字符：数字和符号，已签名，如果为 19 或 20 位数字，如果无符号。 因此，长度为 20。|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

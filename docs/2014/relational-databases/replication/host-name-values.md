@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721187"
 ---
 # <a name="hostname-values"></a>HOST_NAME 值
   具有参数化筛选器的合并发布使用 SUSER_SNAME() 和/或 HOST_NAME() 函数筛选数据。 函数在新建发布向导或 **“发布属性”** 对话框中指定。  
@@ -32,7 +32,7 @@ ms.locfileid: "52752199"
  在 **“HOST_NAME 值”** 列中为每个订阅服务器输入一个值或者接受默认值，默认值为订阅服务器计算机的名称。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   
  [查看和修改推送订阅属性](view-and-modify-push-subscription-properties.md)   

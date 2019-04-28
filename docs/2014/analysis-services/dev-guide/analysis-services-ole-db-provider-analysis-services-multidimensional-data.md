@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732183"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB 访问接口（Analysis Services - 多维数据）
   Analysis Services OLE DB 访问接口是用于与交互的应用程序的界面[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 它用于生成与多维数据进行交互的客户端应用程序。 此访问接口还提供对多维数据和关系数据进行联机或脱机数据挖掘分析的方法，且为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的一部分。 它可由第三方客户端应用程序进行再分发。  

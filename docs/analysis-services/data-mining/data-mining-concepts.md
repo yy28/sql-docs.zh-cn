@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649989"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "54185133"
   
  这些模式和趋势可以被收集在一起并定义为“数据挖掘模型” 。 挖掘模型可以应用于特定的方案，例如：  
   
--   **预测**:估计销售量、预测服务器负载或服务器停机时间  
+-   **预测**:估计销售量、 预测服务器负载或服务器停机时间  
   
--   **风险和概率**:选择目标邮递的最佳客户、确定风险方案的可能保本点、将概率分配给诊断或其他结果  
+-   **风险和概率**:选择目标邮递确定风险方案的可能保本点、 将概率分配给诊断或其他结果的最佳客户  
   
 -   **建议**:确定哪些产品有可能一起销售并生成建议  
   
--   **查找序列**:分析购物车中的客户选择，并预测接下来可能发生的事件  
+-   **查找序列**:分析购物车，预测下一步可能发生的事件中的客户选择  
   
 -   **分组**:将客户或事件划分到相关的项目分类，分析和预测相关性  
   

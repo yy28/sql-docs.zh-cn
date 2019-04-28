@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834573"
 ---
 # <a name="use-the-new-instance-wizard"></a>使用新建实例向导
   “新建实例”向导用于为 CDC 服务创建新实例。 您从 CDC 设计器控制台打开“创建 Oracle CDC 实例”向导。 您可以在“新建实例”向导中执行以下操作。  

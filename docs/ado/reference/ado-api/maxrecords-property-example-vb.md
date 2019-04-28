@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c687f2b7a11dba37c05412c03cf14da4a3daa543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863869"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 属性示例 (VB)
 此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含 10 个最贵的书中***标题***表。  

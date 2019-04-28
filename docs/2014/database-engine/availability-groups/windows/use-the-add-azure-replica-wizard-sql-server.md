@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788125"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   通过使用“添加 Azure 副本向导”，您可以在混合 IT 环境中创建新的 Windows Azure 虚拟机，将它配置为新的或现有 AlwaysOn 可用性组的辅助副本。  
@@ -26,9 +26,9 @@ ms.locfileid: "48095637"
   
      [先决条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **要添加副本，请使用：**[添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果您从未向可用性组添加任何可用性副本，请参阅"服务器实例"和"可用性组和副本"部分中的[先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "48095637"
   
 4.  为将承载新辅助副本的 Windows Azure 虚拟机指定设置：  
   
-     图像  
+     Image  
      要用于 Windows Azure 虚拟机的 SQL Server 图像的名称  
   
      VM 大小  

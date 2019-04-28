@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836445"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
   可以使用 **“Analysis Services 处理任务编辑器”** 对话框的 **Analysis Services** 页指定 Analysis Services 连接管理器，选择要处理的分析对象，以及设置处理选项和错误处理选项。  
@@ -44,7 +44,7 @@ ms.locfileid: "58380895"
  **新建**  
  创建新的 Analysis Services 连接管理器。  
   
- **相关主题：**[Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)，[添加 Analysis Services 连接管理器对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：**[Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
  |属性|Description|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380895"
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：**[影响分析对话框的&#40;Analysis Services-多维数据&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批设置摘要**  
  |属性|Description|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380895"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：**[更改设置对话框&#40;Analysis Services-多维数据&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

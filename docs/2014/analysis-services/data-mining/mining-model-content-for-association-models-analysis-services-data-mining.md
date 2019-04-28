@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733561"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>关联模型的挖掘模型内容（Analysis Services – 数据挖掘）
-  本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅[挖掘模型内容 （Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+  本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解关联模型的结构  
  关联模型结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有项集和规则的平面列表。 项集和规则不是按树组织的，它们的顺序是项集在先、规则在后，如下面的关系图所示。  
@@ -64,7 +64,7 @@ ms.locfileid: "48135057"
 |节点类型 ID|类型|  
 |------------------|----------|  
 |1（模型）|根节点或父节点。|  
-|7（项集）|项集，或属性-值对的集合。 示例：<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或多个<br /><br /> `Gender = Male`。|  
+|7（项集）|项集，或属性-值对的集合。 示例：<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或<br /><br /> `Gender = Male`。|  
 |8（规则）|用于定义项相互关联的方式的规则。<br /><br /> 例如：<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`。|  
   
  NODE_CAPTION  
@@ -102,12 +102,12 @@ ms.locfileid: "48135057"
 |RULE_COUNT|模型中所有规则的计数。|  
 |MIN_SUPPORT|为任何单个项集找到的最小支持。<br /><br /> **注意** 值可能不同于为 *MINIMUM _SUPPORT* 参数设置的值。|  
 |MAX_SUPPORT|为任何单个项集找到的最大支持。<br /><br /> **注意** 值可能不同于为 *MAXIMUM_SUPPORT* 参数设置的值。|  
-|MIN_ITEMSET_SIZE|最小项集的大小，由项目的计数表示。<br /><br /> 值为 0 指示`Missing`状态被视为独立项目。<br /><br /> **注意** *MINIMUM_ITEMSET_SIZE* 参数的默认值为 1。|  
+|MIN_ITEMSET_SIZE|最小项集的大小，由项目的计数表示。<br /><br /> 值为 0 指示 `Missing` 状态被视为独立项目。<br /><br /> **注意** *MINIMUM_ITEMSET_SIZE* 参数的默认值为 1。|  
 |MAX_ITEMSET_SIZE|指示找到的最大项集的大小。<br /><br /> **注意** 此值受创建模型时为 *MAX_ITEMSET_SIZE* 参数设置的值的约束。 该值永远不可大于、但可小于为该参数设置的值。 默认值为 3。|  
-|MIN_PROBABILITY|为模型中的任何单个项集或规则检测到的最小概率。<br /><br /> 示例：0.400390625<br /><br /> **注意** 对于项集，此值始终大于创建模型时为 *MINIMUM_PROBABILITY* 参数设置的值。|  
-|MAX_PROBABILITY|为模型中的任何单个项集或规则检测到的最大概率。<br /><br /> 示例：1<br /><br /> **注意** 没有参数来约束项集的最大概率。 若要消除出现过于频繁的项目，请改用 *MAXIMUM_SUPPORT* 参数。|  
-|MIN_LIFT|该模型为任何项集提供的最小提升量。<br /><br /> 示例：0.14309369632511<br /><br /> 注意：了解最小提升可帮助你确定对任何一个项集的提升是否有效。|  
-|MAX_LIFT|该模型为每个项集提供的最大提升量。<br /><br /> 示例：1.95758227647523 **注意** 了解最大提升可帮助您确定对任何一个项集的提升是否有效。|  
+|MIN_PROBABILITY|为模型中的任何单个项集或规则检测到的最小概率。<br /><br /> 例如：0.400390625<br /><br /> **注意** 对于项集，此值始终大于创建模型时为 *MINIMUM_PROBABILITY* 参数设置的值。|  
+|MAX_PROBABILITY|为模型中的任何单个项集或规则检测到的最大概率。<br /><br /> 例如：1<br /><br /> **注意** 没有参数来约束项集的最大概率。 若要消除出现过于频繁的项目，请改用 *MAXIMUM_SUPPORT* 参数。|  
+|MIN_LIFT|该模型为任何项集提供的最小提升量。<br /><br /> 例如：0.14309369632511<br /><br /> 注意：了解最小提升可帮助您确定对任何一个项集的提升是否有效。|  
+|MAX_LIFT|该模型为每个项集提供的最大提升量。<br /><br /> 例如：1.95758227647523**注意**了解最大提升可帮助您确定对任何一个项集的提升是否有效。|  
   
  **项集节点** 项集节点包含一个项目列表，该列表显示为一个以逗号分隔的文本字符串。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48135057"
  空白。  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 关联算法](microsoft-association-algorithm.md)   
  [关联模型查询示例](association-model-query-examples.md)  
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667972"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>项目设置（同步）(SybaseToSQL)
 同步页**项目设置**对话框中包含自定义如何 SSMA 将数据库对象，如表和存储的过程加载到设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  

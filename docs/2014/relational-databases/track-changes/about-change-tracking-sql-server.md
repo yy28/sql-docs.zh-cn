@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670913"
 ---
 # <a name="about-change-tracking-sql-server"></a>关于更改跟踪 (SQL Server)
   更改跟踪是一种轻量型解决方案，它为应用程序提供了一种有效的更改跟踪机制。 通常，若要使应用程序能够查询对数据库中的数据所做的更改和访问与这些更改相关的信息，应用程序开发人员必须实现自定义更改跟踪机制。 创建这些机制通常涉及多项工作的和经常涉及到使用的触发器，组合`timestamp`列和新表来存储跟踪信息和自定义清除过程。  

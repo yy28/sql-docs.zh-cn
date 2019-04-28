@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656741"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安装 PowerPivot for SharePoint
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是在 SharePoint 2010 场中提供 PowerPivot 数据访问的中间层和后端服务的集合。 如果您的组织使用客户端应用程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 来创建包含分析数据的工作簿，您必须具有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 才能访问服务器环境中的数据。 本主题演练基本安装过程，并包含可帮助您配置 PowerPivot 的其他主题链接。  
@@ -51,7 +51,7 @@ ms.locfileid: "53356807"
   
     -   [使用 SharePoint 2010 场中的 SQL Server BI 功能的指南](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> 步骤 1:安装 PowerPivot for SharePoint  
+##  <a name="InstallSQL"></a> 步骤 1：安装 PowerPivot for SharePoint  
  在此步骤中，您将运行 SQL Server 安装程序以安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 在后续步骤中，您将配置服务器来作为安装后任务。  
   
 1.  插入安装介质或者打开包含 SQL Server 安装程序文件的文件夹，然后双击**setup.exe**。  
@@ -116,12 +116,12 @@ ms.locfileid: "53356807"
 > [!TIP]  
 >  如果需要进行故障排除 SQL Server 安装，请参阅[查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-##  <a name="bkmk_config"></a> 步骤 2:配置 Server  
+##  <a name="bkmk_config"></a> 步骤 2：配置服务器  
   
 > [!IMPORTANT]  
 >  必须首先安装 SharePoint 2010 SP2，然后才能配置 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 或配置使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库服务器的 SharePoint 场。 如果您尚未安装 Service Pack，则应立即安装 Service Pack，然后再开始配置服务器。  
   
- 在配置服务器前，安装是不完整的。 在此版本中，服务器配置始终作为安装后任务执行，并且使用以下方法之一执行：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具、管理中心或 PowerShell。 若要继续，请选择下列方法之一：  
+ 在配置服务器前，安装是不完整的。 在此版本中，服务器配置始终作为安装后任务，使用以下方法之一执行：[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具、 管理中心或 PowerShell。 若要继续，请选择下列方法之一：  
   
 -   [配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "53356807"
   
  **连接到数据库引擎实例。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]在安装  时，SQL Server 安装程序会为您提供用于向安装中添加数据库引擎实例的选项。 您可能添加了数据库引擎实例向您的安装如果正在设置新场且需要让数据库服务器来运行该场的配置和内容数据库。 如果添加了数据库引擎，则它已安装为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 命名实例。 每当需要指定 （例如，在场配置向导时如果使用该项导配置场），在此实例的连接，请务必按以下格式输入数据库名称： <`servername`> \PowerPivot。  
   
-##  <a name="bkmk_redist"></a> 步骤 3:在 Excel Services 应用程序服务器上安装 Analysis Services OLE DB 访问接口  
+##  <a name="bkmk_redist"></a> 步骤 3：在 Excel Services 应用程序服务器上安装 Analysis Services OLE DB 访问接口  
  如果在单独的应用程序服务器上运行 Excel Calculation Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，则需要执行其他安装步骤。 在运行 Excel Calculation Services 的应用程序服务器上，安装适当版本的 Analysis Services OLE DB (MSOLAP) 访问接口。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP 包含在 SQL Server 安装程序中，因此，仅当您的应用程序服务器不是 PowerPivot 应用程序服务器的情况下，才需要显式安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的 MSOLAP。  

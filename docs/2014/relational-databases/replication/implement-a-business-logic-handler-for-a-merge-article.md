@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721201"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
   本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
@@ -58,7 +58,7 @@ ms.locfileid: "52816889"
   
 2.  将对以下列命名空间的引用添加到该项目。  
   
-    |程序集引用|位置|  
+    |程序集引用|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM（默认安装）|  
     |<xref:System.Data>|GAC（.NET Framework 的组件）|  
@@ -131,7 +131,7 @@ ms.locfileid: "52816889"
   
 2.  将对以下列命名空间的引用添加到该项目。  
   
-    |程序集引用|位置|  
+    |程序集引用|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM（默认安装）|  
     |<xref:System.Data>|GAC（.NET Framework 的组件）|  

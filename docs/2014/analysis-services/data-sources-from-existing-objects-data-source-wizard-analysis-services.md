@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732771"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>来自现有对象的数据源（数据源向导）(Analysis Services)
   可以使用 **“来自现有对象的数据源”** 页，指定新数据源基于的现有数据源或项目。  

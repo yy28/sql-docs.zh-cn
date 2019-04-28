@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726453"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在数据源视图中定义命名计算 (Analysis Services)
   命名计算是一个表示为计算列的 SQL 表达式。 该表达式作为表内的列出现并发挥作用。 使用命名计算，您可以扩展数据源视图中现有表或视图的关系架构，而无需修改基础数据源中的表或视图。 请考虑下列示例：  
@@ -85,6 +85,6 @@ FROM
  尝试删除命名计算时，系统将提示您删除会使在项目或数据库中定义的对象列表失效。 在删除计算之前仔细查看该列表。  
   
 ## <a name="see-also"></a>请参阅  
- [数据源视图中定义命名的查询&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中定义命名查询 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

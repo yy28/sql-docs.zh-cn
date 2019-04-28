@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698416"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机生成快速图表报表（报表生成器）
   在本教程中，将使用向导创建饼图，然后将对其稍作修改以了解都能执行哪些操作。 您可以通过两种不同的方式学习本教程。 这两种方法具有相同结果的饼图类似下图中所示：  

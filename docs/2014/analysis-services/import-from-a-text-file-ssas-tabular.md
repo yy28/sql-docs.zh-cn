@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730412"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>从文本文件导入（SSAS 表格）
   可以通过使用表导入向导从 Microsoft Excel 文件和文本文件中导入数据。  
@@ -32,7 +32,7 @@ ms.locfileid: "48055760"
 3.  执行表导入向导中的步骤。 在后续页上，您可以使用 **“选择表和视图”** 页来选择特定表并应用筛选器。  
   
 ## <a name="see-also"></a>请参阅  
- [导入数据&#40;SSAS 表格&#41;](import-data-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   
  [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 查看时序公式模型 （数据挖掘） |Microsoft 文档
+title: 查看时序公式模型 （数据挖掘） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659704"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "34017224"
     > [!NOTE]  
     >  如果浏览使用 ARIMA 模型和 ARTXP 模型的混合模型内容，则在单独的树中的这两个模型将在表示该模型的根节点处联接。 即使为了方便起见将 ARIMA 模型和 ARTXP 模型显示在同一查看器中，但由于公式不同，模型结构也具有很大不同，因此不能对其进行合并或比较。 ARTXP 树更像是决策树，而 ARIMA 树则是一系列移动平均线。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [使用 Microsoft 时序查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

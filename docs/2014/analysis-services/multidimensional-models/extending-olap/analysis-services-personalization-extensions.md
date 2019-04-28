@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726113"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 个性化设置扩展
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 个性化设置扩展是概念的实现插件体系结构的基础。 在插件体系结构中，您可以动态地开发新的多维数据集对象和功能，并可以与其他开发人员方便地共享。 在这种情况下，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]个性化设置扩展提供可实现以下功能：  

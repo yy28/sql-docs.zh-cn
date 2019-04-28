@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649325"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表 （报表生成器）
   本教程旨在帮助您了解地图功能，您可以使用该功能针对地理背景显示报表数据。  

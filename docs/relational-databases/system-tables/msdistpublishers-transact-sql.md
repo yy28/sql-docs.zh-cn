@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817051"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "52787209"
 |**security_mode**|**int**|在分发服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。<br /><br /> **1** = Windows 身份验证。|  
 |**login**|**sysname**|登录 ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**password**|**nvarchar(524)**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（已加密）。|  
-|**活动**|**bit**|指示远程发布服务器是否在使用本地分发服务器。|  
-|**受信任**|**bit**|指示远程发布服务器是否使用与本地分发服务器相同的密码：<br /><br /> **0** = A 密码需要远程发布服务器上，才能连接到分发服务器。<br /><br /> **1** = 不需要密码。|  
+|**active**|**bit**|指示远程发布服务器是否在使用本地分发服务器。|  
+|**trusted**|**bit**|指示远程发布服务器是否使用与本地分发服务器相同的密码：<br /><br /> **0** = A 密码需要远程发布服务器上，才能连接到分发服务器。<br /><br /> **1** = 不需要密码。|  
 |**third_party**|**bit**|发布服务器是否为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。**1** = 异类数据源。|  
 |**publisher_type**|**sysname**|发布服务器类型：<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。<br /><br /> **ORACLE** = 标准 Oracle 发布服务器。<br /><br /> **ORACLE 网关**= Oracle 网关发布服务器。|  
 |**storage_connection_string**|**nvarchar(779)**|Azure SQL 数据库存储连接字符串的值。|  

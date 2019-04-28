@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733453"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
-  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解聚类分析模型的结构  
  聚类分析模型的结构很简单。 每个模型均具有表示该模型及其元数据的单一父节点，且每个父节点均具有分类的平面列表 (NODE_TYPE = 5)。 下图显示了此组织。  
@@ -51,12 +51,12 @@ ms.locfileid: "48190277"
 > [!NOTE]  
 >  该方差表示分类的总方差。 如果方差的值较小，则表示列中的大多数值与均值很接近。 若要获取标准偏差，请计算该方差的平方根。  
   
- 请注意，对于每个属性有`Missing`值类型，可告诉您有多少事例具有该属性的任何数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
+ 请注意，对于每个属性，都有一个 `Missing` 值类型，可告诉您有多少个事例没有该属性的数据。 缺少的数据可能会很重要，影响计算的方式也会不同，具体取决于数据类型。 有关详细信息，请参阅 [缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)预定义的这些标志以外，第三方插件还可能具有其他建模标志。  
   
 ## <a name="model-content-for-a-clustering-model"></a>聚类分析模型的模型内容  
  本节仅针对与聚类分析模型有关的挖掘模型内容中的这些列给出详细信息和示例。  
   
- 有关架构行集中通用列（例如 MODEL_CATALOG 和 MODEL_NAME）的信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+ 有关架构行集中通用列（例如 MODEL_CATALOG 和 MODEL_NAME）的信息，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -149,9 +149,9 @@ ms.locfileid: "48190277"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。 此标题无法更改。  
   
- **父节点** 模型的类型：聚类分析模型  
+ **父节点**的模型的类型：群集模型  
   
- **群集节点** 分类的名称。 示例：分类 1。  
+ **群集节点** 分类的名称。 例如：聚类 1。  
   
 ## <a name="remarks"></a>备注  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](query-the-parameters-used-to-create-a-mining-model.md)。  
@@ -160,7 +160,7 @@ ms.locfileid: "48190277"
 >  无论使用哪一个聚类分析方法或参数，模型的结构和内容都保持不变。  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
  [数据挖掘模型查看器](data-mining-model-viewers.md)   
  [Microsoft 聚类分析算法](microsoft-clustering-algorithm.md)   
  [数据挖掘查询](data-mining-queries.md)  

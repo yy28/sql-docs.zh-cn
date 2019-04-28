@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733228"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>物理体系结构（Analysis Services - 数据挖掘）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用服务器组件和客户端组件为商业智能应用程序提供数据挖掘功能：  
@@ -52,6 +52,6 @@ ms.locfileid: "48094143"
  客户端与 Analysis Services 服务器之间的所有通信都使用与平台和语言无关的 XMLA 协议。 从客户端那里收到请求后，Analysis Services 确定该请求是与 OLAP 相关还是与数据挖掘相关，并相应地路由请求。 有关详细信息，请参阅 [OLAP 引擎服务器组件](../multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [逻辑体系结构&#40;Analysis Services-数据挖掘&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [逻辑体系结构（Analysis Services - 数据挖掘）](logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 核对清单：使用 PowerShell 验证 PowerPivot for SharePoint |Microsoft Docs
+title: 清单：使用 PowerShell 验证 PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729995"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>核对清单：使用 PowerShell 验证 PowerPivot for SharePoint
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>清单：使用 PowerShell 验证 PowerPivot for SharePoint
   若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。  
   
 |||  
@@ -29,7 +29,7 @@ ms.locfileid: "55087786"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **本主题中**:以下目录中带字母的项目与关系图区域相对应。 关系图说明  
+ **本主题中**:带字母的项目中对区域的目录对应的以下关系图。 关系图说明  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "55087786"
   
  以 **管理员权限**打开 Powershell 窗口或 PowerShell ISE（集成脚本环境）。 如果您不具备管理员权限，则在运行命令时，可能会显示类似以下内容的错误消息：  
   
- Get-SPLogEvent：需要具有机器**管理员特权**才能运行此 cmdlet。  
+ Get-SPLogEvent :需要具有机器**管理员特权**才能运行此 cmdlet。  
   
  **SharePoint 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 模块  
   

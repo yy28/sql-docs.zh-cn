@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701940"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "50146422"
   
 -   属性成员  
   
--   单元  
+-   单元格  
   
 -   多维数据集  
   
@@ -71,11 +71,11 @@ ms.locfileid: "50146422"
  **附加属性**  
  选择属性。 下表总结了可用的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> 批处理<br /><br /> 交互<br /><br /> 处于打开状态|  
 |**应用程序**|说明操作的应用程序。|  
-|**Description**|说明操作。|  
+|**说明**|说明操作。|  
 |**Caption**|提供为操作显示的标题。 如果标题是 MDX，指定`True`有关**标题是 MDX**。|  
 |**True**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "50146422"
  **报表服务器**  
  下表说明的属性是为报表服务器指定的。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |**服务器名称**|运行报表服务器的计算机的名称。|  
 |**服务器路径**|报表服务器所显示的路径。|  
@@ -124,7 +124,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **钻取列**  
  选择一个或多个维度以及每个维度的、由该操作返回到客户端应用程序的钻取列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的多维数据集](cubes-in-multidimensional-models.md)  
   
   

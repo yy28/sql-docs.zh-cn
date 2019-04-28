@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 840379944950b83fe301929ba20c35678564b02f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736010"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>NumberOfFlags 属性（ServerSettings 类）
   获取与实例相关联的常规标志数[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

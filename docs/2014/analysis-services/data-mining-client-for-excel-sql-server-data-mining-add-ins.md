@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692026"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 数据挖掘客户端（SQL Server 数据挖掘外接程序）
   Excel 数据挖掘客户端是一组工具，通过这些工具，可执行常用的数据挖掘任务，包括从数据清理到建模和预测查询。 可使用 Excel 表或范围中的数据，也可访问外部数据源。  
@@ -77,12 +77,12 @@ ms.locfileid: "48063549"
  [分类向导&#40;Excel 数据挖掘外接程序&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  **分类**向导可帮助您生成基于 Excel 表、 Excel 区域或外部数据源中的现有数据的分类模型。 分类模型提取数据中表示相似性的模式，并帮助您基于值的分组进行预测。 例如，分类模型可用于根据收入或消费模式来预测风险。  
   
- **分类**向导支持使用以下 Microsoft 数据挖掘算法： 决策树算法，逻辑回归、 朴素贝叶斯、 神经网络。  
+ **分类**向导支持使用以下 Microsoft 数据挖掘算法：决策树算法，逻辑回归、 朴素贝叶斯、 神经网络。  
   
  [估计向导&#40;Excel 数据挖掘外接程序&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  **估计**向导帮助您创建估计模型。 估计模型从数据中提取数据模式，并且使用这些模式来预测数字结果，例如货币、销售金额、日期或时间。  
   
- **估计**向导使用以下 Microsoft 数据挖掘算法： 决策树、 线性回归、 逻辑回归和神经网络。  
+ **估计**向导使用以下 Microsoft 数据挖掘算法：决策树、 线性回归、 逻辑回归和神经网络。  
   
  [分析关键影响因素&#40;Excel 表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  聚类分析向导帮助您生成聚类分析模型。 聚类分析模型检测各组具有相似特征的行。 此向导对于检测各种类型数据中的模式非常有用。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794619"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>在 Analysis Services 中使用的工具和应用程序
   找到您将需要用于生成 Analysis Services 模型以及用于在 Analysis Services 实例上管理关联数据库的工具和应用程序。  
@@ -43,7 +43,7 @@ ms.locfileid: "53354975"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio 是所有 SQL Server 功能（包括 Analysis Services）的主要管理工具。 SQL Server Management Studio 是可选组件。 如果你在 Windows Server 2012 的应用程序页面上未看见该组件与其他 SQL Server 应用程序一并列出，则运行 SQL Server 安装程序，将其添加到你的安装中。  
   
-### <a name="sql-server-profiler"></a>SQL Server 事件探查器  
+### <a name="sql-server-profiler"></a>SQL Server Profiler  
  SQL Server Profiler 提供一种便捷方法，用以监视连接、MDX 查询执行和其他服务器操作，但从官方角度来说，不推荐使用此方法。 SQL Server Profiler 将按默认安装。 可在 Windows Server 2012 中的应用程序上一并找到此组件与 SQL Server 应用程序。  
   
 ### <a name="powershell"></a>PowerShell  

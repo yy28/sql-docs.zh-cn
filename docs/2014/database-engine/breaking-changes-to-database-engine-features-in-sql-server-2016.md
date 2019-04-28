@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813202"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的重大更改
-  本主题介绍中的重大更改[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]及更早版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
+  本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
 ##  <a name="SQL14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的重大更改  
  没有新问题。  
@@ -42,7 +42,7 @@ ms.locfileid: "54420202"
 |ALTER TABLE|ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 在编译时出现错误 117 失败，指定表名现在使用以下格式：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。 要解决此问题，请不要使用 4 部分的前缀。|  
 |浏览元数据|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 查询视图时，现在会返回视图的元数据而非基础对象的元数据。 此行为现在匹配浏览元数据的其他方法。|  
 |SOUNDEX|数据库兼容级别为 110 时，SOUNDEX 函数实现的新规则可能导致由该函数计算的值不同于更低兼容级别时计算的值。 在升级到兼容性级别 110 后，可能需要重新生成使用 SOUNDEX 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)
-|失败的 DML 语句的行计数消息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，DML 语句失败时，[!INCLUDE[ssDE](../includes/ssde-md.md)] 将以一致方式将包含 RowCount:0 的 TDS DONE 令牌发送到客户端。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，当 TRY-CATCH 块包含失败的 DML 语句并且该语句由[!INCLUDE[ssDE](../includes/ssde-md.md)]自动参数化或 TRY-CATCH 块所处的级别不同于失败语句的级别时，会向客户端发送不正确的值 -1。 例如，如果 TRY-CATCH 块调用存储过程且该过程中的 DML 语句失败，客户端将错误地收到 -1 值。<br /><br /> 依赖这种不正确行为的应用程序将失败。|  
+|失败的 DML 语句的行计数消息|在中[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，则[!INCLUDE[ssDE](../includes/ssde-md.md)]以一致方式将包含 RowCount 的 TDS DONE 令牌：0 到客户端时的 DML 语句失败。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，当 TRY-CATCH 块包含失败的 DML 语句并且该语句由[!INCLUDE[ssDE](../includes/ssde-md.md)]自动参数化或 TRY-CATCH 块所处的级别不同于失败语句的级别时，会向客户端发送不正确的值 -1。 例如，如果 TRY-CATCH 块调用存储过程且该过程中的 DML 语句失败，客户端将错误地收到 -1 值。<br /><br /> 依赖这种不正确行为的应用程序将失败。|  
 |SERVERPROPERTY (Edition)|所安装的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例的产品版本。 使用该属性的值确定已安装的产品支持的功能和限制（如最大 CPU 数）。<br /><br /> 根据安装的 Enterprise 版，此方法可返回 Enterprise Edition 或 Enterprise Edition:基于内核授予许可。 根据单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的最大计算能力来区分 Enterprise 版本。 有关详细信息中的计算能力限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，请参阅[Compute Capacity Limits by Edition 的 SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密码*`' HASHED`选项不能用于创建的哈希[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  
 |`datetimeoffset` 的 CAST 和 CONVERT 转换|在从日期和数据类型转换为 `datetimeoffset` 时，只支持样式 0 或 1。 所有其他转换样式均返回错误 9809。 例如，下面的代码将返回错误 9809。<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
@@ -69,7 +69,7 @@ ms.locfileid: "54420202"
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR 数据类型（geometry、geography 和 hierarchyid）  
  程序集**Microsoft.SqlServer.Types.dll**，其中包含空间数据类型和 hierarchyid 类型具有已从版本 10.0 升级到版本 11.0。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
--   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 你可能会看到以下错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   移动时自定义应用程序从一台计算机依据[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]到仅计算机上安装[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]是安装，该应用程序将失败，因为的被引用的版本 10.0 **SqlTypes**程序集不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   当引用**SqlTypes**程序集版本 11.0 和也安装了版本 10.0，可能会看到此错误消息： `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -156,7 +156,7 @@ ms.locfileid: "54420202"
 -   比较运算符和**按排序**子句。 比较运算符包括 +、 \<，>， \<=、 > =、 `eq`， `lt`， `gt`， `le`，和`ge`。  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>对系统过程的分布式查询调用  
- 在从一个 `OPENQUERY` 服务器对另一个服务器进行调用时，通过 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如，`SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`。  
+ 在从一个 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 服务器对另一个服务器进行调用时，通过 `OPENQUERY` 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如，`SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`。  
   
 #### <a name="isolation-level-and-spresetconnection"></a>隔离级别和 sp_reset_connection  
  连接用隔离级别由客户端驱动程序按照如下方法处理：  
@@ -249,7 +249,7 @@ ms.locfileid: "54420202"
   
 |功能|Description|  
 |-------------|-----------------|  
-|Datetime 支持|在中[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，数据类型`xs:time`， `xs:date`，和`xs:dateTime`没有时区支持。 时区数据会映射到 UTC 时区。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合标准的行为，从而导致了以下变化：<br /><br /> 将验证没有时区的值。<br /><br /> 将保留提供的时区或缺少的时区。<br /><br /> 修改了内部存储表示形式。<br /><br /> 增加了存储值的分辨率。<br /><br /> 不允许使用负年份。<br /><br /> <br /><br /> 注意：可以修改应用程序和 XQuery 表达式来利用新类型值。|  
+|Datetime 支持|在中[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，数据类型`xs:time`， `xs:date`，和`xs:dateTime`没有时区支持。 时区数据会映射到 UTC 时区。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合标准的行为，从而导致了以下变化：<br /><br /> 将验证没有时区的值。<br /><br /> 将保留提供的时区或缺少的时区。<br /><br /> 修改了内部存储表示形式。<br /><br /> 增加了存储值的分辨率。<br /><br /> 不允许使用负年份。<br /><br /> <br /><br /> 注意：修改应用程序和 XQuery 表达式，以说明新的类型值。|  
 |XQuery 和 Xpath 表达式|在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，以冒号开头的 XQuery 或 XPath 表达式中的步骤 (:) 允许使用。 例如，下面的语句在路径表达式中包含以冒号开头的名称测试 (`CTR02)`。<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，这种用法是不允许的，因为它不符合 XML 标准。 返回错误 9341。 请删除前导冒号或为名称测试指定一个前缀，例如 (n$/CTR02) 或 (n$/p1:CTR02)。|  
   
 ### <a name="connecting"></a>Connecting  

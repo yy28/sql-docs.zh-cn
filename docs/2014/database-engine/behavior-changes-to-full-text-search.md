@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813190"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
   本主题介绍全文搜索中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -68,7 +68,7 @@ ms.locfileid: "52508870"
   
 |**术语**|**以前的断字符和词干分析器的结果**|**新断字符和词干分析器的结果**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *（其中字词为无效英文字符）*|jěˊÿqℭžl|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *（其中字词为无效英文字符）*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> 表|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v z *（其中，v 和 z 为干扰词）*|*（无结果）*|v z|  

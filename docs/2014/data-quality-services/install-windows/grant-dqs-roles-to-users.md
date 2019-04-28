@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792547"
 ---
 # <a name="grant-dqs-roles-to-users"></a>将 DQS 角色授予用户
   本主题介绍如何基于 Windows 主体创建 SQL 登录名，以及如何授予针对 DQS_MAIN 数据库的 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -38,7 +38,7 @@ ms.locfileid: "56035444"
   
 5.  在验证该用户后，在左侧窗格中单击 **“用户映射”** 。  
   
-6.  在右窗格中，选择下的复选框**地图**的列**DQS_MAIN**数据库，并选择**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的复选框**数据库角色成员身份：DQS_MAIN**窗格中，具体取决于该用户所需的访问级别。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。  
+6.  在右侧窗格中，选中“DQS_MAIN”数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份：DQS_MAIN”窗格中选中“dqs_administrator”、“dqs_kb_editor”或“dqs_kb_operator”复选框。 有关这三个 DQS 角色的信息，请参阅 [DQS 安全](../dqs-security.md)。  
   
 7.  在“登录名 - 新建”对话框中，单击“确定”以便应用更改。  
   

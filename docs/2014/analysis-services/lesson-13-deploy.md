@@ -1,5 +1,5 @@
 ---
-title: 第 14 课： 部署 |Microsoft Docs
+title: 第 14 课：部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729453"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
   在本课中，您将配置部署属性；同时指定在表格模式下运行的 Analysis Services 的部署服务器实例以及为您要部署的模型指定名称。 然后，将模型部署到该实例。 部署此模型之后，用户可以使用报表客户端应用程序连接到该模型。 若要了解详细信息，请参阅[表格模型解决方案部署（SSAS 表格）](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
- 学完本课的估计时间：**5 分钟**  
+ 估计的时间才能完成本课程中：**5 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课：[第 13 课：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 13 课：在 Excel 中分析](lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
   
@@ -54,15 +54,15 @@ ms.locfileid: "48196224"
   
      “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
   
-## <a name="conclusion"></a>结语  
- 恭喜！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
+## <a name="conclusion"></a>结束语  
+ 祝贺你！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
   
 ## <a name="additional-resources"></a>其他资源  
  若要了解有关支持 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表的表格模型属性的详细信息，请参阅 [Power View 报表属性（SSAS 表格）](tabular-models/properties-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [DirectQuery 模式（SSAS 表格）](tabular-models/directquery-mode-ssas-tabular.md)   
- [配置默认数据建模和部署属性&#40;SSAS 表格&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [表格模型数据库&#40;SSAS 表格&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [配置默认数据建模和部署属性（SSAS 表格）](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [表格模型数据库（SSAS 表格）](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

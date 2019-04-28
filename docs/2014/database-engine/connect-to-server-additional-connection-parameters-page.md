@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808668"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>连接到服务器（“其他连接参数”页）
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“连接到”对话框将最常用的连接字符串值作为选项提供。 使用“其他连接参数”页可以将更多连接参数添加到连接字符串。  
@@ -45,14 +45,14 @@ ms.locfileid: "48087947"
   
 ## <a name="examples"></a>示例  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>示例 A：连接到数据库引擎  
+### <a name="example-a-connecting-to-the-database-engine"></a>示例 a:连接到数据库引擎  
  若要连接到名为 ACCOUNTING 的服务器上的 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 数据库，请在“其他连接参数”页中输入以下内容：  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>示例 B：连接到 Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>示例 b:连接到 Analysis Services  
  若要连接到 Analysis Server 并实时（跳过缓存）查询侦听通知的各部分，且将写回超时值设置为 5，则请在“其他连接参数”页中输入以下内容：  
   
 ```  

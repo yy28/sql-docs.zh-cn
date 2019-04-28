@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734027"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了用于预测的连续值，如产品销量，随着时间的推移进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
@@ -99,10 +99,10 @@ ms.locfileid: "48134257"
   
  在这两个示例中，您可以预测每个产品新的未来销售额和数量。 不能预测产品或时间的新值。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：具有表示为列值的序列的时序数据集  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：表示列的值作为序列与时序数据集  
  该示例使用下表中的输入事例：  
   
-|TimeID|Product|Sales|数据量|  
+|TimeID|产品|Sales|数据量|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -115,7 +115,7 @@ ms.locfileid: "48134257"
   
  Sales 列说明指定产品一天的毛利润，Volume 列说明仓库中存放的指定产品数量。 这两列包含用于为模型定型的数据。 Sales 和 Volume 都可以为 Product 列中的各个序列的可预测属性。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：各序列位于单独列中的时序数据集  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>示例 2：在单独的列中每个序列与时序数据集  
  尽管该示例使用的输入数据与第一个示例基本相同，但输入数据的结构不同，如下表所示：  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +123,7 @@ ms.locfileid: "48134257"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这将创建一个包含以下四个可预测列的时序模型：A_Sales、A_Volume、B_Sales 和 B_Volume。  
+ 在该表中，TimeID 列仍包含时序模型的事例序列，您将该列指定为 key time 列。 但是，先前的 Sales 和 Volume 列现在拆分为两列，并且拆分后的每个列前面都带有产品名称。 因此，TimeID 列中每天只有一个条目。 这会创建将包含四个可预测列的时序模型：A_Sales、 A_Volume、 B_Sales 和 B_Volume。  
   
  此外，由于您已将产品分成不同的列，因此您不需要指定附加的序列键列。 该模型中的所有列都是事例序列列或可预测列。  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48134257"
 -   支持钻取。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 时序查看器浏览模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)   
+ [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
  [时序模型查询示例](time-series-model-query-examples.md)   
- [时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

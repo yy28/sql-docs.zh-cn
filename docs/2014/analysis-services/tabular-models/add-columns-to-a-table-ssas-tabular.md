@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795324"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>将列添加到表（SSAS 表格）
   本主题介绍如何向现有表中添加列。  
@@ -41,7 +41,7 @@ ms.locfileid: "48184717"
 2.  在 **“编辑表属性”** 对话框中，在表预览窗口中选择要添加的源列，然后单击“确定”。 已包含在表定义中的列将被选中。  
   
 ## <a name="add-a-calculated-column"></a>添加计算列  
- 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅[计算列（SSAS 表格）](ssas-calculated-columns.md)。  
+ 在计算列中，DAX 公式用于定义每一行的值。 例如，您可以创建一个计算列，该列包含简单的公式 (=1) 以将值 1 添加到每行。 计算列还可以有更复杂的公式，以基于模型中的其他数据计算值。 将在其他主题中更详细介绍计算列。 有关详细信息，请参阅 [计算列（SSAS 表格）](ssas-calculated-columns.md)中创建的表格模型项目。  
   
 #### <a name="to-create-a-calculated-column"></a>创建计算列  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48184717"
 2.  单击顶部的单元，然后键入名称，按 Enter。  
   
 ## <a name="see-also"></a>请参阅  
- [编辑表属性对话框&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [更改表、 列或行筛选器映射&#40;SSAS 表格&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [“编辑表属性”对话框 (SSAS)](../edit-table-properties-dialog-box-ssas.md)   
+ [更改表、列或行筛选器映射（SSAS 表格）](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

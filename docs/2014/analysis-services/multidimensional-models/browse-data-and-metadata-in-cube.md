@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700935"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
   可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集数据。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  

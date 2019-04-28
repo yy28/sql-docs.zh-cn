@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805851"
 ---
 # <a name="error-messages"></a>错误消息
   返回的消息的文本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序放置在*MessageText*参数**SQLGetDiagRec**。 错误源由消息标头指示：  
@@ -34,7 +34,7 @@ ms.locfileid: "48069887"
  [Microsoft][SQL Server Native Client]  
  这些错误引发的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序。 如果没有名为 Net-Library 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他节点，驱动程序就会发生该错误。  
   
- [Microsoft][SQL Server Native Client][*Net-transportname*]  
+ [Microsoft][SQL Server Native Client][*Net-Transportname*]  
  这些错误会引发[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]网络库，其中*Net-transportname*的显示名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端网络传输 （例如，Named Pipes、 Shared Memory、 TCP/IP 套接字或 VIA）。 错误消息的提醒内容含有调用的 Net-Library 函数以及 TDS 函数在基础网络 API 中调用的函数。 *PfNative*返回这些错误与错误代码是基础网络协议堆栈中的错误代码。  
   
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  

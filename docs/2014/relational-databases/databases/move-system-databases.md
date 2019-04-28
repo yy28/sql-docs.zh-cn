@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871534"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移动系统数据库。 移动系统数据库在下列情况下可能很有用：  
@@ -60,7 +60,7 @@ ms.locfileid: "52756269"
   
 -   [移动 Resource 数据库](#Resource)  
   
--   [后续操作：移动所有系统数据库后](#Follow)  
+-   [后续任务:移动所有系统数据库后](#Follow)  
   
 -   [示例](#Examples)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "52756269"
 ##  <a name="Resource"></a> 移动 Resource 数据库  
  Resource 数据库的位置是 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\。 无法移动该数据库。  
   
-##  <a name="Follow"></a> 后续操作：移动所有系统数据库后  
+##  <a name="Follow"></a> 后续任务：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
   
 -   更改 SQL Server 代理日志路径。 如果不更新此路径，SQL Server 代理将无法启动。  

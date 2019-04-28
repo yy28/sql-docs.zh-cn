@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727573"
 ---
 # <a name="partition-storage-modes-and-processing"></a>分区存储模式和处理
   分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  

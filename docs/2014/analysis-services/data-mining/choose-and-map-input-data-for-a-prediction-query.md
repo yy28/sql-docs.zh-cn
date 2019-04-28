@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705763"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
   在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -119,6 +119,6 @@ ms.locfileid: "48119057"
      如果已经存在关系，则挖掘模型中的列将自动映射到输入表中具有相同名称的列。 通过单击 **“修改联接”** 以打开 **“创建关系”** 对话框，可以修改嵌套表与事例表之间的关系。  
   
 ## <a name="see-also"></a>请参阅  
- [预测查询&#40;数据挖掘&#41;](prediction-queries-data-mining.md)  
+ [预测查询（数据挖掘）](prediction-queries-data-mining.md)  
   
   

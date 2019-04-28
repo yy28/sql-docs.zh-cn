@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34c203652b3c96c5c5fe8c3d95a10339facf733c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62819129"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>分配模型对象权限 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52777189"
 > [!NOTE]  
 >  将权限分配给模型时，针对所有其他模型的权限被隐式拒绝。 如果未分配模型对象权限，则用户或组将无法在 **“资源管理器”** 中访问任何数据。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -57,13 +57,13 @@ ms.locfileid: "52777189"
   
 9. 在顶层模型级别中，选择“管理员”（如果需要将用户设置为模型管理员）。   
   
-10. 单击 **“保存”**。  
+10. 单击“保存” 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   （可选）[分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除模型对象权限 (Master Data Services)](../master-data-services/delete-model-object-permissions-master-data-services.md)   
  [模型对象权限 (Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)  

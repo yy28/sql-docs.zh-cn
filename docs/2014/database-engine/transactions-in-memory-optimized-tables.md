@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843092"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>内存优化表中的事务
   基于磁盘的表的行版本控制（使用 SNAPSHOT 隔离或 READ_COMMITTED_SNAPSHOT）提供了一种乐观并发控制形式。 读取器和编写器不会相互阻止。 对于内存优化表，编写器不会阻止编写器。 使用基于磁盘的表的行版本控制时，一个事务会锁定行，而尝试更新行的并发事务会被阻塞。 对于内存优化表则没有锁定。 如果两个事务尝试更新同一行，则会发生写/写冲突（错误 41302）。  
@@ -28,7 +28,7 @@ ms.locfileid: "48195617"
   
 -   基于快照的事务隔离  
   
--   Optimistic  
+-   乐观  
   
 -   冲突检测  
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805648"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他数据库引擎升级问题
   升级顾问的当前版本无法检测到以下升级问题。 请检查以下列出的问题来评估它们对系统的潜在影响。  

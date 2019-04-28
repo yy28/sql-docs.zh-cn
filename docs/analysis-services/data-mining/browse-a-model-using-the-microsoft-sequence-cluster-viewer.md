@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft 序列分类查看器浏览模型 |Microsoft 文档
+title: 使用 Microsoft 序列分类查看器浏览模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671315"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 序列分类查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34016784"
 ###  <a name="BKMK_Diagram"></a> 分类关系图  
  **序列分类查看器的** “分类关系图” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡可显示挖掘模型中的全部分类。 两个分类之间连线的明暗度表示分类的相似程度。 如果明暗度较浅或无明暗度，则表示分类的相似程度较低。 连线的颜色越深，链接的相似性越强。 通过调整分类右侧的滑块，可以调整查看器显示的连线数。 降低滑块将只显示最强链接。  
   
- 默认情况下，明暗度代表分类的总体。 通过使用“明暗度变量”和“状态”选项，可以选择明暗度代表的属性和状态对。 明暗度越深，特定状态所对应的属性分布范围就越大。 明暗度越浅，分布范围就越小。  
+ 默认情况下，明暗度代表分类的总体。 通过使用“明暗度****变量”和“状态”选项，可以选择明暗度代表的属性和状态对。 明暗度越深，特定状态所对应的属性分布范围就越大。 明暗度越浅，分布范围就越小。  
   
  若要重命名某个群集，请右键单击其节点并选择“重命名群集”。 新名称会在服务器中永久保留。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34016784"
  [返回页首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> 分类剖面图  
- **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<属性 >.samples 行表示在群集中，存在的数据的不同序列和\<属性 > 行所说明群集包含的所有项和其总体分发。  
+ **“分类剖面图”** 选项卡可以提供模型中的算法创建的分类的总体视图。 网格中 **“总体”** 列后的每一列都代表模型发现的分类。 \<属性 > s 行代表不同的群集中存在的数据序列和\<属性 > 行进行了说明分类包含的所有项及其总体分布。  
   
  通过“直方图条”  选项，可以控制直方图中可见的条数。 如果存在的图条数多于您选择显示的图条数，则会保留重要性最高的那些图条，其余图条则组合到一个灰色的存储桶内。  
   
@@ -80,10 +80,10 @@ ms.locfileid: "34016784"
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft 顺序分析和聚类分析算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [使用 Microsoft 分类查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  

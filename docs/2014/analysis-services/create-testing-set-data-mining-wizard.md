@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679863"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>创建测试集（数据挖掘向导）
   可以使用 **“创建测试集”** 页指定用于定型的数据量，以及为用作测试集而保留的数据量。 在创建挖掘结构时将数据分成定型集和测试集，可以更方便地评估以后创建的挖掘模型的准确性。  
@@ -35,7 +35,7 @@ ms.locfileid: "48096347"
   
 -   如果尝试预测的值存储在嵌套表中，则无法对数据进行分区。  
   
- **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)、[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **有关详细信息：**[测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)，[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>选项  
  **测试数据的百分比**  

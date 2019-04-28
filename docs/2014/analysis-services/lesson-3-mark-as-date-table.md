@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729193"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 课：标记为日期表
   在第 2 课：添加数据，导入名为 DimDate 的维度表。 然后将 DimDate 表，在第 3 课中的重命名：重命名列，为简单的 Date。 虽然在模型中该表已命名为 Date，它也可以称为“日期表”，该表中包含日期和时间数据。  
@@ -25,7 +25,7 @@ ms.locfileid: "52417288"
   
  在本课中，将导入和重命名的 Date 表标记为“日期表”，将 Date 列（Date 表中）标记为“日期列”（唯一标识符）。 所有使用日期可以都获取类型的令人困惑的名称，但很快将都明白了吧。  
   
- 学完本课的预计时间：**3 分钟**  
+ 估计的时间才能完成本课程中：**3 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 3 课：重命名列](rename-columns.md)。  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842840"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 数据库引擎的向后兼容性
   向后兼容性部分中的主题说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本之间的行为更改。  

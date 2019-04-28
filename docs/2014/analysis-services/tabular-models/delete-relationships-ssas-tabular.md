@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795454"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
-  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  
+  您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的详细信息，请参阅 [关系（SSAS 表格）](relationships-ssas-tabular.md)。  
   
 ## <a name="considerations-for-deleting-relationships"></a>删除关系时的注意事项  
  决定是否删除关系时要注意下列问题：  
@@ -53,7 +53,7 @@ ms.locfileid: "48130637"
 4.  在 **“管理关系”** 对话框中，单击 **“关闭”**。  
   
 ## <a name="see-also"></a>请参阅  
- [关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)   
- [创建两个表之间的关系&#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [关系（SSAS 表格）](relationships-ssas-tabular.md)   
+ [创建两个表之间的关系（SSAS 表格）](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

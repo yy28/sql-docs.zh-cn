@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2ab9f98018e421bd14012af7d8bd1cb5da3a71c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701705"
 ---
 # <a name="set-usage-property"></a>设置用法属性
   可以使用维度设计器中的 **“维度结构”** 视图来设置属性的用法，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  

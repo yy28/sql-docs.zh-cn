@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650975"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>评估访问数据库对象的转换 (AccessToSQL)
 然后加载对象和数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您应该确定多少的迁移将会成功，并且转换可能需要多长时间。 SSMA 可以创建显示已成功将转换为的对象的百分比评估报告[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 语法和时间估计为执行迁移。 SSMA 还允许您查看特定问题导致转换失败。  
@@ -44,7 +44,7 @@ SSMA 时它创建的评估报告，将转换为所选的访问数据库对象[!I
   
     SSMA 窗口底部的状态栏中显示进度。 如果输出窗格是可见的您也会看到输出窗格中的消息。  
   
-评估完成后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问迁移助手： 评估报告窗口出现。  
+评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Access:评估报告窗口将出现。  
   
 ## <a name="using-assessment-reports"></a>使用评估报告  
 评估报告窗口包含三个窗格： 资源管理器、 详细信息窗格中和消息窗格。  

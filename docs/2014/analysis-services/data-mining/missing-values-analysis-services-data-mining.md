@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733347"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
   正确处理“Missing 值”   是有效建模的重要组成部分。 本节说明什么是 Missing 值，并介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的、用于处理在生成数据挖掘结构和挖掘模型时的 Missing 值的功能。  
@@ -43,7 +43,7 @@ ms.locfileid: "48164323"
 ## <a name="calculation-of-the-missing-state"></a>Missing 状态的计算  
  对于数据挖掘算法，Missing 值为信息性内容。 在事例表中，`Missing` 与其他任何值一样为有效状态。 此外，数据挖掘模型还可以使用其他值来预测某个值是否为 Missing 值。 也就是说，值缺失这种情况不会被视为错误。  
   
- 在创建挖掘模型时`Missing`状态会自动添加到所有离散列的模型。 例如，如果输入的列 [性别] 包含两个可能的值，男性和女性之类的第三个值自动添加来表示`Missing`值和列始终包含的计数显示的所有值分布的直方图用例和`Missing`值。 如果性别列不缺少任何值，则直方图显示发现 0 个事例的状态为 Missing。  
+ 创建挖掘模型时，对于所有离散列，`Missing` 状态会自动添加到模型中。 例如，如果输入列 [性别] 包含两个可能的值（男和女），将自动添加第三个值来表示 `Missing` 值，而且显示该列所有值分布的直方图将始终包含一个具有 `Missing` 值的事例的计数。 如果性别列不缺少任何值，则直方图显示发现 0 个事例的状态为 Missing。  
   
  当您认为数据可能不具有所有可能值的示例，并且不希望仅仅因为数据中没有任何示例而使模型排除该可能性时，则默认包含 `Missing` 状态很有必要。 例如，即使某商店的销售数据显示所有购买某种产品的客户恰巧都为女性，您也不希望创建一个预测只有女性才可能购买此产品的模型。 相反，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会添加额外未知的值的占位符称之为`Missing`，作为一种方法以适应可能的其他状态。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48164323"
   
  此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 `Missing` 值的计数为 0。 但是，如果任何用例的 [Bike Buyer] 字段中，必须为空[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会将该行计为具有的事例`Missing`值。  
   
- 如果输入为连续的列，则模型将属性的两个可能的状态 `Existing` 和 `Missing` 排列成表格报表的形式。 也就是说，该列或者包含某种数值数据类型的值，或者不包含任何值。 对于有值的事例，模型会计算平均值、标准偏差以及其他有意义的统计。 对于没有值的情况下，模型将提供的计数`Missing`值并相应调整预测。 调整预测的方法因算法而异，下面一节将对其进行介绍。  
+ 如果输入为连续的列，则模型将属性的两个可能的状态 `Existing` 和 `Missing` 排列成表格报表的形式。 也就是说，该列或者包含某种数值数据类型的值，或者不包含任何值。 对于有值的事例，模型会计算平均值、标准偏差以及其他有意义的统计。 对于没有值的事例，模型将提供 `Missing` 值的计数并相应调整预测。 调整预测的方法因算法而异，下面一节将对其进行介绍。  
   
 > [!NOTE]  
 >  对于嵌套表中的属性，Missing 值为非信息性内容。 例如，如果某个客户未购买某种产品，则嵌套 **Products** 表中将不会有对应该产品的行，挖掘模型也不会为该缺少的产品创建属性。 但是，如果您对未购买某种产品的客户感兴趣，则可以创建一个模型，在该模型中对嵌套表中的不存在的产品进行筛选，其方法是在模型筛选器中使用 NOT EXISTS 语句。 有关详细信息，请参阅 [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
   
 ## <a name="adjusting-probability-for-missing-states"></a>调整 Missing 状态的概率  
- 除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 同样适用于`Missing`值。 例如，下表显示了前面示例中事例的概率：  
+ 除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 这对于 `Missing` 值同样适用。 例如，下表显示了前面示例中事例的概率：  
   
 |ReplTest1|事例|概率|  
 |-----------|-----------|-----------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "48164323"
 |1|9098|49.42%|  
 |Missing|0|0.03%|  
   
- 有些奇怪的概率`Missing`的事例数为 0 时，计算值为 0.03%。 实际上，此行为是设计造成的，目的是通过这种调整使模型可以适当地处理未知值。  
+ 当事例个数为 0 时，计算得出的 `Missing` 值的概率为 0.03%，这好像有些奇怪。 实际上，此行为是设计造成的，目的是通过这种调整使模型可以适当地处理未知值。  
   
  通常，概率计算如下：良好的事例除以所有可能的事例。 在此示例中，算法计算符合某个特定条件（[Bike Buyer] = 1 或 [Bike Buyer] = 0）的事例的总和，并用该数除以总行数。 但是，为了将 `Missing` 事例考虑在内，将 1 添加到所有可能的事例数中。 因此，未知事例的概率不再为零，而是一个非常小的数，表示此状态仅仅是不大可能的状态，但不是不可能的状态。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48164323"
 >  每个算法（包括可能从第三方插件中获取的自定义算法）都可以用不同的方式处理 Missing 值。  
   
 ### <a name="special-handling-of-missing-values-in-decision-tree-models"></a>决策树模型中 Missing 值的特殊处理  
- Microsoft 决策树算法计算 Missing 值的概率的方法不同于其他算法。 不仅仅向事例总数加 1，决策树算法根据需要调整`Missing`状态通过一个略有不同的公式。  
+ Microsoft 决策树算法计算 Missing 值的概率的方法不同于其他算法。 不仅仅向事例总数加 1，该决策树算法还使用稍有差别的公式来针对 `Missing` 状态进行调整。  
   
  在决策树模型中，`Missing` 状态的概率按如下公式进行计算：  
   
@@ -109,13 +109,13 @@ ms.locfileid: "48164323"
   
 |“任务”|链接|  
 |-----------|-----------|  
-|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)|  
+|将标志添加到各个模型列来控制对 Missing 值的处理|[查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
 |设置挖掘模型的属性来控制对 Missing 值的处理|[更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定建模标志|[建模标志&#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|了解如何在 DMX 中指定建模标志|[建模标志 (DMX)](/sql/dmx/modeling-flags-dmx)|  
 |更改挖掘结构处理 Missing 值的方式|[更改挖掘结构的属性](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
- [建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
+ [建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
   

@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873810"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 例程的自定义属性
   列出的特性可以应用于公共语言运行时 (CLR) 例程、 用户定义类型和用户定义的聚合中注册的[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  

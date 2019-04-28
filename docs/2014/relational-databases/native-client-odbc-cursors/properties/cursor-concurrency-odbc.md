@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711452"
 ---
 # <a name="cursor-concurrency-odbc"></a>游标并发 (ODBC)
   和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 使用的 SQL_ATTR_CONCURRENCY 选项设置并发选项[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。 并发类型包括：  

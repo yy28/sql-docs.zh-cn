@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af99d5ba79919920b2fb1ff3dde8d0a134a8ef0c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832922"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 下载任务
   Azure Blob 下载任务启用了一个 SSIS 包来从 Azure blob 存储区下载文件。   

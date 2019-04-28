@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733138"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
   本节提供有关模型筛选器语法的详细信息以及示例表达式。  
@@ -112,7 +112,7 @@ ms.locfileid: "52405362"
 ## <a name="examples-of-filters"></a>筛选器示例  
  下面的示例演示应用到挖掘模型中的筛选器的用法。 如果使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在筛选器对话框的 **“属性”** 窗口和 **“表达式”** 窗格创建筛选表达式，您将只能看到显示在 WITH FILTER 关键字之后的字符串。 此处包括挖掘结构的定义，从而更易于理解列类型和用法。  
   
-###  <a name="bkmk_Ex1"></a> 示例 1:典型的事例级筛选  
+###  <a name="bkmk_Ex1"></a> 示例 1：典型的事例级筛选  
  以下示例显示一个简单的筛选器，它将模型中使用的事例限制为其职业为建筑师并且年龄在 30 岁以上的客户。  
   
 ```  
@@ -128,7 +128,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a> 示例 2:使用嵌套表属性的事例级筛选  
+###  <a name="bkmk_Ex2"></a> 示例 2：使用嵌套表属性的事例级筛选  
  如果您的挖掘结构包含嵌套表，则您可以对嵌套表中某个值的存在性进行筛选，还可以对包含特定值的嵌套表行进行筛选。 下面的示例将模型所用的事例限制为年龄在 30 岁以上并且至少购买过一次包含牛奶在内的产品的客户。  
   
  如下面的示例所示，不要求筛选器仅使用模型中包含的列。 嵌套表 **产品** 是挖掘结构的一部分，但没有包含在挖掘模型内。 但是，您仍然可以对嵌套表中的值和属性进行筛选。 若要查看这些事例的详细信息，必须启用钻取功能。  

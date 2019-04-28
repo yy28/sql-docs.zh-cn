@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796152"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|受指令影响的对象。|  
 |**object_id**|**uniqueidentifier**|受指令影响的对象标识号 (**job_id**一个作业对象，或对服务器对象 0x00) 或特定于的数据值**operation_code**。|  
 |**target_server**|**nvarchar(30)**|下载此指令的目标服务器。|  
-|**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：任何错误消息都将阻止目标服务器的所有下载继续进行。|  
+|**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：目标服务器下载所有任何错误消息块继续。|  
 |**date_posted**|**datetime**|指令发布到表的日期。|  
 |**date_downloaded**|**datetime**|目标服务器下载指令的日期。|  
 |**status**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 成功下载。|  

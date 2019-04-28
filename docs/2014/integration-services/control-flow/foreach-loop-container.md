@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831570"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -86,7 +86,7 @@ ms.locfileid: "58380255"
  若要避免在循环中并行执行任务时遇到不可确定的定时导致的负数结果，应当将包配置为每次只运行一个可执行文件。 例如，如果包可以并发运行多个任务，那么当一个 Foreach 循环容器枚举文件夹中的文件，然后检索文件名，然后使用执行 SQL 任务将文件名插入表中时，如果在两个执行 SQL 任务实例都试图同时写入，就有可能导致写入冲突。 有关详细信息，请参阅 [在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击以下主题之一：  
   

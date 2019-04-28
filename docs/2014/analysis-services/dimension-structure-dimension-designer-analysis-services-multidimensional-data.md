@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731793"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>维度结构（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“维度结构”** 页修改所选维度的属性、层次结构和级别。 **“维度结构”** 页包含一个工具栏和三个窗格。  

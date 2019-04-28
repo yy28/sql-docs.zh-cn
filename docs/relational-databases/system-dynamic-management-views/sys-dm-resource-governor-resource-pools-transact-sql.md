@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6a3084f7b98edc3c9159576ae19323baeaa1b105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62684038"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47712765"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|资源池的 ID。 不可为 null。|  
-|NAME|**sysname**|资源池的名称。 不可为 null。|  
+|name|**sysname**|资源池的名称。 不可为 null。|  
 |statistics_start_time|**datetime**|为该池重置统计信息的时间。 不可为 null。|  
 |total_cpu_usage_ms|**bigint**|自重置资源调控器统计信息以来的累计 CPU 使用量（毫秒）。 不可为 null。|  
 |cache_memory_kb|**bigint**|当前的缓存内存总用量（以 KB 为单位）。 不可为 null。|  
@@ -84,13 +84,13 @@ ms.locfileid: "47712765"
   
  此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用 sys.resource_governor_resource_pools 目录视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

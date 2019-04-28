@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebdb15312f78b624a6bb908baa519da6b920307d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732767"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>数据源视图向导的 F1 帮助 (Analysis Services)
   使用数据源视图向导可以创建用于 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的以下商业智能项目的数据源视图：  

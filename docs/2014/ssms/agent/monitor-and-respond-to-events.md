@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720134"
 ---
 # <a name="monitor-and-respond-to-events"></a>监视事件和响应事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可监视并自动响应*事件*，例如来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的消息、特定性能条件以及 Windows Management Instrumentation (WMI) 事件。  
@@ -68,6 +68,6 @@ ms.locfileid: "52822001"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务通过执行事件警报中指定的任务来响应事件，而不管事件的源是什么。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_altermessage &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+ [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

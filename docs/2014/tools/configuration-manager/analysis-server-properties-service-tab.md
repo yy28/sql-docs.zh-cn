@@ -1,23 +1,26 @@
 ---
 title: Analysis Server 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666736"
 ---
 # <a name="analysis-server-properties-service-tab"></a>分析服务器属性（“服务”选项卡）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   此服务是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 若要使 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 正常运行，则必须运行此服务。 如果属性值呈浅灰色，则不能使用此应用程序进行更改。  
   
 ## <a name="options"></a>选项  
@@ -45,11 +48,11 @@ ms.locfileid: "52795869"
  **启动模式**  
  对此服务设置以下选项：  
   
--   手动：计算机启动时，此服务不自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
+-   手动：此服务不会在计算机启动时自动启动。 您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器或其他工具来启动该服务。  
   
--   自动：计算机启动时，此服务将尝试启动。  
+-   自动：此服务将尝试启动此计算机启动时。  
   
--   禁用：此服务无法启动。  
+-   已禁用：无法启动此服务。  
   
  **状态**  
  指示此服务是正在运行、已停止还是已禁用。  

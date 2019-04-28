@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844178"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>选项（“文本编辑器”-“所有语言”-“常规”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的所有五个编辑器的常规编辑选项。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择 **“文本编辑器”** 文件夹，展开 **“所有语言”** 文件夹，再单击 **“常规”**。  
@@ -39,7 +39,7 @@ ms.locfileid: "51030914"
  **参数信息**  
  在编辑器中，当前声明或过程的完整语法会显示在插入点的左侧，并显示其所有可用参数。 下一个可分配参数以粗体显示。  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  **启用虚空格**  
  注释在代码旁的位置将保持不变。 选中此复选框之后，可以将光标放置在行中的最后一个字符之外。 键入内容时，将自动添加制表符和空格以结束到插入点的行。  
   

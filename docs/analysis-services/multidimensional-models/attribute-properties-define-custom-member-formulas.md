@@ -1,5 +1,5 @@
 ---
-title: 定义自定义成员公式 |Microsoft 文档
+title: 定义自定义成员公式 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666580"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>特性属性-定义自定义成员公式
+# <a name="attribute-properties---define-custom-member-formulas"></a>特性属性 - 定义自定义成员公式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可以定义称为自定义成员公式的多维表达式 (MDX) 表达式，以便为指定属性的成员提供值。 数据源视图内表中的列为属性中的每个成员提供了用于为其提供值的表达式。  
   
@@ -31,25 +31,25 @@ ms.locfileid: "34021664"
   
  自定义成员公式替代与度量值相关的聚合函数。 例如，在指定自定义成员公式之前，使用 **Sum** 聚合函数的度量值对“时间”维度的下列成员产生下列值：  
   
--   2003: 2100  
+-   2003:2100  
   
-    -   第一季度：700  
+    -   第 1 季度：700  
   
-    -   第二季度：500  
+    -   第 2 季度：500  
   
-    -   第三季度：100  
+    -   第 3 季度：100  
   
-    -   第四季度：800  
+    -   第 4 季度：800  
   
--   2004: 1500  
+-   2004:1500  
   
-    -   第一季度：600  
+    -   第 1 季度：600  
   
-    -   第二季度：200  
+    -   第 2 季度：200  
   
-    -   第三季度：300  
+    -   第 3 季度：300  
   
-    -   第四季度：400  
+    -   第 4 季度：400  
   
  使用自定义成员公式时，成员的值可改由自定义汇总公式提供。 例如，以下自定义成员公式可用来为“时间”维度中 2004 成员的“第四季度”子成员提供值 450。  
   
@@ -66,8 +66,8 @@ Time.[Quarter 3] * 1.5
   
  如果对属性成员同时使用计算成员和自定义汇总公式，则应当注意计算顺序。 系统会先解析计算成员，然后再解析自定义汇总公式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [维度中的设置的属性的自定义成员公式](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [为维度中的属性设置自定义成员公式](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

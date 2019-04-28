@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733423"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 顺序分析和聚类分析算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅[挖掘模型内容 （Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  下表显示了 NODE_DISTRIBUTION 表的结果以及图形查看器中所显示的舍入概率值。  
   
-|Product|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
+|产品|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|（未显示）|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  若要了解如何通过查询模型内容来获取被观察路径的列表，并查看针对顺序分析和聚类分析模型的其他查询示例，请参阅 [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft 序列聚类分析算法](microsoft-sequence-clustering-algorithm.md)   
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)  
   
   

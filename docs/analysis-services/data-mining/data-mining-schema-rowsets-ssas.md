@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670433"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>数据挖掘架构行集 (SSA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>示例 3：列出所有行集  
+### <a name="example-3-list-all-rowsets"></a>示例 3:列出所有行集  
  下面的示例返回在当前服务器上可用的行集的综合性列表：  
   
 ```  

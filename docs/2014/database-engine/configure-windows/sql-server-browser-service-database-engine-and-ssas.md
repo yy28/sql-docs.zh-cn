@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809323"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
@@ -125,7 +125,7 @@ ms.locfileid: "52641528"
  隐藏的实例是仅支持共享内存连接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，设置 `HideInstance` 标记来指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不应对此服务器实例的相关信息做出响应。  
   
 ### <a name="using-a-firewall"></a>使用防火墙  
- 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关使用防火墙的信息，请参见“如何：为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access 配置防火墙”（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
+ 若要与有防火墙保护的服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务进行通信，除了打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 端口（如 1433）之外，还要打开 UDP 端口 1434。 有关如何使用防火墙的信息，请参阅"如何：为配置防火墙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问权限"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="see-also"></a>请参阅  
  [网络协议和网络库](../../sql-server/install/network-protocols-and-network-libraries.md)  

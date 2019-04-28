@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807446"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>数据库镜像和复制 (SQL Server)
   数据库镜像可以与复制一起使用以改进发布数据库的可用性。 数据库镜像涉及一个数据库的两个副本，这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主体数据库。 客户端对主体数据库所做的更新应用到数据库的另一副本（称为镜像数据库）。 镜像涉及将在主体数据库上执行的每个插入、更新或删除操作的事务日志应用到镜像数据库上。  

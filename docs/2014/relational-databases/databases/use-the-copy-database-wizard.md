@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871134"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用复制数据库向导
   通过复制数据库向导，可以方便地将数据库及其对象从一台服务器移动或复制到另一台服务器，而服务器无需停机。 还可以将数据库从以前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此向导可执行以下操作：  
@@ -228,7 +228,7 @@ ms.locfileid: "52759109"
      **文件夹位置**  
      指定文件系统上源数据库文件所在的位置。  
   
-     例如：C:\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\DATA  
+     例如：C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **源服务器上的文件共享**  
      指定源数据库文件的位置作为文件共享的路径。  

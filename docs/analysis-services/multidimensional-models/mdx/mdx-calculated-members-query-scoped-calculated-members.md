@@ -1,5 +1,5 @@
 ---
-title: 创建查询作用域的计算成员 (MDX) |Microsoft 文档
+title: 创建查询作用域的计算成员 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802681"
 ---
-# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 计算成员的查询作用域的计算成员
+# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 计算成员-查询作用域的计算成员
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   如果某个计算成员仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字定义该计算成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
   
@@ -87,9 +87,9 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MDX 函数引用 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 语句 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [创建会话作用域计算成员 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
+## <a name="see-also"></a>请参阅  
+ [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)   
+ [创建会话作用域的计算成员 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

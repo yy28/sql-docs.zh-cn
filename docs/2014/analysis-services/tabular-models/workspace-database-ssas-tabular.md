@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794595"
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作区数据库（SSAS 表格）
   当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。 该工作区数据库驻留在以表格模式运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的内存中；通常是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 所在的计算机上。  

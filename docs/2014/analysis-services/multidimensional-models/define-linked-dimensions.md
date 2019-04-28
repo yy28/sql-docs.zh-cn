@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726471"
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
   链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
@@ -31,7 +31,7 @@ ms.locfileid: "48114227"
 > [!NOTE]  
 >  因为刷新功能不可用，所以，大多数 Analysis Services 开发人员都是复制维度，而不是链接它们。 可以跨同一个解决方案中的多个项目复制维度。 有关详细信息，请参阅 [在 SSAS 中刷新链接的维度](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  提供维度的源数据库和使用维度的当前数据库必须处于相同的版本和兼容级别。 有关详细信息，请参阅[设置多维数据库的兼容性级别&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
   
  源数据库必须已部署并且处于联机状态。 发布或恢复链接对象的服务器必须配置为允许该操作（见下文）。  

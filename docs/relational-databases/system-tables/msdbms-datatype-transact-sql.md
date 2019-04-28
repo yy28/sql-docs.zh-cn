@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816928"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810539"
 |**datatype_id**|**int**|标识每个唯一的数据类型。|  
 |**dbms_id**|**int**|标识数据类型所属的 DBMS。|  
 |**类型**|**sysname**|数据类型名称（本机）。|  
-|**createparams**|**int**|说明哪一长度、精度和小数位数组合适用于每种数据类型的位图，包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = 规模。<br /><br /> **0x4** = 长度。|  
+|**createparams**|**int**|说明哪一长度、精度和小数位数组合适用于每种数据类型的位图，包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = 长度。|  
   
 ## <a name="remarks"></a>备注  
  此表包含 SQL Server 数据类型的条目，因为 SQL Server 的实例可以同时订阅非 SQL Server 数据库和发布到非 SQL Server 订阅服务器。  

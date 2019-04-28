@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733790"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器）组成的“多层感知器”网络（也称为“反向传播 Delta 法则”网络）。 这些层分别是输入层、可选隐藏层和输出层。  
@@ -105,13 +105,13 @@ ms.locfileid: "52521119"
   
  Μ = p-一种状态的先验概率  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  **连续值**  
   
  存在值 = 1-μ/σ  
   
- 不存在值 =-μ/σ  
+ No existing value= -μ/σ  
   
  对值进行编码后，将会对输入进行加权求和，权值为网络边缘。  
   

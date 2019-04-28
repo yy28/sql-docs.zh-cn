@@ -1,5 +1,5 @@
 ---
-title: 指定副本页 (新建可用性组向导：添加副本向导） |Microsoft Docs
+title: “指定副本”页（新建可用性组向导：添加副本向导）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788334"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定副本页 (新建可用性组向导：添加副本向导）
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
   本主题介绍 **“指定副本”** 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
   
 |Tab|简短说明|  
@@ -38,7 +38,7 @@ ms.locfileid: "53371569"
  如果 **“可用性副本”** 网格未列出要用于承载辅助副本的服务器实例，则单击 **“添加副本”** 按钮。 如果在混合 IT 环境中配置可用性组（请参阅 [Windows Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)），则可单击“添加 Azure 副本”按钮以在 Windows Azure 中创建具有次要副本的虚拟机。  
   
  **初始角色**  
- 指示新副本将执行的初始角色：**主**或**辅助**。  
+ 指示新副本最初将执行的角色：主要或辅助密钥。  
   
  **自动故障转移 （最多 2 个）**  
  仅当您希望此可用性副本成为自动故障转移伙伴时，才选中此复选框。 要配置自动故障转移，您必须为初始主副本和一个辅助副本选中此选项。 这两个副本将同时使用同步提交可用性模式。 只有两个副本才能支持自动故障转移。  

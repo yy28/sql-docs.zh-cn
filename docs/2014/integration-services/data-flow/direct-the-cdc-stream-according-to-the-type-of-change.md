@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827400"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>根据更改的类型定向 CDC 流
   若要添加并配置 CDC 拆分器转换，包必须包含至少一个数据流任务和一个 CDC 源。  
@@ -40,7 +40,7 @@ ms.locfileid: "58377265"
   
     -   插入输出：定向 INSERT 更改行的输出。  
   
-    -   更新输出：定向其中之前/之后 UPDATE 更改行和 Merge 更改行的输出。  
+    -   更新输出：定向 UPDATE 更改行和 Merge 更改行之前/之后的输出。  
   
 7.  或者，您可以使用 **“高级编辑器”** 对话框配置高级属性。  
   

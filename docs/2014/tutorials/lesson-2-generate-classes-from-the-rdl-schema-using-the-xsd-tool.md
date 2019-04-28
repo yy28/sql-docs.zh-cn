@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653742"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 课：从 RDL 架构使用 xsd 工具生成类
   创建 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 项目后，下一步是检索报表定义架构的本地副本和运行 XML 架构定义工具 (Xsd.exe)。  

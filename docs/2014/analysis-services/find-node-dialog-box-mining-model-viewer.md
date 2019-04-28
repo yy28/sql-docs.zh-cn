@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731509"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>“查找节点”对话框（挖掘模型查看器）
   可以使用模型的 **“依赖关系网络”** 选项卡中可用的 **“查找节点”** 对话框来查找特定节点。 在包含多个节点或项集的复杂关系图中，此功能很有用。  
@@ -36,8 +36,8 @@ ms.locfileid: "48218529"
  选择节点列表中的节点，再单击“确定”。 此时，将关闭该对话框，并在查看器中突出显示所选节点。  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)   
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

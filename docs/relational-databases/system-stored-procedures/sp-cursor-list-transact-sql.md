@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724042"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @cursor_return=] *cursor_variable_name*输出  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  已声明的游标变量的名称。 *cursor_variable_name*是**光标**，无默认值。 游标是可滚动、 动态、 只读游标。  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  指定要报告的游标级别。 *cursor_scope*是**int**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -88,7 +88,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  使用 sp_describe_cursor_columns 对游标返回的结果集的属性进行说明。 使用 sp_describe_cursor_tables 报告游标引用的基表。 sp_describe_cursor 报告相同的信息与 sp_cursor_list，但只针对指定的游标。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限默认授予 public 角色。  
   
 ## <a name="examples"></a>示例  

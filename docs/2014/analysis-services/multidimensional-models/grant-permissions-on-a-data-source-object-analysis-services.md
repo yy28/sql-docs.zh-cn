@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725851"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
   通常，大多数 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用户无需访问作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目基础的数据源。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery) 或 [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset) 子句的数据挖掘扩展插件 (DMX) 查询。  
@@ -56,10 +56,10 @@ ms.locfileid: "48126257"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源](data-sources-in-multidimensional-models.md)   
- [连接字符串属性&#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [连接字符串属性 (Analysis Services)](../instances/connection-string-properties-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
+ [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

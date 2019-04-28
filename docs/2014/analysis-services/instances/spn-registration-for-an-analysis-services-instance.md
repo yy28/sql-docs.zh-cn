@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729793"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   在使用 Kerberos 对客户端和服务标识进行相互身份验证时，服务主体名称 (SPN) 唯一标识 Active Directory 域中的某一服务实例。 SPN 与服务实例运行所基于的登录帐户相关联。  

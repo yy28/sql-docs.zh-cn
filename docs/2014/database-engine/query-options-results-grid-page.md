@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843683"
 ---
 # <a name="query-options-results-grid-page"></a>“查询选项”中的“结果”（“网格”页）
   使用此页可以指定以网格格式显示查询结果集的选项。  

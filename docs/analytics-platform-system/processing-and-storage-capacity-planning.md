@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678547"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平台系统中处理和存储容量
 你的业务需求确定的数据规模单位数和计算节点磁盘中 Analytics Platform System (APS) 设备所需的大小。 使用这些处理和存储的计算来指导你的容量购买和规划决策。  

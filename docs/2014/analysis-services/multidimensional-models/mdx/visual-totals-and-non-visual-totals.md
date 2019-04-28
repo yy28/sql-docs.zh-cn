@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725135"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>直观合计和非直观合计
   直观合计是位于列尾或行尾的合计，它将列或行中可见的所有项相加。 这是大多数表在显示时的默认行为。 但有一些情况，用户想要只显示表中的某些列，但保留针对整个行的合计，包括那些未显示的行。 这称作 `Non Visual Totals`，因为合计来自可见值以及非可见值。  
@@ -91,19 +91,19 @@ ms.locfileid: "48197047"
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|所有分销商|$73,694,430.80|$506,172.45|$1,524,906.93|  
+|All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
   
  与上述结果比较时，您可以观察到 [All Resellers] 行现在是将 [Value Added Reseller] 和 [Warehouse] 仓库的显示值相加，但 [All Products] 列会显示所有产品的总值，包括那些未显示的值。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
- [使用成员、 元组和集&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [基本 MDX 查询&#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [用查询轴和切片器轴限定查询&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [在查询中建立多维数据集上下文&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [使用成员、元组和集 (MDX)](working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
+ [基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)   
+ [用查询轴和切片器轴限定查询 (MDX)](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)  
   
   

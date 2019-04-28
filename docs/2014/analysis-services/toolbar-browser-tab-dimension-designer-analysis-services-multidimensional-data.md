@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794442"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行 **维度设计器** 的 **“浏览器”** 选项卡上的常规操作。  
@@ -28,7 +28,7 @@ ms.locfileid: "48091247"
  **重新连接**  
  如果“浏览器”选项卡会话由于连接丢失或超时而断开，单击此项可将“浏览器”选项卡重新连接到包含维度的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和数据库。  
   
- **“刷新”**  
+ **刷新**  
  单击此项可以使用维度的数据和元数据重新加载“浏览器”选项卡。  
   
  **成员属性**  
@@ -39,7 +39,7 @@ ms.locfileid: "48091247"
  **筛选成员**  
  单击此项可以显示“筛选成员”对话框，并对在所选层次结构的“级别和成员”中显示的成员进行筛选。  
   
- **写回**  
+ **Writeback**  
  选择此选项可以在维度写回模式下设置“级别和成员”窗格。  
   
  **减少缩进**  

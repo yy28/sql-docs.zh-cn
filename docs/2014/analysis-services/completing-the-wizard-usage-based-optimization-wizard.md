@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680421"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>完成向导（基于使用情况的优化向导）
   可以使用 **“完成向导”** 页保存聚合设计，以及将其分配给所选的分区。 您也可以在基于使用情况的优化向导完成设计并保存聚合之后，处理所选分区。  

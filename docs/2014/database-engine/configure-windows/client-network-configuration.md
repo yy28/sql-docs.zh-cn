@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787097"
 ---
 # <a name="client-network-configuration"></a>客户端网络配置
   借助客户端软件，客户端计算机能够连接到网络上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 “客户端”是前端应用程序，它使用服务器（如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]）提供的服务。 这种应用程序所驻留的计算机称为“客户端计算机” 。  

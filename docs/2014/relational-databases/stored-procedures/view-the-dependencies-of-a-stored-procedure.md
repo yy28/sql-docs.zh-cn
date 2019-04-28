@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856502"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>查看存储过程的依赖关系
     
 ##  <a name="Top"></a> 本主题介绍如何查看存储的过程中的依赖关系[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
--   **开始之前：**  [安全性](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要查看过程的依赖关系，请使用：**[SQL Server Management Studio](#SSMSProcedure)[Transact-SQL](#TsqlProcedure)  
+-   **若要查看依赖关系的过程中，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   

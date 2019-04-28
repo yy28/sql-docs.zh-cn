@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800024"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性-使用单元属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ SELECT [<axis_specification>
   
 |属性|Description|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
+|**ACTION_TYPE**|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：钻取操作不包括查询一组包含在 where 子句。|  
 |**BACK_COLOR**|用于显示 **VALUE** 或 **FORMATTED_VALUE** 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
 |**CELL_ORDINAL**|数据集中单元的序号。|  
 |**FONT_FLAGS**|字体的位掩码细节效果。 该值是对以下一个或多个常量执行按位 OR 操作的结果：<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> 例如，值 5 表示粗体 (**MDFF_BOLD**) 和下划线 (**MDFF_UNDERLINE**) 字体效果的组合。|  

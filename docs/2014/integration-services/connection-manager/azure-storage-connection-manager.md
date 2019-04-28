@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833555"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
   Azure 存储连接管理器使一个 SSIS 包来连接到 Azure 存储帐户通过使用指定的值为以下属性：存储帐户名称和帐户密钥。  

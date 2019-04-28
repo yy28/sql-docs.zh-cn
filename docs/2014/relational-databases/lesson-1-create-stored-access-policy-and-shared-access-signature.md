@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806728"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>第 2 课。 在容器上创建策略并生成共享访问签名 (SAS) 密钥
   在本课中，您将学习如何在 Blob 容器上创建策略以及生成 SAS 密钥。  
@@ -25,7 +25,7 @@ ms.locfileid: "48124077"
   
  可使用以下某种方法创建策略和共享访问签名：  
   
--   Windows Azure REST API 操作： [创建容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)、 [设置容器 ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)和 [获取容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)。  
+-   Windows Azure REST API 操作：[创建容器](https://msdn.microsoft.com/library/azure/dd179468.aspx)，[设置容器 ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)，和[获取容器 ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)。  
   
 -   Windows Azure SDK 中的[CloudBlobContainer.GetSharedAccessSignature 方法](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) 。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731566"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>编辑现有数据源连接（SSAS 表格）
   本主题介绍如何编辑表格模型中现有数据源连接的属性。  
@@ -79,7 +79,7 @@ ms.locfileid: "48117797"
      在您保存当前的一组表属性时，可能会显示一条消息，指示您需要处理表。 单击 **“处理”** 可将更新的数据加载到模型中。  
   
 ## <a name="see-also"></a>请参阅  
- [处理数据&#40;SSAS 表格&#41;](process-data-ssas-tabular.md)   
+ [处理数据（SSAS 表格）](process-data-ssas-tabular.md)   
  [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

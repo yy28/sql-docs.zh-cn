@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653553"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定的一个或多个特性[字段](../../../ado/reference/ado-api/field-object.md)对象。  

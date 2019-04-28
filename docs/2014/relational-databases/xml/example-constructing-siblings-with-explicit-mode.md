@@ -1,5 +1,5 @@
 ---
-title: 例如：使用 EXPLICIT 模式构造同级 |Microsoft Docs
+title: 例如：使用 EXPLICIT 模式构造同级 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704728"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>例如：使用 EXPLICIT 模式构造同级
   假定您要构造提供销售订单信息的 XML。 请注意，<`SalesPerson`> 和 <`OrderDetail`> 元素是同级。 每个订单都有一个 <`OrderHeader`> 元素、一个 <`SalesPerson`> 元素和一个或多个 <`OrderDetail`> 元素。  

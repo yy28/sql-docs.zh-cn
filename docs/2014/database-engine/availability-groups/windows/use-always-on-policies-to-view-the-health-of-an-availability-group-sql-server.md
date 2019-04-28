@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812970"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)
   本主题说明在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 通过 AlwaysOn 策略确定 AlwaysOn 可用性组的运行状况。 有关 AlwaysOn 基于策略的管理的信息，请参阅[针对 AlwaysOn 可用性组 (SQL Server) 运行问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)。  
@@ -89,7 +89,7 @@ ms.locfileid: "54420122"
   
      这些 cmdlet 接受以下选项：  
   
-    |选项|Description|  
+    |Option|Description|  
     |------------|-----------------|  
     |`AllowUserPolicies`|运行在 AlwaysOn 策略类别中找到的用户策略。|  
     |`InputObject`|对象的集合，表示可用性组、可用性副本或可用性数据库状态（取决于正在使用的 cmdlet）。 此 cmdlet 将计算指定对象的运行状况。|  
@@ -106,7 +106,7 @@ ms.locfileid: "54420122"
     ```  
   
     > [!NOTE]  
-    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

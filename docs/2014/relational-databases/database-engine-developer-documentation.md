@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872613"
 ---
 # <a name="developer39s-guide-database-engine"></a>开发人员&#39;指南 （数据库引擎）
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了大量用于开发、管理和控制数据库应用程序的工具。  

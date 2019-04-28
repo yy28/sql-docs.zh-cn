@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eae0fe81f501ff83d81722ece541085b00ade44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730697"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>从多维数据源导入（SSAS 表格）
   可以使用 Analysis Services 多维数据集数据库作为表格模型的数据源。 为了从 Analysis Services 多维数据集导入数据，必须定义一个 MDX 查询以选择要导入的数据。  
@@ -34,7 +34,7 @@ ms.locfileid: "48076987"
 3.  执行表导入向导中的步骤。 可以在 **“指定 MDX 查询”** 页上指定 MDX 查询。 若要使用 MDX 查询设计器，请在“指定 MDX 查询”页上单击 **“设计”**。  
   
 ## <a name="see-also"></a>请参阅  
- [导入数据&#40;SSAS 表格&#41;](import-data-ssas-tabular.md)   
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   
  [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

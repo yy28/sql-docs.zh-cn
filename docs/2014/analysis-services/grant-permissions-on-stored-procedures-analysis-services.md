@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730787"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授予对存储过程的权限 (Analysis Services)
-  存储过程或程序集，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是编写的外部例程[!INCLUDE[msCoName](../includes/msconame-md.md)].NET 编程语言的扩展功能的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 通过程序集，开发人员可以利用跨语言集成、异常处理、版本支持、部署支持以及调试支持。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的存储过程或程序集是使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 编程语言编写的外部例程，扩展了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 通过程序集，开发人员可以利用跨语言集成、异常处理、版本支持、部署支持以及调试支持。  
   
  你必须是服务器管理员才能注册程序集。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   

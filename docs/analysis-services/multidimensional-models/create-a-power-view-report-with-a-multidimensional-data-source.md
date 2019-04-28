@@ -1,5 +1,5 @@
 ---
-title: 使用多维数据源创建 Power View 报表 |Microsoft 文档
+title: 使用多维数据源创建 Power View 报表 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48328b57ffd8064f9f7994c9660ceebd8a459eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866692"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>使用多维数据源创建 Power View 报表
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

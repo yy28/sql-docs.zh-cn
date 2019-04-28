@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805933"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>配置您的实用工具控制点数据仓库（SQL Server 实用工具）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集的数据存储在实用工具管理数据仓库 (UMDW) 中；UMDW 文件名为 sysutility_mdw。  
@@ -28,7 +28,7 @@ ms.locfileid: "52804039"
   
 -   收集组上载频率：每隔 15 分钟。  
   
- UMDW 目录是可配置：\<系统驱动器 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< UCP_Name > \MSSQL\Data\\，其中\<系统驱动器 > 通常是 C:\ 驱动器。 日志文件 Sysutility_mdw_\<GUID>_LOG 位于同一目录中。  
+ UMDW 目录是可配置：\<系统驱动器 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< UCP_Name > \MSSQL\Data\\，其中\<系统驱动器 > 通常是 C:\驱动器。 日志文件 Sysutility_mdw_\<GUID>_LOG 位于同一目录中。  
   
 > [!NOTE]  
 >  可以使用 detach/attach 或 ALTER DATABASE 更改该 UMDW (sysutility_mdw) 文件位置。 我们建议使用 ALTER DATABASE。 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  

@@ -1,5 +1,5 @@
 ---
-title: 第 10 课： 创建层次结构 |Microsoft Docs
+title: 第 10 课：创建层次结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728113"
 ---
 # <a name="lesson-10-create-hierarchies"></a>第 10 课：创建层次结构
   在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构可独立于报表客户端应用程序字段列表中的其他列出现，使客户端用户可以更方便地在报表中导航和包含数据。 若要了解详细信息，请参阅[层次结构（SSAS 表格）](tabular-models/hierarchies-ssas-tabular.md)。  
   
  若要创建层次结构，可使用“关系图视图”中的模型设计器。 在数据视图的模型设计器中不支持创建和管理层次结构。  
   
- 学完本课的估计时间： **20 分钟**  
+ 估计的时间才能完成本课程中：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课：[第 9 课：创建透视](lesson-8-create-perspectives.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 9 课：创建透视](lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>创建层次结构  
   

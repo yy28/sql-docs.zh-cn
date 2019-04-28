@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69acb3d6495ce7ec77b67feed7644945a477a86e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654397"
 ---
 # <a name="schedules"></a>“计划”
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了共享计划和报表特定计划，可帮助您控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。  

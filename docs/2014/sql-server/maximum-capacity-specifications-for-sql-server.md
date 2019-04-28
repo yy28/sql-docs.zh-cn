@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711442"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
   以下各表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。 若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
@@ -86,7 +86,7 @@ ms.locfileid: "52771769"
 |嵌套子查询个数|32|32|  
 |嵌套触发器层数|32|32|  
 |每个表的非聚集索引数|999|999|  
-|在 GROUP BY 子句中存在下列任一条件时的非重复表达式数目：多维数据集，汇总，GROUPING SETS、 CUBE、 WITH ROLLUP 与|32|32|  
+|当存在以下任意子句时，GROUP BY 子句中的非重复表达式数：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP|32|32|  
 |GROUP BY 子句中的运算符生成的分组集数目|4,096|4,096|  
 |每个存储过程的参数个数|2,100|2,100|  
 |每个用户定义函数的参数个数|2,100|2,100|  

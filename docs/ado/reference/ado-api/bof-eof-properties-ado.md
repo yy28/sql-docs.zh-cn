@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821438"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
 -   **BOF**指示当前记录的位置是在中的第一个记录之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
@@ -62,9 +62,9 @@ ms.locfileid: "47748115"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**， **MoveLast**|设置为 **，则返回 True**|设置为 **，则返回 True**|  
-|**移动**0|没有变化|没有变化|  
-|**MovePrevious**，**移动**< 0|设置为 **，则返回 True**|没有变化|  
-|**MoveNext**，**移动**> 0|没有变化|设置为 **，则返回 True**|  
+|**Move** 0|无更改|无更改|  
+|**MovePrevious**，**移动**< 0|设置为 **，则返回 True**|无更改|  
+|**MoveNext**，**移动**> 0|无更改|设置为 **，则返回 True**|  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -1,5 +1,5 @@
 ---
-title: 保留数据库名称的并行数据仓库 |Microsoft 文档
+title: 保留数据库名称的并行数据仓库 |Microsoft Docs
 description: 分析平台系统并行数据仓库中保留的数据库名称。
 author: mzaman1
 manager: craigg
@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679266"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>并行数据仓库中保留的数据库名称
 保留的数据库名称是不能分配给 SQL Server PDW 中的用户数据库的名称。  
@@ -41,7 +41,7 @@ ms.locfileid: "31539447"
   
 -   DWQueue  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->

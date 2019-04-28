@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727903"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>“合并分区”对话框（Analysis Services - 多维数据）
   可以使用 **SQL Server Management Studio** 中的 **“合并分区”** 对话框合并多维数据中的度量值组的分区。 通过在**对象资源管理器**中右键单击分区文件夹或某个分区并从上下文菜单中选择“合并分区”，可以显示“合并分区”对话框。  
@@ -48,7 +48,7 @@ ms.locfileid: "48117411"
 |**上次处理**|显示上次处理源分区的日期和时间。|  
   
 ## <a name="see-also"></a>请参阅  
- [分区&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Analysis Services 中合并分区&#40;SSAS-多维&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [分区（Analysis Services - 多维数据）](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [在 Analysis Services 中合并分区（SSAS - 多维）](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

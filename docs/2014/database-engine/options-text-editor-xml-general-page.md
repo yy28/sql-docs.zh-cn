@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843801"
 ---
 # <a name="options-text-editor---xml---general-page"></a>选项（“文本编辑器”-“XML”-“常规”页）
   使用此对话框可以更改 XML 编辑器（用于编辑 XML 文档）的常规编辑行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **XML** 子文件夹，再单击 **“常规”**。  
@@ -34,7 +34,7 @@ ms.locfileid: "51029096"
  **参数信息**  
  选中此复选框后，在编辑器中，当前声明或过程的完整语法会显示在插入点的左侧，并显示其所有可用参数。 下一个可分配参数以粗体显示。  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  **启用虚空格**  
  如果选中此复选框，将在每个代码行末尾插入空格。 如果选中此复选框，可将注释始终定位在代码旁的同一位置。  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722019"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
   在使用预测查询生成器设计查询后，可通过在数据挖掘设计器的 **“挖掘模型预测”** 选项卡上切换到“查询文本”视图来修改查询。 屏幕的底部会出现文本编辑器，显示查询生成器创建的查询。  
@@ -45,7 +45,7 @@ ms.locfileid: "48065532"
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘查询](data-mining-queries.md)   
- [预测查询生成器&#40;数据挖掘&#41;](../prediction-query-builder-data-mining.md)   
- [第 6 课： 创建和使用预测&#40;数据挖掘基础教程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [预测查询生成器（数据挖掘）](../prediction-query-builder-data-mining.md)   
+ [第 6 课：创建和使用预测&#40;数据挖掘基础教程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

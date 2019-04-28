@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793242"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
@@ -35,7 +35,7 @@ ms.locfileid: "56029528"
     > [!NOTE]  
     >  您在将域映射到引用数据服务过程中指定的阈值在使用引用数据服务中的知识清理数据时同样适用，但在 **“常规设置”** 选项卡的 **“配置”** 部分中指定的阈值则不适用。 有关为引用数据清理指定阈值的信息，请参阅中的步骤 9[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
--   域值分类到以下：**建议**，**新**，**无效**，**更正**，并且**正确**。  
+-   域值分为以下几类：“建议”、“新建”、“无效”、“已更正”和“正确”。  
   
 -   附加数据将追加到源中，并且该信息与清理后的数据一起提供以供导出。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56029528"
   
 1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。  
   
-2.  上**地图**页上，将以下 4 个域与您的源数据中的相应列映射：**地址行**，**市/县**，**状态**，并且**Zip**。 单击“下一步” 。  
+2.  在“映射”页上，将以下 4 个域与源数据中的相应列进行映射：“Address Line”、“City”、“State”和“Zip”。 单击“下一步” 。  
   
     > [!NOTE]  
     >  当您在 **“地址验证”** 复合域中映射了所有 4 个域后，数据清理现在将在复合域级别完成，而非在单独的域级别完成。  
@@ -64,7 +64,7 @@ ms.locfileid: "56029528"
     > [!NOTE]  
     >  在 **“清理”** 页上，DQS 通过以下两种方式显示与附加到引用数据服务的域有关的信息：  
     >   
-    >  -   下面显示一条消息**启动**按钮："域\<Domain1 >， \<Domain2 >，...\<DomainN> 已使用引用数据服务提供程序进行清理。” 在此示例中，将显示以下消息："地址验证使用引用数据服务提供程序清除域"。  
+    >  -   “启动”按钮下会显示一条消息：“Domains \<Domain1>, \<Domain2>,…\<DomainN> 已使用引用数据服务提供程序进行清理。” 在此示例中，将显示以下消息：“域地址验证已使用引用数据服务提供程序进行清理。”  
     > -   ![将域附加到 RDS](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "Domain is attached to RDS") 图标根据附加到引用数据服务提供程序的域显示在“探查器”区域中。 在此示例中，将针对 **“地址验证”** 复合域显示该图标。  
   
 4.  在 **“管理和查看结果”** 页上，查看您的域值。 根据在将域映射到引用数据服务的过程中在 **“建议的候选项”** 框中指定的建议的最大数目，引用数据服务可为一个值显示多个建议（如果可用）。 例如，为下面的美国地址显示两项建议：  

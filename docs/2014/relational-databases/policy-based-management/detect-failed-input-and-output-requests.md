@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705168"
 ---
 # <a name="detect-failed-input-output-request"></a>检测失败的输入的输出请求
   此规则检查系统事件日志中是否存在 EventId 50。 此错误是由失败的 I/O 请求引起的。  

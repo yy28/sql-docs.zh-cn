@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 支持的身份验证方法 |Microsoft 文档
+title: Analysis Services 支持的身份验证方法 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659209"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,10 +78,10 @@ ms.locfileid: "34019134"
   
  有关存储的凭据的详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和[将 Excel Services 与 SharePoint Server 2013 中的 Secure Store Service 一起使用](http://go.microsoft.com/fwlink/?LinkID=309869)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将模拟用于传输安全](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [针对 Kerberos 约束委派对 Analysis Services 进行配置](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Kerberos 约束委派配置 Analysis Services](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [针对 Analysis Services 实例的 SPN 注册](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [连接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

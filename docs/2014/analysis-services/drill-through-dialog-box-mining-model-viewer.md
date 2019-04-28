@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731546"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>“钻取”对话框（挖掘模型查看器）
   在使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡查看挖掘模型时，可以钻取到有关事例数据的详细信息（假定模型已启用钻取功能）。 而且，如果基础挖掘结构已启用钻取功能，则还可以查看挖掘结构中的列，即使挖掘模型中没有包含这些列也是如此。 在列列表中，结构列的前缀为标签 “Structure”。  
@@ -42,12 +42,12 @@ ms.locfileid: "48066941"
 > [!NOTE]  
 >  可在列网格中右键单击任意位置，并选择“全部复制”，以将钻取数据以制表符分隔的格式复制到剪贴板。 复制的数据只包含事例数据，而不包含节点定义。  
   
- **播放**  
+ **Play**  
  单击绿色箭头按钮刷新数据。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取查询&#40;数据挖掘&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [钻取查询（数据挖掘）](data-mining/drillthrough-queries-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [挖掘模型查看器任务和操作指南](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

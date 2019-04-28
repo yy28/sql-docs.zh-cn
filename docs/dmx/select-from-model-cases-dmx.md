@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。用例 (DMX) |Microsoft Docs
+title: SELECT FROM &lt;model&gt;.CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658764"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。用例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ AND IsInNode('002')
 >  并非所有挖掘模型类型都支持钻取功能。 有关支持钻取的模型的信息，请参阅[钻取查询&#40;数据挖掘&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [选择&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

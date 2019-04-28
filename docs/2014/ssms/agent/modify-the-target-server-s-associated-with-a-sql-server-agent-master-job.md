@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654055"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>修改与 SQL Server 代理主作业关联的目标服务器
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改与 SQL Server 代理主作业关联的目标服务器。  
@@ -56,7 +56,7 @@ ms.locfileid: "54129057"
   
 4.  右键单击要修改目标服务器的作业，然后选择“属性”。  
   
-5.  在中**作业属性-**_job_name_对话框中的**选择页**，选择**目标**。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;以页为目标&#41;](job-properties-new-job-targets-page.md)。  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“目标”。 有关此页上的可用选项的详细信息，请参阅[作业属性：新的作业&#40;以页为目标&#41;](job-properties-new-job-targets-page.md)。  
   
 6.  完成后，单击 **“确定”**。  
   
