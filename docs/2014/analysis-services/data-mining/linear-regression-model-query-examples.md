@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722229"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
@@ -45,11 +45,11 @@ ms.locfileid: "48201007"
  [对回归模型使用预测函数](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> 查找有关线性回归模型的信息  
- 线性回归模型的结构极其简单：挖掘模型将数据表示为定义回归公式的单个节点。 有关详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
+ 线性回归模型的结构极其简单：挖掘模型将数据表示为定义回归公式的单个节点。 有关详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
   
  [返回页首](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：使用数据挖掘架构行集确定用于模型的参数  
+###  <a name="bkmk_Query1"></a> 示例查询 1:使用数据挖掘架构行集确定用于模型的参数  
  通过查询数据挖掘架构行集，您可找到模型的元数据。 这包括模型创建时间、上次处理模型时间、模型所基于的挖掘结构的名称以及指定为可预测属性的列的名称。 您还可以返回首次创建模型时所使用的参数。  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [返回页首](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：检索模型的回归公式  
+###  <a name="bkmk_Query2"></a> 示例查询 2:检索模型的回归公式  
  下面的查询返回一个线性回归模型的挖掘模型内容，该回归模型是通过使用 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)中使用的目标邮件数据源创建的。 此模型基于年龄预测客户收入。  
   
  查询返回包含回归公式的节点的内容。 所有变量和系数均存储在嵌套表 NODE_DISTRIBUTION 的单独行中。 如果要查看完整的回归公式，请使用 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)，单击“(全部)”节点，然后打开“挖掘图例”。  
@@ -113,11 +113,11 @@ FROM LR_PredictIncome.CONTENT
 |9（统计信息）|  
 |11（截距）|  
   
- 有关回归模型的每个值类型的含义的详细信息，请参阅[线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 有关回归模型每个值类型含义的详细信息，请参阅 [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [返回页首](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：仅返回模型的系数  
+###  <a name="bkmk_Query3"></a> 示例查询 3:仅返回系数模型  
  通过使用 VALUETYPE 枚举，您可以仅返回回归公式的系数，如下面的查询所示：  
   
 ```  
@@ -146,7 +146,7 @@ FROM LR_PredictIncome.CONTENT
   
  [返回页首](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4：使用单独查询预测收入  
+###  <a name="bkmk_Query4"></a> 示例查询 4:使用单独查询预测收入  
  创建针对回归模型的单个查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，可以通过选择相应的回归模型中，生成下面的 DMX 查询选择**单独查询**，然后键入`20`的值作为**年龄**。  
   
 ```  
@@ -164,7 +164,7 @@ NATURAL PREDICTION JOIN
   
  [返回页首](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> 示例查询 5：对回归模型使用预测函数  
+###  <a name="bkmk_Query5"></a> 示例查询 5:回归模型使用预测函数  
  您可以对线性回归模型使用许多标准预测函数。 下面的示例演示如何向预测查询结果中添加说明性统计信息。 您可以从这些结果发现此模型的均值的偏差非常大。  
   
 ```  
@@ -191,13 +191,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的节点是否包含当前事例。|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|返回指定列的一个预测值或一组值。|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|返回每个事例的 Node_ID。|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
+|[IsDescendant (DMX)](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[IsInNode (DMX)](/sql/dmx/isinnode-dmx)|指示指定的节点是否包含当前事例。|  
+|[PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx)|返回指定列的一个预测值或一组值。|  
+|[PredictNodeId (DMX)](/sql/dmx/predictnodeid-dmx)|返回每个事例的 Node_ID。|  
+|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
+|[PredictSupport (DMX)](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
+|[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
   
  有关对所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都通用的函数列表，请参阅[数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)。 有关如何使用这些函数的详细信息，请参阅[数据挖掘扩展插件 (DMX) 函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
@@ -205,6 +205,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

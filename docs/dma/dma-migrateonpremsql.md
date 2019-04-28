@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706963"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722361"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
@@ -28,12 +28,12 @@ ms.locfileid: "53372749"
   
 -   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程：[如何：配置订阅以使用 Web 同步 （复制 TRANSACT-SQL 编程）](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO：[如何：配置订阅以使用 Web 同步 （RMO 编程）](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO:[如何：配置订阅以使用 Web 同步 （RMO 编程）](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 5.0、6.0 和 7.0 版。 IIS 版本 7.0 不支持配置 Web 同步向导。  
   
 > [!IMPORTANT]  
->  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误。 其中包括：“Web 同步期间的消息格式无效。 请确保在 Web 服务器上正确配置了复制组件”。  
+>  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误。 其中包括："Web 同步期间消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件”。  
   
 > [!CAUTION]  
 >  不要同时使用 WebSync 和备用快照文件夹位置。  
@@ -217,7 +217,7 @@ ms.locfileid: "53372749"
   
 #### <a name="to-configure-iis-authentication"></a>配置 IIS 身份验证  
   
--   当订阅方连接到 IIS 时，IIS 必须对其进行身份验证，订阅方才能访问资源和过程。 IIS 提供了三种身份验证类型：匿名、基本和集成。 身份验证可以应用于整个网站或您创建的虚拟目录。  
+-   当订阅方连接到 IIS 时，IIS 必须对其进行身份验证，订阅方才能访问资源和过程。 IIS 提供了三种类型的身份验证：匿名、 基本版和集成。 身份验证可以应用于整个网站或您创建的虚拟目录。  
   
      建议您使用带有 SSL 的基本身份验证。 无论使用何种类型的身份验证，都需要 SSL。 有关如何配置身份验证的详细信息，请参阅 IIS 文档。  
   

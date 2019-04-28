@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727281"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改某个特性的 KeyColumn 属性
   可以修改特性的 **KeyColumns** 属性。 例如，您可能需要指定组合键以作为该特性的键，而不是指定单个键。  

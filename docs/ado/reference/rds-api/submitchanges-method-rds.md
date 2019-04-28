@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710189"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交挂起的更改的本地缓存和可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到中指定的数据源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性。  

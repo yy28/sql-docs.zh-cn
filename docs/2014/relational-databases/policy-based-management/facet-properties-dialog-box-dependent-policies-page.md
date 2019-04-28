@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704918"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>“方面属性”对话框，“依赖策略”页
   此对话框用于显示当前引用此基于策略的管理方面的策略的列表。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680750"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>聚类分析向导（Excel 数据挖掘外接程序）
   ![数据挖掘功能区中的群集向导](media/dmc-cluster.gif "数据挖掘功能区中的群集向导")  

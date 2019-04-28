@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711432"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 AlwaysOn 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
@@ -48,7 +48,7 @@ ms.locfileid: "53349930"
 > [!IMPORTANT]  
 >  如果 WSFC 群集因为仲裁失败而被设为脱机，则需要手动干预以便将其重新联机。  
 >   
->  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复&#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+>  有关详细信息，请参阅：[通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
 ##  <a name="QuorumModes"></a> 仲裁模式  
   “仲裁模式”是在 WSFC 群集级别配置的，指示用于仲裁投票的方法。  故障转移群集管理器实用工具将会基于群集中的节点数来建议仲裁模式。  
@@ -87,7 +87,7 @@ ms.locfileid: "53349930"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036):该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中没有仲裁投票的群集节点。  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：修补程序可让你配置中不具有仲裁投票的群集节点[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]并在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  

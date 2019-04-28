@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719706"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 函数
 **符合性**  
@@ -79,4 +79,4 @@ BOOL SQLWritePrivateProfileString(
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|获取一个值中的系统信息|[不到 SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|
+|获取一个值中的系统信息|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

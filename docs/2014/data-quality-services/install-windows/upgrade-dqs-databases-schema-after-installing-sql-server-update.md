@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 984f6927f4602703b71526bf4d005202fe09fcdf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792435"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安装 SQL Server 更新后升级 DQS 数据库架构
   当你在先前配置的 DQS 实例上安装了 SQL Server 更新（补丁、修补程序或累积更新）后，你可能需要运行 DQSInstaller.exe 文件（带 **upgrade** 命令行参数）来升级 DQS 数据库架构。 否则，当您尝试使用数据质量客户端连接到数据质量服务器时，可能会收到以下错误：  
@@ -27,7 +27,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  升级 DQS 数据库架构不会影响 DQS 数据库（知识库、数据质量项目以及 DQS_STAGING_DATA 数据库中的已导出结果）中的现有数据。 但是，您必须先备份 DQS 数据库，然后才能升级 DQS 数据库架构，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../backing-up-and-restoring-dqs-databases.md)。  
   
 > [!NOTE]  
->  大多数 SQL Server 更新将要求升级到 DQS 数据库架构。 将需要升级到 DQS 数据库架构的 SQL Server 更新的信息，请参阅在图表中的步骤 1.A[升级 DQS:Data Quality Services 上安装累积更新或修补程序](https://go.microsoft.com/fwlink/?LinkID=251565)。  
+>  大多数 SQL Server 更新将要求升级到 DQS 数据库架构。 有关要求升级到 DQS 数据库架构的 SQL Server 更新的信息，请参阅 [升级 DQS：在 Data Quality Services 中安装累积更新或修补程序](https://go.microsoft.com/fwlink/?LinkID=251565)中的步骤 1.A。  
   
 ## <a name="prerequisites"></a>先决条件  
   
@@ -60,7 +60,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>后续步骤  
  从数据质量客户端应用程序登录到升级后的数据质量服务器。  
   
- 详细了解升级 DQS 数据库架构后安装 SQL Server 更新和相关故障排除步骤，请参阅[升级 DQS:Data Quality Services 上安装累积更新或修补程序](https://go.microsoft.com/fwlink/?LinkID=251565)。  
+ 有关安装 SQL Server 更新后升级 DQS 数据库架构以及相关故障排除步骤的详细信息，请参阅 [升级 DQS：在 Data Quality Services 中安装累积更新或修补程序](https://go.microsoft.com/fwlink/?LinkID=251565)中的步骤 1.A。  
   
 ## <a name="see-also"></a>请参阅  
  [安装 Data Quality Services](install-data-quality-services.md)   

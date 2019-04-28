@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732800"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>数据源向导的 F1 帮助 (Analysis Services)
   使用数据源向导可以创建用于 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的以下商业智能项目的数据源：  

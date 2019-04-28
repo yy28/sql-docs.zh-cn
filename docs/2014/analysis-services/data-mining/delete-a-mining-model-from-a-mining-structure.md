@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09560d26d201ced8160bf171a92dbb618a1c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722569"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>从挖掘结构中删除挖掘模型
   您可以使用数据挖掘设计器、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 DMX 语句删除挖掘模型。  
@@ -48,7 +48,7 @@ ms.locfileid: "48180367"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 删除挖掘模型  
   
--   [删除挖掘模型&AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [删除挖掘模型 (DMX)](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)  

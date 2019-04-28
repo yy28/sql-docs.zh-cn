@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c3a3bdf67c23669f4d8f80ad03c122f1e987164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702075"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以借助 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
@@ -46,7 +46,7 @@ ms.locfileid: "48080539"
   
 -   Organization  
   
--   Product  
+-   产品  
   
 -   Promotion  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48080539"
   
  选中 **“这是变化的维度”** 复选框时，维度向导将定义下表中列出的属性：  
   
-|Attribute|类型|  
+|特性|类型|  
 |---------------|----------|  
 |SCD OriginalID|SCDOriginalID|  
 |SCD End Date|SCDEndDate|  

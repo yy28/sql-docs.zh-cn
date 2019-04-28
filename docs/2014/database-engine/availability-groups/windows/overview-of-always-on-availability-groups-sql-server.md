@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789555"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
   本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](always-on-availability-groups-sql-server.md)。  
@@ -149,7 +149,7 @@ ms.locfileid: "53363589"
   
 -   **博客：**  
   
-     [AlwaysON-HADRON 学习系列：启用了 HADRON 的工作线程池用法的数据库](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "53363589"
   
 -   **视频：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：介绍下一代高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)（Microsoft SQL Server Code-Named "Denali" Always On 系列，第 1 部分：介绍下一代高可用性解决方案）  
   
      [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：构建使用 AlwaysOn 的关键任务高可用性解决方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -177,8 +177,8 @@ ms.locfileid: "53363589"
  [对内存中 OLTP 数据库的高可用性支持](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [活动辅助副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [活动辅助副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：可读辅助副本&#40;AlwaysOn 可用性组&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [活动次要副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
   
   

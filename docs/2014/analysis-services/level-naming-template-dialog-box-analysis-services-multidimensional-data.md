@@ -16,24 +16,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37afa05887059607edc257c3957495a8db335d3c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728143"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>“级别命名模板”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “级别命名模板” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为维度的父属性构造级别命名模板。 有关级别命名模板的详细信息，请参阅 [NamingTemplate 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl)。 可以显示**级别命名模板**对话框中，通过单击省略号按钮 (**...**) 上`NamingTemplate`转换中的属性的值**翻译详细信息**窗格**翻译**选项卡**维度设计器**.  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  
-|**定义级别模板**|显示一个网格，您可以在其中设计父属性中级别的层次结构。 该网格包含以下列：<br /><br /> **级别**： 显示名称中指定级别的序号位置**名称**使用。 若要为级别添加新的命名模板，请在“级别”中包含星号 (\*) 的行上选择“名称”。<br /><br /> **名称**： 包含用于在所指示级别的命名模板**级别**。 若要在命名模板中为级别序号位置添加占位符，请添加单个星号 (*)。 若要添加星号作为命名模板创建的名称的一部分，请添加两个星号 (\*\*)。|  
+|**定义级别模板**|显示一个网格，您可以在其中设计父属性中级别的层次结构。 该网格包含以下列：<br /><br /> **级别**：显示“名称”中指定名称的级别的序号位置。 若要为级别添加新的命名模板，请在“级别”中包含星号 (\*) 的行上选择“名称”。<br /><br /> **名称**：包含用于“级别”中所指示级别的命名模板。 若要在命名模板中为级别序号位置添加占位符，请添加单个星号 (*)。 若要添加星号作为命名模板创建的名称的一部分，请添加两个星号 (\*\*)。|  
 |**全部清除**|选择此项可以删除 **“定义级别模板”** 中的所有行。|  
 |**结果**|显示由对话框生成的级别命名模板。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [翻译&#40;维度设计器&#41; &#40;Analysis Services-多维数据&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   

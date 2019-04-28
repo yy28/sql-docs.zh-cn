@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731705"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>钻取操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“钻取操作窗体编辑器”** 窗格，修改在 **“操作组织程序”** 窗格中选择的钻取操作。 有关钻取操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "48213227"
  **附加属性**  
  展开可查看“默认值”、“最大行数”、“调用”、“应用程序”、“说明”、“标题”和“标题是 MDX”选项。  
   
- **Default**  
+ **默认**  
  若要将此钻取操作设置为默认的钻取操作，请选择 **True** ，否则选择 **False**。  
   
  如果`RETURN`省略子句的 mdx`DRILLTHROUGH`由客户端应用程序，执行语句[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例评估所有默认钻取操作，并运行第一个默认钻取返回非空的集合的操作。 有关 MDX 的详细信息`DRILLTHROUGH`语句，请参阅[钻取语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
@@ -90,7 +90,7 @@ ms.locfileid: "48213227"
 > [!NOTE]  
 >  此选项只是向客户端应用程序提供使用哪一个客户端应用程序执行某项操作的建议，并不直接控制对该操作的访问。 客户端应用程序将隐藏与其他客户端应用程序关联的所有操作。  
   
- **Description**  
+ **说明**  
  键入操作说明（可选）。  
   
  **Caption**  
@@ -104,7 +104,7 @@ ms.locfileid: "48213227"
  选择 **True** 表示 **“标题”** 包含一个 MDX 表达式，该表达式返回一个表示将在客户端应用程序中为该操作显示的标题的字符串。 必须在将该操作返回给客户端应用程序之前解析 MDX 表达式。  
   
 ## <a name="see-also"></a>请参阅  
- [多维表达式&#40;MDX&#41;引用](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [操作&#40;多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [工具栏&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [操作组织程序&#40;操作选项卡，多维数据集设计器&#41; &#40;Analysis Services-多维数据&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

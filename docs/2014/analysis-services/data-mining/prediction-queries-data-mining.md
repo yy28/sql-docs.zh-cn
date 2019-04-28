@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733193"
 ---
 # <a name="prediction-queries-data-mining"></a>预测查询（数据挖掘）
   典型数据挖掘项目的目标是使用挖掘模型来进行预测。 例如，您可能希望预测某个服务器群集的预期停机时间量，或者生成一个分数，指示客户群体是否可能会响应广告活动。 若要执行所有这些操作，您需要创建一个预测查询。  

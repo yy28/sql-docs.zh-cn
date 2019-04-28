@@ -1,5 +1,5 @@
 ---
-title: 第 7 课： 创建度量值 |Microsoft Docs
+title: 第 7 课：创建度量值 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728103"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 课：创建度量值
   在本课中，您将创建要包括在您的模型中的度量值。 与您在前一课中创建的计算列类似，度量值从根本上来说是使用 DAX 公式创建的计算。 但是，与计算列不同，度量值是基于用户选择的*筛选器*进行计算的；例如，添加到数据透视表中的“行标签”字段中的特定列或切片器。   然后，由所应用的度量值计算出筛选器中每个单元的值。 度量值是功能强大的、灵活的计算，您可以将其包含在几乎所有表格模型中，以便对数值数据执行动态计算。 若要了解详细信息，请参阅[度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  
@@ -27,10 +27,10 @@ ms.locfileid: "48213237"
   
  在本课中，您将通过在编辑栏中输入一个 DAX 公式并使用“自动求和”功能来创建度量值。  
   
- 学完本课的估计时间：**30 分钟**  
+ 估计的时间才能完成本课程中：**30 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课：[第 6 课：创建计算列](lesson-5-create-calculated-columns.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 6 课：创建计算的列](lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>创建度量值  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213237"
     |“度量值名称”|“列”|自动求和 (∑)|公式|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Sum|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Sum|=SUM([Total Product Cost])|  
+    |Internet Total Sales|Sales Amount|Sum|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Sum|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Sum|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Sum|=SUM([Freight])|  
   
 2.  通过在度量值网格中单击一个空单元并使用编辑栏，创建并命名以下度量值：  
   

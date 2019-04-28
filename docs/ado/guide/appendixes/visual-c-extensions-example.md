@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 扩展示例 |Microsoft Docs
+title: VisualC++扩展插件示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802886"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 扩展示例
-此程序说明如何从字段中检索和转换为 C/c + + 变量值。  
+此程序说明如何从字段中检索和转换为 C 值 /C++变量。  
   
  此示例还会利用的"智能指针，"它会自动处理调用的特定于 COM 的详细信息`QueryInterface`和引用计数**IADORecordBinding**接口。  
   
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 因为由实现 Visual c + + 扩展**记录集**对象，智能指针构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`若要查找`IADORecordBinding`接口。  
+ 因为视觉对象C++扩展通过实现**记录集**对象，智能指针构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`若要查找`IADORecordBinding`接口。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Visual c + + 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+ [使用视觉对象C++扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

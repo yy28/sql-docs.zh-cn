@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658180"
 ---
 # <a name="new-features"></a>新功能
 在 ODBC 3 引入了以下新功能。*x*。 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器不映射这些功能时使用的 ODBC 2 *.x*驱动程序。  

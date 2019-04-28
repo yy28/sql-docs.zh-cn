@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726595"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授予对维度数据的自定义访问权限 (Analysis Services)
   启用对多维数据集的读取访问权限后，可以设置明确允许或拒绝访问维度成员的其他权限（包括包含在度量值维度中的度量值，此维度包含在多维数据集中使用的全部度量值）。 例如，假设有多个经销商类别，您可能想要设置权限以排除某个具体业务类型的数据。 下图是拒绝访问“经销商”维度中“仓库”业务类型的前后对比效果。  
@@ -42,7 +42,7 @@ ms.locfileid: "48091728"
   
  基本维度安全性最容易；只需选择要在角色中包括或去除的维度属性和属性层次结构即可。 高级安全性更复杂，要求擅长 MDX 脚本编写。 下面将介绍这两种方法。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  并非所有度量值或维度成员都可用于自定义访问方案。 如果某个角色限制访问默认度量值或成员，或者限制访问属于度量值表达式的度量值，则连接将失败。  
   
  **检查对维度安全性的阻碍：默认度量值、默认成员和度量值表达式中使用的度量值**  
@@ -51,7 +51,7 @@ ms.locfileid: "48091728"
   
 2.  搜索 `DefaultMeasure`。 应发现一个针对多维数据集的度量值和一个针对每个透视的度量值。 定义维度安全性时，避免限制访问默认度量值。  
   
-3.  接下来，搜索 `MeasureExpression`。 度量值表达式是基于计算的度量值表达式，该计算通常包含其他度量值。 确认表达式中未使用要限制的度量值。 或者，继续操作并限制访问，只需确保在整个多维数据集内同样排除对该度量值的所有引用。  
+3.  然后，搜索 `MeasureExpression`。 度量值表达式是基于计算的度量值表达式，该计算通常包含其他度量值。 确认表达式中未使用要限制的度量值。 或者，继续操作并限制访问，只需确保在整个多维数据集内同样排除对该度量值的所有引用。  
   
 4.  最后，搜索 `DefaultMember`。 请记录用作属性的默认成员的任何属性。 设置维度安全性时，避免对这些属性施加限制。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48091728"
   
 -   如果数据库角色没有为特性定义默认成员，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用自己为该特性定义的默认成员。 除非另行指定，否则特性的默认成员为 `All` 成员（特性定义为不可聚合时除外）。  
   
- 例如，假设数据库角色指定`Male`的默认成员为`Gender`属性。 除非查询在显式包含 `Gender` 特性的同时又为此特性指定了其他成员，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将返回仅包含男性客户的数据集。 有关设置默认成员的详细信息，请参阅 [定义默认成员](attribute-properties-define-a-default-member.md)。  
+ 例如，假设数据库角色指定 `Male` 为 `Gender` 属性的默认成员。 除非查询在显式包含 `Gender` 特性的同时又为此特性指定了其他成员，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将返回仅包含男性客户的数据集。 有关设置默认成员的详细信息，请参阅 [定义默认成员](attribute-properties-define-a-default-member.md)。  
   
  **启用直观合计**  
  VisualTotals 属性指示是根据所有单元值还是仅根据数据库角色可见的单元值来计算显示的聚合单元值。  
@@ -127,9 +127,9 @@ ms.locfileid: "48091728"
  单击以测试此页面上定义的 MDX 语法。  
   
 ## <a name="see-also"></a>请参阅  
- [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予数据源对象上的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
+ [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)   
+ [授予数据挖掘结构和模型的权限 (Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

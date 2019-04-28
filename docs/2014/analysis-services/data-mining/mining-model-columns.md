@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733619"
 ---
 # <a name="mining-model-columns"></a>挖掘模型列
   数据挖掘模型为挖掘结构表示的数据应用挖掘模型算法。 如挖掘结构一样，挖掘模型也包含列。 挖掘模型包含在挖掘结构之内，继承由挖掘结构定义的所有属性值。 该模型可以使用挖掘结构包含的所有列，或使用其中一部分列。  
@@ -46,8 +46,8 @@ ms.locfileid: "48167987"
  有关使用 DMX 以编程方式设置用法属性和定义建模标志的详细信息，请参阅 [CREATE MINING MODEL (DMX)](/sql/dmx/create-mining-model-dmx)。 有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中设置用法属性和定义建模标志的详细信息，请参阅[移动数据挖掘对象](moving-data-mining-objects.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
  [更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)   
  [从挖掘模型中排除列](exclude-a-column-from-a-mining-model.md)   
  [挖掘结构列](mining-structure-columns.md)  

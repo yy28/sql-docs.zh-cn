@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732093"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>定义计算作用域（商业智能向导）
   可以使用 **“定义计算作用域”** 页将新的时间计算与各度量值相关联。  

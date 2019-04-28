@@ -42,11 +42,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710331"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 属性 (ADOX)
 指定要提供对特定于提供程序的属性的访问的表、 用户或列对象的父目录。  

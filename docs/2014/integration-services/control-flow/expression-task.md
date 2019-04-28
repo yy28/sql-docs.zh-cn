@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831421"
 ---
 # <a name="expression-task"></a>表达式任务
   表达式任务使用表达式生成器创建和计算在运行时设置变量值的表达式。 在您编辑该任务时， [Expression Builder](../expressions/expression-builder.md) 将启动。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680552"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>配置 PowerPivot 无人参与的数据刷新帐户 (PowerPivot for SharePoint)
   PowerPivot 无人参与的数据刷新帐户是为在 SharePoint 场中运行 PowerPivot 数据刷新作业而指定的帐户。 通过将其配置，启用**使用的数据刷新帐户由管理员配置**数据刷新计划页 （见下文） 中的选项。 如果计划数据刷新的工作簿作者希望使用 PowerPivot 无人参与的数据刷新帐户来运行数据刷新作业，则可以选择此选项。 有关如何在数据刷新计划中查看凭据选项的详细信息，请参阅[计划数据刷新&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。  
@@ -33,15 +33,15 @@ ms.locfileid: "53366589"
   
  [先决条件](#bkmk_prereq)  
   
- [第 1 步：创建目标应用程序并设置凭据](#bkmk_create)  
+ [步骤 1：创建目标应用程序并设置凭据](#bkmk_create)  
   
- [步骤 2:在 PowerPivot 服务器配置页中指定无人参与的帐户](#bkmk_specifyUA)  
+ [步骤 2：在 PowerPivot 服务器配置页中指定无人参与的帐户](#bkmk_specifyUA)  
   
- [步骤 3:授予参与对帐户的权限](#bkmk_grant)  
+ [步骤 3：授予参与对帐户的权限](#bkmk_grant)  
   
- [步骤 4:授予读取权限，才能访问数据刷新中使用的外部数据源](#bkmk_dbread)  
+ [步骤 4：授予读取权限，才能访问数据刷新中使用的外部数据源](#bkmk_dbread)  
   
- [步骤 5:验证在数据刷新配置页中的帐户可用性](#bkmk_verify)  
+ [步骤 5：验证在数据刷新配置页中的帐户可用性](#bkmk_verify)  
   
  [使用 PowerPivot 无人参与的数据刷新帐户](#bkmk_use)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53366589"
   
 -   验证该帐户在已发布的 PowerPivot 工作簿的“管理数据刷新计划”页中可用。  
   
-###  <a name="bkmk_create"></a> 步骤 1:创建目标应用程序并设置凭据  
+###  <a name="bkmk_create"></a> 步骤 1：创建目标应用程序并设置凭据  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53366589"
   
 16. 单击“确定” 。  
   
-###  <a name="bkmk_specifyUA"></a> 步骤 2:在 PowerPivot 服务器配置页中指定无人参与的帐户  
+###  <a name="bkmk_specifyUA"></a> 步骤 2：在 PowerPivot 服务器配置页中指定无人参与的帐户  
   
 1.  在“管理中心”的“应用程序管理”中，单击 **“管理服务应用程序”**。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53366589"
   
 6.  单击“确定” 。  
   
-###  <a name="bkmk_grant"></a> 步骤 3:授予参与对帐户的权限  
+###  <a name="bkmk_grant"></a> 步骤 3：授予参与对帐户的权限  
  在您可以使用 PowerPivot 无人参与的数据刷新帐户之前，对于使用该帐户的任何 PowerPivot 工作簿，必须授予“参与讨论”权限。 此权限级别是从库中打开工作簿、然后在刷新数据后将其保存回库中所必需的。  
   
  分配权限这个步骤将由网站集管理员来执行。 SharePoint 权限可以在根网站集或其下的任何级别分配，包括单独的文档和项。 设置权限的方式将因您所需的粒度而异。 下面的步骤说明可用于授予权限的一个方法。  
@@ -187,7 +187,7 @@ ms.locfileid: "53366589"
   
 8.  单击“确定” 。  
   
- 如果您不仅要更改密码，也要更改帐户用户名，则很可能需要执行附加的配置步骤，例如向外部数据源授予读取权限和 SharePoint 权限以便更新 PowerPivot 工作簿。 有关说明，请转到 PowerPivot 无人参与的数据刷新帐户配置中的此步骤：[步骤 3:授予参与对帐户的权限](#bkmk_grant)，然后继续使用所有剩余的步骤，并最终使用验证帐户是否已正确配置。  
+ 如果您不仅要更改密码，也要更改帐户用户名，则很可能需要执行附加的配置步骤，例如向外部数据源授予读取权限和 SharePoint 权限以便更新 PowerPivot 工作簿。 有关说明，请转到 PowerPivot 无人参与的数据刷新帐户配置中的此步骤：[步骤 3：授予参与对帐户的权限](#bkmk_grant)，然后继续使用所有剩余的步骤，并最终使用验证帐户是否已正确配置。  
   
 ## <a name="see-also"></a>请参阅  
  [使用 SharePoint 2010 的 PowerPivot 数据刷新](powerpivot-data-refresh-with-sharepoint-2010.md)   

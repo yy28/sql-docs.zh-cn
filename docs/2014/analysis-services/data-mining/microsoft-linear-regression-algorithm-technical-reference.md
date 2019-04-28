@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721899"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
@@ -60,7 +60,7 @@ ms.locfileid: "48106067"
 |建模标志|Description|  
 |-------------------|-----------------|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
-|REGRESSOR|指示该列包含在分析过程中应被视为潜在独立变量的连续数值。<br /><br /> 注意：将列标记为回归量不能确保该列将在最终模型中用作回归量。<br /><br /> 适用于挖掘模型列。|  
+|REGRESSOR|指示该列包含在分析过程中应被视为潜在独立变量的连续数值。<br /><br /> 注意：将列标记为回归量不能确保该列将用作最终模型中的回归量。<br /><br /> 适用于挖掘模型列。|  
   
 ### <a name="regressors-in-linear-regression-models"></a>线性回归模型中的回归量  
  线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 但是，即使不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，任何决策树模型也都可以包含表示连续属性的回归的树或节点。  
@@ -83,11 +83,11 @@ ms.locfileid: "48106067"
 |可预测属性|Continuous、Cyclical 和 Ordered|  
   
 > [!NOTE]  
->  `Cyclical` 和`Ordered`支持内容类型，但算法会将它们视为离散值，不执行特别处理。  
+>  支持 `Cyclical` 和 `Ordered` 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [线性回归模型查询示例](linear-regression-model-query-examples.md)   
- [线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729370"
 ---
 # <a name="modifying-the-date-dimension"></a>修改“日期”维度
   在本主题的各任务中，将创建用户定义的层次结构，并更改为“日期”、“月份”、“日历季度”以及“日历半期”等属性显示的成员名称。 还将为属性定义组合键，控制维度成员的排序顺序以及定义属性关系。  
@@ -130,7 +130,7 @@ ms.locfileid: "52526110"
 14. 在“文件”  菜单上，单击“全部保存” 。  
   
 ## <a name="providing-unique-dimension-member-names"></a>提供唯一的维度成员名称  
- 在此任务中，将创建由 **EnglishMonthName****CalendarQuarter** 和 **CalendarSemester** 属性使用的用户友好名称列。  
+ 在此任务中，将创建由 **EnglishMonthName** **CalendarQuarter** 和 **CalendarSemester** 属性使用的用户友好名称列。  
   
 #### <a name="to-provide-unique-dimension-member-names"></a>提供唯一的维度成员名称  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733317"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>挖掘结构任务和操作指南
   **的数据挖掘设计器中的** “挖掘结构” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡包含可用于创建、编辑和处理挖掘结构的工具。  

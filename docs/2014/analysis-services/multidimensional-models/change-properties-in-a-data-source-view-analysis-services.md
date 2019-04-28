@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726831"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
   在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  
@@ -44,7 +44,7 @@ ms.locfileid: "48153027"
 > [!NOTE]  
 >  “属性”窗格显示 .dsv 文件以及 DSV 对象的属性。 若要查看对象的属性，请在解决方案资源管理器中双击它。 将更新“属性”窗格以反映您在下表中看到的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |数据源|指定要查看其属性的数据源视图中的数据源|  
 |Description|指定数据源视图的说明|  
@@ -56,7 +56,7 @@ ms.locfileid: "48153027"
 ## <a name="viewing-or-changing-datatable-properties"></a>查看或更改 DataTable 属性  
  **DataTable** 属性是数据源视图中表、视图和命名查询的属性。 将上述任一对象添加到数据源视图时，便会设置这些属性。 下表列出并说明了数据源视图中 **DataTable** 对象的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |AllowChangesDuringGeneration|指定在重新生成过程中架构生成向导是否有权覆盖数据源视图表。 此属性仅存在于最初由架构生成向导生成的表中。 有关详细信息，请参阅 [了解增量生成](understanding-incremental-generation.md)。|  
 |DataSource|为对象指定数据源。 您无法编辑此属性。|  
@@ -70,7 +70,7 @@ ms.locfileid: "48153027"
 ## <a name="viewing-or-changing-datacolumn-properties"></a>查看或更改 DataColumn 属性  
  **DataColumn** 属性是数据源视图的表、视图和命名查询中列的属性。 将上述任一对象从基础表、视图或命名查询添加到数据源视图时，或者上述任一对象在由命名计算定义后添加到数据源视图时，便会设置这些属性。 下表列出并说明了数据源视图中 **DataColumn** 对象的属性。  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |AllowNull|基于基础表、值或命名查询中的列指定列的为空性属性。 此属性不可编辑。|  
 |DataType|基于基础表、值或命名查询中的列指定列的数据类型。 此属性不可直接编辑。 但是，如果需要更改表或视图中列的数据类型，则使用可将列转换为所需数据类型的命名查询来替换表。|  
@@ -82,6 +82,6 @@ ms.locfileid: "48153027"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)   
- [使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器中的关系图 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

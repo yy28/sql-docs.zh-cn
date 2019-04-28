@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693525"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 类
   [ClientNetworkProtocol 类](clientnetworkprotocol-class.md)表示网络协议允许使用的实例进行通信的客户端实例上安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络。  

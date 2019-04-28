@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679745"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>“交叉验证”选项卡（“挖掘准确性图表”视图）
-  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后将生成一组标准准确性指标为每个模型。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
+  通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后为每个模型生成一组标准准确性指标。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
   
  有关详细信息，请参阅[交叉验证（Analysis Services - 数据挖掘）](data-mining/cross-validation-analysis-services-data-mining.md)。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188203"
  当**目标****阈值**设置为`null`，这是默认值，每个事例最有可能的预测计为正确。 在上面的示例中，0.05、0.15 和 0.8 是三个不同事例中的预测概率。 虽然概率差别较大，但每个预测都记为正确，因为每个事例只生成一个预测，而这些预测是这些事例的最佳预测。  
   
 ## <a name="see-also"></a>请参阅  
- [测试和验证&#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)   
- [交叉验证&#40;Analysis Services-数据挖掘&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)   
+ [交叉验证（Analysis Services - 数据挖掘）](data-mining/cross-validation-analysis-services-data-mining.md)   
  [交叉验证报表中的度量值](data-mining/measures-in-the-cross-validation-report.md)   
- [数据挖掘存储过程&#40;Analysis Services-数据挖掘&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [数据挖掘存储过程（Analysis Services - 数据挖掘）](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

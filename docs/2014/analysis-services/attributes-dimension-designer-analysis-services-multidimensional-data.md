@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650791"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格管理与所选维度关联的属性。 可以将属性从此窗格拖到 **“层次结构”** 窗格，以创建层次结构和级别。 有关详细信息，请参阅[层次结构&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720231"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形状图（报表生成器和 SSRS）
   形状图将值数据显示为整体的百分比。 形状图通常用于显示数据集中不同值之间的比例比较结果。 类别由各个形状段来表示。 形状段的大小由值来决定。 形状图与饼图的用法类似，但前者是按从最大到最小的顺序来排列类别。  

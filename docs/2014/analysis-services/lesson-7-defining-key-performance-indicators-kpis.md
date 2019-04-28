@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6a27cfbbe4a499f6ac2c598e80f30409a37ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728198"
 ---
-# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 课：定义关键绩效指标 (Kpi)
+# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 课：定义关键绩效指标 (KPI)
   在本课中，您将了解如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义关键绩效指标 (KPI)。 KPI 可以为用于定义度量业务的服务器端计算提供框架，并且也可以使结果信息的显示方式标准化。 使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 工具和第三方工具，通过数据访问 API，KPI 可以显示在报表、门户和仪表板中。 KPI 是对常规度量值和其他多维表达式 (MDX) 表达式的元数据包装。 有关详细信息，请参阅[多维模型中的关键绩效指标 (KPI)](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)。  
   
 > [!NOTE]  

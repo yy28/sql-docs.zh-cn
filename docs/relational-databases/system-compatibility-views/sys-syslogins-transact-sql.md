@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671926"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53204227"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**适用于**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]通过[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,9 +51,9 @@ ms.locfileid: "53204227"
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**名称**|**sysname**|用户的登录名。|  
-|**数据库名称**|**sysname**|建立连接时，用户的默认数据库名。|  
+|**dbname**|**sysname**|建立连接时，用户的默认数据库名。|  
 |**password**|**nvarchar(128)**|返回 NULL。|  
-|**语言**|**sysname**|默认的用户语言。|  
+|**language**|**sysname**|默认的用户语言。|  
 |**denylogin**|**int**|1 = 登录名是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组且已被拒绝访问。|  
 |**hasaccess**|**int**|1 = 已授权登录名访问服务器。|  
 |**isntname**|**int**|1 = 登录名是 Windows 用户或组。<br /><br /> 0 = 登录名是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  

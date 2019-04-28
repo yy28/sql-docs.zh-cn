@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795354"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>更改表、列或行筛选器映射（SSAS 表格）
   本主题介绍如何使用 **中的** “编辑表属性” [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对话框来更改表、列或行筛选器映射。  
@@ -45,6 +45,6 @@ ms.locfileid: "48201487"
          如果您执行了错误的操作并需要重新开始，请单击 **“清除行筛选器”**。  
   
 ## <a name="see-also"></a>请参阅  
- [编辑表属性对话框&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [“编辑表属性”对话框 (SSAS)](../edit-table-properties-dialog-box-ssas.md)  
   
   

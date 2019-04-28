@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726351"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署实用工具部署模型解决方案
   可以使用 **Microsoft.AnalysisServices.Deployment** 实用工具在命令提示符下启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 此实用工具使用的输入文件，是在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中生成 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目时生成的 XML 输出文件。 可以轻松修改输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
@@ -69,7 +69,7 @@ ms.locfileid: "48106767"
 ##  <a name="Modes"></a> 模式  
  此实用工具可以在下表列出的模式下运行。  
   
-|“模式”|Description|  
+|模式|Description|  
 |----------|-----------------|  
 |静默模式|不会显示任何用户界面，部署所需要的全部信息均由输入文件提供。 在静默模式下，此实用工具不显示进度。 但可使用可选的日志文件捕获进度和错误信息供以后查看。|  
 |应答模式|显示部署向导用户界面，并将用户响应保存到指定的输入文件供以后部署。 不会在应答模式下进行部署。 应答模式的唯一用途是捕获用户响应|  

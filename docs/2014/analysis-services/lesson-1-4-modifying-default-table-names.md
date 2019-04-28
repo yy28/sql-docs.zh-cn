@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729532"
 ---
 # <a name="modifying-default-table-names"></a>修改默认表名
   可以在数据源视图中更改 **FriendlyName** 属性的值，以使它们更易于受人关注和使用。  
@@ -51,6 +51,6 @@ ms.locfileid: "48065407"
   
 ## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [更改数据源视图中的属性&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [在数据源视图中更改属性 (Analysis Services)](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659236"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>安装示例数据和多维项目 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 使用的说明和本文中提供的链接安装 Analysis Services 教程中使用的数据和项目文件。 
   
-## <a name="step-1-install-prerequisites"></a>步骤 1：安装先决条件 
+## <a name="step-1-install-prerequisites"></a>第 1 步：安装先决条件 
 本教程中的课程假定您已安装以下软件。 您可以在一台计算机上安装的所有功能。 若要安装这些功能，请运行 SQL Server 安装程序并从“功能选择”页中选择它们。  
   
 -   SQL Server 数据库引擎  
   
--   SQL Server Analysis Services (SSAS) 
+-   SQL Server Analysis Services  (SSAS) 
   
     Analysis Services 是在仅限这些版本中可用：评估版，企业版、 商业智能，标准。 Azure Analysis Services 中不支持多维模型。
   
     默认情况下，作为表格实例，您可以替代通过在服务器中的安装向导的配置页选择多维服务器模式安装 Analysis Services 2016 及更高版本。
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>步骤 2：下载并安装开发人员和管理工具
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>第 2 步：下载并安装开发人员和管理工具
 SQL Server Data Tools (SSDT) for Visual Studio 是单独下载和安装其他 SQL Server 功能。 设计器和用于创建 BI 模型和报表的项目模板包含在 SSDT 中的 Visual Studio 2015 或作为[Nuget 包](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)Visual Studio 2017。  
   
 [下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542)。   

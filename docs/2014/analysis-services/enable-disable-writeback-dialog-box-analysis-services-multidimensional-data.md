@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731499"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>启用 / 禁用写回对话框 (Analysis Services-多维数据)
   可以使用“启用/禁用写回”对话框，为多维数据集中的度量值组启用或禁用写回。 对度量值组启用写回将定义一个写回分区，并为该度量值组创建一个写回表。 对度量值组禁用写回将删除写回分区（但不会删除写回表），以免发生意外数据丢失。 通过执行以下操作可以显示“启用/禁用写回”对话框：  

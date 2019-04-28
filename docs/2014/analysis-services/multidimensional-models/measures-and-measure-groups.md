@@ -22,24 +22,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725783"
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
   多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
   
  本主题将介绍 [Measures](#bkmk_measure) 和 [Measure Groups](#bkmk_mg)。 它还包含以下表格，以及指向有关创建和配置度量值和度量值组的过程步骤的链接。  
   
-|**链接**|**Description**|  
+|**链接**|**说明**|  
 |--------------|---------------------|  
 |[在多维模型中创建度量值和度量值组](create-measures-and-measure-groups-in-multidimensional-models.md)|选择多种方法中的其中一种来创建度量值和度量值组。|  
 |[配置度量值属性](configure-measure-properties.md)|如果使用多维数据集向导来启动多维数据集，则在聚合值之前可能需要更改聚合方法、应用数据格式、在客户端应用程序中设置该度量值的可见性，或添加度量值表达式以处理数据。|  
 |[配置度量值组属性](configure-measure-group-properties.md)|在多维模型中，度量值组相当于源数据仓库中的事实数据表。 通过度量值组的属性，你可以指定缓存行为、存储以及在度量值组级别统一操作的处理指令。 分区配置部分确定于你在度量值组对象上设置的属性。|  
 |[使用聚合函数](use-aggregate-functions.md)|了解可分配给度量值的聚合方法。|  
-|[定义半累加性行为](define-semiadditive-behavior.md)|半累加性行为是指对某些维度有效而对其他维度无效的聚合。 常见示例为银行帐户余额。 你可能想按客户和地域（而不是时间）来聚合余额。 例如，您可能不想连续数日从相同帐户添加余额。 若要定义半累加性行为，请使用“添加商业智能向导”。|  
+|[“选择增强功能”](define-semiadditive-behavior.md)|半累加性行为是指对某些维度有效而对其他维度无效的聚合。 常见示例为银行帐户余额。 你可能想按客户和地域（而不是时间）来聚合余额。 例如，您可能不想连续数日从相同帐户添加余额。 若要定义半累加性行为，请使用“添加商业智能向导”。|  
 |[链接度量值组](linked-measure-groups.md)|重用同一数据库中或不同 Analysis Services 数据库中其他多维数据集的现有度量值组。|  
   
 ##  <a name="bkmk_measure"></a> Measures  

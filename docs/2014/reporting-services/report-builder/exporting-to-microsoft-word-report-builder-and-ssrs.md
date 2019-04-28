@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657952"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
   Word 呈现扩展插件通过 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的本机格式呈现报表。 格式为 Office Open XML。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f81cca9c4f7be1e0a94b9947432d1e7534994e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726841"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>更改分区源以使用不同的事实数据表
   在创建多维数据集的分区时，可以选择使用不同的事实数据表。 不同的数据表可能来自单个数据源视图，也可能来自不同的数据源视图或不同的数据源。 数据源视图也可能包含来自多个数据源的不同表。  
@@ -33,6 +33,6 @@ ms.locfileid: "48153787"
  可以使用包含重复数据的不同事实数据表，但建议不要这样做。 因为在此情况下，您必须在分区中使用筛选器，以确保一个分区使用的数据不被任何其他分区使用。 有关详细信息，请参阅[创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [创建和管理本地分区&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [创建和管理本地分区 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

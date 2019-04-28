@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805861"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE（ODBC 错误代码）
   SQLSTATE 提供与警告或错误的原因有关的详细信息。 在数据中出现的错误源检测到并返回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将返回本机错误号映射到相应的 SQLSTATE。 如果本机错误号没有要映射到，ODBC 错误代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将返回 SQLSTATE 42000 （"语法错误或访问冲突"）。 对于由驱动程序检测到的错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将生成相应的 SQLSTATE。  
   
  有关状态错误代码的详细信息，请参阅下面的主题：  
   
--   [附录 A：ODBC 错误代码](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [附录 a:ODBC 错误代码](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [SQLSTATE 映射](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

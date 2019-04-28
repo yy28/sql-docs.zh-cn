@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792610"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
   
 |DQS 组件|Description|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库引擎，包括三个数据库：DQS_MAIN、 DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎的基础上安装，包括 3 个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使你可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019630"
   
  DQS 安装过程包括三个部分：  
   
--   [预安装任务](#PreInstallationTasks):在安装 DQS 前验证系统要求。  
+-   [预安装任务](#PreInstallationTasks)：安装 DQS 前先验证系统要求。  
   
--   [Data Quality Services 安装任务](#DQSInstallation):使用 SQL Server 安装程序安装 DQS。  
+-   [Data Quality Services 安装任务](#DQSInstallation)：使用 SQL Server安装程序安装 DQS。  
   
--   [安装后任务](#PostInstallationTasks):使用 SQL Server 安装程序完成安装 DQS 后执行这些任务。  
+-   [安装后任务](#PostInstallationTasks)：使用 SQL Server 安装程序完成 DQS 安装后执行以下任务。  
   
 > [!NOTE]  
 >  本主题不包括有关从命令行运行安装程序的说明。 有关命令行选项可用于安装信息[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和客户端，请参阅[功能参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)中[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "56019630"
   
 |DQS 组件|最低系统要求|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：<br />-最小值：2 GB<br />建议：4 GB 或更多<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎。 有关详细信息，请参阅[有关 SQL Server 数据库引擎](../../database-engine/sql-server-database-engine-overview.md)。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：<br />-最小值：2 GB<br />建议：4 GB 或更大<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库引擎。 有关详细信息，请参阅[有关 SQL Server 数据库引擎](../../database-engine/sql-server-database-engine-overview.md)。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]
@@ -75,7 +75,7 @@ ms.locfileid: "56019630"
 |使数据可供 DQS 操作使用|确保您可以访问用于 DQS 操作的源数据，并且可以将已处理的数据导出到数据库中的某个表。|[访问 DQS 操作数据](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [视频：安装和配置 DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [视频：安装并配置 DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新后升级 SQLCLR 程序集](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   

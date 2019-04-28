@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721729"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器创建推送订阅的信息，请参阅[为非 SQL Server 订阅服务器创建订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
@@ -263,7 +263,7 @@ ms.locfileid: "54135537"
  [Create a Publication](publish/create-a-publication.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [同步推送订阅](synchronize-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [订阅发布](subscribe-to-publications.md)   
  [将 sqlcmd 与脚本变量结合使用](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

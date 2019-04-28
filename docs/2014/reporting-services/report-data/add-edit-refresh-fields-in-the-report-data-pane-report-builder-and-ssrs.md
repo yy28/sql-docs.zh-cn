@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 002caf336a45e9b1b8b01e2e1ba2308b05a38378
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697719"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）
   数据集字段是在对外部数据源运行数据集查询时返回的表示数据的字段名称的内置集合。  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792734"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>将域导出到 .dqs 文件
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将域导出到 .dqs 文件。 您可以将域或整个知识库导出到数据文件。 有关导出知识库的信息，请参阅[将知识库导出到 .dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "56023638"
   
 6.  在 **“导出域”** 对话框中，验证该对话框中的状态行是否指示导出已完成。 单击“确定” 。  
   
-##  <a name="FollowUp"></a> 跟进：之后将域导出到.dqs 文件  
+##  <a name="FollowUp"></a> 跟进：将域导出到 .dqs 文件后  
  将域导出到 .dqs 文件后，您可以将该域导入到另一个知识库。  
   
   

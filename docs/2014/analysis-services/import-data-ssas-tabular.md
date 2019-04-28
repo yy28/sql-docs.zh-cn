@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730385"
 ---
 # <a name="import-data-ssas-tabular"></a>导入数据（SSAS 表格）
   可以从各种源将数据导入表格模型中。 本节中的主题说明如何使用数据导入向导连接并选择要导入模型项目的数据。  
@@ -26,7 +26,7 @@ ms.locfileid: "48145981"
   
  使用表导入向导，可以从以下数据源导入数据：  
   
-|**数据源**|**Description**|  
+|**数据源**|**说明**|  
 |---------------------|---------------------|  
 |**关系数据库**|关系数据源包括：<br /><br /> Microsoft SQL Server<br /><br /> Microsoft SQL Azure<br /><br /> Microsoft SQL Server Parallel Data Warehouse<br /><br /> Microsoft Access<br /><br /> Oracle<br /><br /> Teradata<br /><br /> Sybase<br /><br /> Informix<br /><br /> IBM DB2<br /><br /> OLEDB/ODBC|  
 |**多维源**|Microsoft SQL Server Analysis Services 多维数据集|  
@@ -43,6 +43,6 @@ ms.locfileid: "48145981"
 |[从多维数据源导入&#40;SSAS 表格&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|说明如何从多维 SQL Server Analysis Services 多维数据集导入数据。|  
 |[从数据馈送导入&#40;SSAS 表格&#41;](import-from-a-data-feed-ssas-tabular.md)|说明如何从数据馈送（如 Microsoft Reporting Services 报表或 Azure DataMarket 数据集）导入数据。|  
 |[从文本文件导入&#40;SSAS 表格&#41;](import-from-a-text-file-ssas-tabular.md)|说明如何从 Microsoft Excel 工作簿或文本文件中导入数据。|  
-|[复制和粘贴数据&#40;SSAS 表格&#41;](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
+|[复制并粘贴数据（SSAS 表格）](copy-and-paste-data-ssas-tabular.md)|说明如何使用“粘贴”和“追加粘贴”将数据添加到模型设计器中的现有表。|  
   
   

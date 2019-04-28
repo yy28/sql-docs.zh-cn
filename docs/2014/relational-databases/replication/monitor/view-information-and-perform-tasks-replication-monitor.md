@@ -1,5 +1,5 @@
 ---
-title: 查看信息和执行其任务使用复制监视器 |Microsoft Docs
+title: 使用复制监视器查看信息和执行任务 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667123"
 ---
-# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>查看信息和执行使用复制监视器任务
-复制监视器提供大量选项卡和选项，以查看信息并执行各种任务。 本文介绍了不同的操作，可以查看和完成时使用复制监视器。
+# <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
+复制监视器提供大量选项卡和选项，用于查看信息和执行各种任务。 本文介绍使用复制监视器时可以查看和完成的各种事项。
 
-## <a name="for-a-publication"></a>为发布
+## <a name="for-a-publication"></a>针对发布
 
 ### <a name="view-information"></a>查看信息
 
@@ -53,13 +53,13 @@ ms.locfileid: "54136353"
 2.  若要查看和修改发布属性，请右键单击该发布，然后单击 **“属性”**。    
 3.  若要查看有关订阅的信息，请单击 **“所有订阅”** 选项卡。  
   
-     若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
+     若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
   
-4.  若要查看有关代理的信息，请单击 **“代理”** 选项卡。您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。    
+4.  若要查看有关代理的信息，请单击 **“代理”** 选项卡。您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。    
 5.  若要查看代理警告和阈值的相关信息，请单击 **“警告”** 选项卡。有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)。   
 6.  若要查看有关跟踪令牌的信息，请单击 **“跟踪令牌”** 选项卡。有关如何使用跟踪令牌的详细信息，请参阅 [为事务复制测量滞后时间和验证连接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
-## <a name="for-a-publisher"></a>在发布服务器
+## <a name="for-a-publisher"></a>针对发布服务器
   复制监视器提供了下列选项卡，以显示有关选定发布服务器的信息：  
   
 -   **发布**-此选项卡显示所选发布服务器上所有发布的相关信息。  
@@ -86,7 +86,7 @@ ms.locfileid: "54136353"
     -   若要启动未运行的代理，请右键单击代理，然后单击 **“启动代理”**。    
     -   若要停止运行中的代理，请右键单击代理，然后单击 **“停止代理”**。  
   
-## <a name="for-a-subscription"></a>订阅 
+## <a name="for-a-subscription"></a>针对订阅 
 
   复制监视器提供下列包含订阅相关信息的选项卡：  
   
@@ -100,16 +100,16 @@ ms.locfileid: "54136353"
   
 1.  在左窗格中展开发布服务器组，再展开其中的一个发布服务器，然后单击其中的一个发布。   
 2.  若要查看有关订阅的信息，请单击 **“所有订阅”** 选项卡。若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。   
-3.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
+3.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
   
-### <a name="subscription-watch-list-tab"></a>订阅监视列表选项卡  
+### <a name="subscription-watch-list-tab"></a>“订阅监视列表”选项卡  
   
 1.  在左窗格中，展开发布服务器组，然后单击一个发布服务器。   
 2.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。  
 3.  从“显示 \<订阅类型> 订阅”下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
-4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
+4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”**。 您还可以通过该选项卡访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
 
-## <a name="for-publication-agents"></a>发布代理的
+## <a name="for-publication-agents"></a>针对发布代理
 
   复制监视器提供了 **“代理”** 选项卡，其中包含与所选发布关联的代理的相关信息。 分发代理和合并代理与订阅相关联;有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](view-information-and-perform-tasks-replication-monitor.md)。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "54136353"
     -   若要启动未运行的代理，请右键单击代理，然后单击 **“启动代理”**。  
       -   若要停止运行中的代理，请右键单击代理，然后单击 **“停止代理”**。  
 
-## <a name="for-subscription-agents"></a>订阅代理的
+## <a name="for-subscription-agents"></a>针对订阅代理
 
 ### <a name="view-information-and-perform-tasks"></a>查看信息并执行任务
   复制监视器提供了两个选项卡，可用于访问与订阅相关联的代理的相关信息：  

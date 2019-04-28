@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730714"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>层次结构（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“层次结构”** 窗格管理当前所选维度的层次结构和级别。 有关详细信息，请参阅 [创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)。  

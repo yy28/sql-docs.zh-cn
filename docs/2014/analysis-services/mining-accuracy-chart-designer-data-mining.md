@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703184"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>挖掘准确性图表设计器（数据挖掘）
   可以使用 **“挖掘准确性图表”** 视图，比较基于所选挖掘结构生成的不同挖掘模型的性能。  
@@ -35,9 +35,9 @@ ms.locfileid: "48171967"
   
 -   [分类矩阵选项卡&#40;挖掘准确性图表视图&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     在所选模型显示分类矩阵`Input Selection`选项卡。  
+     显示在`Input Selection`选项卡上所选模型的分类矩阵。  
   
--   [交叉验证选项卡&#40;挖掘准确性图表视图&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [“交叉验证”选项卡（“挖掘准确性图表”视图）](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      为所选挖掘结构设置选项并生成交叉验证结果。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171967"
 ## <a name="see-also"></a>请参阅  
  [挖掘结构视图&#40;数据挖掘模型设计器&#41;](mining-structure-view-data-mining-model-designer.md)   
  [挖掘模型视图&#40;数据挖掘模型设计器&#41;](mining-models-view-data-mining-model-designer.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [预测查询生成器&#40;数据挖掘&#41;](prediction-query-builder-data-mining.md)  
   
   

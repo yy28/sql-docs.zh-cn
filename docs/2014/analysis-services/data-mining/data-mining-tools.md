@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722879"
 ---
 # <a name="data-mining-tools"></a>数据挖掘工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了以下工具，可用于创建数据挖掘解决方案：  
@@ -62,7 +62,7 @@ ms.locfileid: "48171547"
   
 -   创建针对现有挖掘模型的预测和内容查询。 生成一次性查询，或设置用于为整个外部数据表生成预测的查询。  
   
- **有关详细信息：** [数据挖掘设计器](data-mining-designer.md)  
+ **有关详细信息：**[数据挖掘设计器](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  在创建挖掘模型并将其部署到服务器之后，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来管理承载数据挖掘对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 也可以继续执行使用模型的任务，如浏览模型、处理新数据和创建预测。  
@@ -91,7 +91,7 @@ ms.locfileid: "48171547"
  **有关详细信息：**[数据挖掘解决方案的相关项目](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)   
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
  [挖掘模型查看器任务和操作指南](mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘解决方案](data-mining-solutions.md)  

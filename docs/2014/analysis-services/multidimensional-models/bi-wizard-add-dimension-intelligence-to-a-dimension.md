@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1bee662934a8c63393da3fdf1f6c64b3e9def579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726927"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>向维度中添加维度智能
   可以在多维数据集或维度中添加维度智能增强功能，以便为维度指定标准业务类型。 此增强功能还将为维度属性指定相应的类型。 客户端应用程序在分析数据时可以使用这些指定的类型。  
@@ -35,7 +35,7 @@ ms.locfileid: "48061277"
 >  如果选择 **“帐户”** 作为维度，则要指定维度的帐户智能。 有关详细信息，请参阅 [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="specifying-dimension-attributes"></a>指定维度属性  
- 上**定义维度智能**页上，在**维度类型**列表中，所做的选择将设置维度的`Type`属性。 `Type`属性设置为服务器和客户端的信息应用程序提供有关内容的维度。 某些设置只为客户端应用程序提供指导；这些设置是可选的。 其他设置（如“帐户”或“时间”）则确定特定的行为，它们在实现特定商业智能增强功能时可能是必需的。 例如，SQL Server Management Studio 使用维度类型标识“货币”维度，并设置合适的货币换算规则。 **“维度类型”** 的默认设置是 **“常规”**，该设置不对维度内容进行任何假设。  
+ 上**定义维度智能**页上，在**维度类型**列表中，所做的选择将设置维度的`Type`属性。 `Type` 属性设置可以为服务器和客户端应用程序提供有关维度内容的信息。 某些设置只为客户端应用程序提供指导；这些设置是可选的。 其他设置（如“帐户”或“时间”）则确定特定的行为，它们在实现特定商业智能增强功能时可能是必需的。 例如，SQL Server Management Studio 使用维度类型标识“货币”维度，并设置合适的货币换算规则。 **“维度类型”** 的默认设置是 **“常规”**，该设置不对维度内容进行任何假设。  
   
  选择维度类型后，请在 **“维度属性”** 的 **“包含”** 列中，选中在维度中有其相应属性的每个标准属性类型旁边的复选框。 最后，在“维度属性”列中展开下拉列表，并在维度中选择对应于所选属性类型的属性。 如果从该列表选择特性，将会设置特性的 `Type` 属性。  
   

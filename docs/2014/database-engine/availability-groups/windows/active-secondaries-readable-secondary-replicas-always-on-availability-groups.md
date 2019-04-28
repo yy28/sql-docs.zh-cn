@@ -1,5 +1,5 @@
 ---
-title: 活动辅助副本：可读次要副本 (Alwayson 可用性组） |Microsoft Docs
+title: 活动次要副本：可读次要副本 (Alwayson 可用性组） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789849"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动辅助副本：可读次要副本 (Alwayson 可用性组）
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本 (Alwayson 可用性组）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
   
  在主数据库中进行的安全设置会对辅助数据库永久保留。 这包括用户、数据库角色和应用程序角色及其各自的权限；如果对主数据库启用了透明数据加密 (TDE)，还将包括 TDE。  
@@ -272,9 +272,9 @@ GO
     |可读辅助副本？|启用了快照隔离或 RCSI 级别隔离？|主数据库|辅助数据库|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |否|否|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
-    |否|用户帐户控制|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
-    |用户帐户控制|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
-    |用户帐户控制|用户帐户控制|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |否|是|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
+    |是|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |是|是|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 相关任务  
   

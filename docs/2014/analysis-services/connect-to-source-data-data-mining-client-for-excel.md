@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680248"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>连接到源数据（Excel 数据挖掘客户端）
   本主题介绍如何创建和使用连接来存储数据挖掘模型以及访问 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中存储的外部数据。  
@@ -29,7 +29,7 @@ ms.locfileid: "48159737"
   
  **与外部数据源的连接。** 生成模型或保存结果时还可以创建与外部数据的连接。 例如，您可以在一个服务器上创建数据挖掘模型，然后使用存储在另一个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例、Excel 数据表或者外部数据源（如 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access）中的数据对该数据挖掘模型执行预测查询。 每次访问新的数据源时，系统都通过一个对话框提示您创建连接。  
   
-##  <a name="bkmk_prereq2"></a> Prerequisites  
+##  <a name="bkmk_prereq2"></a> 先决条件  
  此版本的外接程序要求您的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例为 SQL Server 2012。 若要连接到早期版本的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，则可使用外接程序的一个单独版本。 有很多外接程序版本支持 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2。  
   
  要连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，您必须具有访问数据库服务器的权限。 而且，还必须启用数据挖掘会话，您还必须具有服务器上存储的数据库对象的读或读/写权限。  

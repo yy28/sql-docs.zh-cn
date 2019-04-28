@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657151"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -49,7 +49,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *docid*  
  与键值相对应的内部文档标识符 (DocId)。 无效的 *docid* 值不会返回任何结果。  
   
- *密钥*  
+ *key*  
  指定表中的全文键值。 无效的 *key* 值不会返回任何结果。 有关全文索引键值的信息，请参阅[管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 > [!IMPORTANT]  

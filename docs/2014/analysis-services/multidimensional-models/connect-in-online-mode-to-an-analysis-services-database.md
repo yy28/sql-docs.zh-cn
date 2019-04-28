@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d87e8919f7a6173614f0da6a874d83e5da7a874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702089"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在联机模式下连接到 Analysis Services 数据库
   可以直接连接到现有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并直接修改该数据库中的对象。 直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库时，会立即更改对象并且不在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。  
@@ -40,7 +40,7 @@ ms.locfileid: "48056673"
      现在可以直接编辑 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有对象。  
   
 ## <a name="see-also"></a>请参阅  
- [使用 Analysis Services 在开发阶段项目和数据库](work-with-analysis-services-projects-and-databases-in-development.md)   
- [创建多维模型使用的 SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [在开发阶段使用 Analysis Services 项目和数据库](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [使用 SQL Server Data Tools 创建多维模型 (SSDT)](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832563"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>列长度分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选择的 **“列长度分布配置文件请求”** 设置选项。 列长度分布配置文件报告所选列中字符串值的所有不同长度，以及每个长度表示的行在表中的百分比。 此配置文件有助于标识数据中的问题，如值无效。 例如，在对以两个字符表示的美国州代码列进行事件探查，发现存在超过两个字符的值。  

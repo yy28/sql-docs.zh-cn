@@ -1,5 +1,5 @@
 ---
-title: 修改或删除数据库维度在解决方案资源管理器 |Microsoft 文档
+title: 修改或删除数据库维度在解决方案资源管理器 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c03cd9c54ca7315a9d6d8b7b9c99fe46f1be93a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714834"
 ---
-# <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>数据库维度的修改或删除数据库维度在解决方案资源管理器
+# <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>数据库维度-修改或删除数据库维度在解决方案资源管理器
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度设计器来修改或删除维度。 修改维度时，只有对维度进行处理后，所做的更改才对用户可用。 有关详细信息，请参阅[处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34025774"
   
 -   在解决方案资源管理器中，右键单击要删除的维度，然后单击“删除”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的维度](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

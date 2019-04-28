@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 531a100fed389264d9af6a1733636792a3dc7920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660939"
 ---
 # <a name="reserved-keyword-limitations"></a>保留的关键字限制
 
@@ -31,5 +31,5 @@ ODBC 保留关键字的列表将出现在：
 
 - [ODBC 保留关键字](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)。
 
-- 在中*ODBC 程序员参考指南*，请参阅[附录 c: SQL 语法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)。
+- 在中*ODBC 程序员参考指南*，请参阅[附录 c:SQL 语法](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)。
 

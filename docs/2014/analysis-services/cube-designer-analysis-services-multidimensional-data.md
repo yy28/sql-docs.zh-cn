@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679623"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>多维数据集设计器（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的**多维数据集设计器**，编辑现有多维数据集的各种属性，包括多维数据集中包含的度量值组和度量值、多维数据集维度和维度关系、计算、关键绩效指标 (KPI)、操作、分区、透视和翻译，还可以浏览多维数据集中包含的数据。 通过执行以下操作可以显示 **“多维数据集设计器”** 对话框：  
@@ -31,7 +31,7 @@ ms.locfileid: "48155413"
   
 ## <a name="tabs"></a>制表符  
   
-|选项卡|定义|  
+|Tab|定义|  
 |---------|----------------|  
 |**多维数据集结构**|使用此选项卡可以创建和修改度量值组和度量值、添加多维数据集维度以及通过关联的数据源视图显示多维数据集中包含的对象。 有关此选项卡的详细信息，请参阅[多维数据集结构（多维数据集设计器）（Analysis Services - 多维数据）](cube-structure-cube-designer-analysis-services-multidimensional-data.md)。|  
 |**维度用法**|使用此选项卡可以创建和修改多维数据集中包含的多维数据集维度和度量值组之间的关系。 有关此选项卡的详细信息，请参阅[维度用法（多维数据集设计器）（Analysis Services - 多维数据）](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)。|  

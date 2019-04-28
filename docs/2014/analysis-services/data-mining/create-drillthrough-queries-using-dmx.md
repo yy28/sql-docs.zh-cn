@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722687"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 来创建钻取查询
   对于支持钻取的所有模型，可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何其他支持 DMX 的客户端中创建 DMX 查询来检索事例数据和结构数据。  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  请注意，在此示例中，已使用别名对该结构列进行了重命名。 如果您没有为该结构列分配别名，则该列将以“Expression”名称返回。 这是所有未命名列的默认行为。  
   
 ## <a name="see-also"></a>请参阅  
- [钻取查询&#40;数据挖掘&#41;](drillthrough-queries-data-mining.md)   
+ [钻取查询（数据挖掘）](drillthrough-queries-data-mining.md)   
  [对挖掘结构的钻取功能](drillthrough-on-mining-structures.md)  
   
   

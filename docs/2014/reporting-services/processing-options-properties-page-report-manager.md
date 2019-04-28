@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657667"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>“处理选项”属性页（报表管理器）
   使用“处理选项”属性页可为当前所选的报表设置报表执行属性。 这些选项将确定处理报表数据的时间。 您可以设置这些选项，使报表数据的检索时间错开高峰期。 如果有经常访问的报表，则可以临时缓存其副本，这样，在每隔几分钟便有多个用户访问同一报表的情况下可使用户无需等待。  

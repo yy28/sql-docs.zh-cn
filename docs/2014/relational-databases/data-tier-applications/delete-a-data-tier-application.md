@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872716"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要升级 DAC，使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)， [PowerShell](#DeleteDACPowerShell)  
+-   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在删除某一数据层应用程序 (DAC) 实例时，您可以选择三个选项之一，这三个选项指定要对与该数据层应用程序相关联的数据库执行何种操作。 所有这三个选项都删除 DAC 定义元数据。 这些选项在如何处理与数据层应用程序相关联的数据库上有所不同。 向导并不删除与 DAC 或数据库相关联的任何实例级别的对象，例如登录名。  
   
-|选项|数据库操作|  
+|Option|数据库操作|  
 |------------|----------------------|  
 |删除注册|关联的数据库保持不变。|  
 |分离数据库|关联的数据库被分离。 数据库引擎的实例无法引用该数据库，但数据和日志文件保持不变。|  
@@ -46,7 +46,7 @@ ms.locfileid: "52532513"
 ###  <a name="LimitationsRestrictions"></a> 限制和局限  
  在删除某一 DAC 后，没有自动的机制可以还原该 DAC 的定义元数据或数据库。 您可以手动重新生成 DAC 实例的方式取决于删除选项。  
   
-|选项|如何重新生成 DAC 实例|  
+|Option|如何重新生成 DAC 实例|  
 |------------|-------------------------------------|  
 |删除注册|从原来的数据库中注册一个 DAC。|  
 |分离数据库|通过使用 **sp_attachdb** 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]重新附加数据库，然后从该数据库注册一个新的 DAC 实例。|  

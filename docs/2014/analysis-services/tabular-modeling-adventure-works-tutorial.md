@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795508"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
   本教程提供的课程介绍如何通过使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 创建 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格模型。  
@@ -94,6 +94,6 @@ ms.locfileid: "53373679"
 |[为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
   
 ## <a name="next-step"></a>下一步  
- 要开始学习本教程，请转到第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
+ 若要开始本教程，请继续第一课：[第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

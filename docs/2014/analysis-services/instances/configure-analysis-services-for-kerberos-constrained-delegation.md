@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20e8a9d7b360b9b161d994805ff713840962be41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730903"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 约束委派配置 Analysis Services
   在配置 Analysis Services 以使用 Kerberos 身份验证时，您很可能希望实现以下两个结果中的一个或全部两个：在查询数据时让 Analysis Services 模拟某个用户标识；或者让 Analysis Services 将某个用户标识委托给下级服务。 每个方案都具有稍有不同的配置要求。 这两个方案都要求进行验证，以便确保正确完成配置。  
@@ -44,9 +44,9 @@ ms.locfileid: "53350050"
   
 |任务|Description|  
 |----------|-----------------|  
-|步骤 1：确认帐户是否适合委托|请确保用于运行服务的帐户在 Active Directory 中具有正确的属性。 Active Directory 中的服务帐户不得标记为敏感帐户，也不得明确从委托方案中排除。 有关详细信息，请参阅 [理解用户帐户](https://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> **\*\* 重要\* \*** 所有帐户和服务器必须通常情况下，都属于同一 Active Directory 域或者同一个林中受信任的域。 但是，因为 Windows Server 2012 支持跨域边界的委托，如果域功能级别是 Windows Server 2012，您可以配置跨域边界的 Kerberos 约束委派。 另一种替代方法是，配置 Analysis Services 进行 HTTP 访问并对客户端连接使用 IIS 身份验证方法。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
-|步骤 2：注册 SPN|在设置约束委派前，您必须为 Analysis Services 实例注册服务主体名称 (SPN)。 在为中间层服务配置 Kerberos 约束委派时，将需要 Analysis Services SPN。 有关说明，请参阅 [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) 。<br /><br /> 服务主体名称 (SPN) 指定域中为 Kerberos 身份验证配置的服务的唯一标识。 使用集成安全性的客户端连接通常请求 SPN 作为 SSPI 身份验证的一部分。 该请求被转发到 Active Directory 域控制器 (DC)，并且由 KDC 授予一个票证（如果客户端提供的 SPN 在 Active Directory 中有匹配的 SPN 注册）。|  
-|步骤 3：配置约束委派|在验证要使用的帐户和为这些帐户注册 SPN 后，下一步是为约束委派配置上级服务（例如 IIS、Reporting Services 或 SharePoint Web 服务），并且将 Analysis Services SPN 作为允许委托的特定服务列出。<br /><br /> 在 SharePoint 中运行的服务（例如 SharePoint 模式下的 Excel Services 或 Reporting Services）常常承载使用 Analysis Services 多维或表格数据的工作簿和报表。 为这些服务配置约束委派是一个常见的配置任务，并且是支持从 Excel Services 执行数据刷新所必需的。 以下链接提供 SharePoint 服务以及其他服务的说明，这些服务可能存在针对 Analysis Services 数据的下游数据连接请求：<br /><br /> [Excel Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299826) 或 [如何配置 SharePoint Server 2010 中的 Excel Services 的 Kerberos 身份验证](https://support.microsoft.com/kb/2466519)<br /><br /> [针对 PerformancePoint Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [针对 SQL Server Reporting Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 对于 IIS 7.0，请参阅 [配置 Windows 身份验证 (IIS 7.0)](https://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) 或 [如何配置 SQL Server 2008 Analysis Services 和 SQL 服务器 2005 Analysis Services 使用 Kerberos 身份验证](https://support.microsoft.com/kb/917409)。|  
+|第 1 步：验证帐户适合委托|请确保用于运行服务的帐户在 Active Directory 中具有正确的属性。 Active Directory 中的服务帐户不得标记为敏感帐户，也不得明确从委托方案中排除。 有关详细信息，请参阅 [理解用户帐户](https://go.microsoft.com/fwlink/?LinkId=235818)。<br /><br /> **\*\* 重要\* \*** 所有帐户和服务器必须通常情况下，都属于同一 Active Directory 域或者同一个林中受信任的域。 但是，因为 Windows Server 2012 支持跨域边界的委托，如果域功能级别是 Windows Server 2012，您可以配置跨域边界的 Kerberos 约束委派。 另一种替代方法是，配置 Analysis Services 进行 HTTP 访问并对客户端连接使用 IIS 身份验证方法。 有关详细信息，请参阅 [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](configure-http-access-to-analysis-services-on-iis-8-0.md)。|  
+|第 2 步：注册 SPN|在设置约束委派前，您必须为 Analysis Services 实例注册服务主体名称 (SPN)。 在为中间层服务配置 Kerberos 约束委派时，将需要 Analysis Services SPN。 有关说明，请参阅 [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) 。<br /><br /> 服务主体名称 (SPN) 指定域中为 Kerberos 身份验证配置的服务的唯一标识。 使用集成安全性的客户端连接通常请求 SPN 作为 SSPI 身份验证的一部分。 该请求被转发到 Active Directory 域控制器 (DC)，并且由 KDC 授予一个票证（如果客户端提供的 SPN 在 Active Directory 中有匹配的 SPN 注册）。|  
+|步骤 3：配置约束的委派|在验证要使用的帐户和为这些帐户注册 SPN 后，下一步是为约束委派配置上级服务（例如 IIS、Reporting Services 或 SharePoint Web 服务），并且将 Analysis Services SPN 作为允许委托的特定服务列出。<br /><br /> 在 SharePoint 中运行的服务（例如 SharePoint 模式下的 Excel Services 或 Reporting Services）常常承载使用 Analysis Services 多维或表格数据的工作簿和报表。 为这些服务配置约束委派是一个常见的配置任务，并且是支持从 Excel Services 执行数据刷新所必需的。 以下链接提供 SharePoint 服务以及其他服务的说明，这些服务可能存在针对 Analysis Services 数据的下游数据连接请求：<br /><br /> [Excel Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299826) 或 [如何配置 SharePoint Server 2010 中的 Excel Services 的 Kerberos 身份验证](https://support.microsoft.com/kb/2466519)<br /><br /> [针对 PerformancePoint Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [针对 SQL Server Reporting Services 的标识委托 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> 对于 IIS 7.0，请参阅 [配置 Windows 身份验证 (IIS 7.0)](https://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) 或 [如何配置 SQL Server 2008 Analysis Services 和 SQL 服务器 2005 Analysis Services 使用 Kerberos 身份验证](https://support.microsoft.com/kb/917409)。|  
 |步骤 4：测试连接|测试时，请基于不同标识从远程计算机连接，并使用与业务用户相同的应用程序来查询 Analysis Services。 您可以使用 SQL Server Profiler 来监视连接。 您应该会看到发出请求的用户标识。 有关详细信息，请参阅本节中的 [测试模拟的标识或委托的标识](#bkmk_test) 。|  
   
 ##  <a name="bkmk_delegate"></a> 配置 Analysis Services 以实现可信委托  

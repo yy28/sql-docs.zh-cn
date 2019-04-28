@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual FoxPro ODBC 驱动程序与 C 或 Visual c + + 应用程序 |Microsoft Docs
+title: 使用 Visual FoxPro ODBC 驱动程序与 C 或视觉对象C++应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694593"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>使用 Visual FoxPro ODBC 驱动程序与 C 或 Visual c + + 应用程序
-在 C 或 c + + 应用程序通过发送 Visual FoxPro 数据与通信[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)或[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 的语句。 此语句可以包含以下信息：  
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>使用 Visual FoxPro ODBC 驱动程序与 C 或视觉对象C++应用程序
+在 C 或C++应用程序通过发送与 Visual FoxPro 数据通信[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)或[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 的语句。 此语句可以包含以下信息：  
   
 -   SQL 语句本机 Visual FoxPro 语言，如[DROP TABLE](../../odbc/microsoft/drop-table-command.md)命令。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47612265"
   
  Visual FoxPro 的本机 SQL 的详细信息，请参阅 Visual FoxPro 文档。  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>示例： 使用 Visual FoxPro ODBC 驱动程序和 C 或 c + + 应用程序  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>例如：在 C 中使用 Visual FoxPro ODBC 驱动程序或C++应用程序  
  以下示例使用 ODBC C API 来检索存储在名为 TasTrade 的 Microsoft® Visual FoxPro 示例数据库中的 employee 表的 last_name 字段中的数据。 此数据库随 Visual FoxPro 一起提供，默认情况下，在以下位置安装：  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  

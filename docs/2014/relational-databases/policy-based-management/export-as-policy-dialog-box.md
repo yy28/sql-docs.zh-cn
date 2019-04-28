@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705202"
 ---
 # <a name="export-as-policy-dialog-box"></a>“导出为策略”对话框
   使用此对话框可以将一组基于策略的管理方面属性保存为策略。 可以在 XML 文件中保存策略，也可以将其直接保存到当前 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。  

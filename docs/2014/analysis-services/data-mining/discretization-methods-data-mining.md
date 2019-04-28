@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722719"
 ---
 # <a name="discretization-methods-data-mining"></a>离散化方法（数据挖掘）
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中创建数据挖掘模型时使用的某些算法需要特定的内容类型才能正常运行。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  
@@ -51,19 +51,19 @@ ms.locfileid: "48187047"
   
 ## <a name="remarks"></a>备注  
   
--   可以使用`EQUAL_AREAS`方法来离散化字符串。  
+-   您可以使用 `EQUAL_AREAS` 方法来离散化字符串。  
   
--   `CLUSTERS`方法使用 1000 条记录的随机样本来离散化数据。 如果您不希望算法对数据采样，请使用 `EQUAL_AREAS` 方法。  
+-   `CLUSTERS` 方法使用 1000 个随机记录样本来离散化数据。 如果您不希望算法对数据采样，请使用 `EQUAL_AREAS` 方法。  
   
--   神经网络挖掘模型教程提供了一个介绍如何自定义离散化的示例。 有关详细信息，请参阅[第 5 课： 生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
+-   神经网络挖掘模型教程提供了一个介绍如何自定义离散化的示例。 有关详细信息，请参阅[第 5 课：生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [内容类型&#40;数据挖掘&#41;](content-types-data-mining.md)   
- [内容类型&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
- [数据类型&#40;数据挖掘&#41;](data-types-data-mining.md)   
+ [内容类型 &#40;数据挖掘&#41;](content-types-data-mining.md)   
+ [内容类型 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [数据类型（数据挖掘）](data-types-data-mining.md)   
  [挖掘结构列](mining-structure-columns.md)   
- [列分布&#40;数据挖掘&#41;](column-distributions-data-mining.md)  
+ [列分布（数据挖掘）](column-distributions-data-mining.md)  
   
   

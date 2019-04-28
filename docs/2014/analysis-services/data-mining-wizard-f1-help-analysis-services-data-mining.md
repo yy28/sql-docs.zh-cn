@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689426"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>数据挖掘向导 F1 帮助（Analysis Services － 数据挖掘）
   可以使用 **“数据挖掘向导”** 创建新的挖掘结构和关联挖掘模型（可选）。  
@@ -58,7 +58,7 @@ ms.locfileid: "48087757"
  创建挖掘结构和挖掘模型（可选）后，可以使用 **数据挖掘设计器** 修改它们的属性。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [数据挖掘设计器](data-mining/data-mining-designer.md)   
  [创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)   
  [选择定义方法&#40;数据挖掘向导&#41;](select-the-definition-method-data-mining-wizard.md)   

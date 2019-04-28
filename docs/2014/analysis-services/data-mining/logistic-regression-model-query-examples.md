@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13afa5437c0628092ee5c0d09f1fc61e0298bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722179"
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
@@ -39,9 +39,9 @@ ms.locfileid: "48094677"
  [对离散值进行预测](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> 获取有关逻辑回归模型的信息  
- 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
+ 逻辑回归模型是使用带有一组特殊参数的 Microsoft 神经网络算法创建的；因此，逻辑回归模型具有某些与神经网络模型相同的信息，但是会简单些。 若要了解模型内容的结构以及哪些节点存储哪类信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
   
- 若要继续探讨查询方案，可以按“数据挖掘中级教程”中的下一节所述，创建逻辑回归模型：[第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
+ 若要继续探讨查询方案，可以创建逻辑回归模型中的数据挖掘中级教程的以下部分所述：[第 5 课：生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
   
  此外，还可以使用 [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)中的挖掘结构 Targeted Mailing。  
   
@@ -65,7 +65,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a> 示例查询 1：使用数据挖掘架构行集检索模型参数  
+###  <a name="bkmk_Query1"></a> 示例查询 1:使用数据挖掘架构行集检索模型参数  
  通过查询数据挖掘架构行集，您可以找到有关模型的元数据，如模型创建时间、上次处理模型的时间、模型基于的挖掘结构的名称以及用作可预测属性的列的名称。 下面的示例返回首次创建模型时所用的参数、模型的名称和类型以及模型的创建时间。  
   
 ```  
@@ -80,7 +80,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a> 示例查询 2：使用 DMX 查找有关模型的其他详细信息  
+###  <a name="bkmk_Query2"></a> 示例查询 2:使用 DMX 查找有关模型的其他详细信息  
  下面的查询返回有关逻辑回归模型的一些基本信息。 逻辑回归模型在很多方面与神经网络模型类似，包括都存在描述用作输入的值的边际统计信息节点 (NODE_TYPE = 24)。 此示例查询使用 Targeted Mailing 模型，并通过从嵌套表 NODE_DISTRIBUTION 中检索所有输入的值来获取这些值。  
   
 ```  
@@ -108,7 +108,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>针对逻辑回归模型的预测查询  
  对每种挖掘模型都可以使用 [Predict (DMX)](/sql/dmx/predict-dmx) 函数向模型提供新数据并基于新值进行预测。 还可以使用函数返回有关预测的其他信息，例如，预测正确性的概率。 本节提供针对逻辑回归模型的预测查询的一些示例。  
   
-###  <a name="bkmk_Query3"></a> 示例查询 3：对连续值进行预测  
+###  <a name="bkmk_Query3"></a> 示例查询 3:对连续值进行预测  
  由于逻辑回归支持在输入和预测中都使用连续属性，因此可以轻松地在您的数据中创建与各种因素相关的模型。 您可以使用预测查询来探查这些因素之间的关系。  
   
  以下查询示例基于中级教程中的 Call Center（呼叫中心）模型，并创建了预测 Friday AM shift（周五早班）的服务等级的单独查询。 [PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx) 函数返回一个嵌套表，该表提供与用于了解预测值的有效性相关的统计信息。  
@@ -126,7 +126,7 @@ NATURAL PREDICTION JOIN
   
  示例结果：  
   
- **预测服务等级**: 0.102601830123659  
+ **预测服务等级**:0.102601830123659  
   
  **结果**  
   
@@ -135,9 +135,9 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 ||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
+ 有关嵌套表 NODE_DISTRIBUTION 中的概率、支持和标准偏差值的详细信息，请参阅 [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)。  
   
-###  <a name="bkmk_Query4"></a> 示例查询 4：对离散值进行预测  
+###  <a name="bkmk_Query4"></a> 示例查询 4:对离散值进行预测  
  要分析产生二进制结果的因素时通常使用逻辑回归。 尽管教程中使用的模型预测的是连续值 **ServiceGrade**，但实际生活中你可能还是希望设置该模型来预测服务等级是否符合特定的离散化目标值。 或者，您可以使用连续值来输出预测，但之后将这些预测结果分组到 **较好**、 **一般**或 **较差**这几个等级中。  
   
  下面的示例演示如何更改可预测属性的分组方式。 若要执行此操作，您需要复制挖掘结构，然后更改目标列的离散化方法，以便值归入各分组而不是连续的。  
@@ -195,13 +195,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |预测函数|用法|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|返回指定状态调整后的概率。|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|返回指定列的一个预测值或一组值。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|返回指定状态的概率。|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
+|[IsDescendant (DMX)](/sql/dmx/isdescendant-dmx)|确定一个节点是否是模型中另一个节点的子节点。|  
+|[PredictAdjustedProbability (DMX)](/sql/dmx/predictadjustedprobability-dmx)|返回指定状态调整后的概率。|  
+|[PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx)|返回指定列的一个预测值或一组值。|  
+|[PredictProbability (DMX)](/sql/dmx/predictprobability-dmx)|返回指定状态的概率。|  
+|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|返回预测值的标准偏差。|  
+|[PredictSupport (DMX)](/sql/dmx/predictsupport-dmx)|返回指定状态的支持值。|  
+|[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|返回指定列的方差。|  
   
  有关所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法都支持的通用函数的列表，请参阅[通用预测函数 (DMX)](/sql/dmx/general-prediction-functions-dmx)。 有关特定函数的语法，请参阅[数据挖掘扩展插件 (DMX) 函数引用](/sql/dmx/data-mining-extensions-dmx-function-reference)。  
   
@@ -212,7 +212,7 @@ NATURAL PREDICTION JOIN
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [逻辑回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-logistic-regression-models.md)   
- [第 5 课： 生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)   
+ [第 5 课：生成神经网络模型和逻辑回归模型&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

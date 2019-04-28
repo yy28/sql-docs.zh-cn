@@ -1,5 +1,5 @@
 ---
-title: bcp_control |Microsoft Docs
+title: bcp_control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689511"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   更改用于在文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间进行大容量复制的各种控制参数的默认设置。  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  如果为 TRUE，则指定的**datetime**并**smalldatetime**以字符格式保存的值将使用 ODBC 时间戳转义序列前缀和后缀。 BCPODBC 选项仅适用于 BCP_OUT。  
   
- 为 FALSE 时， **datetime**表示 1997 年 1 月 1 日的值转换为字符字符串：1997-01-01 00:00:00.000。 如果为 TRUE，相同**datetime**值表示为: {ts ' 1997年-01-01 00:00:00.000'}。  
+ 为 FALSE 时， **datetime**表示 1997 年 1 月 1 日的值转换为字符字符串：1997-01-01 00:00:00.000. 如果为 TRUE，相同**datetime**值表示为: {ts ' 1997年-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  返回当前（或上一次）BCP 操作所影响的行数。  

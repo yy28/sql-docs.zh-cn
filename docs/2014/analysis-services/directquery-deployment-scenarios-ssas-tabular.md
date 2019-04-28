@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731663"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署方案（SSAS 表格）
   本主题提供 DirectQuery 模型的设计和部署过程的演练。 您可以将 DirectQuery 配置为只使用关系数据（仅限 DirectQuery），也可以将模型配置为在仅使用缓存数据或仅使用关系数据之间进行切换（混合模式）。 本主题说明了两种模式的实现过程，并根据模式和安全配置描述有关查询结果的可能的差异。  
@@ -78,7 +78,7 @@ ms.locfileid: "48135177"
   
 |||  
 |-|-|  
-|**仅限 DirectQuery**|对于  **“模拟设置”** 属性，请指定将用于连接到 SQL Server 数据源的帐户。<br /><br /> 如果使用值**ImpersonateCurrentUser**，实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，主机模型会将凭据传递当前用户的模型到 SQL Server 数据库。|  
+|**仅限 DirectQuery**|对于  **“模拟设置”** 属性，请指定将用于连接到 SQL Server 数据源的帐户。<br /><br /> 如果您使用值 **ImpersonateCurrentUser**，则承载该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例会将模型的当前用户的凭据传递到 SQL Server 数据库。|  
 |**混合模式**|对于 **“模拟设置”** 属性，请指定将用于访问 SQL Server 数据源中的数据的帐户。<br /><br /> 此设置并不影响用于处理模型使用的缓存的凭据。|  
   
  **步骤 7。将模型部署**  
@@ -94,7 +94,7 @@ ms.locfileid: "48135177"
   
  **步骤 8。验证已部署的模型**  
   
- 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，打开部署了该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 右键单击数据库名称并选择 **“属性”**。  
+ 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，打开部署了该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 右键单击数据库名称并选择 **“属性”**。  
   
 -   当您在定义部署属性时，设置属性 **DirectQueryMode**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48135177"
  **仅限 DirectQuery**  
  在您想要确保单个数据源时，或者您的数据太大以致内存中容纳不下时，此选项是首选选项。 如果您在设计时使用非常大的关系数据源，则可以通过使用数据的某个子集创建模型。 当您在仅 DirectQuery 模式下部署模型时，可以编辑数据源定义以包含所有所需数据。  
   
- 如果您想要使用关系数据源提供的安全性来控制用户对数据的访问，此选项也是首选选项。 使用缓存的表格模型，您还可以使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]角色来控制数据访问，但在缓存中存储的数据也必须进行保护。 如果您的安全上下文要求数据应该永远不缓存，则您应该始终使用此选项。  
+ 如果您想要使用关系数据源提供的安全性来控制用户对数据的访问，此选项也是首选选项。 通过缓存的表格模型，您还可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 角色控制数据访问，但还必须确保缓存中存储的数据的安全。 如果您的安全上下文要求数据应该永远不缓存，则您应该始终使用此选项。  
   
  下表描述了有关仅 DirectQuery 模式的可能的部署结果：  
   

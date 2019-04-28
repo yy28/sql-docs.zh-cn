@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726123"
 ---
 # <a name="dimension-attribute-properties-reference"></a>维度特性属性参考
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，提供了许多可确定维度和维度特性工作方式的属性。 下表列出了这些特性属性并逐一对其进行说明。  
@@ -30,7 +30,7 @@ ms.locfileid: "53368679"
 |`AttributeHierarchyEnabled`|确定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是否为特性生成特性层次结构。 如果未启用特性层次结构，则不能在用户定义的层次结构中使用该特性，也不能在多维表达式 (MDX) 语句中引用该特性层次结构。|  
 |`AttributeHierarchyOptimizedState`|确定应用于属性层次结构的优化级别。 默认情况下，特性层次结构处于 `FullyOptimized` 状态，也就是说 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为特性层次结构生成索引以提高查询性能。 另一个选项 `NotOptimized` 表示没有为该特性层次结构生成索引。 使用`NotOptimized`很有用，如果属性层次结构用于查询，之外的其他用途，因为没有其他索引会为特性生成。 特性层次结构的其他用途可用于帮助对另一个特性进行排序。|  
 |`AttributeHierarchyOrdered`|确定关联的属性层次结构是否已排序。 默认值是 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
-|`AttributeHierarchyVisible`|确定属性层次结构是否对客户端应用程序可见。 默认值是 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
+|`AttributeHierarchyVisible`|确定属性层次结构是否对客户端应用程序可见。 默认值为 `True`。 但是，如果某特性层次结构将不用于查询，则您可以通过将该属性的值更改为 `False` 来节省处理时间。|  
 |`CustomRollupColumn`|指定定义自定义汇总公式的列。|  
 |`CustomRollupPropertiesColumn`|指定包含自定义汇总公式的属性的列。|  
 |`DefaultMember`|指定用于定义该特性默认度量值的多维表达式 (MDX)。|  

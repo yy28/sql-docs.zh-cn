@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863694"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 属性示例 (VC++)
 此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含 10 个最贵的书中***标题***表。  
@@ -168,13 +168,13 @@ void PrintComError(_com_error &e) {
   
  **价格的前十个标题：**  
 **但它是用户友好？---22.95**  
-**计算机 Phobic 和非恐惧症的个人： 行为变体---21.59**  
-**洋葱、 Leeks 和蒜蓉： 烹饪地中海---20.95 机密**  
+**计算机 Phobic 和非恐惧症的个人：---21.59 行为的变体**  
+**洋葱、 Leeks 和蒜蓉：烹饪地中海---20.95 机密**  
 **硅谷---20.00 的秘密**  
 **繁忙主管的数据库指南---19.99**  
 **有关计算机---19.99 直接对话**  
 **硅谷 Gastronomic 将---19.99**  
-**长时间的数据 Deprivation： 四个案例研究---19.99**  
+**长时间的数据 Deprivation:四个案例研究---19.99**  
 **寿司，任何人？---14.99**  
 **在 Buckingham 店厨房---11.95 五十年**   
 ## <a name="see-also"></a>请参阅  

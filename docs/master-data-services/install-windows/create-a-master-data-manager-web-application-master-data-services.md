@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696318"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>创建主数据管理器 Web 应用程序 (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694538"
   
  在您创建 Web 应用程序之后，将其与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库相关联。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   有关承载 Web 应用程序的计算机的要求信息，请参阅 [Web 应用程序要求 (Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "47694538"
   
 6.  单击“确定” 。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>后续步骤  
   
 -   将 Web 应用程序与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。 有关详细信息，请参阅 [将 Master Data Services 数据库与 Web 应用程序关联](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)。  
   
 -   如果你想要通过使用安全套接字层 (SSL) 对内容进行加密，还可以配置承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的网站以便使用 HTTPS 绑定。 您必须使用 IIS 管理器之类的 Internet Information Services (IIS) 工具为 Web 服务器配置服务器证书，以及为站点配置 HTTPS 绑定和 SSL 设置。 有关详细信息，请参阅 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

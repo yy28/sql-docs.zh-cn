@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721769"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 复制中的重大更改
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  

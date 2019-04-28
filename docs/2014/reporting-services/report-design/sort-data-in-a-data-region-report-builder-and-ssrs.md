@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720345"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
   若要更改报表首次运行时数据区域中数据的排序顺序，必须为数据区域或组设置排序表达式。 默认情况下，组的排序表达式自动设置为与组表达式相同的值。  

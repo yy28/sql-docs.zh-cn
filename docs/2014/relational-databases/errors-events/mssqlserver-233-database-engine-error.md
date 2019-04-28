@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869217"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
     
@@ -32,7 +32,7 @@ ms.locfileid: "48146907"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称||  
-|消息正文|已成功与服务器建立连接，但是在登录过程中发生错误。 (提供程序: 共享内存提供程序，错误: 0 - 在管道的另一端没有进程。) (Microsoft SQL Server，错误: 233)|  
+|消息正文|已成功与服务器建立连接，但是在登录过程中发生错误。 (提供程序：共享内存提供程序，错误: 0 - 在管道的另一端没有进程。) (Microsoft SQL Server，错误: 233)|  
   
 ## <a name="explanation"></a>解释  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端无法连接到服务器。 发生此错误的原因可能是服务器未配置为接受远程连接。  

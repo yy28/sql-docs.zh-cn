@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98916a7e6a9247661fdefe3a779e08f255d56ac8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697529"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>配置报表的数据源属性（报表管理器）
   在运行报表时，报表服务器检索属性信息以确定如何连接到数据源。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  

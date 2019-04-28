@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f21abbe6ce79db149104b13399b819a811558c43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844356"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 编辑筛选器
   使用 **“编辑筛选器”** 对话框可以在跟踪中创建和修改数据列筛选器。 在列表中单击数据列名称，相邻窗格中将会显示可用于该数据列的筛选条件。 输入筛选条件并单击 **“确定”** ，这样可将其应用于所选数据列。 如果在列表中的数据列名称左侧显示筛选器图标，则表明该列已配置了筛选器。  

@@ -1,29 +1,23 @@
 ---
 title: 查看和保存预测查询的结果 |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
 ms.topic: conceptual
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- viewing prediction query results
-- displaying prediction query results
-- Mining Model Prediction [Analysis Services], viewing results
-ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 0273919410b5b182b535b805922ec39cdd82d6e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733733"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>查看和保存预测查询的结果
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   使用预测查询生成器在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义查询后，可通过切换到查询结果视图来运行查询以及查看结果。  
   
  可以将预测查询的结果保存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中定义的任何数据源的表中。 可以创建新的表，也可以将查询结果保存到现有表中。 如果将结果保存到现有表中，可以选择覆盖表中当前存储的数据；否则，查询结果将追加到表中现有数据的末尾。  
@@ -46,7 +40,7 @@ ms.locfileid: "48195927"
   
 4.  如果希望将表添加到数据源视图中，请从 **“添加到数据源视图”** 中选择数据源视图。  
   
-5.  单击 **“保存”**。  
+5.  单击“保存” 。  
   
     > [!WARNING]  
     >  如果目标不支持分层行集，则可以向结果中添加 FALTTENED 关键字以另存为平面表。  

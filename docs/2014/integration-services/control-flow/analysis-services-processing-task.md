@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832962"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -57,12 +57,12 @@ ms.locfileid: "58379125"
   
  此任务常与大容量插入任务或数据流任务结合使用，前者将数据加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表，后者实现将数据加载到表中的数据流。 例如，数据流任务可能具有数据流，该数据流从联机事务性数据库 (OLTP) 数据库中提取数据，并将数据加载到数据仓库中的事实数据表，然后调用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务来处理根据数据仓库构建的多维数据集。  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例。 有关详细信息，请参阅 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)。  
   
 ## <a name="error-handling"></a>错误处理  
   
 ## <a name="configuration-of-the-analysis-services-processing-task"></a>配置 Analysis Services 处理任务  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   

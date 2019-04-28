@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656392"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>设置报表项的格式（报表生成器和 SSRS）
   对报表中的项进行格式设置可以使报表更赏心悦目并增强其可读性。 在报表设计模式下，可以对文本框、文本框中的各项、图像、表达式以及数据进行格式设置。  

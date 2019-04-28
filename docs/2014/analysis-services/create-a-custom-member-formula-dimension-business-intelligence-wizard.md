@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679924"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>创建自定义成员公式（维度）（商业智能向导）
   使用**创建自定义成员公式**页后，可以选择向其商业智能向导会将属性关联与自定义成员公式列的列包含多维表达式 (MDX) 的维度定义该属性成员值的语句。  

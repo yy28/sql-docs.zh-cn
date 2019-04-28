@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722661"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
   在选择满足业务需要的算法后，可以按照以下方式自定义挖掘模型，从而有可能使结果得到改善。  
@@ -107,8 +107,8 @@ ms.locfileid: "52407862"
 |HIDDEN_NODE_RATIO|[Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持百分比值。|  
-|HOLDOUT_SEED|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数不同于应用到挖掘结构中的维持种子值。|  
+|HOLDOUT_PERCENTAGE|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持百分比值。|  
+|HOLDOUT_SEED|[Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：此参数是不同于应用到挖掘结构的维持种子值。|  
 |INSTABILITY_SENSITIVITY|[Microsoft 时序算法技术参考](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 聚类分析算法技术参考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 决策树算法技术参考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 算法技术参考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)|  

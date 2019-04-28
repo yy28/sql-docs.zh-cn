@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653997"
 ---
 # <a name="server-configuration---collation"></a>服务器配置 - 排序规则
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置 – 排序规则”页上修改[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排序时所用的排序规则设置。 选择相应选项以匹配其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装或者其他计算机的排序规则设置。  

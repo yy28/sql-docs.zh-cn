@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655333"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   由于排队更新订阅允许对多个位置上的相同数据进行修改，因此，在发布服务器中同步数据时可能会发生冲突。 复制在将更改与发布服务器同步时检测冲突，并使用在创建发布时所选择的解决策略来解决那些冲突。 可能会发生下列冲突：  
@@ -56,7 +56,7 @@ ms.locfileid: "54133627"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[设置排队更新冲突解决选项 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   复制 TRANSACT-SQL 编程：[允许更新事务发布的订阅](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   复制 Transact-SQL 编程：[允许更新事务发布的订阅](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **查看数据冲突**  
   

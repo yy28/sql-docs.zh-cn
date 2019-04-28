@@ -1,5 +1,5 @@
 ---
-title: 自动执行 Analysis Services Administrative Tasks with SSIS |Microsoft 文档
+title: 自动执行 Analysis Services Administrative Tasks with SSIS |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c750c0e8ee9f13c4b4751af872b02f4ed9ee419a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659590"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自动执行 Analysis Services 管理任务
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使你能够自动执行 DDL 脚本、 多维数据集和挖掘模型处理任务，以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持您自动执行 DDL 脚本、多维数据集和挖掘模型处理任务以及数据挖掘查询任务。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可被视为控制流和维护任务（这些任务可链接起来以形成顺序和并行执行的数据处理作业）的集合。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用于在数据处理任务期间执行清除操作并将数据从不同的数据源集合到一起。 使用多维数据集和挖掘模型时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以将非数值数据转换为数值数据，并且可以确保数据值处于期望的范围内，如此便创建了用来填充事实数据表和维度的干净数据。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34015644"
 ## <a name="data-mining-query-task"></a>数据挖掘查询任务  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的数据挖掘查询任务允许您提取和存储来自挖掘模型的信息。 该信息通常存储在一个关系数据库中并且可用于特定的用途，例如，用于找出目标市场活动的一组潜在客户。 数据挖掘可以标识客户的值和客户响应特定市场推销的概率。 您可以使用数据挖掘查询任务提取数据并将数据修改为您偏爱的格式。 有关如何执行此任务的详细信息，请参阅 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分区处理目标](../../integration-services/data-flow/partition-processing-destination.md)   
  [维度处理目标](../../integration-services/data-flow/dimension-processing-destination.md)   
  [数据挖掘查询转换](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844924"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具选项 （常规选项页）
   使用 **“常规选项”** 对话框可以查看或指定以下选项：  
@@ -61,7 +61,7 @@ ms.locfileid: "48113057"
  打开跟踪文件后，让 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 在添加滚动更新文件之前进行提示。  
   
  **从不加载后续滚动更新文件**  
- [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]从不在跟踪文件处于打开状态时加载后续滚动更新文件。  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 从不在跟踪文件处于打开状态时加载后续滚动更新文件。  
   
 ### <a name="replay-options"></a>重播选项  
  **默认重播线程数**  
@@ -74,9 +74,9 @@ ms.locfileid: "48113057"
  指定重播过程中的 Health Monitor 轮询间隔（秒）。 默认值为 60 秒。 使用此值，用户可以配置 Health Monitor 对终止候选项的轮询频率。  
   
 ## <a name="see-also"></a>请参阅  
- [连接到服务器后自动启动跟踪&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [设置跟踪显示默认值&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [重播跟踪表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [连接到服务器后自动启动跟踪 (SQL Server Profiler)](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [设置跟踪显示默认值 (SQL Server Profiler)](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [重播跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重播跟踪文件 (SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重播跟踪](../tools/sql-server-profiler/replay-traces.md)   
  [设置全局跟踪选项&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   

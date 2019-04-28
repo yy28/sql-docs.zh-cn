@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669445"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空间数据的 sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|约束的 OBJECT 或 COLUMN<br /><br /> 索引和堆的 INDEX|  
 |**major_id**|**int**|约束的 OBJECT ID<br /><br /> 包含索引和堆的表的 OBJECT ID|  
 |**minor_id**|**int**|对于约束为 NULL<br /><br /> 索引和堆的 Index_id|  
-|**依赖关系**|**nvarchar(60)**|导致禁用约束或索引的依赖项的说明。 在升级过程中引发的警告中也使用相同的值。 这方面的例子有：<br /><br /> “space”对应于内部<br /><br /> “geometry”对应于系统 UDT<br /><br /> “geography::Parse”对应于系统 UDT 的一个方法|  
+|**dependency**|**nvarchar(60)**|导致禁用约束或索引的依赖项的说明。 在升级过程中引发的警告中也使用相同的值。 这方面的例子有：<br /><br /> “space”对应于内部<br /><br /> “geometry”对应于系统 UDT<br /><br /> “geography::Parse”对应于系统 UDT 的一个方法|  
   
 ## <a name="general-remarks"></a>一般备注  
  当更改兼容级别时，将禁用使用某些内部函数的持久化计算列。 此外，当升级数据库时，将禁用使用任何 Geometry 或 Geography 方法的持久化计算列。  
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
  **“索引”**  
   
- 如果聚集索引被禁用，或者强制使用非聚集索引，则会引发以下错误："查询处理器是无法生成计划，因为索引 %。\*ls' 在表或视图 ' %。\*ls' 被禁用。" 若要重新启用这些对象，请重新生成索引升级后通过调用**ALTER INDEX ON...REBUILD** 来更改选项。  
+ 如果聚集的索引被禁用，或者强制非聚集索引，会引发以下错误："查询处理器是无法生成计划，因为索引 %。\*ls' 在表或视图 ' %。\*ls' 被禁用。" 若要重新启用这些对象，请重新生成索引升级后通过调用**ALTER INDEX ON...REBUILD** 来更改选项。  
   
  **堆**  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715094"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
   当具有想要用于预测，但不想要将其映射到外部输入数据集或生成大容量预测的模型时，单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  

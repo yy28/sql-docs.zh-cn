@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679785"
 ---
 # <a name="data-source-information-properties"></a>数据源信息属性
   在特定于访问接口的属性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口定义了以下数据源信息属性。  
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|键入：VT_BOOL<br /><br /> R/W：读取<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明:用于确定是否支持列排序规则。<br /><br /> VARIANT_TRUE：支持列级排序规则。<br /><br /> VARIANT_FALSE：不支持列级排序规则。|  
+|SSPROP_COLUMNLEVELCOLLATION|键入：VT_BOOL<br /><br /> R/W:读取<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明:用于确定是否支持列排序规则。<br /><br /> VARIANT_TRUE:支持列级排序规则。<br /><br /> VARIANT_FALSE:不支持列级排序规则。|  
 |SSPROP_UNICODELCID|键入：VT_I4 R/W:读取<br /><br /> 说明:Unicode 区域设置 id。<br /><br /> 这是用于 Unicode 数据排序的区域设置。|  
 |SSPROP_UNICODECOMPARISONSTYLE|键入：VT_I4 R/W:读取<br /><br /> 说明:Unicode 比较样式。<br /><br /> 用于 Unicode 数据排序的排序选项。|  
   

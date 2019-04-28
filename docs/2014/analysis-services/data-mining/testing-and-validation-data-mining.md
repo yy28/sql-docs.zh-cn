@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732905"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
   验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
@@ -87,13 +87,13 @@ ms.locfileid: "48077747"
 |主题|链接|  
 |------------|-----------|  
 |了解如何使用向导或 DMX 命令设置测试数据集|[定型数据集和测试数据集](training-and-testing-data-sets.md)|  
-|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
-|了解有关 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的图标类型的准确性。|[提升图&#40;Analysis Services-数据挖掘&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图&#40;Analysis Services-数据挖掘&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图&#40;Analysis Services-数据挖掘&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵&#40;Analysis Services-数据挖掘&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|了解如何测试挖掘结构中的数据分布和代表性|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
+|了解有关 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的图标类型的准确性。|[提升图（Analysis Services - 数据挖掘）](lift-chart-analysis-services-data-mining.md)<br /><br /> [利润图（Analysis Services - 数据挖掘）](profit-chart-analysis-services-data-mining.md)<br /><br /> [散点图（Analysis Services - 数据挖掘）](scatter-plot-analysis-services-data-mining.md)|  
+|了解如何创建分类矩阵（有时也称为混淆矩阵），以评估真正、假正、真负和假负的次数。|[分类矩阵（Analysis Services - 数据挖掘）](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘解决方案](data-mining-solutions.md)   
- [测试和验证任务和操作指南&#40;数据挖掘&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [测试和验证任务和操作指南（数据挖掘）](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

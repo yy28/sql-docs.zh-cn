@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680817"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比较表格和多维解决方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为数据建模提供两种不同方法：表格和多维。 虽然它们之间有明显的重叠现象，但也有重要的差异，你可以通过差异决定如何继续。 在本主题中，我们提供功能比较，并解释每种方法如何满足常见项目要求。 例如，如果对特定数据源的支持是最重要的因素，则有关数据源的部分有助于指导您决定采用哪种建模方法。  
@@ -47,7 +47,7 @@ ms.locfileid: "53365839"
   
 -   [下一步：构建解决方案](#bkmk_Next)  
   
- 其他信息请参见 MSDN 上的这篇技术文章：[在 SQL Server 2012 Analysis Services 中选择表格或多维建模体验](https://go.microsoft.com/fwlink/?LinkId=251588)。  
+ 可以在 MSDN 上的此技术文章中找到更多信息：[在 SQL Server 2012 Analysis Services 中选择表格或多维建模体验](https://go.microsoft.com/fwlink/?LinkId=251588)。  
   
 ##  <a name="bkmk_overview"></a> Analysis Services 中的建模概述  
  Analysis Services 通过在 Analysis Services 实例上承载的数据库提供模型的开发体验以及模型部署。 模型类型包括表格和多维。 正如你所料，数据库承载支持你所创建的表格和多维解决方案，但数据库承载还包括 PowerPivot for SharePoint。  
@@ -100,13 +100,13 @@ ms.locfileid: "53365839"
 ||**多维**|**表格**|  
 |操作|[是](multidimensional-models/actions-in-multidimensional-models.md)|否|  
 |Aggregation 对象|[是](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|否|  
-|计算度量值|[是](multidimensional-models/create-calculated-members.md)|用户帐户控制|  
+|计算度量值|[是](multidimensional-models/create-calculated-members.md)|是|  
 |自定义程序集|[是](multidimensional-models/multidimensional-model-assemblies-management.md)|否|  
-|自定义汇总|用户帐户控制|否|  
+|自定义汇总|是|否|  
 |Distinct Count|[是](multidimensional-models/use-aggregate-functions.md)|是 （通过 DAX) *|  
-|钻取|[是](multidimensional-models/actions-in-multidimensional-models.md)|用户帐户控制|  
-|层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|用户帐户控制|  
-|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|用户帐户控制|  
+|钻取|[是](multidimensional-models/actions-in-multidimensional-models.md)|是|  
+|层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
+|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|是|  
 |链接度量值组|[是](multidimensional-models/linked-measure-groups.md)|否|  
 |多对多关系|[是](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|否|  
 |父子层次结构|[是](multidimensional-models/parent-child-dimension.md)|是（通过 DAX）|  
@@ -114,7 +114,7 @@ ms.locfileid: "53365839"
 |透视|[是](multidimensional-models/perspectives-in-multidimensional-models.md)|[是](tabular-models/partitions-ssas-tabular.md)|  
 |半累加性度量值|[是](multidimensional-models/define-semiadditive-behavior.md)|是（通过 DAX）|  
 |翻译|[是](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|否|  
-|用户定义的层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|用户帐户控制|  
+|用户定义的层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
 |写回|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
  * 如果你的解决方案必须支持非常大量的非重复计数 （例如，数以百万计的客户 Id），请首先考虑表格。 表格在此方案中往往具有更高的性能。 请参阅有关在白皮书中，非重复计数部分[Analysis Services 案例研究：在大型商业解决方案中使用表格模型](https://msdn.microsoft.com/library/dn751533.aspx)。  

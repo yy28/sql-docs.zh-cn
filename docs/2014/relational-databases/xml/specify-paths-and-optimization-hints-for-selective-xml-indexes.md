@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679795"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
   本主题介绍如何在创建或更改选择性 XML 索引时，如何指定要建立索引的节点路径以及用于索引的优化提示。  
@@ -29,7 +29,7 @@ ms.locfileid: "58528799"
  有关选择性 XML 索引的详细信息，请参阅 [选择性 XML 索引 (SXI)](../xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解非类型化 XML 中的 XQuery 和 SQL Server 类型  
- 选择性 XML 索引支持两种类型系统：XQuery 类型和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
+ 选择性 XML 索引支持两种类型的系统：XQuery 类型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。 已建立索引的路径可用于匹配 XQuery 表达式，或者用于匹配 XML 数据类型的 value() 方法的返回值。  
   
 -   在未对要建立索引的路径加批注时，或者使用 XQUERY 关键字进行批注时，该路径匹配 XQuery 表达式。 对于 XQUERY 批注的节点路径有两种变化形式：  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型匹配 value() 方法的返回值。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型支持此优化提示：单一实例。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型支持此优化提示：SINGLETON。  
   
  对于返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型的路径，必须指定某一类型。 使用您要在 value() 方法中使用的相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型。  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>选择要建立索引的节点  
  您可以使用以下两个简单的原则来标识要添加到选择性 XML 索引的正确的节点子集。  
   
-1.  **原则 1**:若要评估对给定的 XQuery 表达式，您需要检查的所有节点建立都索引。  
+1.  **原则 1**：若要评估某一给定的 XQuery 表达式，请对需要检查的所有节点建立索引。  
   
     -   对其本身或值用于 XQuery 表达式中的所有节点建立索引。  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   节点 `b`，因为在 XQuery 表达式中一个谓词应用于节点`b` 。  
   
-2.  **原则 2**:为了获得最佳性能，需要对给定的 XQuery 表达式求值的所有节点建立都索引。 如果您仅对其中某些节点建立索引，则选择性 XML 索引将改进只包含已建立索引的节点的子表达式的求值。  
+2.  **原则 2**：为了获得最佳性能，请为针对某一给定 XQuery 表达式进行求值所需的所有节点建立索引。 如果您仅对其中某些节点建立索引，则选择性 XML 索引将改进只包含已建立索引的节点的子表达式的求值。  
   
  为了提高上面所示的 SELECT 语句的性能，您可以创建以下选择性 XML 索引：  
   
@@ -358,20 +358,20 @@ WHERE T.xmldata.exist('
   
 |优化提示|更高效的存储|改进的性能|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|用户帐户控制|否|  
-|**SINGLETON**|否|用户帐户控制|  
-|**DATA TYPE**|用户帐户控制|用户帐户控制|  
-|**MAXLENGTH**|用户帐户控制|用户帐户控制|  
+|**node()**|是|否|  
+|**SINGLETON**|否|是|  
+|**DATA TYPE**|是|是|  
+|**MAXLENGTH**|是|是|  
   
 ### <a name="optimization-hints-and-data-types"></a>优化提示和数据类型  
  您可以将节点作为 XQuery 数据类型或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型建立索引。 下表显示了每种数据类型支持的优化提示。  
   
 |优化提示|XQuery 数据类型|SQL 数据类型|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|用户帐户控制|否|  
-|**SINGLETON**|用户帐户控制|用户帐户控制|  
-|**DATA TYPE**|用户帐户控制|否|  
-|**MAXLENGTH**|用户帐户控制|否|  
+|**node()**|是|否|  
+|**SINGLETON**|是|是|  
+|**DATA TYPE**|是|否|  
+|**MAXLENGTH**|是|否|  
   
 ### <a name="node-optimization-hint"></a>node() 优化提示  
  适用范围：XQuery 数据类型  
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果某个查询要求已使用 node() 提示建立索引的节点值，则不能使用选择性 XML 索引。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 优化提示  
- 适用范围：XQuery 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型  
+ 适用范围：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型  
   
  SINGLETON 优化提示指定节点的基数。 此提示将改进查询性能，因为提前知道节点在其父节点或祖先节点内最多出现一次。  
   

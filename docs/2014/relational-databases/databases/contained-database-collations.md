@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872051"
 ---
 # <a name="contained-database-collations"></a>包含数据库的排序规则
   许多属性会影响文本数据的排序顺序和相等语义，包括区分大小写、区分重音以及所用的基本语言。 对于这些特性，可通过选择数据的排序规则来表示给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关排序规则本身的更深入讨论，请参阅[排序规则和 Unicode 支持](../collations/collation-and-unicode-support.md)。  

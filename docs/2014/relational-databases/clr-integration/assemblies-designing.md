@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874931"
 ---
 # <a name="designing-assemblies"></a>设计程序集
   本主题说明了设计程序集时应考虑的下列因素：  
@@ -39,7 +39,7 @@ ms.locfileid: "48196237"
 -   如果托管代码需要更高的权限，最好将该代码与不需要更高权限的代码分开，并将其放入单独的程序集。  
   
 ## <a name="managing-assembly-security"></a>管理程序集安全性  
- 当程序集运行托管代码时，可以控制程序集访问受 .NET 代码访问安全性保护的资源的程度。 可以通过在创建或修改程序集时指定三个权限集（SAFE、EXTERNAL_ACCESS 或 UNSAFE）之一执行以上操作。  
+ 当程序集运行托管代码时，可以控制程序集访问受 .NET 代码访问安全性保护的资源的程度。 执行此操作通过在创建或修改程序集时指定三个权限集之一：安全的 EXTERNAL_ACCESS 或 UNSAFE。  
   
 ### <a name="safe"></a>SAFE  
  SAFE 是默认的权限集，并且最具限制性。 使用具有 SAFE 权限的程序集运行的代码不能访问外部系统资源（例如文件、网络、环境变量或注册表）。 SAFE 代码可以从本地 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库访问数据，或执行不涉及访问本地数据库以外资源的计算和业务逻辑。  

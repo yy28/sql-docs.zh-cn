@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715834"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "56012378"
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所属的对象的 id。||  
-|NAME|**sysname**|索引的名称。 名称是只在对象中唯一的。 NULL = 堆||  
+|name|**sysname**|索引的名称。 名称是只在对象中唯一的。 NULL = 堆||  
 |index_id|**int**|索引的 id。 index_id 是只在对象中唯一的。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引<br /><br /> > 1 = 非聚集索引||  
 |type|**tinyint**|索引的类型：<br /><br /> 0 = 堆<br /><br /> 1 = 聚集<br /><br /> 2 = 非聚集<br /><br /> 5 = 聚集 xVelocity 内存优化的列存储索引|  
 |type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 聚集列存储||  
@@ -37,7 +37,7 @@ ms.locfileid: "56012378"
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY 是 OFF。|始终为 0。|  
 |is_primary_key|**bit**|1 = 索引是 PRIMARY KEY 约束的一部分。|始终为 0。|  
 |is_unique_constraint|**bit**|1 = 索引是 UNIQUE 约束的一部分。|始终为 0。|  
-|fill_factor|**tinyint**|> 0 = 创建或重新生成索引时使用的 FILLFACTOR 百分比。<br /><br /> 0 = 默认值|始终为 0。|  
+|fill_factor|**tinyint**|> 0 = 使用已创建或重新生成索引的 FILLFACTOR 百分比。<br /><br /> 0 = 默认值|始终为 0。|  
 |is_padded|**bit**|0 = PADINDEX 是 OFF。|始终为 0。|  
 |is_disabled|**bit**|1 = 禁用索引。<br /><br /> 0 = 不禁用索引。||  
 |is_hypothetical|**bit**|0 = 索引不是假设的。|始终为 0。|  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676426"
 ---
 # <a name="overview-of-upgrade-advisor"></a>升级顾问概述
   本部分概述了升级过程，并且提供了有助于您了解和使用升级顾问分析向导和升级顾问报表查看器的信息。  

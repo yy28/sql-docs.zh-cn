@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660055"
 ---
 # <a name="browsing-a-clustering-model"></a>浏览聚类分析模型
   当你打开聚类分析模型使用**浏览**，模型将显示在交互式查看器，类似于中的聚类分析查看器[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 该查看器可帮助您浏览已创建的分类并了解分类特征。 您还可以将各个段与其他段或填充进行比较和对比。  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678625"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>用于分析平台系统的电源打开或关闭的设备
 本主题介绍如何打开或关闭在分析平台 Systemappliance 电源电源运行的并行数据仓库。 使用本主题分析平台系统 appliance 移动时，或电源在一台设备上发生灾难性的电源发生故障后。  

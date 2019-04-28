@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650668"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>“属性配置文件”选项卡（挖掘模型查看器）
   可以使用 **“属性配置文件”** 选项卡，来查看 Naive Bayes 模型状态中输入值的分布如何生成结果属性的每个状态。 值的分布会显示为一个彩色直方图且所有分布都以表格格式显示，以便能更轻松地比较值。  
   
- **有关详细信息，请参阅** [Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **有关详细信息：**[Microsoft Naive Bayes 算法](data-mining/microsoft-naive-bayes-algorithm.md)，[使用 Microsoft Naive Bayes 查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48194537"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型以进行查看。 挖掘模型将在其关联的查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 可以选择为每个挖掘模型提供的自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
  **显示图例**  
@@ -55,8 +55,8 @@ ms.locfileid: "48194537"
 |**可预测属性的状态列**|为可预测列的每个状态显示一列，其中每一行对应于模型中的一个输入属性。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

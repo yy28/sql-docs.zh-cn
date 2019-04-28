@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730422"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>从客户端应用程序进行连接 (Analysis Services)
   如果您不熟悉 Analysis Services，则在了解了本主题中的信息之后，您就可以通过常用工具和应用程序连接到现有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。 本主题还说明如何出于测试目的基于不同的用户标识进行连接。  

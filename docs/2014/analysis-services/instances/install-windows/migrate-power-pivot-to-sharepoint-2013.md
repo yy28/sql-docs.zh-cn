@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729916"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>将 PowerPivot 迁移到 SharePoint 2013
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368369"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>解决在您尝试装入数据库时出现的问题  
  本节介绍在装入数据库时遇到的可能问题。  
   
-1.  **身份验证错误：** 如果你看到与身份验证相关的错误，则查看源 Web 应用程序正在使用的身份验证模式。 该错误可能是由于身份验证在 SharePoint 2013 Web 应用程序和 SharePoint 2010 Web 应用程序之间不匹配导致的。 有关详细信息，请参阅 [1) 准备 SharePoint 2013 场](#bkmk_prepare_sharepoint2013) 。  
+1.  **身份验证错误：** 如果您看到与身份验证相关的错误，查看源 web 应用程序正在使用的身份验证模式。 该错误可能是由于身份验证在 SharePoint 2013 Web 应用程序和 SharePoint 2010 Web 应用程序之间不匹配导致的。 有关详细信息，请参阅 [1) 准备 SharePoint 2013 场](#bkmk_prepare_sharepoint2013) 。  
   
 2.  **缺少 powerpivot 文件：** 如果你看到与缺少 PowerPivot.dll 相关的错误**spPowerPivot.msi**尚未安装或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]配置工具不使用配置 PowerPivot。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "53368369"
   
     5.  单击 **“确定”**。 刷新历史记录现在将在刷新页中可见，并且刷新将在普通时间触发。  
   
- **SQL Server 2008 R2 PowerPivot 工作簿**  
+ **SQL Server 2008 R2 PowerPivot workbooks**  
   
 -   在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用时，SQL Server 2008 R2 PowerPivot 工作簿将不会自动升级。 在您迁移包含 2008 R2 工作簿的内容数据库后，可以使用工作簿，但计划将不会升级。  
   

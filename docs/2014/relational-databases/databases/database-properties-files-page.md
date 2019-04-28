@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871983"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
   使用此页可以创建新的数据库，也可以查看或修改所选数据库的属性。 对于现有数据库，本主题适用于 **数据库属性（“文件”页）** ；另外，本主题还适用于 **新建数据库（“常规”页）**。  

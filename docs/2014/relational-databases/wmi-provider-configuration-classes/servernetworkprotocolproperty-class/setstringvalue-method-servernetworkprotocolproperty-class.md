@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5736b6e4e88d103c29d0d027327a9f3f46d0cfdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736247"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 方法（ServerNetworkProtocolProperty 类）
   设置引用的属性的字符串值。  
@@ -47,7 +47,7 @@ StrValue
   
 |参数|Description|  
 |---------------|-----------------|  
-|*strValue*|一个指定当前属性的新值的字符串值。|  
+|*StrValue*|一个指定当前属性的新值的字符串值。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

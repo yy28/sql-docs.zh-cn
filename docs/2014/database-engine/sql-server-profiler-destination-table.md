@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842738"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - 目标表
   使用 **“目标表”** 对话框可以指定要用于存储跟踪的表。  
@@ -39,7 +39,7 @@ ms.locfileid: "48227557"
  指定要用于存储跟踪的表的名称。  
   
 ## <a name="see-also"></a>请参阅  
- [将跟踪结果保存到表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [将跟踪结果保存到表 (SQL Server Profiler)](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 事件探查器](../tools/sql-server-profiler/sql-server-profiler.md)  
   

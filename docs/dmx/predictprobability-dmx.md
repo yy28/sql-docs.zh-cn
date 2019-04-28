@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f2a01e2cfd460d503e4326c44eaf356b8a5ecb4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659126"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果省略预测状态，则将使用概率最大的状态，不包括“缺失状态”存储桶。 若要包括缺少状态存储桶，设置\<预测状态 > 到**INCLUDE_NULL**。 若要返回缺少状态的概率，设置\<预测状态 > 为 NULL。  
   
 > [!NOTE]  
@@ -61,7 +61,7 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-|@shouldalert|0.867074195848097|0.132755556974282|  
+|1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   

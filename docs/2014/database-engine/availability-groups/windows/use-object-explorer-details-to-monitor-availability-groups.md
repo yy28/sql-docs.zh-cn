@@ -17,21 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788320"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)
   本主题说明如何通过使用 **的** “对象资源管理器详细信息” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 窗格来监视和管理现有的 AlwaysOn 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
->  有关使用“对象资源管理器详细信息”窗格的信息，请参阅[对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
+>  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
--   **准备工作：**  [先决条件](#Prerequisites)  
+-   **开始之前：**[先决条件](#Prerequisites)  
   
--   **若要监视可用性组，请使用：**[SQL Server Management Studio](#SSMSProcedure)  
+-   **若要监视可用性组，使用：**[SQL Server Management Studio](#SSMSProcedure)  
   
 -   **对象资源管理器详细信息：**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48075127"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**“未同步”**|该数据库未同步或尚未联接到可用性组。|  
-|**已同步**|该数据库与当前主副本（如果有）或上一个主副本上的主数据库同步。<br /><br /> 注意：在性能模式中，数据库从不处于“已同步”状态。|  
+|**已同步**|该数据库与当前主副本（如果有）或上一个主副本上的主数据库同步。<br /><br /> 注意：在性能模式下，数据库是永远不会处于 Synchronized 状态。|  
 |**NULL**|未知状态。 当本地服务器实例无法与 WSFC 故障转移群集通信（即本地节点不是 WSFC 仲裁的一部分）时，出现此值。|  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "48075127"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式中，同步状态始终是“正在同步”。|  
+|正在同步|辅助数据库已收到主数据库尚未写入磁盘（硬编码）的事务日志记录。<br /><br /> 注意：在异步提交模式下，同步状态始终是**Synchronizing**。|  
   
  **已挂起**  
  指示可用性数据库当前是否联机。 可能的值如下：  

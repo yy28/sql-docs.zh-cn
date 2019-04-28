@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730200"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中创建 Analysis Services 脚本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包括您可以用来对 Analysis Services 对象和任务编写脚本的脚本生成功能、模板和编辑器。  
@@ -36,7 +36,7 @@ ms.locfileid: "48067179"
   
 2.  右键单击某个数据库，然后单击“备份”。 这将打开“备份数据库”对话框。 指定备份文件的名称，并选择要用于此备份的选项。  
   
-3.  单击对话框顶部的 **“脚本”** 。 脚本功能是 Management Studio 中所有基于任务的对话框的一部分。 该功能具有以下选项： **“将操作脚本保存到‘新建查询’窗口”** （用于打开查询编辑器窗口）、 **“将操作脚本保存到文件”** （用于将 XMLA 脚本保存到文件）或 **“将操作脚本保存到剪贴板”** （用于将 XMLA 脚本保存到剪贴板）。  
+3.  单击对话框顶部的 **“脚本”** 。 脚本功能是 Management Studio 中所有基于任务的对话框的一部分。 它具有以下选项：**脚本操作在新查询窗口**以打开查询编辑器窗口中，**操作脚本保存到文件**若要将 XMLA 脚本保存到一个文件，或**操作脚本保存到剪贴板**保存到 XMLA 脚本剪贴板。  
   
      请注意，Analysis Services 脚本不支持在 Management Studio 中列为脚本选项的 **“将操作脚本保存到作业”** 选项。  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067179"
   
 2.  找到要为其创建脚本（该脚本可以创建、更改或删除对象）的对象。  
   
-3.  右键单击该对象，指向“编写多维数据集脚本为”，再指向“CREATE 到”、“ALTER 到”或“DELETE 到”，然后单击以下选项之一：“新查询编辑器窗口”（用于打开查询编辑器窗口）、“文件”（用于将 XMLA 脚本保存到文件）或“剪贴板”（用于将 XMLA 脚本保存到剪贴板）。  
+3.  右键单击该对象，指向**作为多维数据集脚本**，依次指向**创建到**， **ALTER 到**，或**删除到**，然后单击其中一个以下选项：**新查询编辑器窗口**以打开查询编辑器窗口中，**文件**若要将 XMLA 脚本保存到一个文件，或**剪贴板**将 XMLA 脚本保存到剪贴板。  
   
     > [!NOTE]  
     >  通常，如果想要创建该文件的多个不同版本，请选择“文件”。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中编写管理任务脚本](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA 查询编辑器&#40;Analysis Services-多维数据&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [XMLA 查询编辑器（Analysis Services - 多维数据）](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805875"
 ---
 # <a name="enhance-merge-replication-performance"></a>增强合并复制性能
   在考虑 [增强事务复制性能](enhance-general-replication-performance.md)中介绍的常规性能提示后，还需要考虑特定于合并复制的其他几个方面。  
@@ -140,10 +140,10 @@ ms.locfileid: "54129117"
   
 -   不定期地重新对合并复制系统表建立索引。  
   
-     合并复制维护的一部分，应不定期检查与合并复制系统表的增长情况：**MSmerge_contents**， **MSmerge_genhistory**，和**MSmerge_tombstone**， **MSmerge_current_partition_mappings**，和**MSmerge_past_partition_mappings**。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
+     在维护合并复制过程中，应不定期检查与合并复制关联的系统表的增长：MSmerge_contents、MSmerge_genhistory，以及 MSmerge_tombstone、MSmerge_current_partition_mappings，以及 MSmerge_past_partition_mappings。 定期对这些表重建索引。 有关详细信息，请参阅 [重新组织和重新生成索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用复制监视器中的 **“同步历史记录”** 选项卡监视同步性能。  
   
-     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 查看详细统计信息的详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     对于合并复制，复制监视器会在 **“同步历史记录”** 选项卡中显示同步过程中所处理的每个项目的详细统计信息，其中包括每个处理阶段（如上载更改、下载更改等）所用的时间。 它可帮助查明导致速度降低的特定表，是用来解决合并订阅性能问题的最佳途径。 有关查看详细统计信息详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

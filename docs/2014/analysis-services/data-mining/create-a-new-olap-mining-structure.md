@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 603b1d22370a32808460aa3e725e5f26e0f62dc0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718204"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导来创建使用来自多维模型的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  

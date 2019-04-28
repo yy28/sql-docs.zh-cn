@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730266"
 ---
 # <a name="creating-an-analysis-services-project"></a>创建 Analysis Services 项目
   在以下任务中，您使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]以创建新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]名为项目`Analysis Services Tutorial`根据[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目模板。 “  项目”是相关对象的集合。 项目存在于解决方案中，而解决方案包括一个或多个项目。 有关详细信息，请参阅[创建 Analysis Services 项目 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "48066940"
  [定义数据源](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>请参阅  
- [创建多维模型使用的 SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [创建 Analysis Services 项目&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [使用 SQL Server Data Tools 创建多维模型 (SSDT)](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [创建 Analysis Services 项目 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

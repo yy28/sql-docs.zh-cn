@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721150"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
   默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  
@@ -46,7 +46,7 @@ ms.locfileid: "52811979"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]设置用户帐户 ：[使用备份来初始化事务发布 &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
--   复制 TRANSACT-SQL 编程：[从备份初始化事务订阅（复制 Transact-SQL 编程）](initialize-a-transactional-subscription-from-a-backup.md)  
+-   复制 Transact-SQL 编程：[从备份初始化事务订阅（复制 Transact-SQL 编程）](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  如果初始化订阅时不使用快照，在发布服务器上运行 SQL Server 服务的帐户必须具有分发服务器上快照文件夹的写权限。 有关权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  

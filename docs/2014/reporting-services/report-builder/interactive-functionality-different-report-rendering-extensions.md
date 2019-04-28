@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688787"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同报表呈现扩展插件的交互功能（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一些交互式报告功能，利用这些功能，可以在运行时处理报表。 并非所有的报表呈现格式都支持整套交互功能。 您可以通过下表了解每项交互功能在处理特定格式时的工作原理。  

@@ -1,5 +1,5 @@
 ---
-title: 域管理：域列表 |Microsoft Docs
+title: 域管理：域列表 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792744"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
   本主题介绍 **(DQS) 中** “域管理” [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 页的域列表中的控件。 使用此窗格可以选择要对其执行管理操作的域。 将对 **“域管理”** 页中的所有选项卡式页使用此同一窗格。  

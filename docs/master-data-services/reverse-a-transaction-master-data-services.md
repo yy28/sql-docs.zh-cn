@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7a23e955452408c5c1b57adcaf8de6ece84aa2fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704409"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>撤消事务 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52751850"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，管理员可以在需要撤消操作时撤消事务。 事务的示例包括属性值更改、层次结构移动或成员删除。 本主题仅适用于事务日志类型为“属性”的实体的事务。 请转到实体资源管理器页，查看事务日志类型为“成员”的实体的事务历史记录。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52751850"
   
 7.  在确认对话框中，单击 **“确定”**。 将向网格添加另一事务以记录撤消的事务。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)   
  [重新激活成员或集合 (Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [回退成员修订历史记录](../master-data-services/rollback-member-revision-history-master-data-services.md)

@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807887"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
     
@@ -111,7 +111,7 @@ ms.locfileid: "48154937"
  镜像会话启动或继续后，将累积在主体服务器上的主体数据库日志记录发送给镜像服务器的过程，此过程将这些日志记录尽快写入磁盘，以便与主体服务器保持同步。  
   
  事务安全  
- 一种镜像特定的数据库属性，用于确定数据库镜像会话是同步运行还是异步运行。 有两种安全级别：FULL 和 OFF。  
+ 一种镜像特定的数据库属性，用于确定数据库镜像会话是同步运行还是异步运行。 有两种安全级别：完整和关闭。  
   
  Witness  
  仅用于高安全性模式，SQL Server 的一个可选实例，它能使镜像服务器识别何时要启动自动故障转移。 与这两个故障转移伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  
@@ -329,7 +329,7 @@ ms.locfileid: "48154937"
  [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [自动页修复&#40;可用性组和数据库镜像&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [数据库镜像配置故障排除 (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [数据库镜像：互操作性和共存 (SQL Server)](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [数据库镜像：互操作性和共存 &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [数据库镜像的先决条件、限制和建议](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [AlwaysOn 可用性组概述&#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [关于日志传送 (SQL Server)](../log-shipping/about-log-shipping-sql-server.md)  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719727"
 ---
 # <a name="the-driver-manager"></a>驱动程序管理器
 *驱动程序管理器*是管理应用程序和驱动程序之间的通信的库。 例如，在 Microsoft® Windows® 平台上驱动程序管理器是由 Microsoft 编写，可以重新分发的可再发行组件的 MDAC 2.8 SP1 SDK 用户的动态链接库 (DLL)。  
@@ -32,7 +32,7 @@ ms.locfileid: "47791547"
   
  驱动程序管理器通过提供一个单一位置来调用每个函数来解决此问题。 应用程序链接到驱动程序管理器并调用 ODBC 函数在驱动程序管理器中，不是驱动程序。 应用程序标识与目标驱动程序和数据源*连接句柄*。 当它加载驱动程序时，驱动程序管理器将生成指向该驱动程序中的函数的指针的表。 它由应用程序传递的连接句柄用于在目标驱动程序中查找的函数地址，并调用该函数的地址。  
   
- 大多数情况下，驱动程序管理器只需将传递到正确的驱动程序应用程序的函数调用。 但是，它还实现一些函数 (**SQLDataSources**， **SQLDrivers**，并**SQLGetFunctions**) 并执行基本的错误检查。 例如，驱动程序管理器检查句柄不是空指针，以正确的顺序，调用的函数和某些函数自变量都有效。 检查由驱动程序管理器中的错误的完整说明，请参阅每个函数的参考部分和[附录 b: ODBC 状态转换表](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 大多数情况下，驱动程序管理器只需将传递到正确的驱动程序应用程序的函数调用。 但是，它还实现一些函数 (**SQLDataSources**， **SQLDrivers**，并**SQLGetFunctions**) 并执行基本的错误检查。 例如，驱动程序管理器检查句柄不是空指针，以正确的顺序，调用的函数和某些函数自变量都有效。 检查由驱动程序管理器中的错误的完整说明，请参阅每个函数的参考部分和[附录 b:状态转换表](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  驱动程序管理器中的最后一个主要角色是加载和卸载驱动程序。 应用程序加载和卸载该驱动程序管理器。 当它想要使用的特定驱动程序时，它将调用连接函数 (**SQLConnect**， **SQLDriverConnect**，或**SQLBrowseConnect**) 驱动程序管理器中，并指定特定数据源或驱动程序，例如"财务"或"SQL Server。"的名称 使用此名称，驱动程序管理器中搜索驱动程序的文件名称，例如 Sqlsrvr.dll 的数据源信息。 然后加载驱动程序 （假设未加载），将每个函数的地址存储在驱动程序，并调用中的驱动程序，然后初始化自身并连接到数据源的连接函数。  
   

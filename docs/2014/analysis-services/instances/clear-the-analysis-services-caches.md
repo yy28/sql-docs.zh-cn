@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730313"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 缓存
   Analysis Services 通过缓存数据来提高查询性能。 本主题提供关于使用 XMLA ClearCache 命令来清除为响应 MDX 查询而创建的缓存的建议。 根据您使用的表格模型还是多维模型，运行 ClearCache 的影响有所不同。  
@@ -47,13 +47,13 @@ ms.locfileid: "53350651"
   
  清除缓存要求您向 XMLA 查询中的 `ClearCache` 语句提供对象标识符。 本主题中的第一步解释如何获取对象标识符。  
   
-#### <a name="step-1-get-the-object-identifier"></a>步骤 1：获取对象标识符  
+#### <a name="step-1-get-the-object-identifier"></a>第 1 步：获取对象标识符  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个对象，选择“属性”，然后复制“属性”窗格中 ID 属性的值。 这种方法适用于数据库、多维数据集、维度或表。  
   
 2.  若要获取度量值组 ID，请右键单击该度量值组并选择“编写度量值组脚本为”。 选择 **“创建”** 或 **“更改”**，并将查询发送到一个窗口。 度量值组的 ID 将在对象定义中可见。 复制对象定义的 ID。  
   
-#### <a name="step-2-run-the-query"></a>步骤 2：运行查询  
+#### <a name="step-2-run-the-query"></a>第 2 步：运行查询  
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，右键单击某个数据库，指向“新建查询”，然后选择 XMLA。  
   

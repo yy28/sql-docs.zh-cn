@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864992"
 ---
 # <a name="allocating-a-connection-handle"></a>分配连接句柄
   应用程序可以连接到数据源或驱动程序之前，必须分配连接句柄。 这是通过调用**SQLAllocHandle**与*HandleType*参数设置为 SQL_HANDLE_DBC 并*InputHandle*指向初始化的环境句柄。  

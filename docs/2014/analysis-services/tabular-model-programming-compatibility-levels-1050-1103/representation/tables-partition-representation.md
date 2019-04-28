@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795516"
 ---
 # <a name="partition-representation-tabular"></a>分区表示形式（表格）
   为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表；这些子集中的每个子集都是表的一个分区。  

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813990"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
@@ -45,7 +45,7 @@ ms.locfileid: "48108087"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **挂起数据库，使用：**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48108087"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **跟进：** [避免出现已满事务日志](#FollowUp)  
+-   **跟进：**[避免出现已满事务日志](#FollowUp)  
   
 -   [相关任务](#RelatedTasks)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48108087"
  您必须连接到承载要挂起的数据库的服务器实例。 若要挂起主数据库和相应的辅助数据库，请连接到承载主副本的服务器实例。 若要挂起辅助数据库但保持主数据库可用，请连接到辅助副本。  
   
 ###  <a name="Recommendations"></a> 建议  
- 出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅本主题后面的 [跟进：避免出现已满事务日志](#FollowUp)。  
+ 出现瓶颈时，短暂挂起一个或多个辅助数据库可能有助于暂时提高主副本的性能。 只要有一个辅助数据库仍挂起，就无法截断相应的主数据库的事务日志。 这将导致日志记录在主数据库上累积。 因此，我们建议您快速恢复或删除挂起的辅助数据库。 有关详细信息，请参阅[执行后续操作：避免事务日志已满](#FollowUp)，本主题中更高版本。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -107,9 +107,9 @@ ms.locfileid: "48108087"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **挂起数据库**  
   
-1.  将目录更改 (`cd`) 到承载要挂起其数据库副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
+1.  将目录 (`cd`) 改为承载要挂起数据库的副本的服务器实例。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。  
   
-2.  使用`Suspend-SqlAvailabilityDatabase`cmdlet 挂起可用性组。  
+2.  使用 `Suspend-SqlAvailabilityDatabase` cmdlet 挂起可用性组。  
   
      例如，以下命令为可用性数据库 `MyDb3` （位于 `MyAg` 服务器实例上的可用性组 `Computer\Instance`中）暂停数据同步。  
   
@@ -119,13 +119,13 @@ ms.locfileid: "48108087"
     ```  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 `Get-Help` PowerShell 环境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   
 -   [SQL Server PowerShell 提供程序](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> 跟进：避免出现已满事务日志  
  通常，在数据库上执行自动检查点操作时，事务日志将在下一个日志备份后截断到该检查点。 但是，当挂起辅助数据库时，当前的所有日志记录在主数据库上都保持活动状态。 如果填满该事务日志（因为它达到其最大大小或服务器实例耗尽空间），则数据库将无法再执行任何更新。  
   
  若要避免此问题，应执行以下操作之一：  

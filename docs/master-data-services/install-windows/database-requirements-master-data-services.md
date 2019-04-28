@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d9d62078c4c3f2e4b72abed1bc7275fbf616b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695782"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
 
@@ -63,7 +63,7 @@ ms.locfileid: "52504615"
   
 ### <a name="accounts-and-permissions"></a>帐户和权限  
   
-|类型|描述|  
+|类型|Description|  
 |----------|-----------------|  
 |用户帐户|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，可以使用 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以承载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 用户帐户必须属于  实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 有关 **sysadmin** 角色的详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理员帐户|创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时，必须指定要作为 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系统管理员的域用户帐户。 对于与此数据库关联的所有 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序，此用户可以更新所有模型以及所有功能区域中的所有数据。 有关详细信息，请参阅 [管理员 (Master Data Services)](../../master-data-services/administrators-master-data-services.md)。|  
@@ -71,7 +71,7 @@ ms.locfileid: "52504615"
 ### <a name="database-backup"></a>数据库备份  
  最佳做法是每天在活动较少时进行完整数据库备份，并根据环境需要更频繁地备份事务日志。 有关数据库备份的详细信息，请参阅[备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装 Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [创建 Master Data Services 数据库](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services 数据库](../../master-data-services/master-data-services-database.md)   

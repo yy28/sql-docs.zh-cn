@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707259"
 ---
 # <a name="---comment-dmx-summary"></a>-（注释） (DMX) 摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38031445"
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该运算符用于单行或嵌套的注释。 通过使用 -- 插入的注释由换行符分隔。  
   
  注释没有最大长度限制。  
@@ -43,6 +43,6 @@ ms.locfileid: "38031445"
  [斜杠星型&#40;注释&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [双斜杠&#40;注释&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [运算符&#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

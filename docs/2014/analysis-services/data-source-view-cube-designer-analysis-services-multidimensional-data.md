@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732658"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>数据源视图（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“数据源视图”** 窗格，查看与所选多维数据集关联的数据源视图中的表和列。 此窗格用于创建度量值组和度量值，方法是将列从 **“数据源视图”** 窗格拖动到 **“度量值”** 窗格中。  

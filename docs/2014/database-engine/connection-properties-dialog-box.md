@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808395"
 ---
 # <a name="connection-properties-dialog-box"></a>“连接属性”对话框
   使用此对话框可以查看当前的连接属性。 在不同“对象资源管理器”对话框中单击“查看连接属性”时，可以使用此对话框。 此页上显示的属性是只读的。  

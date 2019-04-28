@@ -1,5 +1,5 @@
 ---
-title: DrillupMember (MDX) |Microsoft 文档
+title: DrillupMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690765"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -35,13 +35,13 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **DrillupMember**函数将返回一组基于是在第二组的成员的后代的成员中的第一组指定的成员。 第一个集可以具有任何维数，但第二个集必须包含一个一维集。 第一个集中的原始成员顺序会被保留。 此函数在构造集时仅包括位于第一个集中并且是第二个集中成员的直接后代的那些成员。 如果第一个集中某成员的直接祖先不在第二个集中，则第一个集中的该成员包括在此函数返回的集中。 第一个集中位于第二个集中某个祖先成员之前的后代，也会包括在内。  
+## <a name="remarks"></a>备注  
+ **DrillupMember**函数将返回一组基于指定第一个集中的第二个集中成员的后代的成员的成员。 第一个集可以具有任何维数，但第二个集必须包含一个一维集。 第一个集中的原始成员顺序会被保留。 此函数在构造集时仅包括位于第一个集中并且是第二个集中成员的直接后代的那些成员。 如果第一个集中某成员的直接祖先不在第二个集中，则第一个集中的该成员包括在此函数返回的集中。 第一个集中位于第二个集中某个祖先成员之前的后代，也会包括在内。  
   
  第一个集可以包含元组，但不能包含成员。 元组的深化是 OLE DB 的扩展，它返回元组集而非成员集。  
   
 > [!IMPORTANT]  
->  只有后面紧跟子成员或后代的成员才会被浅化。 集合中的成员的顺序非常重要的这两个明细\*和向上钻取\*系列函数。 请考虑使用**Hierarchize**函数适当的成员进行排序的第一个集。  
+>  只有后面紧跟子成员或后代的成员才会被浅化。 在集中的成员的顺序非常重要的这两种向下钻取\*和向上钻取\*系列的函数。 请考虑使用**Hierarchize**函数进行正确排序的第一组的成员。  
   
 ## <a name="example"></a>示例  
  除了第二个集以外，以下三个示例都是相似的。 在第一个示例时，第二个集为 United States。 因此，从结果集中排除 Colorado。 它是 United States 的后代。  
@@ -59,7 +59,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- 示例二向我们显示了成员顺序的重要性。 由于**DrillupMember**仅钻取向上上紧跟第一组上的后代的成员，它不会不向上钻取加拿大成员。 Canada 与其后代由 United States 和 Colorado 分隔开来。 如果你对成员重新排序，使 Canada 直接位于 Alberta 上方，则 Alberta 和 Brunswick 都将从行集中排除。  
+ 示例二向我们显示了成员顺序的重要性。 由于**DrillupMember**仅浅化紧跟第一个集中的后代的那些成员，它不浅化 Canada 成员。 Canada 与其后代由 United States 和 Colorado 分隔开来。 如果你对成员重新排序，使 Canada 直接位于 Alberta 上方，则 Alberta 和 Brunswick 都将从行集中排除。  
   
 ```  
 SELECT DrillUpMember (   
@@ -75,7 +75,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 三个示例演示如何使用**Hierarchize**可以减轻加拿大成员上的成员顺序和向上钻取影响。  
+ 示例三显示了如何使用**Hierarchize**可以降低成员顺序和浅化 Canada 成员的效果。  
   
 ```  
 SELECT DrillUpMember (   
@@ -95,6 +95,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 表达式 (MDX) |Microsoft 文档
+title: 表达式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690836"
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
 
 
-  表达式是标识符、 值和可进行计算以获取结果的运算符的组合。 数据可在多个不同位置时访问或更改数据。 例如，可以将表达式用作查询要检索的数据的一部分，或用作查找满足一组条件的数据的搜索条件。  
+  表达式是标识符、 值和运算符，可以计算来获取结果的组合。 可以在多个不同的位置访问或更改数据时使用数据。 例如，可以将表达式用作查询要检索的数据的一部分，或用作查找满足一组条件的数据的搜索条件。  
   
 ## <a name="simple-and-complex-expressions"></a>简单表达式和复杂表达式  
  在 MDX 中，表达式可以是简单的，也可以是复杂的：  
@@ -38,7 +38,7 @@ ms.locfileid: "34740836"
  可以从用运算符联接的这些实体的组合生成复杂表达式。  
   
 ## <a name="expression-results"></a>表达式结果  
- 对于生成的单个常量、 变量、 标量函数或列名称的简单表达式，数据类型、 排序规则、 精度、 刻度和表达式的值是数据类型、 排序规则、 精度、 刻度和被引用元素的值。 因为 MDX 仅直接支持 OLE VARIANT 数据类型，所以使用简单表达式时不会发生强制。  
+ 对于单个常量、 变量、 标量函数或列名构成的简单表达式，数据类型、 排序规则、 精度、 小数位数和表达式的值是元素的数据类型、 排序规则、 精度、 小数位数和引用的值。 因为 MDX 仅直接支持 OLE VARIANT 数据类型，所以使用简单表达式时不会发生强制。  
   
  对于复杂表达式，当使用两个或多个不同数据类型的简单表达式时，可以发生强制。  
   
@@ -85,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[处理空值](../mdx/working-with-empty-values.md)|说明什么是空值以及如何处理此类值。|  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

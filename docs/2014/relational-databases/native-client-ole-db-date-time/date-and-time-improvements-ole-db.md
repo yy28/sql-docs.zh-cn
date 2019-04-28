@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866829"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日期和时间改进 (OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型公开为中的扩展[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。 概览[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 支持新的日期和时间数据类型，请参阅[日期和时间改进](../native-client/features/date-and-time-improvements.md)。 有关示例，请参阅[使用增强的日期和时间功能&#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)。  
@@ -29,8 +29,8 @@ ms.locfileid: "52818003"
  [针对 OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  提供有关 OLE DB 的信息 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 类型的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期和时间数据类型。  
   
- [元数据&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- 包含有关 DBBINDING 结构、`ICommandWithParameters::GetParameterInfo`、`ICommandWithParameters::SetParameterInfo`、`IColumnsRowset::GetColumnsRowset` 和 I`ColumnsInfo::GetColumnInfo` 的信息。还提供了有关 OLE DB 架构行集更新的信息。  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ 包含有关 DBBINDING 结构的信息`ICommandWithParameters::GetParameterInfo`， `ICommandWithParameters::SetParameterInfo`， `IColumnsRowset::GetColumnsRowset`，和我`ColumnsInfo::GetColumnInfo`。还提供了有关 OLE DB 架构行集更新的信息。  
   
  [绑定和转换 (OLE DB)](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  说明在服务器和客户端之间现有和新数据类型的转换规则。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864898"
 ---
 # <a name="global-settings-tester-oracletosql"></a>全局设置（测试程序）(OracleToSQL)
 使用的测试人员页面**全局设置**对话框来指定 SSMA 测试人员的设置。  
@@ -28,7 +28,7 @@ ms.locfileid: "47679315"
   
 此设置有以下选项：  
   
-1.  用户帐户控制  
+1.  是  
   
 2.  否  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47679315"
   
 此设置有以下选项：  
   
-1.  用户帐户控制  
+1.  是  
   
 2.  否  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47679315"
   
 此设置有以下选项：  
   
-1.  用户帐户控制  
+1.  是  
   
 2.  否  
   

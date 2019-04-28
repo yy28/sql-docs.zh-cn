@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679967"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 元素
   W3C XSD **redefine** 元素为重新定义架构组件提供了支持。 但是，对此指令可能会严重影响性能，同时还要求的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新进行验证的所有实例`xml`重新定义的架构与相关联的数据类型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含 **\<xsd:redefine>** 元素的 XML 架构。  

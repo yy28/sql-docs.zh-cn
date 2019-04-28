@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655421"
 ---
 # <a name="transactional-replication"></a>事务复制
   事务复制通常从发布数据库对象和数据的快照开始。 创建了初始快照后，接着在发布服务器上所做的数据更改和架构修改通常在修改发生时（几乎实时）便传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器，因此，在发布内部可以保证事务的一致性。  
@@ -75,8 +75,8 @@ ms.locfileid: "54127677"
 |发布类型|Description|  
 |----------------------|-----------------|  
 |标准事务发布|适合于订阅服务器上的所有数据均为只读的拓扑（事务复制在订阅服务器上并不强制如此）。<br /><br /> 默认情况下，在使用 Transact-SQL 或复制管理对象 (RMO) 时创建标准事务发布。 使用新建发布向导时，将通过选择 **“发布类型”** 页上的 **“事务发布”** 来创建标准事务发布。<br /><br /> 有关创建发布的详细信息，请参阅 [发布数据和数据库对象](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
-|具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> -每个位置具有相同的数据，使用一个发布服务器和订阅服务器。 <br /> -它是可以在订阅服务器上的行来更新<br /> -此拓扑最适合用于需要高可用性的服务器环境和读取可伸缩性。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
-|对等拓扑|此发布类型的特征如下：<br /> -每个位置都具有相同的数据，兼作发布服务器和订阅服务器。<br /> -同一行可以一次只能在一个位置更改。<br /> -支持[冲突检测](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-此拓扑最适合用于需要高可用性的服务器环境和读取可伸缩性。<br /><br />有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
-|双向事务复制|此发布类型的特征如下：<br />双向复制是类似于对等复制，但是，它不提供冲突解决方法。 此外，双向复制被限制为 2 个服务器。 <br /><br /> 有关详细信息，请参阅[双向事务复制](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|具有可更新订阅的事务发布|此发布类型的特征如下：<br /><br /> -每个位置具有相同的数据，使用一个发布服务器和订阅服务器。 <br /> -它是可以在订阅服务器上的行来更新<br /> - 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅[可更新订阅](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|对等拓扑|此发布类型的特征如下：<br /> - 每个位置都具有相同的数据，兼作发布服务器和订阅服务器。<br /> - 同一行每次只能在一个位置进行更改。<br /> - 支持[冲突检测](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- 此拓扑最适合需要高可用性和读取可伸缩性的服务器环境。<br /><br />有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|双向事务复制|此发布类型的特征如下：<br />双向复制类似于对等复制，但是它不提供冲突解决方案。 此外，双向复制仅限于 2 台服务器。 <br /><br /> 有关详细信息，请参阅[双向事务复制](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

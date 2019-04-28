@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834558"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>“配置 SSIS 日志”对话框
   使用 **“配置 SSIS 日志”** 对话框可以定义包的日志记录选项。  
@@ -76,7 +76,7 @@ ms.locfileid: "58375206"
  **Configuration**  
  在列表中选择一个现有的连接管理器或单击\<“新建连接...”> 以创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
- 相关主题：[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)管理器中，[文件连接管理器](connection-manager/file-connection-manager.md)  
+ 相关的主题：[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)管理器、[文件连接管理器](connection-manager/file-connection-manager.md)  
   
  **删除**  
  选择一个日志提供程序，然后单击“删除”。  

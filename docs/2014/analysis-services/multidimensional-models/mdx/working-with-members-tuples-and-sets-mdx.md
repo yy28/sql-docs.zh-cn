@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699138"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成员、元组和集 (MDX)
   MDX 提供多个可返回一个或多个成员、元组或集的函数，或对成员、元组或集进行操作的函数。  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- 此外可以使用`FirstChild`函数以返回成员，如以下示例所示。  
+ 还可以使用 `FirstChild` 函数返回此成员，如下面的示例所示。  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  字符串函数对 MDX 表达式进行操作，返回一个字符串。 例如，[UniqueName (MDX)](/sql/mdx/uniquename-mdx) 函数返回一个字符串值，该字符串包含维度、层次结构、级别或成员的唯一名称。 有关字符串函数的详细信息，请参阅 [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)  
   
   

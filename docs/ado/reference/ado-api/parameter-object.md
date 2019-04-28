@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710341"
 ---
 # <a name="parameter-object"></a>Parameter 对象
 表示参数或参数与相关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象基于参数化的查询或存储的过程。  

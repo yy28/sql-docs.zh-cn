@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733676"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序查看器 inData 挖掘设计器提供的最简单的方式查看时序模型中使用的回归公式的详细信息。  

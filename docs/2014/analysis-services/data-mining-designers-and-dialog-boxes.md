@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f42a30372d3f12e767a1cc64a4e77f5bfe8d1b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689640"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>数据挖掘设计器和对话框
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供可用于创建、 查看、 测试和通过数据挖掘模型创建预测的设计工具。  
@@ -29,7 +29,7 @@ ms.locfileid: "48146005"
 |主题|Description|  
 |-----------|-----------------|  
 |[数据挖掘模型设计器&#40;Analysis Services-数据挖掘&#41;](data-mining-model-designer-analysis-services-data-mining.md)|使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的工具可以定义新的挖掘结构和关联的挖掘模型。|  
-|[挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中提供的自定义查看器可以浏览已完成的模型并更好地理解数据中的模式。|  
+|[挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中提供的自定义查看器可以浏览已完成的模型并更好地理解数据中的模式。|  
 |[挖掘准确性图表设计器&#40;数据挖掘&#41;](mining-accuracy-chart-designer-data-mining.md)|使用准确性图表工具（例如提升图、分类矩阵和交叉验证）可以评估挖掘模型以及用于定型的数据集。 所有准确性工具都会在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中提供。|  
 |[预测查询生成器&#40;数据挖掘&#41;](prediction-query-builder-data-mining.md)|使用在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中均提供的预测查询生成器可以|  
 |[挖掘结构属性对话框&#40;Analysis Services-数据挖掘&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [挖掘模型属性对话框&#40;Analysis Services-数据挖掘&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|更改挖掘结构或挖掘模型的属性可以影响处理数据的方式、添加建模标志或编辑元数据。|  

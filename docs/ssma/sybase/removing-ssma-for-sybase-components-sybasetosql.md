@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667928"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>删除 SSMA for Sybase 组件 (SybaseToSQL)
 完成后将数据库从 Sybase Adaptive Server Enterprise (ASE) 中，为迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能需要卸载 SSMA 组件。 您可以在任何时候，卸载客户端组件，但不是应卸载扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非你确信你迁移的数据库不能再使用中的函数**ssma_syb**架构**sysdb**数据库。  

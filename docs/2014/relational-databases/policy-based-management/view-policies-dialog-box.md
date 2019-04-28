@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676851"
 ---
 # <a name="view-policies-dialog-box"></a>“查看策略”对话框
   此对话框用于查看对该目标有效的策略， 它显示相关的策略、其策略类别以及策略相关信息。  

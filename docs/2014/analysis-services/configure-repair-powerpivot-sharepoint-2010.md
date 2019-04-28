@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680465"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
   要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "53360339"
   
      **通行短语：** 键入通行短语。 对于新的 SharePoint 场，在向该 SharePoint 场中添加新的服务器或应用程序时，需要使用该通行短语。 对于已存在的场，输入允许您向该场添加服务器应用程序的通行短语。  
   
-5.  **端口：** 可以选择键入用于连接到管理中心 Web 应用程序的端口号，也可以使用提供的随机生成的端口号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。  
+5.  **端口：**（可选） 键入用于连接到管理中心 web 应用程序或使用提供的随机生成的数的端口号。 该配置工具将首先检查该端口号是否可用，然后将其作为选项提供。  
   
 6.  单击 **“在本地服务器上注册 SQL Server Analysis Services (PowerPivot)”**。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360339"
   
  下表说明了用于配置服务器的值。  
   
-|第|输入值|源|Description|  
+|第|输入值|Source|Description|  
 |----------|-----------------|------------|-----------------|  
 |**配置或修复 PowerPivot for SharePoint**|默认帐户|当前用户|默认帐户是用于在场中设置共享服务的域 Windows 用户帐户。 该帐户用于设置 PowerPivot 服务应用程序、Secure Store Service、Excel Services、Web 应用程序池标识、网站集管理员和 PowerPivot 无人参与的数据刷新帐户。<br /><br /> 默认情况下，该工具将输入当前用户的域帐户。 除非您是为评估目的配置服务器，否则，应该使用其他域用户帐户替换该默认帐户。<br /><br /> 您还可以在以后使用管理中心来更改服务标识。<br /><br /> 或者，在 PowerPivot 配置工具中，您可为以下项指定专用的帐户：<br /><br /> Web 应用程序，使用 **“创建默认的 Web 应用程序”** 页（假定该工具正在为场创建 Web 应用程序）。<br /><br /> PowerPivot 无人参与的数据刷新帐户，使用此工具中的 **“为数据刷新创建无人参与的帐户”** 页。|  
 ||数据库服务器|本地 PowerPivot 命名实例（如果可用）|如果数据库引擎实例作为 PowerPivot 命名实例安装，则该工具将使用此实例填充数据库服务器字段。 如果您没有安装数据库引擎，此字段将为空。 您必须提供一个实例。 该实例可以是支持 SharePoint 场的任何 SQL Server 版本或发行版。|  

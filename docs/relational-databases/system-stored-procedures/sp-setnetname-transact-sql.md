@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656462"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>参数  
- **@server = '** *服务器*   
+ **@server = '** *server* **'**  
  在用户编码的远程存储过程调用语法中引用的远程服务器名。 中的一行**sys.servers**必须已经存在要使用此*server*。 *server* 的数据类型为 **sysname**，无默认值。  
   
- **@netname ='** *network_name*   
+ **@netname ='** *network_name* **'**  
  对其执行远程存储过程调用的计算机网络名。 *network_name*是**sysname**，无默认值。  
   
  该名称必须与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 计算机名相匹配，并且该名称可以包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符中不允许使用的字符。  
@@ -74,7 +74,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  使用**sp_setnetname**为链接的服务器指回本地服务器不支持。 以这种方式引用的服务器不能参与分布式事务。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求的成员身份**sysadmin**并**setupadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -91,7 +91,7 @@ EXEC Win_1.master.dbo.sp_who;
 ## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

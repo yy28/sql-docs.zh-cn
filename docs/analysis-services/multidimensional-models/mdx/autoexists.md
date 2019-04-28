@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800220"
 ---
 # <a name="autoexists"></a>Autoexists
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -310,7 +310,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 中的重要概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [多维数据集空间](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [元组](../../../analysis-services/multidimensional-models/mdx/tuples.md)   

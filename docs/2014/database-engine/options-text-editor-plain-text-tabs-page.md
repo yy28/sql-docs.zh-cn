@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844283"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>选项（“文本编辑器”-“纯文本”-“选项卡”页）
   使用此对话框可以更改文本编辑器的跳格行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在“工具”菜单上单击“选项”，展开“文本编辑器”，展开“纯文本”，再单击“制表符”。  
@@ -30,10 +30,10 @@ ms.locfileid: "48074759"
  **无**  
  不缩进按 Enter 时创建的新行。 光标置于新行的第一列。  
   
- **块**  
+ **Block**  
  缩进按 Enter 时创建的新行，缩进量与上一行的缩进量相同。  
   
- **智能**  
+ **Smart**  
  纯文本编辑器不支持此格式类型。  
   
 ## <a name="tabs"></a>制表符  

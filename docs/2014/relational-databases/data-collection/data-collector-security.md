@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873612"
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
   数据收集器使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的基于角色的安全模式。 在此模式下，数据库管理员能够在只拥有执行相应任务所需的权限的安全上下文中运行各种数据收集器任务。 执行涉及内部表的操作时也采用这种方法，内部表只能通过存储过程或视图进行访问。 不会向内部表授予任何权限。 但是，还要对使用存储过程或视图访问表的用户进行权限检查。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679830"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉验证（SQL Server 数据挖掘外接程序）
   ![交叉验证按钮、 数据挖掘功能区](media/dmc-xvalid.gif "交叉验证按钮、 数据挖掘功能区")  
@@ -96,12 +96,12 @@ ms.locfileid: "48171747"
   
 -   一个模型的所有分区中相对于特定度量值平均值的偏差的平均值。  
   
-#### <a name="classification-passfail"></a>分类： 通过/失败  
+#### <a name="classification-passfail"></a>分类：通过/失败  
  没有为可预测属性指定目标值时，此度量值用于分类模型中。 例如，如果您创建了一个可预测多种可能性的模型，此度量值将指示该模型在预测所有可能的值时的有效程度。  
   
  通过/失败通过对满足以下条件的事例计数：**传递**如果具有最高概率的预测的状态与输入状态相同并且概率大于您为指定的值**状态阈值**; 否则为**失败**。  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>分类：真正、假正、真负和假负  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>分类：真正、 假负和假负  
  此测试可用于具有指定目标的所有分类模型。 该度量值指示根据对以下问题的回答，每个事例如何分类：模型预测什么内容和实际结果如何。  
   
 |度量值|Description|  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721779"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
   可通过新建发布向导和 **“发布属性”** 对话框访问 **“项目属性”** 对话框。 使用该对话框可以查看和设置所有类型项目的属性。 对于某些属性来说，只有在创建了发布时才能设置；而对于其他属性，只有在发布没有活动订阅时才能设置。 无法设置的属性将显示为只读。  
@@ -88,7 +88,7 @@ ms.locfileid: "54124987"
  此选项仅适用于存储过程。 它将确定是否复制存储过程的定义（CREATE PROCEDURE 语句）或其执行代码。 如果复制存储过程的执行代码，则在初始化订阅时，会将过程定义复制到订阅服务器；当在发布服务器上执行该过程时，复制功能将在订阅服务器上执行相应的过程。 对于执行较大的批处理操作的情况，这样可以显著地提高性能。 有关详细信息，请参阅 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)。  
   
 ## <a name="options-for-merge-publications"></a>用于合并发布的选项  
- **项目属性**合并发布的对话框中有两个选项卡：**属性**并**冲突解决程序**。  
+ 合并发布的“项目属性”对话框有两个选项卡：“属性”和“解决程序”。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **同步方向**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124987"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有基于 COM 的冲突解决程序均已签名。 选择此选项可以在进行同步时验证冲突解决程序是否有效。  
   
 ## <a name="options-for-oracle-publications"></a>用于 Oracle 发布的选项  
- **项目属性**Oracle 发布的对话框中有两个选项卡：**属性**并**数据映射**。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
+ Oracle 发布的“项目属性”对话框有两个选项卡：“属性”和“数据映射”。 Oracle 发布并不能支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布所支持的所有属性。 有关详细信息，请参阅 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)。  
   
 ### <a name="properties-tab"></a>“属性”选项卡  
  **复制 INSERT、UPDATE 和 DELETE 存储过程**  

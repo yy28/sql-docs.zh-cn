@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692092"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
   如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  单击 **“值”** 文本框，然后在此框中键入一个值。  
   
-     例如，依次选择 `Income` 作为列和大于 (>) 运算符，然后键入 `30000`。  
+     例如，选择`Income`作为列，选择大于运算符 (>)，然后键入`30000`。  
   
 9. 单击网格中的下一行。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 按步骤 7 和 8 中所述选择一个运算符并键入一个值。  
   
-     例如，再次选择 `Income` 作为列，选择小于 (<) 运算符，然后键入 `40000`。  
+     例如，选择`Income`作为列再次选择小于运算符 (<)，然后键入`40000`。  
   
 12. 单击网格中的下一行。  
   

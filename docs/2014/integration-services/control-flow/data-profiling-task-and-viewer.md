@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832573"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
@@ -55,7 +55,7 @@ ms.locfileid: "58379226"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 和数据事件探查  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，数据事件探查过程包括以下步骤：  
   
- **第 1 步：设置数据事件探查任务**  
+ **步骤 1：设置数据事件探查任务**  
  数据事件探查任务是用于配置要计算的配置文件的任务。 运行包含数据事件探查任务的包以计算配置文件。 该任务将配置文件输出以 XML 格式保存到文件或包变量。  
   
  **详细信息：**[设置数据事件探查任务](data-profiling-task.md)  

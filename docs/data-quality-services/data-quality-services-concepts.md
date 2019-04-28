@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659135"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -93,7 +93,7 @@ ms.locfileid: "56033434"
   
  有关 DQS 管理的详细信息，请参阅 [DQS Administration](../data-quality-services/dqs-administration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

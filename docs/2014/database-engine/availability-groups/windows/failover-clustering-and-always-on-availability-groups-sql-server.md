@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791997"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]是在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中引入的高可用性和灾难恢复解决方案，它要求 Windows Server 故障转移群集 (WSFC)。 此外，尽管 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，但您可以使用故障转移群集实例 (FCI) 来为可用性组承载可用性副本。 因此，了解每种群集技术所扮演的角色以及设计您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]环境所需的注意事项十分重要。  
@@ -63,11 +63,11 @@ ms.locfileid: "53352313"
   
 ||FCI 内的节点|可用性组内的副本|  
 |-|-------------------------|-------------------------------------------|  
-|**使用 WSFC 群集**|用户帐户控制|用户帐户控制|  
+|**使用 WSFC 群集**|是|是|  
 |**保护级别**|实例|“数据库”|  
 |**存储类型**|共享|非共享<br /><br /> 请注意，尽管可用性组中的副本不共享存储，但是，由 FCI 承载的副本将使用该 FCI 所要求的共享存储解决方案。 该存储解决方案仅由 FCI 内的节点共享，不在可用性组的副本之间共享。|  
 |**存储解决方案**|直连、SAN、装入点、SMB|取决于节点类型|  
-|**可读辅助副本**|否*|用户帐户控制|  
+|**可读辅助副本**|否*|是|  
 |**适用的故障转移策略设置**|WSFC 仲裁<br /><br /> FCI 特有的<br /><br /> 可用性组设置**|WSFC 仲裁<br /><br /> 可用性组设置|  
 |**故障转移资源**|服务器、实例和数据库|仅数据库|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "53352313"
   
 -   **白皮书：**  
   
-     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组生成高可用性和灾难恢复解决方案](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn 解决方案指南有关高可用性和灾难恢复](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

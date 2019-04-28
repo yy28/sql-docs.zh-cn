@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712794"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
   对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符” 标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
@@ -167,9 +167,9 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 交互指定终止符  
  以下示例使用 `Department-c-t.txt` 语句大容量导入 `BULK INSERT` 数据文件，该语句使用了下表中所示的限定符。  
   
-|选项|Attribute|  
+|Option|特性|  
 |------------|---------------|  
-|DATAFILETYPE **=`char`**|指定将数据字段作为字符数据加载。|  
+|DATAFILETYPE **='`char`'**|指定将数据字段作为字符数据加载。|  
 |FIELDTERMINATOR **='**`,`**'**|将逗号 (`,`) 指定为字段终止符。|  
 |ROWTERMINATOR **='**`\n`**'**|指定行终止符作为换行符。|  
   

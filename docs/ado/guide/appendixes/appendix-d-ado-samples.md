@@ -1,5 +1,5 @@
 ---
-title: 附录 D:ADO 示例 |Microsoft Docs
+title: 附录 D：ADO 示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719780"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>在 Windows SDK 中附录 D:ADO 示例
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>附录 D：Windows SDK 中的 ADO 示例
 Windows SDK 包含几个示例应用程序，演示了如何使用 ADO 和 RDS 代码。 这些示例旨在帮助您了解如何使用 ADO 和 RDS，但不是应部署在生产服务器上。
 
 > [!NOTE]
@@ -34,4 +34,4 @@ Windows SDK 包含几个示例应用程序，演示了如何使用 ADO 和 RDS �
  ADO 文档还包含多种语言，包含作为此联机帮助中的主题中的代码示例。 有关这些示例的详细信息，请参阅[的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)。
 
 ## <a name="see-also"></a>请参阅
- [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)[的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)[在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)[的 ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual c + + 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)[配置 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [附录 c:使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 历史记录](../../../ado/guide/ado-history.md)
+ [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)[的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)[在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)[的 ADO 代码示例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [视觉对象中的 ADO 代码示例C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)[配置 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [附录 c:使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 历史记录](../../../ado/guide/ado-history.md)

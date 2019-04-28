@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855847"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服务概述
 Microsoft OLE DB 访问接口用于 Microsoft 索引服务提供编程的只读访问，以文件系统和 Web 数据由 Microsoft 索引服务编制索引。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。
@@ -67,27 +67,27 @@ MSIDXS
 
  **标准的 ADO 记录集属性的可用性：**
 
-|“属性”|可用性|
+|属性|可用性|
 |--------------|------------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|read/write|
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|read/write|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|只读|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)*|读/写|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|
+|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)*|read/write|
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|read/write|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|始终**adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|read/write|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|read/write|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|
-|[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|read/write|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|
+|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|read/write|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|只读|
+|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|read/write|
+|[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|
 
  \*必须存在于为了使此功能提供程序上启用书签**记录集**。
@@ -97,20 +97,20 @@ MSIDXS
 |方法|可用？|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|用户帐户控制|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|
-|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|用户帐户控制|
-|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|用户帐户控制|
+|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|
+|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|
 |[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|用户帐户控制|
-|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|用户帐户控制|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|用户帐户控制|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|用户帐户控制|
-|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|用户帐户控制|
-|[再次查询](../../../ado/reference/ado-api/requery-method.md)|用户帐户控制|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|用户帐户控制|
-|[支持](../../../ado/reference/ado-api/supports-method.md)|用户帐户控制|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|
+|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|
+|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|
+|[再次查询](../../../ado/reference/ado-api/requery-method.md)|是|
+|[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|
+|[支持](../../../ado/reference/ado-api/supports-method.md)|是|
 |[Update](../../../ado/reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|
 

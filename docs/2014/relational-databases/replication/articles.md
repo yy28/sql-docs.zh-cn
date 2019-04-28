@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721989"
 ---
 # <a name="articles"></a>项目
   在 **“项目”** 页中，可以指定要作为项目包含在发布中的数据库对象。 如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  

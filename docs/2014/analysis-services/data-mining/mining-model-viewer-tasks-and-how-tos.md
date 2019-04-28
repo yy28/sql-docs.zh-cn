@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733392"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>挖掘模型查看器任务和操作指南
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”选项卡具体相关的任务的分步说明。  
@@ -42,12 +42,12 @@ ms.locfileid: "48189663"
   
 -   [从挖掘模型钻取到事例数据](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [查看时序公式模型&#40;数据挖掘&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [查看时序模型的公式（数据挖掘）](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [更改数据挖掘查看器中使用的颜色](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>请参阅  
  [数据挖掘基础教程](../../tutorials/basic-data-mining-tutorial.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [挖掘模型查看器（数据挖掘模型设计器）](../mining-model-viewers-data-mining-model-designer.md)  
   
   

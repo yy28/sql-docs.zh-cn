@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781992"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
   若要将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则以下两个条件都必须得到满足：  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |应用场景|身份验证方法|  
 |--------------|---------------------------|  
-|SPN 映射到正确的域帐户、虚拟帐户、MSA 或内置帐户。 例如 Local System 或 NETWORK SERVICE。<br /><br /> 注意：“正确”表示注册的 SPN 映射到的帐户是当前运行 SQL Server 服务的帐户。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
-|SPN 是正确的域帐户、虚拟帐户、MSA 或内置帐户。<br /><br /> 注意：“正确”表示注册的 SPN 映射到的帐户是当前运行 SQL Server 服务的帐户。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
+|SPN 映射到正确的域帐户、虚拟帐户、MSA 或内置帐户。 例如 Local System 或 NETWORK SERVICE。<br /><br /> 注意：映射的已注册 SPN 的帐户是 SQL Server 服务下运行的帐户的正确方法。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
+|SPN 是正确的域帐户、虚拟帐户、MSA 或内置帐户。<br /><br /> 注意：映射的已注册 SPN 的帐户是 SQL Server 服务下运行的帐户的正确方法。|本地连接使用 NTLM，远程连接使用 Kerberos。|  
 |SPN 映射到不正确的域帐户、虚拟帐户、MSA 或内置帐户。|身份验证失败。|  
 |SPN 查找失败或未映射到正确的域帐户、虚拟帐户、MSA 或内置帐户，或者不是正确的域帐户、虚拟帐户、MSA 或内置帐户。|本地和远程连接使用 NTLM。|  
   

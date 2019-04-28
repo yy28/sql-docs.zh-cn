@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709462"
 ---
 # <a name="monitoring-overview"></a>监视概述
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -25,7 +25,7 @@ Analysis Services 具有许多不同的工具来帮助你监视和优化服务�
   
 ## <a name="monitoring-tools"></a>监视工具  
 
-|工具  |Description  |
+|Tool  |Description  |
 |---------|---------|
 |[SQL Server 事件探查器](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)      |   跟踪引擎进程事件。 它还会捕获有关这些事件，使您能够监视服务器和数据库活动的数据。      |
 | [扩展事件](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)     |   轻量跟踪和性能监视系统，它使用系统资源非常少，因此诊断生产和测试服务器上的问题的理想工具。       |

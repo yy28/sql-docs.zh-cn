@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809472"
 ---
 # <a name="server-network-configuration"></a>服务器网络配置
   服务器网络配置任务包括启用协议、修改协议使用的端口或管道、配置加密、配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务、在网络上显示或隐藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及注册服务器主体名称。 大多数情况下，无须更改服务器网络配置。 只在有特殊的网络要求时才需要重新配置服务器网络协议。  

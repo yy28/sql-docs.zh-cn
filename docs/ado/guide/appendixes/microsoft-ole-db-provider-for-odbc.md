@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for ODBC |Microsoft Docs
+title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853333"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |驱动程序名称 (KAGPROP_DRIVERNAME)|指示 ODBC 驱动程序的文件名称。|
 |驱动程序的 ODBC 版本 (KAGPROP_DRIVERODBCVER)|指示此驱动程序支持 ODBC 的版本。|
 |文件使用情况 (KAGPROP_FILEUSAGE)|指示如何驱动程序会将数据源; 中的文件为表或为编录。|
-|Like 转义子句 (KAGPROP_LIKEESCAPECLAUSE)|在 LIKE 谓词的 WHERE 子句中，该值指示是否该驱动程序支持的定义和转义字符的使用百分比字符 （%） 和下划线字符 (_)。|
+|Like 转义子句 (KAGPROP_LIKEESCAPECLAUSE)|指示是否该驱动程序支持的定义和转义字符的使用百分比字符 （%）和 WHERE 子句在 LIKE 谓词中下划线字符 (_)。|
 |分组依据 (KAGPROP_MAXCOLUMNSINGROUPBY) 中最大列数|指示可以在 SELECT 语句的 GROUP BY 子句中列出的列的最大数目。|
 |索引 (KAGPROP_MAXCOLUMNSININDEX) 中最大列数|指示列可以包含在索引中的最大数目。|
 |在排序依据 (KAGPROP_MAXCOLUMNSINORDERBY) 最大列数|指示可以在 SELECT 语句的 ORDER BY 子句中列出的列的最大数目。|
@@ -175,23 +175,23 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |属性|ForwardOnly|动态|Keyset|Static|
 |--------------|-----------------|-------------|------------|------------|
-|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
-|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
-|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|读/写|读/写|读/写|读/写|
+|[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|read/write|read/write|
+|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|read/write|read/write|
+|[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|read/write|read/write|read/write|read/write|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|只读|只读|只读|
-|[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|读/写|读/写|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|读/写|读/写|读/写|读/写|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|读/写|读/写|读/写|读/写|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|读/写|读/写|读/写|读/写|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|不可用|不可用|read/write|read/write|
+|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|read/write|read/write|read/write|read/write|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|read/write|read/write|read/write|read/write|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|read/write|read/write|read/write|read/write|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|只读|只读|只读|只读|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|读/写|读/写|读/写|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|读/写|读/写|读/写|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|读/写|读/写|读/写|读/写|
-|[最大记录](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|读/写|读/写|读/写|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
-|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
-|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|read/write|read/write|read/write|read/write|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|read/write|read/write|read/write|read/write|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|read/write|read/write|read/write|read/write|
+|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|read/write|read/write|read/write|read/write|
+|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|read/write|不可用|只读|只读|
+|[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|read/write|read/write|read/write|read/write|
+|[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|read/write|不可用|只读|只读|
+|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|read/write|read/write|read/write|read/write|
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
 |[“状态”](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
@@ -201,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |方法|ForwardOnly|动态|Keyset|Static|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|用户帐户控制|
-|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|用户帐户控制|是|是|用户帐户控制|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|用户帐户控制|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|用户帐户控制|是|是|用户帐户控制|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|用户帐户控制|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|用户帐户控制|是|是|用户帐户控制|
-|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|用户帐户控制|是|是|用户帐户控制|
-|[再次查询](../../../ado/reference/ado-api/requery-method.md)|用户帐户控制|是|是|用户帐户控制|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|用户帐户控制|
-|[支持](../../../ado/reference/ado-api/supports-method.md)|用户帐户控制|是|是|用户帐户控制|
-|[Update](../../../ado/reference/ado-api/update-method.md)|用户帐户控制|是|是|用户帐户控制|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|用户帐户控制|是|是|用户帐户控制|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
+|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
+|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
+|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
+|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
+|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
+|[再次查询](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
+|[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
+|[支持](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
+|[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
  * 不受支持的 Microsoft Access 数据库。
 
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |隔离级别|DBPROP_SUPPORTEDTXNISOLEVELS|
 |隔离保持|DBPROP_SUPPORTEDTXNISORETAIN|
 |区域设置标识符|DBPROP_INIT_LCID|
-|位置|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |最大索引大小|DBPROP_MAXINDEXSIZE|
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -323,7 +323,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |IrowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
 |IRowsetInfo|DBPROP_IRowsetInfo|
-|IrowsetLocate|DBPROP_IRowsetLocate|
+|IRowsetLocate|DBPROP_IRowsetLocate|
 |IRowsetResynch||
 |IRowsetUpdate|DBPROP_IRowsetUpdate|
 |ISequentialStream|DBPROP_ISequentialStream|
@@ -389,7 +389,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |IrowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
 |IRowsetInfo|DBPROP_IRowsetInfo|
-|IrowsetLocate|DBPROP_IRowsetLocate|
+|IRowsetLocate|DBPROP_IRowsetLocate|
 |IRowsetResynch||
 |IRowsetUpdate|DBPROP_IRowsetUpdate|
 |ISequentialStream|DBPROP_ISequentialStream|

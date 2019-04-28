@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666774"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
   脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
@@ -65,7 +65,7 @@ ms.locfileid: "48113777"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.` BusinessEntityID `< 5;`  
   
  然后，您可以使用 `-v` 选项指定要返回的列名称：  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48113777"
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
  将 **sqlcmd** 定义的变量称为脚本变量。 下表列出了 **sqlcmd** 脚本变量。  
   
-|变量|相关选项|R/W|，则“默认”|  
+|变量|相关选项|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  

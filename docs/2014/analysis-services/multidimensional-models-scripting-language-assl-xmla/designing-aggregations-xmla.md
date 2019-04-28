@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702118"
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
   聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 对分区使用相同的存储结构可让你可以轻松地定义可使用更高版本合并的分区[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

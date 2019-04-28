@@ -1,5 +1,5 @@
 ---
-title: 例如：重命名&lt;行&gt;元素 |Microsoft Docs
+title: 例如：重命名 &lt;row&gt; 元素 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704906"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>例如：重命名&lt;行&gt;元素
+# <a name="example-renaming-the-ltrowgt-element"></a>例如：重命名 &lt;row&gt; 元素
   对于结果集中的每一行，RAW 模式都生成一个元素 `<row>`。 您可以通过向 RAW 模式指定一个可选参数为该元素指定另一个名称，如该查询中所示。 该查询为行集中的每一行返回一个 <`ProductModel`> 元素。  
   
 ## <a name="example"></a>示例  

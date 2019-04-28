@@ -1,27 +1,23 @@
 ---
 title: 定义引用的关系和被引用关系属性 |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- referenced dimension relationship
-- relationships [Analysis Services], referenced dimensions
-ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 0b173aa62dfe5656bfc784c766791c294453596c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700101"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>定义引用的关系和引用的关系属性
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   引用维度关系是在多维数据集设计器的 **“维度用法”** 选项卡中定义的。 可通过指定下列各项来定义引用维度关系：  
   
 -   要联接到的中间维度。 该维度可以是常规维度，也可以是其他引用维度。  

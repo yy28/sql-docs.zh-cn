@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872124"
 ---
 # <a name="database-mail-log-and-audits"></a>数据库邮件日志和审核
   数据库邮件日志记录功能旨在提供一种隔离和更正问题的方法。 数据库邮件将日志信息存储在 **msdb** 数据库中。 有关数据库邮件电子邮件内容的信息、电子邮件状态以及已接收的任何消息（例如，数据库邮件记录的错误）可用于故障排除和审核目的。  

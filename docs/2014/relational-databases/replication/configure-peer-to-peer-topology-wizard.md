@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721639"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>配置对等拓扑向导
   本节提供配置对等拓扑向导的所有页的相关信息：  

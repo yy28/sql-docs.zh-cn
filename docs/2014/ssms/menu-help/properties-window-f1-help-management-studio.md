@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661754"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
   使用“属性”窗口可以查看所选元素的属性。 使用“属性”窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  

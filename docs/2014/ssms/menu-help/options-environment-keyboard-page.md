@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662068"
 ---
 # <a name="options-environment-keyboard-page"></a>选项 （环境-键盘页）
   使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  

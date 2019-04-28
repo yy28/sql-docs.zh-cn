@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721801"
 ---
 # <a name="replication-programming-concepts"></a>复制编程概念
   在开发使用复制功能的应用程序之前，应该先完成以下常规计划步骤：  

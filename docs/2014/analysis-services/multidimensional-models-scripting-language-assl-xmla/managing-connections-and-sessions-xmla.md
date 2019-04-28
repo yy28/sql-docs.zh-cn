@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701999"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
   *有状态性*是在此期间服务器将保留标识和上下文的方法调用之间的客户端的条件。 *无状态*是在此期间服务器不会记住标识和上下文的客户端方法调用完成后一情况。  

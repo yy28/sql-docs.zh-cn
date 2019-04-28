@@ -15,50 +15,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725441"
 ---
 # <a name="supported-mdx-mdx"></a>支持的 MDX (MDX)
   支持在多维表达式 (MDX) 脚本中使用下列语句和函数：  
   
- [&#40;注释&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [（注释）(MDX)](/sql/mdx/comment-mdx)  
   
- [-&#40;注释&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [--（注释）(MDX)](/sql/mdx/comment-mdx)  
   
- [注释&#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [注释 (MDX)](/sql/mdx/comment-mdx)  
   
- [ALTER CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
+ [ALTER CUBE 语句 (MDX)](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  MDX 脚本仅支持更改默认成员。  
   
- [CALCULATE 语句&#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
+ [CALCULATE 语句 (MDX)](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE 语句&#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
+ [CASE 语句 (MDX)](/sql/mdx/case-statement-mdx)  
   
- [CREATE CELL CALCULATION 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 语句 (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)  
   
- [CREATE SET 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET 语句 (MDX)](/sql/mdx/mdx-data-definition-create-set)  
   
- [EXISTING 关键字&#40;MDX&#41;](mdx-query-existing-keyword.md)  
+ [EXISTING 关键字 (MDX)](mdx-query-existing-keyword.md)  
   
- [冻结语句&#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
+ [FREEZE 语句 (MDX)](/sql/mdx/mdx-scripting-freeze)  
   
- [IF 语句&#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [IF 语句 (MDX)](/sql/mdx/mdx-scripting-if)  
   
- [此&#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [此 (MDX)](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  MDX 支持为下列单元属性赋值：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 和 `FONT_SIZE`。 有关详细信息，请参阅[使用单元属性 (MDX)](mdx-cell-properties-using-cell-properties.md)。 MDX 还支持分配给`NON_EMPTY_BEHAVIOR`的属性[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)语句。  
   
- [SCOPE 语句&#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
+ [SCOPE 语句 (MDX)](/sql/mdx/mdx-scripting-scope)  
   
 ## <a name="see-also"></a>请参阅  
- [基本 MDX 脚本&#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+ [基本 MDX 脚本 (MDX)](the-basic-mdx-script-mdx.md)  
   
   

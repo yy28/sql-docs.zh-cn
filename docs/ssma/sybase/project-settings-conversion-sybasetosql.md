@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664659"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>项目设置（转换）(SybaseToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换 Sybase Adaptive Server Enterprise (ASE) 语法来设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的语法。  
@@ -148,7 +148,7 @@ ms.locfileid: "53215294"
   
 -   若要为 PRINT 和 RAISERROR 函数使用字符串文本，请选择**创建新的字符串**。  
   
-    在此模式下，如果 PRINT 或 RAISERROR 语句不使用占位符和本地变量，该语句不变。 双精度百分比字符 （%） 都会更改为打印字符串文本中的单个百分比字符 %。  
+    在此模式下，如果 PRINT 或 RAISERROR 语句不使用占位符和本地变量，该语句不变。 双精度百分比字符 （%）更改打印字符串文本中的单个百分比字符 %。  
   
     如果 PRINT 或 RAISERROR 语句使用占位符和一个或多个本地变量，例如如以下示例所示：  
   
@@ -183,7 +183,7 @@ ms.locfileid: "53215294"
   
 -   SSMA 生成新的变量为每个 PRINT 和 RAISERROR 语句，以及如何将该变量的字符串值，请选中**创建新变量**。  
   
-    在此模式下，如果 PRINT 或 RAISERROR 语句不使用占位符和局部变量，SSMA 替换所有的双精度百分比字符 （%） 百分比的单个字符以符合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 语法。  
+    在此模式下，如果 PRINT 或 RAISERROR 语句不使用占位符和局部变量，SSMA 将替换所有的双精度百分比字符 （%）具有要符合单个百分比字符[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 语法。  
   
     如果 PRINT 或 RAISERROR 语句使用占位符和一个或多个本地变量，例如如以下示例所示：  
   
@@ -246,7 +246,7 @@ ms.locfileid: "53215294"
   
 -   选择**否**如果不需要存储对象。  
   
-**默认/乐观模式：** 用户帐户控制  
+**默认/乐观模式：** 是  
   
 **完整模式：** 否  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12b2d4d449e46b167f99b0c8e10edb3975fcd129
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833577"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS 清理连接管理器
   使用 DQS 清除连接管理器可将包连接到 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 数据库。 DQS 清除转换使用 DQS 清除连接管理器。  
@@ -26,7 +26,7 @@ ms.locfileid: "58386646"
 >  DQS 清除连接管理器仅支持 Windows 身份验证。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [“DQS 清除转换编辑器”对话框](../dqs-cleansing-transformation-editor-dialog-box.md)。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [“DQS 清除转换编辑器”对话框](../dqs-cleansing-transformation-editor-dialog-box.md)。  
   
  有关以编程方式配置连接管理器的信息，请参阅开发人员指南中针对 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类的文档。  
   

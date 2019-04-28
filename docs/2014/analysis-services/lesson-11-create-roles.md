@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729614"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
   在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色定义有单一权限：无、 读取、 读取和进程、 进程或管理员。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "52506776"
   
  因为贵组织中的 Windows 用户和组帐户是唯一的，所以您可以从您的特定组织向成员添加帐户。 但是，对于本教程，您还可以将成员保留为空。 您仍能够测试每个角色的影响，更高版本中第 12 课：在 Excel 中分析。  
   
- 学完本课的预计时间：**15 分钟**  
+ 估计的时间才能完成本课程中：**15 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
  本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 11 课：创建分区](lesson-10-create-partitions.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "52506776"
   
 4.  在“权限”列中，单击下拉列表，然后选择“读取”权限。  
   
-5.  可选:单击“成员”选项卡，然后单击“添加”。  
+5.  可选：单击“成员”选项卡，然后单击“添加”。  
   
 6.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52506776"
   
      在您完成公式的建立后，按 Enter。  
   
-6.  可选:单击“成员”选项卡，然后单击“添加”。  
+6.  可选：单击“成员”选项卡，然后单击“添加”。  
   
 7.  在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52506776"
   
 4.  单击“成员”选项卡，然后单击“添加”。  
   
-5.  可选:在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
+5.  可选：在“选择用户或组”对话框中，输入要包括在角色中的来自组织的 Windows 用户或组。  
   
 6.  确认你的选择，然后单击“确定”。  
   

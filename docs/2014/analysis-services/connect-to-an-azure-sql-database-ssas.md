@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680238"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>连接到 Azure SQL Database (SSAS)
   “表导入向导” 的这一页可用于连接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

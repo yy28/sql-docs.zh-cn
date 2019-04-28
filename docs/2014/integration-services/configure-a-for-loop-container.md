@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5d09e160dfa4974704ea3e4ee1b6400f983fe88
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834553"
 ---
 # <a name="configure-a-for-loop-container"></a>配置 For 循环容器
   此过程介绍如何使用 **“For 循环编辑器”** 对话框配置 For 循环容器。  

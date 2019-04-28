@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680600"
 ---
 # <a name="column-width-dialog-box-ssas"></a>“列宽”对话框 (SSAS)
   “列宽”  对话框可用于指定模型设计器中列的宽度。 若要访问此对话框，请右键单击某一列，然后单击“列宽” 。 也可以通过双击列的右边缘上的网格线，使列自动调整为列内容的大小。  

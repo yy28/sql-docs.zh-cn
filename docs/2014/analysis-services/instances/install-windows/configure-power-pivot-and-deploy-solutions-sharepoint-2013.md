@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703531"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>配置 PowerPivot 和部署解决方案 (SharePoint 2013)
   本主题介绍如何部署和配置 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 PowerPivot 功能的中间层增强功能，包括 PowerPivot 库、计划数据刷新、管理面板和数据提供程序。 运行 **PowerPivot for SharePoint 2013 配置** 工具以便完成以下任务：  
@@ -38,7 +38,7 @@ ms.locfileid: "53370079"
  [解决问题](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 PowerPivot for SharePoint 2013 配置  
- **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导将安装两种不同的配置工具来[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 这两个工具均支持不同版本的 SharePoint。  
+ **注意：** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导将安装两种不同的配置工具来[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 这两个工具均支持不同版本的 SharePoint。  
   
 |“属性”|Description|  
 |----------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "53370079"
   
     2.  **数据库服务器**:可以使用 SQL Server 数据库引擎支持的 SharePoint 场。  
   
-    3.  **通行短语**:输入通行短语。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
+    3.  **通行短语**:输入的密码。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
     4.  **PowerPivot Server for Excel Services**:键入的名称[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式服务器。 在单服务器部署中，它与数据库服务器相同。 `[ServerName]\powerpivot`  
   

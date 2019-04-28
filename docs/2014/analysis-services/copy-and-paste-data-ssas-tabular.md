@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680122"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>复制并粘贴数据（SSAS 表格）
   可以从外部应用程序复制表数据并将它粘贴到模型设计器中的新表或现有表。 从剪贴板粘贴的数据必须是 HTML 格式，例如，从 Excel 或 Word 中复制的数据。 模型设计器将对粘贴数据自动检测并应用数据类型。 您也可以手动修改列的数据类型或显示格式。  
@@ -87,8 +87,8 @@ ms.locfileid: "48129297"
  显示剪贴板内容的示例。 目标表中的现有数据将被删除，并且将新行插入到表中。  
   
 ## <a name="see-also"></a>请参阅  
- [导入数据&#40;SSAS 表格&#41;](import-data-ssas-tabular.md)   
- [支持的数据源&#40;SSAS 表格&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [设置列的数据类型&#40;SSAS 表格&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [导入数据（SSAS 表格）](import-data-ssas-tabular.md)   
+ [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [设置列的数据类型（SSAS 表格）](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

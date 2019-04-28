@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fc769436a919a4d522fb48699c6fc6faa0d6e5c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670256"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
 客户端上执行排序或筛选**记录集**基于指定的排序和筛选器属性。  

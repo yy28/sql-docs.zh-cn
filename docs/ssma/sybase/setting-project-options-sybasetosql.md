@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 08b1084f2f54a204f82bc0d1a0ee4096d207d835
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667425"
 ---
 # <a name="setting-project-options-sybasetosql"></a>设置项目选项 (SybaseToSQL)
 对于每个 SSMA 项目，可以设置项目级别选项。 这些选项指定对象转换、 对象加载、 SQL azure、 用户界面和数据迁移设置。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，验证配置选项是否适用于该项目。  
@@ -39,9 +39,9 @@ SSMA 具有五个集的项目设置：
   
 它还具有四种模式来配置这些设置：  
   
-1.  ，则“默认”  
+1.  默认  
   
-2.  Optimistic  
+2.  乐观  
   
 3.  完全  
   

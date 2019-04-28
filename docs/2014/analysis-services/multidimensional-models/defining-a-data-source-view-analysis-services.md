@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726387"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
   数据源视图包含使用的架构的逻辑模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据库对象即多维数据集、 维度和挖掘结构。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  

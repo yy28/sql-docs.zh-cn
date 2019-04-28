@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733688"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是由提供顺序分析算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 可以使用此算法来研究包含可通过以下路径，链接的事件的数据或*序列*。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
@@ -62,7 +62,7 @@ ms.locfileid: "48190777"
 ## <a name="viewing-a-sequence-clustering-model"></a>查看顺序分析和聚类分析模型  
  该算法创建的挖掘模型在数据中包含了最常见顺序的说明。 若要浏览该模型，可以使用 **Microsoft 序列分类查看器**。 查看顺序分析和聚类分析模型时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示包含多个转换的分类。 您还可以查看相关的统计信息。 有关详细信息，请参阅 [使用 Microsoft 序列分类查看器浏览模型](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
- 如果希望了解更多详细信息，可在 [Microsoft 一般内容树查看器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布情况、每个分类的概率以及有关转换的详细信息。 有关详细信息，请参阅[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)。  
+ 如果希望了解更多详细信息，可在 [Microsoft 一般内容树查看器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中浏览该模型。 为该模型存储的内容包括每个节点中所有值的分布情况、每个分类的概率以及有关转换的详细信息。 有关详细信息，请参阅 [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)。  
   
 ## <a name="creating-predictions"></a>创建预测  
  对模型进行定型后，结果将存储为一组模式。 您可以使用数据中最常见顺序的说明来预测新顺序的下一个可能步骤。 但是，因为该算法包括了其他列，所以您可以使用得到的模型来识别顺序数据和非顺序输入之间的关系。 例如，您可以向模型添加客户的人口统计数据，还可以进行针对特定客户群体的预测。 可以自定义预测查询，以便返回数目可变的预测或返回说明性的统计信息。  
@@ -78,9 +78,9 @@ ms.locfileid: "48190777"
 -   支持使用 OLAP 挖掘模型和创建数据挖掘维度。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 序列聚类分析算法技术参考](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [顺序聚类分析模型查询示例](clustering-model-query-examples.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)   
  [使用 Microsoft 序列分类查看器浏览模型](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703574"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 安装
   本主题中的过程将指导您以 SharePoint 部署模式在单台服务器上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 2013 管理中心的配置任务。  
@@ -29,11 +29,11 @@ ms.locfileid: "53373969"
   
  [先决条件](#bkmk_prereq)  
   
- [第 1 步：安装 PowerPivot for SharePoint](#InstallSQL)  
+ [步骤 1：安装 PowerPivot for SharePoint](#InstallSQL)  
   
- [步骤 2:配置基本 Analysis Services SharePoint 集成](#bkmk_config)  
+ [步骤 2：配置基本 Analysis Services SharePoint 集成](#bkmk_config)  
   
- [步骤 3:验证集成](#bkmk_verify)  
+ [步骤 3：验证集成](#bkmk_verify)  
   
  [配置 Windows 防火墙以允许 Analysis Services 访问](#bkmk_firewall)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "53373969"
 ##  <a name="bkmk_background"></a> 背景  
  PowerPivot for SharePoint 是在 SharePoint 2013 场中提供 PowerPivot 数据访问的中间层和后端服务的集合。  
   
--   **后端服务：** 如果使用 PowerPivot for Excel 来创建包含分析数据的工作簿，则必须具有 PowerPivot for SharePoint 才能在服务器环境中访问这些数据。 您可在安装了 SharePoint Server 2013 的计算机上或没有 SharePoint 软件的其他计算机上运行 SQL Server 安装程序。 Analysis Services 对 SharePoint 没有任何依赖关系。  
+-   **后端服务：** 如果使用 PowerPivot for Excel 来创建包含分析数据的工作簿，您必须具有 PowerPivot for SharePoint 才能访问服务器环境中的数据。 您可在安装了 SharePoint Server 2013 的计算机上或没有 SharePoint 软件的其他计算机上运行 SQL Server 安装程序。 Analysis Services 对 SharePoint 没有任何依赖关系。  
   
      **注意：** 本主题介绍安装[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器和后端服务。  
   
--   **中间层：** 增强 SharePoint 中 PowerPivot 体验的各项功能，包括 PowerPivot 库、计划数据刷新、管理仪表板和数据提供程序。 有关安装和配置中间层的详细信息，请参阅下面的内容：  
+-   **中间层：** 在包括 PowerPivot 库、 计划数据刷新、 管理仪表板和数据访问接口的 SharePoint 中 PowerPivot 体验的增强功能。 有关安装和配置中间层的详细信息，请参阅下面的内容：  
   
     -   [安装或卸载 PowerPivot for SharePoint 外接程序&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53373969"
   
  [Microsoft SQL Server 2012 发行说明 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893)。  
   
-##  <a name="InstallSQL"></a> 步骤 1:安装 PowerPivot for SharePoint  
+##  <a name="InstallSQL"></a> 步骤 1：安装 PowerPivot for SharePoint  
  在此步骤中，您将运行 SQL Server 安装程序以便在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 在后续步骤中，将 Excel Services 配置为使用此服务器的工作簿数据模型。  
   
 1.  运行 SQL Server 安装向导 (Setup.exe)。  
@@ -96,7 +96,7 @@ ms.locfileid: "53373969"
   
 9. 如果看到其他 **“安装程序支持规则”**，请查看所有警告并单击 **“下一步”**。  
   
-     **注意：** 因为启用了 Windows 防火墙，所以你将看到打开端口以启用远程访问的警告。  
+     **注意：** 因为启用了 Windows 防火墙，您将看到打开端口以便启用远程访问的警告。  
   
 10. 在 **“设置角色”** 页中，选择 **“SQL Server PowerPivot for SharePoint”**。 此选项将在 SharePoint 模式下安装 Analysis Services。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "53373969"
   
 3.  连接到 Analysis Services 实例，例如 **[您的服务器名称]\POWERPIVOT**。 如果您可连接到该实例，则验证服务是否正在运行。  
   
-##  <a name="bkmk_config"></a> 步骤 2:配置基本 Analysis Services SharePoint 集成  
+##  <a name="bkmk_config"></a> 步骤 2：配置基本 Analysis Services SharePoint 集成  
  下列步骤介绍与 SharePoint 文档库中的 Excel 高级数据模型交互所需的配置更改。 在安装 SharePoint Server 2013 和 SQL Server Analysis Services 之后完成这些步骤。  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>授予对 Analysis Services 的 Excel Services 服务器管理权限  
@@ -203,10 +203,10 @@ ms.locfileid: "53373969"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 步骤 3:验证集成  
+##  <a name="bkmk_verify"></a> 步骤 3：验证集成  
  下列步骤指导你创建和上载新的工作簿以验证 Analysis Services 集成。 您将需要 SQL Server 数据库才能完成这些步骤。  
   
-1.  **注意：** 如果你已具有包含切片器或筛选器的高级工作簿，则可将其上载到 SharePoint 文档库并验证你是否能通过文档库视图与切片器和筛选器进行交互。  
+1.  **注意：** 如果您已具有包含切片器或筛选器的高级工作簿，可以将其上载到 SharePoint 文档库并验证您是否能与切片器和筛选器进行交互通过文档库视图。  
   
 2.  在 Excel 中启动新的工作簿。  
   

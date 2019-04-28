@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721999"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
@@ -61,7 +61,7 @@ ms.locfileid: "53365399"
  有关详细说明如何[!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法如何处理离散可预测列，请参阅[学习 Bayesian 网络：知识和统计数据的组合](https://go.microsoft.com/fwlink/?LinkId=45963)。 有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法如何处理可预测的连续列的详细信息，请参阅 [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)（时序分析的自动回归树模型）的附录。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>计分方法和功能选择  
- Microsoft 决策树算法提供三种信息获取计分公式:Shannon 平均信息量、使用 K2 先验的 Bayesian 网络和使用先验统一 Dirichlet 分布的 Bayesian 网络。 这三种都是数据挖掘领域中已经确立的方法。 建议您利用不同的参数，分别试用这些方法，以确定哪种方法结果最佳。 有关这些计分方法的详细信息，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
+ Microsoft 决策树算法提供了三种信息获取计分公式：Shannon 平均信息量、 使用 K2 先验的 Bayesian 网络和使用先验统一 Dirichlet 分布的 Bayesian 网络。 这三种都是数据挖掘领域中已经确立的方法。 建议您利用不同的参数，分别试用这些方法，以确定哪种方法结果最佳。 有关这些计分方法的详细信息，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 用于功能选择的方法取决于生成模型所用的算法。 控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   

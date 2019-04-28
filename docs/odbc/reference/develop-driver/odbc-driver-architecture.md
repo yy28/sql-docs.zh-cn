@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690655"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 驱动程序体系结构
 驱动程序编写人员必须了解驱动程序体系结构可能会影响是否应用程序可以使用特定于 DBMS 的 SQL。  
@@ -45,11 +45,11 @@ ms.locfileid: "47788145"
   
  可以在下表中描述的位置中找到有关驱动程序问题的详细信息。  
   
-|问题|主题|位置|  
+|问题|主题|Location|  
 |-----------|-----------|--------------|  
 |与应用程序和驱动程序兼容性问题|[应用程序/驱动程序兼容性](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[编程注意事项](../../../odbc/reference/develop-app/programming-considerations.md)中的 ODBC 程序员参考|  
 |编写 ODBC 驱动程序|[编写 ODBC 3.x 驱动程序](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[编程注意事项](../../../odbc/reference/develop-app/programming-considerations.md)中的 ODBC 程序员参考|  
-|为了向后兼容的驱动程序指南|[为了向后兼容的驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[附录 g： 向后兼容性驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)中的 ODBC 程序员参考|  
+|为了向后兼容的驱动程序指南|[为了向后兼容的驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[附录 g:为了向后兼容的驱动程序指南](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)中的 ODBC 程序员参考|  
 |连接到驱动程序|[选择数据源或驱动程序](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)中的 ODBC 程序员参考|  
 |识别驱动程序|[查看驱动程序](../../../odbc/admin/viewing-drivers.md)|[查看驱动程序](../../../odbc/admin/viewing-drivers.md)中的 Microsoft ODBC 数据源管理器联机帮助|  
 |启用连接池|[ODBC 连接池](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)中的 ODBC 程序员参考|  

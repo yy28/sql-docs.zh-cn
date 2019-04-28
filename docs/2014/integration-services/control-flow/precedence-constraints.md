@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831693"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -77,7 +77,7 @@ ms.locfileid: "58394475"
 >  优先约束必须为相同 `Precedence Constraint` 集合的成员，才能组成逻辑与条件。 例如，不能组合来自两个 Foreach 循环容器的优先约束。  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>优先约束的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中设置的属性的信息，请参阅 [优先约束编辑器](../precedence-constraint-editor.md)。  
   

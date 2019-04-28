@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792384"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>在 SSMS 中管理 DQS 用户
   本主题介绍如何使用 SQL Server Management Studio 在 SQL Server 实例中创建其他用户，并向这些用户授予针对 DQS_MAIN 数据库的适当 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -42,7 +42,7 @@ ms.locfileid: "56027978"
   
 5.  在验证该用户后，在左侧窗格中单击 **“用户映射”** 。  
   
-6.  在右窗格中，选择下的复选框**地图**的列**DQS_MAIN**数据库，并选择**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的复选框**数据库角色成员身份：DQS_MAIN**窗格中，具体取决于该用户所需的访问级别。  
+6.  在右侧窗格中，选中“DQS_MAIN”数据库的“映射”列下的复选框，然后根据用户所需的访问级别，在“数据库角色成员身份：DQS_MAIN”窗格中选中“dqs_administrator”、“dqs_kb_editor”或“dqs_kb_operator”复选框。  
   
 7.  在“登录名 - 新建”对话框中，单击“确定”以便应用更改。  
   

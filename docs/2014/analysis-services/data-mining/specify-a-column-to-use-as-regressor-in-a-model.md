@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c35eeb8905a5f4753572ae89adce0c8fdfbec691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732865"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>在模型中指定用作回归量的列
   线性回归模型将可预测属性的值表示为结合了各种输入的公式的结果，这样，数据将尽可能接近地适合于估计的回归线。 该算法只接受数值作为输入，并且自动检测提供最佳调整的输入。  
@@ -64,6 +64,6 @@ ms.locfileid: "48179919"
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [数据挖掘查询](data-mining-queries.md)   
  [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)   
- [线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

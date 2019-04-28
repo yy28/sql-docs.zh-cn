@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725171"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

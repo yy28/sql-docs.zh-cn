@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7daff41d09f1468f3819af5a8d2020719aebe9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658998"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  与一起使用时[SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)，则**RangeMin**， **RangeMid**，并**RangeMax**函数返回指定存储桶的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**， **RangeMid**，并**RangeMax**函数用于说明预测所指定的存储桶。 当**RangeMid**函数用于 PREDICTION JOIN 语句，标量列引用只能包含离散、 可预测列。  
   
 ## <a name="examples"></a>示例  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679901"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>创建挖掘结构（SQL Server 数据挖掘外接程序）
   ![创建挖掘结构按钮，数据挖掘功能区](media/dmc-createstruct.gif "创建挖掘结构按钮、 数据挖掘功能区")  
@@ -83,7 +83,7 @@ ms.locfileid: "52542971"
   
 ### <a name="related-options"></a>相关的选项  
   
-|选项|注释|  
+|Option|注释|  
 |------------|--------------|  
 |**选择源数据**对话框|选择 Excel 表时，您应指示数据是否已具有标题。 如果跳过此操作，则第一行数据将用作列名。<br /><br /> 如果使用选项，**外部数据源**，可以使用任何类型的数据可以在中定义[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源。 但是，外接程序中用于创建新数据源的对话框并非包含 Analysis Services 支持的所有数据源，因此我们建议您提前在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器上创建数据源，然后使用外接程序进行连接。|  
 |**数据源查询编辑器**对话框|连接到指定数据源之后，可以添加列，或创建自定义查询以生成自定义列。|  
@@ -95,7 +95,7 @@ ms.locfileid: "52542971"
   
 |值|Description|  
 |------------|-----------------|  
-|**包括**|指定该列包含可用于分析或预测的数据。|  
+|**Include**|指定该列包含可用于分析或预测的数据。|  
 |**Key**|指定该列包含事务 ID、序列 ID 或处理所需的另一个键。<br /><br /> 所有算法均需要“键”列。 不过，有些算法仅允许单个键，有些算法则允许多个键。<br /><br /> 如果列包含一个键，但不是处理所需的则选择**不使用**。|  
 |**关键时间**|指定该列包含可用于唯一标识时序中的项的日期或其他数值。|  
 |**不使用**|指定应忽略该列。 不会处理该列中的数据。|  

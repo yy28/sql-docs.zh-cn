@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667812"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -88,7 +88,7 @@ ms.locfileid: "52813899"
   
 3.  单击 **“插入跟踪器”**。  
   
-4.  在以下各列中查看跟踪令牌的占用时间：**发布服务器到分发服务器**，**分发服务器到订阅服务器**，**总滞后时间**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  以下各列中的跟踪令牌的视图所用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>查看有关以前插入的跟踪令牌的信息  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52813899"
   
 3.  从 **“插入时间”** 下拉列表中选择时间。  
   
-4.  在以下各列中查看跟踪令牌的占用时间：**发布服务器到分发服务器**，**分发服务器到订阅服务器**，**总滞后时间**。 值为 **“挂起”** 表示令牌尚未到达指定点。  
+4.  以下各列中的跟踪令牌的视图所用时间：“发布服务器到分发服务器”、“分发服务器到订阅服务器”、“总滞后时间”。 值为 **“挂起”** 表示令牌尚未到达指定点。  
   
     > [!NOTE]  
     >  跟踪令牌信息的保留时间与其他历史数据的保留时间一样长，该时间由分发数据库的历史记录保持期来控制。 若要了解如何更改分发数据库属性，请参阅[查看和修改分发服务器和发布服务器属性](../view-and-modify-distributor-and-publisher-properties.md)。  

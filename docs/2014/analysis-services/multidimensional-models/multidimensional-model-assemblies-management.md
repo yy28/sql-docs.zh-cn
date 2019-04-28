@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725241"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一些可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数，这些内部函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
@@ -41,7 +41,7 @@ ms.locfileid: "48172107"
   
  可向服务器添加具有新过程和新功能的程序集。 您可以使用程序集增强或添加服务器未提供的自定义功能。 您还可以通过使用程序集，向多维表达式 (MDX)、数据挖掘扩展 (DMX) 或存储过程添加新功能。 可从运行自定义应用程序处加载程序集，并且程序集二进制文件的副本将和数据库数据一起保存到服务器中。 删除程序集时，程序集副本也会从服务器中删除。  
   
- 程序集可为两种不同的类型：COM 和 CLR。 CLR 程序集是使用 .NET Framework 编程语言（如 C#、Visual Basic .NET 和托管 C++）开发的程序集。 COM 程序集是必须在服务器中注册的 COM 库。  
+ 程序集可为两种不同类型：COM 和 CLR。 CLR 程序集是使用 .NET Framework 编程语言（如 C#、Visual Basic .NET 和托管 C++）开发的程序集。 COM 程序集是必须在服务器中注册的 COM 库。  
   
  可以将程序集添加到 <xref:Microsoft.AnalysisServices.Server> 或 <xref:Microsoft.AnalysisServices.Database> 对象。 连接到服务器的任何用户或服务器中任何对象均可以调用服务器程序集。 但数据库程序集却只能由连接到 <xref:Microsoft.AnalysisServices.Database> 的数据库对象或用户调用。  
   
@@ -92,21 +92,21 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |权限设置|Description|  
 |------------------------|-----------------|  
 |`Safe`|提供内部计算权限。 此权限存储桶不分配访问 .NET Framework 中任何受保护资源的权限。 如果没有对 `PermissionSet` 属性指定任何权限存储桶，则这是程序集的默认权限存储桶。|  
-|`ExternalAccess`|提供的相同访问权限`Safe`设置，以及访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
+|`ExternalAccess`|提供和 `Safe` 设置相同的访问权限，以及访问外部系统资源的附加功能。 此权限存储桶无法保证安全性（尽管有可能保证这种情况的安全），但可以保证可靠性。|  
 |`Unsafe`|无限制。 对运行于此权限集下的托管代码无法提供安全性或可靠性保证。 任何权限，甚至管理员提供的自定义权限都将授予在此信任级别运行的代码。|  
   
  当 CLR 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]承载时，基于堆栈审核的权限检查在本机 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 代码的边界停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集中的任何托管代码始终属于前面列出的三种权限类别中的一种。  
   
  COM（或非托管）程序集例程不支持 CLR 安全模式。  
   
-### <a name="impersonation"></a>模拟  
- 无论托管代码何时访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外的任何资源，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都将遵守与程序集的 `ImpersonationMode` 属性设置相关的规则，以确保访问在适当的 Windows 安全性上下文中进行。 因为使用的程序集`Safe`权限设置不能访问外部资源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，这些规则是仅适用于使用的程序集`ExternalAccess`和`Unsafe`权限设置。  
+### <a name="impersonation"></a>Impersonation  
+ 无论托管代码何时访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外的任何资源，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都将遵守与程序集的 `ImpersonationMode` 属性设置相关的规则，以确保访问在适当的 Windows 安全性上下文中进行。 由于使用 `Safe` 权限设置的程序集不能访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外的资源，所以这些规则仅适用于使用 `ExternalAccess` 和 `Unsafe` 权限设置的程序集。  
   
 -   如果当前执行的上下文对应于通过 Windows 身份验证的登录，并且和原始调用方的上下文相同（即中间没有 EXECUTE AS），则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在访问资源之前模拟通过 Windows 身份验证的登录。  
   
 -   如果某个中间 EXECUTE AS 更改了执行上下文，使之不再是原始调用方的上下文，则访问外部资源的尝试将失败。  
   
- `ImpersonationMode`属性可以设置为`ImpersonateCurrentUser`或`ImpersonateAnonymous`。 默认设置， `ImpersonateCurrentUser`，当前用户的网络登录帐户下运行程序集。 如果`ImpersonateAnonymous`设置，执行上下文是对应于 Windows 登录用户帐户 IUSER_*servername*在服务器上。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
+ `ImpersonationMode` 属性可设置为 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 默认设置 `ImpersonateCurrentUser` 在当前用户的网络登录帐户下运行程序集。 如果`ImpersonateAnonymous`设置，执行上下文是对应于 Windows 登录用户帐户 IUSER_*servername*在服务器上。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
   
 ### <a name="application-domains"></a>应用程序域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 `System.Reflection` 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  

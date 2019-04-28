@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699738"
 ---
 # <a name="user-defined-member-properties-mdx"></a>用户定义的成员属性 (MDX)
-  用户定义的成员属性可作为属性关系添加到维度的特定命名级别中。 用户定义的成员属性不能添加到`(All)`级别的层次结构中，或层次结构本身。  
+  用户定义的成员属性可作为属性关系添加到维度的特定命名级别中。 用户定义的成员属性不能添加到层次结构的 `(All)` 级别，也不能添加到层次结构本身中。  
   
 ## <a name="creating-user-defined-member-properties"></a>创建用户定义的成员属性  
  用户定义的成员属性可以通过用户界面或通过编程方式添加到基于服务器的维度或多维数据集中。  
@@ -38,7 +38,7 @@ ms.locfileid: "48114307"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES`关键字出现在轴规范的集表达式之后。 例如，下面的 MDX 查询`PROPERTIES`关键字将检索`List Price`和`Dealer Price`用户定义的成员属性和标识产品的集表达式我们卖出年 1 月后，会显示：  
+ `PROPERTIES` 关键字出现在轴规范的集表达式之后。 例如，以下 MDX 查询中的 `PROPERTIES` 关键字将检索用户定义成员属性 `List Price` 和 `Dealer Price`，并显示在标识一月份售出产品的集表达式之后。  
   
 ```  
 SELECT   
@@ -53,7 +53,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>使用 Properties 函数检索用户定义的成员属性  
- 也可以使用 `Properties` 函数访问自定义成员属性。 例如，下面的 MDX 查询使用`WITH`关键字创建计算的成员组成`List Price`成员属性：  
+ 也可以使用 `Properties` 函数访问自定义成员属性。 例如，以下 MDX 查询使用 `WITH` 关键字创建包含 `List Price` 成员属性的计算成员：  
   
 ```  
 WITH   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
  有关生成计算成员的详细信息，请参阅[在 MDX 中生成计算成员 (MDX)](mdx-calculated-members-building-calculated-members.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [使用成员属性&#40;MDX&#41;](mdx-member-properties.md)   
- [属性&#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [使用成员属性 (MDX)](mdx-member-properties.md)   
+ [属性 (MDX)](/sql/mdx/properties-mdx)  
   
   

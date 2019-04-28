@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806365"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
   一个企业可以具有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，并且每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具可以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例和多个数据层应用程序。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具都具有一个且仅有一个实用工具控制点 (UCP)。 必须为每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具分别创建一个新的 UCP。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个托管实例以及每个数据层应用程序都是一个且只能是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的成员，并且由单个 UCP 管理。  
@@ -76,7 +76,7 @@ ms.locfileid: "53377659"
   
 -   该过程必须由具有 sysadmin 权限的用户运行，创建 UCP 要求同样的权限。  
   
--   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅[如何从 SQL Server 实用工具中删除的 SQL Server 实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅[如何：从 SQL Server 实用工具中删除的 SQL Server 实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  使用此过程可以从 SQL Server 实用工具中删除 SQL Server UCP。 在完成该操作后，可以再次在 SQL Server 的实例上创建 UCP。  
   

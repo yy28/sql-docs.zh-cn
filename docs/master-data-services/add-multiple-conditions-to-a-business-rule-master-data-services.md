@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34e7a7cb4cfaaa75eca8d51bdb591a7016ba411b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678615"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>向业务规则添加多个条件 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52777369"
 > [!NOTE]  
 >  如果您创建使用 **OR** 运算符的业务规则，则考虑为可以独立进行计算的每个条件语句都创建单独的规则。 然后，您可以根据需要排除规则，提供更高的灵活性以及更便于排除故障。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -64,7 +64,7 @@ ms.locfileid: "52777369"
   
 12. 填写所有必填字段。  
   
-13. 单击 **“保存”**。 此时，系统会在“If”  网格中新添加一行。  
+13. 单击“保存” 。 此时，系统会在“If”  网格中新添加一行。  
   
 14. （可选）若要添加更多条件，请完成第 8-13 步。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52777369"
     > [!TIP]  
     >  你可以选择多个条件，然后右键单击将它们组合在一个逻辑运算符内，或取消将条件组合在特定的逻辑运算符内。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [更改业务规则名称 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [配置业务规则以发送通知 (Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

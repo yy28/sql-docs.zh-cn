@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866224"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>任务 9:配置引用数据服务
   在本任务中，您将 DQS 配置为使用 Microsoft Azure 市场上的引用数据服务。 在下一个任务，您将配置**地址验证**域以使用此服务。 在运行时，在清理活动，DQS 将传递的值中的域**地址验证**的域和服务以进行清理。 请参阅[配置 DQS 以使用引用数据](https://msdn.microsoft.com/library/hh213070.aspx)的更多详细信息。  

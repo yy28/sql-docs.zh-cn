@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661628"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示从行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或数据提供程序或返回由半结构化的数据提供程序，如文件或目录的对象。  

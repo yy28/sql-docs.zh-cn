@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729504"
 ---
 # <a name="granting-process-database-permissions"></a>授予处理数据库权限
   在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。  
@@ -57,6 +57,6 @@ ms.locfileid: "48171757"
 >  通过下载和安装示例，可以获得第 10 课中使用的完整项目。 有关详细信息，请参阅 [安装 Analysis Services 多维建模教程的示例数据和项目](install-sample-data-and-projects.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [角色和权限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色和权限 (Analysis Services)](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d05632fd4546b18e0268307fc6a85a8719eadd5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834596"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>完成该向导（SSIS 包升级向导）
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  

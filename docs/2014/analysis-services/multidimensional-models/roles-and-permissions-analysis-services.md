@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc36b27bea2c546582cb167046affcc0fbd0d5a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736581"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色和权限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供基于角色的授权模型，该模型授予对操作、对象和数据的访问权限。 访问 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库的所有用户都必须在某一角色范畴内执行操作。  
@@ -30,34 +30,34 @@ ms.locfileid: "48114107"
   
  创建角色和分配成员身份通常将作为单独的操作。 通常情况下，模型设计者在设计阶段添加角色。 这样，所有角色定义都将反映在定义该模型的项目文件中。 角色成员身份通常在以后在数据库进入生产阶段时实现，并且通常由创建了可被开发、测试和作为独立操作运行的脚本的数据库管理员执行。  
   
- 所有授权都基于有效的 Windows 用户标识。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用专用于验证用户身份的 Windows 身份验证。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了任何专有身份验证方法。请参阅[Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)。  
+ 所有授权都基于有效的 Windows 用户标识。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用专用于验证用户身份的 Windows 身份验证。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不提供专有身份验证方法。请参阅 [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)。  
   
 > [!IMPORTANT]  
 >  在数据库中的所有角色中，对于每个 Windows 用户或组，权限都是可以累加的。 如果某个角色拒绝用户或用户组执行特定任务或查看特定数据的权限，但是另一个角色为该用户或用户组授予相应的执行或查看权限，则该用户或用户组将具有执行任务或查看数据的权限。  
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [授予对对象和操作的访问权限&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授予对对象和操作的访问权限 (Analysis Services)](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
+-   [授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)  
   
--   [授予多维数据集或模型权限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+-   [授予多维数据集或模型权限 (Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [授予处理权限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+-   [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
   
--   [授予读取对象元数据定义权限&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [授予数据源对象上的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [授予数据挖掘结构和模型的权限 (Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [授予维度的权限&#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
+-   [授予维度的权限 (Analysis Services)](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [授予对维度数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [授予对单元数据的自定义访问&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+-   [授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>请参阅  
- [创建和管理角色&#40;SSAS 表格&#41;](../tabular-models/roles-ssas-tabular.md)  
+ [创建和管理角色（SSAS 表格）](../tabular-models/roles-ssas-tabular.md)  
   
   

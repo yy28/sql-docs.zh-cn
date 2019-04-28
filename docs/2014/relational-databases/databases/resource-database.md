@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871104"
 ---
 # <a name="resource-database"></a>Resource 数据库
   Resource 数据库为只读数据库，它包含了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的所有系统对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统对象（如 sys.objects）在物理上保留在 Resource 数据库中，但在逻辑上却显示在每个数据库的 sys 架构中。 Resource 数据库不包含用户数据或用户元数据。  

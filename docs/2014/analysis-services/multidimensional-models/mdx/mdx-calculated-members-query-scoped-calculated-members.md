@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725541"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>创建查询作用域的计算成员 (MDX)
   如果某个计算成员仅用于单个多维表达式 (MDX) 查询，则可以使用 WITH 关键字定义该计算成员。 使用 WITH 关键字创建的计算成员在执行完查询之后就不再存在。  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [创建会话作用域的计算成员&#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)   
+ [创建会话作用域的计算成员 (MDX)](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

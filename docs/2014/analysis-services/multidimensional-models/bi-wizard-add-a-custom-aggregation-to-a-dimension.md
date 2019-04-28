@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726881"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>向维度中添加自定义聚合
   在多维数据集或维度中添加自定义聚合增强功能，以使用其他一元运算符替换与维度成员关联的默认聚合。 这种增强功能指定维度表中定义父子层次结构中的成员汇总的一元运算符列。 一元运算符对父子层次结构中的父属性进行操作。  

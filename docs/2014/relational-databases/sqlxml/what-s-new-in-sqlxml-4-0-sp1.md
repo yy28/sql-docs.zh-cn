@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718024"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>什么&#39;中 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包括各种更新和增强功能。 本主题简要总结这些更新，并提供一些介绍详细信息的链接供您查看。 SQLXML 4.0 SP1 提供附加的增强功能，以便支持 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的新数据类型。 本主题包括以下内容：  
@@ -199,7 +199,7 @@ ms.locfileid: "53371229"
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQL Server 2005 中引入的 SQLXML 3.0 ISAPI 和数据类型的可支持性  
  由于 ISAPI 支持已从 SQLXML 4.0 中，如果解决方案需要增强的数据键入功能中引入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]如[xml 数据类型](/sql/t-sql/xml/xml-transact-sql)或[用户定义数据类型 (Udt)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)和基于 Web 的访问，你将需要使用另一种解决方案，例如[SQLXML 托管类](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)或其他类型的 HTTP 处理程序，如 SQL Server 2005 的本机 XML Web 服务。  
   
- 或者，如果不需要这些类型扩展，则可以继续使用 SQLXML 3.0 连接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安装。 SQLXML 3.0 ISAPI 支持将针对这些更高版本工作，但不支持或识别 `xml` 中引入的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 数据类型或 UDT 类型支持。  
+ 或者，如果不需要这些类型扩展，则可以继续使用 SQLXML 3.0 连接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安装。 SQLXML 3.0 ISAPI 支持将针对这些更高版本工作，但不支持或识别 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的 `xml` 数据类型或 UDT 类型支持。  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>临时文件的 XML 大容量加载安全更改  
  对于 SQLXML 4.0 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，XML 大容量加载文件的权限授予执行大容量加载操作的用户。 读写权限都继承自文件系统。 在早期版本的 SQLXML 和 SQL Server 中，SQLXML 下的 XML 大容量加载将创建一些任何人都可读的不安全的临时文件。  

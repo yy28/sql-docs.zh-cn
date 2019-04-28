@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700093"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况下，`DbStorageLocation`数据库属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 可以在本地磁盘或网络设备中指定的数据库位置。  
@@ -42,7 +42,7 @@ ms.locfileid: "50148192"
 > [!IMPORTANT]  
 >  不应使用 `Alter` 命令更改数据库存储位置。 相反，我们建议使用一系列`Detach` / `Attach`数据库命令 (请参阅[移动 Analysis Services 数据库](move-an-analysis-services-database.md)，[附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](move-an-analysis-services-database.md)   

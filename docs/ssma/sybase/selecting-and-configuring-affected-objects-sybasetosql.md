@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667504"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
 在此页可以选择表和外键，在其中更改应进行比较时 SSMA 验证在上一步中选择的对象的执行结果。 此外，还可以自定义验证参数。  
@@ -52,7 +52,7 @@ SQL 选项卡包含"创建表"选定的表的 SQL。
 ## <a name="data"></a>数据  
 数据选项卡显示所选择的表中的数据。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
 属性选项卡显示所选表的属性。 以下字段是属性选项卡下存在：  
   
 -   创建或上次修改时间  

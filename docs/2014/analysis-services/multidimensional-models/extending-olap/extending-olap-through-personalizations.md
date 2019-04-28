@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725981"
 ---
 # <a name="extending-olap-through-personalizations"></a>通过个性化设置扩展 OLAP
   Microsoft  [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 提供了诸多可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数。 这些函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且可靠的产品都需要不断地扩展其功能，本产品也不例外。  

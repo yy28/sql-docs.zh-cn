@@ -1,5 +1,5 @@
 ---
-title: Microsoft 神经网络算法 |Microsoft 文档
+title: Microsoft 神经网络算法 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724968"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft 神经网络算法
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法是用于机器学习的流行且适应性强的神经网络体系结构实现。  该算法的工作原理是针对可预测属性的每个可能状态来测试输入属性的每个可能状态，并基于定型数据计算每个组合的概率。 可以将这些概率用于分类或回归任务，以便基于某些输入属性来预测结果。 神经网络还可以用于关联分析。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "34015536"
 ## <a name="how-the-algorithm-works"></a>算法的原理  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建由多至三层节点（有时称为神经元）组成的网络。 这些层分别是输入层、隐藏层和输出层。  
   
- **输入层：** 输入节点定义数据挖掘模型的所有输入属性值及其概率。  
+ **输入的层：** 输入的节点定义数据挖掘模型和及其概率的所有输入的属性的值。  
   
- **隐藏层：** 隐藏节点接收来自输入节点的输入，并向输出节点提供输出。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏节点的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
+ **隐藏的层：** 隐藏的节点接收来自输入节点的输入，并提供输出到输出节点。 隐藏层是向各种输入概率分配权重的位置。 权重说明某一特定输入对于隐藏节点的相关性或重要性。 输入所分配的权重越大，则输入的值越重要。 权重可为负值，表示输入抑制而不是促进某一特定结果。  
   
  **输出层：** 输出节点代表数据挖掘模型的可预测属性值。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34015536"
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 -   不支持钻取或数据挖掘维度， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "34015536"
   
 -   不支持创建数据挖掘维度。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 神经网络算法技术参考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [神经网络模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [神经网络模型查询示例](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft 逻辑回归算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   

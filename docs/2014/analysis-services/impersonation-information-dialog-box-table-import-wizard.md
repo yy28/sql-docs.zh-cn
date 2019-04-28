@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d271bbfdf31a24304961d71e4501ea7ae4579440
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730705"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>“模拟信息”对话框（表导入向导）
   使用 **“模拟信息”** 页可以指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将用于连接到数据源的凭据。 有关凭据模拟的详细信息，请参阅[模拟&#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)。  
@@ -43,6 +43,6 @@ ms.locfileid: "48047558"
  选择此选项将使用与管理该模型的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务相关联的安全凭据。  
   
 ## <a name="see-also"></a>请参阅  
- [模拟&#40;SSAS 表格&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [模拟（SSAS 表格）](tabular-models/impersonation-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 构建在 MDX 中的度量值 |Microsoft 文档
+title: 构建在 MDX 中的度量值 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2095d3bde254a59c5b2edbe8ebb117854ab7777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806119"
 ---
 # <a name="mdx-building-measures"></a>MDX 生成度量值
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,9 +42,9 @@ from [Model]
 |2003|41993729.72||  
 |2004|25808962.34||  
   
-## <a name="see-also"></a>另请参阅  
- [创建成员语句 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [MDX 函数引用 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 语句 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>请参阅  
+ [CREATE MEMBER 语句 (MDX)](../../../mdx/mdx-data-definition-create-member.md)   
+ [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 语句 (MDX)](../../../mdx/mdx-data-manipulation-select.md)  
   
   

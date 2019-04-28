@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721649"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并复制的 Web 同步选项支持使用 HTTPS 协议跨 Internet 复制数据。 若要使用 Web 同步，首先需要执行以下配置操作：  

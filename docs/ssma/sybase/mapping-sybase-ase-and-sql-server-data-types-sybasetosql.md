@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706068"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>映射 Sybase ASE 和 SQL Server 数据类型 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型。 转换到 ASE 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象，必须指定如何将映射到 ASE 中的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  

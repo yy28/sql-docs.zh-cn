@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657480"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 故障转移群集上安装客户端工具
   诸如 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的客户端工具是在同一台计算机上的所有实例间公用的共享功能。 它们与支持的、可并行安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本兼容。 在某一时刻，节点上只能存在客户端工具的一个版本。  
@@ -43,7 +43,7 @@ ms.locfileid: "52800479"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示符处安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 客户端工具  
   
-1.  若要安装[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书，请运行以下命令：Setup.exe/q/Action=Install /Features = Tools  
+1.  若要安装[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书，请运行以下命令：Setup.exe/q/Action=Install /Features=Tools  
   
 2.  若要只安装基本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理工具运行以下命令：Setup.exe/q/Action=Install Features = SSMS。 这将为 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、sqlcmd 实用工具以及 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 提供程序安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持。  
   

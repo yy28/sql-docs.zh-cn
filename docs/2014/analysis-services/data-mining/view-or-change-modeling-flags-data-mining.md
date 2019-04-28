@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732618"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>查看或更改建模标志（数据挖掘）
   建模标志是在挖掘结构列或挖掘模型列上设置的属性，用于控制分析期间算法处理数据的方式。  
@@ -53,6 +53,6 @@ ms.locfileid: "48050128"
   
 ## <a name="see-also"></a>请参阅  
  [挖掘模型任务和操作指南](mining-model-tasks-and-how-tos.md)   
- [建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+ [建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
   

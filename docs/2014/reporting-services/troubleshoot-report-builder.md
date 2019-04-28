@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657409"
 ---
 # <a name="troubleshoot-report-builder"></a>报表生成器故障排除
   报表生成器是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的一个报表创作工具，可以用于从多种不同类型的数据源生成报表，并可将报表发布到报表服务器或 SharePoint 站点。 在 Web 浏览器或作为的一部分，可以在报表生成器中，查看您创建报告[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 应用程序或 SharePoint 站点。  

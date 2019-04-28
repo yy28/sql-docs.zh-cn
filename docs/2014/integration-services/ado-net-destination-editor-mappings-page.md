@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836933"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目标编辑器（“映射”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

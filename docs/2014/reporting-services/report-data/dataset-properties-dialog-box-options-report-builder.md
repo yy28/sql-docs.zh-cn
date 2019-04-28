@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf7814d51fd0f726a60d3b177af18fbeba223d2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696749"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>“数据集属性”对话框 -&gt;“选项”（报表生成器）
   在“数据集属性”对话框中选择“选项”可更改查询的数据选项，如排序规则选项和将小计视为详细数据进行处理。 有关排序规则的详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/collations/collation-and-unicode-support.md) 中的 [排序规则和 Unicode 支持](https://go.microsoft.com/fwlink/?linkid=98335)。  

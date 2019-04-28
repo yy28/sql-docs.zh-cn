@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724886"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418378"
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示该列将被视为具有两个可能状态:**缺少**并**现有**。 Null 视为 **Missing** 值。  
+ 意味着，该列将被视为具有两个可能状态：**缺少**并**现有**。 Null 视为 **Missing** 值。  
   
  适用于挖掘模型列。  
   

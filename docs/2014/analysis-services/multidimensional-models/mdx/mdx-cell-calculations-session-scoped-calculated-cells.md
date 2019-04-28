@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725401"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>创建会话作用域的计算单元
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  `String_Expression` 值包含一个正交、单维度 MDX 集表达式列表，每个表达式都必须解析为下表列出的集类别之一。  
   
-|类别|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |后代集|解析为指定成员的后代的 MDX 集表达式。 这就`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函数。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>请参阅  
- [构建在 MDX 中的单元格计算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [在 MDX 中生成单元格计算 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

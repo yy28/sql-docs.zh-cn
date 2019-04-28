@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730661"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>“生成命名查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “生成命名查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，创建基于图表序列、图表序列值或图表筛选器（从 **“浏览数据”** 对话框的 **“透视图”** 选项卡上显示的表中选择）的命名查询。 单击 **“浏览数据”** 对话框中的 **“生成命名查询”** ，可以显示 **“生成命名查询”** 对话框。  
@@ -29,7 +29,7 @@ ms.locfileid: "48161607"
  **名称**  
  键入命名查询的名称。  
   
- **Description**  
+ **说明**  
  键入命名查询的说明（可选）。  
   
  **查询定义**  

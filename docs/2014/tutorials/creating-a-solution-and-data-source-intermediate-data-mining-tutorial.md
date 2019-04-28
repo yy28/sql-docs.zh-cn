@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855348"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>创建解决方案和数据源（数据挖掘中级教程）
   若要使用数据挖掘，必须首先在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 **“Analysis Services 多维和数据挖掘项目”** 模板创建一个项目。 打开该模板时，它将在设计器中加载您进行数据挖掘时可能需要的所有架构：数据源、挖掘结构和挖掘模型，甚至多维数据集（如果您的挖掘结构使用多维数据）。  

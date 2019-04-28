@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea31ff7c14baff6a102ad9aa11c227e9c333da60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725523"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>在 MDX 中生成计算成员 (MDX)
   在多维表达式 (MDX) 中，计算成员是通过以下方式解析的成员：计算 MDX 表达式以返回值。 这种泛泛的定义所包括的范围十分惊人。 由于能在 MDX 查询中构造和使用计算成员，使得人们能够更有力地驾驭多维数据。  
@@ -39,8 +39,8 @@ ms.locfileid: "48051787"
      有关如何使用 CREATE MEMBER 语句在会话中创建计算成员的详细信息，请参阅[创建会话作用域的计算成员 (MDX)](mdx-calculated-members-session-scoped-calculated-members.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [CREATE MEMBER 语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)   
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 语句 (MDX)](/sql/mdx/mdx-data-manipulation-select)  
   
   

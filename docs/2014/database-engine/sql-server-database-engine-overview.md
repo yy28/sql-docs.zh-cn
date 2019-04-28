@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843778"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server 数据库引擎
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。 利用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可控制访问权限并快速处理事务，从而满足企业内要求极高而且需要处理大量数据的应用需要。  

@@ -1,5 +1,5 @@
 ---
-title: 步骤 2： 调用服务器程序 （RDS 教程） |Microsoft Docs
+title: 第 2 步：调用服务器程序 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675813"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步骤 2：调用服务器程序（RDS 教程）
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>第 2 步：调用服务器程序（RDS 教程）
 调用客户端上的方法时*代理*，实际的程序在服务器上执行该方法。 在此步骤中，将在服务器上执行查询。  
   
 > [!IMPORTANT]
@@ -65,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [步骤 3： 服务器获取记录集 （RDS 教程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [步骤 3：服务器获取记录集 （RDS 教程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

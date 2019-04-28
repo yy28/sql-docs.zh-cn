@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733484"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 神经网络算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -217,11 +217,11 @@ ms.locfileid: "48218697"
 ### <a name="input-nodes"></a>输入节点  
  输入层为模型中使用的属性的每个值各包含一个节点。  
   
- **离散属性：** 输入节点仅在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 列中存储属性的名称和值。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **离散属性：** 输入的节点存储属性和其值的名称仅在 ATTRIBUTE_NAME 和 ATTRIBUTE_VALUE 列中。 例如，如果列为 [Work Shift]，则为模型中使用的该列的每个值（例如 AM 和 PM）创建一个单独的节点。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
- **离散化数值属性：** 输入节点存储属性的名称和值，该值可以是一个范围或一个特定值。 所有值均通过表达式表示，例如将 [Time Per Issue] 的值表示为“77.4 - 87.4”或“< 64.0”。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **离散化数值属性：** 输入的节点存储属性和值，该值可以是一个范围或特定值的名称。 所有值均通过表达式表示，例如将 [Time Per Issue] 的值表示为“77.4 - 87.4”或“< 64.0”。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
- **连续属性：** 输入节点存储属性的平均值。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
+ **连续属性：** 输入的节点存储属性的平均值。 每个节点的 NODE_DISTRIBUTION 表仅列出属性的当前值。  
   
 ### <a name="hidden-layer-nodes"></a>隐藏层节点  
  隐藏层包含可变数目的节点。 在每个节点中，NODE_DISTRIBUTION 表包含从隐藏层到输入层中的节点的映射。 ATTRIBUTE_NAME 列包含与输入层中的节点对应的节点 ID。 ATTRIBUTE_VALUE 列包含与输入节点和隐藏层节点的该组合关联的权重。 表中的最后一行包含表示隐藏层中的该隐藏节点的权重的系数。  
@@ -231,14 +231,14 @@ ms.locfileid: "48218697"
   
  NODE_DISTRIBUTION 表根据属性类型包含以下其他信息：  
   
- **离散属性：** NODE_DISTRIBUTION 表的最后两行包含整个节点的系数和属性的当前值。  
+ **离散属性：** NODE_DISTRIBUTION 表的最后两行包含该节点作为一个整体和该属性的当前值的系数。  
   
- **离散化数值属性：** 除非该属性的值是一个值范围，否则该属性与离散属性相同。  
+ **离散化数值属性：** 与离散属性相同，但该属性的值的值范围。  
   
- **连续属性：** NODE_DISTRIBUTION 表的最后两行包含该属性的平均值、整个节点的系数和系数的方差。  
+ **连续属性：** NODE_DISTRIBUTION 表的最后两行包含属性的平均值、 整个节点的系数和系数的方差。  
   
 ## <a name="see-also"></a>请参阅  
- [Microsoft 神经网络算法](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Microsoft 神经网络算法技术参考](microsoft-neural-network-algorithm-technical-reference.md)   
  [神经网络模型查询示例](neural-network-model-query-examples.md)  
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701684"
 ---
 # <a name="define-custom-member-formulas"></a>定义自定义成员公式
   可以定义称为自定义成员公式的多维表达式 (MDX) 表达式，以便为指定属性的成员提供值。 数据源视图内表中的列为属性中的每个成员提供了用于为其提供值的表达式。  
@@ -37,25 +37,25 @@ ms.locfileid: "48186017"
   
  自定义成员公式替代与度量值相关的聚合函数。 例如，在指定自定义成员公式之前，使用 `Sum` 聚合函数的度量值对“时间”维度的下列成员产生下列值：  
   
--   2003: 2100  
+-   2003:2100  
   
-    -   第一季度：700  
+    -   第 1 季度：700  
   
-    -   第二季度：500  
+    -   第 2 季度：500  
   
-    -   第三季度：100  
+    -   第 3 季度：100  
   
-    -   第四季度：800  
+    -   第 4 季度：800  
   
--   2004: 1500  
+-   2004:1500  
   
-    -   第一季度：600  
+    -   第 1 季度：600  
   
-    -   第二季度：200  
+    -   第 2 季度：200  
   
-    -   第三季度：300  
+    -   第 3 季度：300  
   
-    -   第四季度：400  
+    -   第 4 季度：400  
   
  使用自定义成员公式时，成员的值可改由自定义汇总公式提供。 例如，以下自定义成员公式可用来为“时间”维度中 2004 成员的“第四季度”子成员提供值 450。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186017"
 Time.[Quarter 3] * 1.5  
 ```  
   
- 自定义成员公式存储在维度表的一列中。 通过设置启用自定义汇总公式`CustomRollupColumn`特性的属性。  
+ 自定义成员公式存储在维度表的一列中。 可以通过设置特性的 `CustomRollupColumn` 属性来启用自定义汇总公式。  
   
  若要将单个 MDX 表达式应用于属性的所有成员，请在维度表中创建可将 MDX 表达式作为文字字符串返回的命名计算。 然后，使用要配置的特性的 `CustomRollupColumn` 属性设置指定命名计算。 命名计算是数据源视图表中的一列，可返回由 SQL 表达式定义的行值。 有关构造命名计算的详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

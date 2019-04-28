@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 410bb163ba04d99ea8f71c262c8e671f8393c841
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792925"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中从 .dqs 数据文件导入整个知识库。 您可以通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序内导出现有知识库来创建数据文件（请参阅 [将知识库导出到.dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)）。  
@@ -64,7 +64,7 @@ ms.locfileid: "56039548"
   
 13. 在 Data Quality Services 主页中，验证该知识库是否列在 **“最近的知识库”** 下。  
   
-##  <a name="FollowUp"></a> 跟进：在从.dqs 文件导入知识库后  
+##  <a name="FollowUp"></a> 跟进：从 .dqs 文件导入知识库后  
  在从 .dqs 文件导入知识库之后，您可以将知识添加到知识库，或在清理或匹配项目中使用此知识库，具体取决于知识库的内容。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理域](../../2014/data-quality-services/managing-a-domain.md)、[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)、[数据清理](../../2014/data-quality-services/data-cleansing.md)或[数据匹配](../../2014/data-quality-services/data-matching.md)。  
   
   

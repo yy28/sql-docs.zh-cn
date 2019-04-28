@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715144"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
   可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”选项以创建预测查询。  

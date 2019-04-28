@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4ca51b182ca528c6bab05804da4396fbde4dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699491"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>使用变量和参数 (MDX)
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，可以参数化多维表达式 (MDX) 语句。 参数化语句允许您创建可在运行时自定义的一般语句。  
@@ -57,9 +57,9 @@ from [Adventure Works]
 </Envelope>  
 ```  
   
- 若要使用 OLE DB 使用此功能，将使用`ICommandWithParameters`接口。 若要将此功能与 ADOMD.Net 结合使用，请使用 **AdomdCommand.Parameters** 集合。  
+ 若要将此功能与 OLE DB 结合使用，请使用 `ICommandWithParameters` 接口。 若要将此功能与 ADOMD.Net 结合使用，请使用 **AdomdCommand.Parameters** 集合。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
   

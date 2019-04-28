@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715174"
 ---
 # <a name="classified-columns-data-mining"></a>已分类列（数据挖掘）
   定义已分类列时，在挖掘结构中创建当前列和另一个列之间的关系。 指定为已分类列的挖掘结构列中的数据包含描述挖掘结构中另一个列的值的分类信息。  
@@ -37,7 +37,7 @@ ms.locfileid: "48193747"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法不支持使用已分类列，此功能用于创建自定义算法中。  
   
 ## <a name="defining-a-classified-column"></a>定义已分类列  
- 已分类列的数据类型必须是`Long`或`Double`。  
+ 已分类列的数据类型必须为 `Long` 或 `Double`。  
   
  以下列表说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持的已分类列内容类型。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48193747"
  列内的值是相关值的权重或事例复制因子。  
   
 ## <a name="see-also"></a>请参阅  
- [内容类型&#40;数据挖掘&#41;](content-types-data-mining.md)   
- [挖掘结构&#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
- [数据类型&#40;数据挖掘&#41;](data-types-data-mining.md)  
+ [内容类型 &#40;数据挖掘&#41;](content-types-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](mining-structures-analysis-services-data-mining.md)   
+ [数据类型（数据挖掘）](data-types-data-mining.md)  
   
   

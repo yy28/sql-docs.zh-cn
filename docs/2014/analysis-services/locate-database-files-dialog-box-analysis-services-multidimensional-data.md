@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728163"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>“定位数据库文件”对话框（Analysis Services - 多维数据）
   **“定位数据库文件”** 对话框显示一组可用文件的列表，这些文件位于为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例定义的日志和数据文件夹中。 您可以选择一个列出的文件，如果需要的话，您也可以指定另一个文件夹和文件。 您可以通过执行以下操作之一显示 **“定位数据库文件”** 对话框：  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701378"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>向维度中添加帐户智能
   在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用这些分类对一段时间内的帐户进行聚合。  
@@ -51,7 +51,7 @@ ms.locfileid: "48183425"
     |**负债**|`LastNonEmpty`|在特定时间所拖欠的现金或事物的价值。 该帐户类型不会随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**资产**|`LastNonEmpty`|在特定时间所拥有的现金或事物的价值。 该帐户类型随时间而积累，因此，不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。 该帐户类型使用“期末”汇率在各种货币之间进行换算。|  
     |**平衡**|`LastNonEmpty`|在特定时间某事物的计数。 该帐户类型随时间而积累，但不会随时间而自然聚合。 例如，“年”数量是指具有数据的上一个月的值。|  
-    |**流**|`Sum`|某事物的增量计数。 此帐户类型聚合为`Sum`随着时间的推移但不会使用货币换算规则。|  
+    |**流**|`Sum`|某事物的增量计数。 该帐户类型随时间而聚合为 `Sum`，但不会使用货币换算规则进行换算。|  
     |**费用**|`Sum`|所花费的现金或事物的价值。 该帐户类型随时间而聚合为 `Sum`，并可使用平均汇率在各种货币之间进行换算。|  
     |**收入**|`Sum`|所收到的现金或事物的价值。 该帐户类型随时间而聚合为 `Sum`，并可使用平均汇率在各种货币之间进行换算。|  
   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725961"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
   多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
@@ -37,7 +37,7 @@ ms.locfileid: "48149707"
 > [!NOTE]  
 >  只有具有“完全控制”权限的服务器管理员或数据库管理员可以将多维数据集从源文件部署到服务器，或创建角色和分配成员。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)并[授予数据库权限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)有关这些权限的详细信息级别。  
   
-#### <a name="step-1-create-the-role"></a>步骤 1：创建角色  
+#### <a name="step-1-create-the-role"></a>第 1 步：创建角色  
   
 1.  在 SSMS 中，连接到 Analysis Services。 如果需要此步骤的帮助，请参阅[从客户端应用程序进行连接 (Analysis Services)](../instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48149707"
   
 5.  输入名称和（可选）描述后继续下一个步骤。  
   
-#### <a name="step-2-assign-membership"></a>步骤 2：分配成员身份  
+#### <a name="step-2-assign-membership"></a>第 2 步：分配成员身份  
   
 1.  在“成员身份”  窗格中，单击“添加”  以输入将使用此角色访问多维数据集的 Windows 用户或组帐户。 Analysis Services 仅支持 Windows 安全标识。 请注意，在此步骤中不创建数据库登录。 在 Analysis Services 中，用户通过 Windows 帐户进行连接。  
   
 2.  继续下一个步骤“设置多维数据集权限”。  
   
-     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关这些权限级别的详细信息，请参阅 [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
+     请注意，我们将跳过“数据源”窗格。 Analysis Services 数据的多数常规使用者无需具备对数据源对象的权限。 有关这些权限级别的详细信息，请参阅 [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
   
 #### <a name="step-3-set-cube-permissions"></a>步骤 3：设置多维数据集权限  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48149707"
   
 ## <a name="see-also"></a>请参阅  
  [Analysis Services 支持的身份验证方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授予数据挖掘结构和模型的权限&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授予数据源对象上的权限&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授予数据挖掘结构和模型的权限 (Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授予数据源对象的权限 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

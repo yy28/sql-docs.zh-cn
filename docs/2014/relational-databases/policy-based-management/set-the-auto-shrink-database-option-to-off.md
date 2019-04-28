@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691513"
 ---
 # <a name="set-the-autoshrink-database-option-to-off"></a>将 AUTO_SHRINK 数据库选项设置为 OFF
   此规则检查 AUTO_SHRINK 数据库选项是否已设置为 OFF。 频繁收缩和展开数据库可能会导致物理碎片。  

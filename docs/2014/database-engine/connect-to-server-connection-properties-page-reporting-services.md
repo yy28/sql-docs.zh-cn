@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808658"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>连接到服务器（“连接属性”页）(Reporting Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，此对话框中仅显示“测试”和“保存”。  
@@ -42,7 +42,7 @@ ms.locfileid: "48066970"
  保存“已注册的服务器”中的设置。  
   
 ## <a name="see-also"></a>请参阅  
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [在 Management Studio 中连接到报表服务器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [针对报表服务器的身份验证](../reporting-services/security/authentication-with-the-report-server.md)  
   

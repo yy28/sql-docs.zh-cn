@@ -1,5 +1,5 @@
 ---
-title: 第 9 课： 创建透视 |Microsoft Docs
+title: 第 9 课：创建透视 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83d9b10af87926a26b2a671ff162163d3c8fa62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728073"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 课：创建透视
   在本课程中，您将创建 Internet Sales 透视。 透视可定义模型的可查看子集，借此您可以将注意力集中在特定业务或特定应用程序上。 当用户使用透视连接到模型时，将只能看到与该透视中定义的字段相同的那些模型对象（表、列、度量值、层次结构和 KPI）。  
@@ -27,10 +27,10 @@ ms.locfileid: "48163607"
   
  若要了解详细信息，请参阅[透视表（SSAS 表格）](tabular-models/perspectives-ssas-tabular.md)。  
   
- 学完本课的估计时间： **5 分钟**  
+ 估计的时间才能完成本课程中：**5 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
- 本主题是表格建模教程的一部分，该教程应按顺序学习。 在执行本课程中的任务之前，应该已完成上一课：[第 8 课：创建关键绩效指标](lesson-7-create-key-performance-indicators.md)。  
+## <a name="prerequisites"></a>先决条件  
+ 本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 8 课：创建关键绩效指标](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>创建透视  
   

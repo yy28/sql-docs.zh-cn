@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689047"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>更改挖掘模型的属性
-  某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 应用于整个模型的属性的示例`Drillthrough`属性，用于指定是否应将可用于查询事例数据，并`Description`属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  
+  某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 例如，`Drillthrough` 属性就应用于整个模型，它指定事例数据是否应该可用于查询；`Description` 属性也是此类属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  
   
  下面的模型属性具有可用于创建表达式或配置复杂模型属性的高级编辑器。 以下属性提供：  
   
--   `Filter` 属性： 打开[数据集筛选器或模型筛选器对话框](../data-set-filter-or-model-filter-dialog-box.md)。  
+-   `Filter` 属性：此时将打开[数据集筛选器或模型筛选器对话框](../data-set-filter-or-model-filter-dialog-box.md)。  
   
--   `AlgorithmParameters` 属性： 打开[算法参数对话框&#40;挖掘模型视图&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
+-   `AlgorithmParameters` 属性：此时将打开[算法参数对话框&#40;挖掘模型视图&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
   
- 有关如何在挖掘模型中设置属性的信息，请参阅[挖掘模型列](mining-model-columns.md)。  
+ 有关如何在挖掘模型中设置属性的信息，请参阅 [挖掘模型列](mining-model-columns.md)。  
   
 ### <a name="to-change-the-properties-of-a-mining-model"></a>更改挖掘模型的属性  
   

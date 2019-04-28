@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842523"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 实用工具故障排除
   解决 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具问题可能包括解决向 UCP 注册 SQL Server 实例的失败的操作、排除导致 UCP 上托管实例列表视图中图标灰显的失败的数据收集故障、缓解性能瓶颈或者解决资源运行状况问题。 有关标识的资源运行状况问题的缓解[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，请参阅[进行故障排除 SQL Server 资源运行状况&#40;SQL Server 实用工具&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "53371059"
   
  执行 Transact-SQL 语句或批处理时发生了异常。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 其他信息：无法获取有关 Windows NT 组/用户的信息\<DomainName\AccountName >，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
+ 其他信息：无法获取有关 Windows NT 组/用户的信息\<DomainName\AccountName >，错误代码 0x5。 (Microsoft SQL Server，错误：15404)  
   
  在以下示例中将发生此问题：  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371059"
   
  简化的错误消息如下：  
   
- 命令执行已停止，因为 shell 变量“ErrorActionPreference”设置为 Stop：访问被拒绝。  
+ 命令执行停止，因为 shell 变量"ErrorActionPreference"设置为 Stop:访问被拒绝。  
   
- 错误：\<日期-时间 （MM/DD/YYYY hh: mm:） >:收集 CPU 属性时捕获到异常。  WMI 查询可能已失败。  警告。  
+ 错误：\<日期-时间 （MM/DD/YYYY hh: mm:） >:收集 cpu 属性时捕获的异常。  WMI 查询可能已失败。  警告。  
   
  为了解决此问题，请验证以下配置设置：  
   

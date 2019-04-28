@@ -22,13 +22,13 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23895b8321e5f772972821c24b652dd8b85318aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62858826"
 ---
-# <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact SQL)
+# <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 包含每个子句的边缘约束的行。
@@ -40,7 +40,7 @@ ms.locfileid: "47791835"
 |**to_object_id**|**int**|TO 节点表的 object_id。|  
 |**clause_number**|**int**|子句的内部生成的整数索引。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 例如：检索以 XML 形式的产品型号信息 |Microsoft Docs
+title: 例如：以 XML 形式检索产品型号信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704710"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>例如：以 XML 形式检索产品型号信息
   下面的查询将返回产品型号信息。 `RAW` 子句中指定了 `FOR XML` 模式。  

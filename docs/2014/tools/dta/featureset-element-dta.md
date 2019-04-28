@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735750"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
   包含数据库引擎优化顾问在分析中使用的物理设计结构（索引或索引视图）。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719891"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>备份、还原和同步数据库 (XMLA)
   在 XML for Analysis 中，有三个命令分别用于备份、还原和同步数据库：  
@@ -54,7 +54,7 @@ ms.locfileid: "50145932"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在备份文件中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在备份文件中包括安全定义。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "50145932"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在数据库中包括安全定义。|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50145932"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*skipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
+|*SkipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在目标数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在目标数据库中包括安全定义。|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50145932"
   
  可以使用**位置**Synchronize 命令同步 ROLAP 对象中的元素。 每个**位置**用来定位数据源，元素**DataSourceType**属性必须显式设置为*本地*。 . 您还必须设置**ConnectionString**的属性**位置**到新位置的连接字符串的元素。 在同步期间， **Synchronize**命令将通过标识的数据源的连接字符串替换为**DataSourceID**属性**位置**具有的值的元素**ConnectionString**的属性**位置**元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Backup 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Restore 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

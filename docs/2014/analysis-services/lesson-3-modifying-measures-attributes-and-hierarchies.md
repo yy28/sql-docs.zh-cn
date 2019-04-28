@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729353"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>第 3 课：修改度量值、 属性和层次结构
   在定义初始多维数据集后，即可开始提高多维数据集的有用性和友好性。 您可以通过添加在不同级别支持导航和聚合的层次结构、通过将格式应用于特定的度量值以及通过定义计算和关系，实现上述目的。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659130"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三个示例显示如何使用 EXTEND_MODEL_CASES 参数用最新数据更新挖掘模型。  
   
- 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程中，[第 2 课： 生成预测方案&#40;数据挖掘中级教程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)并[时间时序预测 DMX教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要了解有关使用时序模型的详细信息，请参阅数据挖掘教程中，[第 2 课：生成预测方案&#40;数据挖掘中级教程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)并[时间时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 > [!NOTE]  
 >  您可能会从模型中获取不同的结果；下面提供的示例结果仅用于说明结果格式。  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  在此示例中使用了 FLATTENED 关键字，目的是使结果更易于读取。  如果不使用 FLATTENED 关键字，而返回一个分层行集，此查询将返回两列。 第一列包含 [ModelRegion] 的值，第二列包含具有两个列的嵌套表：$TIME，显示要预测的时间段；Quantity，包含预测的值。  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>示例 2：添加新数据和使用 REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>示例 2：添加新数据，并使用 REPLACE_MODEL_CASES  
  假定您发现某一特定地区的数据不正确，并且您希望使用模型中的模式，但是又想调整预测，以便与新数据匹配。 或者您可能发现另一地区的趋势更可靠，并且希望向不同地区中的数据应用最可靠的模型。  
   
  在这些方案中，您可以使用 REPLACE_MODEL_CASES 参数，并指定一组新的数据以用作历史数据。 这样，预测将基于指定模型中的模式，但将从新数据点末尾继续平滑地进行。 有关此方案的完整演练，请参阅[高级时序预测&#40;数据挖掘中级教程&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。  
@@ -162,7 +162,7 @@ ON
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
 |M200 Pacific|9/25/2008 12:00:00 AM|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>示例 3：添加新数据和使用 EXTEND_MODEL_CASES  
+### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>示例 3:添加新数据，并使用 EXTEND_MODEL_CASES  
  示例 3 说明如何使用*EXTEND_MODEL_CASES*选项来提供新数据添加到现有的数据序列的末尾。 新数据将添加到模型中，而不是替换现有数据点。  
   
  在下面的示例中，新数据是在 NATURAL PREDICTION JOIN 后的 SELECT 语句中提供的。 您可以使用此语法提供多个新输入行，但每个新输入行必须具有唯一的时间戳：  
@@ -194,11 +194,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   根据新扩展的模型返回其余三个时间段的新预测。  
   
- 下表列出示例 2 查询的结果。 请注意，针对 M200 Europe 返回的前两个值与您提供的新值完全相同。 此行为是默认设置；如果您希望在新数据末尾启动预测，则必须指定开始和结束时间步长。 有关如何执行此操作的示例，请参阅[第 5 课： 扩展时序模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
+ 下表列出示例 2 查询的结果。 请注意，针对 M200 Europe 返回的前两个值与您提供的新值完全相同。 此行为是默认设置；如果您希望在新数据末尾启动预测，则必须指定开始和结束时间步长。 有关如何执行此操作的示例，请参阅[第 5 课：扩展时序模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
   
  另请注意，由于没有向太平洋地区提供新数据， 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 返回所有（五个）时间段的新预测。  
   
- Quantity: M200 Europe。 EXTEND_MODEL_CASES:  
+ 数量：M200 Europe。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantity: M200 Pacific。 EXTEND_MODEL_CASES:  
+ 数量：M200 Pacific。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>示例 4：返回时序预测中的统计信息  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>示例 4:返回时序预测中的统计信息  
  **PredictTimeSeries**函数不支持*INCLUDE_STATISTICS*作为参数。 但是，可以使用以下查询来返回时序查询的预测统计信息。 此方法还可以与具有嵌套表列的模型结合使用。  
   
  在此特定模型中，可预测属性为 Quantity，，因此必须使用`[Quantity]`PredictTimeSeries 函数的第一个参数。 如果模型使用不同的可预测属性，则可以替换为不同的列名。  

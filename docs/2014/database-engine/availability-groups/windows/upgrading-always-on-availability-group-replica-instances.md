@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812924"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
   将服务器实例从 SQL Server 2012 更新或升级到 Service Pack 或更高版本时，您可以通过执行顺序更新或升级将可用性组的停机时间降低到一个手动故障转移所需的时间。 对于升级 SQL Server 版本，它称为“滚动升级”；对于使用修复程序或 Service Pack 更新当前 SQL Server 版本，它称为“滚动更新”。  

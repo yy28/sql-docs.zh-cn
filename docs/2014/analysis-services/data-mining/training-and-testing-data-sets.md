@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733472"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
   将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
@@ -52,7 +52,7 @@ ms.locfileid: "50144992"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>修改结构属性以创建测试数据集  
  如果您在创建和处理挖掘结构之后又决定取消一个测试数据集，可以修改挖掘结构的属性。 若要更改数据的分区方式，请编辑下列属性：  
   
-|“属性”|Description|  
+|属性|Description|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|指定要包括在测试集内的最大事例数。|  
 |`HoldoutMaxPercent`|指定测试集内要包括的事例数在整个数据集中所占的百分比。 如果没有数据集，则将指定 0。|  
@@ -108,7 +108,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |提供用于创建维持集的 DMX 语法。|[CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)|  
 |在定型集和测试集中检索有关事例的信息。|[数据挖掘架构行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [查询数据挖掘架构行集&#40;Analysis Services-数据挖掘&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘概念](data-mining-concepts.md)   
  [数据挖掘解决方案](data-mining-solutions.md)   

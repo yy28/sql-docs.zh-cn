@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf9296a798135a8fb7fac8f3919cfca20385004c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720884"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>报表生成器中的报表部件和数据集
   在报表生成器中，在报表中包含数据的最简单方式是从报表部件库添加报表部件。 报表部件包含它们所依赖的数据集，这些数据集称为 *相关数据集*。 相关数据集基于共享数据源，并且可以是嵌入数据集或共享数据集。  

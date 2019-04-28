@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822446"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>高级时序预测（数据挖掘中级教程）
   通过浏览预测模型，您发现尽管大多数区域的销售额都遵循一个相似的模式，但是某些区域和某些型号（例如，太平洋地区的 M200 型号）却呈现出完全不同的趋势。 您对此并不感到惊奇，因为您知道区域之间的差异很常见，可以由多种因素引起，其中包括市场促销、错误的报告或地理政治事件。  

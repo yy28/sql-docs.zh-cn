@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726592"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
   作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
@@ -27,9 +27,9 @@ ms.locfileid: "48181259"
  权限通过角色授予，将对象与权限以及 Windows 用户或组帐户进行关联。 请记住，权限是可以累加的。 如果一个角色授予处理多维数据集的权限，同时另一个角色授予同一用户处理维度的权限，那么两个不同角色的权限会合并以授予用户在该数据库内的处理多维数据集和处理特定维度的权限。  
   
 > [!IMPORTANT]  
->  其角色只有处理权限的用户将不能够使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 来连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和处理对象。 这些工具需要`Read Definition`访问对象元数据的权限。 没有功能使用任一工具时，则必须使用 XMLA 脚本来执行处理操作。  
+>  其角色只有处理权限的用户将不能够使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 来连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和处理对象。 这些工具要求 `Read Definition` 访问对象元数据的权限。 没有功能使用任一工具时，则必须使用 XMLA 脚本来执行处理操作。  
 >   
->  我们建议同时授予`Read Definition`出于测试目的的权限。 用户具有`Read Definition`并`Process Database`权限可以处理中的对象[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以交互方式。 有关详细信息，请参阅 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
+>  我们建议同时授予 `Read Definition` 权限以便进行检测。 具有 `Read Definition` 和 `Process Database` 权限的用户可交互地处理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的对象。 有关详细信息，请参阅 [授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>设置数据库级别的处理权限  
  此部分解释了如何通过非管理员为数据库中的所有多维数据集、维度、挖掘结构和挖掘模型启用处理。  
@@ -93,7 +93,7 @@ ms.locfileid: "48181259"
 ## <a name="see-also"></a>请参阅  
  [处理数据库、 表或分区](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)   
- [授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授予读取对象元数据定义权限&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)   
+ [授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

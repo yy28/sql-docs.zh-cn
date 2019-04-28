@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732173"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依赖关系网络关系图演练（数据挖掘外接程序）
   几种不同的数据挖掘模型将网络图用作探索数据中各种关系的方法。 可以将这些模型导入使用 Visio**依赖关系网络**形状，然后再继续进行自定义和增强布局。 **Visio 数据挖掘形状**包括以下自定义控件适用于依赖关系网络关系图：  

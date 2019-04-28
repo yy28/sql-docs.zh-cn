@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 015548ce55df25d3e0751b697fe046783d084ec5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695639"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>“输入数据源凭据”对话框（报表生成器）
   使用 **“输入数据源凭据”** 对话框可以提供您用来从数据源检索数据的凭据。  

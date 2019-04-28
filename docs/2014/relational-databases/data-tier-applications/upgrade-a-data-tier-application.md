@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872653"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  
   
--   **开始之前：**[选择 DAC 升级选项](#ChoseDACUpgOptions)，[限制和局限](#LimitationsRestrictions)，[先决条件](#Prerequisites)，[安全](#Security)，[权限](#Permissions)  
+-   **开始之前：**[选择 DAC 升级选项](#ChoseDACUpgOptions)、[限制和局限](#LimitationsRestrictions)、[先决条件](#Prerequisites)、[安全性](#Security)、[权限](#Permissions)  
   
--   **若要升级 DAC，使用：**[升级数据层应用程序向导](#UsingDACUpgradeWizard)， [PowerShell](#UpgradeDACPowerShell)  
+-   若要升级 DAC，请使用：[升级数据层应用程序向导](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  DAC 升级是一个就地过程，此过程更改现有数据库的架构以匹配在新版本的 DAC 中定义的架构。 这一新版本的 DAC 在 DAC 包文件中提供。 有关创建 DAC 包的详细信息，请参阅 [数据层应用程序](data-tier-applications.md)。  

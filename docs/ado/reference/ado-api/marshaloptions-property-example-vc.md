@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863998"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 (VC++)
 此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送到服务器的所有行或仅修改的行。  

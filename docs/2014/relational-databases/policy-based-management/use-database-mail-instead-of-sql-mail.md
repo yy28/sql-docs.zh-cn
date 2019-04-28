@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfce3fb95ddae03525b7f63f09d109c6dc80b47c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676965"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>使用数据库邮件而不是 SQL Mail
   此规则检查 sys.configurations 目录视图以确定 SQL Mail XPs 服务器范围配置选项是否已设置为 ON。  

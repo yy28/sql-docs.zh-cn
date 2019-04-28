@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703028"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 服务器编程
   ADOMD.NET 的 ADOMD.NET 服务器组件位于 `Microsoft.AnalysisServices.AdomdServer` 命名空间中（在 msmgdsrv.dll 中）。 这些服务器组件用于创建自定义的多维表达式 (MDX) 函数和实例运行的存储的过程[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 服务器对象可提供查询多维数据集和挖掘模型以及在给定上下文计算表达式的功能。 创建自定义函数和存储过程的优点包括执行速度快、部署集中且可维护性得以改进。  

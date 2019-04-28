@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85653036f4e5348e7bb9d53959b0d6957564f18a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704502"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新激活成员或集合 (Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52783049"
   
  重新激活集合或成员时，将还原以前的所有事务。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，您必须具有对 **“版本管理”** 功能区域的权限。  
@@ -66,7 +66,7 @@ ms.locfileid: "52783049"
   
 7.  在确认对话框中，单击 **“确定”**。 添加新事务，在 **“新值”** 列中显示 **“活动”** 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除成员或集合 (Master Data Services)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  

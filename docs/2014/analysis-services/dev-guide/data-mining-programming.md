@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732220"
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
   如果您觉得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的内置工具和查看器不符合您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的功能。 如果采用这种方法，您有两种选择：  

@@ -1,5 +1,5 @@
 ---
-title: DrillupLevel (MDX) |Microsoft 文档
+title: DrillupLevel (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00851557b502bda3a98763eff4bac9c3abdccff
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690778"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 
@@ -35,10 +35,10 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **DrillupLevel**函数将返回一组的成员按层次结构组织基于包含在指定组的成员。 指定集中的成员顺序将予以保留。  
+## <a name="remarks"></a>备注  
+ **DrillupLevel**函数将返回按层次结构组织成员的一组基于包含在指定集中的成员。 指定集中的成员顺序将予以保留。  
   
- 如果指定一个级别表达式，则**DrillupLevel**函数构造一个集通过检索指定的级别高于那些成员。 如果指定一个级别表达式，并且不存在该指定集内的指定级别的成员，则返回指定的集。  
+ 如果指定了级别表达式，则**DrillupLevel**函数检索所指定级别以上的成员来构造集。 如果指定了级别表达式，并且不没有指定集中所表示的指定级别的任何成员，则返回指定的集。  
   
  如果未指定级别表达式，则此函数只检索那些比指定的集所引用的第一个维度的最低级别高一个级别的成员，然后用它们来构造集。  
   
@@ -58,6 +58,6 @@ SELECT DrillUpLevel
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

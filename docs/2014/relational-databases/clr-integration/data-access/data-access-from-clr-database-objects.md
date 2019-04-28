@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874082"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
   公共语言运行时 (CLR) 例程可以轻松地访问数据的实例中存储[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中它运行所在，以及在远程实例中存储的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 通过使用用于.NET Framework 数据提供程序访问数据从 CLR 数据库对象内的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管客户端和中间层应用程序中的数据。 因此，您可以在客户端和中间层应用程序中充分利用您所掌握的有关 ADO.NET 和 `SqlClient` 的知识。  

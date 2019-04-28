@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725520"
 ---
 # <a name="calculation-context"></a>计算上下文
   计算上下文是多维数据集的已知子空间，在其中，将对表达式进行计算，并且所有坐标或者是显式已知的，或者可以从表达式派生。  
@@ -39,7 +39,7 @@ ms.locfileid: "48081477"
   
 5.  每个轴上的多维数据集或子多维数据集，消除了轴上的空元组并应用 HAVING 子句。  
   
-6.  有关详细信息，请参阅[在查询中建立多维数据集上下文&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)。  
+6.  有关详细信息，请参阅 [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)。  
   
  在以下查询中，由 WHERE 子句中指定的 Country 属性成员和 Calendar Year 属性成员限制行轴的计算上下文。  
   
@@ -71,8 +71,8 @@ WHERE (Customer.Country.France,
 >  若要提高查询性能，应在解析过程中尽早地消除成员和元组。 通过这种方式，针对最终成员集的复杂查询时间计算涉及的单元最少。  
   
 ## <a name="see-also"></a>请参阅  
- [在查询中建立多维数据集上下文&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [在查询中建立多维数据集上下文 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)  
   
   

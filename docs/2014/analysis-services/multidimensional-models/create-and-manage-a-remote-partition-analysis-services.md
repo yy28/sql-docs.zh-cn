@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700577"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
   对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
@@ -67,7 +67,7 @@ ms.locfileid: "53356639"
   
 2.  在从属服务器：在解决方案资源管理器中创建新的数据源指向多维数据集的数据库，master 数据库。 使用访问接口“本机 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0”。  
   
-3.  在从属服务器：部署该解决方案。  
+3.  在从属服务器：部署解决方案。  
   
 #### <a name="enable-features-in-ssms"></a>启用功能（在 SSMS 中）  
   

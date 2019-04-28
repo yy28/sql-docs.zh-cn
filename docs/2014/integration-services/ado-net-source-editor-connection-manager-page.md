@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836953"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 源编辑器（“连接管理器”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -43,7 +43,7 @@ ms.locfileid: "58380145"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |表或视图|从 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 数据源中的表或视图中检索数据。|  
 |SQL 命令|使用 SQL 查询从 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 数据源中检索数据。|  

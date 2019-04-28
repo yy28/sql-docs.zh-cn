@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714089"
 ---
 # <a name="what-is-odbc"></a>什么是 ODBC？
 在对计算世界中存在有关 ODBC 的许多误解。 向最终用户，它是 Microsoft® Windows® 控制面板中的图标。 应用程序程序员来说，它是一个库，包含数据访问例程。 许多其他是出人意料的所有数据库访问权限问题的答案。  

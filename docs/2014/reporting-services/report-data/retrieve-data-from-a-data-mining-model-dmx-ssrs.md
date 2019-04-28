@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc39cb2f4e6b5a5e296f623feea213374473e9a1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654993"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>从数据挖掘模型检索数据 (DMX) (SSRS)
   若要在报表中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据挖掘模型中的数据，则必须定义 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源以及一个或多个报表数据集。 创建数据源定义时，必须指定连接字符串和凭据，以便能够从客户端计算机访问该数据源。  

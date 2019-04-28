@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680580"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>完成向导（数据源向导）(Analysis Services)
   可以使用向导的 **“完成向导”** 页查看连接字符串以及指定新数据源的名称。  

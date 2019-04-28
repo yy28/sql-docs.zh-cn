@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703616"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>在表格模式下安装 Analysis Services
   如果您要安装 Analysis Services 以便使用新增的表格建模功能，则必须在支持这种模型的服务器模式下安装 Analysis Services。 服务器是表格模式，在安装过程中配置。  
@@ -52,11 +52,11 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  未使用提供的示例命令行语法安装工具（例如 SQL Server Management Studio 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]）。 有关添加功能的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
- `ASSERVERMODE` 是区分大小写。  所有值必须以大写形式表示。 下表对 `ASSERVERMODE` 的有效值进行了说明。  
+ `ASSERVERMODE` 区分大小写。  所有值必须以大写形式表示。 下表对 `ASSERVERMODE` 的有效值进行了说明。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|这是默认值。 如果未设置`ASSERVERMODE`，在多维服务器模式下安装了服务器。|  
+|MULTIDIMENSIONAL|这是默认值。 如果不设置 `ASSERVERMODE`，则服务器将在多维服务器模式下安装。|  
 |POWERPIVOT|该值是可选的。 实际上，如果设置 `ROLE` 参数，服务器模式就会自动设置为 1，从而使得 `ASSERVERMODE` 成为 PowerPivot for SharePoint 安装的可选项。 有关详细信息，请参阅[从命令提示符安装 PowerPivot](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)。|  
 |TABULAR|如果是在使用命令行安装程序在表格模式下安装 Analysis Services，则此值是必需的。|  
   

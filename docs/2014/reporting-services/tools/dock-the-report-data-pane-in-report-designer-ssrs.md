@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711254"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>在报表设计器中停靠“报表数据”窗格 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的报表设计器中，“报表数据”窗格显示了可在报表中使用的数据对象的层次结构视图（包括数据源、数据集、字段、参数和图像）。 解决方案资源管理器中显示的共享数据源中可嵌入或引用此视图中的数据源。  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729065"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
   操作可以具有不同的类型，因而必须相应地进行创建。 操作可为：  
@@ -72,7 +72,7 @@ ms.locfileid: "50146583"
 ## <a name="resolving-and-executing-actions"></a>解析并执行操作  
  当业务用户在访问已为其定义了命令对象的对象时，系统将自动解析与操作关联的语句，以使它对客户端应用程序可用，但操作不会自动执行。 操作只在业务用户执行启动它的客户端特定操作时才被执行。 例如，当业务用户右键单击特定的成员或单元时，客户端应用程序可能以弹出菜单的形式显示一组操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的操作](actions-in-multidimensional-models.md)  
   
   

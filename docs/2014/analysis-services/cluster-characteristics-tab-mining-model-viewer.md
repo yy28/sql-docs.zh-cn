@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd78b9b59b69614958abb86febcd2bd290b9f302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680807"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>“分类特征”选项卡（挖掘模型查看器）
   利用 **“分类特征”** 选项卡，可以浏览聚类分析模型中分类的特征或该模型中所有事例的集。 图形会将每个属性-值对的重要性显示为定义分类的特征（与其他分类相比）。  
   
- **有关详细信息，请参阅** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **有关详细信息：**[Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)，[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>选项  
  **刷新查看器内容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48141597"
  **挖掘模型**  
  从当前挖掘结构的挖掘模型中选择一个挖掘模型。 挖掘模型将在自定义查看器中打开。  
   
- **查看器**  
+ **Viewer**  
  选择用于浏览所选挖掘模型的查看器。 可以使用与此模型类型关联的自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用任何可用的插件查看器。  
   
  **Cluster**  
@@ -48,8 +48,8 @@ ms.locfileid: "48141597"
 |**概率**|条形指示属性-值对的强度作为此分类的显著特征。 如果您将鼠标指针悬停在条形上方，则可查看以百分比表示的概率值。 这表示，在任何特定事例中使用此属性和值组合时，该事例会归入此分类的概率。|  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘模型查看器](data-mining/data-mining-model-viewers.md)  
   
   

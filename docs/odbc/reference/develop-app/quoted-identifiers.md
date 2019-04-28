@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861639"
 ---
 # <a name="quoted-identifiers"></a>带引号的标识符
 在 SQL 语句，其中包含特殊字符或匹配关键字的标识符必须括在*标识符引号字符*; 在此类字符中包含的标识符称为*带引号的标识符*(也称为*分隔的标识符*SQL-92 中)。 例如，在下面的示例引用 Accounts Payable 标识符**选择**语句：  

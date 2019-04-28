@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711555"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>通过 ODBC 游标使用自动提取
   连接到的实例时[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用任何服务器游标类型时，Native Client ODBC 驱动程序支持自动提取选项。 启用了自动提取， **SQLExecute**或**SQLExecDirect**打开游标的函数也具有隐式[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) 函数。 组成第一个行集的行将作为语句执行的一部分返回给绑定应用程序变量，并通过网络将另一个往返保存到服务器。 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)时不支持自动提取选项，则启用; 将结果集列必须绑定到程序变量。  

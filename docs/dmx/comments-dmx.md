@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709090"
 ---
 # <a name="comments-dmx"></a>（注释）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "38042105"
 -   **/\* ...\*/ （正斜杠-星号字符对）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释，甚至还可以在可执行代码中编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 计算所有内容从开始注释对 (/ *) 到结束注释对 (\*/) 作为注释部分。 若要创建多行注释，开始注释的注释字符对 (/\*)，并结束注释的注释字符对 (\*/)。 该类注释的任何行中都不应包含其他注释字符。 有关此注释字符的详细信息，请参阅[斜杠星型&#40;注释&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;引用](../dmx/data-mining-extensions-dmx-reference.md)   
+ [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;运算符参考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [数据挖掘扩展插件&#40;DMX&#41;语句引用](../dmx/data-mining-extensions-dmx-statements.md)   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691786"
 ---
 # <a name="select-source-dialog-box"></a>“选择源”对话框
   此对话框用于选择要运行的策略的来源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”**。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”**。  

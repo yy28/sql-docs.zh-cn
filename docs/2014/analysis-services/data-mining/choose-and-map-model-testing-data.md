@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705955"
 ---
 # <a name="choose-and-map-model-testing-data"></a>选择和映射模型测试数据
   若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中创建准确性图表，您必须选择将用于测试模型的数据，并且将数据映射到模型。  

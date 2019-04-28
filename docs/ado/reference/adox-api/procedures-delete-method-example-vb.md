@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709115"
 ---
 # <a name="procedures-delete-method-example-vb"></a>过程 Delete 方法示例 (VB)
 下面的代码演示如何通过删除过程[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  

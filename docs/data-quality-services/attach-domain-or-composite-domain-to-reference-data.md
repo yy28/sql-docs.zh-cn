@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862388"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
@@ -44,7 +44,7 @@ ms.locfileid: "56010718"
   
 ###  <a name="Security"></a> 安全性  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>权限  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 角色才能将域映射到引用数据。  
   
 ##  <a name="Map"></a> 将域从 Melissa Data 映射到引用数据  
@@ -91,7 +91,7 @@ ms.locfileid: "56010718"
 ##  <a name="FollowUp"></a> 跟进：在将域映射到引用数据后  
  创建一个数据质量项目，然后通过将其与本主题中创建的知识库进行比较，对包含美国地址的源数据运行清理活动。 请参阅[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DQS 中的 Reference Data Services](../data-quality-services/reference-data-services-in-dqs.md)   
  [数据清理](../data-quality-services/data-cleansing.md)  
   

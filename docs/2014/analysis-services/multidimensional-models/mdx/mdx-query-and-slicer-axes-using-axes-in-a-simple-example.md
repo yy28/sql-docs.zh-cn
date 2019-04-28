@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8001fe4357bc7e17ce915f3d2d38c5e2e0f9cbb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699505"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>在简单示例中使用查询轴和切片器轴 (MDX)
   本主题中提供的简单示例说明了指定和使用查询轴和切片器轴的基本操作。  
@@ -49,7 +49,7 @@ WHERE ( [Measures].[Packages] )
 |第二季度|45|45|  
   
 ## <a name="see-also"></a>请参阅  
- [指定查询轴的内容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [指定切片器轴的内容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定查询轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [指定切片器轴的内容 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

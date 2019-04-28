@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680610"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>完成向导（数据挖掘向导）
   可以使用 **“完成向导”** 页查看在完成向导后创建的挖掘结构。 您还可以设置挖掘结构的名称。  
@@ -28,7 +28,7 @@ ms.locfileid: "48202567"
 > [!NOTE]  
 >  根据你在该向导的“选择定义方法”页中选择的是“从现有关系数据库或数据仓库”还是“从现有多维数据集”，此页会相应变化。  
   
- **有关详细信息：**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[数据挖掘设计器](data-mining/data-mining-designer.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
+ **有关详细信息：**[数据挖掘向导&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)，[数据挖掘设计器](data-mining/data-mining-designer.md)，[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
  **挖掘结构名称**  

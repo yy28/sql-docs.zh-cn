@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843684"
 ---
 # <a name="options-text-editorxmltabs-page"></a>选项（“文本编辑器”:“XML”:“选项卡”页）
   此对话框支持您更改 XML 编辑器（用于编辑 XML 文档）的跳格行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **“文本编辑器”** 文件夹，展开 **XML** 子文件夹，再单击 **“制表符”**。  
@@ -30,10 +30,10 @@ ms.locfileid: "48050147"
  **无**  
  选择此选项后，则按 Enter 键时所创建的新行不会缩进。 光标置于新行的第一列。  
   
- **块**  
+ **Block**  
  如果选择此选项，则按 Enter 时创建的新行的自动缩进距离与上一行的缩进距离相同。  
   
- **智能**  
+ **Smart**  
  选择此选项后，则按 Enter 键时所创建的新行会根据上下文调整位置。 例如，在左大括号 ({) 后，包含的行将自动多缩进一个制表位。 对应的右大括号 (}) 将根据其左大括号重新对齐。  
   
 ## <a name="tabs"></a>制表符  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723992"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_cursorexecute prepared_handle, cursor
 > [!IMPORTANT]  
 >  如果*ccopt*未指定值，默认值为 OPTIMISTIC，而不考虑*ccopt*在 sp_cursorprepare 中指定的值。  
   
- *行计数*  
+ *rowcount*  
  一个可选参数，指示要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 *行计数*以不同的方式指定为输入值与返回值时的行为。  
   
 |作为输入值|作为返回值|  
@@ -99,8 +99,8 @@ sp_cursorexecute prepared_handle, cursor
  RPC RETURN_METADATA 输入标志可设置为 1，以请求在 TDS 流中返回游标选择列表元数据。  
   
 ## <a name="see-also"></a>请参阅  
- [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 创建会话作用域计算单元格 |Microsoft 文档
+title: 创建会话作用域的计算单元格 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799542"
 ---
 # <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX 单元计算-会话作用域的计算单元
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -73,14 +73,14 @@ FOR String_Expression AS 'MDX_Expression'
   
  `String_Expression` 值包含一个正交、单维度 MDX 集表达式列表，每个表达式都必须解析为下表列出的集类别之一。  
   
-|类别|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
 |级别成员集|解析为单个级别的成员的 MDX 集表达式。 有关于此的示例，请参见 Level_Expression **Members** MDX 函数。 若要包括计算成员，请使用 Level_Expression **AllMembers** MDX 函数。<br /><br /> 有关详细信息，请参阅 [AllMembers (MDX)](../../../mdx/allmembers-mdx.md)。|  
 |后代集|解析为指定成员的后代的 MDX 集表达式。 有关于此的示例，请参见 **Descendants**(Member_Expression、Level_Expression、Desc_Flag) MDX 函数。<br /><br /> 有关详细信息，请参阅 [Descendants (MDX)](../../../mdx/descendants-mdx.md)。|  
   
-## <a name="see-also"></a>另请参阅  
- [在 MDX & #40; 生成单元计算MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+## <a name="see-also"></a>请参阅  
+ [在 MDX 中生成单元格计算 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   
