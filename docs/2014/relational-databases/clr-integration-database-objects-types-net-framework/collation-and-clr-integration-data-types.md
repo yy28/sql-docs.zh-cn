@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874848"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>排序规则和 CLR 集成数据类型
   在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中，`CompareInfo` 对象处理排序规则。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 字符串应用程序编程接口 (API) 使用与当前线程的 `CompareInfo` 对象关联的 `CultureInfo` 属性来执行字符串比较。 默认设置`CultureInfo`对象所基于[!INCLUDE[msCoName](../../includes/msconame-md.md)]的计算机上的 Windows 区域设置[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在运行。 该设置在未显式指定 `CultureInfo` 的情况下确定比较 `System.String` 值的默认比较语义。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会显式更改数据库或服务器排序规则的 `CompareInfo` 属性 用户必须根据需要在其例程中设置相应的 `CompareInfo` 属性。  

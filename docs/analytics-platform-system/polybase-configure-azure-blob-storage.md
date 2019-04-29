@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027518"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>配置 PolyBase 以访问 Azure Blob 存储中的外部数据
 
@@ -23,7 +23,7 @@ ms.locfileid: "49460625"
 > [!NOTE]
 > APS 目前仅支持本地冗余 (LRS) Azure Blob 存储的标准常规用途 v1。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先决条件
 
  - 在订阅中的 azure Blob 存储。
  - 在 Azure Blob 存储中创建一个容器。

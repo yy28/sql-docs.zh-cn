@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899445"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>错误和事件参考 (Integration Services)
   本节包含与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]有关的多个错误和事件的相关信息。 其中包括错误消息的原因和解决方法信息。  
@@ -51,7 +51,7 @@ ms.locfileid: "58375245"
 ## <a name="events-sqlispackage"></a>事件 (SQLISPackage)  
  有关详细信息，请参阅 [由 Integration Services 包记录的事件](performance/events-logged-by-an-integration-services-package.md)。  
   
-|事件|Description|  
+|Event|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|指示包已启动。|  
 |SQLISPackage_12289|指示包已成功完成运行。|  
@@ -65,7 +65,7 @@ ms.locfileid: "58375245"
 ## <a name="events-sqlisservice"></a>事件 (SQLISService)  
  有关详细信息，请参阅 [由 Integration Services 服务记录的事件](service/events-logged-by-the-integration-services-service.md)。  
   
-|事件|Description|  
+|Event|Description|  
 |-----------|-----------------|  
 |SQLISService_256|指示服务正要启动。|  
 |SQLISService_257|指示服务已经启动。|  

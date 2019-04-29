@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955890"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>将查询与项目中的连接关联
   如果查询在创建时没有连接，或者将查询从一个项目移动到另一个项目，则该查询将不与当前项目中的连接关联。  

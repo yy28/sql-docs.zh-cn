@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027880"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 属性 (ADO)
 设置容器的 OLE DB**行**对象上**ADORecordConstruction**对象，以便行的父变成 ADO**记录**对象。  

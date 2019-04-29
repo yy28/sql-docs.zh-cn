@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040823"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>获取和并行数据仓库配置备份服务器
 本文介绍如何将非设备 Windows 系统配置为备份服务器用于与 Analytics Platform System (APS) 和并行数据仓库 (PDW) 中的备份和还原功能一起使用。  
@@ -35,12 +35,12 @@ ms.locfileid: "51696946"
   
 -   托管备份文件共享，这是使用服务器消息块 (SMB) 应用程序级别网络协议的 Windows 文件共享。 备份文件共享权限向 Windows 域用户 （通常这是专用的备份用户） 提供的功能来执行备份和还原共享上的操作。 Windows 域用户的用户名和密码凭据存储在 PDW 中，以便 PDW 可以执行备份和还原备份文件共享上的操作。  
   
-## <a name="Step1"></a>步骤 1： 确定容量要求  
+## <a name="Step1"></a>步骤 1:确定容量要求  
 备份服务器的系统要求几乎完全取决于自己的工作负荷。 在购买或预配备份服务器之前，您需要找出你的容量要求。 备份服务器不必是专用的备份，只要它将处理工作负荷的性能和存储要求。 此外可以具有多个备份服务器备份和还原到多个服务器之一的每个数据库。  
   
 使用[备份服务器容量规划工作表](backup-capacity-planning-worksheet.md)以帮助确定容量要求。  
   
-## <a name="Step2"></a>步骤 2： 获取备份服务器  
+## <a name="Step2"></a>步骤 2:获取备份服务器  
 现在，更好地了解你的容量要求，您可以计划的服务器和网络将需要购买或预配的组件。 将下面的要求列表合并到你购买的计划，然后购买你的服务器或预配的现有服务器。  
   
 ### <a name="software-requirements"></a>软件要求  
@@ -61,7 +61,7 @@ ms.locfileid: "51696946"
   
 3.  购买 2 个 FDR InfiniBand 电缆双端口卡片或为单个端口卡 1 FDR InfiniBand 网络。 FDR InfiniBand 电缆将连接到设备 InfiniBand 网络加载服务器。 电缆长度取决于加载服务器和设备 InfiniBand 交换机之间的距离根据您的环境。  
   
-## <a name="Step3"></a>步骤 3： 将服务器连接到 InfiniBand 网络  
+## <a name="Step3"></a>步骤 3:将服务器连接到 InfiniBand 网络  
 使用以下步骤将加载服务器连接到 InfiniBand 网络。 如果服务器不使用 InfiniBand 网络，请跳过此步骤。  
   
 1.  机架服务器得足够近到设备，以便可以将其连接到设备 InfiniBand 网络。  
@@ -76,7 +76,7 @@ ms.locfileid: "51696946"
   
 5.  配置网络适配器的 InfiniBand 和 DNS 设置。 有关配置说明，请参阅[配置无线带宽技术网络适配器](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步骤 4： 配置备份的文件共享  
+## <a name="Step4"></a>步骤 4:配置备份的文件共享  
 PDW 将通过 UNC 文件共享中访问备份的服务器。 若要设置的文件共享：  
   
 1.  用于存储备份的备份服务器上创建一个文件夹。  
@@ -101,7 +101,7 @@ PDW 将通过 UNC 文件共享中访问备份的服务器。 若要设置的文�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>步骤 5： 启动备份数据  
+## <a name="Step5"></a>步骤 5:开始备份你的数据  
 现在您就可以开始备份到备份服务器数据。  
   
 若要备份的数据，请使用查询客户端连接到 SQL Server PDW，然后提交备份或还原数据库命令。 使用磁盘 = 子句来指定备份服务器和备份位置。  
@@ -122,7 +122,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 -   [备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [还原数据库](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>安全通知  
 备份服务器未加入到该设备的专用域中。 在您自己的网络，并且没有自己的域和专用设备域之间没有信任关系。  
@@ -147,7 +147,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 加载服务器上的操作可以使用来自受信任的内部网络之外的请求数据的 UNC 路径。 在网络上或能够影响名称解析攻击者可以截获或修改数据发送到 PDW。 这带来篡改和信息泄露的风险。 若要帮助缓解篡改的风险：
 
 - 需要在连接上签名。 
-- 在加载服务器上，在安全设置 \ 本地策略 \ 安全选项中设置以下组策略选项： Microsoft 网络客户端： 数字签名通信 （始终）： 已启用。  
+- 在加载服务器上，安全设置 \ 本地策略 \ 安全选项中设置以下组策略选项：Microsoft 网络客户端：数字签名通信 （始终）：已启用。  
   
 ## <a name="see-also"></a>请参阅  
 [备份和还原](backup-and-restore-overview.md)  

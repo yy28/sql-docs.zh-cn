@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876167"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>删除具有活动租约的备份 Blob 文件
   在备份到 Windows Azure 存储区或从中还原时，SQL Server 获得无限期租约以锁定对 blob 的独占访问。 当成功完成备份或还原过程时，释放租约。 如果备份或还原失败，备份过程将尝试清除所有无效 blob。 但是，如果由于持续很长时间的网络连接故障而导致备份失败，备份过程可能无法再次访问 blob 且 blob 可能保持孤立状态。 这意味着在释放租约前，不能写入或删除 blob。 本主题说明如何释放租约和删除 blob。  
@@ -29,9 +29,9 @@ ms.locfileid: "53352661"
 ## <a name="managing-orphaned-blobs"></a>管理孤立的 Blob  
  以下步骤说明在备份或还原活动失败后如何进行清除。 可以使用 PowerShell 脚本来执行所有这些步骤。 在接下来的章节中提供了代码示例：  
   
-1.  **标识具有租约的 blob:** 如果你有一个脚本或进程运行备份过程，您可能可以捕获脚本或进程内的失败并使用它清除 blob。   您还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦您标识了 blob，我们建议您查看列表，在删除 blob 前验证备份文件的有效性。  
+1.  **标识具有租约的 blob:** 如果有运行备份过程的脚本或进程，可能可以捕获脚本或进程内的失败并使用它清除 blob。   您还可以使用 LeaseStats 和 LeastState 属性来标识具有租约的 blob。 一旦您标识了 blob，我们建议您查看列表，在删除 blob 前验证备份文件的有效性。  
   
-2.  **中断租约：** 获得授权的请求可以中断租约而不提供租约 id。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中断租约：** 获得授权的请求可以中断租约而不提供租约 ID。 有关详细信息，请参阅 [此处](https://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
     > [!TIP]  
     >  SQL Server 发出租约 ID 以在还原操作期间建立独占访问。 还原租约 ID 是 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
@@ -80,7 +80,7 @@ ms.locfileid: "53352661"
   
      **正在中断租约**  
   
-     **上的租约\<Blob 的 URL > 是还原租约：仅当某个 blob 具有仍处于活动状态的还原租约时，将看到此消息。**  
+     **\<Blob 的 URL> 上的租约是还原租约：仅当某个 blob 具有仍处于活动状态的还原租约时，才会看到此消息。**  
   
      **\<Blob 的 URL> 上的租约不是还原租约，正在中断 \<Blob 的 URL> 上的租约。**  
   

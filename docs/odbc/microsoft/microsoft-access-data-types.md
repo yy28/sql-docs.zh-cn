@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026889"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 数据类型
 下表显示了 Microsoft Access 数据类型、 用于创建表的数据类型和 ODBC SQL 数据类型。  

@@ -1,5 +1,5 @@
 ---
-title: 示例：联机还原只读文件（完整恢复模式）| Microsoft Docs
+title: 例如：联机还原只读文件 （完整恢复模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b104eab4067f4eeb435c397708d0cad4d1e9cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876054"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：联机还原只读文件（完整恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>例如：只读文件的联机还原（完整恢复模式）
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
  在此示例中，名为 `adb`的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  

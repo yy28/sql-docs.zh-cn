@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733504"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>了解逻辑回归模型的结构  
  逻辑回归模型是使用带有约束模型以消除隐藏节点的参数的 Microsoft 神经网络算法创建的。 因此，逻辑回归模型的总体结构几乎与神经网络的总体结构相同：每个模型都具有一个表示该模型及其元数据的单一父节点，以及一个提供有关在该模型中使用的输入的说明性统计信息的特殊边际统计信息节点 (NODE_TYPE = 24)。  
@@ -41,7 +41,7 @@ ms.locfileid: "48164507"
 ## <a name="model-content-for-a-logistic-regression-model"></a>逻辑回归模型的模型内容  
  本部分提供的详细信息和示例仅针对挖掘模型内容中与逻辑回归有特殊关系的列。 模型内容与神经网络模型的内容几乎相同，但是为方便起见，此表可能将重复应用于神经网络模型的说明。  
   
- 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
+ 有关此处未涵盖的架构行集中的通用列（如 MODEL_CATALOG 和 MODEL_NAME）的信息或有关挖掘模型术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -141,7 +141,7 @@ ms.locfileid: "48164507"
  从父节点到达该节点的概率。 对于逻辑回归模型，始终为 0。  
   
  NODE_DISTRIBUTION  
- 包含节点的统计信息的嵌套表。 有关该表中的每个节点类型的内容的详细信息，请参阅了解 NODE_DISTRIBUTION 表中的部分[神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 包含节点的统计信息的嵌套表。 有关该表中每个节点类型的内容的详细信息，请参阅 [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
   
  NODE_SUPPORT  
  对于逻辑回归模型，始终为 0。  
@@ -186,7 +186,7 @@ ms.locfileid: "48164507"
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft 逻辑回归算法](microsoft-logistic-regression-algorithm.md)   
- [神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [逻辑回归模型查询示例](logistic-regression-model-query-examples.md)   
  [Microsoft 逻辑回归算法技术参考](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044052"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>强制目标服务器轮询主服务器
   本主题说明如何强制目标服务器轮询主服务器。 目标服务器必须是主服务器上的已注册服务器。  
@@ -30,7 +30,7 @@ ms.locfileid: "52764209"
 > [!NOTE]  
 >  如果在目标服务器试图上载作业状态时无法访问主服务器，则作业将处于假脱机状态，直到可以访问主服务器。  
   
--   **开始之前：**[限制和局限](#Restrictions)，[安全](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
 -   **若要强制目标服务器轮询主服务器，请使用：**[SQL Server Management Studio](#SSMS)  
   

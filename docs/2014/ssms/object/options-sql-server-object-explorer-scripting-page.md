@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031931"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>选项 （SQL Server 对象资源管理器-脚本页）
   使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
@@ -56,7 +56,7 @@ ms.locfileid: "52764399"
  **编写全文目录脚本**  
  包含用于全文目录的脚本。 默认值为 False。 有关详细信息，请参阅[CREATE FULLTEXT CATALOG &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
   
- **脚本使用\<数据库 >**  
+ **Script USE \<database>**  
  将 USE DATABASE 语句添加到脚本，可在当前 **对象资源管理器** 数据库的上下文中创建数据库对象。 如果希望该脚本可在其他数据库中使用，请选择 False 以忽略该选项。 默认值为 True。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
 ### <a name="object-scripting-options"></a>对象脚本选项  

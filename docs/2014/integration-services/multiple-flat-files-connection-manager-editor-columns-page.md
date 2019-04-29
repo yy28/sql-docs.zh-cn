@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 241bd91cf05f3a7317dcdbfe6684b7266fee947c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890499"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>多平面文件连接管理器编辑器（“列”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“列”** 节点指定行和列的信息，以及预览选定的第一个文件。  
@@ -86,7 +86,7 @@ ms.locfileid: "58373937"
 > [!NOTE]  
 >  右边未对齐是指文件中除最后一列之外每一列的宽度都固定。 它由行分隔符分隔。  
   
- **字体**  
+ **Font**  
  选择用于显示预览数据的字体。  
   
  **源数据列**  

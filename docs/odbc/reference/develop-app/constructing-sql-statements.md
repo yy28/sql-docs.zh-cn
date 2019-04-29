@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38ff4066f7ff693d96f3ef239ef25948b2caf3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042506"
 ---
 # <a name="constructing-sql-statements"></a>构造 SQL 语句
 可以在三种方式之一中构造 SQL 语句： 硬编码在开发期间，在运行时构造或直接由用户输入。  

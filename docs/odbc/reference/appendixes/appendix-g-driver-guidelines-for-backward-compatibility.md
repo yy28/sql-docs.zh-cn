@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026627"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>附录 G：为了向后兼容的驱动程序指南
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>附录 G：驱动程序后向兼容性准则
 本附录提供了驱动程序编写人员致力于 ODBC 3 的信息。*x*需要支持 ODBC 2 的驱动程序。*x*应用程序。 有关向后兼容性的详细信息，请参阅[向后兼容性和标准符合性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   
  本部分包含以下主题。  

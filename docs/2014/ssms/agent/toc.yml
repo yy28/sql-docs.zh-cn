@@ -6,7 +6,7 @@
   href: set-sql-server-connection-for-sql-server-agent-service-ssms.md
 - name: 为 SQL Server 代理服务选择帐户
   href: select-an-account-for-the-sql-server-agent-service.md
-- name: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+- name: 为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）
   href: set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
 - name: Autostart SQL Server Agent (SQL Server Management Studio)
   href: autostart-sql-server-agent-sql-server-management-studio.md
@@ -215,7 +215,7 @@
           href: change-steps-of-a-sql-server-agent-master-job.md
         - name: Remove Steps from a SQL Server Agent Master Job
           href: remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+        - name: 修改与 SQL Server 代理主作业关联的目标服务器
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
         - name: 为多服务器环境选择正确的 SQL Server 代理服务帐户
           href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md

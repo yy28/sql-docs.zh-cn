@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027907"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和 Mode 属性示例 （VC + +）
 此示例使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)以打开一个独占的连接，并[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)属性可以打开的事务的执行中的其他事务隔离。  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **连接模式是独占**  
 **事务隔离**  
 **繁忙管理层的数据库指南-业务**  
-**烹饪与计算机： 暗中资产负债表的业务**  
+**烹饪与计算机：暗中资产负债表的业务**  
 **你可以抵御计算机压力 ！-业务**  
 **有关计算机的业务的直接对话**  
 **硅谷 Gastronomic 视为-mod_cook**  
@@ -235,13 +235,13 @@ void PrintComError(_com_error &e) {
 **计算机特别爱看美食-決的心理学**  
 **但它是用户友好？-popular_comp**  
 **硅谷-popular_comp 的秘密**  
-**Net 刷屏-popular_comp**  
-**计算机 Phobic 和非恐惧症个人： 行为变化-self_help**  
+**Net Etiquette -  popular_comp**  
+**计算机 Phobic 和非恐惧症的个人：行为变体-self_help**  
 **是愤怒的防范对象？-self_help**  
 **而无需担心-self_help 生命**  
-**长时间的数据 Deprivation： 四个案例研究-self_help**  
-**情感安全性： 一种新算法-self_help**  
-**洋葱、 Leeks 和蒜蓉： 地中海-trad_cook 的烹饪机密**  
+**长时间的数据 Deprivation:四个案例研究-self_help**  
+**情感安全性：一种新算法-self_help**  
+**洋葱、 Leeks 和蒜蓉：烹饪地中海-trad_cook 机密**  
 **在 Buckingham 店厨房-trad_cook 五十年**  
 **寿司，任何人？-trad_cook**   
 ## <a name="see-also"></a>请参阅  

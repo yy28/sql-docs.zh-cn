@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e3daee4ea5f5d46ecf0e7490e1d2e82303dd8a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018380"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>不是由游标库执行的 ODBC 函数
 > [!IMPORTANT]  

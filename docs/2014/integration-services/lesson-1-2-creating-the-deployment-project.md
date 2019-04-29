@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：创建部署项目 |Microsoft Docs
+title: 第 2 步：创建部署项目 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5b0cc2c86ef483a7e2b2c0f5dccba21383641f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891843"
 ---
-# <a name="step-2-creating-the-deployment-project"></a>步骤 2：创建部署项目
+# <a name="step-2-creating-the-deployment-project"></a>第 2 步：创建部署项目
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的单元是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 必须先创建一个新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目，再将所有包和要与包一起部署的任何辅助文件添加到该项目，才能部署包。  
   
 ### <a name="to-create-the-integration-services-project"></a>创建 Integration Services 项目  

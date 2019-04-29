@@ -23,7 +23,7 @@
       href: ../wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
     - name: WMI Provider for Server Events 类和属性
       href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
-    - name: 示例：使用 WMI Provider for Server Events 创建 SQL Server 代理警报
+    - name: 示例：使用服务器事件 WMI 提供程序创建 SQL Server 代理警报
       href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
     - name: 示例：与 .NET Framework 结合使用 WMI 事件提供程序
       href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md

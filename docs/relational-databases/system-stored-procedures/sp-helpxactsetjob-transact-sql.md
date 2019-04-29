@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959607"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|作业运行的最后日期。|  
 |**thisdate**|**varchar(22)**|更改的时间。|  
 |**nextdate**|**varchar(22)**|作业将要运行的下一个日期。|  
-|**中断**|**varchar(1)**|指示作业是否中断的标志。|  
-|**时间间隔**|**varchar(200)**|作业的间隔。|  
-|**失败**|**int**|作业失败的次数。|  
+|**broken**|**varchar(1)**|指示作业是否中断的标志。|  
+|**interval**|**varchar(200)**|作业的间隔。|  
+|**failures**|**int**|作业失败的次数。|  
 |**xactsetjobwhat**|**varchar(200)**|作业执行的过程的名称。|  
 |**xactsetjob**|**varchar(1)**|作业的状态，可以是以下状态之一：<br /><br /> **1** -启用作业。<br /><br /> **0** -已禁用的作业。|  
 |**xactsetlonginterval**|**int**|作业的长间隔。|  

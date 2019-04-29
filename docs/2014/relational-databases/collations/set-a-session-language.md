@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf4eb1d7595d16369a0355562f090b746a4203ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918941"
 ---
 # <a name="set-a-session-language"></a>设置会话语言
   根据语言和区域性首选项，可用会话语言设置下列元素在服务器上显示的方式：  

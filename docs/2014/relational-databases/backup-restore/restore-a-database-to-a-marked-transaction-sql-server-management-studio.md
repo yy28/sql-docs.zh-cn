@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875603"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>将数据库还原到标记的事务 (SQL Server Management Studio)
   数据库处于还原状态时，可以使用 **“还原事务日志”** 对话框将数据库还原到可用日志备份中的标记的事务。  
@@ -45,12 +45,12 @@ ms.locfileid: "48050423"
   
      下表列出了网格的列标题并对列值进行了说明。  
   
-    |标题|ReplTest1|  
+    |Header|ReplTest1|  
     |------------|-----------|  
     |\<blank>|显示一个用于选择标记的复选框。|  
     |**事务标记**|提交事务时，用户为标记的事务指定的名称。|  
     |**Date**|事务的提交日期及时间。 事务日期和时间显示为 **msdbgmarkhistory** 表中所记录的日期和时间，而非客户端计算机的日期和时间。|  
-    |**Description**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
+    |**说明**|提交事务时，用户为标记的事务指定的说明（如果有的话）。|  
     |**LSN**|所标记事务的日志序列号。|  
     |**“数据库”**|提交标记的事务时所在数据库的名称。|  
     |**用户名**|提交标记事务的数据库用户的名称。|  

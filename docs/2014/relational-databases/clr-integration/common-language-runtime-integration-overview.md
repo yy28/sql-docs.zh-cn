@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919322"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>公共语言运行时 (CLR) 集成概述
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在具备与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework 的公共语言运行时 (CLR) 组件集成的功能。 CLR 为托管代码提供服务，例如跨语言集成、代码访问安全性、对象生存期管理以及调试和分析支持。 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户和应用程序开发人员来说，CLR 集成意味着您现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数（标量函数和表值函数）以及用户定义的聚合函数。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括预安装的 .NET Framework 版本 4。  
@@ -34,7 +34,7 @@ ms.locfileid: "53354856"
   
 -   **改进了的安全和安全性。** 托管代码在数据库引擎承载的公共语言运行时环境中运行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 利用这一特点为在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 早期版本中提供的扩展存储过程提供更安全更可靠的替代方法。  
   
--   **能够定义数据类型和聚合函数。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了  的存储和查询功能。  
+-   **能够定义数据类型和聚合函数。** 用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的存储和查询功能。  
   
 -   **通过标准化环境简化了的开发。** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]数据库开发集成到将来版本的  Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
   

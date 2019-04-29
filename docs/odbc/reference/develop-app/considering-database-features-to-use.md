@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042183"
 ---
 # <a name="considering-database-features-to-use"></a>考虑使用数据库功能
-基本级别的互操作性已知后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将该应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ 长整型数据？ 有关所有 Dbms 可能不都支持哪些功能的看法，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，并[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 C:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可能会消除某些 Dbms 从目标 Dbms 的列表。 它们还可能会显示该应用程序可以轻松地面向许多 Dbms。  
+基本级别的互操作性已知后，必须考虑应用程序使用的数据库功能。 例如，哪些 SQL 语句将该应用程序执行？ 将应用程序使用可滚动游标？ 事务？ 过程？ 长整型数据？ 有关所有 Dbms 可能不都支持哪些功能的看法，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，并[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函数描述，以及[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 应用程序所需的功能可能会消除某些 Dbms 从目标 Dbms 的列表。 它们还可能会显示该应用程序可以轻松地面向许多 Dbms。  
   
- 例如，如果所需的功能很简单，它们可以通常实现具有高度的互操作性。 执行一个简单的应用程序**选择**与只进游标的语句并检索结果很可能是由于其简单性高度可互操作： 几乎所有驱动程序和 Dbms 支持的功能它需求。  
+ 例如，如果所需的功能很简单，它们可以通常实现具有高度的互操作性。 执行一个简单的应用程序**选择**与只进游标的语句并检索结果很可能是由于其简单性高度可互操作：几乎所有驱动程序和 Dbms 支持其所需的功能。  
   
  但是，如果所需的功能是更复杂，例如可滚动游标，定位的 update 和 delete 语句和过程，必须经常进行的权衡。 有几种可能性：  
   

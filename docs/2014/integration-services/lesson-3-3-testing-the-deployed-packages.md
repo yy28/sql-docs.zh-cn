@@ -1,5 +1,5 @@
 ---
-title: 步骤 3：测试已部署的包 |Microsoft Docs
+title: 步骤 3：测试已部署的包 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891802"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>步骤 3：测试已部署的包
   在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  

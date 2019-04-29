@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：创建新的 Integration Services 项目 | Microsoft Docs
+title: 第 1 步：创建新的 Integration Services 项目 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891756"
 ---
-# <a name="step-1-creating-a-new-integration-services-project"></a>步骤 1：创建新的 Integration Services 项目
+# <a name="step-1-creating-a-new-integration-services-project"></a>第 1 步：创建新的 Integration Services 项目
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中创建包，第一步是创建一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。 此项目包含在数据转换解决方案中使用的数据源、数据源视图和包等对象的模板。  
   
  将在本 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中创建的包用于解释受区域设置影响的数据的值。 如果您的计算机未配置为使用区域选项“英语(美国)”，则需要在包中设置其他属性。 第 2 课到第 5 课中使用的包是从第 1 课中创建的包复制而来的，因此不需要更新复制的包中受区域设置影响的属性。  

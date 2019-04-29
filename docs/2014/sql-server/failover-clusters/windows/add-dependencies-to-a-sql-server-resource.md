@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a29577d6027c43fd35a8b27db8b402123c89a4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035642"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>向 SQL Server 资源添加依赖项
   本主题说明如何使用故障转移群集管理器管理单元向 AlwaysOn 故障转移群集实例 (FCI) 资源添加依赖项。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
--   **准备工作：**[限制和局限](#Restrictions)、[先决条件](#Prerequisites)  
+-   **开始之前：**[限制和局限](#Restrictions)，[先决条件](#Prerequisites)  
   
--   **向 SQL Server 资源添加依赖项，使用：** [Windows 故障转移群集管理器](#WinClusManager)  
+-   **若要将依赖项添加到 SQL Server 资源，使用：**[Windows 故障转移群集管理器](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -44,13 +44,13 @@ ms.locfileid: "48086777"
   
  还需要考虑下列问题：  
   
--   使用 FTP 进行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制：如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例使用 FTP 进行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制，则 FTP 服务必须与设置为使用 FTP 服务的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位于同一个物理磁盘。  
+-   使用 FTP 进行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制：有关的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 FTP 进行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制，你的 FTP 服务必须使用相同的物理磁盘之一与安装的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，将设置为使用 FTP 服务。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源依赖关系：如果将某个资源添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中，并且您具有与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系来确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议您添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的依赖关系。 不要添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。 若要确保运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机保持高可用性，请对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源进行合理配置以使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的失败不会对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组带来影响。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源依赖关系：如果已添加到资源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]组中，并且具有依赖关系[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，确保[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不可用，[!INCLUDE[msCoName](../../../includes/msconame-md.md)]建议上添加依赖项[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理资源。 不要添加与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的依赖关系。 若要确保运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机保持高可用性，请对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源进行合理配置以使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理资源的失败不会对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组带来影响。  
   
--   文件共享和打印机资源：安装文件共享资源或打印机群集资源时，不应将它们置于运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的同一物理磁盘资源上。 如果将它们放在相同的物理磁盘资源上，可能导致运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的性能降低或该计算机上的服务丢失。  
+-   文件共享和打印机资源：在安装文件共享资源或打印机群集资源时，它们不应将放在正在运行的计算机相同的物理磁盘资源上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果将它们放在相同的物理磁盘资源上，可能导致运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的计算机的性能降低或该计算机上的服务丢失。  
   
--   MS DTC 注意事项：安装操作系统和配置 FCI 后，必须使用故障转移群集管理器管理单元将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 配置为在群集中使用。 群集 MS DTC 失败不会导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序停止运行，但如果未能正确配置 MS DTC，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序功能可能会受影响。  
+-   MS DTC 注意事项：安装操作系统和配置 FCI 后，必须配置[!INCLUDE[msCoName](../../../includes/msconame-md.md)]分布式事务处理协调器 (MS DTC) 若要在群集中运行故障转移群集管理器管理单元中使用。 群集 MS DTC 失败不会导致 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序停止运行，但如果未能正确配置 MS DTC，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应用程序功能可能会受影响。  
   
      如果在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 组中安装 MS DTC，并且具有依赖于 MS DTC 的其他资源，则在此组脱机时或者处于故障转移期间的情况下，MS DTC 将不可用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建议您尽可能将 MS DTC 放入单独的组中且占用单独的物理磁盘资源。  
   

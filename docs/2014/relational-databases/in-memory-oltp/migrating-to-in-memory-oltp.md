@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015299"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>迁移到内存中 OLTP
   本节论述如何迁移数据库对象以便使用内存中 OLTP。  

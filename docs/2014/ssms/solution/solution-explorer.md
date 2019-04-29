@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025722"
 ---
 # <a name="solution-explorer"></a>解决方案资源管理器
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  

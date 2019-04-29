@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960081"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |**ObjId**|**int**|持有锁的对象的标识号。 可以在相关数据库中使用 OBJECT_NAME() 函数来标识对象。 值为 99 时是一种特殊情况，表示用于记录数据库中页分配的其中一个系统页的锁。|  
 |**IndId**|**smallint**|持有锁的索引的标识号。|  
 |**类型**|**nchar(4)**|锁的类型：<br /><br /> RID = 表中单个行的锁，由行标识符 (RID) 标识。<br /><br /> KEY = 索引内保护可串行事务中一系列键的锁。<br /><br /> PAG = 数据页或索引页的锁。<br /><br /> EXT = 对某区的锁。<br /><br /> TAB = 整个表（包括所有数据和索引）的锁。<br /><br /> DB = 数据库的锁。<br /><br /> FIL = 数据库文件的锁。<br /><br /> APP = 指定的应用程序资源的锁。<br /><br /> MD = 元数据或目录信息的锁。<br /><br /> HBT = 堆或 B 树索引的锁。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中此信息不完整。<br /><br /> AU = 分配单元的锁。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中此信息不完整。|  
-|**资源**|**nchar(32)**|标识被锁定资源的值。 值的格式取决于在所标识的资源类型**类型**列：<br /><br /> **类型**值：**资源**值<br /><br /> RID:标识符格式为 fileid: pagenumber: rid，其中 fileid 标识包含页上，文件 pagenumber 标识包含行的页，rid 标识页上的特定行。 fileid 与匹配**file_id**中的列**sys.database_files**目录视图。<br /><br /> 项：在内部使用的十六进制数[!INCLUDE[ssDE](../../includes/ssde-md.md)]。<br /><br /> PAG:格式为 fileid: pagenumber，其中 fileid 标识包含页上，该文件，pagenumber 标识页内的数字。<br /><br /> EXT:标识区中的第一页的编号。 该数字的格式为 fileid:pagenumber。<br /><br /> 选项卡上：没有提供信息，因为表中已标识**ObjId**列。<br /><br /> DB: 没有提供信息，因为在已标识的数据库**dbid**列。<br /><br /> FIL:匹配的文件的标识符**file_id**中的列**sys.database_files**目录视图。<br /><br /> 应用程序：被锁定的应用程序资源的唯一标识符。 格式为 DbPrincipleId:\<为 16 个字符的资源字符串的前两个 >\<哈希运算值 >。<br /><br /> MD：随资源类型而变化。 有关详细信息，请参阅的说明**resource_description**中的列[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。<br /><br /> HBT:没有提供的信息。 使用**sys.dm_tran_locks**改为动态管理视图。<br /><br /> AU:没有提供的信息。 使用**sys.dm_tran_locks**改为动态管理视图。|  
+|**资源**|**nchar(32)**|标识被锁定资源的值。 值的格式取决于在所标识的资源类型**类型**列：<br /><br /> **类型**值：**资源**值<br /><br /> RID:标识符格式为 fileid: pagenumber: rid，其中 fileid 标识包含页上，文件 pagenumber 标识包含行的页，rid 标识页上的特定行。 fileid 与匹配**file_id**中的列**sys.database_files**目录视图。<br /><br /> 密钥：在内部使用的十六进制数[!INCLUDE[ssDE](../../includes/ssde-md.md)]。<br /><br /> PAG:格式为 fileid: pagenumber，其中 fileid 标识包含页上，该文件，pagenumber 标识页内的数字。<br /><br /> EXT:标识区中的第一页的编号。 该数字的格式为 fileid:pagenumber。<br /><br /> 选项卡上：没有提供信息，因为表中已标识**ObjId**列。<br /><br /> DB:没有提供信息，因为在已标识的数据库**dbid**列。<br /><br /> FIL:匹配的文件的标识符**file_id**中的列**sys.database_files**目录视图。<br /><br /> 应用程序：被锁定的应用程序资源的唯一标识符。 格式为 DbPrincipleId:\<为 16 个字符的资源字符串的前两个 >\<哈希运算值 >。<br /><br /> MD：随资源类型而变化。 有关详细信息，请参阅的说明**resource_description**中的列[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)。<br /><br /> HBT:没有提供的信息。 使用**sys.dm_tran_locks**改为动态管理视图。<br /><br /> AU:没有提供的信息。 使用**sys.dm_tran_locks**改为动态管理视图。|  
 |**模式**|**nvarchar(8)**|所请求的锁模式。 可以是：<br /><br /> NULL = 不授予对资源的访问权限。 用作占位符。<br /><br /> Sch-S = 架构稳定性。 确保在任何会话持有对架构元素（例如表或索引）的架构稳定性锁时，不删除该架构元素。<br /><br /> Sch-M = 架构修改。 必须由要更改指定资源架构的任何会话持有。 确保没有其他会话正在引用所指示的对象。<br /><br /> S = 共享。 授予持有锁的会话对资源的共享访问权限。<br /><br /> U = 更新。 指示对最终可能更新的资源获取的更新锁。 用于防止一种常见的死锁，这种死锁在多个会话锁定资源以便稍后对资源进行更新时发生。<br /><br /> X = 排他。 授予持有锁的会话对资源的独占访问权限。<br /><br /> IS = 意向共享。 指示有意将 S 锁放置在锁层次结构中的某个从属资源上。<br /><br /> IU = 意向更新。 指示有意将 U 锁放置在锁层次结构中的某个从属资源上。<br /><br /> IX = 意向排他。 指示有意将 X 锁放置在锁层次结构中的某个从属资源上。<br /><br /> SIU = 共享意向更新。 指示对有意在锁层次结构中的从属资源上获取更新锁的资源进行共享访问。<br /><br /> SIX = 共享意向排他。 指示对有意在锁层次结构中的从属资源上获取排他锁的资源进行共享访问。<br /><br /> UIX = 更新意向排他。 指示对有意在锁层次结构中的从属资源上获取排他锁的资源持有的更新锁。<br /><br /> BU = 大容量更新。 用于大容量操作。<br /><br /> RangeS_S = 共享键范围和共享资源锁。 指示可串行范围扫描。<br /><br /> RangeS_U = 共享键范围和更新资源锁。 指示可串行更新扫描。<br /><br /> RangeI_N = 插入键范围和 Null 资源锁。 用于在将新键插入索引前测试范围。<br /><br /> RangeI_S = 键范围转换锁。 由 RangeI_N 和 S 锁的重叠创建。<br /><br /> RangeI_U = 由 RangeI_N 和 U 锁的重叠创建的键范围转换锁。<br /><br /> RangeI_X = 由 RangeI_N 和 X 锁的重叠创建的键范围转换锁。<br /><br /> RangeX_S = 由 RangeI_N 和 RangeS_S 锁的重叠创建的键范围转换锁 锁。<br /><br /> RangeX_U = 由 RangeI_N 和 RangeS_U 锁的重叠创建的键范围转换锁。<br /><br /> RangeX_X = 排他键范围和排他资源锁。 这是在更新范围中的键时使用的转换锁。|  
 |**“状态”**|**nvarchar(5)**|锁的请求状态：<br /><br /> CNVRT:锁正转换从另一种模式，但被持有的锁模式相冲突的另一个进程阻止转换。<br /><br /> 授予：已获取锁。<br /><br /> 等待时间：锁持有的锁模式相冲突的另一个进程被阻止。|  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926584"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>传输作业任务编辑器（“常规”页）
   可以使用 **“传输作业任务编辑器”** 对话框的 **“常规”** 页，对传输作业任务进行命名和说明。 有关传输作业任务的详细信息，请参阅 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)。  

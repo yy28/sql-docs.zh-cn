@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892238"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -102,6 +102,6 @@ ms.locfileid: "58377974"
  [在部署项目后设置参数值](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>相关内容  
- 博客文章[SSIS 快速提示：必需的参数](https://go.microsoft.com/fwlink/?LinkId=239781)，mattmasson.com 上的。  
+ mattmasson.com 上的博客文章：[SSIS 快速提示：必需的参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

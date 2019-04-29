@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026772"
 ---
 # <a name="appendix-d-data-types"></a>附录 D：数据类型
 ODBC 定义数据类型的两个的集：SQL 数据类型以及 C 数据类型。 SQL 数据类型表示存储在数据源的数据的数据类型。 C 数据类型表示应用程序缓冲区中存储的数据的数据类型。  

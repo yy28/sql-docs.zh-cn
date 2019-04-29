@@ -65,7 +65,7 @@ ms.locfileid: "58872257"
  
    将应用程序的数据库移动到其他服务器实例时，必须在目标服务器实例的 master 和 msdb 中重新创建依赖实体和依赖对象的所有元数据。 例如，如果数据库应用程序使用服务器级触发器，则仅在新系统上附加或还原数据库是不够的。 如果不手动在 master 数据库中重新创建这些触发器的元数据，则数据库不能按预期方式工作。 有关详细信息，请参阅[当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
--   **存储在 MSDB 中的 Integration Services 包：** 如果要在 MSDB 中存储包，需要使用 [dtutil Utility](../../integration-services/dtutil-utility.md) 编写这些包的脚本或者将其重新部署到新服务器。 在新服务器上使用包之前，需要将包升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+-   **存储在 MSDB 中的 Integration Services 包：** 如果要在 MSDB 中存储包，需要使用 [dtutil Utility](../../integration-services/dtutil-utility.md) 编写这些包的脚本或者将其重新部署到新服务器。 在新服务器上使用包之前，需要将包升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [升级 Integration Services 包](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
 -   **Reporting Services 加密密钥：** 报表服务器配置的一个重要部分是为用于加密敏感信息的对称密钥创建备份副本。 该密钥的备份副本对许多例程操作来说是必需的，通过使用备份副本，您可以在新的安装中重用现有报表服务器数据库。 有关详细信息，请参阅 [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 和 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   

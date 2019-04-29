@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018370"
 ---
 # <a name="outer-join-escape-sequence"></a>外部联接转义序列
 ODBC 使用的外部联接转义序列。 此转义序列的语法如下所示：  
@@ -32,7 +32,7 @@ ODBC 使用的外部联接转义序列。 此转义序列的语法如下所示�
 ## <a name="remarks"></a>备注  
  BNF 表示法中的语法是按如下所示：  
   
- *ODBC 外部-联接的转义*:: =  
+ *ODBC-outer-join-escape* ::=  
   
  *ODBC esc 启动器*oj*外部联接 ODBC esc 终止符*  
   
@@ -40,14 +40,14 @@ ODBC 使用的外部联接转义序列。 此转义序列的语法如下所示�
   
  外部联接 {*l e-n* [*相关名称*] &#124; *外部联接*} ON  
   
- *搜索-*  
+ *search-*  
   
- *条件*  
+ *condition*  
   
- *相关名称*:: =*用户定义名称*  
+ *correlation-name* ::= *user-defined-name*  
   
- *ODBC esc 启动器*:: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC esc 终止符*:: =}  
+ *ODBC-esc-terminator* ::= }  
   
  若要确定支持此语句中的哪些部分，应用程序调用**SQLGetInfo** SQL_OJ_CAPABILITIES 信息类型。 用于外部联接*搜索条件*必须包含仅之间指定的联接条件*表名*。

@@ -1,5 +1,5 @@
 ---
-title: FieldStatusEnum |Microsoft Docs
+title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e2f08868aa581136bc155011671e0b8b1c55e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028154"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的[Field 对象](../../../ado/reference/ado-api/field-object.md)。  

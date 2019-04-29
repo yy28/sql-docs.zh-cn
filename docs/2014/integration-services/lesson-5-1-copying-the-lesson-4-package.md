@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：复制第 4 课包 |Microsoft Docs
+title: 第 1 步：复制第 4 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891164"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>步骤 1：复制第 4 课包
+# <a name="step-1-copying-the-lesson-4-package"></a>第 1 步：复制第 4 课包
   在本任务中，将为第 4 课中创建的 Lesson 4.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 4 包添加到项目中，然后再对其进行复制。 将使用这一新副本来完成第 5 课剩余部分。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>复制 Lesson 4 包  

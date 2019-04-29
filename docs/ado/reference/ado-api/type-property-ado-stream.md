@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e4df670c5fe6ca42015e7e85445dafde47738f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042623"
 ---
 # <a name="type-property-ado-stream"></a>Type 属性（ADO 流）
 指示中包含的数据类型[Stream](../../../ado/reference/ado-api/stream-object-ado.md) （二进制或文本）。  

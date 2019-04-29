@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901481"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -45,7 +45,7 @@ ms.locfileid: "58380926"
 > [!NOTE]  
 >  OLE DB 目标不支持参数。 如果需要执行参数化 INSERT 语句，请考虑使用 OLE DB 命令转换。 有关详细信息，请参阅 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性应配置要使用的 OLE DB 连接管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端或使用快速加载访问模式之一：**表或视图-快速加载**或**表名变量或视图名变量-快速加载**。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型中，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 当 OLE DB 目标加载使用双字节字符集 (DBCS) 的数据时，如果没有使用快速加载选项的数据访问模式，并且 OLE DB 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，则该数据可能会被损坏。 为了确保 DBCS 数据的完整性，应将 OLE DB 连接管理器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或使用以下任一快速加载访问模式：“表或视图 - 快速加载”或“表名称或视图名称变量 - 快速加载”。 这两个选项都可以在 **“OLE DB 目标编辑器”** 对话框中使用。 编程时[!INCLUDE[ssIS](../../includes/ssis-md.md)]对象模型中，应将 AccessMode 属性设置为`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
 >  如果用 **设计器中的** “OLE DB 目标编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框创建 OLE DB 目标要向其插入数据的目标表，可能需要手动选择新创建的表。 当 OLE DB 访问接口（如 OLE DB Provider for DB2）自动将架构标识符添加到表名称时，需要进行手动选择。  
@@ -87,7 +87,7 @@ ms.locfileid: "58380926"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|指定要插入的大小 (KB)。 选项具有窗体`KILOBYTES_PER_BATCH`  = \<正整数值**>**。|  
 |FIRE_TRIGGERS|指定是否在插入表上激发触发器。 选项的格式为 **FIRE_TRIGGERS**。 出现该选项说明要激发触发器。|  
-|ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC|DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表中的聚集索引对输入数据排序，则性能可以得到提高。|  
+|ORDER|指定输入数据如何排序。 选项格式为 ORDER \<列名称> ASC|DESC。 可以列出任何列数，是否包括排序顺序是可选的。 如果省略排序顺序，则插入操作假定数据不排序。<br /><br /> 注意：如果使用 ORDER 选项根据表的聚集索引的输入的数据进行排序，可以提高性能。|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字传统上采用大写字母键入，但并不区分大小写。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58380926"
  可以记录 OLE DB 目标对外部数据访问接口所做的调用。 利用此日志记录功能，可以对 OLE DB 目标在执行将数据保存到外部数据源的操作进行故障排除。 若要记录 OLE DB 目标对外部数据访问接口所做的调用，请在包级别启用包日志记录并选择 **“诊断”** 事件。 有关详细信息，请参阅 [包执行的疑难解答工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-destination"></a>配置 OLE DB 目标  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 **“OLE DB 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   

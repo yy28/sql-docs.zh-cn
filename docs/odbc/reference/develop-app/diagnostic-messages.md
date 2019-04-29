@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034914"
 ---
 # <a name="diagnostic-messages"></a>诊断消息
 带有每个返回的诊断消息。 有很多不同的消息的通常返回相同的 SQLSTATE。 例如，SQL 语法中的大多数错误返回 SQLSTATE 42000 （语法错误或访问冲突）。 但是，每个语法错误很可能通过不同的消息进行描述。  
@@ -33,21 +33,21 @@ ms.locfileid: "47767625"
   
  如果出现错误或警告的源是一个组件本身，诊断消息必须说明这。 因此，消息的文本具有两个不同的格式。 错误和警告的数据源中不会发生，诊断消息必须使用以下格式：  
   
- **[** *供应商标识符* **] [** *ODBC 组件标识符* **]** *组件提供文本*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  对于错误和数据源中出现的警告，诊断消息必须使用以下格式：  
   
- **[** *供应商标识符* **] [** *ODBC 组件标识符* **] [** *数据源标识符* **]** *数据源的提供的文本*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  下表显示了每个元素的含义。  
   
 |元素|含义|  
 |-------------|-------------|  
-|*供应商标识符*|标识在其中发生错误或警告，或直接从数据源收到的错误或警告的组件的供应商联系。|  
-|*ODBC 组件标识符*|标识在其中发生错误或警告，或直接从数据源收到的错误或警告的组件。|  
-|*数据源标识符*|标识数据源。 对于基于文件的驱动程序，这通常是一种文件格式，例如 Xbase [1] 基于为 DBMS 的驱动程序，这是 DBMS 产品。|  
-|*组件提供文本*|ODBC 组件生成。|  
-|*数据源的提供的文本*|生成的数据源。|  
+|*vendor-identifier*|标识在其中发生错误或警告，或直接从数据源收到的错误或警告的组件的供应商联系。|  
+|*ODBC-component-identifier*|标识在其中发生错误或警告，或直接从数据源收到的错误或警告的组件。|  
+|*data-source-identifier*|标识数据源。 对于基于文件的驱动程序，这通常是一种文件格式，例如 Xbase [1] 基于为 DBMS 的驱动程序，这是 DBMS 产品。|  
+|*component-supplied-text*|ODBC 组件生成。|  
+|*data-source-supplied-text*|生成的数据源。|  
   
  [1] 在这种情况下，该驱动程序充当驱动程序和数据源。  
   

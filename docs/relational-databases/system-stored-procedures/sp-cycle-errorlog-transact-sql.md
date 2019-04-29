@@ -1,5 +1,5 @@
 ---
-title: sp_cycle_errorlog (TRANSACT-SQL) |Microsoft Docs
+title: sp_cycle_errorlog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724192"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_cycle_errorlog
 ## <a name="remarks"></a>备注  
  每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是启动，当前错误日志将被重命名为**errorlog.1**;**errorlog.1**变得**errorlog.2**， **errorlog.2**变得**errorlog.3**，依次类推。 **sp_cycle_errorlog**使您能够循环错误日志文件，而不必停止和启动服务器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  执行权限**sp_cycle_errorlog**的成员仅限于**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  

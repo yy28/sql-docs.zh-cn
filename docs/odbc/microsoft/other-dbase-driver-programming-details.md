@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1791fa0569012ca9c3cb66068a45104f95b35717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024174"
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驱动程序的编程详细信息
 > [!NOTE]  
@@ -48,4 +48,4 @@ ms.locfileid: "47857245"
   
 -   [SQLTransact（dBASE 驱动程序）](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [dBASE 索引 (dBASE 驱动程序)](../../odbc/microsoft/dbase-indexes.md)
+-   [dBASE Indexes (dBASE Driver)](../../odbc/microsoft/dbase-indexes.md)

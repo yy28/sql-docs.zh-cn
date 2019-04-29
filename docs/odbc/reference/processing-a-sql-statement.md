@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045494"
 ---
 # <a name="processing-a-sql-statement"></a>处理 SQL 语句
 在讨论之前用于以编程方式使用 SQL 的技术，有必要讨论如何处理 SQL 语句。 尽管每种技术在不同时间执行它们所涉及的步骤是普遍适用于所有这三种技术。 下图显示所涉及步骤中处理 SQL 语句，对此进行讨论本部分的其余部分。  

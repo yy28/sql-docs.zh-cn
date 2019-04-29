@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028404"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
   使用此对话框可以创建全文索引，用于对数据库表中基于文本的列进行全文搜索。 全文索引依赖于常规索引，因此必须先创建常规索引。 常规索引只能对单个非空的列创建，而且最好选择值较小的列而不是选择值较大的列。  
@@ -63,7 +63,7 @@ ms.locfileid: "52822741"
  显示当前是否可以使用此全文索引执行全文搜索。  
   
  **更改跟踪设置**  
- 描述状态的更改跟踪此索引：Auto，手动或关闭。  
+ 描述此索引的更改跟踪状态：“手动”、“自动”或“关闭”。  
   
  **爬网已完成**  
  显示最近一次爬网是否已完成。 如果此属性值为“否”，则表示爬网当前正在进行。  
@@ -87,7 +87,7 @@ ms.locfileid: "52822741"
  显示下一次爬网的开始日期和时间。  
   
  **当前或上一次爬网的类型**  
- 显示当前或最近一次爬网的类型：完全、 增量、 更新或自动传播。  
+ 显示当前或最近一次爬网中的类型：“完全”、“增量”、“更新”或“自动传播”。  
   
  **唯一索引名称**  
  显示此数据库中具有唯一单列索引的所有列的名称列表。 这些列可用于创建全文索引。  

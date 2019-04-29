@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026684"
 ---
 # <a name="appendix-e-scalar-functions"></a>附录 E：标量函数
 ODBC 指定以下类型的标量函数，有关每个相应部分的本附录中提供这些函数类型的详细信息。 函数说明包含关联的语法。  

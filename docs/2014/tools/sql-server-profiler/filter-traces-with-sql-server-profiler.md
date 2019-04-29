@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035246"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 筛选跟踪
   您可以为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪事件的数据列定义筛选器，以便只捕获您感兴趣的事件的信息。 跟踪筛选器可减小跟踪对系统性能的影响，因为跟踪中捕获的事件减少了。 筛选还使得跟踪结果更容易阅读，因为搜索范围中的事件减少了。  

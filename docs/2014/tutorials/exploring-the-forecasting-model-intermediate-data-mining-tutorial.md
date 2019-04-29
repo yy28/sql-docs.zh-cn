@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992273"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>浏览预测模型（数据挖掘中级教程）
   既然您已经生成预测的挖掘模型，您可以通过使用浏览结果**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]时序查看器包含两个选项卡：**图表**并**模型**。  
@@ -81,7 +81,7 @@ ms.locfileid: "56040028"
   
 3.  请注意 X 轴的刻度。 历史和预测数据的更改始终表示为百分比，但实际值将被自动调整，以便所有值都能显示在图形中。 因此，在比较模型时务须小心，不要仅依赖于可见值。 若要获取确切值或百分比增长和预测值，将鼠标悬停在虚线或实线上方，或单击要查看中的值中的行**挖掘图例**。  
   
-     **提示**:如果**挖掘图例**不可见，请切换到**模型**查看，右键单击任意节点，然后选择**显示图例**。  
+     **提示**：如果**挖掘图例**不可见，请切换到**模型**查看，右键单击任意节点，然后选择**显示图例**。  
   
  通过观察这些趋势，您会担心某些序列缺少数据，并想知道是否可以通过按模型（或者可能按地区）计算销售额的平均值来获取更可靠的预测。 本教程后面的课程中将探讨这种方法。  
   

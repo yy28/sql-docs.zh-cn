@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033606"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>配置服务帐户（SSRS 配置管理器）
-  在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装、 报表服务器 Web 服务、 报表管理器和后台处理应用程序在单个服务内运行。 定义的帐户在其下运行该服务是在安装过程时在服务标识页中指定的帐户，但你可以使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具，如果您希望使用其他帐户或更新密码。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中，报表服务器 Web 服务、报表管理器和后台处理应用程序在一个服务内运行。 运行该服务的帐户是在安装过程中定义的，即在“服务标识”页中指定的帐户；但是，如果希望使用不同的帐户或更改密码，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具。  
   
- 如果已配置为使用 SharePoint 集成模式下的报表服务器并通过更改服务帐户[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具中，您还必须打开 SharePoint 管理中心并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**页后，可以重新应用报表服务器和实例设置。 此步骤将新服务帐户授予访问 SharePoint 数据库所需的集成[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]与[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
+ 如果已配置为使用 SharePoint 集成模式下的报表服务器并通过更改服务帐户[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具中，您还必须打开 SharePoint 管理中心并使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授予数据库访问权限**页后，可以重新应用报表服务器和实例设置。 此步骤向新服务帐户授予对 SharePoint 数据库的访问权限，这是将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 与 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]集成所必需的。  
   
  请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具来更新服务帐户，以便可以同时更新依赖服务标识的其他设置。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48136369"
 -   更新服务帐户时可能会发生 URL 预留错误。 每个 URL 预留都包含一个安全描述符，其中包含授权该服务帐户接受该 URL 上的请求的自由访问控制列表 (DACL)。 更新帐户时，必须重新创建该 URL，以便用新帐户信息更新 DACL。 如果无法重新创建 URL 预留，并且你知道该帐户是有效的，请尝试重新启动计算机。 如果错误仍然存在，请尝试使用不同的帐户。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [服务帐户&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

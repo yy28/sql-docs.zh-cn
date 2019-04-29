@@ -1,5 +1,5 @@
 ---
-title: '附录 c: SQL 语法 |Microsoft Docs'
+title: 附录 C：SQL 语法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1de83d96e8116ee1ab9991a0a2fe78bed165c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027054"
 ---
 # <a name="appendix-c-sql-grammar"></a>附录 C：SQL 语法
 本附录包含的以下主题。  

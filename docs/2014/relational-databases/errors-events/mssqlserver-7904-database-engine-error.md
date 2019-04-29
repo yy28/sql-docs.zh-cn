@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913734"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -30,7 +30,7 @@ ms.locfileid: "48115047"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_MISSING_FILE|  
-|消息正文|表错误：找不到列 ID C_ID，ROWGUID RG_ID (位于对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中)的 FileStream 文件。|  
+|消息正文|表错误：未找到索引 ID I_ID，分区 ID PN_ID 的列 ID C_ID，ROWGUID RG_ID 位于对象 ID O_ID，filestream 文件。|  
   
 ## <a name="explanation"></a>解释  
  分区的列值在对应的 FILESTREAM 列目录中没有匹配的 FILESTREAM 文件。  

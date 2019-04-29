@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021698"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
   可以使用 **“跟踪令牌”** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -35,13 +35,13 @@ ms.locfileid: "52792069"
 ## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**:中的一个或多个列的排序**排**对话框。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
--   **清除筛选器**:清除网格的任何筛选器设置。  
+-   **清除筛选器**：清除网格的任何筛选设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   

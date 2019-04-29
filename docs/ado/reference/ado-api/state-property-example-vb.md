@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027627"
 ---
 # <a name="state-property-example-vb"></a>State 属性示例 (VB)
 此示例使用[状态](../../../ado/reference/ado-api/state-property-ado.md)属性在异步打开连接和异步执行命令时显示一条消息。  

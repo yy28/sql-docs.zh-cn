@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025664"
 ---
 # <a name="complete-the-post-installation-steps"></a>完成安装后步骤
   安装 Distributed Replay 后，您必须修改 Distributed Replay 控制器和客户端服务帐户。  

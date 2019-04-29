@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032923"
 ---
 # <a name="rules-for-conversions"></a>转换规则
 在本部分中的规则适用于涉及数值的转换。 出于这些规则，定义了以下术语：  
   
--   *存储分配：* 时将数据发送到数据库中的表列。 发生这种情况在对调用期间**SQLExecute**， **SQLExecDirect**，并**SQLSetPos**。 在应用商店分配期间"目标"是指数据库列和"源"是指应用程序缓冲区中的数据。  
+-   *将存储分配：* 当数据发送到数据库中的表列。 发生这种情况在对调用期间**SQLExecute**， **SQLExecDirect**，并**SQLSetPos**。 在应用商店分配期间"目标"是指数据库列和"源"是指应用程序缓冲区中的数据。  
   
--   *检索分配：* 到应用程序缓冲区从数据库检索数据时。 发生这种情况在对调用期间**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，以及**SQLSetPos**。 在检索分配期间"目标"是指应用程序缓冲区和"源"是指数据库列。  
+-   *检索分配：* 到应用程序缓冲区从数据库检索数据。 发生这种情况在对调用期间**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，以及**SQLSetPos**。 在检索分配期间"目标"是指应用程序缓冲区和"源"是指数据库列。  
   
 -   *CS:* 字符源中的值。  
   
 -   *NT:* 数值的目标中的值。  
   
--   *NS:* 数值源中的值。  
+-   *NS:* 数值的源中的值。  
   
 -   *CT:* 字符目标中的值。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47706095"
   
     -   如果 NS 小于 0，然后让 Y 是导致的：  
   
-         - &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          其中&#124;&#124;是字符串串联运算符。  
   

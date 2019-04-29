@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721497"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
   在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅[合并同步期间执行业务逻辑](merge/execute-business-logic-during-merge-synchronization.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "54128757"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>在本地计算机上调试业务逻辑处理程序  
   
-1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)并[创建发布](publish/create-a-publication.md)。  
+1.  配置发布和分发，创建一个发布，然后创建该发布的一个订阅。 有关详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)和[创建发布](publish/create-a-publication.md)。  
   
 2.  创建和注册业务逻辑处理程序。 有关详细信息，请参阅 [实现合并项目的业务逻辑处理程序](implement-a-business-logic-handler-for-a-merge-article.md)。  
   

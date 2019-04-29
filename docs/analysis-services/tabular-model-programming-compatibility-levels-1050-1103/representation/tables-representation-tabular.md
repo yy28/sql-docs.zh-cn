@@ -1,5 +1,5 @@
 ---
-title: 表表示形式 （表格） |Microsoft 文档
+title: 表表示形式 （表格） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f84aed71870e71416b108f0348840f4cce983cd5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019275"
 ---
 # <a name="tables-representation-tabular"></a>表表示形式（表格）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34043681"
   
  从过程角度来看，需要在定义任何其他对象之前先创建数据源视图。 数据源视图对象包含数据源中所有相关对象的映射。 关系模型的映射作为 .Net DataSet 对象嵌入数据源视图并存储在 DSV 的 Schema 属性中。  
   
- 下面的代码段假定你已具有 SQL 客户端连接字符串，将映射到你打算在表格模型中和的数据的名称与变量 newDataSourceViewName 表示关系模型中的所有表的 Select 语句的字典源视图 （通常是你的关系数据库的名称）。  
+ 下面的代码段假定您具有 SQL 客户端的连接字符串，将映射到要在您的表格模型和数据的名称与变量 newDataSourceViewName 表示关系模型中的所有表的 Select 语句的字典源视图 （通常在关系数据库的名称）。  
   
 ```  
   

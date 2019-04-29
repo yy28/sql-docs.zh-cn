@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014258"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51664216"
   
  *DataPtr*参数将被忽略，但是必须设置为非 NULL 值。 详细信息，请参阅部分中的可变 TVP 行绑定上[绑定和 Data Transfer of Table-Valued 参数和列值](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如果*StrLen_Or_Ind*值不是 SQL_DEFAULT_PARAM 也介于 0 到 SQL_PARAMSET_SIZE (即*ColumnSize* SQLBindParameter 参数)，则返回错误。 此错误导致 SQLPutData 返回 SQL_ERROR：SQLSTATE=HY090，“字符串或缓冲区长度无效”。  
+ 如果*StrLen_Or_Ind*值不是 SQL_DEFAULT_PARAM 也介于 0 到 SQL_PARAMSET_SIZE (即*ColumnSize* SQLBindParameter 参数)，则返回错误。 此错误导致 SQLPutData 返回 SQL_ERROR:SQLSTATE = HY090，"字符串或缓冲区长度无效"。  
   
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   

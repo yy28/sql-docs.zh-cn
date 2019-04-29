@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026923"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：状态转换表
+# <a name="appendix-b-odbc-state-transition-tables"></a>附录 B：ODBC 状态转换表
 本附录中的表显示如何 ODBC 函数导致的环境、 连接、 语句和描述符状态转换。 环境、 连接、 语句或描述符的状态通常决定了可以使用相应类型的句柄 （环境、 连接、 语句或描述符） 的函数可以调用时。 环境、 连接、 语句和描述符状态重叠大致下图中所示。 例如，连接的确切重叠状态 C5，C6 和语句状态 S1 到 S12 是数据源决定的因为事务在不同时间开始对不同的数据源和描述符状态 D1i （隐式已分配的描述符） 取决于描述符与之关联的语句的状态，状态 D1e （显式已分配的描述符） 时不依赖于状态的任何语句。 每个状态的说明，请参阅[环境转换](../../../odbc/reference/appendixes/environment-transitions.md)，[连接转换](../../../odbc/reference/appendixes/connection-transitions.md)，[语句转换](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述符转换](../../../odbc/reference/appendixes/descriptor-transitions.md)、 本附录中更高版本。  
   
  环境和连接状态重叠，如下所示：  

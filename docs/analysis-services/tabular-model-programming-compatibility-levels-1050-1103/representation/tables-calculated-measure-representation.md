@@ -1,5 +1,5 @@
 ---
-title: 计算度量值表示形式 （表格） |Microsoft 文档
+title: 计算度量值表示形式 （表格） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019287"
 ---
-# <a name="tables---calculated-measure-representation"></a>表的计算度量值表示形式
+# <a name="tables---calculated-measure-representation"></a>表格 - 计算度量值表示形式
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   计算度量值是每次在使用时计算其值的已命名 DAX 表达式。  
   
 ## <a name="calculated-measure-representation"></a>计算度量值表示形式  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 中的计算度量值  
- 使用 AMO 管理表格模型计算度量值时，在逻辑计算度量值对象和 <xref:Microsoft.AnalysisServices.Command> 对象的 <xref:Microsoft.AnalysisServices.MdxScript> 对象中定义的度量值之间存在一对一匹配关系。 每个**计算度量值**定义为**创建度量值**内的表达式<xref:Microsoft.AnalysisServices.Command>对象，并由分号分隔。 所有计算表格模型中的度量值对应于集合**创建度量值**中的一个命令对象中的字符串<xref:Microsoft.AnalysisServices.MdxScript>对象。 对于每个计算度量值，存在与 <xref:Microsoft.AnalysisServices.CalculationProperty> 的一对一映射关系。  
+ 使用 AMO 管理表格模型计算度量值时，在逻辑计算度量值对象和 <xref:Microsoft.AnalysisServices.Command> 对象的 <xref:Microsoft.AnalysisServices.MdxScript> 对象中定义的度量值之间存在一对一匹配关系。 每个**计算度量值**指**CREATE MEASURE**内的表达式<xref:Microsoft.AnalysisServices.Command>对象，并由分号分隔。 在表格模型中的度量值对应于集合的所有计算**创建度量值**字符串中的一个命令对象<xref:Microsoft.AnalysisServices.MdxScript>对象。 对于每个计算度量值，存在与 <xref:Microsoft.AnalysisServices.CalculationProperty> 的一对一映射关系。  
   
  下面的代码段演示如何创建计算度量值。  
   

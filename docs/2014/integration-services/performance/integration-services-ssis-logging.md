@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889780"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -62,7 +62,7 @@ ms.locfileid: "58394305"
   
  下表列出了用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含日志提供程序的 ProgID 和 ClassID，以及日志提供程序写入的日志的位置。  
   
-|日志提供程序|ProgID|ClassID|位置|  
+|日志提供程序|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |文本文件|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|日志提供程序使用的文件连接管理器指定此文本文件的路径。|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|日志提供程序使用的文件连接管理器指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所使用的文件的路径。|  
@@ -96,7 +96,7 @@ ms.locfileid: "58394305"
 |运算符|启动包的用户的标识。|  
 |SourceName|发生日志事件的容器或任务的名称。|  
 |SourceID|发生日志事件的包、 For 循环容器、Foreach 循环容器、序列容器或任务的唯一标识符。|  
-|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会创建具有不同 ExecutionID 元素值的日志项。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
+|ExecutionID|包执行实例的 GUID。<br /><br /> 注意：运行单个包可能会使用不同的 ExecutionID 元素值中创建日志条目。 例如，当在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中运行包时，验证阶段可能会创建 ExecutionID 元素与 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]对应的日志项。 但是，执行阶段可能会创建 ExecutionID 元素与 dtshost.exe 对应的日志项。 再比如，当运行包含“执行包”任务的包时，这些任务中的每个任务都会运行子包。 这些子包创建的日志项所具有的 ExecutionID 元素可能不同于父包创建的日志项。|  
 |MessageText|与日志项关联的消息。|  
 |DataBytes|日志项特定的字节数组。 此字段的意义因日志项的不同而不同。|  
   
@@ -147,12 +147,12 @@ ms.locfileid: "58394305"
   
 1.  为包及其任务启用日志记录。 可以在包级、容器级以及任务级进行日志记录。 可以为包、容器和任务指定不同的日志。  
   
-2.  选择日志提供程序并为包添加日志。 可以仅在包级创建日志，任务或容器必须使用为包创建的日志之一。 每个日志都与一个以下日志提供程序相关联：文本文件中， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Windows 事件日志或 XML 文件。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](../enable-package-logging-in-sql-server-data-tools.md)。  
+2.  选择日志提供程序并为包添加日志。 可以仅在包级创建日志，任务或容器必须使用为包创建的日志之一。 每个日志都与以下任一日志提供程序关联：文本文件、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 事件日志或 XML 文件。 有关详细信息，请参阅 [在 SQL Server Data Tools 中启用包日志记录](../enable-package-logging-in-sql-server-data-tools.md)。  
   
 3.  选择要在日志中捕获的事件以及每个事件的日志架构信息。 有关详细信息，请参阅 [使用保存的配置文件配置日志记录](../configure-logging-by-using-a-saved-configuration-file.md)。  
   
 ### <a name="configuration-of-log-provider"></a>日志提供程序的配置  
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  作为在包中实现日志记录的一个步骤来创建和配置日志提供程序。 有关详细信息，请参阅[Integration Services 日志记录](integration-services-ssis-logging.md)。  
   

@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916812"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估计聚集索引的大小
   您可以使用下列步骤估计存储聚集索引中的数据所需的空间大小：  
@@ -84,7 +84,7 @@ ms.locfileid: "48140787"
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  你可以组合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`导致总定义的表的宽度超过 8,060 字节的列。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 对于 `varchar`、`varbinary` 或 `sql_variant` 中的每一列，其长度不能超过 8,000 字节，对于 `nvarchar` 列，不能超过 4,000 字节。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "48140787"
   
 8.  计算索引中的非叶页数：  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>级别</sup>***))***  
+     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>Level</sup>***))***  
   
      其中，1 <= Level <= ***Non-leaf_Levels***  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48140787"
   
 -   大型对象 (LOB) 值  
   
-     要确定将完全使用多少空间来存储 LOB 数据类型的算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
+     精确确定存储 LOB 数据类型 `varchar(max)`、`varbinary(max)`、`nvarchar(max)`、`text`、`ntext`、`xml` 和 `image` 值所用的空间量的算法非常复杂。 只需加上所期望的 LOB 值的平均大小，再乘以 ***Num_Rows***，然后再加上群集索引的总大小就可以了。  
   
 -   压缩  
   

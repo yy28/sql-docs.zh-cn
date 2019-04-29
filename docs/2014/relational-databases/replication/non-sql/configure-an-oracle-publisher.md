@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022595"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
   Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤 1、步骤 3 和步骤 4）：  
@@ -122,7 +122,7 @@ ms.locfileid: "52804434"
 > [!NOTE]  
 >  Oracle 发布服务器不能与它的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器同名，也不能与任何使用同一分发服务器的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器同名。  
   
- 当 Oracle 数据库标识为发布服务器时，必须选择 Oracle 发布选项：完成或 Oracle 网关。 标识发布服务器后，除非删除并重新配置发布服务器，否则无法更改此选项。 “完整”选项用于为快照和事务发布提供 Oracle 发布的完整的支持功能集。 Oracle Gateway 选项提供特定的设计优化，以提高当复制作为系统间的网关时的性能。  
+ 将 Oracle 数据库标识为发布服务器时，必须选择 Oracle 发布选项：“完整”或“Oracle 网关”。 标识发布服务器后，除非删除并重新配置发布服务器，否则无法更改此选项。 “完整”选项用于为快照和事务发布提供 Oracle 发布的完整的支持功能集。 Oracle Gateway 选项提供特定的设计优化，以提高当复制作为系统间的网关时的性能。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上标识 Oracle 发布服务器后，复制创建一个链接服务器，其名称与 Oracle 数据库的 TNS 服务名相同。 此链接服务器只能由复制使用。 如果需要通过链接服务器连接来连接到 Oracle 发布服务器，请创建另一个 TNS 服务名称，然后在调用 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 时使用该名称。  
   

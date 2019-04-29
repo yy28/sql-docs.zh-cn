@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021788"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>发布信息，代理（快照发布）
   **“代理”** 选项卡显示所选发布的快照代理的摘要信息。  
@@ -25,13 +25,13 @@ ms.locfileid: "54135747"
 ## <a name="options"></a>选项  
  有关快照代理的详细信息及相关任务，请右键单击该代理的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
--   **排序**:中的一个或多个列的排序**排**对话框。  
+-   **排序**：在“列排序”对话框中对一列或多个列进行排序。  
   
--   **选择显示的列**:选择哪些列显示以及用来显示它们中的顺序**选择列**对话框。  
+-   **选择要显示的列**：在“选择列”对话框中选择要显示的列以及它们的显示顺序。  
   
--   **筛选器**:筛选列中的值为基础的网格中的行**筛选器设置**对话框。  
+-   **筛选器**：根据“筛选设置”对话框中的列值筛选网格中的行。  
   
--   **清除筛选器**:清除网格的任何筛选器设置。  
+-   **清除筛选器**：清除网格的任何筛选设置。  
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54135747"
 -   已完成  
   
  **代理**  
- 快照代理。 这是与快照发布关联的唯一代理。 分发代理与此发布的订阅关联。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+ 快照代理。 这是与快照发布关联的唯一代理。 分发代理与此发布的订阅关联。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  **上次启动时间**  
  代理上次启动的时间。  
@@ -60,7 +60,7 @@ ms.locfileid: "54135747"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [监视复制](monitoring-replication.md)  
   
   

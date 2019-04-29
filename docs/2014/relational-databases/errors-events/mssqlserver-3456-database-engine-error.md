@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914239"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141187"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|REC_REDOLSNMISMATCH|  
-|消息正文|对于事务 ID %S_XID，无法在数据库 '%.*ls' (数据库 ID 为 %d)的页 %S_PGID 上重做日志记录 %S_LSN。 页: LSN = %S_LSN，类型 = %ld。 日志: 操作码 = %ld，上下文 %ld，上一页的 LSN: %S_LSN。 请从数据库备份还原该数据库，或者修复它。|  
+|消息正文|对于事务 ID %S_XID，无法在数据库 '%.*ls' (数据库 ID 为 %d)的页 %S_PGID 上重做日志记录 %S_LSN。 页:LSN = %S_LSN，类型 = %ld。 日志:操作码 = %ld，上下文 %ld，上一页的 LSN: %S_LSN。 请从数据库备份还原该数据库，或者修复它。|  
   
 ## <a name="explanation"></a>解释  
  还原操作无法重做事务日志。 此错误使数据库进入 SUSPECT 状态。 主文件组以及可能其他文件组可疑并可能受损。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动过程中无法恢复数据库，因此无法使用该数据库。 需要用户执行操作来解决问题。  

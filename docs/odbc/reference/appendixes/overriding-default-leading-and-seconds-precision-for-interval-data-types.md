@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018472"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>重写间隔数据类型的默认前导和秒精度
 如果 ARD 的 SQL_DESC_TYPE 字段设置为 datetime 或间隔 C 类型，通过调用**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 字段 （其中包含间隔 （秒）精度） 设置以下默认值为：  

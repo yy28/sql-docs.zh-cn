@@ -1,5 +1,5 @@
 ---
-title: 示例：数据库的段落还原（完整恢复模式）| Microsoft Docs
+title: 例如：数据库的段落还原（完整恢复模式）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 157541fe3792ba082d9b1ec84c3ab45ca0617060
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875819"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>示例：数据库的段落还原（完整恢复模式）
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例如：数据库的段落还原（完整恢复模式）
   段落还原顺序将从主文件组及所有具有读写权限的辅助文件组开始，在文件组级别分阶段还原和恢复数据库。  
   
  在此示例中，灾难发生后，数据库 `adb` 被还原到新计算机。 该数据库使用完整恢复模式，因此，开始进行还原之前必须先获取数据库的结尾日志备份。 灾难发生之前，所有文件组均处于联机状态。 文件组 `B` 是只读的。 必须还原所有辅助文件组，但这些辅助文件组将按重要性顺序进行还原： `A` （最高）， `C`其次，最后为 `B`。 在此示例中，存在四个日志备份，其中包括结尾日志备份。  

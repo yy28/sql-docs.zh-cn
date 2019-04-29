@@ -416,7 +416,7 @@ static void Main()
 > 2.  右键单击该包，然后单击“执行”。  
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 > 
->      有关日志记录级别的详细信息，请参阅 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
+>      有关日志记录级别的详细信息，请参阅 [启用日志记录在 SSIS 服务器上的包执行的](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
 > 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  

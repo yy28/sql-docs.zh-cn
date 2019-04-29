@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919171"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>对常规连接和上下文连接的限制
   本主题讨论中执行的代码相关的限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]进程通过上下文和常规连接。  
@@ -47,7 +47,7 @@ ms.locfileid: "48163317"
 ## <a name="restrictions-on-regular-connections"></a>对常规连接的限制  
  开发应用程序时，请考虑应用于常规连接的以下限制：  
   
--   不支持对内部服务器异步执行命令。 如果在命令的连接字符串中包括“async=true”，然后执行命令，将导致引发 `System.NotSupportedException`。 将出现此消息：“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 进程内运行时，不支持异步处理。”  
+-   不支持对内部服务器异步执行命令。 如果在命令的连接字符串中包括“async=true”，然后执行命令，将导致引发 `System.NotSupportedException`。 将显示此消息："内运行时不支持异步处理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]进程。"  
   
 -   不支持 `SqlDependency` 对象。  
   

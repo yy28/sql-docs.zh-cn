@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891791"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>步骤 4：在包中添加数据流任务
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>步骤 4：向包添加数据流任务
   为源数据和目标数据创建了连接管理器后，下一个任务是在包中添加一个数据流任务。 数据流任务将封装在源和目标之间移动数据的数据流引擎，并提供在移动数据时转换、清除和修改数据的功能。 大部分的数据提取、转换和加载 (ETL) 进程均在数据流任务中完成。  
   
 > [!NOTE]  

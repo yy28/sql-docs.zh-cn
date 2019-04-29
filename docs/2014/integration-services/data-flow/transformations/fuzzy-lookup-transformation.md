@@ -31,11 +31,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900311"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -89,7 +89,7 @@ ms.locfileid: "58390835"
   
  下表介绍了匹配索引选项：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|创建一个新的索引，保存它，然后对其进行维护。 该转换在引用表上安装触发器，使引用表和索引表同步。|  
 |**GenerateAndPersistNewIndex**|创建一个新的索引，保存它，但不对其进行维护。|  
@@ -122,7 +122,7 @@ ms.locfileid: "58390835"
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。 如果模糊查找转换使用的引用表位于生产服务器上，您应该考虑将该表复制到非生产服务器，并将模糊查找转换配置为访问该副本。 这样做可以防止查找查询占用生产服务器上的资源。 此外，如果模糊查找转换维护匹配索引（即如果 MatchIndexOptionsis 设置为“GenerateAndMaintainNewIndex”），则转换可以在执行数据清理操作的过程中锁定引用表，以防止其他用户和应用程序访问该表。  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>配置模糊查找转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 **“模糊查找转换编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   

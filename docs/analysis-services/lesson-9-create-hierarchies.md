@@ -1,5 +1,5 @@
 ---
-title: 第 9 课： 创建层次结构 |Microsoft Docs
+title: 第 9 课：创建层次结构 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017269"
 ---
-# <a name="lesson-9-create-hierarchies"></a>第 9 课： 创建层次结构
+# <a name="lesson-9-create-hierarchies"></a>第 9 课：创建层次结构
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将创建层次结构。 层次结构是按级别排列的列的分组；例如，地理层次结构可能具有针对国家/地区、省/市/自治区、县和市的子级别。 层次结构可独立于报表客户端应用程序字段列表中的其他列出现，使客户端用户可以更方便地在报表中导航和包含数据。 若要了解详细信息，请参阅[层次结构](../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
 若要创建层次结构，将使用模型设计器中的*关系图视图*。 在数据视图中不支持创建和管理层次结构。  
   
-学完本课的估计时间： **20 分钟**  
+估计的时间才能完成本课程中：**20 分钟**  
   
-## <a name="prerequisites"></a>必要條件  
-本主题是表格建模教程的一部分，该教程应按顺序学习。 在之前在本课程中执行的任务，您应已完成上一课：[第 8 课： 创建透视](../analysis-services/lesson-8-create-perspectives.md)。  
+## <a name="prerequisites"></a>先决条件  
+本主题是表格建模教程的一部分，该教程应按顺序学习。 执行任务之前在本课程中，您应当已完成上一课：[第 8 课：创建透视](../analysis-services/lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>创建层次结构  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42791694"
   
 5.  右键单击**ModelName**列 >**添加到层次结构**，然后选择**类别**。 执行相同操作**EnglishProductName**。 重命名层次结构中的这些列**模型**并**产品**。  
 
-    ![作为表格-lesson9-类别](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>在 DimDate 表中创建层次结构  
   
@@ -73,6 +73,6 @@ ms.locfileid: "42791694"
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>下一步是什么？
-转到下一课：[第 10 课： 创建分区](../analysis-services/lesson-10-create-partitions.md)。 
+请转到下一课：[第 10 课：创建分区](../analysis-services/lesson-10-create-partitions.md)。 
   
   

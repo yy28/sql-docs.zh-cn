@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023581"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -30,7 +30,7 @@ ms.locfileid: "52753779"
 |事件源|MSSQLSERVER|  
 |组件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |符号名称||  
-|消息正文|%s 必须是有效的 Windows 登录名的形式：'\' 或者 '域。 请参阅 '%s' 的文档。|  
+|消息正文|%s 必须是有效的 Windows 登录名的形式：'MACHINE\Login' 或 'DOMAIN\Login'。 请参阅 '%s' 的文档。|  
   
 ## <a name="explanation"></a>解释  
  如果为 **@job_login** 参数指定的值为空或无效，下列复制存储过程将引发此错误。 如果 **db_owner** 固定数据库角色的成员从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中运行脚本时，将发生此错误。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中的安全模式已更改，因此必须更新这些脚本。  

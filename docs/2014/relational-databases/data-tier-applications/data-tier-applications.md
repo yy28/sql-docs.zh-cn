@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873098"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
@@ -108,7 +108,7 @@ ms.locfileid: "52540121"
   
 -   **IMPORT** - 用户可以将架构和数据导入到主机服务器上的新数据库中。  
   
- 数据库管理工具支持这两种功能：Server Management Studio、 SQL Azure 管理门户和 DACFx API。  
+ 数据库管理工具：Server Management Studio、 SQL Azure 管理门户和 DACFx API。  
   
 ## <a name="permissions"></a>权限  
  用户必须是 `dbmanager` 角色的成员或分配了 `CREATE DATABASE` 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 `dbmanager` 角色的成员或分配了 `DROP DATABASE` 权限才能删除数据库。  
