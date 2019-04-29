@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25fa0df8f0e3575b8767020721b56b4a19ac529d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691912"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 关联规则查看器浏览模型
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 关联规则查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是用于创建可用于市场篮分析的数据挖掘模型的关联算法。 有关此算法的详细信息，请参阅 [Microsoft Association Algorithm](microsoft-association-algorithm.md)。  

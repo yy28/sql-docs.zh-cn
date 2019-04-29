@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948a7411c39191635245fdf0f6777538b1ef57fd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833078"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
   SMTP 连接管理器使包可以连接到简单邮件传输协议 (SMTP) 服务器。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的发送邮件任务使用 SMTP 连接管理器。  
@@ -42,7 +42,7 @@ ms.locfileid: "58391585"
   
 -   指定在发送电子邮件时是否使用安全套接字层 (SSL) 对通信进行加密。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请参阅 [SMTP 连接管理器编辑器](../smtp-connection-manager-editor.md)。  
   

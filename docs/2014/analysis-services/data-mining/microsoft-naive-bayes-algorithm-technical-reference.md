@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734820"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 算法技术参考
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的一种用于预测性建模的分类算法。 该算法计算输入列与可预测列之间的条件概率，并假定列相互独立。 由于此独立性假设，所以取名为 Naive Bayes。  
@@ -82,7 +82,7 @@ ms.locfileid: "53376929"
   
 |建模标志|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|表示该列将被视为具有两个可能状态:Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
+|MODEL_EXISTENCE_ONLY|意味着，该列将被视为具有两个可能状态：Missing 和 Existing。 Null 表示缺失值。<br /><br /> 适用于挖掘模型列。|  
 |NOT NULL|指示该列不能包含 Null。 如果 Analysis Services 在模型定型过程中遇到 Null 值，将会导致错误。<br /><br /> 适用于挖掘结构列。|  
   
 ## <a name="requirements"></a>要求  

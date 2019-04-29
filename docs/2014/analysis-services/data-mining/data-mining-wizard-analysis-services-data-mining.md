@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722742"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
   每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  

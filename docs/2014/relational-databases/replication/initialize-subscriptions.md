@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721145"
 ---
 # <a name="initialize-subscriptions"></a>初始化订阅
   必须先初始化订阅服务器，然后才能接收复制的数据。 订阅服务器可以没有初始的数据集，但对于复制的每个对象以及复制所需的任何元数据表和过程，必须要具有相应的架构。  
@@ -32,7 +32,7 @@ ms.locfileid: "52794469"
 >  该向导可能会提示您连接到分发服务器，以启动分发代理或合并代理的相应作业。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [初始化订阅](initialize-a-subscription.md)   
  [订阅发布](subscribe-to-publications.md)  

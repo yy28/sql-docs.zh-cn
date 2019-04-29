@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658062"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>“查找远程文件夹”对话框（Analysis Services - 多维数据）
-  **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
+   **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
   
 -   在分区向导中，在“处理位置和存储位置”页上单击省略号按钮 (**...**)。  
   

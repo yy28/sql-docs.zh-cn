@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699832"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
@@ -102,7 +102,7 @@ ms.locfileid: "53370459"
 |`IS_DATAMEMBER`|一个指示成员是否为数据成员的布尔值。|  
 |`IS_PLACEHOLDERMEMBER`|用来指明成员是否为占位符的布尔值。|  
 |`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果键不是组合键，则 KEY0 与 `Key` 等效。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅[简单的 MDX 小组件：Key0、 Key1、 Key2](https://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID` *X*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
+|`LCID` *x*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |`LEVEL_NUMBER`|成员距层次结构的根的距离。 根级别为零。|  
 |`LEVEL_UNIQUE_NAME`|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_CAPTION`|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 `MEMBER_NAME`。|  
@@ -134,7 +134,7 @@ ms.locfileid: "53370459"
 ### <a name="example"></a>示例  
  以下示例显示返回内部属性的 MDX 查询。  
   
- **示例 1:在查询中使用上下文相关的内部属性**  
+ **示例 1：在查询中使用上下文相关的内部属性**  
   
  以下示例返回每个产品类别的父 ID、键和名称。 请注意属性如何公开为度量值。 这允许您在运行查询时在单元集中查看属性，而非在 SSMS 的“成员属性”对话框中查看。 您可能运行类似的查询以从部署的多维数据集检索成员元数据。  
   
@@ -152,7 +152,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **示例 2:非上下文相关的内部属性**  
+ **示例 2：非上下文相关的内部属性**  
   
  以下示例是非上下文相关的内部属性的完整列表。 在 SSMS 中运行查询后，单击各个成员可以在“成员属性”对话框中查看属性。  
   

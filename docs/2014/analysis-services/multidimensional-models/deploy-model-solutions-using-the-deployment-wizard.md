@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726262"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>使用部署向导部署模型解决方案
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中生成的 XML 输出文件作为输入文件。 可以轻松地修改这些输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
+   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中生成的 XML 输出文件作为输入文件。 可以轻松地修改这些输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  
   
  您可以使用此处介绍的向导来进行部署。 也可以实现自动部署或使用同步功能。 如果部署的数据库很大，则需要考虑在目标系统上使用分区。 您还可以使用分析管理对象 (AMO)，实现分区创建和填充自动化。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48087647"
 ## <a name="see-also"></a>请参阅  
  [使用 XMLA 部署模型解决方案](deploy-model-solutions-using-xmla.md)   
  [同步 Analysis Services 数据库](synchronize-analysis-services-databases.md)   
- [了解用于创建部署脚本的输入的文件](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [了解用于创建部署脚本的输入文件](deployment-script-files-input-used-to-create-deployment-script.md)   
  [使用部署实用工具部署模型解决方案](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

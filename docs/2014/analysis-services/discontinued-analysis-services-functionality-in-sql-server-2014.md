@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731617"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014 中废弃的 Analysis Services 功能
   此主题介绍 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|类别|不推荐使用的功能|替代功能|  
+|Category|不推荐使用的功能|替代功能|  
 |--------------|------------------------|-----------------|  
 |本地多维数据集|InsertInto 连接字符串属性|用于填充本地多维数据集的原始连接字符串语法已替换为 Create Global Cube（创建全局多维数据集）语句。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。|  
 |本地多维数据集|CreateCube 连接字符串属性|用于填充本地多维数据集的原始连接字符串语法已替换为 Create Global Cube（创建全局多维数据集）语句。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。|  
@@ -42,6 +42,6 @@ ms.locfileid: "48117967"
  为与 SQL Server 2000 Analysis Services 数据库兼容而提供的决策支持对象 (DSO) 库也已废弃，因为该库不再是 SQL Server 的一部分了。  
   
 ## <a name="see-also"></a>请参阅  
- [Analysis Services 后向兼容性](analysis-services-backward-compatibility.md)  
+ [Analysis Services 向后兼容性](analysis-services-backward-compatibility.md)  
   
   

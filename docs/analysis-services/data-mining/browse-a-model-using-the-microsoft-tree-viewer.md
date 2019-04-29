@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft 树查看器浏览模型 |Microsoft 文档
+title: 使用 Microsoft 树查看器浏览模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d56116652e389e60edfb269ce2e23c14bb824f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671133"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>使用 Microsoft 树查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 树查看器显示借助于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法生成的决策树。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种既支持分类又支持回归的混合决策树算法。 因此，你可以使用该查看器来查看基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法用于为离散属性和连续属性进行预测性建模。 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -90,9 +90,9 @@ ms.locfileid: "34016314"
   
  [返回页首](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>另请参阅  
- [Microsoft 决策树算法](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [挖掘模型查看器 & #40; 数据挖掘模型设计器 & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+## <a name="see-also"></a>请参阅  
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  

@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774707"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不再推荐使用的 SQL Server 功能
   本主题介绍升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 后不再可用的功能。  
@@ -29,7 +29,7 @@ ms.locfileid: "53351013"
 ### <a name="discontinued-active-directory-helper-service"></a>停止使用的 Active Directory Helper 服务  
  Active Directory Helper 服务和相关组件已删除。 下表列出了已删除的关联组件：  
   
-|类别|废弃的功能|替代功能|  
+|Category|废弃的功能|替代功能|  
 |--------------|--------------------------|-----------------|  
 |系统存储过程|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|没有可以替换的表|  
   

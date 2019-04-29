@@ -1,5 +1,5 @@
 ---
-title: 使用 Microsoft Naive Bayes 查看器浏览模型 |Microsoft 文档
+title: 使用 Microsoft Naive Bayes 查看器浏览模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678807"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>使用 Microsoft Naive Bayes 查看器浏览模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种非常适合于针对预测性建模任务进行改编的分类算法。 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
   
  由于 Naive Bayes 模型的主要用途之一是提供一种快速浏览数据集内数据的方法，因此， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 查看器提供了多种方法来显示可预测属性与输入属性之间的交互。  
   
@@ -68,16 +68,16 @@ ms.locfileid: "34014774"
  **值**  
  显示“属性”列中某属性的值。  
   
- **优先\<值为 1 >**  
+ **倾向于\<值为 1 >**  
  显示一个彩色条，以指示属性值倾向于“值 1”中显示的可预测属性值的程度。  
   
- **优先\<值为 2 >**  
+ **倾向于\<值为 2 >**  
  显示一个彩色条，以指示属性值倾向于“值 2”中显示的可预测属性值的程度。  
   
  [返回页首](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>另请参阅  
- [Microsoft Naive Bayes 算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>请参阅  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [挖掘模型查看器任务和操作指南](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [数据挖掘工具](../../analysis-services/data-mining/data-mining-tools.md)   
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
