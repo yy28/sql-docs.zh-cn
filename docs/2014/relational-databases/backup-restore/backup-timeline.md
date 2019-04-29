@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876699"
 ---
 # <a name="backup-timeline"></a>备份时间线
   使用“备份时间线”对话框可以查找和指定备份以便将数据库还原到某个时间点。 通过单击“还原数据库（“常规”页）”窗格上的“时间线”可以访问“备份时间线”对话框。 通过此对话框，您可以查看对数据库执行的还原操作的时间线。  

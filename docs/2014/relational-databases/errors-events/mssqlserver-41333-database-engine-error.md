@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab94977bcd3bf5a9b0b26ac7be76cb67d58e0755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913983"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
     
@@ -30,7 +30,7 @@ ms.locfileid: "48135507"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|消息正文|以下事务必须在快照隔离下访问内存优化表和本机编译存储过程：RepeatableRead 事务、Serializable 事务以及在 RepeatableRead 或 Serializable 隔离中访问非内存优化表的事务。|  
+|消息正文|以下事务必须能够在快照隔离下访问内存优化表和本机编译的存储过程：RepeatableRead 事务、可串行事务以及访问在 RepeatableRead 或可串行隔离中未进行内存优化的表的事务。|  
   
 ## <a name="explanation"></a>解释  
  对于基于磁盘的事务和 XTP 事务之间的更高隔离级别用户，存在一些限制。  

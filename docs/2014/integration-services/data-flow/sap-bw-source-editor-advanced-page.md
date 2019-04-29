@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901036"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 源编辑器（“高级”页）
   使用“SAP BW 源编辑器”的“高级”页指定字符串转换规则和超时时间，还可重置特定请求 ID 的状态。  
@@ -44,7 +44,7 @@ ms.locfileid: "58386435"
  **字符串转换**  
  指定要应用的字符串转换规则。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**自动字符串转换**|当 SAP Netweaver BW 系统为 Unicode 系统时，将所有字符串转换为 `nvarchar`。 否则，将所有字符串转换为 `varchar`。|  
 |**将字符串转换为 varchar**|将所有字符串转换为 `varchar`。|  

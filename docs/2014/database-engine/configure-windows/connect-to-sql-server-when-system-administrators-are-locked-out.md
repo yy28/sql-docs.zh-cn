@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782380"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
@@ -61,7 +61,7 @@ ms.locfileid: "52641558"
 5.  上**启动参数**选项卡上，在**指定启动参数**框中，键入`-m`，然后单击`Add`。 （这是短划线后跟小写字母 m。）  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”**。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 在最后，添加新参数 `;-m`，然后单击 `OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 在最后，添加新参数 `;-m`，然后单击 `OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
   
 6.  单击`OK`，右键单击服务器名称，并重新启动的消息，显示后，然后单击**重新启动**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641558"
 11. 上**启动参数**选项卡上，在**现有参数**框中，选择`-m`，然后单击`Remove`。  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”**。 参数在非常小的窗口中打开。 删除`;-m`的前面，添加，然后单击`OK`。  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 删除`;-m`的前面，添加，然后单击`OK`。  
   
 12. 右键单击你的服务器名称，然后单击“重启”。  
   

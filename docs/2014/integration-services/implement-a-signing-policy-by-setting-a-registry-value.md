@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f0761f0485cea055e2317ca24b2931302431e5c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893196"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  

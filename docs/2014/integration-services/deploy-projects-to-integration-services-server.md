@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898875"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的当前版本中，您可以将您的项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 通过 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器，您可以使用环境来管理包、运行包以及为包配置运行时值。  

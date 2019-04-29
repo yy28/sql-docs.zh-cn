@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998311"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=] '*发布*  
+ [ @publication=] '*publication*'  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ @article=] '*一文*  
+ [ @article=] '*article*'  
  发布所订阅的项目。 *文章*是**sysname**，使用默认值为 all。 如果为 all，则订阅将添加到该发布的所有项目中。 Oracle 发布服务器只支持 all 或 NULL 值。  
   
- [ @subscriber=] '*订阅服务器*  
+ [ @subscriber=] '*subscriber*'  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
  [ @destination_db=] '*destination_db*'  
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：已不推荐使用此选项。 请改用仅支持复制。|  
+|none|订阅服务器已包含发布表的架构和初始数据。<br /><br /> 注意：此选项已弃用。 请改用仅支持复制。|  
 |automatic（默认值）|已发布表的架构和初始数据将首先传输到订阅服务器。|  
 |replication support only|如果需要，在项目的订阅服务器上自动生成支持更新订阅的自定义存储过程和触发器。 假定订阅服务器已拥有已发布表的架构和初始数据。 在配置对等事务复制拓扑时，确保该拓扑中所有节点上的数据都相同。 有关详细信息，请参阅 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
 |initialize with backup|从发布数据库的备份获取已发布表的架构和初始数据。 假定订阅服务器对发布数据库的备份具有访问权。 指定备份的备份和媒体类型的位置*backupdevicename*并*backupdevicetype*。 在使用此选项时，无需在配置期间停止对等事务复制拓扑。<br /><br /> *不支持非 SQL Server 发布的订阅。*|  
@@ -102,7 +102,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  始终会传输系统表和数据。  
   
- [ @status=] '*状态*  
+ [ @status=] '*status*'  
  订阅状态。 *状态*是**sysname**，默认值为 NULL。 当此参数未显式设置时，复制会自动将其设置为下列值之一。  
   
 |ReplTest1|Description|  
@@ -129,7 +129,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  请注意，在是否要订阅的发布允许 DTS 不允许的值同步事务和 queued 的 tran。  
   
- [ @loopback_detection=] '*loopback_detection*  
+ [ @loopback_detection=] '*loopback_detection*'  
  指定分发代理是否将从订阅服务器发起的事务发送回该订阅服务器。 *loopback_detection*是**nvarchar(5)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -185,7 +185,7 @@ sp_addsubscription [ @publication = ] 'publication'
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为 NULL。  
   
  [ @active_start_time_of_day=] *active_start_time_of_day*  
- 第一次安排分发代理的时间，格式为 HHMMSS。 *active_start_time_of_day*是**int**，默认值为 NULL。  
+ 第一次安排分发代理的时间，格式为 HHMMSS。 *active_start_time_of_day* 是 **int**，默认值为 NULL。  
   
  [ @active_end_time_of_day=] *active_end_time_of_day*  
  停止安排分发代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
@@ -199,7 +199,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  要执行的可选命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。  
   
- [ @reserved=] '*保留*  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -319,11 +319,11 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>请参阅  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [订阅发布](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

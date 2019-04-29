@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045989"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 错误表
   报表服务器基于在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中发生的错误在 SOAP 异常中生成错误和错误消息。 下表显示可通过报表服务器 Web 服务中的“SoapException”从方法访问的错误。 该表按引发异常的方法组织。  

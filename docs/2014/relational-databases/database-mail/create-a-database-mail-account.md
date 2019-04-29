@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917724"
 ---
 # <a name="create-a-database-mail-account"></a>创建数据库邮件帐户
   使用 **“数据库邮件配置向导”** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以创建数据库邮件帐户。  
   
--   **开始之前：**[系统必备组件](#Prerequisites)  
+-   **开始之前：**[先决条件](#Prerequisites)  
   
--   **创建数据库邮件帐户，使用：**[数据库邮件配置向导](#SSMSProcedure)， [Transact SQL](#TsqlProcedure)  
+-   **创建数据库邮件帐户，使用：**[数据库邮件配置向导](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 -   **跟进：**[若要配置数据库邮件的后续步骤](#FollowUp)  
   

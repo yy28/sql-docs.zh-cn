@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924906"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>删除订阅视图 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要某订阅视图时，可以删除它。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中删除订阅视图后，将从 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中删除此视图。  

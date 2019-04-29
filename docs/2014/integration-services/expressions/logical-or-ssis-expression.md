@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4be7f70d568fd705847d3529fadd28181a71352
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897593"
 ---
 # <a name="-logical-or-ssis-expression"></a>||（逻辑或）（SSIS 表达式）
   执行“逻辑或”运算。 如果条件之一或两个条件都为 TRUE，则表达式计算结果为 TRUE。  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f85a8baf6eb40ad6ed268db0eae4b1060469d2f4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925616"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合权限（主数据服务）
   集合权限应用到实体的所有集合。 不能将权限授予特定集合，权限应用到所有集合。  

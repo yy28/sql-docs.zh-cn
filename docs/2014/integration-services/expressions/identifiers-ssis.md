@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898855"
 ---
 # <a name="identifiers-ssis"></a>标识符 (SSIS)
   在表达式中，标识符是可供运算使用的列和变量。 表达式可以使用常规标识符和限定标识符。  

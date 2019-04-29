@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004701"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47735775"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**< 继承的列 >**||继承中的列[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**站点**|**nvarchar(128)**|站点的主机名，如 SITE = 选项中指定的那样。|  
+|**site**|**nvarchar(128)**|站点的主机名，如 SITE = 选项中指定的那样。|  
 |**url_path**|**nvarchar(4000)**|此 HTTP 端点 URL 的仅路径部分，如 PATH= 选项中指定的那样。|  
 |**is_clear_port_enabled**|**bit**|1 = 使用 PORT = CLEAR 选项启用清除端口。|  
 |**clear_port**|**int**|在 CLEAR PORT = 选项中指定的端口号。<br /><br /> NULL = 未指定。|  
@@ -51,7 +51,7 @@ ms.locfileid: "47735775"
 |**default_logon_domain**|**nvarchar(128)**|启用 BASIC 身份验证时的默认登录域。 DEFAULT LOGON DOMAIN 选项的值。<br /><br /> 如果未指定该选项值或 BASIC 身份验证未启用，则为 NULL。|  
 |**is_compression_enabled**|**bit**|1 = 设置了 COMPRESSION = ENABLED 选项。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

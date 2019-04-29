@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900219"
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -129,11 +129,11 @@ ms.locfileid: "58386545"
   
 ## <a name="related-content"></a>相关内容  
   
--   MSDN 库中的视频[操作说明：在完全缓存模式下实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)，msdn.microsoft.com 上  
+-   MSDN 库中的视频[操作说明：在完全缓存模式下实现查找转换](https://go.microsoft.com/fwlink/?LinkId=131031)  
   
 -   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
--   博客文章[查找模式：不区分大小写](https://go.microsoft.com/fwlink/?LinkId=157782)，blogs.msdn.com 上的  
+-   blogs.msdn.com 上的博客文章：[查找模式：不区分大小写](https://go.microsoft.com/fwlink/?LinkId=157782)  
   
 -   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   

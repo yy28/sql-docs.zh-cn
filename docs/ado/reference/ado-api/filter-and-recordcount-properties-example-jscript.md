@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028085"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 和 RecordCount 属性示例 (JScript)
 此示例打开**记录集**上的公司的 Northwind 数据库，然后使用[筛选器](../../../ado/reference/ado-api/filter-property.md)以限制可见的记录为其中的公司名称字段以字母开头的属性D.剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**FilterJS.asp**。  

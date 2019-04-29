@@ -1,5 +1,5 @@
 ---
-title: 示例：仅对某些文件组进行段落还原（简单恢复模式）| Microsoft Docs
+title: 例如：段落还原仅对某些文件组 （简单恢复模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cdc7e6c036a38ac40eb8c7bb2495b1ed5a3e6e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922025"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>示例：仅对某些文件组进行段落还原（简单恢复模式）
+# <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>例如：仅对某些文件组进行段落还原（简单恢复模式）
   本主题针对采用简单恢复模式并包含只读文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。  
   
  段落还原顺序在文件组级别分阶段还原和恢复数据库，并从主文件组和所有读写辅助文件组开始还原和恢复。  

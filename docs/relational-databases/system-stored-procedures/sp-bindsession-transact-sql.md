@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62996608"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ sp_bindsession { 'bind_token' | NULL }
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *bind_token*   
- 标识事务的令牌最初通过使用**sp_getbindtoken**或开放式数据服务**srv_getbindtoken**函数。 *bind_token*是**varchar(255)**。  
+ **'** *bind_token* **'**  
+ 标识事务的令牌最初通过使用**sp_getbindtoken**或开放式数据服务**srv_getbindtoken**函数。 *bind_token*is **varchar(255)**.  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -60,7 +60,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  在会话中通过使用取消绑定**sp_bindsession**而无需指定*bind_token*或者通过将中的 NULL *bind_token*。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

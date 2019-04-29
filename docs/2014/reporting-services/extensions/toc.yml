@@ -22,9 +22,9 @@
     - name: 部署数据处理扩展插件
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: 如何向报表服务器部署数据处理扩展插件
+        - name: 如何：向报表服务器部署数据处理扩展插件
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: 如何向报表设计器部署数据处理扩展插件
+        - name: 如何：向报表设计器部署数据处理扩展插件
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: 调试数据处理扩展插件代码
       href: data-processing/debugging-data-processing-extension-code.md

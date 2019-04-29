@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：复制第 1 课包 |Microsoft Docs
+title: 第 1 步：复制第 1 课包 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891670"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>步骤 1：复制第 1 课包
+# <a name="step-1-copying-the-lesson-1-package"></a>第 1 步：复制第 1 课包
   在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  
   
 ### <a name="to-create-the-lesson-2-package"></a>创建 Lesson 2 包  

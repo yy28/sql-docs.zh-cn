@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020881"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>向图表添加空点（报表生成器和 SSRS）
   Null 值在图表中显示为空格或显示为序列中数据点间的空白。 空点是可在由 Null 值创建的空格中插入的数据点。  

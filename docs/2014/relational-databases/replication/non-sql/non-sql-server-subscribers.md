@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022250"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
@@ -69,7 +69,7 @@ ms.locfileid: "52763219"
   
 -   如果在发布中添加或删除项目，必须重新初始化对非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的订阅。  
   
--   支持的所有约束只有非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]订阅者：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
+-   所有非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器支持的约束都只有：NULL 和 NOT NULL。 主键约束按唯一索引复制。  
   
 -   不同的数据库处理 NULL 值的方式不同，这将影响空白值、空字符串和 NULL 的显示方式， 而显示方式又影响在定义了唯一约束的列中插入值的行为。 例如，Oracle 允许唯一列中有多个 NULL 值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅允许唯一列中存在一个 NULL 值。  
   

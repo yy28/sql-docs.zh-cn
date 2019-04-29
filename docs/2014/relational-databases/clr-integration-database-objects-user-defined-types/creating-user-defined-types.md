@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919615"
 ---
 # <a name="creating-a-user-defined-type"></a>Creating a User-Defined Type（创建用户定义类型）
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  

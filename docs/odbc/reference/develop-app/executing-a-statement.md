@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032814"
 ---
 # <a name="executing-a-statement"></a>执行语句
 有四种方法执行语句，具体取决于在编译 （准备） 数据库引擎和用户定义它们时：  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 03830b00df02332069383e496c0b22d198b95d7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013019"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47597019"
 |**total_virtual_address_space_kb**|**bigint**|指示虚拟地址空间的用户模式部分的总大小。 不可为 Null。|  
 |**virtual_address_space_reserved_kb**|**bigint**|指示进程保留的虚拟地址空间的总量。 不可为 Null。|  
 |**virtual_address_space_committed_kb**|**bigint**|指示已提交或已映射到物理页的已保留虚拟地址空间量。 不可为 Null。|  
-|**virtual_address_space_available_kb**|**bigint**|指示当前可用的虚拟地址空间量。 不可为 Null。<br /><br /> **注意：** 免费小于分配粒度可以存在的区域。 这些区域不可进行分配。|  
+|**virtual_address_space_available_kb**|**bigint**|指示当前可用的虚拟地址空间量。 不可为 Null。<br /><br /> **注意：** 小于分配粒度较小的可用区域可以存在。 这些区域不可进行分配。|  
 |**page_fault_count**|**bigint**|指示由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程引发的页错误数。 不可为 Null。|  
 |**memory_utilization_percentage**|**int**|指定工作集中的已提交内存所占的百分比。 不可为 Null。|  
 |**available_commit_limit_kb**|**bigint**|指示可供进程提交的内存量。 不可为 Null。|  
@@ -56,8 +56,8 @@ ms.locfileid: "47597019"
 |**process_virtual_memory_low**|**bit**|指示检测到虚拟内存不足的情况。 不可为 Null。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要对服务器拥有 VIEW SERVER STATE 权限。  
+## <a name="permissions"></a>权限  
+ 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有服务器上的 VIEW SERVER STATE 权限。  
   
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

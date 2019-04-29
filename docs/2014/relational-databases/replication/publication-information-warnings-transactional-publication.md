@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022001"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>发布信息，警告（事务发布，SQL Server 2005 及更高版本）
   **“警告”** 选项卡适用于运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
@@ -77,7 +77,7 @@ ms.locfileid: "54132697"
   
 ## <a name="see-also"></a>请参阅  
  [启动复制监视器](monitor/start-the-replication-monitor.md)   
- [查看信息和执行其任务使用复制监视器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)   
  [监视复制](monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027958"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法示例 (VC++)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的从的行数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后使用生成的数据填充数组。 **GetRows**方法将返回所需的行数小于两种情况下： 任一 if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者，如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**仅当第二种情况发生。 若要运行此过程需要 GetRowsOK 函数。  

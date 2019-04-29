@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893378"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  

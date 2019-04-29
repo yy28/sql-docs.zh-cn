@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032829"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>映射替换函数以实现应用程序后向兼容性
 ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序管理器对 ODBC 2 起作用。*x*驱动程序，只要使用的任何新功能。 复制功能和行为的更改，但是，影响的方式，ODBC 3。*x*应用程序适用于 ODBC 2。*x*驱动程序。 当使用 ODBC 2。*x*驱动程序，驱动程序管理器将映射以下 ODBC 3。*x*函数，它已替换为一个或多个 ODBC 2。*x*函数，到相应的 ODBC 2。*x*函数。  
@@ -452,11 +452,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |缓冲区|ReplTest1|  
 |------------|-----------|  
 |ColumnName|""（空字符串）|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序，可以对以下调用**SQLGetData**检索书签：  

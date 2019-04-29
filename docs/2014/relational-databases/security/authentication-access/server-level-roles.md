@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011927"
 ---
 # <a name="server-level-roles"></a>服务器级别角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供服务器级角色以帮助你管理服务器上的权限。 这些角色是可组合其他主体的安全主体。 服务器级角色的权限作用域为服务器范围。 （“角色”类似于 Windows 操作系统中的“组”。）  
@@ -57,7 +57,7 @@ ms.locfileid: "58531849"
  每个固定服务器角色都被分配了特定的权限。 有关分配给服务器角色的权限的图表，请参阅 [数据库引擎固定服务器和固定数据库角色](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 权限与 `sysadmin` 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER` 不表示 `sysadmin` 固定服务器角色的成员身份。）但是，有时可在角色和相等的权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关列表的 171 个系统存储过程的要求`sysadmin`成员身份，请参阅 Andreas Wolter 的以下博文[CONTROL SERVER 与 sysadmin/sa： 权限、 系统过程、 DBCC、 自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER` 权限与 `sysadmin` 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER` 并不意味着中的成员身份`sysadmin`固定的服务器角色。)但是，有时可在角色和相等的权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关列表的 171 个系统存储过程的要求`sysadmin`成员身份，请参阅 Andreas Wolter 的以下博文[CONTROL SERVER 与 sysadmin/sa： 权限、 系统过程、 DBCC、 自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>服务器级权限  
  只能向用户定义的服务器角色中添加服务器级权限。 若要列出服务器级权限，请执行下面的语句。 服务器级权限如下：  

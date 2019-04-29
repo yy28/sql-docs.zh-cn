@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bc1a379d2e171855f616482d4bb3029c6708f800
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924177"
 ---
 # <a name="import-statuses-master-data-services"></a>导入状态 (Master Data Services)
   在 **“集成管理”** 功能区域中的 **“临时批处理”** 页上，以下状态可能会出现。  

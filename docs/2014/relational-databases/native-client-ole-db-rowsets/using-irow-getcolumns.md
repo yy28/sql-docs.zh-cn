@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b26d13fd5e1158c93118de3efb495469ff0d8f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938625"
 ---
 # <a name="using-irowgetcolumns"></a>使用 IRow::GetColumns
   IRow 实现允许对列进行按顺序的只进访问。 可以一次调用 IRow::GetColumns 以访问行中的所有列，也可以多次调用 IRow::GetColumns，每次访问行中的几个列。  

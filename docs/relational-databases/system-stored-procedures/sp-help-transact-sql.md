@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017754"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**长度**|**smallint**|数据类型的物理长度（以字节为单位）。|  
     |**Prec**|**int**|精度（数字总位数）。|  
     |**小数位数**|**int**|在小数点右侧的数字的位数。|  
-    |**可以为 Null**|**varchar(** 35 **)**|指示是否允许 NULL 值:“是”或“否”。|  
+    |**可以为 Null**|**varchar(** 35 **)**|指示是否允许 NULL 值：是或否。|  
     |**Default_name**|**nvarchar(** 128 **)**|绑定到此类型的默认值的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**Rule_name**|**nvarchar(** 128 **)**|绑定到此类型的规则的名称。<br /><br /> NULL = 未绑定默认值。|  
     |**排序规则**|**sysname**|数据类型的排序规则。 如果是非字符数据类型，则为 NULL。|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|列名称。|  
         |**类型**|**nvarchar(** 128 **)**|列数据类型。|  
-        |**计算**|**varchar(** 35 **)**|指示是否计算列中的值：“是”或“否”。|  
+        |**计算**|**varchar(** 35 **)**|指示是否计算列中的值：是或否。|  
         |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或者**xml**)，将的值显示为-1。|  
         |**Prec**|**char(** 5 **)**|列精度。|  
         |**小数位数**|**char(** 5 **)**|列小数位数。|  
-        |**可以为 Null**|**varchar(** 35 **)**|指示是否允许列中的 NULL 值:“是”或“否”。|  
+        |**可以为 Null**|**varchar(** 35 **)**|指示列中是否允许 NULL 值：是或否。|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|剪裁尾随空格。 返回 Yes 或 No。|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|仅为保持向后兼容。|  
         |**排序规则**|**sysname**|列的排序规则。 对于非字符数据类性为 NULL。|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名|数据类型|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的 FileGroup：主级、次级或事务日志。|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|数据所在的文件组：主要副本，辅助数据库或事务日志。|  
   
     -   针对索引返回的其他结果集：  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|约束的类型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|约束的名称。|  
-        |**delete_action**|**nvarchar(** 9 **)**|指示 DELETE 操作是否是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**update_action**|**nvarchar(** 9 **)**|指示 UPDATE 操作是否是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
-        |**status_enabled**|**varchar(** 8 **)**|指示是否启用约束：Enabled、Disabled 或 N/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
+        |**delete_action**|**nvarchar(** 9 **)**|指示 DELETE 操作是：NO_ACTION、 CASCADE、 SET_NULL、 SET_DEFAULT 还是 n/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**update_action**|**nvarchar(** 9 **)**|指示 UPDATE 操作是：NO_ACTION、 CASCADE、 SET_NULL、 SET_DEFAULT 还是 n/A。<br /><br /> 仅适用于 FOREIGN KEY 约束。|  
+        |**status_enabled**|**varchar(** 8 **)**|指示是否启用约束：Enabled、 Disabled 或 n/A。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
         |**status_for_replication**|**varchar(** 19 **)**|指示约束是否用于复制。<br /><br /> 仅适用于 CHECK 和 FOREIGN KEY 约束。|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|构成约束的列的名称。对于默认值和规则而言，则为定义默认值或规则的文本。|  
   

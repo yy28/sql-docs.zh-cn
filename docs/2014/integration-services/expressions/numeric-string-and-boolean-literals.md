@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897461"
 ---
 # <a name="literals-ssis"></a>文字 (SSIS)
   表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  

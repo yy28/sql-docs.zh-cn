@@ -24,13 +24,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013482"
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact SQL)
+# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   包含与 PolyBase 数据管理一起使用的节点的信息。 它列出了每个节点的一行。  
@@ -41,7 +41,7 @@ ms.locfileid: "52416848"
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|无论是什么类型的向外缩放群集中是唯一的。|  
 |type|**nvarchar(32)**|节点的类型。|计算、 头|  
-|NAME|**nvarchar(32)**|节点的逻辑名称。|适当的长度的任何字符串。|  
+|name|**nvarchar(32)**|节点的逻辑名称。|适当的长度的任何字符串。|  
 |address|**nvarchar(32)**|此节点的 P 地址。|IP 地址范围|  
   
 ## <a name="see-also"></a>请参阅  

@@ -1,5 +1,5 @@
 ---
-title: 更改数据源视图 (Analysis Services) 中的属性 |Microsoft 文档
+title: 在数据源视图 (Analysis Services) 中更改属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988092"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34023274"
 |--------------|-----------------|  
 |数据源|指定要查看其属性的数据源视图中的数据源|  
 |Description|指定数据源视图的说明|  
-|名称|指定在解决方案资源管理器或 Analysis Services 数据库中显示的数据源视图的名称。 可以在此或在解决方案资源管理器中更改数据源视图的名称。|  
+|“属性”|指定在解决方案资源管理器或 Analysis Services 数据库中显示的数据源视图的名称。 可以在此或在解决方案资源管理器中更改数据源视图的名称。|  
 |NameMatchingCriteria|数据源的名称匹配条件。 如果数据源视图向导检测到主键-外键关系，则默认值为（无）。 无论数据源视图向导是否设置此属性，都可以在此指定一个值。 如果数据库关系存在并指定了名称匹配条件，则可以使用这些关系和条件来推断现有表和新添加的表之间的关系。|  
 |RetrieveRelationships|指定是否从数据库中检索关系。 默认值为 True。|  
 |SchemaRestriction|指定对从数据源中检索的架构的限制（如果有）。 默认情况下，不存在架构限制。|  
@@ -54,7 +54,7 @@ ms.locfileid: "34023274"
 |DataSource|为对象指定数据源。 您无法编辑此属性。|  
 |Description|为表、视图或命名查询指定说明。 如果基础数据库表或视图具有存储为扩展属性的说明，则会显示此值。 您可以编辑此属性。|  
 |FriendlyName|为表或视图指定更便于用户理解或与主题区域更相关的名称。 默认情况下，表或视图的 **FriendlyName** 属性与表或视图的 **“名称”** 属性相同。 基于表或视图定义对象名时，OLAP 和数据挖掘对象会使用 **FriendlyName** 属性。 您可以编辑此属性。|  
-|名称|指定基础表或视图的名称，或者指定命名查询的名称。 基于命名查询定义对象名时，OLAP 和数据挖掘对象会使用 **“名称”** 属性。 只能针对命名查询编辑此属性。|  
+|“属性”|指定基础表或视图的名称，或者指定命名查询的名称。 基于命名查询定义对象名时，OLAP 和数据挖掘对象会使用 **“名称”** 属性。 只能针对命名查询编辑此属性。|  
 |QueryDefinition|指定命名查询定义。 此属性仅适用于命名查询，并且不可直接编辑。 若要编辑此属性，可以编辑命名查询本身。|  
 |架构|指定适用于表、视图或命名查询的数据库架构。 此属性不可编辑。|  
 |TableType|为表、视图或命名查询指定表的类型。 此属性不可编辑。|  
@@ -70,10 +70,10 @@ ms.locfileid: "34023274"
 |Description|指定列的说明。 如果基础数据库列具有存储为扩展属性的说明，则会显示此值。 您可以编辑此属性。|  
 |FriendlyName|为表或视图中的列指定更便于用户理解或与主题区域更相关的名称。 默认情况下，表或视图中列的 **FriendlyName** 属性与列的 **“名称”** 属性相同。 基于表或视图中的列定义属性时，OLAP 和数据挖掘对象会使用 **FriendlyName** 属性。 您可以编辑此属性。|  
 |长度|基于基础表或视图的列中的数据指定列的最大长度。|  
-|名称|指定基础列的名称，或者指定命名计算的名称。 基于命名计算定义属性时，OLAP 和数据挖掘对象会使用 **“名称”** 属性。 只能针对命名计算编辑此属性。|  
+|“属性”|指定基础列的名称，或者指定命名计算的名称。 基于命名计算定义属性时，OLAP 和数据挖掘对象会使用 **“名称”** 属性。 只能针对命名计算编辑此属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型中的数据源视图](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [使用数据源视图设计器 & #40; 中的关系图Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器中的关系图 (Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

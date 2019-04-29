@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011480"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
   当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  

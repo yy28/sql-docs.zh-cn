@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置日志记录 |Microsoft Docs
+title: 第 2 步：添加和配置日志记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892432"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>步骤 2：添加和配置日志记录
+# <a name="step-2-adding-and-configuring-logging"></a>第 2 步：添加和配置日志记录
   在本任务中，将为 Lesson 3.dtsx 包中的数据流启用日志记录。 然后，将配置一个文本文件日志提供程序，以记录 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 该文本文件日志提供程序可以创建便于查看并可轻松传输的日志。 由于便于使用，因此，这些日志文件在包的基本测试阶段非常有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的“日志事件”窗口中查看日志条目。  
   
 ### <a name="to-add-logging-to-the-package"></a>向包中添加日志记录  

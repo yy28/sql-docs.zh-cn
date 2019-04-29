@@ -1,5 +1,5 @@
 ---
-title: 步骤 1：复制部署捆绑 |Microsoft Docs
+title: 第 1 步：复制部署捆绑 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891680"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>步骤 1：复制部署捆绑
+# <a name="step-1-copying-the-deployment-bundle"></a>第 1 步：复制部署捆绑
   在此任务中，将部署捆绑复制到目标计算机。  
   
  将部署捆绑复制到目标计算机的最简单方法是，首先在目标计算机上创建公共共享，将一个驱动器映射到公共共享，再将部署捆绑复制到该共享。 如何您不知道如何创建和配置公共文件夹或映射驱动器，请参阅 Windows 文档。  

@@ -10,11 +10,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025811"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
   Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  

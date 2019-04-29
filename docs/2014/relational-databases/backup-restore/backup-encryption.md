@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922168"
 ---
 # <a name="backup-encryption"></a>备份加密
   本主题概述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的加密选项。 其中详细介绍备份期间加密的用法、优点和推荐做法。  
@@ -26,7 +26,7 @@ ms.locfileid: "48055827"
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
   
--   **加密算法：** 支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES  
+-   **加密算法：** 支持的加密算法包括：AES 128、 192 AES、 AES 256 和三重 DES  
   
 -   **加密程序：** 证书或非对称密钥  
   
@@ -37,9 +37,9 @@ ms.locfileid: "48055827"
   
  如果从经过 TDE 加密的数据库还原备份，则要还原到的实例上应有 TDE 证书。  
   
-##  <a name="Benefits"></a> 优点  
+##  <a name="Benefits"></a> 优势  
   
-1.  加密数据库备份有助于保护数据：SQL Server 提供在创建备份的同时加密备份数据的选项。  
+1.  加密数据库备份有助于保护数据：SQL Server 提供用于创建备份时加密备份数据的选项。  
   
 2.  加密还可用于使用 TDE 加密的数据库。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055827"
 ##  <a name="Prerequisites"></a> 先决条件  
  以下是有关加密备份的先决条件：  
   
-1.  **创建 master 数据库的数据库主密钥：** 数据库主密钥是一个对称密钥，用于保护数据库中证书和非对称密钥的私钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
+1.  **创建 master 数据库的数据库主密钥：** 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
   
 2.  创建用于备份加密的证书或非对称密钥。 有关创建证书的详细信息，请参阅 [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)。 有关创建非对称密钥的详细信息，请参阅[创建非对称密钥 (Transact-SQL)](/sql/t-sql/statements/create-asymmetric-key-transact-sql)。  
   

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47eec543c21e74565d750035d20fbcee9baa82e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877304"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理服务器管理多台服务器
   您可以通过指定中央管理服务器并创建服务器组来管理多台服务器。  

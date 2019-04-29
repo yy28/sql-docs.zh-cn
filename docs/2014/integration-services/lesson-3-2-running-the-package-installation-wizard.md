@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：运行包安装向导 |Microsoft Docs
+title: 第 2 步：运行包安装向导 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891575"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>步骤 2：运行包安装向导
+# <a name="step-2-running-the-package-installation-wizard"></a>第 2 步：运行包安装向导
   在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
   
  包安装向导将引导您完成安装和配置包的步骤。 将包安装到目标计算机（向其复制部署捆绑的计算机）上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 您还将创建文件夹 C:\DeploymentTutorialInstall，向导将在该文件夹中安装非包文件。  
@@ -81,11 +81,11 @@ ms.locfileid: "58385535"
   
      由于目标计算机上环境变量的值与开发计算机上环境变量的值不同，因此会在“包验证”页上出现多个警告。 您可能会看到下列四个警告：  
   
-    -   配置文件中："C:\DeploymentTutorial\DataTransferConfig.dtsConfig"无效。 请检查此配置文件名。  
+    -   配置文件：“C:\DeploymentTutorial\DataTransferConfig.dtsConfig”无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   
-    -   配置文件中："C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig 不是有效的。 请检查此配置文件名。  
+    -   配置文件：“C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig”无效。 请检查此配置文件名。  
   
     -   包中至少有一个配置条目无法加载。 请检查配置条目和以前的警告，查看配置失败的有关说明。  
   

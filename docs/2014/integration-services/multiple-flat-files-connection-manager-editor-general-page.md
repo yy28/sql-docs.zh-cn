@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890540"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>多平面文件连接管理器编辑器（“常规”页）
   可以使用 **“多平面文件连接管理器编辑器”** 对话框的 **“常规”** 页，选择一组具有相同数据格式的文件并指定其数据格式。 多平面文件连接使得数据包可以连接到具有相同格式的一组文本文件。  

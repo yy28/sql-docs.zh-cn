@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918273"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对表或索引启用压缩功能。  
@@ -142,7 +142,7 @@ ms.locfileid: "52542696"
   
                 -   如果选择 **“天”**，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 您还可以选择**第一个**，**第二个**，**第三个**，或者**第四个**，以及特定工作日 (例如：星期日或星期三） 前两个列表中。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”**，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”。 还可以从前两个列表中选择“第一周”、“第二周”、“第三周”或“第四周”以及特定工作日（例如：星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   

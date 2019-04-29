@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020858"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>添加和修改线条（报表生成器和 SSRS）
   如果希望图形元素分割报表的各部分，则可以在报表中添加线条。 可以通过编辑线条属性（如颜色或样式）自定义线条的外观。 例如，您可能希望将公司颜色合并到报表中。  

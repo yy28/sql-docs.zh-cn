@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752678"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lesson 5-2-定义事实关系
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

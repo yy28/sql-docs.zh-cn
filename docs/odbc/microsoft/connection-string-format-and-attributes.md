@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902815"
 ---
 # <a name="connection-string-format-and-attributes"></a>连接字符串格式和属性
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.locfileid: "52542782"
   
  连接字符串的属性如下所示：  
   
-|Attribute|Description|默认值|  
+|特性|Description|默认值|  
 |---------------|-----------------|-------------------|  
 |DSN|数据源名称中的驱动程序选项卡列出**ODBC 数据源管理器**对话框。|""|  
 |PWD|你想要访问 Oracle 服务器的密码。 此驱动程序支持 Oracle 置于密码的限制。|""|  

@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011531"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用于连接器[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Azure 密钥保管库启用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加密，以将 Azure 密钥保管库服务用作[可扩展密钥管理&#40;EKM&#41; ](extensible-key-management-ekm.md)提供程序以保护其加密密钥。  
@@ -30,7 +30,7 @@ ms.locfileid: "59242197"
   
 -   [使用 EKM](#Uses)  
   
--   [步骤 1:设置密钥保管库用于 SQL Server](#Step1)  
+-   [步骤 1：设置密钥保管库用于 SQL Server](#Step1)  
   
 -   [步骤 2：安装 SQL Server Connector](#Step2)  
   

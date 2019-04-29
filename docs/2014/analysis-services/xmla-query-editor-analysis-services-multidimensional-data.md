@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755912"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 查询编辑器（Analysis Services - 多维数据）
   可以使用 XMLA 查询编辑器，设计和执行以多维表达式 (XMLA) 语言编写的语句和脚本。  
@@ -57,7 +57,7 @@ ms.locfileid: "48101537"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|键入 XMLA 查询编辑器要执行的 XMLA 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**： 将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除所选内容。<br />**复制**：将当前选定内容复制到剪贴板。<br />**粘贴**： 粘贴到当前所选内容剪贴板的内容。<br />**连接**：打开“连接到服务器”  对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br />**断开**： 断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br />**断开所有查询**： 断开所有打开的查询编辑器。<br />**更改连接**： 将打开**连接到服务器**对话框中，来为另一种连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br />**在对象资源管理器中打开服务器**： 将打开[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中当前查询编辑器连接到**对象资源管理器**。<br />**执行**： 执行所选的代码，或如果没有选择任何代码，在当前查询编辑器中执行的全部代码。<br />**属性窗口**： 显示**属性**中的窗口[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]当前查询窗口。<br />**查询选项**： 显示**查询选项**对话框。|  
+|**查询编辑器窗口**|键入 XMLA 查询编辑器要执行的 XMLA 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除该选定内容。<br />**复制**：将当前选定内容复制到剪贴板。<br />**粘贴**：将剪贴板的内容粘贴到当前选定区域。<br />**连接**：打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br />**断开连接**：断开当前查询编辑器与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接。<br />**断开所有查询**：断开所有打开的查询编辑器。<br />**更改连接**：打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br />**在对象资源管理器中打开服务器**：在“对象资源管理器”中打开当前查询编辑器连接到的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。<br />**执行**：执行所选代码，如果没有选定任何代码，则执行当前查询编辑器中的全部代码。<br />**属性窗口**：在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示当前查询窗口的“属性”窗口。<br />**查询选项**：显示“查询选项”对话框。|  
 |**结果窗口**|以文本显示 XMLA 语句或脚本的结果。|  
 |**消息窗口**|显示如何执行 XMLA 语句或脚本的有关信息。 例如，此窗口可显示执行过程中遇到的所有错误，或执行完成后检索到的单元数。|  
   

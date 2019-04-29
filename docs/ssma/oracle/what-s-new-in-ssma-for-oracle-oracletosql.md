@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d28ddc0ca3338c9f3a5f8e9e912efa90f6cbcfa
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011871"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>什么是 SSMA for Oracle (OracleToSQL) 中的新增功能
 本文列出了每个版本中的 Oracle 更改 SQL Server Migration Assistant (SSMA)。

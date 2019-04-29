@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7ca120e4af3d004732d1e2217743f9ce3acff53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647310"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成一个可用来将报表服务器数据库升级为 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 架构的脚本。  

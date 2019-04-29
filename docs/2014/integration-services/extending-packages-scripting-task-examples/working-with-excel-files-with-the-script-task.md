@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894781"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
@@ -74,7 +74,7 @@ ms.locfileid: "58376086"
   
 5.  设置脚本组件的默认脚本语言，方法是使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
-##  <a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
+##  <a name="example1"></a>示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
@@ -144,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 示例 2 说明：检查 Excel 表是否存在  
+##  <a name="example2"></a>示例 2 说明：检查 Excel 表是否存在  
  本示例可确定 `ExcelTable` 变量中指定的 Excel 工作表或命名范围是否存在于 `ExcelFile` 变量中指定的 Excel 工作簿文件中，然后根据该结果设置 `ExcelTableExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  

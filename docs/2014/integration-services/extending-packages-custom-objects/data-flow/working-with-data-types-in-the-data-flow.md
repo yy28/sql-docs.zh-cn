@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898925"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>在数据流中使用数据类型
   在 Integration Services 中开发自定义数据流组件时，将数据复制到数据流缓冲区和从数据流缓冲区复制数据以及转换值的过程中，需要经常使用数据类型。 本主题中的信息有助于您选择正确的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，以及在使用这些数据类型时选择正确的方法。  

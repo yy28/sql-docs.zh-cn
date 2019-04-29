@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960167"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用为此存储过程中指定的登录名进行身份验证*登录名*并*密码*。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，此选项用于指定动态远程过程调用 (RPC)。|  
-|**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意：此帐户还必须存在于发布服务器中，并具有足够的权限。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  
+|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用为此存储过程中指定的登录名进行身份验证*登录名*并*密码*。<br /><br /> 注意：在以前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此选项用于指定动态远程过程调用 (RPC)。|  
+|**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意：此帐户还必须存在于发布服务器具有足够特权。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  
 |**2**|使用现有的、 用户定义链接的服务器登录名创建使用**sp_link_publication**。|  
   
 `[ @login = ] 'login'` 是的登录名。 login 的数据类型为 sysname，默认值为 NULL。 此参数必须是指定何时*security_mode*是**0**。  

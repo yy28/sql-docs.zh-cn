@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893592"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
   使用**选择数据源**页可指定要复制的数据源。  
@@ -67,7 +67,7 @@ ms.locfileid: "58381206"
  键入源数据库的名称。  
   
  **Integrated Security**  
- 若要使用 Windows 集成身份验证进行连接，请指定 `True`（建议）；若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 `False`。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值是 `False`。  
+ 若要使用 Windows 集成身份验证进行连接，请指定 `True`（建议）；若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 `False`。 如果指定 `False`，则必须输入用户 ID 和密码。 默认值为 `False`。  
   
  **用户 ID**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，指定数据库连接的用户名。  

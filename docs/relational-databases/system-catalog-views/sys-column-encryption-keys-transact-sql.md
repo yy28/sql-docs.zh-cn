@@ -22,13 +22,13 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 83dde1e60b9c9dd78a76c4bfa6afa86ac23f1bd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013706"
 ---
-# <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys (TRANSACT-SQL)
+# <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   返回有关与创建列加密密钥 (Cek) 的信息[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)语句。 每一行表示 CEK。  
@@ -40,7 +40,7 @@ ms.locfileid: "47756015"
 |**create_date**|**datetime**|CEK 的创建日期。|  
 |**modify_date**|**datetime**|CEK 的上次修改日期。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要**VIEW ANY COLUMN ENCRYPTION KEY**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918335"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
   管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  

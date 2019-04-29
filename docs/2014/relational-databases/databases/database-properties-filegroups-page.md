@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917103"
 ---
 # <a name="database-properties-filegroups-page"></a>数据库属性（“文件组”页）
   使用此页可以查看文件组，或为所选数据库添加新的文件组。 文件组类型分为行 文件组、FILESTREAM 数据和内存优化文件组。  

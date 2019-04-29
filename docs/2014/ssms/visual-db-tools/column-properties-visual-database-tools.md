@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990196"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
   有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  

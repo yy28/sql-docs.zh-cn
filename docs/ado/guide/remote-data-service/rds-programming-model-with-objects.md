@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931414"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 编程模型和对象
 RDS 的目标是获得访问权限并更新数据源通过 IIS 等中介。 编程模型指定来实现此目标所需的活动序列。 对象模型指定其方法和属性会影响编程模型的对象。  
@@ -45,7 +45,7 @@ RDS 的目标是获得访问权限并更新数据源通过 IIS 等中介。 编�
  [RDS 对象模型摘要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 方案](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

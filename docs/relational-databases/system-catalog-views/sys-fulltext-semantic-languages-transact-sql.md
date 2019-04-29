@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fb609936d7f86728fca53021f96afcbaed412c2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63006555"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47604208"
     
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**Description**|  
+|**列名**|**类型**|**说明**|  
 |lcid|ssNoversion|语言的 Microsoft Windows 区域设置标识符 (LCID)。|  
-|NAME|sysname|是中的别名值[sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值对应**lcid**，或是数值 LCID 的字符串表示形式。|  
+|name|sysname|是中的别名值[sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值对应**lcid**，或是数值 LCID 的字符串表示形式。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "47604208"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  
   
 ## <a name="examples"></a>示例  

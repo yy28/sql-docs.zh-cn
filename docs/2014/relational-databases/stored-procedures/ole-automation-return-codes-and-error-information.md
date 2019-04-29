@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011262"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE 自动化返回代码和错误信息
-  OLE 自动化系统存储过程返回`int`返回代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码为十六进制 0x800*nnnnn*，但是当作为`int`中的存储的过程返回代码的 HRESULT 值具有的形式为 214*nnnnnnn*。  
+  OLE 自动化系统存储过程返回一个 `int` 返回代码，该代码是基础 OLE 自动化操作返回的 HRESULT。 HRESULT 为 0 表示成功。 非零的 HRESULT 是 OLE 错误代码为十六进制 0x800*nnnnn*，但是当作为`int`中的存储的过程返回代码的 HRESULT 值具有的形式为 214*nnnnnnn*。  
   
  例如，传递一个无效的对象名 (SQLDMO。Xyzzy) 为 sp_OACreate 将使该过程返回`int`的 2147221005，为 0x800401f3 十六进制的 HRESULT。  
   

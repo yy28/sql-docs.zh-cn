@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931421"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 课：使用 Suppliers 知识库清理供应商数据
   通过使用在本课程中，清理 Excel 文件中的供应商数据**供应商**第一课中创建的知识库。 DQS 中的数据清理包括**计算机辅助过程**前者分析数据与知识库中知识的相符和一个**交互进程**，可用于查看和修改从在计算机辅助过程的结果。 数据清理功能可以识别数据源中不正确的数据，然后对这些数据进行更正或提出更正建议。 它还通过使用域值、同义词的前导值、域规则、基于字词的关系和参考数据来使客户数据标准化和更加丰富。 您可以通过交互方式批准或拒绝计算机辅助过程建议的更改。 请参阅[数据清理](https://msdn.microsoft.com/library/gg524800.aspx)的更多详细信息。  
   
  计算机辅助过程使用以下阈值，您可以使用 DQS 客户端主页上的“配置”选项来配置这些阈值。  
   
--   **建议的最低分数：** DQS 用于建议替换值的最低分数或置信度。  
+-   **建议的最低分数：** 最低分数或置信度级别由 DQS 用于建议替换值。  
   
--   **用于自动更正的最低分数：** DQS 用于自动更正值的最低分数或置信度。  
+-   **用于自动更正的最低分数：** 最低分数或置信度级别由 DQS 用于自动更正值。  
   
  请参阅[配置清理和匹配活动的阈值值](https://msdn.microsoft.com/library/hh510415.aspx)有关如何配置这些设置的详细信息。  
   

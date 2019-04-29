@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e69ccbba805040dbc88b04fc91378e1038c5fdb4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877898"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目标编辑器（“映射”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

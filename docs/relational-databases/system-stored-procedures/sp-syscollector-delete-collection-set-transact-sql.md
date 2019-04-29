@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004133"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  [ @collection_set_id = ] *collection_set_id*  
  收集组的唯一标识符。 *collection_set_id*是**int**并且必须具有一个值，如果*名称*为 NULL。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  是收集组的名称。 *名称*是**sysname**并且必须具有一个值，如果*collection_set_id*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +58,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
  不能删除系统定义的收集组。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab1a5e0e9838975b8c0e4912a8179784f488d43e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921093"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>将磁盘或磁带指定为备份目标 (SQL Server)
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将磁盘或磁带指定为备份目标。  
@@ -37,7 +37,7 @@ ms.locfileid: "48154748"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要将磁盘或磁带指定为备份目标，可使用：**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48154748"
   
 #### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>将磁盘或磁带指定为备份目标  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

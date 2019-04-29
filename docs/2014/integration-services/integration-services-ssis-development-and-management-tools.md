@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892412"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>ntegration Services (SSIS) 与 Studio 环境
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含两个与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]一起使用的 Studio：  

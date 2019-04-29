@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012058"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
   本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
@@ -184,14 +184,14 @@ ms.locfileid: "54134997"
      默认情况下，分离操作保留所有与数据库关联的全文目录。 若要删除全文目录，请清除 **“保留全文目录”** 复选框。 只有从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升级数据库时，才会显示此选项。  
   
      **“状态”**  
-     显示以下状态之一：**准备好**或**未就绪**。  
+     将显示以下状态之一：“就绪”或“未就绪”。  
   
      **Message**  
      **“消息”** 列可显示关于数据库的如下信息：  
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”**。  
   
-    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 _< number_of_active_connections>_**个活动连接**-例如：**1 个活动连接**。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   当数据库有一个或多个活动连接，**状态**是**未就绪**并**消息**列将显示 _< number_of_active_connections>_**个活动连接**-例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   

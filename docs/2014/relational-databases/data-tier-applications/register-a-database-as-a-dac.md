@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918059"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
   可以使用两种**注册数据层应用程序向导**或 Windows PowerShell 脚本可以生成描述现有数据库中的对象的数据层应用程序 (DAC) 定义并注册中的DAC定义`msdb`系统数据库 (**主**中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要升级 DAC，使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)， [PowerShell](#RegisterDACPowerShell)  
+-   **若要升级 DAC，请使用：**[注册数据层应用程序向导](#UsingRegisterDACWizard)、[PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>开始之前  
  注册过程将创建用于定义数据库中的对象的 DAC 定义。 DAC 定义与数据库的组合构成一个 DAC 实例。 如果在数据库引擎的托管实例上将数据库注册为 DAC，则在下次将实用工具收集组从该实例发送到实用工具控制点时，已注册的 DAC 将合并到 SQL Server 实用工具中。 然后，该 DAC 将出现 **中的** “实用工具资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **“已部署的数据层应用程序”** 节点下，并且在 **中的** 详细信息页中报告。  

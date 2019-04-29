@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001552"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @instance_name =] '*instance_name*  
+ [ @instance_name = ] '*instance_name*'  
  为实例名称。 *instance_name*是**sysname** ，默认值为本地实例，如果为 NULL。  
   
 > **注意：**_instance_name_必须是完全限定的实例名称，其中包含计算机名称和实例名称，格式*computerName* \\ *instanceName*。    

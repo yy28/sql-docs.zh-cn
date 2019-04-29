@@ -1,5 +1,5 @@
 ---
-title: 设置分区写回 |Microsoft 文档
+title: 设置分区写回 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 844aad81d49f16718cb795f443c3d8101e2ff771
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020095"
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34027014"
  可以将分区写回表中的数据转换为分区。 此过程使得写回表成为新分区的事实数据表。  
   
 > [!CAUTION]  
->  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅[创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
+>  不正确地使用分区可导致多维数据集数据不准确。 有关详细信息，请参阅 [创建和管理本地分区 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
   
  将写回数据表转换为分区还会对分区禁用写功能。 分区单元的所有无限制读/写策略和读/写权限都将禁用，而且最终用户将无法更改显示的多维数据集数据。 （被禁用无限制读/写策略或读/写权限的最终用户仍然能够浏览多维数据集。）读取权限和有条件读取权限不受影响。  
   
  若要将写回数据转换为分区，请使用“转换到分区”对话框，可以通过右键单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中可写入的分区的写回表来访问该对话框。 您将指定分区的名称，并指定是在以后为分区设计聚合，还是在创建分区时为其设计聚合。 若要在选择分区时创建聚合，则必须选择复制现有分区中的聚合设计。 这通常（但不必须）是当前的写回分区。 还可以选择在创建分区时对其进行处理。  
   
-## <a name="see-also"></a>另请参阅  
- [写入的分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+## <a name="see-also"></a>请参阅  
+ [可写入的分区](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [在 Excel 2010 中启用以单元级别写回到 OLAP 多维数据集](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [启用 Analysis Services 写回并使用它保护数据项](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   

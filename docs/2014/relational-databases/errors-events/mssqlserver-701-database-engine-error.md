@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913777"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
     
@@ -46,7 +46,7 @@ ms.locfileid: "48186807"
   
 1.  验证其他应用程序或服务是否占用此服务器上的内存。 重新配置不太重要的应用程序或服务，使其占用更少的内存。  
   
-2.  开始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager**、**SQL Server: Memory Manager** 的性能监视器计数器。  
+2.  开始收集性能监视器计数器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:缓冲区管理器**， **SQL Server:内存管理器**。  
   
 3.  检查以下 SQL Server 内存配置参数：  
   

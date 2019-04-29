@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956151"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>教程：使用基于策略的管理来评估最佳实践
   欢迎使用“使用基于策略的管理来评估最佳实践”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。 基于策略的管理是一个系统，用于定义可用于强制执行网站管理标准的策略。 基于策略的管理包括一组最佳实践策略，这些策略可用于分析某一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，以便确定该实例是否满足最佳实践指导原则和建议。  

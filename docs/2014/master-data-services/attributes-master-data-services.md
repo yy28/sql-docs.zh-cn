@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926308"
 ---
 # <a name="attributes-master-data-services"></a>属性 (Master Data Services)
   属性是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实体中包含的对象。 属性值描述实体的成员。 属性可用于描述叶成员、合并成员或集合。  
@@ -58,7 +58,7 @@ ms.locfileid: "52748059"
 -   如果包含浮点数，值可能无法“往返转换”。 如果某一运算将原始浮点数转换为其他形式，而相反运算将已转换形式转换回浮点数，并且最终生成的浮点数与原始浮点数相等，则值被认为是往返转换。 因为在转换过程中一个或多个最小有效位缺失或更改，所以该往返转换可能失败。  
   
 ## <a name="attribute-examples"></a>属性示例  
- 在以下示例中，该实体具有属性：名称、 代码、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
+ 在以下示例中，该实体具有以下属性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 这些属性描述成员。 每个成员由一行属性值表示。  
   
  ![自行车产品实体表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike Product Entity Table")  
   

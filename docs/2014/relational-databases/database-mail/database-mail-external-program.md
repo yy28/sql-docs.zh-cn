@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917625"
 ---
 # <a name="database-mail-external-program"></a>数据库邮件外部程序
   数据库邮件外部可执行程序是 **DatabaseMail.exe**，该程序位于 **安装的** MSSQL\Binn directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录中。 当有电子邮件要处理时，数据库邮件使用 Service Broker 激活来启动该外部程序。 数据库邮件启动该外部程序的一个实例。 该外部程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务帐户的安全上下文中运行。  

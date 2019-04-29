@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876860"
 ---
 # <a name="back-up-database-backup-options-page"></a>备份数据库（“备份选项”页）
   使用  **“备份数据库”** 对话框的 **“备份选项”** 页可以查看或修改数据库备份选项。  
@@ -45,7 +45,7 @@ ms.locfileid: "48060347"
   
  有关备份集的信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
- **Description**  
+ **说明**  
  输入备份集的说明。  
   
  **备份集过期时间**  

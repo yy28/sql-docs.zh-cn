@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960810"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
-  复制代理安全模式允许精细地控制在其下运行复制代理和建立连接的帐户：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
+  用复制代理安全模式可以对复制代理运行和建立连接所用的帐户进行精细粒度的控制：可以为每个代理指定不同的帐户。 有关如何指定帐户的详细信息，请参阅[管理复制中的登录名和密码](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定服务器角色的成员配置复制时，可以配置复制代理来模拟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理帐户。 不指定复制代理的登录名和密码即可完成此操作；但是不推荐这种方法。 作为最佳安全做法，建议以本主题后面的“代理所需权限”部分中介绍的最小权限来为每个代理指定一个帐户。  
   
  和所有可执行文件一样，复制代理在 Windows 帐户的上下文中运行。 它们使用此帐户来建立 Windows 集成安全性连接。 代理在哪个帐户之下运行取决于代理的启动方式：  
   
--   启动从代理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理作业，则默认的：当[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理作业用于启动复制代理、 代理配置复制时指定帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
+-   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理，默认值为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
   
--   从 MS-DOS 命令行中，启动代理，直接或通过脚本：在命令行运行代理的用户帐户的上下文中运行该代理。  
+-   从 MS-DOS 命令行或直接通过脚本启动代理：代理在命令行上运行代理的用户帐户的上下文中运行。  
   
--   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理：在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行该代理。  
+-   从使用复制管理对象 (RMO) 或 ActiveX 控件的应用程序启动代理：代理在调用 RMO 或 ActiveX 控件的应用程序的上下文中运行。  
   
     > [!NOTE]  
     >  不推荐使用 ActiveX 控件。  

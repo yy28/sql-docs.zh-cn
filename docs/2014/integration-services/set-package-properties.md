@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889210"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -118,7 +118,7 @@ ms.locfileid: "58393635"
 |属性|Description|  
 |--------------|-----------------|  
 |`Configurations`|包使用的配置集合。 单击浏览按钮 (…) 可以查看和配置包配置。|  
-|`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式。<br /><br /> 注意：您可以为对象模型包含的所有包属性，而不仅仅是“属性”窗口中列出的属性，创建属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式。|  
+|`Expressions`|单击浏览按钮 (…) 可以为包属性创建表达式。<br /><br /> 注意：您可以创建对象模型包含，而不仅仅是在属性窗口中列出的属性的所有包属性的属性表达式。<br /><br /> 有关详细信息，请参阅 [在包中使用属性表达式](expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要查看现有的属性表达式，请展开 `Expressions`。 单击表达式文本框中的浏览按钮 (…) 可以修改和计算表达式。|  
 |`ForceExecutionResult`|包的执行结果。 其值为：`None`、`Success`、`Failure` 和 `Completion`。 此属性的默认值为 `None`。 有关详细信息，请参阅 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |`LocaleId`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。|  
 |`LoggingMode`|指定包日志记录行为的值。 具体的值为 `Disabled`、`Enabled` 和 `UseParentSetting`。 此属性的默认值为 `UseParentSetting`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 。|  
@@ -139,7 +139,7 @@ ms.locfileid: "58393635"
   
 |属性|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` 的用户。<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的值`TransactionOption`属性是`Required`。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`Snapshot` 属性的 `IsolationLevel` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` 的用户。<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的值`TransactionOption`属性是`Required`。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`Snapshot`的值`IsolationLevel`属性是与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |`TransactionOption`|包的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值为 `Supported`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> 。|  
   
 ###  <a name="Version"></a> 版本  

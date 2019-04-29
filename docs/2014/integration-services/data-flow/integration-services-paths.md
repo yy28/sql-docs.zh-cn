@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901789"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
@@ -37,7 +37,7 @@ ms.locfileid: "58374715"
   
  元数据显示前一组件的输出中每一列的名称、数据类型、精度、小数位数、长度、代码页和源组件。 源组件是创建此列的数据流组件。 这可能是数据流中的第一个组件，也可能不是。 例如，Union All 和排序转换创建自己的列，并且是其输出列的源。 反之，复制列转换则可以不加更改地传递列，或者通过复制输入列来创建新列。 复制列转换仅是新列的源组件。  
   
- 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可在 **“数据流路径编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   

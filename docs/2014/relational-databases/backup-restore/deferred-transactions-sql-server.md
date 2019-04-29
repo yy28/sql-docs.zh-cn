@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876209"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业版中，如果在数据库启动过程中回滚（撤消）所需的数据处于脱机状态，则损坏的事务可能延迟。 “延迟的事务”  是指前滚阶段结束时未提交的事务或遇到错误而无法回滚的事务。 因为无法回滚事务，所以事务将延迟。  
@@ -84,7 +84,7 @@ ms.locfileid: "48074187"
   
          有关紧急模式的信息，请参阅 [Database States](../databases/database-states.md)。  
   
-    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库： [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)或 [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)。  
+    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库：[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)， [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)，或[DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)。  
   
          在遇到错误的页时，DBCC 将释放该页并修复所有相关错误。 此方法可以使数据库重新联机并处于物理上一致的状态。 但是，还可能会丢失其他数据；因此，应在不得已的情况下才使用此方法。  
   

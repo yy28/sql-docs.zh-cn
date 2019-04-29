@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925310"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 合并成员可以具有其自己的属性。 它们用于分组。 如以下示例中所示，合并成员可用于其下具有帐户的帐户组。  

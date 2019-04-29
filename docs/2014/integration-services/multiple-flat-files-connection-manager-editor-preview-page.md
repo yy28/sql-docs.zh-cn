@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890552"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多平面文件连接管理器编辑器（“预览”页）
   可以使用“多平面文件连接管理器编辑器”对话框的“预览”页，查看选择的第一个源文件在按定义的样式划分为多列后的显示情况。  

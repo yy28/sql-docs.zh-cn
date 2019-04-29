@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 177aec3306c0be861b2fdf09f5a0d6974d715d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031991"
 ---
 # <a name="select-object-types-object-explorer"></a>选择对象类型（对象资源管理器）
   使用此对话框可以指定“选择对象”对话框中所显示对象的类型。  

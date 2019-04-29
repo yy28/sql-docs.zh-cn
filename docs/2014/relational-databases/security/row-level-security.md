@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985765"
 ---
 # <a name="row-level-security"></a>行级安全性
   行级别安全性使客户可以基于执行查询的用户的特性（例如，组成员身份或执行上下文）来控制对数据库表进行的访问。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 中现在提供行级别安全性。 有关此功能的当前描述，请参阅当前文档中的 [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  

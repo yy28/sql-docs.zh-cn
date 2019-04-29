@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998006"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47629515"
   
  **线程池资源所有者：**  
   
--   线程池 id = 计划程序\<十六进制地址 >  
+-   threadpool id=scheduler\<hex-address>  
   
  **并行查询资源所有者：**  
   
--   exchangeEvent id = {端口 |管道}\<十六进制地址 > WaitType =\<exchange 等待类型 > nodeId =\<exchange 节点 id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange 等待类型：**  
   
@@ -79,17 +79,17 @@ ms.locfileid: "47629515"
   
  **锁资源所有者：**  
   
--   \<类型特定于说明 > id = 锁\<锁十六进制地址 > 模式 =\<模式 > associatedObjectId =\<关联 obj id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<类型特定于说明 > 可以是：**  
   
-    -   对于数据库： databaselock subresource =\<databaselock subresource > dbid =\<-i >  
+    -   For DATABASE: databaselock subresource=\<databaselock-subresource> dbid=\<db-id>  
   
     -   对于文件： filelock fileid =\<的文件 id > subresource =\<filelock subresource > dbid =\<-i >  
   
-    -   对于对象： objectlock lockPartition =\<锁分区 id > objid =\<obj id > subresource =\<objectlock subresource > dbid =\<-i >  
+    -   For OBJECT: objectlock lockPartition=\<lock-partition-id> objid=\<obj-id> subresource=\<objectlock-subresource> dbid=\<db-id>  
   
-    -   对于 PAGE: pagelock fileid =\<的文件 id > pageid =\<-i > dbid =\<-i > subresource =\<pagelock 子资源 >  
+    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
   
     -   对于密钥： keylock hobtid =\<hobt id > dbid =\<-i >  
   
@@ -111,11 +111,11 @@ ms.locfileid: "47629515"
   
  **外部资源所有者：**  
   
--   外部 ExternalResource =\<等待类型 >  
+-   External ExternalResource=\<wait-type>  
   
  **常规资源所有者：**  
   
--   TransactionMutex TransactionInfo 工作区 =\<工作区 id >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -129,13 +129,13 @@ ms.locfileid: "47629515"
   
  **闩锁资源所有者：**  
   
--   \<-i >:\<的文件 id >:\<页面中文件 >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID &GT;  
+-   \<GUID>  
   
--   \<闩锁类 > (\<闩锁-a d d >)  
+-   \<latch-class> (\<latch-address>)  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

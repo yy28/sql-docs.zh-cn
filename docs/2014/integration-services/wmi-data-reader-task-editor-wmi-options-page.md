@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e4e798100c4cf972949dc91dd7aeb5648a28275
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877544"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 数据读取器任务编辑器（“WMI 选项”页）
   可以使用“WMI 数据读取器任务编辑器”对话框的“WMI 选项”页，指定 Windows Management Instrumentation 查询语言 (WQL) 查询的源和查询结果的目标。  
@@ -31,7 +31,7 @@ ms.locfileid: "58376775"
  **WMIConnectionName**  
  从列表中选择 WMI 连接管理器，或单击“\<新建 WMI 连接…>”，新建一个连接管理器。  
   
- **相关主题：**[WMI 连接管理器](connection-manager/wmi-connection-manager.md)， [WMI 连接管理器编辑器](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **相关主题：**[WMI 连接管理器](connection-manager/wmi-connection-manager.md)、[WMI 连接管理器编辑器](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  选择任务运行的 WQL 查询的源类型。 此属性具有下表所列的选项。  
@@ -66,13 +66,13 @@ ms.locfileid: "58376775"
  **WQLQuerySource**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 变量  
  **WQLQuerySource**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="destinationtype-dynamic-options"></a>DestinationType 动态选项  
   
@@ -80,13 +80,13 @@ ms.locfileid: "58376775"
  **目标**  
  在列表中选择一个文件连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = 变量  
  **目标**  
  从列表中选择变量，或单击“\<新建变量...>”以创建新的变量。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9c47ca70b7637096a18332866ba42561e2dd729
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727993"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查询编辑器（Analysis Services - 多维数据）
   可以使用 MDX 查询编辑器，设计和执行使用多维表达式 (MDX) 语言编写的语句和脚本。  
@@ -57,7 +57,7 @@ ms.locfileid: "48069667"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**： 将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除所选内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**： 粘贴到当前所选内容剪贴板的内容。<br /><br /> **连接**：打开“连接到服务器”  对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开**： 断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **断开所有查询**： 断开所有当前打开的查询编辑器。<br /><br /> **更改连接**： 将打开**连接到服务器**对话框中，来为另一种连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。<br /><br /> **在对象资源管理器中打开服务器**： 将打开[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中当前查询编辑器连接到**对象资源管理器**。<br /><br /> **执行**： 执行所选的代码，或如果没有选择任何代码，在当前查询编辑器中执行的全部代码。<br /><br /> **属性窗口**： 显示**属性**中的窗口[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]当前查询窗口。<br /><br /> **查询选项**： 显示**查询选项**对话框。|  
+|**查询编辑器窗口**|键入要由 MDX 查询编辑器执行的 MDX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除该选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前选定区域。<br /><br /> **连接**：打开 **“连接到服务器”** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例之间的连接。<br /><br /> **断开所有查询**：断开当前打开的所有查询编辑器。<br /><br /> **更改连接**：打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在“对象资源管理器”中打开当前查询编辑器连接到的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。<br /><br /> **执行**：执行所选代码，如果没有选定任何代码，则执行当前查询编辑器中的全部代码。<br /><br /> **属性窗口**：在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示当前查询窗口的“属性”窗口。<br /><br /> **查询选项**：显示“查询选项”对话框。|  
 |**元数据窗口**|显示当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的元数据。|  
 |**Cube**|在当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中选择一个多维数据集，以显示与 **“元数据”** 选项卡中的多维数据集关联的元数据。|  
 |**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 右键单击该对象并选择“复制”，再右键单击查询窗格并选择“粘贴”。|  

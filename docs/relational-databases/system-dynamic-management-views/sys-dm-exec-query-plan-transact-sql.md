@@ -19,12 +19,12 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013277"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ sys.dm_exec_query_plan(plan_handle)
   
  当即席查询使用简单或强制参数化**query_plan**列将包含仅语句文本，而不是实际查询计划。 若要返回查询计划，请调用**sys.dm_exec_query_plan**准备参数化查询的计划句柄。 您可以确定查询是否已参数化通过引用**sql**的列[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)视图或文本列[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)动态管理视图。  
   
- 由于在允许的嵌套级别数的限制造成**xml**数据类型**sys.dm_exec_query_plan**不能返回达到或超过 128 级的嵌套元素的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更高版本**query_plan**列返回 NULL。 可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)动态管理函数以文本格式返回查询计划的输出。  
+> [!NOTE] 
+> 由于在允许的嵌套级别数的限制造成**xml**数据类型**sys.dm_exec_query_plan**不能返回达到或超过 128 级的嵌套元素的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更高版本**query_plan**列返回 NULL。   
+> 可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)动态管理函数以文本格式返回查询计划的输出。  
   
 ## <a name="permissions"></a>权限  
  若要执行**sys.dm_exec_query_plan**，用户必须是属于**sysadmin**固定服务器角色或具有`VIEW SERVER STATE`服务器上的权限。  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042213"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>使用 SQLDriverConnect 连接
 **SQLDriverConnect**用于连接到数据源使用的连接字符串。 **SQLDriverConnect**而不是使用**SQLConnect**原因如下：  

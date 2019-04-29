@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988643"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>配置和查看 SharePoint 和诊断日志记录
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52410414"
 #### <a name="entries-for-power-pivot-services"></a>PowerPivot 服务的条目  
  下表描述了 SharePoint 日志文件中最可能存在的针对 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务器操作的条目。  
   
-|处理|区域|类别|级别|消息|详细信息|  
+|处理|区域|Category|级别|消息|详细信息|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务|用法|“详细”|不存在当前请求统计信息，无信息可供记录。|按照预定义的间隔，服务将查询响应统计信息作为使用情况事件向使用情况数据收集系统报告。 此消息指示没有查询统计信息可供报告。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务|Web 前端|“详细”|开始定位数据源的应用程序服务器 =\<*路径*>|收到连接请求时， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  

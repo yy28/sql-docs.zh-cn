@@ -1,5 +1,5 @@
 ---
-title: 步骤 6： 将更改发送到服务器 （RDS 教程） |Microsoft Docs
+title: 步骤 6：将更改发送到服务器 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955714"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步骤 6：将更改发送到服务器（RDS 教程）
 如果**记录集**编辑对象，可以将任何更改 （即，对行进行添加、 更改或删除） 发回服务器。  

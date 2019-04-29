@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002599"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>连接（用于 Excel 的 MDS 外接程序）
 
@@ -30,7 +30,7 @@ ms.locfileid: "51696255"
   
  您可以创建多个连接。 最近访问过的连接被视为默认连接。  
   
- 可以同时连接多个用户。 但是，当多个用户试图发布相同的数据时，可能会发生冲突。 有关详细信息，请参阅[概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+ 可以同时连接多个用户。 但是，当多个用户试图发布相同的数据时，可能会发生冲突。 有关详细信息，请参阅[概述：从 Excel 导入数据 (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>自动连接和加载常用数据  
  如果总要连接同一服务器并加载相同的一组数据，您可以创建快捷查询文件，其中包含连接和筛选器信息。 有关查询文件的详细信息，请参阅 [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "51696255"
   
 ## <a name="related-content"></a>相关内容  
   
--   [概述：将数据导出到 Excel（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概述：将数据导出到 Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [快捷查询文件（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   

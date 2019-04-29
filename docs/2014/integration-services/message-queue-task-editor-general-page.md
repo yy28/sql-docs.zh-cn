@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890413"
 ---
 # <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
@@ -43,7 +43,7 @@ ms.locfileid: "58375855"
  **MSMQConnection**  
  选择现有 MSMQ 连接管理器，或单击“\<新建连接...>”以创建新的连接管理器。  
   
- **相关主题**：[MSMQ 连接管理器](connection-manager/msmq-connection-manager.md)， [MSMQ 连接管理器编辑器](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **相关主题**：[MSMQ 连接管理器](connection-manager/msmq-connection-manager.md)、[MSMQ 连接管理器编辑器](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
  指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  

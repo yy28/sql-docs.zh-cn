@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013353"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041627"
   
  在模板中指定 XPath 查询时，请注意以下行为：  
   
--   XPath 可以包含在 XML 中具有特殊含义的字符，如 < 或 &（模板为 XML 文档）。 必须使用 XML & 编码对这些字符进行转义，或在 URL 中指定 XPath。  
+-   XPath 可以包含 < 或 & XML 中具有特殊含义的 （和模板是一个 XML 文档）。 您必须使用 XML 这些字符进行转义 （& a) 的编码，或在 URL 中指定 XPath。  
   
 ## <a name="see-also"></a>请参阅  
  [在 SQLXML 4.0 中使用 XPath 查询](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

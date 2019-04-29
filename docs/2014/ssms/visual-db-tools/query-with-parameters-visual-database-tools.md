@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010719"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用参数查询 (Visual Database Tools)
   在许多情况下，创建一个每次采用不同的输入就可在应用程序中多次重复使用的查询非常有用。 在本节中，您将了解有关如何创建这些通用参数查询的信息。  

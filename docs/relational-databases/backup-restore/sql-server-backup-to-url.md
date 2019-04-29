@@ -161,7 +161,7 @@ ms.locfileid: "59582830"
 |BUFFERCOUNT|是|||  
 |MAXTRANSFERSIZE|是|不支持用于页 blob。 支持用于块 blob。| 默认值为 1048576。 该值的最大范围为 4 MB，以 65536 字节为增量递增。</br> 建议使用 MAXTRANSFERSIZE=4194304 以优化块 blob 中允许的 50,000 个块的使用。 |  
 |NO_CHECKSUM &#124; CHECKSUM|是|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|是|||  
+|STOP_ON_ERROR &#124 CONTINUE_AFTER_ERROR|是|||  
 |STATS|是|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
@@ -194,7 +194,7 @@ ms.locfileid: "59582830"
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
 |CHECKSUM &#124; NO_CHECKSUM|是|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|是|||  
+|STOP_ON_ERROR &#124 CONTINUE_AFTER_ERROR|是|||  
 |FILESTREAM|是|对快照备份不支持||  
 |STATS|是|||  
 |REWIND &#124; NOREWIND|−|||  

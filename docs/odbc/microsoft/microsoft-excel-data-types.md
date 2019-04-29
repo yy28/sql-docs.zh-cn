@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026778"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 数据类型
 下表显示了如何将 Microsoft Excel 驱动程序数据类型映射到 ODBC SQL 数据类型。 Microsoft Excel 驱动程序将这些数据类型分配给基于列中的数据在 Microsoft Excel 表中的列。  

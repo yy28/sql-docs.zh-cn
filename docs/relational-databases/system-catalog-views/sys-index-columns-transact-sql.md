@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004389"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47655815"
 |**index_id**|**int**|定义了列的索引的 ID。|  
 |**index_column_id**|**int**|索引列的 ID。 **index_column_id**仅中是唯一**index_id**。|  
 |**column_id**|**int**|中列的 ID **object_id**。<br /><br /> 0 = 非聚集索引中的行标识符 (RID)。<br /><br /> **column_id**仅中是唯一**object_id**。|  
-|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意： XML 索引或空间索引不能为键的基础列不是可比较，因为这意味着它们的值不能进行排序。|  
+|**key_ordinal**|**tinyint**|键列集内的序数（从 1 开始）。<br /><br /> 0 = 不是键列，或者是 XML 索引、列存储索引或空间索引。<br /><br /> 注意：XML 索引或空间索引不能为键的基础列不是可比较，因为这意味着它们的值不能进行排序。|  
 |**partition_ordinal**|**tinyint**|分区列集内的序数（从 1 开始）。 聚集列存储索引可以具有最多 1 个分区列。<br /><br /> 0 = 非分区列。|  
 |**is_descending_key**|**bit**|1 = 索引键列采用降序排序。<br /><br /> 0 = 索引键列的排序方向为升序，或者列是列存储或哈希索引的一部分。|  
 |**is_included_column**|**bit**|1 = 列是使用 CREATE INDEX INCLUDE 子句添加到索引的非键列，或者列是列存储索引的一部分。<br /><br /> 0 = 列不是包含列。<br /><br /> 隐式添加，因为它们是聚集键的一部分的列不列在**sys.index_columns**。<br /><br /> 由于是分区列而隐式添加的列作为 0 返回。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  

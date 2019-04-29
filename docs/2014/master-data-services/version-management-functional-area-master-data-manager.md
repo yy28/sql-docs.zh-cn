@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ced43d5008531f540bd9985a817794baa88705fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922858"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能区域（主数据管理器）
   在“版本管理”功能区域中，管理员可以验证数据，查看和撤消事务，创建数据的受版本控制的副本，以及为订阅系统标记数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  

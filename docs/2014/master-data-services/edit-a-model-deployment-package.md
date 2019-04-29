@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f001d290237bfb111b321800d79ff3c42921e5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924499"
 ---
 # <a name="edit-a-model-deployment-package"></a>编辑模型部署包
   本主题介绍如何在 MDS 中部署模型的所选部分，而不是部署整个模型。 为此，您需使用模型包编辑器来编辑 MDS 模型包。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f1e7bb0a649cef66ccb0740af04753fce4009a79
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019250"
 ---
 # <a name="querying-a-tabular-model"></a>查询表格模型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ FROM [Model]
   
  对于示例模型“Adventure Works DW Tabular Denali CTP3”，您应该收到以下值来作为最终生成的表：  
   
-|Calendar Year|Product Category Name|Internet Total Sales|Reseller Total Sales|Total Sales|  
+|Calendar Year|Product Category Name|Internet Total Sales|Reseller Total Sales|总销售额|  
 |-------------------|---------------------------|--------------------------|--------------------------|-----------------|  
 |||$     29,358,677.22|$     80,450,596.98|$   109,809,274.20|  
 ||Accessories|$           700,759.96|$           571,297.93|$        1,272,057.89|  
@@ -103,7 +103,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-|@shouldalert|@shouldalert|Bikes|$  28,318,144.65|$  66,302,381.56|  
+|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|组件||$  11,799,076.66|  
   

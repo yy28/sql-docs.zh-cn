@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920659"
 ---
 # <a name="move-a-filestream-enabled-database"></a>移动启用了 FILESTREAM 的数据库
   本主题演示如何移动启用了 FILESTREAM 的数据库。  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020136"
 ---
 # <a name="batching-methods"></a>批处理方法
   通过在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中使用 SOAP 标头，您可以在单个操作中包含多个 Web 服务方法。 方法在单个数据库事务的作用域中按照调用它们的顺序运行。  

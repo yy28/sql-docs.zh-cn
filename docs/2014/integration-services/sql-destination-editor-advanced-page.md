@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 751ace509744cdfbaee7b6b4c262988a92652c88
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878024"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目标编辑器（“高级”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“高级”** 页指定大容量插入高级选项。  

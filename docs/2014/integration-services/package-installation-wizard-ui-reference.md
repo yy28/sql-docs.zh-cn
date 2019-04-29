@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890270"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  

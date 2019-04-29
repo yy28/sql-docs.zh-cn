@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921038"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 数据库的 **suspect_pages** 表中进行了标识。  
@@ -62,7 +62,7 @@ ms.locfileid: "58536389"
   
     -   事务日志  
   
-    -   分配页：全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
+    -   分配页：全局分配映射 (GAM) 页、 共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
   
     -   所有数据文件的页 0（文件引导页）  
   
@@ -133,7 +133,7 @@ ms.locfileid: "58536389"
     |Header|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
-    |**组件**|备份组件：“数据库”、“文件”或“\<空白>”（对于事务日志）。|  
+    |**组件**|备份的组件：“数据库”、“文件”或“\<空白>”（对于事务日志）。|  
     |**类型**|执行的备份类型：“完整”、“差异”或“事务日志”。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行备份操作的实例的名称。|  
     |**“数据库”**|备份操作中涉及的数据库的名称。|  

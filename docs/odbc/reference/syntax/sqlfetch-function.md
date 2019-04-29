@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982307"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函数
 **符合性**  
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |条件|第一行的新行集。|  
 |---------------|-----------------------------|  
 |在开始之前|1|  
-|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|后端|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|后端|  
 |后端|后端|  
   
  [1] 如果提取行集大小为发生更改，这是用于上次提取的行集大小。  
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|行已成功提取和上一次提取此结果集从之后未发生更改。 但是，有关行返回一条警告。|  
 |SQL_ROW_ERROR|提取行时出错。|  
 |SQL_ROW_UPDATED [1]，[2] 和 [3]|行成功读取，并且此结果集从上次提取后已更改。 如果此结果集从再次提取或刷新的行**SQLSetPos**，状态更改为行的新状态。|  
-|SQL_ROW_DELETED [3]|已删除行，因为它上次提取此结果集中。|  
-|SQL_ROW_ADDED [4]|通过插入行**SQLBulkOperations**。 如果此结果集从再次提取或刷新的行**SQLSetPos**，其状态是 SQL_ROW_SUCCESS。|  
+|SQL_ROW_DELETED[3]|已删除行，因为它上次提取此结果集中。|  
+|SQL_ROW_ADDED[4]|通过插入行**SQLBulkOperations**。 如果此结果集从再次提取或刷新的行**SQLSetPos**，其状态是 SQL_ROW_SUCCESS。|  
 |SQL_ROW_NOROW|行集重叠的结果集的末尾并不返回任何行时，对应于此元素的行状态数组。|  
   
  [1] 的由键集游标混合和动态游标，如果更新密钥的值时，数据行被视为已被删除，并添加一个新行。  
@@ -232,10 +232,10 @@ SQLRETURN SQLFetch(
   
 |描述符字段|Desc。|中的字段|通过设置|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|标头|SQL_ATTR_ROW_ARRAY_SIZE 语句属性|  
+|SQL_DESC_ARRAY_SIZE|ARD|标头|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|标头|SQL_ATTR_ROW_STATUS_PTR 语句属性|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|标头|SQL_ATTR_ROW_BIND_OFFSET_PTR 语句属性|  
-|SQL_DESC_BIND_TYPE|ARD|标头|SQL_ATTR_ROW_BIND_TYPE 语句属性|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|标头|SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute|  
+|SQL_DESC_BIND_TYPE|ARD|标头|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
 |SQL_DESC_COUNT|ARD|标头|*ColumnNumber*自变量的**SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|记录|*TargetValuePtr*自变量的**SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|记录|*StrLen_or_IndPtr*中的参数**SQLBindCol**|  

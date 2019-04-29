@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_3961 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 3961 (Database Engine error)
 ms.assetid: 3bbc6965-6445-400c-940a-2d85b037513f
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f12e70423905a78eddecb93a8b4623c96a6f0322
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914079"
 ---
 # <a name="mssqlserver3961"></a>MSSQLSERVER_3961
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48155457"
 |消息正文|数据库 '%.*ls' 中的快照隔离事务失败，因为自此事务启动后，该语句所访问的对象已由其他并发事务中的 DDL 语句修改。  这是不允许的，因为未对元数据进行版本控制。 如果与快照隔离混合，对元数据的并发更新可能导致不一致。|  
   
 ## <a name="explanation"></a>解释  
- 如果在快照隔离下查询元数据并且在快照隔离下存在用于更新正在访问的元数据的并发 DDL 语句，则将发生此错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行哪些 DDL 操作存在限制。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。 在快照隔离下，BEGIN TRANSACTION 语句之后不允许使用任何公共语言运行时 (CLR) DDL 语句或下列 DDL 语句：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。  
+如果在快照隔离下查询元数据并且在快照隔离下存在用于更新正在访问的元数据的并发 DDL 语句，则将发生此错误。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持元数据的版本控制。 因此，对于在快照隔离下运行的显式事务中可以执行哪些 DDL 操作存在限制。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。 以下 DDL 语句不允许 BEGIN TRANSACTION 语句之后的快照隔离下：ALTER TABLE、 CREATE INDEX、 CREATE XML INDEX、 ALTER INDEX、 DROP INDEX、 DBCC REINDEX、 ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或任何公共语言运行时 (CLR) DDL 语句。 在隐式事务中使用快照隔离时允许使用这些语句。 根据定义，隐式事务是单个语句，这使得它即便是使用 DDL 语句也可以强制应用快照隔离的语义。  
   
 ## <a name="user-action"></a>用户操作  
- 在查询元数据之前将快照隔离级别更改为诸如“已提交读”之类的非快照隔离级别。  
-  
+在查询元数据之前将快照隔离级别更改为诸如“已提交读”之类的非快照隔离级别。  
   

@@ -1,5 +1,5 @@
 ---
-title: 备份和还原：互操作性和共存 (SQL Server) | Microsoft Docs
+title: 备份和还原：互操作性和共存 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922432"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
-  本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
+  本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  
   
  **本主题内容：**  
   
@@ -132,6 +132,6 @@ ms.locfileid: "48155567"
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [活动辅助副本： 次要副本备份&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [活动次要副本：在辅助副本上备份&#40;AlwaysOn 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

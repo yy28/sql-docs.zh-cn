@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877413"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 源编辑器（“连接管理器”页）
   可以使用 **“XML 源编辑器”** 的 **“连接管理器”** 页指定 XML 文件和转换 XML 数据的 XSD。  
@@ -34,7 +34,7 @@ ms.locfileid: "58393885"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |XML 文件位置|从 XML 文件检索数据。|  
-|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**:[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
+|来自变量的 XML 文件|在变量中指定 XML 文件名。<br /><br /> **相关信息**：[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
 |来自变量的 XML 数据|从变量检索 XML 数据。|  
   
  **使用内联架构**  

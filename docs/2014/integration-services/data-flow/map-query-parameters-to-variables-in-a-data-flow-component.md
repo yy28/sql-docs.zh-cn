@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901557"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
   当配置 OLE DB 源以使用参数化查询时，可以将参数映射到变量。  

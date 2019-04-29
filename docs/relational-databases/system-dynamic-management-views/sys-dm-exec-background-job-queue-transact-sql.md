@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013584"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47815265"
 |**time_queued**|**datetime**|作业添加到队列中的时间。|  
 |**job_id**|**int**|作业标识符。|  
 |**database_id**|**int**|执行作业所在的数据库。|  
-|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
-|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参见“备注”部分。|  
+|**object_id1**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id2**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id3**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
+|**object_id4**|**int**|值取决于作业类型。 有关详细信息，请参阅“备注”部分。|  
 |**error_code**|**int**|如果因失败而重新插入作业，则为错误代码。 如果作业已挂起、未被选取或已完成，则为 NULL。|  
 |**request_type**|**smallint**|作业请求的类型。|  
 |**retry_count**|**smallint**|从队列中选取作业又因缺少资源或其他原因而将其重新插入队列的次数。|  
@@ -51,7 +51,7 @@ ms.locfileid: "47815265"
 |**session_id**|**smallint**|会话标识符。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -80,7 +80,7 @@ GO
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [统计信息](../../relational-databases/statistics/statistics.md)   
- [KILL STATS JOB &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+ [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013212"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "47718635"
 |“属性”|数据类型|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
-|**匹配项**|**bigint**|此计数器的优化事件的发生次数。|  
+|**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
 |**value**|**float**|每次发生事件的平均属性值。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -78,7 +78,7 @@ ms.locfileid: "47718635"
 |包含子查询|包含至少一个子查询的查询的优化数。|不适用|  
 |取消嵌套失败|仅供内部使用|仅供内部使用|  
 |表|总优化次数。|每个优化查询引用的平均表数。|  
-|提示|指定某些提示的次数。 计数的提示包括：JOIN、GROUP、UNION 和 FORCE ORDER 查询提示，FORCE PLAN 设置选项和联接提示。|不适用|  
+|提示|指定某些提示的次数。 计数的提示包括：加入、 组、 UNION 和 FORCE ORDER 查询提示、 FORCE PLAN 设置选项，以及联接提示。|不适用|  
 |排序提示|指定强制排序提示的次数。|不适用|  
 |联接提示|联接提示强制联接算法的次数。|不适用|  
 |视图引用|查询中引用视图的次数。|不适用|  
@@ -119,7 +119,7 @@ FROM sys.dm_exec_query_optimizer_info WHERE counter = 'elapsed time';
 ```  
   
 ### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D. 涉及子查询的优化部分  
- 已优化查询的哪一部分包含子查询？  
+ 已优化查询中有多少包含子查询？  
   
 ```  
 SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info WHERE counter = 'contains subquery') /  

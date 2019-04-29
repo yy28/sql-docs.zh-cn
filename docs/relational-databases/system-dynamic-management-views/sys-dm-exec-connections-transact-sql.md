@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013498"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47774225"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|标识与此连接关联的会话。 可以为 Null。|  
-|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （另一个会话可以重用 SOAP 连接。）可以为 Null。|  
+|most_recent_session_id|**int**|表示与此连接关联的最近请求的会话 ID。 （SOAP 连接可以重复使用由另一个会话。）可以为 Null。|  
 |connect_time|**datetime**|连接建立时的时间戳。 不可为 null。|  
 |net_transport|**nvarchar(40)**|始终返回**会话**时连接了多个活动结果集 (MARS) 启用。<br /><br /> **注意：** 描述此连接使用的物理传输协议。 不可为 null。|  
 |protocol_type|**nvarchar(40)**|指定负载的协议类型。 此参数当前可区分 TDS (TSQL) 和 SOAP。 可以为 Null。|  
@@ -53,7 +53,7 @@ ms.locfileid: "47774225"
 |last_read|**datetime**|此连接中上一次发生读操作的时间戳。 可以为 Null。|  
 |last_write|**datetime**|此连接中上一次发生写操作的时间戳。 不可为 Null。|  
 |net_packet_size|**int**|用于信息和数据传输的网络包的大小。 可以为 Null。|  
-|client_net_address|**varchar(48)**|与此服务器连接的客户端的主机地址。 可以为 Null。<br /><br /> 在 V12 之前[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，此列始终返回 NULL。|  
+|client_net_address|**varchar(48)**|与此服务器连接的客户端的主机地址。 可以为 Null。<br /><br /> 在版本早于 V12 的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |client_tcp_port|**int**|与此连接关联的客户端计算机上的端口号。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |local_net_address|**varchar(48)**|表示此连接的目标服务器的 IP 地址。 只对使用 TCP 传输提供程序的连接可用。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
 |local_tcp_port|**int**|如果此连接使用 TCP 传输，则表示此连接的目标服务器的 TCP 端口。 可以为 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此列始终返回 NULL。|  
@@ -62,7 +62,7 @@ ms.locfileid: "47774225"
 |most_recent_sql_handle|**varbinary(64)**|此连接上执行的上一个请求的 SQL 句柄。 most_recent_sql_handle 列始终与 most_recent_session_id 列同步。 可以为 Null。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

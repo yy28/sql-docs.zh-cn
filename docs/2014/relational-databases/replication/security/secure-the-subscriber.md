@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960807"
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
   合并代理和分发代理连接到订阅服务器。 这些连接可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录或 Windows 登录上下文环境中建立。 在遵循授予必要的最小权限并且保护所有密码的存储的原则下，为这些代理提供合适的登录名十分重要。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](replication-agent-security-model.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "54125420"
     > [!IMPORTANT]  
     >  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到订阅服务器，并指定一个不同帐户连接到每个订阅服务器。 如果使用请求订阅，复制始终将连接设置为使用 Windows 身份验证（对于请求订阅，复制无法访问需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的订阅服务器上的元数据）。 这种情况下，请在配置订阅后对连接进行更改，以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证。  
   
-     有关详细信息，请参阅如何：创建对事务发布 (SQL Server Management Studio) 的更新订阅并[查看和修改复制安全设置](view-and-modify-replication-security-settings.md)。  
+     有关详细信息，请参阅如何：创建事务发布的更新订阅 (SQL Server Management Studio) 和[查看和修改复制安全设置](view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [启用数据库引擎的加密连接（SQL Server 配置管理器）](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

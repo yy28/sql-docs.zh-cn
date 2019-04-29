@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0a6901811eafb82e7d3d313c18072fd2c8eeb63e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924837"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务可让您通过任何能访问 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站的计算机以编程方式使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在开始编写访问 Web 服务的代码之前，必须先生成代理类。 您用于执行 Web 服务操作的主代理类是 <xref:Microsoft.MasterDataServices.ServiceClient> 类，它可实现 <xref:Microsoft.MasterDataServices.IService> 接口。  
@@ -36,7 +36,7 @@ ms.locfileid: "53351783"
     “你已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  
- 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc。 有关详细信息，请参阅[如何添加、 更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果已安装了 Visual Studio 2010，则生成代理类的最简方法是将“服务引用”添加到项目中。 服务引用的地址为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序的 URL，后面追加 /service/service.svc。 例如： http://yourserver/MDS/service/service.svc。 有关详细信息，请参阅[如何：添加、 更新或删除服务引用](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 创建代理类  
  必须安装了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，才能在计算机上运行 Svcutil.exe。 如果使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，必须使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示符运行该命令。 有关详细信息，请参阅 [ServiceModel 元数据实用工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[根据服务元数据生成 WCF 客户端](https://go.microsoft.com/fwlink/?LinkId=164821)。  

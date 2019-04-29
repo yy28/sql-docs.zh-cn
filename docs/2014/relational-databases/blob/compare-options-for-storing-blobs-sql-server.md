@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877214"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
   讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
@@ -47,12 +47,12 @@ ms.locfileid: "53364701"
   
 |功能|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**用于管理任务的单个存储区**|否|用户帐户控制|**是**|  
-|**单组服务**：搜索、报告、查询等|否|用户帐户控制|**是**|  
-|**集成的安全模型**|否|用户帐户控制|**是**|  
-|**FILESTREAM 数据的就地更新**|用户帐户控制|否|**是**|  
+|**用于管理任务的单个存储区**|否|是|**是**|  
+|**单组服务**：搜索、报告、查询等|否|是|**是**|  
+|**集成的安全模型**|否|是|**是**|  
+|**FILESTREAM 数据的就地更新**|是|否|**是**|  
 |**在数据库中维护文件和目录层次结构**|否|否|**是**|  
-|**Windows 应用程序兼容性**|用户帐户控制|否|**是**|  
+|**Windows 应用程序兼容性**|是|否|**是**|  
 |**对文件属性的关系访问**|否|否|**是**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911658"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 属性（SqlServiceAdvancedProperty 类）
   获取或设置属性索引，以指定高级属性在属于所引用服务的高级属性数组中的位置。  

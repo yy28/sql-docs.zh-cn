@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a9fca0d602f54d6bab7f21c57838a50212dfd5a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878216"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
   可以使用 **“SMO 连接管理器编辑器”** 配置各种传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的任务使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 连接。  

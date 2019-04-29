@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026600"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>块游标、可滚动游标和后向兼容性
 这两者的存在**SQLFetchScroll**并**SQLExtendedFetch**表示首先清除拆分 ODBC 之间应用程序编程接口 (API)，这是组的函数中服务提供程序接口 (SPI)，这是组的函数和应用程序调用，该驱动程序实现。 此拆分是必需的以便 ODBC 3。*x*，使用**SQLFetchScroll**，与标准 bealigned，也是与 ODBC 2 兼容。*x*，使用该**SQLExtendedFetch**。  

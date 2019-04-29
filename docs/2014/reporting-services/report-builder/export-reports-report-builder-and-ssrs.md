@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987894"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
   运行报表后，可以将其导出为其他格式（如 Excel 或 PDF），也可以通过生成 Atom 服务文档，列出可从报表获得的与 Atom 兼容的数据馈送来导出报表。  
