@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156267"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX 数据对象 (ADO)
 
-在 c + + 程序中使用 ADO 连接到 SQL Server。 当然，它也适用于连接到在云中的 Azure SQL 数据库。
+ADO 中使用C++程序连接到 SQL Server。 当然，它也适用于连接到在云中的 Azure SQL 数据库。
 
 这篇文章中的每个部分介绍了 ADO 的组件。
 
@@ -34,7 +34,7 @@ ms.locfileid: "51605167"
  Microsoft ActiveX 数据对象 (ADO) 启用客户端应用程序访问和处理从各种源通过 OLE DB 访问接口的数据。 它的主要优点是易于使用、 高速度、 低内存开销和小磁盘空间占用量。 ADO 支持构建客户端/服务器和基于 Web 的应用程序的主要功能。  
   
 ## <a name="ado-md"></a>ADO MD  
- Microsoft ActiveX 数据对象 （多维） (ADO MD) 可轻松访问多维数据从 Microsoft Visual Basic 和 Microsoft Visual c + + 等语言。 ADO MD 扩展了 Microsoft ActiveX 数据对象 (ADO) 以包括特定于多维数据，例如 CubeDef 和单元集对象的对象。 使用 ADO MD 可以浏览多维架构、 查询多维数据集，并检索结果。  
+ Microsoft ActiveX 数据对象 （多维） (ADO MD) 可轻松访问多维数据从 Microsoft Visual Basic 和 Microsoft Visual 等语言C++。 ADO MD 扩展了 Microsoft ActiveX 数据对象 (ADO) 以包括特定于多维数据，例如 CubeDef 和单元集对象的对象。 使用 ADO MD 可以浏览多维架构、 查询多维数据集，并检索结果。  
   
  例如 ADO，ADO MD 使用基础的 OLE DB 访问接口来访问数据。 若要使用 ADO MD，提供程序必须按照 OLE DB for OLAP 规范的定义是多维数据提供程序 (MDP)。 Mdp 表格视图中呈现数据而不是表格数据提供程序 (Tdp) 的多维视图中显示数据。 请参阅更多详细信息的特定语法和支持您的提供程序的行为在 OLAP OLE DB 提供程序的文档。  
   

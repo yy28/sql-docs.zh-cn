@@ -1,5 +1,5 @@
 ---
-title: ValidMeasure (MDX) |Microsoft 文档
+title: ValidMeasure (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140238"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -32,14 +32,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **ValidMeasure**函数返回的元组的值，忽略具有其值的度量值的度量值组没有关系的属性元组返回。 出于以下两个原因，属性可与度量值无关：  
+## <a name="remarks"></a>备注  
+ **ValidMeasure**函数返回的值元组，请忽略其值具有不到该度量值的度量值组具有关系的属性与元组返回。 出于以下两个原因，属性可与度量值无关：  
   
 -   属性的维度与元组中度量值的度量值组无关。  
   
 -   属性的维度与度量值的度量值组无关，但粒度属性不是键属性，并且粒度属性与元组中的属性没有直接关系。  
   
- 指定此函数的行为是默认服务器端行为，并由控制**IgnoreUnrelatedDimensions**度量值组对象的属性。  
+ 指定此函数的行为是默认服务器端行为，且受**IgnoreUnrelatedDimensions**度量值组对象的属性。  
   
  对于具有粒度的指定元组中的每个属性（也就是说，元组中的成员不是“全部”成员），其当前坐标按如下方式移动：  
   
@@ -70,6 +70,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067643"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 故障转移群集安装
   若要安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，您必须通过运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来创建并配置一个故障转移群集实例。  
@@ -43,14 +43,14 @@ ms.locfileid: "52815729"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集安装选项  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>方法 1：与添加节点的集成的安装  
+##### <a name="option-1-integrated-installation-with-add-node"></a>选项 1：带“添加节点”功能的集成安装  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 集成故障转移群集安装包括两个步骤：  
   
 1.  创建并配置单节点 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例。 在成功配置完该节点时，您将拥有一个功能齐全的故障转移群集实例。 此时，由于故障转移群集内仅有一个节点，因此它不具备高可用性。  
   
 2.  在要添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中的每个节点上，运行带“添加节点”功能的安装程序以添加该节点。  
   
-##### <a name="option-2-advancedenterprise-installation"></a>方法 2：高级/企业安装  
+##### <a name="option-2-advancedenterprise-installation"></a>选项 2：高级/企业安装  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高级/企业故障转移群集安装包括两个步骤：  
   
 1.  在将要成为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集一部分的每个节点上，运行带“准备故障转移群集”功能的安装程序。 此步骤将准备好节点使其可以加入群集，但在此步骤结束时不会有可工作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  

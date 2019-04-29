@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065615"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
   不支持对内存优化表执行 ALTER 操作。 其中包括更改 bucket_count、添加或删除索引、添加或删除列等操作。 本主题指导如何更新内存优化表。  

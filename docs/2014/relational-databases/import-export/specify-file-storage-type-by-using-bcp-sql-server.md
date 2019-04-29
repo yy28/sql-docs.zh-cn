@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155824"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
-  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以导出到数据文件作为其数据库表类型 （本机格式）、 字符表示形式 （字符格式），或为其中支持隐式转换; 任何数据类型例如，复制`smallint`作为`int`。 用户定义的数据类型将按其基类型导出。  
+  “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 `smallint` 形式复制 `int`。 用户定义的数据类型将按其基类型导出。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>用于文件存储类型的 bcp 提示符  
  如果某个交互式 **bcp** 命令包含不带格式化文件开关 ( **-f** ) 或数据格式开关（ **-n** 、**-c**、**-w**或 **-N**）的 **in**或 **out**选项，则该命令会提示输入每个数据字段的文件存储类型，如下所示：  
@@ -35,9 +35,9 @@ ms.locfileid: "48048437"
   
 -   若要以尽可能大的压缩存储的格式（本机数据格式）将数据从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例批量导出到数据文件中，请接受 **bcp**提供的默认文件存储类型。 有关本机文件存储类型的列表，请参阅本主题后面所述的“本机文件存储类型”。  
   
--   实例中的大容量导出数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到字符格式数据文件，指定`char`作为文件存储类型的表中的所有列。  
+-   若要以字符格式将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出到数据文件中，请指定 `char` 作为表中所有列的文件存储类型。  
   
--   大容量导入数据的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从数据文件，将文件存储类型指定为`char`类型存储在字符格式，并且对于以本机数据类型格式存储数据，指定一个文件存储类型，根据需要：  
+-   若要将数据从数据文件大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，对于以字符格式存储的类型，请将文件存储类型指定为 `char`，而对于以本机数据类型格式存储的数据，请按需指定以下文件存储类型之一：  
   
     |文件存储类型|在命令提示符下输入|  
     |-----------------------|-----------------------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "48048437"
   
      <sup>1</sup>的字段长度、 前缀长度和终止符一起决定的非字符数据的导出为数据文件中分配的存储空间量`char`文件存储类型。  
   
-     <sup>2</sup> `ntext`， `text`，和`image`中的未来版本将删除的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 使用`nvarchar(max)`， `varchar(max)`，和`varbinary(max)`相反。  
+     <sup>2</sup> `ntext`， `text`，和`image`中的未来版本将删除的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 相反，使用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
   
 ## <a name="native-file-storage-types"></a>本机文件存储类型  
  在格式化文件中，每种本机文件存储类型都记录为相应的宿主文件数据类型。  
@@ -120,7 +120,7 @@ ms.locfileid: "48048437"
   
 -   如果输入的文件存储类型表示无效的隐式转换， **bcp**失败; 例如，不过您可以指定`int`有关`smallint`数据，如果指定`smallint`为`int`数据，导致溢出错误。  
   
--   当非字符数据类型，如`float`， `money`， `datetime`，或`int`存储为其数据库类型时，数据将写入数据文件中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机格式。  
+-   当非字符数据类型（如 `float`、`money`、`datetime` 或 `int`）存储为其数据库类型时，数据将写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机格式的数据文件。  
   
     > [!NOTE]  
     >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[ 非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  

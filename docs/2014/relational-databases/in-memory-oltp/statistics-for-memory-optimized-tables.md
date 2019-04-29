@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155788"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  

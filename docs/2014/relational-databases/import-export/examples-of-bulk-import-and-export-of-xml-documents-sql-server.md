@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140485"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
     

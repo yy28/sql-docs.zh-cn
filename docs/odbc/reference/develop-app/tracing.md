@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148977"
 ---
 # <a name="tracing"></a>跟踪
 ODBC 驱动程序管理器具有一种跟踪工具，允许 ODBC 应用程序以录制和转录到日志文件所做的函数调用的序列。 通过跟踪捕获应用程序和驱动程序管理器中，驱动程序管理器和驱动程序之间以及之间的调用的 DLL 执行跟踪。 跟踪此方法会执行的 ODBC 2 的跟踪 *.x* ODBC 2 中执行的驱动程序管理器和跟踪 *.x*通过 ODBC Spy。  

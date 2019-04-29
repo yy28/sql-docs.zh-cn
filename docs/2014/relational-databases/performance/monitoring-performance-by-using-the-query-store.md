@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150792"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 选项来配置查询存储。  
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>使用回归查询功能  
  在启用查询存储后，刷新对象资源管理器的数据库部分，以添加“查询存储”  部分。  
   
- ![查询存储](../../database-engine/media/querystore.PNG "查询存储")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
  在选择“回归查询” 后，打开 **中的“回归查询”**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 “回归查询”窗格将显示查询存储中的查询和计划。 借助顶部的下拉列表框，可基于各种条件选择查询。 选择某个计划以查看图形查询计划。 可使用按钮来查看源查询，强制执行和取消强制执行某一查询计划，以及刷新显示内容。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140472"
 ---
 # <a name="fetching-rows"></a>提取行
   IRowset 接口是基础行集接口。 IRowset 接口提供了用于按顺序提取行、从这些行中获得数据以及管理行的方法。 使用者使用 IRowset 中的这些方法执行所有基本行集操作。 这包括提取和释放行以及获得列值。  

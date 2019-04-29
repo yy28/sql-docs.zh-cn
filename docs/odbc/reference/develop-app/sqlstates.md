@@ -1,5 +1,5 @@
 ---
-title: SQLSTATEs |Microsoft Docs
+title: SQLSTATEs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149040"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs 提供原因有关的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于 ISO/IEF CLI 规范中的那些虽然使用 IM 启动这些 SQLSTATEs 是特定于 ODBC。  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131065"
 ---
 # <a name="detach-database-id-32767"></a>分离数据库 ID 32767
   升级顾问检测到具有数据库 ID 32767 的数据库。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中，此数据库 ID 是保留值。 请先分离该数据库，然后再升级。 您可以在升级后再附加该数据库。  

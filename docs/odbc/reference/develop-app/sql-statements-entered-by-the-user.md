@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149141"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>用户输入的 SQL 语句
 通常还执行即席分析的应用程序允许用户直接输入 SQL 语句。 例如：  

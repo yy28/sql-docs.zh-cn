@@ -1,5 +1,5 @@
 ---
-title: SetToStr (MDX) |Microsoft 文档
+title: SetToStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57e74eb1c7db4aebdd01fde8fc48a425d7affa55
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149284"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -32,8 +32,8 @@ SetToStr(Set_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 该函数用于将某集的字符串表示形式传输到外部函数，以进行分析。 返回的字符串括在大括号{}，与将逗号隔开集中每个项。  
+## <a name="remarks"></a>备注  
+ 该函数用于将某集的字符串表示形式传输到外部函数，以进行分析。 返回的字符串括在大括号{}，并且用逗号分隔的集中每个项。  
   
 ## <a name="example"></a>示例  
  下面的示例将返回包含 Geography.Country 属性层次结构的所有成员的字符串。  
@@ -45,6 +45,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

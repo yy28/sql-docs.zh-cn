@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062923"
 ---
 # <a name="ado-fundamentals"></a>ADO 基础知识
 ADO 有关以编程方式访问、 编辑和更新数据的各种数据源通过 OLE DB 系统接口，使开发人员功能强大、 逻辑的对象模型。 ADO 的最常见的用法是查询表或关系数据库中的表、 检索和应用程序中显示的结果以及可能允许用户更改和保存更改的数据。 其他任务包括：  
@@ -59,7 +59,7 @@ ADO 有关以编程方式访问、 编辑和更新数据的各种数据源通过
   
 -   [ADO 对象和集合](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData：简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData:一个简单的 ADO 应用程序](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB 访问接口](../../../ado/guide/data/ole-db-providers-ado.md)  
   

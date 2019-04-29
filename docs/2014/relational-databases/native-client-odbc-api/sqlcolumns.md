@@ -1,5 +1,5 @@
 ---
-title: SQLColumns |Microsoft Docs
+title: SQLColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067707"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 指示是否存在值都返回 SQL_SUCCESS *CatalogName*， *TableName*，或*ColumnName*参数。 **SQLFetch**这些参数中使用的值无效时返回 SQL_NO_DATA。  

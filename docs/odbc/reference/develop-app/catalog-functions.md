@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125575"
 ---
 # <a name="catalog-functions"></a>目录函数
 所有数据库都有一个结构，其中概述了如何将数据库中存储数据。 例如，简单的销售订单数据库可能具有在下图中，ID 列使用链接的表中所示的结构。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138829"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
 变量值文件是 XML 文件包含的命令 （如源或目标服务器名称） 的服务器迁移而频繁更改的参数值。 大量的数据库迁移发生时，创建和使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 此行为有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  

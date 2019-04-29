@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134481"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 对象 (RDS)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "51600557"
   
  远程数据服务需要业务对象代理，以便客户端组件可以与位于中间层业务对象进行通信。 代理方便打包、 解包，和传输 （封送处理） 的应用程序的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)跨进程或计算机边界的数据。  
   
- 远程数据服务使用**rds。DataSpace**对象的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法来创建业务对象代理。 每当创建的中间层业务对象对应的实例时，都会动态创建的业务对象代理。 远程数据服务支持以下协议： HTTP、 HTTPS （HTTP 安全套接字）、 DCOM 和进程内 （客户端组件和业务对象驻留在同一台计算机上）。  
+ 远程数据服务使用**rds。DataSpace**对象的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法来创建业务对象代理。 每当创建的中间层业务对象对应的实例时，都会动态创建的业务对象代理。 远程数据服务支持以下协议：HTTP、 HTTPS （HTTP 安全套接字）、 DCOM 和进程内 （客户端组件和业务对象驻留在同一台计算机上）。  
   
 > [!NOTE]
 >  RDS 的行为"无状态"方式时**rds。数据空间**对象使用的 HTTP 或 HTTPS 协议。 也就是说，服务器返回响应后，将被放弃有关客户端请求的任何内部信息。  

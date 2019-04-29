@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa9303f5108ef97f077764122481565df1937a4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126340"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE 驱动程序编程注意事项
 本部分包含以下主题。  

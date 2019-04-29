@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054777"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>在 Power Pivot 模式下安装 Analysis Services。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52527754"
 ###  <a name="bkmk_sqleditions"></a> SQL Server 版本要求  
  并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[功能支持的 Analysis Services SQL Server 2016 各个版本](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)并[SQL Server 2016 的组件和版本](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-##  <a name="InstallSQL"></a> 步骤 1:安装 Power Pivot for SharePoint  
+##  <a name="InstallSQL"></a> 步骤 1：安装 Power Pivot for SharePoint  
  在此步骤中，你将运行 SQL Server 安装程序以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服务器。 在后续步骤中，将 Excel Services 配置为使用此服务器的工作簿数据模型。  
   
 1.  运行 SQL Server 安装向导 (Setup.exe)。  
@@ -77,7 +77,7 @@ ms.locfileid: "52527754"
   
 9. 如果看到其他的“安装程序支持规则” ，则查看所有警告并选择“下一步” 。  
   
-     **注意：** 因为启用了 Windows 防火墙，所以你将看到打开端口以启用远程访问的警告。  
+     **注意：** 因为启用了 Windows 防火墙，您将看到打开端口以便启用远程访问的警告。  
   
 10. 在“安装角色”  页上，选择“SQL Server 功能安装” 。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527754"
   
 3.  连接到 Analysis Services 实例，例如 **[你的服务器名称]\POWERPIVOT**。 如果您可连接到该实例，则验证服务是否正在运行。  
   
-##  <a name="bkmk_config"></a> 步骤 2:配置基本 Analysis Services SharePoint 集成  
+##  <a name="bkmk_config"></a> 步骤 2：配置基本 Analysis Services SharePoint 集成  
  下列步骤介绍与 SharePoint 文档库中的 Excel 高级数据模型交互所需的配置更改。 在安装 SharePoint 和 SQL Server Analysis Services 之后完成这些步骤。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527754"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 步骤 3:验证集成  
+##  <a name="bkmk_verify"></a> 步骤 3：验证集成  
  下列步骤指导你创建和上载新的工作簿以验证 Analysis Services 集成。 您将需要 SQL Server 数据库才能完成这些步骤。  
   
-1.  **注意：** 如果你已具有包含切片器或筛选器的高级工作簿，则可将其上载到 SharePoint 文档库并验证你是否能通过文档库视图与切片器和筛选器进行交互。  
+1.  **注意：** 如果您已具有包含切片器或筛选器的高级工作簿，可以将其上载到 SharePoint 文档库并验证您是否能与切片器和筛选器进行交互通过文档库视图。  
   
 2.  在 Excel 中启动新的工作簿。  
   

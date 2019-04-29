@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161571"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
 ADO 允许到 XML 的分层记录集对象持久性。 分层记录集对象中父记录集的值是字段的另一个记录集。 此类字段表示为 XML 流而不是属性中的子元素。  

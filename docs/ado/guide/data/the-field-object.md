@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062661"
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的列。 但是，**字段**还表示到另一个指针**记录集**，名为一章。 将在本指南的后面介绍异常，如章节列。  

@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139017"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>连接到 SQL Server (AccessToSQL)
 将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到的目标实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 连接时，获取有关的实例中的数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并显示数据库中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 SSMA 存储信息的哪些实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您连接到，但不存储密码。  
@@ -63,9 +63,9 @@ ms.locfileid: "47649275"
   
     -   如果要连接到另一台计算机上的默认实例，输入的计算机的名称。  
   
-    -   如果要连接到命名实例，则输入计算机名称、 一个反斜杠和实例名称。 例如： MyServer\MyInstance。  
+    -   如果要连接到命名实例，则输入计算机名称、 一个反斜杠和实例名称。 例如：MyServer\MyInstance。  
   
-    -   若要连接到的活动用户实例[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用命名管道连接协议和指定管道名称，例如\\ \\.\pipe\sql\query。 有关详细信息，请参阅 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文档。  
+    -   若要连接到的活动用户实例[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，使用命名管道连接协议和指定管道名称，例如\\ \\.\pipe\sql\query。 有关详细信息，请参阅[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]文档。  
   
 3.  如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为接受非默认端口上的连接，请输入用于的端口号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的连接**服务器端口**框。 对于默认实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，默认端口号为 1433年。 对于命名实例，SSMA 会尝试获取端口号从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器服务。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "47649275"
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (版本： 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (版本： 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|用户帐户控制|是|是|是|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||用户帐户控制|是|是|用户帐户控制||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||用户帐户控制|是|用户帐户控制||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||用户帐户控制|用户帐户控制||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||用户帐户控制||
-|SQL Azure||||||用户帐户控制|
+|**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (版本：9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (版本：10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||是||
+|SQL Azure||||||是|
   
 > [!IMPORTANT]  
 > 根据项目类型，但根据连接到的 SQL Server 的版本不被执行数据库对象的转换。 对于 SQL Server 2005 项目，转换被执行根据 SQL Server 2005 即使你已连接到更高版本的 SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)。  

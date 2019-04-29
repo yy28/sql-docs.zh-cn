@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127250"
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
 可在 ODBC 数据源管理器联机帮助中的说明和有关如何实现和安装 Microsoft ODBC 桌面数据库驱动程序的技术说明。 此文件可以访问在从驱动程序安装例程期间[Microsoft ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  

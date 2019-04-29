@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7185dca3db146e7c17f41cb0f0c5376274fe3634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161487"
 ---
 # <a name="jumping-to-a-record"></a>跳转到记录
 [移动](../../../ado/reference/ado-api/move-method-ado.md)方法，可在向前或向后移动**记录集**指定的数目的记录通过使用以下语法：  

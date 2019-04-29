@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134341"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 方法 (RDS)
 将给定的记录集与在 ADO 2.5 及更高版本中使用的连接字符串由指定的数据库同步。  
@@ -56,7 +56,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  指向要同步的记录集的指针。  
   
  *pStatusArray*  
- 用于返回受影响的行的行状态的安全数组的变体同步。 如果没有以下同步选项的设置未设置： *RefreshWithUpdate*，*刷新*并*RefreshConflicts*。  
+ 用于返回受影响的行的行状态的安全数组的变体同步。 未设置，如果没有以下同步选项的设置：*RefreshWithUpdate*，*刷新*并*RefreshConflicts*。  
   
  *lcid*  
  用于生成任何错误中返回的 LCID *pInformation*。  

@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150844"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一套综合的工具，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件和优化物理数据库的设计。 工具的选择取决于要执行的监视或优化类型和要监视的具体事件。  
   
  以下是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 监视和优化工具：  
   
-|工具|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |[sp_trace_setfilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 用于跟踪引擎进程事件（如批处理或事务的开始），使您能够监视服务器和数据库的活动（例如，死锁、错误或登录活动）。 您可以将 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 数据捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或文件中供以后分析，还可以逐步重播在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上捕获的事件以确切了解所发生的事件。|  
 |[SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播可以使用多台计算机重播跟踪数据，并模拟任务关键型工作负荷。|  
@@ -48,21 +48,21 @@ ms.locfileid: "52817967"
 ## <a name="choosing-a-monitoring-tool"></a>选择监视工具  
  监视工具的选择取决于要监视的事件或活动。  
   
-|事件或活动|SQL Server 事件探查器|分布式重播|系统监视器|活动监视器|Transact-SQL|错误日志|  
+|事件或活动|SQL Server Profiler|分布式重播|系统监视器|活动监视器|Transact-SQL|错误日志|  
 |-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|走向分析|用户帐户控制||用户帐户控制||||  
+|走向分析|是||是||||  
 |重播捕获的事件|是（从单台计算机）|是（从多台计算机）|||||  
-|临时监视|用户帐户控制|||是|是|用户帐户控制|  
-|生成警报|||用户帐户控制||||  
-|图形界面|用户帐户控制||是|是||用户帐户控制|  
-|在自定义应用程序内使用|是 <sup>1</sup>||||用户帐户控制||  
+|临时监视|是|||是|是|是|  
+|生成警报|||是||||  
+|图形界面|是||是|是||是|  
+|在自定义应用程序内使用|是 <sup>1</sup>||||是||  
   
  <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]系统存储过程。  
   
 ## <a name="windows-monitoring-tools"></a>Windows 监视工具  
  Windows 操作系统和 Windows Server 2003 也提供这些监视工具。  
   
-|工具|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |任务管理器|显示在系统上运行的进程和应用程序的提要。|  
 |网络监视器代理|用于监视网络流量。|  

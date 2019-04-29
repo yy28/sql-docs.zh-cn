@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140121"
 ---
 # <a name="datasource-property-ado"></a>DataSource 属性 (ADO)
 指示一个对象，包含数据而无法表示为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  

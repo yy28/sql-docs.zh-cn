@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062405"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函数
 **符合性**  
@@ -145,15 +145,15 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>注释  
  连接字符串具有以下语法：  
   
- *连接字符串*:: =*空字符串*[;]&#124; *特性*[;]&#124; *特性*;*连接字符串*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *空字符串*:: =*特性*:: =*特性关键字*=*属性值*&#124;驱动程序 = [{}]*属性值*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *零个以上*:: = DSN &#124; UID &#124; PWD &#124; *驱动程序的定义的属性的关键字*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
- *属性值*:: =*字符字符串*  
+ *attribute-value* ::= *character-string*  
   
- *驱动程序的定义的零个以上*:: =*标识符*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  其中*字符串*具有零个或多个字符;*标识符*具有一个或多个字符;*特性关键字*不区分大小写;*属性值*可能是区分大小写; 和的值**DSN**关键字不会包含单独的空格。  
   
@@ -171,7 +171,7 @@ SQLRETURN SQLDriverConnect(
 |-------------|---------------------------------|  
 |**DSN**|所返回的数据源的名称**SQLDataSources**或的数据源对话框**SQLDriverConnect**。|  
 |**FILEDSN**|数据源的.dsn 文件将从其生成连接字符串的名称。 这些数据源称为文件数据源。|  
-|**驱动程序**|通过返回的驱动程序的说明**SQLDrivers**函数。 例如，Rdb 或 SQL Server。|  
+|**DRIVER**|通过返回的驱动程序的说明**SQLDrivers**函数。 例如，Rdb 或 SQL Server。|  
 |**UID**|用户 id。|  
 |**PWD**|对应的用户 ID 或为空字符串，如果没有密码的用户 ID 的密码 (PWD =;）。|  
 |**SAVEFILE**|要在其中保存属性值中存在，成功连接使用的关键字.dsn 文件的文件名。|  

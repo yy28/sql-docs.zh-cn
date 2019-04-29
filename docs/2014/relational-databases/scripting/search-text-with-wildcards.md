@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136227"
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
   以下表达式可以替换“查找和替换”对话框的“查找内容”字段中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的字符或数字。  

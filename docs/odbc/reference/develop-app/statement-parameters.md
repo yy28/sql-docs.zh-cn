@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149363"
 ---
 # <a name="statement-parameters"></a>语句参数
 一个*参数*是可变的 SQL 语句。 例如，假设一个部件表具有名为 PartID、 描述和价格的列。 若要添加不带参数部件需要构造 SQL 语句，例如：  
@@ -37,7 +37,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  刚才所示的语句可能是订单输入应用程序以插入新行中硬编码。 但是，参数标记并不局限于垂直应用程序。 对于任何应用程序，它们易于通过避免文本之间的转换在运行时构造 SQL 语句的难度。 例如，刚才所示的部分 ID 是最有可能存储在应用程序作为一个整数。 如果 SQL 语句构建时没有参数标记，该应用程序必须将部分 ID 转换为文本和数据源必须将其转换为整数。 通过使用参数标记，该应用程序可以一部分 ID 发送给该驱动程序通常可以将其发送到数据源为整数的整数。 这可节省两次转换。 对于长数据值，这一点非常重要，因为此类值的文本形式经常超出允许的 SQL 语句的长度。  
   
- 仅在 SQL 语句中特定位置参数才有效。 例如，不允许在 select 列表中 (要返回的列的列表**选择**语句)，也不它们允许为等号 （=），如二元运算符的两个操作数因为不可能的确定参数类型。 通常情况下，参数都是仅在数据操作语言 (DML) 语句，而不在数据定义语言 (DDL) 语句有效。 有关详细信息，请参阅[参数标记](../../../odbc/reference/appendixes/parameter-markers.md)附录 c: SQL 语法中。  
+ 仅在 SQL 语句中特定位置参数才有效。 例如，不允许在 select 列表中 (要返回的列的列表**选择**语句)，也不它们允许为等号 （=），如二元运算符的两个操作数因为不可能的确定参数类型。 通常情况下，参数都是仅在数据操作语言 (DML) 语句，而不在数据定义语言 (DDL) 语句有效。 有关详细信息，请参阅[参数标记](../../../odbc/reference/appendixes/parameter-markers.md)附录 c： 驱动器中SQL 语法。  
   
  可以使用该 SQL 语句时调用一个名为参数的过程。 命名的参数由其名称，不是由 SQL 语句中的位置标识。 可以将它们绑定通过调用**SQLBindParameter**，但无法由参数标识由 IPD （实现参数描述符） 的 SQL_DESC_NAME 字段*ParameterNumber*的自变量**SQLBindParameter**。 它们还可以绑定通过调用**SQLSetDescField**或**SQLSetDescRec**。 有关命名参数的详细信息，请参阅[按名称 （命名参数） 绑定参数](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)，在本部分中更高版本。 有关描述符的详细信息，请参阅[描述符](../../../odbc/reference/develop-app/descriptors.md)。  
   

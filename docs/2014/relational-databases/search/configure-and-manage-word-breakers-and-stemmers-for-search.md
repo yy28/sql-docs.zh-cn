@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140066"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
   断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析将涉及到查找词边界（断字）和组合动词（词干分析）。 断字符和词干分析器是特定于语言的，并且各语言的语言分析规则也各不相同。 对于给定语言，“断字符”  通过根据语言的词法规则确定词的边界位置来标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。 词干分析器根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。  

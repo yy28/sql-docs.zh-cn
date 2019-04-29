@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183002"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
   Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  
@@ -34,7 +34,7 @@ ms.locfileid: "52810649"
 |**Free Space in tempdb (KB)**|**tempdb**中的可用空间量 (KB)。 必须具有足够的可用空间以保存快照隔离级别版本存储区和在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中创建的所有新临时对象。|  
 |**Longest Transaction Running Time**|比任何其他当前事务活动时间都长的事务启动后运行的时间长度（秒）。 在数据库处于读取已提交读快照隔离级别之下时，该计数器只显示活动。 如果数据库处于任何其他隔离级别中，该计数器将不会记录任何活动。|  
 |**NonSnapshot Version Transactions**|未使用快照隔离级别并进行了数据修改（这些修改在 **tempdb** 版本存储区中生成行版本）的当前活动事务的数目。|  
-|**Snapshot Transactions**|使用快照隔离级别的当前活动事务的数目。<br /><br /> 注意：**Snapshot Transactions**对象计数器时第一次数据访问发生，不响应时`BEGIN TRANSACTION`发出语句。|  
+|**Snapshot Transactions**|使用快照隔离级别的当前活动事务的数目。<br /><br /> 注意：Snapshot Transactions 对象计数器在进行第一次数据访问时响应，而不是在发出 `BEGIN TRANSACTION` 语句时响应。|  
 |**中的**|当前活动的所有类型的事务的数目。|  
 |**Update conflict ratio**|使用快照隔离级别的、在最后一秒内遇到更新冲突的事务的百分比。 更新冲突在以下情况下发生：快照隔离级别事务尝试修改一行，但该行最近一次修改由在快照隔离级别事务启动时未提交的其他事务执行。|  
 |**Update Snapshot Transactions**|使用快照隔离级别并已修改数据的当前活动事务的数目。|  

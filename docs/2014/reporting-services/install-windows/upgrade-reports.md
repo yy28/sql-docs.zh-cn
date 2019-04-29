@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c8330266babdb260f80843213ddb892021eb8c8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064075"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   报表定义 (.rdl) 文件通过以下方式自动升级：  

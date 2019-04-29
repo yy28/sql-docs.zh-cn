@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156694"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
@@ -36,7 +36,7 @@ ms.locfileid: "48058757"
 >  在你以交互方式指定 **bcp** 命令中的所有字段后，该命令会提示你将自己对每个字段的响应保存到一个非 XML 格式化文件中。 有关非 XML 格式文件的详细信息，请参阅[非 XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   
 ## <a name="overview-of-prefix-length"></a>前缀长度概述  
- 若要存储字段的前缀长度，您需要有足够的字节来表示字段的最大长度。 另外，所需的字节数还取决于文件存储类型、列是否可以为 Null 以及数据是以本机格式还是字符格式存储在数据文件中。 例如，`text`或`image`数据类型需要四个前缀字符存储字段长度，但`varchar`数据类型需要两个字符。 在数据文件中，这些长度前缀字符以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的内部二进制数据格式存储。  
+ 若要存储字段的前缀长度，您需要有足够的字节来表示字段的最大长度。 另外，所需的字节数还取决于文件存储类型、列是否可以为 Null 以及数据是以本机格式还是字符格式存储在数据文件中。 例如，`text` 或 `image` 数据类型需要四个前缀字符存储字段长度，而 `varchar` 数据类型需要两个字符。 在数据文件中，这些长度前缀字符以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的内部二进制数据格式存储。  
   
 > [!IMPORTANT]  
 >  使用本机格式时，请使用长度前缀而不要使用字段终止符。 本机格式数据可能会与终止符相冲突，因为本机格式数据文件是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内部二进制数据格式存储的。  
@@ -81,7 +81,7 @@ ms.locfileid: "48058757"
 |UDT（用户定义的数据类型）|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> `ntext`， `text`，和`image`中的未来版本将删除的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 使用`nvarchar(max)`， `varchar(max)`，和`varbinary(max)`相反。  
+ <sup>1</sup> `ntext`， `text`，和`image`中的未来版本将删除的数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 相反，使用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)`。  
   
 ##  <a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  

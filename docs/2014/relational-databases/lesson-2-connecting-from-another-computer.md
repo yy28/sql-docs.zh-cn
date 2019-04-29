@@ -1,5 +1,5 @@
 ---
-title: 第 2 课：从另一台计算机连接 |Microsoft Docs
+title: 第 2 课：从其他计算机进行连接 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144808"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
   为了增强安全性， [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在初始安装时不能从其他计算机对其进行访问。 本课介绍如何启用协议，配置端口以及配置 Windows 防火墙，以便从其他计算机进行连接。  

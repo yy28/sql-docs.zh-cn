@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183066"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>数据迁移设置 (MySQLToSQL)
   
@@ -50,7 +50,7 @@ ms.locfileid: "51681145"
   
 -   **应用：** 单击**应用**以应用设置已更改。  
   
--   **取消:** 单击**取消**若要还原的设置存在，就发生了更改。  
+-   **取消：** 单击**取消**若要还原的设置存在，就发生了更改。  
   
 ## <a name="see-also"></a>请参阅  
 [将 MySQL 数据迁移到 SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

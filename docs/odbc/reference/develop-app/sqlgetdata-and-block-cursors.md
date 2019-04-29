@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149068"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData 和块游标
 **SQLGetData**作用于单个行的单个列，并且无法提取包含来自多个行的数据的数组。 这是因为主数据库使用的**SQLGetData**是提取在部件中，长整型数据，并且没有很少或没有为多个行执行此操作一次的原因。  

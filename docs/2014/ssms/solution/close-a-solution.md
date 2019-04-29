@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f14fea5c448a4b3cd3dbb0a34ce86b40d1db7835
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128549"
 ---
 # <a name="close-a-solution"></a>关闭解决方案
   可以关闭解决方案并将其从解决方案资源管理器中删除。 如果关闭解决方案，则解决方案资源管理器将无法再使用该解决方案。  

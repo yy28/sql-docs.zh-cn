@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的错误处理 |Microsoft Docs
+title: 视觉对象中的错误处理C++|Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e33d28201e1a2e4f7df8ac330ac89b3f00194b14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161629"
 ---
 # <a name="handling-errors-in-visual-c"></a>处理 Visual C++ 中的错误
 在 COM 中，大多数操作返回一个 HRESULT 返回代码，指示函数是否已成功完成。 #Import 指令生成每个"原始"方法或属性周围的包装器代码，并检查返回的 HRESULT。 如果 HRESULT 表示失败，包装器代码将 COM 错误的 HRESULT 返回代码的调用 _com_issue_errorex() 引发作为参数。 COM 错误对象可以陷入**try catch**块。 （为提高效率的起见，捕获 _com_error 对象的引用。）  

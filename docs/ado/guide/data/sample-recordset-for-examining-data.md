@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063083"
 ---
 # <a name="sample-recordset-for-examining-data"></a>用于检查数据的示例记录集
 首先，让我们看看**记录集**对象返回使用以下 SQL 查询，执行针对 Microsoft SQL Server 中的基的 Northwind 示例数据。  
@@ -36,7 +36,7 @@ WHERE CategoryID = 7
 |---------------|-----------------|---------------|  
 |7|柳贡干的梨|30.0000|  
 |14|豆腐|23.2500|  
-|28|Rssle 泡菜口味|45.6000|  
+|28|Rssle Sauerkraut|45.6000|  
 |51|猪肉干|53.0000|  
 |74|Longlife 豆腐|10.0000|  
   

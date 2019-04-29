@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135493"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>更改地图图例、色阶和关联的规则（报表生成器和 SSRS）
   地图中可以包含地图图例、色阶和距离刻度。 地图的这些部分可帮助用户解释地图上的数据可视化。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5895a106c389afe2d1979cf8d9c16e92f570538a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049940"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 按书签删除行
 书签，通过删除行时**SQLBulkOperations**使数据源中删除一个或多个所选的表的行。 通过绑定的书签列中的书签标识行。  

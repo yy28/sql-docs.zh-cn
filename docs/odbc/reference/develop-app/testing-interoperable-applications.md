@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148932"
 ---
 # <a name="testing-interoperable-applications"></a>测试交互式应用程序
 测试交互式应用程序是最耗时的业务和最坏的情形是不可能因为在市场上不断出现新的驱动程序。 但是，可能会合理程度的测试。 具有有限的或较低的互操作性的应用程序只需要针对可确保支持这些驱动程序测试。 但是，它们必须进行完全测试针对这些驱动程序。  

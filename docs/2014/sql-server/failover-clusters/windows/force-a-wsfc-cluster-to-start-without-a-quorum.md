@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049480"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在无仲裁情况下强制启动 WSFC 群集
   本主题说明如何在无仲裁情况下强制启动 Windows Server 故障转移群集 (WSFC) 群集节点。  在灾难恢复和多子网方案中，可能需要它来为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例恢复数据和完全重建高可用性。  
   
--   **在开始之前：**[建议](#Recommendations)，[安全](#Security)  
+-   **开始之前：**[建议](#Recommendations)，[安全](#Security)  
   
 -   **若要强制群集启动而无需仲裁使用：**[使用故障转移群集管理器](#FailoverClusterManagerProcedure)，[使用 Powershell](#PowerShellProcedure)，[使用 Net.exe](#CommandPromptProcedure)  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 跟进：在无仲裁情况下强制启动群集后  
+##  <a name="FollowUp"></a> 跟进：在强制仲裁情况下启动群集后  
   
 -   在使其他节点重新联机前，必须重新计算和重新配置 NodeWeight 值以正确构造新的仲裁。 否则，该群集可能再次脱机。  
   

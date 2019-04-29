@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161521"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>在记录集中移动的更多方法
 以下四种方法可用来四处移动，或向下滚动，在**记录集**:[MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （某些的这些方法不能对只进游标。）  

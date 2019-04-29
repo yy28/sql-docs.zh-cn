@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063924"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
   默认情况下，将数据导入表中时， **bcp** 命令和 BULK INSERT 语句将使用为表中的列定义的默认值。 例如，如果数据文件中包含一个空字段，则会加载该列的默认值。 **bcp** 命令和 BULK INSERT 语句都允许指定保留空值。  
@@ -108,7 +108,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |------------|-----------------|  
 |`-f`|指定命令使用格式化文件。|  
 |`-k`|指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。|  
-|`-T`|指定 bcp 实用工具使用可信连接来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|`-T`|指定 bcp 实用工具使用可信连接来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
   
  在 Windows 命令提示符下输入。  
   

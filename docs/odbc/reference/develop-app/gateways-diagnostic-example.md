@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062415"
 ---
 # <a name="gateways-diagnostic-example"></a>网关诊断示例
 在网关体系结构中，驱动程序将请求发送到支持 ODBC 的网关。 网关将请求发送到 DBMS。 因为它是接口与驱动程序管理器的组件，该驱动程序格式，并返回自变量**SQLGetDiagRec**。  

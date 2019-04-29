@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164983"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>“数据集属性”对话框 -&amp;gt;“参数”（报表生成器）
   选择**参数**上**数据集属性**对话框可以添加、 更改和删除查询参数。  

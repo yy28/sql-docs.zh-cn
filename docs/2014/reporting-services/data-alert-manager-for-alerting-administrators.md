@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4096d6fed3d73faffdc8798c475954bdb031dd68
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165100"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>向管理员提出警报的数据警报管理器
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 为 SharePoint 警报管理员提供了数据警报管理器以便管理数据警报。 警报管理员可以查看与保存到站点的所有警报有关的信息和删除警报。 下图显示数据警报管理器中可用于 SharePoint 警报管理员的功能。  

@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138794"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
 将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个包含有关你想要迁移到 Access 数据库的元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接信息和项目设置。  
@@ -90,7 +90,7 @@ SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多�
   
         正在保存元数据可能需要几分钟的时间。 如果您不想要现在保存元数据，则选择任何复选框。  
   
-    2.  单击 **“保存”**。  
+    2.  单击“保存” 。  
   
         SSMA 会分析访问架构，并将元数据保存到项目文件。  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38065b8cc27526cccc8c1554b25a288662fef8a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151164"
 ---
 # <a name="delete-a-plan-guide"></a>删除计划指南
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除计划指南。 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，您还可以删除数据库中的所有计划指南。  
@@ -26,7 +26,7 @@ ms.locfileid: "48052337"
   
 -   **开始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要删除计划指南，请使用：**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48052337"
   
 #### <a name="to-delete-a-single-plan-guide"></a>删除单个计划指南  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48052337"
   
 #### <a name="to-delete-all-plan-guides-in-a-database"></a>删除数据库中的所有计划指南  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

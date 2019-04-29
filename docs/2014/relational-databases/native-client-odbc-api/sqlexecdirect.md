@@ -1,5 +1,5 @@
 ---
-title: SQLExecDirect |Microsoft Docs
+title: SQLExecDirect | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067504"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   如果语句属性 SQL_SOPT_SS_PARAM_FOCUS 不为 0，SQLExecDirect 将返回 SQL_ERROR 并生成的诊断记录具有 SQLSTATE = HY024 和消息"属性值无效，SQL_SOPT_SS_PARAM_FOCUS （必须在执行时为零）"。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  

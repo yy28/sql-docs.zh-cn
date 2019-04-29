@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061595"
 ---
 # <a name="getting-long-data"></a>获取 Long 数据
 定义 Dbms*长整型数据*为任何字符或二进制数据而非特定大小，如 255 个字符。 此数据可能很小，可存储在一个缓冲区，例如一部分描述的多个几千个字符。 但是，它可能太长，无法存储在内存中，如长文本文档或位图。 由于此类数据不能存储在一个缓冲区，将从使用部件中的驱动程序中检索**SQLGetData**已提取的行中的其他数据之后。  
@@ -30,9 +30,9 @@ ms.locfileid: "47849435"
 > [!NOTE]  
 >  应用程序可以实际检索任何类型的数据与**SQLGetData**，而不仅仅是长数据，尽管可以在部件中检索仅字符和二进制数据。 但是，如果数据是足够小，无法全部放入一个缓冲区，则通常无需使用**SQLGetData**。 它是更轻松地将缓冲区绑定到的列和让驱动程序在缓冲区中返回数据。  
   
- 若要从一列中检索的长整型数据，应用程序首先调用**SQLFetchScroll**或**SQLFetch**移动到某一行并提取对于绑定列的数据。 然后，应用程序调用**SQLGetData**。 **SQLGetData**具有相同的参数**SQLBindCol**： 语句句柄; 列号; 应用程序变量; 的 C 数据类型、 地址和字节长度和长度/指示器缓冲区的地址。 这两个函数具有相同的参数，因为它们执行实质上是相同的任务： 它们都描述向驱动程序应用程序变量，并指定应在该变量中返回的特定列的数据。 主要区别是**SQLGetData**提取行后，将调用 (有时称为*后期绑定*出于此原因)，并且该绑定指定由**SQLGetData**在调用期间持续。  
+ 若要从一列中检索的长整型数据，应用程序首先调用**SQLFetchScroll**或**SQLFetch**移动到某一行并提取对于绑定列的数据。 然后，应用程序调用**SQLGetData**。 **SQLGetData**具有相同的参数**SQLBindCol**： 语句句柄; 列号; 应用程序变量; 的 C 数据类型、 地址和字节长度和长度/指示器缓冲区的地址。 这两个函数具有相同的参数，因为它们执行实质上是相同的任务：它们都描述向驱动程序应用程序变量，并指定应在该变量中返回的特定列的数据。 主要区别是**SQLGetData**提取行后，将调用 (有时称为*后期绑定*出于此原因)，并且该绑定指定由**SQLGetData**在调用期间持续。  
   
- 有关单个列**SQLGetData**的行为类似于**SQLFetch**： 它检索列的数据、 将其转换为应用程序变量的类型并将其返回该变量中。 它还返回长度/指示器缓冲区中的数据的字节长度。 详细了解如何**SQLFetch**返回的数据，请参阅[提取行数据](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
+ 有关单个列**SQLGetData**的行为类似于**SQLFetch**:它检索列的数据、 将其转换为应用程序变量的类型并将其返回该变量中。 它还返回长度/指示器缓冲区中的数据的字节长度。 详细了解如何**SQLFetch**返回的数据，请参阅[提取行数据](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)。  
   
  **SQLGetData**不同于**SQLFetch**一个重要方面。 如果调用一次连续的同一列，每个调用将返回连续数据的一部分。 除最后一次调用每个调用将返回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （字符串数据，右端被截断）;最后一次调用都返回 SQL_SUCCESS。 这是如何**SQLGetData**用于检索部分中的长整型数据。 若要返回，没有更多数据时**SQLGetData**返回 sql_no_data 为止。 应用程序负责将长数据组合在一起，这可能意味着串联的数据部分。 每个部分是以 null 结尾;如果串联部件，该应用程序必须删除的 null 终止字符。 检索部分中的数据可能会出于长度可变的书签以及与其他长整型数据。 虽然很常见的驱动程序不能发现可用的数据量并返回 SQL_NO_TOTAL 字节长度长度/指示器缓冲区减少在每次调用中返回通过在上一个调用中，返回的字节数的值。 例如：  
   

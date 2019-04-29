@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165011"
 ---
 # <a name="data-source-selection-page-report-manager"></a>“选择数据源”页（报表管理器）
   使用“选择数据源”页，可以选择用于报表或报表模型的现有共享数据源项， 还可以选择其他数据源。 若要查看数据源类型或连接字符串，必须导航到共享数据源并打开属性页。  

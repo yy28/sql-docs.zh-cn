@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136256"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件
-  您可以使用 `sqlcmd` 运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 一个[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本文件是一个可以包含的组合的文本文件[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，`sqlcmd`命令和脚本变量。  
+  您可以使用 `sqlcmd` 运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件是一个文本文件，它可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、`sqlcmd` 命令以及脚本变量的组合。  
   
  若要使用记事本创建一个简单的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件，请执行下列操作：  
   
 1.  单击 **“开始”**，依次指向 **“所有程序”**、 **“附件”**，再单击 **“记事本”**。  
   
-2.  复制并粘贴以下[!INCLUDE[tsql](../../includes/tsql-md.md)]到记事本的代码：  
+2.  复制以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码并将其粘贴到记事本：  
   
     ```  
     USE AdventureWorks2012;  
@@ -50,7 +50,7 @@ ms.locfileid: "48085367"
   
 1.  打开命令提示符窗口。  
   
-2.  在命令提示符窗口中，键入： `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  在命令提示符窗口中，键入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  按 Enter。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085367"
   
 1.  打开命令提示符窗口。  
   
-2.  在命令提示符窗口中，键入： `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  在命令提示符窗口中，键入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  按 Enter。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48085367"
   
 ## <a name="see-also"></a>请参阅  
  [启动 sqlcmd 实用工具](sqlcmd-start-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)  
   
   

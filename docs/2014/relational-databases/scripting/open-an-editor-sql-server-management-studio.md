@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144772"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  

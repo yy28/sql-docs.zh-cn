@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130456"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>全文搜索断字符和筛选器在 SQL Server 2005 和 SQL Server 2008 中有重大改进
   断字符和筛选器都进行了重大更改。 对断字符进行了更多改进，其中包括增强的语言覆盖范围和可靠性。  

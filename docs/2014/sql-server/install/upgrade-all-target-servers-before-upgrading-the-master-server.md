@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156722"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>升级主服务器前先升级所有目标服务器
   在升级主服务器前，升级正在运行配置为目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有计算机。  
@@ -37,7 +37,7 @@ ms.locfileid: "48061932"
 ## <a name="corrective-action"></a>纠正措施  
  如果无法在升级主服务器前升级所有目标服务器，则必须先脱离所有目标服务器，再在升级后重新登记这些服务器。  
   
- 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“企业内的自动化管理”、“如何使目标服务器脱离主服务器”以及“如何在主服务器上登记目标服务器”主题。  
+ 有关详细信息，请参阅"自动执行跨企业管理，"的主题"如何：脱离目标服务器从主服务器，"和"如何：登记到主目标服务器"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 代理升级问题](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

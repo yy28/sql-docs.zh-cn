@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165373"
 ---
 # <a name="feature-selection"></a>功能选择
   使用  安装向导的“功能选择” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页上的复选框为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择组件。  
@@ -34,16 +34,16 @@ ms.locfileid: "53365829"
  **“共享功能”** 是指给定计算机上所有实例所共有的功能。 上述每个共享功能都设计为与可并行安装的支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本向后兼容（Service Pack、累积更新和修补程序）。  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：**[!INCLUDE[ssDE](../../includes/ssde-md.md)]和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 组件是唯一支持故障转移群集的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能。 可以在故障转移群集节点上安装其他组件，如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，但这些组件不能识别群集，因此当该故障转移群集节点脱机时，这些组件的服务不进行故障转移。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：**[!INCLUDE[ssDE](../../includes/ssde-md.md)]并[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]组件是仅有[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能支持故障转移群集。 可以在故障转移群集节点上安装其他组件，如 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，但这些组件不能识别群集，因此当该故障转移群集节点脱机时，这些组件的服务不进行故障转移。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 ### <a name="instance-features"></a>实例功能  
  选择各个组件组时， **“说明”** 窗格中会显示相应的说明。 您可以选中任意一些复选框。 若要继续，必须进行选择。  
   
 |功能|Description|  
 |--------------|-----------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、用于管理关系数据和 XML 数据的工具以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 服务器。 数据库引擎的功能如下：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。<br /><br /> 复制：可选:复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。<br /><br /> 全文搜索：可选:全文搜索提供了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于纯字符的数据发出全文查询的功能。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]设置用户帐户 ：可选:[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，它不仅能让你发现数据源中不一致和不正确的数据，还能提供计算机辅助且交互式方法来清理数据。 选中此复选框将安装 DQS 服务器。 完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装之后，您必须运行 DQSInstaller.exe 文件，才能 *完成* DQS 服务器安装。 如果你安装的 SQL server 默认实例，此文件是位于 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：** 选择“数据库引擎服务”时，“复制”组件和“全文搜索”组件是必需的，并由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装的安装程序自动选择。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包括[!INCLUDE[ssDE](../../includes/ssde-md.md)]（用于存储、处理和保护数据安全的核心服务）、复制、全文搜索、用于管理关系数据和 XML 数据的工具以及 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 服务器。 数据库引擎的功能如下：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用于存储、处理和保护数据的核心服务。<br /><br /> 复制：可选：复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。<br /><br /> 全文搜索：可选：全文搜索提供了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于纯字符的数据发出全文查询的功能。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]设置用户帐户 ：可选：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一种数据清理解决方案，使您能够发现数据源中的不一致和不正确数据并提供计算机辅助且交互式方法来清理您的数据。 选中此复选框将安装 DQS 服务器。 完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装之后，您必须运行 DQSInstaller.exe 文件，才能 *完成* DQS 服务器安装。 如果你安装的 SQL server 默认实例，此文件是位于 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集：** 复制和全文搜索组件是必需的并自动选择由安装程序为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集安装时选择数据库引擎服务。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一些工具，可用于创建和管理联机分析处理 (OLAP) 以及数据挖掘应用程序。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -本机|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式包括用于创建、管理和部署表格报表、矩阵报表、图形报表以及自由格式报表的服务器和客户端组件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还是一个可用于开发报表应用程序的可扩展平台。|  
   
 > [!IMPORTANT]
 >  1.  安装程序不为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 扩展部署中的多个节点配置负载平衡和单 URL 寻址。 若要完成扩展部署，必须使用 Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或第三方群集管理软件。 有关设置 Web 场部署的详细信息，请参阅[为横向扩展部署配置 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448)。  

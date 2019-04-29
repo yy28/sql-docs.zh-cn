@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce901e6a8639c8a2caea6e55cbaa18fedb56f4a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132729"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>创建和打开表（文本文件驱动程序）
 使用文本驱动程序时，使用 Odbcinst.ini 中指定的格式创建一个新表。 如果未指定，CSVDELIMITED 格式创建表。 默认情况下，整数列的默认值为 11 个字符和 FLOAT 列默认为 22 个字符。 日期列使用的年-月-日格式。 CHAR 和 LONGCHAR 列是在 CREATE 语句中指定的宽度。

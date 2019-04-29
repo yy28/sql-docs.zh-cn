@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182959"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  

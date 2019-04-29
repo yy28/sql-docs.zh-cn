@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063480"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime、xs:date 和 xs:time 类型的存储格式发生更改
   XMLDATETIME 规则可确定您的数据库是否包含在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后将变为无效的类型化 XML 数据。  

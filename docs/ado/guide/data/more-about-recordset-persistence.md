@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161581"
 ---
 # <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
 ADO 记录集对象支持存储的内容**记录集**通过使用文件中的对象及其[保存](../../../ado/reference/ado-api/save-method.md)方法。 永久存储的文件可能位于本地驱动器中，服务器或 Web 上的 URL 作为站点。 更高版本，可以使用还原文件[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**对象或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  

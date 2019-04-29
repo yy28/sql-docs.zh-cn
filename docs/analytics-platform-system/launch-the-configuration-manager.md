@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183434"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>在分析平台系统中启动配置管理器
 本主题说明用于启动**Configuration Manager**的分析平台系统 appliance。  

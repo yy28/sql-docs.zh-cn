@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128698"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 标头信息和版本信息
   没有用于 SQL Server Express LocalDB 实例 API 的单独头文件；LocalDB 函数签名和错误代码在 SQL Server Native Client 头文件 (sqlncli.h) 中定义。 若要使用 LocalDB 实例 API，必须在项目中包含 sqlncli.h 头文件。  
@@ -25,9 +25,9 @@ ms.locfileid: "52795349"
 ## <a name="localdb-versioning"></a>LocalDB 版本  
  对于每个主要 SQL Server 版本，LocalDB 安装将使用单组二进制代码。 这些 LocalDB 版本独立进行维护和修补。 这意味着，用户必须指定他或她将使用的 LocalDB 基准版本（也即主 SQL Server 版本）。 在.NET Framework 定义的标准版本格式指定的版本**System.Version**类：  
   
- *[.revision]]*  
+ *major.minor[.build[.revision]]*  
   
- 版本字符串中的前两个数字 (*主要*并*次要*) 都是必需的。 版本字符串中的最后两个数字 (*构建*并*修订*) 是可选的默认值为 0，如果用户将其省略。这意味着，如果用户仅指定“12.2”作为 LocalDB 版本号，则视为用户指定的是“12.2.0.0”。  
+ 版本字符串中的前两个数字 (*主要*并*次要*) 都是必需的。 版本字符串中的最后两个数字 (*构建*并*修订*) 是可选的默认值为 0，如果用户将其省略。这意味着，如果用户仅指定"12.2"作为 LocalDB 版本号，它将被视为用户指定的是"12.2.0.0"。  
   
  LocalDB 安装的版本在 SQL Server 实例注册表项下的 MSSQLServer\CurrentVersion 注册表项中定义，例如：  
   

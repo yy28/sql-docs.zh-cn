@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128095"
 ---
 # <a name="driver-architecture-overview"></a>驱动程序体系结构概述
 Microsoft Visual FoxPro ODBC 驱动程序是一个 32 位驱动程序，可用于打开和查询 Microsoft Visual FoxPro 数据库或多个 FoxPro 表通过开放式数据库连接 (ODBC) 接口。 您可以访问使用以下类型的应用程序的 FoxPro 数据：  
   
 -   使用 Microsoft 查询与 ODBC 进行通信的 Microsoft Office 应用程序，如 Microsoft Excel 或 Microsoft Word。  
   
--   Microsoft Visual c + + 或 C 使用 ODBC SDK API 编写的应用程序。  
+-   Microsoft 的视觉对象中编写的应用程序C++或使用 ODBC SDK API 的 C。  
   
 -   在 Microsoft Visual Basic 或 Microsoft Visual Basic for Applications 中编写的应用程序。  
   

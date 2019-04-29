@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057758"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
   此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在“表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅[使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  

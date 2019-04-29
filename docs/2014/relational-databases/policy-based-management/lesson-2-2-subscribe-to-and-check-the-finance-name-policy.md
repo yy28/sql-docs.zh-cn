@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135714"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>订阅和检查 Finance Name 策略
   在本任务中，将 Finance 数据库配置为订阅 Finance 策略类别。 然后，测试 Finance Name 策略。  
@@ -69,7 +69,7 @@ ms.locfileid: "48137077"
  本教程说明了如何创建基于策略的管理条件、策略和策略组，以及如何应用筛选器并检查基于策略的管理目标是否符合策略。  
   
 ## <a name="next"></a>Next  
- 现已学完了本教程。 若要返回到开始位置，请单击 [教程：使用基于策略的管理来管理服务器](tutorial-administering-servers-by-using-policy-based-management.md)。  
+ 现已学完了本教程。 若要返回到开始位置，请单击[教程：使用基于策略的管理来管理服务器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
  有关教程的列表，请参阅[有关 SQL Server 2014 教程](../../tutorials/tutorials-for-sql-server-2014.md)。  
   

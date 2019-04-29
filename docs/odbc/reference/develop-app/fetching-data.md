@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a548c521b7baa283a9cdf1572fbe8e42e1e6cf45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061665"
 ---
 # <a name="fetching-data"></a>提取数据
 从结果集中检索行并将它们返回到应用程序的过程称为*提取*。 本部分介绍如何提取数据。  

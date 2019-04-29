@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156558"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&amp;gt;“设置”（报表生成器）
   单击**报表生成器**按钮，然后单击**选项**为显示最近使用的文件和连接设置选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046622"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   使用 SQLPutData 发送 65,535 字节以上的数据时，以下限制适用 (对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本 4.21 a) 或 400 KB 的 sql_longvarchar （适用于 SQL Server 版本在 6.0 及更高版本) 的数据 (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 列：  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164998"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>“数据源属性”对话框 -&gt;“常规”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“常规”** 可从报表服务器中选择共享数据源，或者创建或修改报表中嵌入的数据源的连接信息。  

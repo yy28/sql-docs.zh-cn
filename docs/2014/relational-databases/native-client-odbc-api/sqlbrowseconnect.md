@@ -1,5 +1,5 @@
 ---
-title: SQLBrowseConnect |Microsoft Docs
+title: SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067654"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用三个级别的连接信息进行分类的关键字。 对于每个关键字，下表指示是否返回有效值列表以及该关键字是否可选。  
@@ -35,24 +35,24 @@ ms.locfileid: "53352686"
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|用户帐户控制|否|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
-|UID|否|用户帐户控制|用户登录 id。|  
+|SERVER|是|否|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
+|UID|否|是|用户登录 id。|  
 |PWD|否|是（取决于用户）|用户指定的密码。|  
-|APP|否|用户帐户控制|应用程序调用的名称**SQLBrowseConnect**。|  
-|WSID|否|用户帐户控制|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
+|APP|否|是|应用程序调用的名称**SQLBrowseConnect**。|  
+|WSID|否|是|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
   
 ## <a name="level-3"></a>级别 3  
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|用户帐户控制|用户帐户控制|名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。|  
-|LANGUAGE|用户帐户控制|用户帐户控制|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
+|DATABASE|是|是|名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。|  
+|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
   
  **SQLBrowseConnect**忽略存储在 ODBC 数据源定义中的 DATABASE 和 LANGUAGE 关键字的值。 如果数据库或连接字符串中指定的语言传递给**SQLBrowseConnect**是无效的**SQLBrowseConnect**返回 SQL_NEED_DATA 和级别 3 连接属性。  
   
  通过调用设置的以下属性[SQLSetConnectAttr](sqlsetconnectattr.md)，确定返回的结果集**SQLBrowseConnect**。  
   
-|Attribute|Description|  
+|特性|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果设置为 SQL_MORE_INFO_YES， **SQLBrowseConnect**返回服务器属性的扩展的字符串。<br /><br /> 以下是返回的扩展字符串示例**SQLBrowseConnect**: ServerName\InstanceName;群集： 无;版本： 8.00.131<br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定服务器名称，则**SQLBrowseConnect**将返回指定的服务器的信息。 如果将 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL， **SQLBrowseConnect**返回域中的所有服务器的信息。<br /><br /> 由于网络问题，而**SQLBrowseConnect**不可能及时接收来自所有服务器。 因此，每个请求所返回的服务器列表都可能不同。|  

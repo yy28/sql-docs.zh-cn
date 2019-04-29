@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7ad878072f8139cc95d6dc34c01f5f48835774a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067586"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger 输出中的新列可能会影响应用程序
   trigger_schemaias 结果集中的最后一列返回的 sp_helptrigger 系统存储过程。  

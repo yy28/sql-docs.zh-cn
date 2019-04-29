@@ -1,5 +1,5 @@
 ---
-title: 发送更新： UpdateBatch 方法 |Microsoft Docs
+title: 发送更新：UpdateBatch 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062873"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>发送更新：UpdateBatch 方法
 下面的代码通过 LockType 属性设置为 adLockBatchOptimistic 和到 adUseClient CursorLocation 在批处理模式下打开的记录集。 它将添加两个新记录和保存的原始值的现有记录中的字段的值更改，然后调用 UpdateBatch 将所做的更改回数据源。  

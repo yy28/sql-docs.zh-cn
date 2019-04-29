@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046149"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
   创建和维护全文索引涉及使用称为“填充”（也称为“爬网”）的过程填充索引。  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> 排除全文填充 （爬网） 中的错误  
  如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 对给定实例的默认爬网日志，在这种情况下，第一个实例，位于 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 文件夹。 爬网日志文件遵循以下命名方案：  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >。日志 [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  数据库的 ID。 <`dbid`> 是一个五位数带有前导零。  

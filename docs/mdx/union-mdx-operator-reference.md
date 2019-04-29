@@ -1,5 +1,5 @@
 ---
-title: + （并集）(MDX) |Microsoft 文档
+title: + （联盟）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129822"
 ---
-# <a name="union---mdx-operator-reference"></a>联合的 MDX 运算符参考
+# <a name="union---mdx-operator-reference"></a>并集的 MDX 运算符参考
 
 
   执行一个集运算以返回两个集的并集并删除重复成员。  
@@ -35,7 +35,7 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>返回值  
  一个包含两个指定集的成员的集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **+ （联合）** 运算符在功能上等效于[联合&#40;MDX&#41; ](../mdx/union-mdx.md)函数。  
   
 ## <a name="examples"></a>示例  

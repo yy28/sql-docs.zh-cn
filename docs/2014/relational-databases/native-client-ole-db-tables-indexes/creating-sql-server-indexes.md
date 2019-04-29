@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bda39528b6bc04fbff6faa4c72d85a4eccd576c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046449"
 ---
 # <a name="creating-sql-server-indexes"></a>创建 SQL Server 索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**iindexdefinition:: Createindex**函数，从而允许使用者定义的新索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。  
@@ -42,23 +42,23 @@ ms.locfileid: "48146197"
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_CLUSTERED|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：控制索引聚类分析。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口尝试创建聚集的索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口尝试对创建非聚集索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。|  
-|DBPROP_INDEX_FILLFACTOR|R/W：读/写<br /><br /> 默认值：0<br /><br /> 说明：指定用于存储的索引页所占的百分比。 有关详细信息，请参阅[创建索引](/sql/t-sql/statements/create-index-transact-sql)。<br /><br /> 变量类型为 VT_I4。 该值必须大于或等于 1 且小于或等于 100。|  
-|DBPROP_INDEX_INITIALIZE|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLCOLLATION|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLS|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_PRIMARYKEY|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE 说明：将该索引创建为引用完整性 PRIMARY KEY 约束。<br /><br /> VARIANT_TRUE：创建该索引是为了支持表的 PRIMARY KEY 约束。 列必须不可为 Null。<br /><br /> VARIANT_FALSE：该索引不作为表中行值的 PRIMARY KEY 约束使用。|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TEMPINDEX|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TYPE|R/W：读/写<br /><br /> 默认值：无<br /><br /> 说明： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_UNIQUE|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：对参与的一个或多个列将该索引创建为 UNIQUE 约束。<br /><br /> VARIANT_TRUE：该索引用于唯一约束表中的行值。<br /><br /> VARIANT_FALSE：该索引不对行值进行唯一约束。|  
+|DBPROP_INDEX_AUTOUPDATE|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_CLUSTERED|R/W:读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:控制索引聚类分析。<br /><br /> VARIANT_TRUE:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口尝试创建聚集的索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持对任何表最多创建一个聚集索引。<br /><br /> VARIANT_FALSE:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口尝试对创建非聚集索引[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。|  
+|DBPROP_INDEX_FILLFACTOR|R/W:读/写<br /><br /> 默认值：0<br /><br /> 说明:指定用于存储索引页的百分比。 有关详细信息，请参阅[创建索引](/sql/t-sql/statements/create-index-transact-sql)。<br /><br /> 变量类型为 VT_I4。 该值必须大于或等于 1 且小于或等于 100。|  
+|DBPROP_INDEX_INITIALIZE|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLCOLLATION|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLS|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_PRIMARYKEY|R/W:读/写<br /><br /> 默认值：VARIANT_FALSE 说明：该索引创建为引用完整性，PRIMARY KEY 约束。<br /><br /> VARIANT_TRUE:创建索引以支持表的 PRIMARY KEY 约束。 列必须不可为 Null。<br /><br /> VARIANT_FALSE:索引不用作表中的行值的 PRIMARY KEY 约束。|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TEMPINDEX|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TYPE|R/W:读/写<br /><br /> 默认值：None<br /><br /> 说明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不支持此属性。 尝试在 CreateIndex 中设置此属性将导致出现 DB_S_ERRORSOCCURRED 返回值。 此属性结构的 dwStatus 成员指示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_UNIQUE|R/W:读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:该索引创建为参与列或列的唯一约束。<br /><br /> VARIANT_TRUE:索引用于唯一约束的表中的行值。<br /><br /> VARIANT_FALSE:索引不唯一约束的行值。|  
   
  在特定于提供程序的属性集 DBPROPSET_SQLSERVERINDEX 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口定义以下数据源信息属性。  
   
 |属性 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|类型：VT_BOOL (R/W)<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：当使用 IIndexDefinition::CreateIndex 将此属性指定为值 VARIANT_TRUE 时，将导致创建与被索引的列对应的主 xml 索引。 如果此属性为 VARIANT_TRUE，则 cIndexColumnDescs 应为 1，否则将会出错。|  
+|SSPROP_INDEX_XML|键入：VT_BOOL (R/W)<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明:如果值为 VARIANT_TRUE 使用 iindexdefinition:: Createindex 指定此属性，它会导致正在创建要编制索引的列相对应的主 xml 索引。 如果此属性为 VARIANT_TRUE，则 cIndexColumnDescs 应为 1，否则将会出错。|  
   
  本示例创建了一个主键索引：  
   

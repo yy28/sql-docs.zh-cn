@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1738c7432dce6538fe15c4b23f15f5ab7fe6f219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161531"
 ---
 # <a name="handling-ado-events"></a>处理 ADO 事件
 ADO 事件模型支持某些可发出的同步和异步 ADO 操作*事件*，或在操作开始前或后完成的通知。 事件是实际应用程序中定义的事件处理程序例程的调用。  
