@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047185"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ ms.locfileid: "47794315"
 |**product_version**|**varchar(23)**|产品版本。 按如下格式显示：<br /><br /> x.x:x.x|  
 |**debug**|**bit**|1 = 模块是调试版本的已加载模块。|  
 |**修补**|**bit**|1 = 模块已得到修补。|  
-|**预发行版**|**bit**|1 = 模块是预发行版本的已加载模块。|  
+|**prerelease**|**bit**|1 = 模块是预发行版本的已加载模块。|  
 |**private_build**|**bit**|1 = 模块是专用版本的已加载模块。|  
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
-|**语言**|**int**|模块的版本信息语言。|  
-|**公司**|**nvarchar(256)**|创建模块的公司的名称。|  
+|**language**|**int**|模块的版本信息语言。|  
+|**company**|**nvarchar(256)**|创建模块的公司的名称。|  
 |**description**|**nvarchar(256)**|模块的说明。|  
 |**名称**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
 |**pdw_node_id**|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>请参阅  

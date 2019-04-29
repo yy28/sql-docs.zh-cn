@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130208"
 ---
 # <a name="persisting-data"></a>保留数据
 （例如，使用便携式计算机） 的可移植计算已经生成了可以在这两个连接和断开连接状态中运行的应用程序的需要。 ADO 现已支持这通过让开发人员能够保存客户端游标**记录集**到磁盘并重新加载它更高版本。  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065717"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式化文件跳过表列 (SQL Server)
   本主题说明格式化文件。 当数据文件中不存在字段时，您可以使用格式化文件跳过导入表列。 仅当跳过的列可为空值和/或具有默认值时，数据文件中的字段数才可以少于表中的列数。  

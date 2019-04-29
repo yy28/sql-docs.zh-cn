@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047106"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "48906347"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|在资源池与资源调控器池相关联的情况下的资源池 ID。|  
-|**memory_broker_type**|**nvarchar(60)**|内存中介器的类型。 目前有三种类型的内存中介器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 其说明与下面所列。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 以供分配的内存缓存对象 （不缓冲池缓存）。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 从缓冲池盗用的内存。 这种内存在当前所有者释放它之前，不能供其他组件重新使用。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供将来使用的当前正在执行的请求的内存。|  
+|**memory_broker_type**|**nvarchar(60)**|内存中介器的类型。 目前有三种类型的内存中介器中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 其说明与下面所列。<br /><br /> **MEMORYBROKER_FOR_CACHE** :以供分配的内存缓存对象 （不缓冲池缓存）。<br /><br /> **MEMORYBROKER_FOR_STEAL** :从缓冲池盗用的内存。 这种内存在当前所有者释放它之前，不能供其他组件重新使用。<br /><br /> **MEMORYBROKER_FOR_RESERVE** :当前正在执行的请求保留供将来使用的内存。|  
 |**allocations_kb**|**bigint**|已分配给这种类型的中介器的内存量（以 KB 为单位）。|  
 |**allocations_kb_per_sec**|**bigint**|每秒钟的内存分配速率（以 KB 为单位）。 对于内存释放，该值可以为负值。|  
 |**predicted_allocations_kb**|**bigint**|由中介器预测的已分配的内存量。 这基于内存使用模式。|  
@@ -51,7 +51,7 @@ ms.locfileid: "48906347"
 |**last_notification**|**nvarchar(60)**|基于当前设置和使用模式的内存使用建议。 以下是有效值：<br /><br /> 增长<br /><br /> 缩减<br /><br /> 稳定|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

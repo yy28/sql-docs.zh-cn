@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060281"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
   当记录实例出现在时，updategram 指示插入操作**\<后 >** 块中但不是在相应**\<之前 >** 块。 在这种情况下，updategram 中的记录插入**\<后 >** 到数据库中的块。  
@@ -64,7 +64,7 @@ ms.locfileid: "53365849"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<之前 > 块  
+## <a name="before-block"></a>\<before> Block  
  **\<之前 >** 块可省略了插入操作。 如果可选`mapping-schema`未指定属性，  **\<ElementName >** 的 updategram 映射到数据库表和子元素中指定或属性将映射到表中的列。  
   
 ## <a name="after-block"></a>\<后 > 块  

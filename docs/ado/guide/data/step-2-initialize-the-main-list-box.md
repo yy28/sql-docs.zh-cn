@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：初始化主列表框 |Microsoft Docs
+title: 第 2 步：初始化主列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062793"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
+# <a name="step-2-initialize-the-main-list-box"></a>第 2 步：初始化主列表框
 若要声明全局记录和记录集对象，请插入 （常规） （声明） 为 Form1 的以下代码：  
   
 ```  
@@ -52,5 +52,5 @@ End Sub
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
- [第 1 步：设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [步骤 3:填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [步骤 1：设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [步骤 3：填充字段列表框](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140428"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
   有两种方法可以将结果集或数据从过程返回给调用程序：输出参数和返回代码。 本主题提供了有关这两种方法的信息。  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可以使用过程`cursor`数据类型用于 OUTPUT 参数。 如果`cursor`数据类型指定为参数，则必须为过程定义中该参数指定 VARYING 和 OUTPUT 关键字。 可以将参数指定为仅限 OUTPUT，但如果在参数声明中指定了 VARYING 关键字，则数据类型必须为`cursor`，并且还必须指定 OUTPUT 关键字。  
   
 > [!NOTE]  
->  `cursor`数据类型不能绑定到通过数据库 Api，如 OLE DB、 ODBC、 ADO 和 Db-library 应用程序变量。 因为必须绑定 OUTPUT 参数，应用程序可以执行的过程，过程与之前`cursor`输出参数不能从数据库 Api 调用。 可以从调用这些过程[!INCLUDE[tsql](../../../includes/tsql-md.md)]批处理、 过程或触发器时，才`cursor`OUTPUT 变量分配给[!INCLUDE[tsql](../../../includes/tsql-md.md)]本地`cursor`变量。  
+>  `cursor` 数据类型不能通过数据库 API（例如 OLE DB、ODBC、ADO 和 DB-Library）绑定到应用程序变量上。 因为必须先绑定 OUTPUT 参数，应用程序才可以执行过程，所以带有 `cursor` OUTPUT 参数的过程不能通过数据库 API 调用。 只有将 `cursor` OUTPUT 变量分配给 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 局部 `cursor` 变量时，才可以通过 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理、过程或触发器调用这些过程。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 输出参数的规则  
- 以下规则适用于`cursor`时执行该过程输出参数：  
+ 在执行过程时，以下规则适用于 `cursor` 输出参数：  
   
 -   对于只进游标，游标的结果集中返回的行只是那些过程执行结束时处于或超出游标位置的行，例如：  
   

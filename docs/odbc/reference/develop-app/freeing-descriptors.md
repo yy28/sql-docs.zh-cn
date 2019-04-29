@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061485"
 ---
 # <a name="freeing-descriptors"></a>释放描述符
 可以是显式分配的描述符是显式释放通过调用**SQLFreeHandle**与*HandleType* SQL_HANDLE_DESC，或隐式时，将释放连接句柄。 显式分配的描述符被释放时，会自动应用的已释放的描述符还原为隐式为其分配的描述符到的所有语句句柄。  

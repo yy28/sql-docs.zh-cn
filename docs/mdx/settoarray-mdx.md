@@ -1,5 +1,5 @@
 ---
-title: SetToArray (MDX) |Microsoft 文档
+title: SetToArray (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149302"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 
@@ -38,8 +38,8 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **SetToArray**函数将一个或多个集转换为数组以供用户定义函数。 所得到的数组中的维度数与指定的集数相同。  
+## <a name="remarks"></a>备注  
+ **SetToArray**函数将一个或多个集转换为数组，以便在用户定义函数中使用。 所得到的数组中的维度数与指定的集数相同。  
   
  可选的数值表达式可以为数组单元提供值。 如果未指定数值表达式，则在当前上下文中对集的交叉联接求值。  
   
@@ -51,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  返回类型**SetToArray** VARIANT 类型，VT_ARRAY 技术支持部门。 因此，输出**SetToArray**函数应仅用作输入的用户定义函数。  
+>  返回类型**SetToArray**函数是 VARIANT 类型 VT_ARRAY。 因此的输出**SetToArray**函数应只用作用户定义函数的输入。  
   
 ## <a name="example"></a>示例  
  下例将返回一个数组。  
@@ -61,6 +61,6 @@ SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065515"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>使用关系图布局 (Visual Database Tools)
   您可以自定义数据库关系图的外观。  

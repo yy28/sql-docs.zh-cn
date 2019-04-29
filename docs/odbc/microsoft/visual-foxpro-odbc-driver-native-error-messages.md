@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065104"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 驱动程序本机错误消息
 下表列出了本机 Visual FoxPro ODBC 驱动程序的错误消息。  
@@ -167,7 +167,7 @@ ms.locfileid: "47677235"
 |492|没有键列指定为更新表\\*值*\\。 使用游标的 KeyFieldList 属性。|  
 |493|找不到 SQL 参数。|  
 |494|视图定义已更改。|  
-|495|警告： 表的 KeyField 属性定义的键*值*不是唯一的。|  
+|495|警告：表的 KeyField 属性定义的键*值*不是唯一的。|  
 |498|SQL SELECT 语句是无效的。|  
 |499|SQL 参数*值*无效。|  
   
@@ -280,7 +280,7 @@ ms.locfileid: "47677235"
   
 |||  
 |-|-|  
-|802|SQL： 找不到表。|  
+|802|SQL:找不到表。|  
 |872|列数过多。|  
 |879|没有主键。|  
 |884|索引的唯一性*值*发生冲突。|  
@@ -297,7 +297,7 @@ ms.locfileid: "47677235"
 |902|表达式计算器失败。|  
 |903|字符串是太长而无法容纳。|  
 |904|* * 或 ^ 域错误。|  
-|905|Log （）： 零或负数作为参数使用。|  
+|905|LOG （):零或负用作参数。|  
 |906|Sqrt （） 参数不能为负。|  
 |912|操作是无效的通用字段。|  
 |914|代码页编号无效。|  

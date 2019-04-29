@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130723"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Visual C# .NET 入门
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET 是一种支持的公共语言运行时 (CLR) 的托管编程语言中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET。 许多 C# 语言中，有关详细信息请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET 文档。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 来开发 SMO 应用程序。  

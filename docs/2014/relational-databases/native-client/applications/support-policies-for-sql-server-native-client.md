@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046522"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支持策略
   本主题讨论如何将各种数据访问组件与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 一起使用。  
@@ -29,9 +29,9 @@ ms.locfileid: "48142477"
 |SQL Server Native Client 版本|受支持的操作系统|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更高版本<br />Microsoft Windows Server 2003 或更高版本<br />Microsoft Windows XP Service Pack 1 或更高版本<br />Microsoft Windows Vista (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 或更高版本)<br />Microsoft Windows Server 2008 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 或更高版本)|  
-|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2，或更高版本<br />Microsoft Windows XP Service Pack 2 或更高版本<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2，或更高版本<br />Microsoft Windows XP Service Pack 2 或更高版本<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7|  
-|SQL Server Native Client 11.0（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]）|Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7<br />Microsoft Windows 8<br />Microsoft Windows Server 2012|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2，或更高版本<br />Microsoft Windows XP Service Pack 2 或更高版本<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2，或更高版本<br />Microsoft Windows XP Service Pack 2 或更高版本<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7|  
+|SQL Server Native Client 11.0（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]）|-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7<br />-   Microsoft Windows 8<br />-   Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO 支持策略  
  ADO 应用程序如果不需要 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本的任何功能，则可以使用 Windows 附带的 SQLOLEDB OLE DB 访问接口。  

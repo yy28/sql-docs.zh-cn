@@ -1,5 +1,5 @@
 ---
-title: 安装 Analysis Services |Microsoft 文档
+title: 安装 Analysis Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054284"
 ---
 # <a name="install-sql-server-analysis-services"></a>安装 SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   SQL Server Analysis Services 是托管表格模型、多维数据集以及数据挖掘模型的分析数据库服务器，可从报表、电子表格和仪表板进行访问。  
   
- Analysis Services 是多实例，这意味着你可以在一台计算机上安装多个副本或运行新和旧版本并行。 安装的任何示例都以三种模式之一运行，这是在安装期间确定的：多维和数据挖掘、表格或 SharePoint。 如果你想使用多种模式，每种模式都将需要一个单独实例。  
+ Analysis Services 是多实例，这意味着您可以在一台计算机上安装多个副本或新的和旧版本并行运行。 确定在安装过程，您安装的任何实例运行在三种模式之一：多维和数据挖掘、 表格或 SharePoint。 如果你想使用多种模式，每种模式都将需要一个单独实例。  
   
  在某种模式下安装了服务器后，可以用它来托管符合该模式的解决方案。 例如，如果你想通过网络来访问表格模型数据，则需要表格模式服务器。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "34708075"
   
 1.  从安装程序的功能树中选择 **“Analysis Services”** 。  
   
-     ![安装程序功能树显示 Analsyis 服务](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "显示 Analsyis 服务的安装程序功能树")  
+     ![显示 Analsyis Services 的安装程序功能树](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "显示 Analsyis Services 的安装程序功能树")  
   
-2.  在“Analysis Services 配置”页上，选择一种模式。 表格模式下是默认设置...  
+2.  在“Analysis Services 配置”页上，选择一种模式。 表格模式下是默认值...  
   
-     ![使用 Analysis Services 配置选项的设置页](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "使用 Analysis Services 配置选项的设置页")  
+     ![使用 Analysis Services 配置选项的设置页面](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "与 Analysis Services 配置选项的安装程序页")  
   
   表格模式使用 xVelocity 内存中分析引擎 (VertiPaq)，该引擎是表格模型的默认存储器。 将表格模型部署到服务器之后，可选择性地配置表格解决方案，以便使用 DirectQuery 磁盘存储代替受内存限制的存储。  
  
@@ -68,7 +68,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|TABULAR|这是默认值。 如果你未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
+|TABULAR|这是默认值。 如果未设置**ASSERVERMODE**，在表格模式下安装了服务器。|
 |MULTIDIMENSIONAL|该值是可选的。|  
 |POWERPIVOT|该值是可选的。 实际上，如果设置 **ROLE** 参数，会自动将服务器模式设置为 1，从而使 **ASSERVERMODE** 成为 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安装的可选项。 有关详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。|  
   

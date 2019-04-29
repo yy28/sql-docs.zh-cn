@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061625"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>使用 SQLBulkOperations 提取行
 可以通过调用到行集使用书签 refetched 数据**SQLBulkOperations。** 由绑定的书签列中的书签标识要提取的行。 不会获取 SQL_COLUMN_IGNORE 值的列。  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065755"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
   将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
@@ -42,7 +42,7 @@ ms.locfileid: "48078437"
   
 -   为避免在转换期间丢失扩展字符，请使用 Unicode 字符格式或指定代码页。  
   
--   存储在字符格式文件中的所有 `sql_variant` 数据都是在不包括元数据的情况下进行存储的。 每个数据值转换为`char`格式，根据隐式数据转换规则。 当数据导入到 `sql_variant` 列中时，该数据是以 `char` 格式导入的。 当导入到某一列数据类型以外`sql_variant`，数据会转换从`char`使用隐式转换。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
+-   存储在字符格式文件中的所有 `sql_variant` 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 `char` 格式。 当数据导入到 `sql_variant` 列中时，该数据是以 `char` 格式导入的。 而导入到数据类型不是 `sql_variant` 的列中时，数据将通过隐式转换从 `char` 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
 -   **Bcp**实用工具导出`money`值作为字符格式数据文件与四位数字的小数点后且不包含诸如逗号分隔符之类的任何数字分组符号。 例如，包含值 1,234,567.123456 的 `money` 列将以字符串 1234567.1235 的形式大容量导出到数据文件中。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48078437"
   
  下列命令行选项支持字符格式：  
   
-|Command|选项|Description|  
+|Command|Option|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|将导致**bcp**实用工具使用字符数据。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |限定符|Description|  
 |----------------|-----------------|  
 |**-c**|指定字符格式。|  
-|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认的字段终止符是制表符 (\t)。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|将逗号 (`,`) 指定为字段终止符。<br /><br /> 注意：默认字段终止符是制表符 (\t)。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 实用工具通过使用集成安全性的受信任连接连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T** ，则需要指定 **-U** 和 **-P** 才能成功登录。|  
   
  下面的示例将 `myTestCharData` 表中的字符格式数据大容量导出到使用逗号 (,) 作为字段终止符且名为 `myTestCharData-c.Dat` 的新数据文件。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示符下输入：  

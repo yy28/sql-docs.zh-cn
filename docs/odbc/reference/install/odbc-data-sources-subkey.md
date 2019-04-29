@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069816"
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC 数据源子项
 在 ODBC 数据源的子项下的值列表的数据源。 这些值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|*数据源名称*|REG_SZ|*驱动程序说明*|  
+|*data-source-name*|REG_SZ|*driver-description*|  
   
  *数据源名称*值定义管理程序 （这通常会提示用户为其），并*驱动程序说明*驱动程序开发人员定义 (它通常是的名称DBMS 的驱动程序相关联的)。  
   
- 例如，假设已定义三个数据源： 清单，它将使用 SQL Server;工资单、 使用 dBASE;和人员，使用该格式的文本文件。 在 ODBC 数据源的子项下的值可能按如下所示：  
+ 例如，假设三个数据源已定义：清单，它将使用 SQL Server;工资单、 使用 dBASE;和人员，使用该格式的文本文件。 在 ODBC 数据源的子项下的值可能按如下所示：  
   
 ```  
 Inventory : REG_SZ : SQL Server  

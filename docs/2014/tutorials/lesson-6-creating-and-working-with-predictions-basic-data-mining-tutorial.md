@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185393"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>第 6 课：创建和使用预测 （数据挖掘基础教程）
   您已经定型、测试并浏览了创建的数据挖掘模型。 现在已准备好使用模型来标识最可能响应新目标邮递活动的人。  

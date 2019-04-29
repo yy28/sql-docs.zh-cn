@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065258"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 创建可更新的新记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  

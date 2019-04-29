@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount |Microsoft Docs
+title: SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046602"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   当参数值的数组绑定的语句执行时`SQLRowCount`如果任何行的参数值在语句执行过程中生成错误条件，则返回 SQL_ERROR。 通过返回任何值*RowCountPtr*函数自变量。  

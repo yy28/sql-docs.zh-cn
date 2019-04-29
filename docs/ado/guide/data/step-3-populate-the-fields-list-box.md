@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062773"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步骤 3：填充字段列表框
 若要填充的字段列表框中，将以下代码插入的单击事件处理程序`lstMain`:  
@@ -59,5 +59,5 @@ End Sub
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   
- [步骤 2:初始化主列表框](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [步骤 4:填充详细信息文本框中](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [步骤 2：初始化主列表框](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
+ [步骤 4：填充详细信息文本框中](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

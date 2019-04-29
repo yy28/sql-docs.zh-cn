@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052877"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建一个新的空白表格模型项目。 创建新项目之后，您可以使用表导入向导开始添加数据。 本课程还提供了创作环境，在 SSDT 中的表格模型的简要介绍。  
   
-学完本课的预计时间：**10 分钟**  
+估计的时间才能完成本课程中：**10 分钟**  
   
 ## <a name="prerequisites"></a>先决条件  
 本主题是表格模型创作教程中的第一课。 若要完成本课程中，您必须安装 SQL Server 实例上的 AdventureWorksDW 示例数据库。 若要了解详细信息，请参阅[表格建模&#40;Adventure Works 教程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  

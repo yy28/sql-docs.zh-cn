@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061635"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驱动程序管理器生成的事件
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47639835"
   
 |Visual Studio Analyzer 事件|Description|  
 |----------------------------------|-----------------|  
-|**调用**|生成 ODBC API 的每个条目。|  
+|**Call**|生成 ODBC API 的每个条目。|  
 |**ReturnException**|生成每个 ODBC API 返回 SQL_ERROR 返回代码时。|  
 |**ReturnNormal**|生成每个 ODBC API 返回时，如果返回代码不是 SQL_ERROR。|  
 |**连接开始**|指示连接已开始;ODBC 驱动程序管理器调用驱动程序的连接的 Api 时生成。|  

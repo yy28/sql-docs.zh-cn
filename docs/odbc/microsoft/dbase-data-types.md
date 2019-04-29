@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126310"
 ---
 # <a name="dbase-data-types"></a>dBASE 数据类型
 下表显示了如何将 dBASE 数据类型映射到 ODBC SQL 数据类型。 请注意，并非所有 ODBC SQL 数据类型都支持。  
@@ -32,11 +32,11 @@ ms.locfileid: "47626265"
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT [1]|SQL_DOUBLE|  
+|FLOAT[1]|SQL_DOUBLE|  
 |逻辑|SQL_BIT|  
 |备注|SQL_LONGVARCHAR|  
 |数字 (BCD)|SQL_DOUBLE|  
-|OLEOBJECT [1]|SQL_LONGBINARY|  
+|OLEOBJECT[1]|SQL_LONGBINARY|  
   
  仅为 dBASE 版本 5 的的 [1] 有效。*x*  
   

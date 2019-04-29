@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134389"
 ---
 # <a name="minimizing-log-file-space-usage"></a>最大程度降低日志文件空间使用
 日志文件可能会快速填充 （从而停止服务器） 上的 SQL Server 数据库的活动量很大时。 可以将日志文件设置为**在检查点截断**显著扩展数据库的日志文件的生命周期。  

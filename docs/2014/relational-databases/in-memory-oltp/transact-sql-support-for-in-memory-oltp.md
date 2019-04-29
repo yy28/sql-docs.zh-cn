@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156225"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>对内存中 OLTP 的 Transact-SQL 支持
   可以使用任何 Transact-SQL 查询或 DML 语句（SELECT、INSERT、UPDATE 或 DELETE）、即席语句和 SQL 模块（如存储过程、表值函数、标量函数、触发器和视图）来访问内存优化表。 有关详细信息请参阅[访问内存优化表使用解释型 TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48218487"
   
 -   [创建类型&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (请参阅`MEMORY_OPTIMIZED`， `BUCKET_COUNT`， `INDEX`，并且`HASH`)  
   
--   [声明@local_variable &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (请参阅`NULL`  |  `NOT NULL`)  
+-   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (see `NULL` | `NOT NULL`)  
   
  内存优化表支持 `PRIMARY KEY` 和 `NOT NULL` 约束。 有关实现不支持的约束的信息，请参阅[迁移检查和外键约束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。  
   

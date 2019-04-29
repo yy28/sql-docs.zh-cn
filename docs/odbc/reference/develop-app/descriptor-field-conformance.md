@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049847"
 ---
 # <a name="descriptor-field-conformance"></a>描述符字段一致性
 下表指示每个 ODBC 描述符标头字段，这是定义完善的一致性级别。  
@@ -47,8 +47,8 @@ ms.locfileid: "47642305"
 |SQL_DESC_CATALOG_NAME|级别 2|  
 |SQL_DESC_CONCISE_TYPE|核心|  
 |SQL_DESC_DATA_PTR|核心|  
-|SQL_DESC_DATETIME_INTERVAL_ 代码|核心 [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ 精度|核心 [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Core[1]|  
 |SQL_DESC_DISPLAY_SIZE|核心|  
 |SQL_DESC_FIXED_PREC_SCALE|核心|  
 |SQL_DESC_INDICATOR_PTR|核心|  

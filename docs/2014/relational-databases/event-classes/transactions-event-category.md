@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076e68de4dc5d4e25f6cabe6b39ac4a61a05033a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062225"
 ---
 # <a name="transactions-event-category"></a>Transactions 事件类别
   **Transactions** 事件类可用于监视事务的状态。 带有 **TM:** 前缀的事件类名称可用于跟踪通过事务管理界面发送的、与事务相关的操作。  
@@ -32,16 +32,16 @@ ms.locfileid: "52801099"
 |-----------|-----------------|  
 |[DTCTransaction 事件类](dtctransaction-event-class.md)|跟踪由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 协调的事务。 这些是在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的两个或两个以上的数据库或实例之间分布的事务。|  
 |[SQLTransaction 事件类](sqltransaction-event-class.md)|跟踪 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN、COMMIT TRAN、SAVE TRAN 和 ROLLBACK TRAN 语句。|  
-|[TM:Begin Tran Completed 事件类](tm-begin-tran-completed-event-class.md)|指明已完成 BEGIN TRANSACTION 请求。|  
-|[TM:Begin Tran Starting 事件类](tm-begin-tran-starting-event-class.md)|指明正在启动 BEGIN TRANSACTION 请求。|  
-|[TM:Commit Tran Completed 事件类](tm-commit-tran-completed-event-class.md)|指明已完成 COMMIT TRANSACTION 请求。|  
-|[TM:Commit Tran Starting 事件类](tm-commit-tran-starting-event-class.md)|指明正在启动 COMMIT TRANSACTION 请求。|  
-|[TM:Promote Tran Completed 事件类](tm-promote-tran-completed-event-class.md)|指明已完成 PROMOTE TRANSACTION 请求。|  
-|[TM:Promote Tran Starting 事件类](tm-promote-tran-starting-event-class.md)|指明正在启动 PROMOTE TRANSACTION 请求。|  
-|[TM:Rollback Tran Completed 事件类](tm-rollback-tran-completed-event-class.md)|指明已完成 ROLLBACK TRANSACTION 请求。|  
-|[TM:Rollback Tran Starting 事件类](tm-rollback-tran-starting-event-class.md)|指明正在启动 ROLLBACK TRANSACTION 请求。|  
-|[TM:Save Tran Completed 事件类](tm-save-tran-completed-event-class.md)|指明已完成 SAVE TRANSACTION 请求。|  
-|[TM:Save Tran Starting 事件类](tm-save-tran-starting-event-class.md)|指明正在启动 SAVE TRANSACTION 请求。|  
+|[TM：Begin Tran Completed 事件类](tm-begin-tran-completed-event-class.md)|指明已完成 BEGIN TRANSACTION 请求。|  
+|[TM：Begin Tran Starting 事件类](tm-begin-tran-starting-event-class.md)|指明正在启动 BEGIN TRANSACTION 请求。|  
+|[TM：Commit Tran Completed 事件类](tm-commit-tran-completed-event-class.md)|指明已完成 COMMIT TRANSACTION 请求。|  
+|[TM：Commit Tran Starting 事件类](tm-commit-tran-starting-event-class.md)|指明正在启动 COMMIT TRANSACTION 请求。|  
+|[TM：Promote Tran Completed 事件类](tm-promote-tran-completed-event-class.md)|指明已完成 PROMOTE TRANSACTION 请求。|  
+|[TM：Promote Tran Starting 事件类](tm-promote-tran-starting-event-class.md)|指明正在启动 PROMOTE TRANSACTION 请求。|  
+|[TM：Rollback Tran Completed 事件类](tm-rollback-tran-completed-event-class.md)|指明已完成 ROLLBACK TRANSACTION 请求。|  
+|[TM：Rollback Tran Starting 事件类](tm-rollback-tran-starting-event-class.md)|指明正在启动 ROLLBACK TRANSACTION 请求。|  
+|[TM：Save Tran Completed 事件类](tm-save-tran-completed-event-class.md)|指明已完成 SAVE TRANSACTION 请求。|  
+|[TM：Save Tran Starting 事件类](tm-save-tran-starting-event-class.md)|指明正在启动 SAVE TRANSACTION 请求。|  
 |[TransactionLog 事件类](transactionlog-event-class.md)|跟踪事务何时写入数据库事务日志。|  
   
   

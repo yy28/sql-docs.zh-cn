@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (dBASE 驱动程序) |Microsoft Docs
+title: SQLDriverConnect (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060950"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect（dBASE 驱动程序）
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47690875"
   
  **SQLDriverConnect**使你能够连接到驱动程序而无需创建数据源 (DSN)。  
   
- 在连接字符串中的所有驱动程序支持下列关键字： **DSN**， **DBQ**，并**FIL**。  
+ 在连接字符串中的所有驱动程序支持以下关键字：**DSN**， **DBQ**，和**FIL**。  
   
  当使用 Paradox 驱动程序时，由用户打开受密码保护的文件后时，不允许其他用户打开同一文件。  
   

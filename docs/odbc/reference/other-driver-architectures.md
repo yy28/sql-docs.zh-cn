@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045516"
 ---
 # <a name="other-driver-architectures"></a>其他驱动程序体系结构
 某些 ODBC 驱动程序不严格符合到前面所述的体系结构。 这可能是因为驱动程序执行任务，而非传统的 ODBC 驱动程序，或不是通常意义上的驱动程序。  

@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) |Microsoft Docs
+title: IIf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125473"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,10 +34,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  条件的计算结果为 **，则返回 true** (1) 或**false** (0)。 它必须是有效的多维表达式 (MDX) 逻辑表达式。  
   
- *Expression1 提示 [预先 |严格 |延迟]]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  逻辑表达式的计算结果时使用 **，则返回 true**。 Expression1 必须是有效的多维表达式 (MDX) 表达式。  
   
- *Expression2 提示 [预先 |严格 |延迟]]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  逻辑表达式的计算结果时使用**false**。 Expression2 必须是有效的多维表达式 (MDX) 表达式。  
   
 ## <a name="remarks"></a>备注  

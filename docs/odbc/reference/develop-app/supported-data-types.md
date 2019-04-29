@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a8848bad9d27dfd9318b725b77203706d3dfd5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149109"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
 支持的 Dbms 的数据类型差异相当大。 应用程序可以通过调用确定的名称和受支持的数据类型的特征**SQLGetTypeInfo**。 由于宽变体中数据的类型名称，该应用程序必须使用返回的数据类型名称**SQLGetTypeInfo**中**CREATE TABLE**语句。 有关详细信息，请参阅[ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。

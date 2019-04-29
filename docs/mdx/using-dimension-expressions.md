@@ -1,5 +1,5 @@
 ---
-title: 使用维度表达式 |Microsoft 文档
+title: 使用维度表达式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125525"
 ---
 # <a name="using-dimension-expressions"></a>使用维度表达式
 
 
   将参数传递给多维表达式 (MDX) 中的函数时，通常使用维度表达式和层次结构表达式从层次结构中返回成员、集或元组。  
   
- 因为维度表达式是对象标识符，所以它们只能是简单表达式。 请参阅[表达式&#40;MDX&#41; ](../mdx/expressions-mdx.md)有关简单和复杂表达式的说明。  
+ 因为维度表达式是对象标识符，所以它们只能是简单表达式。 请参阅[表达式&#40;MDX&#41; ](../mdx/expressions-mdx.md)简单和复杂表达式的说明。  
   
 ## <a name="dimension-expressions"></a>维度表达式  
  维度表达式包含维度标识符或维度函数。  
@@ -38,7 +38,7 @@ ms.locfileid: "34743906"
   
  `FROM [Adventure Works]`  
   
- 维度标识符显示为*Dimension_Name*中用来描述 MDX 语句的 BNF 表示法。  
+ 显示为一个维度标识符*Dimension_Name*中用于描述 MDX 语句的 BNF 表示法。  
   
 ## <a name="hierarchy-expressions"></a>层次结构表达式  
  同样，层次结构表达式包含层次结构标识符或层次结构函数。 以下示例说明使用层次结构表达式 [Date].[Calendar] 以及 .Levels 和 .Count 函数返回 Date 维度的 Calendar 层次结构中级别的数目。  
@@ -59,7 +59,7 @@ ms.locfileid: "34743906"
   
  `FROM [Adventure Works]`  
   
- 层次结构标识符显示为*Dimension_Name **。** Hierarchy_Name*中用来描述 MDX 语句的 BNF 表示法。  
+ 显示为层次结构标识符*Dimension_Name **。** Hierarchy_Name*中用于描述 MDX 语句的 BNF 表示法。  
   
 ## <a name="see-also"></a>请参阅  
  [表达式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

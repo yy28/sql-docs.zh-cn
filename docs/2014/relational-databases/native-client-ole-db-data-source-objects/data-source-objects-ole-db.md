@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130591"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 接口用于建立指向数据存储区，如集使用数据源一词[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 创建提供程序的数据源对象的实例是第一个任务的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端使用者。  
   
- 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是 C/c + + GUID CLSID_SQLNCLI10 (符号 SQLNCLI_CLSID 将解析为正确 progid 您引用的 sqlncli.h 文件中)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例。  
+ 每个 OLE DB 访问接口都为自身声明一个类标识符 (CLSID)。 CLSID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是 C /C++ GUID CLSID_SQLNCLI10 (符号 SQLNCLI_CLSID 将解析为正确 progid 您引用的 sqlncli.h 文件中)。 通过 CLSID，使用者使用 OLE CoCreateInstance 函数生成数据源对象的实例。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是进程内服务器。 实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 CLSCTX_INPROC_SERVER 宏以指示可执行上下文创建 Native Client OLE DB 提供程序对象。  
   

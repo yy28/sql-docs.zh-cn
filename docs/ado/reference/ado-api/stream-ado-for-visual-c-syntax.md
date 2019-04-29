@@ -1,5 +1,5 @@
 ---
-title: Stream (ADO for Visual c + + 语法) |Microsoft Docs
+title: Stream (ADO for VisualC++语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77da08e1d6ead2ad5777f41113a1ed164a7fb5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062615"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>流（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

@@ -1,5 +1,5 @@
 ---
-title: 步骤 3： 生成并执行的 SQL 语句 |Microsoft Docs
+title: 步骤 3：生成并执行 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148974"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步骤 3：生成并执行 SQL 语句
 第三步是生成和执行 SQL 语句，如以下插图所示。 用于执行此步骤的方法很可能有很大差异。 应用程序可能会提示用户输入的 SQL 语句，生成基于用户输入的 SQL 语句或使用硬编码的 SQL 语句。 有关详细信息，请参阅[构造 SQL 语句](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  
@@ -36,6 +36,6 @@ ms.locfileid: "47801365"
   
 |SQL 语句的类型|请继续执行|  
 |---------------------------|----------------|  
-|**选择**或目录函数|[步骤 4a：提取结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**更新**，**删除**，或**插入**|[步骤 4b：提取行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|所有其他 SQL 语句|步骤 3： 生成并执行的 SQL 语句 （本主题中） 或[步骤 5： 提交事务](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**选择**或目录函数|[步骤 4a:提取的结果](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**更新**，**删除**，或**插入**|[步骤 4b:提取行计数](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|所有其他 SQL 语句|步骤 3：生成并执行 SQL 语句 （本主题中） 或[步骤 5:提交事务](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

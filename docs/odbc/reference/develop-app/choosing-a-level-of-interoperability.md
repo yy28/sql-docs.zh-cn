@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125413"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>选择互操作性的级别
-假设应用程序将使用 ODBC 下, 一步是确定何种级别的互操作性是必需的。 基本级别的互操作性通常是应用程序类型的函数： 自定义应用程序往往不能够互操作性垂直应用程序往往能够在有限数量的 Dbms，可互操作和泛型应用程序往往是可互操作在所有 Dbms。  
+假设应用程序将使用 ODBC 下, 一步是确定何种级别的互操作性是必需的。 基本级别的互操作性通常是应用程序类型的函数：自定义应用程序往往不能够互操作性垂直应用程序往往能够在有限数量的 Dbms，可互操作和泛型应用程序往往是可在所有 Dbms 之间的互操作。  
   
  本部分包含以下主题。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151257"
 ---
 # <a name="conformance-levels"></a>一致性级别
 ODBC 驱动程序让各种数据源的应用程序访问。 每个驱动程序，应用程序在运行时确定 ODBC 的功能，以及哪些 SQL 语法的驱动程序和每个数据源支持。 这不是用于处理单个驱动程序或一组小型、 已知的驱动程序，因为这些应用程序只需写入该驱动程序或驱动程序的功能的应用程序的要求。 为了帮助了解驱动程序和数据源功能的应用程序，符合性的两个区域都可用： ODBC 接口和 SQL 语法。  

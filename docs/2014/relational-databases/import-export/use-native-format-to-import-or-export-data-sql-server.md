@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065745"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
   当使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用本机格式。  
@@ -64,9 +64,9 @@ ms.locfileid: "48124297"
   
 -   `sql_variant` 数据  
   
-     如果`sql_variant`数据存储为 SQLVARIANT 的本机格式数据文件中，数据会保留其所有特征。 记录每个数据值的数据类型的元数据与数据值一起存储。 此元数据用于重新创建具有相同的数据类型在目标中的数据值`sql_variant`列。  
+     如果 `sql_variant` 数据以 SQLVARIANT 存储在本机格式数据文件中，则数据会保留其所有特征。 记录每个数据值的数据类型的元数据与数据值一起存储。 此元数据用于在目标 `sql_variant` 列中重新创建具有相同数据类型的数据值。  
   
-     如果目标列的数据类型不是`sql_variant`，每个数据值转换为目标列中，按照隐式数据转换的一般规则的数据类型。 如果在数据转换过程中出现错误，则回滚当前批。 在 `char` 列之间传输的任何 `varchar` 值和 `sql_variant` 值都可能存在代码页转换问题。  
+     如果目标列的数据类型不是 `sql_variant`，则每个数据值将按照隐式数据转换的一般规则转换为目标列的数据类型。 如果在数据转换过程中出现错误，则回滚当前批。 在 `char` 列之间传输的任何 `varchar` 值和 `sql_variant` 值都可能存在代码页转换问题。  
   
      有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48124297"
   
  下列命令行选项支持本机格式：  
   
-|Command|选项|Description|  
+|Command|Option|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|将导致**bcp**实用工具使用本机数据类型的数据。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|使用本机数据类型或宽本机数据类型的数据。 注意，如果格式化文件指定了数据类型，则不需要 DATAFILETYPE。|  

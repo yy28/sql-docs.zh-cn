@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183057"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>执行 SSMA 控制台 (MySQLToSQL)
 Microsoft 你提供一组可靠的脚本来执行和控制 SSMA 活动文件命令。  
@@ -199,7 +199,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-连接目标数据库  
+connect-target-database  
   
 1.  连接到目标 SQL Server 或 SQL Azure 数据库并完全加载目标数据库的高级别的元数据，但不是元数据。  
   
@@ -377,7 +377,7 @@ convert-schema
 ```  
 **Command**  
   
-迁移数据  
+migrate-data  
   
 1.  将源数据迁移到目标。  
   
@@ -439,7 +439,7 @@ convert-schema
   
 **Command**  
   
-映射架构  
+map-schema  
   
 源数据库到目标架构的架构映射。  
   
@@ -467,7 +467,7 @@ convert-schema
   
 **Command**  
   
-同步目标  
+synchronize-target  
   
 1.  将目标对象与目标数据库同步。  
   
@@ -483,11 +483,11 @@ convert-schema
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   作为警告报告总数  
+    -   report-total-as-warning  
   
-    -   报表的每个-作为-警告  
+    -   report-each-as-warning  
   
-    -   脚本失败  
+    -   fail-script  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
@@ -532,7 +532,7 @@ convert-schema
 ```  
 **Command**  
   
-从数据库刷新  
+refresh-from-database  
   
 1.  刷新数据库中的源对象。  
   
@@ -546,11 +546,11 @@ convert-schema
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   作为警告报告总数  
+    -   report-total-as-warning  
   
-    -   报表的每个-作为-警告  
+    -   report-each-as-warning  
   
-    -   脚本失败  
+    -   fail-script  
   
 4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   

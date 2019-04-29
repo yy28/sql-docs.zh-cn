@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140365"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
 指示用来建立与数据源的连接的信息。  
@@ -36,10 +36,10 @@ ms.locfileid: "47828878"
   
 |参数|Description|  
 |--------------|-----------------|  
-|*提供程序 =*|指定要用于连接的提供程序的名称。|  
+|*Provider=*|指定要用于连接的提供程序的名称。|  
 |*文件名称 =*|指定的特定于提供程序的文件 （例如，持久化的数据源对象） 包含预设的连接信息的名称。|  
-|*远程提供程序 =*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
-|*远程服务器 =*|指定要打开客户端连接时使用的服务器的路径名称。 （仅在远程数据服务中。）|  
+|*Remote Provider=*|指定要打开客户端连接时使用的提供程序的名称。 （仅在远程数据服务中。）|  
+|*Remote Server=*|指定要打开客户端连接时使用的服务器的路径名称。 （仅在远程数据服务中。）|  
 |*URL=*|连接字符串指定为标识资源，例如文件或目录的绝对 URL。|  
   
  在设置后**ConnectionString**属性并打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，该提供程序可能会通过将映射到 ADO 定义自变量名称等更改属性的内容及其特定提供程序的等效项。  
@@ -60,7 +60,7 @@ ms.locfileid: "47828878"
 |默认 ADO 提供程序|Windows 操作系统|  
 |--------------------------|------------------------------|  
 |MSDASQL<br /><br /> （若要提高源代码的可读性，显式指定的提供程序名称的连接字符串中。）|Windows 2000 （32 位）<br /><br /> Windows XP （32 位）<br /><br /> Windows 2003 Server （32 位）<br /><br /> Windows Vista （32 位）<br /><br /> Windows Vista Service Pack 1 或更高版本 （32 位和 64 位）<br /><br /> Windows Vista （32 位和 64 位） 之后的 Windows 版本|  
-|无默认值。<br /><br /> 当 ADO 应用程序在以下操作系统上运行，且未显式指定提供程序时，ADO 将返回以下错误:"ADODB。连接： 未指定提供程序和没有指定的默认提供程序"|Windows 2000 （64 位）<br /><br /> Windows XP （64 位）<br /><br /> Windows 2003 Server （64 位）<br /><br /> Windows Vista （64 位）|  
+|无默认值。<br /><br /> 当 ADO 应用程序在以下操作系统上运行，且未显式指定提供程序时，ADO 将返回以下错误："ADODB。连接： 未指定提供程序和没有指定的默认提供程序"|Windows 2000 （64 位）<br /><br /> Windows XP （64 位）<br /><br /> Windows 2003 Server （64 位）<br /><br /> Windows Vista （64 位）|  
   
 ## <a name="applies-to"></a>适用范围  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,4 +68,4 @@ ms.locfileid: "47828878"
 ## <a name="see-also"></a>请参阅  
  [ConnectionString、 ConnectionTimeout 和 State 属性示例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

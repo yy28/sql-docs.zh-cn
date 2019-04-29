@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156452"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助您轻松组织报表资源并快速生成所需报表。 设计图面位于窗口中央，功能区位于上方，“报表数据”、“分组”和“属性”窗格及“报表部件库”分别位于左侧、下方和右侧。 设计图面用于添加和组织报表项。 功能区将传统菜单项分为多个类别，使您可以轻松查找和使用它们。 这些窗格可帮助您添加、选择和组织报表资源，以及更改报表项属性。  

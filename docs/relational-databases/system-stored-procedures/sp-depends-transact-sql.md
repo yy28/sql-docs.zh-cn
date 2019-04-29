@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047161"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,20 +68,20 @@ sp_depends [ @objname = ] '<object>'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar (257** **)**|存在依赖项的项名称。|  
+|**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
 |**类型**|**nvarchar(16)**|项的类型。|  
-|**更新**|**nvarchar(7)**|是否更新项。|  
-|**选择**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
+|**updated**|**nvarchar(7)**|是否更新项。|  
+|**selected**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**column**|**sysname**|存在依赖项的列或参数。|  
   
  下面的结果集显示依赖于的对象*\<对象 >*。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**名称**|**nvarchar (257** **)**|存在依赖项的项名称。|  
+|**名称**|**nvarchar(257** **)**|存在依赖项的项名称。|  
 |**类型**|**nvarchar(16)**|项的类型。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -107,6 +107,6 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sql_dependencies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

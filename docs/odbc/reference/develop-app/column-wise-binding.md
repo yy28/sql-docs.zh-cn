@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126322"
 ---
 # <a name="column-wise-binding"></a>按列绑定
 使用按列绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据将返回每个列。 第一个数组保留了数据值，并第二个数组长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，第三个数组绑定。 每个数组包含任意多个元素的行集中的行一样。  

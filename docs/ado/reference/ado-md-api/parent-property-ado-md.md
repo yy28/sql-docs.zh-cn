@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cb0b93ba1be2570ecd474ed1244bec16575180d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156263"
 ---
 # <a name="parent-property-ado-md"></a>Parent 属性 (ADO MD)
 指示是当前父级的成员[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)层次结构中。  

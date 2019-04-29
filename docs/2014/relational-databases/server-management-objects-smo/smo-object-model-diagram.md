@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130650"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 对象模型关系图
   此关系图显示 SMO 对象层次结构以及各对象类型之间的关系。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象是顶层对象。  

@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049491"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定的时间，以毫秒为单位，SQL Server 资源 DLL 应等待返回的信息[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)报告之前存储过程AlwaysOn 故障转移群集实例 (FCI) 为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  
   
--   **开始之前：**[限制和局限](#Limits)，[安全](#Security)  
+-   **开始之前：**[限制和局限](#Limits)、[安全性](#Security)  
   
 -   **若要配置 HeathCheckTimeout 设置，请使用：**[PowerShell](#PowerShellProcedure)，[故障转移群集管理器](#WSFC)， [Transact SQL](#TsqlProcedure)  
   

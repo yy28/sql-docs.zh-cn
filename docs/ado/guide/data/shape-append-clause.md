@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062853"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 形状命令 APPEND 子句将列或列追加**记录集**。 通常情况下，这些列是章节列，请参阅子**记录集**。  
@@ -43,7 +43,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   表关键字后, 跟的表中的数据提供程序的名称。  
   
- *父别名*  
+ *parent-alias*  
  指的是父级的可选别名**记录集**。  
   
  *column-list*  

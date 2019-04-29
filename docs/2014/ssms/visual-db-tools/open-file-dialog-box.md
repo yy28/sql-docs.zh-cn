@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138877"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
   使用“打开文件”对话框打开磁盘中的现有文件。 还可以使用此对话框打开已通过其他语言编码选项打开的文件。  
@@ -27,7 +27,7 @@ ms.locfileid: "53328597"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
   
-## <a name="option"></a>选项  
+## <a name="option"></a>Option  
  **查找范围**  
  在此下拉菜单中查找现有的项目文件夹。 如果在此列表中选择了一个文件夹，则此文件夹的内容将显示在主窗格中。  
   

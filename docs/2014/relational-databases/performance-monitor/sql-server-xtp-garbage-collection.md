@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151035"
 ---
 # <a name="xtp-garbage-collection"></a>XTP 垃圾收集
   XTP 垃圾收集性能对象包含与 XTP 引擎的垃圾收集器相关的计数器。  

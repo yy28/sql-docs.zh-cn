@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183479"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>将数据加载到并行数据仓库
 可以加载，也可以通过使用 Integration Services 将数据插入到 SQL Server 并行数据仓库 (PDW) [bcp 实用工具](../tools/bcp-utility.md)， **dwloader**命令行加载程序，或者 SQL INSERT 语句。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29b59bc33d34af9d9521f30fd7028c6d073a9bd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128055"
 ---
 # <a name="drop-index-statement-limitations"></a>DROP INDEX 语句限制
 Microsoft Excel 或文本文件驱动程序不支持 DROP INDEX 语句。

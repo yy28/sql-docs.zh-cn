@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069643"
 ---
 # <a name="troubleshooting-sybasetosql"></a>故障排除 (SybaseToSQL)
 不常见遇到迁移问题正好执行控制台脚本或命令。  

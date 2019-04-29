@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d8969e2a299f501fb35eb56a435c6a2e56a5bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127033"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio Web 浏览器
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于托管 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 版本。 此 Web 浏览器使您无需离开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]便可以浏览 URL 并查看 MSDN 库帮助主题。 通过指向“视图”菜单上的“Web 浏览器”，然后单击“显示浏览器”，可以访问 Web 浏览器。  

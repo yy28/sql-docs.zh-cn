@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01d61838d1267b54eedd1c389c198d50fa52f7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052848"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,8 +79,8 @@ HRESULT SetParameterProperties(
 |成员|Description|  
 |------------|-----------------|  
 |iOrdinal|所传递参数的序号。|  
-|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  

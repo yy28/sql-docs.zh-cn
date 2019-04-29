@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048964"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>启动 dta 命令提示实用工具并优化工作负荷
   此任务指导你如何从命令提示符下启动 **dta** 实用工具，查看其帮助，以及使用它优化工作负荷。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
@@ -63,7 +63,7 @@ ms.locfileid: "48171107"
   
 -   [dta 实用工具](dta-utility.md) 提供有关此命令提示实用工具的参考材料和可用于控制此实用工具的操作的可选 XML 文件。  
   
- 若要返回教程的起始位置，请参阅 [教程：数据库引擎优化顾问](tutorial-database-engine-tuning-advisor.md)。  
+ 若要返回到本教程的开始位置，请参阅[教程：数据库引擎优化顾问](tutorial-database-engine-tuning-advisor.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [数据库引擎教程](../../relational-databases/database-engine-tutorials.md)  

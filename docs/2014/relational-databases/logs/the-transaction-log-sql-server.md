@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144613"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
@@ -93,7 +93,7 @@ ms.locfileid: "52807009"
 |12|-|仅供内部使用|  
 |13|OLDEST_PAGE|如果将数据库配置为使用间接检查点，数据库中最早的页可能比检查点 LSN 早。 在这种情况下，最早的页可以延迟日志截断。 （所有恢复模式）<br /><br /> 有关间接检查点的信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|当前未使用此值。|  
-|16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：若要在 512 MB 大小之前截断事务日志，请针对所讨论的数据库手动触发 Checkpoint 命令。|  
+|16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：512 MB 大小之前的事务日志截断，触发手动对所讨论数据库的检查点命令。|  
   
 ##  <a name="MinimallyLogged"></a> 可以按最小方式记录的操作  
  最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  

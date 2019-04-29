@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062675"
 ---
 # <a name="catalog-example-vb"></a>目录示例 (VB)
 此 Visual Basic 项目中创建新多维数据集使用 MDX。 然后，它介绍在 Microsoft Word 文档中的多维数据集的结构。  

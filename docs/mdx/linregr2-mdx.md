@@ -1,5 +1,5 @@
 ---
-title: LinRegR2 (MDX) |Microsoft 文档
+title: LinRegR2 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 42c703e703e8c557b4de8466a0cd1b686217fd4b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136208"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
 
-  计算对一组进行线性回归，并返回确定，R 系数<sup>2</sup>。  
+  一组进行线性回归计算，并返回确定，R 系数<sup>2</sup>。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +38,26 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  通常是单元坐标（返回代表 X 轴的值的数字）的多维表达式 (MDX) 的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- 线性回归使用最小二乘法，可以计算出回归线（即一系列点的最佳拟合线）的公式。 回归行都有以下公式，其中是斜率，b 是截距：  
+## <a name="remarks"></a>备注  
+ 线性回归使用最小二乘法，可以计算出回归线（即一系列点的最佳拟合线）的公式。 回归线具有如下公式，其中是增量的斜率，b 是截距：  
   
  y = ax+b  
   
- **LinRegR2**函数的计算结果指定的 setagainst 第一个数值 expressionto 获取 y 轴的值。 然后，该函数对指定集计算第二个数值表达式（如果指定）的值，以获得 X 轴的值。 如果未指定第二个数值 expressionis，该功能将用作值具有 x 轴中指定集的单元格的当前上下文。 不指定 x axisargument 经常用于在时间维度。  
+ **LinRegR2**函数计算指定的 setagainst 第一个数值 expressionto 获得 y 轴的值。 然后，该函数对指定集计算第二个数值表达式（如果指定）的值，以获得 X 轴的值。 如果未指定第二个数值 expressionis，该函数使用指定集中单元的当前上下文作为值在 x 轴。 不指定 x axisargument 通常不对时间维度。  
   
- 获取组点之后, **LinRegR2**函数将返回统计 R<sup>2</sup>描述最适合的线性方程式与点状态。  
+ 获取点集后**LinRegR2**函数返回统计量 R<sup>2</sup> ，它描述线性方程与点的拟合度。  
   
 > [!NOTE]  
->  **LinRegR2**函数将忽略空单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
+>  **LinRegR2**函数将忽略空单元或单元格包含文本或逻辑值。 但是，该函数将包含值为零的单元。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回统计 R<sup>2</sup>描述拟合度到单位销售额和销售的应用商店的度量值的点的线性回归公式的好坏。  
+ 下面的示例返回统计量 R<sup>2</sup> ，它描述线性回归方程与单元销售额和存储销售额度量值点的拟合度。  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

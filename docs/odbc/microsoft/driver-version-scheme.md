@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128044"
 ---
 # <a name="driver-version-scheme"></a>驱动程序版本方案
 > [!IMPORTANT]  
@@ -28,7 +28,7 @@ ms.locfileid: "47806525"
   
 |驱动程序版本|内部版本号|可用性历史记录|  
 |--------------------|------------------|--------------------------|  
-|1.0|2.00.6235|Visual c + + 4.2 和 Visual Basic 5.0，企业版|  
+|1.0|2.00.6235|Visual C++ 4.2 和 Visual Basic 5.0，企业版|  
 |2.0|2.73.7269|Visual Studio 97 和 MDAC 1.5 a|  
 |更新 2.0|2.73.7283.01|IIS 4.0|  
 |更新 2.0|2.73.7283.03|MDAC 1.5b 和 1.5 c|  

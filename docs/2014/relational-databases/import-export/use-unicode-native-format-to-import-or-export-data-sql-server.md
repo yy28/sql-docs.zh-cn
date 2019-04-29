@@ -14,25 +14,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065675"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 本机格式导入或导出数据 (SQL Server)
   当必须将信息从一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制到另一个时，Unicode 本机格式将非常有用。 为非字符数据使用本机格式可以节省时间，并消除与字符格式之间不必要的数据类型转换。 在使用不同代码页的服务器之间大容量传输数据时，为所有字符数据使用 Unicode 字符格式可以防止丢失任何扩展字符。 可以通过任何批量导入方法读取 Unicode 本机格式的数据文件。  
   
- 通过使用包含扩展字符或 DBCS 字符的数据文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例之间大容量传输数据时，建议使用 Unicode 本机格式。 对于非字符数据，Unicode 本机格式使用本机（数据库）数据类型。 对于字符数据，如`char`， `nchar`， `varchar`， `nvarchar`， `text`， `varchar(max)`， `nvarchar(max)`，和`ntext`，Unicode 本机格式使用 Unicode 字符数据格式。  
+ 通过使用包含扩展字符或 DBCS 字符的数据文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例之间大容量传输数据时，建议使用 Unicode 本机格式。 对于非字符数据，Unicode 本机格式使用本机（数据库）数据类型。 对于字符数据（如 `char`、`nchar`、`varchar`、`nvarchar`、`text`、`varchar(max)`、`nvarchar(max)` 和 `ntext`），Unicode 本机格式使用 Unicode 字符数据格式。  
   
- 在 Unicode 本机格式数据文件中存储为 SQLVARIANT 的 `sql_variant` 数据的运算方式与在本机格式数据文件中的运算方式相同，只是 `char` 和 `varchar` 值需转换为 `nchar` 和 `nvarchar`，这使得受影响列的存储量加倍。 保留原始的元数据，和的值转换回其原始`char`和`varchar`大容量导入到表列时，数据类型。  
+ 在 Unicode 本机格式数据文件中存储为 SQLVARIANT 的 `sql_variant` 数据的运算方式与在本机格式数据文件中的运算方式相同，只是 `char` 和 `varchar` 值需转换为 `nchar` 和 `nvarchar`，这使得受影响列的存储量加倍。 这些值的原始元数据被保留，当大容量导入到表列时，这些值将转换回其原始的 `char` 和 `varchar` 数据类型。  
   
 ## <a name="command-options-for-unicode-native-format"></a>Unicode 本机格式的命令选项  
  你可以使用 **bcp**、BULK INSERT 或 INSERT ...选择\*从 OPENROWSET （BULK）。对于 **bcp** 命令或 BULK INSERT 语句，你可以在命令行中指定数据格式。 对于 INSERT ... SELECT * FROM OPENROWSET(BULK...) 语句，您必须在格式化文件中指定数据格式。  
   
  下列选项支持 Unicode 本机格式：  
   
-|Command|选项|Description|  
+|Command|Option|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-N**|将导致**bcp**实用工具使用 Unicode 本机格式，将使用本机 （数据库） 数据类型的所有非字符数据并为所有字符的 Unicode 字符数据格式 (`char`， `nchar`， `varchar`，`nvarchar`， `text`，和`ntext`) 数据。|  
 |BULK INSERT|DATAFILETYPE **='** widenative **'**|大容量导入数据时使用 Unicode 本机格式。|  

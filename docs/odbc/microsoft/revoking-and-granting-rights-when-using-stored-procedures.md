@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127968"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>使用存储过程时撤销和授予权限
 > [!IMPORTANT]  
@@ -27,9 +27,9 @@ ms.locfileid: "47792225"
   
  Microsoft ODBC Driver for Oracle 时的用户权限是授予，然后撤消的对存储过程中访问的表返回以下错误消息：  
   
- SQL_ERROR = 1  
+ SQL_ERROR=-1  
   
- szErrorMsg ="[Microsoft] [Oracle ODBC 驱动程序] 参数个数不正确"  
+ szErrorMsg="[Microsoft][ODBC driver for Oracle]Wrong number of parameters"  
   
  szErrorMsg ="[Microsoft] [Oracle ODBC 驱动程序] 语法错误或访问冲突"  
   

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057585"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装。 如果通过使用仅安装文件选项安装报表服务器，必须使用配置管理器来配置服务器，然后才能使用服务器。 如果使用默认配置安装选项安装了报表服务器，则可以使用配置管理器来验证或修改在安装过程中指定的设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可以用来配置本地或远程报表服务器实例。  
@@ -39,10 +39,10 @@ ms.locfileid: "48209787"
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  介绍如何配置用来访问报表服务器 Web 服务和报表管理器的 URL。  
   
- [创建报表服务器数据库&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [创建报表服务器数据库（SSRS 配置管理器）](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  介绍如何创建存储服务器元数据和对象所必需的报表服务器数据库。  
   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  介绍如何修改报表服务器用于连接到报表服务器数据库的连接字符串。  
   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "48209787"
  提供常见任务的分步说明。  
   
  [Reporting Services 配置管理器 F1 帮助主题&#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- 中的页提供了帮助主题[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置工具。  
+ 提供有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具页面的帮助主题。  
   
  **本主题内容：**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48209787"
   
 -   配置报表服务器服务帐户。 此帐户最初是在安装过程中配置的，但是，如果需要更新密码或使用其他帐户，则可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器进行修改。  
   
--   创建和配置的 URL。 报表服务器和报表管理器是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]通过 Url 访问的应用程序。 报表服务器 URL 提供对报表服务器 SOAP 端点访问。 报表管理器 URL 用于打开报表管理器。 可以为每个应用程序配置一个或多个 URL。  
+-   创建和配置的 URL。 报表服务器和报表管理器都是可通过 URL 进行访问的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序。 报表服务器 URL 提供对报表服务器 SOAP 端点访问。 报表管理器 URL 用于打开报表管理器。 可以为每个应用程序配置一个或多个 URL。  
   
 -   创建和配置报表服务器数据库。 报表服务器是一个无状态服务器，它需要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用于内部存储。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来创建报表服务器数据库并配置与该数据库的连接。 还可以选择已包含要使用的内容的现有报表服务器数据库。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48209787"
   
     -   从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。  
   
-    -   单击**启动**，依次指向**所有程序**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然后指向**配置工具**。  
+    -   单击 **“开始”**，依次指向 **“所有程序”**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”**。  
   
-         如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，指向[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]而不是[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]若要打开的配置工具[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]服务器组件。  
+         如果要从先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中配置报表服务器实例，请打开此版本的程序文件夹。 例如，在打开 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 服务器组件的配置工具时，应指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 而非 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
          单击 **“Reporting Services 配置管理器”**。  
   
@@ -130,9 +130,9 @@ ms.locfileid: "48209787"
 6.  单击 **“连接”**。  
   
 ## <a name="see-also"></a>请参阅  
- [报表管理器&#40;SSRS 本机模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [报表管理器（SSRS 本机模式）](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)   
  [配置和管理报表服务器（SSRS 本机模式）](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

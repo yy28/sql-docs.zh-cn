@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057060"
 ---
 # <a name="configure-auto-statistics"></a>配置自动统计信息
 
@@ -32,7 +32,7 @@ ms.locfileid: "52617957"
 自动统计信息包括以下三个设置： 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-时自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON，则查询优化器在查询谓词中，必要时，将改进查询计划的基数估计的单独列上创建统计信息。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。
+在自动创建统计信息选项 AUTO_CREATE_STATISTICS 为 ON 时，查询优化器将根据需要在查询谓词中的单独列上创建统计信息，以便改进查询计划的基数估计。 这些单列统计信息在现有统计信息对象中尚未具有直方图的列上创建。
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。

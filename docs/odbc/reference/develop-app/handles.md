@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061436"
 ---
 # <a name="handles"></a>控点
 句柄是不透明的 32 位值，标识特定的项;在 ODBC 中，此项可以是环境、 连接、 语句或描述符。 当应用程序调用**SQLAllocHandle**、 驱动程序管理器或驱动程序创建指定类型的新项并返回其句柄到应用程序。 更高版本的应用程序使用该句柄来调用 ODBC 函数时标识该项。 驱动程序管理器和驱动程序使用该句柄来查找有关项目的信息。  
@@ -78,7 +78,7 @@ SQLCloseCursor(hstmtOrder);
   
  随后，当应用程序调用**SQLExecute**若要生成特定的销售订单的行号的结果集，它将传递相同的句柄。 驱动程序使用该句柄从结构检索访问计划标识符。 它将标识符发送到数据源，以告诉它要执行的计划。  
   
- ODBC 具有两个级别的句柄： 驱动程序管理器句柄和驱动程序句柄。 应用程序调用 ODBC 函数，因为它在驱动程序管理器中调用这些函数时使用驱动程序管理器句柄。 驱动程序管理器使用此句柄来查找相应的驱动程序句柄，并驱动程序中调用函数时使用的驱动程序句柄。 有关如何使用驱动程序和驱动程序管理器句柄的示例，请参阅[的连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
+ ODBC 具有两个级别的句柄：驱动程序管理器句柄和驱动程序句柄。 应用程序调用 ODBC 函数，因为它在驱动程序管理器中调用这些函数时使用驱动程序管理器句柄。 驱动程序管理器使用此句柄来查找相应的驱动程序句柄，并驱动程序中调用函数时使用的驱动程序句柄。 有关如何使用驱动程序和驱动程序管理器句柄的示例，请参阅[的连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
  有两个级别的句柄是 ODBC 体系结构; 的项目在大多数情况下，不相关的应用程序或驱动程序。 尽管通常没有任何理由这么做，但它是应用程序可以通过调用确定驱动程序句柄**SQLGetInfo**。  
   

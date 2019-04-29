@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127715"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 中的 DiffGrams 简介
   本主题提供对 DiffGrams 的简要介绍。  
@@ -47,7 +47,7 @@ ms.locfileid: "52777085"
   
  DiffGram 格式由这些块组成：  
   
- **\<DataInstance >**  
+ **\<DataInstance>**  
  此元素的名称**DataInstance**，用于说明目的，本文档中。 例如，如果从.NET Framework 的值中的数据集生成 DiffGram**名称**将数据集属性将用作此元素的名称。 此块包含更改后的所有相关数据，可能包括尚未修改的数据。 DiffGram 处理逻辑将忽略此块中的元素，其**diffgr: haschanges**未指定属性。  
   
  **\<diffgr:before>**  

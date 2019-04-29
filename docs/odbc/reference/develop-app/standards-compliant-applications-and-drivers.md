@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148906"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>符合标准的应用程序和驱动程序
-符合标准的应用程序或驱动程序是一个符合开放组 CAE 规范"数据管理:: SQL 调用级别接口 (CLI)，"和 ISO/IEC 9075-3:1995 (E) 调用级别接口 (SQL/CLI)。  
+符合标准的应用程序或驱动程序是一个符合开放组 CAE 规范的"数据管理：SQL 调用级别接口 (CLI)"和 ISO/IEC 9075-3:1995 (E) 调用级别接口 (SQL/CLI)。  
   
  ODBC 3 *.x*保证了以下功能：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47811335"
   
 -   如果符合标准的应用程序调用**SQLAllocEnv** (可能因为**SQLAllocEnv**是 Open Group 和 ISO CLI 中的有效函数)，在调用映射到**SQLAllocHandleStd**在编译时。 因此，在运行时，应用程序调用**SQLAllocHandleStd**。 在处理此调用期间，驱动程序管理器设置为 SQL_OV_ODBC3 SQL_ATTR_ODBC_VERSION 环境属性。 调用**SQLAllocHandleStd**等效于调用**SQLAllocHandle**与*HandleType* SQL_HANDLE_ENV 和调用**SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION 设置为 SQL_OV_ODBC3。  
   
--   如果符合标准的应用程序调用**SQLBindParam** (可能因为**SQLBindParam**是 Open Group 和 ISO CLI 中的有效函数)，ODBC 3 *.x*驱动程序管理器映射中的等效调用在调用**SQLBindParameter**。 (请参阅[SQLBindParam 映射](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)中向后兼容性的附录 g： 驱动程序指南。)  
+-   如果符合标准的应用程序调用**SQLBindParam** (可能因为**SQLBindParam**是 Open Group 和 ISO CLI 中的有效函数)，ODBC 3 *.x*驱动程序管理器映射中的等效调用在调用**SQLBindParameter**。 (请参阅[SQLBindParam 映射](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)附录 g:驱动程序指南的向后兼容性。）  
   
 -   若要使用 ISO CLI，ODBC 3 对齐 *.x*标头文件包含用于调用的信息类型的别名**SQLGetInfo**。 符合标准的应用程序可以使用这些别名而不是 ODBC 3 *.x*信息类型。 有关详细信息，请参阅下一主题[标头文件](../../../odbc/reference/develop-app/header-files.md)。  
   

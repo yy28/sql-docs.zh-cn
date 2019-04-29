@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127804"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>项目设置 (GUI) (SybaseToSQL)
 GUI 项目设置允许你配置数据上的显示方式**数据**选项卡，以及是否显示转换后的评估报告，或不。  
@@ -30,15 +30,15 @@ GUI 窗格现已推出**项目设置**并**默认项目设置**对话框。
 **源的最大行数**  
 将配置上显示数据的行数**数据**的所选的源表选项卡。  
   
-**默认**: 100  
+**Default**：100  
   
 **目标的最大行数**  
 将配置上显示数据的行数**数据**的所选的目标表选项卡。  
   
-**默认**: 100  
+**Default**：100  
   
 **显示转换后的报表**  
 若要显示报表转换架构后，选择 True。 生成的转换报告包含相同的布局和与评估报告的信息。  
   
-**默认**: False  
+**Default**：False  
   

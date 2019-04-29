@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165044"
 ---
 # <a name="migrating-computed-columns"></a>迁移计算列
   内存优化的表中不支持计算列。 但是，可模拟计算列。  

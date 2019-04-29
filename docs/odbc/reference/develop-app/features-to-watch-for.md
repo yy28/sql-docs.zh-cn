@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061605"
 ---
 # <a name="features-to-watch-for"></a>要监视的功能
 本部分介绍大量的应用程序开发人员往往需要理所当然的功能。 实际上，这些功能差异很大支持和 Dbms; 支持的方式故障代码，使其很可能会导致可互操作应用程序中的问题。  
   
- 本部分不会列出应用程序开发人员需要考虑的所有功能。 该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，并[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明、[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，并讨论每个功能此手册的部分。  
+ 本部分不会列出应用程序开发人员需要考虑的所有功能。 该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，并[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明、[附录 c:SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，并讨论每个功能此手册的部分。  
   
  本部分包含以下主题。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLBindParameter |Microsoft Docs
+title: SQLBindParameter | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067813"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` 可以消除数据转换时用于提供数据的负担[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，从而导致应用程序的客户端和服务器组件的显著的性能提升。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  

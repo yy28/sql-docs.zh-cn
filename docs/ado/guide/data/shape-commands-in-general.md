@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062843"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
 数据整理定义的形状的列**记录集**，所列的方式表示的实体之间的关系**记录集**用数据填充。  

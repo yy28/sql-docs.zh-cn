@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065180"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
-ADO 文档的此部分包含每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含一系列 ADO 语法索引以用于 Microsoft Visual c + + 和 Windows Foundation 类 (WFC)。  
+ADO 文档的此部分包含每个 ADO 对象、 集合、 属性、 动态属性、 方法、 事件和枚举的主题。 此外，它包含一系列 ADO 语法索引以用于 Microsoft VisualC++和 Windows Foundation 类 (WFC)。  
   
  有关详细信息，搜索索引中的特定主题，或请参阅以下主题：  
   
@@ -46,8 +46,8 @@ ADO 文档的此部分包含每个 ADO 对象、 集合、 属性、 动态属�
 -   [ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>请参阅  
- [附录 D:ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [附录 d:ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [附录 c： 使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [附录 c:使用 ADO 进行编程](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 历史记录](../../../ado/guide/ado-history.md)

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b392222b8b55cc846dca66d20f70355d6778195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064550"
 ---
 # <a name="cluster-security-policy"></a>群集安全策略
   使用“群集安全策略”页可以为故障转移群集实例配置安全策略。  

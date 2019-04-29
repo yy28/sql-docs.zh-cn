@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126856"
 ---
 # <a name="navigating-through-data"></a>浏览数据
 **记录集**支持多个方法和属性来浏览生成的数据集。 探讨如何使用此功能通过浏览我们的示例使用了几种方案**记录集**对象。  

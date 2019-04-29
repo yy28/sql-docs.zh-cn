@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c2cca868cbbdeddc98264160e646dde3676c585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126110"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>使用 SQL Server ODBC 驱动程序进行大容量复制操作指南主题 (ODBC)
   当与 Microsoft 一起使用？ SQL Server??? 2005 年，SQL Server ODBC 驱动程序支持的 Db-library API 支持的相同大容量复制函数。  

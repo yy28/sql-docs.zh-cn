@@ -1,5 +1,5 @@
 ---
-title: 将特性添加到维度 |Microsoft 文档
+title: 向维度添加属性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,12 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045999"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>课程 2-3-添加特性的维度
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>课程 2-3-向维度添加属性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 现在，您已经定义了维度，可以用表示维度中各数据元素的属性填充这些维度。 属性通常基于数据源视图中的字段。 在向维度中添加属性时，您可以在数据源视图中包括来自任何表的字段。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/10/2018
   
     -   **ListPrice**  
   
-    -   **Size**  
+    -   **大小**  
   
     -   **SizeRange**  
   
@@ -118,14 +119,14 @@ ms.lasthandoff: 05/10/2018
   
     -   **EndDate**  
   
-    -   **状态**  
+    -   **“状态”**  
   
 5.  在“文件”菜单上，单击“全部保存”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
-[查看多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[检查多维数据集和维度属性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [维度特性属性参考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

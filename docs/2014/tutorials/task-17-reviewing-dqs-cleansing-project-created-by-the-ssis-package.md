@@ -1,5 +1,5 @@
 ---
-title: 任务 17:查看由 SSIS 包的项目创建的 DQS 清理 |Microsoft Docs
+title: 任务 17：查看由 SSIS 包的项目创建的 DQS 清理 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057840"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>任务 17:查看由 SSIS 包创建的 DQS 清理项目
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>任务 17：查看由 SSIS 包创建的 DQS 清理项目
   在该任务中，您将打开由 SSIS 包在 DQS 客户端中创建的 DQS 项目，检查清理过程的结果，并可选执行交互式清理和导出结果。  
   
 1.  启动**数据质量客户端**。  
@@ -26,7 +26,7 @@ ms.locfileid: "56024438"
   
 3.  对基于列表进行排序**活动开始时间**若要查看最新记录。  
   
-4.  注意，您将看到采用以下格式的项目名称：**CleanseAndCurate.Cleanse Supplier Data.GUID**。  
+4.  请注意，您将看到采用以下格式的项目的名称：**CleanseAndCurate.Cleanse Supplier Data.GUID**。  
   
      ![DQS 清理项目创建的 SSIS 包](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "DQS 清理项目创建的 SSIS 包")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56024438"
   
 8.  在主页面中的**DQS 客户端**，单击**打开数据质量项目**中**数据质量项目**窗格。  
   
-9. 在项目列表中，选择由 SSIS DQS 清理组件创建的项目。 项目的名称应采用以下格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (红色）**。 可能需要对基于列表进行排序**创建日期**列，并寻找最新记录。  
+9. 在项目列表中，选择由 SSIS DQS 清理组件创建的项目。 项目的名称应采用格式：**CleanseAndCurate.Cleanse Supplier Data.GUID (红色）**。 可能需要对基于列表进行排序**创建日期**列，并寻找最新记录。  
   
 10. 单击“下一步” 。  
   

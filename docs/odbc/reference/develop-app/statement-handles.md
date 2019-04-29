@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149002"
 ---
 # <a name="statement-handles"></a>语句句柄
 一个*语句*非常方便地看作是一个 SQL 语句，如**选择\*从员工**。 但是，一个语句是不止是一个 SQL 语句-它包含所有与该 SQL 语句，如所有创建语句的结果集和执行语句中使用参数相关联的信息。 语句不甚至不需要将应用程序定义 SQL 语句。 例如，当目录函数如**SQLTables**执行上一条语句，它将执行返回一系列表名称的预定义的 SQL 语句。  

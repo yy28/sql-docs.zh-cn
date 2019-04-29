@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71cd369568d8fc66764345038568818a551f9fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046592"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持两种用于使用者指定表值参数行的数据模型： 推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
@@ -51,11 +51,11 @@ ms.locfileid: "48093837"
   
 -   IRowset::GetNextRows  
   
--   Irowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
 -   IRowset::GetData  
   
--   Irowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
 -   IRowset::RestartPosition  
   

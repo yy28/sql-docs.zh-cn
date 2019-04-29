@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150966"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>为参数化查询创建计划指南
   TEMPLATE 计划指南与参数化为指定形式的独立查询匹配。  

@@ -1,5 +1,5 @@
 ---
-title: 定义时间智能计算使用商业智能向导 |Microsoft 文档
+title: 定义时间智能计算使用商业智能向导 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043065"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "34026914"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>查看时间智能增强功能  
  在商业智能向导的最后一页中，可以查看将对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行的更改。 对于时间智能增强功能，向导将按下表所述更改所选时间维度、关联的数据源视图以及关联的多维数据集。  
   
-|对象|更改|  
+|Object|更改|  
 |------------|------------|  
 |时间维度|为每个计算（或视图）添加属性。|  
 |数据源视图|在时间表中为时间维度中每个新属性添加计算列。|  
 |多维数据集|添加计算成员，该成员定义了执行此计算的多维表达式 (MDX) 代码。|  
   
-## <a name="see-also"></a>另请参阅  
- [创建计算的成员](../../analysis-services/multidimensional-models/create-calculated-members.md)  
+## <a name="see-also"></a>请参阅  
+ [创建计算成员](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

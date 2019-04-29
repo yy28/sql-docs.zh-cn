@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046407"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>将应用程序从 MDAC 更新到 SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 Microsoft 数据访问组件（MDAC；从 Windows Vista 开始，数据访问组件已改称为 Windows 数据访问组件或 Windows DAC）之间存在很多差异。 虽然都可提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的本机数据访问，但经过专门设计的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可以公开 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的新功能，且同时保持了与早期版本的向后兼容性。  
@@ -108,7 +108,7 @@ ms.locfileid: "52541917"
   
 -   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端，ITransactionLocal::BeginTransaction 将导致事务立即启动。 如果使用 MDAC，则事务会延迟，直到应用程序已执行要求事务处于隐式事务模式的语句后才启动。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](/sql/t-sql/statements/set-implicit-transactions-transact-sql)。  
   
--   使用时，可能会遇到错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驱动程序和使用 System.Data.Odbc 访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新的服务器计算机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定数据类型或功能。 System.Data.Odbc 提供一般 ODBC 实现并且随后不会公开供应商特定的功能或扩展。 （[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序已更新为可本机支持最新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。）解决此问题，您可以恢复到 MDAC 或迁移到 System.Data.SqlClient。  
+-   使用时，可能会遇到错误[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 驱动程序和使用 System.Data.Odbc 访问[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]新的服务器计算机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的特定数据类型或功能。 System.Data.Odbc 提供一般 ODBC 实现并且随后不会公开供应商特定的功能或扩展。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驱动程序更新以本机方式支持最新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能。)解决此问题，您可以恢复到 MDAC 或迁移到 System.Data.SqlClient。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 都支持使用行版本控制的已提交读事务隔离，但只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持快照事务隔离。 （就编程而言，使用行版本控制的已提交读事务隔离等同于已提交读事务。）  
   

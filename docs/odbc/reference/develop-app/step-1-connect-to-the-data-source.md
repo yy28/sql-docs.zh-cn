@@ -1,5 +1,5 @@
 ---
-title: 步骤 1： 连接到数据源 |Microsoft Docs
+title: 第 1 步：连接到数据源 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 154fdd7368835ba2a578d3ec641705c4064859ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149022"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>步骤 1：连接数据源
+# <a name="step-1-connect-to-the-data-source"></a>第 1 步：连接到数据源
 任何应用程序的第一步是连接到数据源。 在下图中显示此阶段，包括它需要的函数。  
   
  ![连接到 ODBC 应用程序中的数据源](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  

@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130365"
 ---
 # <a name="capture-logon-trigger-event-data"></a>捕获登录触发器事件数据
   若要捕获有关 LOGON 事件的 XML 数据以在登录触发器内部使用，请使用 [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) 函数。 LOGON 事件将返回以下事件数据架构：  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134378"
 ---
 # <a name="create-an-aps-domain-administrator"></a>创建 APS 域管理员
 某些操作需要分析平台系统域管理员权限。 这解释了如何创建其他设备域管理员。  

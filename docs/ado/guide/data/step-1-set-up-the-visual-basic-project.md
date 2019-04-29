@@ -1,5 +1,5 @@
 ---
-title: 步骤 1： 将 Visual Basic 项目设置 |Microsoft Docs
+title: 第 1 步：设置 Visual Basic 项目 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062803"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>步骤 1：设置 Visual Basic 项目
+# <a name="step-1-set-up-the-visual-basic-project"></a>第 1 步：设置 Visual Basic 项目
 在此方案中，假定您已用于 Internet 发布在系统上安装 Microsoft Visual Basic 6.0、 ADO 2.5 或更高版本，以及 Microsoft OLE DB 访问接口。 将首先创建一个新项目，并将某些控件添加到项目中的默认窗体。  
   
 ### <a name="to-create-an-ado-project"></a>若要创建 ADO 项目：  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064576"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
   可以将包含标识值的数据文件大容量导入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中。 默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。 这些唯一值基于在表创建期间指定的种子和增量值。  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  有关创建格式化文件的详细信息，请参阅[创建格式化文件 (SQL Server)](create-a-format-file-sql-server.md)。  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. 使用 bcp 并保留标识值  
- 下面的示例说明如何在使用 `bcp` 大容量导入数据时保留标识值。 `bcp`命令使用格式化文件中， `myDepartment-f-n-x.Xml`，并包含以下开关：  
+ 下面的示例说明如何在使用 `bcp` 大容量导入数据时保留标识值。 `bcp` 命令使用格式化文件 `myDepartment-f-n-x.Xml`，并包含下列开关：  
   
 |限定符|Description|  
 |----------------|-----------------|  

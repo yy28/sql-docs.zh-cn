@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061525"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>基于文件的驱动程序诊断示例
 基于文件的驱动程序充当 ODBC 驱动程序和数据源同时。 在 ODBC 连接并作为数据源，它会因此生成错误和警告都作为一个组件。 因为它也是接口与驱动程序管理器的组件，其格式，并返回参数**SQLGetDiagRec**。  

@@ -12,11 +12,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 57a745385de80a3040897310ddc5b43b1301ea86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138750"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
 用于连接到 SQL Azure 对话框的连接到你想要迁移的 SQL Azure 数据库。  

@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151445"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 属性 （IP 地址选项卡）
   使用 **“TCP/IP 属性（‘IP 地址’选项卡）”** 对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”**。  
   
- 在重新启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后，更改才会生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅联机丛书中的“如何：启动和停止 SQL Server Browser 服务”。  
+ 在重新启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之后，更改才会生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅如何：启动和停止联机丛书中的 SQL Server Browser 服务。  
   
 ## <a name="static-vs-dynamic-ports"></a>静态端口与动态端口  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  
@@ -51,7 +51,7 @@ ms.locfileid: "52747969"
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]可以侦听同一 IP 地址的多个端口，端口以逗号分隔的格式列出：1433,1500,1501。 此字段最多允许 2047 个字符。  
   
- 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：：将数据库引擎配置为侦听多个 TCP 端口”（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中）。  
+ 若要配置单个 IP 地址以侦听多个端口，还必须将“TCP/IP 属性”对话框的“协议”选项卡上的“全部侦听”参数设置为“否”。 有关详细信息，请参阅 SQL Server 联机丛书中的“如何：将数据库引擎配置为侦听多个 TCP 端口"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>添加或删除 IP 地址  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器显示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时可用的 IP 地址。 如果发生以下情况，可用的 IP 地址也会随之改变：添加或删除网卡、动态分配的 IP 地址过期、重新配置网络结构或计算机的物理位置发生改变（例如便携式计算机在另一座大楼连接到网络）。 若要更改 IP 地址，可以编辑 **“IP 地址”** 框，然后重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

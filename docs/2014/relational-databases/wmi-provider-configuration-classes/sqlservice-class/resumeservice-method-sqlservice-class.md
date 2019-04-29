@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 30c509284657b7458e6cf9d2257859a71f6ffd5b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062335"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法（SqlService 类）
   尝试将服务置于已恢复状态。  

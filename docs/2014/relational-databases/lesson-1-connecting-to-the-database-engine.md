@@ -1,5 +1,5 @@
 ---
-title: 第 1 课：连接到数据库引擎 |Microsoft Docs
+title: 第 1 课：连接到数据库引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145498"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 课：连接到数据库引擎
   安装 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]时，安装哪些工具取决于版本和您的安装选择。 本课将介绍主要的工具以及如何连接并执行一项基本功能（授权多个用户）。  
@@ -101,6 +101,6 @@ ms.locfileid: "53375299"
 >  这是基本的入门信息。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了丰富的安全环境，而安全显然是数据库操作的一个重要方面。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 2 课：从另一台计算机进行连接](lesson-2-connecting-from-another-computer.md)  
+ [第 2 课：从其他计算机进行连接](lesson-2-connecting-from-another-computer.md)  
   
   

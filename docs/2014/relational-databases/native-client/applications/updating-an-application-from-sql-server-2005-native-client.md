@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf12faa1dc32044c6dc40c048d463394d6841b2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046475"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>从 SQL Server 2005 Native Client 更新应用程序
   本主题介绍自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以来在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 中的重大更改。  
@@ -36,7 +36,7 @@ ms.locfileid: "48155829"
 |SQLGetDescRec 不再不描述符一致性检查。|早于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 中，设置 SQL_DESC_DATA_PTR 字段时 SQLGetDescRec 执行描述符一致性检查。 这不是 ODBC 规范和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 以及更高版本所要求的，该一致性检查不再执行。|  
 |日期超出范围时返回其他错误。|对于 `datetime` 类型，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client（从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 开始）将对超出范围的日期返回与更早版本返回错误号不同的错误号。<br /><br /> 具体来说，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 对字符串转换到 `datetime` 时所有超出范围的年份值均返回 22007；而从版本 10.0 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 开始的 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 则在日期处于 `datetime2` 支持的范围但不处于 `datetime` 或 `smalldatetime` 支持的范围时返回 22008。|  
 |如果舍入将更改日期，则 `datetime` 值将截断秒的小数部分，并且不舍入。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，对于发送到服务器的 `datetime` 值的客户端行为是将它们舍入到最接近 1/300 秒的值。 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，如果舍入会更改日期，则该方案会导致截断秒的小数部分。|  
-|可能截断的秒`datetime`值。|如果您绑定到某一 datetime 列并且其类型标识符为 DBTYPE_DBTIMESTAMP (OLE DB) 或 SQL_TIMESTAMP (ODBC)、小数位数为 0，则使用连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 2005 服务器的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client（或更高版本）生成的应用程序将截断要发送到服务器的时间部分中的秒和秒的小数部分。<br /><br /> 例如：<br /><br /> 输入数据：1994-08-21 21:21:36.000<br /><br /> 插入的数据：1994-08-21 21:21:00.000|  
+|可能截断的秒`datetime`值。|如果您绑定到某一 datetime 列并且其类型标识符为 DBTYPE_DBTIMESTAMP (OLE DB) 或 SQL_TIMESTAMP (ODBC)、小数位数为 0，则使用连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 2005 服务器的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client（或更高版本）生成的应用程序将截断要发送到服务器的时间部分中的秒和秒的小数部分。<br /><br /> 例如：<br /><br /> 输入的数据：1994-08-21 21:21:36.000<br /><br /> 插入的数据：1994-08-21 21:21:00.000|  
 |从 DBTYPE_DBTIME 到 DBTYPE_DATE 的 OLE DB 数据转换不会再导致日期发生更改。|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 之前，如果 DBTYPE_DATE 的时间部分是在距离午夜的半秒内，则 OLE DB 转换代码将导致日期发生更改。 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，日期不会更改（秒的小数部分将截断但不舍入）。|  
 |IBCPSession::BCColFmt 转换更改。|从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]导出 Native Client 10.0，当你使用 IBCPSession::BCOColFmt 将 SQLDATETIME 或 SQLDATETIME 转换为字符串类型，小数部分值。 例如，将类型 SQLDATETIME 转换为类型 SQLNVARCHARMAX 时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的更早版本返回<br /><br /> 1989-02-01 00:00:00. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 及更高版本返回 1989-02-01 00:00:00.0000000。|  
 |发送的数据的大小必须与 SQL_LEN_DATA_AT_EXEC 中指定的长度匹配。|使用 SQL_LEN_DATA_AT_EXEC 时，数据的大小必须与用 SQL_LEN_DATA_AT_EXEC 指定的长度匹配。 可以使用 SQL_DATA_AT_EXEC，但使用 SQL_LEN_DATA_AT_EXEC 有潜在的性能好处。|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128510"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 暂留提供程序概述
 Microsoft OLE DB 永久性提供程序使您可以保存[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象到文件中，并在以后还原该**记录集**文件中的对象。 架构信息和数据，而挂起的更改将保留。

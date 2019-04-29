@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127072"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>全文搜索自 SQL Server 2008 以后已发生更改
   升级顾问检测到将升级全文搜索。 许多全文搜索选项和设置已发生更改。 因此，当您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 全文搜索时，可能需要修改某些设置。  

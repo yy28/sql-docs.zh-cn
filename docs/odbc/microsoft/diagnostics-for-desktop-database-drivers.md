@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128070"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>桌面数据库驱动程序的诊断
 由驱动程序处理所有错误和警告不检查或部分选中由驱动程序管理器。 该驱动程序还映射本机错误或错误返回给 SQLSTATEs 的数据源。 中列出的每个函数*ODBC 程序员参考*包含指定状态和消息的"诊断"部分。  
@@ -32,15 +32,15 @@ ms.locfileid: "47709625"
 |---------------------|-------------------|  
 |SQL_DIA_DYNAMIC_FUNCTION|不支持|  
 |SQL_DIAG_CLASS_ORIGIN|支持。 始终"ODBC 3.0"此驱动程序版本 3.0 及更高版本。|  
-|SQL_DIAG_COLUMN_NUMBER|是否支持|  
+|SQL_DIAG_COLUMN_NUMBER|支持|  
 |SQL_DIAG_CURSOR_ROW_COUNT|不支持|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|不支持|  
-|SQL_DIAG_MESSAGE_TEXT|是否支持|  
-|SQL_DIAG_NATIVE|是否支持|  
-|SQL_DIAG_NUMBER|是否支持|  
+|SQL_DIAG_MESSAGE_TEXT|支持|  
+|SQL_DIAG_NATIVE|支持|  
+|SQL_DIAG_NUMBER|支持|  
 |SQL_DIAG_RETURNCODE|支持，但实现由驱动程序管理器|  
-|SQL_DIAG_ROW_COUNT|是否支持|  
-|SQL_DIAG_ROW_NUMBER|是否支持|  
+|SQL_DIAG_ROW_COUNT|支持|  
+|SQL_DIAG_ROW_NUMBER|支持|  
 |SQL_DIAG_SERVER_NAME|不支持|  
-|SQL_DIAG_SQLSTATE|是否支持|  
-|SQL_DIAG_SUBCLASS_ORIGIN|是否支持|
+|SQL_DIAG_SQLSTATE|支持|  
+|SQL_DIAG_SUBCLASS_ORIGIN|支持|

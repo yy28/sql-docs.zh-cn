@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127834"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 在后续索引和排序操作中指定字符字段的排序规则的顺序。  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  指定排序规则顺序。 下表所述的可用排序规则序列选项。  
   
-|选项|“报表”|  
+|选项|语言|  
 |-------------|--------------|  
 |荷兰语|荷兰语|  
 |GENERAL|英语、 法语、 德语、 现代西班牙语、 葡萄牙语、 和其他西欧语言|  

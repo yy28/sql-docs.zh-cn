@@ -16,14 +16,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 59110e6686307e9555355fb72fefdbf6099bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060106"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 处理 (SQLXML 4.0)
-  XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值是 NULL，则该属性或元素不出现在 XML 文档中。）在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中，`updg:nullvalue` 属性支持为元素或属性值指定 NULL。  
+  XML 语法将 NULL 视为不存在。 (例如，如果属性或元素值为 NULL，该属性或元素不存在从 XML 文档。)在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML，`updg:nullvalue`特性使元素或属性值指定为 NULL。  
   
  例如，以下 updategram 确保**标题**值与联系人**ContactID** 64 的为 NULL，并更新**标题**值为"Mr." 该联系人。  
   

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047203"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "56014504"
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|为特定的备份、 还原或负载运行的唯一标识符。<br /><br /> 此视图的键。||  
-|NAME|**nvarchar(255)**|对于负载为 null。 为备份或还原的可选名称。||  
+|name|**nvarchar(255)**|对于负载为 null。 为备份或还原的可选名称。||  
 |submit_time|**datetime**|提交请求的时间。||  
 |start_time|**datetime**|启动操作的时间。||  
 |end_time|**datetime**|该操作已完成、 失败或已取消的时间。||  

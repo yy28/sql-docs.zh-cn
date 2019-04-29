@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046901"
 ---
 # <a name="aggregate-functions---count"></a>聚合函数 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   **命名空间**中的关键字[XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)定义命名空间前缀。 该前缀随后将用于 XQuery 主体。  
   
--   此查询将构造包含 <`NoOfWorkStations`> 元素的 XML。  
+-   该查询将构造包含的 XML <`NoOfWorkStations`> 元素。  
   
 -   **Count （)** 函数，在 XQuery 正文计数的数量 <`Location`> 元素。  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -92,7 +92,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

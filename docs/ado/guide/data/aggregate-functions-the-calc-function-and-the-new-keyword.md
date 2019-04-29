@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063093"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>聚合函数、CALC 函数和 NEW 关键字
 数据整理支持以下函数。 分配给包含的列的一章来操作的名称是*章别名*。  
@@ -44,7 +44,7 @@ ms.locfileid: "47625925"
   
 |新的关键字|Description|  
 |-----------------|-----------------|  
-|新*字段类型*[(*宽度* &#124; *规模* &#124; *精度* &#124; *错误*[，*规模* &#124; *错误*])]|将添加到指定的类型的空列**记录集**。|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|将添加到指定的类型的空列**记录集**。|  
   
  *字段类型*传递使用 NEW 关键字可以是任何以下数据类型。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47625925"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary，AdVarBinary，adLongVarBinary|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|每，以便您可以排除 adLongVarChar|  
 |DBTYPE_WSTR|adWChar，adVarWChar adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  

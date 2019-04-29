@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156646"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>“Reporting Services 登录”对话框（报表生成器）
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。 若要获取有关这些凭据的帮助，请与报表服务器管理员联系。  

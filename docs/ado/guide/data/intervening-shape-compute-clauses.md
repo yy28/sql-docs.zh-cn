@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161474"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中间 Shape COMPUTE 子句
 它是有效嵌入父级和子级之间的一个或多个 COMPUTE 子句在参数化的形状命令中，如以下示例所示：  

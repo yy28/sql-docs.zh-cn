@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046303"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理和监视服务器实例的全文搜索
   针对服务器实例的全文管理包括：  
@@ -72,7 +72,7 @@ ms.locfileid: "48906367"
   
  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器实例全文属性及其相关的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数。  
   
-|“属性”|Description|函数|  
+|属性|Description|函数|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|全文组件是否安装在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前实例中。|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中是否注册并使用了操作系统断字符和筛选器。|FULLTEXTSERVICEPROPERTY|  

@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126935"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>还原加密密钥（SSRS 本机模式）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题将概述如何使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器来还原密钥。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题概括了如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来还原密钥。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
@@ -29,12 +29,12 @@ ms.locfileid: "48220079"
   
  若要验证是否还原了有效的密钥，请使用报表管理器来查看订阅或具有使用存储凭据的数据源的任何报表。 如果在试图打开订阅定义页时出现“报表服务器无法访问加密数据”错误，或者在打开此前将存储凭据用于报表数据源的报表时，系统提示您输入凭据，则表明您还原的是无效密钥。  
   
- 如果还原的是无效密钥，而不是用于加密数据的密钥，则无法解密当前存储在报表服务器数据库中的数据。 如果还原的是无效密钥，则应立即还原正确密钥的备份副本（如果有的话）。 如果没有用于加密数据的密钥的备份副本，则必须删除所有加密数据。 单击**删除**按钮[加密密钥](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)页后，可以执行此步骤。 在删除加密内容之后，必须手动更新所有订阅并重新指定为报表定义的所有存储凭据以及报表服务器上的所有数据驱动订阅。  
+ 如果还原的是无效密钥，而不是用于加密数据的密钥，则无法解密当前存储在报表服务器数据库中的数据。 如果还原的是无效密钥，则应立即还原正确密钥的备份副本（如果有的话）。 如果没有用于加密数据的密钥的备份副本，则必须删除所有加密数据。 请单击 **加密密钥** 页上的 [“删除”](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) 按钮以执行此步骤。 在删除加密内容之后，必须手动更新所有订阅并重新指定为报表定义的所有存储凭据以及报表服务器上的所有数据驱动订阅。  
   
 ## <a name="restore-encryption-key-dialog"></a>“还原加密密钥”对话框  
  有关在何处查找信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
- 若要打开还原加密密钥对话框中，单击**加密密钥**中的导航窗格[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager，然后单击**还原**。 更新使用服务帐户页中的服务帐户时，也会显示此对话框[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 有关更多信息  
+ 若要打开“还原加密密钥”对话框，请单击 **配置管理器导航窗格中的** “加密密钥” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然后单击 **“还原”**。 当使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“服务帐户”页更新服务帐户时，也会显示此对话框。 有关更多信息  
   
 ## <a name="options"></a>选项  
  **文件位置**  

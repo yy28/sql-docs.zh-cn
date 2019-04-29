@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063438"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>安装报表生成器的独立版本（报表生成器）
   你可以安装报表生成器[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在功能包[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472)或如 ReportBuilder3_x86.msi，报表生成器中，Windows Installer 程序包有公用文件夹的位置已下载。  

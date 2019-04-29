@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049433"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
-  维护任务，例如添加或删除节点从现有 AlwaysOn 故障转移群集实例 (FCI) 都通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
+  诸如从现有 AlwaysOn 故障转移群集实例 (FCI) 中添加或删除节点等此类维护任务均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来完成。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>维护故障转移群集实例  
  安装 FCI 后，您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序对其进行更改或修复。 例如，您可以向 FCI 添加其他节点、将 FCI 作为独立实例运行或从 FCI 配置中删除节点。  
@@ -50,14 +50,14 @@ ms.locfileid: "48110537"
 > [!IMPORTANT]  
 >  请勿对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户和 WSFC 服务帐户使用同一帐户。 否则，如果更改了 WSFC 服务帐户的密码， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装将失败。  
   
- 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 在 [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]中，服务 SID 可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
 ## <a name="administering-a-failover-cluster-instance"></a>管理故障转移群集实例  
   
 |任务说明|主题链接|  
 |----------------------|----------------|  
 |说明如何为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源添加依赖项。|[向 SQL Server 资源添加依赖项](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos 是一种网络身份验证协议，旨在为客户端/服务器应用程序提供严格的身份验证。 Kerberos 为互操作性奠定了基础，同时有助于增强企业范围的网络身份验证的安全性。 可以使用 Kerberos 身份验证用于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]独立实例或 AlwaysOn Fci。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
+|Kerberos 是一种网络身份验证协议，旨在为客户端/服务器应用程序提供严格的身份验证。 Kerberos 为互操作性奠定了基础，同时有助于增强企业范围的网络身份验证的安全性。 可以将 Kerberos 身份验证用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 独立实例或 AlwaysOn FCI。|[为 Kerberos 连接注册服务主体名称](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。|  
 |提供指向描述如何启用 Kerberos 身份验证的内容的链接||  
 |介绍用于从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集故障中恢复的过程。|[从故障转移群集实例故障中恢复](recover-from-failover-cluster-instance-failure.md)|  
 |介绍用于更改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的 IP 地址资源的过程。|[更改故障转移群集实例的 IP 地址](change-the-ip-address-of-a-failover-cluster-instance.md)|  

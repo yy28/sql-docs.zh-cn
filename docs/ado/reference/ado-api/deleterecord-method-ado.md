@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23c66eb3ca786df27f856539e8bba026d2b1ea71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140192"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 删除所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -38,7 +38,7 @@ Record.DeleteRecord Source, Async
  *数据源*  
  可选。 一个**字符串**值，该值包含要删除的 URL 标识的实体 （例如，文件或目录）。 如果*源*省略或指定了空字符串，表示由当前的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)被删除。 如果记录是集合记录 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，例如目录) 也将删除所有子项 （例如，子目录）。  
   
- *异步*  
+ *Async*  
  可选。 一个**布尔**值，当**True**，指定删除操作是异步。  
   
 ## <a name="remarks"></a>备注  

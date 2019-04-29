@@ -1,5 +1,5 @@
 ---
-title: 级别 (MDX) |Microsoft 文档
+title: 级别 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048511"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 
@@ -30,10 +30,10 @@ Member_Expression.Level
   
 ## <a name="arguments"></a>参数  
  *Member_Expression*  
- 有效多维表达式 (MDX)，返回的成员。  
+ 一个有效多维表达式 (MDX) 返回成员。  
   
 ### <a name="examples"></a>示例  
- 下面的示例使用**级别**函数返回的 Adventure Works 多维数据集中的所有月份。  
+ 下面的示例使用**级别**函数返回 Adventure Works 多维数据集中的所有月份。  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -41,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用**级别**函数返回通用 Bike Stand Adventure Works 多维数据集中的模型名称属性层次结构中的级别的名称。  
+ 下面的示例使用**级别**函数为 All-Purpose Bike Stand Adventure Works 多维数据集中型号名称属性层次结构中返回的级别名称。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

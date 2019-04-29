@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061555"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>驱动程序管理器中的函数映射
 驱动程序管理器支持两个入口点用于采用字符串参数的函数。 未修饰的函数 (**SQLDriverConnect**) 是该函数的 ANSI 格式。 使用修饰 Unicode 窗体*W* (**SQLDriverConnectW**。)  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127700"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
   XML Path 语言 (XPath) 查询可以指定作为 URL 的一部分，或在模板内指定。 映射架构决定生成的此片段的结构，值从数据库中进行检索。 从概念上来说，此过程类似于使用 CREATE VIEW 语句创建视图，然后根据视图编写 SQL 查询。  
@@ -116,7 +116,7 @@ ms.locfileid: "52753369"
   
  在模板中指定 XPath 查询时，请注意以下行为：  
   
--   XPath 可以包含在 XML 中具有特殊含义的字符，如 < 或 &（模板为 XML 文档）。 必须使用 XML & 编码对这些字符进行转义，或在 URL 中指定 XPath。  
+-   XPath 可以包含 < 或 & XML 中具有特殊含义的 （和模板是一个 XML 文档）。 您必须使用 XML 这些字符进行转义 （& a) 的编码，或在 URL 中指定 XPath。  
   
 ## <a name="see-also"></a>请参阅  
  [在 SQLXML 4.0 中使用 XPath 查询](using-xpath-queries-in-sqlxml-4-0.md)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061538"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>释放语句句柄 ODBC
 前面曾提到，是重复使用比删除它们并分配新的语句更有效。 在执行前的新的 SQL 语句的语句，应用程序应确保当前的语句设置正确。 这些设置包括语句属性、参数绑定和结果集绑定。 通常情况下，参数和旧的 SQL 语句的结果集需要是未绑定 (通过调用**SQLFreeStmt** SQL_RESET_PARAMS 和 SQL_UNBIND 选项) 和新的 SQL 语句的重新绑定。  

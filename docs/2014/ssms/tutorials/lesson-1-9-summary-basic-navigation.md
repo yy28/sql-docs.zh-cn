@@ -1,5 +1,5 @@
 ---
-title: 摘要：基本导航 | Microsoft Docs
+title: 摘要：基本导航 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151500"
 ---
 # <a name="summary-basic-navigation"></a>摘要：基本导航
   可以根据个人的喜好和工作要求来自定义 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设计图面。  
@@ -31,6 +31,6 @@ ms.locfileid: "48086473"
 -   设置“启动时”选项以自定义默认布局。  
   
 ## <a name="next-lesson"></a>下一课  
- [第 2 课：编写 Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [第 2 课：编写 TRANSACT-SQL](lesson-2-writing-transact-sql.md)  
   
   

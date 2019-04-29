@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127062"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>执行复制维护作业 (SQL Server Management Studio)
   复制使用下列维护作业：  
@@ -69,7 +69,7 @@ ms.locfileid: "54128387"
   
 ## <a name="see-also"></a>请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [复制代理管理](../agents/replication-agent-administration.md)  
   
   

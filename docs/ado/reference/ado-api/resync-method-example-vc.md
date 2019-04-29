@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062445"
 ---
 # <a name="resync-method-example-vc"></a>Resync 方法示例 (VC++)
 此示例演示如何使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法来刷新中静态记录集的数据。  

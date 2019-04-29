@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144663"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 可以使用 **“生成和发布脚本向导”** 为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。  
   
-1.  **选择一种方法：**  [生成和发布脚本向导](#GenPubScriptWiz)、 [对象资源管理器“编写脚本为”菜单](#OEScriptAsMenu)  
+1.  **选择一种方法：**[生成和发布脚本向导](#GenPubScriptWiz)，[对象资源管理器脚本为菜单](#OEScriptAsMenu)  
   
-2.  **若要使用“编写脚本为”菜单：**  [编写单个对象的脚本](#ScriptSingleObject)、 [使用对象资源管理器为两个对象编写脚本](#ScriptTwoObjectsOE)、 [使用对象资源管理器详细信息为两个对象编写脚本](#ScriptTwoObjectsOED)  
+2.  **若要使用脚本为菜单：**[编写单个对象的脚本](#ScriptSingleObject)，[使用对象资源管理器的两个对象编写脚本](#ScriptTwoObjectsOE)，[使用对象资源管理器详细信息的两个对象编写脚本](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>开始之前  
  选择最能满足您的需求的机制。  

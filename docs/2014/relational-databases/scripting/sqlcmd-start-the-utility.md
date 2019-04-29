@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135335"
 ---
 # <a name="start-the-sqlcmd-utility"></a>启动 sqlcmd 实用工具
   开始使用 `sqlcmd` 之前，必须先启动该实用工具并连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一个实例。 可以连接到默认实例，也可以连接到命名实例。 第一步是启动 `sqlcmd` 实用工具。  
@@ -33,7 +33,7 @@ ms.locfileid: "48228347"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。 在 **“打开”** 框中，键入 **cmd**，然后单击 **“确定”** 打开命令提示符窗口。  
   
-2.  在命令提示符处，键入`sqlcmd`。  
+2.  在命令提示符下键入 `sqlcmd`。  
   
 3.  按 Enter。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48228347"
   
 2.  按 Enter。  
   
-     `sqlcmd` prompt (1>) 指示已连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例。  
+     `sqlcmd`提示符 (1 >) 表示你已连接到的指定实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     > [!NOTE]  
     >  输入的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句存储在缓冲区中。 在遇到 GO 命令时，它们将作为批处理命令执行。  

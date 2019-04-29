@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057801"
 ---
 # <a name="what-is-polybase"></a>什么是 PolyBase？
 PolyBase 使可以处理可以从中读取数据并将数据写入到外部数据源的 TRANSACT-SQL 查询在 Analytics Platform System (APS)。 访问外部数据的相同查询还可以在您的 AP 中包含的关系表。 这样即可将数据从外部源与高价值 APS 数据库中的关系数据合并。

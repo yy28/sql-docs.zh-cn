@@ -1,5 +1,5 @@
 ---
-title: ADO 事件实例化： Visual c + + |Microsoft Docs
+title: ADO 事件实例化：Visual C++ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062943"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件实例化：Visual C++
 这是如何在 Microsoft® Visual C++ ADO 事件实例化的示意性说明。 请参阅[ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)有关的完整说明。  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 事件类都继承自**IUnknown**，因此还必须实现**QueryInterface**， **AddRef**，以及**版本**方法。 此外可实现类构造函数和析构函数。 选择最合适，若要简化此任务的一部分，是 Visual c + + 工具。  
+ 事件类都继承自**IUnknown**，因此还必须实现**QueryInterface**， **AddRef**，以及**版本**方法。 此外可实现类构造函数和析构函数。 选择的视觉对象C++工具与您习惯最来简化此任务的一部分。  
   
  使其已知的事件处理程序可通过发出**QueryInterface**上[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象**IConnectionPointContainer**并**IConnectionPoint**接口。 然后，发出**IConnectionPoint::Advise**为每个类。  
   

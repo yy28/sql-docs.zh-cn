@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams |Microsoft Docs
+title: SQLNumParams | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046697"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
   以开头的数据库引擎中的改进[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLNumParams 若要获取的预期的结果更准确描述。 这些更准确的结果可能不同于 SQLNumParams 的早期版本中返回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

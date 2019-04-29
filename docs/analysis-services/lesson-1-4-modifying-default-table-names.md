@@ -1,5 +1,5 @@
 ---
-title: 修改默认表名称 |Microsoft 文档
+title: 修改默认表名 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053120"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>课程 1-4-修改默认表名称
+# <a name="lesson-1-4---modifying-default-table-names"></a>课程 1-4-修改默认表名
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 可以在数据源视图中更改 **FriendlyName** 属性的值，以使它们更易于受人关注和使用。  
@@ -47,9 +47,9 @@ ms.locfileid: "34015657"
 7.  在“文件”菜单上，或者在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具栏上，单击“全部保存”，以保存截至目前已在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中进行的更改。 您可以根据需要在此处停止教程学习，并在以后继续。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 2 课︰ 定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[第 2 课：定义和部署多维数据集](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [在数据源视图中更改属性 (Analysis Services)](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

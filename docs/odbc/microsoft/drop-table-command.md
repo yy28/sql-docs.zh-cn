@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128029"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 指定与数据源的数据库中移除一个表并从磁盘中删除它。  
@@ -32,7 +32,7 @@ ms.locfileid: "47852295"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>“设置”  
+## <a name="settings"></a>设置  
  *TableName*  
  指定从指定的数据源的数据库中删除并从磁盘中删除的表。  
   
@@ -51,4 +51,4 @@ DROP TABLE TableName | FileName | ?
 |ODBC 语法|数据源|Visual FoxPro 语法|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE*基础表名称*|数据库 （.dbc 文件）|删除表*TableName*删除|  
-||可用表 （.dbf 文件） 的目录|擦除*dbfName*<br /><br /> 擦除*cdxName*<br /><br /> 擦除*fptName*|
+||可用表 （.dbf 文件） 的目录|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|

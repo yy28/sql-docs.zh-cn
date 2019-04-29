@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52420786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054554"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>配置 Power Pivot 和部署解决方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52420786"
  有关安装 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 配置工具的信息，请参阅[安装或卸载 Power Pivot for SharePoint 外接程序 (SharePoint 2013)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 运行 Power Pivot for SharePoint 2013 配置  
- **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导将安装两种不同的配置工具来[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 这两个工具均支持不同版本的 SharePoint。  
+ **注意：** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安装向导将安装两种不同的配置工具来[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 这两个工具均支持不同版本的 SharePoint。  
   
 |“属性”|Description|  
 |----------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "52420786"
   
     2.  **数据库服务器**:可以使用 SQL Server 数据库引擎支持的 SharePoint 场。  
   
-    3.  **通行短语**:输入通行短语。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
+    3.  **通行短语**:输入的密码。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
     4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Server for Excel Services**:键入的名称[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式服务器。 在单服务器部署中，它与数据库服务器相同。 `[ServerName]\powerpivot`  
   
