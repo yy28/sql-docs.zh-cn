@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877054"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
   使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
@@ -42,7 +42,7 @@ ms.locfileid: "48050062"
   
 ## <a name="options"></a>选项  
   
-### <a name="source"></a>数据源  
+### <a name="source"></a>Source  
  可通过 **“源”** 面板中的选项标识数据库并指定备份操作的备份类型和组件。  
   
  **“数据库”**  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982389"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函数
 **符合性**  
@@ -93,7 +93,7 @@ SQLRETURN SQLSpecialColumns(
  *范围*  
  [输入]最小所需 rowid 作用的域。 返回的 rowid 可能会更大范围。 必须是下列选项之一：  
   
- SQL_SCOPE_CURROW 之外：保证 rowid 只有位于该行上时才有效。 如果行已更新或删除由另一个事务，请使用 rowid 中更高版本重新选择可能不返回行。  
+ SQL_SCOPE_CURROW:保证 rowid 只有位于该行上时才有效。 如果行已更新或删除由另一个事务，请使用 rowid 中更高版本重新选择可能不返回行。  
   
  SQL_SCOPE_TRANSACTION:Rowid 保证可为当前事务的持续时间内有效。  
   

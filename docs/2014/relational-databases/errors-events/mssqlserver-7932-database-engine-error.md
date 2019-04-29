@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913276"
 ---
 # <a name="mssqlserver7932"></a>MSSQLSERVER_7932
     
@@ -30,7 +30,7 @@ ms.locfileid: "48140877"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|消息正文|表错误: 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 的 FileStream 目录 ID F_ID 位于文件组 FG_ID1 中，但该目录应位于文件组 FG_ID2 中。|  
+|消息正文|表错误：FileStream 目录 ID F_ID 对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID 中文件组 FG_ID1，但应为文件组 FG_ID2 中。|  
   
 ## <a name="explanation"></a>解释  
  在运行 DBCC CHECKDB 期间，在错误的文件组中检测到指定对象的 FILESTREAM 存储。 这可能是由于对象元数据损坏。  

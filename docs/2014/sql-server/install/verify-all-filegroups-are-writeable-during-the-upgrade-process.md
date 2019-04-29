@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985797"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>确保升级过程中所有文件组均可写
   升级顾问检测到其中包含一个或多个只读文件组的数据库。 必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库的文件组都设置为 READ_WRITE 后，才能升级。  

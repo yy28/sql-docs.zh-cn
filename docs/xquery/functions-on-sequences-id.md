@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933701"
 ---
 # <a name="functions-on-sequences---id"></a>基于序列的函数 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 基于 IDREF 属性值检索元素  
- 下面的示例使用 fn:id 来基于 IDREF manager 属性检索 <`employee`> 元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
+ 下面的示例使用 fn: id 来检索 <`employee`> 基于 IDREF manager 属性的元素。 在此示例中，manager 属性是一个 IDREF 类型的属性，eid 属性是一个 ID 类型的属性。  
   
  对于特定的 manager 属性值， **id （)** 函数查找 <`employee`> 元素，其 ID 类型属性值匹配输入的 IDREF 值。 换句话说，对于特定雇员**id （)** 函数返回雇员经理。  
   
@@ -99,7 +99,7 @@ Go
  该查询返回值“Dave”。 这表示 Dave 是 Joe 的经理。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 基于 OrderList IDREFS 属性值检索元素  
- 在下面的示例中，<`Customer`> 元素的 OrderList 属性是一个 IDREFS 类型的属性。 它列出特定客户的订单 ID。 对于每个订单 ID，在 <`Customer`> 下都有一个提供订单值的 <`Order`> 元素子级。  
+ 在下面的示例的 OrderList 属性 <`Customer`> 元素是一个 IDREFS 类型属性。 它列出特定客户的订单 ID。 对于每个订单 id，没有 <`Order`> 元素下的子 <`Customer`> 提供订单值。  
   
  查询表达式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 检索第一个客户的 IDRES 列表中的第一个值。 然后将此值传递给**id （)** 函数。 然后，该函数查找 <`Order`> 元素的 OrderID 属性值匹配的输入**id （)** 函数。  
   

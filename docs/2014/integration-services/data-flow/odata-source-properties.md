@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901196"
 ---
 # <a name="odata-source-properties"></a>OData 源属性
   在数据流中右键单击“OData 源”并单击“属性”时，将在“属性”窗口中看到“OData 源”组件的属性。  

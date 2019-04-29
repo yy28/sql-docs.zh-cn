@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5214722aea9ea3fb1d04519d414b4c86ebb33de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925537"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>“连接到 Master Data Services 数据库”对话框
   使用 **“连接到 Master Data Services 数据库”** 对话框可以选择 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  
@@ -34,7 +34,7 @@ ms.locfileid: "52810109"
 |控件名称|Description|  
 |------------------|-----------------|  
 |**SQL Server 实例**|指定要承载 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例的名称。 该实例可以是本地或远程计算机上的默认实例或命名实例。 通过键入以下内容指定信息：<br /><br /> 键入一个句点 (.)，可以连接到本地计算机上的默认实例。<br /><br /> 键入服务器名或 IP 地址，可以连接到指定的本地或远程计算机上的默认实例。<br /><br /> 键入服务器名或 IP 地址以及实例名称，可以连接到指定的本地或远程计算机上的命名实例。 以 server_name\\instance_name 格式指定此信息。|  
-|**身份验证类型**|选择在连接到指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例时要使用的身份验证的类型。 用于连接的凭据确定在“Master Data Services 数据库”下拉列表中显示的数据库。 身份验证类型包括：<br /><br /> **当前用户-集成安全性**:使用集成 Windows 身份验证使用当前 Windows 用户帐户的凭据进行连接。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 使用登录到计算机并打开了该应用程序的用户的 Windows 凭据。 您不能在应用程序中指定其他 Windows 凭据。 如果您想要使用其他 Windows 凭据进行连接，则必须作为该用户登录到计算机，然后打开 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帐户**:使用 SQL Server 帐户连接。 在您选择此选项后， **“用户名”** 和 **“密码”** 字段将启用，并且您必须为指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帐户指定凭据。|  
+|**身份验证类型**|选择在连接到指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例时要使用的身份验证的类型。 用于连接的凭据确定在“Master Data Services 数据库”下拉列表中显示的数据库。 身份验证类型包括：<br /><br /> **当前用户 - 集成安全性**：通过使用当前 Windows 用户帐户的凭据，使用集成 Windows 身份验证进行连接。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 使用登录到计算机并打开了该应用程序的用户的 Windows 凭据。 您不能在应用程序中指定其他 Windows 凭据。 如果您想要使用其他 Windows 凭据进行连接，则必须作为该用户登录到计算机，然后打开 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帐户**：使用 SQL Server 帐户进行连接。 在您选择此选项后， **“用户名”** 和 **“密码”** 字段将启用，并且您必须为指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帐户指定凭据。|  
 |**用户名**|指定将用于连接到指定的 SQL Server 实例的用户帐户的名称。 该帐户必须是指定的 **实例上** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 角色的成员：<br /><br /> “身份验证类型”为“当前用户 - 集成安全性”时，“用户名”框为只读，并且它显示登录到计算机的 Windows 用户帐户的名称。<br /><br /> 在 **“身份验证类型”** 为 **“SQL Server 帐户”** 时， **“用户名”** 框将启用，并且您必须为指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帐户指定凭据。|  
 |**“密码”**|指定与用户帐户关联的密码：<br /><br /> “身份验证类型”为“当前用户 - 集成安全性”时，“密码”框为只读，并且使用指定 Windows 用户帐户的凭据进行连接。<br /><br /> 在 **“身份验证类型”** 为 **“SQL Server 帐户”** 时， **“密码”** 框将启用，并且您必须指定与指定的用户帐户相关联的密码。|  
 |**“连接”**|使用指定的凭据连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。|  

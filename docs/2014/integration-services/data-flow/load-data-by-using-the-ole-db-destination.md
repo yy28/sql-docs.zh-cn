@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902211"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>通过使用 OLE DB 目标来加载数据
   若要添加和配置 OLE DB 目标，包中必须已包含至少一个数据流任务和一个源。  
@@ -42,7 +42,7 @@ ms.locfileid: "58376715"
   
     -   **“表或视图”** 在包含该数据的数据库中选择一个表或视图。  
   
-    -   **表或视图-快速加载**选择表或视图中包含的数据的数据库，然后设置快速加载选项：**保留标识**，**保留空值**，**表锁**， **Check 约束**，**每批行数**，或**最大插入提交大小**。  
+    -   **表或视图 - 快速加载** 在包含该数据的数据库中选择一个表或视图，然后设置快速加载选项：“保留标识”、“保留 NULL”、“表锁”、“CHECK 约束”、“每批行数”或“最大插入提交大小”。  
   
     -   **表名变量或视图名变量** 在数据库中选择包含表名称或视图名称的用户定义变量。  
   

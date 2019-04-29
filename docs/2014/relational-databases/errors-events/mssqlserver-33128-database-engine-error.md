@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33128 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914509"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -33,17 +34,17 @@ ms.locfileid: "48057787"
 |消息正文|加密失败。 密钥使用了不推荐使用的算法“%.*ls”，这不再受支持。|  
   
 ## <a name="explanation"></a>解释  
- 引用 RC4（或 RC4_128）加密算法时，就会出现此消息。 RC4 和 RC4_128 是弱算法，不推荐使用它们。 请改用一种较强的算法，如某个 AES 算法。  
+引用 RC4（或 RC4_128）加密算法时，就会出现此消息。 RC4 和 RC4_128 是弱算法，不推荐使用它们。 请改用一种较强的算法，如某个 AES 算法。  
   
- 数据库兼容级别为 90 或 100 时，该操作成功，引发不推荐使用事件，该消息仅在环形缓冲区中显示。  
+数据库兼容级别为 90 或 100 时，该操作成功，引发不推荐使用事件，该消息仅在环形缓冲区中显示。  
   
- 数据库兼容级别为 110 或更高时，解密操作成功，引发不推荐使用事件，该消息仅在环形缓冲区中显示。 加密操作将失败，引发不推荐使用事件，对用户显示该消息并在环形缓冲区中显示它。  
+数据库兼容级别为 110 或更高时，解密操作成功，引发不推荐使用事件，该消息仅在环形缓冲区中显示。 加密操作将失败，引发不推荐使用事件，对用户显示该消息并在环形缓冲区中显示它。  
   
 > [!NOTE]  
->  环形缓冲区是未完全介绍的内部组件，不计划提供给客户使用。 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持联系时，来自环形缓冲区的消息很有用。 若要查看环形缓冲区，请查询 sys.dm_os_ring_buffers 动态管理视图。  
+> 环形缓冲区是未完全介绍的内部组件，不计划提供给客户使用。 与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持联系时，来自环形缓冲区的消息很有用。 若要查看环形缓冲区，请查询 sys.dm_os_ring_buffers 动态管理视图。  
   
 |State|Description|  
-|-----------|-----------------|  
+|---------|---------------|  
 |1|RC4 密钥在内置的 encryptbykey() 函数使用。 内置函数返回 NULL。 此消息仅显示在环形缓冲区中。|  
 |2|RC4 密钥在内置的 decryptbykey() 函数中使用。 此消息仅显示在环形缓冲区中。|  
 |3|对称密钥正在对不推荐使用的 RC4 密钥加密。 显示给用户和在环形缓冲区中显示。 不能在兼容级别 110 中更改不推荐使用的 RC4 对称密钥。 尝试使用非 RC4 密钥进行加密操作。 如果需要，将向后兼容级别设置为 90 或 100。|  
@@ -56,8 +57,7 @@ ms.locfileid: "48057787"
 |10|EKM 密钥正在对 RC4 对称密钥解密。 此消息仅显示在环形缓冲区中。|  
   
 ## <a name="user-action"></a>用户操作  
- 请改用一种较强的算法，如某个 AES 算法。 （建议）  
+请改用一种较强的算法，如某个 AES 算法。 （建议）  
   
- 使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 将数据库兼容级别设置为 100。 （建议不要使用。）  
-  
+使用 ALTER DATABASE SET COMPATIBILITY_LEVEL 将数据库兼容级别设置为 100。 （建议不要使用。）  
   

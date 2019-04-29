@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043332"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>连接数据源或驱动程序
 应用程序可以连接到任意数量的驱动程序和数据源。 这些可以是各种驱动程序和数据源中，相同的驱动程序和各种数据源，或者甚至多个连接到相同的驱动程序和数据源。  

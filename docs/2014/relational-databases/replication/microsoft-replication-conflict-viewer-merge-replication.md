@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938579"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
   使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
@@ -71,7 +71,7 @@ ms.locfileid: "52756229"
  选择此选项可显示前五列以及所有包含冲突的列。 当表包含很多列，而您只想查看与解决冲突最相关的列时，这非常有用。 前五列始终包含在此视图中，因为标识行的字段（如主键或名称字段）通常位于表的前几列中。  
   
  **显示列信息** (**…**)  
- 单击此项可查看列信息：**表名**，**列名**，**数据类型**，并且**列值**。 除非值显示为只读，否则 **“列值”** 是可编辑的。  
+ 单击以查看列信息：“表名”、“列名”、“数据类型”和“列值”。 除非值显示为只读，否则 **“列值”** 是可编辑的。  
   
  **提交入选方**  
  单击此项可将冲突解决程序确定的行保留为入选方。 在单击此按钮之前，可以更改未显示为只读的任何列的值。  

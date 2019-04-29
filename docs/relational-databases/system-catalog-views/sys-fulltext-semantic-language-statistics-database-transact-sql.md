@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_language_statistics_database (TRANSACT-SQL) |Microsoft Docs
+title: sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 97631b830acc3babacb5720707722775b4592629
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007531"
 ---
 # <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47708925"
   
 ||||  
 |-|-|-|  
-|**列名**|**类型**|**Description**|  
+|**列名**|**类型**|**说明**|  
 |**database_id**|**int**|数据库 ID（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中唯一）。|  
 |**register_date**|**datetime**|注册数据库进行语义处理的日期。|  
 |**registered_by**|**int**|注册数据库进行语义处理的服务器主体的 ID。|  
@@ -51,7 +51,7 @@ ms.locfileid: "47708925"
   
 ## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>权限  
  目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  
   
 ## <a name="examples"></a>示例  

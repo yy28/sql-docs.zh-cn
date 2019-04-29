@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913182"
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
     
@@ -29,7 +29,7 @@ ms.locfileid: "48181567"
 |事件 ID|846|  
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
-|符号名称|N/A|  
+|符号名称|不可用|  
 |消息正文|等待缓冲区闩锁时出现超时 - 类型 %d，bp %p，页 %d:%d，stat %#x，数据库 ID: %d，分配单元 ID: %I64d%ls，任务 0x%p : %d，等待时间 %d，标志 0x%I64x，所属任务 0x%p。 将不继续等待。|  
   
 ## <a name="explanation"></a>解释  

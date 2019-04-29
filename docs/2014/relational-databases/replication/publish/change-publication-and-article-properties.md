@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021319"
 ---
 # <a name="change-publication-and-article-properties"></a>更改发布和项目属性
   在创建发布后，可以更改大多数发布和项目属性，但有些发布和项目属性要求重新生成快照和/或重新初始化订阅。 本主题提供有关更改时需要以上一种或两种操作的所有属性的信息。  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的发布属性  
   
-|Description|存储过程|Properties|要求|  
+|Description|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式。|**sp_changepublication**|**sync_method**|新建快照。|  
 |更改快照位置。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -42,7 +42,7 @@ ms.locfileid: "54135807"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>快照和事务复制的项目属性  
   
-|Description|存储过程|Properties|要求|  
+|Description|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除项目|**sp_droparticle**|所有参数。|项目可以在创建订阅之前删除。 使用存储过程，可以删除项目的订阅；如果使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，则必须删除整个订阅，然后再重新创建订阅并进行同步。 有关详细信息，请参阅[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |更改列筛选器。|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|新建快照。<br /><br /> 重新初始化订阅。|  
@@ -60,7 +60,7 @@ ms.locfileid: "54135807"
   
 ## <a name="publication-properties-for-merge-replication"></a>合并复制的发布属性  
   
-|Description|存储过程|Properties|要求|  
+|Description|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |更改快照格式|**sp_changemergepublication**|**sync_mode**|新建快照。|  
 |更改快照位置。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新建快照。|  
@@ -71,7 +71,7 @@ ms.locfileid: "54135807"
 |添加联接筛选器或逻辑记录。|**sp_addmergefilter**|所有参数。|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除联接筛选器或逻辑记录。|**sp_dropmergefilter**|所有参数。|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改联接筛选器或逻辑记录。|**sp_changemergefilter**|**@property**<br /><br /> **@value**|新建快照<br /><br /> 重新初始化订阅。|  
-|禁用参数化筛选器（启用参数化筛选器不需要任何特殊操作）。|**sp_changemergepublication**| **false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
+|禁用参数化筛选器（启用参数化筛选器不需要任何特殊操作）。|**sp_changemergepublication**|**false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
 |启用或禁用预计算分区。|**sp_changemergepublication**|**use_partition_groups**|新建快照。|  
 |启用或禁用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 分区优化。|**sp_changemergepublication**|**keep_partition_changes**|重新初始化订阅。|  
 |启用或禁用订阅服务器分区验证。|**sp_changemergepublication**|**validate_subscriber_info**|重新初始化订阅。|  
@@ -79,7 +79,7 @@ ms.locfileid: "54135807"
   
 ## <a name="article-properties-for-merge-replication"></a>合并复制的项目属性  
   
-|Description|存储过程|Properties|要求|  
+|Description|存储过程|属性|要求|  
 |-----------------|----------------------|----------------|------------------|  
 |删除在发布中使用最新参数化筛选器的项目。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
 |删除在联接筛选器或逻辑记录中处于父级的项目（这对删除联接有副作用）。|**sp_dropmergearticle**|所有参数|新建快照。<br /><br /> 重新初始化订阅。|  
@@ -87,7 +87,7 @@ ms.locfileid: "54135807"
 |包括以前未发布的列筛选器。|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|新建快照。<br /><br /> 重新初始化订阅。|  
 |添加、删除或更改行筛选器。|**sp_changemergearticle**|**subset_filterclause**|新建快照。<br /><br /> 重新初始化订阅。<br /><br /> 如果添加、删除或更改参数化筛选器，则订阅服务器上挂起的更改在重新初始化期间将无法上载到发布服务器。 若要上载挂起的更改，请在更改筛选器前同步所有订阅。<br /><br /> 如果项目未包含在任何联接筛选器中，您可以用不同的行筛选器删除并再次添加此项目，而无需重新初始化整个订阅。 有关添加和删除项目的详细信息，请参阅[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。|  
 |更改架构选项。|**sp_changemergearticle**|**schema_option**|新建快照。|  
-|将跟踪从列级更改为行级（从行级跟踪更改为列级跟踪不需要任何特殊操作）。|**sp_changemergearticle**| **false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
+|将跟踪从列级更改为行级（从行级跟踪更改为列级跟踪不需要任何特殊操作）。|**sp_changemergearticle**|**false** 的 **false**值|新建快照。<br /><br /> 重新初始化订阅。|  
 |更改在将订阅服务器上所编写的语句应用于发布服务器之前是否检查权限。|**sp_changemergearticle**|**check_permissions**|新建快照。<br /><br /> 重新初始化订阅。|  
 |启用或禁用仅下载订阅（更改为其他上载选项或从其他上载选项更改都不需要任何特殊操作）。|**sp_changemergearticle**|将 **2** 的值更改为 **2**，或者从此值更改|重新初始化订阅。|  
 |更改目标表所有者。|**sp_changemergearticle**|**destination_owner**|新建快照。<br /><br /> 重新初始化订阅。|  

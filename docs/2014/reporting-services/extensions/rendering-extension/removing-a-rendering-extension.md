@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988063"
 ---
 # <a name="removing-a-rendering-extension"></a>删除呈现扩展插件
   若要删除[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]呈现扩展插件，只需删除`Extension`元素的呈现扩展插件从 rsreportserver.config 文件中，位于 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50。\<实例名称 > services\reportserver**文件夹。 如果为报表服务器或报表设计器生成条目，则删除`Extension`元素从[RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md)也。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  

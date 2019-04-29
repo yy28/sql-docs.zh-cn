@@ -13,11 +13,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943155"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47763205"
   
 -   用于在出现 DDL 事件时增强功能的 DDL 触发器。 有关详细信息，请参阅 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)。  
   
- SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 作为实现 SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]程序集。 这意味着，公共语言运行时从[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]使用 SMO 对象之前，必须在安装版本 2.0。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 程序集位于 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
+ SMO 命名空间为 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集实现。 这意味着在使用 SMO 对象之前，必须先安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 版本 2.0 中的公共语言运行时。 SMO 程序集随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 选件默认安装到全局程序集缓存 (GAC) 中。 程序集位于 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\。 有关详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文档。  
   
 ## <a name="smo-classes"></a>SMO 类  
  SMO 类包括两个类别：实例类和实用工具类。  
@@ -141,7 +141,7 @@ ms.locfileid: "47763205"
   
  索引表分区支持您管理跨多个文件组的表和索引中的数据的分布。 此新增功能由 SMO 对象表示。  
   
- **终结点**  
+ **EndPoints**  
   
  SOAP 和数据库镜像请求通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象由端点处理。  
   

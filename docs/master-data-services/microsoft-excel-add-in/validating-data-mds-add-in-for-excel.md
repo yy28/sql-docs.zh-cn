@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62905014"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>验证数据（用于 Excel 的 MDS 外接程序）
 
@@ -40,7 +40,7 @@ ms.locfileid: "52418548"
   
  有关其他状态的信息，请参阅[验证状态 (Master Data Services)](../../master-data-services/validation-statuses-master-data-services.md)  
   
-|“登录属性”|描述|  
+|“登录属性”|Description|  
 |------------|-----------------|  
 |验证失败|行中的一个或多个值未通过针对 MDS 管理员定义的业务规则的验证。|  
 |验证成功|行中的所有值都已根据业务规则通过了验证。|  
@@ -48,7 +48,7 @@ ms.locfileid: "52418548"
 ## <a name="input-statuses"></a>输入状态  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，以下输入状态是可能的  
   
-|“登录属性”|描述|  
+|“登录属性”|Description|  
 |------------|-----------------|  
 |错误|行中的一个或多个值不符合长度或数据类型之类的系统要求。 值在 MDS 存储库中不更新。|  
 |新行|该行中的值尚未发布到 MDS 存储库中。|  
@@ -64,6 +64,6 @@ ms.locfileid: "52418548"
   
 ## <a name="related-content"></a>相关内容  
   
--   [概述：从 Excel 导入数据（用于 Excel 的 MDS 外接程序）](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概述：从 Excel 导入数据&#40;MDS add-in for Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d080df993035bc34783bb39991d80d6a8e692618
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894496"
 ---
 # <a name="fast-parse"></a>Fast Parse
   快速分析提供一组快速、简单的数据分析例程。 这些例程是不区分区域设置的，并且它们只支持日期、时间和整数格式的一个子集。  

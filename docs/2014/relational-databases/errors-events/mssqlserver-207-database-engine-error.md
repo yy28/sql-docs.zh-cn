@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915047"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
     
@@ -115,7 +115,7 @@ ms.locfileid: "48050157"
     GROUP BY Year;  
     ```  
   
--   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 。  
+-   MERGE 语句中的 WHEN NOT MATCHED BY SOURCE 子句引用的是可以访问的值。 修改 MERGE 语句，使源表至少在 WHEN NOT MATCHED BY SOURCE 子句中返回一行。 例如，您可能需要添加或修订为子句指定的搜索条件。 或者，也可以更改该子句以指定没有引用源表的值。 例如，`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`。  
   
 ## <a name="see-also"></a>请参阅  
  [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)   

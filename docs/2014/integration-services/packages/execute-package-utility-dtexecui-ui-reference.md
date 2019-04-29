@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890172"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 可以从打开此用户界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或通过键入`dtexecui`在命令提示符，是通过使用在运行包的替代方法**DTExec**命令提示工具。  
@@ -329,7 +329,7 @@ ms.locfileid: "58374936"
  **验证包内部版本**  
  选择此项可以验证包内部版本。  
   
- 生成  
+ Build  
  指定与内部版本相关联的内部版本序号。  
   
  **验证包 ID**  

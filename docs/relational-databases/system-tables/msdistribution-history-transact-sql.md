@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903664"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52817319"
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
 |**duration**|**int**|消息会话的持续时间（秒）。|  
-|**注释**|**nvarchar(4000)**|消息文本。|  
+|**comments**|**nvarchar(4000)**|消息文本。|  
 |**xact_seqno**|**varbinary(16)**|上次处理的事务序列号。|  
 |**current_delivery_rate**|**float**|自从最后一个历史记录条目后，平均每秒传送的命令数。|  
 |**current_delivery_latency**|**int**|自从最后一个历史记录条目后，命令从进入分发数据库到应用于订阅服务器之间的滞后时间。 以毫秒为单位。|  

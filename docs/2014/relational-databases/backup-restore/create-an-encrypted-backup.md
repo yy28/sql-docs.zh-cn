@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876505"
 ---
 # <a name="create-an-encrypted-backup"></a>创建加密的备份
   本主题介绍使用 Transact-SQL 创建加密备份所需的步骤。  
@@ -52,7 +52,7 @@ ms.locfileid: "52531851"
   
     ```  
   
-3.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+3.  **备份数据库：** 指定加密算法和要使用证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -111,7 +111,7 @@ ms.locfileid: "52531851"
   
     ```  
   
-4.  **备份数据库：** 指定要使用的加密算法和证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
+4.  **备份数据库：** 指定加密算法和要使用的证书。 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

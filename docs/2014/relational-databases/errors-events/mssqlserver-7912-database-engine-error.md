@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913149"
 ---
 # <a name="mssqlserver7912"></a>MSSQLSERVER_7912
     
@@ -30,7 +30,7 @@ ms.locfileid: "48133529"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|消息正文|修复: 区 P_ID 已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID (类型为 TYPE)。|  
+|消息正文|修复:区 P_ID 已分配给对象 ID O_ID，索引 ID I_ID，分区 ID PN_ID，分配单元 ID A_ID （类型为 TYPE）。|  
   
 ## <a name="explanation"></a>解释  
  这是来自 REPAIR 的信息性消息，该消息声明已将一个区分配给指定对象。  

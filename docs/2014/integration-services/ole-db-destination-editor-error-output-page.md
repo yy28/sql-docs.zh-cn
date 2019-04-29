@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890390"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目标编辑器（“错误输出”页）
   可以使用 **“OLE DB 目标编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  

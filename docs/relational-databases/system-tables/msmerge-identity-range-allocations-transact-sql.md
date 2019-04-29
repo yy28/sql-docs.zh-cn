@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910169"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52809689"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**nvarchar(128)**|发布数据库的名称。|  
-|**发布**|**nvarchar(128)**|发布的名称。|  
+|**publication**|**nvarchar(128)**|发布的名称。|  
 |**article**|**nvarchar(128)**|项目的名称。|  
 |**订阅服务器**|**nvarchar(128)**|订阅服务器的名称。|  
 |**subscriber_db**|**nvarchar(128)**|订阅数据库的名称。|  

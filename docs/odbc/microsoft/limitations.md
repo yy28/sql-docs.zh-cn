@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026835"
 ---
 # <a name="limitations"></a>限制
 本部分介绍 ODBC 桌面数据库驱动程序的以下主题方面的限制：  
@@ -38,11 +38,11 @@ ms.locfileid: "47828825"
 ||[SELECT 语句](../../odbc/microsoft/select-statement-limitations.md)|[FROM 子句](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[UPDATE 语句](../../odbc/microsoft/update-statement-limitations.md)|[HAVING 子句](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[LIKE 谓词](../../odbc/microsoft/like-predicate-limitations.md)|  
-|||[不为 NULL](../../odbc/microsoft/not-null-limitations.md)|  
+|||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
 |||[ORDER BY 子句](../../odbc/microsoft/order-by-clause-limitations.md)|  
 |||[表名](../../odbc/microsoft/table-name-limitations.md)|  
 |||[表引用](../../odbc/microsoft/table-references-limitations.md)|  
 |||[视图](../../odbc/microsoft/views-limitations.md)|  
 |||[其中子句](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[其中 CURRENT OF 子句](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
-|||[字符串](../../odbc/microsoft/string-limitations.md)|
+|||[String](../../odbc/microsoft/string-limitations.md)|

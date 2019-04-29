@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898835"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>执行 SQL 任务编辑器（“常规”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“常规”** 页，配置执行 SQL 任务以及提供任务运行的 SQL 语句。  
@@ -55,7 +55,7 @@ ms.locfileid: "58382268"
  **ConnectionType**  
  选择连接数据源要使用的连接管理器的类型。 可用的连接类型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)， [ODBC 连接管理器](connection-manager/odbc-connection-manager.md)， [ADO 连接管理器](connection-manager/ado-connection-manager.md)， [ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)， [SQL ServerCompact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相关主题：**[OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **“连接”**  
  从已定义的连接管理器的列表中选择连接。 要创建新连接，请选择“\<新建连接...>”。  
@@ -104,13 +104,13 @@ ms.locfileid: "58382268"
  **文件连接**  
  选择现有文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器。  
   
- **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)，[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相关主题：**[文件连接管理器](connection-manager/file-connection-manager.md)、[文件连接管理器编辑器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  
  选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题：**[Integration Services &#40;SSIS&#41;变量](integration-services-ssis-variables.md)，[添加变量](../../2014/integration-services/add-variable.md)  
+ **相关主题：**[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

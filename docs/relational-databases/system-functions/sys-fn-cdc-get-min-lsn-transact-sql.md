@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) |Microsoft Docs
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62948939"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
- **'** *capture_instance_name*   
+ **'** *capture_instance_name* **'**  
  是的捕获实例的名称。 *capture_instance_name*是**sysname**。  
   
 ## <a name="return-types"></a>返回类型  
@@ -54,7 +54,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  该函数通常用于标识与某个捕获实例关联的变更数据捕获时间线的低端点。 您也可以在请求更改数据之前，使用该函数来验证某个查询范围的端点是否处于捕获实例时间线内。 执行这种检查是很重要的，因为当对更改表执行清理时，捕获实例的低端点会发生变化。 如果更改数据的两次请求之间相距的时间很长，则即使将上一个更改数据请求的高端点设置为低端点，此低端点也可能处于在当前时间线之外。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  

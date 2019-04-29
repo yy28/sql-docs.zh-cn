@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_input_buffer (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013133"
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   返回有关语句提交到的实例信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -60,7 +60,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 |**参数**|**smallint**|为该语句提供任何参数。|  
 |**event_info**|**nvarchar(max)**|给定 spid 的输入缓冲区中的语句的文本。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果用户具有 VIEW SERVER STATE 权限，用户将看到所有正在执行的会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。  
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，如果用户是数据库所有者，用户将看到所有正在执行的会话上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]; 否则为用户会看到仅为当前会话。  

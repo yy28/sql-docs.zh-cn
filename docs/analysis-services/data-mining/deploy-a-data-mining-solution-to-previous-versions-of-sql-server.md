@@ -1,5 +1,5 @@
 ---
-title: 将数据挖掘解决方案部署到以前版本的 SQL Server |Microsoft 文档
+title: 将数据挖掘解决方案部署到以前版本的 SQL Server |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011037"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>将数据挖掘解决方案部署到以前版本的 SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34015094"
  如果用于该模型数据源的访问接口是 SQL Client Data Provider 10，则还必须修改数据源定义以指定 SQL Server Native Client 的以前版本。 否则， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将生成一个错误，指出提供程序未注册。  
   
 ##  <a name="bkmk_Holdout"></a> 部署具有维持的模型  
- 如果你创建包含维持分区用于测试数据挖掘模型的挖掘结构，挖掘结构可以部署到的 SQL Server 2005 实例，但分区信息将会丢失。  
+ 如果创建包含一个维持部分用于测试数据挖掘模型的挖掘结构，该挖掘结构可以部署到的 SQL Server 2005 实例，但分区信息将会丢失。  
   
  使用 SQL Server 2005 Analysis Services 打开该挖掘结构时， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 将引发错误，然后重新生成该结构以删除维持部分。  
   
- 已重新生成结构后，维持分区的大小不再可用在属性窗口中;但是，值\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍会出现在 ASSL 脚本文件。  
+ 已重新生成该结构后，维持分区的大小不可再在属性窗口中;但是，值\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍会出现在 ASSL 脚本文件。  
   
 ##  <a name="bkmk_Filter"></a> 部署具有筛选器的模型  
- 如果对挖掘模型应用筛选器，该模型可以部署到的 SQL Server 2005 实例，但将不会应用筛选器。  
+ 如果对挖掘模型应用筛选器，该模型可以部署到的 SQL Server 2005 实例，但不是会应用该筛选器。  
   
  打开该挖掘模型时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将引发错误，然后重新生成该模型以删除该筛选器。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34015094"
   
  如果尝试同步 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库，则服务器将返回错误，且数据库同步失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 向后兼容性](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

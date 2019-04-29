@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95a71e977f56932d28b9ca0382829d6a30c7b212
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042493"
 ---
 # <a name="rds-objects"></a>RDS 对象
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "51600257"
   
 |||  
 |-|-|  
-|[数据控件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|将绑定数据查询**记录集**到一个或多个控件 （例如，文本框中，网格控件或组合框） 以显示**记录集**Web 页上的数据。<br /><br /> **DataControl**对象是可安全执行脚本。|  
+|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|将绑定数据查询**记录集**到一个或多个控件 （例如，文本框中，网格控件或组合框） 以显示**记录集**Web 页上的数据。<br /><br /> **DataControl**对象是可安全执行脚本。|  
 |[数据工厂 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|提供对读/写数据访问的实现方法指定客户端应用程序的数据源。<br /><br /> **DataFactory**对象不是可安全执行脚本。|  
-|[数据空间 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|创建自定义业务对象位于中间层上的客户端代理。<br /><br /> **DataSpace**对象是可安全执行脚本。|  
+|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|创建自定义业务对象位于中间层上的客户端代理。<br /><br /> **DataSpace**对象是可安全执行脚本。|  
 |[IRDSService 接口 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|公开[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用于返回一个指向所请求的接口的对象的功能更强大版本上。|  
   
 ## <a name="see-also"></a>请参阅  

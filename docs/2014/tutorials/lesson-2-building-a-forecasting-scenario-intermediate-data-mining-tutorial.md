@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931532"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 课：生成预测方案 （数据挖掘中级教程）
   作为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]的销售分析人员，您需要对下一年产品的销售量做出预测。 特别是已要求您比较不同区域和产品线的预测值。 此外，您还需要确定不同产品的销售量在一年中的不同时间是否有变化。  

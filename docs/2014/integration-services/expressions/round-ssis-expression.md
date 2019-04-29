@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897327"
 ---
 # <a name="round-ssis-expression"></a>ROUND（SSIS 表达式）
   返回舍入到指定长度或精度的数值表达式。 length 参数的取值必须为整数。  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679605"
 ---
 # <a name="currency-conversions-analysis-services"></a>货币换算 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多维  
@@ -55,7 +55,7 @@ ms.locfileid: "48190837"
  货币维度  
  一个为之定义了以下设置的数据库维度：  
   
--   `Type`维度的属性设置为货币。  
+-   维度的 `Type` 属性设置为 Currency。  
   
 -   该维度的一个特性的 `Type` 属性被设置为 CurrencyName。  
   
@@ -69,23 +69,23 @@ ms.locfileid: "48190837"
   
 -   时间维度和比率度量值组之间的常规维度关系。  
   
--   作为一个可选项，还可以将 `Type` 属性设置为 ExchangeRate。 商业智能向导使用的关系和货币与时间维度，以识别可能的比率度量值组，而设置`Type`属性设置为 exchangerate 可允许客户端应用程序能够更轻松地标识比率度量值组。  
+-   作为一个可选项，还可以将 `Type` 属性设置为 ExchangeRate。 当商业智能向导将这些关系和货币与时间维度一起使用来标识可能的比率度量值组时，将 `Type` 属性设置为 ExchangeRate 可使得客户端应用程序能够更轻松地标识比率度量值组。  
   
 -   一个或多个度量值，用来代表比率度量值组中包含的汇率。  
   
  报表货币维度  
  由商业智能向导在定义了货币换算后定义的维度，它包含用于货币换算的报表货币。 报表货币维度基于一个命名查询，此命名查询定义于和比率度量值组相关联的货币维度所基于的数据源视图中，来自货币维度的维度主表。 该维度被定义了以下设置：  
   
--   `Type`维度的属性设置为货币。  
+-   维度的 `Type` 属性设置为 Currency。  
   
--   `Type`属性的维度的键属性设置为 CurrencyName。  
+-   该维度的键特性的 `Type` 属性被设置为 CurrencyName。  
   
--   `Type`的维度中的一个特性的属性设置为 CurrencyDestination，并且绑定到该属性的列包含代表用于货币换算的报表货币的货币标识符。  
+-   该维度的一个特性的 `Type` 属性被设置为 CurrencyDestination，并且绑定到该特性的列包含代表用于货币换算的报表货币的货币标识符。  
   
 ## <a name="defining-currency-conversions"></a>定义货币换算  
  您可以使用商业智能向导来为多维数据集定义货币换算功能，也可以使用 MDX 脚本来手动定义货币换算。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先决条件  
  您必须首先定义至少一个货币维度、至少一个时间维度和至少一个比率度量值组，然后才能使用商业智能向导在多维数据集中定义货币换算。 商业智能向导可以从这些对象中检索相应的数据和元数据，以用于构造提供货币换算功能所需的报表货币维度和 MDX 脚本。  
   
 ### <a name="decisions"></a>决策  

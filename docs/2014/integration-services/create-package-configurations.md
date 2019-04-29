@@ -33,7 +33,7 @@ ms.locfileid: "62831974"
 >  您还可以通过单击 **“配置”** 属性旁的省略号按钮，访问 **“包配置组织程序”** 。 “配置”选项出现在包的属性窗口中。  
   
 > [!NOTE]  
->  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+>  配置可用于包部署模型。 对于项目部署模型，参数用于代替配置。 项目部署模型使您可以将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。 有关部署模型的详细信息，请参阅 [部署的项目和包](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  在 **“包配置组织程序”** 对话框中，可以启用包以使用配置、添加和删除配置以及设置加载配置的首选顺序。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "62831974"
   
 6.  在“包配置向导”页的欢迎页上，单击 **“下一步”**。  
   
-7.  在“选择配置类型”页上，指定配置类型，然后设置与该配置类型相关的属性。 有关详细信息，请参阅 [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
+7.  在“选择配置类型”页上，指定配置类型，然后设置与该配置类型相关的属性。 有关详细信息，请参阅 [包配置向导用户界面参考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
-8.  在“选择要导出的属性”页上，选择要在配置中包括的包对象的属性。 如果配置类型只支持一个属性，则此向导页的标题是“选择目标属性”。 有关详细信息，请参阅 [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
+8.  在“选择要导出的属性”页上，选择要在配置中包括的包对象的属性。 如果配置类型只支持一个属性，则此向导页的标题是“选择目标属性”。 有关详细信息，请参阅 [包配置向导用户界面参考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
     > [!NOTE]  
     >  只有 **XML 配置文件**和 **SQL Server** 配置类型支持在一个配置中包括多个属性。  

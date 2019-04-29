@@ -1,5 +1,5 @@
 ---
-title: 使用字符串函数 |Microsoft 文档
+title: 使用字符串函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928158"
 ---
 # <a name="using-string-functions"></a>使用字符串函数
 
 
   可以对多维表达式 (MDX) 中的几乎所有对象使用字符串函数。 在存储过程中，字符串函数主要用于将对象转换为字符串表示形式。 还可以使用字符串函数为对象计算字符串表达式，以返回一个值。  
   
- 使用最广泛的字符串函数是**名称**和**Uniquename**。 这两个函数分别返回对象的名称和唯一名称。 它们通常用于调试计算以发现函数正在返回哪个成员。  
+ 使用最广泛的字符串函数是**名称**并**Uniquename**。 这两个函数分别返回对象的名称和唯一名称。 它们通常用于调试计算以发现函数正在返回哪个成员。  
   
 ## <a name="examples"></a>示例  
  以下示例查询说明如何使用这两个函数：  
@@ -48,7 +48,7 @@ ms.locfileid: "34743818"
   
  `FROM [Adventure Works]`  
   
- **生成**函数可用来在一组的每个成员上执行的字符串函数，并将结果串联起来。 由于此函数允许您对集的内容进行可视化，因此它在调试计算时也很有用。 以下示例说明如何以这种方式使用此函数：  
+ **生成**函数可用于一组的每个成员上执行字符串函数以及串联结果。 由于此函数允许您对集的内容进行可视化，因此它在调试计算时也很有用。 以下示例说明如何以这种方式使用此函数：  
   
  `WITH`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34743818"
   
  `FROM [Adventure Works]`  
   
- 另一组广泛使用的字符串函数能够转换字符串，该字符串包含对象的唯一名称或将该对象解析到对象本身的表达式。 下面的示例查询演示如何**StrToMember**和**StrToSet**函数执行此操作：  
+ 另一组广泛使用的字符串函数能够转换字符串，该字符串包含对象的唯一名称或将该对象解析到对象本身的表达式。 下面的示例查询演示了如何**StrToMember**并**StrToSet**函数执行此操作：  
   
  `SELECT`  
   
@@ -99,11 +99,11 @@ ms.locfileid: "34743818"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  **StrToMember**和**StrToSet**应多加小心使用函数。 如果在计算定义中使用这些函数，则可能会导致查询性能较差。  
+>  **StrToMember**并**StrToSet**函数应谨慎使用。 如果在计算定义中使用这些函数，则可能会导致查询性能较差。  
   
 ## <a name="see-also"></a>请参阅  
  [生成&#40;MDX&#41;](../mdx/generate-mdx.md)   
- [名称&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
  [使用存储的过程&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

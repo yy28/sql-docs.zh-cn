@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913272"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130490"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|消息正文|系统表预检查: 对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
+|消息正文|系统表预检查:对象 ID O_ID 具有不匹配的链链接。 P_ID1->next = P_ID2，但是 P_ID2->prev = P_ID3。 由于不可修复的错误，Check 语句已终止。|  
   
 ## <a name="explanation"></a>解释  
  DBCC CHECKDB 的第一个阶段用于对关键系统表的数据页进行简单检查。 如果找到任何错误，则无法修复它们；因此，DBCC CHECKDB 立即终止。  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021707"
 ---
 # <a name="publication-properties-subscription-options"></a>发布属性，订阅选项
   可以使用 **“发布属性”** 对话框的 **“订阅选项”** 页，查看和设置与订阅关联的发布级别属性。 属性分为以下类别：  
@@ -35,7 +35,7 @@ ms.locfileid: "52753849"
   
 ### <a name="creation-and-synchronization"></a>创建和同步  
  **允许匿名订阅**  
- 确定是否允许匿名请求订阅。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
+ 确定是否允许匿名请求订阅。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE 支持匿名订阅。 若要对快照发布和事务发布使用此选项，则必须将选项 **“快照始终可用”** 设置为 **True**。  
   
  **可附加的订阅数据库**  
  确定是否可以通过附加订阅数据库的副本来创建订阅（对于快照发布和事务发布，要求将选项 **“快照始终可用”** 设置为 **True** ）。  

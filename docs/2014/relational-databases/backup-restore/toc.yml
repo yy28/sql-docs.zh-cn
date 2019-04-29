@@ -18,7 +18,7 @@
   items:
     - name: 设置 SQL Server 托管备份到 Windows Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: SQL Server 托管备份到 Windows Azure：互操作性和共存
+    - name: 针对 Microsoft Azure 的 SQL Server 托管备份：互操作性和共存
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: SQL Server 托管备份到 Windows Azure - 保持和存储设置
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: 删除失效文件组 (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: 示例：读/写文件的联机还原（完整恢复模式）
+    - name: 例如：读/写文件的联机还原（完整恢复模式）
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: 示例：联机还原只读文件（完整恢复模式）
+    - name: 例如：只读文件的联机还原（完整恢复模式）
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: 示例：联机还原只读文件（简单恢复模式）
+    - name: 例如：只读文件的联机还原（简单恢复模式）
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: 示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）
+    - name: 例如：主文件组和一个其他文件组的脱机还原（完整恢复模式）
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: 还原页
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: 段落还原
   href: piecemeal-restores-sql-server.md
   items:
-    - name: 示例：数据库的段落还原（完整恢复模式）
+    - name: 例如：数据库的段落还原（完整恢复模式）
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: 示例：数据库的段落还原（简单恢复模式）
+    - name: 例如：数据库的段落还原（简单恢复模式）
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: 示例：仅对某些文件组进行段落还原（完整恢复模式）
+    - name: 例如：仅对某些文件组进行段落还原（完整恢复模式）
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: 示例：仅对某些文件组进行段落还原（简单恢复模式）
+    - name: 例如：仅对某些文件组进行段落还原（简单恢复模式）
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: 恢复数据库但不还原数据 (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008011"
 ---
 # <a name="buffers"></a>缓冲区
 一个缓冲区就是用于应用程序和驱动程序之间传递数据的应用程序任何的内存部分。 例如，应用程序缓冲区可以关联，或*绑定到*结果集列与**SQLBindCol**。 提取每个行，则将返回这些缓冲区中的每列的数据。 *输入缓冲区*用于将数据传递给驱动程序; 应用程序中*输出缓冲区*用于从驱动程序的数据返回到应用程序。  

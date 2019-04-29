@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955876"
 ---
 # <a name="troubleshooting-rds"></a>RDS 故障排除
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51560394"
   
 -   [在 Windows 2000 上配置 RDS](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   ["Internet 服务器错误： 访问被拒绝"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Internet 服务器错误：Access Denied"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS 返回“未读取流”错误](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

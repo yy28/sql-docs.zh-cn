@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019995"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50145912"
 > [!NOTE]  
 >  以下针对以前版本的 Analysis Services 撰写的白皮书仍适用于使用 SQL Server 2012 生成的可缩放多维解决方案。 有关详细信息，请参阅 [使用 Analysis Services 缩放查询](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用只读数据库缩放 Analysis Services 查询](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先决条件  
  在启动数据库同步的目标服务器上，您必须是具有 Analysis Services 服务器管理员角色的成员。 在源服务器上，您的 Windows 用户帐户必须拥有源数据库上的完全控制权限。 如果以交互方式同步数据库，请注意同步在 Windows 用户标识的安全上下文中运行。 如果帐户被拒绝访问特定对象，则操作将排除这些对象。 有关服务器管理员角色和数据库权限的详细信息，请参阅[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)。  
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "50145912"
  如果源服务器上使用迟缓聚合处理，请关闭它。 在后台处理的聚合可能会干扰数据库同步。 有关设置此服务器属性的详细信息，请参阅 [OLAP Properties](../../analysis-services/server-properties/olap-properties.md)。  
   
 > [!NOTE]  
->  要确定同步是不是合适的方法，数据库大小是要考虑的因素。 没有硬件要求，但是如果同步太慢，请考虑按以下技术文章所述并行同步多个服务器： [Analysis Services 同步最佳做法](http://go.microsoft.com/fwlink/?LinkID=253136)。  
+>  要确定同步是不是合适的方法，数据库大小是要考虑的因素。 没有硬件要求，但是如果同步太慢，请考虑同步并行情况下，多个服务器中本技术白皮书所述：[Analysis Services 同步最佳实践](http://go.microsoft.com/fwlink/?LinkID=253136)。  
   
 ## <a name="synchronize-database-wizard"></a>同步数据库向导  
  使用同步数据库向导可执行从源数据库到目标数据库的单向同步，或生成用于指定数据库同步操作的脚本。 在同步过程中，可以同步本机和远程分区并选择是否包含角色。  
@@ -181,7 +181,7 @@ ms.locfileid: "50145912"
 ## <a name="next-steps"></a>后续步骤  
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

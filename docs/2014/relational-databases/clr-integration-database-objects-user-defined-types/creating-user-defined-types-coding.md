@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919938"
 ---
 # <a name="coding-user-defined-types"></a>用户定义类型编码
   编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` 类提供了一些自定义属性，这些属性可用于标记方法定义以便指定 Null 调用行为的确定性以及指定方法是否为赋值函数。 使用的是这些属性的默认值，仅在需要非默认值时才使用自定义特性。  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 类继承自 `SqlFunctionAttribute` 类，因此 `SqlMethodAttribute` 继承了 `FillRowMethodName` 中的 `TableDefinition` 和 `SqlFunctionAttribute` 字段。 这意味着可以编写一个不属于此情况的表值方法。 方法能够编译并且程序集部署，但出现错误有关`IEnumerable`返回类型是在运行时出现以下消息:"方法、 属性或字段 '\<名称 > 中类\<类 > 中程序集\<程序集 > 具有无效的返回类型。"  
+>  `SqlMethodAttribute` 类继承自 `SqlFunctionAttribute` 类，因此 `SqlMethodAttribute` 继承了 `FillRowMethodName` 中的 `TableDefinition` 和 `SqlFunctionAttribute` 字段。 这意味着可以编写一个不属于此情况的表值方法。 该方法能够编译和程序集部署，但出现错误有关`IEnumerable`返回类型是在运行时出现以下消息："方法、 属性或字段 '\<名称 >' 中类\<类 > 中的程序集\<程序集 > 具有无效的返回类型。"  
   
  下表说明了可以在 UDT 方法中使用的部分相关 `Microsoft.SqlServer.Server.SqlMethodAttribute` 属性，并列出了其默认值。  
   
@@ -551,16 +551,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  指示函数是否需要访问存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地实例中的用户数据。 默认值为 `DataAccessKind`.`None`。  
   
  IsDeterministic  
- 指示在输入值相同且数据库状态相同的情况下函数是否会生成相同的输出值。 默认值是`false`。  
+ 指示在输入值相同且数据库状态相同的情况下函数是否会生成相同的输出值。 默认值为 `false`。  
   
  IsMutator  
- 指示方法是否在 UDT 实例中引起状态变化。 默认值是`false`。  
+ 指示方法是否在 UDT 实例中引起状态变化。 默认值为 `false`。  
   
  IsPrecise  
- 指示函数是否涉及不精确的计算，如浮点运算。 默认值是`false`。  
+ 指示函数是否涉及不精确的计算，如浮点运算。 默认值为 `false`。  
   
  OnNullCall  
- 指示在指定 Null 引用输入参数时是否调用此方法。 默认值是`true`。  
+ 指示在指定 Null 引用输入参数时是否调用此方法。 默认值为 `true`。  
   
 ### <a name="example"></a>示例  
  使用 `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` 属性可以标记允许 UDT 实例状态改变的方法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 不允许在一个 UPDATE 语句的 SET 子句中设置两个 UDT 属性。 然而，您可以将一个方法标记为更改两个成员的赋值函数。  

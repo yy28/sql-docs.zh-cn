@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 253e29ffb6b0723d672fdbf4de8a3cd6aff334d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007972"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 处理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值是 NULL，则该属性或元素不出现在 XML 文档中。）在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML， **updg: nullvalue**特性使元素或属性值指定为 NULL。  
+  XML 语法将 NULL 视为不存在。 (例如，如果属性或元素值为 NULL，该属性或元素不存在从 XML 文档。)在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML， **updg: nullvalue**特性使元素或属性值指定为 NULL。  
   
  例如，以下 updategram 确保**标题**值与联系人**ContactID** 64 的为 NULL，并更新**标题**值为"Mr." 该联系人。  
   

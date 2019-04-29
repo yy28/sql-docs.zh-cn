@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013223"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |属性|**varchar(128)**|与此计划关联的属性的名称。 立即下此表列出了可能的属性、 其数据类型和及其说明。|  
-|值|**sql_variant**|与此计划关联的属性的值。|  
+|value|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 从上表中，**特性**可以具有以下值：
 
-|Attribute|数据类型|Description|  
+|特性|数据类型|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是 ID 中存储的对象[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)的数据库对象 （过程、 视图、 触发器等）。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -79,7 +79,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|批处理的 SQL 句柄。|  
 |merge_action_type|**smallint**|用作 MERGE 语句结果的触发器执行计划的类型。<br /><br /> 0 表示非触发器计划，或者不会作为 MERGE 语句结果来执行的触发器计划，或者作为仅指定 DELETE 操作的 MERGE 语句结果执行的触发器计划。<br /><br /> 1 表示作为 MERGE 语句结果运行的 INSERT 触发器计划。<br /><br /> 2 表示作为 MERGE 语句结果运行的 UPDATE 触发器计划。<br /><br /> 3 表示一个作为包含对应的 INSERT 或 UPDATE 操作的 MERGE 语句结果运行的 DELETE 触发器计划。<br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的 MERGE 语句的操作。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
@@ -92,7 +92,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>计算 Set 选项  
  转换中返回的值**set_options**编译计划所用的选项，减去这些值**set_options**值，直到你从最大值，达到 0。 所减去的每个值对应于查询计划中所用的一个选项。 例如，如果中的值**set_options**为 251，编译计划所使用的选项为 ANSI_NULL_DFLT_ON (128)、 QUOTED_IDENTIFIER (64)、 ANSI_NULLS(32)、 ANSI_WARNINGS (16)、 CONCAT_NULL_YIELDS_NULL (8)、 并行 Plan(2)和 ANSI_PADDING (1)。  
   
-|选项|ReplTest1|  
+|Option|ReplTest1|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -120,7 +120,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>计算游标选项  
  转换中返回的值**required_cursor_options**并**acceptable_cursor_options**编译计划所用的选项，减去的列值，并从开始值最大值，直到达到 0。 所减去的每个值对应于查询计划中所用的一个游标选项。  
   
-|选项|ReplTest1|  
+|Option|ReplTest1|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

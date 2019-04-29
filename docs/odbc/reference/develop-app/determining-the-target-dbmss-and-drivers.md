@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034944"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>确定目标 DBMS 和驱动程序
 要考虑的下一步问题是，什么是应用程序的目标 Dbms 和哪些驱动程序可支持这些 Dbms？ 泛型应用程序往往是高度可互操作，因为目标 Dbms 的问题是最适用于自定义和垂直应用程序。 但是，目标驱动程序的问题适用于所有应用程序，因为驱动程序差异很大在速度、 质量、 支持的功能和可用性。 此外，如果驱动程序来与应用程序一起重新发布，成本和可用性的许可计划需要考虑。  

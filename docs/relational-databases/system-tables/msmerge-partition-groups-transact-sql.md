@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911246"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_partition_groups**表为每个预计算分区在给定的数据库中存储一行。 除了列出的列以外，还将为参数化行筛选器中使用的每个函数在该表中添加一列。 例如，一个名为的列**HOST_NAME_FN**如果使用筛选器添加到表[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数。 对于每一组已经与该发布服务器同步的唯一函数值，相应地存储一行。 如果两个或更多个订阅服务器进行同步时使用的函数值完全相同，则会在该表中包含相同的行，因此将全部使用相同的分区 ID。该表存储在发布数据库中。  
+  **MSmerge_partition_groups**表为每个预计算分区在给定的数据库中存储一行。 除了列出的列以外，还将为参数化行筛选器中使用的每个函数在该表中添加一列。 例如，一个名为的列**HOST_NAME_FN**如果使用筛选器添加到表[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数。 对于每一组已经与该发布服务器同步的唯一函数值，相应地存储一行。 所有这些函数完全相同的值与同步的两个或多个订阅者将共享此表中的同一行，将因此所有共享相同的分区 id。该表存储在发布数据库中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

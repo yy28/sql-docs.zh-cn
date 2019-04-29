@@ -1,5 +1,5 @@
 ---
-title: 步骤 4： 服务器返回记录集 （RDS 教程） |Microsoft Docs
+title: 步骤 4：服务器返回记录集 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f111fab97b81ed847870f6535399c58bd856ab99
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955801"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步骤 4：服务器返回记录集（RDS 教程）
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [步骤 5: DataControl 是变为可用选 （RDS 教程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [步骤 5：数据控件不能进行 （RDS 教程）](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

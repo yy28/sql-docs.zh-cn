@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994237"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame=] '*登录名*  
- 当前数据库的新所有者的登录 ID。 *登录名*是**sysname**，无默认值。 *登录名*必须是一个已有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 *登录名*不能成为当前数据库的所有者，如果它已有权访问通过数据库内现有的用户安全帐户数据库。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
+ [ @loginame= ] '*login*'  
+ 当前数据库的新所有者的登录 ID。 *登录名* 是 **sysname** ，无默认值。 *登录名*必须是一个已有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 *登录名*不能成为当前数据库的所有者，如果它已有权访问通过数据库内现有的用户安全帐户数据库。 为了避免发生上述情况，请首先删除当前数据库内的用户。  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  *Remap_alias_flag*参数被弃用，因为登录名的别名已从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*remap_alias_flag*参数不会导致错误，但不起作用。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -64,7 +64,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
  使用 ALTER AUTHORIZATION 语句可以更该任意安全对象的所用者。 有关详细信息，请参阅 [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有对数据库的 TAKE OWNERSHIP 权限。 如果新所有者在数据库中具有对应的用户，则要求具有对登录名的 IMPERSONATE 权限，否则要求具有对服务器的 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -77,10 +77,10 @@ EXEC sp_changedbowner 'Albert';
 ## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

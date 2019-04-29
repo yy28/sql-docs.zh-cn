@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916943"
 ---
 # <a name="model-database"></a>model 数据库
   **model** 数据库用作在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建的所有数据库的模板。 因为每次启动 **时都会创建** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。 **model** 数据库的全部内容（包括数据库选项）都会被复制到新的数据库。 启动期间，也可使用 **model** 数据库的某些设置创建新的 **tempdb** ，因此 **model** 数据库必须始终存在于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统中。  
@@ -49,32 +49,32 @@ ms.locfileid: "52812179"
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|用户帐户控制|  
-|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
-|ANSI_NULLS|OFF|用户帐户控制|  
-|ANSI_PADDING|OFF|用户帐户控制|  
-|ANSI_WARNINGS|OFF|用户帐户控制|  
-|ARITHABORT|OFF|用户帐户控制|  
-|AUTO_CLOSE|OFF|用户帐户控制|  
-|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_SHRINK|OFF|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|是|  
+|ANSI_NULL_DEFAULT|OFF|是|  
+|ANSI_NULLS|OFF|是|  
+|ANSI_PADDING|OFF|是|  
+|ANSI_WARNINGS|OFF|是|  
+|ARITHABORT|OFF|是|  
+|AUTO_CLOSE|OFF|是|  
+|AUTO_CREATE_STATISTICS|ON|是|  
+|AUTO_SHRINK|OFF|是|  
+|AUTO_UPDATE_STATISTICS|ON|是|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
 |CHANGE_TRACKING|OFF|否|  
-|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
-|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 用户帐户控制|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|CONCAT_NULL_YIELDS_NULL|OFF|是|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
+|CURSOR_DEFAULT|GLOBAL|是|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 是|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
 |DB_CHAINING|OFF|否|  
 |ENCRYPTION|OFF|否|  
-|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
-|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
-|PARAMETERIZATION|SIMPLE|用户帐户控制|  
-|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
-|READ_COMMITTED_SNAPSHOT|OFF|用户帐户控制|  
-|RECOVERY|取决于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|用户帐户控制|  
-|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|NUMERIC_ROUNDABORT|OFF|是|  
+|PAGE_VERIFY|CHECKSUM|是|  
+|PARAMETERIZATION|SIMPLE|是|  
+|QUOTED_IDENTIFIER|OFF|是|  
+|READ_COMMITTED_SNAPSHOT|OFF|是|  
+|RECOVERY|取决于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|是|  
+|RECURSIVE_TRIGGERS|OFF|是|  
 |Service Broker 选项|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   

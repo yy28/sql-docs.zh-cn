@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911841"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 方法（SqlServiceAdvancedProperty 类）
   设置属性的字符串值。  
@@ -47,7 +47,7 @@ StrValue
   
 |参数|Description|  
 |---------------|-----------------|  
-|*strValue*|一个指定高级属性的值的字符串值。|  
+|*StrValue*|一个指定高级属性的值的字符串值。|  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 uint32 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

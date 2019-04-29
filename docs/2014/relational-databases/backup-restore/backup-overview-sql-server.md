@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922118"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
@@ -77,7 +77,7 @@ ms.locfileid: "48049391"
  [日志备份 (log backup)](transaction-log-backups-sql-server.md)  
  包括以前日志备份中未备份的所有日志记录的事务日志备份。 （完整恢复模式）  
   
- [文件备份](full-file-backups-sql-server.md)  
+ [file backup](full-file-backups-sql-server.md)  
  一个或多个数据库文件或文件组的备份。  
   
  [部分备份](partial-backups-sql-server.md)  
@@ -156,7 +156,7 @@ ms.locfileid: "48049391"
   
 -   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **若要创建备份**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48049391"
   
 -   [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   

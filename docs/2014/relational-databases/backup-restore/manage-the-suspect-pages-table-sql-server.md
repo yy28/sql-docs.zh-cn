@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921950"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
   本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 表位于 [msdb 数据库](../databases/msdb-database.md)中。  
@@ -50,7 +50,7 @@ ms.locfileid: "48053497"
   
      [建议](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要管理 suspect_pages 表，可使用：**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48053497"
   
 #### <a name="to-manage-the-suspectpages-table"></a>管理 suspect_pages 表  
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+1.  连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -166,7 +166,7 @@ GO
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [还原页 (SQL Server)](restore-pages-sql-server.md)   
- [suspect_pages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

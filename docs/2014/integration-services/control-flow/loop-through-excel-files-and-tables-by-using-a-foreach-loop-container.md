@@ -69,7 +69,7 @@ ms.locfileid: "62830578"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 架构行集枚举器循环遍历 Excel 表  
   
-1.  创建使用 Microsoft Jet OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在 **“连接管理器”** 对话框的“所有”页上，确保输入 Excel 8.0 作为“扩展属性”的值。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
+1.  创建使用 Microsoft Jet OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在 **“连接管理器”** 对话框的“所有”页上，确保输入 Excel 8.0 作为“扩展属性”的值。 有关详细信息，请参阅 [添加、 删除或共享连接管理器在包中](../add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   

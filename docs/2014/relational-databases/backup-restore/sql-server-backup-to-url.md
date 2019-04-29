@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920725"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
   本主题介绍使用 Windows Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 区别均为显著的例外，并且本主题中包括少量代码示例。  
@@ -61,9 +61,9 @@ ms.locfileid: "53359289"
 ###  <a name="Blob"></a> Windows Azure Blob 存储服务  
  **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Windows Azure Blob 存储服务，请首先创建一个 Windows Azure 存储帐户。 需要使用 **storage account name** 和 **access key** 属性来向 Windows Azure Blob 存储服务及其组件进行身份验证。  
   
- **容器：** 一个容器提供一组 Blob 的分组，并且可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Windows Azure Blob 服务，您必须至少创建根容器。  
+ **容器：** 容器提供一组 Blob，并且可以存储无限的数量的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Windows Azure Blob 服务，您必须至少创建根容器。  
   
- **Blob:** 任意类型和大小的文件。 Windows Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份将页 Blob 作为 Blob 类型。 Blob 是可使用以下 URL 格式寻址： https://\<存储帐户 >.blob.core.windows.net/\<容器 > /\<blob >  
+ **Blob：** 任意类型和大小的文件。 Windows Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份将页 Blob 作为 Blob 类型。 Blob 是可使用以下 URL 格式寻址： https://\<存储帐户 >.blob.core.windows.net/\<容器 > /\<blob >  
   
  ![Azure Blob 存储](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53359289"
  有关页 Blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 在此实现中，唯一有效的 URL 是指向 Windows Azure 存储帐户中页 Blob 的 URL。 该 URL 必须指向实际 Blob，而不仅仅是容器。 如果 Blob 不存在，则创建它。 如果现有的 Blob 是指定，BACKUP 将失败，除非指定了"WITH FORMAT"选项。  
+ **URL：** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 在此实现中，唯一有效的 URL 是指向 Windows Azure 存储帐户中页 Blob 的 URL。 该 URL 必须指向实际 Blob，而不仅仅是容器。 如果 Blob 不存在，则创建它。 如果现有的 Blob 是指定，BACKUP 将失败，除非指定了"WITH FORMAT"选项。  
   
 > [!WARNING]  
 >  如果您选择复制备份文件并将它上载到 Windows Azure Blob 存储服务，则将页 blob 用作您的存储选项。 不支持从块 Blob 进行还原。 从块 blob 类型 RESTORE 将出错并且失败。  
@@ -123,7 +123,7 @@ ms.locfileid: "53359289"
   
 |||||  
 |-|-|-|-|  
-|备份/还原语句|是否支持|Exceptions|注释|  
+|备份/还原语句|支持|Exceptions|注释|  
 |BACKUP|???|不支持 BLOCKSIZE 和 MAXTRANSFERSIZE。|要求指定 WITH CREDENTIAL|  
 |RESTORE|???||要求指定 WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|???||要求指定 WITH CREDENTIAL|  
@@ -176,7 +176,7 @@ ms.locfileid: "53359289"
   
 |||||  
 |-|-|-|-|  
-|参数|是否支持|Exceptions|注释|  
+|参数|支持|Exceptions|注释|  
 |DATABASE|???|||  
 |LOG|???|||  
 |FROM (URL)|???||FROM URL 参数用于指定备份文件的 URL 路径。|  
@@ -214,7 +214,7 @@ ms.locfileid: "53359289"
   
  以下步骤介绍为了能够备份到 Windows Azure 存储而对“备份数据库”任务作出的更改：  
   
-1.  启动 SQL Server Management Studio 并连接到 SQL Server 实例。  选择你想要备份，请右键单击一个的数据库**任务**，然后选择**备份...**.此操作将打开“备份数据库”对话框。  
+1.  启动 SQL Server Management Studio 并连接到 SQL Server 实例。  选择你想要备份，请右键单击一个的数据库**任务**，然后选择**备份...**.这将打开备份数据库对话框。  
   
 2.  在“常规”页上， **“URL”** 用于向 Windows Azure 存储创建备份。 选择此选项后，将看到此页上启用其他选项：  
   
@@ -227,9 +227,9 @@ ms.locfileid: "53359289"
         >   
         >  如果您无权访问管理证书或发布配置文件，可以创建一个 SQL 凭据，方法是使用 Transact-SQL 或 SQL Server Management Studio 指定存储帐户名称和访问密钥信息。 请参阅中的示例代码[创建凭据](#credential)部分，以使用 TRANSACT-SQL 创建凭据。 或者，使用 SQL Server Management Studio，从数据库引擎实例中右键单击 **“安全性”**，依次选择 **“新建”** 和 **“凭据”**。 在 **“标识”** 字段中指定存储帐户名称，在 **“密码”** 字段中指定访问密钥。  
   
-    3.  **Azure 存储容器：** 用于存储备份文件的 Windows Azure 存储容器的名称。  
+    3.  **Azure 存储容器：** Windows Azure 存储容器用于存储备份文件的名称。  
   
-    4.  **URL 前缀：** 使用在上一步中所述的字段中指定的信息自动生成此信息。 如果手动编辑此值，则确保它与以前提供的其他信息相匹配。 例如，如果修改存储 URL，则确保设置 SQL 凭据以向同一存储帐户进行身份验证。  
+    4.  **URL 前缀：** 这是自动使用上一步骤中所述的字段中指定的信息生成的。 如果手动编辑此值，则确保它与以前提供的其他信息相匹配。 例如，如果修改存储 URL，则确保设置 SQL 凭据以向同一存储帐户进行身份验证。  
   
  选择 URL 作为目标后，将禁用 **“介质选项”** 页中的某些选项。  以下主题详细介绍“备份数据库”对话框：  
   
@@ -279,7 +279,7 @@ ms.locfileid: "53359289"
 ###  <a name="credential"></a> 创建凭据  
  下面的示例创建存储 Windows Azure 存储身份验证信息的凭据。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "53359289"
 ###  <a name="complete"></a> 完整数据库备份  
  下面的示例将 AdventureWorks2012 数据库备份到 Windows Azure Blob 存储服务。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "53359289"
 ###  <a name="databaselog"></a> 备份数据库和日志  
  下面的示例备份 AdventureWorks2012 示例数据库，默认情况下，该数据库使用简单恢复模式。 若要支持日志备份，请将 AdventureWorks2012 数据库改为使用完整恢复模式。 然后，该示例对 Windows Azure Blob 创建完整数据库备份，并在一段更新活动过后备份日志。 此示例将创建具有日期时间戳的备份文件名。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "53359289"
 ###  <a name="filebackup"></a> 创建主文件组的完整文件备份  
  下面的示例创建主文件组的完整文件备份。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "53359289"
 ###  <a name="differential"></a> 创建主文件组的差异文件备份  
  下面的示例创建主文件组的差异文件备份。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "53359289"
 ###  <a name="restoredbwithmove"></a> 还原数据库并移动文件  
  要还原完整数据库备份并将还原的数据库移到 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目录，请使用以下步骤。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "53359289"
 ###  <a name="PITR"></a> 使用 STOPAT 还原到时间点  
  下面的示例将数据库状态还原到某个时间点并显示一个还原操作。  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
@@ -877,6 +877,6 @@ ms.locfileid: "53359289"
 ## <a name="see-also"></a>请参阅  
  [SQL Server 备份到 URL 最佳实践和故障排除](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [备份和还原系统数据库 (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   
- [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

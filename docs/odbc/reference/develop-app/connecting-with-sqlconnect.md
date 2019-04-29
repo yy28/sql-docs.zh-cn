@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042737"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 连接
 **SQLConnect**是最简单的连接函数。 它需要数据源名称，并接受可选的用户 ID 和密码。 它适用于应用程序硬编码数据源名称，不需要用户 ID 或密码。 它也适用于良好的应用程序，以便控制其自己"外观和感觉"或具有没有用户界面。 此类应用程序可以生成使用的数据源的列表**SQLDataSources**、 提示用户输入数据源、 用户 ID 和密码，然后再调用**SQLConnect**。  

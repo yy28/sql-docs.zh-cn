@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca3701807ebb591a0c083c4f4762b7597b9856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043832"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>唯一表、 唯一架构，唯一目录属性-动态 (ADO)
 使您能够密切控制修改为在特定的基表[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的由多个基表上的联接操作。  

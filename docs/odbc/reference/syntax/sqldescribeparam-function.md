@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982295"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 函数
 **符合性**  
- 版本引入了： ODBC 1.0 标准符合性： ODBC  
+ 版本引入了：ODBC 1.0 标准符合性：ODBC  
   
  **摘要**  
  **SQLDescribeParam**返回与已准备的 SQL 语句相关联的参数标记的说明。 在 IPD 字段中，此信息是也可用。  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  [输入]参数标记号订购，按顺序在不断增加的参数顺序，从 1 开始。  
   
  *DataTypePtr*  
- [输出]指向用于返回参数的 SQL 数据类型的缓冲区。 从 IPD SQL_DESC_CONCISE_TYPE 记录字段读取此值。 这将是中的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d： 数据类型或特定于驱动程序的 SQL 数据类型。  
+ [输出]指向用于返回参数的 SQL 数据类型的缓冲区。 从 IPD SQL_DESC_CONCISE_TYPE 记录字段读取此值。 这将是中的值之一[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)部分的附录 d:数据类型或特定于驱动程序的 SQL 数据类型。  
   
  在 ODBC 3。*x*，将中返回 SQL_TYPE_DATE、 SQL_TYPE_TIME 或 SQL_TYPE_TIMESTAMP  *\*DataTypePtr*日期、 时间或时间戳数据的 ODBC 2 中分别;。*x*，将返回 SQL_DATE、 SQL_TIME 或 SQL_TIMESTAMP。 驱动程序管理器执行所需的映射时 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序或当 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序。  
   
  当*ColumnNumber*等于 SQL_BINARY 中为 0 （表示书签列），则返回 *\*DataTypePtr*长度可变的书签。 （如果书签由 ODBC 3，则返回 SQL_INTEGER。*x*应用程序使用 ODBC 2。*x*驱动程序或通过 ODBC 2。*x*应用程序使用 ODBC 3。*x*驱动程序。)  
   
- 有关详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)附录 d： 数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
+ 有关详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)中附录 d:数据类型。 有关特定于驱动程序的 SQL 数据类型的信息，请参阅驱动程序的文档。  
   
  *ParameterSizePtr*  
  [输出]指向用于返回大小，以字符为单位的列或表达式的相应参数标记的数据源定义的缓冲区。 有关列大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
@@ -72,11 +72,11 @@ SQLRETURN SQLDescribeParam(
  *NullablePtr*  
  [输出]指向用于返回一个值，指示参数是否允许 NULL 值的缓冲区。 从 IPD SQL_DESC_NULLABLE 字段读取此值。 可以是以下类型之一：  
   
--   SQL_NO_NULLS: 参数不允许 NULL 值 （这是默认值）。  
+-   SQL_NO_NULLS:参数不允许 NULL 值 （这是默认值）。  
   
--   SQL_NULLABLE： 该参数允许 NULL 值。  
+-   SQL_NULLABLE:该参数允许 NULL 值。  
   
--   SQL_NULLABLE_UNKNOWN： 驱动程序无法确定参数是否允许 NULL 值。  
+-   SQL_NULLABLE_UNKNOWN:该驱动程序无法确定参数是否允许 NULL 值。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

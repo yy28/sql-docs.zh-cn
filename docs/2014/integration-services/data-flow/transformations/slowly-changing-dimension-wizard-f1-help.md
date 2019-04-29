@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900011"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>渐变维度向导的 F1 帮助
   可以使用 **渐变维度向导** 配置在各种类型的渐变维度中加载数据的过程。 本部分提供 **渐变维度向导**各页的 F1 帮助。 下表对本部分的主题进行了说明：  

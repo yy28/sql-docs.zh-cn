@@ -1,5 +1,5 @@
 ---
-title: 附录 A:ODBC 错误代码 |Microsoft Docs
+title: 附录 A：ODBC 错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026794"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附录 A：ODBC 错误代码
 本主题讨论为 ODBC 3 的 SQLSTATE 值。*x*。 有关 ODBC 3 的详细信息。*x* SQLSTATE 值，请参阅[SQLSTATE 映射](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
   
- **SQLGetDiagRec**或**SQLGetDiagField**按照 Open Group 定义返回 SQLSTATE 值*数据管理： 结构化查询语言 (SQL)、 版本 2* (1995 年 3 月)。 SQLSTATE 值是包含五个字符的字符串。 下表列出了一个驱动程序可以返回的 SQLSTATE 值**SQLGetDiagRec**。  
+ **SQLGetDiagRec**或**SQLGetDiagField**按照 Open Group 定义返回 SQLSTATE 值*数据管理：结构化查询语言 (SQL)，版本 2* (1995 年 3 月)。 SQLSTATE 值是包含五个字符的字符串。 下表列出了一个驱动程序可以返回的 SQLSTATE 值**SQLGetDiagRec**。  
   
  返回的 SQLSTATE 字符字符串值包含两个字符类值后跟三个字符子类值。 "01"某个类值指示警告和伴随的 SQL_SUCCESS_WITH_INFO 返回代码。 "01，"类"IM"除外以外的类值表示出现错误，并且伴随的 SQL_ERROR 返回值。 此类"IM"是特定于警告和错误派生 ODBC 自身的实现。 中的任何类的子类值"000"指示该 SQLSTATE 没有子类。 通过 SQL-92 定义了类和子类值的分配。  
   
@@ -103,15 +103,15 @@ ms.locfileid: "47767735"
 |HY008|操作已取消|可以异步方式处理的所有 ODBC 函数：<br /><br /> **SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLConnect**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLDisconnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLEndTran**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetData**<br /><br /> **SQLGetTypeInfo**<br /><br /> **SQLMoreResults**<br /><br /> **SQLNumParams**<br /><br /> **SQLNumResultCols**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |HY009|使用空指针无效|**SQLAllocHandle**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLExecDirect**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetFunctions**<br /><br /> **SQLNativeSql**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |HY010|函数序列错误|**SQLAllocHandle**<br /><br /> **SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLCloseCursor**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLCopyDesc**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLDisconnect**<br /><br /> **SQLEndTran**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLGetFunctions**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLGetTypeInfo**<br /><br /> **SQLMoreResults**<br /><br /> **SQLNumParams**<br /><br /> **SQLNumResultCols**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLRowCount**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetDescRec**<br /><br /> **SQLSetPos**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
-|HY011 并显示|现在无法设置属性|**SQLBulkOperations**<br /><br /> **SQLParamData**<br /><br /> **QLSetPos**<br /><br /> **SQLSetStmtAttr**|  
+|HY011|现在无法设置属性|**SQLBulkOperations**<br /><br /> **SQLParamData**<br /><br /> **QLSetPos**<br /><br /> **SQLSetStmtAttr**|  
 |HY012|事务操作代码无效|**SQLEndTran**|  
 |HY013|内存管理错误|除以外的所有 ODBC 函数：<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY014 句|超出了句柄的数量限制|**SQLAllocHandle**|  
+|HY014|超出了句柄的数量限制|**SQLAllocHandle**|  
 |HY015|没有可用的游标名称|**SQLGetCursorName**|  
 |HY016|无法修改实现行描述符|**SQLCopyDesc**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY017|自动分配的描述符句柄的使用无效|**SQLFreeHandle**<br /><br /> **SQLSetStmtAttr**|  
 |HY018|服务器拒绝取消请求|**SQLCancel**|  
-|HY019 分段|分段发送非字符和非二进制数据|**SQLPutData**|  
+|HY019|分段发送非字符和非二进制数据|**SQLPutData**|  
 |HY020|尝试连接 null 值|**SQLPutData**|  
 |HY021|描述符信息不一致|**SQLBindParameter**<br /><br /> **SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY024|属性值无效|**SQLSetConnectAttr**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e386aa60489fe3edb2caac3cb49ebad263ffdfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026615"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>行为更改和 ODBC 3.x 驱动程序
 环境属性 SQL_ATTR_ODBC_VERSION 指示驱动程序是否需要展示 ODBC 2。*x*行为或 ODBC 3 *.x*行为。 如何设置 SQL_ATTR_ODBC_VERSION 环境属性取决于应用程序。 ODBC 3 *.x*应用程序必须调用**SQLSetEnvAttr**若要将此属性设置后它们调用**SQLAllocHandle**以分配环境句柄和它们调用之前**SQLAllocHandle**以分配连接句柄。 如果它们无法执行此操作，驱动程序管理器将返回 SQLSTATE HY010 （函数序列错误），后者调用**SQLAllocHandle**。  

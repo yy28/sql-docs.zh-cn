@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   该类型必须有至少一个索引。 与内存优化表一样，可以使用哈希索引和非聚集索引。  
   
-     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)。  
+     对于哈希索引，Bucket 计数应该是预期唯一索引键数目的一倍到两倍。 有关详细信息，请参阅 [哈希索引确定正确的存储桶计数](../relational-databases/indexes/indexes.md)。  
   
 -   针对内存优化表的数据类型和约束限制也适用于内存优化表类型。 例如，在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中支持默认约束，但不支持 CHECK 约束。  
   

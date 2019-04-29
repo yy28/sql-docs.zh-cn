@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025094"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47809175"
 |**object_id**|**int**|包含该分区的表或索引视图的对象 ID。|  
 |**index_id**|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
-|**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 （未计入 B 树中非叶页的数目。）以上两种情况都未计入 IAM（索引分配映射）页。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
+|**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 （B 树中的非叶页不包括在计数中。）在任一情况下不包括 IAM （索引分配映射） 页。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
 |**in_row_used_page_count**|**bigint**|用于存储和管理分区中的行内数据的总页数。 此计数包括非叶 B 树页、 IAM 页和中包含的所有页面**in_row_data_page_count**列。 对列存储索引始终为 0。|  
 |**in_row_reserved_page_count**|**bigint**|为存储和管理该分区中的行内数据而保留的总页数，包括已使用的和未使用的页。 对列存储索引始终为 0。|  
 |**lob_used_page_count**|**bigint**|用于存储和管理扩展的行中的页数**文本**， **ntext**，**图像**， **varchar （max)**， **nvarchar(max)**， **varbinary （max)**，和**xml**在分区内的列。 包含 IAM 页。<br /><br /> 用于存储和管理分区中的列存储索引的 LOB 总数。|  
@@ -66,7 +66,7 @@ ms.locfileid: "47809175"
   
  可以通过求全部相关分区计数的和来获取单个表或单个索引的总计数。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要 VIEW DATABASE STATE 权限到查询**sys.dm_db_partition_stats**动态管理视图。 动态管理视图权限的详细信息，请参阅[动态管理视图和函数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  

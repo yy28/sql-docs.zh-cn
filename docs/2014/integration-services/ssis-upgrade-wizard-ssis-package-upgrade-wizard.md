@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927103"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS 升级向导（SSIS 包升级向导）
   可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导将在 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 中开发的包迁移为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的当前版本使用的包格式。  

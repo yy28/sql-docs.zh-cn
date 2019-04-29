@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60923181e553fe0fb5cb35de2201718e2a155d79
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019212"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
 
@@ -64,7 +64,7 @@ ms.locfileid: "56041548"
 6.  导出数据后，单击 **“完成”** 以关闭 Integration Services 项目。  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services (SSIS) 项目](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011647"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服务安装概述
   您可以利用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服务更新将更新应用到任何已安装的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件。 如果现有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件的版本级别高于更新版本的级别，则安装程序会将其从更新中排除。 更新应用服务的详细信息，请参阅[安装 SQL Server 2014 服务更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  
@@ -88,15 +88,15 @@ ms.locfileid: "53369059"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>启动 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，请运行自解压缩包文件。  
   
- 累积更新包 (CU):\<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
+ 累积更新包 (CU):\<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Service pack 包 (PCU):\<SQLServer2014 >\<SPx >-KBxxxxxx-PPP LLL.exe  
+ Service pack 包 (PCU):\<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x 表示 Service Pack 编号  
   
 -   PPP 表示特定的平台。  
   
--   LLL 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语言的字符缩写形式，例如：英语的 LLL 为 ENU。  
+-   LLL 表示的字符缩写形式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语言，例如：英语的 LLL 为 ENU。  
   
  若要将更新应用于故障转移群集中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 组件，请参阅故障转移群集安装的相关章节。 有关如何在无人参与模式下运行更新安装的详细信息，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   

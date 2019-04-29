@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928165"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 核心级别  
+ ODBC API 一致性：核心级别  
   
  在结果集中返回列的描述符信息。 描述符信息返回为字符串、 一个 32 位依赖于描述符的值或一个整数值。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47820048"
   
 |*fDescType*|注释|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|返回 FALSE: Visual FoxPro 没有任何计数器字段。|  
+|SQL_COLUMN_AUTO_INCREMENT|返回 FALSE:Visual FoxPro 没有任何计数器字段。|  
 |SQL_COLUMN_CASE_SENSITIVE|如果列类型是字符，始终返回 TRUE。|  
 |SQL_COLUMN_LABEL|返回列名称，也会返回 SQL_COLUMN_NAME。|  
 |SQL_COLUMN_MONEY|如果列类型是货币 （由 Visual FoxPro 语言中的"Y"），则返回 TRUE。|  

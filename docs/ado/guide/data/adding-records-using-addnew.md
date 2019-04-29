@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010730"
 ---
 # <a name="adding-records-using-addnew-method"></a>添加记录使用 AddNew 方法
 这是基本的语法**AddNew**方法：

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013058"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47643485"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|节点的 ID。|  
-|node_state_desc|**nvarchar(256)**|对节点状态的说明。 首先显示互斥的值，后跟可组合的值。 例如：<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />有四个互斥的 node_state_desc 值。 它们是下面列出了及其说明。<br /><ul><li>联机： 节点处于联机状态<li>脱机： 节点处于脱机状态<li>空闲： 节点没有挂起的工作请求，并且已进入空闲状态。<li>IDLE_READY： 节点没有挂起的工作请求，并已准备好进入空闲状态。</li></ul><br />有三个可组合的 node_state_desc 值，下面列出了及其说明。<br /><ul><li>DAC： 此节点保留供[专用管理连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<li>THREAD_RESOURCES_LOW： 没有新的线程可以创建在此节点上由于内存不足的情况。<li>热添加： 指示节点已添加以响应一个热添加 CPU 事件。</li></ul>|  
+|node_state_desc|**nvarchar(256)**|对节点状态的说明。 首先显示互斥的值，后跟可组合的值。 例如：<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />有四个互斥的 node_state_desc 值。 它们是下面列出了及其说明。<br /><ul><li>ONLINE：节点处于联机状态<li>OFFLINE：节点处于脱机状态<li>IDLE：节点没有挂起的工作请求，并且已进入空闲状态。<li>IDLE_READY:节点没有挂起的工作请求，并已准备好进入空闲状态。</li></ul><br />有三个可组合的 node_state_desc 值，下面列出了及其说明。<br /><ul><li>DAC:此节点保留供[专用管理连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<li>THREAD_RESOURCES_LOW:由于内存不足的情况，可以在此节点上不创建任何新线程。<li>热添加：指示节点已添加以响应一个热添加 CPU 事件。</li></ul>|  
 |memory_object_address|**varbinary(8)**|与此节点关联的内存对象的地址。 与一对一关系[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address。|  
 |memory_clerk_address|**varbinary(8)**|与此节点关联的内存分配器的地址。 与一对一关系[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address。|  
 |io_completion_worker_address|**varbinary(8)**|分配给此节点的 IO 完成的工作线程的地址。 与一对一关系[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address。|  
@@ -62,7 +62,7 @@ ms.locfileid: "47643485"
 |cpu_count |**int** |此节点可用的 Cpu 数。 |
 |pdw_node_id|**int**|对于此分布的节点标识符。<br /><br /> **适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   

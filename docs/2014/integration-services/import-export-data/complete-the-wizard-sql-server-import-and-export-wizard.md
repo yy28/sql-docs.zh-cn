@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893068"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成该向导（SQL Server 导入和导出向导）
   使用**完成该向导**页后，可以确认在向导中，在复制数据前进行的选择。  

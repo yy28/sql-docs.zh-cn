@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919696"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 集成程序集
   托管代码在被编译后部署在称作程序集的单元中。 程序集将打包为 DLL 或可执行 (.exe) 文件。 尽管可执行文件可以自动运行，但 DLL 必须在现有应用程序中承载。 可以加载到托管的 DLL 程序集，并在由托管[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 CREATE ASSEMBLY 语句，才能在进程中加载和使用的数据库。 还可以使用 ALTER ASSEMBLY 语句从更新的版本更新程序集，或者使用 DROP ASSEMBLY 语句从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中删除程序集。  
@@ -31,7 +31,7 @@ ms.locfileid: "48229297"
 |“列”|Description|  
 |------------|-----------------|  
 |assembly_id|为程序集定义的标识符。 此编号分配到与同一程序集相关的所有对象。|  
-|NAME|对象的名称。|  
+|name|对象的名称。|  
 |file_id|标识每个对象的编号，对于与给定的 `assembly_id` 关联的第一个对象，该值为 1。 如果有多个对象与同一个 `assembly_id` 关联，则后续的每个对象的 `file_id` 值依次递增 1。|  
 |content|程序集或文件的十六进制表示形式。|  
   

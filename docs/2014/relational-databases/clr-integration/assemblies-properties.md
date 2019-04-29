@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919295"
 ---
 # <a name="assembly-properties-general-page"></a>程序集属性（“常规”页）
   使用此页可以查看或修改程序集的属性。  
@@ -30,7 +30,7 @@ ms.locfileid: "48103267"
  键入所有者名称或架构名称，或者从列表中选择。  
   
  **权限集**  
- 设置程序集的安全级别。 提供了三个级别的安全：**安全**，**外部访问**，并**Unsafe**访问。  
+ 设置程序集的安全级别。 提供三个安全级别：**安全**，**外部访问**，和**Unsafe**访问。  
   
  **程序集的路径**  
  键入程序集文件的路径。  

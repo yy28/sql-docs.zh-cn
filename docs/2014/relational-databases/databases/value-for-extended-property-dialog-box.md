@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916499"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>“扩展属性的值”对话框
   使用“*\<属性名称> 的值”* 对话框可输入或查看值。  这是一个可以从多个位置打开的公共对话框。  

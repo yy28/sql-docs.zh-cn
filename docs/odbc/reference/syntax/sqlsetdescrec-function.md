@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982169"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函数
 **符合性**  
- 版本引入了： ODBC 3.0 标准符合性： ISO 92  
+ 版本引入了：ODBC 3.0 标准符合性：ISO 92  
   
  **摘要**  
  **SQLSetDescRec**函数设置会影响的数据类型的多个描述符字段和缓冲区绑定到列或参数的数据。  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetDescRec(
  *类型*  
  [输入]要设置的 SQL_DESC_TYPE 字段为描述符记录值。  
   
- *子类型*  
+ *SubType*  
  [输入]对于其类型为 SQL_DATETIME 或 SQL_INTERVAL 的记录，这是为其设置 SQL_DESC_DATETIME_INTERVAL_CODE 字段的值。  
   
  *长度*  

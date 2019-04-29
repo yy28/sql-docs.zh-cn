@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012020"
 ---
 # <a name="create-a-login"></a>创建一个登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
@@ -73,7 +73,7 @@ ms.locfileid: "54131587"
   
      如果单击“搜索…”：  
   
-    1.  下**选择此对象类型**，单击**对象类型...** 以打开**对象类型**对话框中，然后选择以下的任意或全部：**内置安全主体**，**组**，和**用户**。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
+    1.  在“选择此对象类型”下，单击“对象类型…”以打开“对象类型”对话框，并选择以下任意或全部选项：“内置安全主体”、“组”和“用户”。 默认情况下，将选中“内置安全主体”和“用户”。 完成后，单击 **“确定”**。  
   
     2.  在“从此位置”下，单击“位置…”以打开“位置”对话框，并选择一个可用的服务器位置。 完成后，单击 **“确定”**。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54131587"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- **登录名-新建**对话框还提供了四个其他页面上的选项：**服务器角色**，**用户映射**，**安全对象**，并且**状态**。  
+ “登录名 - 新建”对话框中还提供了其他四个页面上选项：“服务器角色”、“用户映射”、“安全对象”和“状态”。  
   
 ### <a name="server-roles"></a>“服务器角色”  
  **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项包括：  
@@ -176,7 +176,7 @@ ms.locfileid: "54131587"
   
 1.  单击 **“搜索”**。  
   
-2.  在中**添加对象**对话框中，选择以下选项之一：**特定对象...**，**类型的所有对象...**，或**服务器**_server_name_。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在“添加对象”对话框中，选择以下选项之一：**特定对象...**，**类型的所有对象...**，或**服务器**_server_name_。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  选择“服务器_server_name_”将会使用该服务器的所有安全对象自动填充上部网格。  
@@ -185,7 +185,7 @@ ms.locfileid: "54131587"
   
     1.  在“选择对象”对话框中的“选择这些对象类型”下，单击“对象类型…”。  
   
-    2.  在中**选择对象类型**对话框框中，选择任意或全部以下对象类型：**终结点**，**登录名**，**服务器**，**可用性组**，并且**服务器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在“选择对象类型”对话框中，选择以下任意或全部对象类型：“端点”、“登录名”、“服务器”、“可用性组”和“服务器角色”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  在“输入要选择的对象名称(示例)”下，单击“浏览…”。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54131587"
   
     5.  在 **“选择对象”** 对话框中，单击 **“确定”**。  
   
-4.  如果您选择**类型的所有对象...**，请在**选择对象类型**对话框框中，选择任意或全部以下对象类型：**终结点**，**登录名**，**服务器**，**可用性组**，并且**服务器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果选择“所有类型的对象…”，请在“选择对象类型”对话框中，选择以下任意或全部对象类型：“端点”、“登录名”、“服务器”、“可用性组”和“服务器角色”。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  

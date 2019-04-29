@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987201"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安装
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是为您发布到 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿提供查询处理和管理控制的服务器组件的集合。 组件包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务。  

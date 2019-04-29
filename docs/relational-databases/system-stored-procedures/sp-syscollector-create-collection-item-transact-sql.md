@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004143"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +53,20 @@ sp_syscollector_create_collection_item
  [ @collector_type_uid = ] '*collector_type_uid*'  
  是标识要用于此项的收集器类型的 GUID *collector_type_uid*是**uniqueidentifier** ，无默认值... 有关收集器类型的列表，请查询 syscollector_collector_types 系统视图。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  收集项的名称。 *名称*是**sysname**且不能为空字符串或 NULL。  
   
  *名称*必须是唯一的。 有关当前收集项名称的列表，请查询 syscollector_collection_items 系统视图。  
   
- [ @frequency =]*频率*  
+ [ @frequency = ] *frequency*  
  用于指定此收集项收集数据的频率（秒）。 *频率*是**int**，默认值为 5。 可指定的最小值为 5 秒。  
   
  如果将收集组设置为非缓存模式，则忽略频率，这是因为此模式将导致数据收集和上载按为收集组指定的计划执行。 若要查看收集组的收集模式，请查询[syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)系统视图。  
   
- [ @parameters =] '*参数*  
+ [ @parameters = ] '*parameters*'  
  收集器类型的输入参数。 *参数*是**xml**默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
   
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  标识收集组项的唯一标识符。 *collection_item_id*是**int**并且它具有 OUTPUT。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -77,7 +77,7 @@ sp_syscollector_create_collection_item
   
  必须先停止要向其添加收集项的收集组，然后才能创建收集项。 不能向系统收集组添加收集项。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -119,10 +119,10 @@ EXEC sp_syscollector_create_collection_item
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

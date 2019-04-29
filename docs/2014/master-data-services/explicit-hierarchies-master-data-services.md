@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924534"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，显式层次结构以您指定的任意方式组织一个实体中的成员。 显式层次结构可以是不规则的，并且与派生层次结构不同，该结构不依据基于域的属性关系。  
@@ -69,7 +69,7 @@ ms.locfileid: "52809269"
 |可以是不规则的|始终包含一致的级别数|  
   
 ## <a name="explicit-hierarchy-example"></a>显式层次结构示例  
- 在下面的示例中，Product 实体包含这些叶成员：BK-M101 {mountain-100}、 BK-M201 {Mountain-200}、 BK-M301 {Mountain-300}、 BK-R150 {Road-150}、 BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
+ 在以下示例中，Product 实体包含这些叶成员：BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450} 和 BK-R650 {Road-650}。  
   
  若要在特定的合并点汇总这些叶成员，您可以在 Product 实体中创建合并成员。 在要汇总叶成员的层次结构树的级别中插入合并成员。 对插入合并成员的位置没有限制，但是每个成员（叶成员或合并成员）只能使用一次。  
   

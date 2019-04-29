@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982399"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函数
 **符合性**  
@@ -106,7 +106,7 @@ SQLRETURN SQLSetPos(
 |HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
 |HY008|操作已取消|异步处理的已启用*StatementHandle*。 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*，然后调用该函数是在上再次*StatementHandle*。<br /><br /> 调用该函数，和之前执行完毕**SQLCancel**或**SQLCancelHandle**上调用了*StatementHandle*来自不同线程中多线程应用程序。|  
 |HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLSetPos 函数时。<br /><br /> (DM) 指定*StatementHandle*当时不处于执行状态。 调用函数时没有首先调用**SQLExecDirect**， **SQLExecute**，或目录函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。<br /><br /> (DM) 驱动程序是 ODBC 2。*x*驱动程序，并**SQLSetPos**曾为*StatementHandle*后**SQLFetch**调用。|  
-|HY011 并显示|现在无法设置属性|(DM) 驱动程序是 ODBC 2。*x*驱动程序; SQL_ATTR_ROW_STATUS_PTR 设置语句属性; 然后**SQLSetPos**之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用。|  
+|HY011|现在无法设置属性|(DM) 驱动程序是 ODBC 2。*x*驱动程序; SQL_ATTR_ROW_STATUS_PTR 设置语句属性; 然后**SQLSetPos**之前调用**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**调用。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY090|字符串或缓冲区长度无效|*操作*参数为 SQL_UPDATE、 数据值为 null 指针，和的列长度值不是 0，SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORE，SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *操作*参数为 SQL_UPDATE; 数据值不是空指针; C 数据类型为 SQL_C_BINARY 或 SQL_C_CHAR; 和列长度值是小于 0 但不是等于 SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORESQL_NTS 或 SQL_NULL_DATA，或小于或等于 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 长度/指示器缓冲区中的值为 SQL_DATA_AT_EXEC;SQL 类型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 数据源特定的数据类型;和中的 SQL_NEED_LONG_DATA_LEN 信息类型**SQLGetInfo**是"Y"。|  
 |HY092|无效的属性标识符|(DM) 为指定的值*操作*参数无效。<br /><br /> (DM) 为指定的值*LockType*参数无效。<br /><br /> *操作*参数 SQL_UPDATE 或 SQL_DELETE，而 sql_attr_concurrency 设置语句属性是 SQL_ATTR_CONCUR_READ_ONLY。|  

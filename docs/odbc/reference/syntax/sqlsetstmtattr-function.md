@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982162"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函数
 **符合性**  
@@ -105,7 +105,7 @@ SQLRETURN SQLSetStmtAttr(
 |HY001|内存分配错误|该驱动程序无法分配支持执行或完成该函数所需的内存。|  
 |HY009|使用空指针无效|*特性*参数标识所需的字符串属性，一个语句属性和*ValuePtr*参数是空指针。|  
 |HY010|函数序列错误|(DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行时**SQLSetStmtAttr**调用函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数*StatementHandle*和仍在执行时调用此函数。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或者**SQLSetPos**曾为*StatementHandle*和返回 SQL_NEED_DATA。 数据已发送的所有执行时数据参数或列之前调用此函数。|  
-|HY011 并显示|现在无法设置属性|*特性*SQL_ATTR_CONCURRENCY、 SQL_ ATTR_CURSOR_TYPE、 SQL_ ATTR_SIMULATE_CURSOR 或 SQL_ ATTR_USE_BOOKMARKS，准备的语句。|  
+|HY011|现在无法设置属性|*特性*SQL_ATTR_CONCURRENCY、 SQL_ ATTR_CURSOR_TYPE、 SQL_ ATTR_SIMULATE_CURSOR 或 SQL_ ATTR_USE_BOOKMARKS，准备的语句。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
 |HY017|自动分配的描述符句柄的使用无效|（数据挖掘）*特性*参数为 SQL_ATTR_IMP_ROW_DESC 或 SQL_ATTR_IMP_PARAM_DESC。<br /><br /> （数据挖掘）*特性*参数为 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC 和中的值*ValuePtr*最初以外句柄的隐式分配的描述符句柄为 ARD 或 APD 分配。|  
 |HY024|属性值无效|给出指定*特性*值，在指定了无效的值*ValuePtr*。 （驱动程序管理器将返回此仅适用于连接和语句属性接受一组离散的值，例如 SQL_ATTR_ACCESS_MODE 或 SQL_ ATTR_ASYNC_ENABLE 的 SQLSTATE。 对于所有其他连接和语句属性，该驱动程序必须验证中指定的值*ValuePtr*。)<br /><br /> *特性*参数为 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，并*ValuePtr*已不在同一连接的显式分配的描述符句柄*StatementHandle*参数。|  
@@ -160,7 +160,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>语句属性  
  下表中; 中显示当前定义的属性和在其中引入的 ODBC 版本应更多属性将由驱动程序以利用不同的数据源。 由 ODBC; 保留一系列属性驱动程序开发人员必须保留供从 Open Group 自己特定于驱动程序使用的值。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
-|Attribute|*ValuePtr*内容|  
+|特性|*ValuePtr*内容|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|句柄，以便后续调用 APD **SQLExecute**并**SQLExecDirect**语句句柄。 此属性的初始值是在初始分配该语句时隐式分配的描述符。 如果此属性的值设置为 SQL_NULL_DESC 或描述符最初分配的句柄，从其中取消关联是以前与语句句柄相关联的显式分配的 APD 句柄和语句句柄将恢复为隐式分配 APD 句柄。<br /><br /> 不能设置此属性，为已为另一个语句隐式分配的描述符句柄或隐式设置在同一语句; 的另一个描述符句柄隐式分配的描述符句柄不能与多个语句或描述符句柄相关联。|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|为语句句柄上的后续提取 ARD 句柄。 此属性的初始值是在初始分配该语句时隐式分配的描述符。 如果此属性的值设置为 SQL_NULL_DESC 或描述符最初分配的句柄，从其中取消关联是以前与语句句柄相关联的显式分配的 ARD 句柄和语句句柄将恢复为隐式分配 ARD 句柄。<br /><br /> 不能设置此属性，为已为另一个语句隐式分配的描述符句柄或隐式设置在同一语句; 的另一个描述符句柄隐式分配的描述符句柄不能与多个语句或描述符句柄相关联。|  
@@ -186,7 +186,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAM_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT\*指向 SQLUSMALLINT 值的数组的值用于在 SQL 语句的执行过程中忽略参数。 每个值设置为 SQL_PARAM_PROCEED （适用于要执行的参数） 或 SQL_PARAM_IGNORE （适用于要忽略的参数）。<br /><br /> 通过设置指向 SQL_DESC_ARRAY_STATUS_PTR 到 SQL_PARAM_IGNORE APD 中的数组中的状态值，可以在处理期间忽略的一组参数。 如果其状态的值设置为 SQL_PARAM_PROCEED 或设置数组中的没有元素处理的一组参数。<br /><br /> 此语句属性可以设置为 null 指针，在这种情况下，驱动程序不返回参数状态值。 此属性可以设置在任何时候，但下一次之前未使用的新值**SQLExecDirect**或**SQLExecute**调用。<br /><br /> 没有绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 设置此语句属性 APD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
 |SQL_ATTR_PARAM_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*值，该值指向数组 SQLUSMALLINT 值包含每行的参数值对的调用后的状态信息**SQLExecute**或**SQLExecDirect**。 此字段是必需的仅当 PARAMSET_SIZE 大于 1。<br /><br /> 状态值可以包含以下值：<br /><br /> SQL_PARAM_SUCCESS:此参数集的成功执行 SQL 语句。<br /><br /> SQL_PARAM_SUCCESS_WITH_INFO:参数; 这一组已成功执行 SQL 语句但是，诊断数据结构中提供了警告信息。<br /><br /> SQL_PARAM_ERROR:处理此套参数时出错。 诊断数据结构中提供了其他错误的信息。<br /><br /> SQL_PARAM_UNUSED:此参数集为未使用，可能是因为，一些以前的参数集导致中止将来进行处理，出现错误或因为 SQL_PARAM_IGNORE 设置该集指定的 SQL_ATTR_PARAM_OPERATION_PTR 数组中的参数。<br /><br /> SQL_PARAM_DIAG_UNAVAILABLE:该驱动程序将参数的数组作为一个整体化单元，并因此不会生成此级别的错误的信息。<br /><br /> 此语句属性可以设置为 null 指针，在这种情况下，驱动程序不返回参数状态值。 此属性可以设置在任何时候，但下一次之前未使用的新值**SQLExecute**或**SQLExecDirect**调用。 请注意，设置此属性可能会影响由驱动程序实现的输出参数行为。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置在 IPD 标头中设置 SQL_DESC_ARRAY_STATUS_PTR 字段。|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN\*指向的缓冲区中要返回的已处理，包括错误集的参数集的数量的记录字段。 如果这是 null 指针，则将返回无编号。<br /><br /> 将此语句属性设置在 IPD 标头中设置 SQL_DESC_ROWS_PROCESSED_PTR 字段。<br /><br /> 如果在调用**SQLExecDirect**或**SQLExecute** ，填充此属性指向的缓冲区中未返回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，缓冲区的内容是不确定。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。|  
-|则 SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|Sqlulen 生成值，该值指定为每个参数的值的数目。 如果 SQL_ATTR_PARAMSET_SIZE 大于 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 指向数组。 每个数组的基数是此字段的值相等。<br /><br /> 没有绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置的 SQL_DESC_ARRAY_SIZE 字段设置 APD 标头中。|  
+|SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|Sqlulen 生成值，该值指定为每个参数的值的数目。 如果 SQL_ATTR_PARAMSET_SIZE 大于 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 指向数组。 每个数组的基数是此字段的值相等。<br /><br /> 没有绑定的参数时，将忽略此属性。<br /><br /> 有关详细信息，请参阅[使用的参数的数组](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 将此语句属性设置的 SQL_DESC_ARRAY_SIZE 字段设置 APD 标头中。|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|对应于为 SQL 语句执行返回给应用程序之前等待的秒数 sqlulen 生成值。 如果*ValuePtr*是等于 0 （默认值），没有任何超时。<br /><br /> 如果指定的超时时间超出了数据源中的最大超时或小于最小超时值，则**SQLSetStmtAttr**替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 请注意，该应用程序无需调用**SQLCloseCursor**如果重复使用该语句**选择**语句已超时。<br /><br /> 在此语句属性中设置的查询超时值是在同步和异步模式中有效。|  
 |SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|Sqlulen 生成的值：<br /><br /> SQL_RD_ON = **SQLFetchScroll**并在 ODBC 3 *.x*， **SQLFetch**之后将光标放置到指定位置检索数据。 这是默认设置。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**并在 ODBC 3 *.x*， **SQLFetch**之后它将光标置于不检索数据。<br /><br /> 通过设置为 SQL_RD_OFF SQL_RETRIEVE_DATA，应用程序可以验证行存在，或检索的行的书签，而不会产生检索行的开销。 有关详细信息，请参阅[滚动和提取行](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)。<br /><br /> 此属性的值可以设置对打开的游标;但是，该设置可能不会立即生效，在这种情况下，驱动程序将返回 SQLSTATE 01S02 （选项值已更改） 并将该属性重置为其原始值。|  
 |SQL_ATTR_ROW_ARRAY_SIZE (ODBC 3.0)|Sqlulen 生成值，该值指定由每次调用返回的行数**SQLFetch**或**SQLFetchScroll**。 它也是在大容量书签运算中的书签数组中的行数**SQLBulkOperations**。 默认值为 1。<br /><br /> 如果指定的行集大小超过最大行集大小支持的数据源，该驱动程序替代该值，并返回 SQLSTATE 01S02 （选项值已更改）。<br /><br /> 有关详细信息，请参阅[行集大小](../../../odbc/reference/develop-app/rowset-size.md)。<br /><br /> 将此语句属性设置的 SQL_DESC_ARRAY_SIZE 字段设置 ARD 标头中。|  

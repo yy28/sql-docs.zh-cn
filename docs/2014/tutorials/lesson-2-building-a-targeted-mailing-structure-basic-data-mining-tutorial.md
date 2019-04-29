@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931507"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>第 2 课：生成 Targeted 的 Mailing 结构 （数据挖掘基础教程）
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部希望通过向目标特定客户发送邮件的方式来提高销售量。 公司的数据库包含一个现有客户列表和一个潜在的新客户列表。 通过调查以前的客户的属性，该公司希望发现随后可应用于潜在客户的模式。 例如，他们可能使用过去的趋势来预测哪些潜在客户最有可能购买自行车从[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，或创建客户细分为将来的市场营销活动。  

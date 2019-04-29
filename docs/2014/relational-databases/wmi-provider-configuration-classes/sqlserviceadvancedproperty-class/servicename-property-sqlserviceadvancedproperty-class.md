@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cf4a413fe9b45a253e25b55267f4b65d6008c4b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911455"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 属性（SqlServiceAdvancedProperty 类）
   获取与高级属性关联的托管服务的名称。  

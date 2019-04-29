@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 315d6a4e4bb0d9b28f6f921e0a254fec6e11fdae
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900123"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>历史属性选项（渐变维度向导）
   可以使用 **“历史属性选项”** 对话框按开始日期和结束日期显示历史属性，或者将历史属性记录到专门的列中。  
@@ -28,7 +28,7 @@ ms.locfileid: "58377178"
  **使用单独的列显示当前和过期记录**  
  如果您选择使用单独的列来记录历史属性的状态，则下列选项可用：  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**指示当前记录的列**|选择一个要在其中指示当前记录的列。|  
 |**表示当前记录的值**|使用 **True** 或 **“当前”** 来显示该记录是否为当前记录。|  

@@ -1,6 +1,6 @@
 ---
-title: T-SQL 语言元素的并行数据仓库 |Microsoft 文档
-description: T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+title: T-SQL 语言元素-并行数据仓库 |Microsoft Docs
+description: T-SQL 语言元素的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034998"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>并行数据仓库的 T-SQL 语言元素
-T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>并行数据仓库 T-SQL 语言元素
+T-SQL 语言元素的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 
 ## <a name="core-elements"></a>核心元素
 * [语法约定](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [对象命名规则](../relational-databases/databases/database-identifiers.md)
 * [保留的关键字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [排序规则](https://msdn.microsoft.com/library/ff848763.aspx)
-* [注释](../t-sql/language-elements/comment-transact-sql.md)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [常量](../t-sql/data-types/constants-transact-sql.md)
 * [数据类型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
@@ -34,7 +34,7 @@ T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>批处理、 控制流和变量
+## <a name="batches-control-of-flow-and-variables"></a>批、 流控制和变量
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -58,7 +58,7 @@ T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)
 * [=（等于）](../t-sql/language-elements/equals-transact-sql.md)
 * [> （大于）](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< （小于）](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = （等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = （大于或等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = （小于或等于）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
@@ -69,7 +69,7 @@ T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)
 * [不是](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [或](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>位运算符
 * [&（位与）](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -224,8 +224,8 @@ T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>中的
-* [事务](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+## <a name="transactions"></a>事务
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>诊断会话
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -259,24 +259,24 @@ T-SQL 语言元素的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
-* [集 ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
-* [集 ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
+* [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
+* [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
-* [集 CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+* [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [集 IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [集 NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
-* [集 QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-* [组行计数](../t-sql/statements/set-rowcount-transact-sql.md)
-* [集 TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
-* [将事务隔离级别设置](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
+* [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
+* [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
+* [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
-有关更多参考信息，请参阅[T-SQL 语句](tsql-statements.md)和[T-SQL 的系统视图](tsql-system-views.md)。
+有关更多参考信息，请参阅[T-SQL 语句](tsql-statements.md)并[T-SQL 系统视图](tsql-system-views.md)。
 
 <!--Image references-->
 

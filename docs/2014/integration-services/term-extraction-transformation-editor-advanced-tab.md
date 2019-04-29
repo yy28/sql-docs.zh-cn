@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926819"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
@@ -41,7 +41,7 @@ ms.locfileid: "58385035"
  指定分数为字词的频率。  
   
  **TFIDF**  
- 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率，定义为产品：TFIDF a Term T = (frequency of T) * log ((#rows 输入中的) / (#rows having T))  
+ 指定分数为字词的 TFIDF 值。 TFIDF 分数是字词频率和文档频率倒数的乘积，其定义如下：字词 T 的 TFIDF = (T 的频率) * log( (输入中的行数) / (具有 T 的行数) )  
   
  **频率阈值**  
  指定某个词或短语必须出现多少次以后才对其进行提取。 默认值为 2。  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903694"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "52817499"
 |**runstatus**|**int**|运行状态：<br /><br /> **1** = 开始。<br /><br /> **2** = 成功。<br /><br /> **3** = 正在进行。<br /><br /> **4** = 空闲。<br /><br /> **5** = 重试。<br /><br /> **6** = 失败。|  
 |**estimated_upload_changes**|**int**|需要在发布服务器上应用的估计更改数。|  
 |**estimated_download_changes**|**int**|需要在订阅服务器上应用的估计更改数。|  
-|**连接类型**|**int**|上载过程中使用的连接：<br /><br /> **1** = 局域网 (LAN)。<br /><br /> **2** = 拨号网络连接。<br /><br /> **3** = web 同步。|  
+|**connection_type**|**int**|上载过程中使用的连接：<br /><br /> **1** = 局域网 (LAN)。<br /><br /> **2** = 拨号网络连接。<br /><br /> **3** = web 同步。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
   
 ## <a name="see-also"></a>请参阅  

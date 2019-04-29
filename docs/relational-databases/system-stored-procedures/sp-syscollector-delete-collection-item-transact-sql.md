@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collection_item (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_delete_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004175"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  收集项的唯一标识符。 *collection_item_id*是**int**默认值为 NULL。 *collection_item_id*时，必须具有值*名称*为 NULL。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  收集项的名称。 *名称*是**sysname**默认值为 NULL。 *名称*时，必须具有值*collection_item_id*为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -56,7 +56,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
  在此操作期间，将停止并重新启动包含收集项的收集组。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -70,7 +70,7 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
   
 ## <a name="see-also"></a>请参阅  
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

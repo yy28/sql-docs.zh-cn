@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027952"
 ---
 # <a name="getrows-method-ado"></a>GetRows 方法 (ADO)
 检索的多个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到一个数组对象。  
@@ -41,7 +41,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *行*  
  可选。 一个[GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)值，该值指示要检索的记录数。 默认值是**adGetRowsRest**。  
   
- *启动*  
+ *开始*  
  可选。 一个**字符串**值或**变体**的计算结果为记录书签从其**GetRows**应开始操作。 此外可以使用[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)值。  
   
  *Fields*  

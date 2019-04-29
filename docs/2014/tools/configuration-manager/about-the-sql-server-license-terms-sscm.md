@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035316"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>关于 SQL Server 许可条款 (SSCM)
   安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)]时，会将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 软件许可条款复制到本地计算机。 当在同一台计算机上安装具有相同版本类别和语言的多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，许可条款的单个副本将适用于该版本类别和语言的所有实例。 这些文件写入到： %ProgramFiles%\Microsoft SQL Server\110\License Terms\ 或 %programfiles (x86) %\Microsoft SQL Server\110\License 条款\\。  

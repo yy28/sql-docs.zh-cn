@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 67a43ee9150f68a55a9999eae5bc6e8d8fc970b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022441"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionScenario 属性 (WMI MSReportServer_ConfigurationSetting)
   返回一个字符串值，该值指示报表服务器配置为允许的扩展保护方案。  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927220"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -89,7 +89,7 @@ ms.locfileid: "58391255"
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |`ProgressCountLow`|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|String|进度说明。|OnProgress 事件处理程序|  
-|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中忽略 `Propagate` 变量的值。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：值`Propagate`包的验证过程中忽略变量。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |`SourceDescription`|String|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |`SourceID`|String|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|String|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

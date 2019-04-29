@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924144"
 ---
 # <a name="install-master-data-services"></a>安装 Master Data Services
   下面的流程图概要说明了如何安装并配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装过程包括三个部分：  
   
--   [预安装任务](#preinstall):在安装前验证系统要求[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+-   [预安装任务](#preinstall)：在安装前验证系统要求[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 -   [安装操作](#install):安装[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]通过使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序或命令提示符。  
   
--   [安装后任务](#postinstall):打开[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]以完成安装后操作。 创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务并部署示例模型。  
+-   [安装后任务](#postinstall)：打开[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]以完成安装后操作。 创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务并部署示例模型。  
   
 ##  <a name="preinstall"></a> 安装前任务  
   
 |操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
 |验证安装要求|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机必须满足以下方面的最低要求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库（如果数据库所在的计算机与 Web 应用程序所在的计算机相同）。<br /><br /> 请注意，您可以通过只在 web 服务器计算机上运行安装程序并创建单独的 web 服务器计算机和数据库服务器计算机[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]运行受支持的版本和版本的远程计算机上的数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)<br /><br /> [数据库要求 (Master Data Services)](database-requirements-master-data-services.md)|  
-|配置所需的角色、角色服务和功能|运行安装程序前，请使用所需的 Windows 角色、角色服务和功能配置计算机。<br /><br /> 注意：尽管您可以在工作流的后面部分执行此步骤，但是在运行安装程序前进行配置很有用，因为这样您可以执行紧挨安装后面的 Web 配置任务。|[Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)|  
+|配置所需的角色、角色服务和功能|运行安装程序前，请使用所需的 Windows 角色、角色服务和功能配置计算机。<br /><br /> 注意：尽管工作流的更高版本中，可以执行此步骤中，最好运行安装程序，因此，你可以执行紧挨安装后面的 web 配置任务前将此配置。|[Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)|  
 |查看语言支持注意事项|确定要安装和运行 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 所用的语言。|[多语言和全球部署 (Master Data Services)](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> 安装操作  

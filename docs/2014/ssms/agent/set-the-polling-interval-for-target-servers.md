@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033616"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>设置目标服务器的轮询间隔
   本主题介绍如何设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理刷新从主服务器到目标服务器的信息的频率。 作业是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 多服务器作业是主服务器在一台或多台目标服务器上运行的作业。  
   
--   **开始之前：**[安全](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
--   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)， [Transact SQL](#TSQL)  
+-   **若要设置目标服务器，使用的轮询间隔：**[SQL Server Management Studio](#SSMS)、[Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  每个目标服务器一次只能运行一个相同作业的实例。 每台目标服务器会定期轮询主服务器，下载分配给目标服务器的任何新作业的一个副本，然后断开连接。 目标服务器在本地运行作业，然后重新连接到主服务器以上载作业结果状态。  
@@ -66,6 +66,6 @@ ms.locfileid: "52818679"
 3.  在查询窗口中，使用[sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系统存储过程来设置目标服务器的轮询间隔。  
   
 ## <a name="see-also"></a>请参阅  
- [dbo.sysdownloadlist &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

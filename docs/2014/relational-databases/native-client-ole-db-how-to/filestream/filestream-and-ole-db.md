@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cadab8c51000270d218bea890d2c4e7077daae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938645"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream 和 OLE DB
   本节包含四个示例，这些示例说明如何将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 与文件流功能配合使用：  

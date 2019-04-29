@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035378"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`实用工具，可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件在命令提示符下，在**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或的操作系统 (Cmd.exe) 作业步骤[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业。 此实用工具使用 ODBC 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理。  
@@ -95,7 +95,7 @@ ms.locfileid: "53591921"
  工作站的名称。 此选项设置 `sqlcmd` 脚本变量 SQLCMDWORKSTATION。 工作站名称列出在“sys.processes”目录视图的“hostname”列中，并且可使用存储过程“sp_who”返回。 如果不指定此选项，则默认为当前计算机名称。 此名称可用来标识不同的 `sqlcmd` 会话。  
   
  **-K** _application_intent_  
- 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本：可读次要副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
  在连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `-M`。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `-M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本：可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
@@ -188,9 +188,9 @@ ms.locfileid: "53591921"
   
  路径示例：  
   
- **-i** c:\\< 文件名\>  
+ **-i** C:\\<filename\>  
   
- **-i** \\ \\< 服务器\>\\< 共享 $>\\< 文件名\>  
+ **-i** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-i** "C:\Some Folder\\<file name\>"  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53591921"
   
  **-o** C:\\< filename>  
   
- **-o** \\ \\< 服务器\>\\< 共享 $>\\< 文件名\>  
+ **-o** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-o "** C:\Some Folder\\<file name\>"  
   
@@ -260,12 +260,12 @@ ms.locfileid: "53591921"
  如果在指定此选项的同时还指定了 `-b`，`sqlcmd` 在遇到错误时将退出。 本主题的后面将介绍 `-b`。  
   
  **-t** _query_timeout_  
- 指定命令（或 SQL 语句）超时的时间。此选项设置 `sqlcmd` 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。querytime_out 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `sqlcmd` 将生成错误消息。  
+ 指定命令（或 SQL 语句）超时的时间。此选项设置`sqlcmd`脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。querytime_out 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `sqlcmd` 将生成错误消息。  
   
 > [!NOTE]  
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
- **-vvar =** _值_[ **var =** _值_...]  
+ **-vvar =** _value_[ **var =** _value_...]  
  创建`sqlcmd`可以使用中的脚本变量`sqlcmd`脚本。 如果该值包含空格，则将其用引号引起来。 可以指定多个 **_var_**=**"*`values`*"** 值。 如果指定的任何值中有错误，`sqlcmd` 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -499,7 +499,7 @@ ms.locfileid: "53591921"
  输出语句缓存的内容。  
   
  **变量**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **"*`value`*"** ]  
  定义 `sqlcmd` 脚本变量。 脚本变量具有如下格式： `$(VARNAME)`。  
   
  变量名称不区分大小写。  
@@ -531,7 +531,7 @@ ms.locfileid: "53591921"
   
  **输出命令**  
   **:Error**   
- **_\<_** _文件名_**_>|_ STDERR |STDOUT**  
+ **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
  将所有错误输出重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 **Error** 命令可以在一个脚本中多次出现。 默认情况下，错误输出将发送到 **stderr**。  
   
  *file name*  
@@ -560,7 +560,7 @@ ms.locfileid: "53591921"
  [**:**] **QUIT**  
  导致 `sqlcmd` 退出。  
   
- [**:**]**退出**[ **(*`statement`*)** ]  
+ [**:**] **EXIT**[ **(*`statement`*)** ]  
  允许您将 SELECT 语句的结果用作 `sqlcmd` 的返回值。 如果为数值，最后一个结果行的第一列将转换为 4 字节的整数（长整型）。 MS-DOS 将低字节传递给父进程或操作系统错误级别。 Windows 200x 传递整个 4 字节整数。 语法为：  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "53591921"
  **:Serverlist**  
  列出在本地配置的服务器和在网络上广播的服务器的名称。  
   
- **: Connect** _server_name_[**\\**_instance_name_] [-l*超时*] [-U *user_名称*[-P*密码*]]  
+ **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个实例。 同时关闭当前的连接。  
   
  超时选项：  
@@ -651,7 +651,7 @@ ms.locfileid: "53591921"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!** \< *命令*>  
+ [**:**] **!!**\< *command*>  
  执行操作系统命令。 若要执行操作系统命令，请用两个感叹号 (**!!**) 开始一行，后面输入操作系统命令。 例如：  
   
  `:!! Dir`  

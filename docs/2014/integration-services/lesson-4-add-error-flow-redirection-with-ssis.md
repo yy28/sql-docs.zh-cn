@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891322"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>第 4 课：添加错误流重定向
   为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 允许根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  
@@ -34,7 +34,7 @@ ms.locfileid: "58391825"
 ## <a name="tasks-in-lesson"></a>课程中的任务  
  本课程包含以下任务：  
   
--   [第 1 步：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [步骤 2：创建损坏的文件](lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "58391825"
 -   [步骤 5：测试第 4 课教程包](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>开始课程  
- [第 1 步：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
+ [步骤 1：复制第 3 课包](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

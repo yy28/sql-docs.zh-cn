@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920045"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 对象
   当您调用过程或函数，或对公共语言运行时 (CLR) 用户定义类型调用方法，或者当您所执行的操作激发任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 语言中定义的触发器时，您就会调用服务器中的托管代码。 由于在用户连接过程中需要执行此代码，因此需要从服务器上运行的代码访问调用方的上下文。 此外，某些数据访问操作只有在调用方的上下文中运行时才有效。 例如，访问触发器操作中使用的插入和删除的伪表只在调用方的上下文中有效。  
@@ -28,13 +28,13 @@ ms.locfileid: "48062938"
   
  `SqlContext` 提供了对以下组件的访问：  
   
--   `SqlPipe`：`SqlPipe` 对象表示结果流向客户端时所使用的“管道”。 有关详细信息`SqlPipe`对象，请参阅[SqlPipe 对象](sqlpipe-object.md)。  
+-   `SqlPipe`设置用户帐户 ：`SqlPipe`对象表示通过结果发送到客户端的"管道"。 有关详细信息`SqlPipe`对象，请参阅[SqlPipe 对象](sqlpipe-object.md)。  
   
--   `SqlTriggerContext`：`SqlTriggerContext` 对象只能从 CLR 触发器内部检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关详细信息`SqlTriggerContext`对象，请参阅[SqlTriggerContext 对象](sqltriggercontext-object.md)。  
+-   `SqlTriggerContext`设置用户帐户 ：`SqlTriggerContext`对象只能从 CLR 触发器中检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关详细信息`SqlTriggerContext`对象，请参阅[SqlTriggerContext 对象](sqltriggercontext-object.md)。  
   
--   `IsAvailable`：`IsAvailable` 属性用于确定上下文的可用性。  
+-   `IsAvailable`设置用户帐户 ：`IsAvailable`属性用于确定上下文可用性。  
   
--   `WindowsIdentity`：`WindowsIdentity` 属性用于检索调用方的 Windows 标识。  
+-   `WindowsIdentity`设置用户帐户 ：`WindowsIdentity`属性用于检索调用方的 Windows 标识。  
   
 ## <a name="determining-context-availability"></a>确定上下文可用性  
  查询 `SqlContext` 类可查看当前执行的代码是否在进程中运行。 若要执行此项检查，请查看 `IsAvailable` 对象的 `SqlContext` 属性。 `IsAvailable` 属性是只读的，如果调用代码正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内运行，并且其他 `True` 成员可访问，该属性将返回 `SqlContext`。 如果 `IsAvailable` 属性返回 `False`，所有其他 `SqlContext` 成员都将在使用时引发 `InvalidOperationException`。 如果 `IsAvailable` 返回 `False`，打开连接字符串中具有“context connection=true”的连接对象的任何尝试都会失败。  

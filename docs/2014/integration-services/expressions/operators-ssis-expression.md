@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897356"
 ---
 # <a name="operators-ssis-expression"></a>运算符（SSIS 表达式）
   本部分介绍了表达式语言提供的运算符和表达式计算器使用的运算符优先级及结合性。  

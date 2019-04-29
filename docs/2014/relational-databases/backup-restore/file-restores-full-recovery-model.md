@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921936"
 ---
 # <a name="file-restores-full-recovery-model"></a>文件还原（完整恢复模式）
   本主题仅与在完整恢复模式或大容量加载恢复模式下包含多个文件或文件组的数据库相关。  
@@ -50,7 +50,7 @@ ms.locfileid: "48141247"
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE。  
   
   
   
@@ -132,7 +132,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
 
   
 ## <a name="see-also"></a>请参阅  
- [备份和还原：互操作性和共存 (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   

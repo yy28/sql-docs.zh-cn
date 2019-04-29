@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c36dfe992dc5abafa2eea78c72d1336bb33f7dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994223"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@restore_delay =** ] '*restore_delay*'  
- 辅助服务器在还原给定备份文件之前等待的时间（分钟）。 *restore_delay*是**int**且不能为 NULL。 默认值为 0。  
+`[ @restore_delay = ] 'restore_delay'` 在辅助服务器还原给定备份文件之前等待的分钟的时间量。 *restore_delay*是**int**且不能为 NULL。 默认值为 0。  
   
- [ **@restore_all =** ] '*restore_all*'  
- 如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。 *restore_all*是**位**且不能为 NULL。  
+`[ @restore_all = ] 'restore_all'` 如果设置为 1，辅助服务器还原所有可用的事务日志备份还原作业运行时。 否则，在原还了一个文件之后它将停止。 *restore_all*是**位**且不能为 NULL。  
   
- [ **@restore_mode =** ] '*restore_mode*'  
- 辅助数据库的还原模式。  
+`[ @restore_mode = ] 'restore_mode'` 辅助数据库的还原模式。  
   
  0 = 使用 NORECOVERY 还原日志。  
   
@@ -67,29 +64,21 @@ sp_change_log_shipping_secondary_database
   
  *还原*是**位**且不能为 NULL。  
   
- [ **@disconnect_users =** ] '*disconnect_users*'  
- 如果设置为 1，则在执行还原操作时，用户将与辅助数据库断开。 默认值 = 0。 *disconnect_users*是**位**且不能为 NULL。  
+`[ @disconnect_users = ] 'disconnect_users'` 如果执行还原操作时，设置为 1，用户已从辅助数据库断开连接。 默认值 = 0。 *disconnect_users*是**位**且不能为 NULL。  
   
- [  **@block_size =** ] '*block_size*  
- 用作备份设备的块大小（字节）。 *block_size*是**int**与默认值为-1。  
+`[ @block_size = ] 'block_size'` 大小 （字节），用作备份设备的块大小。 *block_size*是**int**与默认值为-1。  
   
- [ **@buffer_count =** ] '*buffer_count*'  
- 备份或还原操作使用的缓冲区总数。 *buffer_count*是**int**与默认值为-1。  
+`[ @buffer_count = ] 'buffer_count'` 使用备份或还原操作的缓冲区的总数。 *buffer_count*是**int**与默认值为-1。  
   
- [  **@max_transfer_size =** ] '*max_transfer_size*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。 *max_transfersize*是**int** ，可以为 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'` 大小，以字节为单位的最大输入或输出请求发出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向备份设备。 *max_transfersize*是**int** ，可以为 NULL。  
   
- [  **@restore_threshold =** ] '*restore_threshold*  
- 两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 *restore_threshold*是**int**且不能为 NULL。  
+`[ @restore_threshold = ] 'restore_threshold'` 之间允许等待的分钟数还原操作，就会生成警报。 *restore_threshold*是**int**且不能为 NULL。  
   
- [  **@threshold_alert =** ] '*threshold_alert*  
- 是超过还原阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14420。  
+`[ @threshold_alert = ] 'threshold_alert'` 是要在超过还原阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14420。  
   
- [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- 指定是否将是警报时引发*restore_threshold*超出。 1 = 启用；0 = 禁用。 *threshold_alert_enabled*是**位**且不能为 NULL。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定是否将是警报时引发*restore_threshold*超出。 1 = 启用；0 = 禁用。 *threshold_alert_enabled*是**位**且不能为 NULL。  
   
- [ **@history_retention_period =** ] '*history_retention_period*'  
- 历史记录的保留时间长度（分钟）。 *history_retention_period*是**int**。如果未指定，将使用值为 1440年。  
+`[ @history_retention_period = ] 'history_retention_period'` 是以分钟为单位保留历史记录长度。 *history_retention_period*是**int**。如果未指定，将使用值为 1440年。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -104,7 +93,7 @@ sp_change_log_shipping_secondary_database
   
 2.  更改在本地监视记录**log_shipping_monitor_secondary**辅助服务器上使用提供的参数，如有必要。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  

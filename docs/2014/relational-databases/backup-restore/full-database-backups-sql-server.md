@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922039"
 ---
 # <a name="full-database-backups-sql-server"></a>完整数据库备份 (SQL Server)
   完整数据库备份可对整个数据库进行备份。 这包括对部分事务日志进行备份，以便在还原完整数据库备份之后，能够恢复完整数据库备份。 完整数据库备份表示备份完成时的数据库。  
@@ -50,7 +50,7 @@ ms.locfileid: "53205376"
   
  ![显示数据库备份之间的工作丢失风险](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "显示数据库备份之间的工作丢失风险")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  有关如何创建日志备份的信息，请参阅[事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)。  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>示例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下面的示例说明了如何使用 WITH FORMAT 覆盖任意现有备份并创建新介质集，从而创建一个完整数据库备份。 然后，此示例将备份事务日志。 在现实情况下，您必须执行一系列的定期日志备份。 在此示例中， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库设置为使用完整恢复模式。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览透视 |Microsoft 文档
+title: 定义和浏览透视 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017327"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lesson 9-1-定义和浏览透视
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>第 9-1 课-定义和浏览透视
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 透视可以出于特定目的简化多维数据集的视图。 默认情况下，用户可以查看多维数据集内对其具有查看权限的所有元素。 用户查看整个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集时所看到的内容是该多维数据集的默认透视。 对于导航视图的用户，尤其对于只需与多维数据集的一小部分交互就能满足其商业智能和报表需求的用户来说，整个多维数据集的视图将是非常复杂的。  
@@ -34,13 +34,13 @@ ms.locfileid: "34018024"
   
     所有对象和它们的对象类型都将出现在“透视”窗格中，如下图所示。  
   
-    ![透视的多维数据集设计器的窗格中](../analysis-services/media/l9-perspectives-1.gif "透视窗格中的多维数据集设计器")  
+    ![多维数据集设计器的透视窗格](../analysis-services/media/l9-perspectives-1.gif "透视多维数据集设计器窗格")  
   
 2.  在“透视”选项卡的工具栏上，单击“新建透视”按钮。  
   
     新透视将显示在“透视名称”列中，其默认名称为“透视”，如下图所示。 注意，每个对象的复选框均已选中；除非您清除了对象的复选框，否则此透视与此多维数据集的默认透视是相同的。  
   
-    ![透视名称列中的新透视](../analysis-services/media/l9-perspectives-2.gif "透视名称列中的新透视")  
+    ![透视名称列中的新建透视](../analysis-services/media/l9-perspectives-2.gif "透视名称列中的新建透视")  
   
 3.  将透视名称更改为 **Internet Sales**。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "34018024"
   
 4.  当您在 Excel 中浏览模型时，“在 Excel 中分析”将会提示选择您要使用的透视，如下图中所示。  
   
-    ![为 Internet Sales 透视对象](../analysis-services/media/l9-perspectives-3.gif "Internet Sales 透视的对象")  
+    ![对象的 Internet 销售透视](../analysis-services/media/l9-perspectives-3.gif "对象的 Internet 销售透视")  
   
 5.  或者，您可以从 Windows 的“开始”菜单启动 Excel，定义与本地主机上 Analysis Services 教程数据库的连接，并且在数据连接向导中选择某一透视，如下图中所示。  
   
@@ -189,12 +189,12 @@ ms.locfileid: "34018024"
   
     注意，在每个度量值组中，只出现单个度量值，如下图所示。  
   
-    ![Internet 销售和分销商销售的度量值](../analysis-services/media/l9-perspectives-4.gif "Internet 销售和分销商销售的度量值")  
+    ![Internet 销售和分销商销售度量值](../analysis-services/media/l9-perspectives-4.gif "Internet Sales 和分销商销售度量值")  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
 [定义和浏览翻译](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [透视](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [多维模型中的透视](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

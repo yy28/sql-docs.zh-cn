@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910858"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法示例 (VC++)
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法来显示数据集支持的选项，打开不同的游标类型。 若要运行此示例需要 DisplaySupport 函数。  

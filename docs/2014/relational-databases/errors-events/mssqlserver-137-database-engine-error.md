@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915684"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
     
@@ -43,7 +43,7 @@ ms.locfileid: "48214127"
   
  USE AdventureWorks2012;  
   
- GO  
+ 前往  
   
  DECLARE @mycol nvarchar(20);  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48214127"
   
  USE AdventureWorks2012;  
   
- GO  
+ 前往  
   
  DECLARE @mycol nvarchar(20);  
   

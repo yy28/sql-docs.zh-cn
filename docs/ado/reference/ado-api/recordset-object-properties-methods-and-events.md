@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033449"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>记录集对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -58,7 +58,7 @@ ms.locfileid: "47691315"
   
  [MaxRecords 属性](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
- [PageCount 属性](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount Property](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
  [PageSize 属性](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   

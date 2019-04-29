@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900153"
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -38,10 +38,10 @@ ms.locfileid: "58379166"
 |True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |False|True|否|该转换将创建一个新文件并将数据写入到该文件中。|  
 |True|True|否|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
-|False|False|用户帐户控制|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
-|False|True|用户帐户控制|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
-|True|False|用户帐户控制|转换将打开文件并将数据写入到文件末尾。|  
-|True|True|用户帐户控制|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
+|False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
+|False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
+|True|False|是|转换将打开文件并将数据写入到文件末尾。|  
+|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
  可以按照下列方式配置导出列转换：  
@@ -55,11 +55,11 @@ ms.locfileid: "58379166"
     > [!NOTE]  
     >  仅在不将数据追加到现有文件且数据具有 DT_NTEXT 数据类型时写入 BOM。  
   
- 此转换使用成对的输入列：一列包含文件名，另一列包含数据。 数据集中的每一行都可指定一个不同的文件。 转换在处理行时，数据将插入到指定的文件中。 在运行时，如果这些文件不存在，转换将创建这些文件，然后将数据写入到文件中。 要写入的数据必须具有 DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
+ 转换使用成对的输入列：一个列包含文件名，并且另一列包含数据。 数据集中的每一行都可指定一个不同的文件。 转换在处理行时，数据将插入到指定的文件中。 在运行时，如果这些文件不存在，转换将创建这些文件，然后将数据写入到文件中。 要写入的数据必须具有 DT_TEXT、DT_NTEXT 或 DT_IMAGE 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../integration-services-data-types.md)。  
   
  此转换有一个输入、一个输出和一个错误输出。  
   
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  有关可以在“导出列转换编辑器”对话框中设置的属性的详细信息，请参阅[导出列转换编辑器（“列”页）](../../export-column-transformation-editor-columns-page.md)。  
   

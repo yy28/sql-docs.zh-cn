@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877089"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
   本主题介绍 SQL Server 备份和还原到 Windows Azure Blob 服务的最佳做法和故障排除提示。  
@@ -24,7 +24,7 @@ ms.locfileid: "53349992"
   
 -   [使用 Windows Azure Blob 存储服务进行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [教程：SQL Server 备份和还原到 Windows Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [教程：Windows Azure Blob 存储服务的 SQL Server 备份和还原](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>管理备份  
  下表列出了管理备份的一般建议：  
@@ -98,15 +98,15 @@ ms.locfileid: "53349992"
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
--   由于对其具有活动租约的 blob 的备份过程中出错：失败的备份活动可能会导致 blob 具有活动租约。  
+-   由于 blob 具有活动租约，备份期间出错：失败的备份活动可能导致 blob 产生活动租约。  
   
      如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
   
-     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(412) 当前 blob 上的租约，则在请求中未指定任何租约 ID**。  
+     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回了错误：(412) 当前 blob 上的租约，则在请求中未指定任何租约 ID**。  
   
      如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
   
-     **异常消息：远程服务器返回错误：(409) 冲突...**  
+     **异常消息：远程服务器返回了错误：(409) 冲突...**  
   
      发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349992"
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败：“备份到 URL”收到来自远程终结点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
+-   尽情涂鸦"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失败：备份到 URL 收到来自远程终结点的异常。 异常消息：无法从传输连接读取数据：连接已关闭。  
   
 -   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53349992"
   
  **未选择默认代理设置：**  
   
- 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回错误：(407)* **需要代理身份验证**。  
+ 有时，可能由于没有选择默认设置而导致如下代理身份验证错误：文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。备份到 URL”收到来自远程终结点的异常 *。异常消息：远程服务器返回了错误：(407)* **需要代理身份验证**。  
   
  若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   

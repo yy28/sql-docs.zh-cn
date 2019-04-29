@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011319"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和数据库加密密钥（数据库引擎）
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用加密密钥帮助保护存储在服务器数据库中的数据、凭据和连接信息。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密钥分为两种：“对称”和“非对称”。 对称密钥使用相同的密码对数据进行加密和解密。 非对称密钥使用一个密码来加密数据（称为公钥），使用另一个密码来解密数据（称为私钥）。  
@@ -31,9 +31,9 @@ ms.locfileid: "48160697"
   
  数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 它还可用于对数据进行加密，但由于它有长度限制，所以用于数据加密时实用性不如对称密钥。  
   
- 当创建主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。 若要启用数据库主密钥的自动解密，请使用 SMK 对此密钥的副本进行加密。 使用它的位置以及在这两个数据库中存储`master`系统数据库。  
+ 当创建主密钥时，会使用 Triple DES 算法以及用户提供的密码对其进行加密。 若要启用数据库主密钥的自动解密，请使用 SMK 对此密钥的副本进行加密。 此密钥的副本存储在使用它的数据库和 `master` 系统数据库中。  
   
- 存储中的 dmk 副本`master`每当更改 DMK 时，以无提示方式更新系统数据库。 但是，可以通过更改此默认值`DROP ENCRYPTION BY SERVICE MASTER KEY`的选项`ALTER MASTER KEY`语句。 必须使用 `OPEN MASTER KEY` 语句和密码打开未使用服务主密钥进行加密的 DMK。  
+ 每当更改 DMK 时，存储在 `master` 系统数据库中的 DMK 副本都将在没有提示的情况下更新。 但是，使用 `DROP ENCRYPTION BY SERVICE MASTER KEY` 语句的 `ALTER MASTER KEY` 选项可以更改此默认设置。 必须使用 `OPEN MASTER KEY` 语句和密码打开未使用服务主密钥进行加密的 DMK。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>管理 SQL Server 和数据库密钥  
  对加密密钥的管理包括创建新数据库密钥，创建服务器和数据库密钥的备份以及了解还原、删除或更改密钥的条件和方式。  

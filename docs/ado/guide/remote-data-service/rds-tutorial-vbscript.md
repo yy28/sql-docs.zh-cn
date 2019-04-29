@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a50b9d8c1f22f23f3533240b2543ef981fef8e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931379"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 教程 (VBScript)
 这是 RDS 教程中，用 Microsoft Visual Basic Scripting Edition。 本教程的目的的说明，请参阅[RDS 教程](../../../ado/guide/remote-data-service/rds-tutorial.md)。  

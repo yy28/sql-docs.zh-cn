@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956072"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>在解决方案中添加现有项目
   可以在现有解决方案中添加一个或多个项目。 一个项目可以与多个解决方案关联。  

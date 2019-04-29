@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011617"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>其他 Reporting Services 升级问题
   本主题介绍在升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时可能会遇到的已知问题。 **升级顾问未检测到这些问题。** 有关其他信息，请参阅[SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)  

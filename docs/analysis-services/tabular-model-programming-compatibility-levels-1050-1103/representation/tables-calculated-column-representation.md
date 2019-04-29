@@ -1,5 +1,5 @@
 ---
-title: 计算列表示形式 （表格） |Microsoft 文档
+title: 计算列表示形式 （表格） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019258"
 ---
-# <a name="tables---calculated-column-representation"></a>表的计算的列表示形式
+# <a name="tables---calculated-column-representation"></a>表格 - 计算列表示形式
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   计算列是在表中创建新列并且获取的值存储于该表中的 DAX 表达式。 每次处理表时，都会对计算列表达式进行计算。  
   

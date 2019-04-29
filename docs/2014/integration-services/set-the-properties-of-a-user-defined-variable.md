@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878200"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>设置用户定义变量的属性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中设置用户定义的变量的属性，可以使用下列功能之一：  
   
 -   “变量”窗口。  
   
--   属性窗口。 **属性**窗口中列出了配置中不可用的变量的属性**变量**窗口：说明、 EvaluateAsExpression、 表达式、 ReadOnly、 ValueType 和 IncludeInDebugDump。  
+-   属性窗口。 “属性”窗口列出了用于配置“变量”窗口中未提供的变量的属性：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 还提供了一组无法更新属性的系统变量，但 RaiseChangedEvent 属性例外。  

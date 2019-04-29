@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998920"
 ---
 # <a name="parameter-binding-offsets"></a>参数绑定偏移
 应用程序可以指定偏移量添加绑定参数缓冲区地址和相应的长度/指示器缓冲区地址何时**SQLExecDirect**或**SQLExecute**调用。 这些新增功能的结果确定这些操作中使用的地址。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035052"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
@@ -52,7 +52,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  目标目录中在最近还原点之后创建的所有备份文件都将还原到一个或多个辅助数据库中。 然后， **sqllogship** 应用程序会根据文件保持期清除任何旧备份文件。 接着，此应用程序记录在辅助服务器和监视服务器上执行还原操作的历史记录。 最后，此应用程序会运行 **sp_cleanup_log_shipping_history**，根据保持期清除旧的历史记录信息。  
   
- **-verboselevel** _级别_  
+ **-verboselevel** _level_  
  指定要添加到日志传送历史记录的消息的级别。 *level* 是以下整数之一：  
   
 |level|Description|  
@@ -79,7 +79,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 ## <a name="permissions"></a>权限  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
   
-|选项|目录访问权限|权限|  
+|Option|目录访问权限|权限|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 存储过程相同的权限。|  

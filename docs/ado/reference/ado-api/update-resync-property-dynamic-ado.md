@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43b8864d03e3ec2e563984e203779e5905a15813
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042562"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync 属性 - 动态 (ADO)
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法后跟一个隐式[重新同步](../../../ado/reference/ado-api/resync-method.md)方法操作，如果是，该操作的范围。  

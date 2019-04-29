@@ -1,5 +1,5 @@
 ---
-title: 使用维度、 层次结构和级别函数 |Microsoft 文档
+title: 使用维度、 层次结构和级别函数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982189"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>使用维度函数、层次结构函数和级别函数
 
@@ -46,7 +46,7 @@ ms.locfileid: "34743386"
 ## <a name="see-also"></a>请参阅  
  [维度&#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [函数&#40;MDX 语法&#41;](../mdx/functions-mdx-syntax.md)   
- [层次结构&#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [级别&#40;MDX&#41;](../mdx/level-mdx.md)  
+ [Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [Level &#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

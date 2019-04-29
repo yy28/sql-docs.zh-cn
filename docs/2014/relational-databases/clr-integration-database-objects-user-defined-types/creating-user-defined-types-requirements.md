@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919663"
 ---
 # <a name="user-defined-type-requirements"></a>用户定义类型要求
   在创建用户定义类型 (UDT) 中安装时，必须进行几个重要的设计决策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -86,7 +86,7 @@ ms.locfileid: "49120094"
 ## <a name="userdefined-serialization"></a>UserDefined 序列化  
  针对 `UserDefined` 属性的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 格式设置为开发人员提供了对二进制格式的完全控制。 在将 `Format` 特性属性指定为 `UserDefined` 时，必须在您的代码中执行以下操作：  
   
--   指定可选的 `IsByteOrdered` 特性属性。 默认值是 `false`。  
+-   指定可选的 `IsByteOrdered` 特性属性。 默认值为 `false`。  
   
 -   指定 `MaxByteSize` 的 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 属性。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "49120094"
  指示此 UDT 的所有实例是否都具有相同的长度。  
   
  `MaxByteSize`  
- 实例的最大大小（以字节为单位）。 您在指定 `MaxByteSize` 时必须同时指定 `UserDefined` 序列化格式。 对于指定了用户定义的序列化的 UDT，`MaxByteSize` 是指采用用户定义的序列化格式的 UDT 的总大小。 `MaxByteSize` 的值必须处于 1 到 8000 的范围内，或者设置为 -1，以便指示 UDT 大于 8000 字节（总大小不能超过最大 LOB 大小）。 考虑这样一个 UDT：它有一个由 10 个字符组成的字符串属性 (`System.Char`)。 当使用 BinaryWriter 序列化 UDT 时，序列化字符串的总大小为 22 字节：每个 Unicode UTF-16 字符占 2 个字节，乘以最大字符数，再加上因序列化二进制流而导致的系统开销 2 个控制字节。 因此，在确定 `MaxByteSize` 的值时，必须考虑序列化之后的 UDT 的总大小：以二进制格式序列化的数据的大小加上因序列化而导致的系统开销。  
+ 实例的最大大小（以字节为单位）。 您在指定 `MaxByteSize` 时必须同时指定 `UserDefined` 序列化格式。 对于指定了用户定义的序列化的 UDT，`MaxByteSize` 是指采用用户定义的序列化格式的 UDT 的总大小。 `MaxByteSize` 的值必须处于 1 到 8000 的范围内，或者设置为 -1，以便指示 UDT 大于 8000 字节（总大小不能超过最大 LOB 大小）。 考虑这样一个 UDT：它有一个由 10 个字符组成的字符串属性 (`System.Char`)。 当使用 BinaryWriter 序列化 UDT 时，序列化字符串的总大小为 22 字节：每个 Unicode utf-16 字符占 2 个字节的字符，再加上 2 个控件的最大数目个字节的序列化二进制流所产生的开销的乘积。 因此，在确定 `MaxByteSize` 的值时，必须考虑序列化之后的 UDT 的总大小：以二进制格式序列化的数据的大小加上因序列化而导致的系统开销。  
   
  `ValidationMethodName`  
  用于验证 UDT 的实例的方法的名称。  
@@ -142,7 +142,7 @@ ms.locfileid: "49120094"
   
 -   大于或等于 (> =)  
   
--   小于或等于 (<=)  
+-   小于或等于 (< =)  
   
 ### <a name="implementing-nullability"></a>实现为 Null 性  
  除了正确指定程序集的属性外，类还必须支持为 Null 性。 加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 UDT 是可识别 Null 的，但为使 UDT 能够识别某一 Null 值，该类必须实现 `INullable` 接口。 有关详细信息和如何在 UDT 中实现为 null 性的示例，请参阅[类型](creating-user-defined-types-coding.md)。  

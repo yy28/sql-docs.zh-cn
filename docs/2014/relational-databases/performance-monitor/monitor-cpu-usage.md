@@ -1,8 +1,9 @@
 ---
 title: 监视 CPU 使用率 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -19,17 +20,18 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032094"
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  
   
  一个确定 CPU 使用率的有效方法是使用系统监视器中的 **Processor:% Processor Time** 计数器。 该计数器监视 CPU 执行非闲置线程所用的时间。 持续 80% 到 90% 的状态可能表明需要升级 CPU 或需要增加更多的处理器。 对于多处理器系统，应为每个处理器监视一个该计数器的独立实例。 这一值代表了在一个特定处理器上的处理器时间之和。 若要确定所有处理器的平均时间，请改用 **System: %Total Processor Time** 计数器。  
@@ -47,7 +49,7 @@ ms.locfileid: "52747699"
   
      对应于处理器执行用户进程（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）所用时间的百分比。  
   
--   **System: 处理器队列长度**  
+-   **系统：Processor Queue Length**  
   
      对应于等待处理器时间的线程数。 当一个进程的线程需要的处理器循环数超过可获得的循环数时，就产生了处理器瓶颈。 如果有很多进程在争用处理器时间，可能需要安装一个速度更快的处理器。 如果使用的是多处理器系统，则可以增加一个处理器。  
   

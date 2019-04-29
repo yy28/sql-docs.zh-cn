@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876044"
 ---
 # <a name="device-contents-sql-server"></a>设备内容 (SQL Server)
   使用此对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
@@ -44,7 +44,7 @@ ms.locfileid: "48101687"
  **名称**  
  显示介质集的名称。  
   
- **Description**  
+ **说明**  
  显示介质集的说明。  
   
  **介质簇计数**  
@@ -56,8 +56,8 @@ ms.locfileid: "48101687"
 |Header|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|**类型**|执行的备份类型：完整备份、差异备份或事务日志备份。|  
-|**组件**|已备份的组件：数据库、文件或 *\<blank>*（用于事务日志）。|  
+|**类型**|执行的备份类型：完整、 差异备份或事务日志。|  
+|**组件**|备份的组件：数据库、 文件、 或*\<保留为空 >* （对于事务日志）。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**“数据库”**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  

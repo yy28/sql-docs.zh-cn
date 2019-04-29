@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcb553e6762580c20aa3fc126f2f1576d1d5ff68
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925494"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合并成员临时表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的合并成员临时表 (stg.name_Consolidated) 可以创建、更新、停用和删除合并成员。 您还可以使用它更新合并成员的属性值。  

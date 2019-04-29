@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1db3c3efe332eb65504c9476a569ec54b49cc1a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874831"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   借助 FILESTREAM，基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的应用程序可以将非结构化的数据（如文档和图像）存储在文件系统中。 应用程序在利用丰富的流式 API 和文件系统的性能的同时，还可保持非结构化数据和对应的结构化数据之间的事务一致性。  
@@ -28,12 +28,12 @@ ms.locfileid: "48087233"
   
  FILESTREAM 使用 NT 系统缓存来缓存文件数据。 这有助于减少 FILESTREAM 数据可能对 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 性能产生的任何影响。 由于没有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓冲池，因此该内存可用于查询处理。  
   
- 在安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，并不会自动启用 FILESTREAM。 您必须使用 SQL Server 配置管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来启用 FILESTREAM。 若要使用 FILESTREAM，您必须创建或修改数据库以包含一个特殊类型的文件组。 然后，创建或修改表，使其包含`varbinary(max)`列具有 FILESTREAM 属性。 在完成这些任务后，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 来管理 FILESTREAM 数据。  
+ 在安装或升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，并不会自动启用 FILESTREAM。 您必须使用 SQL Server 配置管理器和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来启用 FILESTREAM。 若要使用 FILESTREAM，您必须创建或修改数据库以包含一个特殊类型的文件组。 然后，创建或修改某个表，以使其包含一个具有 FILESTREAM 属性的 `varbinary(max)` 列。 在完成这些任务后，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 来管理 FILESTREAM 数据。  
   
  有关安装和使用 FILESTREAM 的详细信息，请参阅 [相关任务](#reltasks)的列表。  
   
 ##  <a name="whentouse"></a> 何时使用 FILESTREAM  
- 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Blob 可以是标准`varbinary(max)`将数据存储在表或 FILESTREAM 数据`varbinary(max)`文件系统中存储数据的对象。 数据的大小和应用情况决定您应该使用数据库存储还是文件系统存储。 如果满足以下条件，则应考虑使用 FILESTREAM：  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，BLOB 可以是将数据存储在表中的标准 `varbinary(max)` 数据，也可以是将数据存储在文件系统中的 FILESTREAM `varbinary(max)` 对象。 数据的大小和应用情况决定您应该使用数据库存储还是文件系统存储。 如果满足以下条件，则应考虑使用 FILESTREAM：  
   
 -   所存储的对象平均大于 1 MB。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48087233"
   
   
 ##  <a name="storage"></a> FILESTREAM 存储  
- 作为实现 FILESTREAM 存储`varbinary(max)`中的数据存储为 Blob 文件系统中的列。 BLOB 的大小仅受文件系统容量大小的限制。 标准`varbinary(max)`文件大小为 2 GB 的限制不适用于文件系统中存储的 Blob。  
+ FILESTREAM 存储以 `varbinary(max)` 列的形式实现，在该列中数据以 BLOB 的形式存储在文件系统中。 BLOB 的大小仅受文件系统容量大小的限制。 文件大小为 2 GB 的 `varbinary(max)` 标准限制不适用于存储在文件系统中的 BLOB。  
   
- 若要指定列应将数据存储在文件系统上，指定 FILESTREAM 属性上`varbinary(max)`列。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
+ 若要指定列应将数据存储在文件系统中，请对 `varbinary(max)` 列指定 FILESTREAM 属性。 这样 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会将该列的所有数据存储在文件系统，而不是数据库文件中。  
   
  FILESTREAM 数据必须存储在 FILESTREAM 文件组中。 FILESTREAM 文件组是包含文件系统目录而非文件本身的专用文件组。 这些文件系统目录称为“数据容器” 。 数据容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 存储与文件系统存储之间的接口。  
   

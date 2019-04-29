@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923911"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>加载数据（用于 Excel 的 MDS 外接程序）
   在中[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，您必须加载数据从 MDS 存储库到 Excel 活动工作表之前您可以使用它。 完成数据处理后，将其发布到 MDS 存储库以便其他用户可以共享这些数据。  

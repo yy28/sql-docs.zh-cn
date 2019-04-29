@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001389"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  标识收集项的唯一标识符。 *collection_item_id*是**int**默认值为 NULL。 *collection_item_id*时，必须具有值*名称*为 NULL。  
   
- [ @name =] '*名称*  
+ [ @name = ] '*name*'  
  收集项的名称。 *名称*是**sysname**默认值为 NULL。 *名称*时，必须具有值*collection_item_id*为 NULL。  
   
- [ @new_name =] '*new_name*  
+ [ @new_name = ] '*new_name*'  
  收集项的新名称。 *new_name*是**sysname**，并且如果使用，不能为空字符串。  
   
  *new_name*必须是唯一的。 有关当前收集项名称的列表，请查询 syscollector_collection_items 系统视图。  
   
- [ @frequency =]*频率*  
+ [ @frequency = ] *frequency*  
  此收集项收集数据的频率（以秒为单位）。 *频率*是**int**，默认值为 5，可以指定的最小值。  
   
- [ @parameters =] '*参数*  
+ [ @parameters = ] '*parameters*'  
  收集项的输入参数。 *参数*是**xml**默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -82,7 +82,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 dc_admin 或 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。 尽管 dc_operator 可以运行此存储过程，但是此角色的成员在其属性更改权限方面受到限制。 下列属性只能由 dc_admin 更改：  
   
 -   @new_name  
@@ -141,7 +141,7 @@ GO
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

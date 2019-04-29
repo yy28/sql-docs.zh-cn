@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934736"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>数据取值函数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  本主题提供了一些针对 XML 实例存储在各种中的 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用 string 函数  
- 下面的查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素节点。  
+ 以下查询将检索 <`Features`> 子元素节点 <`ProductDescription`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -119,7 +119,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 This is a comment 10  
@@ -139,7 +139,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- 结果如下：  
+ 下面是结果：  
   
 ```  
 This is a comment   

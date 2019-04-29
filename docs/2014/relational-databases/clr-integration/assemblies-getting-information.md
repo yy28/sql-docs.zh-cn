@@ -15,34 +15,34 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919307"
 ---
 # <a name="getting-information-about-assemblies"></a>获取有关程序集的信息
   可以查询下列目录视图和函数来获取有关程序集的元数据。  
   
  **若要获取有关各个程序集信息**  
   
--   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
+-   [ASSEMBLYPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/assemblyproperty-transact-sql)  
   
  **若要获取数据库中的所有程序集的信息**  
   
--   [sys.assemblies &#40;Transact SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
+-   [sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
   
  **若要获取有关程序集文件，包括程序集二进制文件的信息源文件，并调试文件**  
   
--   [sys.assembly_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
  **若要获取有关跨程序集引用的信息**  
   
--   [sys.assembly_references &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
+-   [sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
   
  **若要获取有关用户定义类型的程序集信息**  
   
--   [sys.assembly_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
   
 -   [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   

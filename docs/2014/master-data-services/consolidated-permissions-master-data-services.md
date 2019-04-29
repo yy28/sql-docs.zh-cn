@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925408"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合并的权限（主数据服务）
   合并权限应用到实体的所有合并成员的属性值。  

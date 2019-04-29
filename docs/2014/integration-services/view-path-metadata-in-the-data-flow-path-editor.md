@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877828"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在数据流路径编辑器中查看路径元数据
   路径连接两个数据流组件。 若要查看路径元数据，数据流必须包含至少两个已连接的数据流组件。 有关详细信息，请参阅 [在数据流中添加或删除组件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [连接数据流中的组件](data-flow/connect-components-in-a-data-flow.md)。  

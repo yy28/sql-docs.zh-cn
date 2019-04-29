@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046259"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
   FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "48068277"
   
  还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
 -   [FILESTREAM 支持&#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   

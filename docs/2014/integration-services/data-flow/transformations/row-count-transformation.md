@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900201"
 ---
 # <a name="row-count-transformation"></a>行计数转换
   行计数转换在行通过数据流时对行进行计数，并将最终计数结果存储在一个变量中。  
@@ -35,7 +35,7 @@ ms.locfileid: "58386785"
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-row-count-transformation"></a>行计数转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   

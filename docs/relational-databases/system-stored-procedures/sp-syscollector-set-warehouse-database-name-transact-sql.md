@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004257"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @database_name =] '*database_name*  
+ [ @database_name = ] '*database_name*'  
  是管理数据仓库的名称。 *database_name*是**sysname**默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -52,7 +52,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
   
  若要查看当前的数据库名称，请查询[syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)系统视图。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="examples"></a>示例  

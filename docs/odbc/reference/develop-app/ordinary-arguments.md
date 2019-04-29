@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999285"
 ---
 # <a name="ordinary-arguments"></a>普通自变量
 目录函数字符串自变量时的普通参数，则将它视为文本字符串。 普通参数接受字符串的搜索模式既不值的列表。 普通自变量的情况是有意义的并在字符串中的引号字符将按字面解释。 这些参数将被视为普通自变量，如果 SQL_ATTR_METADATA_ID 语句属性设置为 SQL_FALSE;它们被视为标识符参数改为如果此属性设置为 SQL_TRUE。  

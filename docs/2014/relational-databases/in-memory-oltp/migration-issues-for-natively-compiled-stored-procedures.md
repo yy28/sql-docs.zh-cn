@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015279"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>本机编译的存储过程的迁移问题
   本节说明与创建本机编译的存储过程有关的几个问题。  

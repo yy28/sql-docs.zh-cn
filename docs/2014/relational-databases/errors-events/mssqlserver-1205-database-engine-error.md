@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1205 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915889"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>详细信息  
   
 |||  
@@ -33,7 +34,7 @@ ms.locfileid: "48092177"
 |消息正文|事务(进程 ID %d)与另一个进程被死锁在 %.*ls 资源上，并且已被选作死锁牺牲品。 重新运行该事务。|  
   
 ## <a name="explanation"></a>解释  
- 在不同事务中访问资源的顺序冲突，从而导致死锁。 例如：  
+在不同事务中访问资源的顺序冲突，从而导致死锁。 例如：  
   
 -   Transaction1 更新 **Table1.Row1**，而 Transaction2 更新 **Table2.Row2**。  
   
@@ -43,11 +44,10 @@ ms.locfileid: "48092177"
   
 -   之所以出现死锁，是因为 Transaction1 在等待 Transaction2 完成，但 Transaction2 在等待 Transaction1 完成。  
   
- 系统将检测到此死锁，并将所涉及的事务之一选作“牺牲品”，然后发出此消息，回滚牺牲品的事务。  
+系统将检测到此死锁，并将所涉及的事务之一选作“牺牲品”，然后发出此消息，回滚牺牲品的事务。  
   
 ## <a name="user-action"></a>用户操作  
- 重新执行事务。 您还可以修订应用程序以避免死锁。 可以重试被选作牺牲品的事务，而且很可能成功，具体取决于同时执行的操作。  
+重新执行事务。 您还可以修订应用程序以避免死锁。 可以重试被选作牺牲品的事务，而且很可能成功，具体取决于同时执行的操作。  
   
- 为防止或避免出现死锁，请考虑让所有的事务按相同顺序（先访问 **Table1**，然后访问 **Table2**）访问行；这样，虽然可能会出现阻止，但不会出现死锁。  
-  
+为防止或避免出现死锁，请考虑让所有的事务按相同顺序（先访问 **Table1**，然后访问 **Table2**）访问行；这样，虽然可能会出现阻止，但不会出现死锁。  
   

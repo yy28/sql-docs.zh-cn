@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918973"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
   可以覆盖 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  

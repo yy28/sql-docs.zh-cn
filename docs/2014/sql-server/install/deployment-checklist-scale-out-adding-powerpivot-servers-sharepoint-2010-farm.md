@@ -1,5 +1,5 @@
 ---
-title: 部署清单：通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展 |Microsoft Docs
+title: 部署核对清单：通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025705"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署清单：通过向 SharePoint 2010 场中添加 PowerPivot 服务器来进行扩展
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署核对清单：通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展
   如果您预期在 SharePoint 场中对 PowerPivot 查询处理有大量请求，则可以通过添加额外的 PowerPivot for SharePoint 实例来无缝地添加新的查询和数据处理支持。  
   
  安装新的实例后，您就有了额外的容量进行 PowerPivot 数据查询或处理 PowerPivot 数据刷新作业。 此外，您也可以选择将每台服务器配置为只处理一种类型的请求：查询或数据刷新。  

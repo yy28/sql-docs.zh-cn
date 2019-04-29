@@ -28,7 +28,7 @@ ms.locfileid: "62767229"
  若要了解有关 MSMQ 连接管理器的详细信息，请参阅 [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)。  
   
 > [!NOTE]  
->  MSMQ 连接管理器支持本地公共队列、本地专用队列和远程公共队列。 它不支持远程专用队列。 有关使用脚本任务的解决方法，请参阅 [Sending to a Remote Private Message Queue with the Script Task](control-flow/script-task.md)。  
+>  MSMQ 连接管理器支持本地公共队列、本地专用队列和远程公共队列。 它不支持远程专用队列。 有关使用脚本任务的解决方法，请参阅 [向远程私有消息队列使用脚本任务发送](control-flow/script-task.md)。  
   
 ## <a name="options"></a>选项  
  **名称**  

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997082"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @Action=] '*操作*  
+ [ @Action= ] '*action*'  
  描述过程要执行的操作。 *操作*是**varchar(10)**。 *操作*可以具有以下值之一。  
   
 |ReplTest1|Description|  
@@ -54,10 +54,10 @@ sp_change_users_login [ @Action = ] 'action'
 |**报告**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*，*登录名*，和*密码*必须为 NULL 或未指定。<br /><br /> 若要将使用系统表的查询替换为报表选项，比较中的条目**sys.server_prinicpals**中的条目**sys.database_principals**。|  
 |**Update_One**|链接指定*用户*当前到现有数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*登录*。 *用户*并*登录名*必须指定。 *密码*必须为 NULL 或未指定。|  
   
- [ @UserNamePattern=] '*用户*  
+ [ @UserNamePattern= ] '*user*'  
  当前数据库中的用户名。 *用户*是**sysname**，默认值为 NULL。  
   
- [ @LoginName=] '*登录名*  
+ [ @LoginName= ] '*login*'  
  是的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 login 的数据类型为 sysname，默认值为 NULL。  
   
  [ @Password= ] '*password*'  
@@ -84,7 +84,7 @@ sp_change_users_login [ @Action = ] 'action'
   
  不能在用户定义的事务中执行 sp_change_users_login。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  要求具有 db_owner 固定数据库角色中的成员资格。 只有 sysadmin 固定的服务器角色的成员可以指定**Auto_Fix**选项。  
   
 ## <a name="examples"></a>示例  
@@ -124,7 +124,7 @@ GO
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

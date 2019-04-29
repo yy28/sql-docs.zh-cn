@@ -193,7 +193,7 @@ ms.locfileid: "62814480"
  执行故障转移后，客户端必须重新连接到当前的主数据库。 有关详细信息，请参阅 [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)概念。  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 升级期间维护可用性  
- 当您升级硬件或软件时，可用性组的数据库管理员可以使用手动故障转移来维护数据库可用性。 若要将可用性组用于软件升级，承载目标辅助副本的服务器实例和/或计算机节点必须已经收到升级。 有关详细信息，请参阅 [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md)。  
+ 当您升级硬件或软件时，可用性组的数据库管理员可以使用手动故障转移来维护数据库可用性。 若要将可用性组用于软件升级，承载目标辅助副本的服务器实例和/或计算机节点必须已经收到升级。 有关详细信息，请参阅 [升级和更新的可用性组服务器停机时间最短和数据丢失](upgrading-always-on-availability-group-replica-instances.md)。  
   
 ##  <a name="ForcedFailover"></a> 强制故障转移（可能丢失数据）  
  强制执行可用性组的故障转移（可能丢失数据）是一种灾难恢复方法，可使你使用次要副本作为热备用服务器。因为强制执行故障转移可能面临数据丢失的风险，因此应审慎使用它。 建议仅当您必须立即将服务还原到可用性数据库并愿意承担数据丢失的风险时，才执行强制故障转移。 有关强制故障转移的先决条件和建议，以及使用强制故障转移从灾难性故障中恢复的示例应用场景的详细信息，请参阅 [执行可用性组的强制手动故障转移 (SQL Server)](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  

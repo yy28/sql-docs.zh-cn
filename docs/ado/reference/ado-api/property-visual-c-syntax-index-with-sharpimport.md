@@ -1,5 +1,5 @@
 ---
-title: '属性 （Visual c + + 语法索引与 #import） |Microsoft Docs'
+title: '属性 (VisualC++使用 #import 语法索引) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31bdc1249a82660ef7fa7c73a25fb0806c8c0744
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027704"
 ---
-# <a name="property-visual-c-syntax-index-with-import"></a>属性 （Visual c + + 语法索引与 #import）
+# <a name="property-visual-c-syntax-index-with-import"></a>属性 (VisualC++使用 #import 语法索引)
 ## <a name="properties"></a>属性  
   
 ```  

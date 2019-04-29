@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901082"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 源编辑器（“连接管理器”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“连接管理器”** 页，为 SAP BW 源选择 SAP BW 连接管理器。 在该页中，您还可选择用于从 SAP Netweaver BW 系统提取数据的执行模式和参数。  
@@ -55,7 +55,7 @@ ms.locfileid: "58381415"
  **执行模式**  
  指定从源提取数据的方法。  
   
-|选项|Description|  
+|Option|Description|  
 |------------|-----------------|  
 |**P - 触发进程链**|触发进程链。 此情况下， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包会启动提取进程。|  
 |**W - 等待通知**|等待 SAP Netweaver BW 系统发出开始提取数据的通知。 此情况下，SAP Netweaver BW 系统会启动提取进程。|  

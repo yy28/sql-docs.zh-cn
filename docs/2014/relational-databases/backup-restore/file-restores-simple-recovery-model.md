@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921801"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
   本主题仅适用于至少包含一个只读辅助文件组的简单模式数据库。  
@@ -46,7 +46,7 @@ ms.locfileid: "54126897"
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你想要脱机文件还原的数据库，使数据库脱机之前通过执行以下命令启动还原顺序[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)语句：ALTER DATABASE *database_name*设置为离线。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE。  
   
 
   
@@ -76,9 +76,9 @@ ms.locfileid: "54126897"
   
 ### <a name="examples"></a>示例  
   
--   [示例：联机还原只读文件的&#40;简单恢复模式&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [示例：只读文件的联机还原（简单恢复模式）](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [示例：主服务器和一个其他文件组的脱机还原&#40;完全恢复模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [示例：主文件组和一个其他文件组的脱机还原（完整恢复模式）](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54126897"
   
   
 ## <a name="see-also"></a>请参阅  
- [备份和还原：互操作性和共存&#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   

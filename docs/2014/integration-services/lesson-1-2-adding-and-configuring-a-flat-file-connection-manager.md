@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：添加和配置平面文件连接管理器 |Microsoft Docs
+title: 第 2 步：添加和配置平面文件连接管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891786"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步骤 2：添加和配置平面文件连接管理器
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>第 2 步：添加和配置平面文件连接管理器
   在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。**[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
   
  必须为要使用的每种文件格式创建一个新的平面文件连接管理器。 因为本教程从多个数据格式完全相同的平面文件提取数据，所以只需为您的包添加和配置一个平面文件连接管理器。  
@@ -87,7 +87,7 @@ ms.locfileid: "58385264"
     |----------------------|--------------------|------------------------|----------------------|  
     |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
      有关建议的数据类型`CurrencyID`列是与目标表中的字段的数据类型不兼容。 因为的数据类型`DimCurrency.CurrencyAlternateKey`为 nchar (3)、`CurrencyID`必须从字符串 [DT_STR] 改为 string [DT_WSTR]。 另外，字段`DimDate.FullDateAlternateKey`定义为日期数据类型; 因此，`CurrencyDate`需要更改从日期 [dt_date 改] 为数据库 date [DT_DBDATE]。  

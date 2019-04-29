@@ -1,5 +1,5 @@
 ---
-title: '步骤 5: DataControl 是变为可用选 （RDS 教程） |Microsoft Docs'
+title: 步骤 5：数据控件不能进行 （RDS 教程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955767"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5：DataControl 变为可用（RDS 教程）
-返回**记录集**对象是可供使用。 您可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 使用可以做什么**记录集**取决于你的环境。 Visual Basic 和 Visual c + + 有可用的可视化控件**记录集**直接或间接的启用的数据控件的帮助。  
+返回**记录集**对象是可供使用。 您可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 使用可以做什么**记录集**取决于你的环境。 Visual Basic 和 VisualC++具有可视控件，可以使用**记录集**直接或间接的启用的数据控件的帮助。  
   
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -45,5 +45,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [步骤 6： 将更改发送到服务器 （RDS 教程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [步骤 6：将更改发送到服务器 （RDS 教程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 教程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

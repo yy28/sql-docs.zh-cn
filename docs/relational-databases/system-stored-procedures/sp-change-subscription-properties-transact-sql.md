@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997103"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理使用的密码。|  
 |**internet_security_mode**|**1**|使用 Windows 集成身份验证进行 Web 同步。 建议您将基本身份验证与 Web 同步结合使用。 有关详细信息，请参阅 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。|  
-||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意：Web 同步要求与 Web 服务器存在 SSL 连接。|  
+||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意：Web 同步要求 SSL 连接到 Web 服务器。|  
 |**internet_timeout**||Web 同步请求过期之前的时间长度（秒）。|  
 |**internet_url**||表示 Web 同步的复制侦听器的位置的 URL。|  
 |**merge_job_login**||用来运行代理的 Windows 帐户的登录名。|  

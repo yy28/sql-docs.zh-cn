@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920655"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>启用 FileTable 的先决条件
   介绍如何启用创建和使用 FileTable 的先决条件。  
@@ -54,7 +54,7 @@ ms.locfileid: "58538139"
 ##  <a name="BasicsNTAccess"></a> 在数据库级别启用非事务性访问  
  FileTable 使 Windows 应用程序可以获取 FILESTREAM 数据的 Windows 文件句柄而不需要事务。 为了允许对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的文件进行此非事务性访问，您必须为要包含 FileTable 的每个数据库在数据库级别上指定所需的非事务性访问级别。  
   
-###  <a name="HowToCheckAccess"></a> 如何：检查是否在数据库上启用了非事务性访问  
+###  <a name="HowToCheckAccess"></a> 如何：检查是否对数据库启用非事务性访问  
  查询目录视图 [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 并检查 **non_transacted_access** 和 **non_transacted_access_desc** 列。  
   
 ```sql  
@@ -128,7 +128,7 @@ GO
  **使用 SQL Server Management Studio 指定 FileTable 的目录**  
  可以在“数据库属性”对话框的“选项”页的“FILESTREAM 目录名称”字段中指定目录名称。 有关此对话框的详细信息，请参阅[数据库属性（选项页）](../databases/database-properties-options-page.md)。  
   
-###  <a name="viewnames"></a> 如何：查看实例的现有目录名  
+###  <a name="viewnames"></a> 如何：查看实例的现有目录名称  
  若要查看该实例的现有目录名称的列表，可查询目录视图 [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 并查看 **filestream_database_directory_name** 列。  
   
 ```sql  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013235"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52413405"
 |**session_id**|**smallint**|正在运行查询的会话 ID (SPID)。|  
 |**request_id**|**int**|请求的 ID。 在会话的上下文中是唯一的。|  
 |**scheduler_id**|**int**|正在计划查询的计划程序的 ID。|  
-|**并行度**|**smallint**|查询的并行度。|  
+|**dop**|**smallint**|查询的并行度。|  
 |**request_time**|**datetime**|查询请求内存授予的日期和时间。|  
 |**grant_time**|**datetime**|向查询授予内存的日期和时间。 如果尚未授予内存，则此值为 NULL。|  
 |**requested_memory_kb**|**bigint**|请求的内存总量 (KB)。|  
@@ -53,9 +53,9 @@ ms.locfileid: "52413405"
 |**max_used_memory_kb**|**bigint**|到此刻为止所用的最大物理内存 (KB)。|  
 |**query_cost**|**float**|估计查询开销。|  
 |**timeout_sec**|**int**|查询放弃内存授予请求前的超时时间（秒）。|  
-|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 在早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本中是唯一的。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的"备注"部分。|  
+|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 是唯一的版本中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的"备注"部分。|  
 |**queue_id**|**smallint**|查询等待内存授予时所在等待队列的 ID。 如果已授予内存，则为 NULL。|  
-|**wait_order**|**int**|正在等待的查询中指定的连续顺序**queue_id**。 如果其他查询获得内存授予或超时，则给定查询的该值可以更改。如果已授予内存，则为 NULL。|  
+|**wait_order**|**int**|正在等待的查询中指定的连续顺序**queue_id**。 如果其他查询获得内存授予或超时时间，此值可以更改给定的查询。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  
 |**wait_time_ms**|**bigint**|等待时间（毫秒）。 如果已授予内存，则为 NULL。|  
 |**plan_handle**|**varbinary(64)**|查询计划的标识符。 使用**sys.dm_exec_query_plan**提取实际的 XML 计划。|  

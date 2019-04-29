@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014097"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "51667778"
   
  SQL_SOPT_SS_PARAM_FOCUS 的类型为 SQLULEN。  
   
- 默认值为 0，表示这些调用将对与 SQL 语句中的参数标记相对应的参数进行寻址。 当设置为表值参数的参数编号时，这些调用将对该表值参数的列进行寻址。 当设置的值不是表值参数的参数编号时，这些调用将返回错误 IM020：“参数焦点未引用表值参数”。  
+ 默认值为 0，表示这些调用将对与 SQL 语句中的参数标记相对应的参数进行寻址。 当设置为表值参数的参数编号时，这些调用将对该表值参数的列进行寻址。 设置为一个值，不是表值参数的参数编号时，这些调用将返回错误 IM020:"参数焦点不是指表值参数"。  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 属性指定后续目录函数调用的名称范围。 SQLColumns 返回的结果集取决于 SQL_SOPT_SS_NAME_SCOPE 的设置。  
