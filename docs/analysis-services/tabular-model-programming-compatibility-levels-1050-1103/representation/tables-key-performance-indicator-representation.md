@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019330"
 ---
 # <a name="tables---key-performance-indicator-representation"></a>表格 - 关键绩效指标表示形式
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 示例  
- 为了理解如何使用 AMO 创建和操作关键绩效指标表示形式，请参阅“AMO 到表格示例中的源代码”；具体来讲，请查看以下源文件：AddKPIs.cs。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
+ 为了理解如何使用 AMO 创建和操作关键绩效指标表示形式，请参阅 AMO 到表格示例; 的源代码具体查看以下源文件：AddKPIs.cs。 该示例位于 Codeplex。 有关该代码的重要说明：提供该代码只是为了支持本文介绍的逻辑概念，不应用于生产环境中；也不应用于除教学之外的其他用途。  
   
   

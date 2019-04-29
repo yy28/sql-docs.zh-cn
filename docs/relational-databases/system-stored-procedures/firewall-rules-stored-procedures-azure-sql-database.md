@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 1794f45c95095dbbfaac065eed40b4ef23cac725
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032904"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火墙规则存储过程 （Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

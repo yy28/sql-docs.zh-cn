@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955886"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>服务器连接的 F1 帮助 (SQL Server Management Studio)
   本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“连接到服务器”对话框页的 F1 帮助。  

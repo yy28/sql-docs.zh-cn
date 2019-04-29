@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901102"
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -37,9 +37,9 @@ ms.locfileid: "58382070"
 ## <a name="error-handling"></a>错误处理  
  ODBC 源有一个错误输出。 组件的错误输出包括以下输出列：  
   
--   **错误代码**:与当前错误相对应的编号。 有关错误的列表，请参阅您正在使用的支持 ODBC 的数据库文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
+-   **错误代码**：与当前错误相对应的编号。 有关错误的列表，请参阅您正在使用的支持 ODBC 的数据库文档。 有关 SSIS 错误代码的列表，请参阅 SSIS 错误代码和消息参考。  
   
--   **错误列**:导致错误 （针对转换错误） 的源列。  
+-   **错误列**：导致错误（针对转换错误）的源列。  
   
 -   标准的输出数据列。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "58382070"
 ## <a name="extract-options"></a>提取选项  
  ODBC 源在“批处理”或“逐行”模式下操作。 使用的模式由 **FetchMethod** 属性确定。 下表对这些模式进行了说明。  
   
--   **批处理**:组件将尝试使用最高效的提取方法基于发现的 ODBC 访问接口功能。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
+-   **批处理**：组件将基于发现的 ODBC 访问接口功能尝试使用最高效的提取方法。 对于大多数现今的 ODBC 提供程序，这是具有数组绑定的 SQLFetchScroll（其中，数组大小由 **BatchSize** 属性确定）。 如果选择“批处理”并且提供程序不支持此方法，则 ODBC 目标将自动切换到“逐行”模式。  
   
--   **行由行**:组件使用 SQLFetch 来一次检索行。  
+-   **逐行**：组件使用 SQLFetch 来检索行，每次检索一行。  
   
  有关 **FetchMethod** 属性的详细信息，请参阅 [ODBC Source Custom Properties](odbc-source-custom-properties.md)。  
   

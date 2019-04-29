@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920838"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 数据库对象
   部署是分发要在其他计算机上安装并运行的已完成应用程序或模块的过程。 可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 开发公共语言运行时 (CLR) 数据库对象，并将这些对象部署到测试服务器。 或者，也可以使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 再分发文件替代 Visual Studio 对托管数据库对象进行编译。 编译完之后，可以使用 Visual Studio 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，将包含 CLR 数据库对象的程序集部署到测试服务器。 请注意，Visual Studio .NET 2003 无法用于 CLR 集成编程或部署。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含预先安装的 .NET Framework，而 Visual Studio .NET 2003 无法使用 .NET Framework 2.0 程序集。  
@@ -96,7 +96,7 @@ ms.locfileid: "48122777"
   
 6.  对于每个对象类型中所选**选择对象类型**窗格中，**选择\<类型 >** 显示窗格。 在此窗格中，可以从在指定数据库中注册的该数据库对象类型的所有实例中进行选择。 选择一个或多个对象，然后单击**下一步**。  
   
-7.  **输出选项**窗格中，将出现所有所需的数据库对象已选择类型。 选择**将脚本保存到文件**并指定脚本文件的路径。 选择“下一步” 。 查看你的选择，然后单击**完成**。 部署脚本将保存到指定的文件路径。  
+7.  **输出选项**窗格中，将出现所有所需的数据库对象已选择类型。 选择**将脚本保存到文件**并指定脚本文件的路径。 选择“**下一步**”。 查看你的选择，然后单击**完成**。 部署脚本将保存到指定的文件路径。  
   
 ## <a name="post-deployment-scripts"></a>后期部署脚本  
  您可以运行后期部署脚本。  

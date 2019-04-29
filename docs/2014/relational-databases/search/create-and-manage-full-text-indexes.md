@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022499"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
   全文引擎使用全文索引中的信息来编译可快速搜索表中的特定词或词组的全文查询。 全文索引将有关重要的词及其位置的信息存储在数据库表的一列或多列中。 全文索引是一种特殊类型的基于标记的功能性索引，它是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护的。 生成全文索引的过程不同于生成其他类型的索引。 全文引擎并非基于特定行中存储的值来构造 B 树结构，而是基于要编制索引的文本中的各个标记来生成倒排、堆积且压缩的索引结构。  全文索引大小仅受运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的可用内存资源限制。  
@@ -27,7 +27,7 @@ ms.locfileid: "48054728"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，全文引擎位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中，而不是位于单独的服务中。 通过将全文引擎集成到数据库引擎中，可提高全文可管理性和总体性能，并进一步优化了混合查询。  
   
- 每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 基于类型的列的全文索引`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`创建索引全文搜索。 创建全文索引的列的数据类型是`varbinary`， `varbinary(max)`， `image`，或`xml`要求您指定的类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
+ 每个表只允许有一个全文索引。 若要对某个表创建全文索引，该表必须具有一个唯一且非 Null 的列。 你可以对以下类型的列创建全文索引：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)`，从而可对这些列进行全文搜索。 对数据类型为 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的列创建全文索引需要您指定类型列。 *类型列*是用来存储每行中文档的文件扩展名（.doc、.pdf、xls 等）的表列。  
   
  创建和维护全文索引的过程称为“填充”（也称为“爬网”）。 有三种类型的全文索引填充：完全填充、基于更改跟踪的填充和基于时间戳的增量式填充。 有关详细信息，请参阅 [填充全文索引](populate-full-text-indexes.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48054728"
   
  对于本示例，我们假定已对“标题”列创建全文索引。  
   
-|DocumentID|Title|  
+|DocumentID|标题|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -95,7 +95,7 @@ ms.locfileid: "48054728"
 ##  <a name="fragments"></a> 全文索引碎片  
  逻辑全文索引通常拆分到多个内部表中。 每个内部表称为一个全文索引碎片。 这些碎片中的某一些可能包含比其他碎片更新的数据。 例如，如果用户更新其 DocId 是 3 的以下行，并且该表可自动跟踪更改，则会创建新的碎片。  
   
-|DocumentID|Title|  
+|DocumentID|标题|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   

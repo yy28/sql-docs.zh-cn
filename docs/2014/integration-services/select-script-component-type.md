@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889230"
 ---
 # <a name="select-script-component-type"></a>选择脚本组件类型
   可以使用 **“选择脚本组件类型”** 对话框，指定是否创建预配置为源、转换或目标的脚本转换。  

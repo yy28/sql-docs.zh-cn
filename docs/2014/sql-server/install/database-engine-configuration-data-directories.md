@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b223c3ef9c6b4a8085c6575f827ae5e9e276ad9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992318"
 ---
 # <a name="database-engine-configuration---data-directories"></a>数据库引擎配置 - 数据目录
   使用此页面可指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 程序和数据文件的安装位置。 根据安装类型，支持的存储可能包括本地磁盘、共享存储或 SMB 文件服务器。  
@@ -44,12 +44,12 @@ ms.locfileid: "53365509"
   
 |Description|支持的存储类型|默认目录|建议|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|数据根目录|共享存储、SMB 文件服务器|\<驱动器:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
-|用户数据库目录|共享存储、SMB 文件服务器|\<驱动器： > 程序文件\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。|  
-|用户数据库日志目录|共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|确保日志目录有足够的空间。|  
-|临时数据库目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。|  
-|临时数据库日志目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。|  
-|备份目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Backup<br /><br /> 提示：如果选择了共享的磁盘上**群集磁盘选择**页上，默认值是第一个共享的磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|设置合适的权限以防止数据丢失，并确保 SQL Server 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
+|数据根目录|共享存储、SMB 文件服务器|\<驱动器:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。|  
+|用户数据库目录|共享存储、SMB 文件服务器|\<驱动器： > 程序文件\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|用户数据目录的最佳实践取决于工作量和性能要求。|  
+|用户数据库日志目录|共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|确保日志目录有足够的空间。|  
+|临时数据库目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。|  
+|临时数据库日志目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Data<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|请确保指定的目录对所有群集节点都有效。 在故障转移期间，如果 tempdb 目录对故障转移目标节点不可用，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源将无法联机。|  
+|备份目录|本地磁盘、共享存储、SMB 文件服务器|\<驱动器： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12。\<InstanceID > \MSSQL\Backup<br /><br /> 提示：如果在“群集磁盘选择”页上选择了共享磁盘，则默认设置为第一个共享磁盘。 如果在 **“群集磁盘选择”** 页上没有进行任何选择，此字段默认为空。|设置合适的权限以防止数据丢失，并确保 SQL Server 服务的用户帐户具有写入备份目录的足够权限。 不支持对备份目录使用映射的驱动器。|  
   
 ## <a name="security-considerations"></a>需要考虑的安全性因素  
  安装程序将为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录配置 ACL 并在配置过程中中断继承。  

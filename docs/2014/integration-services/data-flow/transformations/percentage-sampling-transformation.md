@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900143"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比抽样转换
   百分比抽样转换通过选择转换输入行的百分比来创建样本数据集。 样本数据集是从转换输入中随机选择的行，这使得结果样本可以代表输入。  

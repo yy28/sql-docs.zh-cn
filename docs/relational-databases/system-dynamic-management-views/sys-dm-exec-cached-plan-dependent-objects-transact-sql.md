@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013559"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>参数  
 *plan_handle*  
-为已执行且其计划位于计划缓存中的批次唯一标识查询执行计划。 *plan_handle*是**varbinary(64)**。   
+是一个令牌，用于唯一标识已执行的批次查询执行计划和其计划驻留在计划缓存中。 *plan_handle*是**varbinary(64)**。   
 
 *Plan_handle*可以从以下动态管理对象中获得：  
   
@@ -64,7 +64,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar(50)**|计划缓存对象类型。 此列不可为空值。 可能的值有<br /><br /> 可执行计划<br /><br /> CLR 编写函数<br /><br /> CLR 编写过程<br /><br /> 游标|  
   
 ## <a name="permissions"></a>权限  
- 要求具有服务器的 VIEW SERVER STATE 权限。  
+ 要求具有对服务器的 `VIEW SERVER STATE` 权限。  
   
 ## <a name="physical-joins"></a>物理联接  
  ![关系图](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "关系图")  
