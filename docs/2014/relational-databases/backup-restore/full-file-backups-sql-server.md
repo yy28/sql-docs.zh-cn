@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876129"
 ---
 # <a name="full-file-backups-sql-server"></a>完整文件备份 (SQL Server)
   本主题适用于包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。  
@@ -99,7 +99,7 @@ ms.locfileid: "48097497"
 ## <a name="see-also"></a>请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
- [备份和还原：互操作性和共存 (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
  [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   

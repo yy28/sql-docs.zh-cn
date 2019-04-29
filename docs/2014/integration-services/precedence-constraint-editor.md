@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889449"
 ---
 # <a name="precedence-constraint-editor"></a>优先约束编辑器
   可以使用 **“优先约束编辑器”** 对话框配置优先约束。  
   
 ## <a name="options"></a>选项  
  **求值运算**  
- 指定优先约束使用的求值运算。 操作包括：**约束**，**表达式**，**表达式和约束**，并且**表达式或约束**。  
+ 指定优先约束使用的求值运算。 运算包括：“约束”、“表达式”、“表达式和约束”和“表达式或约束”。  
   
  **ReplTest1**  
- 指定约束值：**成功**，**失败**，或**完成**。  
+ 指定约束值：“成功”、“失败”或“完成”。  
   
 > [!NOTE]  
 >  优先约束线的含义：绿色表示“成功”，突出显示表示“失败”，蓝色表示“完成”。  

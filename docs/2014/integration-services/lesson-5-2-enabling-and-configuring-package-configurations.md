@@ -1,5 +1,5 @@
 ---
-title: 步骤 2：启用和配置包配置 |Microsoft Docs
+title: 第 2 步：启用和配置包配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891053"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>第 2 步：启用和配置包配置
   在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 您将使用该向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 `Directory` 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>创建映射到 Directory 属性的新的包级别变量  

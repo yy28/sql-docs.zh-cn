@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022395"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 发布的术语词汇表
   在配置和管理 Oracle 发布时，应熟悉下列 Oracle 术语。 有关 Oracle 术语的完整列表，请参阅 Oracle 联机文档。  

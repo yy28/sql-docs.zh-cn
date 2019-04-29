@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044062"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>测试筛选后的模型（数据挖掘基础教程）
   现在，您已确定`TM_Decision_Tree`模型是最准确的您将自定义模型以更好地满足的需求[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]目标邮递活动。 具体来说，市场部希望了解男客户和女客户是否存在特征差异。 这些信息可帮助他们决定哪些杂志进行广告使用以及功能在邮件中推广哪些产品。  

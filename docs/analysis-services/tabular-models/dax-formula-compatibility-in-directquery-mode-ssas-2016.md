@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019233"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式下的 DAX 公式兼容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -158,7 +158,7 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 `EXAMPLE: LOG(blank())`  
   
-同样的限制适用于其他对数函数：LOG10 和 LN。  
+相同的限制适用于其他对数函数：LOG10 和 ln。  
   
 有关 DAX 中的 **blank** 数据类型的详细信息，请参阅 [DAX 语法参考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -190,9 +190,9 @@ SQL Server 处理 Null 值和空白的方式与 xVelocity 引擎不同。 因此
   
 通常，因为接受的日期范围对于 Excel 和 SQL Server 是不同的，所以，仅当日期在共同的日期范围内（包括以下日期）时，才能保证结果匹配。  
   
--   最早日期：1990 年 3 月 1 日  
+-   最早日期：1990 年 3 月 1日日  
   
--   最晚日期：9999 年 12 月 31 日  
+-   最晚日期：到 9999 年 12 月 31 日  
   
 如果公式中使用的任何日期超出此范围，则公式将导致错误，或结果不匹配。  
   

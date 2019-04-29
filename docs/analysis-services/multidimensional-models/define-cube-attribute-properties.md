@@ -1,5 +1,5 @@
 ---
-title: 定义多维数据集特性属性 |Microsoft 文档
+title: 定义多维数据集特性属性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e2ab2374955710452f1ba1cba91e3a4d8ff8c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025437"
 ---
 # <a name="define-cube-attribute-properties"></a>定义多维数据集特性属性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34026864"
 |**AttributeHierarchyVisible**|指示属性层次结构在此多维数据集维度上是否可见。 这可以使属性层次结构在特定多维数据集或维度角色上可见。 如果基础属性层次结构不可见，则此设置不起作用。 默认值是 **True**秒。|  
 |**AttributeID**|包含属性的唯一标识符 (ID)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义多维数据集维度属性](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [定义多维数据集层次结构属性](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

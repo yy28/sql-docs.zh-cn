@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889240"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>脚本转换编辑器（“连接管理器”页）
   可以使用 **脚本转换编辑器** 的 **“连接管理器”** 页指定脚本将使用的任何连接。  

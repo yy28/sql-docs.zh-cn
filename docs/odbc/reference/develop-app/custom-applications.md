@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042523"
 ---
 # <a name="custom-applications"></a>自定义应用程序
 自定义应用程序通常执行特定任务的几个 Dbms。 例如，应用程序可能检索单个 DBMS 中的数据并生成报告，或者它可能在多个 Dbms 之间的数据传输。 这些应用程序具有的共同点是这些 Dbms 之前编写的应用程序已知的且不太可能更改应用程序的生命周期。  

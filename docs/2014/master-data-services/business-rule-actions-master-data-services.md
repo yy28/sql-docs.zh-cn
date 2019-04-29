@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877191"
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则操作是业务规则条件计算的结果。 如果条件为 true，则将启动操作。  
@@ -50,7 +50,7 @@ ms.locfileid: "53357723"
 |**必需**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**无效**|所选属性 **“无效”**。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。<br /><br /> 此操作对文本和链接值有效。|  
-|**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳做法：** 将此操作与必需条件，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
+|**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳做法：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**必须具有以下值之一**|所选属性 **“必须具有以下值之一”** ，它是在列表中指定的。<br /><br /> 此操作对文本值有效。|  
 |**必须大于**|所选属性 **“必须大于”** 特定属性、特定属性值或者为空。<br /><br /> 此操作对文本、数字和日期值有效。|  
 |**必须等于**|所选属性 **“必须等于”** 已定义的属性值、另一个属性或者为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  

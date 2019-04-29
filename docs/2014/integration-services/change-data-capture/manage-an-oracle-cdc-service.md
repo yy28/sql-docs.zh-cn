@@ -28,7 +28,7 @@ ms.locfileid: "62835547"
   
 2.  选择要使用的 CDC 服务。  
   
-     也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
+     也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [你可以做什么与 CDC 服务](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
  **OR**  
   
@@ -36,9 +36,9 @@ ms.locfileid: "62835547"
   
 2.  从 CDC 服务配置控制台的中间部分，选择您要使用的服务。  
   
-     也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
+     也可以右键单击要使用的 CDC 服务，然后选择所需操作。 请参阅 [你可以做什么与 CDC 服务](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> 使用 CDC 服务可以做什么  
  您可在使用 CDC 服务时执行以下操作。  
   
 ### <a name="delete-the-service"></a>删除服务  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027552"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>监视设备，但在管理控制台的分析平台系统
 在管理控制台是一个 SQL Server PDW web 应用程序，它会显示设备状态、 运行状况和性能信息。 用户连接到 Internet 资源管理器通过在管理控制台。  
@@ -22,7 +22,7 @@ ms.locfileid: "37909847"
 ## <a name="About"></a>有关在管理控制台  
 ![工具控制台主页](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**设备**  
+**Appliance**  
 主页  
 提供的设备状态的快速摘要。  
   
@@ -55,10 +55,10 @@ Backups/Restores
   
 显示硬件和软件的警报。  
   
-Resources  
+资源  
 显示 PDW 资源锁及其当前状态的列表。  
   
-存储器  
+存储  
 总结了 PDW 存储使用率。  
   
 性能监视器  
@@ -85,7 +85,7 @@ Resources
 |-|-|  
 |**信息类型**|**如何在管理控制台中的访问权限**|  
 |设备的总体状态|单击**设备状态**在顶部菜单中，或**主页**。|  
-|Alerts|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)。|  
+|警报|单击**警报**。 有关详细信息，请参阅[了解管理员控制台警报&#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)。|  
 |设备组件和它们的状态|单击**设备状态**在顶部菜单中，或**主页**。|  
 |监视器请求 （包括查询、 加载、 备份和还原）|单击**会话**若要查看当前活动会话或新会话。<br /><br />单击**查询**若要查看当前活动或最新的查询。 显示查询的信息包括加载、 备份和还原。<br /><br />单击**锁**若要查看活动锁。|  
 |监视负载、 备份和还原的其他信息。|单击**负载**或**备份/还原**。|  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875096"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 访问 FILESTREAM 数据
   OpenSqlFilestream API 获取 Win32 兼容的文件句柄的 FILESTREAM 二进制大型对象 (BLOB) 存储在文件系统中。 可以将句柄传递到任何以下 Win32 Api:[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)， [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)， [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)， [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)， [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)，或[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  

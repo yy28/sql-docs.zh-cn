@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022646"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
   Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  
@@ -28,36 +28,36 @@ ms.locfileid: "52786649"
   
 |Oracle 数据类型|SQL Server 数据类型|备用|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|用户帐户控制|  
-|BLOB|VARBINARY(MAX)|用户帐户控制|  
-|CHAR([1-2000])|CHAR([1-2000])|用户帐户控制|  
-|CLOB|VARCHAR(MAX)|用户帐户控制|  
-|DATE|DATETIME|用户帐户控制|  
+|BFILE|VARBINARY(MAX)|是|  
+|BLOB|VARBINARY(MAX)|是|  
+|CHAR([1-2000])|CHAR([1-2000])|是|  
+|CLOB|VARCHAR(MAX)|是|  
+|DATE|DATETIME|是|  
 |FLOAT|FLOAT|否|  
 |FLOAT([1-53])|FLOAT([1-53])|否|  
 |FLOAT([54-126])|FLOAT|否|  
-|INT|NUMERIC(38)|用户帐户控制|  
-|INTERVAL|DATETIME|用户帐户控制|  
-|LONG|VARCHAR(MAX)|用户帐户控制|  
-|LONG RAW|IMAGE|用户帐户控制|  
+|INT|NUMERIC(38)|是|  
+|INTERVAL|DATETIME|是|  
+|LONG|VARCHAR(MAX)|是|  
+|LONG RAW|IMAGE|是|  
 |NCHAR([1-1000])|NCHAR([1-1000])|否|  
-|NCLOB|NVARCHAR(MAX)|用户帐户控制|  
-|NUMBER|FLOAT|用户帐户控制|  
+|NCLOB|NVARCHAR(MAX)|是|  
+|NUMBER|FLOAT|是|  
 |NUMBER([1-38])|NUMERIC([1-38])|否|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|用户帐户控制|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|是|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|否|  
 |RAW([1-2000])|VARBINARY([1-2000])|否|  
 |real|FLOAT|否|  
 |ROWID|CHAR(18)|否|  
-|timestamp|DATETIME|用户帐户控制|  
-|TIMESTAMP(0-7)|DATETIME|用户帐户控制|  
-|TIMESTAMP(8-9)|DATETIME|用户帐户控制|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|用户帐户控制|  
+|timestamp|DATETIME|是|  
+|TIMESTAMP(0-7)|DATETIME|是|  
+|TIMESTAMP(8-9)|DATETIME|是|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|否|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|用户帐户控制|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|是|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|否|  
 |UROWID|CHAR(18)|否|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|用户帐户控制|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|是|  
   
 ## <a name="considerations-for-data-type-mapping"></a>数据类型映射注意事项  
  在从 Oracle 数据库复制数据时需注意下列数据类型问题。  

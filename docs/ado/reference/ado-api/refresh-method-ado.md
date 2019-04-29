@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcba9515535e32557470b75267a0e99976a18595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033389"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
 更新以反映，从可用对象的集合和特定于中的对象，提供程序。  

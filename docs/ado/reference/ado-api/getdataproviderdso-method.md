@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028064"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 方法
 从 Shape 提供程序检索基础 OLE DB 数据源对象。  
@@ -39,5 +39,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>备注  
  此方法执行不 addref 的接口指针。 如果调用方计划以容纳指针，调用方必须执行操作所需的 addref 和 release。  
   
-## <a name="applies-to"></a>适用于  
+## <a name="applies-to"></a>适用对象  
  [IDSOShapeExtensions 接口](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

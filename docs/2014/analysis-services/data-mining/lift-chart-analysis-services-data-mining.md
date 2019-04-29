@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722273"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
   一个**提升图**以图形方式表示的挖掘模型时比较提供针对随机推测，改进和度量的变化*提升*分数。 通过比较您的数据集的各个部分以及不同模型的提升分数，您可以确定哪个模型最佳，以及数据集中的事例的百分比受益于应用模型的预测。  

@@ -1,5 +1,5 @@
 ---
-title: ParameterAttributesEnum |Microsoft Docs
+title: ParameterAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c43697cad7682f23fdf9def8f961d550192aff67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027890"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 指定的特性[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  

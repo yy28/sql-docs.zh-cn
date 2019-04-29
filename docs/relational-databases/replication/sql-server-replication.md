@@ -72,7 +72,7 @@ ms.locfileid: "54124737"
   
 -   [定义和修改列筛选器](publish/define-and-modify-a-column-filter.md)    
 -   [定义和修改静态行筛选器](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [定义和修改合并项目的参数化行筛选器](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [优化参数化行筛选器](publish/optimize-parameterized-row-filters.md)    
 -   [定义和修改合并项目间的联接筛选器](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   

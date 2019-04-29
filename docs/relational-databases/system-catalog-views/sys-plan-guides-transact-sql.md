@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032985"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "47696476"
 |**scope_object_id**|**Int**|如果作用域为 OBJECT，则为定义计划指南作用域的对象的 object_id。<br /><br /> 如果计划指南的作用域不是 OBJECT，则其值为 NULL。|  
 |**scope_batch**|**nvarchar(max)**|批处理文本，如果**scope_type**是 SQL。<br /><br /> 如果批处理类型不是 SQL，则其值为 NULL。<br /><br /> 如果为 NULL 并且**scope_type**是 SQL 的值**query_text**适用。|  
 |**参数**|**nvarchar(max)**|定义与计划指南关联的参数列表的字符串。<br /><br /> NULL = 没有与计划指南关联的参数列表。|  
-|**提示**|**nvarchar(max)**|与计划指南关联的 OPTION 子句提示。|  
+|**hints**|**nvarchar(max)**|与计划指南关联的 OPTION 子句提示。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

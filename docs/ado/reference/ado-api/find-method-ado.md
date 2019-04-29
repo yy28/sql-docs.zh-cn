@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028128"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)满足指定的条件的行。 （可选） 可以指定搜索、 起始行和偏移量开始的行的方向。 找到的记录; 如果满足条件，则设置的当前行位置否则，将位置设置为的终点 （或起点）**记录集**。  
@@ -44,7 +44,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  可选 *。* 一个[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，该值指定搜索是否应在当前行或搜索的方向中的下一个可用行上开始。 结尾处停止时的不成功搜索**记录集**如果值为**adSearchForward**。 不成功搜索停止的开头**记录集**如果值为**adSearchBackward**。  
   
- *启动*  
+ *开始*  
  可选。 一个**变体**充当搜索的起始位置的书签。  
   
 ## <a name="remarks"></a>备注  
