@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270939"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>支持的游标模型（Visual FoxPro ODBC 驱动程序）
 Visual FoxPro ODBC 驱动程序同时支持*块*(*行集*) 和*静态*游标。 级别 1 ODBC 法规遵从性符合任何驱动程序支持静态游标。 该驱动程序不支持动态，由键集驱动或混合 （键集和动态） 游标。  

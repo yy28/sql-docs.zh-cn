@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 73294cfc5d1a7e4b2693615692604ef991421169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255298"
 ---
 # <a name="create-the-off-by-default-policy"></a>创建 Off By Default 策略
   此任务创建一个基于外围应用配置器方面的名为 Mail Off 的条件。 然后，创建一个名为 Off By Default 的条件。  

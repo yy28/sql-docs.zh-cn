@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b9e66e04cc6e4ae179816b6f0b679178c2e7052
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267602"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>即使触发器嵌套功能设置为 OFF，也会触发嵌套的 AFTER 触发器
   升级顾问检测到一个嵌套在一个或多个表中定义的 INSTEAD OF 触发器中的 AFTER 触发器。 即使在 `nested triggers` 服务器配置选项设置为 0 时，也可能会激发嵌套 AFTER 触发器。  

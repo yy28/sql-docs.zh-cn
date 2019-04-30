@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5a87a1cbfbdff5eb428e73d74cdd1199955d673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267699"
 ---
 # <a name="datetime-data-type-changes"></a>Datetime 数据类型更改
 在 ODBC 3。*x*、 的标识符的日期、 时间和时间戳 SQL 数据类型已更改从 SQL_DATE、 SQL_TIME 和 SQL_TIMESTAMP (的实例，并用 **#define** 9、 10 和 11 的标头文件中) 到 SQL_TYPE_DATE，SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的实例，并用 **#define** 91、 92 和 93 的标头文件中)，分别。 相应的 C 类型标识符都更改 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分别。  

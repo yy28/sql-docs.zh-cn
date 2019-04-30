@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268524"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>在 .NET 环境中使用 SQLXML 大容量加载
   本主题说明如何在 .NET 环境中使用 XML 大容量加载功能。 有关 XML 大容量加载的详细信息，请参阅[执行大容量加载的 XML 数据&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  

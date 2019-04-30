@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240204"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 附带的所有基于 COM 的解决程序都处理更新冲突，并且在得到指示时，它们还会处理插入和删除冲突。 所有冲突解决程序都能处理列跟踪，大多数还能处理行跟踪。 这些冲突解决程序及所有其他基于 COM 的冲突解决程序都声明它们能处理的冲突类型，而合并复制代理使用默认的冲突解决程序处理所有其他冲突类型。  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 54e2594b040c74715d279576a3e09a6fc6016fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255358"
 ---
 # <a name="create-the-finance-name-policy"></a>创建 Finance Name 策略
   在本任务中，将创建一个名为 Finance 的数据库，然后创建一个要求所有表以字母 **fintbl** 开头的条件。 然后，将创建一个策略和策略类别，强制 Finance 数据库中的表执行某一命名标准。  

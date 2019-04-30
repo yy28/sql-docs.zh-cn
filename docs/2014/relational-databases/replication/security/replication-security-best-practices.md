@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268666"
 ---
 # <a name="replication-security-best-practices"></a>复制安全最佳实践
   复制在分布式环境（从单个域中的 Intranet 到在不受信任的域之间通过 Internet 访问数据的应用程序）中移动数据。 理解在这些不同环境下保护复制连接的最佳方法非常重要。  

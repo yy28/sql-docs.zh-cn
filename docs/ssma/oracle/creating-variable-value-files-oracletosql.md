@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 067781fd998c9e7763fe3a9f2befacab59687250
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287170"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>创建变量值文件 (OracleToSQL)
 变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **-v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259398"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函数
 **SQLDataSourceToDriver** supportstranslations ODBC 驱动程序。 不支持 ODBC 的应用程序; 通过调用此函数应用程序请求通过翻译**SQLSetConnectAttr**。 与关联的驱动程序*ConnectionHandle*中指定**SQLSetConnectAttr**调用指定的 DLL 执行从数据源流动到驱动程序的所有数据的转换。 可以在 ODBC 初始化文件中指定默认转换 DLL。  

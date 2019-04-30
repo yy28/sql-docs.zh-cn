@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 8bc452dff465ca872f094fa7aaaba98612beb135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287203"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高级对象选择 (OracleToSQL)
 **高级对象部分**对话框可以通过使用字符串和子字符串中的对象名称，来筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

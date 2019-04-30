@@ -1,5 +1,5 @@
 ---
-title: Sum (MDX) |Microsoft 文档
+title: Sum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241381"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
@@ -35,7 +35,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指定了数值表达式，则对集计算指定数值表达式的值然后求和。 如果没有指定数值表达式，则在指定集成员的当前上下文中计算指定集然后求和。 如果将 SUM 函数应用于非数值表达式，则结果不确定。  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用与成员关键字和**总和**函数定义中包含的 Country 属性层次结构中 Geography 维度的加拿大和美国成员的 Reseller Sales Amount 度量值之和的度量值维度的计算的成员。  
+ 下面的示例使用 WITH MEMBER 关键字和**之和**函数定义中包含的 Canada 和 United States 成员的 Reseller Sales Amount 度量值之和的度量值维度的计算的成员在 Geography 维度 country 属性层次结构。  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -81,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- 通常情况下，**总和**函数用于处理**CURRENTMEMBER**函数或功能，例如**YTD**返回一组的层次结构 currentmember 而异。 例如，下面的查询返回所有日期（从日历年的开始到行轴上显示的日期）的 Internet Sales Amount 度量值的总和。  
+ 通常情况下，**总和**函数与一起使用**CURRENTMEMBER**函数或函数，例如**YTD**返回一组，具体取决于层次结构的当前成员而异。 例如，下面的查询返回所有日期（从日历年的开始到行轴上显示的日期）的 Internet Sales Amount 度量值的总和。  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -94,6 +94,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

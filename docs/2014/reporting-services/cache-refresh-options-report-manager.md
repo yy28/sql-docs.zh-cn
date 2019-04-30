@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266471"
 ---
 # <a name="cache-refresh-options-report-manager"></a>缓存刷新选项（报表管理器）
   使用“缓存刷新选项”页可以创建使用报表或共享数据集数据的临时副本预加载缓存的计划。 刷新计划包括计划和指定或覆盖参数值的选项。 对于共享数据集，不能覆盖标记为只读的参数值。 在刷新选项页中，可以创建和使用多个刷新计划。  

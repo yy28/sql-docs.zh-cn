@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b77fdee70ff73772710c9758eeb2bf2594f365d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280951"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>配合使用 VFP FoxPro ODBC 驱动程序和 Visual Basic 应用程序
 你的 Microsoft® Visual Basic® 应用程序可以与 Visual FoxPro 数据通信通过创建连接到 Visual FoxPro 数据源的数据控件。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240982"
 ---
 # <a name="descriptor-transitions"></a>描述符转换
 ODBC 描述符有以下三种状态。  
@@ -37,8 +37,8 @@ ODBC 描述符有以下三种状态。
   
 |D0<br /><br /> 未分配|D1i<br /><br /> 隐式|D1e<br /><br /> 显式|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i[1]|--|--|  
+|D1e[2]|--|--|  
   
  [1] 此行显示转换时*HandleType*已 SQL_HANDLE_STMT。  
   

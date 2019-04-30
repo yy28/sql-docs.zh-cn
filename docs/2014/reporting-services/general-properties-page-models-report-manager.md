@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260811"
 ---
 # <a name="general-properties-page-models-report-manager"></a>模型的“常规”属性页（报表管理器）
   使用报表模型的“常规”属性页可以重命名、删除、移动或替换模型定义 (.smdl) 文件。 页面顶部显示了有关创建或修改模型的用户以及发生更改的时间等详细信息。  

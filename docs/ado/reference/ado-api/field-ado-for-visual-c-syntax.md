@@ -1,5 +1,5 @@
 ---
-title: 字段 (ADO for Visual c + + 语法) |Microsoft Docs
+title: 字段 (ADO for VisualC++语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e65d9922a040fa1a24442c98e9d16b57d29188db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267189"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>字段（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  

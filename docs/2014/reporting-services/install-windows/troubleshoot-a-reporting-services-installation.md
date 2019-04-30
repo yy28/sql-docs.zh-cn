@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225654"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
   如果由于安装期间出现错误而导致无法安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，请使用本主题中的说明来解决最有可能导致安装错误的情况。  

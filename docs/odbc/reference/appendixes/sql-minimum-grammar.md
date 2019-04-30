@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270498"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最低语法
 本部分介绍的 ODBC 驱动程序必须支持的最小 SQL 语法。 在本部分中所述的语法是 SQL-92 的条目级别语法的子集。  
@@ -29,7 +29,7 @@ ms.locfileid: "47818895"
  仅使用只读数据源的驱动程序可能不支持此部分中包含的语法处理变化的数据的那些的部分。 应用程序可以确定数据源通过调用是否是只读**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 信息类型。  
   
 ## <a name="statement"></a>。  
- *create table 语句*:: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE*基础表名称*  
   
@@ -38,49 +38,49 @@ ms.locfileid: "47818895"
 > [!IMPORTANT]  
 >  作为*数据类型*中*create table 语句*，应用程序必须使用返回的结果集的 TYPE_NAME 列中数据类型**SQLGetTypeInfo**。  
   
- *delete 语句搜索*:: =  
+ *delete-statement-searched* ::=  
   
- DELETE FROM *l e-n* [其中*搜索条件*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
- *drop table 语句*:: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE*基础表名称*  
   
- *insert 语句*:: =  
+ *insert-statement* ::=  
   
- INSERT INTO *l e-n* [(*列标识符*[，*列标识符*]...)]     值 (*插入值*[， *insert 值*]...)  
+ INSERT INTO *table-name* [( *column-identifier* [, *column-identifier*]...)]      VALUES (*insert-value*[, *insert-value*]... )  
   
- *选择语句*:: =  
+ *select-statement* ::=  
   
- 选择 [所有&#124;DISTINCT]*选择列表*  
+ SELECT [ALL &#124; DISTINCT] *select-list*  
   
  从*表引用列表*  
   
- [其中*搜索条件*]  
+ [WHERE *search-condition*]  
   
- [*order by 子句*]  
+ [*order-by-clause*]  
   
- *语句*:: = *create table 语句*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*delete 语句搜索*  
+ &#124; *delete-statement-searched*  
   
- &#124;*drop table 语句*  
+ &#124; *drop-table-statement*  
   
- &#124;*insert 语句*  
+ &#124; *insert-statement*  
   
- &#124;*select 语句*  
+ &#124; *select-statement*  
   
- &#124;*更新语句搜索*  
+ &#124; *update-statement-searched*  
   
- *update 语句搜索*  
+ *update-statement-searched*  
   
  更新*表名称*  
   
- 设置*列标识符*= {*表达式* &#124; NULL}  
+ SET *column-identifier* = {*expression* &#124; NULL }  
   
  [，*列标识符*= {*表达式* &#124; NULL}]...  
   
- [其中*搜索条件*]  
+ [WHERE *search-condition*]  
   
  本部分包含以下主题。  
   

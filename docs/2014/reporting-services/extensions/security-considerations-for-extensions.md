@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282419"
 ---
 # <a name="security-considerations-for-extensions"></a>扩展插件的安全注意事项
   每种以公共语言运行时 (CLR) 为目标的应用程序都必须与 CLR 的安全系统进行交互。 当此类应用程序运行时，CLR 将自动对它进行计算，然后向它提供一组权限。 应用程序可能会继续运行，或者生成安全性异常，具体取决于应用程序所收到的权限。 针对特定报表服务器的安全策略配置文件中的本地安全设置和策略定义程序集接收的代码权限。  

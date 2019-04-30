@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d20fc0c1257d467f2115095b19c4d1b05c37cebb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255021"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能和任务 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基础内容按报表和报表功能、报表服务器功能和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 产品功能进行组织。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1fedf055524fa963203f1d0c2b0a64e0fafb6de
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266480"
 ---
 # <a name="choose-the-table-layout"></a>选择表布局
   使用报表向导的此页可以选择报表中表的布局。  

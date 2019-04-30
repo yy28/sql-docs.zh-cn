@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269864"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>支持规则、触发器、默认值和存储过程（Visual FoxPro ODBC 驱动程序）
 无法创建 Visual FoxPro 规则、 触发器、 默认值或使用 Visual FoxPro ODBC 驱动程序的存储的过程。 但是，你的应用程序可能交互与现有规则、 触发器、 默认值或存储的过程中，因为它将插入、 更新或删除存储在数据库中的 Visual FoxPro 数据。  
@@ -202,7 +202,7 @@ ms.locfileid: "47655005"
 |参数命令|主 （） 函数|专用命令|  
 |PI （） 函数|程序 （） 函数|正确的 （） 函数|  
 |过程命令|PV （） 函数||  
-|公共命令|PADL （) &#124; PADR （) &#124; PADC （） 函数||  
+|公共命令|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   

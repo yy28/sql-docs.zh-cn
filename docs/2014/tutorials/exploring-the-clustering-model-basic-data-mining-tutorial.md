@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280424"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>浏览聚类分析模型（数据挖掘基础教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)]聚类分析算法事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  

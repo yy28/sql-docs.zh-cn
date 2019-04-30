@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241200"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>无效字符和转义规则
   本主题介绍 FOR XML 子句如何处理无效的 XML 字符，并列出了在 XML 名称中无效的字符的转义规则。  

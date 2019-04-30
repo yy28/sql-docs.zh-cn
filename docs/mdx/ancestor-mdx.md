@@ -1,5 +1,5 @@
 ---
-title: 上级 (MDX) |Microsoft 文档
+title: 上级 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298500"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -42,18 +42,18 @@ Ancestor(Member_Expression, Distance)
  *距离*  
  指定与指定成员距离的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- 与**上级**函数，该函数提供的 MDX 成员表达式，然后提供的级别，该成员的祖先一个 MDX 表达式，或者表示的上面该成员的级别数的数值表达式。 使用此信息，**上级**函数返回在该级别的祖先成员。  
+## <a name="remarks"></a>备注  
+ 与**祖先**函数，该函数提供 MDX 成员表达式，然后提供成员的祖先所在级别的 MDX 表达式，或者表示的更高版本的级别数的数值表达式该成员。 使用此信息，**上级**函数将返回该级别处的祖先成员。  
   
 > [!NOTE]  
->  若要返回一个包含祖先成员，而不是只需祖先成员集使用[上级&#40;MDX&#41; ](../mdx/ancestors-mdx.md)函数。  
+>  若要返回祖先成员，而不是只是祖先成员，其中包含一组使用[祖先&#40;MDX&#41; ](../mdx/ancestors-mdx.md)函数。  
   
- 如果指定一个级别表达式，则**上级**函数返回在指定的级别的指定成员的祖先。 如果指定成员与指定级别不在同一个层次结构中，该函数将返回错误。  
+ 如果指定了级别表达式，则**祖先**函数返回指定成员在指定级别处的祖先。 如果指定成员与指定级别不在同一个层次结构中，该函数将返回错误。  
   
- 如果指定的距离，则**上级**函数返回由成员表达式指定层次结构中指定设置的步骤数的指定成员的祖先。 可以将成员指定为属性层次结构的成员或用户定义层次结构的成员，有时还可以指定为父子层次结构的成员。 数值 1 返回成员的父成员，数值 2 返回成员的祖父成员（如果存在）。 数值 0 返回成员本身。  
+ 如果指定了距离，则**祖先**函数返回在层次结构指定成员表达式高出指定步骤数的指定成员的祖先。 可以将成员指定为属性层次结构的成员或用户定义层次结构的成员，有时还可以指定为父子层次结构的成员。 数值 1 返回成员的父成员，数值 2 返回成员的祖父成员（如果存在）。 数值 0 返回成员本身。  
   
 > [!NOTE]  
->  使用这种形式的**上级**情况下在其中的父级别，未知或不能为命名的函数。  
+>  使用这种形式的**祖先**函数的情况下是未知的或不能为命名的父级别。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用一个级别表达式，并返回 Australia 中每个 State-Province 的 Internet Sales Amount 及其占 Australia 总 Internet Sales Amount 的百分比。  
@@ -100,6 +100,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238137"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 审核操作组和操作
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能，你可以对服务器级别和数据库级别事件组以及各个事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。  
@@ -80,8 +80,8 @@ ms.locfileid: "48222987"
 |DATABASE_CHANGE_GROUP|创建、更改或删除数据库时将引发此事件。 创建、更改或删除任何数据库时均将引发此事件。 等效于 [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)。|  
 |DATABASE_LOGOUT_GROUP|在包含数据库用户注销某一数据库时，会引发此事件。 等效于 Audit Database Logout 事件类。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|引发此事件的目的是为了报告与数据库镜像传输安全性相关的审核消息。 等效于 [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)。|  
-|DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如消息类型、程序集和协定）时将引发此事件。<br /><br /> 此事件由对任何数据库的任何访问而引发。 **注意：** 这可能会导致大量审核记录。 <br /><br /> 等效于 [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)。|  
-|DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 创建、更改或删除任何数据库对象时均将引发此事件。 **注意：** 这可能会导致大量审核记录。 <br /><br /> 等效于 [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)。|  
+|DATABASE_OBJECT_ACCESS_GROUP|访问数据库对象（如消息类型、程序集和协定）时将引发此事件。<br /><br /> 此事件由对任何数据库的任何访问而引发。 **注意：** 这可能导致生成大量审核记录。 <br /><br /> 等效于 [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)。|  
+|DATABASE_OBJECT_CHANGE_GROUP|针对数据库对象（如架构）执行 CREATE、ALTER 或 DROP 语句时将引发此事件。 创建、更改或删除任何数据库对象时均将引发此事件。 **注意：** 这可能导致大量审核记录。 <br /><br /> 等效于 [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|在数据库范围内更改对象所有者时，将引发此事件。 服务器上任意数据库的任意对象所有权发生更改时，均将引发此事件。 等效于 [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|针对数据库对象（例如，程序集和架构）发出 GRANT、REVOKE 或 DENY 语句时将引发此事件。 服务器上任意数据库的任意对象权限发生更改时，均将引发此事件。 等效于 [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)。|  
 |DATABASE_OPERATION_GROUP|数据库中发生操作（如检查点或订阅查询通知）时将引发此事件。 对于任何数据库的任何操作都将引发此事件。 等效于 [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)。|  
@@ -160,7 +160,7 @@ ms.locfileid: "48222987"
 |SELECT|发出 SELECT 语句时将引发此事件。|  
 |UPDATE|发出 UPDATE 语句时将引发此事件。|  
 |Insert|发出 INSERT 语句时将引发此事件。|  
-|删除|发出 DELETE 语句时将引发此事件。|  
+|DELETE|发出 DELETE 语句时将引发此事件。|  
 |在运行 CREATE 语句前执行|发出 EXECUTE 语句时将引发此事件。|  
 |RECEIVE|发出 RECEIVE 语句时将引发此事件。|  
 |REFERENCES|检查 REFERENCES 权限时将引发此事件。|  
@@ -177,7 +177,7 @@ ms.locfileid: "48222987"
   
 |操作组名称|Description|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> -创建服务器审核<br />-更改服务器审核<br />-删除服务器审核<br />-创建服务器审核规范<br />-更改服务器审核规范<br />-删除服务器审核规范<br />-创建数据库审核规范<br />-更改数据库审核规范<br />-删除数据库审核规范|  
+|AUDIT_ CHANGE_GROUP|发出以下命令之一时将引发此事件：<br /><br /> -   CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-   DROP SERVER AUDIT<br />-   CREATE SERVER AUDIT SPECIFICATION<br />-   ALTER SERVER AUDIT SPECIFICATION<br />-   DROP SERVER AUDIT SPECIFICATION<br />-   CREATE DATABASE AUDIT SPECIFICATION<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>相关内容  
  [创建服务器审核和服务器审核规范](create-a-server-audit-and-server-audit-specification.md)  

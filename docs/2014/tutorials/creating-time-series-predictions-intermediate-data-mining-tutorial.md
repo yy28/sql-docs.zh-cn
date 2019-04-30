@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313891"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>创建时序预测（数据挖掘中级教程）
   在本课前面的任务中，您已经创建了时序模型并浏览了结果。 默认情况下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将始终为一个时序模型创建一组五 (5) 个预测，并将预测值作为预测图的一部分显示。 但是，也可以通过生成数据挖掘扩展插件 (DMX) 预测查询，来创建预测。  

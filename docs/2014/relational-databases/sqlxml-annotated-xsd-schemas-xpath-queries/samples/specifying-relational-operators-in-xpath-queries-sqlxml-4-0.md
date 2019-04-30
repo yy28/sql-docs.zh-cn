@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268604"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
   以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关该示例架构的信息，请参阅[示例带批注的 XSD 架构的 XPath 示例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -92,7 +92,7 @@ ms.locfileid: "52804430"
 ```  
   
 > [!NOTE]  
->  在模板中指定该查询时，< 字符必须进行实体编码，因为 < 字符在 XML 文档中有特殊含义。 在模板中，请使用 `<` 指定 < 字符。  
+>  在模板中，指定此查询时 < 字符必须进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用`<`指定 < 字符。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

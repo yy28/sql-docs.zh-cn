@@ -1,5 +1,5 @@
 ---
-title: 级别 (MDX) |Microsoft 文档
+title: 级别 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269944"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -42,10 +42,10 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  指定级别名称的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
- 如果指定级别号，则**级别**函数返回与指定的从零开始位置相关联的级别。  
+## <a name="remarks"></a>备注  
+ 如果指定了级别号，则**级别**函数返回与指定的从零开始位置相关联的级别。  
   
- 如果指定级别的名称，则**级别**函数将返回指定的级别。  
+ 如果指定级别名称，则**级别**函数将返回指定的级别。  
   
 > [!NOTE]  
 >  将字符串表达式语法用于用户定义的函数。  
@@ -53,7 +53,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="examples"></a>示例  
  以下示例说明了每个**级别**函数语法。  
   
-### <a name="numeric"></a>数字  
+### <a name="numeric"></a>Numeric  
  以下示例返回国家（地区）级别：  
   
 ```  
@@ -70,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

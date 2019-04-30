@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254183"
 ---
 # <a name="mixed-cursors"></a>混合游标
 混合的游标是由键集驱动游标和动态游标的组合。 使用时的结果集太大而无法合理地保存整个结果集的密钥。 混合的游标实现通过创建小于整个结果集，但大于行集由键集。  
   
- 只要应用程序滚动内由键集时，行为是由键集驱动。 如果外键集滚动应用程序，则行为是动态： 提取请求的行并创建新的由键集游标。 创建新的由键集后，行为将恢复为由键集驱动的键集内。  
+ 只要应用程序滚动内由键集时，行为是由键集驱动。 如果外键集滚动应用程序，则行为是动态：游标提取请求的行，并创建新的由键集。 创建新的由键集后，行为将恢复为由键集驱动的键集内。  
   
  例如，假设结果集包含 1,000 行，并使用混合的游标键集大小为 100、 行集大小为 10。 时提取第一个行集，游标将创建由键集包含的前 100 行的键。 然后根据请求返回前 10 行。  
   

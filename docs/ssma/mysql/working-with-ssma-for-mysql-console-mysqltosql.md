@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0cb332040b7d5e145639bc55feb41ecf62084478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288324"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>使用 SSMA for MySQL 控制台 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL 现可通过在命令行控制台应用程序访问。 脚本文件窗体应用程序以执行命令的输入。 作为控制台应用程序，SSMA 使脚本级别进行连接，可减少迁移周期，并可缩放的迁移工作。  
@@ -26,7 +26,7 @@ ms.locfileid: "47749165"
   
 |||  
 |-|-|  
-|**主题**|**Description**|  
+|**主题**|**说明**|  
 |[开始使用 SSMA for MySQL 控制台&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|说明要执行的控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项&#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|介绍运行 SSMA 控制台应用程序的命令行选项和参数。|  
 |[创建脚本文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|介绍如何创建脚本文件。|  

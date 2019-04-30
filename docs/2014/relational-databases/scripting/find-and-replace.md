@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225447"
 ---
 # <a name="find-and-replace"></a>查找和替换
   使用 **“查找和替换”** 对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”**，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  

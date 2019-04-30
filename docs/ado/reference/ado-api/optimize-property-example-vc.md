@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240075"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 属性示例 (VC++)
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象动态**优化**属性。 **Zip**字段**作者**表中**Pubs**数据库未编制索引。 设置[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)属性设置为**True**上**zip**字段授权 ADO 建立索引，可改进性能的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237808"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>查看或更改注册的筛选器和断字符
   在系统上安装或卸载了任何断字符或筛选器后，所做的更改并不会在服务器实例上自动生效。 本主题介绍在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上如何查看当前注册的断字符或筛选器，以及如何注册新安装的断字符和筛选器。  

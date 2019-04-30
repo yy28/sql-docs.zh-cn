@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273481"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>创建顺序分析和聚类分析挖掘模型结构（数据挖掘中级教程）
   要创建顺序分析和聚类分析挖掘模型，第一步是使用数据挖掘向导创建基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法的新挖掘结构和挖掘模型。  

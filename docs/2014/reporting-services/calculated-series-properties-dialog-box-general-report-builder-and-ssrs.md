@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266365"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   在“计算序列属性”对话框中选择“公式”可以添加或修改将根据使用现有序列数据作为输入的内置公式计算的序列。  

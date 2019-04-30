@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240253"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：第 1 级  
   
  返回语句选项的当前设置。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47646995"
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|为当前记录数的书签的 32 位整数值|  
 |SQL_ROW_NUMBER|32 位整数，指定在结果中的当前行的位置设置|  
-|SQL_TRANSLATE_DLL|错误:"驱动程序不支持"|  
+|SQL_TRANSLATE_DLL|错误："驱动程序不支持"|  
   
  Visual FoxPro ODBC 驱动程序具有任何转换 Dll。  
   

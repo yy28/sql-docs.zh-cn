@@ -16,92 +16,92 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240953"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 语句中使用的元素
 在前面列出的 SQL 语句中使用以下元素。  
   
 ## <a name="element"></a>元素  
- *基本表标识符*:: =*用户定义名称*  
+ *base-table-identifier* ::= *user-defined-name*  
   
- *基本表名*:: =*基础表标识符*  
+ *base-table-name* ::= *base-table-identifier*  
   
- *一个布尔值身份*:: [NOT] =*主数据库的布尔值*  
+ *boolean-factor* ::= [NOT] *boolean-primary*  
   
- *一个布尔值主*:: = 比较 *-谓词* &#124; (*搜索条件*)  
+ *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
   
- *一个布尔值术语*:: =*布尔值身份*[AND*布尔值术语*]  
+ *boolean-term* ::= *boolean-factor* [AND *boolean-term*]  
   
- *字符字符串文本*:: = ' {*字符*}...' (*字符*是驱动程序/数据源的字符集中的任何字符。 若要在字符字符串文本中包含文本的单引号字符 （"），使用两个文本引号字符 ['']。)  
+ *character-string-literal* ::= ''{*character*}...'' (*字符*是驱动程序/数据源的字符集中的任何字符。 若要在字符字符串文本中包含文本的单引号字符 （"），使用两个文本引号字符 ['']。)  
   
- *列标识符*:: =*用户定义名称*  
+ *column-identifier* ::= *user-defined-name*  
   
- *列名称*:: = [*表名称*。]*列标识符*  
+ *column-name* ::= [*table-name*.]*column-identifier*  
   
- *比较运算符*:: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
+ *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
  *比较谓词*:: =*表达式*比较运算符表达式  
   
  *数据类型*:: =*字符字符串类型*(*字符字符串类型*是 SQLGetTypeInfo 返回的结果集中的""DATA_TYPE""列了任一 SQL_CHAR 的任何数据类型或SQL_VARCHAR。)  
   
- *数字*:: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *动态参数*:: =？  
+ *dynamic-parameter* ::= ?  
   
- *表达式*:: = 术语&#124;表达式 {+&#124;-} 术语  
+ *expression* ::= term &#124; expression {+&#124;-} term  
   
- *身份*:: = [*+*&#124;*-*]*主*  
+ *factor* ::= [*+*&#124;*-*]*primary*  
   
- *插入值*:: =  
+ *insert-value* ::=  
   
- *动态参数*  
+ *dynamic-parameter*  
   
- &#124;*文本*  
+ &#124; *literal*  
   
- &AMP;#124;为 NULL  
+ &#124; NULL  
   
- &AMP;#124;用户  
+ &#124; USER  
   
- *字母*:: =*写写字母&#124;上限大小写字母*  
+ *letter* ::= *lower-case-letter &#124; upper-case-letter*  
   
- *文字*:: =*字符字符串文本*  
+ *literal* ::= *character-string-literal*  
   
  *写写字母*:: = &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r&#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
- *order by 子句*:: = ORDER BY*排序规范*[，*排序规范*]...  
+ *order-by-clause* ::=    ORDER BY *sort-specification* [, *sort-specification*]...  
   
- *主*:: =*列名称*  
+ *primary* ::= *column-name*  
   
- &#124;*动态参数*  
+ &#124; *dynamic-parameter*  
   
- &#124;*文本*  
+ &#124; *literal*  
   
- &#124;(*表达式*)  
+ &#124; ( *expression* )  
   
- *搜索条件*:: =*布尔值术语*[或者*搜索条件*]  
+ *search-condition* ::= *boolean-term* [OR *search-condition*]  
   
- *选择列表*:: = \* &#124; *选择子列表*[，*选择子列表*]... (*选择列表*不能包含参数。)  
+ *select-list* ::= \* &#124; *select-sublist* [, *select-sublist*]...  (*select-list* cannot contain parameters.)  
   
- *选择子列表*:: =*表达式*  
+ *select-sublist* ::= *expression*  
   
- *排序规范*:: = {*无符号整数&#124;列名称*} [*ASC &#124; DESC*]  
+ *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
   
- *表标识符*:: =*用户定义名称*  
+ *table-identifier* ::= *user-defined-name*  
   
- *表名*:: =*表标识符*  
+ *table-name* ::= *table-identifier*  
   
- *表引用*:: =*表名称*  
+ *table-reference* ::= *table-name*  
   
- *表引用列表*:: =*表引用*[，*表引用*]...  
+ *table-reference-list* ::= *table-reference* [,*table-reference*]...  
   
- *字词*:: =*身份* &#124; *术语*{\*&#124;*/*}*身份*  
+ *term* ::= *factor* &#124; *term* {\*&#124;*/*} *factor*  
   
- *无符号整数*:: = {*数字*}  
+ *unsigned-integer* ::= {*digit*}  
   
  *上限大小写字母*:: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G&#124;小时&#124;我&#124;J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *用户定义名称*:: =*字母*[*数字* &#124; *字母* &#124; *_*]...
+ *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_*]...

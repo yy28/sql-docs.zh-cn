@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285023"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>以编程方式为 Excel 驱动程序设置选项
 
-|选项|Description|方法|  
+|Option|Description|方法|  
 |------------|-----------------|------------|  
 |数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，请使用**DSN**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |“数据库”|Microsoft Access 数据源可以设置而无需选择或创建数据库。 如果在安装程序时未不提供任何数据库，将提示用户连接到数据源时选择的数据库文件。|若要动态设置此选项，请使用**DBQ**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  

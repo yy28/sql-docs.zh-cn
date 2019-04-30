@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288338"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>将现有列更改为 XML 列
   ALTER TABLE 语句支持 `xml` 数据类型。 例如，可以将任意字符串类型列更改为 `xml` 数据类型。 注意，在这些情况下，列中包含的文档必须格式正确。 此外，如果将列的类型从字符串更改为类型化的 xml，则列中的文档将根据指定的 XSD 架构进行验证。  

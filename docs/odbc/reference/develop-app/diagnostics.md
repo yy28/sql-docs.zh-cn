@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242300"
 ---
 # <a name="diagnostics"></a>诊断
 在 ODBC 中的函数返回以下两种方式的诊断信息。 返回代码指示总体成功或失败的函数，而诊断记录提供有关该函数的详细的信息。 即使该函数成功，则返回至少一个诊断记录的标头记录。  

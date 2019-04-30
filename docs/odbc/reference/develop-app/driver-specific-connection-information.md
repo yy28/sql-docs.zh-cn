@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3852e713e517828e83e74bf7fb291ef20865532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238705"
 ---
 # <a name="driver-specific-connection-information"></a>特定于驱动程序的连接信息
 **SQLConnect**假定数据源名称、 用户 ID 和密码足以连接到数据源并且，可以在系统上存储的所有其他连接信息。 这经常是不这种情况。 例如，驱动程序可能需要一个用户 ID 和密码登录到服务器的另一个用户 ID 和密码登录到 DBMS。 因为**SQLConnect**接受单个用户 ID 和密码，这意味着，用户 ID 和密码必须存储在系统上的数据源信息如果**SQLConnect**时要使用。 这是可能出现安全违规，除非密码进行加密，否则应避免使用。  

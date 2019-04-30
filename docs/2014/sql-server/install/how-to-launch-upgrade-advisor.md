@@ -1,5 +1,5 @@
 ---
-title: 如何： 启动升级顾问 |Microsoft Docs
+title: 如何：启动升级顾问 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295114"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>如何启动升级顾问
+# <a name="how-to-launch-upgrade-advisor"></a>如何：启动升级顾问
   升级顾问提供了可用于启动升级顾问分析向导和升级顾问报表查看器的中央控制台。 本主题介绍了如何启动升级顾问。  
   
 ### <a name="to-launch-upgrade-advisor"></a>若要启动升级顾问  

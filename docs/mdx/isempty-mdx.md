@@ -1,5 +1,5 @@
 ---
-title: IsEmpty (MDX) |Microsoft 文档
+title: IsEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224965"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 
@@ -32,16 +32,16 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  有效 MDX（多维表达式）表达式，通常返回成员或元组的单元坐标。  
   
-## <a name="remarks"></a>Remarks  
- **IsEmpty**函数返回**true**如果计算的表达式是空单元值。 否则，此函数返回**false**。  
+## <a name="remarks"></a>备注  
+ **IsEmpty**函数将返回**true**如果表达式的计算结果为空单元值。 否则，此函数返回**false**。  
   
 > [!NOTE]  
 >  成员的默认属性为成员的值。  
   
- **IsEmpty**函数是唯一的方法来可靠地测试空单元格，因为空单元值在中具有特殊含义[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **IsEmpty**函数是唯一的方法可以可靠测试空单元，因为空单元值中具有特殊含义[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 > [!IMPORTANT]  
->  如果值表达式的计算结果将返回错误，则该函数将返回**false**。 值表达式也可能返回错误，例如，属性引用引用了无效或不存在的属性。  
+>  如果值表达式的计算将返回错误，则该函数将返回**false**。 值表达式也可能返回错误，例如，属性引用引用了无效或不存在的属性。  
   
  有关空单元的详细信息，请参阅 OLE DB 文档。  
   
@@ -60,6 +60,6 @@ IsEmpty(Value_Expression)
   
 ## <a name="see-also"></a>请参阅  
  [使用空值](../mdx/working-with-empty-values.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

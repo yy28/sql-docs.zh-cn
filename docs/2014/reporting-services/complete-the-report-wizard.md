@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f226cc3db3d9f10292624c363d3f0cc04b13010
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266028"
 ---
 # <a name="complete-the-report-wizard"></a>完成报表向导
   使用此页可以对报表进行命名并检查要应用于报表的选项。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285692"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>创建预测（数据挖掘基础教程）
   已测试挖掘模型的准确性，并决定你感到满意结果后，您然后可以在使用预测查询生成器来生成预测**挖掘模型预测**对数据挖掘模型中的选项卡设计器。  

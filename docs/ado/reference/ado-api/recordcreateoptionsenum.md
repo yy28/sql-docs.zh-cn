@@ -1,5 +1,5 @@
 ---
-title: RecordCreateOptionsEnum |Microsoft Docs
+title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239973"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定是否将现有**记录**应为打开或一个新**记录**为创建[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 可以使用 AND 运算符组合这些值。  

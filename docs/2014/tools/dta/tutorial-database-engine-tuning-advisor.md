@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268365"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教程：Database Engine Tuning Advisor
   欢迎使用数据库引擎优化顾问教程。 数据库引擎优化顾问检查指定数据库中处理查询的方式，然后建议如何通过修改数据库结构（例如索引、索引视图和分区）来改善查询处理性能。  

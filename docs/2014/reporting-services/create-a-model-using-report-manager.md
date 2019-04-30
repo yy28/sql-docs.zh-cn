@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265968"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
   您可以使用报表管理器从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库或 Oracle 数据库生成模型。 报表模型是从已发布到报表服务器上的共享数据源中生成。 如果尚未拥有共享数据源，则必须先创建一个。  

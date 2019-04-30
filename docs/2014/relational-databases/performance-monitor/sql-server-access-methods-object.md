@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251113"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server Access Methods 对象
   **中的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供用于监视如何访问数据库中的逻辑数据的计数器。 用 **Buffer Manager** 计数器监视对磁盘上的数据库页的物理访问。 监视用于访问数据库中存储的数据的方法有助于确定是否可以通过添加或修改索引、添加或移动分区、添加文件或文件组、对索引进行碎片整理或者重写查询来提高查询性能。 **Access Methods** 计数器也可用于监视数据库中数据、索引和可用空间的数量，从而指示每个服务器实例的数据卷和碎片。 索引的碎片过多会降低性能。  

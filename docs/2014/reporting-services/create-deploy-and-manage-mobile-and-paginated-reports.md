@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266166"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供大量现成的工具和服务，帮助您创建、 部署和管理你的组织的报表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中包括了很多可用于扩展和自定义报告功能的编程特性。  

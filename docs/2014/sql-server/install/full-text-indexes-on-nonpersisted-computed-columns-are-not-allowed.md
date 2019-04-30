@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ce7f80189cc15ea946f5cc8fab470ed83a754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298281"
 ---
 # <a name="full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed"></a>不允许对非持久化计算列建立全文检索
   不能对不确定的计算列和不精确的计算列创建全文检索。 此类列不能用作类型列或全文键列。  

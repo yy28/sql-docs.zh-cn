@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270773"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 类
   [SecurityCertificate 类] securitycertificate class.md) 表示安全证书。 证书是一个数字签名的语句，将公钥的值绑定到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，用于保存相应的私钥。 证书是由证书颁发机构颁发的。  

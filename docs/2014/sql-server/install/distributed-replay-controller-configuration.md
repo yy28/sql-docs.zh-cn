@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 186ae568a21c39f35389100d55d5395687f20755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253520"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Distributed Replay 控制器配置
   使用 **安装向导的** “Distributed Replay 控制器配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以指定您希望向其授予针对 Distributed Replay 控制器服务的管理权限的用户。  

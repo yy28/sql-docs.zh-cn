@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239730"
 ---
 # <a name="clone-method-ado"></a>Clone 方法 (ADO)
 创建重复[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象从现有**记录集**对象。 （可选） 指定的克隆是只读的。  
@@ -68,17 +68,17 @@ rsNew.Filter = rsOriginal.Filter
   
  下表提供了所有的完整列表**记录集**事件。 它指示它们是否有效以及是否使用生成的任何记录集克隆触发**克隆**方法。  
   
-|事件|在克隆中触发？|  
+|Event|在克隆中触发？|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|否|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|否|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|否|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|用户帐户控制|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|用户帐户控制|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|用户帐户控制|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|用户帐户控制|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|是|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|是|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|否|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|否|  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281212"
 ---
 # <a name="views-delete-method-example-vb"></a>视图 Delete 方法示例 (VB)
 下面的代码演示如何使用[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法从目录中删除视图。  

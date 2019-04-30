@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270594"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>“条件”窗格 (Visual Database Tools)
   “条件”窗格用于指定查询选项（例如要显示哪些数据列、如何对结果进行排序以及选择哪些行等），可以通过将选择输入到一个类似电子表格的网格中来进行指定。 在“条件”窗格中，可以指定：  
@@ -60,7 +60,7 @@ ms.locfileid: "52797909"
 |“列”|All|显示用于查询的数据列名或计算列的表达式。 该列将被锁定，以便当水平滚动屏幕时，始终可以看到该列。|  
 |别名|SELECT、INSERT FROM、UPDATE 和 MAKE TABLE|指定列的可选名称或可以为计算列使用的名称。|  
 |表|SELECT、INSERT FROM、UPDATE 和 MAKE TABLE|指定关联数据列的表名或表结构对象名。 对于计算列，该列是空白的。|  
-|“输出”|SELECT、INSERT FROM 和 MAKE TABLE|指定某个数据列是否出现在查询输出中。<br /><br /> 注意：如果数据库允许，可以将某个数据列用于排序子句或搜索子句，但不在结果集内显示该数据列。|  
+|“输出”|SELECT、INSERT FROM 和 MAKE TABLE|指定某个数据列是否出现在查询输出中。<br /><br /> 注意：如果数据库允许，您可将数据列用于排序子句或搜索子句，而不会显示在结果集中。|  
 |排序类型|SELECT 和 INSERT FROM|指定关联的数据列用于对查询结果进行排序，并指定排序是升序还是降序。|  
 |“排序顺序”|SELECT 和 INSERT FROM|指定用于对结果集进行排序的数据列的排序优先级。 当更改某个数据列的排序顺序时，所有其他列的排序顺序都将相应更新。|  
 |分组依据|SELECT、INSERT FROM 和 MAKE TABLE|指定关联的数据列用于创建聚合查询。 只有从“工具”菜单中选择“分组依据”或向 SQL 窗格中添加了 GROUP BY 子句时，才会显示此网格列。<br /><br /> 默认情况下，该列的值设置为“分组依据”，而且该列也将成为 GROUP BY 子句的一部分。<br /><br /> 当移动到该列的某个单元格中，并选择一个聚合函数以应用到关联的数据列时，在默认情况下所得到的表达式将作为结果集的输出列添加。|  

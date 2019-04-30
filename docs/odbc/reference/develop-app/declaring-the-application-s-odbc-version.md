@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267685"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>声明应用程序&#39;s ODBC 版本
 应用程序分配连接之前，它必须设置 SQL_ATTR_ODBC_VERSION 环境属性。 此属性规定应用程序，如下所示 ODBC 2。*x*或 ODBC 3。*x*规范时使用以下各项：  
@@ -32,7 +32,7 @@ ms.locfileid: "53591541"
   
 -   **日期、 时间和时间戳类型标识符**。 下表显示日期、 时间和 ODBC 2 中的时间戳数据类型标识符。*x*和 ODBC 3。*x*。  
   
-    |ODBC 2。*x*|ODBC 3。*x*|  
+    |ODBC 2.*x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**SQL 类型标识符**||  
     |SQL_DATE|SQL_TYPE_DATE|  

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288455"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>评估 Oracle 架构以进行转换 (OracleToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，应确定迁移将复杂程度，并且多长时间的迁移。 SSMA 可以创建评估报告，显示将成功转换的对象的百分比。 SSMA 还可以查看特定问题，导致转换失败。  
@@ -37,7 +37,7 @@ SSMA 时创建此评估报表时，将转换为所选的 Oracle 数据库对象[
   
     SSMA 会在窗口底部的状态栏中显示进度。 如果输出窗格是可见的您也会看到输出窗格中的消息。  
   
-    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle： 评估报告窗口中会显示。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle:将出现评估报表窗口。  
   
 ## <a name="using-assessment-reports"></a>使用评估报告  
 评估报告窗口包含三个窗格：  

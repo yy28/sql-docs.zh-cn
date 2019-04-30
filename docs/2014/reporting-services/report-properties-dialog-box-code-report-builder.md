@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302399"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>“报表属性”对话框 ->“代码”（报表生成器和 SSRS）
   在 **“报表属性”** 对话框中选择 **“代码”** 可以定义将由报表中的表达式使用的自定义代码。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225249"
 ---
 # <a name="find-results-windows"></a>“查找结果”窗口
   两个“查找结果”窗口显示通过使用 **“查找和替换”** 对话框中的 **“在文件中查找”** 或 **“在文件中替换”** 选项卡找到的匹配项。 **“在文件中查找”** 和 **“在文件中替换”** 选项卡中的 **“结果选项”** 命令允许您选择“查找结果”窗口，其中显示找到的所有匹配项。  

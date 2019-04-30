@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255430"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>查看和解决合并发布的数据冲突 (SQL Server Management Studio)
   可以根据为每个项目指定的冲突解决程序来解决合并发布中的冲突。 默认情况下，解决冲突无需用户干预。 但是，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中查看冲突，并更改解决的结果。  
@@ -51,7 +51,7 @@ ms.locfileid: "52770810"
 3.  右键单击要查看其冲突的发布，然后单击 **“查看冲突”**。  
   
     > [!NOTE]  
-    >  如果为 **conflict_logging** 属性指定了值 **“subscriber”** ， **“查看冲突”** 菜单选项将不可用。 若要查看冲突，请在命令提示符下启动 ConflictViewer.exe。 默认情况下，ConflictViewer.exe 位于以下目录中：Microsoft SQL server\100\tools\binn\vsshell\common7\ide。 要获取有效引导参数的列表，请运行 ConflictViewer.exe -?。  
+    >  如果为 **conflict_logging** 属性指定了值 **“subscriber”** ， **“查看冲突”** 菜单选项将不可用。 若要查看冲突，请在命令提示符下启动 ConflictViewer.exe。 默认情况下，ConflictViewer.exe 位于以下目录中：Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE。 要获取有效引导参数的列表，请运行 ConflictViewer.exe -?。  
   
 4.  在 **“选择冲突表”** 对话框中，选择要查看冲突的数据库、发布和表。  
   

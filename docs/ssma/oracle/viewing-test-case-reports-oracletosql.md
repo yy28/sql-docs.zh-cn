@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283635"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>查看测试用例报表 (OracleToSQL)
 测试用例报表显示的测试验证结果和一般测试的信息。 如果测试失败，还会显示有关已验证的对象中的任何不匹配数据的信息。  

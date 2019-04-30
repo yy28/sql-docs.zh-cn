@@ -1,5 +1,5 @@
 ---
-title: Cousin (MDX) |Microsoft 文档
+title: 它的同级 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad604900ac31cbcfb7e9a68fba4241c5f539b491
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284981"
 ---
 # <a name="cousin-mdx"></a>Cousin (MDX)
 
@@ -35,7 +35,7 @@ Cousin( Member_Expression , Ancestor_Member_Expression )
  *Ancestor_Member_Expression*  
  返回祖先成员的有效多维表达式 (MDX) 成员表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数按各级别内的成员的顺序和位置进行操作。 如果有两个层次结构，第一个层次结构有四个级别，第二个层次结构有五个级别，则第一个层次结构的第三个级别与第二个层次结构的第三个级别是同级。  
   
 ## <a name="examples"></a>示例  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

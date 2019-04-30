@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254165"
 ---
 # <a name="multiple-results"></a>多个结果
 一个*结果*内容过后未返回数据源执行的语句。 ODBC 具有两种类型的结果： 结果集和行计数。 *行计数*的更新，受影响的行数删除，或 insert 语句。 批处理中所述[SQL 语句的批处理](../../../odbc/reference/develop-app/batches-of-sql-statements.md)，可以生成多个结果。  
@@ -31,8 +31,8 @@ ms.locfileid: "52539904"
   
 |批处理类型|行计数|结果集|  
 |----------------|----------------|-----------------|  
-|显式批处理|SQL_BATCH_ROW_COUNT [a]|-[b]。|  
-|过程|SQL_BATCH_ROW_COUNT [a]|-[b]。|  
+|显式批处理|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|过程|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |参数的数组|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] 行计数生成批处理中的语句可能受支持，但返回的行计数不受支持。 中的 SQL_BATCH_SUPPORT 选项**SQLGetInfo**指示行计数生成语句批处理中允许是否; SQL_BATCH_ROW_COUNTS 选项指示这些行计数返回到应用程序。  

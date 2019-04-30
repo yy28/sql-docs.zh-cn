@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284949"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>以编程方式为 dBASE 驱动程序设置选项
 
-|选项|Description|方法|  
+|Option|Description|方法|  
 |------------|-----------------|------------|  
 |估计行数|确定是否近似表大小统计信息。 此选项适用于使用 ODBC 驱动程序的所有数据源。|若要动态设置此选项，请使用**统计信息**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  
 |对序列进行排序|字段的排序顺序的序列。<br /><br /> 序列可以是：ASCII （默认值） 或国际。|若要动态设置此选项，请使用**COLLATINGSEQUENCE**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)。|  

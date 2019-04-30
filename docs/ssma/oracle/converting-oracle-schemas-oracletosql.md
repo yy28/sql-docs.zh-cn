@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288884"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
 已连接到 Oracle 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  

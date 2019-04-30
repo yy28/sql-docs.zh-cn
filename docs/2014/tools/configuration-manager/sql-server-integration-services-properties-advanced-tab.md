@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c854e26ee7acfc34931e5b08f1179494d2cbd096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252669"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>SQL Server Integration Services 属性（“高级”选项卡）
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 以 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  

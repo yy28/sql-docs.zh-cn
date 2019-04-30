@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ec2ec96afdeb52f121a49673e881821406090a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298323"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 属性示例 (VB)
 此示例演示[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)的属性[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象。 该代码将追加一个新[表](../../../ado/reference/adox-api/table-object-adox.md)，然后定义新的主要密钥，设置**DeleteRule**到**adRICascade**。  

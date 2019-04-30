@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251466"
 ---
 # <a name="serializability"></a>可序列化性
 理想情况下，事务应*可序列化*。 事务被称为可串行-运行它们的结果作为的同时运行的事务的结果是相同的情况下序列化一个接一个即。 它并不重要的事务，则首先执行，仅的结果不会反映任何混合的事务。  

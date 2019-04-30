@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280484"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
   参数是在从“工具”菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  

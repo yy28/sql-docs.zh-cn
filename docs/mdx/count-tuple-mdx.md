@@ -1,5 +1,5 @@
 ---
-title: 计数 （元组） (MDX) |Microsoft 文档
+title: Count （元组） (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3775af63181489b982778d40ddd69ebc12872271
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285039"
 ---
 # <a name="count-tuple-mdx"></a>Count（元组）(MDX)
 
@@ -32,7 +32,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  返回元组的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回元组中的维度数。  
   
 ## <a name="example"></a>示例  
@@ -48,7 +48,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>请参阅  
  [计数&#40;维度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [计数&#40;层次结构级别&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [计数&#40;设置&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count（集）(MDX)](../mdx/count-set-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

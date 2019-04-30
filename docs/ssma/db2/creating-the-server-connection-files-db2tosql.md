@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298913"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>创建服务器连接文件 (DB2ToSQL)
 脚本文件的服务器部分中或在单独的服务器连接文件中，可以指定服务器信息。 服务器连接文件的命令行参数是， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
   
-**示例： 1**  
+**示例：1**  
   
 ```  
 <!--Sample of server connection file commands -->  

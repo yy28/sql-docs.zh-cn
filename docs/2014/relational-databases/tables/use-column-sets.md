@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298636"
 ---
 # <a name="use-column-sets"></a>使用列集
   使用稀疏列的表可以指定一个列集以返回表中的所有稀疏列。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列组合成为一种结构化的输出。 列集与计算列的相似之处在于，列集并不是物理地存储在表中。 列集与计算列的不同之处在于，列集可直接更新。  

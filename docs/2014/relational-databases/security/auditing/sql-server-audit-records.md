@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238381"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的用户。  
@@ -26,27 +26,27 @@ ms.locfileid: "53364299"
   
 |列名|Description|类型|始终可用|  
 |-----------------|-----------------|----------|----------------------|  
-|**event_time**|触发可审核操作的日期/时间。|`datetime2`|用户帐户控制|  
-|**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|`int`|用户帐户控制|  
-|**action_id**|操作的 ID<br /><br /> 提示：若要使用**action_id**作为谓词，它必须将字符串转换，为数字值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|`varchar(4)`|用户帐户控制|  
-|**succeeded**|指示触发事件的操作是否成功|`bit` -1 = success,0 = Fail|用户帐户控制|  
+|**event_time**|触发可审核操作的日期/时间。|`datetime2`|是|  
+|**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|`int`|是|  
+|**action_id**|操作的 ID<br /><br /> 提示：若要使用**action_id**作为谓词，它必须将字符串转换，为数字值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|`varchar(4)`|是|  
+|**succeeded**|指示触发事件的操作是否成功|`bit` -1 = success,0 = Fail|是|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|`bigint`|否|  
 |**is_column_permission**|指示列级别权限的标志|`bit` -1 = true，0 = False|否|  
-|**session_id**|发生该事件的会话的 ID。|`int`|用户帐户控制|  
-|**server_principal_id**|在其中执行操作的登录上下文 ID。|`int`|用户帐户控制|  
+|**session_id**|发生该事件的会话的 ID。|`int`|是|  
+|**server_principal_id**|在其中执行操作的登录上下文 ID。|`int`|是|  
 |**database_principal_id**|在其中执行操作的数据库用户上下文 ID。|`int`|否|  
 |**object_ id**|发生审核的实体的主 ID。 这包括：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象|`int`|否|  
-|**target_server_principal_id**|可审核操作适用的服务器主体。|`int`|用户帐户控制|  
+|**target_server_principal_id**|可审核操作适用的服务器主体。|`int`|是|  
 |**target_database_principal_id**|可审核操作适用的数据库主体。|`int`|否|  
-|**class_type**|发生审核的可审核实体的类型。|`varchar(2)`|用户帐户控制|  
-|**session_server_principal_name**|会话的服务器主体。|`sysname`|用户帐户控制|  
-|**server_principal_name**|当前登录名。|`sysname`|用户帐户控制|  
-|**server_principal_sid**|当前登录名 SID。|`varbinary`|用户帐户控制|  
+|**class_type**|发生审核的可审核实体的类型。|`varchar(2)`|是|  
+|**session_server_principal_name**|会话的服务器主体。|`sysname`|是|  
+|**server_principal_name**|当前登录名。|`sysname`|是|  
+|**server_principal_sid**|当前登录名 SID。|`varbinary`|是|  
 |**database_principal_name**|当前用户。|`sysname`|否|  
 |**target_server_principal_name**|操作的目标登录名。|`sysname`|否|  
 |**target_server_principal_sid**|目标登录名的 SID。|`varbinary`|否|  
 |**target_database_principal_name**|操作的目标用户。|`sysname`|否|  
-|**server_instance_name**|发生审核的服务器实例的名称。 使用标准计算机\实例格式。|`nvarchar(120)`|用户帐户控制|  
+|**server_instance_name**|发生审核的服务器实例的名称。 使用标准计算机\实例格式。|`nvarchar(120)`|是|  
 |**database_name**|发生此操作的数据库上下文。|`sysname`|否|  
 |**schema_name**|发生此操作的架构上下文。|`sysname`|否|  
 |**object_name**|发生审核的实体的名称。 这包括：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象<br /><br /> TSQL 语句（如果有）|`sysname`|否|  

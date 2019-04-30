@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 123afc28db147118d10a66199364ca8b73afb34c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265411"
 ---
 # <a name="csv-device-information-settings"></a>CSV 设备信息设置
   通过用于 CSV 呈现扩展插件的设备信息设置，可以更改分隔符和限定符并指定换行符处理。 还可以提交文件的扩展名，以及指示编码和是否在输出中包括标题行。 由于分隔符可能是特殊字符，因此，如果将设置编写为 XML，则应在 CDATA 部分对它们进行编码。  
@@ -35,7 +35,7 @@ ms.locfileid: "59951643"
 |**NoHeader**|指示是否从输出中排除标题行。 默认值是 `false`。|  
 |`Qualifier`|围绕着包含字段分隔符或记录分隔符的结果放置的限定符字符串。 如果结果包含限定符，将重复此限定符。 `Qualifier` 设置必须与 `FieldDelimiter` 和 `RecordDelimiter` 设置不同。 默认值为引号 (")。|  
 |`RecordDelimiter`|要放在每个记录末尾的记录分隔符。 默认值为 \<cr>\<lf>。|  
-|**SuppressLineBreaks**|指示是否在输出中包含从数据删除的换行符。 默认值是 `false`。 如果值为 `true`，则 `FieldDelimiter`、`RecordDelimiter` 和 `Qualifier` 设置不能为空格字符。|  
+|**SuppressLineBreaks**|指示是否在输出中包含从数据删除的换行符。 默认值为 `false`。 如果值为 `true`，则 `FieldDelimiter`、`RecordDelimiter` 和 `Qualifier` 设置不能为空格字符。|  
 |`UseFormattedValues`|指示是否将格式化的字符串放入 CSV 输出中。 默认值为 `true`（当 `ExcelMode` 为 `true` 时），否则为 `false`。|  
   
 ## <a name="see-also"></a>请参阅  

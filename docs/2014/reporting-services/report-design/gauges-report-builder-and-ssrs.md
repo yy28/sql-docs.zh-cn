@@ -160,11 +160,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225081"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>仪表（报表生成器和 SSRS）
   仪表数据区域是显示数据集中的单个值的一维数据区域。 各仪表始终位于仪表面板内，您可以在仪表面板内添加子仪表或相邻仪表。 可以使用仪表面板在单个仪表面板内创建多个共享公用功能（如筛选、分组或排序）的多个仪表。  

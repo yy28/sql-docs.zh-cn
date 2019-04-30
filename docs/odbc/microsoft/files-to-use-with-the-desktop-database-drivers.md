@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314227"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>要与桌面数据库驱动程序一起使用的文件
 ODBC 桌面数据库驱动程序用于 Microsoft Jet 数据库引擎，可安装 ISAM 文件和 Microsoft ODBC 文件。 并非所有所需的重新分发的产品，而且并非所有都核心组件。  

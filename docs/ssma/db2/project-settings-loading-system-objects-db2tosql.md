@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266463"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>项目设置 （加载系统对象） (DB2ToSQL)
 正在加载系统对象页**项目设置**对话框可以指定的 DB2 系统对象 SSMA 将转换并将加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

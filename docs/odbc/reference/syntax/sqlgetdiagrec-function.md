@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagRec 函数 |Microsoft Docs
+title: SQLGetDiagRec Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259328"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 函数
 **符合性**  

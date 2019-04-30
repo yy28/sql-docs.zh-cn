@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239949"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 属性示例 （VC + +）
 此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)并[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)通过显示一条消息，如果一条记录的基础数据的属性已更改期间[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新。  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **数据已更改 ！**  
-**标题 ID: PS1372**  
+**标题 ID:PS1372**  
 **当前值： self_help**   
 **原始值： 心理学**   
 **基础值： 社会学**   
 **数据已更改 ！**  
-**标题 ID: PS2091**  
+**标题 ID:PS2091**  
 **当前值： self_help**   
 **原始值： 心理学**   
 **基础值： 社会学**   
 **数据已更改 ！**  
-**标题 ID: PS2106**  
+**标题 ID:PS2106**  
 **当前值： self_help**   
 **原始值： 心理学**   
 **基础值： 社会学**   
 **数据已更改 ！**  
-**标题 ID: PS3333**  
+**标题 ID:PS3333**  
 **当前值： self_help**   
 **原始值： 心理学**   
 **基础值： 社会学**   
 **数据已更改 ！**  
-**标题 ID: PS7777**  
+**标题 ID:PS7777**  
 **当前值： self_help**   
 **原始值： 心理学**   
 **基础值： 社会学**    

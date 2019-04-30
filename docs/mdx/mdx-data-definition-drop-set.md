@@ -1,5 +1,5 @@
 ---
-title: 删除 SET 语句 (MDX) |Microsoft 文档
+title: DROP SET 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284968"
 ---
-# <a name="mdx-data-definition---drop-set"></a>MDX 数据定义-删除组
+# <a name="mdx-data-definition---drop-set"></a>MDX 数据定义 - DROP SET
 
 
   删除一个命名集。  
@@ -35,12 +35,12 @@ DROP [SESSION] SET
   
 ## <a name="arguments"></a>参数  
  *Cube_Name*  
- 有效的字符串表达式，它提供的多维数据集的名称。  
+ 提供的多维数据集名称的有效字符串表达式。  
   
  *Set_Name*  
  有效字符串表达式，提供将要删除的命名集的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关命名集的详细信息，请参阅[在 MDX 中生成命名集 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)。  
   
 ## <a name="see-also"></a>请参阅  

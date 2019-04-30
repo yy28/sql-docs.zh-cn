@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239028"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  

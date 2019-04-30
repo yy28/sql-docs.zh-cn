@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253562"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>配置帐户以创建和管理 SQL Server 代理作业
   本主题介绍如何对用户进行配置以创建或执行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
--   **开始之前：**[安全](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
 -   **若要配置用户以创建和管理 SQL Server 代理作业，使用：**[SQL Server Management Studio](#SSMS)  
   

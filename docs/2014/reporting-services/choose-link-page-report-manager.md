@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266059"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
   使用“选择链接”页可为当前所选链接报表选择要基于的不同报表。 链接报表基于已发布到报表服务器的其他报表。 链接报表使用基础报表的布局和数据，但是其属性页与基础报表不同，以便您可以自定义参数属性、安全设置、名称、说明和位置。  

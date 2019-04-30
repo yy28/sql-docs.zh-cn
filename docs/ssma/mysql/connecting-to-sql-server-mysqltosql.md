@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273511"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server，必须连接到 SQL Server 目标实例。 连接时，SSMA 获取有关 SQL Server 实例中的所有数据库的元数据，并在 SQL Server 元数据资源管理器中显示数据库元数据。 SSMA 存储的连接，但不存储密码的 SQL Server 实例的信息。  
@@ -81,12 +81,12 @@ ms.locfileid: "52412284"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (版本：9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (版本：10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|用户帐户控制|是|是|是|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||用户帐户控制|是|是|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||用户帐户控制|是|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||用户帐户控制|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||用户帐户控制||  
-|SQL Azure||||||用户帐户控制|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||是||  
+|SQL Azure||||||是|  
   
 > [!IMPORTANT]  
 > 根据项目类型，但不是根据版本的数据库对象的转换执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相连。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年项目中，执行转换为每个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 即使你已连接到更高版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)。  

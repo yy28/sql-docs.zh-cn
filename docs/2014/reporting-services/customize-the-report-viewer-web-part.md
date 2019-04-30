@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264833"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自定义报表查看器 Web 部件
   可以使用报表查看器 Web 部件来查看配置为 SharePoint 集成模式的报表服务器上运行的报表。 可显示的报表包括报表定义 (.rdl) 文件和报表生成器报表。 报表在报表查看器 Web 部件的新页面中自动打开，但如果您希望始终在某现有网页中显示特定报表，也可以将报表查看器 Web 部件添加至该网页或站点。  

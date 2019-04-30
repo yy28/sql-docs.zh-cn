@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 23d018a8d551a5c3a7f2978339b6cf7612f378fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253278"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Azure，必须连接到 SQL Azure 的目标实例。 连接时，SSMA 获取有关 SQL Azure 实例中的所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储的 SQL Azure 连接到，但不存储密码的实例的信息。  

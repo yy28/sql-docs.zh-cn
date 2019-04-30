@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4bbf7c60159453aeeb1b4b5ae3b939875ee30395
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260929"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>从 Microsoft Access 导入报表 (Reporting Services)
   在报表设计器中，你可以导入报表从[!INCLUDE[msCoName](../includes/msconame-md.md)]访问数据库或项目。 必须在安装报表设计器的计算机上安装 Access 2002 或更高版本。  

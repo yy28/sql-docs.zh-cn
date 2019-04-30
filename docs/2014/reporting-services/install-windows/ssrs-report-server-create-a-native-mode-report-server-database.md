@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae7a7ed873a86096f1f203cc20b2bfecd379db6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225757"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>创建本机模式报表服务器数据库（SSRS 配置管理器）
   本机模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用于内部存储。 该数据库是必需的，它用于存储已发布的报表、模型、共享数据源、会话数据、资源和服务器元数据。  

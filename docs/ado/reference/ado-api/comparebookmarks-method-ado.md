@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315977"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
 比较两个书签，并返回其相对值的指示。  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  一个书签的数据类型是特定于每个提供程序，因为 ADO 公开其作为**变体**。 例如，SQL Server，书签将变为类型 DBTYPE_R8 的 (**Double**)。 ADO 将公开此类型作为**Variant**使用的子类型**Double**。  
   
- 在比较书签时，ADO 将不会尝试任何类型的强制转换。 将值只被传递给提供程序进行比较。 如果传递给书签**CompareBookmarks**方法存储在不同类型的变量，它可以生成以下类型不匹配错误:"自变量的类型不正确、 不在可接受范围内，或发生冲突与每个其他。  
+ 在比较书签时，ADO 将不会尝试任何类型的强制转换。 将值只被传递给提供程序进行比较。 如果传递给书签**CompareBookmarks**方法存储在不同类型的变量，它可以生成以下类型不匹配错误："自变量的类型不正确、 不在可接受范围内，或与相互冲突。"  
   
  一个书签，用于无效或格式不正确会导致错误。  
   

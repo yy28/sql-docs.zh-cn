@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309228"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 扩展 （预览版）
+# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 扩展（预览版）
 
 **数据层应用程序向导**提供了一种易于使用的体验来部署和提取.dacpac 文件并导入和导出.bacpac 文件。
 

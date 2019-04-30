@@ -1,5 +1,5 @@
 ---
-title: 从 SQL 到 c:字符 |Microsoft Docs
+title: 从 SQL 到 C：字符 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259511"
 ---
-# <a name="sql-to-c-character"></a>从 SQL 到 c:字符
+# <a name="sql-to-c-character"></a>从 SQL 到 C：字符
 
 对于字符 ODBC SQL 数据类型标识符如下所示：
 
@@ -67,7 +67,7 @@ ms.locfileid: "54419972"
 
 SQL 字符数据转换为任何以下类型时，将忽略前导空格和尾随空格：
 
-- 日期
+- date
 - NUMERIC
 - time
 - TIMESTAMP

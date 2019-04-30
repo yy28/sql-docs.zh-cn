@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280852"
 ---
 # <a name="connection-handles"></a>连接句柄
 一个*连接*组成一个驱动程序和数据源。 连接句柄标识每个连接。 连接句柄定义使用的驱动程序不仅要通过该驱动程序使用的数据源。 实现 ODBC （驱动程序管理器或驱动程序） 的代码段，在连接句柄标识结构，其中包含连接信息，如下所示：  

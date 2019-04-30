@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302353"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果你正在使用较大的子**记录集**，尤其是相对于父级的大小**记录集**，但需要访问仅在几个子级的章节中，你可能会发现使用更加高效参数化的命令。  

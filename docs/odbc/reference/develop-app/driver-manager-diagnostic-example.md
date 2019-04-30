@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238042"
 ---
 # <a name="driver-manager-diagnostic-example"></a>驱动程序管理器诊断示例
 驱动程序管理器还可以生成诊断消息。 例如，如果应用程序传递到一个无效的方向选项**SQLDataSources**，驱动程序管理器可能会设置格式并返回以下值从**SQLGetDiagRec**:  

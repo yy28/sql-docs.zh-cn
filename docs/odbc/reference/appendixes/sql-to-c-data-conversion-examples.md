@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db00ac11e2e3ec8cc0119dfa7f34452409689d6d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270924"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>从 SQL 到 C 的数据转换示例
 
 下表中所示的示例演示了如何驱动程序将 SQL 数据转换为 C 数据：  
   
-|SQL 类型<br /><br /> 标识符 (identifier)|SQL 数据<br /><br /> 值|C 类型<br /><br /> 标识符 (identifier)|缓冲区<br /><br /> 长度|**TargetValuePtr*|SQLSTATE|  
+|SQL 类型<br /><br /> 标识符 (identifier)|SQL 数据<br /><br /> value|C 类型<br /><br /> 标识符 (identifier)|缓冲区<br /><br /> 长度|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|7|abcdef\0[a]|不适用|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0[a]|01004|  

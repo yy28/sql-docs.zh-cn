@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 88a1d6554f8a8975918a59a4ab3ec9d728a8d201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298734"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>安装 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用在 DB2 和执行迁移的客户端应用程序包含迁移助手 (SSMA) for DB2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 Azure SQL DB。 它还包含支持数据迁移和 DB2 系统函数的使用在你迁移的数据库中的扩展包。  

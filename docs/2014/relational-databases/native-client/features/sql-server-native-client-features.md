@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225566"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
   除公开 Windows（以前为 Microsoft）数据访问组件 (WDAC) 的功能以外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还实现诸多其他功能以公开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  

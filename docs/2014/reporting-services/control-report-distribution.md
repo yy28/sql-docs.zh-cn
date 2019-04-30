@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265987"
 ---
 # <a name="control-report-distribution"></a>控制报表分发
   您可以配置报表服务器，以降低电子邮件和文件共享分发引起的安全风险。  

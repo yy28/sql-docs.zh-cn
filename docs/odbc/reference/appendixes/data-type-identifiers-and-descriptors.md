@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241412"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>数据类型标识符和描述符
 中列出的数据类型[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)并[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面的部分是"简洁"数据类型：每个标识符是指一种数据类型。 没有标识符和数据类型之间的一一对应关系。 描述符，但是，此不能在所有情况下使用单个值来标识数据类型。 在某些情况下，它们可以使用"详细"的数据类型和类型子代码。 对于除日期时间和间隔数据类型的所有数据类型，详细的类型标识符的简洁类型标识符相同，SQL_DESC_DATETIME_INTERVAL_CODE 中的值等于 0。 对于日期时间和间隔数据类型，但是，详细的类型 （SQL_DATETIME 或 SQL_INTERVAL） 存储中的 SQL_DESC_TYPE、 简洁类型存储在 SQL_DESC_CONCISE_TYPE，并且为每种简洁类型子代码存储在 SQL_DESC_DATETIME_INTERVAL_CODE。 设置这些字段之一会影响其他。 有关这些字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。  

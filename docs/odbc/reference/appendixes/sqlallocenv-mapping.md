@@ -1,5 +1,5 @@
 ---
-title: SQLAllocEnv 映射 |Microsoft Docs
+title: SQLAllocEnv Mapping | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280854"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 映射
 当应用程序调用**SQLAllocEnv**通过 ODBC 3 *.x*驱动程序，将会调用**SQLAllocEnv**(*phenv*) 映射到**SQLAllocHandle** ，如下所示：  

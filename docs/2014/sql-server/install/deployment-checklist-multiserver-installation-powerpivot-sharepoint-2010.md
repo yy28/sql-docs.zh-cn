@@ -1,5 +1,5 @@
 ---
-title: 部署清单：PowerPivot for SharePoint 2010 的多服务器安装 |Microsoft Docs
+title: 部署核对清单：PowerPivot for SharePoint 2010 的多服务器安装 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237919"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署清单：PowerPivot for SharePoint 2010 的多服务器安装
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署核对清单：PowerPivot for SharePoint 2010 的多服务器安装
   此核对清单将指导您逐步完成添加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for SharePoint 到向上的从零开始构建的三层 SharePoint 2010 场。 一个三层场包括数据库层、应用程序层和 Web 层。 添加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到此拓扑要求运行 SQL Server 安装程序安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]应用层上。 当你将部署 web 应用程序解决方案时，PowerPivot 程序文件将添加到 web 层中，但仅作为安装后任务。 尽管这些是部署步骤，但对于 Web 层或数据层而言，并没有需要执行的单独的安装步骤。 您需要执行的唯一安装步骤安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]应用程序服务器上。  
   
 ||  
@@ -227,7 +227,7 @@ ms.locfileid: "53350547"
  您可以为用于缓存到磁盘的 PowerPivot 数据文件的磁盘空间量设置一个上限。 默认设置是使用所有可用磁盘空间量。 有关如何限制磁盘空间使用情况的说明，请参阅[配置的磁盘空间使用情况&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
 ####  <a name="Upload"></a> 增加 SharePoint Web 应用程序的文件最大上载大小  
- 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件上载大小。 需要配置以下两个文件大小设置：Web 应用程序的最大上载大小和 Excel Services 中的最大工作簿大小。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
+ 因为 PowerPivot 工作簿可能很大，所以，您可能要增加最大文件上载大小。 有两个文件大小设置来配置：Web 应用程序和 Excel Services 中的最大工作簿大小的最大上载大小。 在这两个应用程序中，最大文件大小应该设置为相同值。 有关说明，请参阅[配置最大文件上传大小&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>向工作簿用户授予 SharePoint 权限  
  用户将首先需要 SharePoint 权限，然后才能发布或查看工作簿。 请务必授予**视图**需要用来查看已发布工作簿的用户的权限和**参与讨论**发布或管理工作簿的用户的权限。 您必须是网站集管理员才能授予权限。  

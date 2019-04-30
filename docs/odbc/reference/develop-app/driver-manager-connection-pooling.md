@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280421"
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池使应用程序能够从无需每次使用重新建立的连接池使用连接。 一旦创建并放入池连接，应用程序可以重复使用该连接，而不执行整个连接过程。  

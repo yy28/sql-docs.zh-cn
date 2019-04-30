@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 983097de95e41914bb4d577cb071d790a795f96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254679"
 ---
 # <a name="obtaining-descriptor-handles"></a>获取描述符句柄
 应用程序作为输出参数的调用中获取的任何显式分配的描述符句柄**SQLAllocHandle**。 通过调用获取的隐式分配的描述符句柄**SQLGetStmtAttr**。

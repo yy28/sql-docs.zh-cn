@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266814"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中，可以使用 Web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268494"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>权限和 Visual Database Tools (Visual Database Tools)
   允许用户访问数据源对象的权限是在数据源中授予的，而不是在 Visual Database Tools 中授予的。 所授予的对数据源对象的访问权限由您所安装系统的安全策略进行控制。 如果您没有访问某些数据库对象的权限，则应与数据库管理员联系。  

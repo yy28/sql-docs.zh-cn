@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240239"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函数
 **符合性**  
@@ -122,7 +122,7 @@ SQLRETURN SQLGetFunctions(
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -139,7 +139,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle**将返回为仅在受支持的驱动程序支持同时**SQLCancel**并**SQLCancelHandle**。 如果**SQLCancel**支持，但**SQLCancelHandle**不是，应用程序仍然可以调用**SQLCancelHandle**上语句句柄，因为它将映射到**SQLCancel**。  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 宏  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 宏用于确定是否支持 ODBC 3 *.x*早期函数后的或**SQLGetFunctions**已使用调用*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 参数。 在应用程序调用与 SQL_FUNC_EXISTS *SupportedPtr*参数设置为*SupportedPtr*传入*SQLGetFunctions*，并使用*FunctionID*参数设置为 **#define**函数。 SQL_FUNC_EXISTS 否则返回支持的函数，如果 SQL_TRUE 和 SQL_FALSE。  
   
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: 生成 (MDX) |Microsoft 文档
+title: 生成 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224884"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -45,10 +45,10 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *分隔符*  
  以字符串表达式表示的有效分隔符。  
   
-## <a name="remarks"></a>Remarks  
- 如果指定第二个集，则**生成**函数返回通过将第二组中的元组应用到每个元组中的第一组生成一组 *，* ，然后联接生成由联合设置。 如果**所有**指定，则函数将保留在结果集中的重复项。  
+## <a name="remarks"></a>备注  
+ 如果指定第二个集，则**生成**函数将返回通过将第二个集中的元组应用到第一个集中每个元组生成一组 *，* ，然后对所得到的联合设置。 如果**所有**指定，则该函数将保留在结果集中的重复项。  
   
- 如果指定的字符串表达式，则**生成**函数返回由针对每个元组中的第一组指定的字符串表达式求值生成一个字符串 *，* ，然后串联结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
+ 如果指定的字符串表达式，则**Generate**函数返回生成的第一个集中每个元组对指定的字符串表达式求值的字符串 *，* 再串联得到结果。 根据需要，可以分隔字符串，从而分隔得到的串联字符串中的每个结果。  
   
 ## <a name="examples"></a>示例  
   
@@ -73,7 +73,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 最常见的实际用途**生成**要计算的复杂设置表达式，如 TopCount，通过一组的成员。 以下示例查询显示行上每个日历年的前 10 种产品：  
+ 最常见的实际用法**生成**计算复杂集表达式，如 TopCount，对一组的成员。 以下示例查询显示行上每个日历年的前 10 种产品：  
   
 ```  
 SELECT   
@@ -90,7 +90,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 请注意，每年，并且显示不同的前 10 使用**生成**是以获取此结果的唯一方法。 将日历年和前 10 种产品的集进行简单交叉联接将显示所有时间的前 10 种产品（每年都重复），如以下示例所示：  
+ 请注意，每年，并且显示不同的前 10 的使用**生成**是得到此结果的唯一方法。 将日历年和前 10 种产品的集进行简单交叉联接将显示所有时间的前 10 种产品（每年都重复），如以下示例所示：  
   
 ```  
 SELECT   
@@ -106,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- 下面的示例演示如何使用**生成**以返回字符串：  
+ 下面的示例演示如何使用**生成**返回一个字符串：  
   
 ```  
 WITH   
@@ -125,9 +125,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  这种形式的**生成**函数可在调试计算，因为它使您能够返回在一组中显示的所有成员的名称的字符串。 这可能是一组的严格 MDX 表示更便于阅读， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函数返回。  
+>  这种形式的**生成**函数时非常有用调试计算，因为它让你可以返回集内显示所有成员的名称的字符串。 这可能是一组的严格 MDX 表示形式更便于阅读， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函数返回。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

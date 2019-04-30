@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250875"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
   充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  

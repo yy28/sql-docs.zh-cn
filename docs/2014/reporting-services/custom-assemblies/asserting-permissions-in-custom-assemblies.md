@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265383"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>在自定义程序集中断言权限
   默认情况下，自定义程序集代码以受限的 Execution 权限集运行。 在某些情况下，您可能想要实现对您的安全系统内的受保护资源（例如文件或注册表）进行安全调用的自定义程序集。 为此，您必须执行以下操作：  

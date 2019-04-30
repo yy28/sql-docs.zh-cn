@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302830"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  

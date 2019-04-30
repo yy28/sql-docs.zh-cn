@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273419"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
 从 Windows Server 2003 开始，Microsoft 操作系统必须支持 64 位 ODBC 库。 ODBC 标头和库首次随 MDAC 2.7 SDK 包含更改，以允许编程人员能够轻松地编写新的 64 位平台的代码。 通过确保您的代码使用下面列出的定义的 ODBC 类型，可以编译为 64 位和 32 位平台基于相同的源代码 **_WIN64**或**WIN32**宏。  
@@ -231,7 +231,7 @@ typedef SQLULEN BOOKMARK;
   
  当*特性*参数具有以下值之一，64 位返回的值是*值*:  
   
- SQL_ATTR_ASYNC_ENABLE 设置  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -303,7 +303,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE 设置  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -379,7 +379,7 @@ typedef SQLULEN BOOKMARK;
   
  当*特性*参数具有以下值之一，为 64 位值传入*值*:  
   
- SQL_ATTR_ASYNC_ENABLE 设置  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -425,7 +425,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE 设置  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   

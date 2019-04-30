@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273401"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>创建数据源视图（数据挖掘基础教程）
   数据源视图是在某个数据源的基础上生成的，并且定义可在您的挖掘结构中使用的数据的子集。 您还可以使用数据源视图来添加列、创建计算列和聚合以及添加命名视图。 通过数据源视图，可以选择与项目相关的数据，建立表之间的关系，以及修改数据的结构，而不必修改原始的数据源。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  

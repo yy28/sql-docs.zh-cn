@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267481"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>筛选挖掘模型中的嵌套表（数据挖掘中级教程）
   创建并浏览模型后，您决定将精力集中在客户数据的某个子集上。 例如，您可能希望仅分析包含特定项的购物篮，或者可能希望仅分析在某个时间段内没有购买任何物品的客户的人口统计信息。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了筛选挖掘模型中所使用数据的功能。 此功能很有用，因为不需要设置新的数据源视图，以使用不同的数据。 在数据挖掘基础教程中，您学习了如何通过对事例表应用条件来筛选平面表中的数据。 在此任务中，您将创建一个应用于嵌套表的筛选器。  
   
-## <a name="filters-on-nested-vs-case-tables"></a>针对嵌套表和针对事例表的筛选器  
+## <a name="filters-on-nested-vs-case-tables"></a>针对嵌套表和筛选器。事例表  
  如果您的数据源视图包含一个事例表和一个嵌套表，如 Association 模型中使用的数据源视图，则可以筛选事例表中的值、筛选嵌套表中是否存在某个值，或者这两者的组合。  
   
  在本任务中，您将首选制作 Association 模型的副本，然后将 IncomeGroup 和 Region 属性添加到新的相关模型中，以便您能够筛选事例表中的这些属性。  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1d249662ef306e2b1608582b5b61271098ccf42
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266437"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>连接筛选器或文档 Web 部件（SharePoint 集成模式下的 Reporting Services）
   如果在使用 SharePoint 产品，可以创建一个包含筛选器 Web 部件或文档 Web 部件和报表查看器 Web 部件的面板或 Web 部件页。 支持的版本为 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]。 还支持 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 或 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007。 通过连接筛选器 Web 部件，在筛选器 Web 部件中选择筛选器值的用户可以将值发送至同一页中的参数化报表。 通过连接文档 Web 部件，在文档库中单击报表的用户可以在相邻的报表查看器 Web 部件中查看报表。  

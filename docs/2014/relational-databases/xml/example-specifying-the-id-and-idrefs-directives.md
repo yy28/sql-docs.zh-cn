@@ -1,5 +1,5 @@
 ---
-title: 例如：指定 ID 和 IDREFS 指令 |Microsoft Docs
+title: 例如：指定 ID 和 IDREFS 指令 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288880"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>例如：指定 ID 和 IDREFS 指令
   可以将元素属性指定为 `ID` 类型属性，然后就可以使用 `IDREFS` 属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  

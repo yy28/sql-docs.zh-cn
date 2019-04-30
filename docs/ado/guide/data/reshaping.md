@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280397"
 ---
 # <a name="reshaping"></a>重新整理
 一个**记录集**创建形状的子句命令可能会分配*别名*名称 （通常使用 AS 关键字）。 形状的别名**记录集**可以完全不同的命令中引用。 也就是说，您可以重复使用，或*重塑*，以前形状**记录集**中新的形状命令。 若要支持此功能，ADO，提供了一个属性，[改变形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

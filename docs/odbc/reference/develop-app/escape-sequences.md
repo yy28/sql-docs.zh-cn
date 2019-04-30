@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259268"
 ---
 # <a name="escape-sequences"></a>转义序列
 ODBC 定义包含日期、 时间、 时间戳和日期时间间隔文字标量函数调用的标准语法的转义序列**如**谓词转义字符、 外部联接和过程调用。 可互操作应用程序应使用尽可能这些序列。  

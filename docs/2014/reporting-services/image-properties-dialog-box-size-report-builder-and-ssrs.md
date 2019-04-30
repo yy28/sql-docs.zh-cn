@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260646"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“大小”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“大小”** 可以设置字段或设计区域中显示的图像的大小，或者更改单元或文本框边缘与该单元或文本框内包含的图片或值之间的多余空间。  

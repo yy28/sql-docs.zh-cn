@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239826"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 属性示例 (VC++)
 此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性显示的操作的性能差别执行具有和没有 30 记录缓存。  

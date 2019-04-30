@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270535"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
   如果尝试保存数据库关系图或选定的表，但某些将受保存操作影响的数据库对象对于数据库已经过期，则会显示此对话框。 如果接受对话框中显示的更改，则将更新数据库以匹配关系图并改写其他用户所做的更改。  

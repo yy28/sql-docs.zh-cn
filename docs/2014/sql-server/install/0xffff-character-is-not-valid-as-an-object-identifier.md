@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b41d10fde129319c14fe5a5409391cb1abd6f826
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225368"
 ---
 # <a name="0xffff-character-is-not-valid-as-an-object-identifier"></a>0xFFFF 字符不能用作对象标识符
   升级顾问在对象标识符中检测到 0xFFFF 字符。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，当数据库兼容模式设置为 90 或更高时，不能引用或重命名标识符中包含该字符的对象（如数据库、表和列）。 升级到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 时，用户数据库将保持其兼容模式。 在将数据库兼容模式更改为 90 或更高之前，请重命名包含 0xFFFF 字符的对象。  

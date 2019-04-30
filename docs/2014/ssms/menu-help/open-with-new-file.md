@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240133"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
   通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  

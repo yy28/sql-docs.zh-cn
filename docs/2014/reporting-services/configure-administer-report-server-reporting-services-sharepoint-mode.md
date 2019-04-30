@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266279"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>配置和管理报表服务器（Reporting Services SharePoint 模式）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是基于服务器的报表平台，提供了各种现成可用的工具和服务，帮助你创建、部署和管理组织的报表，并提供了使你能扩展和自定义报表功能的编程功能。 您可以将您的报表环境与 SharePoint 产品相集成，体验使用 SharePoint 站点提供的协作环境所带来的好处。  

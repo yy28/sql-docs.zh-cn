@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276143"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>设备监视 Analytics Platform system
 此设备监视指南介绍的工具和监视 Analytics Platform System 设备的任务。  

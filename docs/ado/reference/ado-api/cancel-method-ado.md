@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239817"
 ---
 # <a name="cancel-method-ado"></a>Cancel 方法 (ADO)
 取消挂起的异步方法调用的执行。  
@@ -45,7 +45,7 @@ object.Cancel
 |如果*对象*是|终止对此方法的最后一个异步调用|  
 |----------------------|-------------------------------------------------------------|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
+|[“连接”](../../../ado/reference/ado-api/connection-object-ado.md)|[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[记录](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，或[打开](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[流](../../../ado/reference/ado-api/stream-object-ado.md)|[打开](../../../ado/reference/ado-api/open-method-ado-stream.md)|  

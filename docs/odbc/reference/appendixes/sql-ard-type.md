@@ -1,5 +1,5 @@
 ---
-title: SQL_ARD_TYPE |Microsoft Docs
+title: SQL_ARD_TYPE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270437"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 类型标识符用于指示在缓冲区中的数据将 ARD SQL_DESC_CONCISE_TYPE 字段中指定的类型。 中输入 SQL_ARD_TYPE *TargetType*是对的调用的参数**SQLGetData**而不是特定的数据类型和允许的应用程序更改的数据缓冲区的类型通过更改描述符字段。 此值将绑定的数据类型 *\*TargetValuePtr*缓冲区描述符字段。 (对的调用中未输入 SQL_ARD_TYPE **SQLBindCol**或**SQLBindParameter**因为绑定的缓冲区的类型已绑定到的 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 字段，并可以更改任何时候通过更改这些字段之一。）  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264777"
 ---
 # <a name="custom-report-items"></a>自定义报表项
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供大量工具，用于生成和发布企业报表，管理安全性和订阅，以及通过全面的 API 扩展报表功能。 报表使用称作报表定义语言 (RDL) 的基于 XML 的语言定义。 RDL 提供一组指令，用于描述报表的布局、查询信息和项类型。 可以通过编写自定义报表项来扩展 RDL。 自定义报表项由运行时组件（由报表处理器在运行时调用）和设计时组件（允许在报表设计器中使用该自定义报表项）构成。  

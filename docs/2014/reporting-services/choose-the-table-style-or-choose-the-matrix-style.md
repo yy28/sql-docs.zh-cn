@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266088"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>选择表样式或选择矩阵样式
   使用报表向导的这些页可为报表选择文本和线条样式。 样式列表基于可配置的模板。 报表设计器提供了下列初始模板：静态图像、 林、 公司、 粗体、 海洋和泛型。  

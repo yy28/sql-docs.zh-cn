@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265441"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>创建和管理本机模式报表服务器的订阅
   本节包含有关订阅处理、监管和控制的主题。 标准订阅和数据驱动订阅的订阅管理有所不同。 标准订阅通常由用户所有并由用户进行管理。 而数据驱动订阅通常由报表服务器管理员创建和维护。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253192"
 ---
 # <a name="errors-collection-ado"></a>错误集合 (ADO)
 包含所有[错误](../../../ado/reference/ado-api/error-object.md)到单个提供程序相关的失败的响应中创建的对象。  
@@ -48,4 +48,4 @@ ms.locfileid: "47612225"
   
 ## <a name="see-also"></a>请参阅  
  [错误对象](../../../ado/reference/ado-api/error-object.md)   
- [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附录 a:提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

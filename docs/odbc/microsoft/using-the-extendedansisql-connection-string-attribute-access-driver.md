@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259368"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 连接字符串属性（Access 驱动程序）
 Jet 4.0 具有 ODBC 桌面数据库驱动程序 4.0 版中默认情况下不启用的几个新功能。 若要充分利用这些新功能，应用程序将具有以设置新的连接属性、 将新属性添加到连接字符串，或在 DSN 中设置的属性。 该属性称为 ExtendedAnsiSQL，与仅向 Microsoft ODBC 桌面数据库驱动程序 4.0 及更高版本。  

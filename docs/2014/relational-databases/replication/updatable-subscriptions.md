@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255391"
 ---
 # <a name="updatable-subscriptions"></a>可更新订阅
   如果使用的是事务复制，应将复制的数据视为只读数据；不过，可以使用可更新的订阅，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器上修改复制的数据。 如果需要在订阅服务器上修改数据，请根据您的要求选择下列选项之一。  
@@ -36,9 +36,9 @@ ms.locfileid: "52770999"
 -   对于排队更新订阅，请选择 **“对更改进行排队并在可能时提交”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [创建请求订阅](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [订阅发布](subscribe-to-publications.md)   
  [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

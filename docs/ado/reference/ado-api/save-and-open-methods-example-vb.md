@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241151"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法示例 (VB)
 这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)并[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  

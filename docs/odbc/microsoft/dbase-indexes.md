@@ -1,5 +1,5 @@
 ---
-title: dBASE 索引 |Microsoft Docs
+title: dBASE Indexes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240398"
 ---
 # <a name="dbase-indexes"></a>dBASE 索引
 ODBC dBASE 驱动程序自动打开，并更新 dBASE IV 索引文件。 必须使用**选择索引**显示通过 ODBC 数据源管理器将 dBASE III.ndx 文件与 dBASE 文件相关联的对话框。  
