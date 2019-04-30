@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250731"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、Broker 和 DBM 传输对象
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223550"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
   [SqlServerAlias 类](sqlserveralias-class.md)类表示服务器连接别名。  
@@ -34,7 +34,7 @@ ms.locfileid: "53377887"
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：**[SqlServerAlias 类](sqlserveralias-class.md)继承`Put`从提供程序类的方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
+ **注意：** [SqlServerAlias 类](sqlserveralias-class.md)继承`Put`从提供程序类的方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
   
 ## <a name="see-also"></a>请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  

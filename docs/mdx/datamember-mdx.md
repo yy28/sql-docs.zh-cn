@@ -1,5 +1,5 @@
 ---
-title: 数据成员 (MDX) |Microsoft 文档
+title: 数据成员 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98b10c951043416280c05fd6a0e5eeb5df92c104
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248146"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -32,14 +32,14 @@ Member_Expression.DataMember
  *Member_Expression*  
  返回成员的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 此函数对任何层次结构中的非叶成员进行操作，并可由[更新多维数据集语句 (MDX)](../mdx/mdx-data-manipulation-update-cube.md)命令到非叶成员直接，而不是叶成员的后代的写回数据。  
+## <a name="remarks"></a>备注  
+ 此函数对任何层次结构中的非叶成员进行操作，并可由[UPDATE CUBE 语句 (MDX)](../mdx/mdx-data-manipulation-update-cube.md)命令给非叶成员直接，而不是叶成员的后代写回数据。  
   
 > [!NOTE]  
 >  如果指定的成员为叶成员，或者如果非叶成员没有关联的数据成员，则返回指定的成员。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用**DataMember**中计算的度量值，以显示每个单个员工的销售定额函数：  
+ 下面的示例使用**DataMember**中以显示各雇员的销售配额计算度量值的函数：  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -51,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 中的重要概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 中的重要概念 (Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

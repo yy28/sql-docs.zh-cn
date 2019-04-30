@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242703"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法示例 (VC++)
 此示例使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以查看数据集中使用复合命令语句组成的三个单独的记录**选择**语句。  

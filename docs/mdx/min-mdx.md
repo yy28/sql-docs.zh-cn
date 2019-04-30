@@ -1,5 +1,5 @@
 ---
-title: 最小值 (MDX) |Microsoft 文档
+title: 最小值 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 85d48badaa1b50edec6a563decbead1a38f5fcb0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278075"
 ---
 # <a name="min-mdx"></a>Min (MDX)
 
@@ -35,7 +35,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指定了数值表达式，则指定的数值表达式对集求值，然后返回该求值的最小值。 如果未指定数值表达式，则在指定集的成员的当前上下文中对该集求值，然后该求值的最小值。  
   
 > [!NOTE]  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

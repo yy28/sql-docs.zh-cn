@@ -1,5 +1,5 @@
 ---
-title: 任务 3 （可选）：查看订阅视图 |Microsoft Docs
+title: 任务 3（可选）：查看订阅视图 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250003"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>任务 3 （可选）：查看订阅视图
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>任务 3（可选）：查看订阅视图
   在本任务中，您将确认使用 SQL Server Management Studio 创建了 SQL 视图。  
   
 1.  启动**SQL Server Management Studio**。 单击**启动**按钮，再单击**所有程序**，单击**Microsoft SQL Server 2012**，然后单击**SQL Server Management Studio**。  

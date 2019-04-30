@@ -1,5 +1,5 @@
 ---
-title: 任务 12:添加派生列转换以添加 MDS 所需的列 |Microsoft Docs
+title: 任务 12：添加派生列转换以添加 MDS 所需的列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222618"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>任务 12:添加派生列转换以添加 MDS 所需的列
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>任务 12：添加派生列转换以添加 MDS 所需的列
   在本任务中，您将向数据流添加派生列转换。 添加两个派生的列**ImportType**并**BatchTag**到记录传递给此转换。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)的更多详细信息。  
   
 1.  拖放**派生列转换**从**常见**主题中**SSIS 工具箱**到**数据流**选项卡。  

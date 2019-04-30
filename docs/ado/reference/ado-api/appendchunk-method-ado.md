@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ac0174a223571e29973ad854f9350a6e60f1de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248295"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或设置为[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -35,10 +35,10 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Parameters  
- 对象  
+ *object*  
  一个**字段**或**参数**对象。  
   
- *数据*  
+ *Data*  
  一个**变体**，其中包含要追加到对象的数据。  
   
 ## <a name="remarks"></a>备注  

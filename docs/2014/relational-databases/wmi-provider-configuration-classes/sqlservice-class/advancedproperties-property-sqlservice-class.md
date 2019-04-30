@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223220"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 属性（SqlService 类）
   获取一组包含 `SqlService` 对象的高级属性的对象引用。  

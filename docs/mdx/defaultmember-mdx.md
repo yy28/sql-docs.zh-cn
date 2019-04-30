@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (MDX) |Microsoft 文档
+title: DefaultMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a0c11acadcbdcadfd9398baff09db9292c87eb2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248133"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -32,11 +32,11 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  返回层次结构的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  特性的默认成员用于在查询中不包括特性的情况下计算表达式。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用**DefaultMember**函数，结合**名称**函数，以在 Adventure Works 多维数据集中返回目标货币维度的默认成员。 此示例将返回**美元**。 **名称**函数用于返回度量值的名称而不是度量值，这是默认属性**值**。  
+ 下面的示例使用**DefaultMember**函数，结合**名称**函数，返回 Adventure Works 多维数据集中的 Destination Currency 维度的默认成员。 该示例将返回**美元**。 **名称**函数用于返回的度量值名称，而不是默认属性的度量值是**值**。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,7 +46,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
  [定义默认成员](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   

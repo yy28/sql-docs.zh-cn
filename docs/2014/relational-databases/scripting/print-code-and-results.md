@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ac6c8b8e45e63ccebd8ccc1cca2e1035d8f830d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277006"
 ---
 # <a name="print-code-and-results"></a>打印代码和结果
   在打印查询或文件时，如果打印机支持彩色打印，并且打印机设置中启用了彩色打印功能，则以彩色打印方式打印设定了颜色的元素。  

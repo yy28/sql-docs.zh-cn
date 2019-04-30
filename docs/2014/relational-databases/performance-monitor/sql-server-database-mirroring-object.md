@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250671"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server Database Mirroring 对象
   **SQLServer:Database Mirroring** 性能对象包含报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像的性能计数器。 下表列出了此对象包含的计数器。  

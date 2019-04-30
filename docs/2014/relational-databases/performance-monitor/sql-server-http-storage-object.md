@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250542"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server，HTTP_STORAGE_OBJECT
   **SQLServer:HTTP_STORAGE_OBJECT** 性能对象由监视 Windows Azure 存储帐户的性能计数器组成。 使用[在 Windows Azure 中的 SQL Server 数据文件](../databases/sql-server-data-files-in-microsoft-azure.md)功能，可以在 Windows Azure 存储 Blob 中存储数据库文件。 此性能对象将每一个 Windows Azure 存储帐户都视为不同的驱动器。  

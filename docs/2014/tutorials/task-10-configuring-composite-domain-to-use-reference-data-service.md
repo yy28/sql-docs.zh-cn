@@ -1,5 +1,5 @@
 ---
-title: 任务 10:配置复合域以使用引用数据服务 |Microsoft Docs
+title: 任务 10：配置复合域以使用引用数据服务 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222819"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10:配置复合域以使用引用数据服务
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10：配置复合域以使用引用数据服务
   在此任务中，配置**地址验证**复合域以使用**Melissa 数据-地址检查**服务。 在运行时，在清理活动期间，DQS 将“地址验证”域中各域的值传递给此服务以进行清理。 请参阅[映射到引用数据的域/复合域](https://msdn.microsoft.com/library/hh213030.aspx)的更多详细信息。  
   
 1.  在主页面中的**DQS 客户端**，单击**Suppliers （域管理）** 下**最近的知识库**以启动**域管理**页。  

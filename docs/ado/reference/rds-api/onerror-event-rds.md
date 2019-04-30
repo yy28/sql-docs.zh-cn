@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db04be0a40a71528e325ca314a9224d1d7c6817
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225824"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 **OnError**操作过程中发生错误时调用事件。  
@@ -38,7 +38,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  一个整数，指示该错误的状态代码。  
   
- *Description*  
+ *说明*  
  一个**字符串**，该值指示错误的说明。  
   
  *数据源*  

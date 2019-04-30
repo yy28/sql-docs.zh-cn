@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232779"
 ---
 # <a name="sql-modules"></a>SQL 模块
 将 SQL 语句发送到 DBMS 的第二个方法是通过模块。 简单地说，模块包含的一组过程，从主机编程语言调用。 每个过程包含单个 SQL 语句，且数据将传递到和从过程参数。  

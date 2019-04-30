@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232850"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改联接运算符 (Visual Database Tools)
   默认情况下， [查询和视图设计器](visual-database-tools.md) 使用等号（同等联接）联接表，等号会对两个联接列中的值进行匹配。 如果需要，您可以更改用于对联接列中的值进行比较的运算符。  

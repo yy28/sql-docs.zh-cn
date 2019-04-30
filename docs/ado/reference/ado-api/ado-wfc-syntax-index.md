@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249121"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 语法索引
 ADO 语言参考使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 此索引是对的 ADO 语言参考主题中，基于 ADO 的 Windows 基础类 (ADO/WFC) 的交叉引用。 出现在语法中的差异后，使用此索引，而不是语言参考主题中的语法列表中的函数签名。  

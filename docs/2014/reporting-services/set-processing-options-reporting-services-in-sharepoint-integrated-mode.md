@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb3edf70f1823017b1c155c085044a2432f332b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223518"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>设置处理选项（SharePoint 集成模式下的 Reporting Services）
   可以对 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表设置处理选项，以决定何时进行数据处理。 还可以为报表处理设置超时值和用于决定是否为当前报表启用报表历史记录的选项。  

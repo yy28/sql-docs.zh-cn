@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233590"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 设置对话框
 **ODBC Visual FoxPro 设置**对话框中，您可以添加或更改 Visual FoxPro 数据源。  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250369"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用仅下载项目优化合并复制的性能
   合并复制提供了两种不同的项目类型以满足不同的应用程序需要。 根据应用程序的需要，发布可以包含下列项目类型中的一个或多个：  

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223247"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密密钥（SSRS 本机模式）
   使用“加密密钥”页可以管理用于对报表服务器中数据进行加密和解密的对称密钥。 管理加密密钥是报表服务器配置的一个重要方面。 在创建报表服务器数据库时，自动创建并应用对称密钥。 创建对称密钥的备份副本，以便您可以执行例行的维护操作。 您需要具有对称密钥的有效副本，才可执行以下维护任务：  
@@ -43,7 +43,7 @@ ms.locfileid: "48144227"
 > [!IMPORTANT]  
 >  删除和重新创建对称密钥的操作不能逆转或撤消。 删除或重新创建该密钥可能对您当前的安装产生重要影响。 如果删除对称密钥，则使用此密钥加密的所有现有数据也将被删除。 删除的数据包括指向外部报表数据源的连接字符串、存储的连接字符串和某些订阅信息。  
   
- 若要打开此页，请启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择导航窗格中的链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开此页，请启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，然后在导航窗格中选择相应链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>选项  
  **备份**  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232072"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函数
 **符合性**  
- 版本引入了： ODBC 2.5  
+ 版本引入了：ODBC 2.5  
   
  **摘要**  
  **ConfigDriver**允许执行安装和卸载函数而无需调用该程序的安装程序**ConfigDSN**。 此函数将执行特定于驱动程序的功能，如创建特定于驱动程序的系统信息和在安装期间，在执行 DSN 转换，以及在卸载过程中清理系统的信息修改。 此函数是由驱动程序安装程序 DLL 或单独的安装程序 DLL 公开的。  
@@ -55,9 +55,9 @@ BOOL ConfigDriver(
  *fRequest*  
  [输入]请求的类型。 *FRequest*参数必须包含以下值之一：  
   
- ODBC_INSTALL_DRIVER： 安装新的驱动程序。  
+ ODBC_INSTALL_DRIVER:安装新的驱动程序。  
   
- ODBC_REMOVE_DRIVER： 删除驱动程序。  
+ ODBC_REMOVE_DRIVER:删除驱动程序。  
   
  此选项也可以是特定于驱动程序，在这种情况下*fRequest*第一个选项的参数必须从 ODBC_CONFIG_DRIVER_MAX + 1 开始。 *FRequest*任何其他选项的参数也必须从大于 ODBC_CONFIG_DRIVER_MAX + 1 的值启动。  
   

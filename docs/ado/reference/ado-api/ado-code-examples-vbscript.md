@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0db3b07328e4b528ed923ea10e0b74550345b0d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249191"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 代码示例 VBScript
 使用下面的代码示例来了解有关如何在 Microsoft® Visual Basic® Scripting Edition (VBScript) 中写入时使用 ADO 方法。  
@@ -47,5 +47,5 @@ ms.locfileid: "47601805"
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Visual c + + 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [附录 D：ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [视觉对象中的 ADO 代码示例C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
+ [附录 d:ADO 示例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231350"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
 
@@ -73,14 +73,14 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 
 | |与某个可用性组 | 独立容器实例<br/> 无可用性组
 |:------|:------|:------
-|自动从节点故障中恢复 | 用户帐户控制 | 用户帐户控制
-|自动从 pod 故障中恢复 | 用户帐户控制 | 用户帐户控制
-|更快故障转移 |用户帐户控制 |
-|自动从 SQL Server 实例故障中恢复 | 用户帐户控制 | 
-|自动从数据库运行状况检查失败中恢复 | 用户帐户控制 | 
-|提供只读副本 | 用户帐户控制 |
-|辅助副本备份 | 用户帐户控制 | 
-|StatefulSet 作为运行 | 用户帐户控制 | 
+|自动从节点故障中恢复 | 是 | 是
+|自动从 pod 故障中恢复 | 是 | 是
+|更快故障转移 |是 |
+|自动从 SQL Server 实例故障中恢复 | 是 | 
+|自动从数据库运行状况检查失败中恢复 | 是 | 
+|提供只读副本 | 是 |
+|辅助副本备份 | 是 | 
+|StatefulSet 作为运行 | 是 | 
 
 一个主要区别是通过在容器中的 SQL Server 的单个实例的可用性组相比更快地恢复 （或故障转移） 时间。 此项改进是因为 SQL Server 可用性组在群集中其他节点上将辅助副本。 故障转移时，辅助副本是选择并升级为主要副本。 连接到服务的应用程序将重定向到新的主副本。
 

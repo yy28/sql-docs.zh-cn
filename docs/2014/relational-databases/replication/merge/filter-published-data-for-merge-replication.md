@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250468"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>为合并复制筛选已发布数据
   除了可使用其他类型的复制定义的静态行筛选器和列筛选器之外，合并复制还提供参数化行筛选器和联接筛选器。 有关静态行筛选器和列筛选器的详细信息，请参阅[筛选已发布数据](../publish/filter-published-data.md)。  

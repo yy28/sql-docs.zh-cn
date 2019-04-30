@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a736f60b66756a8ef8e5cce2daf46550042f5695
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232247"
 ---
 # <a name="standard-data-stream-protocol"></a>标准数据流协议
 标准数据流协议是一种方法访问异类 Dbms 中的数据。 事实上，标准数据流协议已存在：
 
-- ANSI/ISO 远程数据库访问 (RDA) 标准： [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)。 尽管 ANSI/ISO 系统显示承诺，但它尚未广泛实现今天。
+- ANSI/ISO 远程数据库访问 (RDA) 标准版：[ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)。 尽管 ANSI/ISO 系统显示承诺，但它尚未广泛实现今天。

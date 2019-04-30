@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e1e74f5d2cfdd80e3d8a348808d9ecd6d8f38219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228548"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>将 XSD 数据类型映射到 XPath 数据类型 (SQLXML 4.0)
   针对 XSD 架构执行 XPath 查询且在 `xsd:type` 属性中指定 XSD 类型时，XPath 使用它处理查询时指定的数据类型。  

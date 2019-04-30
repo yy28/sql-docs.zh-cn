@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260673"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>资源的“常规”属性页（报表管理器）
   使用资源的“常规”属性页可以重命名、删除、移动或替换资源。 页面顶部显示有关添加资源或修改属性的用户的信息。  

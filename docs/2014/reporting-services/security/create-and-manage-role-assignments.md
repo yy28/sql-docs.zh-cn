@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242678"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  

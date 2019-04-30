@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243793"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 转发器分析平台系统中解析非设备 DNS 名称
 可以在 Active Directory 域服务节点上配置 DNS 转发器 (**_装置\_域_-AD01**并**_设备\_域_-AD02**) 的分析平台系统的设备，可允许脚本和访问外部服务器的软件应用程序。  

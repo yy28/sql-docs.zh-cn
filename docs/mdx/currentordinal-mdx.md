@@ -1,5 +1,5 @@
 ---
-title: CurrentOrdinal (MDX) |Microsoft 文档
+title: CurrentOrdinal (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248199"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -32,11 +32,11 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 当循环访问一组，如与[筛选器 (MDX)](../mdx/filter-mdx.md)或[生成 (MDX)](../mdx/generate-mdx.md)函数， **CurrentOrdinal**函数返回的迭代数。  
+## <a name="remarks"></a>备注  
+ 在迭代过程中通过一组，如使用[Filter (MDX)](../mdx/filter-mdx.md)或[Generate (MDX)](../mdx/generate-mdx.md)函数**CurrentOrdinal**函数返回迭代数。  
   
 ## <a name="examples"></a>示例  
- 下面的简单示例演示如何**CurrentOrdinal**可以与使用**生成**以返回包含在其在集中的位置以及一组中每个项的名称的字符串：  
+ 下面的简单示例演示如何**CurrentOrdinal**可用于**生成**以返回包含在组中的位置以及一组中每个项的名称的字符串：  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -48,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- CurrentOrdinal 的实际用法仅限于非常复杂的计算。 下面的示例中是唯一的使用的集返回的产品数目**顺序**函数进行排序之前使用的非空元组**筛选器**函数。 **CurrentOrdinal**函数用于比较并消除等同值。  
+ CurrentOrdinal 的实际用法仅限于非常复杂的计算。 下面的示例中是唯一的使用的集返回的产品数量**顺序**函数进行排序之前使用的非空元组**筛选器**函数。 **CurrentOrdinal**函数用于比较和消除等同值。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -83,6 +83,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

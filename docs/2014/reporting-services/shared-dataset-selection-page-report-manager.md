@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbb2e4e671bf00016071bfe53a7b3e5f53acac2f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223234"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>“共享数据集选择”页（报表管理器）
   使用“共享数据集选择”页可以查看和修改当前与报表关联的共享数据集。  

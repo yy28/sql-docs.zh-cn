@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242356"
 ---
 # <a name="direct-execution-odbc"></a>直接执行 ODBC
 直接执行是执行语句的最简单方法。 提交要执行该语句后，数据源将它编译成访问计划，然后执行该访问计划。  

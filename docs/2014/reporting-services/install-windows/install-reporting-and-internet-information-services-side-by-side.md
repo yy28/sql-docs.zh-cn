@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ab231da8d69c88521174813d1986b7f91e40139
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261965"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>并行安装 Reporting Services 和 Internet Information Services（SSRS 本机模式）
   可以在同一台计算机上安装和运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 和 Internet Information Services (IIS)。 所用 IIS 的版本确定了必须解决的互操作性问题。  

@@ -1,5 +1,5 @@
 ---
-title: DistinctCount (MDX) |Microsoft 文档
+title: DistinctCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f0235f14366667dbce21af92cf0418bb6fa1e0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248212"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
 
@@ -32,7 +32,7 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **DistinctCount**函数等同于`Count(Distinct(Set_Expression), EXCLUDEEMPTY)`。  
   
 ## <a name="examples"></a>示例  
@@ -63,7 +63,7 @@ DistinctCount(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [计数&#40;设置&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count（集）(MDX)](../mdx/count-set-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

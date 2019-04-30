@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242547"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 此功能自身并不直接提供保护机制来防止特定攻击（如凭据转发），但它为诸如 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的应用程序提供了一种基础结构来实施针对验证的扩展保护。  

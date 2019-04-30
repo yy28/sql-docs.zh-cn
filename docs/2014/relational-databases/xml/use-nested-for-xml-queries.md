@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232407"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用嵌套 FOR XML 查询
   `xml`数据类型和[FOR XML 查询中的 TYPE 指令](type-directive-in-for-xml-queries.md)实现在服务器上以及在客户端上处理由 FOR XML 查询返回的 XML。  

@@ -1,5 +1,5 @@
 ---
-title: 任务 1:创建供应商模型使用主数据管理器 |Microsoft Docs
+title: 任务 1：创建供应商模型使用主数据管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222660"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>任务 1:使用主数据管理器创建供应商模型
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>任务 1：使用主数据管理器创建供应商模型
   在此任务中，创建名为的模型**供应商**在 MDS 中使用**主数据管理器**。  
   
 1.  导航到[ http://localhost/mds ](http://localhost/mds)以启动**主数据管理器**。 如果使用其他名称配置了 Web 应用程序或它位于其他网站上，请替换该 URL。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226411"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函数
 **符合性**  
@@ -158,7 +158,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|若要显示列中的数据所需的字符的最大数目。 有关显示大小的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|如果列具有固定的精度和非零规模的数据源特定于，SQL_TRUE。<br /><br /> 如果列不具有固定的精度和非零规模的数据源特定于，SQL_FALSE。|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列标签或标题。 例如，一个名为 EmpName 列可能被标记为雇员姓名或可能会带有一个别名。<br /><br /> 如果列不具有标签，则返回的列名称。 如果列是未标记的和未命名，则返回空字符串。|  
-|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
+|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|可以是数字值的最大值或实际的字符长度的字符字符串或二进制数据类型。 这是固定长度的数据类型的最大字符长度或可变长度数据类型的实际字符长度。 其值始终不包括结束字符字符串的 null 终止字节。<br /><br /> 将从 IRD 的 SQL_DESC_LENGTH 记录字段返回此信息。<br /><br /> 长度有关的详细信息，请参阅[列的大小、 十进制数字、 传输八位字节长度和显示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)中附录 d:数据类型。|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的前缀的字符。 此字段包含空字符串数据类型为其文字前缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的字符或驱动程序会识别为此数据类型的文字的后缀的字符。 此字段包含空字符串数据类型为其文本后缀不适用。 有关详细信息，请参阅[文字前缀和后缀](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|此 varchar （128） 记录字段包含的数据类型可能不同于常规的数据类型名称的任何本地化 （本机语言） 名称。 如果没有本地化的名称，则返回空字符串。 此字段是仅出于显示目的。 字符串的字符集与区域设置相关并通常是服务器的默认字符集。|  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245409"
 ---
 # <a name="arguments-dialog-box"></a>“参数”对话框
   “参数”对话框可以为工具指定新参数或现有参数。 如果启动一个外部工具，并且选中了该工具的“外部工具”对话框中的“提示输入参数”选项，则会出现此对话框。  

@@ -1,5 +1,5 @@
 ---
-title: ADO for Visual c + + 语法索引 com |Microsoft Docs
+title: ADO 视觉对象C++COM 的语法索引 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248913"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
-此索引是对基于 Microsoft Visual c + + ADO 语言参考的交叉引用。  
+此索引是对基于 Microsoft Visual ADO 语言参考的交叉引用C++。  
   
  如果您使用 **#import**指令在应用程序中，标头将生成文件，使您可以使用 Microsoft Visual Basic 类似的语法。 窗体的属性名称**get_**_PropertyName_并**put_**_PropertyName_可以视为如同它们声明为*PropertyName*。 然后可以将属性视为而不是函数的数据成员。  
   
  所有方法、 属性和事件都返回的函数**HRESULT**，其中进行测试以确定是否函数成功执行。  
   
- 在 Visual c + + 中的方法和属性语法列出的以下元素：  
+ 视觉对象中的方法和属性语法C++列出的以下元素：  
   
 -   [集合](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
@@ -52,5 +52,5 @@ ms.locfileid: "52529633"
 -   [Stream 对象](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>请参阅  
- [ADO for Visual c + + 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [ADO 视觉对象C++使用 #import 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

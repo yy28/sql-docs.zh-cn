@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6d615ad3d0642d2e738359089f2ea51159e7f1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223477"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>安装 SSMA for Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for Oracle 包括客户端应用程序，用于执行从到的 Oracle 迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 Azure SQL DB。 它还包含支持数据迁移和使用 Oracle 系统函数在你迁移的数据库中的扩展包。  

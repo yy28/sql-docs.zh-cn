@@ -1,5 +1,5 @@
 ---
-title: 删除单元格计算语句 (MDX) |Microsoft 文档
+title: DROP CELL CALCULATION 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509717221a51ac790b92969ff052d0a8a5d0143d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248272"
 ---
-# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX 数据定义-删除单元计算
+# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX 数据定义 - DROP CELL CALCULATION
 
 
   删除指定的单元计算。  
@@ -36,7 +36,7 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  提供要删除的单元计算名称的有效字符串表达式。  
   
 ## <a name="see-also"></a>请参阅  
- [创建单元格计算语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [CREATE CELL CALCULATION 语句 (MDX)](../mdx/mdx-data-definition-create-cell-calculation.md)   
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

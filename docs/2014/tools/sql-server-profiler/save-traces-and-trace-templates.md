@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267431"
 ---
 # <a name="save-traces-and-trace-templates"></a>保存跟踪和跟踪模板
   区分保存跟踪文件和保存跟踪模板很重要。 保存跟踪文件是指将捕获的事件数据保存到指定位置。 保存跟踪模板是指保存跟踪定义，例如指定的数据列、事件类或筛选器。  

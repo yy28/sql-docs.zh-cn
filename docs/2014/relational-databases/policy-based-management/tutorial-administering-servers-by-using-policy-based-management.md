@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63256057"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教程：使用基于策略的管理来管理服务器
   欢迎使用“使用基于策略的管理策略来管理服务器”教程。 本教程适用于熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不熟悉基于策略的管理的用户。  

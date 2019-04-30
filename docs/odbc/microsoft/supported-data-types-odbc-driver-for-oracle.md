@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270889"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>支持的数据类型（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
@@ -31,19 +31,19 @@ ms.locfileid: "47620455"
 |---------------|----------------|-------------|  
 |BFILE|不适用|不支持|  
 |BLOB|不适用|不支持|  
-|CHAR|是否支持|是否支持|  
+|CHAR|支持|支持|  
 |CLOB|不适用|不支持|  
-|DATE|是否支持|是否支持|  
-|FLOAT|是否支持|是否支持|  
-|整数|是否支持|是否支持|  
-|LONG|是否支持|是否支持|  
-|LONG RAW|是否支持|是否支持|  
+|DATE|支持|支持|  
+|FLOAT|支持|支持|  
+|整数|支持|支持|  
+|LONG|支持|支持|  
+|LONG RAW|支持|支持|  
 |NCHAR|不适用|不支持|  
 |NCLOB|不适用|不支持|  
-|NUMBER|是否支持|是否支持|  
+|NUMBER|支持|支持|  
 |NVARCHAR2|不适用|不支持|  
-|RAW|是否支持|是否支持|  
-|VARCHAR2|是否支持|是否支持|  
+|RAW|支持|支持|  
+|VARCHAR2|支持|支持|  
 |MLSLABEL|不提供支持。|不提供支持。|  
   
 > [!NOTE]  

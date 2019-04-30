@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e98be6ed17cebe6c06033b7230fbbdcdde18dd66
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233540"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>获取数据连接的备选方法（报表生成器）
   数据连接包含要连接到外部数据源（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库）的信息。 通常会从数据源所有者处获取连接信息以及要使用的凭据类型。  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245941"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>设置跟踪筛选器 (Transact-SQL)
   本主题介绍了如何使用存储过程创建只检索有关所需跟踪事件信息的筛选器。  
@@ -30,7 +30,7 @@ ms.locfileid: "54126687"
 2.  执行 **sp_trace_setfilter** 以配置有关检索跟踪事件信息的类型。  
   
 > [!IMPORTANT]
->  与常规存储过程，所有的参数不同[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]存储过程 (<strong>sp_trace_*xx*</strong>) 已严格类型化和不支持自动数据类型转换。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   
 ## <a name="see-also"></a>请参阅  
  [筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)   

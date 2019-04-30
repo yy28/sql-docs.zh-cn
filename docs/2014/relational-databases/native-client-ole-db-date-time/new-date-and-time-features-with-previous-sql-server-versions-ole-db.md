@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233076"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
   本主题介绍预期的行为时使用增强的日期和时间功能的客户端应用程序的版本与通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，并在客户端使用的版本进行编译时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]发送到服务器的命令支持增强的日期和时间功能。  
@@ -65,7 +65,7 @@ ms.locfileid: "52774679"
   
 |参数类型|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|日期|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +79,7 @@ ms.locfileid: "52774679"
   
 |列类型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|日期|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +91,7 @@ ms.locfileid: "52774679"
   
 |参数类型|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|日期|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -106,7 +106,7 @@ ms.locfileid: "52774679"
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|日期|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +118,7 @@ ms.locfileid: "52774679"
   
 |列类型|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|日期|DBTYPE_WSTR|10|20|日期|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
@@ -128,9 +128,9 @@ ms.locfileid: "52774679"
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型 -><br /><br /> “列”|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|类型-><br /><br /> “列”|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
@@ -142,7 +142,7 @@ ms.locfileid: "52774679"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273303"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和标准 CLI
 ODBC 与以下的规范和处理使用调用级别接口 (CLI) 的标准保持一致。 （ODBC 功能是每个这些标准的超集。）  
   
--   打开组 CAE 规范"数据管理： SQL 调用级别接口 (CLI)"  
+-   打开组 CAE 规范"数据管理：SQL 调用级别接口 (CLI)"  
   
 -   ISO/IEC 9075-3:1995 (E) 调用级别接口 (SQL/CLI)  
   

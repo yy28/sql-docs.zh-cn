@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231183"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>“操作属性”对话框（报表生成器和 SSRS）
   使用 **“操作”** 对话框可以为支持链接的图表、仪表和地图元素启用超链接选项。 定义一项操作，以便用户单击报表并链接到 URL、同一报表服务器或与报表服务器集成的 SharePoint 站点上的其他报表，或链接到同一报表中的其他位置。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255732"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 属性 (RDS)
 指示的进度[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)检索到的数据对象及其[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  

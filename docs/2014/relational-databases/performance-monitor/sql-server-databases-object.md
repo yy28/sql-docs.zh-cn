@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250651"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
   SQL Server 中的 **SQLServer:Databases** 对象提供了计数器，来监视大容量复制操作、备份和还原吞吐量以及事务日志活动。 监视事务及事务日志确定数据库中进行的用户活动数量及事务日志的饱满程度。 用户活动数量可以确定数据库的性能并影响日志大小、锁和复制。 监视低级日志活动以测量用户活动和资源使用情况，有助于查明性能瓶颈。  

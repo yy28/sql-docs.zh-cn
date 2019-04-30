@@ -1,5 +1,5 @@
 ---
-title: 任务 4:创建 SSIS 项目使用 SQL Server Data Tools |Microsoft Docs
+title: 任务 4：创建 SSIS 项目使用 SQL Server Data Tools |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249957"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4:使用 SQL Server Data Tools 创建 SSIS 项目
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4：使用 SQL Server Data Tools 创建 SSIS 项目
   通过使用在此任务中，创建一个 SSIS 项目**SQL Server Data Tools**来自动执行清理和匹配供应商数据。  
   
 1.  启动 **SQL Server Data Tools**。 单击开始，指向**所有程序**，展开**Microsoft SQL Server 2012**，然后单击**SQL Server Data Tools**。  

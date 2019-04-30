@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13454c9f73b54da7977dd52bbbdc7c1d2cddb28c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224696"
 ---
 # <a name="manage-report-data-sources"></a>管理报表数据源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表、报表模型以及数据驱动订阅都从外部数据源检索数据。 若要连接到外部数据源，报表服务器可以使用报表、模型或订阅中定义的或从中引用的数据源连接信息。 数据源连接属性始终在创建报表或模型时通过该报表或模型进行定义，但是可以在将报表或模型发布到报表服务器后对这些属性进行单独管理。  

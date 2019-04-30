@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248349"
 ---
 # <a name="establishing-a-connection"></a>建立连接
-后分配环境和连接句柄并设置连接属性，该应用程序已准备好连接到数据源或驱动程序。 有三个应用程序可用于执行此操作的不同函数： **SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** (Core) 和**SQLBrowseConnect**(级别 1)。 这三个用于在不同的方案中使用。 在连接时之前，应用程序可以确定这这些函数使用受支持**ConnectFunctions**返回的关键字**SQLDrivers**。  
+后分配环境和连接句柄并设置连接属性，该应用程序已准备好连接到数据源或驱动程序。 有三个不同的函数应用程序可用于执行此操作：**SQLConnect** （核心接口一致性级别）， **SQLDriverConnect** (Core) 和**SQLBrowseConnect** (级别 1)。 这三个用于在不同的方案中使用。 在连接时之前，应用程序可以确定这这些函数使用受支持**ConnectFunctions**返回的关键字**SQLDrivers**。  
   
 > [!NOTE]  
 >  某些驱动程序限制它们支持的活动连接数。 应用程序调用**SQLGetInfo** SQL_MAX_DRIVER_CONNECTIONS 选项以确定如何多个活动连接的特定驱动程序支持。  

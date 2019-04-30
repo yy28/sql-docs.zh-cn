@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245504"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
   使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，此对话框中仅显示“测试”和“保存”。  

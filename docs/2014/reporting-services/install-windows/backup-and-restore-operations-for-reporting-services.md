@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261949"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的备份和还原操作
   本主题概述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的所有数据文件，并介绍应在何时以及如何备份这些文件。 为报表服务器数据库文件制定备份和还原计划是恢复策略中最重要的一部分。 但是，更全面的恢复策略应包括备份加密密钥、自定义程序集或扩展插件、配置文件，以及报表和模型的源文件。  

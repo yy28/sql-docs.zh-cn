@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249394"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>自定义和处理预测模型（数据挖掘中级教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法提供了多个参数，这些参数影响模型创建方式和时间数据分析方式。 更改这些属性可以极大地影响挖掘模型进行预测的方式。  

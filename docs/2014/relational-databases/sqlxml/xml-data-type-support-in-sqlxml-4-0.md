@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232703"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
   开头[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持 XML 类型化数据使用`xml`数据类型。 本主题提供的信息介绍 SQLXML 4.0 如何识别 `xml` 数据类型的实例和如何为它们实现支持。  

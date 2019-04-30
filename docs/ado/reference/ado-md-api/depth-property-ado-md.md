@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225771"
 ---
 # <a name="depth-property-ado-md"></a>Depth 属性 (ADO MD)
 指示级别之间的数[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)和层次结构的根。  

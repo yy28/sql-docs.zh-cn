@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d0e7f4d0c1b8f6e4b1f4442c9b3ae6538b0eabef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250559"
 ---
 # <a name="merge-replication"></a>合并复制
   与事务复制相同，合并复制通常也是从发布数据库对象和数据的快照开始， 并且用触发器跟踪在发布服务器和订阅服务器上所做的后续数据更改和架构修改。 订阅服务器在连接到网络时将与发布服务器进行同步，并交换自上次同步以来发布服务器和订阅服务器之间发生更改的所有行。  

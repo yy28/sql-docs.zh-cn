@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223472"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
   使用 **“选择颜色”** 对话框可以为数据区域或文本框中单个或多个单元的背景指定颜色选项，或为图表指定颜色选项。  

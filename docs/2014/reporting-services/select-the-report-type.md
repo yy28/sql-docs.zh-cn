@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f504928105f10b2b56bfa6989ff090f9f848bdd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223211"
 ---
 # <a name="select-the-report-type"></a>选择报表类型
   使用报表向导的此页可以选择表格报表或矩阵报表。  

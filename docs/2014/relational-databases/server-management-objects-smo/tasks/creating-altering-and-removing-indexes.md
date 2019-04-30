@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223486"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>创建、更改和删除索引
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO) 层次结构中，索引由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象表示。 索引列由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 对象的集合表示，而该对象由 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 属性表示。  

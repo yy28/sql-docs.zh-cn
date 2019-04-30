@@ -1,5 +1,5 @@
 ---
-title: 协方差 (MDX) |Microsoft 文档
+title: 协方差 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1bb24e4dcb536af144214f96dd5b904cc8530cd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249607"
 ---
 # <a name="covariance-mdx"></a>Covariance (MDX)
 
@@ -38,13 +38,13 @@ Covariance(Set_Expression,Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  通常是单元坐标（返回代表 X 轴的值的数字）的多维表达式 (MDX) 的有效数值表达式。  
   
-## <a name="remarks"></a>Remarks  
- **协方差**函数的计算结果的第一个数值表达式，以获取 y 轴的值针对指定的集。 然后，此函数对指定的集计算第二个数值表达式（如果指定），以获得 x 轴的一组值。 如果未指定第二个数值 expressionis，该功能会将指定集的单元格的当前上下文值用作 x 轴中。  
+## <a name="remarks"></a>备注  
+ **协方差**函数的第一个数值表达式，以获取 y 轴的值对指定的集计算。 然后，此函数对指定的集计算第二个数值表达式（如果指定），以获得 x 轴的一组值。 如果未指定第二个数值 expressionis，该函数使用指定集中单元的当前上下文作为值在 x 轴。  
   
- **协方差**函数使用有偏差的总体公式。 这是与此相反[CovarianceN](../mdx/covariancen-mdx.md)使用无偏差的总体公式 （x，y 对的数目除以然后数减去 1） 的函数。  
+ **协方差**函数使用有偏差的总体公式。 这是与此相反[CovarianceN](../mdx/covariancen-mdx.md)函数，它使用无偏差的总体公式 （除以 x-y 对的数目，然后再减 1）。  
   
 > [!NOTE]  
->  **协方差**函数将忽略空单元格包含文本或逻辑值将被忽略。 但是，该函数将包含值为零的单元。  
+>  **协方差**函数将忽略空单元格包含文本或将忽略逻辑值。 但是，该函数将包含值为零的单元。  
   
 ## <a name="example"></a>示例  
  下面的示例说明如何使用 Covariance 函数：  
@@ -59,6 +59,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

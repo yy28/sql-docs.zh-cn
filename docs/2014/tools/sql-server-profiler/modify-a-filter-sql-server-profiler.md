@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228495"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>修改筛选器 (SQL Server Profiler)
   可以通过将筛选器添加到包含跟踪定义的跟踪模板，来限制跟踪所收集的事件数。 限制收集的事件数能够减少跟踪对性能的影响。 如果已设置了跟踪模板的筛选器，并发现该跟踪没有收集所需类型的信息，则可以对该筛选器进行编辑。  

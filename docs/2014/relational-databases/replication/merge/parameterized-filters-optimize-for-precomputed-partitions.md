@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250551"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
   预计算分区是一种性能优化方法，可用于已筛选的合并发布。 预计算分区也是在已筛选的发布上使用逻辑记录的一项要求。 有关逻辑记录的详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  
