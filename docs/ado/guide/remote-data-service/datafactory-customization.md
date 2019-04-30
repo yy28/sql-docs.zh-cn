@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214769"
 ---
 # <a name="datafactory-customization"></a>自定义 DataFactory
 远程数据服务 (RDS) 提供了一种方法轻松地在三层客户端/服务器系统中执行数据访问。 客户端数据控件指定远程数据源或连接字符串上执行查询的连接和命令的字符串参数和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象参数，以执行更新。  

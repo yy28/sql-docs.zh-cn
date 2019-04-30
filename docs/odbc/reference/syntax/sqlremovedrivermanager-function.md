@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186033"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函数
 **符合性**  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>诊断  
  当**SQLRemoveDriverManager**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
-|*\*pfErrorCode*|错误|Description|  
+|*\*pfErrorCode*|错误|描述|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序无法删除驱动程序管理器的信息，因为它在注册表中不存在或找不到注册表中。|  
@@ -81,13 +81,13 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32。DLL|  
-|ODBCCR32。DLL|ODBC16GT。DLL|  
-|ODBCCU32。DLL|ODBC32GT。DLL|  
-|ODBCINT。DLL|DS16GT。DLL|  
-|ODBCTRAC。DLL|DS32GT。DLL|  
-|MSVCRT40。DLL|ODBCAD32。EXE|  
-|ODBCCP32。CPL||  
+|ODBC32DLL|ODBCCP32.DLL|  
+|ODBCCR32.DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT.DLL|  
+|ODBCTRAC.DLL|DS32GT.DLL|  
+|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager**也称为升级过程的一部分。 如果应用程序检测到它必须执行升级和它以前已安装的驱动程序，应删除并再重新安装该驱动程序。  
   

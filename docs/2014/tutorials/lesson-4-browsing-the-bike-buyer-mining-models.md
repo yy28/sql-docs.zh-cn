@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070873"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>第 4 课：浏览自行车购买者挖掘模型
   在本课程中，您将使用[SELECT (DMX)](/sql/dmx/select-dmx)语句浏览决策树和聚类分析挖掘中的内容模型中创建的[第 2 课：向预测性挖掘结构添加挖掘模型](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  

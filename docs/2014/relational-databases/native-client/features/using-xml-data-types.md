@@ -31,11 +31,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136666"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中。  
@@ -135,7 +135,7 @@ ms.locfileid: "52406004"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 架构行集  
  COLUMNS 和 PROCEDURE_PARAMETERS 架构行集添加了以下列。  
   
-|列名|类型|Description|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|在其中定义 XML 架构集合的架构的名称。 对于非 XML 列或非类型化 XML 列，为 NULL。|  
@@ -147,7 +147,7 @@ ms.locfileid: "52406004"
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 架构行集  
  所引入的新的架构行集 SS_XMLSCHEMA 可供客户端检索 XML 架构信息。 SS_XMLSCHEMA 行集包含以下列。  
   
-|列名|类型|Description|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所属的目录。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所属的架构。|  
@@ -167,7 +167,7 @@ ms.locfileid: "52406004"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 属性集  
  为了支持**xml**通过 OLE DB 数据类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 实现新的 DBPROPSET_SQLSERVERPARAMETER 属性集，其中包含以下值。  
   
-|“属性”|类型|Description|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|在其中定义 XML 架构集合的目录（数据库）的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|架构集合内 XML 架构的名称。 由三部分组成的 SQL 名称标识符的一部分。|  
@@ -176,7 +176,7 @@ ms.locfileid: "52406004"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  若要支持中的表创建**ITableDefinition**接口， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 向 DBPROPSET_SQLSERVERCOLUMN 属性集添加三个新列。  
   
-|“属性”|类型|Description|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定在其中存储 XML 架构的目录的名称。 对于其他列类型，此属性返回空字符串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|对于类型化 XML 列，此属性是一个字符串，它指定定义此列的 XML 架构的名称。|  
@@ -196,7 +196,7 @@ ms.locfileid: "52406004"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 接口  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端中添加以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-返回的行集的特定列**icolumnrowset:: Getcolumnsrowset**方法。 这些列包含 XML 架构集合的由三个部分组成的名称。 对于非 XML 列或非类型化 XML 列，所有这三列均取默认值 NULL。  
   
-|列名|类型|Description|  
+|列名|类型|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 架构集合所属的目录，<br /><br /> 否则为 Null。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 架构集合所属的架构。 否则为 Null。|  

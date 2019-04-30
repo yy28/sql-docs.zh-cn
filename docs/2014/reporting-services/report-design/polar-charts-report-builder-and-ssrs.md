@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46e431f85960f0fb5ce93ff80a53a3001c1b666d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215752"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>极坐标图（报表生成器和 SSRS）
   极坐标图将序列显示为一组位于 360 度圆上、按类别分组的点。 值通过由自圆心测量的点的长度来表示。 点离圆心的距离越远，其值越大。 类别标签显示在图表的周边上。 有关如何将数据添加到坐标图的详细信息，请参阅 [图表（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "59943926"
 ## <a name="example"></a>示例  
  下例说明了如何使用雷达图。 下表提供了雷达图的示例数据。  
   
-|“属性”|Sales|  
+|名称|Sales|  
 |----------|-----------|  
 |Shrubs|61|  
 |Seeds|78|  

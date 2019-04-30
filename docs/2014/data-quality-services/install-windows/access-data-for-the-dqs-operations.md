@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792590"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>访问 DQS 操作数据
   若要将您的源数据用于 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作并导出已处理的数据，您可以执行以下任一操作：  
@@ -40,13 +40,13 @@ ms.locfileid: "56019918"
   
 4.  在 **“登录属性”** 对话框的左侧窗格中，单击 **“用户映射”** 页。  
   
-5.  在右窗格中，选择下的复选框**地图**的列**DQS_STAGING_DATA**数据库，并选择中的以下角色**数据库角色成员身份：DQS_STAGING_DATA**窗格：  
+5.  在右侧窗格中，选中“DQS_STAGING_DATA”数据库的“映射”列下的复选框，然后在“数据库角色成员身份:DQS_STAGING_DATA”窗格中选择以下角色**：  
   
-    -   **db_datareader**:从表/视图中读取数据。  
+    -   **db_datareader**：从表/视图中读取数据。  
   
-    -   **db_datawriter**:添加、 删除或更改表中的数据。  
+    -   **db_datawriter**：在表中添加、删除或更改数据。  
   
-    -   **db_ddladmin**:创建、 修改或删除表/视图。  
+    -   **db_ddladmin**：创建、修改或删除表/视图。  
   
 6.  在 **“登录属性”** 对话框中，单击 **“确定”** 以应用所做的更改。  
   

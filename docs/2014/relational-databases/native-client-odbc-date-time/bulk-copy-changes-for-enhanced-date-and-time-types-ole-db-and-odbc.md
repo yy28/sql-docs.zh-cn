@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207102"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型的大容量复制更改（OLE DB 和 ODBC）
   本主题描述为支持大容量复制功能而增强的日期/时间功能。 本主题中的信息对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC 均适用。  
@@ -61,7 +61,7 @@ ms.locfileid: "52401612"
 ```  
   
 ## <a name="character-data-files"></a>字符数据文件  
- 在字符数据文件中，日期和时间值按字符串和文字"一节[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)针对 ODBC，或[OLE DB 日期和时间改进的数据类型支持](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
+ 在字符数据文件中，表示日期和时间值，如中所述"数据格式：字符串和文字"一节[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)针对 ODBC，或[OLE DB 日期和时间改进的数据类型支持](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)用于 OLE DB。  
   
  在本机数据大小数位数为四种新类型的日期和时间值表示为其 TDS 表示形式，小数的 7 (因为这是支持的最大[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 bcp 数据文件不存储这些列的小数位数)。 到现有的存储没有变化`datetime`和`smalldatetime`类型或其表格数据流 (TDS) 表示形式。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52401612"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|日期|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -104,7 +104,7 @@ ms.locfileid: "52401612"
   
  **OLE DB 说明** 以下转换由 IBCPSession 执行。 IRowsetFastLoad 使用 OLE DB 转换中定义[转换到服务器从客户端执行](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 请注意，日期时间值将舍入为 1 秒的 1/300，smalldatetime 值在执行下述客户端转换后将秒设置为零。 日期时间舍入将传播至小时和分钟，而非日期。  
   
-|若要：<br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|若要：<br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|不可用|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  

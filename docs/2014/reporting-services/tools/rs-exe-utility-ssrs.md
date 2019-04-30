@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e75c56597a351f7c76ff509e3347d37dc40e41b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201383"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 实用工具 (SSRS)
   rs.exe 实用工具处理您在输入文件中提供的脚本。 使用此实用工具，可以实现报表服务器部署与管理任务的自动化。  

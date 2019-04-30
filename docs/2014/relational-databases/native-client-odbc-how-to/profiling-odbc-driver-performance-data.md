@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200303"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>配置驱动程序性能数据 (ODBC)
   此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 此示例将创建一个文件： odbcperf.log.This 示例演示如何创建性能数据日志文件和显示性能数据直接从 SQLPERF 数据结构 （SQLPERF 结构在 Odbcss.h 中定义。）。 此示例是面向 ODBC 3.0 版或更高版本开发的。  

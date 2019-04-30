@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3663c9cdb9fd83dc0caa4298a81f73adcae87cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185805"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合引用（报表生成器和 SSRS）
   `DataSources` 集合表示在报表中使用的所有数据源。 同样，`DataSets` 集合表示报表中所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  
@@ -29,7 +29,7 @@ ms.locfileid: "59970563"
   
 |**变量**|`Type`|**说明**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012` 的用户。|  
+|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012`。|  
 |`Type`|`String`|数据源数据访问接口的类型。 例如， `SQL`。|  
   
 ## <a name="datasets"></a>DataSets  

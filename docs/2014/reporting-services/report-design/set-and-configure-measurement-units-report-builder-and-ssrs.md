@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215648"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>设置和配置度量单位（报表生成器和 SSRS）
   指示器提供两种度量单位：百分比和数字。 默认情况下，指示器配置为使用百分比作为度量单位。 这意味着分配给指示器集中各图标的指示器值由百分比范围确定。 百分比范围在指示器集中的各图标上平均划分。 每个图标都表示一个指示器状态。 您可以通过指定不同的开始和结束百分比，更改指示器集中每个图标的百分比。 指示器还自动检测数据中的最小值和最大值。  

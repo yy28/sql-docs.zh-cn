@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215948"
 ---
 # <a name="setting-project-options-mysqltosql"></a>设置项目选项 (MySQLToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项用于指定如何转换对象、 如何迁移数据和源数据类型如何映射到目标数据类型。  在将对象转换为 SQL Server 或 SQL Azure 或将数据迁移到 SQL Server 或 SQL Azure 之前，验证配置选项适用于项目。  
@@ -39,9 +39,9 @@ SSMA 具有五个集的项目设置：
   
 可以通过四种方法配置项目设置：  
   
--   ，则“默认”  
+-   默认  
   
--   Optimistic  
+-   乐观  
   
 -   完全  
   

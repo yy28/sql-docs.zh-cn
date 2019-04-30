@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5be6c0698a20e9b05549ea81878c3d7929d0743
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215183"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>设置已发布报表的参数（SharePoint 集成模式下的 Reporting Services）
   参数化报表可以在运行报表时接受用于筛选数据的输入值。 参数是在创建报表时定义的。 根据报表定义中报表参数的定义方式，参数可以接受单值、多值或者根据上一选择而变化的动态值（例如，选择产品类别后，下一选择可能是该类别中的特定产品）。 参数可以具有默认值，该值可用于自动运行经过筛选的报表，也可以由不同的值来代替。  
@@ -50,7 +50,7 @@ ms.locfileid: "59968113"
   
      指定的值组合可能无法让您获得所需的结果。 如果您无法获得所需信息，则报表作者可能需要修改报表。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
 ### <a name="to-set-parameter-properties"></a>设置参数属性  
   

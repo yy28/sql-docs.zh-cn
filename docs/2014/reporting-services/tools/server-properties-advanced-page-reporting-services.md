@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158763"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
   使用此页可以针对报表服务器设置系统属性。 可通过多种方法来设置系统属性。 此工具提供了一个图形用户界面，您不必编写代码即可设置属性。  
@@ -39,7 +39,7 @@ ms.locfileid: "59960773"
  指示报表执行日志记录是否处于启用状态。 默认值是 `true`。 有关报表服务器执行日志的详细信息，请参阅[报表服务器执行日志和 ExecutionLog3 视图](../report-server/report-server-executionlog-and-the-executionlog3-view.md)。  
   
  **ExecutionLogDaysKept**  
- 在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `-1` 到 `2`、`147`、`483` 和 `647`。 如果值为 `-1`，则不从执行日志表中删除项。 默认值是 `60`。  
+ 在执行日志中保留报表执行信息的天数。 此属性的有效值包括 `-1` 到 `2`、`147`、`483` 和 `647`。 如果值为 `-1`，则不从执行日志表中删除项。 默认值为 `60`。  
   
  **SessionTimeout**  
  会话保持活动状态的时间长度（以秒为单位）。 默认值是 `600`。  
@@ -54,7 +54,7 @@ ms.locfileid: "59960773"
  指定所存储的参数能够保存的最大天数。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值为 `180` 天。  
   
  **StoredParametersThreshold**  
- 指定报表服务器可以存储的参数值的最大数目。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值是 `1500`。  
+ 指定报表服务器可以存储的参数值的最大数目。 有效值为 `-1` 以及 `+1` 到 `2,147,483,647`。 默认值为 `1500`。  
   
  **UseSessionCookies**  
  指示报表服务器与客户端浏览器通信时是否应使用会话 cookie。 默认值是 `true`。  
@@ -72,7 +72,7 @@ ms.locfileid: "59960773"
  **All =** 针对所有的存储选项（包括报表服务器数据库或文件系统）压缩快照。  
   
  **SystemReportTimeout**  
- 在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值为 `1800`。  
+ 在报表服务器命名空间中托管的所有报表的默认报表处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则处理期间命名空间中的报表不会超时。 默认值是 `1800`。  
   
  **SystemSnapshotLimit**  
  为报表存储的快照的最大数目。 有效值为 `-1` 到 `2`、`147`、`483`、`647`。 如果值为 `-1`，则无快照限制。  
@@ -92,7 +92,7 @@ ms.locfileid: "59960773"
  如果关闭此选项，则会缓解恶意用户通过用 LoadReportDefinition 请求使报表服务器重载来启动拒绝服务攻击的威胁。  
   
  **EnableRemoteErrors**  
- 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值为 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)。  
+ 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 `true` 和 `false`。 默认值是 `false`。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../report-server/enable-remote-errors-reporting-services.md)。  
   
  **EnableReportDesignClientDownload**  
  指定是否可以从报表服务器下载报表生成器安装包。 如果清除此设置，则指向报表生成器的 URL 将不起作用。 有关详细信息，请参阅 [配置报表生成器访问权限](../report-server/configure-report-builder-access.md)。  

@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188898"
 ---
 # <a name="interval-data-types"></a>间隔数据类型
 一个时间间隔被指两个日期和时间之间的差异。 在两种不同方式之一表示时间间隔。 一个是*年-月*表示年和整月数方面的时间间隔的间隔。 另一个是*日期时间*表达方面天、 分钟和秒的时间间隔的间隔。 这两种类型的间隔不同，并且不能混用，因为几个月可以具有不同数量的天。  
@@ -42,7 +42,7 @@ ms.locfileid: "47622215"
   
  有 13 间隔 SQL 数据类型和 13 间隔 C 数据类型。 每个间隔 C 数据类型使用相同的结构，SQL_INTERVAL_STRUCT，以包含数据间隔。 (有关详细信息，请参阅下一部分中， [C 间隔结构](../../../odbc/reference/appendixes/c-interval-structure.md)。)SQL 数据类型的详细信息，请参阅[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md); 有关 C 数据类型的详细信息，请参阅[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|类型标识符|类|Description|  
+|类型标识符|类|描述|  
 |---------------------|-----------|-----------------|  
 |MONTH|年月|两个日期之间的月数。|  
 |YEAR|年月|两个日期之间的年数。|  

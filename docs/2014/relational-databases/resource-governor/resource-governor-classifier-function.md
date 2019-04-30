@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209739"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。  

@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151634"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>使用 BULK INSERT 或 OPENROWSET(BULK...) 导入批量数据 (SQL Server)
   本主题概述了如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 语句和 INSERT...SELECT * FROM OPENROWSET(BULK...) 语句将数据从某一数据文件大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 本主题还说明了使用 BULK INSERT 和 OPENROWSET(BULK...) 以及使用这些方法从远程数据源大容量导入数据的安全注意事项。  
@@ -64,7 +64,7 @@ ms.locfileid: "54127577"
   
 -   [使用格式化文件将表列映射到数据文件字段 (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 函数  
+## <a name="openrowsetbulk-function"></a>OPENROWSET （BULK)函数  
  通过调用 OPENROWSET 函数并指定 BULK 选项，访问 OPENROWSET 大容量行集提供程序。 使用 OPENROWSET(BULK...) 函数可以通过 OLE DB 访问接口连接到远程数据源（如数据文件）以访问远程数据。  
   
  若要大容量导入数据，请从 INSERT 语句中的 SELECT...FROM 子句调用 OPENROWSET(BULK...)。 大容量导入数据的基本语法如下：  

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188985"
 ---
 # <a name="environment-transitions"></a>环境转换
 ODBC 环境具有以下三种状态。  
   
-|State|Description|  
+|State|描述|  
 |-----------|-----------------|  
 |E0|未分配的环境|  
 |E1|分配的环境中，未分配的连接|  
@@ -37,8 +37,8 @@ ODBC 环境具有以下三种状态。
   
 |E0<br /><br /> 未分配|E1<br /><br /> 分配|E2<br /><br /> 连接|  
 |------------------------|----------------------|-----------------------|  
-|E1 [1]|--[4]|--[4]|  
-|(IH)[2]|E2 [5]<br />(HY010)[6]|--[4]|  
+|E1[1]|--[4]|--[4]|  
+|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
 |(IH)[3]|(IH)|--[4]|  
   
  [1] 此行显示转换时*HandleType*已 SQL_HANDLE_ENV。  
@@ -83,7 +83,7 @@ ODBC 环境具有以下三种状态。
 |E0<br /><br /> 未分配|E1<br /><br /> 分配|E2<br /><br /> 连接|  
 |------------------------|----------------------|-----------------------|  
 |(IH)[1]|E0|(HY010)|  
-|(IH)[2]|(IH)|--[4]<br />E1 [5]|  
+|(IH)[2]|(IH)|--[4]<br />E1[5]|  
 |(IH)[3]|(IH)|--|  
   
  [1] 此行显示转换时*HandleType*已 SQL_HANDLE_ENV。  

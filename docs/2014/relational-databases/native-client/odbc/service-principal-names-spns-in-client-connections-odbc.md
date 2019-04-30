@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144398"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>客户端连接中的服务主体名称 (SPN) (ODBC)
   本主题介绍支持客户端应用程序中的服务主体名称 (SPN) 的 ODBC 属性和函数。 在客户端应用程序中的 Spn 的详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../features/service-principal-name-spn-support-in-client-connections.md)并[获取 Kerberos 相互身份验证](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  

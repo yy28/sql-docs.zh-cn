@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137517"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>自动页修复 （针对可用性组和数据库镜像）
   数据库镜像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 支持自动页修复。 在某些类型的错误导致页损坏，使其无法读取后，数据库镜像伙伴（主体或镜像）或可用性副本（主副本或辅助副本）将尝试自动修复该页。 无法读取该页的伙伴/副本将从其伙伴或从其他副本请求该页的新副本。 如果此请求成功，则将以可读副本替换不可读的页，并且这通常会解决该错误。  
@@ -35,7 +35,7 @@ ms.locfileid: "48070579"
 ##  <a name="ErrorTypes"></a> 导致自动页修复尝试的错误类型  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
-|错误号|Description|导致自动页修复尝试的实例|  
+|错误号|描述|导致自动页修复尝试的实例|  
 |------------------|-----------------|---------------------------------------------------------|  
 |[823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md)|仅当操作系统对数据执行循环冗余检查 (CRC) 失败时才执行此操作。|ERROR_CRC。 此错误的操作系统值为 23。|  
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|逻辑错误。|逻辑数据错误，例如残缺写或错误的页校验和。|  
@@ -52,7 +52,7 @@ ms.locfileid: "48070579"
   
 -   页 9（数据库引导页）。  
   
--   分配页：全局分配映射 (GAM) 页、共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
+-   分配页：全局分配映射 (GAM) 页、 共享全局分配映射 (SGAM) 页和页可用空间 (PFS) 页。  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070579"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 如何：查看自动页修复尝试次数  
  下面的动态管理视图返回对应于给定可用性数据库或镜像数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。  
   
 -   **AlwaysOn 可用性组：**  

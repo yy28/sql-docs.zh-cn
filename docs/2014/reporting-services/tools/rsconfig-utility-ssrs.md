@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9a22983a23e9bd1801de849774836a0a0acd2927
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201037"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 实用工具 (SSRS)
   **rsconfig.exe** 实用工具可以在 RSReportServer.config 文件中加密并存储连接和帐户值。 加密值包括用于无人参与报表处理的报表服务器数据库连接信息和帐户值。  

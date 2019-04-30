@@ -1,5 +1,5 @@
 ---
-title: 注释 （MDX 语法） |Microsoft 文档
+title: 注释 （MDX 语法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181561"
 ---
 # <a name="comments-mdx-syntax"></a>注释（MDX 语法）
 
@@ -23,7 +23,7 @@ ms.locfileid: "34740756"
   
  MDX 中的注释遵循下列指导原则：  
   
--   注释中可以使用所有字母数字字符或符号。  将忽略的注释内的所有字符。  
+-   注释中可以使用所有字母数字字符或符号。  将忽略注释中的所有字符。  
   
 -   语句或脚本中的注释没有最大长度限制。 一条注释可由一行或多行组成。  
   
@@ -35,8 +35,8 @@ ms.locfileid: "34740756"
  --（双连字符）  
  这些注释字符可与要运行的代码在同一行上，也可单独成一行。 从双连字符开始到行尾均为注释部分。 对于多行注释，每个注释行的开始都必须出现双连字符。 有关详细信息，请参阅[-&#40;注释&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)。  
   
- /* ...\*/ （正斜杠星号字符对）  
- 这种注释字符可在要运行的代码行中使用，可以单独成行，也可以位于可执行代码中。 从开始注释对的所有内容 (/\*) 到结束注释对 (\*/) 被视为注释的一部分。 对于多行注释，打开注释字符对 (/\*) 必须启动该注释，并关闭注释字符对 (\*/) 必须结束注释。 注释的任何行中均不能出现其他注释字符。 有关详细信息，请参阅[/ *...\*/ (Comment)](../mdx/comment-mdx.md).  
+ /* ...\*/ （正斜杠-星号字符对）  
+ 这种注释字符可在要运行的代码行中使用，可以单独成行，也可以位于可执行代码中。 从开始注释对 (/\*) 到结束注释对 (\*/) 被视为注释部分。 对于多行注释，注释字符对 (/\*) 必须启动该注释，并关闭注释字符对 (\*/) 结束注释。 注释的任何行中均不能出现其他注释字符。 有关详细信息，请参阅[/ *...\*/ （注释）](../mdx/comment-mdx.md)。  
   
 ## <a name="example"></a>示例  
  以下查询说明上述三种注释的示例：  

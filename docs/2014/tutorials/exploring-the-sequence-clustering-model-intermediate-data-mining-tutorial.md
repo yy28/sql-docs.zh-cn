@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164054"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>浏览顺序分析和聚类分析模型（数据挖掘中级教程）
   现在，您构建**Sequence Clustering with Region**模型，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析查看器**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]序列分类查看器包含五个选项卡：**分类关系图**，**分类剖面图**，**分类特征**， **ClusterDiscrimination**，和**的状态转换**. 有关如何使用此查看器的详细信息，请参阅[使用 Microsoft 序列分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
@@ -149,7 +149,7 @@ ms.locfileid: "56024990"
   
 4.  转换行包含转换的文本中**变量**列中，和序列属性值的某种组合**值**列。 该序列也可以包含起点和缺少值。  
   
-     例如，假定转换的值为 [Start] -> Road Tire Tube。 这意味着此分类中的客户通常首先将 Road Tire Tube 放入购物篮中。 这可能表示该产品是客户首先挑选出的受欢迎商品，或者只表示该产品在购物场所容易找到。  
+     例如，假定转换的值，开始-> Road Tire Tube。 这意味着此分类中的客户通常首先将 Road Tire Tube 放入购物篮中。 这可能表示该产品是客户首先挑选出的受欢迎商品，或者只表示该产品在购物场所容易找到。  
   
 5.  滚动浏览列表，直到找到第一个转换，但没有 **[Start]** 或**缺少**中它。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024990"
   
 8.  单击 Touring Tire 的节点，将滑块控件向下移回至中间位置。  
   
-     开始时，有很多将 Touring Tire 与其他产品连接起来的转换线，但当您提高概率阈值时，可能性较低的转换就不再显示在图中，只剩下转换 Touring Tire > Touring Tire Tube。 此转换的含义是如果客户将 Touring Tire 放入购物篮，则该客户接下来将 Touring Tire Tube 也放入购物篮的概率非常高。  
+     首先，有很多将 Touring Tire 连接到其他产品的转换线，但不太可能的转换时引发的概率阈值，就不再从关系图，只剩下转换，Touring Tire > Touring Tire Tube。 此转换的含义是如果客户将 Touring Tire 放入购物篮，则该客户接下来将 Touring Tire Tube 也放入购物篮的概率非常高。  
   
  [返回页首](#bkmk_CDiagram)  
   

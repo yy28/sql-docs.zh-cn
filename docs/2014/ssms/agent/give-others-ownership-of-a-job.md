@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075244"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   本主题介绍如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的所有权重新指派给另一用户。  
   
--   **开始之前：**[限制和局限](#Restrictions)，[安全](#Security)  
+-   **开始之前：**[限制和局限](#Restrictions)、[安全性](#Security)  
   
 -   **若要将作业所有权授予其他人，请使用：**  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217753"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
 在脚本编写环境中，可使用 ADO 公开数据通过服务器端脚本。 在此方案中，ADO，基础 OLE DB 提供程序使用，并引用给定的数据存储区所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 ADO 使用 Active Server Pages (ASP)，是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历时，或查看特定的数据。  
@@ -28,26 +28,26 @@ ms.locfileid: "47600385"
   
 |Object|用于编写脚本安全？|  
 |------------|-------------------------|  
-|ADO 连接|用户帐户控制|  
+|ADO 连接|是|  
 |ADO 命令|否|  
 |ADO 参数|否|  
-|ADO 记录集|用户帐户控制|  
-|ADO 记录|用户帐户控制|  
-|ADO Stream|用户帐户控制|  
+|ADO 记录集|是|  
+|ADO 记录|是|  
+|ADO Stream|是|  
 |ADO 错误|否|  
 |ADOX 目录|否|  
 |ADOX 单元集|否|  
-|RDS 数据控件|用户帐户控制|  
-|RDS 数据空间|用户帐户控制|  
+|RDS 数据控件|是|  
+|RDS 数据空间|是|  
 |RDS DataFactory|否|  
   
  下表列出了包括与 Windows DAC/MDAC 的提供程序，并指示它们是否可安全执行脚本。  
   
 |提供程序|用于编写脚本安全？|  
 |--------------|-------------------------|  
-|形状|用户帐户控制|  
-|持久保存|用户帐户控制|  
-|Remote|用户帐户控制|  
+|形状|是|  
+|持久保存|是|  
+|Remote|是|  
 |OLE DB Provider for SQL Server (SQLOLEDB)|否|  
 |OLE DB Provider for ODBC (MSDASQL)|否|  
   

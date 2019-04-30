@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155300"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>内存中 OLTP 不支持的 Transact-SQL 构造
   内存优化的表和本机编译的存储过程不支持基于磁盘的表和解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程所支持的完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 外围应用。 尝试使用某个不支持的功能时，服务器返回错误。  
@@ -37,8 +37,8 @@ ms.locfileid: "52541240"
   
 |类型|“属性”|解决方法|  
 |----------|----------|----------------|  
-|选项|AUTO_CLOSE|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持数据库选项 AUTO_CLOSE=ON。|  
-|选项|ATTACH_REBUILD_LOG|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持 CREATE 数据库选项 ATTACH_REBUILD_LOG。|  
+|Option|AUTO_CLOSE|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持数据库选项 AUTO_CLOSE=ON。|  
+|Option|ATTACH_REBUILD_LOG|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持 CREATE 数据库选项 ATTACH_REBUILD_LOG。|  
 |功能|DATABASE SNAPSHOT|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持创建数据库快照。|  
 |功能|使用 sync_method“database snapshot”或“database snapshot character”进行复制|具有 MEMORY_OPTIMIZED_DATA 文件组的数据库不支持使用 sync_method“database snapshot”或“database snapshot character”进行复制。|  
 |功能|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB 跳过数据库中的内存优化表。<br /><br /> 对内存优化表执行 DBCC CHECKTABLE 将失败。|  
@@ -46,7 +46,7 @@ ms.locfileid: "52541240"
 ## <a name="memory-optimized-tables"></a>内存优化表  
  下表列出可在涉及内存优化表的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
   
-|类型|“属性”|解决方法|  
+|类型|名称|解决方法|  
 |----------|----------|----------------|  
 |功能|ON|内存优化的表不能放置在文件组或分区方案上。 从 `CREATE TABLE` 语句删除 ON 子句。|  
 |数据类型|数据类型名称|不支持所示的数据类型。 使用支持的数据类型之一替换该类型。 有关详细信息，请参阅[支持的数据类型](supported-data-types-for-in-memory-oltp.md)。|  
@@ -76,7 +76,7 @@ ms.locfileid: "52541240"
 |操作|ALTER SCHEMA|不支持更改现有内存优化的表或本机编译的存储过程的架构。 若要更改架构，请删除再重新创建表或过程。|  
 |操作|DBCC CHECKTABLE|内存优化的表不支持 DBCC CHECKTABLE。|  
 |功能|ANSI_PADDING OFF|创建内存优化的表或本机编译的存储过程时会话选项 `ANSI_PADDING` 必须为 ON。 在运行 CREATE 语句前执行 `SET ANSI_PADDING ON`。|  
-|选项|DATA_COMPRESSION|内存优化的表不支持数据压缩。 从表定义中删除该选项。|  
+|Option|DATA_COMPRESSION|内存优化的表不支持数据压缩。 从表定义中删除该选项。|  
 |功能|DTC|不能从分布式事务访问内存优化的表和本机编译的存储过程。 请改用 SQL 事务。|  
 |功能|多个活动的结果集 (MARS)|内存优化表不支持多个活动结果集 (MARS)。 此错误还可能指示使用了链接服务器。 链接服务器可以使用 MARS。 内存优化表不支持链接服务器。 请直接连接到内存优化的表所在的服务器和数据库。|  
 |操作|内存优化的表作为 MERGE 的目标|内存优化的表不能是 `MERGE` 操作的目标。 请改用 `INSERT`、`UPDATE` 或 `DELETE` 语句。|  
@@ -98,9 +98,9 @@ ms.locfileid: "52541240"
 ## <a name="nonclustered-hash-indexes"></a>非聚集哈希索引  
  下表列出可在涉及非聚集哈希索引的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
   
-|类型|“属性”|解决方法|  
+|类型|名称|解决方法|  
 |----------|----------|----------------|  
-|选项|ASC/DESC|非聚集哈希索引不排序。 从索引键定义中删除关键字 `ASC` 和 `DESC`。|  
+|Option|ASC/DESC|非聚集哈希索引不排序。 从索引键定义中删除关键字 `ASC` 和 `DESC`。|  
   
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  下表列出可在涉及本机编译存储过程的错误消息文本中显示的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和关键字，以及用于解决问题的更正操作。  
@@ -167,16 +167,16 @@ ms.locfileid: "52541240"
 |运算符|NEXT VALUE FOR|不能在本机编译的存储过程内引用序列。 使用解释的 [!INCLUDE[tsql](../../includes/tsql-md.md)]获取值，然后将它传递到本机编译的存储过程。 有关详细信息，请参阅 [在内存优化表中实现 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)。|  
 |Set 选项|*option*|在本机编译的存储过程内无法更改 SET 选项。 可以使用 BEGIN ATOMIC 语句设置某些选项。 有关详细信息，请参阅 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)中有关原子块的章节。|  
 |操作数|TABLESAMPLE|不支持此运算符。 从本机编译的存储过程中删除 `TABLESAMPLE`。|  
-|选项|RECOMPILE|在创建时编译本机编译的存储过程。 要重新编译本机编译的存储过程，请删除并重新创建它。 删除`RECOMPILE`从过程定义。|  
-|选项|ENCRYPTION|不支持此选项。 删除`ENCRYPTION`从过程定义。|  
-|选项|FOR REPLICATION|无法为复制创建本机编译的存储过程。 从过程定义中删除 `FOR REPLICATION`。|  
-|选项|FOR XML|不支持此选项。 从本机编译的存储过程中删除 `FOR XML`。|  
-|选项|FOR BROWSE|不支持此选项。 从本机编译的存储过程中删除 `FOR BROWSE`。|  
+|Option|RECOMPILE|在创建时编译本机编译的存储过程。 要重新编译本机编译的存储过程，请删除并重新创建它。 删除`RECOMPILE`从过程定义。|  
+|Option|ENCRYPTION|不支持此选项。 删除`ENCRYPTION`从过程定义。|  
+|Option|FOR REPLICATION|无法为复制创建本机编译的存储过程。 从过程定义中删除 `FOR REPLICATION`。|  
+|Option|FOR XML|不支持此选项。 从本机编译的存储过程中删除 `FOR XML`。|  
+|Option|FOR BROWSE|不支持此选项。 从本机编译的存储过程中删除 `FOR BROWSE`。|  
 |联接提示|HASH、MERGE|本机编译的存储过程仅支持嵌套的循环联接。 不支持哈希和合并联接。 删除联接提示。|  
 |查询提示|*查询提示*|此查询提示不位于本机编译的存储过程内。 有关支持的查询提示，请参阅[查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)。|  
-|选项|DISTINCT|不支持此选项。 从本机编译的存储过程中的查询删除 `DISTINCT`。|  
-|选项|PERCENT|`TOP` 子句不支持此选项。 从本机编译的存储过程中的查询删除 `PERCENT`。|  
-|选项|WITH TIES|`TOP` 子句不支持此选项。 从本机编译的存储过程中的查询删除 `WITH TIES`。|  
+|Option|DISTINCT|不支持此选项。 从本机编译的存储过程中的查询删除 `DISTINCT`。|  
+|Option|PERCENT|`TOP` 子句不支持此选项。 从本机编译的存储过程中的查询删除 `PERCENT`。|  
+|Option|WITH TIES|`TOP` 子句不支持此选项。 从本机编译的存储过程中的查询删除 `WITH TIES`。|  
 |聚合函数|*聚合函数*|不支持此子句。 有关本机编译的存储过程中聚合函数的详细信息，请参阅 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |排名函数|*排名函数*|本机编译的存储过程中不支持排名函数。 从过程定义中删除它们。|  
 |函数|*函数*|不支持此函数。 从本机编译的存储过程中删除它。|  

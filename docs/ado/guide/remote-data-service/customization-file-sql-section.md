@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214754"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
 **Sql**部分可以包含一个新的 SQL 字符串，将客户端的命令字符串。 是否存在任何 SQL 字符串的部分中，将忽略该节。  
@@ -46,7 +46,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |**SQL**|文本字符串，用于指示这是一个 SQL 部分实体。|  
 |***sqlString***|将客户端的字符串为 SQL 字符串。|  

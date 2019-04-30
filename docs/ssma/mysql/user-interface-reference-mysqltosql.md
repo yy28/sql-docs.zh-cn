@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215937"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>用户界面参考 (MySQLToSQL)
 本部分包括帮助主题的 SQL Server Migration Assistant (SSMA) for MySQL。  
@@ -25,7 +25,7 @@ ms.locfileid: "51671337"
   
 |||  
 |-|-|  
-|**主题**|**Description**|  
+|**主题**|**说明**|  
 |[高级对象选择&#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|使用**高级对象选择**对话框可以通过使用筛选器条件来查找数据库对象，然后选择或清除这些对象。|  
 |[评估报告&#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|使用报表来查看 MySQL 对象转换为 TRANSACT-SQL 语法的结果并估计的时间和迁移到 SQL Server 的复杂性。|  
 |[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|使用**连接到 MySQL**对话框以连接到你想要迁移的 MySQL 数据库。|  

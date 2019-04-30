@@ -1,5 +1,5 @@
 ---
-title: 第 4 课： 在 Windows Azure 存储中创建数据库 |Microsoft Docs
+title: 第 4 课：在 Windows Azure 存储中创建数据库 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181997"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>第 4 课：在 Windows Azure 存储中创建数据库
   在本课程中，你将学习如何使用“Windows Azure 中的 SQL Server 数据文件”功能来创建数据库。 注意，开始学习本课之前，必须先学完第 1、2 和 3 课。 第 3 课是一个非常重要的步骤，因为需要将有关 Windows Azure 存储容器及其关联的策略名称和 SAS 密钥的信息存储到 SQL Server 凭据存储区中，然后再开始学习第 4 课。  
@@ -86,7 +86,7 @@ ms.locfileid: "48063007"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注意：** 如果当前引用了容器中的任何数据文件，则尝试删除关联的 SQL Server 凭据总是会失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
+ **注意：** 如果有任何对容器中的数据文件的引用，则尝试删除关联的 SQL Server 凭据失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
   
  可使用此项新功能配置 SQL Server，以使任何 CREATE DATABASE 语句都默认使用支持云的数据库。 换言之，可在 SQL Server Management Studio Server 实例属性中设置默认数据和日志位置，以使任何时候创建数据库，所创建的所有数据库文件（.mdf，.ldf）均为 Windows Azure 存储中的页 blob。  
   

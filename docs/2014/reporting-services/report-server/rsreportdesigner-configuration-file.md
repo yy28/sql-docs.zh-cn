@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190780"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在 `Data` 元素中。 呈现扩展插件信息存储在 `Render` 元素中。 `Designer` 元素可枚举报表设计器中所用的查询生成器。  
@@ -55,7 +55,7 @@ ms.locfileid: "59946073"
   
 ## <a name="configuration-settings"></a>配置设置  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |`SecureConnectionLevel`|指定 Web 服务连接的安全级别。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md)。|  
 |`InstanceName`|预览服务器的标识符。 不要修改此值。|  

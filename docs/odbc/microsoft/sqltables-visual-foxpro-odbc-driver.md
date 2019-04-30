@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e134b2870c4506e725f2900b83d1118e42b55d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219122"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  返回由参数中指定的表名称的列表**SQLTables**语句。 如果未不指定任何参数，将返回当前的数据源中存储的表名称。 驱动程序返回的信息作为结果集。  
   

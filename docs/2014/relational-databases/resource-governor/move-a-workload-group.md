@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209749"
 ---
 # <a name="move-a-workload-group"></a>移动工作负荷组
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 将资源调控器工作负荷组移动到其他资源池。  
   
--   **开始之前：**[限制和局限](#LimitationsRestrictions)，[权限](#Permissions)  
+-   **开始之前：**[限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
--   **若要移动工作负荷组，请使用：**[SQL Server Management Studio](#MoveWGSSMS)， [Transact SQL](#MoveWGTSQL)  
+-   若要移动工作负荷组，请使用：[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
  如果存在挂起的资源调控器配置操作，则无法移动工作负荷组。  

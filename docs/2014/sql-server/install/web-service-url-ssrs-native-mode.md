@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131179"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
   使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)并[配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

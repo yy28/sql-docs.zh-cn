@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192269"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint 中 SQL Server BI 功能的部署拓扑
   本主题将说明用于在 SharePoint 2010 和 SharePoint 2013 环境中安装 SQL Server 商业智能功能 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 的常见拓扑。 例如单服务器和三层安装。  
@@ -169,7 +169,7 @@ ms.locfileid: "53365759"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> 三层向外扩展部署  
  此拓扑说明了在多台服务器上运行同一共享服务的扩展部署，该部署为大量请求提供服务并为 PowerPivot 数据或 Reporting Services 报表提供更强大的处理能力。 下图中有三种应用程序服务器群集，每一种均运行不同组合的共享服务。 在 SharePoint 环境中，已将服务发现和可用性内置于场中。 运行同一共享服务应用程序的多台物理服务器之间的负载平衡是共享服务体系结构的一部分。  
   
- 部署多服务器场时，请确保按照此 SharePoint 文章中的说明进行操作：[三层场 (SharePoint Server 2010) 的多个服务器](https://go.microsoft.com/fwlink/?linkID=219834)。  
+ 在部署时的多服务器场，请务必遵循以下 SharePoint 文章中的说明进行操作：[三层场 (SharePoint Server 2010) 的多个服务器](https://go.microsoft.com/fwlink/?linkID=219834)。  
   
  ![5 服务器拓扑](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 服务器拓扑")  
   

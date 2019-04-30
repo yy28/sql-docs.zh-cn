@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217745"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
   了解群集通过在查看器中浏览模型以获得进一步的序列后，您可以在使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  
@@ -37,7 +37,7 @@ ms.locfileid: "56041298"
   
      **选择挖掘模型**对话框随即打开。  
   
-4.  展开表示挖掘结构的节点**Sequence Clustering with Region**，然后选择模型**Sequence Clustering with Region**。 单击“确定” 。 现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
+4.  展开表示挖掘结构的节点**Sequence Clustering with Region**，然后选择模型**Sequence Clustering with Region**。 单击 **“确定”**。 现在，请忽略“输入”窗格；您将在设置预测函数之后指定输入。  
   
 5.  在网格中，单击下的空单元格**源**，然后选择**预测函数。** 在下的单元格**字段**，选择**PredictSequence**。  
   
@@ -151,7 +151,7 @@ NATURAL PREDICTION JOIN
   
 4.  在中**嵌套表输入**对话框中，单击**添加**。  
   
-5.  在新行中，单击下的框`Model`，并从列表中选择 Touring Tire。 单击“确定” 。  
+5.  在新行中，单击下的框`Model`，并从列表中选择 Touring Tire。 单击 **“确定”**。  
   
 6.  单击**结果**按钮以查看预测。  
   

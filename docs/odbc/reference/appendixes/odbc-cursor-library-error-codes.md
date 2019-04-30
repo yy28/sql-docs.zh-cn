@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181230"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 游标库错误代码
 > [!IMPORTANT]  
@@ -31,17 +31,17 @@ ms.locfileid: "47691125"
 > [!NOTE]  
 >  游标库不排序状态记录;驱动程序管理器和 ODBC 3。*x*驱动程序负责排序状态记录。  
   
-|SQLSTATE|Description|可以从返回|  
+|SQLSTATE|描述|可以从返回|  
 |--------------|-----------------|--------------------------|  
 |01000|游标是不可更新。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|不使用游标库。 加载失败。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|不使用游标库。 没有足够的驱动程序支持。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|不使用游标库。 版本不匹配的驱动程序管理器。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|驱动程序返回 SQL_SUCCESS_WITH_INFO。 警告消息已丢失。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|返回 S1000|常规错误： 无法创建文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|返回 S1000|常规错误： 无法从文件缓冲区读取。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|返回 S1000|常规错误： 无法写入文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|返回 S1000|常规错误： 无法关闭或删除文件缓冲区。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|常规错误：无法创建文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|常规错误：无法从文件缓冲区中读取。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|常规错误：无法写入文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|常规错误：无法关闭或删除文件缓冲区。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|不能执行定位的请求，因为没有可搜索的列绑定。|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|无法执行定位的请求，因为联接条件创建结果集。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|绑定的缓冲区超出了最大段大小。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

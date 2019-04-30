@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159294"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以编程方式为 Access 驱动程序设置选项
 
-|选项|Description|方法|  
+|Option|描述|方法|  
 |------------|-----------------|------------|  
 |缓冲区大小|内部缓冲区，以千字节，Microsoft Access 用于传输数据到 \ 来自磁盘的大小。 默认缓冲区大小为 2048 KB （显示为 2048年）。 可以输入任何整除 256 的整数值。|若要动态设置此选项，在调用中使用 MAXBUFFERSIZE 关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |数据源名称|用于标识数据源，例如工资单或人员的名称。|若要动态设置此选项，请使用**DSN**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |“数据库”|Microsoft Access 数据源可以设置而无需选择或创建数据库。 如果在安装程序时未不提供任何数据库，将提示用户连接到数据源时选择的数据库文件。|若要动态设置此选项，请使用**DBQ**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
-|Description|数据源; 中的数据的可选描述例如，"雇佣日期、 发薪记录和当前查看的所有员工。"|若要动态设置此选项，请使用**描述**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
+|描述|数据源; 中的数据的可选描述例如，"雇佣日期、 发薪记录和当前查看的所有员工。"|若要动态设置此选项，请使用**描述**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |排他|如果**独占**框处于选中状态，数据库将以独占方式打开，并且一次只能有一个用户可以访问。 以独占模式运行时，性能得到了增强。|若要动态设置此选项，请使用**独占**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  
 |ImplicitCommitSync|确定如何将事务外部所做的更改写入到数据库。 此值最初设置为"是"，意味着 Microsoft Access 驱动程序将等待完成的内部/隐式事务中的提交。|此选项已被纳入**设置高级选项**Microsoft Access 驱动程序对话框。|  
 |页超时|以毫秒为单位，页 （如果不使用） 被删除前保留在缓冲区中指定时间的段。 对于 Microsoft Access 驱动程序，默认值为 500 毫秒 （0.5 秒为单位）。 此选项适用于使用 ODBC 驱动程序的所有数据源。<br /><br /> 页超时不能为 0，由于固有的延迟。 页超时不能早于固有的延迟，即使页面超时选项设置为低于该值。|若要动态设置此选项，请使用**PAGETIMEOUT**调用中的关键字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  

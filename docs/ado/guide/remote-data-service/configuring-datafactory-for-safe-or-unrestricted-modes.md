@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214858"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>配置用于安全或不受限制模式的 DataFactory
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559904"
   
  提供了注册表文件 handsafe.reg，若要设置的安全配置的处理程序注册表项。 若要在安全模式下运行，运行 handsafe.reg。  
   
- 运行 handsafe.reg 之后, 您必须停止并通过在命令提示符窗口中键入以下命令重新启动 Web 服务器上的 World Wide Web 发布服务:"NET 停止 W3SVC"和"NET 启动 W3SVC"。  
+ 运行 handsafe.reg 后, 必须停止并重新启动 Web 服务器上的 World Wide Web 发布服务在命令提示符窗口中键入以下命令："NET STOP W3SVC"和"NET 启动 W3SVC"。  
   
 ## <a name="see-also"></a>请参阅  
  [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   

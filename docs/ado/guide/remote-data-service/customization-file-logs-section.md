@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214906"
 ---
 # <a name="customization-file-logs-section"></a>自定义文件 Logs 部分
 **日志**部分包含的日志文件条目，用于指定的操作过程中记录错误的文件的名称**DataFactory**。  
@@ -39,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>备注  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |**err**|文本字符串，用于指示这是一个日志文件条目。|  
 |*FileName*|完整的路径和文件名的名称。 典型的文件名称是**c:\msdfmap.log**。|  

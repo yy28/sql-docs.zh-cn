@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185571"
 ---
 # <a name="basic-data-mining-tutorial"></a>数据挖掘基础教程
   欢迎来到[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据挖掘基础教程。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一个集成的环境，用于创建数据挖掘模型和进行预测。 在本教程中，您将完成目标邮递活动中使用机器学习来分析和预测客户购买行为的一种方案。 本教程说明了如何使用三种最重要的数据挖掘算法：聚类、决策树和 Naive Bayes。 您还将了解如何分析您发现使用挖掘模型查看器的内容以及如何创建预测和准确性图表中包含的数据挖掘工具[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 虚构公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 用于所有的示例。  

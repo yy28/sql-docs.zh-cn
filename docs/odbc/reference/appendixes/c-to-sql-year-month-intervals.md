@@ -1,5 +1,5 @@
 ---
-title: 从 C 到 SQL： 年月间隔 |Microsoft Docs
+title: 从 C 到 SQL：年月间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159289"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>从 C 到 SQL：年月间隔
 年-月间隔 ODBC C 数据类型的标识符是：  
@@ -32,9 +32,9 @@ ms.locfileid: "47692765"
   
 |SQL 类型标识符|测试|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|列的字节长度 > = 字符字节长度<br /><br /> 列的字节长度 < 字符字节长度 [a]<br /><br /> 数据值不是有效的时间间隔文本|不适用<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|列的字符长度 > = 字符长度的数据<br /><br /> 列的字符长度 < 字符长度的数据 [a]<br /><br /> 数据值不是有效的时间间隔文本|不适用<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|单字段间隔转换没有导致截断的整个数字<br /><br /> 转换导致截断的整个数字|不适用<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|列的字节长度 > = 字符字节长度<br /><br /> 列的字节长度 < 字符字节长度 [a]<br /><br /> 数据值不是有效的时间间隔文本|不适用<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|列的字符长度 > = 字符长度的数据<br /><br /> 列的字符长度 < 字符长度的数据 [a]<br /><br /> 数据值不是有效的时间间隔文本|不适用<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|单字段间隔转换没有导致截断的整个数字<br /><br /> 转换导致截断的整个数字|不适用<br /><br /> 22003|  
 |SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|而无需截断的任何字段的已转换数据值<br /><br /> 在转换期间已被截断的数据值的一个或多个字段，|不适用<br /><br /> 22015|  
   
  [a] 所有的 C 间隔数据类型可以转换为字符数据类型。  

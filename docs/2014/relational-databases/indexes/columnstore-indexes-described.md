@@ -17,11 +17,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155520"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *内存中列存储索引*存储和管理通过使用基于列的数据存储和基于列的查询处理的数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。  
@@ -40,9 +40,9 @@ ms.locfileid: "48109798"
 -   [相关的任务和主题](#related)  
   
 ##  <a name="basics"></a> 基础知识  
- *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
+ *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
-###  <a name="benefits"></a> 优点  
+###  <a name="benefits"></a> 优势  
  列存储索引适合于对大型数据集执行分析的大多数只读查询。 通常，列存储索引是针对数据仓库工作负荷的查询。 列存储索引为使用全表扫描的查询带来很大的性能好处，但不适合于查找数据并且搜索特定值的查询。  
   
  列存储索引的优点：  
@@ -64,7 +64,7 @@ ms.locfileid: "48109798"
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，聚集列存储索引：  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，聚集列存储索引：  
   
 -   在 Enterprise Edition、Developer Edition 和 Evaluation Edition 中提供。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48109798"
 |-|  
 |**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非聚集列存储索引：  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，非聚集列存储索引：  
   
 -   可对聚集索引或堆中列的子集建立索引。 例如，它可以对常用列建立索引。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48109798"
  以下关键概念和术语与列存储索引相关联。  
   
  列存储索引  
- *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
+ *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。  
   
  列存储  
  “列存储”是在逻辑上组织为包含行和列的表、在物理上以按列数据格式存储的数据。  
@@ -157,16 +157,16 @@ ms.locfileid: "48109798"
   
  具有非聚集列存储索引的表在该索引被删除或禁用前是只读的。 若要更新该表和非聚集列存储索引，您可以切入和切出分区。也可以禁用该索引，更新该表，然后重新生成该索引。  
   
- 有关详细信息请参阅[使用非聚集列存储索引](indexes.md)  
+ 有关详细信息，请参阅 [Using Nonclustered Columnstore Indexes](indexes.md)。  
   
 ###  <a name="dataload_cci"></a> 将数据加载到聚集列存储索引  
  ![加载到聚集列存储索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "加载到聚集列存储索引")  
   
- 如图所示，将数据加载到聚集列存储索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ 按图中所建议的那样，为了将数据加载到聚集列存储索引， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
 1.  直接将最大大小的行组插入列存储。 加载数据时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 按先来先处理的顺序将数据行分配给一个打开的行组。  
   
-2.  对于每个行组，在达到最大大小后，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
+2.  对于每个行组，在达到最大大小后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
   
     1.  将行组标记为“关闭”。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48109798"
   
     2.  如果行数小于每个行组的最小行数，则将这些行添加到增量存储中。  
   
- 有关增量存储任务和进程的详细信息，请参阅[使用聚集列存储索引](../../database-engine/using-clustered-columnstore-indexes.md)  
+ 有关增量存储任务和进程的详细信息，请参阅 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
   
 ##  <a name="performance"></a> 性能提示  
   
@@ -196,7 +196,7 @@ ms.locfileid: "48109798"
 ##  <a name="related"></a> 相关的任务和主题  
   
 ### <a name="nonclustered-columnstore-indexes"></a>非聚集列存储索引  
- 常见的任务，请参阅[使用非聚集列存储索引](../../database-engine/using-nonclustered-columnstore-indexes.md)。  
+ 对于常见任务，请参阅 [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)。  
   
 -   [CREATE COLUMNSTORE INDEX (Transact-SQL)](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
@@ -205,9 +205,9 @@ ms.locfileid: "48109798"
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>聚集列存储索引  
- 常见的任务，请参阅[Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
+ 对于常见任务，请参阅 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)。  
   
--   [创建聚集列存储索引&#40;Transact SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)与 REBUILD 或 REORGANIZE。  
   

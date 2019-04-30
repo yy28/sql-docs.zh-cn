@@ -1,17 +1,17 @@
 ---
 title: srv_rpcname（扩展存储过程 API）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/03/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_rpcname
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f309349b2867412d552372e83ed1947b34242336
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046642"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname（扩展存储过程 API）
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
@@ -45,7 +46,6 @@ srvproc
 int *  
 len   
 );  
-  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -64,6 +64,6 @@ len
  由于在无远程存储过程的情况下也可以调用 srv_rpcname（不会出现信息性错误），因此，该函数也可用于确定是否存在远程存储过程。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
   

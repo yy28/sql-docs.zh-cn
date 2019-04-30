@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162151"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>堆（没有聚集索引的表）
-  堆是不含聚集索引的表。 可在存储为堆的表上创建一个或多个非聚集索引。 数据存储于堆中并且无需指定顺序。 通常，数据最初以行插入表时的顺序存储，但 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能会在堆中四处移动数据，以便高效地存储行；因此，无法预测数据顺序。 若要确保从堆返回的行的顺序，必须使用`ORDER BY`子句。 若要指定用于存储行的顺序，请对表创建聚集索引，以便表不是堆。  
+  堆是不含聚集索引的表。 可在存储为堆的表上创建一个或多个非聚集索引。 数据存储于堆中并且无需指定顺序。 通常，数据最初以行插入表时的顺序存储，但 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能会在堆中四处移动数据，以便高效地存储行；因此，无法预测数据顺序。 若要确保从堆返回的行的顺序，您必须使用 `ORDER BY` 子句。 若要指定用于存储行的顺序，请对表创建聚集索引，以便表不是堆。  
   
 > [!NOTE]  
 >  有时候可能有必要将表保留为堆，而不是创建聚集索引，但高效率地使用堆需要较高的技能。 大多数表应该具有仔细选择的聚集索引，除非有足够的理由将表保留为堆。  
