@@ -1,5 +1,5 @@
 ---
-title: 聚合 (MDX) |Microsoft 文档
+title: 聚合 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200625"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -35,14 +35,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指定了一组空元组或一个空集，则此函数返回一个空值。  
   
- 下表描述了如何**聚合**函数的行为与不同的聚合函数。  
+ 下表描述了如何**聚合**函数使用不同的聚合函数的行为。  
   
 |聚合运算符|结果|  
 |--------------------------|------------|  
-|SUM|返回对集求得的值之和。|  
+|Sum|返回对集求得的值之和。|  
 |Count|返回对集求得的值数。|  
 |Max|返回对集求得的最大值。|  
 |Min|返回对集求得的最小值。|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |分配|分配根据度量值聚合函数聚合。 如果度量值聚合函数是非重复计数，则对分配求和。|  
   
 ## <a name="examples"></a>示例  
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，在第一个八个月内的日历年 2003年中包含聚合`Date`维度，从**Adventure Works**多维数据集。  
+ 下面的示例返回的总和`Measures.[Order Quantity]`成员，包含在 2003年日历年度前八个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -94,7 +94,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 下面的示例返回其销售已拒绝的以前的时间段内基于用户选择州-省成员的值使用聚合函数计算经销商的计数。 **Hierarchize**和**DrillDownLevel**使用函数以返回的拒绝产品维度中的产品类别的销售值。  
+ 以下示例返回分销商的销售上一时间段内，根据用户选择了使用聚合函数计算的 State-province 成员值的计数。 **Hierarchize**并**DrillDownLevel**函数用于返回 Product 维度中产品类别的销售额下降值。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -123,15 +123,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [子级&#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [计数&#40;设置&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [筛选器&#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [属性&#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate (MDX)](../mdx/periodstodate-mdx.md)   
+ [Children (MDX)](../mdx/children-mdx.md)   
+ [Hierarchize (MDX)](../mdx/hierarchize-mdx.md)   
+ [Count（集）(MDX)](../mdx/count-set-mdx.md)   
+ [Filter (MDX)](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel (MDX)](../mdx/drilldownlevel-mdx.md)   
+ [属性 (MDX)](../mdx/properties-mdx.md)   
+ [PrevMember (MDX)](../mdx/prevmember-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

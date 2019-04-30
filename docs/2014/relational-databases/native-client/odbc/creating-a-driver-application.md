@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205263"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>创建 SQL Server Native Client ODBC 驱动程序应用程序
   ODBC 体系结构具有四个组件，可以执行以下功能：  
@@ -100,7 +100,7 @@ ms.locfileid: "53362169"
   
 -   调用分布式查询元数据 API 函数，以获取链接服务器及其目录的列表。  
   
- 使用大容量复制功能的任何 C 或 c + + ODBC 应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序必须与 sqlncli11.lib 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 Sqlncli.h 和 sqlncli11.lib 文件作为的一部分分发[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
+ 任何 C 或C++使用大容量复制功能的 ODBC 应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序必须与 sqlncli11.lib 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 Sqlncli.h 和 sqlncli11.lib 文件作为的一部分分发[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

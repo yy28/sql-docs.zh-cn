@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b33bc399646a6d274c875abd36d53219a2814e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200516"
 ---
 # <a name="procedure-invocation"></a>过程调用
 过程使用 Microsoft Access 驱动程序时，可以通过使用从驱动程序来调用**SQLExecDirect**或**SQLPrepare**函数具有以下语法: {调用*过程名称* [(*参数*[，*参数*]...)]}。 请注意，表达式不支持为被调用过程的参数。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192350"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 谓词限制
 如果列中的数据的长度超过 255 个字符，LIKE 比较将基于仅前 255 个字符。  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150105"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能可帮助您评估即将进行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升级的影响。 您还可以使用它来帮助评估硬件和操作系统升级以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 优化的影响。  
@@ -39,7 +39,7 @@ ms.locfileid: "53358459"
   
  下表介绍了适当使用每种工具的情况。  
   
-|工具|使用场景|  
+|Tool|使用场景|  
 |----------|---------------|  
 |[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]|您希望在单台计算机上使用传统的重播机制。 特别是，你需要逐行调试功能，如“步骤”、“运行至光标处”和“切换断点”命令。<br /><br /> 您要重播 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪。|  
 |分布式重播|您要评估应用程序兼容性。 例如，您要测试 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和操作系统升级方案、硬件升级或索引优化。<br /><br /> 捕获的跟踪中的并发率过高，以致于单个重播客户端不足以对其进行模拟。|  

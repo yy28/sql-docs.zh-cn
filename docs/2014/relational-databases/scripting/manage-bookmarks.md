@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191816"
 ---
 # <a name="manage-bookmarks"></a>管理书签
   在代码编辑器中工作时，使用 **“书签”** 窗口可以创建指向文档中特定代码行的链接。 可以从 **“查看”** 菜单中显示此窗口。  

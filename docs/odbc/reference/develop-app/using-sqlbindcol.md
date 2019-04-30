@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208478"
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
 应用程序将列绑定通过调用**SQLBindCol**。 此函数将一个列绑定一次。 使用它，该应用程序指定以下：  
   
 -   列号。 列 0 为书签列中;在某些结果集中不包括此列。 所有其他列以数字 1 开始编号。 它是比结果集中; 的列的编号较大的列绑定错误此错误无法检测到之前创建的结果集，因此它不会返回由**SQLFetch**，而非**SQLBindCol**。  
   
--   该变量的 C 数据类型、 地址和字节长度绑定到列。 它是指定不能转换的列的 SQL 数据类型为; C 数据类型错误此错误可能检测不到之前已创建结果集，因此它不会返回由**SQLFetch**，而非**SQLBindCol**。 有关支持的转换的列表，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附录 d： 数据类型。 有关字节长度的信息，请参阅[数据缓冲区长度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
+-   该变量的 C 数据类型、 地址和字节长度绑定到列。 它是指定不能转换的列的 SQL 数据类型为; C 数据类型错误此错误可能检测不到之前已创建结果集，因此它不会返回由**SQLFetch**，而非**SQLBindCol**。 有关支持的转换的列表，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中附录 d:数据类型。 有关字节长度的信息，请参阅[数据缓冲区长度](../../../odbc/reference/develop-app/data-buffer-length.md)。  
   
 -   长度/指示器缓冲区的地址。 长度/指示器缓冲区是可选的。 它用于返回的字节长度的二进制或字符数据或返回 SQL_NULL_DATA，如果数据为 NULL。 有关详细信息，请参阅[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   

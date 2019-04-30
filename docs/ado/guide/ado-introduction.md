@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214861"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概述和权益
 ActiveX 数据对象 (ADO) 是 OLE DB 的高级别、 简单易用的界面。 OLE DB 是多数据存储区的低级别、 高性能界面。 ADO 和 OLE DB 可以使用关系 （表格） 和非关系 (层次结构或流) 数据。

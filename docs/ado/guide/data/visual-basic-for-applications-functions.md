@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184881"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可在数据整理 CALC 表达式：  
@@ -33,11 +33,11 @@ ms.locfileid: "47611595"
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|错误|Error$|Exp|Fix|“格式”|Format$|  
+|错误|Error$|Exp|Fix|格式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |smallint|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|后，leftb 将|Left$|后，leftb 将 $|Len|日志|LTrim|  
+|LeftB|Left$|LeftB$|Len|日志|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |现在|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|Right|  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157959"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
   是否要创建一个新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]内存优化的表或将现有的基于磁盘的表迁移到内存优化表，务必要有的合理估计的每个表的内存需求，因此你可以设置与具有足够的服务器内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  关于 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表中哈希索引的工作原理，请参阅 [哈希索引](../../database-engine/hash-indexes.md)。  
   
- **注意：** 哈希索引数组的大小不能实时更改。 要更改哈希索引数组的大小，必须删除表，更改 bucket_count 值，然后重新创建表。  
+ **注意：** 无法更改动态哈希索引数组的大小。 要更改哈希索引数组的大小，必须删除表，更改 bucket_count 值，然后重新创建表。  
   
  **设置哈希索引数组的大小**  
   

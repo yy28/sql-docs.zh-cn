@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207065"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>复制管理员常见问题
   下列问题和解答就复制数据库管理员所面临的多种任务提供指导。  
@@ -42,7 +42,7 @@ ms.locfileid: "54125847"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>订阅何时可用？何时可以使用订阅数据库？  
  将快照应用于订阅数据库之后，即可使用订阅。 即使订阅数据库在此之前就可以访问，但在应用快照之前，不应使用数据库。 使用复制监视器检查快照生成和应用的状态：  
   
--   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[查看信息和执行其任务使用复制监视器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+-   快照由快照代理生成。 请在复制监视器中某个发布的 **“代理”** 选项卡中查看快照生成的状态。 有关详细信息，请参阅[使用复制监视器查看信息和执行任务](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   快照由分发代理或合并代理应用。 请在复制监视器的 **“分发代理”** 页或 **“合并代理”** 页中查看快照应用的状态。 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125847"
   
 -   对象的定义，如 CREATE TABLE 语句。 默认情况下，复制把所有已复制对象的定义都复制到订阅服务器。  
   
--   在其中创建对象的命名空间：\<数据库 >。\<架构 >。\<对象 >。 架构使用 CREATE SCHEMA 语句定义。  
+-   在其中创建对象的命名空间：\<数据库>.\<架构>.\<对象>。 架构使用 CREATE SCHEMA 语句定义。  
   
 -   在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  
   

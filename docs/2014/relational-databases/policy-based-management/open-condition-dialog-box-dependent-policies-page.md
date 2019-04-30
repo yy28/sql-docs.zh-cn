@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182928"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>“打开条件”对话框，“依赖策略”页
   使用此对话框可以显示当前引用此基于策略的管理条件的策略的列表。 有关条件与方面和策略如何关联的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  

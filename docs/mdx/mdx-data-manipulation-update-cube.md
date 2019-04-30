@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187618"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 数据操作 - UPDATE CUBE
 
 
-  UPDATE CUBE 语句用于将数据写回到多维数据集中的任何单元中，该多维数据集使用 SUM 聚合而聚合到其父级。 详细说明和示例，请参阅"了解分配"中的这篇博客文章：[生成写回应用程序使用 Analysis Services （博客）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
+  UPDATE CUBE 语句用于将数据写回到多维数据集中的任何单元中，该多维数据集使用 SUM 聚合而聚合到其父级。 有关详细说明和示例，请参阅这篇博客文章中的"了解分配":[生成 Analysis Services （博客） 写回应用程序](https://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
   
  以下是分配方法的说明。  
   
- **USE_EQUAL_ALLOCATION:** 影响更新单元的每个叶单元分配基于下面的表达式具有相等值。  
+ **USE_EQUAL_ALLOCATION:** 将基于下面的表达式具有相等值分配每个影响更新单元的叶单元格。  
   
 ```  
 <leaf cell value> =   
@@ -75,7 +75,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 影响更新单元的每个叶单元将分配一个相等的值，基于下面的表达式。  
+ **USE_WEIGHTED_ALLOCATION:** 将基于下面的表达式具有相等值分配每个影响更新单元的叶单元格。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  

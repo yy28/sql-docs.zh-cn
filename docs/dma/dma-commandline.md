@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154678"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
@@ -41,13 +41,13 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|参数  |Description  | 必需 （是/否）
+|参数  |描述  | 必需 （是/否）
 |---------|---------|---------------|
 | `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
 |`/AssessmentName`     |   评估项目的名称   | Y
 |`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | Y
-|`/AssessmentSourcePlatform`     | 源平台进行评估，支持的值：SqlOnPrem，RdsSqlServer。 目标准备情况评估还支持 Cassandra 作为源平台。 默认值是 SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | 目标平台，用于评估，支持的值：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017。 目标准备情况评估还支持 CosmosDB 作为目标平台。 默认值是 SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | 评估源平台： <br>支持的值进行评估：SqlOnPrem，RdsSqlServer （默认值） <br>对于目标准备情况评估支持的值：SqlOnPrem，RdsSqlServer （默认值），Cassandra （预览版）   | N
+|`/AssessmentTargetPlatform`     | 用于评估的目标平台：  <br> 支持的值进行评估：AzureSqlDatabase、 ManagedSqlServer、 SqlServer2012、 SqlServer2014、 SqlServer2016、 SqlServerLinux2017 和 SqlServerWindows2017 （默认值）  <br> 对于目标准备情况评估支持的值：ManagedSqlServer （默认）、 CosmosDB （预览版）   | N
 |`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则。 如果源平台是 RdsSqlServer，不支持将功能奇偶校验计算为目标平台 AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
 |`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
@@ -246,7 +246,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|参数  |Description  | 必需 （是/否）
+|参数  |描述  | 必需 （是/否）
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | 执行 SKU 评估，请参阅 DMA 命令行 | Y
 |`/SkuRecommendationInputDataFilePath`  | 从承载数据库的计算机收集的性能计数器文件的完整路径 |    Y
@@ -330,6 +330,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 - [数据迁移助手](https://aka.ms/get-dma)下载。
 - 文章[标识适当 Azure SQL 数据库的 SKU 的本地数据库](https://aka.ms/dma-sku-recommend-sqldb)。

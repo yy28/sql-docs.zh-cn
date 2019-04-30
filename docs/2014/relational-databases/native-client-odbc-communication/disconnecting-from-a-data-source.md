@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205677"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
   当应用程序使用完数据源时，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接分配任何语句，并与数据源断开连接，驱动程序。 断开连接后，应用程序可以调用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)以释放连接句柄。 退出之前，应用程序还调用**SQLFreeHandle**以释放环境句柄。  

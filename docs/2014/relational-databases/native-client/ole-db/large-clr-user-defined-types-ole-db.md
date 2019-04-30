@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199251"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
@@ -44,7 +44,7 @@ ms.locfileid: "52398130"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  在使用以下信息`DBCOLUMNDESC`需要 UDT 列时使用的 itabledefinition:: Createtable 结构：  
   
-|OLE DB 数据类型 (*wType*)|*pwszTypeName*|SQL Server 数据类型|rgPropertySets|  
+|OLE DB 数据类型 (*wType*)|*pwszTypeName*|SQL Server 数据类型|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|忽略|UDT|必须包括 DBPROPSET_SQLSERVERCOLUMN 属性集。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52398130"
   
  为 Udt 还定义以下各列：  
   
-|列标识符|类型|Description|  
+|列标识符|类型|描述|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  
@@ -102,7 +102,7 @@ ms.locfileid: "52398130"
   
  对于 UDT，还会定义以下列：  
   
-|列标识符|类型|Description|  
+|列标识符|类型|描述|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的目录的名称。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|对于 UDT 列，为在其中定义了 UDT 的架构的名称。|  

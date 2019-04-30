@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155233"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 将给定的记录集与 ADO 2.1 一起使用的连接字符串由指定的数据库同步。  
@@ -56,7 +56,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  指向要同步的记录集的指针指向的指针。  
   
  *pStatusArray*  
- 用于返回受影响的行的行状态的安全数组的变体同步。 如果没有以下同步选项的设置未设置： *RefreshWithUpdate*，*刷新*并*RefreshConflicts*。  
+ 用于返回受影响的行的行状态的安全数组的变体同步。 未设置，如果没有以下同步选项的设置：*RefreshWithUpdate*，*刷新*并*RefreshConflicts*。  
   
 ## <a name="remarks"></a>备注  
  *HandlerString*参数可以为 null。 在这种情况下发生的情况取决于如何配置 RDS 服务器。 "MSDFMAP.handler"的处理程序字符串指示应使用 Microsoft 提供处理程序 (Msdfmap.dll)。 "MASDFMAP.handler,sample.ini"的处理程序字符串指示应使用 Msdfmap.dll 处理程序和自变量"sample.ini"，应传递给处理程序。 Msdfmap.dll 然后会将自变量解释为方向使用 sample.ini 检查连接和查询字符串。  

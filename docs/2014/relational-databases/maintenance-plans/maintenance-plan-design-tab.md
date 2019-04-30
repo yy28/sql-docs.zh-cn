@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184557"
 ---
 # <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
   使用 **维护计划（“设计”选项卡）** 可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  

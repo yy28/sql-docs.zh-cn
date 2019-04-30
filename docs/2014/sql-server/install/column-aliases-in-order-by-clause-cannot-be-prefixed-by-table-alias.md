@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190777"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中的列别名不能以表别名作为前缀
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中，ORDER BY 子句中的列别名不能以表别名作为前缀。  
@@ -26,7 +26,7 @@ ms.locfileid: "59583260"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  例如，以下查询可在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中正常执行，而在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中却返回错误。  
   
 ```  

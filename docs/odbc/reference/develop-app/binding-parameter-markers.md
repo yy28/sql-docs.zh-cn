@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199395"
 ---
 # <a name="binding-parameter-markers"></a>绑定参数标记
 应用程序将参数绑定通过调用**SQLBindParameter**。 **SQLBindParameter**将一个参数绑定一次。 使用它，该应用程序指定以下：  
@@ -28,7 +28,7 @@ ms.locfileid: "47645985"
   
 -   参数类型 （输入、 输入/输出或输出）。 除了在过程调用中的参数，所有参数都是输入的参数。 有关详细信息，请参阅[过程参数](../../../odbc/reference/develop-app/procedure-parameters.md)，在本部分中更高版本。  
   
--   该变量的 C 数据类型、 地址和字节长度绑定到参数。 该驱动程序必须能够将数据从 C 数据类型转换到 SQL 数据类型或返回错误。 有关支持的转换的列表，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附录 d： 数据类型。  
+-   该变量的 C 数据类型、 地址和字节长度绑定到参数。 该驱动程序必须能够将数据从 C 数据类型转换到 SQL 数据类型或返回错误。 有关支持的转换的列表，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)中附录 d:数据类型。  
   
 -   SQL 数据类型、 精度和小数位数参数本身。  
   

@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209504"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指示器（报表生成器和 SSRS）
   指示器是以直观的形式提供单个数据值的状态的最小化仪表。 表示指示器及其状态的图标十分简单，并且即使在以小尺寸使用时也保持有效的外观。  

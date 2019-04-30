@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144328"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
   在某些情况下，物理收缩或扩展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的事务日志的物理日志文件非常有用。 本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  

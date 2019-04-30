@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065455"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   指定用户文件中的数据的源或目标格式。 用作源格式时**bcp_colfmt**指定的现有数据文件中大容量复制到的数据源作为格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 作为目标格式使用时，使用指定的列格式创建数据文件**bcp_colfmt**。  

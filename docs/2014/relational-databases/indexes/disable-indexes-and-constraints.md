@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162401"
 ---
 # <a name="disable-indexes-and-constraints"></a>禁用索引和约束
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用索引或约束。 禁用索引可以防止用户访问索引，而对于聚集索引，则可以防止用户访问基础表数据。 索引定义保留在元数据中，非聚集索引的索引统计信息仍保留。 对视图禁用非聚集索引或聚集索引会以物理方式删除索引数据。 禁用表的聚集索引可以防止对数据的访问，数据仍保留在表中，但在删除或重新生成索引之前，无法对这些数据执行数据操作语言 (DML) 操作。  
@@ -39,7 +39,7 @@ ms.locfileid: "48050557"
   
      [限制和局限](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **禁用索引，使用：**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48050557"
  显示创建索引的表或视图的名称。  
   
  **索引类型**  
- 显示索引的类型：“聚集”、“非聚集”、“空间”或 ”XML”。  
+ 显示索引的类型：**聚集**，**非聚集**，**空间**，或**XML**。  
   
  **“状态”**  
  显示禁用操作的状态。 执行之后可能的值包括：  

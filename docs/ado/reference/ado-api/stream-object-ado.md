@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976e822482efc530e3b055f61c242ee03a30e012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179830"
 ---
 # <a name="stream-object-ado"></a>流对象 (ADO)
 表示二进制数据或文本的流。  

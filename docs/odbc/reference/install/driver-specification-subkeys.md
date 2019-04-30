@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198317"
 ---
 # <a name="driver-specification-subkeys"></a>驱动程序规范子项
 在 ODBC 驱动程序的子项中列出每个驱动程序具有其自己的子项。 此子项有同名的 ODBC 驱动程序子项下的相应值。 此子项下的值中列出的驱动程序和驱动程序安装程序 Dll，返回的驱动程序关键字的值的完整路径**SQLDrivers**，和使用情况计数。 值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
-|CreateDSN|REG_SZ|*驱动程序说明*|  
-|驱动程序|REG_SZ|*驱动程序 DLL 路径*|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|CreateDSN|REG_SZ|*driver-description*|  
+|驱动程序|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *文件 extension1*[**，\*。** *文件 extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *文件 extension1*[**，\*。** *file-extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|安装|REG_SZ|*安装程序 DLL 路径*|  
+|安装|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |UsageCount|REG_DWORD|*计数*|  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: adbc90288789838199a0eee866eb36896a360009
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198548"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 数据源管理器
 Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 此应用程序位于 Windows 控制面板下**管理工具**。 从 Windows 8 开始，该图标名为**ODBC 数据源**，并且在 64 位操作系统上没有 32 位和 64 位版本。  

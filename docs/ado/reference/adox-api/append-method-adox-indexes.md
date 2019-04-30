@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206267"
 ---
 # <a name="append-method-adox-indexes"></a>Append 方法（ADOX 索引）
 添加一个新[索引](../../../ado/reference/adox-api/index-object-adox.md)对象传递给[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)集合。  
@@ -37,7 +37,7 @@ Indexes.Append Index [,Columns]
  *Index*  
  **索引**对象以追加或要创建并追加的索引的名称。  
   
- *列*  
+ *“列”*  
  可选。 一个**变体**值，该值指定要编制索引的列的名称。 *列*参数对应的值[名称](../../../ado/reference/adox-api/name-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
   
 ## <a name="remarks"></a>备注  

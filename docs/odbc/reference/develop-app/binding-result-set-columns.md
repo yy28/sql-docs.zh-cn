@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199272"
 ---
 # <a name="binding-result-set-columns"></a>绑定结果集列
 应用程序可以作为多或较少列结果集根据他们的选择，包括所有绑定的列的绑定。 时提取的数据行，驱动程序将返回到应用程序对于绑定列的数据。 应用程序是否在结果集中绑定的所有列都取决于应用程序。 例如，通常生成报表的应用程序具有固定的格式;此类应用程序创建包含所有报表中使用的列的结果集，然后绑定并检索所有这些列的数据。 有时显示完整的数据的屏幕的应用程序允许用户决定要显示; 的列此类应用程序创建的结果集包含用户可能会想，但绑定并仅为用户选择这些列检索数据的所有列。  

@@ -1,5 +1,5 @@
 ---
-title: 钻取语句 (MDX) |Microsoft 文档
+title: 钻取语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187654"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>MDX 数据操作的钻取
+# <a name="mdx-data-manipulation---drillthrough"></a>MDX 数据操作 - DRILLTHROUGH
 
 
   检索用于在多维数据集中创建指定单元的基础表行。  
@@ -42,17 +42,17 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  以逗号分隔的维度属性和度量值列表。  
   
-## <a name="remarks"></a>Remarks  
- 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，结果是直接从存储中检索 MOLAP，除非查询 ROLAP 分区或维度。  
+## <a name="remarks"></a>备注  
+ 钻取是一种操作，最终用户可通过该操作选择多维数据集中的一个单元，然后在该单元的源数据中检索结果集，以获取更加详细的信息。 默认情况下，钻取结果集来自表行（通过求值来计算选定的多维数据集单元的值）。 如果最终用户要执行钻取操作，则他们的客户端应用程序必须支持此功能。 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，除非查询 ROLAP 分区或维度直接从 MOLAP 存储检索的结果。  
   
 > [!IMPORTANT]  
 >  钻取安全性基于为多维数据集定义的常规安全选项。 如果无法用 MDX 获取一些数据，钻取也将以同样的方式限制用户。  
   
- MDX 语句指定了目标单元。 指定的值**最大行数**参数指示的最大应生成行集返回的行数。  
+ MDX 语句指定了目标单元。 指定的值**最大行数**参数指示的最大应由所得到的行返回的行数。  
   
- 默认情况下，返回的最大行数为 10000 行。 这意味着，如果你离开**最大行数**未指定，将获取 10,000 行或更少。 如果此值为对于你的方案而言太低，则可以设置**最大行数**到较大的数字，如`MAXROWS 20000`。 如果它总体得太低，则可以通过更改增加默认**OLAP\Query\DefaultDrillthroughMaxRows**服务器属性。 有关更改此属性的详细信息，请参阅[Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
+ 默认情况下，返回的最大行数为 10000 行。 这意味着，如果您离开**最大行数**未指定，将获取 10,000 行或更少。 如果此值为对于您的方案而言过低，则可以设置**最大行数**到较大的数字，如`MAXROWS 20000`。 如果其总体得太低，则可以通过更改增加默认值**OLAP\Query\DefaultDrillthroughMaxRows**服务器属性。 有关更改此属性的详细信息，请参阅[Analysis Services 中的服务器属性](../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- 除非另行指定，否则返回的列包括与指定度量值的度量值组相关的所有维度（多对多维度除外）的所有粒度属性。 多维数据集维度带有 $ 前缀，以区分维度和度量值组。 **返回**子句用于指定钻取查询所返回的列。 以下函数可应用于单个属性或度量值进行**返回**子句。  
+ 除非另行指定，否则返回的列包括与指定度量值的度量值组相关的所有维度（多对多维度除外）的所有粒度属性。 多维数据集维度带有 $ 前缀，以区分维度和度量值组。 **返回**子句用于指定钻取查询返回的列。 以下函数可应用于单个属性或通过测量**返回**子句。  
   
  Name(attribute_name)  
  返回指定属性成员的名称。  

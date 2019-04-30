@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184836"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
 在此方案中，将创建记录集对象的内容保存直接向 ASP 响应对象的 Active Server Pages (ASP) 应用程序。  
@@ -38,10 +38,10 @@ ms.locfileid: "51600237"
   
 -   接收和显示数据  
   
-## <a name="step-1-set-up-the-application"></a>步骤 1： 设置应用程序  
+## <a name="step-1-set-up-the-application"></a>第 1 步：设置应用程序  
  创建权限脚本创建名为"XMLPersist"的 IIS 虚拟目录。 在虚拟目录指向，一个名为"XMLResponse.asp，"其他名为"Default.htm。"的文件夹中创建两个新的文本文件  
   
-## <a name="step-2-get-the-data"></a>步骤 2： 获取数据  
+## <a name="step-2-get-the-data"></a>第 2 步：获取数据  
  在此步骤中，将编写代码以打开 ADO 记录集，并准备将其发送给客户端。 使用文本编辑器，例如记事本，打开文件 XMLResponse.asp 并插入以下代码。  
   
 ```  
@@ -70,7 +70,7 @@ ms.locfileid: "51600237"
   
  使文件保持打开，然后继续执行下一步。  
   
-## <a name="step-3-send-the-data"></a>步骤 3： 将数据发送  
+## <a name="step-3-send-the-data"></a>步骤 3：将数据发送  
  现在，已记录集，必须直接将其发送到客户端，通过将其作为 XML 保存到 ASP 响应对象。 将以下代码添加到 XMLResponse.asp 的底部。  
   
 ```  
@@ -89,7 +89,7 @@ ms.locfileid: "51600237"
   
  保存并转到下一步之前关闭 XMLResponse.asp。 此外将从默认 ADO 库安装文件夹的 adovbs.inc 文件复制到 XMLResponse.asp 文件的保存位置的相同文件夹中。  
   
-## <a name="step-4-receive-and-display-the-data"></a>步骤 4： 接收和显示数据  
+## <a name="step-4-receive-and-display-the-data"></a>步骤 4：接收和显示数据  
  在此步骤中将某一 HTML 文件创建使用嵌入[DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)指向 XMLResponse.asp 文件，以获取记录集的对象。 使用文本编辑器，如记事本，打开 default.htm 并添加以下代码。 在 URL 中的"sqlserver"替换为你的服务器的名称。  
   
 ```  

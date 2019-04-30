@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127414"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
     
@@ -62,14 +62,14 @@ n
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP、 NULL<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** 不可用<br /><br /> **< 255:** 不可用|  
-|BIGVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 个字符<br /><br /> **< 255:** VP、实际数据|  
-|BIGCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 个空格<br /><br /> **> = 255:** VP、255 个字符<br /><br /> **< 255:** VP、实际数据加填充字符（最多 255 个）|  
-|BIGBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 0X00<br /><br /> **> = 255:** VP、255 个字节<br /><br /> **< 255:** VP、实际数据加填充字符（最多 255 个）|  
-|BIGVARBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、0X00<br /><br /> **> = 255:** VP、255 个字节<br /><br /> **< 255:** VP、实际数据|  
-|NCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 个空格<br /><br /> **> = 255:** VP、255 个字符<br /><br /> **< 255:** VP、实际数据加填充字符（最多 255 个）|  
-|NVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 个字符<br /><br /> **< 255:** VP、实际数据|  
-|NTEXT|**NULL:** 不可用<br /><br /> **零：** 不可用<br /><br /> **> = 255:** 不可用<br /><br /> **\<255:** 不可用|  
+|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** 不可用<br /><br /> **<255：** 不可用|  
+|BIGVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 个字符<br /><br /> **<255：** VP、实际数据|  
+|BIGCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 个空格<br /><br /> **>=255：** VP、255 个字符<br /><br /> **<255：** VP、实际数据加填充字符（最多 255 个）|  
+|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 0x00<br /><br /> **>=255：** VP、255 个字节<br /><br /> **<255：** VP、实际数据加填充字符（最多 255 个）|  
+|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、0x00<br /><br /> **>=255：** VP、255 个字节<br /><br /> **<255：** VP、实际数据|  
+|NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 个空格<br /><br /> **>=255：** VP、255 个字符<br /><br /> **<255：** VP、实际数据加填充字符（最多 255 个）|  
+|NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 个字符<br /><br /> **<255：** VP、实际数据|  
+|NTEXT|**NULL：** 不可用<br /><br /> **ZERO：** 不可用<br /><br /> **>=255：** 不可用<br /><br /> **\<255：** 不可用|  
   
  \*   数据不能以 Null 值结束；截断 255 个字符以外的字符时不会发出警告。  
   
@@ -79,7 +79,7 @@ n
  使用参数执行远程存储过程调用时，可以通过名称或位置（未命名）来传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 如果出现错误，仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>请参阅  
  [srv_rpcparams（扩展存储过程 API）](srv-rpcparams-extended-stored-procedure-api.md)  

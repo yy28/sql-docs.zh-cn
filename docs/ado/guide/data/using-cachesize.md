@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184906"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**属性来控制要在一次检索到本地内存中从提供程序记录数。 例如，如果**CacheSize**为 10，第一个打开之后**记录集**对象，该提供程序检索到本地内存前 10 条记录。 当你移动通过**记录集**对象，该提供程序返回的数据从本地内存缓冲区。 一旦您跳过缓存中的最后一个记录，该提供程序会将接下来 10 条记录从数据源检索到缓存。  

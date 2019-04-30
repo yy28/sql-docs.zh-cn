@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207163"
 ---
 # <a name="cursor-rowset-size"></a>游标行集大小
   ODBC 游标并不仅限于一次提取一行。 它们可以检索每次调用中的多个行**SQLFetch**或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)。 当与客户端/服务器数据库（例如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）一起使用时，可以更有效地一次提取多行。 每次提取返回的行数称为行集大小和使用的 SQL_ATTR_ROW_ARRAY_SIZE 指定[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)。  

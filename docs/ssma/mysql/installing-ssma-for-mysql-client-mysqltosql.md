@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187186"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安装 SSMA for MySQL 客户端 (MySQLToSQL)
 SSMA for MySQL 客户端包含的程序文件的执行以下任务：  
@@ -34,7 +34,7 @@ SSMA for MySQL 客户端包含的程序文件的执行以下任务：
   
 本主题提供的安装先决条件和安装 SSMA for MySQL 客户端的说明。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>系统必备  
 适用于 MySQL 的 SSMA 设计用于 MySQL 4.1 或更高版本和所有版本的 SQL Server 2005、 SQL Server 2008、 SQL Server 2012 中，SQL Server 2014，SQL Server 2016、 SQL Server 2017 和 Azure SQL DB。  
   
 安装 SSMA 之前，请确保计算机满足以下要求：  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 814f5349e8afc9deb3e7c364f99d796f5c2665d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215406"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的、由表达式指定的所有非 Null 数值的和。  

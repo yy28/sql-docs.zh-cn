@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217865"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>安装 Microsoft SharePoint 2007（升级顾问）
   升级顾问检测到 SharePoint 产品或技术的不支持版本。  
@@ -28,7 +28,7 @@ ms.locfileid: "52417378"
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 无法升级或安装在 SharePoint 2007 上。 已阻止升级。  
   
 ## <a name="corrective-action"></a>纠正措施  

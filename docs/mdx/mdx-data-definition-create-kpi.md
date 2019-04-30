@@ -1,5 +1,5 @@
 ---
-title: 创建 KPI 语句 (MDX) |Microsoft 文档
+title: CREATE KPI 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181557"
 ---
-# <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义-创建 KPI
+# <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义 - CREATE KPI
 
 
   创建关键绩效指标 (KPI)。 KPI 是与多维数据集中的某个度量值组关联并用于评估业务或方案成败的计算集合。  
@@ -42,7 +42,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  定义 KPI 属性值的有效标量表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  指定当前连接的多维数据集以外的多维数据集将导致错误。 因此，应使用 CURRENTCUBE 来代替多维数据集名称，以表示当前的多维数据集。  
   
 ## <a name="kpi-properties"></a>KPI 属性  
@@ -59,25 +59,25 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|返回时间维度成员的有效 MDX 表达式。 CURRENT_TIME_MEMBER 设置所有相对时间函数的参考点|  
 |PARENT_KPI|指定父级 KPI 名称的字符串。|  
 |CAPTION|客户端应用程序用作 KPI 标题的字符串。|  
-|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 是级别的分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
+|DISPLAY_FOLDER|指定显示文件夹的路径的字符串，客户端应用程序将在此处显示 KPI。 文件夹级别的分隔符由客户端应用程序定义。 有关工具和客户端提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜杠 (\\) 作为级别分隔符。 若要为已定义的成员提供多个显示文件夹，则使用分号 (;) 来分隔文件夹。|  
 |ASSOCIATED_MEASURE_GROUP|指定所有 MDX 计算应指向的度量值组名称的字符串。|  
   
- GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 当你使用的工具和客户端提供[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]若要浏览 Kpi，小于-1 的值将被视为-1，而大于 1 的值将被视为 1。  
+ GOAL、STATUS 和 TREND 属性的值是 MDX 表达式，并且这些表达式的计算结果应该在 -1 和 1 之间。 但是，定义这些属性值的实际范围的是客户端应用程序。 当你使用的工具和客户端提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]浏览 Kpi 时，小于-1 的值将被视为-1，而大于 1 的值将被视为 1。  
   
  STATUS_GRAPHIC 和 TREND_GRAPHIC 都是字符串值，客户端应用程序使用它们来标识要显示的正确图像集。 这些字符串还定义显示函数的行为。 此行为包括要显示的状态数（通常是奇数），以及每种状态所使用的图像。  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>SQL Server Data Tools 中的 KPI 图形  
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形可以有三种或五种状态。 下表定义的每一种状态的值。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形可以有三种或五种状态。 下表定义的每种状态的值。  
   
 |KPI 图形状态数|这些状态的值|  
 |--------------------------------------|---------------------------|  
-|3|差 = -1 到 -0.5<br /><br /> 正常 = 到 0.4999-0.4999<br /><br /> 好 = 0.50 到 1|  
+|3|差 = -1 到 -0.5<br /><br /> 正常 = 为 0.4999-0.4999<br /><br /> 好 = 0.50 到 1|  
 |5|差 = -1 到 -0.75<br /><br /> 有风险 = -0.7499 到 -0.25<br /><br /> 一般 = -0.2499 到 0.2499<br /><br /> 良好 = 0.25 到 0.7499<br /><br /> 好 = 0.75 到 1|  
   
 > [!NOTE]  
 >  对于某些图形来说，如反向测量或反向状态箭头，则范围相反。 即，-1 是好，1 是差。  
   
- 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了使用情况、 名称和数字的指出[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]将其 KPI 图形与相关联。  
+ 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，KPI 图形的名称可确定该图形有三种状态还是五种状态。 下表列出了使用情况、 名称和状态数，[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]与其 KPI 图形相关联。  
   
 |图形用途|KPI 图形的名称|状态数|  
 |--------------------|-------------------------|----------------------|  

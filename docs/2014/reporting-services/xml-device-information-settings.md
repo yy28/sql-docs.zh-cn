@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 404ab37f00cd738e619286a3133b906acbbcd06d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206239"
 ---
 # <a name="xml-device-information-settings"></a>XML 设备信息设置
   下表列出以 XML 格式呈现时的设备信息设置。  
   
-|设置|ReplTest1|  
+|设置|值|  
 |-------------|-----------|  
 |`XSLT`|要应用于 XML 文件的 XSLT 的报表服务器命名空间中的路径，例如 `/Transforms/myxslt`。 该 xsl 文件必须是报表服务器上的已发布资源，并且您必须通过报表服务器项路径访问它。 将在报表中指定的 XSLT 之后应用此设置的值。 如果应用 `XSLT` 设置，则将忽略 `OmitSchema` 设置。|  
 |**MIMEType**|XML 文件的多用途 Internet 邮件扩展 (MIME) 类型。|  

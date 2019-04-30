@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144300"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
   本主题讨论 SQL Server Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 ODBC 进行的更改。  
@@ -130,7 +130,7 @@ ms.locfileid: "49072281"
 |转换的目标和源：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支持 *|  
-|SQL_C_BINARY|是否支持|  
+|SQL_C_BINARY|支持|  
 |SQL_C_CHAR|支持 *|  
   
  \* 二进制数据转换为十六进制字符串。  
@@ -140,7 +140,7 @@ ms.locfileid: "49072281"
 |转换的目标和源：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支持 *|  
-|SQL_C_BINARY|是否支持|  
+|SQL_C_BINARY|支持|  
 |SQL_C_CHAR|支持 *|  
   
  \* 十六进制字符串转换为二进制数据时发生。  
@@ -210,7 +210,7 @@ ms.locfileid: "49072281"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  为 UDT 返回的值如下所示：  
   
-|SQL 数据类型|类型|子类型|长度|精度|小数位数|  
+|SQL 数据类型|类型|SubType|长度|精度|小数位数|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> （长度小于或等于 8,000 个字节）|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "49072281"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允许的值如下所示：  
   
-|SQL 数据类型|类型|子类型|长度|精度|小数位数|  
+|SQL 数据类型|类型|SubType|长度|精度|小数位数|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> （长度小于或等于 8,000 个字节）|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

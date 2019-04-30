@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215268"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>StDevP 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。  

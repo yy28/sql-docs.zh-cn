@@ -12,18 +12,18 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215133"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 配置 - 数据目录
   下表中的默认目录是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中可由用户配置的目录。 访问这些文件的权限授予了本地管理员和安装过程中创建并配置的 SQLServerMSASUser$\< 实例 > 安全组成员。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
   
-|Description|默认目录|建议|  
+|描述|默认目录|建议|  
 |-----------------|-----------------------|---------------------|  
 |数据根目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Data\|确保 \Program files\Microsoft SQL Server\ 文件夹进行保护具有有限权限。 在许多配置中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 性能取决于数据目录所在的存储区的性能。 请将此目录放置在附加到系统上的最高性能存储区中。 对于故障转移群集安装，应确保数据目录位于共享磁盘上。|  
 |日志文件目录|C:\Program Files\Microsoft SQL Server\MSAS12。\<InstanceID > \OLAP\Log\|这是用于目录[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]日志文件和它包含 FlightRecorder 日志。 如果要延长网络流量记录器持续时间，请确保该日志目录有足够的空间。|  

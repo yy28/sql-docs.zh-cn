@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5176ddc4f06531dcbfea383362bdd195a215fe84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216169"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  

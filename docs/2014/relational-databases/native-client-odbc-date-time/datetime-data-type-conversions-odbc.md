@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206983"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 数据类型转换 (ODBC)
   以下转换或者已由 ODBC 定义，或者是 ODBC 的一致扩展。 每个访问接口提供的转换由该访问接口所服务的社区决定，因此，各个访问接口之间通常不一致。 方括号中的值是可选的。  
@@ -30,7 +30,7 @@ ms.locfileid: "48220667"
   
 -   日期字符串的格式为 'yyyy-mm-dd'  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅的"数据格式： 字符串和文字"部分[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅"数据格式：字符串和文字"一节[ODBC 日期和时间改进的数据类型支持](data-type-support-for-odbc-date-and-time-improvements.md)。  
   
  下面是一般的转换规则：  
   

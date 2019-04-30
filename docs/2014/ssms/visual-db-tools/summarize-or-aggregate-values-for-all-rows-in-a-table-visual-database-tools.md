@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204608"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>汇总或聚合表中所有行的值 (Visual Database Tools)
   使用聚合函数，可为表中所有值创建汇总。 例如，可创建如下所示的查询，以显示 `titles` 表中所有书籍的总价：  

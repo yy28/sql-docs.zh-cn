@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186321"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>编译嵌入式 SQL 程序
 嵌入式的 SQL 程序包含多种 SQL 和主机语言语句，因为它不能直接提交到主机语言的编译器。 相反，它是通过一个多步骤过程编译。 尽管此过程不同产品产品，但步骤是大致相同的所有产品。  

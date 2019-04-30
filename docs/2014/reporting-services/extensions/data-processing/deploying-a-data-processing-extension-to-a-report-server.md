@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164062"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：将数据处理扩展插件部署到报表服务器
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：向报表服务器部署数据处理扩展插件
   报表服务器使用数据处理扩展插件来检索和处理所呈现报表中的数据。 您应将数据处理扩展插件程序集作为私有程序集部署到报表服务器。 还需要在报表服务器配置文件 RSReportServer.config 中生成一个条目。  
   
 ## <a name="procedures"></a>过程  

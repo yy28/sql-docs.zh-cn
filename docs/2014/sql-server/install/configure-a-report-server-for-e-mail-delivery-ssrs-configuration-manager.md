@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190230"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>针对电子邮件传递配置报表服务器（SSRS 配置管理器）
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802443"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 配置选项设置为：消息中的“收件人：”字段的配置选项  
+##  <a name="bkmk_setting_TO_field"></a> 配置选项设置为：在消息中的字段  
  根据“管理单独的订阅”  任务授予的权限而创建的用户定义订阅包含基于域用户帐户的预设用户名。 用户创建订阅时，“收件人:”  字段中的收件人姓名会使用创建该订阅的人员的域用户帐户自行转换为地址。  
   
  如果您所用的 SMTP 服务器或转发器使用了不同于域用户帐户的电子邮件帐户，则 SMTP 服务器尝试将报表传递给该用户时，报表传递会失败。  
@@ -180,15 +180,15 @@ ms.locfileid: "56802443"
   
 2.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-3.  验证 <`UrlRoot`> 已设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
+3.  验证 <`UrlRoot`> 设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
-4.  在“传递”部分中，查找 <`ReportServerEmail`>。  
+4.  在传递部分中，找到 <`ReportServerEmail`>。  
   
-5.  在 <`SMTPServer`> 中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
+5.  在 <`SMTPServer`>，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
   
-6.  验证 <`SendUsing`> 已设置为 2。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
+6.  验证 <`SendUsing`> 设置为 2。 如果将其设置为其他值，则报表服务器无法配置为使用远程 SMTP 服务。  
   
-7.  在 <`From`> 中，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
+7.  在 <`From`>，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
   
 8.  保存该文件。  
   

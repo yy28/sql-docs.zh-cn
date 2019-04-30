@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049614"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>更改故障转移群集实例的 IP 地址
   本主题说明如何使用故障转移群集管理器管理单元更改 AlwaysOn 故障转移群集实例 (FCI) 中的 IP 地址资源。 故障转移群集管理器管理单元是用于 Windows Server 故障转移群集 (WSFC) 服务的群集管理应用程序。  
   
--   **Before you begin:**  [Security](#Security)  
+-   **开始之前：**[安全性](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
- 在开始之前，请查看以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书主题︰ [安装故障转移群集前的准备工作](../install/before-installing-failover-clustering.md)。  
+ 在开始之前，请查看以下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]联机丛书主题：[安装故障转移群集前的准备工作](../install/before-installing-failover-clustering.md)。  
   
 ###  <a name="Security"></a> 安全性  
   

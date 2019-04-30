@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187443"
 ---
 # <a name="data-type-limitations"></a>数据类型限制
 Microsoft ODBC 桌面数据库驱动程序来实施对数据类型的以下限制：  
   
-|数据类型|Description|  
+|数据类型|描述|  
 |---------------|-----------------|  
 |所有数据类型|类型转换失败可能会导致受影响的列设置为 NULL。|  
 |BINARY|创建一个长度为零的二进制列实际返回 255 个字节的二进制列。|  

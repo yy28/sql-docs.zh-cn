@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729293"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>检查多维数据集和维度属性
   在定义多维数据集后，可以使用多维数据集设计器检查结果。 在下面的任务中，您将检查 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中多维数据集的结构。  
@@ -35,7 +35,7 @@ ms.locfileid: "48196267"
   
 4.  在“多维数据集结构”选项卡的“维度”窗格中，展开“客户”，然后单击“编辑客户”，以便在维度设计器中打开该维度。  
   
-     维度设计器包含以下选项卡：“维度结构”、“属性关系”、“转换”和“浏览器”。 请注意，“维度结构”选项卡包含以下三个窗格：“属性”、“层次结构”和“数据源视图”。 维度中包含的属性显示在“属性”窗格中。 有关详细信息，请参阅[维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)，[创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)。  
+     维度设计器包含以下选项卡：**维度结构**，**属性关系**，**翻译**，并且**浏览器**。 请注意，**维度结构**选项卡包括三个窗格：**特性**，**层次结构**，和**数据源视图**。 维度中包含的属性显示在“属性”窗格中。 有关详细信息，请参阅[维度特性属性参考](multidimensional-models/dimension-attribute-properties-reference.md)，[创建用户定义层次结构](multidimensional-models/user-defined-hierarchies-create.md)。  
   
 5.  要切换到多维数据集设计器，请在解决方案资源管理器中右键单击“多维数据集”节点中的“Analysis Services 教程”多维数据集，然后单击“视图设计器”。  
   

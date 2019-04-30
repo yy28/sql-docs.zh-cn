@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074044"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
   如果作业有多个作业步骤，必须指定这些作业步骤的运行顺序。 我们称之为“流控制”。 您可以随时添加新的作业步骤并重排作业步骤流，更改在下次运行作业时生效。 下图说明了一个数据库备份作业的流控制。  
@@ -44,9 +44,9 @@ ms.locfileid: "52768379"
   
 ## <a name="see-also"></a>请参阅  
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo.sysjobhistory &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo.sysjobs &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo.sysjobsteps &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [执行作业](implement-jobs.md)   
  [管理作业步骤](manage-job-steps.md)  
   

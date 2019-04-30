@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190859"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RSReportServer.config** 文件存储报表管理器、报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -101,7 +101,7 @@ ms.locfileid: "59958433"
 > [!NOTE]  
 >  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
-|设置|Description|模式|  
+|设置|描述|模式|  
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
 |**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效值为 `Default` 和 `Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|N|  
@@ -139,7 +139,7 @@ ms.locfileid: "59958433"
   
  表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|描述|模式|  
 |-------------|-----------------|----------|  
 |**应用程序**|包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的设置。|N|  
 |**名称**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有效值为 ReportServerWebService 或 ReportManager。|N|  
@@ -168,7 +168,7 @@ ms.locfileid: "59958433"
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|描述|模式|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|指定一个或多个身份验证类型。 有效值为 `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、`RSWindowsBasic` 和 `Custom`。<br /><br /> 类型 `RSWindows` 和 `Custom` 是互斥的。<br /><br /> `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM` 和 `RSWindowsBasic` 是累积的并且可以一起使用，如本节前面的默认值示例所示。<br /><br /> 如果预期会收到来自使用不同类型的身份验证的各种客户端应用程序和浏览器的请求，则必须指定多个身份验证类型。<br /><br /> 不要删除 `RSWindowsNTLM`，否则会将浏览器支持限制为部分受支持的浏览器类型。 有关详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。|N|  
 |`RSWindowsNegotiate`|报表服务器接受 Kerberos 或 NTLM 安全令牌。 如果报表服务器在本机模式下运行并且服务帐户为 Network Service，这便是默认设置。 如果报表服务器在本机模式下运行并且服务帐户已配置为域用户帐户，将忽略该设置。<br /><br /> 如果为报表服务器服务帐户配置了域帐户但未为报表服务器配置服务主体名称 (SPN)，则该设置可能会阻止用户登录该服务器。|N|  
@@ -188,7 +188,7 @@ ms.locfileid: "59958433"
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|描述|模式|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|指定报表服务器是否维护一组与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户创建的计划和订阅相对应的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 代理作业。 有效值包括 `True`（默认值）和 `False`。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
 |**IsNotificationService**|指定报表服务器是否处理通知和传递。 有效值包括 `True`（默认值）和 `False`。 如果该值为 `False`，则不传递订阅。<br /><br /> 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能时，此设置将受到影响。 有关详细信息，请参阅 [启动和停止报表服务器服务](start-and-stop-the-report-server-service.md)。|N,S|  
@@ -214,7 +214,7 @@ ms.locfileid: "59958433"
   
  以下表的最后一列指示设置是适用于本机模式报表服务器 (N) 还是 SharePoint 模式报表服务器 (S) 或两者均适用。  
   
-|设置|Description|模式|  
+|设置|描述|模式|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|指定报表管理器连接到的报表服务器的 URL。 仅当将报表管理器配置为连接到其他实例中或远程计算机上的报表服务器时，才修改此值。 有关详细信息，请参阅[配置报表管理器（本机模式）](configure-web-portal.md)。|N,S|  
 |**ReportBuilderTrustLevel**|请不要修改此值，它是不可配置的。 在中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和更高版本中，报表生成器运行仅在`FullTrust`。 有关详细信息，请参阅 [配置报表生成器访问权限](configure-report-builder-access.md) 。 有关不再使用的部分信任模式下的详细信息，请参阅[到 SQL Server Reporting Services SQL Server 2014 中废止的功能](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)。|N,S|  
@@ -262,7 +262,7 @@ ms.locfileid: "59958433"
   
  所有传递扩展插件都具有 **Extension Name**、 **MaxRetries**、 **SecondsBeforeRetry**以及 **Configuration**。 下面首先介绍这些通用的设置， 在第二个表中将介绍特定于扩展插件的设置。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**Extension Name**|指定传递扩展插件的友好名称和程序集。 不要修改此值。|  
 |**MaxRetries**|指定当首次传递尝试操作没有成功时报表服务器进行重试的次数。 默认值为 3。|  
@@ -272,14 +272,14 @@ ms.locfileid: "59958433"
 ####  <a name="bkmk_fileshare_extension"></a> 文件共享传递扩展插件配置设置  
  文件共享传递会将已导出为应用程序文件格式的报表发送到网络上的共享文件夹中。 有关详细信息，请参阅 [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md)。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**， **RenderingExtension**|这些设置用于特意排除那些无法与文件共享传递协同工作的导出格式。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。 有效值为<br /><br /> **HTMLOWC**<br /><br /> **RGDI**<br /><br /> **Null**|  
   
 ####  <a name="bkmk_email_extension"></a> 报表服务器电子邮件扩展插件配置设置  
  报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅[为电子邮件传递配置报表服务器&#40;SSRS 配置管理器&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)并[Reporting Services 中的电子邮件传递](../subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**SMTPServer**|指定用于指示远程 SMTP 服务器或转发器的地址的字符串值。 对于远程 SMTP 服务，必须指定此值。 它可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。|  
 |**SMTPServerPort**|指定一个整数值，该值指示 SMTP 服务用来发送外发邮件的端口。 端口 25 通常用于发送电子邮件。|  
@@ -300,7 +300,7 @@ ms.locfileid: "59958433"
 ####  <a name="bkmk_documentlibrary_extension"></a> 报表服务器 SharePoint 文档库扩展插件配置  
  报表服务器文档库会将已导出为应用程序文件格式的报表发送到文档库中。 只有配置为在 SharePoint 集成模式下运行的报表服务器才能使用此传递扩展插件。 有关详细信息，请参阅 [SharePoint Library Delivery in Reporting Services](../subscriptions/sharepoint-library-delivery-in-reporting-services.md)。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats，RenderingExtension**|这些设置用于特意排除那些无法与文档库传递协同工作的导出格式。 HTMLOWC、RGDI 和 Null 传递扩展插件都被排除。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。|  
   
@@ -310,7 +310,7 @@ ms.locfileid: "59958433"
 ###  <a name="bkmk_ui"></a> 传递 UI 扩展插件常规配置  
  指定包含用户界面组件的传递扩展插件，在报表管理器中定义单个订阅时，订阅定义页中显示这些用户界面组件。 如果需创建和部署具有用户定义选项的自定义传递扩展插件，并且要使用报表管理器，则必须注册此处的传递扩展插件。 默认情况下，存在报表服务器电子邮件和报表服务器文件共享的配置设置。 仅用于数据驱动订阅或 SharePoint 应用程序页的传递扩展插件不具有此处的设置。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|此设置可确定哪个传递扩展插件会最先出现在订阅定义页的传递类型列表中。 仅一个传递扩展插件可包含此设置。 有效值包括 `True` 或 `False`。 如果此值设置为 `True`，则相应扩展插件为默认选项。|  
 |**Configuration**|指定传递扩展插件的配置选项。 可以设置每个传递扩展插件的默认呈现格式。 有效值为 rsreportserver.config 文件的呈现部分中描述的呈现扩展名。|  
@@ -418,12 +418,12 @@ ms.locfileid: "59958433"
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration（RSReportServer.config 文件）  
  `MapTileServerConfiguration` 定义配置设置[!INCLUDE[msCoName](../../includes/msconame-md.md)]提供地图图块背景的必应地图 Web 服务发布的报表服务器上的报表中的报表项。 所有子元素都是必需的。  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**MaxConnections**|指定与 Bing 地图 Web 服务之间的最大连接数。|  
 |**超时**|指定从 Bing 地图 Web 服务等待响应时的超时（秒）。|  
 |**AppID**|指定要用于 Bing 地图 Web 服务的应用程序标识符 (AppID)。 `(Default)` 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认 AppID。<br /><br /> 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](https://go.microsoft.com/fwlink/?LinkId=151372)。<br /><br /> 请勿更改此值，除非您必须为您自己的 Bing 地图许可协议指定自定义 AppID。 当您更改 AppID 时，不必重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，更改就可以生效。|  
-|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值是 `Default`。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
+|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值为 `Default`。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  

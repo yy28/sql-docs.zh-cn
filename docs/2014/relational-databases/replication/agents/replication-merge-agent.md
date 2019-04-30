@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216003"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
@@ -163,7 +163,7 @@ ms.locfileid: "54129537"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  建立连接时合并代理使用的安全套接字层 (SSL) 加密的级别。  
   
-|EncryptionLevel 值|Description|  
+|EncryptionLevel 值|描述|  
 |---------------------------|-----------------|  
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
@@ -180,7 +180,7 @@ ms.locfileid: "54129537"
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
-|ExchangeType 值|Description|  
+|ExchangeType 值|描述|  
 |------------------------|-----------------|  
 |**1**|代理应将订阅服务器上的数据更改上载到发布服务器。|  
 |**2**|代理应将发布服务器上的数据更改下载到订阅服务器。|  
@@ -199,7 +199,7 @@ ms.locfileid: "54129537"
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  指定合并代理应使用的收敛级别，可以为以下值之一：  
   
-|ForceConvergenceLevel 值|Description|  
+|ForceConvergenceLevel 值|描述|  
 |---------------------------------|-----------------|  
 |**0** （默认值）|默认值。 执行不具有附加收敛的标准合并。|  
 |**1**|强制所有生成进行收敛。|  
@@ -220,7 +220,7 @@ ms.locfileid: "54129537"
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  指定在合并操作期间记录的历史记录数量。 选择 **1**可将历史日志记录对性能的影响减至最小。  
   
-|HistoryVerboseLevel 值|Description|  
+|HistoryVerboseLevel 值|描述|  
 |-------------------------------|-----------------|  
 |**0**|记录最终的代理状态消息、最终的会话详细信息和任何错误。|  
 |**1**|记录每个会话状态的增量会话详细信息，包括完成百分比、最终代理状态消息、最终会话详细信息以及任何错误。|  
@@ -325,7 +325,7 @@ ms.locfileid: "54129537"
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  指定是否存在现有的订阅服务器数据库。  
   
-|SubscriberDBAddOption 值|Description|  
+|SubscriberDBAddOption 值|描述|  
 |---------------------------------|-----------------|  
 |**0**|使用现有数据库（默认值）。|  
 |**1**|创建一个新的空订阅服务器数据库。|  
@@ -371,7 +371,7 @@ ms.locfileid: "54129537"
  **-Validate** [**0**|**1**|**2**|**3**]  
  指定是否应在合并会话结束时执行验证，以及如果要执行验证，应执行哪种类型的验证。 建议值为 **3** 。  
   
-|Validate 值|Description|  
+|Validate 值|描述|  
 |--------------------|-----------------|  
 |**0** （默认值）|不执行验证。|  
 |**1**|只验证行计数。|  

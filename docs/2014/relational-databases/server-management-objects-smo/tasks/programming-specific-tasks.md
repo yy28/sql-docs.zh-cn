@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158719"
 ---
 # <a name="programming-specific-tasks"></a>编程特定的任务
   使用 SMO 对象的编程特定的任务包含一些复杂主题，只有具有特定函数的程序才需要这些主题，例如，备份、监视统计信息、复制、管理实例对象以及设置配置选项。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[在 SMO 中使用链接服务器](using-linked-servers-in-smo.md)|介绍 SMO 如何使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 对象以链接 OLE-DB 服务器。|  
 |[在 SMO 中配置 SQL Server](configuring-sql-server-in-smo.md)|介绍如何在 SMO 中查看和修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的配置设置。|  

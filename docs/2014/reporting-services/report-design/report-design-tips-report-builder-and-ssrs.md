@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215629"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>报表设计提示（报表生成器和 SSRS）
   以下提示可帮助您设计报表。  

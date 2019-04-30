@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209074"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>表达式中的运算符（报表生成器和 SSRS）
   运算符是一种符号，用来表示要应用到表达式中一个或多个字词的操作。 表达式中支持下列类别的运算符：算术、比较、串联、逻辑或位，以及移位。  
@@ -27,7 +27,7 @@ ms.locfileid: "59950363"
 ### <a name="arithmetic"></a>算术  
  算术运算符对表达式中的两个数值字词执行数学运算。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |^|以一个数字为底、另一数字为幂求值。|  
 |*|使两个数字相乘。|  
@@ -40,7 +40,7 @@ ms.locfileid: "59950363"
 ### <a name="comparison"></a>比较  
  比较运算符测试两个表达式是否相同。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |<|小于。|  
 |\<=|小于等于。|  
@@ -54,7 +54,7 @@ ms.locfileid: "59950363"
 ### <a name="string-concatenation"></a>字符串串联  
  字符串串联将第二个字符串追加到表达式中的第一个字符串。 对于其他字符串运算，使用内置函数。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |&|串联两个字符串|  
 |+|串联两个字符串|  
@@ -62,7 +62,7 @@ ms.locfileid: "59950363"
 ### <a name="logical-and-bitwise"></a>逻辑和位  
  逻辑运算符和位运算符在表达式中的两个整数字词之间执行逻辑操作。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |And|对两个布尔表达式执行逻辑与运算，或对两个数值表达式执行位与运算。|  
 |Not|对布尔表达式执行逻辑非运算，或对数值表达式执行位求反运算。|  
@@ -74,7 +74,7 @@ ms.locfileid: "59950363"
 ### <a name="bit-shift"></a>移位  
  位运算符在表达式中的两个整数字词之间执行位操作。  
   
-|运算符|Description|  
+|运算符|描述|  
 |--------------|-----------------|  
 |<\<|对位模式执行算术左移位运算。|  
 |>>|对位模式执行算术右移位运算。|  

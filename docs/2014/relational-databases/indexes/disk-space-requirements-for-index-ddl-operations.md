@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161805"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
   磁盘空间是创建、重新生成或删除索引时所需考虑的重要因素。 磁盘空间不足会降低性能，甚至导致索引操作失败。 本主题提供了有助于确定索引数据定义语言 (DDL) 操作所需的磁盘空间量的一般信息。  

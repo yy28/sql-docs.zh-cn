@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072362"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
   中的事务性能收集器[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]可帮助您评估内存中 OLTP 是否将改进数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  

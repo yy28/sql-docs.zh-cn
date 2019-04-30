@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161792"
 ---
 # <a name="index-disk-space-example"></a>索引磁盘空间示例
   无论什么时候创建、重新生成或删除索引，在相应的文件和文件组中都需要用于存储旧（源）结构和新（目标）结构的磁盘空间。 旧的结构只有在提交索引创建事务后才会释放。 还可能需要附加临时磁盘空间以进行排序操作。 有关详细信息，请参阅 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -49,21 +49,21 @@ ms.locfileid: "52542709"
   
 1.  确定源结构的大小。  
   
-     堆：100 万 * 200 字节 ~ 200 MB  
+     堆：1 百万 * 200 字节 ~ 200 MB  
   
-     非聚集索引 A：1 百万 * 50 字节 / 80%~ 63 MB  
+     非聚集索引1 百万 * 50 字节 / 80%~ 63 MB  
   
-     非聚集索引 B：1 百万 * 80 字节 / 80%~ 100 MB  
+     非聚集索引 b:1 百万 * 80 字节 / 80%~ 100 MB  
   
      现有结构的总大小：363 MB  
   
 2.  确定目标索引结构的大小。 假定新聚集键为 24 字节长（包含一个 uniqueifier）。 两个非聚集索引的行指示器（8 字节长）将由此聚集键替换。  
   
-     聚集索引：1 百万 * 200 字节 / 80% ~ 250 MB  
+     聚集的索引：1 百万 * 200 字节 / 80%~ 250 MB  
   
-     非聚集索引 A：1 百万 * （50 8 + 24） 字节 / 80%~ 83 MB  
+     非聚集索引1 百万 * （50 8 + 24） 字节 / 80%~ 83 MB  
   
-     非聚集索引 B：1 百万 * （80 8 + 24） 字节 / 80%~ 120 MB  
+     非聚集索引 b:1 百万 * （80 8 + 24） 字节 / 80%~ 120 MB  
   
      新结构的总大小：453 MB  
   
@@ -109,10 +109,10 @@ ms.locfileid: "52542709"
   
 |索引操作|以下结构的位置所需的磁盘空间|  
 |---------------------|---------------------------------------------------------------------------|  
-|SORT_IN_TEMPDB = ON 时的脱机索引操作|操作期间的总空间大小：1018 MB:<br /><br /> -现有表和索引：363 MB\*<br /><br /> -<br />                    **tempdb**:202 MB *<br /><br /> -新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
-|SORT_IN_TEMPDB = OFF 时的脱机索引操作|操作期间的总空间大小：816 MB:<br /><br /> -现有表和索引：363 MB *<br /><br /> -新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
-|SORT_IN_TEMPDB = ON 时的联机索引操作|操作期间的总空间大小：1058 MB:<br /><br /> -现有表和索引：363 MB\*<br /><br /> -**tempdb** （包含映射索引）：242 MB *<br /><br /> -新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
-|SORT_IN_TEMPDB = OFF 时的联机索引操作|操作期间的总空间大小：856 MB:<br /><br /> -现有表和索引：363 MB *<br /><br /> -临时映射索引：40 MB\*<br /><br /> -新索引：453 MB<br /><br /> 操作后所需的总空间大小：453 MB|  
+|SORT_IN_TEMPDB = ON 时的脱机索引操作|在操作期间的总空间：1018 MB:<br /><br /> -现有表和索引：363 MB\*<br /><br /> -<br />                    **tempdb**:202 MB*<br /><br /> -新索引：453 MB<br /><br /> 完成操作后所需的总空间：453 MB|  
+|SORT_IN_TEMPDB = OFF 时的脱机索引操作|在操作期间的总空间：816 MB:<br /><br /> -现有表和索引：363 MB*<br /><br /> -新索引：453 MB<br /><br /> 完成操作后所需的总空间：453 MB|  
+|SORT_IN_TEMPDB = ON 时的联机索引操作|在操作期间的总空间：1058 MB:<br /><br /> -现有表和索引：363 MB\*<br /><br /> -**tempdb** （包含映射索引）：242 MB*<br /><br /> -新索引：453 MB<br /><br /> 完成操作后所需的总空间：453 MB|  
+|SORT_IN_TEMPDB = OFF 时的联机索引操作|在操作期间的总空间：856 MB:<br /><br /> -现有表和索引：363 MB*<br /><br /> -临时映射索引：40 MB\*<br /><br /> -新索引：453 MB<br /><br /> 完成操作后所需的总空间：453 MB|  
   
  *索引操作提交后将释放此空间。  
   

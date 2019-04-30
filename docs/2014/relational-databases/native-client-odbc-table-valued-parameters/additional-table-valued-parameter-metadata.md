@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200575"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
   若要检索表值参数的元数据，应用程序调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 返回的单个行。 两个附加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-添加了特定列，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  

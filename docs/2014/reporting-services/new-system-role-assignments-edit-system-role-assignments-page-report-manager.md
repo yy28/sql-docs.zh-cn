@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188407"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新建系统角色分配：编辑系统角色分配页 （报表管理器）
   使用“新建系统角色分配”页或“编辑系统角色分配”页可以定义报表服务器的安全性。 所有安全性都是通过将特定用户或组映射到这些用户或组可以执行的任务的角色分配来定义的。 任务列表表现为您在进行角色分配时选择的角色定义。  

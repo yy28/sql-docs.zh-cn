@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162445"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
   只要满足下列要求就可以为计算列定义索引：  
@@ -70,7 +70,7 @@ ms.locfileid: "48049567"
   
 -   表达式的数据类型不是 `float` 或 `real`。  
   
--   它不使用`float`或`real`在其定义中的数据类型。 例如，在下面的语句中，列`y`是`int`和具有确定性，但不是精确。  
+-   表达式定义中没有使用 `float` 或 `real` 数据类型。 例如，在下列语句中，列 `y` 为 `int` 且具有确定性，但不精确。  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049567"
     ```  
   
 > [!NOTE]  
->  任何`float`或`real`表达式被视为不精确，不能为索引键;`float`或`real`索引视图中，但不是作为键，可以使用表达式。 对于计算列同样如此。 任何函数、 表达式或用户定义函数被视为不精确，如果它包含任何`float`或`real`表达式。 这也包括逻辑表达式（比较）。  
+>  任何 `float` 或 `real` 表达式都被认为是不精确的，不能作为索引键；`float` 或 `real` 表达式可以在索引视图中使用，但不能作为键使用。 对于计算列同样如此。 如果任何函数、表达式或用户定义函数包含任何 `float` 或 `real` 表达式，则被认为是不精确的。 这也包括逻辑表达式（比较）。  
   
  COLUMNPROPERTY 函数的 **IsPrecise** 属性报告 *computed_column_expression* 是否精确。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049567"
   
 -   *Computed_column_expression*为计算的列的值不能为定义`text`， `ntext`，或`image`数据类型。  
   
--   从派生的计算列`image`， `ntext`， `text`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，和`xml`可索引数据类型，只要计算的列数据类型作为索引键列。  
+-   只要计算列的数据类型可以作为索引键列，从 `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 和 `xml` 数据类型派生的计算列上就可以创建索引。  
   
--   从派生的计算列`image`， `ntext`，和`text`数据类型可以是在非聚集索引的键 （包含） 列，只要计算的列数据类型作为非键索引列。  
+-   只要计算列的数据类型可以作为非键索引列，从 `image`、`ntext` 和 `text` 数据类型派生的计算列就可以作为非聚集索引中的非键（包含性）列。  
   
  **SET Option Requirements**  
   

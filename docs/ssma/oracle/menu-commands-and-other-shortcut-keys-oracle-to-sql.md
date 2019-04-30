@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209895"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>菜单命令和其他快捷键 (Oracle To SQL)
 以下部分介绍的键盘快捷键来访问菜单命令和其他各种对话框的 SSMA 中使用 Oracle 应用程序的键盘快捷方式。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216238"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称集的一组第一个匹配值。  

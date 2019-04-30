@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184239"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手动创建自联接 (Visual Database Tools)
   即使表在数据库中没有自反关系，您也可将它与自身联接。 例如，可使用自联接查找生活在同一市县的作者对。  

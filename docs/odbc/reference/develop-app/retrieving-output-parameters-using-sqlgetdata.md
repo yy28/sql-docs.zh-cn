@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199083"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>使用 SQLGetData 检索输出参数
 ODBC 3.8 之前应用程序可以仅检索具有绑定的输出缓冲区的查询的输出参数。 但是，很难参数值的大小非常大 （例如，一个大图像） 时分配非常大的缓冲区。 ODBC 3.8 引入了检索输出参数部分中的新方法。 应用程序现在可以调用**SQLGetData**用小缓冲区多次来检索大型参数值。 这是类似于检索大型列数据。  
@@ -112,7 +112,7 @@ ODBC 3.8 之前应用程序可以仅检索具有绑定的输出缓冲区的查�
   
  应用程序仍可以使用**SQLSetDescField**或**SQLSetDescRec**若要设置的绑定信息。 字段映射将不会更改。 但是，描述符中的字段，可能会返回新值。 例如，SQL_DESC_PARAMETER_TYPE 可能会返回 SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM。  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用方案： 从结果集中检索部分中的图像  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用方案：从结果集中检索部分中的图像  
  **SQLGetData**可用于在部件中获取数据时存储的过程将返回包含有关某个映像的元数据的行的结果集和大型输出参数中返回图像。  
   
 ```  
@@ -194,7 +194,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用方案： 发送和接收经过流处理的输入/输出参数作为大型对象  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用方案：发送和接收经过流处理的输入/输出参数作为大型对象  
  **SQLGetData**可以用于获取和存储的过程将作为输入/输出参数，流式处理与数据库的值传递大型对象时部分中的发送数据。 无需在内存中存储的所有数据。  
   
 ```  

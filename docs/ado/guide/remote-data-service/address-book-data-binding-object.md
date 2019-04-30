@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214832"
 ---
 # <a name="address-book-data-binding-object"></a>通讯簿数据绑定对象
 通讯簿应用程序使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象将数据从 SQL Server 数据库绑定到可视对象 （在这种情况下，DHTML 表），应用程序的客户端 HTML 页中。 事件驱动的 VBScript 程序逻辑使用[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)到：  
@@ -51,7 +51,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>一般的对象标记参数  
  下表描述了与对象标记关联的参数。  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
 |***CLASSID***|一个唯一的 128 位数字标识系统的嵌入对象的类型。 此标识符被保存在本地计算机的系统注册表中。 (有关的类 Id **rds。DataControl**对象，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
 |***ID***|定义用于标识代码中的嵌入对象的文档范围标识符。|  
@@ -59,9 +59,9 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS。DataControl Tag 参数  
  下表描述了特定于参数**rds。DataControl**对象。 (有关完整列表的**rds。DataControl**对象的参数，以及何时实现它们，请参阅[rds。DataControl 对象](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
-|参数|Description|  
+|参数|描述|  
 |---------------|-----------------|  
-|[服务器](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|如果使用 HTTP，值是前面的服务器计算机名称`https://`。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|提供必要的连接信息**rds。DataControl**以连接到 SQL Server。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|设置或返回用来检索查询字符串[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。|  
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ecea0b6803db3614ca797b0206d7932f3384c165
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195122"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server 的许可注意事项
   有关详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]许可选项，请参阅[此 Microsoft SQL Server Web 站点](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  

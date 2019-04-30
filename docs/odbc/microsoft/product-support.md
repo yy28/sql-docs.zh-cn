@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a52573ce455fc19b776143ce009c5fc89ef9523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200464"
 ---
 # <a name="product-support"></a>产品支持
 用于 ODBC 的产品支持提供的 Microsoft 产品支持服务。 由于许多 Microsoft 产品使用 ODBC 作为核心组件，并且还重新分发 ODBC 驱动程序，Microsoft 产品支持服务将考虑 ODBC 为每个产品，其中包含 ODBC 作为组件的一部分。 支持的 ODBC 提供将根据该产品的支持的协议。 请参阅单独的产品文档了解详细信息。

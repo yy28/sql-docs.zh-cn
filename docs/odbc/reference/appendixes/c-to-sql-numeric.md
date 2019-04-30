@@ -1,5 +1,5 @@
 ---
-title: 从 C 到 SQL： 数字 |Microsoft Docs
+title: 从 C 到 SQL：Numeric | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191734"
 ---
-# <a name="c-to-sql-numeric"></a>从 C 到 SQL：数字
+# <a name="c-to-sql-numeric"></a>从 C 到 SQL：Numeric
 数值的 ODBC C 数据类型的标识符是：  
   
  SQL_C_STINYINT  
@@ -59,10 +59,10 @@ ms.locfileid: "47786665"
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|数字位数 < = 列的字节长度<br /><br /> 数字位数 > 列的字节长度|不适用<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|字符数 < = 列的字符长度<br /><br /> 字符数 > 列的字符长度|不适用<br /><br /> 22001|  
-|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|数据转换而无需截断或截断的小数位数<br /><br /> 转换为具有整数数字串截断数据|不适用<br /><br /> 22003|  
+|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|数据转换而无需截断或截断的小数位数<br /><br /> 转换为具有整数数字串截断数据|不适用<br /><br /> 22003|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|数据是数字转换到的数据类型的范围内<br /><br /> 数据是数字转换到的数据类型的范围之外|不适用<br /><br /> 22003|  
 |SQL_BIT|数据为 0 或 1<br /><br /> 数据为大于 0，小于 2，且不等于 1<br /><br /> 数据是小于 0 或大于或等于 2|不适用<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|不会被截断的数据。<br /><br /> 数据截断。|不适用<br /><br /> 22015|  
+|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|不会被截断的数据。<br /><br /> 数据截断。|不适用<br /><br /> 22015|  
   
  [a] 仅的精确数值数据类型 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_SSHORT、 SQL_C_USHORT、 SQL_C_SLONG、 SQL_C_ULONG 或 SQL_C_NUMERIC） 支持这些转换。 不支持的近似数值数据类型 （SQL_C_FLOAT 或 SQL_C_DOUBLE）。 精确数字的 C 数据类型不能转换为时间间隔的时间间隔精度不是单个字段的 SQL 类型。  
   

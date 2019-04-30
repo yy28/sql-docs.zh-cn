@@ -1,5 +1,5 @@
 ---
-title: AllowNullsEnum |Microsoft Docs
+title: AllowNullsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d1f4f5ce302c6f9e3e28b037c838d452f771114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206334"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 指定要编制索引是否具有 null 值的记录。  
   
-|常量|ReplTest1|Description|  
+|常量|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|索引允许在其中的键列均为 null 的项。 如果在键列中输入 null 值，则该条目插入到索引。|  
 |**adIndexNullsDisallow**|1|默认值。 索引不允许在其中的键列均为 null 的项。 如果在键列中输入 null 值，则将会出错。|  

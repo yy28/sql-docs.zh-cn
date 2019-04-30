@@ -1,5 +1,5 @@
 ---
-title: 清除计算语句 (MDX) |Microsoft 文档
+title: CLEAR CALCULATIONS 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187664"
 ---
-# <a name="mdx-data-manipulation---clear-calculations"></a>MDX 数据操作-清除计算
+# <a name="mdx-data-manipulation---clear-calculations"></a>MDX 数据操作 - CLEAR CALCULATIONS
 
 
   从多维数据集中删除所有计算，并将多维数据集恢复为计算传递 0。  
@@ -32,8 +32,8 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  有效的多维表达式 (MDX) 多维数据集表达式。  
   
-## <a name="remarks"></a>Remarks  
- **FROM**已知，如所 MDX 脚本的多维数据集的上下文时，可以省略子句。  
+## <a name="remarks"></a>备注  
+ **FROM**多维数据集的上下文是已知的此类在 MDX 脚本时，可以省略子句。  
   
 > [!NOTE]  
 >  只有服务器管理员、数据库管理员或具有多维数据集中源数据访问权（即 ReadSourceData=true）的角色的成员才能执行此语句。  

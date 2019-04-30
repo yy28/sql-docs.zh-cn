@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7e25415949df060c04f4355b7895ed2085a4baf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206852"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>向图表添加移动平均线（报表生成器和 SSRS）
   移动平均值是序列中数据的平均值，它是根据定义的时间段内的数据计算的。 可以在图表中显示移动平均值来标识明显趋势。  

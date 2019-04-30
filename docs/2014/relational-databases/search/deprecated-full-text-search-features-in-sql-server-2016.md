@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218222"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的全文搜索功能
   本主题说明 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中仍然可用但却不推荐使用的全文搜索功能。 按照计划，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "52799762"
   
 |不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> | <prefix_term>}<br /><br /> {<br /><br /> { { NEAR | ~ }    {<simple_term> | <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [，\<距离 > [，\<顺序 >]]<br /><br /> }<br /><br /> )<br /><br /> \<距离 >:: = {*整数* &#124; **最大**}<br /><br /> \<顺序 >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS 和 CONTAINSTABLE 泛型 NEAR 运算符：<br /><br /> {<simple_term> &#124 <prefix_term>}<br /><br /> {<br /><br /> { { NEAR | ~ }    {<simple_term> | <prefix_term>} } [...*n*]<br /><br /> }|自定义 NEAR 运算符：<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG 选项：<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|无。|CREATE FULLTEXT CATLOG IN PATH<br /><br /> 无。*|237<br /><br /> 无。<sup>*</sup>|  
 |DATABASEPROPERTYEX 属性：IsFullTextEnabled|无。|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db 选项：<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|无。|sp_detach_db @keepfulltextindexfile|226|  

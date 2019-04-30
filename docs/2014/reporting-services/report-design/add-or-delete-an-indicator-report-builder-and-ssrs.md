@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207227"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>添加或删除指示器（报表生成器和 SSRS）
   指示器是以直观的形式提供单个数据值的状态的最小化仪表。 有关它们的详细信息，请参阅[指示器（报表生成器和 SSRS）](indicators-report-builder-and-ssrs.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "59938763"
   
 5.  在 **“选择指示器样式”** 对话框的左窗格中，单击所需的指示器类型，然后单击指示器集。  
   
-6.  单击“确定” 。  
+6.  单击 **“确定”**。  
   
 7.  单击指示器。 将打开 **“仪表数据”** 窗格。  
   

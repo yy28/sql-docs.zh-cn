@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190216"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>将报表保存到您的计算机（报表生成器）
   在报表生成器中，可以将报表定义保存到您的计算机。 不过，将报表保存到您的计算机后，其他用户将不能查看这些报表，并且引用共享数据源或存储报表项（如图像和子报表）的报表可能不能在外部运行。 建议将报表保存到报表服务器或 SharePoint 站点。  

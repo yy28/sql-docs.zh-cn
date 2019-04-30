@@ -1,5 +1,5 @@
 ---
-title: 级别 (MDX) |Microsoft 文档
+title: 排名 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1d234f02c8dfcd36073059210c1999cb95f5ab0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200661"
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 
@@ -38,15 +38,15 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_Expression*  
  返回数字的有效数值表达式，通常为单元坐标的多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- 如果指定数值表达式，则**级别**函数将确定通过对此元组指定的数值表达式求值的指定元组 1 为基的秩。 如果指定数值表达式，则**级别**函数将相同的排名指派给与集合中的重复值的元组。 为值相同的元组分配相同的排名，会影响该集中后续元组的排名。 例如，由以下元组组成的集：`{(a,b), (e,f), (c,d)}`。 元组 `(a,b)` 与元组 `(c,d)` 具有相同的值。 如果元组 `(a,b)` 的排名为 1，则 `(a,b)` 和 `(c,d)` 的排名都为 1。 但元组 `(e,f)` 的排名为 3。 此集中可能没有排名为 2 的元组。  
+## <a name="remarks"></a>备注  
+ 如果指定了数值表达式，则**排名**函数通过计算指定数值表达式对元组来确定指定的元组基于 1 的秩。 如果指定了数值表达式，则**排名**函数的一组中的重复值元组分配相同的排名。 为值相同的元组分配相同的排名，会影响该集中后续元组的排名。 例如，由以下元组组成的集：`{(a,b), (e,f), (c,d)}`。 元组 `(a,b)` 与元组 `(c,d)` 具有相同的值。 如果元组 `(a,b)` 的排名为 1，则 `(a,b)` 和 `(c,d)` 的排名都为 1。 但元组 `(e,f)` 的排名为 3。 此集中可能没有排名为 2 的元组。  
   
- 如果未指定数值表达式，**级别**函数将返回指定元组的基于 1 的序号位置。  
+ 如果未指定数值表达式，**排名**函数将返回指定元组的基于 1 的序号位置。  
   
- **级别**函数未排序集。  
+ **排名**函数不会对集进行排序。  
   
 ## <a name="example"></a>示例  
- 下面的示例返回包含客户和购买日期，使用元组的一套**筛选器**， **NonEmpty**，**项**，和**级别**函数来查找每个客户购买过的最后日期。  
+ 下面的示例返回包含客户和采购日期，通过使用元组集**筛选器**， **NonEmpty**，**项**，和**排名**函数来查找最后一个日期，每个客户购买。  
   
 ```  
 WITH SET MYROWS AS FILTER  
@@ -63,7 +63,7 @@ MYROWS ON 1
 FROM [Adventure Works]  
 ```  
   
- 下面的示例使用**顺序**函数，而不是**级别**函数，进行排名，城市层次结构的成员基于 Reseller Sales Amount 度量值，然后按排序顺序显示它们。 通过使用**顺序**函数到第一个订单的市/县层次结构的成员组成的集，排序仅一次执行，并对后跟线性扫描之前要呈现在排序顺序。  
+ 下面的示例使用**顺序**函数，而不是**排名**函数，City 层次结构的成员排名根据 Reseller Sales Amount 度量值，然后按照排名高低显示它们。 通过使用**顺序**函数先对 City 层次结构的成员的集，排序是仅执行一次，并再后跟线性扫描之前显示按排序顺序。  
   
 ```  
 WITH   
@@ -82,7 +82,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [顺序&#40;MDX&#41;](../mdx/order-mdx.md)   
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [订单&#40;MDX&#41;](../mdx/order-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186304"
 ---
 # <a name="dbms-based-drivers"></a>基于 DBMS 的驱动程序
 基于 DBMS 的驱动程序用于如 Oracle 或 SQL Server 提供驱动程序使用一个独立的数据库引擎的数据源。 这些驱动程序通过独立引擎; 访问的物理数据即，它们提交到 SQL 语句，并从引擎中检索结果。  

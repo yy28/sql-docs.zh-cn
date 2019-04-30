@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204686"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
   如果您在表设计器中右键单击，再选择“属性”，则会在“属性”窗口中显示这些属性。 除非另行说明，否则在选定表后可以在“属性”窗口中编辑这些属性。  

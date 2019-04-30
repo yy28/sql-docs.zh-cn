@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242428"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象并返回下一步**记录集**方法通过一系列命令。  

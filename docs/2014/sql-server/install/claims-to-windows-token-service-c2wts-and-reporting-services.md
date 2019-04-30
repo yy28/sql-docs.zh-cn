@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206445"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
   SharePoint Claims to Windows Token Service (c2WTS) 时，需要以及[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式下，如果你想要对 SharePoint 场外的数据源使用 windows 身份验证。 即使用户使用 Windows 身份验证访问数据源，上述要求也是成立的。其原因在于，Web 前端 (WFE) 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务之间的通信将始终是 Claims 身份验证。  
@@ -41,7 +41,7 @@ ms.locfileid: "53354358"
 ## <a name="prerequisites"></a>先决条件  
   
 > [!NOTE]  
->  注意：某些配置步骤可能会更改，或者在某些场拓扑中不适用。 例如，单服务器安装并不支持 Windows Identity Foundation c2WTS 服务，因此，在该场配置中不可能实现 Claims to Windows Token 委派方案。  
+>  注意：某些配置步骤可能会更改，或可能在某些场拓扑中不起作用。 例如，单服务器安装并不支持 Windows Identity Foundation c2WTS 服务，因此，在该场配置中不可能实现 Claims to Windows Token 委派方案。  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>配置 c2WTS 所需的基本步骤  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53354358"
   
      c2WTS 需要调用方标识显式配置文件中列出**c2wtshost.exe.config**。 除非它已配置为执行此操作 c2WTS 不在系统中接受来自所有已经过身份验证的用户的请求。 在此情况下，“调用方”是 WSS_WPG Windows 组。 该 c2wtshost.exe.confi 文件保存在以下位置：  
   
-     **Files\windows 标识 Foundation\v3.5\c2wtshost.exe.config**  
+     **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      下面是该配置文件的示例：  
   

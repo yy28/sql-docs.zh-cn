@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205705"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>从以前的版本升级数据库关系图 (Visual Database Tools)
   如果对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置了数据库关系图创建功能，则对以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]数据库创建的数据库关系图将自动升级。 有关设置关系图，请参阅的详细步骤[设置数据库关系图设计器&#40;Visual Database Tools&#41;](visual-database-tools.md)。  

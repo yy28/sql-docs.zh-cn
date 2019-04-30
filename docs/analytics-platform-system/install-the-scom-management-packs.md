@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215536"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>针对分析平台系统中安装 SQL Server Operations Manager (SCOM) 管理包
 请按照下列步骤以下载并安装用于 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理包。 监视 SCOM 中的 SQL Server PDW 所需的管理包。  
@@ -24,7 +24,7 @@ ms.locfileid: "51696426"
   
 System Center Operations Manager 必须已安装并正在运行。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2 中，System Center Operations Manager 2012 或 System Center Operations Manager 2012 service pack 1。  
   
-## <a name="Step1"></a>步骤 1： 下载管理包  
+## <a name="Step1"></a>步骤 1:下载管理包  
 对于 APS PDW 工作负荷，下载[System Center 管理包 Microsoft Analytics Platform system](https://go.microsoft.com/fwlink/?LinkId=396857)。  
   
 对于设备管理中下载[SQL Server 设备基本管理包](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436)。  
@@ -33,7 +33,7 @@ System Center Operations Manager 必须已安装并正在运行。 SQL Server PD
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>步骤 2： 安装管理包  
+## <a name="Step2"></a>步骤 2:安装管理包  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>安装 SQL Server 设备基础管理包  
   
@@ -76,7 +76,7 @@ System Center Operations Manager 必须已安装并正在运行。 SQL Server PD
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>下一步  
-现在，已安装的管理包，继续下一步：[为 PDW 导入 SCOM 管理包&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)。  
+现在，已安装的管理包，继续下一步：[SCOM 管理包为 PDW 导入&#40;分析平台系统&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

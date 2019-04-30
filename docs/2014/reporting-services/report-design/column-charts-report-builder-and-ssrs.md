@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185602"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>柱形图（报表生成器和 SSRS）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图对于显示一段时间的数据变化或说明各项之间的比较来说十分有用。 平面柱形图与条形图关系密切，条形图将序列显示为多组水平图条，而范围柱形图将序列显示为多组具有不同起点和终点的垂直图条。 有关详细信息，请参阅 [条形图（报表生成器和 SSRS）](charts-report-builder-and-ssrs.md) 和 [范围图（报表生成器和 SSRS）](range-charts-report-builder-and-ssrs.md)。  
@@ -36,9 +36,9 @@ ms.locfileid: "59964153"
   
 -   **三维圆柱**。 一种图条在三维图表中的形状类似于圆柱的柱形图。  
   
--   `Histogram` 的用户。 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
+-   `Histogram`。 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
   
--   `Pareto` 的用户。 一种图条按从最高到最低排列的柱形图。  
+-   `Pareto`。 一种图条按从最高到最低排列的柱形图。  
   
 ## <a name="data-considerations-for-a-column-chart"></a>柱形图在数据方面的注意事项  
   

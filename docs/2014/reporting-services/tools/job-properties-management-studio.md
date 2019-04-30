@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90a5bba8daa52bee13c0bb4d42554c4b30680c2d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201118"
 ---
 # <a name="job-properties-management-studio"></a>作业属性 (Management Studio)
   使用“作业属性”页可以在取消正在执行的报表或订阅之前查看相关信息。  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190915"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>报告服务器执行日志和 ExecutionLog3 视图
   报表服务器执行日志包含有关在一个或多个服务器上在本机模式扩展部署或 SharePoint 场中执行的报表的信息。 您可以使用报表执行日志来查明报表的请求频率、最常用的输出格式以及每个处理阶段所用的处理时间（毫秒）。 该日志包含与执行报表的数据集查询所用的时间长度和处理数据所用的时间长度有关的信息。 如果您是报表服务器管理员，则可以查看日志信息并标识长时间运行的任务，并且向报表作者就其可以改进的报表方面（数据集或处理）提出建议。  
@@ -62,7 +62,7 @@ ms.locfileid: "59962543"
   
 4.  在 **“日志记录”** 部分中选择 **“启用执行日志记录”** 。  
   
-5.  单击“确定” 。  
+5.  单击 **“确定”**。  
   
  **启用详细日志记录：**  
   
@@ -109,7 +109,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。 如果您的环境具有多个报表服务器，则可以对 InstanceName 分布进行分析，以便监视并确定您的网络负载平衡器是否按预期跨多个报表服务器分布请求。|  
 |ItemPath|存储报表或报表项的位置的路径。|  
@@ -308,7 +308,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportPath|报表的路径结构。  例如，在报表管理器的根文件夹中名为“test”的报表将具有“/test”的 ReportPath。<br /><br /> 保存在报表管理器上文件夹“samples”中的名为“test”的报表将具有“/Samples/test/”的 ReportPath|  
@@ -340,7 +340,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  下表描述在报表执行日志中捕获的数据  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |InstanceName|处理请求的报表服务器实例的名称。|  
 |ReportID|报表标识符。|  

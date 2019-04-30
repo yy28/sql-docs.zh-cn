@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86a68dfd8a84892ba3706250dfdde612a429c765
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182826"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：将 ReportViewer 控件添加到应用程序
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 课：向应用程序添加 ReportViewer 控件
   使用报表向导设计子报表后，接下来要向网站应用程序添加 ReportViewer 控件。  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>向应用程序添加 ReportViewer 控件  

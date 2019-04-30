@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198540"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>设置 ODBC 连接池选项
 连接池使应用程序能够从无需每次使用重新建立连接的连接池使用连接。 可以使用**连接池**选项卡**ODBC 数据源管理器**对话框来启用和禁用性能监视。 双击要设置连接超时期限的驱动程序名称。  

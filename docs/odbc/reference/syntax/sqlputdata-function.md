@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186111"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函数
 **符合性**  
@@ -68,7 +68,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>诊断  
  当**SQLPutData**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，关联的 SQLSTATE 值可以通过调用来获取**SQLGetDiagRec**与*HandleType*的 SQL_HANDLE_STMT 和一个*处理*的*StatementHandle*。 下表列出了通常返回的 SQLSTATE 值**SQLPutData** ，并解释了此函数; 每个上下文中的表示法"（数据挖掘）"之前 SQLSTATEs 返回由驱动程序管理器的说明。 与每个 SQLSTATE 值关联的返回代码是 SQL_ERROR，除非另有说明。  
   
-|SQLSTATE|错误|Description|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
 |01000|常规警告|特定于驱动程序的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
 |01004|字符串数据，右截断|字符串或二进制数据返回为输出参数时截断了非空白字符或非 NULL 的二进制数据。 如果它是一个字符串值，它是右侧被截断。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|使用空指针无效|(DM) 参数*DataPtr*是空指针和参数*StrLen_or_Ind*不是 0，SQL_DEFAULT_PARAM 或 SQL_NULL_DATA。|  
 |HY010|函数序列错误|(DM) 以前的函数调用不是调用**SQLPutData**或**SQLParamData**。<br /><br /> (DM) 为与之关联的连接句柄调用以异步方式执行的函数*StatementHandle*。 此异步函数仍在执行调用 SQLPutData 函数时。<br /><br /> （数据挖掘） **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**曾为*StatementHandle*和返回 SQL_PARAM_DATA_可用。 数据已检索到的所有经过流处理参数之前调用此函数。<br /><br /> (DM) 的调用以异步方式执行的函数 （不是此类似） *StatementHandle*和仍在执行时调用此函数。|  
 |HY013|内存管理错误|无法处理函数调用，因为基础内存对象无法访问，可能是由于内存不足的情况。|  
-|HY019 分段|分段发送非字符和非二进制数据|**SQLPutData**已被调用超过一次参数或列中，并且从未被使用它将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列，或将二进制 C 数据发送到具有一个字符的列二进制文件或数据源特定的数据类型。|  
+|HY019|分段发送非字符和非二进制数据|**SQLPutData**已被调用超过一次参数或列中，并且从未被使用它将字符 C 数据发送到包含的字符、 二进制或数据源特定的数据类型的列，或将二进制 C 数据发送到具有一个字符的列二进制文件或数据源特定的数据类型。|  
 |HY020|尝试连接 null 值|**SQLPutData**以来的调用返回 SQL_NEED_DATA，和一个这些调用中多次调用*StrLen_or_Ind*参数包含 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM。|  
 |HY090|字符串或缓冲区长度无效|自变量*DataPtr*不是 null 指针和参数*StrLen_or_Ind*小于 0，但不是等于 SQL_NTS 或 SQL_NULL_DATA。|  
 |HY117|由于未知的事务状态而挂起连接。 仅断开连接，并允许使用只读的函数。|(DM) 有关挂起状态的详细信息，请参阅[SQLEndTran 函数](../../../odbc/reference/syntax/sqlendtran-function.md)。|  

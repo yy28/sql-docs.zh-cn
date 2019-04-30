@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190425"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户具有作为一个整体管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的要求，在此版本中通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的应用程序和多服务器管理概念满足了这一要求。  

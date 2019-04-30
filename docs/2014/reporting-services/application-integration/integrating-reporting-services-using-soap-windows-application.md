@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb34dc31d65c9b0814a348232d0e2405d7676fda
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218348"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>在 Windows 应用程序中使用 SOAP API
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 SOAP API 是一个 Web 服务，同样可以轻松地访问此服务以向自定义业务应用程序提供企业报表功能。 只需通过编写对此 Web 服务进行调用的代码，即可在 Windows 应用程序中访问此服务。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，该类公开此 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  

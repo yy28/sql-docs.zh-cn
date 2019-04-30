@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 081e84289367d2fe5cf2ef2e35c8907cfce3882f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143619"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>管理编辑器和视图模式
   利用编辑器，您可以通过多种方法来控制代码视图。  

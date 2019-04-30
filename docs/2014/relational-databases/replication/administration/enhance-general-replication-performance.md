@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187102"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  

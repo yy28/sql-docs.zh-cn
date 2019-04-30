@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192824"
 ---
 # <a name="row-property-ado"></a>Row 属性 (ADO)
 获取或设置 OLE DB**行**对象或从[ADORecordConstruction 接口](../../../ado/reference/ado-api/adorecordconstruction-interface.md)对象。 当你使用**put_Row**若要设置**行**对象，一行转换为 ADO**记录**对象。  
   
-## <a name="readwritesyntax"></a>读/写。语法  
+## <a name="readwritesyntax"></a>Read/write.Syntax  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -41,7 +41,7 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  指向 OLE DB**行**对象。  
   
- *pRow*  
+ *PRow*  
  OLE DB**行**对象。  
   
 ## <a name="return-values"></a>返回值  

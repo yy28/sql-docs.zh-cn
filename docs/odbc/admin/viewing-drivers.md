@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab3a21bf110b26237858078d4b482328fc493f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198517"
 ---
 # <a name="viewing-drivers"></a>查看驱动程序
 若要配置数据源，您必须具有至少一个驱动程序在系统上安装。 **驱动程序**选项卡**ODBC 数据源管理器**对话框将列出安装在您的计算机，包括名称、 版本、 公司、 文件名和文件创建日期的每个驱动程序上的所有驱动程序。 必须使用驱动程序的安装程序以添加或删除驱动程序从您的系统。 有关修改驱动程序的详细信息，请参阅[管理数据源](../../odbc/admin/managing-data-sources.md)。

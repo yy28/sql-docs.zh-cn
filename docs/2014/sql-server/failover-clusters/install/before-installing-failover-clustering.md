@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190361"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
   安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集之前，必须选择运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
@@ -47,9 +47,9 @@ ms.locfileid: "53355797"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重新启动计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 为了避免在安装过程中由于安装 .NET Framework 4 而重启计算机，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在计算机上安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
-    -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4.0。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
+    -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序支持文件。 您可以通过运行位于您的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装介质上的 SqlSupport.msi 来安装这些文件。  
   
@@ -190,12 +190,12 @@ ms.locfileid: "53355797"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] （64 位） X64<sup>1</sup>|用户帐户控制|用户帐户控制|是<sup>2</sup>|是<sup>2</sup>|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|用户帐户控制|用户帐户控制|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|用户帐户控制|用户帐户控制|是 <sup>2</sup>|是 <sup>2</sup>|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|用户帐户控制|用户帐户控制|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|用户帐户控制|是|是|用户帐户控制|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|用户帐户控制|用户帐户控制|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] （64 位） X64<sup>1</sup>|是|是|是<sup>2</sup>|是<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|是|是|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|是|是|是 <sup>2</sup>|是 <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|是|是|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|是|是|是|是|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|是|是|||  
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在 WOW 模式下不支持群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
   

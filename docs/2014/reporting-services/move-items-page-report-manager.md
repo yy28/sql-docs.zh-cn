@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188438"
 ---
 # <a name="move-items-page-report-manager"></a>“移动项”页（报表管理器）
   使用“移动项”页可以将报表、文件夹或其他项移至报表服务器上的新位置。 您可以键入新位置的路径，也可以使用树视图找到报表服务器命名空间中的新位置。 只能移动您有权移动并且存储在当前报表服务器中的项。  

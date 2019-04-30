@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185637"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>更改图例项的文本（报表生成器和 SSRS）
   在图表的“值”区域中放入一个字段时，会自动生成一个包含此字段名称的图例项。 对于除形状图以外的其他图表，每个图例项会连接到图表上的单个序列，而对于形状图，图例会连接到单个数据点而不是单个序列。  
@@ -38,7 +38,7 @@ ms.locfileid: "59953593"
   
  下表提供了用于“自定义图例文本”属性的特定于图表的关键字示例。 有关关键字的详细信息，请参阅[设置图表上数据点的格式（报表生成器和 SSRS）](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
-|关键字|Description|图例中的显示文本示例|  
+|关键字|描述|图例中的显示文本示例|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|显示包含一个小数位的总计值百分比。|85.0%|  
 |`#VALY`|显示数据字段的实际数值。|17000|  

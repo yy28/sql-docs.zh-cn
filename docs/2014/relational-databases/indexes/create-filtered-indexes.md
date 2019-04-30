@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155385"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建筛选索引。 筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
@@ -113,11 +113,11 @@ ms.locfileid: "54125507"
   
 7.  在“从 table_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
-8.  单击“确定” 。  
+8.  单击 **“确定”**。  
   
 9. 在“筛选器”页的“筛选表达式”下，输入要用于创建筛选索引的 SQL 表达式。  
   
-10. 单击“确定” 。  
+10. 单击 **“确定”**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

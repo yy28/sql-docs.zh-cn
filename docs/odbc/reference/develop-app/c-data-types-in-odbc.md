@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199219"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC 中的 C 数据类型
-ODBC 定义应用程序变量和其对应的类型标识符所使用的 C 数据类型。 这些使用绑定到结果集列和语句参数的缓冲区。 例如，假设应用程序想要从以字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列具有其类型标识符为 SQL_C_CHAR。 C 数据类型和类型标识符的完整列表，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ODBC 定义应用程序变量和其对应的类型标识符所使用的 C 数据类型。 这些使用绑定到结果集列和语句参数的缓冲区。 例如，假设应用程序想要从以字符格式的结果集列中检索数据。 它声明的变量 SQLCHAR * 数据类型，并将此变量绑定到结果集列具有其类型标识符为 SQL_C_CHAR。 C 数据类型和类型标识符的完整列表，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  ODBC 还定义从每个 SQL 数据类型为 C 数据类型的默认映射。 例如，数据源中的 2 字节整数映射到应用程序中的 2 字节整数。 若要使用的默认映射，应用程序，请指定 SQL_C_DEFAULT 类型标识符。 但是，建议不要使用此标识符的互操作性的原因。  
   

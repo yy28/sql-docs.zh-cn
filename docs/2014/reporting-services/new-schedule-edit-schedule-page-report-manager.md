@@ -1,5 +1,5 @@
 ---
-title: 新计划：编辑计划页 （报表管理器） |Microsoft Docs
+title: 新建计划：编辑计划页 （报表管理器） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188363"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新计划：编辑计划页 （报表管理器）
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新建计划：编辑计划页 （报表管理器）
   使用“新建计划”/“编辑计划”页可为报表创建计划。 您可以与订阅一起使用计划，以刷新缓存的报表，以及按独立项的形式创建快照或在报表历史记录中创建快照。  
   
 > [!NOTE]  

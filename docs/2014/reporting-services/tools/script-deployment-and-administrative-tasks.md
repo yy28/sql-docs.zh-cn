@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158305"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>为部署和管理任务编写脚本
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持使用脚本来自动执行日常安装、部署任务和管理任务。 部署报表服务器的过程包括多个步骤。 必须使用多个工具和过程来配置部署；没有任何单个程序或方法可用于自动执行所有任务。  

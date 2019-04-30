@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200220"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
   字符数据，例如 ANSI 字符 SQL_C_CHAR 用声明的变量或数据存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文本**数据类型，可以表示只有有限的数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用存储的值**char**， **varchar**，或**文本**服务器上的数据类型使用服务器的 ACP 进行评估。  

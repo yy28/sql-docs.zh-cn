@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190891"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -57,7 +57,7 @@ ms.locfileid: "59961103"
 ## <a name="log-file-fields"></a>日志文件字段  
  下表对在日志中可用的字段进行了说明： 该字段列表是可配置的；您可以通过 `HTTPTraceSwitches` 配置设置来指定要包括哪些字段。 **默认**列指定是否在字段将自动包含在日志文件是否未指定`HTTPTraceSwitches`。  
   
-|字段|Description|，则“默认”|  
+|字段|描述|，则“默认”|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
 |HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  

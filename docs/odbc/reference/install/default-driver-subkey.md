@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198304"
 ---
 # <a name="default-driver-subkey"></a>默认驱动程序子项
 默认子项包含一个说明默认数据源使用的驱动程序的单个值。 下表中显示此值的格式。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|**驱动程序**|REG_SZ|*驱动程序的默认描述*|  
+|**驱动程序**|REG_SZ|*default-driver-description*|  
   
  *驱动程序的默认描述*名称是描述的驱动程序的 ODBC 驱动程序子项下的值的名称相同。  
   

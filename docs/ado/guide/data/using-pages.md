@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184911"
 ---
 # <a name="using-pages"></a>使用页
 使用**PageCount**属性来确定多少页的数据位于**记录集**对象。 *页面*是一组记录的大小等于**PageSize**属性设置。 即使最后一页是不完整，因为有比记录更少**PageSize**值，它计为中的其他页**PageCount**值。 如果**记录集**对象不支持此属性，请**PageCount**将为-1 指示**PageCount**是无法确定。  

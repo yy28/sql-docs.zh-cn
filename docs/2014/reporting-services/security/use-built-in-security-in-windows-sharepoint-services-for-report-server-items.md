@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191874"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>将 Windows SharePoint Services 中的内置安全性用于报表服务器项
   SharePoint 提供了内置安全功能，您可以使用这些功能从 SharePoint 站点和库访问报表服务器项。 如果已为用户分配了站点和列表权限，则在配置了 SharePoint 和报表服务器之间的集成设置后，这些用户即可拥有访问报表服务器项和操作的权限。  
@@ -28,7 +28,7 @@ ms.locfileid: "59948643"
 ## <a name="securable-items"></a>安全对象  
  对站点或库定义的权限可以用来授予对报表服务器项的访问权限。 但是，如果要确保各项的安全，您可以对以下内容类型设置权限：  
   
-|文件类型|Description|  
+|文件类型|描述|  
 |---------------|-----------------|  
 |.rdl|用来定义报表布局和数据检索命令的报表定义文件。 在处理报表时报表定义使用数据源连接信息来检索数据。 如果报表定义是在报表生成器中创建的特别报告，则该报表将与报表模型 (.smdl) 文件（设置了所呈现报表中的数据浏览的范围）成对使用。|  
 |.smdl|用来描述数据结构以及它们之间如何关联的报表模型文件。 报表模型文件用来创建和运行报表生成器报表。|  

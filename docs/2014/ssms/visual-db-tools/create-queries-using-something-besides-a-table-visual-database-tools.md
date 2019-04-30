@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184324"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用表以外的对象创建查询 (Visual Database Tools)
   每次编写检索查询时，必须明确说明所需的列和行以及查询处理器应从何处查找原始数据。 一般情况下，此类原始数据由一个表或几个联接在一起的表组成。 不过，原始数据也可以来自表以外的源。 事实上，它可以来自视图、查询、同义词或可返回表的用户定义函数。  

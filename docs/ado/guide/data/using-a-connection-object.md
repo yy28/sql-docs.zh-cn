@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184945"
 ---
 # <a name="using-a-connection-object"></a>使用连接对象
 打开之前**连接**对象，必须定义数据源和连接类型的特定信息。 此信息大多数由*ConnectionString*的参数[Open 方法](../../../ado/reference/ado-api/open-method-ado-connection.md)上**连接**对象，或由[ConnectionString属性](../../../ado/reference/ado-api/connectionstring-property-ado.md)上**连接**对象。 连接字符串包含以分号分隔包含在单引号中的值的参数/值对的列表。 例如：  

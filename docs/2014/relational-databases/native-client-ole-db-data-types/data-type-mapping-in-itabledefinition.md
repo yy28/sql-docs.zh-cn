@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e561742406c173b69bfb5040c2f2f51efdf5ed64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201218"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
   通过创建表时**itabledefinition:: Createtable**函数， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者可以指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据类型*pwszTypeName*传递的 DBCOLUMNDESC 数组的成员。 如果使用者按照名称指定列的数据类型，则忽略由 DBCOLUMNDESC 结构的 wType 成员表示的 OLE DB 数据类型映射。  

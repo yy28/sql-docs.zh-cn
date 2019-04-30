@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071782"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存 OLTP 的性能改进
   此示例通过比较针对内存优化表和传统的基于磁盘的表运行完全相同的 TRANSACT-SQL 查询时响应时间上的差异，演示了使用内存中 OLTP 时的性能改进。 另外，还将创建本机编译存储过程（基于相同的查询），然后运行以演示你通常可在使用本机编译存储过程查询内存优化表时，获取最佳响应时间。 此示例只显示访问内存优化表数据时一个方面的性能改进；执行插入操作时的数据访问效率。 此示例是单线程的，未能利用内存中 OLTP 的并发利益。 使用并发的工作负荷将带来更高的性能提升。  

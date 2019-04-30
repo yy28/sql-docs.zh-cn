@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204604"
 ---
 # <a name="solutions-for-remote-data-access"></a>远程数据访问的解决方案
 ## <a name="the-issue"></a>此问题  
