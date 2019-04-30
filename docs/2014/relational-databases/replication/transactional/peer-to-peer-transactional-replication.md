@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274347"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   对等复制通过在多个服务器实例（又称为“节点” ）上维护数据副本，提供了一种扩展的高可用性解决方案。 对等复制建立在事务复制的基础之上，以事务方式近乎实时地传播一致的更改。 这样，需要扩展读取操作的应用程序就可以将来自客户端的读取操作分布到多个节点上。 由于对等复制以近乎实时的方式维护节点上的数据，从而提供了数据冗余，提高了数据的可用性。  
@@ -72,7 +72,7 @@ ms.locfileid: "54127187"
   
  每个地点都有一台数据库服务器和一台应用程序服务器，供支持工程师在输入和更新客户电话的相关信息时使用。 拓扑按时间进行分区。 因此更新只发生在正在办公的节点，然后更新会流动到其他参与数据库。 此拓扑具有下列优点：  
   
--   独立但不孤立：每个办公室可以插入、 更新或单独删除数据但还可以共享数据，因为它复制到所有其他参与数据库。  
+-   独立但不孤立：每个办事处都可以独立插入、更新或删除数据，但还可以共享数据，因为数据会复制到其他所有参与数据库。  
   
 -   在出现故障或需要维护一个或多个参与数据库时可提供更高的可用性。  
   

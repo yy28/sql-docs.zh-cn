@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d92d2784649e4366113b3070b54598df585370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240307"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>桌面数据库驱动程序性能问题
 若要确保与现有的 ANSI 应用程序兼容性，SQL_WCHAR、 SQL_WVARCHAR 和 SQL_WLONGVARCHAR 数据类型公开为 SQL_CHAR、 SQL_VARCHAR 和 SQL_LONGVARCHAR 为 Microsoft 访问 4.0 或更高版本的数据源。 数据源不会返回宽字符数据类型，但仍必须将数据发送到 Jet 宽字符形式。 请务必了解是否 SQL_C_CHAR 参数或结果列绑定到 ANSI 应用程序中的 SQL_CHAR 数据类型，转换将需要的位置。  

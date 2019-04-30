@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238406"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
   可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 同时支持以前[通用邻近词](#Generic_NEAR)，其现已弃用，并且[自定义邻近词](#Custom_NEAR)，这是中的新增功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
@@ -51,11 +51,11 @@ ms.locfileid: "52502842"
   
  {  
   
- *search_term* [，...*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [，...*n* ])[，< maximum_distance > [，< match_order >]]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -160,7 +160,7 @@ GO
   
  通用邻近词表明指定的搜索词必须全部出现在一个文档中匹配项才能返回，而与搜索词之间非搜索词的数目（距离）无关。 基本语法为：  
   
- { *search_term* {NEAR | ~} *search_term* } [，...*n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  例如，在下面的示例中，单词“fox”和“chicken”必须都出现才能产生一个匹配项，不管它们的出现顺序如何：  
   

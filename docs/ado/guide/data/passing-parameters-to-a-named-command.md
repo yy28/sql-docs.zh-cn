@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302368"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
 只需命令的结果作为传递*出*变量的已命名的命令参数已参数化的命令可为传入的*中*命名命令的变量。  

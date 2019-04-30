@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43b54740d0d7870423778e2e8a692089fa3a8ebd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225268"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>启用、禁用和删除断点
   若要查看和管理所有打开的断点，可以使用 **“断点”** 窗口。 使用此窗口可以查看断点信息，并且执行一些诸如删除、禁用或启用断点之类的操作。  

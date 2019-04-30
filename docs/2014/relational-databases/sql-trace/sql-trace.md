@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286533"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -91,7 +91,7 @@ ms.locfileid: "52823481"
 |**GUID**|54|依赖于跟踪中指定的事件类的 GUID 值。|  
 |**FileName**|36|所修改的文件的逻辑名称。|  
 |**Handle**|33|一个整数，ODBC、OLE DB 或 DB-Library 使用它来协调服务器的执行情况。|  
-|**主机名** <sup>1</sup>|8|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|  
+|**HostName** <sup>1</sup>|8|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|  
 |**IndexID**|24|受事件影响的对象的索引 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|  
 |**IntegerData**|25|跟踪中捕获的与事件类对应的整数值。|  
 |**IntegerData2**|55|跟踪中捕获的与事件类对应的整数值。|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280591"
 ---
 # <a name="returning-sqlnodata"></a>返回 SQL_NO_DATA
 当 ODBC 2。*x*应用程序 workingwith ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**，并搜索的 update 或 delete 语句已执行但未影响任何行在数据源，ODBC 3 *.x*驱动程序应返回 SQL_SUCCESS。 当 ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**具有相同的结果，ODBC 3 *.x*驱动程序应返回 sql_no_data 为止。  

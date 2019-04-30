@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240006"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 属性 (ADO)
 指示的值[字段](../../../ado/reference/ado-api/field-object.md)进行任何更改之前存在该记录。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314793"
 ---
 # <a name="sort-property-example-vb"></a>Sort 属性示例 (VB)
 此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[排序](../../../ado/reference/ado-api/sort-property.md)属性来重新排列的行**记录集**派生自***作者***的表***Pubs***数据库。 辅助实用工具例程打印每个行。  

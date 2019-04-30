@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287151"
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
 ODBC 应用程序和驱动程序分为许多类别，除了其版本。 与某些驱动程序; 不兼容的这些应用程序一些在其他情况下，应用程序或驱动程序的类型可能会它们之间的向后兼容性问题重的负担。  

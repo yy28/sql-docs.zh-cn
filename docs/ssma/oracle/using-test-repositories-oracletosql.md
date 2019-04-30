@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283515"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用测试存储库 (OracleToSQL)
 SSMA 测试存储库存储 SSMA 测试人员的测试用例和测试结果以供将来使用。 存储库数据保存在 SQL Server 表**TestCaseRepository**并**RunTestCaseResultRepository**架构中**ssma_oracle_utilities** 的**ssmatesterdb**数据库。  

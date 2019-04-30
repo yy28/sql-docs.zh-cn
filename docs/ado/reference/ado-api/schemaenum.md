@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315798"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的架构的类型**记录集**的[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索。  
   
 ## <a name="remarks"></a>备注  
- 为每个 ADO 常量，可以找到主题中返回的函数和列有关的其他信息[附录 b： 架构行集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表描述部分中的括号中列出每个主题的名称。  
+ 为每个 ADO 常量，可以找到主题中的函数和列有关的其他信息返回[附录 b:架构行集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表描述部分中的括号中列出每个主题的名称。  
   
  为每个 ADO MD 常量可以找到主题中返回的函数和列有关的其他信息[OLE DB for OLAP 对象和架构行集](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的联机分析处理 (OLAP) 文档。 下表描述列中的括号中列出每个主题的名称。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51603658"
 |**adSchemaCollations**|3|返回的字符排序规则在目录中定义的给定用户可访问。<br /><br /> （排序规则行集）|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|返回列的表在目录中定义的可使用或负责授予的给定用户的特权。<br /><br /> （COLUMN_PRIVILEGES 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|返回的表 （包括视图） 在目录中定义的给定用户可以访问的列。<br /><br /> （列行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|返回在目录中定义的列依赖于在目录中定义并由给定用户拥有的域。<br /><br /> （COLUMN_DOMAIN_USAGE 行集）|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|返回在目录中定义的列依赖于在目录中定义并由给定用户拥有的域。<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
 |**adSchemaConstraintColumnUsage**|6|返回由引用约束、 唯一约束、 check 约束和断言、 在目录中定义并由给定用户拥有的列。<br /><br /> （CONSTRAINT_COLUMN_USAGE 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|返回由引用约束、 唯一约束、 check 约束和断言在目录中定义并由给定用户拥有的表。<br /><br /> （CONSTRAINT_TABLE_USAGE 行集）|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|架构 （或在目录中，如果提供程序不支持架构） 中返回有关可用的多维数据集的信息。<br /><br /> （多维数据集行集 *）|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
@@ -53,8 +53,8 @@ ms.locfileid: "51603658"
 |**adSchemaDimensions**|33|返回在给定的多维数据集中的维度的信息。 它具有每个维度的一个行。<br /><br /> （维度行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|返回由给定用户在目录中定义的外键列。<br /><br /> （FOREIGN_KEYS 行集）|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|返回有关可用维度中的层次结构的信息。<br /><br /> （层次结构行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
-|**adSchemaIndexes**|12|返回在目录中定义的由给定用户拥有的索引。<br /><br /> （索引行集）|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME 类型 TABLE_NAME|  
-|**adSchemaKeyColumnUsage**|8|返回在目录中定义的由给定用户约束为键的列。<br /><br /> （KEY_COLUMN_USAGE 行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaIndexes**|12|返回在目录中定义的由给定用户拥有的索引。<br /><br /> （索引行集）|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TYPE TABLE_NAME|  
+|**adSchemaKeyColumnUsage**|8|返回在目录中定义的由给定用户约束为键的列。<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|返回有关可用维度中的级别的信息。<br /><br /> （级别行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|返回有关可用度量值的信息。<br /><br /> （度量值行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|返回有关可用的成员的信息。<br /><br /> （成员行集）|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE 树运算符。 有关详细信息，请参阅 OLE DB 的联机分析处理 (OLAP)。|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225282"
 ---
 # <a name="find-in-files"></a>在文件中查找
   使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”** 中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  

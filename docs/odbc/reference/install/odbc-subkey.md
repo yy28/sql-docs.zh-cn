@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281012"
 ---
 # <a name="odbc-subkey"></a>ODBC 子项
 ODBC 子项下的值指定 ODBC 跟踪选项。 通过显示 ODBC 数据源管理器对话框的跟踪选项卡来设置这些选项**SQLManageDataSources**。 ODBC 子项本身是可选的。 这些值的格式为下表中所示。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
 |跟踪|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*tracefile 路径*|  
+|TraceFile|REG_SZ|*tracefile-path*|  
   
  值采用下表中描述的含义。  
   

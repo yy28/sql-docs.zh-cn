@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240746"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>表达式引用（报表生成器和 SSRS）
   报表表达式支持对内置函数和内置集合的多种形式的引用。 表达式必须具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法，然后才能发布或处理报表。  

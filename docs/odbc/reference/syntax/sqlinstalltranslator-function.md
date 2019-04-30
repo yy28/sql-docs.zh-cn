@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de493cc42980390fee94ca4d86efc8f5cd40646c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242304"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator 函数
 **符合性**  
- 版本引入了： ODBC 2.5 中，不推荐使用  
+ 版本引入了：ODBC 2.5 中，不推荐使用  
   
  **摘要**  
  在 ODBC 3.0 **SQLInstallTranslator**已被取代[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)。 调用**SQLInstallTranslator**将映射到**SQLInstallTranslatorEx**。 有关详细信息，请参阅**SQLInstallTranslatorEx**。  

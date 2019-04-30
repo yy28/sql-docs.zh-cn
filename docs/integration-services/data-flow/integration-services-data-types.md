@@ -95,7 +95,7 @@ ms.locfileid: "58274415"
     |DT_DBTIME2|hh:mm:ss[.fffffff]|  
     |DT_DBTIMESTAMP|yyyy-mm-dd hh:mm:ss[.fff]|  
     |DT_DBTIMESTAMP2|yyyy-mm-dd hh:mm:ss[.fffffff]|  
-    |DT_DBTIMESTAMPOFFSET|yyyy-mm-dd hh:mm:ss[.fffffff] [{+|-} hh:mm]|  
+    |DT_DBTIMESTAMPOFFSET|yyyy-mm-dd hh:mm:ss[.fffffff] [{+&#124;-} hh:mm]|  
   
  在 DT_FILETIME 和 DT_DBTIMESTAMP 的格式中，fff 是一个表示小数秒的介于 0 和 999 之间的值。  
   

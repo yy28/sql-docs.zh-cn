@@ -1,5 +1,5 @@
 ---
-title: Hierarchize (MDX) |Microsoft 文档
+title: Hierarchize (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224897"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -32,15 +32,15 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
-## <a name="remarks"></a>Remarks  
- **Hierarchize**函数组织分层顺序排列指定集的成员。 此函数始终保留重复项。  
+## <a name="remarks"></a>备注  
+ **Hierarchize**函数将指定集的成员组织到层次结构的顺序。 此函数始终保留重复项。  
   
--   如果**POST**未指定，则该函数对按其自然顺序级别中的成员进行排序。 如果未指定其他排序条件，则成员的自然顺序就是它们在层次结构中的默认排序顺序。 子成员会紧跟在它们的父成员之后。  
+-   如果**POST**未指定，则该函数对其自然顺序中的某个级别中的成员进行排序。 如果未指定其他排序条件，则成员的自然顺序就是它们在层次结构中的默认排序顺序。 子成员会紧跟在它们的父成员之后。  
   
 -   如果**POST**指定，则**Hierarchize**函数对使用非自然顺序排序的级别中的成员进行排序。 也就是说，子成员优先于他们的父级。  
   
 ## <a name="example"></a>示例  
- 下例浅化了 Canada 成员。 **Hierarchize**函数用于组织分层顺序中的指定的组成员所需的**DrillUpMember**函数。  
+ 下例浅化了 Canada 成员。 **Hierarchize**函数用于其所需的组织指定的集中的成员在层次结构顺序**DrillUpMember**函数。  
   
 ```  
 SELECT DrillUpMember   
@@ -59,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 下面的示例返回的总和`Measures.[Order Quantity]`成员，在某段中包含的 2003 年的第一个九个月聚合`Date`维度，从**Adventure Works**多维数据集。 **PeriodsToDate**函数定义元组集中的聚合函数对其进行操作。 **Hierarchize**函数将组织从分层顺序中的产品维度的成员组成的指定集的成员。  
+ 下面的示例返回的总和`Measures.[Order Quantity]`成员，2003 年中包含的第一个九个月内的聚合`Date`维度中，从**Adventure Works**多维数据集。 **PeriodsToDate**函数定义的聚合函数对其进行操作的集中的元组。 **Hierarchize**函数组织层次结构顺序中的产品维度中的成员的指定集的成员。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -87,6 +87,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

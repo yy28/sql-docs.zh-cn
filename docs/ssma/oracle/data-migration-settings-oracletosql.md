@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287180"
 ---
 # <a name="data-migration-settings-oracletosql"></a>数据迁移设置 (OracleToSQL)
   
@@ -50,7 +50,7 @@ ms.locfileid: "51656134"
   
 -   **应用：** 单击**应用**以应用设置已更改。  
   
--   **取消:** 单击**取消**若要还原的设置存在，就发生了更改。  
+-   **取消：** 单击**取消**若要还原的设置存在，就发生了更改。  
   
 ## <a name="see-also"></a>请参阅  
 [Oracle 数据迁移到 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  

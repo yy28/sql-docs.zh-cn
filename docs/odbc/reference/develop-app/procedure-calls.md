@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284579"
 ---
 # <a name="procedure-calls"></a>过程调用
 一个*过程*是数据源上存储的可执行对象。 通常，它是一个或更多的已经预编译的 SQL 语句。 调用过程的转义序列是  
   
- **{**[**？ =**]**调用***过程名称*[**(**[*参数*] [**，**[*参数*]]...**)**]**}**  
+ **{**[**？ =**]**调用** *过程名称*[**(**[*参数*] [**，**[*参数*]]...**)**]**}**  
   
  其中*过程名称*指定过程的名称和*参数*指定过程参数。  
   
- 有关过程调用转义序列的详细信息，请参阅[过程调用转义序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)附录 c: SQL 语法中。  
+ 有关过程调用转义序列的详细信息，请参阅[过程调用转义序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)附录 c： 驱动器中SQL 语法。  
   
  一个过程可以有零个或多个参数。 它还可以返回一个值，可选参数标记所示 **？ =** 语法开头。 如果*参数*是输入 / 输出参数，它可以是文字或参数标记。 但是，可互操作应用程序应始终使用参数标记，因为某些数据源不接受文本的参数值。 如果*参数*是输出参数，它必须是参数标记。 必须通过绑定参数标记**SQLBindParameter**语句执行之前在过程调用。  
   

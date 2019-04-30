@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283679"
 ---
 # <a name="server-element-for-configuration-dta"></a>配置的服务器元素 (DTA)
   包含需要数据库引擎优化顾问评估其假设配置（由 `Configuration` 元素指定）的服务器的标识信息。  

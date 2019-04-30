@@ -1,5 +1,5 @@
 ---
-title: 标识符 (MDX) |Microsoft 文档
+title: 标识符 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224948"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
 
 
-  标识符是 Analysis Services 对象的名称。 每个对象可以和必须具有的标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
+  标识符是 Analysis Services 对象的名称。 每个对象可以并且必须具有标识符。 这些对象包括多维数据集、维度、层次结构、级别、成员等等。 可以使用对象的标识符在多维表达式 (MDX) 语句中引用对象。  
   
  根据命名对象的方式，对象标识符可以是常规标识符，也可以是分隔标识符。  
   
 > [!NOTE]  
->  正则和分隔标识符必须包含 1 到 100 个字符。  
+>  正则和带分隔符的标识符必须包含 1 到 100 个字符。  
   
 ## <a name="using-regular-identifiers"></a>使用常规标识符  
  常规标识符是符合成为常规标识符的下列格式规则的对象名称。 常规标识符可以和分隔符一起使用，也可以不和分隔符一起使用。  
@@ -33,13 +33,13 @@ ms.locfileid: "34740806"
   
 1.  第一个字符必须是下列字符之一：  
   
-    -   如 Unicode 标准 2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
+    -   由 Unicode 标准 2.0 定义的字母。 除了其他语言的字母字符外，Unicode 定义的字母还包括从 a 到 z 以及从 A 到 Z 的拉丁字符。  
   
     -   下划线 (_)。  
   
 2.  后续字符可以是：  
   
-    -   在 Unicode 标准 2.0 定义的字母。  
+    -   在 Unicode 标准 2.0 中定义的字母。  
   
     -   基本拉丁字符或其他国家/地区字符中的十进制数字。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34740806"
   
 -   当对象的名称或名称中的一部分使用保留关键字时。  
   
-     建议不要将保留关键字用作对象名称。 升级从早期版本的数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含在早期版本中，包括未保留的词的标识符，但现在保留。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
+     建议不要将保留关键字用作对象名称。 从早期版本的升级数据库[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含标识符，其中包括不保留字在早期版本中，但现在保留的。 必须先更改对象的标识符，才能使用分隔标识符引用对象。  
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   
@@ -124,8 +124,8 @@ ms.locfileid: "34740806"
  此外，还分隔了上一示例中的 Measures 标识符，以说明分隔多个标识符的情况。  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查询基础知识 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

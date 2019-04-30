@@ -1,5 +1,5 @@
 ---
-title: 从 C 到 SQL： 日期 |Microsoft Docs
+title: 从 C 到 SQL：Date | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294373"
 ---
-# <a name="c-to-sql-date"></a>从 C 到 SQL：日期
+# <a name="c-to-sql-date"></a>从 C 到 SQL：date
 日期 ODBC C 数据类型的标识符是：  
   
  SQL_C_TYPE_DATE  

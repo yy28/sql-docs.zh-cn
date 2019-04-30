@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 26410a933c7432189f664c2b04d2b41e3e31c9c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298984"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>连接到 SQL Server (DB2eToSQL)
 将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014年或 Azure SQL DB 必须连接到这些目标实例的任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 SSMA 连接时，获取有关的实例中的所有数据库的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并显示数据库中的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。 SSMA 存储信息的哪些实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相连，但不存储密码。  
@@ -82,10 +82,10 @@ ms.locfileid: "47790499"
 ||||||  
 |-|-|-|-|-|  
 |**项目类型与目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|用户帐户控制|是|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||用户帐户控制|用户帐户控制||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||用户帐户控制||  
-|Azure SQL DB||||用户帐户控制|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||是||  
+|Azure SQL DB||||是|  
   
 > [!IMPORTANT]  
 > 根据项目类型，但不是根据版本的数据库对象的转换执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接到。 情况下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年或 Azure SQL DB。  

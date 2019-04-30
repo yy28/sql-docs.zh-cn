@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239745"
 ---
 # <a name="charset-property-ado"></a>Charset 属性 (ADO)
 指示设置到其中的字符的文本内容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)应为存储中的内部缓冲区的翻译**Stream**对象。  
@@ -36,7 +36,7 @@ ms.locfileid: "47752335"
   
  **Charset**仅用于文本**Stream**对象 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 如果忽略此属性**类型**是**adTypeBinary**。  
   
- 代码示例，请参阅[步骤 4： 填充详细信息文本框](../../../ado/guide/data/step-4-populate-the-details-text-box.md)。  
+ 代码示例，请参阅[步骤 4:详细信息文本框中填充](../../../ado/guide/data/step-4-populate-the-details-text-box.md)。  
   
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

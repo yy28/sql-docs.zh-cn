@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309205"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 将复制所表示的实体[记录](../../../ado/reference/ado-api/record-object-ado.md)到另一个位置。  
@@ -50,7 +50,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *选项*  
  可选。 一个[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)值，该值具有默认值为**adCopyUnspecified**。 指定此方法的行为。  
   
- *异步*  
+ *Async*  
  可选。 一个**布尔**值，当**True**，指定此操作应为异步。  
   
 ## <a name="return-value"></a>返回值  

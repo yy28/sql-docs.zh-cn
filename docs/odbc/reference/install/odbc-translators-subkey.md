@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280791"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 转换器子项
 ODBC 转换器子项下的值列出已安装的转换器。 下表中显示这些值的格式。  
   
-|“属性”|数据类型|data|  
+|“属性”|数据类型|数据|  
 |----------|---------------|----------|  
-|*转换器 desc*|REG_SZ|**安装**|  
+|*translator-desc*|REG_SZ|**安装**|  
   
  *转换器 desc*转换器开发人员通过定义名称。  
   

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283279"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬件配置的分析平台系统
 Analytics Platform System (APS) 硬件构建方式，以便根据你的业务要求购买适当数量的处理和存储可缩放单位。 设备可缩放存储的 SQL Server 并行数据仓库 (PDW) 从几兆兆字节到超过 6 拍字节的数据。  

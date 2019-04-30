@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316012"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 课：添加 Web 引用
   Web 服务发现是客户端查找 Web 服务并获取其服务说明的过程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 Web 服务发现过程涉及询问网站是否遵循预定算法。 此过程的目的是查找服务说明，它是使用 Web 服务描述语言 (WSDL) 的一个 XML 文档。  

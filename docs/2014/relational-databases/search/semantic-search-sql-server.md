@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238649"
 ---
 # <a name="semantic-search-sql-server"></a>语义搜索 (SQL Server)
   统计语义搜索通过提取统计上相关的“关键短语” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*并对其进行索引，提供对*中存储的非结构化文档的更深层次剖析。 然后，它还使用这些关键短语标识“相似或相关文档” 并对其进行索引。  

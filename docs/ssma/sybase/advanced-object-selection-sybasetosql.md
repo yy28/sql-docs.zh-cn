@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2f1ee73e2d6ad21ea57825bd31997db0a519a720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283614"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>高级对象选择 (SybaseToSQL)
 **高级对象部分**对话框可以通过使用字符串和子字符串中的对象名称，来筛选数据库对象，然后选择或取消选择这些对象。 SSMA 执行对所选对象的转换和迁移操作。  

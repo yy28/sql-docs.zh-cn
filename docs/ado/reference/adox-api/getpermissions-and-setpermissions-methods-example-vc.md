@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 829b8df79c726e047576de0e845f2e3f5543352f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298324"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 和 SetPermissions 方法示例 (VC++)
 此示例演示[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)并[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。 下面的代码到 Orders 表到管理员用户授予完全访问权限。  

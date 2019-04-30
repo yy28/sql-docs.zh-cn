@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283653"
 ---
 # <a name="options-designers-analysis-services-designers-general"></a>选项 （设计人员 Analysis Services 设计器的常规）
   使用“设计器”、“维护计划”、“Analysis Services”和“常规”页可以确定 Analysis Services 设计器的默认行为。  

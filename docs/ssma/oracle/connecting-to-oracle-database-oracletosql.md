@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 4ad868122fd8986c642bace1b2c9cf419bb89182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288400"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>连接到 Oracle Database (OracleToSQL)
 将 Oracle 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到你想要迁移的 Oracle 数据库。 连接时，SSMA 中获取有关所有 Oracle 架构的元数据，然后在 Oracle 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  

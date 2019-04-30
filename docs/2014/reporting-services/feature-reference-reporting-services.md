@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225310"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253505"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>从查询结果中删除列 (Visual Database Tools)
   如果在“选择”查询中使用某列，但不希望在结果集中显示该列（即不希望它显示在查询的选择列表中），则可将其从输出中移除。 从查询的输出中移除该列后，您仍可在搜索条件中使用它或将其用作排序字段。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280379"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>“分区列列表”对话框 (Visual Database Tools)
   如果表具有关联的分区方案，则可以使用此对话框选择将分区函数应用于哪一列或哪些列。 要切换到的列的数据类型必须与分区函数中定义的列的数据类型相同，该函数才会有效。  

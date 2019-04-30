@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e7d1b0b68835fe8b909369a87814a3d1c41e07d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240247"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>评估 SAP ASE 数据库对象的转换 (SybaseToSQL)
 在加载对象并将数据迁移到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL，则应确定如何迁移的复杂度和应该花费多少时间。 SSMA 可以创建显示的对象和过程的成功转换为百分比的评估报告[!INCLUDE[tsql](../../includes/tsql-md.md)]。 SSMA 还允许您查看可能会导致转换失败的特定问题。  
@@ -35,7 +35,7 @@ SSMA 创建此评估报表时，将转换为所选的 SAP Adaptive Server Enterp
   
     SSMA 窗口底部的状态栏中显示进度。 如果输出窗格可见时，还将看到相关的任何消息。  
   
-    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase： 评估报告窗口中会显示。  
+    评估完成后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase:将出现评估报表窗口。  
   
 ## <a name="use-assessment-reports"></a>使用评估报告  
 评估报告窗口包含三个窗格：  

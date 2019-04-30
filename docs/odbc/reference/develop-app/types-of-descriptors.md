@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305618"
 ---
 # <a name="types-of-descriptors"></a>描述符类型
 描述符用于描述以下项之一：  
@@ -46,7 +46,7 @@ ms.locfileid: "47797281"
 |**应用程序缓冲区**|应用程序行描述符 (ARD)|应用程序参数描述符 (APD)|  
 |**实现缓冲区**|实现行描述符 (IRD)|实现参数描述符 (IPD)|  
   
- 为参数或行缓冲区时，如果应用程序的实现和应用程序描述符的相应记录中指定不同的数据类型驱动程序执行数据转换时使用描述符。 例如，它可能会将数字和日期时间值转换为字符串格式。 (有关有效转换，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
+ 为参数或行缓冲区时，如果应用程序的实现和应用程序描述符的相应记录中指定不同的数据类型驱动程序执行数据转换时使用描述符。 例如，它可能会将数字和日期时间值转换为字符串格式。 (有关有效转换，请参阅[附录 d:数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
   
  描述符可以执行不同的角色。 不同的语句可以共享任何应用程序显式分配的描述符。 在一个语句中的行描述符可以作为另一个语句中的参数描述符。  
   

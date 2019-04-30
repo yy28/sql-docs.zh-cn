@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226014"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高级多网站配置（SSRS 本机模式）
   使用此对话框可创建和管理用于访问报表服务器或报表管理器的 URL。 **“高级多网站配置”** 对话框用于创建附加 URL 和包含主机标头名称的自定义 URL，或者用于指定 IPv4 或 IPv6 格式的 IP 地址。  
@@ -27,7 +27,7 @@ ms.locfileid: "48185367"
   
  如果要配置多种不同的方式来访问报表服务器，则创建多个 URL 非常有用。 例如，通过 Intranet 和 Extranet 连接访问报表服务器通常对于每种类型的连接需要具有不同的 URL。  
   
- 若要打开**高级多网站配置**对话框中，单击**高级**上**Web 服务 URL**或**报表管理器 URL**页中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 **“高级多网站配置”** 对话框打开后，可以单击 **“添加”** 或 **“编辑”** 来定义新的 URL，或者修改或删除现有的 URL。  
+ 若要打开 **“高级多网站配置”** 对话框，请单击 **配置管理器中的** “Web 服务 URL” **页或** “报表管理器 URL” **页上的** “高级” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 **“高级多网站配置”** 对话框打开后，可以单击 **“添加”** 或 **“编辑”** 来定义新的 URL，或者修改或删除现有的 URL。  
   
  单击 **“确定”** 保存所做的更改。 如果添加或删除 URL 后，没有先单击 **“确定”** 就关闭了对话框，所做的更改将丢失。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185367"
  从列表中清除 URL 项。  
   
 ## <a name="see-also"></a>请参阅  
- [Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

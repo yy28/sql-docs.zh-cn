@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239937"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 和 UnderlyingValue 属性示例 (VB)
 此示例演示[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)并[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)通过显示一条消息，如果一条记录的基础数据的属性已更改期间[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)批处理更新。  

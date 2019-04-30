@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298464"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>断开与已注册服务器的连接 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中随时断开对象资源管理器与服务器的连接。 断开对象资源管理器不会断开其他 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 组件（如 SQL 编辑器）。  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238080"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  连接到现有的数据源，可以是[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)，或者的目录[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)。 ODBC 属性关键字 UID 和 PWD 将被忽略。 下表列出了其他受支持的属性关键字。  
   

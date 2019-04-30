@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238892"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>管理服务器和见解小组件中使用的数据库 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

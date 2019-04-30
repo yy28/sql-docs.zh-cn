@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225531"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大容量复制 SELECT 结果集 (ODBC)
   此示例显示如何使用大容量复制函数向外大容量复制 SELECT 语句的结果集。 此示例是面向 ODBC 3.0 版或更高版本开发的。  

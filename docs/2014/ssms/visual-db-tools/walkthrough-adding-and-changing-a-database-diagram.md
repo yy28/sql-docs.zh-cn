@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273735"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
   本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  
@@ -130,7 +130,7 @@ ms.locfileid: "52822621"
   
 2.  将 `T2col1` 拖动到 `T1col1`。  
   
-     出现两个对话框：**外键关系**背景中和**表和列**在前景中。  
+     显示两个对话框：**外键关系**背景中和**表和列**在前景中。  
   
 3.  单击“确定”保存新的关系。  
   

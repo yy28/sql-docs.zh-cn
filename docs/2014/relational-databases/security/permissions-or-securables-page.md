@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284549"
 ---
 # <a name="permissions-or-securables-page"></a>“权限”或“安全对象”页
   使用 **“权限”** 或 **“安全对象”** 页可以查看或设置安全对象的权限。 此页可以从多个位置打开。 根据此页的打开方式以及其中包含的内容，此页中的内容可能会稍有不同。 此页在打开时，其顶部网格可能会进行填充，也可能为空。 若要在上部网格中添加项目，请单击 **“搜索”**。 在上部网格中，选择一个项目，然后在 **“显式”** 选项卡上设置相应的权限。若要查看聚合权限，请使用 **“有效”** 选项卡。  

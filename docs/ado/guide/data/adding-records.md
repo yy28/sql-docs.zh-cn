@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294388"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
 使用**AddNew**方法创建并初始化新的记录中的现有**记录集**。 可以使用**支持**方法替换**CursorOptionEnum**的值**adAddNew**以验证是否可以将记录添加到当前**记录集**对象。

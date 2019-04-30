@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240911"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程：使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "53030451"
 
 3. 创建存储的过程代码片段有两个字段设置以进行快速编辑*StoredProcedureName*并*SchemaName*。 选择*StoredProcedureName*，右键单击，然后选择**更改所有匹配项**。 现在，键入*getCustomer*和全部*StoredProcedureName*条目更改为*getCustomer*。
 
-   ![代码片段](./media/tutorial-sql-editor/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 5. 更改所有匹配项*SchemaName*到*dbo*。 
 6. 代码段中包含占位符参数和需要更新的正文文本。 *EXECUTE*语句还包含占位符文本，因为它不知道该过程将具有的参数的数目。 对于本教程中更新该代码段因此看起来如以下代码：

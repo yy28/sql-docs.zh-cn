@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237799"
 ---
 # <a name="manage-a-running-process"></a>管理运行中的进程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可监视报表服务器上正在运行的作业的状态。 报表服务器会定期扫描正在进行的作业，并将状态信息写入到报表服务器数据库或针对 SharePoint 模式的服务应用程序数据库中。 如果正在执行以下任意进程，则表明正在处理作业：对远程或本地数据库服务器的查询执行、报表处理以及报表呈现。  

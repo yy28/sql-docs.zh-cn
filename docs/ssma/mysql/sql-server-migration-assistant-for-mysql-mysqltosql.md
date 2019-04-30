@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 5a703adf94d4708a4ee222a6cfcc442386202567
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288541"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant for MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for MySQL 是一个工具，用于将 MySQL 数据库迁移到[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 和 Linux （预览版） 上的 2017年 / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB。 SSMA 为 MySQL 将 MySQL 数据库对象转换为 SQL Server 数据库对象创建中的这些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后将数据从 MySQL 到迁移和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -26,7 +26,7 @@ ms.locfileid: "51670187"
   
 |||  
 |-|-|  
-|**部分**|**Description**|  
+|**部分**|**说明**|  
 |[什么是适用于 MySQL 的 SSMA 中的新增功能](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|什么是此版本的适用于 MySQL 的 SSMA 中的新增功能|  
 |[安装 SSMA for MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|包含为正在运行 SQL Server 的计算机上安装 SSMA for MySQL 客户端和所需的组件提供的先决条件和说明的主题。|  
 |[开始使用 SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|引入了用户界面、 项目和配置选项。|  

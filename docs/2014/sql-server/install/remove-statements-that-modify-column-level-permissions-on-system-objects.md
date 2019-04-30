@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f61990ae0eb35a399a1efca4a5a2cf754892e3d0
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294842"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>删除用来修改系统对象的列级权限的语句
   升级顾问检测到对系统对象的非标准列级权限。 升级时将不保留这些权限更改。 此外，不再支持对系统对象的列级权限。 请从您的应用程序中删除对系统对象设置列级权限的语句。  

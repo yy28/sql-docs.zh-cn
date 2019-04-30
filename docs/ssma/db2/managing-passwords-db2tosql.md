@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299019"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密码 (DB2ToSQL)
 本部分是如何确保数据库密码和导入或导出跨服务器的过程：  

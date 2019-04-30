@@ -1,5 +1,5 @@
 ---
-title: 例如：FOR XML 生成的 xml 指定根元素 |Microsoft Docs
+title: 例如：为 FOR XML 生成的 XML 指定根元素 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288379"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例如：为 FOR XML 生成的 XML 指定根元素
   通过在 `ROOT` 查询中指定 `FOR XML` 选项，您可以为生成的 XML 请求一个顶级元素，如该查询中所示。 为 `ROOT` 指令指定的参数提供了根元素名称。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242318"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函数
 **符合性**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  **转换器**并**安装程序**关键字必须包含在*lpszTranslator*字符串。 DLL 列出与翻译**转换器**关键字和转换器安装程序 DLL 的下列出了带有**安装程序**关键字。 每个对终止 NULL 字节，并且整个列表终止 NULL 字节。 （也就是说，两个 NULL 字节标记列表的末尾。）格式*lpszTranslator*如下所示：  
   
- \0Translator=*转换器 DLL 文件名*\0[Setup=*安装程序 DLL 文件名*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [输入]转换器将在安装或 null 指针的完整路径。 如果*lpszPath*是 null 指针，转换器将安装在系统目录中。  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225470"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>处理结果操作指南主题 (OLE DB)
   OLE DB 应用程序中的处理结果包括首先确定结果集的特性，然后将数据检索至程序变量。 如果该命令执行存储过程，则还必须了解如何处理来自此存储过程的返回代码和输出参数。  

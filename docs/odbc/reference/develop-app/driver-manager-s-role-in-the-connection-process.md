@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238028"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驱动程序管理器&#39;s 的连接过程中的角色
 请记住，应用程序不要直接调用驱动程序函数。 相反，这些驱动程序管理器具有相同名称的函数调用和驱动程序管理器调用驱动程序函数。 通常情况下，这几乎会立即发生。 例如，在应用程序调用**SQLExecute**驱动程序管理器中，一些错误检查之后，驱动程序管理器调用**SQLExecute**驱动程序中。  

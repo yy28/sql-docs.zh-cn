@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270256"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 复制的快照初始化选项
 
@@ -80,7 +80,7 @@ ms.locfileid: "54128207"
 2.  选择 **“压缩此文件夹中的快照文件”**。    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>应用快照之前和之后执行脚本
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>在应用快照之前和之后执行脚本
 
  可以指定在应用快照之前或之后在订阅服务器上执行的脚本。 使用脚本的原因有多种，例如在每台订阅服务器上创建登录帐户和架构（对象所有者）。  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281061"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 创建目标业务对象的代理，并返回的指针。 用来与业务对象的通信通过 Internet 发送的请求和数据服务器端存根 （stub） 代理包和封送数据。 对于进程内组件对象，不使用代理，提供只需指向对象的指针。  
@@ -30,7 +30,7 @@ ms.locfileid: "54419922"
 ## <a name="syntax"></a>语法  
  远程数据服务支持以下协议：HTTP、 HTTPS (安全套接字层的 HTTP)、 DCOM 和进程内。  
   
-|协议|语法|  
+|Protocol|语法|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  

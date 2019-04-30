@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299056"
 ---
 # <a name="troubleshooting-accesstosql"></a>故障排除 (AccessToSQL)
 不常见遇到迁移问题正好执行控制台脚本或命令。  

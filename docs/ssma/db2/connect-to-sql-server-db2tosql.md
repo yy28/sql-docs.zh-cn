@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298981"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>连接到 SQL Server (DB2ToSQL)
 使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]想要迁移到。 访问**连接到 SQL Server**对话框中，在**文件**菜单中，单击**连接到 SQL Server**。  

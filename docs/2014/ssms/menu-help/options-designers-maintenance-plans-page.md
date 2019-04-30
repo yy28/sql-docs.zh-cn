@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283181"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>选项 （设计器维护计划页）
   使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238016"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
   本主题提供有关 COLUMNS 行集和 PROCEDURE_PARAMETERS 行集的信息。 该信息与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的 OLE DB 日期和时间增强功能相关。  
@@ -27,7 +27,7 @@ ms.locfileid: "52774749"
   
 |列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|日期|DBTYPE_DBDATE|Clear|0|  
+|date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|将|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
@@ -64,9 +64,9 @@ ms.locfileid: "52774749"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 行集  
  对于日期/时间类型将返回以下行：  
   
-|类型 -><br /><br /> “列”|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|类型-><br /><br /> “列”|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|”启用|”启用|”启用|”启用|”启用|”启用|  
@@ -78,7 +78,7 @@ ms.locfileid: "52774749"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -91,6 +91,6 @@ ms.locfileid: "52774749"
  对于数字和小数类型，OLE DB 仅定义了 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 time、datetime2 和 datetimeoffset 使用这些列是非标准行为。  
   
 ## <a name="see-also"></a>请参阅  
- [元数据&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

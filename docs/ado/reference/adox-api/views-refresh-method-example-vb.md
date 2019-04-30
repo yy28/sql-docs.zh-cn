@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 123d7abe3248868295e8433d75d9e2a935cdc58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281489"
 ---
 # <a name="views-refresh-method-example-vb"></a>视图 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[视图](../../../ado/reference/adox-api/views-collection-adox.md)系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。 这必需的前[视图](../../../ado/reference/adox-api/view-object-adox.md)中的对象**目录**可访问。  

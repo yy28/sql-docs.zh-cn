@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c310e6c6b2833da6e1d9167faee2e979bb4616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238819"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>特定于驱动程序的数据类型、描述符类型、信息类型、诊断类型和属性
 驱动程序可以为以下分配特定于驱动程序的值：  

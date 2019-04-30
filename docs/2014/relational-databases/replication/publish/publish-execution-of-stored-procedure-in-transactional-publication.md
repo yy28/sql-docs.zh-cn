@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07bab8c30c138139dee50b349ac797e5c86fa5c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238725"
 ---
 # <a name="publish-the-execution-of-a-stored-procedure-in-a-transactional-publication-sql-server-management-studio"></a>在事务发布中发布存储过程的执行 (SQL Server Management Studio)
   可以在“项目属性 - \<项目>”对话框中指定应发布存储过程执行情况（而不仅仅是其定义）。 新建发布向导和“发布属性 - \<发布>”对话框中提供了该对话框。 有关使用该向导和访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)以及[查看和修改发布属性](view-and-modify-publication-properties.md)。  

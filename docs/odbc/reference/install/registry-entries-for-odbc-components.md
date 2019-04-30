@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d0a654b70fb93020bbb0dcfde159b4884cb15c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280966"
 ---
 # <a name="registry-entries-for-odbc-components"></a>ODBC 组件的注册表项
 > [!NOTE]  

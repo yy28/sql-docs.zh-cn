@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae95160a11a965e47845726748c2b9449a819e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284955"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>检索描述符字段中的值
 应用程序可以调用**SQLGetDescField**获取单个字段的描述符记录。 **SQLGetDescField**向在 ODBC 中，定义的所有描述符字段和驱动程序定义的字段以及提供的应用程序访问权限。  

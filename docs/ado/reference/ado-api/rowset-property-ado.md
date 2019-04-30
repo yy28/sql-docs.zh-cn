@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315788"
 ---
 # <a name="rowset-property-ado"></a>Rowset 属性 (ADO)
 获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。 当使用 put_Rowset 时，将行集转换成 ADO**记录集**对象。  

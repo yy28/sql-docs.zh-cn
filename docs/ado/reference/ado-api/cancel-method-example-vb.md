@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239804"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 方法示例 (VB)
 此示例使用[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法来取消执行上一个命令[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象连接正忙。  

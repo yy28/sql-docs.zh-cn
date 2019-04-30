@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298600"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，您需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  

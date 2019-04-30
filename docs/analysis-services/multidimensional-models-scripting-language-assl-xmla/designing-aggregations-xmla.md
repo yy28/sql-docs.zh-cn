@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9f681b3c99bd0e8351a844f28b16be6249de199
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288496"
 ---
 # <a name="designing-aggregations-xmla"></a>设计聚合 (XMLA)
   聚合设计与特定度量值组的分区相关联，以确保分区在存储聚合时使用相同的结构。 对分区使用相同的存储结构可让你可以轻松地定义可使用更高版本合并的分区[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令。 有关聚合设计的详细信息，请参阅[聚合和聚合设计](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -97,13 +97,13 @@ ms.locfileid: "50147182"
 |步骤|Integer|在将控制权返还给客户端应用程序之前，命令执行的步数。|  
 |Time|Long integer|在将控制权返还给客户端应用程序之前，命令运行的毫秒数。|  
 |Optimization|双精度|在将控制权返还给客户端应用程序之前，命令获得的性能提高百分比估计值。|  
-|存储器|Long integer|在将控制权返还给客户端应用程序之前，命令占用的存储空间的估计字节数。|  
+|存储|Long integer|在将控制权返还给客户端应用程序之前，命令占用的存储空间的估计字节数。|  
 |Aggregations|Long integer|在将控制权返还给客户端应用程序之前，命令定义的聚合数。|  
 |LastStep|Boolean|指示行集中的数据是否表示设计过程的最后一步。 如果**具体化**命令的属性已设置为此列的值设置为 true，则为 true。|  
   
  可以使用后每个返回的行集中包含的设计统计信息**DesignAggregations**在迭代中的命令和批处理设计。 在迭代设计过程中，您可以使用设计统计信息来确定并显示进度。 以批处理方式设计聚合时，您可以使用设计统计信息来确定命令所创建的聚合数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Analysis Services 中使用 XMLA 开发](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
