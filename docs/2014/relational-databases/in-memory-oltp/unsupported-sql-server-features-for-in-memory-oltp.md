@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157242"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
   本主题讨论内存优化表支持或不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -39,7 +39,7 @@ ms.locfileid: "53375029"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server 管理对象支持](sql-server-management-objects-support-for-in-memory-oltp.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 有关详细信息，请参阅 [SQL Server PowerShell 概述](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "53375029"
   
 -   与 AlwaysOn 集成： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了几个为服务器或数据库打造高可用性的可选方案，包括 AlwaysOn。 有关详细信息，请参阅[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。  
   
--   日志传送：使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送，您可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 有关详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
+-   日志传送：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送，您可以自动将事务日志备份从主服务器实例上的主数据库发送到单独的辅助服务器实例上的一个或多个辅助数据库。 有关详细信息，请参阅[关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
 -   支持对订阅服务器上的内存优化表进行事务复制，不过有一些限制。 有关详细信息，请参阅 [复制到内存优化表订阅服务器](../replication/replication-to-memory-optimized-table-subscribers.md)。  
   
@@ -105,10 +105,10 @@ ms.locfileid: "53375029"
   
  除若干例外情况，一般不支持跨数据库事务。 下表介绍支持的情况和相应的限制。 （另请参阅 [跨数据库查询](cross-database-queries.md)。）  
   
-|“数据库”|Allowed|Description|  
+|数据库|Allowed|描述|  
 |---------------|-------------|-----------------|  
 |用户数据库、模型和 msdb|否|不支持跨数据库查询和事务。<br /><br /> 访问内存优化表和本机编译存储过程的查询和事务无法访问其他数据库，但系统数据库 master（只读访问）和 tempdb 除外。|  
-|资源数据库和 tempdb|用户帐户控制|除了单用户数据库外，仅使用资源数据库和 tempdb 的跨数据库事务亦不受限制。|  
+|资源数据库和 tempdb|是|除了单用户数据库外，仅使用资源数据库和 tempdb 的跨数据库事务亦不受限制。|  
 |master|只读|如果针对内存中 OLTP 和 master 数据库的跨数据库事务包含针对 master 数据库的任意写入操作，则其将无法提交。 允许仅从 master 读取和仅使用一个用户数据库的跨数据库事务。|  
   
 ## <a name="see-also"></a>请参阅  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150352"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
   在安装和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能之前，您应查看本主题中的重要安全信息。 本主题介绍了您使用分布式重播之前所需的安装后安全配置步骤。 本主题还介绍了与数据保护相关的重要注意事项和重要删除步骤。  
@@ -29,7 +29,7 @@ ms.locfileid: "53350824"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务帐户|可以是域用户帐户或本地用户帐户。 如果使用本地用户帐户，则控制器、客户端和目标 SQL Server 都必须在同一台计算机上运行。<br /><br /> **\*\* 安全说明 \*\*** 建议不要将该帐户设置为 Windows 本地管理员组的成员。|  
 |用于运行分布式重播管理工具的交互式用户帐户|可以是本地用户帐户或域用户帐户。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。|  
   
- **重要**:在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
+ **重要**:在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
 -   域用户帐户  
   

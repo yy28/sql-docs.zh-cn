@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185828"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>表达式中的内置集合（报表生成器和 SSRS）
   在报表的表达式中，可以添加对下列内置集合的引用：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及适用于全局信息（如报表名称）的内置字段。 并非所有集合都显示在 **“表达式”** 对话框中。 DataSets 和 DataSources 集合只有在运行时报表将发布到报表服务器之后才可用。 ReportItems 集合是报表区域中的文本框集合，例如页面或页眉中的文本框。  
@@ -29,7 +29,7 @@ ms.locfileid: "59943871"
 ##  <a name="Collections"></a> 了解内置集合  
  下表列出了在您撰写表达式时可用的内置集合。 无论是否能够使用“表达式”对话框以交互方式添加对集合、示例和包含可用的初始化集合值的说明的引用，每行都包括集合的区分大小写编程名称。  
   
-|内置集合|“表达式”对话框中的类别|示例|Description|  
+|内置集合|“表达式”对话框中的类别|示例|描述|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |`Globals`|内置字段|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|表示对报表有用的全集变量，如报表名称或页码。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  
 |`User`|内置字段|`=User.UserID`<br /><br /> - 或 -<br /><br /> `=User.Language`|表示与运行报表的用户有关的数据的集合，如语言设置或用户 ID。 始终可用。<br /><br /> 有关详细信息，请参阅[内置的全局和用户引用（报表生成器和 SSRS）](built-in-collections-built-in-globals-and-users-references-report-builder.md)。|  

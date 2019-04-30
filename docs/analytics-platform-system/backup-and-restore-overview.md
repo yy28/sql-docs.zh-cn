@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200954"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 
@@ -120,7 +120,7 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 5.  每个计算节点将还原用户数据库的相应部分。 如果还原的任何未成功完成，所有数据库中删除并还原未成功完成。  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>还原到更多的计算节点的设备  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>还原到计算节点数更大的设备  
   
 将备份还原到计算节点数更大的设备会与计算节点数成比例地增加分配的数据库大小。  
   
@@ -130,7 +130,7 @@ PDW 使用 SQL Server 备份技术备份和还原设备数据库。 SQL Server �
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|备份和还原任务|Description|  
+|备份和还原任务|描述|  
 |---------------------------|---------------|  
 |为备份服务器准备服务器。|[获取和配置备份服务器](acquire-and-configure-backup-server.md)|  
 |备份数据库。|[备份数据库](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

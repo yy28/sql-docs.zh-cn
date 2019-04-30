@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213321"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
 >  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支持： 完整  
+ 支持：完全  
   
- ODBC API 一致性： 级别 1  
+ ODBC API 一致性：级别 1  
   
  返回 Visual FoxPro ODBC 驱动程序和连接句柄，与关联数据源的常规信息*hdbc*。 以下列表显示每个 Visual FoxPro ODBC 驱动程序返回的值*fInfoType*参数和返回值的意见。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47855415"
   
  SQL_GROUP_BY 返回 SQL_GB_NO_RELATION。  
   
-## <a name="i-j"></a>我 J  
+## <a name="i-j"></a>I-J  
  SQL_IDENTIFIER_CASE 返回 SQL_IC_MIXED。  
   
  SQL_IDENTIFIER_QUOTE_CHAR 返回。  
@@ -199,7 +199,7 @@ ms.locfileid: "47855415"
   
  SQL_MAX_QUALIFIER_NAME_LEN 返回的最高操作系统路径长度。  
   
- SQL_MAX_ROW_SIZE 返回 254 ^2。  
+ SQL_MAX_ROW_SIZE returns 254^2.  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG 返回 ' N '。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "47855415"
   
 -   SQL_FN_STR_UCASE  
   
--   SQL_FN_STR_SPACE。  
+-   SQL_FN_STR_SPACE.  
   
  SQL_SUBQUERIES 返回：  
   
@@ -367,7 +367,7 @@ ms.locfileid: "47855415"
   
 -   SQL_SQ_IN  
   
--   SQL_SQ_QUANTIFIED。  
+-   SQL_SQ_QUANTIFIED.  
   
  SQL_SYSTEM_FUNCTIONS 返回：  
   
@@ -384,7 +384,7 @@ ms.locfileid: "47855415"
   
  SQL_TIMEDATE_ADD_INTERVALS 返回：  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855415"
   
  SQL_TIMEDATE_DIFF_INTERVALS 返回：  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -452,7 +452,7 @@ ms.locfileid: "47855415"
   
  SQL_TXN_ISOLATION_OPTION 返回 SQL_TXN_READ_COMMITTED。  
   
-## <a name="u-z"></a>U Z  
+## <a name="u-z"></a>U-Z  
  SQL_UNION 返回 SQL_U_UNION 或 SQL_U_UNION_ALL。  
   
  SQL_USER_NAME 返回\<空白 >。

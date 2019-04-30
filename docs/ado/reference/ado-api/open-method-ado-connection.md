@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217668"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法（ADO 连接）
 将打开与数据源的连接。  
@@ -39,7 +39,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  可选。 一个**字符串**值，该值包含连接信息。 请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)有关有效的设置的详细信息的属性。  
   
- *用户 Id*  
+ *UserID*  
  可选。 一个**字符串**值，该值包含用于建立连接时使用的用户名。  
   
  *密码*  

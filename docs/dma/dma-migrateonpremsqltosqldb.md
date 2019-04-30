@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63152393"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>将本地 SQL Server 或 Azure Vm 上的 SQL Server 迁移到 Azure SQL 数据库使用数据迁移助手
 
@@ -119,7 +119,7 @@ ms.locfileid: "57974056"
 
    ![迁移状态](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
 - [数据迁移助手：配置设置](../dma/dma-configurationsettings.md)

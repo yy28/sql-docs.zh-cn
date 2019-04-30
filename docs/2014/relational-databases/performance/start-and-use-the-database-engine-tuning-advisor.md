@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150652"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)。  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  只包括添加索引视图建议。 不会为聚集和非聚集索引提供建议。  
   
  **包括筛选的索引**  
- 包括用来添加筛选索引的建议。 此选项才可用，如果你选择下列物理设计结构之一：**索引和索引的视图**，**索引**，或**非聚集索引**。  
+ 包括用来添加筛选索引的建议。 如果选择下列物理设计结构之一，则此选项可用：索引和索引视图、索引或非聚集索引。  
   
  **“索引”**  
  只包括添加聚集和非聚集索引建议。 不会为索引视图提供建议。  

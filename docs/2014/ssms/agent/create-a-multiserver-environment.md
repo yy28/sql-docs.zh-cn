@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192969"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
   多服务器管理需要设置一个主服务器 (MSX) 以及一个或多个目标服务器 (TSX)。 首先在主服务器上定义将在所有目标服务器上处理的作业，然后将这些作业下载到目标服务器。  
@@ -35,15 +35,15 @@ ms.locfileid: "52795610"
 ## <a name="considerations-for-multiserver-environments"></a>多服务器环境的注意事项  
  有关支持的 MSX/TSX 配置，请参阅下表。  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|用户帐户控制|是|否|否|否|否|否|  
-|**MSX = 8.0 &LT; SP3**|用户帐户控制|是|否|否|否|否|否|  
-|**MSX = 8.0 SP3 或更高版本**|否|否|是|是|是|是|用户帐户控制|  
-|**MSX = 9.0**|否|否|否|是|是|是|用户帐户控制|  
-|**MSX = 10.0**|否|否|否|否|是|是|用户帐户控制|  
-|**MSX = 10.5**|否|否|否|否|否|是|用户帐户控制|  
-|**MSX = 11.0**|否|否|否|否|否|否|用户帐户控制|  
+|**MSX = 7.0**|是|是|否|否|否|否|否|  
+|**MSX = 8.0 < SP3**|是|是|否|否|否|否|否|  
+|**MSX = 8.0 SP3 或更高版本**|否|否|是|是|是|是|是|  
+|**MSX = 9.0**|否|否|否|是|是|是|是|  
+|**MSX = 10.0**|否|否|否|否|是|是|是|  
+|**MSX = 10.5**|否|否|否|否|否|是|是|  
+|**MSX = 11.0**|否|否|否|否|否|否|是|  
   
  创建多服务器环境时，考虑下列问题：  
   
@@ -58,14 +58,14 @@ ms.locfileid: "52795610"
 ## <a name="related-tasks"></a>Related Tasks  
  以下主题介绍创建多服务器环境的常见任务：  
   
-|Description|主题|  
+|描述|主题|  
 |-----------------|-----------|  
 |描述如何创建主服务器。|[设置主服务器](make-a-master-server.md)|  
 |描述如何创建目标服务器。|[设置目标服务器](make-a-target-server.md)|  
 |描述如何将目标服务器登记到主服务器。|[将目标服务器登记到主服务器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目标服务器从主服务器脱离。|[将目标服务器从主服务器脱离](defect-a-target-server-from-a-master-server.md)|  
 |描述如何使多台目标服务器脱离主服务器。|[将多台目标服务器从主服务器脱离](defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何检查目标服务器的状态。|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|描述如何检查目标服务器的状态。|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>请参阅  
  [排除使用代理的多服务器作业的故障](troubleshoot-multiserver-jobs-that-use-proxies.md)  

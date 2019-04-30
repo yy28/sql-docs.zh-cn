@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213498"
 ---
 # <a name="using-encryption"></a>使用加密
   在 SMO 中，服务主密钥由 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 对象表示。 它是由 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性引用的。 可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 方法重新生成服务主密钥。  

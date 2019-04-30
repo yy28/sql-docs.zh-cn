@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205009"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 数据类型的 FOR XML 支持
   如果 FOR XML 查询在 SELECT 子句中指定了 `xml` 类型的列，列值将映射为返回的 XML 中的元素，不管是否指定了 ELEMENTS 指令。 `xml` 类型的列中的任何 XML 声明都不是序列化的。  

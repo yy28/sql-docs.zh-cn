@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155715"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
   本主题列出了本机编译存储过程的支持的功能 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,11 +81,11 @@ ms.locfileid: "58527139"
 ##  <a name="bfncsp"></a> 本机编译存储过程中的内置函数  
  内存优化表的默认约束中以及本机编译的存储过程中支持以下函数。  
   
--   数学函数：ACOS、ASIN、ATAN、ATN2、COS、COT、DEGREES、EXP、LOG、LOG10、PI、POWER、RADIANS、RAND、SIN、SQRT、SQUARE 和 TAN  
+-   数学函数：ACOS、 ASIN、 ATAN、 ATN2、 COS、 COT、 度、 EXP、 日志、 LOG10、 PI、 POWER、 弧度、 RAND、 SIN、 SQRT、 方块和 TAN  
   
--   日期函数：CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME 和 YEAR。  
+-   日期函数：CURRENT_TIMESTAMP、 DATEADD、 DATEDIFF、 DATEFROMPARTS、 DATEPART、 DATETIME2FROMPARTS、 DATETIMEFROMPARTS、 天、 EOMONTH、 GETDATE、 GETUTCDATE、 月、 SMALLDATETIMEFROMPARTS、 SYSDATETIME、 SYSUTCDATETIME 和年。  
   
--   字符串函数：LEN、LTRIM、RTRIM 和 SUBSTRING  
+-   字符串函数：LEN、 LTRIM、 RTRIM 和 SUBSTRING  
   
 -   恒等函数：SCOPE_IDENTITY  
   
@@ -93,7 +93,7 @@ ms.locfileid: "58527139"
   
 -   Uniqueidentifier 函数：NEWID 和 NEWSEQUENTIALID  
   
--   错误函数：ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY 和 ERROR_STATE  
+-   错误函数：ERROR_LINE、 ERROR_MESSAGE、 ERROR_NUMBER、 ERROR_PROCEDURE、 ERROR_SEVERITY 和 ERROR_STATE  
   
 -   转换：CAST 和 CONVERT。 不支持在 Unicode 与非 Unicode 字符串（n(var)char 和 (var)char）之间进行转换。  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527139"
 ##  <a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
   
- 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，系统可能会显示如下错误信息：**消息 41398、 级别 16，状态 1，过程*\<过程名称 >*，行 *\<lineNumber >* ，TOP 运算符可返回最多 8192 行;*\<数 >* 请求。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定超过 8192 行，将收到错误消息：**消息 41398、 级别 16，状态 1，过程*\<过程名称 >*，行 *\<lineNumber >* ，TOP 运算符可返回最多 8192 行;*\<数 >* 请求。**  
   
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
   
  如果您没有使用 ORDER BY 子句，则可以将任何整数值用于 TOP 运算符。  
   
- 使用 TOP N = 8192 的示例：编译  
+ 示例使用 TOP N = 8192:编译  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- 使用 TOP N > 8192 的示例：无法编译。  
+ 示例使用 TOP N > 8192:无法编译。  
   
 ```sql  
 CREATE PROCEDURE testTop  

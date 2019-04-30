@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144338"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
@@ -160,10 +160,10 @@ ms.locfileid: "54132782"
          定义约束在两个任务之间的工作方式。  
   
            “求值运算”列表  
-         指定优先约束使用的求值运算。 操作包括：**约束**，**表达式**，**表达式和约束**，并且**表达式或约束**。  
+         指定优先约束使用的求值运算。 运算包括：“约束”、“表达式”、“表达式和约束”和“表达式或约束”。  
   
           “值”列表  
-         指定约束值：**成功**，**失败**，或**完成**。 **“成功”** 的默认值。  
+         指定约束值：“成功”、“失败”或“完成”。 **“成功”** 的默认值。  
   
         > [!NOTE]  
         >  优先约束线的含义：绿色表示“成功” ，红色表示“失败” ，蓝色表示“完成” 。  

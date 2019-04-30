@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150734"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>减轻生产服务器优化负荷
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 优化顾问依赖于查询优化器分析工作负荷并提供优化建议。 在生产服务器上执行此分析会增加服务器负荷，并且可能会在优化会话过程中影响服务器的性能。 通过除了使用生产服务器以外，再使用一台测试服务器，可以减小在优化会话过程中对服务器负荷的影响。  

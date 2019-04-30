@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188506"
 ---
 # <a name="new-data-source-page-report-manager"></a>“新建数据源”页（报表管理器）
   使用“新建数据源”页，可以创建共享数据源项。 共享数据源定义与外部数据源的连接。 使用共享数据源，可以从使用该数据源的报表、模型和数据驱动订阅分别创建和维护数据源连接设置。  

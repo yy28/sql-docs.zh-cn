@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209978"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>配合使用 16 位应用程序和 32 位驱动程序
 > [!IMPORTANT]  
@@ -47,7 +47,7 @@ ms.locfileid: "47752925"
 ## <a name="components"></a>组件  
  MDAC 2.8 SP1 SDK 的 ODBC 组件包括以下文件为运行 32 位驱动程序使用 16 位应用程序。 这些组件是 \Redist 目录中。  
   
-|File name|Description|  
+|File name|描述|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 位 ODBC 泛型形式转换 DLL|  
 |Odbc32gt.dll|32 位 ODBC 泛型形式转换 DLL|  
@@ -59,8 +59,8 @@ ms.locfileid: "47752925"
   
  此外，以下文件以及 16 位 2.10 的 ODBC 驱动程序管理器中，这不是 ODBC 3.51 的一部分，所需的应使用 16 位应用程序安装。  
   
-|File name|Description|  
+|File name|描述|  
 |---------------|-----------------|  
 |Odbc.dll|16 位驱动程序管理器|  
-|系统为|16 位安装程序 DLL|  
+|Odbcinst.dll|16 位安装程序 DLL|  
 |Odbcadm.exe|16 位 ODBC 管理器程序|

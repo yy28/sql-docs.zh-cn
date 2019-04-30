@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214792"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上配置 RDS
 如果您遇到获取 RDS 才能正常工作后升级到 Windows 2000 的问题，请按照下列步骤来解决此问题：  
@@ -29,7 +29,7 @@ ms.locfileid: "51558445"
   
 3.  使用 RegEdit 实用程序，导航到"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"，并确保**HandlerRequired**设置为 0 并**DefaultHandler**是""(Null 字符串)。  
   
-     **请注意**如果对注册表的此部分进行任何更改，必须停止并通过输入以下命令在命令提示符下重新启动 World Wide Web 发布服务:"NET 停止 W3SVC"和"NET 启动 W3SVC"。  
+     **请注意**如果对注册表的此部分进行任何更改，必须停止并通过输入以下命令在命令提示符下重新启动 World Wide Web 发布服务："NET STOP W3SVC"和"NET 启动 W3SVC"。  
   
 4.  使用 RegEdit 实用程序，导航到"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"注册表中并验证是否有一个名为密钥**提高**。 如果没有，则创建它。  
   

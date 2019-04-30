@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206317"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 枚举常量
 若要帮助调试，ADO MD 枚举常量列出每个常量的值。 但是，此值是纯粹是参考性的并且可能从一个版本的 ADO MD 更改为另一个。 你的代码应仅依赖名称不是实际值的枚举常量。  

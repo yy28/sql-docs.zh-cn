@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154806"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>对查询结果中的行进行分组 (Visual Database Tools)
   如果希望创建小计或显示表的子集的其他摘要信息，可使用聚合查询创建组。 各组可对表中具有相同值的所有行的数据进行汇总。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159340"
 ---
 # <a name="set-exact-command"></a>SET EXACT 命令
 指定用于比较不同长度的两个字符串的规则。  
@@ -53,18 +53,18 @@ SET EXACT ON | OFF
   
 |比较|= 完全关闭|= 在确切|= = 确切 ON 或 OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc"="abc"|匹配项|匹配项|匹配项|  
-|"ab"="abc"|没有匹配项|没有匹配项|没有匹配项|  
-|"abc"="ab"|匹配项|没有匹配项|没有匹配项|  
-|"abc"="ab_"|没有匹配项|没有匹配项|没有匹配项|  
-|"ab"="ab_"|没有匹配项|匹配项|没有匹配项|  
-|"ab_"="ab"|匹配项|匹配项|没有匹配项|  
+|"abc" = "abc"|匹配项|匹配项|匹配项|  
+|"ab" = "abc"|没有匹配项|没有匹配项|没有匹配项|  
+|"abc" = "ab"|匹配项|没有匹配项|没有匹配项|  
+|"abc" = "ab_"|没有匹配项|没有匹配项|没有匹配项|  
+|"ab" = "ab_"|没有匹配项|匹配项|没有匹配项|  
+|"ab_" = "ab"|匹配项|匹配项|没有匹配项|  
 |""="ab"|没有匹配项|没有匹配项|没有匹配项|  
-|"ab"=""|匹配项|没有匹配项|没有匹配项|  
+|"ab" = ""|匹配项|没有匹配项|没有匹配项|  
 |"__" = ""|匹配项|匹配项|没有匹配项|  
 |"" = "___"|没有匹配项|匹配项|没有匹配项|  
-|TRIM("___") =""|匹配项|匹配项|匹配项|  
-|""= TRIM("___")|匹配项|匹配项|匹配项|  
+|TRIM("___") = ""|匹配项|匹配项|匹配项|  
+|"" = TRIM("___")|匹配项|匹配项|匹配项|  
   
 ## <a name="see-also"></a>请参阅  
  [SET ANSI 命令](../../odbc/microsoft/set-ansi-command.md)

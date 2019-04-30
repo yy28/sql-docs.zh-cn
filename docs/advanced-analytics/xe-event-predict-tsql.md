@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142309"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>用于监视 PREDICT 语句的扩展事件
 
@@ -20,7 +20,7 @@ ms.locfileid: "58510534"
 
 实时评分从机器学习已存储在 SQL Server 的模型生成分数。 PREDICT 函数不需要 R 或 Python，仅使用特定的二进制格式创建的模型等外部运行时。 有关详细信息，请参阅[实时评分](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 有关扩展的事件 （有时称为 XEvents），以及如何在会话中跟踪事件的常规信息，请参阅以下文章：
 
@@ -34,7 +34,7 @@ ms.locfileid: "58510534"
 
 在 SQL Server 2017 引入了 T-SQL 的预测语句。 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |事件  |内置执行时间细分|
 |predict_model_cache_hit |事件|从 PREDICT 函数模型缓存检索模型时发生。 使用此事件与其他 predict_model_cache_ * 事件来解决由 PREDICT 函数模型缓存引起的问题。|

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214806"
 ---
 # <a name="basic-rds-programming-model"></a>基本的 RDS 编程模型
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- RDS 解决了以下环境中存在的应用程序： 客户端应用程序指定将在一台服务器并返回所需的信息所必需的参数执行的程序。 调用上对指定的数据源的服务器提升访问权限的程序中检索信息、 根据需要处理数据，然后返回到客户端应用程序可以轻松地使用窗体中生成的信息。 RDS 提供了可以执行以下操作序列的方式：  
+ RDS 解决以下环境中存在的应用程序：客户端应用程序指定将在一台服务器并返回所需的信息所必需的参数执行的程序。 调用上对指定的数据源的服务器提升访问权限的程序中检索信息、 根据需要处理数据，然后返回到客户端应用程序可以轻松地使用窗体中生成的信息。 RDS 提供了可以执行以下操作序列的方式：  
   
 -   指定的服务器上，要调用的程序并获取一种方法来从客户端引用它。 (有时称为此引用*代理*。 它表示远程服务器程序。 客户端应用程序将"调用"代理像它是本地的程序，但它实际上调用远程服务器程序。）  
   

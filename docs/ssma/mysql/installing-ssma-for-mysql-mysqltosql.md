@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f8d642f90aa7c4dffa990977d8e0cb84b5337c7f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187181"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安装 SSMA for MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL 的客户端应用程序的使用来执行从 mysql 迁移到的迁移包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 它还包含已迁移数据库中支持数据迁移以及如何使用 MySQL 系统函数的扩展包。  
@@ -31,7 +31,7 @@ SQL Server Migration Assistant (SSMA) for MySQL 的客户端应用程序的使�
   
 |||  
 |-|-|  
-|**主题**|**Description**|  
+|**主题**|**说明**|  
 |[安装 SSMA for MySQL 客户端&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|提供有关安装 SSMA 客户端有关的信息和说明。|  
 |[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|提供有关的信息和说明的实例上安装的扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[删除 SSMA for MySQL 组件&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|提供用于卸载客户端程序的说明。|  

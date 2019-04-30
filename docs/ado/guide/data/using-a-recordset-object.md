@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184946"
 ---
 # <a name="using-a-recordset-object"></a>使用记录集对象
 或者，可以使用**Recordset.Open**隐式建立连接，通过该连接在单个操作中发出命令。 例如，在 Visual Basic:  

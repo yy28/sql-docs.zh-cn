@@ -19,11 +19,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188039"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
   *透明数据加密* (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -118,7 +118,7 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
  下表显示了 TDE 目录视图和动态管理视图。  
   
-|目录视图或动态管理视图|目标|  
+|目录视图或动态管理视图|用途|  
 |---------------------------------------------|-------------|  
 |[sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|显示数据库信息的目录视图。|  
 |[sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|显示数据库中的证书的目录视图。|  

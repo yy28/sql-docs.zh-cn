@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149692"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>导入 SCOM 管理包中的分析平台系统
 按照以下步骤导入 System Center Operations Manager (SCOM) 管理包 Analytics Platform System (APS)。 监视 SCOM 中的并行数据仓库所需的管理包。 

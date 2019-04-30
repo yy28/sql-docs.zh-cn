@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199375"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>按名称绑定参数（命名参数）
 某些 Dbms 允许应用程序能够通过名称而不是按位置在过程调用中指定的存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持使用命名参数。 在 ODBC 中，命名的参数仅在存储过程调用中使用和不能在其他 SQL 语句中使用。  

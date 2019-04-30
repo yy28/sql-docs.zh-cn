@@ -1,5 +1,5 @@
 ---
-title: 创建全局多维数据集语句 (MDX) |Microsoft 文档
+title: CREATE GLOBAL CUBE 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181440"
 ---
-# <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义-创建全局多维数据集
+# <a name="mdx-data-definition---create-global-cube"></a>MDX 数据定义 - CREATE GLOBAL CUBE
 
 
   基于服务器上某个多维数据集中的子多维数据集，创建并填充一个本地持久化多维数据集。 不需要连接到服务器就可以连接到本地持久化多维数据集。 有关本地多维数据集的详细信息，请参阅[本地多维数据集&#40;Analysis Services-多维数据&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)。  
@@ -114,8 +114,8 @@ FROM source_cube_name (<param list>)
  \<级别类型 >  
  该规范仅对于派生维度定义有效。  
   
-## <a name="remarks"></a>Remarks  
- 本地多维数据集是 definedin 使用条款的度量值和定义它的定义。 有两种类型的维度。  
+## <a name="remarks"></a>备注  
+ 本地多维数据集是 definedin 使用条款的度量值和定义来定义它。 有两种类型的维度。  
   
 -   源维度 - 这些维度是一个或多个源多维数据集的一部分  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  CREATE GLOBAL CUBE 语句遵循下列规则：  
   
--   CREATE GLOBAL CUBE 语句自动将所有命令（如计算度量值或操作）复制到本地多维数据集中。 如果某个命令包含显式引用父多维数据集的多维表达式 (MDX)，本地多维数据集将无法运行该命令。 若要防止出现此问题，请使用**CURRENTCUBE**关键字定义命令的 MDX 表达式时。 **CURRENTCUBE**关键字时引用在 MDX 表达式中的多维数据集，则使用当前的多维数据集上下文。  
+-   CREATE GLOBAL CUBE 语句自动将所有命令（如计算度量值或操作）复制到本地多维数据集中。 如果某个命令包含显式引用父多维数据集的多维表达式 (MDX)，本地多维数据集将无法运行该命令。 若要避免此问题，请使用**CURRENTCUBE**关键字定义命令的 MDX 表达式时。 **CURRENTCUBE**关键字引用 MDX 表达式中的多维数据集时将使用当前多维数据集上下文。  
   
 -   对于从本地多维数据集文件中包含的现有全局多维数据集创建的全局多维数据集，不能将其保存到源本地多维数据集文件中。 例如，创建一个名为 SalesLocal1 的全局多维数据集并将其保存到 C:\SalesLocal.cub 文件中。 然后，连接到 C:\SalesLocal.cub 文件并创建第二个名为 SalesLocal2 的全局多维数据集。 现在，如果试图将 SalesLocal2 全局多维数据集保存到 C:\SalesLocal.cub 文件中，将收到一个错误。 但是，可以将 SalesLocal2 全局多维数据集保存到其他本地多维数据集文件中。  
   
@@ -199,6 +199,6 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
   
 ## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [创建会话多维数据集语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [CREATE SESSION CUBE 语句&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

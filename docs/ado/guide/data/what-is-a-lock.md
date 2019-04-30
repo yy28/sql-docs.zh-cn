@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184863"
 ---
 # <a name="what-is-a-lock"></a>什么是锁定？
 锁定是 DBMS 将访问限制为多用户环境中的行的过程。 以独占方式锁定行或列，不允许其他用户访问锁定的数据，直到锁被释放。 这可确保两个用户不能同时更新行中的同一列。  

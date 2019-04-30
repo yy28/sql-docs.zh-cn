@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156811"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
@@ -104,13 +104,13 @@ ms.locfileid: "54124431"
   
 7.  在“从 _table_name_ 中选择列”对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击“确定” 。  
+8.  单击 **“确定”**。  
   
 9. 在“包含性列”选项卡下，单击“添加…”。  
   
 10. 在“从 _table_name_ 中选择列”对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击“确定” 。  
+11. 单击 **“确定”**。  
   
 12. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
   

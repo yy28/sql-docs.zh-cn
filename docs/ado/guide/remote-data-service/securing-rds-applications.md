@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191767"
 ---
 # <a name="securing-rds-applications"></a>保证 RDS 应用程序的安全
 本主题提供了 rds.的安全信息  
@@ -42,6 +42,6 @@ ms.locfileid: "51559974"
  因此，IIS Windows NT 质询/响应身份验证模式允许的 HTML 页以创建不提示用户的显式登录到数据库所需的用户 ID 和密码信息。 如果使用了 IIS 基本身份验证，则这还将需要。  
   
 ## <a name="password-authentication"></a>密码身份验证  
- RDS 可以与运行中的三种的密码身份验证模式的任何一个的 IIS Web 服务器进行通信： 匿名、 基本、 或 NT 质询/响应身份验证 （在 Windows 2000 中称为集成 Windows 身份验证）。 这些设置用于定义 Web 服务器如何控制通过它，例如，要求客户端计算机在 NT Web 服务器上具有明确的访问权限的访问权限。
+ RDS 可以与运行中的三种的密码身份验证模式的任何一个的 IIS Web 服务器进行通信：Anonymous、 Basic 或 NT 质询/响应身份验证 （在 Windows 2000 中称为集成 Windows 身份验证）。 这些设置用于定义 Web 服务器如何控制通过它，例如，要求客户端计算机在 NT Web 服务器上具有明确的访问权限的访问权限。
 
 

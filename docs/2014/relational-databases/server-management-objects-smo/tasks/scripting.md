@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158780"
 ---
 # <a name="scripting"></a>脚本编写
   SMO 中的脚本撰写由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象控制，或由各个对象的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制外的实例上的对象的依赖关系映射[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

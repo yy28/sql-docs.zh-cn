@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195215"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**ISequentialStream**接口以支持使用者访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文本**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和 xml 数据类型作为二进制大型对象 (Blob). 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据。  

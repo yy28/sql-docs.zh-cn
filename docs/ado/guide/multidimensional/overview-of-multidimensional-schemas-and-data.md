@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194913"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据的概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
@@ -32,12 +32,12 @@ ms.locfileid: "51350411"
   
  一个*成员*是维度中的数据项。 通常情况下，创建一个标题或描述数据库使用的成员的度量值。  
   
- 多维数据集表示通过[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD.中的对象 维度、 层次结构、 级别和成员也由其相应的 ADO MD 对象：[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)，和[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+ 多维数据集表示通过[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD.中的对象 其相应的 ADO MD 对象还表示维度、 层次结构、 级别和成员：[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)，[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)，[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)，并且[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
   
 ### <a name="dimensions"></a>维度  
  多维数据集维度取决于你的业务实体和要在数据库中建模的数据类型。 通常情况下，每个维度是一个独立的入口点或机制，用于选择数据。  
   
- 例如，包含销售数据的多维数据集具有以下五个维度： 销售人员、 Geography、 时间、 产品和度量值。 度量值维度包含实际的销售数据值，而其他维度表示方式进行分类和分组的销售数据值。  
+ 例如，包含销售数据的多维数据集具有以下五个维度：销售人员、 地理位置、 时间、 产品和度量值。 度量值维度包含实际的销售数据值，而其他维度表示方式进行分类和分组的销售数据值。  
   
  地域维度具有以下一组成员：  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  可以按每个维度的一个或多个层次结构合并成员。 时间维度，请考虑在有两种方法来从天级别为 Year 级别汇总：  
   
- 此示例还演示了另一个特征： 年-周层次结构的一周级别的某些成员不会出现在任何级别年季度层次结构中。 因此，层次结构不需要包括维度的所有成员。  
+ 此示例还演示了另一个特征：年周层次结构的一周级别的某些成员不显示在年季度层次结构的任何级别。 因此，层次结构不需要包括维度的所有成员。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

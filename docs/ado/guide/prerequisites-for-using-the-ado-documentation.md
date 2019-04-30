@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63221998"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文档的先决条件
-若要使用此文档，您应具有，最小值，因为大部分指南中的示例用这种语言开发应用程序使用 Microsoft Visual Basic 中，一些经验。 也有 Microsoft Visual c + +、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript 编写的一些示例。  
+若要使用此文档，您应具有，最小值，因为大部分指南中的示例用这种语言开发应用程序使用 Microsoft Visual Basic 中，一些经验。 此外，还有一些 Microsoft 视觉对象中编写的示例C++、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript。  
   
  因为 ADO 用于从各种源访问数据，您还需要一些了解关系数据库管理系统和联机分析处理 (OLAP) 和基本熟悉的 Internet 和 Internet 协议。  
   

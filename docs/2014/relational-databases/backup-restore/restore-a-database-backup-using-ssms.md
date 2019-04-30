@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921240"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>还原数据库备份 (SQL Server Management Studio)
   本主题说明如何还原完整数据库备份。  
@@ -57,13 +57,13 @@ ms.locfileid: "48111972"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称**。  
   
         > [!NOTE]  
         >  此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
          **备份介质**  
-         选择还原操作的介质：**文件**，**磁带**， **URL**或者**备份设备**。 只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。  
+         选择还原操作的介质：**文件**，**磁带**， **URL**或**备份设备**。 只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。  
   
          **备份位置**  
          查看、添加或删除还原操作使用的介质。 列表最多可以包含 64 个文件、磁带或备份设备。  
@@ -96,7 +96,7 @@ ms.locfileid: "48111972"
   
 9. 若要查看或选择高级选项，在 **“选项”** 页的 **“还原选项”** 面板中，可以根据您的实际情况选择下列任意选项：  
   
-    1.  `WITH` 选项 （可选）：  
+    1.  `WITH` 选项（不是必需的）：  
   
         -   **覆盖现有数据库(WITH REPLACE)**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48111972"
  [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)   
  [将数据库还原到新位置 (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)   
  [还原事务日志备份 (SQL Server)](restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [还原数据库（“选项”页）](restore-database-options-page.md)   
  [还原数据库（“常规”页）](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

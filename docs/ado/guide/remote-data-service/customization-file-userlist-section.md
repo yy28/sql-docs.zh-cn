@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214784"
 ---
 # <a name="customization-file-userlist-section"></a>自定义文件 UserList 部分
 **Userlist**部分是关于**连接**的相同部分与部分*标识符*参数。  
@@ -35,7 +35,7 @@ ms.locfileid: "54130667"
  _userName_ **=**   
  **_accessRights_**  
   
-|组成部分|Description|  
+|组成部分|描述|  
 |----------|-----------------|  
 |*userName*|*用户名*表示使用此连接的人员。 有效的用户名称与 IIS 建立**Service Manager**对话框。|  
 |**_accessRights_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取的数据源。<br />-   **ReadWrite** -用户可以读取或写入到数据源。|  

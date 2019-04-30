@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b81a7871434691a5940a04c7c60aaad9254b645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201168"
 ---
 # <a name="odbc-cursor-library"></a>ODBC 游标库
   某些 ODBC 驱动程序仅支持默认游标设置;这些驱动程序也不支持定位的游标操作，如**SQLSetPos**。 ODBC 游标库是用于对通常不支持块状游标或静态游标的驱动程序实现这些游标的 Microsoft 数据访问组件 (MDAC) 的组件。 游标库还实现定位的 UPDATE 和 DELETE 语句和**SQLSetPos**为其创建的游标。  

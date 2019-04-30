@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190824"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>创建市场篮结构和模型（数据挖掘中级教程）
   您已创建了一个数据源视图，现在将使用数据挖掘向导创建一个新的挖掘结构。 在本任务中，将创建基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 关联算法的挖掘结构和挖掘模型。  
@@ -56,10 +56,10 @@ ms.locfileid: "56019448"
     |“列”|内容类型|数据类型|  
     |-------------|------------------|---------------|  
     |IncomeGroup|离散|Text|  
-    |Order Number|Key|Text|  
+    |Order Number|键|Text|  
     |地区|离散|Text|  
     |vAssocSeqLineItems|||  
-    |“模型”|Key|Text|  
+    |“模型”|键|Text|  
   
 12. 上**创建测试设置**页上，该选项的默认值**测试数据百分比**为 30%。 该选项更改为**0**。 单击“下一步” 。  
   

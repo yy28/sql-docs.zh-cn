@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192325"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>使用由键集驱动的游标的限制
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668102"
  此外，如果你的应用程序使用表别名，将无法使用由键集驱动的游标;所需的只进或静态游标类型。 使用由键集游标类型与表别名将导致以下错误:"[Microsoft] [Oracle ODBC 驱动程序] 不能使用由键集驱动的游标上联接，使用 union、 intersect 或减或只读结果集。"  
   
 > [!NOTE]  
->  由于驱动程序处理发送到 Oracle 服务器的 SQL 语句的方式，Oracle 将在内部返回以下错误消息:"ORA 00964： 表名称不在列表中。"
+>  由于驱动程序处理发送到 Oracle 服务器的 SQL 语句的方式，Oracle 在内部将返回以下错误消息："ORA 00964： 表名称不在列表中。"

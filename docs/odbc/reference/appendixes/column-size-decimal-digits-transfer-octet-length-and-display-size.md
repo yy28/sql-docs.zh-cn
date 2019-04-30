@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213307"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数字、 传输八位字节长度和显示大小-ODBC
 数据类型的特征体现在其列 （或参数） 的大小、 小数位数、 长度和显示大小。 以下 ODBC 函数返回对数据源中的 SQL 语句的参数或 SQL 数据类型的这些属性。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  
